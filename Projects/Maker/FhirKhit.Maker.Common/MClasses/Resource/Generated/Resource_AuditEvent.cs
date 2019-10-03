@@ -1,13 +1,13 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Resource
-{
-    #region Json
-    #if NEVER
+using System;                                                                                                                               // MakerGen.cs:432
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:433
+using System.IO;                                                                                                                            // MakerGen.cs:434
+using System.Linq;                                                                                                                          // MakerGen.cs:435
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:436
+                                                                                                                                            // MakerGen.cs:437
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:438
+{                                                                                                                                           // MakerGen.cs:439
+    #region Json                                                                                                                            // MakerGen.cs:440
+    #if NEVER                                                                                                                               // MakerGen.cs:441
     {
       "resourceType": "StructureDefinition",
       "id": "AuditEvent",
@@ -804,907 +804,907 @@ namespace FhirKhit.Maker.Common.Resource
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:444
     /// <summary>
     /// Fhir resource 'AuditEvent'
     /// </summary>
     // 0. AuditEvent
-    public partial class Resource_AuditEvent : FhirKhit.Maker.Common.Resource.Resource_DomainResource
-    {
+    public partial class Resource_AuditEvent : FhirKhit.Maker.Common.Resource.Resource_DomainResource                                       // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 9. AuditEvent.agent
-        public partial class Type_Agent : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Agent : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 19. AuditEvent.agent.network
-            public partial class Type_Network : FhirKhit.Maker.Common.Complex.ComplexBase
-            {
+            public partial class Type_Network : FhirKhit.Maker.Common.Complex.ComplexBase                                                   // MakerGen.cs:381
+            {                                                                                                                               // MakerGen.cs:382
                 // 20. AuditEvent.agent.network.address
-                public ElementDefinitionInfo Element_Address;
+                public ElementDefinitionInfo Element_Address;                                                                               // MakerGen.cs:217
                 // 21. AuditEvent.agent.network.type
-                public ElementDefinitionInfo Element_Type;
-                
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                {
-                    base.Write(sDef);
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                    {
-                        Path = "AuditEvent.agent.network",
-                        ElementId = "AuditEvent.agent.network"
-                    });
-                    Element_Address.Write(sDef);
-                    Element_Type.Write(sDef);
-                }
-                
-                public Type_Network()
-                {
-                    {
+                public ElementDefinitionInfo Element_Type;                                                                                  // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:389
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:390
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:391
+                    {                                                                                                                       // MakerGen.cs:392
+                        Path = "AuditEvent.agent.network",                                                                                  // MakerGen.cs:393
+                        ElementId = "AuditEvent.agent.network"                                                                              // MakerGen.cs:394
+                    });                                                                                                                     // MakerGen.cs:395
+                    Element_Address.Write(sDef);                                                                                            // MakerGen.cs:221
+                    Element_Type.Write(sDef);                                                                                               // MakerGen.cs:221
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                public Type_Network()                                                                                                       // MakerGen.cs:400
+                {                                                                                                                           // MakerGen.cs:401
+                    {                                                                                                                       // MakerGen.cs:232
                         // 20. AuditEvent.agent.network.address
-                        this.Element_Address = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Address",
-                            Path= "AuditEvent.agent.network.address",
-                            Id = "AuditEvent.agent.network.address",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Address = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Address",                                                                                       // MakerGen.cs:236
+                            Path= "AuditEvent.agent.network.address",                                                                       // MakerGen.cs:237
+                            Id = "AuditEvent.agent.network.address",                                                                        // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 21. AuditEvent.agent.network.type
-                        this.Element_Type = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Type",
-                            Path= "AuditEvent.agent.network.type",
-                            Id = "AuditEvent.agent.network.type",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                                {
-                                }
-                            }
-                        };
-                    }
-                }
-            }
+                        this.Element_Type = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Type",                                                                                          // MakerGen.cs:236
+                            Path= "AuditEvent.agent.network.type",                                                                          // MakerGen.cs:237
+                            Id = "AuditEvent.agent.network.type",                                                                           // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                          // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                }                                                                                                                           // MakerGen.cs:403
+            }                                                                                                                               // MakerGen.cs:405
             // 10. AuditEvent.agent.type
-            public ElementDefinitionInfo Element_Type;
+            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:217
             // 11. AuditEvent.agent.role
-            public ElementDefinitionInfo Element_Role;
+            public ElementDefinitionInfo Element_Role;                                                                                      // MakerGen.cs:217
             // 12. AuditEvent.agent.who
-            public ElementDefinitionInfo Element_Who;
+            public ElementDefinitionInfo Element_Who;                                                                                       // MakerGen.cs:217
             // 13. AuditEvent.agent.altId
-            public ElementDefinitionInfo Element_AltId;
+            public ElementDefinitionInfo Element_AltId;                                                                                     // MakerGen.cs:217
             // 14. AuditEvent.agent.name
-            public ElementDefinitionInfo Element_Name;
+            public ElementDefinitionInfo Element_Name;                                                                                      // MakerGen.cs:217
             // 15. AuditEvent.agent.requestor
-            public ElementDefinitionInfo Element_Requestor;
+            public ElementDefinitionInfo Element_Requestor;                                                                                 // MakerGen.cs:217
             // 16. AuditEvent.agent.location
-            public ElementDefinitionInfo Element_Location;
+            public ElementDefinitionInfo Element_Location;                                                                                  // MakerGen.cs:217
             // 17. AuditEvent.agent.policy
-            public ElementDefinitionInfo Element_Policy;
+            public ElementDefinitionInfo Element_Policy;                                                                                    // MakerGen.cs:217
             // 18. AuditEvent.agent.media
-            public ElementDefinitionInfo Element_Media;
+            public ElementDefinitionInfo Element_Media;                                                                                     // MakerGen.cs:217
             // 19. AuditEvent.agent.network
-            public ElementDefinitionInfo Element_Network;
+            public ElementDefinitionInfo Element_Network;                                                                                   // MakerGen.cs:217
             // 22. AuditEvent.agent.purposeOfUse
-            public ElementDefinitionInfo Element_PurposeOfUse;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "AuditEvent.agent",
-                    ElementId = "AuditEvent.agent"
-                });
-                Element_Type.Write(sDef);
-                Element_Role.Write(sDef);
-                Element_Who.Write(sDef);
-                Element_AltId.Write(sDef);
-                Element_Name.Write(sDef);
-                Element_Requestor.Write(sDef);
-                Element_Location.Write(sDef);
-                Element_Policy.Write(sDef);
-                Element_Media.Write(sDef);
-                Element_Network.Write(sDef);
-                Element_PurposeOfUse.Write(sDef);
-            }
-            
-            public Type_Agent()
-            {
-                {
+            public ElementDefinitionInfo Element_PurposeOfUse;                                                                              // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "AuditEvent.agent",                                                                                              // MakerGen.cs:393
+                    ElementId = "AuditEvent.agent"                                                                                          // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Role.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Who.Write(sDef);                                                                                                    // MakerGen.cs:221
+                Element_AltId.Write(sDef);                                                                                                  // MakerGen.cs:221
+                Element_Name.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Requestor.Write(sDef);                                                                                              // MakerGen.cs:221
+                Element_Location.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_Policy.Write(sDef);                                                                                                 // MakerGen.cs:221
+                Element_Media.Write(sDef);                                                                                                  // MakerGen.cs:221
+                Element_Network.Write(sDef);                                                                                                // MakerGen.cs:221
+                Element_PurposeOfUse.Write(sDef);                                                                                           // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Agent()                                                                                                             // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 10. AuditEvent.agent.type
-                    this.Element_Type = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Type",
-                        Path= "AuditEvent.agent.type",
-                        Id = "AuditEvent.agent.type",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Type",                                                                                              // MakerGen.cs:236
+                        Path= "AuditEvent.agent.type",                                                                                      // MakerGen.cs:237
+                        Id = "AuditEvent.agent.type",                                                                                       // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 11. AuditEvent.agent.role
-                    this.Element_Role = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Role",
-                        Path= "AuditEvent.agent.role",
-                        Id = "AuditEvent.agent.role",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Role = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Role",                                                                                              // MakerGen.cs:236
+                        Path= "AuditEvent.agent.role",                                                                                      // MakerGen.cs:237
+                        Id = "AuditEvent.agent.role",                                                                                       // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 12. AuditEvent.agent.who
-                    this.Element_Who = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Who",
-                        Path= "AuditEvent.agent.who",
-                        Id = "AuditEvent.agent.who",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                    "http://hl7.org/fhir/StructureDefinition/Organization",
-                                    "http://hl7.org/fhir/StructureDefinition/Device",
-                                    "http://hl7.org/fhir/StructureDefinition/Patient",
-                                    "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Who = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Who",                                                                                               // MakerGen.cs:236
+                        Path= "AuditEvent.agent.who",                                                                                       // MakerGen.cs:237
+                        Id = "AuditEvent.agent.who",                                                                                        // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                             // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                 // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/Organization",                                                 // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/Device",                                                       // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/Patient",                                                      // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/RelatedPerson"                                                 // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 13. AuditEvent.agent.altId
-                    this.Element_AltId = new ElementDefinitionInfo
-                    {
-                        Name = "Element_AltId",
-                        Path= "AuditEvent.agent.altId",
-                        Id = "AuditEvent.agent.altId",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_AltId = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_AltId",                                                                                             // MakerGen.cs:236
+                        Path= "AuditEvent.agent.altId",                                                                                     // MakerGen.cs:237
+                        Id = "AuditEvent.agent.altId",                                                                                      // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 14. AuditEvent.agent.name
-                    this.Element_Name = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Name",
-                        Path= "AuditEvent.agent.name",
-                        Id = "AuditEvent.agent.name",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Name = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Name",                                                                                              // MakerGen.cs:236
+                        Path= "AuditEvent.agent.name",                                                                                      // MakerGen.cs:237
+                        Id = "AuditEvent.agent.name",                                                                                       // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 15. AuditEvent.agent.requestor
-                    this.Element_Requestor = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Requestor",
-                        Path= "AuditEvent.agent.requestor",
-                        Id = "AuditEvent.agent.requestor",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Requestor = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Requestor",                                                                                         // MakerGen.cs:236
+                        Path= "AuditEvent.agent.requestor",                                                                                 // MakerGen.cs:237
+                        Id = "AuditEvent.agent.requestor",                                                                                  // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                           // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 16. AuditEvent.agent.location
-                    this.Element_Location = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Location",
-                        Path= "AuditEvent.agent.location",
-                        Id = "AuditEvent.agent.location",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Location"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Location = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Location",                                                                                          // MakerGen.cs:236
+                        Path= "AuditEvent.agent.location",                                                                                  // MakerGen.cs:237
+                        Id = "AuditEvent.agent.location",                                                                                   // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Location"                                                      // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 17. AuditEvent.agent.policy
-                    this.Element_Policy = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Policy",
-                        Path= "AuditEvent.agent.policy",
-                        Id = "AuditEvent.agent.policy",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Uri
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Policy = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Policy",                                                                                            // MakerGen.cs:236
+                        Path= "AuditEvent.agent.policy",                                                                                    // MakerGen.cs:237
+                        Id = "AuditEvent.agent.policy",                                                                                     // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                               // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 18. AuditEvent.agent.media
-                    this.Element_Media = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Media",
-                        Path= "AuditEvent.agent.media",
-                        Id = "AuditEvent.agent.media",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Coding
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Media = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Media",                                                                                             // MakerGen.cs:236
+                        Path= "AuditEvent.agent.media",                                                                                     // MakerGen.cs:237
+                        Id = "AuditEvent.agent.media",                                                                                      // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Coding                                                                   // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 19. AuditEvent.agent.network
-                    this.Element_Network = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Network",
-                        Path= "AuditEvent.agent.network",
-                        Id = "AuditEvent.agent.network",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new Type_Network
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Network = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Network",                                                                                           // MakerGen.cs:236
+                        Path= "AuditEvent.agent.network",                                                                                   // MakerGen.cs:237
+                        Id = "AuditEvent.agent.network",                                                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new Type_Network                                                                                                // MakerGen.cs:260
+                            {                                                                                                               // MakerGen.cs:261
+                            }                                                                                                               // MakerGen.cs:262
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 22. AuditEvent.agent.purposeOfUse
-                    this.Element_PurposeOfUse = new ElementDefinitionInfo
-                    {
-                        Name = "Element_PurposeOfUse",
-                        Path= "AuditEvent.agent.purposeOfUse",
-                        Id = "AuditEvent.agent.purposeOfUse",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_PurposeOfUse = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_PurposeOfUse",                                                                                      // MakerGen.cs:236
+                        Path= "AuditEvent.agent.purposeOfUse",                                                                              // MakerGen.cs:237
+                        Id = "AuditEvent.agent.purposeOfUse",                                                                               // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 23. AuditEvent.source
-        public partial class Type_Source : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Source : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 24. AuditEvent.source.site
-            public ElementDefinitionInfo Element_Site;
+            public ElementDefinitionInfo Element_Site;                                                                                      // MakerGen.cs:217
             // 25. AuditEvent.source.observer
-            public ElementDefinitionInfo Element_Observer;
+            public ElementDefinitionInfo Element_Observer;                                                                                  // MakerGen.cs:217
             // 26. AuditEvent.source.type
-            public ElementDefinitionInfo Element_Type;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "AuditEvent.source",
-                    ElementId = "AuditEvent.source"
-                });
-                Element_Site.Write(sDef);
-                Element_Observer.Write(sDef);
-                Element_Type.Write(sDef);
-            }
-            
-            public Type_Source()
-            {
-                {
+            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "AuditEvent.source",                                                                                             // MakerGen.cs:393
+                    ElementId = "AuditEvent.source"                                                                                         // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Site.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Observer.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Source()                                                                                                            // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 24. AuditEvent.source.site
-                    this.Element_Site = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Site",
-                        Path= "AuditEvent.source.site",
-                        Id = "AuditEvent.source.site",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Site = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Site",                                                                                              // MakerGen.cs:236
+                        Path= "AuditEvent.source.site",                                                                                     // MakerGen.cs:237
+                        Id = "AuditEvent.source.site",                                                                                      // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 25. AuditEvent.source.observer
-                    this.Element_Observer = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Observer",
-                        Path= "AuditEvent.source.observer",
-                        Id = "AuditEvent.source.observer",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                    "http://hl7.org/fhir/StructureDefinition/Organization",
-                                    "http://hl7.org/fhir/StructureDefinition/Device",
-                                    "http://hl7.org/fhir/StructureDefinition/Patient",
-                                    "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Observer = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Observer",                                                                                          // MakerGen.cs:236
+                        Path= "AuditEvent.source.observer",                                                                                 // MakerGen.cs:237
+                        Id = "AuditEvent.source.observer",                                                                                  // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                             // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                 // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/Organization",                                                 // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/Device",                                                       // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/Patient",                                                      // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/RelatedPerson"                                                 // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 26. AuditEvent.source.type
-                    this.Element_Type = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Type",
-                        Path= "AuditEvent.source.type",
-                        Id = "AuditEvent.source.type",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Coding
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Type",                                                                                              // MakerGen.cs:236
+                        Path= "AuditEvent.source.type",                                                                                     // MakerGen.cs:237
+                        Id = "AuditEvent.source.type",                                                                                      // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Coding                                                                   // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 27. AuditEvent.entity
-        public partial class Type_Entity : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Entity : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 36. AuditEvent.entity.detail
-            public partial class Type_Detail : FhirKhit.Maker.Common.Complex.ComplexBase
-            {
+            public partial class Type_Detail : FhirKhit.Maker.Common.Complex.ComplexBase                                                    // MakerGen.cs:381
+            {                                                                                                                               // MakerGen.cs:382
                 // 37. AuditEvent.entity.detail.type
-                public ElementDefinitionInfo Element_Type;
+                public ElementDefinitionInfo Element_Type;                                                                                  // MakerGen.cs:217
                 // 38. AuditEvent.entity.detail.value[x]
-                public ElementDefinitionInfo Element_Value;
-                
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                {
-                    base.Write(sDef);
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                    {
-                        Path = "AuditEvent.entity.detail",
-                        ElementId = "AuditEvent.entity.detail"
-                    });
-                    Element_Type.Write(sDef);
-                    Element_Value.Write(sDef);
-                }
-                
-                public Type_Detail()
-                {
-                    {
+                public ElementDefinitionInfo Element_Value;                                                                                 // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:389
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:390
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:391
+                    {                                                                                                                       // MakerGen.cs:392
+                        Path = "AuditEvent.entity.detail",                                                                                  // MakerGen.cs:393
+                        ElementId = "AuditEvent.entity.detail"                                                                              // MakerGen.cs:394
+                    });                                                                                                                     // MakerGen.cs:395
+                    Element_Type.Write(sDef);                                                                                               // MakerGen.cs:221
+                    Element_Value.Write(sDef);                                                                                              // MakerGen.cs:221
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                public Type_Detail()                                                                                                        // MakerGen.cs:400
+                {                                                                                                                           // MakerGen.cs:401
+                    {                                                                                                                       // MakerGen.cs:232
                         // 37. AuditEvent.entity.detail.type
-                        this.Element_Type = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Type",
-                            Path= "AuditEvent.entity.detail.type",
-                            Id = "AuditEvent.entity.detail.type",
-                            Min = 1,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Type = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Type",                                                                                          // MakerGen.cs:236
+                            Path= "AuditEvent.entity.detail.type",                                                                          // MakerGen.cs:237
+                            Id = "AuditEvent.entity.detail.type",                                                                           // MakerGen.cs:238
+                            Min = 1,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 38. AuditEvent.entity.detail.value[x]
-                        this.Element_Value = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Value",
-                            Path= "AuditEvent.entity.detail.value[x]",
-                            Id = "AuditEvent.entity.detail.value[x]",
-                            Min = 1,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String
-                                {
-                                },
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Base64Binary
-                                {
-                                }
-                            }
-                        };
-                    }
-                }
-            }
+                        this.Element_Value = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Value",                                                                                         // MakerGen.cs:236
+                            Path= "AuditEvent.entity.detail.value[x]",                                                                      // MakerGen.cs:237
+                            Id = "AuditEvent.entity.detail.value[x]",                                                                       // MakerGen.cs:238
+                            Min = 1,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                },                                                                                                          // MakerGen.cs:305
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Base64Binary                                                  // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                }                                                                                                                           // MakerGen.cs:403
+            }                                                                                                                               // MakerGen.cs:405
             // 28. AuditEvent.entity.what
-            public ElementDefinitionInfo Element_What;
+            public ElementDefinitionInfo Element_What;                                                                                      // MakerGen.cs:217
             // 29. AuditEvent.entity.type
-            public ElementDefinitionInfo Element_Type;
+            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:217
             // 30. AuditEvent.entity.role
-            public ElementDefinitionInfo Element_Role;
+            public ElementDefinitionInfo Element_Role;                                                                                      // MakerGen.cs:217
             // 31. AuditEvent.entity.lifecycle
-            public ElementDefinitionInfo Element_Lifecycle;
+            public ElementDefinitionInfo Element_Lifecycle;                                                                                 // MakerGen.cs:217
             // 32. AuditEvent.entity.securityLabel
-            public ElementDefinitionInfo Element_SecurityLabel;
+            public ElementDefinitionInfo Element_SecurityLabel;                                                                             // MakerGen.cs:217
             // 33. AuditEvent.entity.name
-            public ElementDefinitionInfo Element_Name;
+            public ElementDefinitionInfo Element_Name;                                                                                      // MakerGen.cs:217
             // 34. AuditEvent.entity.description
-            public ElementDefinitionInfo Element_Description;
+            public ElementDefinitionInfo Element_Description;                                                                               // MakerGen.cs:217
             // 35. AuditEvent.entity.query
-            public ElementDefinitionInfo Element_Query;
+            public ElementDefinitionInfo Element_Query;                                                                                     // MakerGen.cs:217
             // 36. AuditEvent.entity.detail
-            public ElementDefinitionInfo Element_Detail;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "AuditEvent.entity",
-                    ElementId = "AuditEvent.entity"
-                });
-                Element_What.Write(sDef);
-                Element_Type.Write(sDef);
-                Element_Role.Write(sDef);
-                Element_Lifecycle.Write(sDef);
-                Element_SecurityLabel.Write(sDef);
-                Element_Name.Write(sDef);
-                Element_Description.Write(sDef);
-                Element_Query.Write(sDef);
-                Element_Detail.Write(sDef);
-            }
-            
-            public Type_Entity()
-            {
-                {
+            public ElementDefinitionInfo Element_Detail;                                                                                    // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "AuditEvent.entity",                                                                                             // MakerGen.cs:393
+                    ElementId = "AuditEvent.entity"                                                                                         // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_What.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Role.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Lifecycle.Write(sDef);                                                                                              // MakerGen.cs:221
+                Element_SecurityLabel.Write(sDef);                                                                                          // MakerGen.cs:221
+                Element_Name.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Description.Write(sDef);                                                                                            // MakerGen.cs:221
+                Element_Query.Write(sDef);                                                                                                  // MakerGen.cs:221
+                Element_Detail.Write(sDef);                                                                                                 // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Entity()                                                                                                            // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 28. AuditEvent.entity.what
-                    this.Element_What = new ElementDefinitionInfo
-                    {
-                        Name = "Element_What",
-                        Path= "AuditEvent.entity.what",
-                        Id = "AuditEvent.entity.what",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Resource"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_What = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_What",                                                                                              // MakerGen.cs:236
+                        Path= "AuditEvent.entity.what",                                                                                     // MakerGen.cs:237
+                        Id = "AuditEvent.entity.what",                                                                                      // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Resource"                                                      // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 29. AuditEvent.entity.type
-                    this.Element_Type = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Type",
-                        Path= "AuditEvent.entity.type",
-                        Id = "AuditEvent.entity.type",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Coding
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Type",                                                                                              // MakerGen.cs:236
+                        Path= "AuditEvent.entity.type",                                                                                     // MakerGen.cs:237
+                        Id = "AuditEvent.entity.type",                                                                                      // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Coding                                                                   // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 30. AuditEvent.entity.role
-                    this.Element_Role = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Role",
-                        Path= "AuditEvent.entity.role",
-                        Id = "AuditEvent.entity.role",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Coding
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Role = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Role",                                                                                              // MakerGen.cs:236
+                        Path= "AuditEvent.entity.role",                                                                                     // MakerGen.cs:237
+                        Id = "AuditEvent.entity.role",                                                                                      // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Coding                                                                   // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 31. AuditEvent.entity.lifecycle
-                    this.Element_Lifecycle = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Lifecycle",
-                        Path= "AuditEvent.entity.lifecycle",
-                        Id = "AuditEvent.entity.lifecycle",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Coding
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Lifecycle = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Lifecycle",                                                                                         // MakerGen.cs:236
+                        Path= "AuditEvent.entity.lifecycle",                                                                                // MakerGen.cs:237
+                        Id = "AuditEvent.entity.lifecycle",                                                                                 // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Coding                                                                   // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 32. AuditEvent.entity.securityLabel
-                    this.Element_SecurityLabel = new ElementDefinitionInfo
-                    {
-                        Name = "Element_SecurityLabel",
-                        Path= "AuditEvent.entity.securityLabel",
-                        Id = "AuditEvent.entity.securityLabel",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Coding
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_SecurityLabel = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_SecurityLabel",                                                                                     // MakerGen.cs:236
+                        Path= "AuditEvent.entity.securityLabel",                                                                            // MakerGen.cs:237
+                        Id = "AuditEvent.entity.securityLabel",                                                                             // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Coding                                                                   // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 33. AuditEvent.entity.name
-                    this.Element_Name = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Name",
-                        Path= "AuditEvent.entity.name",
-                        Id = "AuditEvent.entity.name",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Name = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Name",                                                                                              // MakerGen.cs:236
+                        Path= "AuditEvent.entity.name",                                                                                     // MakerGen.cs:237
+                        Id = "AuditEvent.entity.name",                                                                                      // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 34. AuditEvent.entity.description
-                    this.Element_Description = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Description",
-                        Path= "AuditEvent.entity.description",
-                        Id = "AuditEvent.entity.description",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Description",                                                                                       // MakerGen.cs:236
+                        Path= "AuditEvent.entity.description",                                                                              // MakerGen.cs:237
+                        Id = "AuditEvent.entity.description",                                                                               // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 35. AuditEvent.entity.query
-                    this.Element_Query = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Query",
-                        Path= "AuditEvent.entity.query",
-                        Id = "AuditEvent.entity.query",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Base64Binary
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Query = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Query",                                                                                             // MakerGen.cs:236
+                        Path= "AuditEvent.entity.query",                                                                                    // MakerGen.cs:237
+                        Id = "AuditEvent.entity.query",                                                                                     // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Base64Binary                                                      // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 36. AuditEvent.entity.detail
-                    this.Element_Detail = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Detail",
-                        Path= "AuditEvent.entity.detail",
-                        Id = "AuditEvent.entity.detail",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new Type_Detail
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Detail = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Detail",                                                                                            // MakerGen.cs:236
+                        Path= "AuditEvent.entity.detail",                                                                                   // MakerGen.cs:237
+                        Id = "AuditEvent.entity.detail",                                                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new Type_Detail                                                                                                 // MakerGen.cs:260
+                            {                                                                                                               // MakerGen.cs:261
+                            }                                                                                                               // MakerGen.cs:262
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 1. AuditEvent.type
-        public ElementDefinitionInfo Element_Type;
+        public ElementDefinitionInfo Element_Type;                                                                                          // MakerGen.cs:217
         // 2. AuditEvent.subtype
-        public ElementDefinitionInfo Element_Subtype;
+        public ElementDefinitionInfo Element_Subtype;                                                                                       // MakerGen.cs:217
         // 3. AuditEvent.action
-        public ElementDefinitionInfo Element_Action;
+        public ElementDefinitionInfo Element_Action;                                                                                        // MakerGen.cs:217
         // 4. AuditEvent.period
-        public ElementDefinitionInfo Element_Period;
+        public ElementDefinitionInfo Element_Period;                                                                                        // MakerGen.cs:217
         // 5. AuditEvent.recorded
-        public ElementDefinitionInfo Element_Recorded;
+        public ElementDefinitionInfo Element_Recorded;                                                                                      // MakerGen.cs:217
         // 6. AuditEvent.outcome
-        public ElementDefinitionInfo Element_Outcome;
+        public ElementDefinitionInfo Element_Outcome;                                                                                       // MakerGen.cs:217
         // 7. AuditEvent.outcomeDesc
-        public ElementDefinitionInfo Element_OutcomeDesc;
+        public ElementDefinitionInfo Element_OutcomeDesc;                                                                                   // MakerGen.cs:217
         // 8. AuditEvent.purposeOfEvent
-        public ElementDefinitionInfo Element_PurposeOfEvent;
+        public ElementDefinitionInfo Element_PurposeOfEvent;                                                                                // MakerGen.cs:217
         // 9. AuditEvent.agent
-        public ElementDefinitionInfo Element_Agent;
+        public ElementDefinitionInfo Element_Agent;                                                                                         // MakerGen.cs:217
         // 23. AuditEvent.source
-        public ElementDefinitionInfo Element_Source;
+        public ElementDefinitionInfo Element_Source;                                                                                        // MakerGen.cs:217
         // 27. AuditEvent.entity
-        public ElementDefinitionInfo Element_Entity;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "AuditEvent",
-                ElementId = "AuditEvent"
-            });
-            Element_Type.Write(sDef);
-            Element_Subtype.Write(sDef);
-            Element_Action.Write(sDef);
-            Element_Period.Write(sDef);
-            Element_Recorded.Write(sDef);
-            Element_Outcome.Write(sDef);
-            Element_OutcomeDesc.Write(sDef);
-            Element_PurposeOfEvent.Write(sDef);
-            Element_Agent.Write(sDef);
-            Element_Source.Write(sDef);
-            Element_Entity.Write(sDef);
-        }
-        
-        public Resource_AuditEvent()
-        {
-            {
+        public ElementDefinitionInfo Element_Entity;                                                                                        // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "AuditEvent",                                                                                                        // MakerGen.cs:393
+                ElementId = "AuditEvent"                                                                                                    // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Type.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Subtype.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Action.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Period.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Recorded.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_Outcome.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_OutcomeDesc.Write(sDef);                                                                                                // MakerGen.cs:221
+            Element_PurposeOfEvent.Write(sDef);                                                                                             // MakerGen.cs:221
+            Element_Agent.Write(sDef);                                                                                                      // MakerGen.cs:221
+            Element_Source.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Entity.Write(sDef);                                                                                                     // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Resource_AuditEvent()                                                                                                        // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. AuditEvent.type
-                this.Element_Type = new ElementDefinitionInfo
-                {
-                    Name = "Element_Type",
-                    Path= "AuditEvent.type",
-                    Id = "AuditEvent.type",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Coding
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Type = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Type",                                                                                                  // MakerGen.cs:236
+                    Path= "AuditEvent.type",                                                                                                // MakerGen.cs:237
+                    Id = "AuditEvent.type",                                                                                                 // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Coding                                                                       // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. AuditEvent.subtype
-                this.Element_Subtype = new ElementDefinitionInfo
-                {
-                    Name = "Element_Subtype",
-                    Path= "AuditEvent.subtype",
-                    Id = "AuditEvent.subtype",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Coding
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Subtype = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Subtype",                                                                                               // MakerGen.cs:236
+                    Path= "AuditEvent.subtype",                                                                                             // MakerGen.cs:237
+                    Id = "AuditEvent.subtype",                                                                                              // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Coding                                                                       // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 3. AuditEvent.action
-                this.Element_Action = new ElementDefinitionInfo
-                {
-                    Name = "Element_Action",
-                    Path= "AuditEvent.action",
-                    Id = "AuditEvent.action",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Action = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Action",                                                                                                // MakerGen.cs:236
+                    Path= "AuditEvent.action",                                                                                              // MakerGen.cs:237
+                    Id = "AuditEvent.action",                                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 4. AuditEvent.period
-                this.Element_Period = new ElementDefinitionInfo
-                {
-                    Name = "Element_Period",
-                    Path= "AuditEvent.period",
-                    Id = "AuditEvent.period",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Period
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Period = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Period",                                                                                                // MakerGen.cs:236
+                    Path= "AuditEvent.period",                                                                                              // MakerGen.cs:237
+                    Id = "AuditEvent.period",                                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Period                                                                       // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 5. AuditEvent.recorded
-                this.Element_Recorded = new ElementDefinitionInfo
-                {
-                    Name = "Element_Recorded",
-                    Path= "AuditEvent.recorded",
-                    Id = "AuditEvent.recorded",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Instant
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Recorded = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Recorded",                                                                                              // MakerGen.cs:236
+                    Path= "AuditEvent.recorded",                                                                                            // MakerGen.cs:237
+                    Id = "AuditEvent.recorded",                                                                                             // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Instant                                                               // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 6. AuditEvent.outcome
-                this.Element_Outcome = new ElementDefinitionInfo
-                {
-                    Name = "Element_Outcome",
-                    Path= "AuditEvent.outcome",
-                    Id = "AuditEvent.outcome",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Outcome = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Outcome",                                                                                               // MakerGen.cs:236
+                    Path= "AuditEvent.outcome",                                                                                             // MakerGen.cs:237
+                    Id = "AuditEvent.outcome",                                                                                              // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 7. AuditEvent.outcomeDesc
-                this.Element_OutcomeDesc = new ElementDefinitionInfo
-                {
-                    Name = "Element_OutcomeDesc",
-                    Path= "AuditEvent.outcomeDesc",
-                    Id = "AuditEvent.outcomeDesc",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_OutcomeDesc = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_OutcomeDesc",                                                                                           // MakerGen.cs:236
+                    Path= "AuditEvent.outcomeDesc",                                                                                         // MakerGen.cs:237
+                    Id = "AuditEvent.outcomeDesc",                                                                                          // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 8. AuditEvent.purposeOfEvent
-                this.Element_PurposeOfEvent = new ElementDefinitionInfo
-                {
-                    Name = "Element_PurposeOfEvent",
-                    Path= "AuditEvent.purposeOfEvent",
-                    Id = "AuditEvent.purposeOfEvent",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_PurposeOfEvent = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_PurposeOfEvent",                                                                                        // MakerGen.cs:236
+                    Path= "AuditEvent.purposeOfEvent",                                                                                      // MakerGen.cs:237
+                    Id = "AuditEvent.purposeOfEvent",                                                                                       // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 9. AuditEvent.agent
-                this.Element_Agent = new ElementDefinitionInfo
-                {
-                    Name = "Element_Agent",
-                    Path= "AuditEvent.agent",
-                    Id = "AuditEvent.agent",
-                    Min = 1,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Agent
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Agent = new ElementDefinitionInfo                                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Agent",                                                                                                 // MakerGen.cs:236
+                    Path= "AuditEvent.agent",                                                                                               // MakerGen.cs:237
+                    Id = "AuditEvent.agent",                                                                                                // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Agent                                                                                                      // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 23. AuditEvent.source
-                this.Element_Source = new ElementDefinitionInfo
-                {
-                    Name = "Element_Source",
-                    Path= "AuditEvent.source",
-                    Id = "AuditEvent.source",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Source
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Source = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Source",                                                                                                // MakerGen.cs:236
+                    Path= "AuditEvent.source",                                                                                              // MakerGen.cs:237
+                    Id = "AuditEvent.source",                                                                                               // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Source                                                                                                     // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 27. AuditEvent.entity
-                this.Element_Entity = new ElementDefinitionInfo
-                {
-                    Name = "Element_Entity",
-                    Path= "AuditEvent.entity",
-                    Id = "AuditEvent.entity",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Entity
-                        {
-                        }
-                    }
-                };
-            }
-            this.Name = "AuditEvent";
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/AuditEvent";
-        }
-    }
-}
+                this.Element_Entity = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Entity",                                                                                                // MakerGen.cs:236
+                    Path= "AuditEvent.entity",                                                                                              // MakerGen.cs:237
+                    Id = "AuditEvent.entity",                                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Entity                                                                                                     // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            this.Name = "AuditEvent";                                                                                                       // MakerGen.cs:468
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/AuditEvent";                                                                // MakerGen.cs:469
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:449

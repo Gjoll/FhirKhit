@@ -1,13 +1,13 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Resource
-{
-    #region Json
-    #if NEVER
+using System;                                                                                                                               // MakerGen.cs:432
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:433
+using System.IO;                                                                                                                            // MakerGen.cs:434
+using System.Linq;                                                                                                                          // MakerGen.cs:435
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:436
+                                                                                                                                            // MakerGen.cs:437
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:438
+{                                                                                                                                           // MakerGen.cs:439
+    #region Json                                                                                                                            // MakerGen.cs:440
+    #if NEVER                                                                                                                               // MakerGen.cs:441
     {
       "resourceType": "StructureDefinition",
       "id": "SearchParameter",
@@ -580,614 +580,614 @@ namespace FhirKhit.Maker.Common.Resource
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:444
     /// <summary>
     /// Fhir resource 'SearchParameter'
     /// </summary>
     // 0. SearchParameter
-    public partial class Resource_SearchParameter : FhirKhit.Maker.Common.Resource.Resource_DomainResource
-    {
+    public partial class Resource_SearchParameter : FhirKhit.Maker.Common.Resource.Resource_DomainResource                                  // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 26. SearchParameter.component
-        public partial class Type_Component : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Component : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 27. SearchParameter.component.definition
-            public ElementDefinitionInfo Element_Definition;
+            public ElementDefinitionInfo Element_Definition;                                                                                // MakerGen.cs:217
             // 28. SearchParameter.component.expression
-            public ElementDefinitionInfo Element_Expression;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "SearchParameter.component",
-                    ElementId = "SearchParameter.component"
-                });
-                Element_Definition.Write(sDef);
-                Element_Expression.Write(sDef);
-            }
-            
-            public Type_Component()
-            {
-                {
+            public ElementDefinitionInfo Element_Expression;                                                                                // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "SearchParameter.component",                                                                                     // MakerGen.cs:393
+                    ElementId = "SearchParameter.component"                                                                                 // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Definition.Write(sDef);                                                                                             // MakerGen.cs:221
+                Element_Expression.Write(sDef);                                                                                             // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Component()                                                                                                         // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 27. SearchParameter.component.definition
-                    this.Element_Definition = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Definition",
-                        Path= "SearchParameter.component.definition",
-                        Id = "SearchParameter.component.definition",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Canonical
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/SearchParameter"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Definition = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Definition",                                                                                        // MakerGen.cs:236
+                        Path= "SearchParameter.component.definition",                                                                       // MakerGen.cs:237
+                        Id = "SearchParameter.component.definition",                                                                        // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                         // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:304
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/SearchParameter"                                               // MakerGen.cs:304
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 28. SearchParameter.component.expression
-                    this.Element_Expression = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Expression",
-                        Path= "SearchParameter.component.expression",
-                        Id = "SearchParameter.component.expression",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Expression = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Expression",                                                                                        // MakerGen.cs:236
+                        Path= "SearchParameter.component.expression",                                                                       // MakerGen.cs:237
+                        Id = "SearchParameter.component.expression",                                                                        // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 1. SearchParameter.url
-        public ElementDefinitionInfo Element_Url;
+        public ElementDefinitionInfo Element_Url;                                                                                           // MakerGen.cs:217
         // 2. SearchParameter.version
-        public ElementDefinitionInfo Element_Version;
+        public ElementDefinitionInfo Element_Version;                                                                                       // MakerGen.cs:217
         // 3. SearchParameter.name
-        public ElementDefinitionInfo Element_Name;
+        public ElementDefinitionInfo Element_Name;                                                                                          // MakerGen.cs:217
         // 4. SearchParameter.derivedFrom
-        public ElementDefinitionInfo Element_DerivedFrom;
+        public ElementDefinitionInfo Element_DerivedFrom;                                                                                   // MakerGen.cs:217
         // 5. SearchParameter.status
-        public ElementDefinitionInfo Element_Status;
+        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:217
         // 6. SearchParameter.experimental
-        public ElementDefinitionInfo Element_Experimental;
+        public ElementDefinitionInfo Element_Experimental;                                                                                  // MakerGen.cs:217
         // 7. SearchParameter.date
-        public ElementDefinitionInfo Element_Date;
+        public ElementDefinitionInfo Element_Date;                                                                                          // MakerGen.cs:217
         // 8. SearchParameter.publisher
-        public ElementDefinitionInfo Element_Publisher;
+        public ElementDefinitionInfo Element_Publisher;                                                                                     // MakerGen.cs:217
         // 9. SearchParameter.contact
-        public ElementDefinitionInfo Element_Contact;
+        public ElementDefinitionInfo Element_Contact;                                                                                       // MakerGen.cs:217
         // 10. SearchParameter.description
-        public ElementDefinitionInfo Element_Description;
+        public ElementDefinitionInfo Element_Description;                                                                                   // MakerGen.cs:217
         // 11. SearchParameter.useContext
-        public ElementDefinitionInfo Element_UseContext;
+        public ElementDefinitionInfo Element_UseContext;                                                                                    // MakerGen.cs:217
         // 12. SearchParameter.jurisdiction
-        public ElementDefinitionInfo Element_Jurisdiction;
+        public ElementDefinitionInfo Element_Jurisdiction;                                                                                  // MakerGen.cs:217
         // 13. SearchParameter.purpose
-        public ElementDefinitionInfo Element_Purpose;
+        public ElementDefinitionInfo Element_Purpose;                                                                                       // MakerGen.cs:217
         // 14. SearchParameter.code
-        public ElementDefinitionInfo Element_Code;
+        public ElementDefinitionInfo Element_Code;                                                                                          // MakerGen.cs:217
         // 15. SearchParameter.base
-        public ElementDefinitionInfo Element_Base;
+        public ElementDefinitionInfo Element_Base;                                                                                          // MakerGen.cs:217
         // 16. SearchParameter.type
-        public ElementDefinitionInfo Element_Type;
+        public ElementDefinitionInfo Element_Type;                                                                                          // MakerGen.cs:217
         // 17. SearchParameter.expression
-        public ElementDefinitionInfo Element_Expression;
+        public ElementDefinitionInfo Element_Expression;                                                                                    // MakerGen.cs:217
         // 18. SearchParameter.xpath
-        public ElementDefinitionInfo Element_Xpath;
+        public ElementDefinitionInfo Element_Xpath;                                                                                         // MakerGen.cs:217
         // 19. SearchParameter.xpathUsage
-        public ElementDefinitionInfo Element_XpathUsage;
+        public ElementDefinitionInfo Element_XpathUsage;                                                                                    // MakerGen.cs:217
         // 20. SearchParameter.target
-        public ElementDefinitionInfo Element_Target;
+        public ElementDefinitionInfo Element_Target;                                                                                        // MakerGen.cs:217
         // 21. SearchParameter.multipleOr
-        public ElementDefinitionInfo Element_MultipleOr;
+        public ElementDefinitionInfo Element_MultipleOr;                                                                                    // MakerGen.cs:217
         // 22. SearchParameter.multipleAnd
-        public ElementDefinitionInfo Element_MultipleAnd;
+        public ElementDefinitionInfo Element_MultipleAnd;                                                                                   // MakerGen.cs:217
         // 23. SearchParameter.comparator
-        public ElementDefinitionInfo Element_Comparator;
+        public ElementDefinitionInfo Element_Comparator;                                                                                    // MakerGen.cs:217
         // 24. SearchParameter.modifier
-        public ElementDefinitionInfo Element_Modifier;
+        public ElementDefinitionInfo Element_Modifier;                                                                                      // MakerGen.cs:217
         // 25. SearchParameter.chain
-        public ElementDefinitionInfo Element_Chain;
+        public ElementDefinitionInfo Element_Chain;                                                                                         // MakerGen.cs:217
         // 26. SearchParameter.component
-        public ElementDefinitionInfo Element_Component;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "SearchParameter",
-                ElementId = "SearchParameter"
-            });
-            Element_Url.Write(sDef);
-            Element_Version.Write(sDef);
-            Element_Name.Write(sDef);
-            Element_DerivedFrom.Write(sDef);
-            Element_Status.Write(sDef);
-            Element_Experimental.Write(sDef);
-            Element_Date.Write(sDef);
-            Element_Publisher.Write(sDef);
-            Element_Contact.Write(sDef);
-            Element_Description.Write(sDef);
-            Element_UseContext.Write(sDef);
-            Element_Jurisdiction.Write(sDef);
-            Element_Purpose.Write(sDef);
-            Element_Code.Write(sDef);
-            Element_Base.Write(sDef);
-            Element_Type.Write(sDef);
-            Element_Expression.Write(sDef);
-            Element_Xpath.Write(sDef);
-            Element_XpathUsage.Write(sDef);
-            Element_Target.Write(sDef);
-            Element_MultipleOr.Write(sDef);
-            Element_MultipleAnd.Write(sDef);
-            Element_Comparator.Write(sDef);
-            Element_Modifier.Write(sDef);
-            Element_Chain.Write(sDef);
-            Element_Component.Write(sDef);
-        }
-        
-        public Resource_SearchParameter()
-        {
-            {
+        public ElementDefinitionInfo Element_Component;                                                                                     // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "SearchParameter",                                                                                                   // MakerGen.cs:393
+                ElementId = "SearchParameter"                                                                                               // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Url.Write(sDef);                                                                                                        // MakerGen.cs:221
+            Element_Version.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Name.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_DerivedFrom.Write(sDef);                                                                                                // MakerGen.cs:221
+            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Experimental.Write(sDef);                                                                                               // MakerGen.cs:221
+            Element_Date.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Publisher.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_Contact.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Description.Write(sDef);                                                                                                // MakerGen.cs:221
+            Element_UseContext.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Jurisdiction.Write(sDef);                                                                                               // MakerGen.cs:221
+            Element_Purpose.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Code.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Base.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Type.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Expression.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Xpath.Write(sDef);                                                                                                      // MakerGen.cs:221
+            Element_XpathUsage.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Target.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_MultipleOr.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_MultipleAnd.Write(sDef);                                                                                                // MakerGen.cs:221
+            Element_Comparator.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Modifier.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_Chain.Write(sDef);                                                                                                      // MakerGen.cs:221
+            Element_Component.Write(sDef);                                                                                                  // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Resource_SearchParameter()                                                                                                   // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. SearchParameter.url
-                this.Element_Url = new ElementDefinitionInfo
-                {
-                    Name = "Element_Url",
-                    Path= "SearchParameter.url",
-                    Id = "SearchParameter.url",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Url = new ElementDefinitionInfo                                                                                // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Url",                                                                                                   // MakerGen.cs:236
+                    Path= "SearchParameter.url",                                                                                            // MakerGen.cs:237
+                    Id = "SearchParameter.url",                                                                                             // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                                   // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. SearchParameter.version
-                this.Element_Version = new ElementDefinitionInfo
-                {
-                    Name = "Element_Version",
-                    Path= "SearchParameter.version",
-                    Id = "SearchParameter.version",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Version = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Version",                                                                                               // MakerGen.cs:236
+                    Path= "SearchParameter.version",                                                                                        // MakerGen.cs:237
+                    Id = "SearchParameter.version",                                                                                         // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 3. SearchParameter.name
-                this.Element_Name = new ElementDefinitionInfo
-                {
-                    Name = "Element_Name",
-                    Path= "SearchParameter.name",
-                    Id = "SearchParameter.name",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Name = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Name",                                                                                                  // MakerGen.cs:236
+                    Path= "SearchParameter.name",                                                                                           // MakerGen.cs:237
+                    Id = "SearchParameter.name",                                                                                            // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 4. SearchParameter.derivedFrom
-                this.Element_DerivedFrom = new ElementDefinitionInfo
-                {
-                    Name = "Element_DerivedFrom",
-                    Path= "SearchParameter.derivedFrom",
-                    Id = "SearchParameter.derivedFrom",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/SearchParameter"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_DerivedFrom = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_DerivedFrom",                                                                                           // MakerGen.cs:236
+                    Path= "SearchParameter.derivedFrom",                                                                                    // MakerGen.cs:237
+                    Id = "SearchParameter.derivedFrom",                                                                                     // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                             // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:304
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/SearchParameter"                                                   // MakerGen.cs:304
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 5. SearchParameter.status
-                this.Element_Status = new ElementDefinitionInfo
-                {
-                    Name = "Element_Status",
-                    Path= "SearchParameter.status",
-                    Id = "SearchParameter.status",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Status",                                                                                                // MakerGen.cs:236
+                    Path= "SearchParameter.status",                                                                                         // MakerGen.cs:237
+                    Id = "SearchParameter.status",                                                                                          // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 6. SearchParameter.experimental
-                this.Element_Experimental = new ElementDefinitionInfo
-                {
-                    Name = "Element_Experimental",
-                    Path= "SearchParameter.experimental",
-                    Id = "SearchParameter.experimental",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Experimental = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Experimental",                                                                                          // MakerGen.cs:236
+                    Path= "SearchParameter.experimental",                                                                                   // MakerGen.cs:237
+                    Id = "SearchParameter.experimental",                                                                                    // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 7. SearchParameter.date
-                this.Element_Date = new ElementDefinitionInfo
-                {
-                    Name = "Element_Date",
-                    Path= "SearchParameter.date",
-                    Id = "SearchParameter.date",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Date = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Date",                                                                                                  // MakerGen.cs:236
+                    Path= "SearchParameter.date",                                                                                           // MakerGen.cs:237
+                    Id = "SearchParameter.date",                                                                                            // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 8. SearchParameter.publisher
-                this.Element_Publisher = new ElementDefinitionInfo
-                {
-                    Name = "Element_Publisher",
-                    Path= "SearchParameter.publisher",
-                    Id = "SearchParameter.publisher",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Publisher = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Publisher",                                                                                             // MakerGen.cs:236
+                    Path= "SearchParameter.publisher",                                                                                      // MakerGen.cs:237
+                    Id = "SearchParameter.publisher",                                                                                       // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 9. SearchParameter.contact
-                this.Element_Contact = new ElementDefinitionInfo
-                {
-                    Name = "Element_Contact",
-                    Path= "SearchParameter.contact",
-                    Id = "SearchParameter.contact",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Contact = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Contact",                                                                                               // MakerGen.cs:236
+                    Path= "SearchParameter.contact",                                                                                        // MakerGen.cs:237
+                    Id = "SearchParameter.contact",                                                                                         // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                                // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 10. SearchParameter.description
-                this.Element_Description = new ElementDefinitionInfo
-                {
-                    Name = "Element_Description",
-                    Path= "SearchParameter.description",
-                    Id = "SearchParameter.description",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Description = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Description",                                                                                           // MakerGen.cs:236
+                    Path= "SearchParameter.description",                                                                                    // MakerGen.cs:237
+                    Id = "SearchParameter.description",                                                                                     // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 11. SearchParameter.useContext
-                this.Element_UseContext = new ElementDefinitionInfo
-                {
-                    Name = "Element_UseContext",
-                    Path= "SearchParameter.useContext",
-                    Id = "SearchParameter.useContext",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_UsageContext
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_UseContext = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_UseContext",                                                                                            // MakerGen.cs:236
+                    Path= "SearchParameter.useContext",                                                                                     // MakerGen.cs:237
+                    Id = "SearchParameter.useContext",                                                                                      // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_UsageContext                                                                 // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 12. SearchParameter.jurisdiction
-                this.Element_Jurisdiction = new ElementDefinitionInfo
-                {
-                    Name = "Element_Jurisdiction",
-                    Path= "SearchParameter.jurisdiction",
-                    Id = "SearchParameter.jurisdiction",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Jurisdiction = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Jurisdiction",                                                                                          // MakerGen.cs:236
+                    Path= "SearchParameter.jurisdiction",                                                                                   // MakerGen.cs:237
+                    Id = "SearchParameter.jurisdiction",                                                                                    // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 13. SearchParameter.purpose
-                this.Element_Purpose = new ElementDefinitionInfo
-                {
-                    Name = "Element_Purpose",
-                    Path= "SearchParameter.purpose",
-                    Id = "SearchParameter.purpose",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Purpose = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Purpose",                                                                                               // MakerGen.cs:236
+                    Path= "SearchParameter.purpose",                                                                                        // MakerGen.cs:237
+                    Id = "SearchParameter.purpose",                                                                                         // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 14. SearchParameter.code
-                this.Element_Code = new ElementDefinitionInfo
-                {
-                    Name = "Element_Code",
-                    Path= "SearchParameter.code",
-                    Id = "SearchParameter.code",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Code = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Code",                                                                                                  // MakerGen.cs:236
+                    Path= "SearchParameter.code",                                                                                           // MakerGen.cs:237
+                    Id = "SearchParameter.code",                                                                                            // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 15. SearchParameter.base
-                this.Element_Base = new ElementDefinitionInfo
-                {
-                    Name = "Element_Base",
-                    Path= "SearchParameter.base",
-                    Id = "SearchParameter.base",
-                    Min = 1,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Base = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Base",                                                                                                  // MakerGen.cs:236
+                    Path= "SearchParameter.base",                                                                                           // MakerGen.cs:237
+                    Id = "SearchParameter.base",                                                                                            // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 16. SearchParameter.type
-                this.Element_Type = new ElementDefinitionInfo
-                {
-                    Name = "Element_Type",
-                    Path= "SearchParameter.type",
-                    Id = "SearchParameter.type",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Type = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Type",                                                                                                  // MakerGen.cs:236
+                    Path= "SearchParameter.type",                                                                                           // MakerGen.cs:237
+                    Id = "SearchParameter.type",                                                                                            // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 17. SearchParameter.expression
-                this.Element_Expression = new ElementDefinitionInfo
-                {
-                    Name = "Element_Expression",
-                    Path= "SearchParameter.expression",
-                    Id = "SearchParameter.expression",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Expression = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Expression",                                                                                            // MakerGen.cs:236
+                    Path= "SearchParameter.expression",                                                                                     // MakerGen.cs:237
+                    Id = "SearchParameter.expression",                                                                                      // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 18. SearchParameter.xpath
-                this.Element_Xpath = new ElementDefinitionInfo
-                {
-                    Name = "Element_Xpath",
-                    Path= "SearchParameter.xpath",
-                    Id = "SearchParameter.xpath",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Xpath = new ElementDefinitionInfo                                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Xpath",                                                                                                 // MakerGen.cs:236
+                    Path= "SearchParameter.xpath",                                                                                          // MakerGen.cs:237
+                    Id = "SearchParameter.xpath",                                                                                           // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 19. SearchParameter.xpathUsage
-                this.Element_XpathUsage = new ElementDefinitionInfo
-                {
-                    Name = "Element_XpathUsage",
-                    Path= "SearchParameter.xpathUsage",
-                    Id = "SearchParameter.xpathUsage",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_XpathUsage = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_XpathUsage",                                                                                            // MakerGen.cs:236
+                    Path= "SearchParameter.xpathUsage",                                                                                     // MakerGen.cs:237
+                    Id = "SearchParameter.xpathUsage",                                                                                      // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 20. SearchParameter.target
-                this.Element_Target = new ElementDefinitionInfo
-                {
-                    Name = "Element_Target",
-                    Path= "SearchParameter.target",
-                    Id = "SearchParameter.target",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Target = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Target",                                                                                                // MakerGen.cs:236
+                    Path= "SearchParameter.target",                                                                                         // MakerGen.cs:237
+                    Id = "SearchParameter.target",                                                                                          // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 21. SearchParameter.multipleOr
-                this.Element_MultipleOr = new ElementDefinitionInfo
-                {
-                    Name = "Element_MultipleOr",
-                    Path= "SearchParameter.multipleOr",
-                    Id = "SearchParameter.multipleOr",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_MultipleOr = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_MultipleOr",                                                                                            // MakerGen.cs:236
+                    Path= "SearchParameter.multipleOr",                                                                                     // MakerGen.cs:237
+                    Id = "SearchParameter.multipleOr",                                                                                      // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 22. SearchParameter.multipleAnd
-                this.Element_MultipleAnd = new ElementDefinitionInfo
-                {
-                    Name = "Element_MultipleAnd",
-                    Path= "SearchParameter.multipleAnd",
-                    Id = "SearchParameter.multipleAnd",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_MultipleAnd = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_MultipleAnd",                                                                                           // MakerGen.cs:236
+                    Path= "SearchParameter.multipleAnd",                                                                                    // MakerGen.cs:237
+                    Id = "SearchParameter.multipleAnd",                                                                                     // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 23. SearchParameter.comparator
-                this.Element_Comparator = new ElementDefinitionInfo
-                {
-                    Name = "Element_Comparator",
-                    Path= "SearchParameter.comparator",
-                    Id = "SearchParameter.comparator",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Comparator = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Comparator",                                                                                            // MakerGen.cs:236
+                    Path= "SearchParameter.comparator",                                                                                     // MakerGen.cs:237
+                    Id = "SearchParameter.comparator",                                                                                      // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 24. SearchParameter.modifier
-                this.Element_Modifier = new ElementDefinitionInfo
-                {
-                    Name = "Element_Modifier",
-                    Path= "SearchParameter.modifier",
-                    Id = "SearchParameter.modifier",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Modifier = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Modifier",                                                                                              // MakerGen.cs:236
+                    Path= "SearchParameter.modifier",                                                                                       // MakerGen.cs:237
+                    Id = "SearchParameter.modifier",                                                                                        // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 25. SearchParameter.chain
-                this.Element_Chain = new ElementDefinitionInfo
-                {
-                    Name = "Element_Chain",
-                    Path= "SearchParameter.chain",
-                    Id = "SearchParameter.chain",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Chain = new ElementDefinitionInfo                                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Chain",                                                                                                 // MakerGen.cs:236
+                    Path= "SearchParameter.chain",                                                                                          // MakerGen.cs:237
+                    Id = "SearchParameter.chain",                                                                                           // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 26. SearchParameter.component
-                this.Element_Component = new ElementDefinitionInfo
-                {
-                    Name = "Element_Component",
-                    Path= "SearchParameter.component",
-                    Id = "SearchParameter.component",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Component
-                        {
-                        }
-                    }
-                };
-            }
-            this.Name = "SearchParameter";
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/SearchParameter";
-        }
-    }
-}
+                this.Element_Component = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Component",                                                                                             // MakerGen.cs:236
+                    Path= "SearchParameter.component",                                                                                      // MakerGen.cs:237
+                    Id = "SearchParameter.component",                                                                                       // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Component                                                                                                  // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            this.Name = "SearchParameter";                                                                                                  // MakerGen.cs:468
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/SearchParameter";                                                           // MakerGen.cs:469
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:449

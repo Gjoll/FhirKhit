@@ -35,6 +35,11 @@ namespace FhirKhit.Tools.R2
             }
         }
 
+        public StructureDefinition GetResource(String uri)
+        {
+            return this.source.ResolveByUri(uri) as StructureDefinition;
+        }
+
         /// <summary>
         /// To save time, store all structure definitions in a fhir bundle file. This need only be run when we get a new 
         /// FHIR version.

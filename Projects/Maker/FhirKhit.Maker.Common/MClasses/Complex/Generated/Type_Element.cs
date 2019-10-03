@@ -1,12 +1,12 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Complex
-{
-    #region Json
+using System;                                                                                                                               // MakerGen.cs:490
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:491
+using System.IO;                                                                                                                            // MakerGen.cs:492
+using System.Linq;                                                                                                                          // MakerGen.cs:493
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:494
+                                                                                                                                            // MakerGen.cs:495
+namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:496
+{                                                                                                                                           // MakerGen.cs:497
+    #region Json                                                                                                                            // MakerGen.cs:498
     #if NEVER
     {
       "resourceType": "StructureDefinition",
@@ -97,63 +97,63 @@ namespace FhirKhit.Maker.Common.Complex
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:502
     /// <summary>
     /// Fhir complex 'Element'
     /// </summary>
     // 0. Element
-    public partial class Type_Element : FhirKhit.Maker.Common.Complex.ComplexBase
-    {
+    public partial class Type_Element : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 1. Element.id
-        public ElementDefinitionInfo Element_Id;
+        public ElementDefinitionInfo Element_Id;                                                                                            // MakerGen.cs:217
         // 2. Element.extension
-        public ElementDefinitionInfo Element_Extension;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "Element",
-                ElementId = "Element"
-            });
-            Element_Id.Write(sDef);
-            Element_Extension.Write(sDef);
-        }
-        
-        public Type_Element()
-        {
-            {
+        public ElementDefinitionInfo Element_Extension;                                                                                     // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "Element",                                                                                                           // MakerGen.cs:393
+                ElementId = "Element"                                                                                                       // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Id.Write(sDef);                                                                                                         // MakerGen.cs:221
+            Element_Extension.Write(sDef);                                                                                                  // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Type_Element()                                                                                                               // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. Element.id
-                this.Element_Id = new ElementDefinitionInfo
-                {
-                    Name = "Element_Id",
-                    Path= "Element.id",
-                    Id = "Element.id",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                    }
-                };
-            }
-            {
+                this.Element_Id = new ElementDefinitionInfo                                                                                 // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Id",                                                                                                    // MakerGen.cs:236
+                    Path= "Element.id",                                                                                                     // MakerGen.cs:237
+                    Id = "Element.id",                                                                                                      // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. Element.extension
-                this.Element_Extension = new ElementDefinitionInfo
-                {
-                    Name = "Element_Extension",
-                    Path= "Element.extension",
-                    Id = "Element.extension",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Extension
-                        {
-                        }
-                    }
-                };
-            }
-        }
-    }
-}
+                this.Element_Extension = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Extension",                                                                                             // MakerGen.cs:236
+                    Path= "Element.extension",                                                                                              // MakerGen.cs:237
+                    Id = "Element.extension",                                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Extension                                                                    // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:507

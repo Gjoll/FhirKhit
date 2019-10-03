@@ -1,13 +1,13 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Resource
-{
-    #region Json
-    #if NEVER
+using System;                                                                                                                               // MakerGen.cs:432
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:433
+using System.IO;                                                                                                                            // MakerGen.cs:434
+using System.Linq;                                                                                                                          // MakerGen.cs:435
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:436
+                                                                                                                                            // MakerGen.cs:437
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:438
+{                                                                                                                                           // MakerGen.cs:439
+    #region Json                                                                                                                            // MakerGen.cs:440
+    #if NEVER                                                                                                                               // MakerGen.cs:441
     {
       "resourceType": "StructureDefinition",
       "id": "Library",
@@ -575,655 +575,655 @@ namespace FhirKhit.Maker.Common.Resource
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:444
     /// <summary>
     /// Fhir resource 'Library'
     /// </summary>
     // 0. Library
-    public partial class Resource_Library : FhirKhit.Maker.Common.Resource.Resource_DomainResource
-    {
+    public partial class Resource_Library : FhirKhit.Maker.Common.Resource.Resource_DomainResource                                          // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 1. Library.url
-        public ElementDefinitionInfo Element_Url;
+        public ElementDefinitionInfo Element_Url;                                                                                           // MakerGen.cs:217
         // 2. Library.identifier
-        public ElementDefinitionInfo Element_Identifier;
+        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:217
         // 3. Library.version
-        public ElementDefinitionInfo Element_Version;
+        public ElementDefinitionInfo Element_Version;                                                                                       // MakerGen.cs:217
         // 4. Library.name
-        public ElementDefinitionInfo Element_Name;
+        public ElementDefinitionInfo Element_Name;                                                                                          // MakerGen.cs:217
         // 5. Library.title
-        public ElementDefinitionInfo Element_Title;
+        public ElementDefinitionInfo Element_Title;                                                                                         // MakerGen.cs:217
         // 6. Library.subtitle
-        public ElementDefinitionInfo Element_Subtitle;
+        public ElementDefinitionInfo Element_Subtitle;                                                                                      // MakerGen.cs:217
         // 7. Library.status
-        public ElementDefinitionInfo Element_Status;
+        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:217
         // 8. Library.experimental
-        public ElementDefinitionInfo Element_Experimental;
+        public ElementDefinitionInfo Element_Experimental;                                                                                  // MakerGen.cs:217
         // 9. Library.type
-        public ElementDefinitionInfo Element_Type;
+        public ElementDefinitionInfo Element_Type;                                                                                          // MakerGen.cs:217
         // 10. Library.subject[x]
-        public ElementDefinitionInfo Element_Subject;
+        public ElementDefinitionInfo Element_Subject;                                                                                       // MakerGen.cs:217
         // 11. Library.date
-        public ElementDefinitionInfo Element_Date;
+        public ElementDefinitionInfo Element_Date;                                                                                          // MakerGen.cs:217
         // 12. Library.publisher
-        public ElementDefinitionInfo Element_Publisher;
+        public ElementDefinitionInfo Element_Publisher;                                                                                     // MakerGen.cs:217
         // 13. Library.contact
-        public ElementDefinitionInfo Element_Contact;
+        public ElementDefinitionInfo Element_Contact;                                                                                       // MakerGen.cs:217
         // 14. Library.description
-        public ElementDefinitionInfo Element_Description;
+        public ElementDefinitionInfo Element_Description;                                                                                   // MakerGen.cs:217
         // 15. Library.useContext
-        public ElementDefinitionInfo Element_UseContext;
+        public ElementDefinitionInfo Element_UseContext;                                                                                    // MakerGen.cs:217
         // 16. Library.jurisdiction
-        public ElementDefinitionInfo Element_Jurisdiction;
+        public ElementDefinitionInfo Element_Jurisdiction;                                                                                  // MakerGen.cs:217
         // 17. Library.purpose
-        public ElementDefinitionInfo Element_Purpose;
+        public ElementDefinitionInfo Element_Purpose;                                                                                       // MakerGen.cs:217
         // 18. Library.usage
-        public ElementDefinitionInfo Element_Usage;
+        public ElementDefinitionInfo Element_Usage;                                                                                         // MakerGen.cs:217
         // 19. Library.copyright
-        public ElementDefinitionInfo Element_Copyright;
+        public ElementDefinitionInfo Element_Copyright;                                                                                     // MakerGen.cs:217
         // 20. Library.approvalDate
-        public ElementDefinitionInfo Element_ApprovalDate;
+        public ElementDefinitionInfo Element_ApprovalDate;                                                                                  // MakerGen.cs:217
         // 21. Library.lastReviewDate
-        public ElementDefinitionInfo Element_LastReviewDate;
+        public ElementDefinitionInfo Element_LastReviewDate;                                                                                // MakerGen.cs:217
         // 22. Library.effectivePeriod
-        public ElementDefinitionInfo Element_EffectivePeriod;
+        public ElementDefinitionInfo Element_EffectivePeriod;                                                                               // MakerGen.cs:217
         // 23. Library.topic
-        public ElementDefinitionInfo Element_Topic;
+        public ElementDefinitionInfo Element_Topic;                                                                                         // MakerGen.cs:217
         // 24. Library.author
-        public ElementDefinitionInfo Element_Author;
+        public ElementDefinitionInfo Element_Author;                                                                                        // MakerGen.cs:217
         // 25. Library.editor
-        public ElementDefinitionInfo Element_Editor;
+        public ElementDefinitionInfo Element_Editor;                                                                                        // MakerGen.cs:217
         // 26. Library.reviewer
-        public ElementDefinitionInfo Element_Reviewer;
+        public ElementDefinitionInfo Element_Reviewer;                                                                                      // MakerGen.cs:217
         // 27. Library.endorser
-        public ElementDefinitionInfo Element_Endorser;
+        public ElementDefinitionInfo Element_Endorser;                                                                                      // MakerGen.cs:217
         // 28. Library.relatedArtifact
-        public ElementDefinitionInfo Element_RelatedArtifact;
+        public ElementDefinitionInfo Element_RelatedArtifact;                                                                               // MakerGen.cs:217
         // 29. Library.parameter
-        public ElementDefinitionInfo Element_Parameter;
+        public ElementDefinitionInfo Element_Parameter;                                                                                     // MakerGen.cs:217
         // 30. Library.dataRequirement
-        public ElementDefinitionInfo Element_DataRequirement;
+        public ElementDefinitionInfo Element_DataRequirement;                                                                               // MakerGen.cs:217
         // 31. Library.content
-        public ElementDefinitionInfo Element_Content;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "Library",
-                ElementId = "Library"
-            });
-            Element_Url.Write(sDef);
-            Element_Identifier.Write(sDef);
-            Element_Version.Write(sDef);
-            Element_Name.Write(sDef);
-            Element_Title.Write(sDef);
-            Element_Subtitle.Write(sDef);
-            Element_Status.Write(sDef);
-            Element_Experimental.Write(sDef);
-            Element_Type.Write(sDef);
-            Element_Subject.Write(sDef);
-            Element_Date.Write(sDef);
-            Element_Publisher.Write(sDef);
-            Element_Contact.Write(sDef);
-            Element_Description.Write(sDef);
-            Element_UseContext.Write(sDef);
-            Element_Jurisdiction.Write(sDef);
-            Element_Purpose.Write(sDef);
-            Element_Usage.Write(sDef);
-            Element_Copyright.Write(sDef);
-            Element_ApprovalDate.Write(sDef);
-            Element_LastReviewDate.Write(sDef);
-            Element_EffectivePeriod.Write(sDef);
-            Element_Topic.Write(sDef);
-            Element_Author.Write(sDef);
-            Element_Editor.Write(sDef);
-            Element_Reviewer.Write(sDef);
-            Element_Endorser.Write(sDef);
-            Element_RelatedArtifact.Write(sDef);
-            Element_Parameter.Write(sDef);
-            Element_DataRequirement.Write(sDef);
-            Element_Content.Write(sDef);
-        }
-        
-        public Resource_Library()
-        {
-            {
+        public ElementDefinitionInfo Element_Content;                                                                                       // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "Library",                                                                                                           // MakerGen.cs:393
+                ElementId = "Library"                                                                                                       // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Url.Write(sDef);                                                                                                        // MakerGen.cs:221
+            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Version.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Name.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Title.Write(sDef);                                                                                                      // MakerGen.cs:221
+            Element_Subtitle.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Experimental.Write(sDef);                                                                                               // MakerGen.cs:221
+            Element_Type.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Subject.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Date.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Publisher.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_Contact.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Description.Write(sDef);                                                                                                // MakerGen.cs:221
+            Element_UseContext.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Jurisdiction.Write(sDef);                                                                                               // MakerGen.cs:221
+            Element_Purpose.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Usage.Write(sDef);                                                                                                      // MakerGen.cs:221
+            Element_Copyright.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_ApprovalDate.Write(sDef);                                                                                               // MakerGen.cs:221
+            Element_LastReviewDate.Write(sDef);                                                                                             // MakerGen.cs:221
+            Element_EffectivePeriod.Write(sDef);                                                                                            // MakerGen.cs:221
+            Element_Topic.Write(sDef);                                                                                                      // MakerGen.cs:221
+            Element_Author.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Editor.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Reviewer.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_Endorser.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_RelatedArtifact.Write(sDef);                                                                                            // MakerGen.cs:221
+            Element_Parameter.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_DataRequirement.Write(sDef);                                                                                            // MakerGen.cs:221
+            Element_Content.Write(sDef);                                                                                                    // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Resource_Library()                                                                                                           // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. Library.url
-                this.Element_Url = new ElementDefinitionInfo
-                {
-                    Name = "Element_Url",
-                    Path= "Library.url",
-                    Id = "Library.url",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Url = new ElementDefinitionInfo                                                                                // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Url",                                                                                                   // MakerGen.cs:236
+                    Path= "Library.url",                                                                                                    // MakerGen.cs:237
+                    Id = "Library.url",                                                                                                     // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                                   // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. Library.identifier
-                this.Element_Identifier = new ElementDefinitionInfo
-                {
-                    Name = "Element_Identifier",
-                    Path= "Library.identifier",
-                    Id = "Library.identifier",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:236
+                    Path= "Library.identifier",                                                                                             // MakerGen.cs:237
+                    Id = "Library.identifier",                                                                                              // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 3. Library.version
-                this.Element_Version = new ElementDefinitionInfo
-                {
-                    Name = "Element_Version",
-                    Path= "Library.version",
-                    Id = "Library.version",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Version = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Version",                                                                                               // MakerGen.cs:236
+                    Path= "Library.version",                                                                                                // MakerGen.cs:237
+                    Id = "Library.version",                                                                                                 // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 4. Library.name
-                this.Element_Name = new ElementDefinitionInfo
-                {
-                    Name = "Element_Name",
-                    Path= "Library.name",
-                    Id = "Library.name",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Name = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Name",                                                                                                  // MakerGen.cs:236
+                    Path= "Library.name",                                                                                                   // MakerGen.cs:237
+                    Id = "Library.name",                                                                                                    // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 5. Library.title
-                this.Element_Title = new ElementDefinitionInfo
-                {
-                    Name = "Element_Title",
-                    Path= "Library.title",
-                    Id = "Library.title",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Title = new ElementDefinitionInfo                                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Title",                                                                                                 // MakerGen.cs:236
+                    Path= "Library.title",                                                                                                  // MakerGen.cs:237
+                    Id = "Library.title",                                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 6. Library.subtitle
-                this.Element_Subtitle = new ElementDefinitionInfo
-                {
-                    Name = "Element_Subtitle",
-                    Path= "Library.subtitle",
-                    Id = "Library.subtitle",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Subtitle = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Subtitle",                                                                                              // MakerGen.cs:236
+                    Path= "Library.subtitle",                                                                                               // MakerGen.cs:237
+                    Id = "Library.subtitle",                                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 7. Library.status
-                this.Element_Status = new ElementDefinitionInfo
-                {
-                    Name = "Element_Status",
-                    Path= "Library.status",
-                    Id = "Library.status",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Status",                                                                                                // MakerGen.cs:236
+                    Path= "Library.status",                                                                                                 // MakerGen.cs:237
+                    Id = "Library.status",                                                                                                  // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 8. Library.experimental
-                this.Element_Experimental = new ElementDefinitionInfo
-                {
-                    Name = "Element_Experimental",
-                    Path= "Library.experimental",
-                    Id = "Library.experimental",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Experimental = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Experimental",                                                                                          // MakerGen.cs:236
+                    Path= "Library.experimental",                                                                                           // MakerGen.cs:237
+                    Id = "Library.experimental",                                                                                            // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 9. Library.type
-                this.Element_Type = new ElementDefinitionInfo
-                {
-                    Name = "Element_Type",
-                    Path= "Library.type",
-                    Id = "Library.type",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Type = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Type",                                                                                                  // MakerGen.cs:236
+                    Path= "Library.type",                                                                                                   // MakerGen.cs:237
+                    Id = "Library.type",                                                                                                    // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 10. Library.subject[x]
-                this.Element_Subject = new ElementDefinitionInfo
-                {
-                    Name = "Element_Subject",
-                    Path= "Library.subject[x]",
-                    Id = "Library.subject[x]",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        },
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Group"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Subject = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Subject",                                                                                               // MakerGen.cs:236
+                    Path= "Library.subject[x]",                                                                                             // MakerGen.cs:237
+                    Id = "Library.subject[x]",                                                                                              // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        },                                                                                                                  // MakerGen.cs:320
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Group"                                                             // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 11. Library.date
-                this.Element_Date = new ElementDefinitionInfo
-                {
-                    Name = "Element_Date",
-                    Path= "Library.date",
-                    Id = "Library.date",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Date = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Date",                                                                                                  // MakerGen.cs:236
+                    Path= "Library.date",                                                                                                   // MakerGen.cs:237
+                    Id = "Library.date",                                                                                                    // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 12. Library.publisher
-                this.Element_Publisher = new ElementDefinitionInfo
-                {
-                    Name = "Element_Publisher",
-                    Path= "Library.publisher",
-                    Id = "Library.publisher",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Publisher = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Publisher",                                                                                             // MakerGen.cs:236
+                    Path= "Library.publisher",                                                                                              // MakerGen.cs:237
+                    Id = "Library.publisher",                                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 13. Library.contact
-                this.Element_Contact = new ElementDefinitionInfo
-                {
-                    Name = "Element_Contact",
-                    Path= "Library.contact",
-                    Id = "Library.contact",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Contact = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Contact",                                                                                               // MakerGen.cs:236
+                    Path= "Library.contact",                                                                                                // MakerGen.cs:237
+                    Id = "Library.contact",                                                                                                 // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                                // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 14. Library.description
-                this.Element_Description = new ElementDefinitionInfo
-                {
-                    Name = "Element_Description",
-                    Path= "Library.description",
-                    Id = "Library.description",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Description = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Description",                                                                                           // MakerGen.cs:236
+                    Path= "Library.description",                                                                                            // MakerGen.cs:237
+                    Id = "Library.description",                                                                                             // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 15. Library.useContext
-                this.Element_UseContext = new ElementDefinitionInfo
-                {
-                    Name = "Element_UseContext",
-                    Path= "Library.useContext",
-                    Id = "Library.useContext",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_UsageContext
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_UseContext = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_UseContext",                                                                                            // MakerGen.cs:236
+                    Path= "Library.useContext",                                                                                             // MakerGen.cs:237
+                    Id = "Library.useContext",                                                                                              // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_UsageContext                                                                 // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 16. Library.jurisdiction
-                this.Element_Jurisdiction = new ElementDefinitionInfo
-                {
-                    Name = "Element_Jurisdiction",
-                    Path= "Library.jurisdiction",
-                    Id = "Library.jurisdiction",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Jurisdiction = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Jurisdiction",                                                                                          // MakerGen.cs:236
+                    Path= "Library.jurisdiction",                                                                                           // MakerGen.cs:237
+                    Id = "Library.jurisdiction",                                                                                            // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 17. Library.purpose
-                this.Element_Purpose = new ElementDefinitionInfo
-                {
-                    Name = "Element_Purpose",
-                    Path= "Library.purpose",
-                    Id = "Library.purpose",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Purpose = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Purpose",                                                                                               // MakerGen.cs:236
+                    Path= "Library.purpose",                                                                                                // MakerGen.cs:237
+                    Id = "Library.purpose",                                                                                                 // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 18. Library.usage
-                this.Element_Usage = new ElementDefinitionInfo
-                {
-                    Name = "Element_Usage",
-                    Path= "Library.usage",
-                    Id = "Library.usage",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Usage = new ElementDefinitionInfo                                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Usage",                                                                                                 // MakerGen.cs:236
+                    Path= "Library.usage",                                                                                                  // MakerGen.cs:237
+                    Id = "Library.usage",                                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 19. Library.copyright
-                this.Element_Copyright = new ElementDefinitionInfo
-                {
-                    Name = "Element_Copyright",
-                    Path= "Library.copyright",
-                    Id = "Library.copyright",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Copyright = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Copyright",                                                                                             // MakerGen.cs:236
+                    Path= "Library.copyright",                                                                                              // MakerGen.cs:237
+                    Id = "Library.copyright",                                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 20. Library.approvalDate
-                this.Element_ApprovalDate = new ElementDefinitionInfo
-                {
-                    Name = "Element_ApprovalDate",
-                    Path= "Library.approvalDate",
-                    Id = "Library.approvalDate",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Date
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ApprovalDate = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ApprovalDate",                                                                                          // MakerGen.cs:236
+                    Path= "Library.approvalDate",                                                                                           // MakerGen.cs:237
+                    Id = "Library.approvalDate",                                                                                            // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Date                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 21. Library.lastReviewDate
-                this.Element_LastReviewDate = new ElementDefinitionInfo
-                {
-                    Name = "Element_LastReviewDate",
-                    Path= "Library.lastReviewDate",
-                    Id = "Library.lastReviewDate",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Date
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_LastReviewDate = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_LastReviewDate",                                                                                        // MakerGen.cs:236
+                    Path= "Library.lastReviewDate",                                                                                         // MakerGen.cs:237
+                    Id = "Library.lastReviewDate",                                                                                          // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Date                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 22. Library.effectivePeriod
-                this.Element_EffectivePeriod = new ElementDefinitionInfo
-                {
-                    Name = "Element_EffectivePeriod",
-                    Path= "Library.effectivePeriod",
-                    Id = "Library.effectivePeriod",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Period
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_EffectivePeriod = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_EffectivePeriod",                                                                                       // MakerGen.cs:236
+                    Path= "Library.effectivePeriod",                                                                                        // MakerGen.cs:237
+                    Id = "Library.effectivePeriod",                                                                                         // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Period                                                                       // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 23. Library.topic
-                this.Element_Topic = new ElementDefinitionInfo
-                {
-                    Name = "Element_Topic",
-                    Path= "Library.topic",
-                    Id = "Library.topic",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Topic = new ElementDefinitionInfo                                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Topic",                                                                                                 // MakerGen.cs:236
+                    Path= "Library.topic",                                                                                                  // MakerGen.cs:237
+                    Id = "Library.topic",                                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 24. Library.author
-                this.Element_Author = new ElementDefinitionInfo
-                {
-                    Name = "Element_Author",
-                    Path= "Library.author",
-                    Id = "Library.author",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Author = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Author",                                                                                                // MakerGen.cs:236
+                    Path= "Library.author",                                                                                                 // MakerGen.cs:237
+                    Id = "Library.author",                                                                                                  // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                                // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 25. Library.editor
-                this.Element_Editor = new ElementDefinitionInfo
-                {
-                    Name = "Element_Editor",
-                    Path= "Library.editor",
-                    Id = "Library.editor",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Editor = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Editor",                                                                                                // MakerGen.cs:236
+                    Path= "Library.editor",                                                                                                 // MakerGen.cs:237
+                    Id = "Library.editor",                                                                                                  // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                                // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 26. Library.reviewer
-                this.Element_Reviewer = new ElementDefinitionInfo
-                {
-                    Name = "Element_Reviewer",
-                    Path= "Library.reviewer",
-                    Id = "Library.reviewer",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Reviewer = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Reviewer",                                                                                              // MakerGen.cs:236
+                    Path= "Library.reviewer",                                                                                               // MakerGen.cs:237
+                    Id = "Library.reviewer",                                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                                // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 27. Library.endorser
-                this.Element_Endorser = new ElementDefinitionInfo
-                {
-                    Name = "Element_Endorser",
-                    Path= "Library.endorser",
-                    Id = "Library.endorser",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Endorser = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Endorser",                                                                                              // MakerGen.cs:236
+                    Path= "Library.endorser",                                                                                               // MakerGen.cs:237
+                    Id = "Library.endorser",                                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                                // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 28. Library.relatedArtifact
-                this.Element_RelatedArtifact = new ElementDefinitionInfo
-                {
-                    Name = "Element_RelatedArtifact",
-                    Path= "Library.relatedArtifact",
-                    Id = "Library.relatedArtifact",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_RelatedArtifact
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_RelatedArtifact = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_RelatedArtifact",                                                                                       // MakerGen.cs:236
+                    Path= "Library.relatedArtifact",                                                                                        // MakerGen.cs:237
+                    Id = "Library.relatedArtifact",                                                                                         // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_RelatedArtifact                                                              // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 29. Library.parameter
-                this.Element_Parameter = new ElementDefinitionInfo
-                {
-                    Name = "Element_Parameter",
-                    Path= "Library.parameter",
-                    Id = "Library.parameter",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_ParameterDefinition
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Parameter = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Parameter",                                                                                             // MakerGen.cs:236
+                    Path= "Library.parameter",                                                                                              // MakerGen.cs:237
+                    Id = "Library.parameter",                                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_ParameterDefinition                                                          // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 30. Library.dataRequirement
-                this.Element_DataRequirement = new ElementDefinitionInfo
-                {
-                    Name = "Element_DataRequirement",
-                    Path= "Library.dataRequirement",
-                    Id = "Library.dataRequirement",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_DataRequirement
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_DataRequirement = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_DataRequirement",                                                                                       // MakerGen.cs:236
+                    Path= "Library.dataRequirement",                                                                                        // MakerGen.cs:237
+                    Id = "Library.dataRequirement",                                                                                         // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_DataRequirement                                                              // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 31. Library.content
-                this.Element_Content = new ElementDefinitionInfo
-                {
-                    Name = "Element_Content",
-                    Path= "Library.content",
-                    Id = "Library.content",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Attachment
-                        {
-                        }
-                    }
-                };
-            }
-            this.Name = "Library";
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/Library";
-        }
-    }
-}
+                this.Element_Content = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Content",                                                                                               // MakerGen.cs:236
+                    Path= "Library.content",                                                                                                // MakerGen.cs:237
+                    Id = "Library.content",                                                                                                 // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Attachment                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            this.Name = "Library";                                                                                                          // MakerGen.cs:468
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/Library";                                                                   // MakerGen.cs:469
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:449

@@ -1,13 +1,13 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Resource
-{
-    #region Json
-    #if NEVER
+using System;                                                                                                                               // MakerGen.cs:432
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:433
+using System.IO;                                                                                                                            // MakerGen.cs:434
+using System.Linq;                                                                                                                          // MakerGen.cs:435
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:436
+                                                                                                                                            // MakerGen.cs:437
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:438
+{                                                                                                                                           // MakerGen.cs:439
+    #region Json                                                                                                                            // MakerGen.cs:440
+    #if NEVER                                                                                                                               // MakerGen.cs:441
     {
       "resourceType": "StructureDefinition",
       "id": "MedicinalProductPharmaceutical",
@@ -337,528 +337,528 @@ namespace FhirKhit.Maker.Common.Resource
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:444
     /// <summary>
     /// Fhir resource 'MedicinalProductPharmaceutical'
     /// </summary>
     // 0. MedicinalProductPharmaceutical
-    public partial class Resource_MedicinalProductPharmaceutical : FhirKhit.Maker.Common.Resource.Resource_DomainResource
-    {
+    public partial class Resource_MedicinalProductPharmaceutical : FhirKhit.Maker.Common.Resource.Resource_DomainResource                   // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 6. MedicinalProductPharmaceutical.characteristics
-        public partial class Type_Characteristics : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Characteristics : FhirKhit.Maker.Common.Complex.ComplexBase                                               // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 7. MedicinalProductPharmaceutical.characteristics.code
-            public ElementDefinitionInfo Element_Code;
+            public ElementDefinitionInfo Element_Code;                                                                                      // MakerGen.cs:217
             // 8. MedicinalProductPharmaceutical.characteristics.status
-            public ElementDefinitionInfo Element_Status;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "MedicinalProductPharmaceutical.characteristics",
-                    ElementId = "MedicinalProductPharmaceutical.characteristics"
-                });
-                Element_Code.Write(sDef);
-                Element_Status.Write(sDef);
-            }
-            
-            public Type_Characteristics()
-            {
-                {
+            public ElementDefinitionInfo Element_Status;                                                                                    // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "MedicinalProductPharmaceutical.characteristics",                                                                // MakerGen.cs:393
+                    ElementId = "MedicinalProductPharmaceutical.characteristics"                                                            // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Code.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Status.Write(sDef);                                                                                                 // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Characteristics()                                                                                                   // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 7. MedicinalProductPharmaceutical.characteristics.code
-                    this.Element_Code = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Code",
-                        Path= "MedicinalProductPharmaceutical.characteristics.code",
-                        Id = "MedicinalProductPharmaceutical.characteristics.code",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Code = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Code",                                                                                              // MakerGen.cs:236
+                        Path= "MedicinalProductPharmaceutical.characteristics.code",                                                        // MakerGen.cs:237
+                        Id = "MedicinalProductPharmaceutical.characteristics.code",                                                         // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 8. MedicinalProductPharmaceutical.characteristics.status
-                    this.Element_Status = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Status",
-                        Path= "MedicinalProductPharmaceutical.characteristics.status",
-                        Id = "MedicinalProductPharmaceutical.characteristics.status",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Status = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Status",                                                                                            // MakerGen.cs:236
+                        Path= "MedicinalProductPharmaceutical.characteristics.status",                                                      // MakerGen.cs:237
+                        Id = "MedicinalProductPharmaceutical.characteristics.status",                                                       // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 9. MedicinalProductPharmaceutical.routeOfAdministration
-        public partial class Type_RouteOfAdministration : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_RouteOfAdministration : FhirKhit.Maker.Common.Complex.ComplexBase                                         // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 16. MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies
-            public partial class Type_TargetSpecies : FhirKhit.Maker.Common.Complex.ComplexBase
-            {
+            public partial class Type_TargetSpecies : FhirKhit.Maker.Common.Complex.ComplexBase                                             // MakerGen.cs:381
+            {                                                                                                                               // MakerGen.cs:382
                 // 18. MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod
-                public partial class Type_WithdrawalPeriod : FhirKhit.Maker.Common.Complex.ComplexBase
-                {
+                public partial class Type_WithdrawalPeriod : FhirKhit.Maker.Common.Complex.ComplexBase                                      // MakerGen.cs:381
+                {                                                                                                                           // MakerGen.cs:382
                     // 19. MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.tissue
-                    public ElementDefinitionInfo Element_Tissue;
+                    public ElementDefinitionInfo Element_Tissue;                                                                            // MakerGen.cs:217
                     // 20. MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.value
-                    public ElementDefinitionInfo Element_Value;
+                    public ElementDefinitionInfo Element_Value;                                                                             // MakerGen.cs:217
                     // 21. MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.supportingInformation
-                    public ElementDefinitionInfo Element_SupportingInformation;
-                    
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                    {
-                        base.Write(sDef);
-                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                        {
-                            Path = "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod",
-                            ElementId = "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod"
-                        });
-                        Element_Tissue.Write(sDef);
-                        Element_Value.Write(sDef);
-                        Element_SupportingInformation.Write(sDef);
-                    }
-                    
-                    public Type_WithdrawalPeriod()
-                    {
-                        {
+                    public ElementDefinitionInfo Element_SupportingInformation;                                                             // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:388
+                    {                                                                                                                       // MakerGen.cs:389
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:390
+                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                  // MakerGen.cs:391
+                        {                                                                                                                   // MakerGen.cs:392
+                            Path = "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod",                   // MakerGen.cs:393
+                            ElementId = "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod"               // MakerGen.cs:394
+                        });                                                                                                                 // MakerGen.cs:395
+                        Element_Tissue.Write(sDef);                                                                                         // MakerGen.cs:221
+                        Element_Value.Write(sDef);                                                                                          // MakerGen.cs:221
+                        Element_SupportingInformation.Write(sDef);                                                                          // MakerGen.cs:221
+                    }                                                                                                                       // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                    public Type_WithdrawalPeriod()                                                                                          // MakerGen.cs:400
+                    {                                                                                                                       // MakerGen.cs:401
+                        {                                                                                                                   // MakerGen.cs:232
                             // 19. MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.tissue
-                            this.Element_Tissue = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Tissue",
-                                Path= "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.tissue",
-                                Id = "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.tissue",
-                                Min = 1,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_Tissue = new ElementDefinitionInfo                                                                 // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Tissue",                                                                                    // MakerGen.cs:236
+                                Path= "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.tissue",         // MakerGen.cs:237
+                                Id = "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.tissue",          // MakerGen.cs:238
+                                Min = 1,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                  // MakerGen.cs:316
+                                    {                                                                                                       // MakerGen.cs:317
+                                    }                                                                                                       // MakerGen.cs:320
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 20. MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.value
-                            this.Element_Value = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Value",
-                                Path= "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.value",
-                                Id = "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.value",
-                                Min = 1,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Complex.Type_Quantity
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_Value = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Value",                                                                                     // MakerGen.cs:236
+                                Path= "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.value",          // MakerGen.cs:237
+                                Id = "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.value",           // MakerGen.cs:238
+                                Min = 1,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Complex.Type_Quantity                                                         // MakerGen.cs:356
+                                    {                                                                                                       // MakerGen.cs:357
+                                    }                                                                                                       // MakerGen.cs:358
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 21. MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.supportingInformation
-                            this.Element_SupportingInformation = new ElementDefinitionInfo
-                            {
-                                Name = "Element_SupportingInformation",
-                                Path= "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.supportingInformation",
-                                Id = "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.supportingInformation",
-                                Min = 0,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_String
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                    }
-                }
+                            this.Element_SupportingInformation = new ElementDefinitionInfo                                                  // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_SupportingInformation",                                                                     // MakerGen.cs:236
+                                Path= "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.supportingInformation",// MakerGen.cs:237
+                                Id = "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.supportingInformation",// MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:301
+                                    {                                                                                                       // MakerGen.cs:302
+                                    }                                                                                                       // MakerGen.cs:305
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                    }                                                                                                                       // MakerGen.cs:403
+                }                                                                                                                           // MakerGen.cs:405
                 // 17. MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.code
-                public ElementDefinitionInfo Element_Code;
+                public ElementDefinitionInfo Element_Code;                                                                                  // MakerGen.cs:217
                 // 18. MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod
-                public ElementDefinitionInfo Element_WithdrawalPeriod;
-                
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                {
-                    base.Write(sDef);
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                    {
-                        Path = "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies",
-                        ElementId = "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies"
-                    });
-                    Element_Code.Write(sDef);
-                    Element_WithdrawalPeriod.Write(sDef);
-                }
-                
-                public Type_TargetSpecies()
-                {
-                    {
+                public ElementDefinitionInfo Element_WithdrawalPeriod;                                                                      // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:389
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:390
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:391
+                    {                                                                                                                       // MakerGen.cs:392
+                        Path = "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies",                                        // MakerGen.cs:393
+                        ElementId = "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies"                                    // MakerGen.cs:394
+                    });                                                                                                                     // MakerGen.cs:395
+                    Element_Code.Write(sDef);                                                                                               // MakerGen.cs:221
+                    Element_WithdrawalPeriod.Write(sDef);                                                                                   // MakerGen.cs:221
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                public Type_TargetSpecies()                                                                                                 // MakerGen.cs:400
+                {                                                                                                                           // MakerGen.cs:401
+                    {                                                                                                                       // MakerGen.cs:232
                         // 17. MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.code
-                        this.Element_Code = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Code",
-                            Path= "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.code",
-                            Id = "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.code",
-                            Min = 1,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Code = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Code",                                                                                          // MakerGen.cs:236
+                            Path= "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.code",                                // MakerGen.cs:237
+                            Id = "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.code",                                 // MakerGen.cs:238
+                            Min = 1,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 18. MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod
-                        this.Element_WithdrawalPeriod = new ElementDefinitionInfo
-                        {
-                            Name = "Element_WithdrawalPeriod",
-                            Path= "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod",
-                            Id = "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new Type_WithdrawalPeriod
-                                {
-                                }
-                            }
-                        };
-                    }
-                }
-            }
+                        this.Element_WithdrawalPeriod = new ElementDefinitionInfo                                                           // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_WithdrawalPeriod",                                                                              // MakerGen.cs:236
+                            Path= "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod",                    // MakerGen.cs:237
+                            Id = "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod",                     // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new Type_WithdrawalPeriod                                                                                   // MakerGen.cs:260
+                                {                                                                                                           // MakerGen.cs:261
+                                }                                                                                                           // MakerGen.cs:262
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                }                                                                                                                           // MakerGen.cs:403
+            }                                                                                                                               // MakerGen.cs:405
             // 10. MedicinalProductPharmaceutical.routeOfAdministration.code
-            public ElementDefinitionInfo Element_Code;
+            public ElementDefinitionInfo Element_Code;                                                                                      // MakerGen.cs:217
             // 11. MedicinalProductPharmaceutical.routeOfAdministration.firstDose
-            public ElementDefinitionInfo Element_FirstDose;
+            public ElementDefinitionInfo Element_FirstDose;                                                                                 // MakerGen.cs:217
             // 12. MedicinalProductPharmaceutical.routeOfAdministration.maxSingleDose
-            public ElementDefinitionInfo Element_MaxSingleDose;
+            public ElementDefinitionInfo Element_MaxSingleDose;                                                                             // MakerGen.cs:217
             // 13. MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerDay
-            public ElementDefinitionInfo Element_MaxDosePerDay;
+            public ElementDefinitionInfo Element_MaxDosePerDay;                                                                             // MakerGen.cs:217
             // 14. MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerTreatmentPeriod
-            public ElementDefinitionInfo Element_MaxDosePerTreatmentPeriod;
+            public ElementDefinitionInfo Element_MaxDosePerTreatmentPeriod;                                                                 // MakerGen.cs:217
             // 15. MedicinalProductPharmaceutical.routeOfAdministration.maxTreatmentPeriod
-            public ElementDefinitionInfo Element_MaxTreatmentPeriod;
+            public ElementDefinitionInfo Element_MaxTreatmentPeriod;                                                                        // MakerGen.cs:217
             // 16. MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies
-            public ElementDefinitionInfo Element_TargetSpecies;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "MedicinalProductPharmaceutical.routeOfAdministration",
-                    ElementId = "MedicinalProductPharmaceutical.routeOfAdministration"
-                });
-                Element_Code.Write(sDef);
-                Element_FirstDose.Write(sDef);
-                Element_MaxSingleDose.Write(sDef);
-                Element_MaxDosePerDay.Write(sDef);
-                Element_MaxDosePerTreatmentPeriod.Write(sDef);
-                Element_MaxTreatmentPeriod.Write(sDef);
-                Element_TargetSpecies.Write(sDef);
-            }
-            
-            public Type_RouteOfAdministration()
-            {
-                {
+            public ElementDefinitionInfo Element_TargetSpecies;                                                                             // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "MedicinalProductPharmaceutical.routeOfAdministration",                                                          // MakerGen.cs:393
+                    ElementId = "MedicinalProductPharmaceutical.routeOfAdministration"                                                      // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Code.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_FirstDose.Write(sDef);                                                                                              // MakerGen.cs:221
+                Element_MaxSingleDose.Write(sDef);                                                                                          // MakerGen.cs:221
+                Element_MaxDosePerDay.Write(sDef);                                                                                          // MakerGen.cs:221
+                Element_MaxDosePerTreatmentPeriod.Write(sDef);                                                                              // MakerGen.cs:221
+                Element_MaxTreatmentPeriod.Write(sDef);                                                                                     // MakerGen.cs:221
+                Element_TargetSpecies.Write(sDef);                                                                                          // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_RouteOfAdministration()                                                                                             // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 10. MedicinalProductPharmaceutical.routeOfAdministration.code
-                    this.Element_Code = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Code",
-                        Path= "MedicinalProductPharmaceutical.routeOfAdministration.code",
-                        Id = "MedicinalProductPharmaceutical.routeOfAdministration.code",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Code = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Code",                                                                                              // MakerGen.cs:236
+                        Path= "MedicinalProductPharmaceutical.routeOfAdministration.code",                                                  // MakerGen.cs:237
+                        Id = "MedicinalProductPharmaceutical.routeOfAdministration.code",                                                   // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 11. MedicinalProductPharmaceutical.routeOfAdministration.firstDose
-                    this.Element_FirstDose = new ElementDefinitionInfo
-                    {
-                        Name = "Element_FirstDose",
-                        Path= "MedicinalProductPharmaceutical.routeOfAdministration.firstDose",
-                        Id = "MedicinalProductPharmaceutical.routeOfAdministration.firstDose",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Quantity
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_FirstDose = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_FirstDose",                                                                                         // MakerGen.cs:236
+                        Path= "MedicinalProductPharmaceutical.routeOfAdministration.firstDose",                                             // MakerGen.cs:237
+                        Id = "MedicinalProductPharmaceutical.routeOfAdministration.firstDose",                                              // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Quantity                                                                 // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 12. MedicinalProductPharmaceutical.routeOfAdministration.maxSingleDose
-                    this.Element_MaxSingleDose = new ElementDefinitionInfo
-                    {
-                        Name = "Element_MaxSingleDose",
-                        Path= "MedicinalProductPharmaceutical.routeOfAdministration.maxSingleDose",
-                        Id = "MedicinalProductPharmaceutical.routeOfAdministration.maxSingleDose",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Quantity
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_MaxSingleDose = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_MaxSingleDose",                                                                                     // MakerGen.cs:236
+                        Path= "MedicinalProductPharmaceutical.routeOfAdministration.maxSingleDose",                                         // MakerGen.cs:237
+                        Id = "MedicinalProductPharmaceutical.routeOfAdministration.maxSingleDose",                                          // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Quantity                                                                 // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 13. MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerDay
-                    this.Element_MaxDosePerDay = new ElementDefinitionInfo
-                    {
-                        Name = "Element_MaxDosePerDay",
-                        Path= "MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerDay",
-                        Id = "MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerDay",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Quantity
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_MaxDosePerDay = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_MaxDosePerDay",                                                                                     // MakerGen.cs:236
+                        Path= "MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerDay",                                         // MakerGen.cs:237
+                        Id = "MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerDay",                                          // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Quantity                                                                 // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 14. MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerTreatmentPeriod
-                    this.Element_MaxDosePerTreatmentPeriod = new ElementDefinitionInfo
-                    {
-                        Name = "Element_MaxDosePerTreatmentPeriod",
-                        Path= "MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerTreatmentPeriod",
-                        Id = "MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerTreatmentPeriod",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Ratio
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_MaxDosePerTreatmentPeriod = new ElementDefinitionInfo                                                      // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_MaxDosePerTreatmentPeriod",                                                                         // MakerGen.cs:236
+                        Path= "MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerTreatmentPeriod",                             // MakerGen.cs:237
+                        Id = "MedicinalProductPharmaceutical.routeOfAdministration.maxDosePerTreatmentPeriod",                              // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Ratio                                                                    // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 15. MedicinalProductPharmaceutical.routeOfAdministration.maxTreatmentPeriod
-                    this.Element_MaxTreatmentPeriod = new ElementDefinitionInfo
-                    {
-                        Name = "Element_MaxTreatmentPeriod",
-                        Path= "MedicinalProductPharmaceutical.routeOfAdministration.maxTreatmentPeriod",
-                        Id = "MedicinalProductPharmaceutical.routeOfAdministration.maxTreatmentPeriod",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Duration
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_MaxTreatmentPeriod = new ElementDefinitionInfo                                                             // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_MaxTreatmentPeriod",                                                                                // MakerGen.cs:236
+                        Path= "MedicinalProductPharmaceutical.routeOfAdministration.maxTreatmentPeriod",                                    // MakerGen.cs:237
+                        Id = "MedicinalProductPharmaceutical.routeOfAdministration.maxTreatmentPeriod",                                     // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Duration                                                                 // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 16. MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies
-                    this.Element_TargetSpecies = new ElementDefinitionInfo
-                    {
-                        Name = "Element_TargetSpecies",
-                        Path= "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies",
-                        Id = "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new Type_TargetSpecies
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_TargetSpecies = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_TargetSpecies",                                                                                     // MakerGen.cs:236
+                        Path= "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies",                                         // MakerGen.cs:237
+                        Id = "MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies",                                          // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new Type_TargetSpecies                                                                                          // MakerGen.cs:260
+                            {                                                                                                               // MakerGen.cs:261
+                            }                                                                                                               // MakerGen.cs:262
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 1. MedicinalProductPharmaceutical.identifier
-        public ElementDefinitionInfo Element_Identifier;
+        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:217
         // 2. MedicinalProductPharmaceutical.administrableDoseForm
-        public ElementDefinitionInfo Element_AdministrableDoseForm;
+        public ElementDefinitionInfo Element_AdministrableDoseForm;                                                                         // MakerGen.cs:217
         // 3. MedicinalProductPharmaceutical.unitOfPresentation
-        public ElementDefinitionInfo Element_UnitOfPresentation;
+        public ElementDefinitionInfo Element_UnitOfPresentation;                                                                            // MakerGen.cs:217
         // 4. MedicinalProductPharmaceutical.ingredient
-        public ElementDefinitionInfo Element_Ingredient;
+        public ElementDefinitionInfo Element_Ingredient;                                                                                    // MakerGen.cs:217
         // 5. MedicinalProductPharmaceutical.device
-        public ElementDefinitionInfo Element_Device;
+        public ElementDefinitionInfo Element_Device;                                                                                        // MakerGen.cs:217
         // 6. MedicinalProductPharmaceutical.characteristics
-        public ElementDefinitionInfo Element_Characteristics;
+        public ElementDefinitionInfo Element_Characteristics;                                                                               // MakerGen.cs:217
         // 9. MedicinalProductPharmaceutical.routeOfAdministration
-        public ElementDefinitionInfo Element_RouteOfAdministration;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "MedicinalProductPharmaceutical",
-                ElementId = "MedicinalProductPharmaceutical"
-            });
-            Element_Identifier.Write(sDef);
-            Element_AdministrableDoseForm.Write(sDef);
-            Element_UnitOfPresentation.Write(sDef);
-            Element_Ingredient.Write(sDef);
-            Element_Device.Write(sDef);
-            Element_Characteristics.Write(sDef);
-            Element_RouteOfAdministration.Write(sDef);
-        }
-        
-        public Resource_MedicinalProductPharmaceutical()
-        {
-            {
+        public ElementDefinitionInfo Element_RouteOfAdministration;                                                                         // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "MedicinalProductPharmaceutical",                                                                                    // MakerGen.cs:393
+                ElementId = "MedicinalProductPharmaceutical"                                                                                // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_AdministrableDoseForm.Write(sDef);                                                                                      // MakerGen.cs:221
+            Element_UnitOfPresentation.Write(sDef);                                                                                         // MakerGen.cs:221
+            Element_Ingredient.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Device.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Characteristics.Write(sDef);                                                                                            // MakerGen.cs:221
+            Element_RouteOfAdministration.Write(sDef);                                                                                      // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Resource_MedicinalProductPharmaceutical()                                                                                    // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. MedicinalProductPharmaceutical.identifier
-                this.Element_Identifier = new ElementDefinitionInfo
-                {
-                    Name = "Element_Identifier",
-                    Path= "MedicinalProductPharmaceutical.identifier",
-                    Id = "MedicinalProductPharmaceutical.identifier",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:236
+                    Path= "MedicinalProductPharmaceutical.identifier",                                                                      // MakerGen.cs:237
+                    Id = "MedicinalProductPharmaceutical.identifier",                                                                       // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. MedicinalProductPharmaceutical.administrableDoseForm
-                this.Element_AdministrableDoseForm = new ElementDefinitionInfo
-                {
-                    Name = "Element_AdministrableDoseForm",
-                    Path= "MedicinalProductPharmaceutical.administrableDoseForm",
-                    Id = "MedicinalProductPharmaceutical.administrableDoseForm",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_AdministrableDoseForm = new ElementDefinitionInfo                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_AdministrableDoseForm",                                                                                 // MakerGen.cs:236
+                    Path= "MedicinalProductPharmaceutical.administrableDoseForm",                                                           // MakerGen.cs:237
+                    Id = "MedicinalProductPharmaceutical.administrableDoseForm",                                                            // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 3. MedicinalProductPharmaceutical.unitOfPresentation
-                this.Element_UnitOfPresentation = new ElementDefinitionInfo
-                {
-                    Name = "Element_UnitOfPresentation",
-                    Path= "MedicinalProductPharmaceutical.unitOfPresentation",
-                    Id = "MedicinalProductPharmaceutical.unitOfPresentation",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_UnitOfPresentation = new ElementDefinitionInfo                                                                 // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_UnitOfPresentation",                                                                                    // MakerGen.cs:236
+                    Path= "MedicinalProductPharmaceutical.unitOfPresentation",                                                              // MakerGen.cs:237
+                    Id = "MedicinalProductPharmaceutical.unitOfPresentation",                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 4. MedicinalProductPharmaceutical.ingredient
-                this.Element_Ingredient = new ElementDefinitionInfo
-                {
-                    Name = "Element_Ingredient",
-                    Path= "MedicinalProductPharmaceutical.ingredient",
-                    Id = "MedicinalProductPharmaceutical.ingredient",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/MedicinalProductIngredient"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Ingredient = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Ingredient",                                                                                            // MakerGen.cs:236
+                    Path= "MedicinalProductPharmaceutical.ingredient",                                                                      // MakerGen.cs:237
+                    Id = "MedicinalProductPharmaceutical.ingredient",                                                                       // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/MedicinalProductIngredient"                                        // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 5. MedicinalProductPharmaceutical.device
-                this.Element_Device = new ElementDefinitionInfo
-                {
-                    Name = "Element_Device",
-                    Path= "MedicinalProductPharmaceutical.device",
-                    Id = "MedicinalProductPharmaceutical.device",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/DeviceDefinition"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Device = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Device",                                                                                                // MakerGen.cs:236
+                    Path= "MedicinalProductPharmaceutical.device",                                                                          // MakerGen.cs:237
+                    Id = "MedicinalProductPharmaceutical.device",                                                                           // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/DeviceDefinition"                                                  // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 6. MedicinalProductPharmaceutical.characteristics
-                this.Element_Characteristics = new ElementDefinitionInfo
-                {
-                    Name = "Element_Characteristics",
-                    Path= "MedicinalProductPharmaceutical.characteristics",
-                    Id = "MedicinalProductPharmaceutical.characteristics",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Characteristics
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Characteristics = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Characteristics",                                                                                       // MakerGen.cs:236
+                    Path= "MedicinalProductPharmaceutical.characteristics",                                                                 // MakerGen.cs:237
+                    Id = "MedicinalProductPharmaceutical.characteristics",                                                                  // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Characteristics                                                                                            // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 9. MedicinalProductPharmaceutical.routeOfAdministration
-                this.Element_RouteOfAdministration = new ElementDefinitionInfo
-                {
-                    Name = "Element_RouteOfAdministration",
-                    Path= "MedicinalProductPharmaceutical.routeOfAdministration",
-                    Id = "MedicinalProductPharmaceutical.routeOfAdministration",
-                    Min = 1,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_RouteOfAdministration
-                        {
-                        }
-                    }
-                };
-            }
-            this.Name = "MedicinalProductPharmaceutical";
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/MedicinalProductPharmaceutical";
-        }
-    }
-}
+                this.Element_RouteOfAdministration = new ElementDefinitionInfo                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_RouteOfAdministration",                                                                                 // MakerGen.cs:236
+                    Path= "MedicinalProductPharmaceutical.routeOfAdministration",                                                           // MakerGen.cs:237
+                    Id = "MedicinalProductPharmaceutical.routeOfAdministration",                                                            // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_RouteOfAdministration                                                                                      // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            this.Name = "MedicinalProductPharmaceutical";                                                                                   // MakerGen.cs:468
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/MedicinalProductPharmaceutical";                                            // MakerGen.cs:469
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:449

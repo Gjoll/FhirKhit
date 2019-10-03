@@ -1,13 +1,13 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Resource
-{
-    #region Json
-    #if NEVER
+using System;                                                                                                                               // MakerGen.cs:432
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:433
+using System.IO;                                                                                                                            // MakerGen.cs:434
+using System.Linq;                                                                                                                          // MakerGen.cs:435
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:436
+                                                                                                                                            // MakerGen.cs:437
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:438
+{                                                                                                                                           // MakerGen.cs:439
+    #region Json                                                                                                                            // MakerGen.cs:440
+    #if NEVER                                                                                                                               // MakerGen.cs:441
     {
       "resourceType": "StructureDefinition",
       "id": "ExplanationOfBenefit",
@@ -3633,4277 +3633,4277 @@ namespace FhirKhit.Maker.Common.Resource
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:444
     /// <summary>
     /// Fhir resource 'ExplanationOfBenefit'
     /// </summary>
     // 0. ExplanationOfBenefit
-    public partial class Resource_ExplanationOfBenefit : FhirKhit.Maker.Common.Resource.Resource_DomainResource
-    {
+    public partial class Resource_ExplanationOfBenefit : FhirKhit.Maker.Common.Resource.Resource_DomainResource                             // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 15. ExplanationOfBenefit.related
-        public partial class Type_Related : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Related : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 16. ExplanationOfBenefit.related.claim
-            public ElementDefinitionInfo Element_Claim;
+            public ElementDefinitionInfo Element_Claim;                                                                                     // MakerGen.cs:217
             // 17. ExplanationOfBenefit.related.relationship
-            public ElementDefinitionInfo Element_Relationship;
+            public ElementDefinitionInfo Element_Relationship;                                                                              // MakerGen.cs:217
             // 18. ExplanationOfBenefit.related.reference
-            public ElementDefinitionInfo Element_Reference;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "ExplanationOfBenefit.related",
-                    ElementId = "ExplanationOfBenefit.related"
-                });
-                Element_Claim.Write(sDef);
-                Element_Relationship.Write(sDef);
-                Element_Reference.Write(sDef);
-            }
-            
-            public Type_Related()
-            {
-                {
+            public ElementDefinitionInfo Element_Reference;                                                                                 // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "ExplanationOfBenefit.related",                                                                                  // MakerGen.cs:393
+                    ElementId = "ExplanationOfBenefit.related"                                                                              // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Claim.Write(sDef);                                                                                                  // MakerGen.cs:221
+                Element_Relationship.Write(sDef);                                                                                           // MakerGen.cs:221
+                Element_Reference.Write(sDef);                                                                                              // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Related()                                                                                                           // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 16. ExplanationOfBenefit.related.claim
-                    this.Element_Claim = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Claim",
-                        Path= "ExplanationOfBenefit.related.claim",
-                        Id = "ExplanationOfBenefit.related.claim",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Claim"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Claim = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Claim",                                                                                             // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.related.claim",                                                                         // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.related.claim",                                                                          // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Claim"                                                         // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 17. ExplanationOfBenefit.related.relationship
-                    this.Element_Relationship = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Relationship",
-                        Path= "ExplanationOfBenefit.related.relationship",
-                        Id = "ExplanationOfBenefit.related.relationship",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Relationship = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Relationship",                                                                                      // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.related.relationship",                                                                  // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.related.relationship",                                                                   // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 18. ExplanationOfBenefit.related.reference
-                    this.Element_Reference = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Reference",
-                        Path= "ExplanationOfBenefit.related.reference",
-                        Id = "ExplanationOfBenefit.related.reference",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Identifier
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Reference = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Reference",                                                                                         // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.related.reference",                                                                     // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.related.reference",                                                                      // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Identifier                                                               // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 21. ExplanationOfBenefit.payee
-        public partial class Type_Payee : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Payee : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 22. ExplanationOfBenefit.payee.type
-            public ElementDefinitionInfo Element_Type;
+            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:217
             // 23. ExplanationOfBenefit.payee.party
-            public ElementDefinitionInfo Element_Party;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "ExplanationOfBenefit.payee",
-                    ElementId = "ExplanationOfBenefit.payee"
-                });
-                Element_Type.Write(sDef);
-                Element_Party.Write(sDef);
-            }
-            
-            public Type_Payee()
-            {
-                {
+            public ElementDefinitionInfo Element_Party;                                                                                     // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "ExplanationOfBenefit.payee",                                                                                    // MakerGen.cs:393
+                    ElementId = "ExplanationOfBenefit.payee"                                                                                // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Party.Write(sDef);                                                                                                  // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Payee()                                                                                                             // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 22. ExplanationOfBenefit.payee.type
-                    this.Element_Type = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Type",
-                        Path= "ExplanationOfBenefit.payee.type",
-                        Id = "ExplanationOfBenefit.payee.type",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Type",                                                                                              // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.payee.type",                                                                            // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.payee.type",                                                                             // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 23. ExplanationOfBenefit.payee.party
-                    this.Element_Party = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Party",
-                        Path= "ExplanationOfBenefit.payee.party",
-                        Id = "ExplanationOfBenefit.payee.party",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                                    "http://hl7.org/fhir/StructureDefinition/Organization",
-                                    "http://hl7.org/fhir/StructureDefinition/Patient",
-                                    "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
-                                }
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Party = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Party",                                                                                             // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.payee.party",                                                                           // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.payee.party",                                                                            // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                 // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                             // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/Organization",                                                 // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/Patient",                                                      // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/RelatedPerson"                                                 // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 32. ExplanationOfBenefit.careTeam
-        public partial class Type_CareTeam : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_CareTeam : FhirKhit.Maker.Common.Complex.ComplexBase                                                      // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 33. ExplanationOfBenefit.careTeam.sequence
-            public ElementDefinitionInfo Element_Sequence;
+            public ElementDefinitionInfo Element_Sequence;                                                                                  // MakerGen.cs:217
             // 34. ExplanationOfBenefit.careTeam.provider
-            public ElementDefinitionInfo Element_Provider;
+            public ElementDefinitionInfo Element_Provider;                                                                                  // MakerGen.cs:217
             // 35. ExplanationOfBenefit.careTeam.responsible
-            public ElementDefinitionInfo Element_Responsible;
+            public ElementDefinitionInfo Element_Responsible;                                                                               // MakerGen.cs:217
             // 36. ExplanationOfBenefit.careTeam.role
-            public ElementDefinitionInfo Element_Role;
+            public ElementDefinitionInfo Element_Role;                                                                                      // MakerGen.cs:217
             // 37. ExplanationOfBenefit.careTeam.qualification
-            public ElementDefinitionInfo Element_Qualification;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "ExplanationOfBenefit.careTeam",
-                    ElementId = "ExplanationOfBenefit.careTeam"
-                });
-                Element_Sequence.Write(sDef);
-                Element_Provider.Write(sDef);
-                Element_Responsible.Write(sDef);
-                Element_Role.Write(sDef);
-                Element_Qualification.Write(sDef);
-            }
-            
-            public Type_CareTeam()
-            {
-                {
+            public ElementDefinitionInfo Element_Qualification;                                                                             // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "ExplanationOfBenefit.careTeam",                                                                                 // MakerGen.cs:393
+                    ElementId = "ExplanationOfBenefit.careTeam"                                                                             // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Sequence.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_Provider.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_Responsible.Write(sDef);                                                                                            // MakerGen.cs:221
+                Element_Role.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Qualification.Write(sDef);                                                                                          // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_CareTeam()                                                                                                          // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 33. ExplanationOfBenefit.careTeam.sequence
-                    this.Element_Sequence = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Sequence",
-                        Path= "ExplanationOfBenefit.careTeam.sequence",
-                        Id = "ExplanationOfBenefit.careTeam.sequence",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Sequence = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Sequence",                                                                                          // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.careTeam.sequence",                                                                     // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.careTeam.sequence",                                                                      // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                       // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 34. ExplanationOfBenefit.careTeam.provider
-                    this.Element_Provider = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Provider",
-                        Path= "ExplanationOfBenefit.careTeam.provider",
-                        Id = "ExplanationOfBenefit.careTeam.provider",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                                    "http://hl7.org/fhir/StructureDefinition/Organization"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Provider = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Provider",                                                                                          // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.careTeam.provider",                                                                     // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.careTeam.provider",                                                                      // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                 // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                             // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/Organization"                                                  // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 35. ExplanationOfBenefit.careTeam.responsible
-                    this.Element_Responsible = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Responsible",
-                        Path= "ExplanationOfBenefit.careTeam.responsible",
-                        Id = "ExplanationOfBenefit.careTeam.responsible",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Responsible = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Responsible",                                                                                       // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.careTeam.responsible",                                                                  // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.careTeam.responsible",                                                                   // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                           // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 36. ExplanationOfBenefit.careTeam.role
-                    this.Element_Role = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Role",
-                        Path= "ExplanationOfBenefit.careTeam.role",
-                        Id = "ExplanationOfBenefit.careTeam.role",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Role = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Role",                                                                                              // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.careTeam.role",                                                                         // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.careTeam.role",                                                                          // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 37. ExplanationOfBenefit.careTeam.qualification
-                    this.Element_Qualification = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Qualification",
-                        Path= "ExplanationOfBenefit.careTeam.qualification",
-                        Id = "ExplanationOfBenefit.careTeam.qualification",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Qualification = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Qualification",                                                                                     // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.careTeam.qualification",                                                                // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.careTeam.qualification",                                                                 // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 38. ExplanationOfBenefit.supportingInfo
-        public partial class Type_SupportingInfo : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_SupportingInfo : FhirKhit.Maker.Common.Complex.ComplexBase                                                // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 39. ExplanationOfBenefit.supportingInfo.sequence
-            public ElementDefinitionInfo Element_Sequence;
+            public ElementDefinitionInfo Element_Sequence;                                                                                  // MakerGen.cs:217
             // 40. ExplanationOfBenefit.supportingInfo.category
-            public ElementDefinitionInfo Element_Category;
+            public ElementDefinitionInfo Element_Category;                                                                                  // MakerGen.cs:217
             // 41. ExplanationOfBenefit.supportingInfo.code
-            public ElementDefinitionInfo Element_Code;
+            public ElementDefinitionInfo Element_Code;                                                                                      // MakerGen.cs:217
             // 42. ExplanationOfBenefit.supportingInfo.timing[x]
-            public ElementDefinitionInfo Element_Timing;
+            public ElementDefinitionInfo Element_Timing;                                                                                    // MakerGen.cs:217
             // 43. ExplanationOfBenefit.supportingInfo.value[x]
-            public ElementDefinitionInfo Element_Value;
+            public ElementDefinitionInfo Element_Value;                                                                                     // MakerGen.cs:217
             // 44. ExplanationOfBenefit.supportingInfo.reason
-            public ElementDefinitionInfo Element_Reason;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "ExplanationOfBenefit.supportingInfo",
-                    ElementId = "ExplanationOfBenefit.supportingInfo"
-                });
-                Element_Sequence.Write(sDef);
-                Element_Category.Write(sDef);
-                Element_Code.Write(sDef);
-                Element_Timing.Write(sDef);
-                Element_Value.Write(sDef);
-                Element_Reason.Write(sDef);
-            }
-            
-            public Type_SupportingInfo()
-            {
-                {
+            public ElementDefinitionInfo Element_Reason;                                                                                    // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "ExplanationOfBenefit.supportingInfo",                                                                           // MakerGen.cs:393
+                    ElementId = "ExplanationOfBenefit.supportingInfo"                                                                       // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Sequence.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_Category.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_Code.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Timing.Write(sDef);                                                                                                 // MakerGen.cs:221
+                Element_Value.Write(sDef);                                                                                                  // MakerGen.cs:221
+                Element_Reason.Write(sDef);                                                                                                 // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_SupportingInfo()                                                                                                    // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 39. ExplanationOfBenefit.supportingInfo.sequence
-                    this.Element_Sequence = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Sequence",
-                        Path= "ExplanationOfBenefit.supportingInfo.sequence",
-                        Id = "ExplanationOfBenefit.supportingInfo.sequence",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Sequence = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Sequence",                                                                                          // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.supportingInfo.sequence",                                                               // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.supportingInfo.sequence",                                                                // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                       // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 40. ExplanationOfBenefit.supportingInfo.category
-                    this.Element_Category = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Category",
-                        Path= "ExplanationOfBenefit.supportingInfo.category",
-                        Id = "ExplanationOfBenefit.supportingInfo.category",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Category = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Category",                                                                                          // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.supportingInfo.category",                                                               // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.supportingInfo.category",                                                                // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 41. ExplanationOfBenefit.supportingInfo.code
-                    this.Element_Code = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Code",
-                        Path= "ExplanationOfBenefit.supportingInfo.code",
-                        Id = "ExplanationOfBenefit.supportingInfo.code",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Code = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Code",                                                                                              // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.supportingInfo.code",                                                                   // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.supportingInfo.code",                                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 42. ExplanationOfBenefit.supportingInfo.timing[x]
-                    this.Element_Timing = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Timing",
-                        Path= "ExplanationOfBenefit.supportingInfo.timing[x]",
-                        Id = "ExplanationOfBenefit.supportingInfo.timing[x]",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Date
-                            {
-                            },
-                            new FhirKhit.Maker.Common.Complex.Type_Period
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Timing = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Timing",                                                                                            // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.supportingInfo.timing[x]",                                                              // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.supportingInfo.timing[x]",                                                               // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Date                                                              // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            },                                                                                                              // MakerGen.cs:305
+                            new FhirKhit.Maker.Common.Complex.Type_Period                                                                   // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 43. ExplanationOfBenefit.supportingInfo.value[x]
-                    this.Element_Value = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Value",
-                        Path= "ExplanationOfBenefit.supportingInfo.value[x]",
-                        Id = "ExplanationOfBenefit.supportingInfo.value[x]",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
-                            {
-                            },
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            },
-                            new FhirKhit.Maker.Common.Complex.Type_Quantity
-                            {
-                            },
-                            new FhirKhit.Maker.Common.Complex.Type_Attachment
-                            {
-                            },
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Resource"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Value = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Value",                                                                                             // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.supportingInfo.value[x]",                                                               // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.supportingInfo.value[x]",                                                                // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                           // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            },                                                                                                              // MakerGen.cs:305
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            },                                                                                                              // MakerGen.cs:305
+                            new FhirKhit.Maker.Common.Complex.Type_Quantity                                                                 // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            },                                                                                                              // MakerGen.cs:358
+                            new FhirKhit.Maker.Common.Complex.Type_Attachment                                                               // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            },                                                                                                              // MakerGen.cs:358
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Resource"                                                      // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 44. ExplanationOfBenefit.supportingInfo.reason
-                    this.Element_Reason = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Reason",
-                        Path= "ExplanationOfBenefit.supportingInfo.reason",
-                        Id = "ExplanationOfBenefit.supportingInfo.reason",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Coding
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Reason = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Reason",                                                                                            // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.supportingInfo.reason",                                                                 // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.supportingInfo.reason",                                                                  // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Coding                                                                   // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 45. ExplanationOfBenefit.diagnosis
-        public partial class Type_Diagnosis : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Diagnosis : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 46. ExplanationOfBenefit.diagnosis.sequence
-            public ElementDefinitionInfo Element_Sequence;
+            public ElementDefinitionInfo Element_Sequence;                                                                                  // MakerGen.cs:217
             // 47. ExplanationOfBenefit.diagnosis.diagnosis[x]
-            public ElementDefinitionInfo Element_Diagnosis;
+            public ElementDefinitionInfo Element_Diagnosis;                                                                                 // MakerGen.cs:217
             // 48. ExplanationOfBenefit.diagnosis.type
-            public ElementDefinitionInfo Element_Type;
+            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:217
             // 49. ExplanationOfBenefit.diagnosis.onAdmission
-            public ElementDefinitionInfo Element_OnAdmission;
+            public ElementDefinitionInfo Element_OnAdmission;                                                                               // MakerGen.cs:217
             // 50. ExplanationOfBenefit.diagnosis.packageCode
-            public ElementDefinitionInfo Element_PackageCode;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "ExplanationOfBenefit.diagnosis",
-                    ElementId = "ExplanationOfBenefit.diagnosis"
-                });
-                Element_Sequence.Write(sDef);
-                Element_Diagnosis.Write(sDef);
-                Element_Type.Write(sDef);
-                Element_OnAdmission.Write(sDef);
-                Element_PackageCode.Write(sDef);
-            }
-            
-            public Type_Diagnosis()
-            {
-                {
+            public ElementDefinitionInfo Element_PackageCode;                                                                               // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "ExplanationOfBenefit.diagnosis",                                                                                // MakerGen.cs:393
+                    ElementId = "ExplanationOfBenefit.diagnosis"                                                                            // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Sequence.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_Diagnosis.Write(sDef);                                                                                              // MakerGen.cs:221
+                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_OnAdmission.Write(sDef);                                                                                            // MakerGen.cs:221
+                Element_PackageCode.Write(sDef);                                                                                            // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Diagnosis()                                                                                                         // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 46. ExplanationOfBenefit.diagnosis.sequence
-                    this.Element_Sequence = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Sequence",
-                        Path= "ExplanationOfBenefit.diagnosis.sequence",
-                        Id = "ExplanationOfBenefit.diagnosis.sequence",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Sequence = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Sequence",                                                                                          // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.diagnosis.sequence",                                                                    // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.diagnosis.sequence",                                                                     // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                       // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 47. ExplanationOfBenefit.diagnosis.diagnosis[x]
-                    this.Element_Diagnosis = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Diagnosis",
-                        Path= "ExplanationOfBenefit.diagnosis.diagnosis[x]",
-                        Id = "ExplanationOfBenefit.diagnosis.diagnosis[x]",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            },
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Condition"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Diagnosis = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Diagnosis",                                                                                         // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.diagnosis.diagnosis[x]",                                                                // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.diagnosis.diagnosis[x]",                                                                 // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            },                                                                                                              // MakerGen.cs:320
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Condition"                                                     // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 48. ExplanationOfBenefit.diagnosis.type
-                    this.Element_Type = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Type",
-                        Path= "ExplanationOfBenefit.diagnosis.type",
-                        Id = "ExplanationOfBenefit.diagnosis.type",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Type",                                                                                              // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.diagnosis.type",                                                                        // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.diagnosis.type",                                                                         // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 49. ExplanationOfBenefit.diagnosis.onAdmission
-                    this.Element_OnAdmission = new ElementDefinitionInfo
-                    {
-                        Name = "Element_OnAdmission",
-                        Path= "ExplanationOfBenefit.diagnosis.onAdmission",
-                        Id = "ExplanationOfBenefit.diagnosis.onAdmission",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_OnAdmission = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_OnAdmission",                                                                                       // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.diagnosis.onAdmission",                                                                 // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.diagnosis.onAdmission",                                                                  // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 50. ExplanationOfBenefit.diagnosis.packageCode
-                    this.Element_PackageCode = new ElementDefinitionInfo
-                    {
-                        Name = "Element_PackageCode",
-                        Path= "ExplanationOfBenefit.diagnosis.packageCode",
-                        Id = "ExplanationOfBenefit.diagnosis.packageCode",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_PackageCode = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_PackageCode",                                                                                       // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.diagnosis.packageCode",                                                                 // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.diagnosis.packageCode",                                                                  // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 51. ExplanationOfBenefit.procedure
-        public partial class Type_Procedure : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Procedure : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 52. ExplanationOfBenefit.procedure.sequence
-            public ElementDefinitionInfo Element_Sequence;
+            public ElementDefinitionInfo Element_Sequence;                                                                                  // MakerGen.cs:217
             // 53. ExplanationOfBenefit.procedure.type
-            public ElementDefinitionInfo Element_Type;
+            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:217
             // 54. ExplanationOfBenefit.procedure.date
-            public ElementDefinitionInfo Element_Date;
+            public ElementDefinitionInfo Element_Date;                                                                                      // MakerGen.cs:217
             // 55. ExplanationOfBenefit.procedure.procedure[x]
-            public ElementDefinitionInfo Element_Procedure;
+            public ElementDefinitionInfo Element_Procedure;                                                                                 // MakerGen.cs:217
             // 56. ExplanationOfBenefit.procedure.udi
-            public ElementDefinitionInfo Element_Udi;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "ExplanationOfBenefit.procedure",
-                    ElementId = "ExplanationOfBenefit.procedure"
-                });
-                Element_Sequence.Write(sDef);
-                Element_Type.Write(sDef);
-                Element_Date.Write(sDef);
-                Element_Procedure.Write(sDef);
-                Element_Udi.Write(sDef);
-            }
-            
-            public Type_Procedure()
-            {
-                {
+            public ElementDefinitionInfo Element_Udi;                                                                                       // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "ExplanationOfBenefit.procedure",                                                                                // MakerGen.cs:393
+                    ElementId = "ExplanationOfBenefit.procedure"                                                                            // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Sequence.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Date.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Procedure.Write(sDef);                                                                                              // MakerGen.cs:221
+                Element_Udi.Write(sDef);                                                                                                    // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Procedure()                                                                                                         // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 52. ExplanationOfBenefit.procedure.sequence
-                    this.Element_Sequence = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Sequence",
-                        Path= "ExplanationOfBenefit.procedure.sequence",
-                        Id = "ExplanationOfBenefit.procedure.sequence",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Sequence = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Sequence",                                                                                          // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.procedure.sequence",                                                                    // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.procedure.sequence",                                                                     // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                       // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 53. ExplanationOfBenefit.procedure.type
-                    this.Element_Type = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Type",
-                        Path= "ExplanationOfBenefit.procedure.type",
-                        Id = "ExplanationOfBenefit.procedure.type",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Type",                                                                                              // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.procedure.type",                                                                        // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.procedure.type",                                                                         // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 54. ExplanationOfBenefit.procedure.date
-                    this.Element_Date = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Date",
-                        Path= "ExplanationOfBenefit.procedure.date",
-                        Id = "ExplanationOfBenefit.procedure.date",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Date = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Date",                                                                                              // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.procedure.date",                                                                        // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.procedure.date",                                                                         // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                          // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 55. ExplanationOfBenefit.procedure.procedure[x]
-                    this.Element_Procedure = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Procedure",
-                        Path= "ExplanationOfBenefit.procedure.procedure[x]",
-                        Id = "ExplanationOfBenefit.procedure.procedure[x]",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            },
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Procedure"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Procedure = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Procedure",                                                                                         // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.procedure.procedure[x]",                                                                // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.procedure.procedure[x]",                                                                 // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            },                                                                                                              // MakerGen.cs:320
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Procedure"                                                     // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 56. ExplanationOfBenefit.procedure.udi
-                    this.Element_Udi = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Udi",
-                        Path= "ExplanationOfBenefit.procedure.udi",
-                        Id = "ExplanationOfBenefit.procedure.udi",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Device"
-                                }
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Udi = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Udi",                                                                                               // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.procedure.udi",                                                                         // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.procedure.udi",                                                                          // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Device"                                                        // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 58. ExplanationOfBenefit.insurance
-        public partial class Type_Insurance : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Insurance : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 59. ExplanationOfBenefit.insurance.focal
-            public ElementDefinitionInfo Element_Focal;
+            public ElementDefinitionInfo Element_Focal;                                                                                     // MakerGen.cs:217
             // 60. ExplanationOfBenefit.insurance.coverage
-            public ElementDefinitionInfo Element_Coverage;
+            public ElementDefinitionInfo Element_Coverage;                                                                                  // MakerGen.cs:217
             // 61. ExplanationOfBenefit.insurance.preAuthRef
-            public ElementDefinitionInfo Element_PreAuthRef;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "ExplanationOfBenefit.insurance",
-                    ElementId = "ExplanationOfBenefit.insurance"
-                });
-                Element_Focal.Write(sDef);
-                Element_Coverage.Write(sDef);
-                Element_PreAuthRef.Write(sDef);
-            }
-            
-            public Type_Insurance()
-            {
-                {
+            public ElementDefinitionInfo Element_PreAuthRef;                                                                                // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "ExplanationOfBenefit.insurance",                                                                                // MakerGen.cs:393
+                    ElementId = "ExplanationOfBenefit.insurance"                                                                            // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Focal.Write(sDef);                                                                                                  // MakerGen.cs:221
+                Element_Coverage.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_PreAuthRef.Write(sDef);                                                                                             // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Insurance()                                                                                                         // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 59. ExplanationOfBenefit.insurance.focal
-                    this.Element_Focal = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Focal",
-                        Path= "ExplanationOfBenefit.insurance.focal",
-                        Id = "ExplanationOfBenefit.insurance.focal",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Focal = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Focal",                                                                                             // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.insurance.focal",                                                                       // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.insurance.focal",                                                                        // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                           // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 60. ExplanationOfBenefit.insurance.coverage
-                    this.Element_Coverage = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Coverage",
-                        Path= "ExplanationOfBenefit.insurance.coverage",
-                        Id = "ExplanationOfBenefit.insurance.coverage",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Coverage"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Coverage = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Coverage",                                                                                          // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.insurance.coverage",                                                                    // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.insurance.coverage",                                                                     // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Coverage"                                                      // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 61. ExplanationOfBenefit.insurance.preAuthRef
-                    this.Element_PreAuthRef = new ElementDefinitionInfo
-                    {
-                        Name = "Element_PreAuthRef",
-                        Path= "ExplanationOfBenefit.insurance.preAuthRef",
-                        Id = "ExplanationOfBenefit.insurance.preAuthRef",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_PreAuthRef = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_PreAuthRef",                                                                                        // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.insurance.preAuthRef",                                                                  // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.insurance.preAuthRef",                                                                   // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 62. ExplanationOfBenefit.accident
-        public partial class Type_Accident : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Accident : FhirKhit.Maker.Common.Complex.ComplexBase                                                      // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 63. ExplanationOfBenefit.accident.date
-            public ElementDefinitionInfo Element_Date;
+            public ElementDefinitionInfo Element_Date;                                                                                      // MakerGen.cs:217
             // 64. ExplanationOfBenefit.accident.type
-            public ElementDefinitionInfo Element_Type;
+            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:217
             // 65. ExplanationOfBenefit.accident.location[x]
-            public ElementDefinitionInfo Element_Location;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "ExplanationOfBenefit.accident",
-                    ElementId = "ExplanationOfBenefit.accident"
-                });
-                Element_Date.Write(sDef);
-                Element_Type.Write(sDef);
-                Element_Location.Write(sDef);
-            }
-            
-            public Type_Accident()
-            {
-                {
+            public ElementDefinitionInfo Element_Location;                                                                                  // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "ExplanationOfBenefit.accident",                                                                                 // MakerGen.cs:393
+                    ElementId = "ExplanationOfBenefit.accident"                                                                             // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Date.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Location.Write(sDef);                                                                                               // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Accident()                                                                                                          // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 63. ExplanationOfBenefit.accident.date
-                    this.Element_Date = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Date",
-                        Path= "ExplanationOfBenefit.accident.date",
-                        Id = "ExplanationOfBenefit.accident.date",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Date
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Date = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Date",                                                                                              // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.accident.date",                                                                         // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.accident.date",                                                                          // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Date                                                              // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 64. ExplanationOfBenefit.accident.type
-                    this.Element_Type = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Type",
-                        Path= "ExplanationOfBenefit.accident.type",
-                        Id = "ExplanationOfBenefit.accident.type",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Type",                                                                                              // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.accident.type",                                                                         // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.accident.type",                                                                          // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 65. ExplanationOfBenefit.accident.location[x]
-                    this.Element_Location = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Location",
-                        Path= "ExplanationOfBenefit.accident.location[x]",
-                        Id = "ExplanationOfBenefit.accident.location[x]",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Address
-                            {
-                            },
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Location"
-                                }
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Location = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Location",                                                                                          // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.accident.location[x]",                                                                  // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.accident.location[x]",                                                                   // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Address                                                                  // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            },                                                                                                              // MakerGen.cs:358
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Location"                                                      // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 66. ExplanationOfBenefit.item
-        public partial class Type_Item : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Item : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 88. ExplanationOfBenefit.item.adjudication
-            public partial class Type_Adjudication : FhirKhit.Maker.Common.Complex.ComplexBase
-            {
+            public partial class Type_Adjudication : FhirKhit.Maker.Common.Complex.ComplexBase                                              // MakerGen.cs:381
+            {                                                                                                                               // MakerGen.cs:382
                 // 89. ExplanationOfBenefit.item.adjudication.category
-                public ElementDefinitionInfo Element_Category;
+                public ElementDefinitionInfo Element_Category;                                                                              // MakerGen.cs:217
                 // 90. ExplanationOfBenefit.item.adjudication.reason
-                public ElementDefinitionInfo Element_Reason;
+                public ElementDefinitionInfo Element_Reason;                                                                                // MakerGen.cs:217
                 // 91. ExplanationOfBenefit.item.adjudication.amount
-                public ElementDefinitionInfo Element_Amount;
+                public ElementDefinitionInfo Element_Amount;                                                                                // MakerGen.cs:217
                 // 92. ExplanationOfBenefit.item.adjudication.value
-                public ElementDefinitionInfo Element_Value;
-                
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                {
-                    base.Write(sDef);
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                    {
-                        Path = "ExplanationOfBenefit.item.adjudication",
-                        ElementId = "ExplanationOfBenefit.item.adjudication"
-                    });
-                    Element_Category.Write(sDef);
-                    Element_Reason.Write(sDef);
-                    Element_Amount.Write(sDef);
-                    Element_Value.Write(sDef);
-                }
-                
-                public Type_Adjudication()
-                {
-                    {
+                public ElementDefinitionInfo Element_Value;                                                                                 // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:389
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:390
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:391
+                    {                                                                                                                       // MakerGen.cs:392
+                        Path = "ExplanationOfBenefit.item.adjudication",                                                                    // MakerGen.cs:393
+                        ElementId = "ExplanationOfBenefit.item.adjudication"                                                                // MakerGen.cs:394
+                    });                                                                                                                     // MakerGen.cs:395
+                    Element_Category.Write(sDef);                                                                                           // MakerGen.cs:221
+                    Element_Reason.Write(sDef);                                                                                             // MakerGen.cs:221
+                    Element_Amount.Write(sDef);                                                                                             // MakerGen.cs:221
+                    Element_Value.Write(sDef);                                                                                              // MakerGen.cs:221
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                public Type_Adjudication()                                                                                                  // MakerGen.cs:400
+                {                                                                                                                           // MakerGen.cs:401
+                    {                                                                                                                       // MakerGen.cs:232
                         // 89. ExplanationOfBenefit.item.adjudication.category
-                        this.Element_Category = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Category",
-                            Path= "ExplanationOfBenefit.item.adjudication.category",
-                            Id = "ExplanationOfBenefit.item.adjudication.category",
-                            Min = 1,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Category = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Category",                                                                                      // MakerGen.cs:236
+                            Path= "ExplanationOfBenefit.item.adjudication.category",                                                        // MakerGen.cs:237
+                            Id = "ExplanationOfBenefit.item.adjudication.category",                                                         // MakerGen.cs:238
+                            Min = 1,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 90. ExplanationOfBenefit.item.adjudication.reason
-                        this.Element_Reason = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Reason",
-                            Path= "ExplanationOfBenefit.item.adjudication.reason",
-                            Id = "ExplanationOfBenefit.item.adjudication.reason",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Reason = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Reason",                                                                                        // MakerGen.cs:236
+                            Path= "ExplanationOfBenefit.item.adjudication.reason",                                                          // MakerGen.cs:237
+                            Id = "ExplanationOfBenefit.item.adjudication.reason",                                                           // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 91. ExplanationOfBenefit.item.adjudication.amount
-                        this.Element_Amount = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Amount",
-                            Path= "ExplanationOfBenefit.item.adjudication.amount",
-                            Id = "ExplanationOfBenefit.item.adjudication.amount",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Money
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Amount = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Amount",                                                                                        // MakerGen.cs:236
+                            Path= "ExplanationOfBenefit.item.adjudication.amount",                                                          // MakerGen.cs:237
+                            Id = "ExplanationOfBenefit.item.adjudication.amount",                                                           // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Money                                                                // MakerGen.cs:356
+                                {                                                                                                           // MakerGen.cs:357
+                                }                                                                                                           // MakerGen.cs:358
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 92. ExplanationOfBenefit.item.adjudication.value
-                        this.Element_Value = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Value",
-                            Path= "ExplanationOfBenefit.item.adjudication.value",
-                            Id = "ExplanationOfBenefit.item.adjudication.value",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
-                                {
-                                }
-                            }
-                        };
-                    }
-                }
-            }
+                        this.Element_Value = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Value",                                                                                         // MakerGen.cs:236
+                            Path= "ExplanationOfBenefit.item.adjudication.value",                                                           // MakerGen.cs:237
+                            Id = "ExplanationOfBenefit.item.adjudication.value",                                                            // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                       // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                }                                                                                                                           // MakerGen.cs:403
+            }                                                                                                                               // MakerGen.cs:405
             // 93. ExplanationOfBenefit.item.detail
-            public partial class Type_Detail : FhirKhit.Maker.Common.Complex.ComplexBase
-            {
+            public partial class Type_Detail : FhirKhit.Maker.Common.Complex.ComplexBase                                                    // MakerGen.cs:381
+            {                                                                                                                               // MakerGen.cs:382
                 // 107. ExplanationOfBenefit.item.detail.subDetail
-                public partial class Type_SubDetail : FhirKhit.Maker.Common.Complex.ComplexBase
-                {
+                public partial class Type_SubDetail : FhirKhit.Maker.Common.Complex.ComplexBase                                             // MakerGen.cs:381
+                {                                                                                                                           // MakerGen.cs:382
                     // 108. ExplanationOfBenefit.item.detail.subDetail.sequence
-                    public ElementDefinitionInfo Element_Sequence;
+                    public ElementDefinitionInfo Element_Sequence;                                                                          // MakerGen.cs:217
                     // 109. ExplanationOfBenefit.item.detail.subDetail.revenue
-                    public ElementDefinitionInfo Element_Revenue;
+                    public ElementDefinitionInfo Element_Revenue;                                                                           // MakerGen.cs:217
                     // 110. ExplanationOfBenefit.item.detail.subDetail.category
-                    public ElementDefinitionInfo Element_Category;
+                    public ElementDefinitionInfo Element_Category;                                                                          // MakerGen.cs:217
                     // 111. ExplanationOfBenefit.item.detail.subDetail.productOrService
-                    public ElementDefinitionInfo Element_ProductOrService;
+                    public ElementDefinitionInfo Element_ProductOrService;                                                                  // MakerGen.cs:217
                     // 112. ExplanationOfBenefit.item.detail.subDetail.modifier
-                    public ElementDefinitionInfo Element_Modifier;
+                    public ElementDefinitionInfo Element_Modifier;                                                                          // MakerGen.cs:217
                     // 113. ExplanationOfBenefit.item.detail.subDetail.programCode
-                    public ElementDefinitionInfo Element_ProgramCode;
+                    public ElementDefinitionInfo Element_ProgramCode;                                                                       // MakerGen.cs:217
                     // 114. ExplanationOfBenefit.item.detail.subDetail.quantity
-                    public ElementDefinitionInfo Element_Quantity;
+                    public ElementDefinitionInfo Element_Quantity;                                                                          // MakerGen.cs:217
                     // 115. ExplanationOfBenefit.item.detail.subDetail.unitPrice
-                    public ElementDefinitionInfo Element_UnitPrice;
+                    public ElementDefinitionInfo Element_UnitPrice;                                                                         // MakerGen.cs:217
                     // 116. ExplanationOfBenefit.item.detail.subDetail.factor
-                    public ElementDefinitionInfo Element_Factor;
+                    public ElementDefinitionInfo Element_Factor;                                                                            // MakerGen.cs:217
                     // 117. ExplanationOfBenefit.item.detail.subDetail.net
-                    public ElementDefinitionInfo Element_Net;
+                    public ElementDefinitionInfo Element_Net;                                                                               // MakerGen.cs:217
                     // 118. ExplanationOfBenefit.item.detail.subDetail.udi
-                    public ElementDefinitionInfo Element_Udi;
+                    public ElementDefinitionInfo Element_Udi;                                                                               // MakerGen.cs:217
                     // 119. ExplanationOfBenefit.item.detail.subDetail.noteNumber
-                    public ElementDefinitionInfo Element_NoteNumber;
+                    public ElementDefinitionInfo Element_NoteNumber;                                                                        // MakerGen.cs:217
                     // 120. ExplanationOfBenefit.item.detail.subDetail.adjudication
-                    public ElementDefinitionInfo Element_Adjudication;
-                    
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                    {
-                        base.Write(sDef);
-                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                        {
-                            Path = "ExplanationOfBenefit.item.detail.subDetail",
-                            ElementId = "ExplanationOfBenefit.item.detail.subDetail"
-                        });
-                        Element_Sequence.Write(sDef);
-                        Element_Revenue.Write(sDef);
-                        Element_Category.Write(sDef);
-                        Element_ProductOrService.Write(sDef);
-                        Element_Modifier.Write(sDef);
-                        Element_ProgramCode.Write(sDef);
-                        Element_Quantity.Write(sDef);
-                        Element_UnitPrice.Write(sDef);
-                        Element_Factor.Write(sDef);
-                        Element_Net.Write(sDef);
-                        Element_Udi.Write(sDef);
-                        Element_NoteNumber.Write(sDef);
-                        Element_Adjudication.Write(sDef);
-                    }
-                    
-                    public Type_SubDetail()
-                    {
-                        {
+                    public ElementDefinitionInfo Element_Adjudication;                                                                      // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:388
+                    {                                                                                                                       // MakerGen.cs:389
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:390
+                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                  // MakerGen.cs:391
+                        {                                                                                                                   // MakerGen.cs:392
+                            Path = "ExplanationOfBenefit.item.detail.subDetail",                                                            // MakerGen.cs:393
+                            ElementId = "ExplanationOfBenefit.item.detail.subDetail"                                                        // MakerGen.cs:394
+                        });                                                                                                                 // MakerGen.cs:395
+                        Element_Sequence.Write(sDef);                                                                                       // MakerGen.cs:221
+                        Element_Revenue.Write(sDef);                                                                                        // MakerGen.cs:221
+                        Element_Category.Write(sDef);                                                                                       // MakerGen.cs:221
+                        Element_ProductOrService.Write(sDef);                                                                               // MakerGen.cs:221
+                        Element_Modifier.Write(sDef);                                                                                       // MakerGen.cs:221
+                        Element_ProgramCode.Write(sDef);                                                                                    // MakerGen.cs:221
+                        Element_Quantity.Write(sDef);                                                                                       // MakerGen.cs:221
+                        Element_UnitPrice.Write(sDef);                                                                                      // MakerGen.cs:221
+                        Element_Factor.Write(sDef);                                                                                         // MakerGen.cs:221
+                        Element_Net.Write(sDef);                                                                                            // MakerGen.cs:221
+                        Element_Udi.Write(sDef);                                                                                            // MakerGen.cs:221
+                        Element_NoteNumber.Write(sDef);                                                                                     // MakerGen.cs:221
+                        Element_Adjudication.Write(sDef);                                                                                   // MakerGen.cs:221
+                    }                                                                                                                       // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                    public Type_SubDetail()                                                                                                 // MakerGen.cs:400
+                    {                                                                                                                       // MakerGen.cs:401
+                        {                                                                                                                   // MakerGen.cs:232
                             // 108. ExplanationOfBenefit.item.detail.subDetail.sequence
-                            this.Element_Sequence = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Sequence",
-                                Path= "ExplanationOfBenefit.item.detail.subDetail.sequence",
-                                Id = "ExplanationOfBenefit.item.detail.subDetail.sequence",
-                                Min = 1,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_Sequence = new ElementDefinitionInfo                                                               // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Sequence",                                                                                  // MakerGen.cs:236
+                                Path= "ExplanationOfBenefit.item.detail.subDetail.sequence",                                                // MakerGen.cs:237
+                                Id = "ExplanationOfBenefit.item.detail.subDetail.sequence",                                                 // MakerGen.cs:238
+                                Min = 1,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                               // MakerGen.cs:301
+                                    {                                                                                                       // MakerGen.cs:302
+                                    }                                                                                                       // MakerGen.cs:305
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 109. ExplanationOfBenefit.item.detail.subDetail.revenue
-                            this.Element_Revenue = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Revenue",
-                                Path= "ExplanationOfBenefit.item.detail.subDetail.revenue",
-                                Id = "ExplanationOfBenefit.item.detail.subDetail.revenue",
-                                Min = 0,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_Revenue = new ElementDefinitionInfo                                                                // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Revenue",                                                                                   // MakerGen.cs:236
+                                Path= "ExplanationOfBenefit.item.detail.subDetail.revenue",                                                 // MakerGen.cs:237
+                                Id = "ExplanationOfBenefit.item.detail.subDetail.revenue",                                                  // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                  // MakerGen.cs:316
+                                    {                                                                                                       // MakerGen.cs:317
+                                    }                                                                                                       // MakerGen.cs:320
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 110. ExplanationOfBenefit.item.detail.subDetail.category
-                            this.Element_Category = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Category",
-                                Path= "ExplanationOfBenefit.item.detail.subDetail.category",
-                                Id = "ExplanationOfBenefit.item.detail.subDetail.category",
-                                Min = 0,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_Category = new ElementDefinitionInfo                                                               // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Category",                                                                                  // MakerGen.cs:236
+                                Path= "ExplanationOfBenefit.item.detail.subDetail.category",                                                // MakerGen.cs:237
+                                Id = "ExplanationOfBenefit.item.detail.subDetail.category",                                                 // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                  // MakerGen.cs:316
+                                    {                                                                                                       // MakerGen.cs:317
+                                    }                                                                                                       // MakerGen.cs:320
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 111. ExplanationOfBenefit.item.detail.subDetail.productOrService
-                            this.Element_ProductOrService = new ElementDefinitionInfo
-                            {
-                                Name = "Element_ProductOrService",
-                                Path= "ExplanationOfBenefit.item.detail.subDetail.productOrService",
-                                Id = "ExplanationOfBenefit.item.detail.subDetail.productOrService",
-                                Min = 1,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_ProductOrService = new ElementDefinitionInfo                                                       // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_ProductOrService",                                                                          // MakerGen.cs:236
+                                Path= "ExplanationOfBenefit.item.detail.subDetail.productOrService",                                        // MakerGen.cs:237
+                                Id = "ExplanationOfBenefit.item.detail.subDetail.productOrService",                                         // MakerGen.cs:238
+                                Min = 1,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                  // MakerGen.cs:316
+                                    {                                                                                                       // MakerGen.cs:317
+                                    }                                                                                                       // MakerGen.cs:320
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 112. ExplanationOfBenefit.item.detail.subDetail.modifier
-                            this.Element_Modifier = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Modifier",
-                                Path= "ExplanationOfBenefit.item.detail.subDetail.modifier",
-                                Id = "ExplanationOfBenefit.item.detail.subDetail.modifier",
-                                Min = 0,
-                                Max = -1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_Modifier = new ElementDefinitionInfo                                                               // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Modifier",                                                                                  // MakerGen.cs:236
+                                Path= "ExplanationOfBenefit.item.detail.subDetail.modifier",                                                // MakerGen.cs:237
+                                Id = "ExplanationOfBenefit.item.detail.subDetail.modifier",                                                 // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = -1,                                                                                                   // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                  // MakerGen.cs:316
+                                    {                                                                                                       // MakerGen.cs:317
+                                    }                                                                                                       // MakerGen.cs:320
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 113. ExplanationOfBenefit.item.detail.subDetail.programCode
-                            this.Element_ProgramCode = new ElementDefinitionInfo
-                            {
-                                Name = "Element_ProgramCode",
-                                Path= "ExplanationOfBenefit.item.detail.subDetail.programCode",
-                                Id = "ExplanationOfBenefit.item.detail.subDetail.programCode",
-                                Min = 0,
-                                Max = -1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_ProgramCode = new ElementDefinitionInfo                                                            // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_ProgramCode",                                                                               // MakerGen.cs:236
+                                Path= "ExplanationOfBenefit.item.detail.subDetail.programCode",                                             // MakerGen.cs:237
+                                Id = "ExplanationOfBenefit.item.detail.subDetail.programCode",                                              // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = -1,                                                                                                   // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                  // MakerGen.cs:316
+                                    {                                                                                                       // MakerGen.cs:317
+                                    }                                                                                                       // MakerGen.cs:320
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 114. ExplanationOfBenefit.item.detail.subDetail.quantity
-                            this.Element_Quantity = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Quantity",
-                                Path= "ExplanationOfBenefit.item.detail.subDetail.quantity",
-                                Id = "ExplanationOfBenefit.item.detail.subDetail.quantity",
-                                Min = 0,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Complex.Type_Quantity
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_Quantity = new ElementDefinitionInfo                                                               // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Quantity",                                                                                  // MakerGen.cs:236
+                                Path= "ExplanationOfBenefit.item.detail.subDetail.quantity",                                                // MakerGen.cs:237
+                                Id = "ExplanationOfBenefit.item.detail.subDetail.quantity",                                                 // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Complex.Type_Quantity                                                         // MakerGen.cs:356
+                                    {                                                                                                       // MakerGen.cs:357
+                                    }                                                                                                       // MakerGen.cs:358
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 115. ExplanationOfBenefit.item.detail.subDetail.unitPrice
-                            this.Element_UnitPrice = new ElementDefinitionInfo
-                            {
-                                Name = "Element_UnitPrice",
-                                Path= "ExplanationOfBenefit.item.detail.subDetail.unitPrice",
-                                Id = "ExplanationOfBenefit.item.detail.subDetail.unitPrice",
-                                Min = 0,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Complex.Type_Money
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_UnitPrice = new ElementDefinitionInfo                                                              // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_UnitPrice",                                                                                 // MakerGen.cs:236
+                                Path= "ExplanationOfBenefit.item.detail.subDetail.unitPrice",                                               // MakerGen.cs:237
+                                Id = "ExplanationOfBenefit.item.detail.subDetail.unitPrice",                                                // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Complex.Type_Money                                                            // MakerGen.cs:356
+                                    {                                                                                                       // MakerGen.cs:357
+                                    }                                                                                                       // MakerGen.cs:358
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 116. ExplanationOfBenefit.item.detail.subDetail.factor
-                            this.Element_Factor = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Factor",
-                                Path= "ExplanationOfBenefit.item.detail.subDetail.factor",
-                                Id = "ExplanationOfBenefit.item.detail.subDetail.factor",
-                                Min = 0,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_Factor = new ElementDefinitionInfo                                                                 // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Factor",                                                                                    // MakerGen.cs:236
+                                Path= "ExplanationOfBenefit.item.detail.subDetail.factor",                                                  // MakerGen.cs:237
+                                Id = "ExplanationOfBenefit.item.detail.subDetail.factor",                                                   // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                   // MakerGen.cs:301
+                                    {                                                                                                       // MakerGen.cs:302
+                                    }                                                                                                       // MakerGen.cs:305
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 117. ExplanationOfBenefit.item.detail.subDetail.net
-                            this.Element_Net = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Net",
-                                Path= "ExplanationOfBenefit.item.detail.subDetail.net",
-                                Id = "ExplanationOfBenefit.item.detail.subDetail.net",
-                                Min = 0,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Complex.Type_Money
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_Net = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Net",                                                                                       // MakerGen.cs:236
+                                Path= "ExplanationOfBenefit.item.detail.subDetail.net",                                                     // MakerGen.cs:237
+                                Id = "ExplanationOfBenefit.item.detail.subDetail.net",                                                      // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Complex.Type_Money                                                            // MakerGen.cs:356
+                                    {                                                                                                       // MakerGen.cs:357
+                                    }                                                                                                       // MakerGen.cs:358
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 118. ExplanationOfBenefit.item.detail.subDetail.udi
-                            this.Element_Udi = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Udi",
-                                Path= "ExplanationOfBenefit.item.detail.subDetail.udi",
-                                Id = "ExplanationOfBenefit.item.detail.subDetail.udi",
-                                Min = 0,
-                                Max = -1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Complex.Type_Reference
-                                    {
-                                        TargetProfile = new String[]
-                                        {
-                                            "http://hl7.org/fhir/StructureDefinition/Device"
-                                        }
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_Udi = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Udi",                                                                                       // MakerGen.cs:236
+                                Path= "ExplanationOfBenefit.item.detail.subDetail.udi",                                                     // MakerGen.cs:237
+                                Id = "ExplanationOfBenefit.item.detail.subDetail.udi",                                                      // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = -1,                                                                                                   // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Complex.Type_Reference                                                        // MakerGen.cs:344
+                                    {                                                                                                       // MakerGen.cs:345
+                                        TargetProfile = new String[]                                                                        // MakerGen.cs:347
+                                        {                                                                                                   // CodeEditorExtensions.cs:28
+                                            "http://hl7.org/fhir/StructureDefinition/Device"                                                // MakerGen.cs:347
+                                        }                                                                                                   // CodeEditorExtensions.cs:34
+                                    }                                                                                                       // MakerGen.cs:348
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 119. ExplanationOfBenefit.item.detail.subDetail.noteNumber
-                            this.Element_NoteNumber = new ElementDefinitionInfo
-                            {
-                                Name = "Element_NoteNumber",
-                                Path= "ExplanationOfBenefit.item.detail.subDetail.noteNumber",
-                                Id = "ExplanationOfBenefit.item.detail.subDetail.noteNumber",
-                                Min = 0,
-                                Max = -1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_NoteNumber = new ElementDefinitionInfo                                                             // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_NoteNumber",                                                                                // MakerGen.cs:236
+                                Path= "ExplanationOfBenefit.item.detail.subDetail.noteNumber",                                              // MakerGen.cs:237
+                                Id = "ExplanationOfBenefit.item.detail.subDetail.noteNumber",                                               // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = -1,                                                                                                   // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                               // MakerGen.cs:301
+                                    {                                                                                                       // MakerGen.cs:302
+                                    }                                                                                                       // MakerGen.cs:305
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 120. ExplanationOfBenefit.item.detail.subDetail.adjudication
-                            this.Element_Adjudication = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Adjudication",
-                                Path= "ExplanationOfBenefit.item.detail.subDetail.adjudication",
-                                Id = "ExplanationOfBenefit.item.detail.subDetail.adjudication",
-                                Min = 0,
-                                Max = -1,
-                                Types = new BaseType[]
-                                {
-                                }
-                            };
-                        }
-                    }
-                }
+                            this.Element_Adjudication = new ElementDefinitionInfo                                                           // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Adjudication",                                                                              // MakerGen.cs:236
+                                Path= "ExplanationOfBenefit.item.detail.subDetail.adjudication",                                            // MakerGen.cs:237
+                                Id = "ExplanationOfBenefit.item.detail.subDetail.adjudication",                                             // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = -1,                                                                                                   // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                    }                                                                                                                       // MakerGen.cs:403
+                }                                                                                                                           // MakerGen.cs:405
                 // 94. ExplanationOfBenefit.item.detail.sequence
-                public ElementDefinitionInfo Element_Sequence;
+                public ElementDefinitionInfo Element_Sequence;                                                                              // MakerGen.cs:217
                 // 95. ExplanationOfBenefit.item.detail.revenue
-                public ElementDefinitionInfo Element_Revenue;
+                public ElementDefinitionInfo Element_Revenue;                                                                               // MakerGen.cs:217
                 // 96. ExplanationOfBenefit.item.detail.category
-                public ElementDefinitionInfo Element_Category;
+                public ElementDefinitionInfo Element_Category;                                                                              // MakerGen.cs:217
                 // 97. ExplanationOfBenefit.item.detail.productOrService
-                public ElementDefinitionInfo Element_ProductOrService;
+                public ElementDefinitionInfo Element_ProductOrService;                                                                      // MakerGen.cs:217
                 // 98. ExplanationOfBenefit.item.detail.modifier
-                public ElementDefinitionInfo Element_Modifier;
+                public ElementDefinitionInfo Element_Modifier;                                                                              // MakerGen.cs:217
                 // 99. ExplanationOfBenefit.item.detail.programCode
-                public ElementDefinitionInfo Element_ProgramCode;
+                public ElementDefinitionInfo Element_ProgramCode;                                                                           // MakerGen.cs:217
                 // 100. ExplanationOfBenefit.item.detail.quantity
-                public ElementDefinitionInfo Element_Quantity;
+                public ElementDefinitionInfo Element_Quantity;                                                                              // MakerGen.cs:217
                 // 101. ExplanationOfBenefit.item.detail.unitPrice
-                public ElementDefinitionInfo Element_UnitPrice;
+                public ElementDefinitionInfo Element_UnitPrice;                                                                             // MakerGen.cs:217
                 // 102. ExplanationOfBenefit.item.detail.factor
-                public ElementDefinitionInfo Element_Factor;
+                public ElementDefinitionInfo Element_Factor;                                                                                // MakerGen.cs:217
                 // 103. ExplanationOfBenefit.item.detail.net
-                public ElementDefinitionInfo Element_Net;
+                public ElementDefinitionInfo Element_Net;                                                                                   // MakerGen.cs:217
                 // 104. ExplanationOfBenefit.item.detail.udi
-                public ElementDefinitionInfo Element_Udi;
+                public ElementDefinitionInfo Element_Udi;                                                                                   // MakerGen.cs:217
                 // 105. ExplanationOfBenefit.item.detail.noteNumber
-                public ElementDefinitionInfo Element_NoteNumber;
+                public ElementDefinitionInfo Element_NoteNumber;                                                                            // MakerGen.cs:217
                 // 106. ExplanationOfBenefit.item.detail.adjudication
-                public ElementDefinitionInfo Element_Adjudication;
+                public ElementDefinitionInfo Element_Adjudication;                                                                          // MakerGen.cs:217
                 // 107. ExplanationOfBenefit.item.detail.subDetail
-                public ElementDefinitionInfo Element_SubDetail;
-                
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                {
-                    base.Write(sDef);
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                    {
-                        Path = "ExplanationOfBenefit.item.detail",
-                        ElementId = "ExplanationOfBenefit.item.detail"
-                    });
-                    Element_Sequence.Write(sDef);
-                    Element_Revenue.Write(sDef);
-                    Element_Category.Write(sDef);
-                    Element_ProductOrService.Write(sDef);
-                    Element_Modifier.Write(sDef);
-                    Element_ProgramCode.Write(sDef);
-                    Element_Quantity.Write(sDef);
-                    Element_UnitPrice.Write(sDef);
-                    Element_Factor.Write(sDef);
-                    Element_Net.Write(sDef);
-                    Element_Udi.Write(sDef);
-                    Element_NoteNumber.Write(sDef);
-                    Element_Adjudication.Write(sDef);
-                    Element_SubDetail.Write(sDef);
-                }
-                
-                public Type_Detail()
-                {
-                    {
+                public ElementDefinitionInfo Element_SubDetail;                                                                             // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:389
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:390
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:391
+                    {                                                                                                                       // MakerGen.cs:392
+                        Path = "ExplanationOfBenefit.item.detail",                                                                          // MakerGen.cs:393
+                        ElementId = "ExplanationOfBenefit.item.detail"                                                                      // MakerGen.cs:394
+                    });                                                                                                                     // MakerGen.cs:395
+                    Element_Sequence.Write(sDef);                                                                                           // MakerGen.cs:221
+                    Element_Revenue.Write(sDef);                                                                                            // MakerGen.cs:221
+                    Element_Category.Write(sDef);                                                                                           // MakerGen.cs:221
+                    Element_ProductOrService.Write(sDef);                                                                                   // MakerGen.cs:221
+                    Element_Modifier.Write(sDef);                                                                                           // MakerGen.cs:221
+                    Element_ProgramCode.Write(sDef);                                                                                        // MakerGen.cs:221
+                    Element_Quantity.Write(sDef);                                                                                           // MakerGen.cs:221
+                    Element_UnitPrice.Write(sDef);                                                                                          // MakerGen.cs:221
+                    Element_Factor.Write(sDef);                                                                                             // MakerGen.cs:221
+                    Element_Net.Write(sDef);                                                                                                // MakerGen.cs:221
+                    Element_Udi.Write(sDef);                                                                                                // MakerGen.cs:221
+                    Element_NoteNumber.Write(sDef);                                                                                         // MakerGen.cs:221
+                    Element_Adjudication.Write(sDef);                                                                                       // MakerGen.cs:221
+                    Element_SubDetail.Write(sDef);                                                                                          // MakerGen.cs:221
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                public Type_Detail()                                                                                                        // MakerGen.cs:400
+                {                                                                                                                           // MakerGen.cs:401
+                    {                                                                                                                       // MakerGen.cs:232
                         // 94. ExplanationOfBenefit.item.detail.sequence
-                        this.Element_Sequence = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Sequence",
-                            Path= "ExplanationOfBenefit.item.detail.sequence",
-                            Id = "ExplanationOfBenefit.item.detail.sequence",
-                            Min = 1,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Sequence = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Sequence",                                                                                      // MakerGen.cs:236
+                            Path= "ExplanationOfBenefit.item.detail.sequence",                                                              // MakerGen.cs:237
+                            Id = "ExplanationOfBenefit.item.detail.sequence",                                                               // MakerGen.cs:238
+                            Min = 1,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                   // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 95. ExplanationOfBenefit.item.detail.revenue
-                        this.Element_Revenue = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Revenue",
-                            Path= "ExplanationOfBenefit.item.detail.revenue",
-                            Id = "ExplanationOfBenefit.item.detail.revenue",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Revenue = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Revenue",                                                                                       // MakerGen.cs:236
+                            Path= "ExplanationOfBenefit.item.detail.revenue",                                                               // MakerGen.cs:237
+                            Id = "ExplanationOfBenefit.item.detail.revenue",                                                                // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 96. ExplanationOfBenefit.item.detail.category
-                        this.Element_Category = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Category",
-                            Path= "ExplanationOfBenefit.item.detail.category",
-                            Id = "ExplanationOfBenefit.item.detail.category",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Category = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Category",                                                                                      // MakerGen.cs:236
+                            Path= "ExplanationOfBenefit.item.detail.category",                                                              // MakerGen.cs:237
+                            Id = "ExplanationOfBenefit.item.detail.category",                                                               // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 97. ExplanationOfBenefit.item.detail.productOrService
-                        this.Element_ProductOrService = new ElementDefinitionInfo
-                        {
-                            Name = "Element_ProductOrService",
-                            Path= "ExplanationOfBenefit.item.detail.productOrService",
-                            Id = "ExplanationOfBenefit.item.detail.productOrService",
-                            Min = 1,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_ProductOrService = new ElementDefinitionInfo                                                           // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_ProductOrService",                                                                              // MakerGen.cs:236
+                            Path= "ExplanationOfBenefit.item.detail.productOrService",                                                      // MakerGen.cs:237
+                            Id = "ExplanationOfBenefit.item.detail.productOrService",                                                       // MakerGen.cs:238
+                            Min = 1,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 98. ExplanationOfBenefit.item.detail.modifier
-                        this.Element_Modifier = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Modifier",
-                            Path= "ExplanationOfBenefit.item.detail.modifier",
-                            Id = "ExplanationOfBenefit.item.detail.modifier",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Modifier = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Modifier",                                                                                      // MakerGen.cs:236
+                            Path= "ExplanationOfBenefit.item.detail.modifier",                                                              // MakerGen.cs:237
+                            Id = "ExplanationOfBenefit.item.detail.modifier",                                                               // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 99. ExplanationOfBenefit.item.detail.programCode
-                        this.Element_ProgramCode = new ElementDefinitionInfo
-                        {
-                            Name = "Element_ProgramCode",
-                            Path= "ExplanationOfBenefit.item.detail.programCode",
-                            Id = "ExplanationOfBenefit.item.detail.programCode",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_ProgramCode = new ElementDefinitionInfo                                                                // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_ProgramCode",                                                                                   // MakerGen.cs:236
+                            Path= "ExplanationOfBenefit.item.detail.programCode",                                                           // MakerGen.cs:237
+                            Id = "ExplanationOfBenefit.item.detail.programCode",                                                            // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 100. ExplanationOfBenefit.item.detail.quantity
-                        this.Element_Quantity = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Quantity",
-                            Path= "ExplanationOfBenefit.item.detail.quantity",
-                            Id = "ExplanationOfBenefit.item.detail.quantity",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Quantity
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Quantity = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Quantity",                                                                                      // MakerGen.cs:236
+                            Path= "ExplanationOfBenefit.item.detail.quantity",                                                              // MakerGen.cs:237
+                            Id = "ExplanationOfBenefit.item.detail.quantity",                                                               // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Quantity                                                             // MakerGen.cs:356
+                                {                                                                                                           // MakerGen.cs:357
+                                }                                                                                                           // MakerGen.cs:358
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 101. ExplanationOfBenefit.item.detail.unitPrice
-                        this.Element_UnitPrice = new ElementDefinitionInfo
-                        {
-                            Name = "Element_UnitPrice",
-                            Path= "ExplanationOfBenefit.item.detail.unitPrice",
-                            Id = "ExplanationOfBenefit.item.detail.unitPrice",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Money
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_UnitPrice = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_UnitPrice",                                                                                     // MakerGen.cs:236
+                            Path= "ExplanationOfBenefit.item.detail.unitPrice",                                                             // MakerGen.cs:237
+                            Id = "ExplanationOfBenefit.item.detail.unitPrice",                                                              // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Money                                                                // MakerGen.cs:356
+                                {                                                                                                           // MakerGen.cs:357
+                                }                                                                                                           // MakerGen.cs:358
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 102. ExplanationOfBenefit.item.detail.factor
-                        this.Element_Factor = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Factor",
-                            Path= "ExplanationOfBenefit.item.detail.factor",
-                            Id = "ExplanationOfBenefit.item.detail.factor",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Factor = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Factor",                                                                                        // MakerGen.cs:236
+                            Path= "ExplanationOfBenefit.item.detail.factor",                                                                // MakerGen.cs:237
+                            Id = "ExplanationOfBenefit.item.detail.factor",                                                                 // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                       // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 103. ExplanationOfBenefit.item.detail.net
-                        this.Element_Net = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Net",
-                            Path= "ExplanationOfBenefit.item.detail.net",
-                            Id = "ExplanationOfBenefit.item.detail.net",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Money
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Net = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Net",                                                                                           // MakerGen.cs:236
+                            Path= "ExplanationOfBenefit.item.detail.net",                                                                   // MakerGen.cs:237
+                            Id = "ExplanationOfBenefit.item.detail.net",                                                                    // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Money                                                                // MakerGen.cs:356
+                                {                                                                                                           // MakerGen.cs:357
+                                }                                                                                                           // MakerGen.cs:358
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 104. ExplanationOfBenefit.item.detail.udi
-                        this.Element_Udi = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Udi",
-                            Path= "ExplanationOfBenefit.item.detail.udi",
-                            Id = "ExplanationOfBenefit.item.detail.udi",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Reference
-                                {
-                                    TargetProfile = new String[]
-                                    {
-                                        "http://hl7.org/fhir/StructureDefinition/Device"
-                                    }
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Udi = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Udi",                                                                                           // MakerGen.cs:236
+                            Path= "ExplanationOfBenefit.item.detail.udi",                                                                   // MakerGen.cs:237
+                            Id = "ExplanationOfBenefit.item.detail.udi",                                                                    // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Reference                                                            // MakerGen.cs:344
+                                {                                                                                                           // MakerGen.cs:345
+                                    TargetProfile = new String[]                                                                            // MakerGen.cs:347
+                                    {                                                                                                       // CodeEditorExtensions.cs:28
+                                        "http://hl7.org/fhir/StructureDefinition/Device"                                                    // MakerGen.cs:347
+                                    }                                                                                                       // CodeEditorExtensions.cs:34
+                                }                                                                                                           // MakerGen.cs:348
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 105. ExplanationOfBenefit.item.detail.noteNumber
-                        this.Element_NoteNumber = new ElementDefinitionInfo
-                        {
-                            Name = "Element_NoteNumber",
-                            Path= "ExplanationOfBenefit.item.detail.noteNumber",
-                            Id = "ExplanationOfBenefit.item.detail.noteNumber",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_NoteNumber = new ElementDefinitionInfo                                                                 // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_NoteNumber",                                                                                    // MakerGen.cs:236
+                            Path= "ExplanationOfBenefit.item.detail.noteNumber",                                                            // MakerGen.cs:237
+                            Id = "ExplanationOfBenefit.item.detail.noteNumber",                                                             // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                   // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 106. ExplanationOfBenefit.item.detail.adjudication
-                        this.Element_Adjudication = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Adjudication",
-                            Path= "ExplanationOfBenefit.item.detail.adjudication",
-                            Id = "ExplanationOfBenefit.item.detail.adjudication",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Adjudication = new ElementDefinitionInfo                                                               // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Adjudication",                                                                                  // MakerGen.cs:236
+                            Path= "ExplanationOfBenefit.item.detail.adjudication",                                                          // MakerGen.cs:237
+                            Id = "ExplanationOfBenefit.item.detail.adjudication",                                                           // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 107. ExplanationOfBenefit.item.detail.subDetail
-                        this.Element_SubDetail = new ElementDefinitionInfo
-                        {
-                            Name = "Element_SubDetail",
-                            Path= "ExplanationOfBenefit.item.detail.subDetail",
-                            Id = "ExplanationOfBenefit.item.detail.subDetail",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new Type_SubDetail
-                                {
-                                }
-                            }
-                        };
-                    }
-                }
-            }
+                        this.Element_SubDetail = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_SubDetail",                                                                                     // MakerGen.cs:236
+                            Path= "ExplanationOfBenefit.item.detail.subDetail",                                                             // MakerGen.cs:237
+                            Id = "ExplanationOfBenefit.item.detail.subDetail",                                                              // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new Type_SubDetail                                                                                          // MakerGen.cs:260
+                                {                                                                                                           // MakerGen.cs:261
+                                }                                                                                                           // MakerGen.cs:262
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                }                                                                                                                           // MakerGen.cs:403
+            }                                                                                                                               // MakerGen.cs:405
             // 67. ExplanationOfBenefit.item.sequence
-            public ElementDefinitionInfo Element_Sequence;
+            public ElementDefinitionInfo Element_Sequence;                                                                                  // MakerGen.cs:217
             // 68. ExplanationOfBenefit.item.careTeamSequence
-            public ElementDefinitionInfo Element_CareTeamSequence;
+            public ElementDefinitionInfo Element_CareTeamSequence;                                                                          // MakerGen.cs:217
             // 69. ExplanationOfBenefit.item.diagnosisSequence
-            public ElementDefinitionInfo Element_DiagnosisSequence;
+            public ElementDefinitionInfo Element_DiagnosisSequence;                                                                         // MakerGen.cs:217
             // 70. ExplanationOfBenefit.item.procedureSequence
-            public ElementDefinitionInfo Element_ProcedureSequence;
+            public ElementDefinitionInfo Element_ProcedureSequence;                                                                         // MakerGen.cs:217
             // 71. ExplanationOfBenefit.item.informationSequence
-            public ElementDefinitionInfo Element_InformationSequence;
+            public ElementDefinitionInfo Element_InformationSequence;                                                                       // MakerGen.cs:217
             // 72. ExplanationOfBenefit.item.revenue
-            public ElementDefinitionInfo Element_Revenue;
+            public ElementDefinitionInfo Element_Revenue;                                                                                   // MakerGen.cs:217
             // 73. ExplanationOfBenefit.item.category
-            public ElementDefinitionInfo Element_Category;
+            public ElementDefinitionInfo Element_Category;                                                                                  // MakerGen.cs:217
             // 74. ExplanationOfBenefit.item.productOrService
-            public ElementDefinitionInfo Element_ProductOrService;
+            public ElementDefinitionInfo Element_ProductOrService;                                                                          // MakerGen.cs:217
             // 75. ExplanationOfBenefit.item.modifier
-            public ElementDefinitionInfo Element_Modifier;
+            public ElementDefinitionInfo Element_Modifier;                                                                                  // MakerGen.cs:217
             // 76. ExplanationOfBenefit.item.programCode
-            public ElementDefinitionInfo Element_ProgramCode;
+            public ElementDefinitionInfo Element_ProgramCode;                                                                               // MakerGen.cs:217
             // 77. ExplanationOfBenefit.item.serviced[x]
-            public ElementDefinitionInfo Element_Serviced;
+            public ElementDefinitionInfo Element_Serviced;                                                                                  // MakerGen.cs:217
             // 78. ExplanationOfBenefit.item.location[x]
-            public ElementDefinitionInfo Element_Location;
+            public ElementDefinitionInfo Element_Location;                                                                                  // MakerGen.cs:217
             // 79. ExplanationOfBenefit.item.quantity
-            public ElementDefinitionInfo Element_Quantity;
+            public ElementDefinitionInfo Element_Quantity;                                                                                  // MakerGen.cs:217
             // 80. ExplanationOfBenefit.item.unitPrice
-            public ElementDefinitionInfo Element_UnitPrice;
+            public ElementDefinitionInfo Element_UnitPrice;                                                                                 // MakerGen.cs:217
             // 81. ExplanationOfBenefit.item.factor
-            public ElementDefinitionInfo Element_Factor;
+            public ElementDefinitionInfo Element_Factor;                                                                                    // MakerGen.cs:217
             // 82. ExplanationOfBenefit.item.net
-            public ElementDefinitionInfo Element_Net;
+            public ElementDefinitionInfo Element_Net;                                                                                       // MakerGen.cs:217
             // 83. ExplanationOfBenefit.item.udi
-            public ElementDefinitionInfo Element_Udi;
+            public ElementDefinitionInfo Element_Udi;                                                                                       // MakerGen.cs:217
             // 84. ExplanationOfBenefit.item.bodySite
-            public ElementDefinitionInfo Element_BodySite;
+            public ElementDefinitionInfo Element_BodySite;                                                                                  // MakerGen.cs:217
             // 85. ExplanationOfBenefit.item.subSite
-            public ElementDefinitionInfo Element_SubSite;
+            public ElementDefinitionInfo Element_SubSite;                                                                                   // MakerGen.cs:217
             // 86. ExplanationOfBenefit.item.encounter
-            public ElementDefinitionInfo Element_Encounter;
+            public ElementDefinitionInfo Element_Encounter;                                                                                 // MakerGen.cs:217
             // 87. ExplanationOfBenefit.item.noteNumber
-            public ElementDefinitionInfo Element_NoteNumber;
+            public ElementDefinitionInfo Element_NoteNumber;                                                                                // MakerGen.cs:217
             // 88. ExplanationOfBenefit.item.adjudication
-            public ElementDefinitionInfo Element_Adjudication;
+            public ElementDefinitionInfo Element_Adjudication;                                                                              // MakerGen.cs:217
             // 93. ExplanationOfBenefit.item.detail
-            public ElementDefinitionInfo Element_Detail;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "ExplanationOfBenefit.item",
-                    ElementId = "ExplanationOfBenefit.item"
-                });
-                Element_Sequence.Write(sDef);
-                Element_CareTeamSequence.Write(sDef);
-                Element_DiagnosisSequence.Write(sDef);
-                Element_ProcedureSequence.Write(sDef);
-                Element_InformationSequence.Write(sDef);
-                Element_Revenue.Write(sDef);
-                Element_Category.Write(sDef);
-                Element_ProductOrService.Write(sDef);
-                Element_Modifier.Write(sDef);
-                Element_ProgramCode.Write(sDef);
-                Element_Serviced.Write(sDef);
-                Element_Location.Write(sDef);
-                Element_Quantity.Write(sDef);
-                Element_UnitPrice.Write(sDef);
-                Element_Factor.Write(sDef);
-                Element_Net.Write(sDef);
-                Element_Udi.Write(sDef);
-                Element_BodySite.Write(sDef);
-                Element_SubSite.Write(sDef);
-                Element_Encounter.Write(sDef);
-                Element_NoteNumber.Write(sDef);
-                Element_Adjudication.Write(sDef);
-                Element_Detail.Write(sDef);
-            }
-            
-            public Type_Item()
-            {
-                {
+            public ElementDefinitionInfo Element_Detail;                                                                                    // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "ExplanationOfBenefit.item",                                                                                     // MakerGen.cs:393
+                    ElementId = "ExplanationOfBenefit.item"                                                                                 // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Sequence.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_CareTeamSequence.Write(sDef);                                                                                       // MakerGen.cs:221
+                Element_DiagnosisSequence.Write(sDef);                                                                                      // MakerGen.cs:221
+                Element_ProcedureSequence.Write(sDef);                                                                                      // MakerGen.cs:221
+                Element_InformationSequence.Write(sDef);                                                                                    // MakerGen.cs:221
+                Element_Revenue.Write(sDef);                                                                                                // MakerGen.cs:221
+                Element_Category.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_ProductOrService.Write(sDef);                                                                                       // MakerGen.cs:221
+                Element_Modifier.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_ProgramCode.Write(sDef);                                                                                            // MakerGen.cs:221
+                Element_Serviced.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_Location.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_Quantity.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_UnitPrice.Write(sDef);                                                                                              // MakerGen.cs:221
+                Element_Factor.Write(sDef);                                                                                                 // MakerGen.cs:221
+                Element_Net.Write(sDef);                                                                                                    // MakerGen.cs:221
+                Element_Udi.Write(sDef);                                                                                                    // MakerGen.cs:221
+                Element_BodySite.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_SubSite.Write(sDef);                                                                                                // MakerGen.cs:221
+                Element_Encounter.Write(sDef);                                                                                              // MakerGen.cs:221
+                Element_NoteNumber.Write(sDef);                                                                                             // MakerGen.cs:221
+                Element_Adjudication.Write(sDef);                                                                                           // MakerGen.cs:221
+                Element_Detail.Write(sDef);                                                                                                 // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Item()                                                                                                              // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 67. ExplanationOfBenefit.item.sequence
-                    this.Element_Sequence = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Sequence",
-                        Path= "ExplanationOfBenefit.item.sequence",
-                        Id = "ExplanationOfBenefit.item.sequence",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Sequence = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Sequence",                                                                                          // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.item.sequence",                                                                         // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.item.sequence",                                                                          // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                       // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 68. ExplanationOfBenefit.item.careTeamSequence
-                    this.Element_CareTeamSequence = new ElementDefinitionInfo
-                    {
-                        Name = "Element_CareTeamSequence",
-                        Path= "ExplanationOfBenefit.item.careTeamSequence",
-                        Id = "ExplanationOfBenefit.item.careTeamSequence",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_CareTeamSequence = new ElementDefinitionInfo                                                               // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_CareTeamSequence",                                                                                  // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.item.careTeamSequence",                                                                 // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.item.careTeamSequence",                                                                  // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                       // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 69. ExplanationOfBenefit.item.diagnosisSequence
-                    this.Element_DiagnosisSequence = new ElementDefinitionInfo
-                    {
-                        Name = "Element_DiagnosisSequence",
-                        Path= "ExplanationOfBenefit.item.diagnosisSequence",
-                        Id = "ExplanationOfBenefit.item.diagnosisSequence",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_DiagnosisSequence = new ElementDefinitionInfo                                                              // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_DiagnosisSequence",                                                                                 // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.item.diagnosisSequence",                                                                // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.item.diagnosisSequence",                                                                 // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                       // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 70. ExplanationOfBenefit.item.procedureSequence
-                    this.Element_ProcedureSequence = new ElementDefinitionInfo
-                    {
-                        Name = "Element_ProcedureSequence",
-                        Path= "ExplanationOfBenefit.item.procedureSequence",
-                        Id = "ExplanationOfBenefit.item.procedureSequence",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_ProcedureSequence = new ElementDefinitionInfo                                                              // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_ProcedureSequence",                                                                                 // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.item.procedureSequence",                                                                // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.item.procedureSequence",                                                                 // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                       // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 71. ExplanationOfBenefit.item.informationSequence
-                    this.Element_InformationSequence = new ElementDefinitionInfo
-                    {
-                        Name = "Element_InformationSequence",
-                        Path= "ExplanationOfBenefit.item.informationSequence",
-                        Id = "ExplanationOfBenefit.item.informationSequence",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_InformationSequence = new ElementDefinitionInfo                                                            // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_InformationSequence",                                                                               // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.item.informationSequence",                                                              // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.item.informationSequence",                                                               // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                       // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 72. ExplanationOfBenefit.item.revenue
-                    this.Element_Revenue = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Revenue",
-                        Path= "ExplanationOfBenefit.item.revenue",
-                        Id = "ExplanationOfBenefit.item.revenue",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Revenue = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Revenue",                                                                                           // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.item.revenue",                                                                          // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.item.revenue",                                                                           // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 73. ExplanationOfBenefit.item.category
-                    this.Element_Category = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Category",
-                        Path= "ExplanationOfBenefit.item.category",
-                        Id = "ExplanationOfBenefit.item.category",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Category = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Category",                                                                                          // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.item.category",                                                                         // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.item.category",                                                                          // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 74. ExplanationOfBenefit.item.productOrService
-                    this.Element_ProductOrService = new ElementDefinitionInfo
-                    {
-                        Name = "Element_ProductOrService",
-                        Path= "ExplanationOfBenefit.item.productOrService",
-                        Id = "ExplanationOfBenefit.item.productOrService",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_ProductOrService = new ElementDefinitionInfo                                                               // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_ProductOrService",                                                                                  // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.item.productOrService",                                                                 // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.item.productOrService",                                                                  // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 75. ExplanationOfBenefit.item.modifier
-                    this.Element_Modifier = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Modifier",
-                        Path= "ExplanationOfBenefit.item.modifier",
-                        Id = "ExplanationOfBenefit.item.modifier",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Modifier = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Modifier",                                                                                          // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.item.modifier",                                                                         // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.item.modifier",                                                                          // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 76. ExplanationOfBenefit.item.programCode
-                    this.Element_ProgramCode = new ElementDefinitionInfo
-                    {
-                        Name = "Element_ProgramCode",
-                        Path= "ExplanationOfBenefit.item.programCode",
-                        Id = "ExplanationOfBenefit.item.programCode",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_ProgramCode = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_ProgramCode",                                                                                       // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.item.programCode",                                                                      // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.item.programCode",                                                                       // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 77. ExplanationOfBenefit.item.serviced[x]
-                    this.Element_Serviced = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Serviced",
-                        Path= "ExplanationOfBenefit.item.serviced[x]",
-                        Id = "ExplanationOfBenefit.item.serviced[x]",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Date
-                            {
-                            },
-                            new FhirKhit.Maker.Common.Complex.Type_Period
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Serviced = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Serviced",                                                                                          // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.item.serviced[x]",                                                                      // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.item.serviced[x]",                                                                       // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Date                                                              // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            },                                                                                                              // MakerGen.cs:305
+                            new FhirKhit.Maker.Common.Complex.Type_Period                                                                   // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 78. ExplanationOfBenefit.item.location[x]
-                    this.Element_Location = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Location",
-                        Path= "ExplanationOfBenefit.item.location[x]",
-                        Id = "ExplanationOfBenefit.item.location[x]",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            },
-                            new FhirKhit.Maker.Common.Complex.Type_Address
-                            {
-                            },
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Location"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Location = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Location",                                                                                          // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.item.location[x]",                                                                      // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.item.location[x]",                                                                       // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            },                                                                                                              // MakerGen.cs:320
+                            new FhirKhit.Maker.Common.Complex.Type_Address                                                                  // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            },                                                                                                              // MakerGen.cs:358
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Location"                                                      // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 79. ExplanationOfBenefit.item.quantity
-                    this.Element_Quantity = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Quantity",
-                        Path= "ExplanationOfBenefit.item.quantity",
-                        Id = "ExplanationOfBenefit.item.quantity",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Quantity
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Quantity = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Quantity",                                                                                          // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.item.quantity",                                                                         // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.item.quantity",                                                                          // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Quantity                                                                 // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 80. ExplanationOfBenefit.item.unitPrice
-                    this.Element_UnitPrice = new ElementDefinitionInfo
-                    {
-                        Name = "Element_UnitPrice",
-                        Path= "ExplanationOfBenefit.item.unitPrice",
-                        Id = "ExplanationOfBenefit.item.unitPrice",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Money
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_UnitPrice = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_UnitPrice",                                                                                         // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.item.unitPrice",                                                                        // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.item.unitPrice",                                                                         // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Money                                                                    // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 81. ExplanationOfBenefit.item.factor
-                    this.Element_Factor = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Factor",
-                        Path= "ExplanationOfBenefit.item.factor",
-                        Id = "ExplanationOfBenefit.item.factor",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Factor = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Factor",                                                                                            // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.item.factor",                                                                           // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.item.factor",                                                                            // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                           // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 82. ExplanationOfBenefit.item.net
-                    this.Element_Net = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Net",
-                        Path= "ExplanationOfBenefit.item.net",
-                        Id = "ExplanationOfBenefit.item.net",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Money
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Net = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Net",                                                                                               // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.item.net",                                                                              // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.item.net",                                                                               // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Money                                                                    // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 83. ExplanationOfBenefit.item.udi
-                    this.Element_Udi = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Udi",
-                        Path= "ExplanationOfBenefit.item.udi",
-                        Id = "ExplanationOfBenefit.item.udi",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Device"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Udi = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Udi",                                                                                               // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.item.udi",                                                                              // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.item.udi",                                                                               // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Device"                                                        // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 84. ExplanationOfBenefit.item.bodySite
-                    this.Element_BodySite = new ElementDefinitionInfo
-                    {
-                        Name = "Element_BodySite",
-                        Path= "ExplanationOfBenefit.item.bodySite",
-                        Id = "ExplanationOfBenefit.item.bodySite",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_BodySite = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_BodySite",                                                                                          // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.item.bodySite",                                                                         // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.item.bodySite",                                                                          // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 85. ExplanationOfBenefit.item.subSite
-                    this.Element_SubSite = new ElementDefinitionInfo
-                    {
-                        Name = "Element_SubSite",
-                        Path= "ExplanationOfBenefit.item.subSite",
-                        Id = "ExplanationOfBenefit.item.subSite",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_SubSite = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_SubSite",                                                                                           // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.item.subSite",                                                                          // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.item.subSite",                                                                           // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 86. ExplanationOfBenefit.item.encounter
-                    this.Element_Encounter = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Encounter",
-                        Path= "ExplanationOfBenefit.item.encounter",
-                        Id = "ExplanationOfBenefit.item.encounter",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Encounter"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Encounter = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Encounter",                                                                                         // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.item.encounter",                                                                        // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.item.encounter",                                                                         // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Encounter"                                                     // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 87. ExplanationOfBenefit.item.noteNumber
-                    this.Element_NoteNumber = new ElementDefinitionInfo
-                    {
-                        Name = "Element_NoteNumber",
-                        Path= "ExplanationOfBenefit.item.noteNumber",
-                        Id = "ExplanationOfBenefit.item.noteNumber",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_NoteNumber = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_NoteNumber",                                                                                        // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.item.noteNumber",                                                                       // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.item.noteNumber",                                                                        // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                       // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 88. ExplanationOfBenefit.item.adjudication
-                    this.Element_Adjudication = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Adjudication",
-                        Path= "ExplanationOfBenefit.item.adjudication",
-                        Id = "ExplanationOfBenefit.item.adjudication",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new Type_Adjudication
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Adjudication = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Adjudication",                                                                                      // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.item.adjudication",                                                                     // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.item.adjudication",                                                                      // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new Type_Adjudication                                                                                           // MakerGen.cs:260
+                            {                                                                                                               // MakerGen.cs:261
+                            }                                                                                                               // MakerGen.cs:262
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 93. ExplanationOfBenefit.item.detail
-                    this.Element_Detail = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Detail",
-                        Path= "ExplanationOfBenefit.item.detail",
-                        Id = "ExplanationOfBenefit.item.detail",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new Type_Detail
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Detail = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Detail",                                                                                            // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.item.detail",                                                                           // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.item.detail",                                                                            // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new Type_Detail                                                                                                 // MakerGen.cs:260
+                            {                                                                                                               // MakerGen.cs:261
+                            }                                                                                                               // MakerGen.cs:262
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 121. ExplanationOfBenefit.addItem
-        public partial class Type_AddItem : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_AddItem : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 139. ExplanationOfBenefit.addItem.detail
-            public partial class Type_Detail : FhirKhit.Maker.Common.Complex.ComplexBase
-            {
+            public partial class Type_Detail : FhirKhit.Maker.Common.Complex.ComplexBase                                                    // MakerGen.cs:381
+            {                                                                                                                               // MakerGen.cs:382
                 // 148. ExplanationOfBenefit.addItem.detail.subDetail
-                public partial class Type_SubDetail : FhirKhit.Maker.Common.Complex.ComplexBase
-                {
+                public partial class Type_SubDetail : FhirKhit.Maker.Common.Complex.ComplexBase                                             // MakerGen.cs:381
+                {                                                                                                                           // MakerGen.cs:382
                     // 149. ExplanationOfBenefit.addItem.detail.subDetail.productOrService
-                    public ElementDefinitionInfo Element_ProductOrService;
+                    public ElementDefinitionInfo Element_ProductOrService;                                                                  // MakerGen.cs:217
                     // 150. ExplanationOfBenefit.addItem.detail.subDetail.modifier
-                    public ElementDefinitionInfo Element_Modifier;
+                    public ElementDefinitionInfo Element_Modifier;                                                                          // MakerGen.cs:217
                     // 151. ExplanationOfBenefit.addItem.detail.subDetail.quantity
-                    public ElementDefinitionInfo Element_Quantity;
+                    public ElementDefinitionInfo Element_Quantity;                                                                          // MakerGen.cs:217
                     // 152. ExplanationOfBenefit.addItem.detail.subDetail.unitPrice
-                    public ElementDefinitionInfo Element_UnitPrice;
+                    public ElementDefinitionInfo Element_UnitPrice;                                                                         // MakerGen.cs:217
                     // 153. ExplanationOfBenefit.addItem.detail.subDetail.factor
-                    public ElementDefinitionInfo Element_Factor;
+                    public ElementDefinitionInfo Element_Factor;                                                                            // MakerGen.cs:217
                     // 154. ExplanationOfBenefit.addItem.detail.subDetail.net
-                    public ElementDefinitionInfo Element_Net;
+                    public ElementDefinitionInfo Element_Net;                                                                               // MakerGen.cs:217
                     // 155. ExplanationOfBenefit.addItem.detail.subDetail.noteNumber
-                    public ElementDefinitionInfo Element_NoteNumber;
+                    public ElementDefinitionInfo Element_NoteNumber;                                                                        // MakerGen.cs:217
                     // 156. ExplanationOfBenefit.addItem.detail.subDetail.adjudication
-                    public ElementDefinitionInfo Element_Adjudication;
-                    
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                    {
-                        base.Write(sDef);
-                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                        {
-                            Path = "ExplanationOfBenefit.addItem.detail.subDetail",
-                            ElementId = "ExplanationOfBenefit.addItem.detail.subDetail"
-                        });
-                        Element_ProductOrService.Write(sDef);
-                        Element_Modifier.Write(sDef);
-                        Element_Quantity.Write(sDef);
-                        Element_UnitPrice.Write(sDef);
-                        Element_Factor.Write(sDef);
-                        Element_Net.Write(sDef);
-                        Element_NoteNumber.Write(sDef);
-                        Element_Adjudication.Write(sDef);
-                    }
-                    
-                    public Type_SubDetail()
-                    {
-                        {
+                    public ElementDefinitionInfo Element_Adjudication;                                                                      // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:388
+                    {                                                                                                                       // MakerGen.cs:389
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:390
+                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                  // MakerGen.cs:391
+                        {                                                                                                                   // MakerGen.cs:392
+                            Path = "ExplanationOfBenefit.addItem.detail.subDetail",                                                         // MakerGen.cs:393
+                            ElementId = "ExplanationOfBenefit.addItem.detail.subDetail"                                                     // MakerGen.cs:394
+                        });                                                                                                                 // MakerGen.cs:395
+                        Element_ProductOrService.Write(sDef);                                                                               // MakerGen.cs:221
+                        Element_Modifier.Write(sDef);                                                                                       // MakerGen.cs:221
+                        Element_Quantity.Write(sDef);                                                                                       // MakerGen.cs:221
+                        Element_UnitPrice.Write(sDef);                                                                                      // MakerGen.cs:221
+                        Element_Factor.Write(sDef);                                                                                         // MakerGen.cs:221
+                        Element_Net.Write(sDef);                                                                                            // MakerGen.cs:221
+                        Element_NoteNumber.Write(sDef);                                                                                     // MakerGen.cs:221
+                        Element_Adjudication.Write(sDef);                                                                                   // MakerGen.cs:221
+                    }                                                                                                                       // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                    public Type_SubDetail()                                                                                                 // MakerGen.cs:400
+                    {                                                                                                                       // MakerGen.cs:401
+                        {                                                                                                                   // MakerGen.cs:232
                             // 149. ExplanationOfBenefit.addItem.detail.subDetail.productOrService
-                            this.Element_ProductOrService = new ElementDefinitionInfo
-                            {
-                                Name = "Element_ProductOrService",
-                                Path= "ExplanationOfBenefit.addItem.detail.subDetail.productOrService",
-                                Id = "ExplanationOfBenefit.addItem.detail.subDetail.productOrService",
-                                Min = 1,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_ProductOrService = new ElementDefinitionInfo                                                       // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_ProductOrService",                                                                          // MakerGen.cs:236
+                                Path= "ExplanationOfBenefit.addItem.detail.subDetail.productOrService",                                     // MakerGen.cs:237
+                                Id = "ExplanationOfBenefit.addItem.detail.subDetail.productOrService",                                      // MakerGen.cs:238
+                                Min = 1,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                  // MakerGen.cs:316
+                                    {                                                                                                       // MakerGen.cs:317
+                                    }                                                                                                       // MakerGen.cs:320
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 150. ExplanationOfBenefit.addItem.detail.subDetail.modifier
-                            this.Element_Modifier = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Modifier",
-                                Path= "ExplanationOfBenefit.addItem.detail.subDetail.modifier",
-                                Id = "ExplanationOfBenefit.addItem.detail.subDetail.modifier",
-                                Min = 0,
-                                Max = -1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_Modifier = new ElementDefinitionInfo                                                               // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Modifier",                                                                                  // MakerGen.cs:236
+                                Path= "ExplanationOfBenefit.addItem.detail.subDetail.modifier",                                             // MakerGen.cs:237
+                                Id = "ExplanationOfBenefit.addItem.detail.subDetail.modifier",                                              // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = -1,                                                                                                   // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                  // MakerGen.cs:316
+                                    {                                                                                                       // MakerGen.cs:317
+                                    }                                                                                                       // MakerGen.cs:320
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 151. ExplanationOfBenefit.addItem.detail.subDetail.quantity
-                            this.Element_Quantity = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Quantity",
-                                Path= "ExplanationOfBenefit.addItem.detail.subDetail.quantity",
-                                Id = "ExplanationOfBenefit.addItem.detail.subDetail.quantity",
-                                Min = 0,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Complex.Type_Quantity
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_Quantity = new ElementDefinitionInfo                                                               // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Quantity",                                                                                  // MakerGen.cs:236
+                                Path= "ExplanationOfBenefit.addItem.detail.subDetail.quantity",                                             // MakerGen.cs:237
+                                Id = "ExplanationOfBenefit.addItem.detail.subDetail.quantity",                                              // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Complex.Type_Quantity                                                         // MakerGen.cs:356
+                                    {                                                                                                       // MakerGen.cs:357
+                                    }                                                                                                       // MakerGen.cs:358
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 152. ExplanationOfBenefit.addItem.detail.subDetail.unitPrice
-                            this.Element_UnitPrice = new ElementDefinitionInfo
-                            {
-                                Name = "Element_UnitPrice",
-                                Path= "ExplanationOfBenefit.addItem.detail.subDetail.unitPrice",
-                                Id = "ExplanationOfBenefit.addItem.detail.subDetail.unitPrice",
-                                Min = 0,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Complex.Type_Money
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_UnitPrice = new ElementDefinitionInfo                                                              // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_UnitPrice",                                                                                 // MakerGen.cs:236
+                                Path= "ExplanationOfBenefit.addItem.detail.subDetail.unitPrice",                                            // MakerGen.cs:237
+                                Id = "ExplanationOfBenefit.addItem.detail.subDetail.unitPrice",                                             // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Complex.Type_Money                                                            // MakerGen.cs:356
+                                    {                                                                                                       // MakerGen.cs:357
+                                    }                                                                                                       // MakerGen.cs:358
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 153. ExplanationOfBenefit.addItem.detail.subDetail.factor
-                            this.Element_Factor = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Factor",
-                                Path= "ExplanationOfBenefit.addItem.detail.subDetail.factor",
-                                Id = "ExplanationOfBenefit.addItem.detail.subDetail.factor",
-                                Min = 0,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_Factor = new ElementDefinitionInfo                                                                 // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Factor",                                                                                    // MakerGen.cs:236
+                                Path= "ExplanationOfBenefit.addItem.detail.subDetail.factor",                                               // MakerGen.cs:237
+                                Id = "ExplanationOfBenefit.addItem.detail.subDetail.factor",                                                // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                   // MakerGen.cs:301
+                                    {                                                                                                       // MakerGen.cs:302
+                                    }                                                                                                       // MakerGen.cs:305
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 154. ExplanationOfBenefit.addItem.detail.subDetail.net
-                            this.Element_Net = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Net",
-                                Path= "ExplanationOfBenefit.addItem.detail.subDetail.net",
-                                Id = "ExplanationOfBenefit.addItem.detail.subDetail.net",
-                                Min = 0,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Complex.Type_Money
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_Net = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Net",                                                                                       // MakerGen.cs:236
+                                Path= "ExplanationOfBenefit.addItem.detail.subDetail.net",                                                  // MakerGen.cs:237
+                                Id = "ExplanationOfBenefit.addItem.detail.subDetail.net",                                                   // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Complex.Type_Money                                                            // MakerGen.cs:356
+                                    {                                                                                                       // MakerGen.cs:357
+                                    }                                                                                                       // MakerGen.cs:358
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 155. ExplanationOfBenefit.addItem.detail.subDetail.noteNumber
-                            this.Element_NoteNumber = new ElementDefinitionInfo
-                            {
-                                Name = "Element_NoteNumber",
-                                Path= "ExplanationOfBenefit.addItem.detail.subDetail.noteNumber",
-                                Id = "ExplanationOfBenefit.addItem.detail.subDetail.noteNumber",
-                                Min = 0,
-                                Max = -1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_NoteNumber = new ElementDefinitionInfo                                                             // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_NoteNumber",                                                                                // MakerGen.cs:236
+                                Path= "ExplanationOfBenefit.addItem.detail.subDetail.noteNumber",                                           // MakerGen.cs:237
+                                Id = "ExplanationOfBenefit.addItem.detail.subDetail.noteNumber",                                            // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = -1,                                                                                                   // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                               // MakerGen.cs:301
+                                    {                                                                                                       // MakerGen.cs:302
+                                    }                                                                                                       // MakerGen.cs:305
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 156. ExplanationOfBenefit.addItem.detail.subDetail.adjudication
-                            this.Element_Adjudication = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Adjudication",
-                                Path= "ExplanationOfBenefit.addItem.detail.subDetail.adjudication",
-                                Id = "ExplanationOfBenefit.addItem.detail.subDetail.adjudication",
-                                Min = 0,
-                                Max = -1,
-                                Types = new BaseType[]
-                                {
-                                }
-                            };
-                        }
-                    }
-                }
+                            this.Element_Adjudication = new ElementDefinitionInfo                                                           // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Adjudication",                                                                              // MakerGen.cs:236
+                                Path= "ExplanationOfBenefit.addItem.detail.subDetail.adjudication",                                         // MakerGen.cs:237
+                                Id = "ExplanationOfBenefit.addItem.detail.subDetail.adjudication",                                          // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = -1,                                                                                                   // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                    }                                                                                                                       // MakerGen.cs:403
+                }                                                                                                                           // MakerGen.cs:405
                 // 140. ExplanationOfBenefit.addItem.detail.productOrService
-                public ElementDefinitionInfo Element_ProductOrService;
+                public ElementDefinitionInfo Element_ProductOrService;                                                                      // MakerGen.cs:217
                 // 141. ExplanationOfBenefit.addItem.detail.modifier
-                public ElementDefinitionInfo Element_Modifier;
+                public ElementDefinitionInfo Element_Modifier;                                                                              // MakerGen.cs:217
                 // 142. ExplanationOfBenefit.addItem.detail.quantity
-                public ElementDefinitionInfo Element_Quantity;
+                public ElementDefinitionInfo Element_Quantity;                                                                              // MakerGen.cs:217
                 // 143. ExplanationOfBenefit.addItem.detail.unitPrice
-                public ElementDefinitionInfo Element_UnitPrice;
+                public ElementDefinitionInfo Element_UnitPrice;                                                                             // MakerGen.cs:217
                 // 144. ExplanationOfBenefit.addItem.detail.factor
-                public ElementDefinitionInfo Element_Factor;
+                public ElementDefinitionInfo Element_Factor;                                                                                // MakerGen.cs:217
                 // 145. ExplanationOfBenefit.addItem.detail.net
-                public ElementDefinitionInfo Element_Net;
+                public ElementDefinitionInfo Element_Net;                                                                                   // MakerGen.cs:217
                 // 146. ExplanationOfBenefit.addItem.detail.noteNumber
-                public ElementDefinitionInfo Element_NoteNumber;
+                public ElementDefinitionInfo Element_NoteNumber;                                                                            // MakerGen.cs:217
                 // 147. ExplanationOfBenefit.addItem.detail.adjudication
-                public ElementDefinitionInfo Element_Adjudication;
+                public ElementDefinitionInfo Element_Adjudication;                                                                          // MakerGen.cs:217
                 // 148. ExplanationOfBenefit.addItem.detail.subDetail
-                public ElementDefinitionInfo Element_SubDetail;
-                
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                {
-                    base.Write(sDef);
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                    {
-                        Path = "ExplanationOfBenefit.addItem.detail",
-                        ElementId = "ExplanationOfBenefit.addItem.detail"
-                    });
-                    Element_ProductOrService.Write(sDef);
-                    Element_Modifier.Write(sDef);
-                    Element_Quantity.Write(sDef);
-                    Element_UnitPrice.Write(sDef);
-                    Element_Factor.Write(sDef);
-                    Element_Net.Write(sDef);
-                    Element_NoteNumber.Write(sDef);
-                    Element_Adjudication.Write(sDef);
-                    Element_SubDetail.Write(sDef);
-                }
-                
-                public Type_Detail()
-                {
-                    {
+                public ElementDefinitionInfo Element_SubDetail;                                                                             // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:389
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:390
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:391
+                    {                                                                                                                       // MakerGen.cs:392
+                        Path = "ExplanationOfBenefit.addItem.detail",                                                                       // MakerGen.cs:393
+                        ElementId = "ExplanationOfBenefit.addItem.detail"                                                                   // MakerGen.cs:394
+                    });                                                                                                                     // MakerGen.cs:395
+                    Element_ProductOrService.Write(sDef);                                                                                   // MakerGen.cs:221
+                    Element_Modifier.Write(sDef);                                                                                           // MakerGen.cs:221
+                    Element_Quantity.Write(sDef);                                                                                           // MakerGen.cs:221
+                    Element_UnitPrice.Write(sDef);                                                                                          // MakerGen.cs:221
+                    Element_Factor.Write(sDef);                                                                                             // MakerGen.cs:221
+                    Element_Net.Write(sDef);                                                                                                // MakerGen.cs:221
+                    Element_NoteNumber.Write(sDef);                                                                                         // MakerGen.cs:221
+                    Element_Adjudication.Write(sDef);                                                                                       // MakerGen.cs:221
+                    Element_SubDetail.Write(sDef);                                                                                          // MakerGen.cs:221
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                public Type_Detail()                                                                                                        // MakerGen.cs:400
+                {                                                                                                                           // MakerGen.cs:401
+                    {                                                                                                                       // MakerGen.cs:232
                         // 140. ExplanationOfBenefit.addItem.detail.productOrService
-                        this.Element_ProductOrService = new ElementDefinitionInfo
-                        {
-                            Name = "Element_ProductOrService",
-                            Path= "ExplanationOfBenefit.addItem.detail.productOrService",
-                            Id = "ExplanationOfBenefit.addItem.detail.productOrService",
-                            Min = 1,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_ProductOrService = new ElementDefinitionInfo                                                           // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_ProductOrService",                                                                              // MakerGen.cs:236
+                            Path= "ExplanationOfBenefit.addItem.detail.productOrService",                                                   // MakerGen.cs:237
+                            Id = "ExplanationOfBenefit.addItem.detail.productOrService",                                                    // MakerGen.cs:238
+                            Min = 1,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 141. ExplanationOfBenefit.addItem.detail.modifier
-                        this.Element_Modifier = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Modifier",
-                            Path= "ExplanationOfBenefit.addItem.detail.modifier",
-                            Id = "ExplanationOfBenefit.addItem.detail.modifier",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Modifier = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Modifier",                                                                                      // MakerGen.cs:236
+                            Path= "ExplanationOfBenefit.addItem.detail.modifier",                                                           // MakerGen.cs:237
+                            Id = "ExplanationOfBenefit.addItem.detail.modifier",                                                            // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 142. ExplanationOfBenefit.addItem.detail.quantity
-                        this.Element_Quantity = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Quantity",
-                            Path= "ExplanationOfBenefit.addItem.detail.quantity",
-                            Id = "ExplanationOfBenefit.addItem.detail.quantity",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Quantity
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Quantity = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Quantity",                                                                                      // MakerGen.cs:236
+                            Path= "ExplanationOfBenefit.addItem.detail.quantity",                                                           // MakerGen.cs:237
+                            Id = "ExplanationOfBenefit.addItem.detail.quantity",                                                            // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Quantity                                                             // MakerGen.cs:356
+                                {                                                                                                           // MakerGen.cs:357
+                                }                                                                                                           // MakerGen.cs:358
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 143. ExplanationOfBenefit.addItem.detail.unitPrice
-                        this.Element_UnitPrice = new ElementDefinitionInfo
-                        {
-                            Name = "Element_UnitPrice",
-                            Path= "ExplanationOfBenefit.addItem.detail.unitPrice",
-                            Id = "ExplanationOfBenefit.addItem.detail.unitPrice",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Money
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_UnitPrice = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_UnitPrice",                                                                                     // MakerGen.cs:236
+                            Path= "ExplanationOfBenefit.addItem.detail.unitPrice",                                                          // MakerGen.cs:237
+                            Id = "ExplanationOfBenefit.addItem.detail.unitPrice",                                                           // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Money                                                                // MakerGen.cs:356
+                                {                                                                                                           // MakerGen.cs:357
+                                }                                                                                                           // MakerGen.cs:358
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 144. ExplanationOfBenefit.addItem.detail.factor
-                        this.Element_Factor = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Factor",
-                            Path= "ExplanationOfBenefit.addItem.detail.factor",
-                            Id = "ExplanationOfBenefit.addItem.detail.factor",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Factor = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Factor",                                                                                        // MakerGen.cs:236
+                            Path= "ExplanationOfBenefit.addItem.detail.factor",                                                             // MakerGen.cs:237
+                            Id = "ExplanationOfBenefit.addItem.detail.factor",                                                              // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                       // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 145. ExplanationOfBenefit.addItem.detail.net
-                        this.Element_Net = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Net",
-                            Path= "ExplanationOfBenefit.addItem.detail.net",
-                            Id = "ExplanationOfBenefit.addItem.detail.net",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Money
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Net = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Net",                                                                                           // MakerGen.cs:236
+                            Path= "ExplanationOfBenefit.addItem.detail.net",                                                                // MakerGen.cs:237
+                            Id = "ExplanationOfBenefit.addItem.detail.net",                                                                 // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Money                                                                // MakerGen.cs:356
+                                {                                                                                                           // MakerGen.cs:357
+                                }                                                                                                           // MakerGen.cs:358
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 146. ExplanationOfBenefit.addItem.detail.noteNumber
-                        this.Element_NoteNumber = new ElementDefinitionInfo
-                        {
-                            Name = "Element_NoteNumber",
-                            Path= "ExplanationOfBenefit.addItem.detail.noteNumber",
-                            Id = "ExplanationOfBenefit.addItem.detail.noteNumber",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_NoteNumber = new ElementDefinitionInfo                                                                 // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_NoteNumber",                                                                                    // MakerGen.cs:236
+                            Path= "ExplanationOfBenefit.addItem.detail.noteNumber",                                                         // MakerGen.cs:237
+                            Id = "ExplanationOfBenefit.addItem.detail.noteNumber",                                                          // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                   // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 147. ExplanationOfBenefit.addItem.detail.adjudication
-                        this.Element_Adjudication = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Adjudication",
-                            Path= "ExplanationOfBenefit.addItem.detail.adjudication",
-                            Id = "ExplanationOfBenefit.addItem.detail.adjudication",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Adjudication = new ElementDefinitionInfo                                                               // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Adjudication",                                                                                  // MakerGen.cs:236
+                            Path= "ExplanationOfBenefit.addItem.detail.adjudication",                                                       // MakerGen.cs:237
+                            Id = "ExplanationOfBenefit.addItem.detail.adjudication",                                                        // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 148. ExplanationOfBenefit.addItem.detail.subDetail
-                        this.Element_SubDetail = new ElementDefinitionInfo
-                        {
-                            Name = "Element_SubDetail",
-                            Path= "ExplanationOfBenefit.addItem.detail.subDetail",
-                            Id = "ExplanationOfBenefit.addItem.detail.subDetail",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new Type_SubDetail
-                                {
-                                }
-                            }
-                        };
-                    }
-                }
-            }
+                        this.Element_SubDetail = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_SubDetail",                                                                                     // MakerGen.cs:236
+                            Path= "ExplanationOfBenefit.addItem.detail.subDetail",                                                          // MakerGen.cs:237
+                            Id = "ExplanationOfBenefit.addItem.detail.subDetail",                                                           // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new Type_SubDetail                                                                                          // MakerGen.cs:260
+                                {                                                                                                           // MakerGen.cs:261
+                                }                                                                                                           // MakerGen.cs:262
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                }                                                                                                                           // MakerGen.cs:403
+            }                                                                                                                               // MakerGen.cs:405
             // 122. ExplanationOfBenefit.addItem.itemSequence
-            public ElementDefinitionInfo Element_ItemSequence;
+            public ElementDefinitionInfo Element_ItemSequence;                                                                              // MakerGen.cs:217
             // 123. ExplanationOfBenefit.addItem.detailSequence
-            public ElementDefinitionInfo Element_DetailSequence;
+            public ElementDefinitionInfo Element_DetailSequence;                                                                            // MakerGen.cs:217
             // 124. ExplanationOfBenefit.addItem.subDetailSequence
-            public ElementDefinitionInfo Element_SubDetailSequence;
+            public ElementDefinitionInfo Element_SubDetailSequence;                                                                         // MakerGen.cs:217
             // 125. ExplanationOfBenefit.addItem.provider
-            public ElementDefinitionInfo Element_Provider;
+            public ElementDefinitionInfo Element_Provider;                                                                                  // MakerGen.cs:217
             // 126. ExplanationOfBenefit.addItem.productOrService
-            public ElementDefinitionInfo Element_ProductOrService;
+            public ElementDefinitionInfo Element_ProductOrService;                                                                          // MakerGen.cs:217
             // 127. ExplanationOfBenefit.addItem.modifier
-            public ElementDefinitionInfo Element_Modifier;
+            public ElementDefinitionInfo Element_Modifier;                                                                                  // MakerGen.cs:217
             // 128. ExplanationOfBenefit.addItem.programCode
-            public ElementDefinitionInfo Element_ProgramCode;
+            public ElementDefinitionInfo Element_ProgramCode;                                                                               // MakerGen.cs:217
             // 129. ExplanationOfBenefit.addItem.serviced[x]
-            public ElementDefinitionInfo Element_Serviced;
+            public ElementDefinitionInfo Element_Serviced;                                                                                  // MakerGen.cs:217
             // 130. ExplanationOfBenefit.addItem.location[x]
-            public ElementDefinitionInfo Element_Location;
+            public ElementDefinitionInfo Element_Location;                                                                                  // MakerGen.cs:217
             // 131. ExplanationOfBenefit.addItem.quantity
-            public ElementDefinitionInfo Element_Quantity;
+            public ElementDefinitionInfo Element_Quantity;                                                                                  // MakerGen.cs:217
             // 132. ExplanationOfBenefit.addItem.unitPrice
-            public ElementDefinitionInfo Element_UnitPrice;
+            public ElementDefinitionInfo Element_UnitPrice;                                                                                 // MakerGen.cs:217
             // 133. ExplanationOfBenefit.addItem.factor
-            public ElementDefinitionInfo Element_Factor;
+            public ElementDefinitionInfo Element_Factor;                                                                                    // MakerGen.cs:217
             // 134. ExplanationOfBenefit.addItem.net
-            public ElementDefinitionInfo Element_Net;
+            public ElementDefinitionInfo Element_Net;                                                                                       // MakerGen.cs:217
             // 135. ExplanationOfBenefit.addItem.bodySite
-            public ElementDefinitionInfo Element_BodySite;
+            public ElementDefinitionInfo Element_BodySite;                                                                                  // MakerGen.cs:217
             // 136. ExplanationOfBenefit.addItem.subSite
-            public ElementDefinitionInfo Element_SubSite;
+            public ElementDefinitionInfo Element_SubSite;                                                                                   // MakerGen.cs:217
             // 137. ExplanationOfBenefit.addItem.noteNumber
-            public ElementDefinitionInfo Element_NoteNumber;
+            public ElementDefinitionInfo Element_NoteNumber;                                                                                // MakerGen.cs:217
             // 138. ExplanationOfBenefit.addItem.adjudication
-            public ElementDefinitionInfo Element_Adjudication;
+            public ElementDefinitionInfo Element_Adjudication;                                                                              // MakerGen.cs:217
             // 139. ExplanationOfBenefit.addItem.detail
-            public ElementDefinitionInfo Element_Detail;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "ExplanationOfBenefit.addItem",
-                    ElementId = "ExplanationOfBenefit.addItem"
-                });
-                Element_ItemSequence.Write(sDef);
-                Element_DetailSequence.Write(sDef);
-                Element_SubDetailSequence.Write(sDef);
-                Element_Provider.Write(sDef);
-                Element_ProductOrService.Write(sDef);
-                Element_Modifier.Write(sDef);
-                Element_ProgramCode.Write(sDef);
-                Element_Serviced.Write(sDef);
-                Element_Location.Write(sDef);
-                Element_Quantity.Write(sDef);
-                Element_UnitPrice.Write(sDef);
-                Element_Factor.Write(sDef);
-                Element_Net.Write(sDef);
-                Element_BodySite.Write(sDef);
-                Element_SubSite.Write(sDef);
-                Element_NoteNumber.Write(sDef);
-                Element_Adjudication.Write(sDef);
-                Element_Detail.Write(sDef);
-            }
-            
-            public Type_AddItem()
-            {
-                {
+            public ElementDefinitionInfo Element_Detail;                                                                                    // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "ExplanationOfBenefit.addItem",                                                                                  // MakerGen.cs:393
+                    ElementId = "ExplanationOfBenefit.addItem"                                                                              // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_ItemSequence.Write(sDef);                                                                                           // MakerGen.cs:221
+                Element_DetailSequence.Write(sDef);                                                                                         // MakerGen.cs:221
+                Element_SubDetailSequence.Write(sDef);                                                                                      // MakerGen.cs:221
+                Element_Provider.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_ProductOrService.Write(sDef);                                                                                       // MakerGen.cs:221
+                Element_Modifier.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_ProgramCode.Write(sDef);                                                                                            // MakerGen.cs:221
+                Element_Serviced.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_Location.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_Quantity.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_UnitPrice.Write(sDef);                                                                                              // MakerGen.cs:221
+                Element_Factor.Write(sDef);                                                                                                 // MakerGen.cs:221
+                Element_Net.Write(sDef);                                                                                                    // MakerGen.cs:221
+                Element_BodySite.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_SubSite.Write(sDef);                                                                                                // MakerGen.cs:221
+                Element_NoteNumber.Write(sDef);                                                                                             // MakerGen.cs:221
+                Element_Adjudication.Write(sDef);                                                                                           // MakerGen.cs:221
+                Element_Detail.Write(sDef);                                                                                                 // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_AddItem()                                                                                                           // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 122. ExplanationOfBenefit.addItem.itemSequence
-                    this.Element_ItemSequence = new ElementDefinitionInfo
-                    {
-                        Name = "Element_ItemSequence",
-                        Path= "ExplanationOfBenefit.addItem.itemSequence",
-                        Id = "ExplanationOfBenefit.addItem.itemSequence",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_ItemSequence = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_ItemSequence",                                                                                      // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.addItem.itemSequence",                                                                  // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.addItem.itemSequence",                                                                   // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                       // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 123. ExplanationOfBenefit.addItem.detailSequence
-                    this.Element_DetailSequence = new ElementDefinitionInfo
-                    {
-                        Name = "Element_DetailSequence",
-                        Path= "ExplanationOfBenefit.addItem.detailSequence",
-                        Id = "ExplanationOfBenefit.addItem.detailSequence",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_DetailSequence = new ElementDefinitionInfo                                                                 // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_DetailSequence",                                                                                    // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.addItem.detailSequence",                                                                // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.addItem.detailSequence",                                                                 // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                       // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 124. ExplanationOfBenefit.addItem.subDetailSequence
-                    this.Element_SubDetailSequence = new ElementDefinitionInfo
-                    {
-                        Name = "Element_SubDetailSequence",
-                        Path= "ExplanationOfBenefit.addItem.subDetailSequence",
-                        Id = "ExplanationOfBenefit.addItem.subDetailSequence",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_SubDetailSequence = new ElementDefinitionInfo                                                              // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_SubDetailSequence",                                                                                 // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.addItem.subDetailSequence",                                                             // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.addItem.subDetailSequence",                                                              // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                       // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 125. ExplanationOfBenefit.addItem.provider
-                    this.Element_Provider = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Provider",
-                        Path= "ExplanationOfBenefit.addItem.provider",
-                        Id = "ExplanationOfBenefit.addItem.provider",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                                    "http://hl7.org/fhir/StructureDefinition/Organization"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Provider = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Provider",                                                                                          // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.addItem.provider",                                                                      // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.addItem.provider",                                                                       // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                 // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                             // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/Organization"                                                  // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 126. ExplanationOfBenefit.addItem.productOrService
-                    this.Element_ProductOrService = new ElementDefinitionInfo
-                    {
-                        Name = "Element_ProductOrService",
-                        Path= "ExplanationOfBenefit.addItem.productOrService",
-                        Id = "ExplanationOfBenefit.addItem.productOrService",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_ProductOrService = new ElementDefinitionInfo                                                               // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_ProductOrService",                                                                                  // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.addItem.productOrService",                                                              // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.addItem.productOrService",                                                               // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 127. ExplanationOfBenefit.addItem.modifier
-                    this.Element_Modifier = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Modifier",
-                        Path= "ExplanationOfBenefit.addItem.modifier",
-                        Id = "ExplanationOfBenefit.addItem.modifier",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Modifier = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Modifier",                                                                                          // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.addItem.modifier",                                                                      // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.addItem.modifier",                                                                       // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 128. ExplanationOfBenefit.addItem.programCode
-                    this.Element_ProgramCode = new ElementDefinitionInfo
-                    {
-                        Name = "Element_ProgramCode",
-                        Path= "ExplanationOfBenefit.addItem.programCode",
-                        Id = "ExplanationOfBenefit.addItem.programCode",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_ProgramCode = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_ProgramCode",                                                                                       // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.addItem.programCode",                                                                   // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.addItem.programCode",                                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 129. ExplanationOfBenefit.addItem.serviced[x]
-                    this.Element_Serviced = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Serviced",
-                        Path= "ExplanationOfBenefit.addItem.serviced[x]",
-                        Id = "ExplanationOfBenefit.addItem.serviced[x]",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Date
-                            {
-                            },
-                            new FhirKhit.Maker.Common.Complex.Type_Period
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Serviced = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Serviced",                                                                                          // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.addItem.serviced[x]",                                                                   // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.addItem.serviced[x]",                                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Date                                                              // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            },                                                                                                              // MakerGen.cs:305
+                            new FhirKhit.Maker.Common.Complex.Type_Period                                                                   // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 130. ExplanationOfBenefit.addItem.location[x]
-                    this.Element_Location = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Location",
-                        Path= "ExplanationOfBenefit.addItem.location[x]",
-                        Id = "ExplanationOfBenefit.addItem.location[x]",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            },
-                            new FhirKhit.Maker.Common.Complex.Type_Address
-                            {
-                            },
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Location"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Location = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Location",                                                                                          // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.addItem.location[x]",                                                                   // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.addItem.location[x]",                                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            },                                                                                                              // MakerGen.cs:320
+                            new FhirKhit.Maker.Common.Complex.Type_Address                                                                  // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            },                                                                                                              // MakerGen.cs:358
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Location"                                                      // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 131. ExplanationOfBenefit.addItem.quantity
-                    this.Element_Quantity = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Quantity",
-                        Path= "ExplanationOfBenefit.addItem.quantity",
-                        Id = "ExplanationOfBenefit.addItem.quantity",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Quantity
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Quantity = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Quantity",                                                                                          // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.addItem.quantity",                                                                      // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.addItem.quantity",                                                                       // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Quantity                                                                 // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 132. ExplanationOfBenefit.addItem.unitPrice
-                    this.Element_UnitPrice = new ElementDefinitionInfo
-                    {
-                        Name = "Element_UnitPrice",
-                        Path= "ExplanationOfBenefit.addItem.unitPrice",
-                        Id = "ExplanationOfBenefit.addItem.unitPrice",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Money
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_UnitPrice = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_UnitPrice",                                                                                         // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.addItem.unitPrice",                                                                     // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.addItem.unitPrice",                                                                      // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Money                                                                    // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 133. ExplanationOfBenefit.addItem.factor
-                    this.Element_Factor = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Factor",
-                        Path= "ExplanationOfBenefit.addItem.factor",
-                        Id = "ExplanationOfBenefit.addItem.factor",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Factor = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Factor",                                                                                            // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.addItem.factor",                                                                        // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.addItem.factor",                                                                         // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                           // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 134. ExplanationOfBenefit.addItem.net
-                    this.Element_Net = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Net",
-                        Path= "ExplanationOfBenefit.addItem.net",
-                        Id = "ExplanationOfBenefit.addItem.net",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Money
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Net = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Net",                                                                                               // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.addItem.net",                                                                           // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.addItem.net",                                                                            // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Money                                                                    // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 135. ExplanationOfBenefit.addItem.bodySite
-                    this.Element_BodySite = new ElementDefinitionInfo
-                    {
-                        Name = "Element_BodySite",
-                        Path= "ExplanationOfBenefit.addItem.bodySite",
-                        Id = "ExplanationOfBenefit.addItem.bodySite",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_BodySite = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_BodySite",                                                                                          // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.addItem.bodySite",                                                                      // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.addItem.bodySite",                                                                       // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 136. ExplanationOfBenefit.addItem.subSite
-                    this.Element_SubSite = new ElementDefinitionInfo
-                    {
-                        Name = "Element_SubSite",
-                        Path= "ExplanationOfBenefit.addItem.subSite",
-                        Id = "ExplanationOfBenefit.addItem.subSite",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_SubSite = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_SubSite",                                                                                           // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.addItem.subSite",                                                                       // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.addItem.subSite",                                                                        // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 137. ExplanationOfBenefit.addItem.noteNumber
-                    this.Element_NoteNumber = new ElementDefinitionInfo
-                    {
-                        Name = "Element_NoteNumber",
-                        Path= "ExplanationOfBenefit.addItem.noteNumber",
-                        Id = "ExplanationOfBenefit.addItem.noteNumber",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_NoteNumber = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_NoteNumber",                                                                                        // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.addItem.noteNumber",                                                                    // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.addItem.noteNumber",                                                                     // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                       // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 138. ExplanationOfBenefit.addItem.adjudication
-                    this.Element_Adjudication = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Adjudication",
-                        Path= "ExplanationOfBenefit.addItem.adjudication",
-                        Id = "ExplanationOfBenefit.addItem.adjudication",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                        }
-                    };
-                }
-                {
+                    this.Element_Adjudication = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Adjudication",                                                                                      // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.addItem.adjudication",                                                                  // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.addItem.adjudication",                                                                   // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 139. ExplanationOfBenefit.addItem.detail
-                    this.Element_Detail = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Detail",
-                        Path= "ExplanationOfBenefit.addItem.detail",
-                        Id = "ExplanationOfBenefit.addItem.detail",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new Type_Detail
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Detail = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Detail",                                                                                            // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.addItem.detail",                                                                        // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.addItem.detail",                                                                         // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new Type_Detail                                                                                                 // MakerGen.cs:260
+                            {                                                                                                               // MakerGen.cs:261
+                            }                                                                                                               // MakerGen.cs:262
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 158. ExplanationOfBenefit.total
-        public partial class Type_Total : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Total : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 159. ExplanationOfBenefit.total.category
-            public ElementDefinitionInfo Element_Category;
+            public ElementDefinitionInfo Element_Category;                                                                                  // MakerGen.cs:217
             // 160. ExplanationOfBenefit.total.amount
-            public ElementDefinitionInfo Element_Amount;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "ExplanationOfBenefit.total",
-                    ElementId = "ExplanationOfBenefit.total"
-                });
-                Element_Category.Write(sDef);
-                Element_Amount.Write(sDef);
-            }
-            
-            public Type_Total()
-            {
-                {
+            public ElementDefinitionInfo Element_Amount;                                                                                    // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "ExplanationOfBenefit.total",                                                                                    // MakerGen.cs:393
+                    ElementId = "ExplanationOfBenefit.total"                                                                                // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Category.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_Amount.Write(sDef);                                                                                                 // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Total()                                                                                                             // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 159. ExplanationOfBenefit.total.category
-                    this.Element_Category = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Category",
-                        Path= "ExplanationOfBenefit.total.category",
-                        Id = "ExplanationOfBenefit.total.category",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Category = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Category",                                                                                          // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.total.category",                                                                        // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.total.category",                                                                         // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 160. ExplanationOfBenefit.total.amount
-                    this.Element_Amount = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Amount",
-                        Path= "ExplanationOfBenefit.total.amount",
-                        Id = "ExplanationOfBenefit.total.amount",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Money
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Amount = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Amount",                                                                                            // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.total.amount",                                                                          // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.total.amount",                                                                           // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Money                                                                    // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 161. ExplanationOfBenefit.payment
-        public partial class Type_Payment : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Payment : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 162. ExplanationOfBenefit.payment.type
-            public ElementDefinitionInfo Element_Type;
+            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:217
             // 163. ExplanationOfBenefit.payment.adjustment
-            public ElementDefinitionInfo Element_Adjustment;
+            public ElementDefinitionInfo Element_Adjustment;                                                                                // MakerGen.cs:217
             // 164. ExplanationOfBenefit.payment.adjustmentReason
-            public ElementDefinitionInfo Element_AdjustmentReason;
+            public ElementDefinitionInfo Element_AdjustmentReason;                                                                          // MakerGen.cs:217
             // 165. ExplanationOfBenefit.payment.date
-            public ElementDefinitionInfo Element_Date;
+            public ElementDefinitionInfo Element_Date;                                                                                      // MakerGen.cs:217
             // 166. ExplanationOfBenefit.payment.amount
-            public ElementDefinitionInfo Element_Amount;
+            public ElementDefinitionInfo Element_Amount;                                                                                    // MakerGen.cs:217
             // 167. ExplanationOfBenefit.payment.identifier
-            public ElementDefinitionInfo Element_Identifier;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "ExplanationOfBenefit.payment",
-                    ElementId = "ExplanationOfBenefit.payment"
-                });
-                Element_Type.Write(sDef);
-                Element_Adjustment.Write(sDef);
-                Element_AdjustmentReason.Write(sDef);
-                Element_Date.Write(sDef);
-                Element_Amount.Write(sDef);
-                Element_Identifier.Write(sDef);
-            }
-            
-            public Type_Payment()
-            {
-                {
+            public ElementDefinitionInfo Element_Identifier;                                                                                // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "ExplanationOfBenefit.payment",                                                                                  // MakerGen.cs:393
+                    ElementId = "ExplanationOfBenefit.payment"                                                                              // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Adjustment.Write(sDef);                                                                                             // MakerGen.cs:221
+                Element_AdjustmentReason.Write(sDef);                                                                                       // MakerGen.cs:221
+                Element_Date.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Amount.Write(sDef);                                                                                                 // MakerGen.cs:221
+                Element_Identifier.Write(sDef);                                                                                             // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Payment()                                                                                                           // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 162. ExplanationOfBenefit.payment.type
-                    this.Element_Type = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Type",
-                        Path= "ExplanationOfBenefit.payment.type",
-                        Id = "ExplanationOfBenefit.payment.type",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Type",                                                                                              // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.payment.type",                                                                          // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.payment.type",                                                                           // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 163. ExplanationOfBenefit.payment.adjustment
-                    this.Element_Adjustment = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Adjustment",
-                        Path= "ExplanationOfBenefit.payment.adjustment",
-                        Id = "ExplanationOfBenefit.payment.adjustment",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Money
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Adjustment = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Adjustment",                                                                                        // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.payment.adjustment",                                                                    // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.payment.adjustment",                                                                     // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Money                                                                    // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 164. ExplanationOfBenefit.payment.adjustmentReason
-                    this.Element_AdjustmentReason = new ElementDefinitionInfo
-                    {
-                        Name = "Element_AdjustmentReason",
-                        Path= "ExplanationOfBenefit.payment.adjustmentReason",
-                        Id = "ExplanationOfBenefit.payment.adjustmentReason",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_AdjustmentReason = new ElementDefinitionInfo                                                               // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_AdjustmentReason",                                                                                  // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.payment.adjustmentReason",                                                              // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.payment.adjustmentReason",                                                               // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 165. ExplanationOfBenefit.payment.date
-                    this.Element_Date = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Date",
-                        Path= "ExplanationOfBenefit.payment.date",
-                        Id = "ExplanationOfBenefit.payment.date",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Date
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Date = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Date",                                                                                              // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.payment.date",                                                                          // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.payment.date",                                                                           // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Date                                                              // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 166. ExplanationOfBenefit.payment.amount
-                    this.Element_Amount = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Amount",
-                        Path= "ExplanationOfBenefit.payment.amount",
-                        Id = "ExplanationOfBenefit.payment.amount",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Money
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Amount = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Amount",                                                                                            // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.payment.amount",                                                                        // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.payment.amount",                                                                         // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Money                                                                    // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 167. ExplanationOfBenefit.payment.identifier
-                    this.Element_Identifier = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Identifier",
-                        Path= "ExplanationOfBenefit.payment.identifier",
-                        Id = "ExplanationOfBenefit.payment.identifier",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Identifier
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Identifier = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Identifier",                                                                                        // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.payment.identifier",                                                                    // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.payment.identifier",                                                                     // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Identifier                                                               // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 170. ExplanationOfBenefit.processNote
-        public partial class Type_ProcessNote : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_ProcessNote : FhirKhit.Maker.Common.Complex.ComplexBase                                                   // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 171. ExplanationOfBenefit.processNote.number
-            public ElementDefinitionInfo Element_Number;
+            public ElementDefinitionInfo Element_Number;                                                                                    // MakerGen.cs:217
             // 172. ExplanationOfBenefit.processNote.type
-            public ElementDefinitionInfo Element_Type;
+            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:217
             // 173. ExplanationOfBenefit.processNote.text
-            public ElementDefinitionInfo Element_Text;
+            public ElementDefinitionInfo Element_Text;                                                                                      // MakerGen.cs:217
             // 174. ExplanationOfBenefit.processNote.language
-            public ElementDefinitionInfo Element_Language;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "ExplanationOfBenefit.processNote",
-                    ElementId = "ExplanationOfBenefit.processNote"
-                });
-                Element_Number.Write(sDef);
-                Element_Type.Write(sDef);
-                Element_Text.Write(sDef);
-                Element_Language.Write(sDef);
-            }
-            
-            public Type_ProcessNote()
-            {
-                {
+            public ElementDefinitionInfo Element_Language;                                                                                  // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "ExplanationOfBenefit.processNote",                                                                              // MakerGen.cs:393
+                    ElementId = "ExplanationOfBenefit.processNote"                                                                          // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Number.Write(sDef);                                                                                                 // MakerGen.cs:221
+                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Text.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Language.Write(sDef);                                                                                               // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_ProcessNote()                                                                                                       // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 171. ExplanationOfBenefit.processNote.number
-                    this.Element_Number = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Number",
-                        Path= "ExplanationOfBenefit.processNote.number",
-                        Id = "ExplanationOfBenefit.processNote.number",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Number = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Number",                                                                                            // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.processNote.number",                                                                    // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.processNote.number",                                                                     // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                       // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 172. ExplanationOfBenefit.processNote.type
-                    this.Element_Type = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Type",
-                        Path= "ExplanationOfBenefit.processNote.type",
-                        Id = "ExplanationOfBenefit.processNote.type",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Type",                                                                                              // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.processNote.type",                                                                      // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.processNote.type",                                                                       // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 173. ExplanationOfBenefit.processNote.text
-                    this.Element_Text = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Text",
-                        Path= "ExplanationOfBenefit.processNote.text",
-                        Id = "ExplanationOfBenefit.processNote.text",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Text = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Text",                                                                                              // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.processNote.text",                                                                      // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.processNote.text",                                                                       // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 174. ExplanationOfBenefit.processNote.language
-                    this.Element_Language = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Language",
-                        Path= "ExplanationOfBenefit.processNote.language",
-                        Id = "ExplanationOfBenefit.processNote.language",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Language = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Language",                                                                                          // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.processNote.language",                                                                  // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.processNote.language",                                                                   // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 176. ExplanationOfBenefit.benefitBalance
-        public partial class Type_BenefitBalance : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_BenefitBalance : FhirKhit.Maker.Common.Complex.ComplexBase                                                // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 184. ExplanationOfBenefit.benefitBalance.financial
-            public partial class Type_Financial : FhirKhit.Maker.Common.Complex.ComplexBase
-            {
+            public partial class Type_Financial : FhirKhit.Maker.Common.Complex.ComplexBase                                                 // MakerGen.cs:381
+            {                                                                                                                               // MakerGen.cs:382
                 // 185. ExplanationOfBenefit.benefitBalance.financial.type
-                public ElementDefinitionInfo Element_Type;
+                public ElementDefinitionInfo Element_Type;                                                                                  // MakerGen.cs:217
                 // 186. ExplanationOfBenefit.benefitBalance.financial.allowed[x]
-                public ElementDefinitionInfo Element_Allowed;
+                public ElementDefinitionInfo Element_Allowed;                                                                               // MakerGen.cs:217
                 // 187. ExplanationOfBenefit.benefitBalance.financial.used[x]
-                public ElementDefinitionInfo Element_Used;
-                
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                {
-                    base.Write(sDef);
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                    {
-                        Path = "ExplanationOfBenefit.benefitBalance.financial",
-                        ElementId = "ExplanationOfBenefit.benefitBalance.financial"
-                    });
-                    Element_Type.Write(sDef);
-                    Element_Allowed.Write(sDef);
-                    Element_Used.Write(sDef);
-                }
-                
-                public Type_Financial()
-                {
-                    {
+                public ElementDefinitionInfo Element_Used;                                                                                  // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:389
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:390
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:391
+                    {                                                                                                                       // MakerGen.cs:392
+                        Path = "ExplanationOfBenefit.benefitBalance.financial",                                                             // MakerGen.cs:393
+                        ElementId = "ExplanationOfBenefit.benefitBalance.financial"                                                         // MakerGen.cs:394
+                    });                                                                                                                     // MakerGen.cs:395
+                    Element_Type.Write(sDef);                                                                                               // MakerGen.cs:221
+                    Element_Allowed.Write(sDef);                                                                                            // MakerGen.cs:221
+                    Element_Used.Write(sDef);                                                                                               // MakerGen.cs:221
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                public Type_Financial()                                                                                                     // MakerGen.cs:400
+                {                                                                                                                           // MakerGen.cs:401
+                    {                                                                                                                       // MakerGen.cs:232
                         // 185. ExplanationOfBenefit.benefitBalance.financial.type
-                        this.Element_Type = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Type",
-                            Path= "ExplanationOfBenefit.benefitBalance.financial.type",
-                            Id = "ExplanationOfBenefit.benefitBalance.financial.type",
-                            Min = 1,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Type = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Type",                                                                                          // MakerGen.cs:236
+                            Path= "ExplanationOfBenefit.benefitBalance.financial.type",                                                     // MakerGen.cs:237
+                            Id = "ExplanationOfBenefit.benefitBalance.financial.type",                                                      // MakerGen.cs:238
+                            Min = 1,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 186. ExplanationOfBenefit.benefitBalance.financial.allowed[x]
-                        this.Element_Allowed = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Allowed",
-                            Path= "ExplanationOfBenefit.benefitBalance.financial.allowed[x]",
-                            Id = "ExplanationOfBenefit.benefitBalance.financial.allowed[x]",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_UnsignedInt
-                                {
-                                },
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String
-                                {
-                                },
-                                new FhirKhit.Maker.Common.Complex.Type_Money
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Allowed = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Allowed",                                                                                       // MakerGen.cs:236
+                            Path= "ExplanationOfBenefit.benefitBalance.financial.allowed[x]",                                               // MakerGen.cs:237
+                            Id = "ExplanationOfBenefit.benefitBalance.financial.allowed[x]",                                                // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_UnsignedInt                                                   // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                },                                                                                                          // MakerGen.cs:305
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                },                                                                                                          // MakerGen.cs:305
+                                new FhirKhit.Maker.Common.Complex.Type_Money                                                                // MakerGen.cs:356
+                                {                                                                                                           // MakerGen.cs:357
+                                }                                                                                                           // MakerGen.cs:358
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 187. ExplanationOfBenefit.benefitBalance.financial.used[x]
-                        this.Element_Used = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Used",
-                            Path= "ExplanationOfBenefit.benefitBalance.financial.used[x]",
-                            Id = "ExplanationOfBenefit.benefitBalance.financial.used[x]",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_UnsignedInt
-                                {
-                                },
-                                new FhirKhit.Maker.Common.Complex.Type_Money
-                                {
-                                }
-                            }
-                        };
-                    }
-                }
-            }
+                        this.Element_Used = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Used",                                                                                          // MakerGen.cs:236
+                            Path= "ExplanationOfBenefit.benefitBalance.financial.used[x]",                                                  // MakerGen.cs:237
+                            Id = "ExplanationOfBenefit.benefitBalance.financial.used[x]",                                                   // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_UnsignedInt                                                   // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                },                                                                                                          // MakerGen.cs:305
+                                new FhirKhit.Maker.Common.Complex.Type_Money                                                                // MakerGen.cs:356
+                                {                                                                                                           // MakerGen.cs:357
+                                }                                                                                                           // MakerGen.cs:358
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                }                                                                                                                           // MakerGen.cs:403
+            }                                                                                                                               // MakerGen.cs:405
             // 177. ExplanationOfBenefit.benefitBalance.category
-            public ElementDefinitionInfo Element_Category;
+            public ElementDefinitionInfo Element_Category;                                                                                  // MakerGen.cs:217
             // 178. ExplanationOfBenefit.benefitBalance.excluded
-            public ElementDefinitionInfo Element_Excluded;
+            public ElementDefinitionInfo Element_Excluded;                                                                                  // MakerGen.cs:217
             // 179. ExplanationOfBenefit.benefitBalance.name
-            public ElementDefinitionInfo Element_Name;
+            public ElementDefinitionInfo Element_Name;                                                                                      // MakerGen.cs:217
             // 180. ExplanationOfBenefit.benefitBalance.description
-            public ElementDefinitionInfo Element_Description;
+            public ElementDefinitionInfo Element_Description;                                                                               // MakerGen.cs:217
             // 181. ExplanationOfBenefit.benefitBalance.network
-            public ElementDefinitionInfo Element_Network;
+            public ElementDefinitionInfo Element_Network;                                                                                   // MakerGen.cs:217
             // 182. ExplanationOfBenefit.benefitBalance.unit
-            public ElementDefinitionInfo Element_Unit;
+            public ElementDefinitionInfo Element_Unit;                                                                                      // MakerGen.cs:217
             // 183. ExplanationOfBenefit.benefitBalance.term
-            public ElementDefinitionInfo Element_Term;
+            public ElementDefinitionInfo Element_Term;                                                                                      // MakerGen.cs:217
             // 184. ExplanationOfBenefit.benefitBalance.financial
-            public ElementDefinitionInfo Element_Financial;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "ExplanationOfBenefit.benefitBalance",
-                    ElementId = "ExplanationOfBenefit.benefitBalance"
-                });
-                Element_Category.Write(sDef);
-                Element_Excluded.Write(sDef);
-                Element_Name.Write(sDef);
-                Element_Description.Write(sDef);
-                Element_Network.Write(sDef);
-                Element_Unit.Write(sDef);
-                Element_Term.Write(sDef);
-                Element_Financial.Write(sDef);
-            }
-            
-            public Type_BenefitBalance()
-            {
-                {
+            public ElementDefinitionInfo Element_Financial;                                                                                 // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "ExplanationOfBenefit.benefitBalance",                                                                           // MakerGen.cs:393
+                    ElementId = "ExplanationOfBenefit.benefitBalance"                                                                       // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Category.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_Excluded.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_Name.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Description.Write(sDef);                                                                                            // MakerGen.cs:221
+                Element_Network.Write(sDef);                                                                                                // MakerGen.cs:221
+                Element_Unit.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Term.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Financial.Write(sDef);                                                                                              // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_BenefitBalance()                                                                                                    // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 177. ExplanationOfBenefit.benefitBalance.category
-                    this.Element_Category = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Category",
-                        Path= "ExplanationOfBenefit.benefitBalance.category",
-                        Id = "ExplanationOfBenefit.benefitBalance.category",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Category = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Category",                                                                                          // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.benefitBalance.category",                                                               // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.benefitBalance.category",                                                                // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 178. ExplanationOfBenefit.benefitBalance.excluded
-                    this.Element_Excluded = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Excluded",
-                        Path= "ExplanationOfBenefit.benefitBalance.excluded",
-                        Id = "ExplanationOfBenefit.benefitBalance.excluded",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Excluded = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Excluded",                                                                                          // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.benefitBalance.excluded",                                                               // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.benefitBalance.excluded",                                                                // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                           // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 179. ExplanationOfBenefit.benefitBalance.name
-                    this.Element_Name = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Name",
-                        Path= "ExplanationOfBenefit.benefitBalance.name",
-                        Id = "ExplanationOfBenefit.benefitBalance.name",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Name = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Name",                                                                                              // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.benefitBalance.name",                                                                   // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.benefitBalance.name",                                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 180. ExplanationOfBenefit.benefitBalance.description
-                    this.Element_Description = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Description",
-                        Path= "ExplanationOfBenefit.benefitBalance.description",
-                        Id = "ExplanationOfBenefit.benefitBalance.description",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Description",                                                                                       // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.benefitBalance.description",                                                            // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.benefitBalance.description",                                                             // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 181. ExplanationOfBenefit.benefitBalance.network
-                    this.Element_Network = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Network",
-                        Path= "ExplanationOfBenefit.benefitBalance.network",
-                        Id = "ExplanationOfBenefit.benefitBalance.network",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Network = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Network",                                                                                           // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.benefitBalance.network",                                                                // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.benefitBalance.network",                                                                 // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 182. ExplanationOfBenefit.benefitBalance.unit
-                    this.Element_Unit = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Unit",
-                        Path= "ExplanationOfBenefit.benefitBalance.unit",
-                        Id = "ExplanationOfBenefit.benefitBalance.unit",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Unit = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Unit",                                                                                              // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.benefitBalance.unit",                                                                   // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.benefitBalance.unit",                                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 183. ExplanationOfBenefit.benefitBalance.term
-                    this.Element_Term = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Term",
-                        Path= "ExplanationOfBenefit.benefitBalance.term",
-                        Id = "ExplanationOfBenefit.benefitBalance.term",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Term = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Term",                                                                                              // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.benefitBalance.term",                                                                   // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.benefitBalance.term",                                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 184. ExplanationOfBenefit.benefitBalance.financial
-                    this.Element_Financial = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Financial",
-                        Path= "ExplanationOfBenefit.benefitBalance.financial",
-                        Id = "ExplanationOfBenefit.benefitBalance.financial",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new Type_Financial
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Financial = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Financial",                                                                                         // MakerGen.cs:236
+                        Path= "ExplanationOfBenefit.benefitBalance.financial",                                                              // MakerGen.cs:237
+                        Id = "ExplanationOfBenefit.benefitBalance.financial",                                                               // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new Type_Financial                                                                                              // MakerGen.cs:260
+                            {                                                                                                               // MakerGen.cs:261
+                            }                                                                                                               // MakerGen.cs:262
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 1. ExplanationOfBenefit.identifier
-        public ElementDefinitionInfo Element_Identifier;
+        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:217
         // 2. ExplanationOfBenefit.status
-        public ElementDefinitionInfo Element_Status;
+        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:217
         // 3. ExplanationOfBenefit.type
-        public ElementDefinitionInfo Element_Type;
+        public ElementDefinitionInfo Element_Type;                                                                                          // MakerGen.cs:217
         // 4. ExplanationOfBenefit.subType
-        public ElementDefinitionInfo Element_SubType;
+        public ElementDefinitionInfo Element_SubType;                                                                                       // MakerGen.cs:217
         // 5. ExplanationOfBenefit.use
-        public ElementDefinitionInfo Element_Use;
+        public ElementDefinitionInfo Element_Use;                                                                                           // MakerGen.cs:217
         // 6. ExplanationOfBenefit.patient
-        public ElementDefinitionInfo Element_Patient;
+        public ElementDefinitionInfo Element_Patient;                                                                                       // MakerGen.cs:217
         // 7. ExplanationOfBenefit.billablePeriod
-        public ElementDefinitionInfo Element_BillablePeriod;
+        public ElementDefinitionInfo Element_BillablePeriod;                                                                                // MakerGen.cs:217
         // 8. ExplanationOfBenefit.created
-        public ElementDefinitionInfo Element_Created;
+        public ElementDefinitionInfo Element_Created;                                                                                       // MakerGen.cs:217
         // 9. ExplanationOfBenefit.enterer
-        public ElementDefinitionInfo Element_Enterer;
+        public ElementDefinitionInfo Element_Enterer;                                                                                       // MakerGen.cs:217
         // 10. ExplanationOfBenefit.insurer
-        public ElementDefinitionInfo Element_Insurer;
+        public ElementDefinitionInfo Element_Insurer;                                                                                       // MakerGen.cs:217
         // 11. ExplanationOfBenefit.provider
-        public ElementDefinitionInfo Element_Provider;
+        public ElementDefinitionInfo Element_Provider;                                                                                      // MakerGen.cs:217
         // 12. ExplanationOfBenefit.priority
-        public ElementDefinitionInfo Element_Priority;
+        public ElementDefinitionInfo Element_Priority;                                                                                      // MakerGen.cs:217
         // 13. ExplanationOfBenefit.fundsReserveRequested
-        public ElementDefinitionInfo Element_FundsReserveRequested;
+        public ElementDefinitionInfo Element_FundsReserveRequested;                                                                         // MakerGen.cs:217
         // 14. ExplanationOfBenefit.fundsReserve
-        public ElementDefinitionInfo Element_FundsReserve;
+        public ElementDefinitionInfo Element_FundsReserve;                                                                                  // MakerGen.cs:217
         // 15. ExplanationOfBenefit.related
-        public ElementDefinitionInfo Element_Related;
+        public ElementDefinitionInfo Element_Related;                                                                                       // MakerGen.cs:217
         // 19. ExplanationOfBenefit.prescription
-        public ElementDefinitionInfo Element_Prescription;
+        public ElementDefinitionInfo Element_Prescription;                                                                                  // MakerGen.cs:217
         // 20. ExplanationOfBenefit.originalPrescription
-        public ElementDefinitionInfo Element_OriginalPrescription;
+        public ElementDefinitionInfo Element_OriginalPrescription;                                                                          // MakerGen.cs:217
         // 21. ExplanationOfBenefit.payee
-        public ElementDefinitionInfo Element_Payee;
+        public ElementDefinitionInfo Element_Payee;                                                                                         // MakerGen.cs:217
         // 24. ExplanationOfBenefit.referral
-        public ElementDefinitionInfo Element_Referral;
+        public ElementDefinitionInfo Element_Referral;                                                                                      // MakerGen.cs:217
         // 25. ExplanationOfBenefit.facility
-        public ElementDefinitionInfo Element_Facility;
+        public ElementDefinitionInfo Element_Facility;                                                                                      // MakerGen.cs:217
         // 26. ExplanationOfBenefit.claim
-        public ElementDefinitionInfo Element_Claim;
+        public ElementDefinitionInfo Element_Claim;                                                                                         // MakerGen.cs:217
         // 27. ExplanationOfBenefit.claimResponse
-        public ElementDefinitionInfo Element_ClaimResponse;
+        public ElementDefinitionInfo Element_ClaimResponse;                                                                                 // MakerGen.cs:217
         // 28. ExplanationOfBenefit.outcome
-        public ElementDefinitionInfo Element_Outcome;
+        public ElementDefinitionInfo Element_Outcome;                                                                                       // MakerGen.cs:217
         // 29. ExplanationOfBenefit.disposition
-        public ElementDefinitionInfo Element_Disposition;
+        public ElementDefinitionInfo Element_Disposition;                                                                                   // MakerGen.cs:217
         // 30. ExplanationOfBenefit.preAuthRef
-        public ElementDefinitionInfo Element_PreAuthRef;
+        public ElementDefinitionInfo Element_PreAuthRef;                                                                                    // MakerGen.cs:217
         // 31. ExplanationOfBenefit.preAuthRefPeriod
-        public ElementDefinitionInfo Element_PreAuthRefPeriod;
+        public ElementDefinitionInfo Element_PreAuthRefPeriod;                                                                              // MakerGen.cs:217
         // 32. ExplanationOfBenefit.careTeam
-        public ElementDefinitionInfo Element_CareTeam;
+        public ElementDefinitionInfo Element_CareTeam;                                                                                      // MakerGen.cs:217
         // 38. ExplanationOfBenefit.supportingInfo
-        public ElementDefinitionInfo Element_SupportingInfo;
+        public ElementDefinitionInfo Element_SupportingInfo;                                                                                // MakerGen.cs:217
         // 45. ExplanationOfBenefit.diagnosis
-        public ElementDefinitionInfo Element_Diagnosis;
+        public ElementDefinitionInfo Element_Diagnosis;                                                                                     // MakerGen.cs:217
         // 51. ExplanationOfBenefit.procedure
-        public ElementDefinitionInfo Element_Procedure;
+        public ElementDefinitionInfo Element_Procedure;                                                                                     // MakerGen.cs:217
         // 57. ExplanationOfBenefit.precedence
-        public ElementDefinitionInfo Element_Precedence;
+        public ElementDefinitionInfo Element_Precedence;                                                                                    // MakerGen.cs:217
         // 58. ExplanationOfBenefit.insurance
-        public ElementDefinitionInfo Element_Insurance;
+        public ElementDefinitionInfo Element_Insurance;                                                                                     // MakerGen.cs:217
         // 62. ExplanationOfBenefit.accident
-        public ElementDefinitionInfo Element_Accident;
+        public ElementDefinitionInfo Element_Accident;                                                                                      // MakerGen.cs:217
         // 66. ExplanationOfBenefit.item
-        public ElementDefinitionInfo Element_Item;
+        public ElementDefinitionInfo Element_Item;                                                                                          // MakerGen.cs:217
         // 121. ExplanationOfBenefit.addItem
-        public ElementDefinitionInfo Element_AddItem;
+        public ElementDefinitionInfo Element_AddItem;                                                                                       // MakerGen.cs:217
         // 157. ExplanationOfBenefit.adjudication
-        public ElementDefinitionInfo Element_Adjudication;
+        public ElementDefinitionInfo Element_Adjudication;                                                                                  // MakerGen.cs:217
         // 158. ExplanationOfBenefit.total
-        public ElementDefinitionInfo Element_Total;
+        public ElementDefinitionInfo Element_Total;                                                                                         // MakerGen.cs:217
         // 161. ExplanationOfBenefit.payment
-        public ElementDefinitionInfo Element_Payment;
+        public ElementDefinitionInfo Element_Payment;                                                                                       // MakerGen.cs:217
         // 168. ExplanationOfBenefit.formCode
-        public ElementDefinitionInfo Element_FormCode;
+        public ElementDefinitionInfo Element_FormCode;                                                                                      // MakerGen.cs:217
         // 169. ExplanationOfBenefit.form
-        public ElementDefinitionInfo Element_Form;
+        public ElementDefinitionInfo Element_Form;                                                                                          // MakerGen.cs:217
         // 170. ExplanationOfBenefit.processNote
-        public ElementDefinitionInfo Element_ProcessNote;
+        public ElementDefinitionInfo Element_ProcessNote;                                                                                   // MakerGen.cs:217
         // 175. ExplanationOfBenefit.benefitPeriod
-        public ElementDefinitionInfo Element_BenefitPeriod;
+        public ElementDefinitionInfo Element_BenefitPeriod;                                                                                 // MakerGen.cs:217
         // 176. ExplanationOfBenefit.benefitBalance
-        public ElementDefinitionInfo Element_BenefitBalance;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "ExplanationOfBenefit",
-                ElementId = "ExplanationOfBenefit"
-            });
-            Element_Identifier.Write(sDef);
-            Element_Status.Write(sDef);
-            Element_Type.Write(sDef);
-            Element_SubType.Write(sDef);
-            Element_Use.Write(sDef);
-            Element_Patient.Write(sDef);
-            Element_BillablePeriod.Write(sDef);
-            Element_Created.Write(sDef);
-            Element_Enterer.Write(sDef);
-            Element_Insurer.Write(sDef);
-            Element_Provider.Write(sDef);
-            Element_Priority.Write(sDef);
-            Element_FundsReserveRequested.Write(sDef);
-            Element_FundsReserve.Write(sDef);
-            Element_Related.Write(sDef);
-            Element_Prescription.Write(sDef);
-            Element_OriginalPrescription.Write(sDef);
-            Element_Payee.Write(sDef);
-            Element_Referral.Write(sDef);
-            Element_Facility.Write(sDef);
-            Element_Claim.Write(sDef);
-            Element_ClaimResponse.Write(sDef);
-            Element_Outcome.Write(sDef);
-            Element_Disposition.Write(sDef);
-            Element_PreAuthRef.Write(sDef);
-            Element_PreAuthRefPeriod.Write(sDef);
-            Element_CareTeam.Write(sDef);
-            Element_SupportingInfo.Write(sDef);
-            Element_Diagnosis.Write(sDef);
-            Element_Procedure.Write(sDef);
-            Element_Precedence.Write(sDef);
-            Element_Insurance.Write(sDef);
-            Element_Accident.Write(sDef);
-            Element_Item.Write(sDef);
-            Element_AddItem.Write(sDef);
-            Element_Adjudication.Write(sDef);
-            Element_Total.Write(sDef);
-            Element_Payment.Write(sDef);
-            Element_FormCode.Write(sDef);
-            Element_Form.Write(sDef);
-            Element_ProcessNote.Write(sDef);
-            Element_BenefitPeriod.Write(sDef);
-            Element_BenefitBalance.Write(sDef);
-        }
-        
-        public Resource_ExplanationOfBenefit()
-        {
-            {
+        public ElementDefinitionInfo Element_BenefitBalance;                                                                                // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "ExplanationOfBenefit",                                                                                              // MakerGen.cs:393
+                ElementId = "ExplanationOfBenefit"                                                                                          // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Type.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_SubType.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Use.Write(sDef);                                                                                                        // MakerGen.cs:221
+            Element_Patient.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_BillablePeriod.Write(sDef);                                                                                             // MakerGen.cs:221
+            Element_Created.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Enterer.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Insurer.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Provider.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_Priority.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_FundsReserveRequested.Write(sDef);                                                                                      // MakerGen.cs:221
+            Element_FundsReserve.Write(sDef);                                                                                               // MakerGen.cs:221
+            Element_Related.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Prescription.Write(sDef);                                                                                               // MakerGen.cs:221
+            Element_OriginalPrescription.Write(sDef);                                                                                       // MakerGen.cs:221
+            Element_Payee.Write(sDef);                                                                                                      // MakerGen.cs:221
+            Element_Referral.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_Facility.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_Claim.Write(sDef);                                                                                                      // MakerGen.cs:221
+            Element_ClaimResponse.Write(sDef);                                                                                              // MakerGen.cs:221
+            Element_Outcome.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Disposition.Write(sDef);                                                                                                // MakerGen.cs:221
+            Element_PreAuthRef.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_PreAuthRefPeriod.Write(sDef);                                                                                           // MakerGen.cs:221
+            Element_CareTeam.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_SupportingInfo.Write(sDef);                                                                                             // MakerGen.cs:221
+            Element_Diagnosis.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_Procedure.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_Precedence.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Insurance.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_Accident.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_Item.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_AddItem.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Adjudication.Write(sDef);                                                                                               // MakerGen.cs:221
+            Element_Total.Write(sDef);                                                                                                      // MakerGen.cs:221
+            Element_Payment.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_FormCode.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_Form.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_ProcessNote.Write(sDef);                                                                                                // MakerGen.cs:221
+            Element_BenefitPeriod.Write(sDef);                                                                                              // MakerGen.cs:221
+            Element_BenefitBalance.Write(sDef);                                                                                             // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Resource_ExplanationOfBenefit()                                                                                              // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. ExplanationOfBenefit.identifier
-                this.Element_Identifier = new ElementDefinitionInfo
-                {
-                    Name = "Element_Identifier",
-                    Path= "ExplanationOfBenefit.identifier",
-                    Id = "ExplanationOfBenefit.identifier",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.identifier",                                                                                // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.identifier",                                                                                 // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. ExplanationOfBenefit.status
-                this.Element_Status = new ElementDefinitionInfo
-                {
-                    Name = "Element_Status",
-                    Path= "ExplanationOfBenefit.status",
-                    Id = "ExplanationOfBenefit.status",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Status",                                                                                                // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.status",                                                                                    // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.status",                                                                                     // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 3. ExplanationOfBenefit.type
-                this.Element_Type = new ElementDefinitionInfo
-                {
-                    Name = "Element_Type",
-                    Path= "ExplanationOfBenefit.type",
-                    Id = "ExplanationOfBenefit.type",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Type = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Type",                                                                                                  // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.type",                                                                                      // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.type",                                                                                       // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 4. ExplanationOfBenefit.subType
-                this.Element_SubType = new ElementDefinitionInfo
-                {
-                    Name = "Element_SubType",
-                    Path= "ExplanationOfBenefit.subType",
-                    Id = "ExplanationOfBenefit.subType",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_SubType = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_SubType",                                                                                               // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.subType",                                                                                   // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.subType",                                                                                    // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 5. ExplanationOfBenefit.use
-                this.Element_Use = new ElementDefinitionInfo
-                {
-                    Name = "Element_Use",
-                    Path= "ExplanationOfBenefit.use",
-                    Id = "ExplanationOfBenefit.use",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Use = new ElementDefinitionInfo                                                                                // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Use",                                                                                                   // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.use",                                                                                       // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.use",                                                                                        // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 6. ExplanationOfBenefit.patient
-                this.Element_Patient = new ElementDefinitionInfo
-                {
-                    Name = "Element_Patient",
-                    Path= "ExplanationOfBenefit.patient",
-                    Id = "ExplanationOfBenefit.patient",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Patient"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Patient = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Patient",                                                                                               // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.patient",                                                                                   // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.patient",                                                                                    // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Patient"                                                           // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 7. ExplanationOfBenefit.billablePeriod
-                this.Element_BillablePeriod = new ElementDefinitionInfo
-                {
-                    Name = "Element_BillablePeriod",
-                    Path= "ExplanationOfBenefit.billablePeriod",
-                    Id = "ExplanationOfBenefit.billablePeriod",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Period
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_BillablePeriod = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_BillablePeriod",                                                                                        // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.billablePeriod",                                                                            // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.billablePeriod",                                                                             // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Period                                                                       // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 8. ExplanationOfBenefit.created
-                this.Element_Created = new ElementDefinitionInfo
-                {
-                    Name = "Element_Created",
-                    Path= "ExplanationOfBenefit.created",
-                    Id = "ExplanationOfBenefit.created",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Created = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Created",                                                                                               // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.created",                                                                                   // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.created",                                                                                    // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 9. ExplanationOfBenefit.enterer
-                this.Element_Enterer = new ElementDefinitionInfo
-                {
-                    Name = "Element_Enterer",
-                    Path= "ExplanationOfBenefit.enterer",
-                    Id = "ExplanationOfBenefit.enterer",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Enterer = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Enterer",                                                                                               // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.enterer",                                                                                   // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.enterer",                                                                                    // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole"                                                  // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 10. ExplanationOfBenefit.insurer
-                this.Element_Insurer = new ElementDefinitionInfo
-                {
-                    Name = "Element_Insurer",
-                    Path= "ExplanationOfBenefit.insurer",
-                    Id = "ExplanationOfBenefit.insurer",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Organization"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Insurer = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Insurer",                                                                                               // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.insurer",                                                                                   // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.insurer",                                                                                    // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 11. ExplanationOfBenefit.provider
-                this.Element_Provider = new ElementDefinitionInfo
-                {
-                    Name = "Element_Provider",
-                    Path= "ExplanationOfBenefit.provider",
-                    Id = "ExplanationOfBenefit.provider",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                                "http://hl7.org/fhir/StructureDefinition/Organization"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Provider = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Provider",                                                                                              // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.provider",                                                                                  // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.provider",                                                                                   // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                                 // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 12. ExplanationOfBenefit.priority
-                this.Element_Priority = new ElementDefinitionInfo
-                {
-                    Name = "Element_Priority",
-                    Path= "ExplanationOfBenefit.priority",
-                    Id = "ExplanationOfBenefit.priority",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Priority = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Priority",                                                                                              // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.priority",                                                                                  // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.priority",                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 13. ExplanationOfBenefit.fundsReserveRequested
-                this.Element_FundsReserveRequested = new ElementDefinitionInfo
-                {
-                    Name = "Element_FundsReserveRequested",
-                    Path= "ExplanationOfBenefit.fundsReserveRequested",
-                    Id = "ExplanationOfBenefit.fundsReserveRequested",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_FundsReserveRequested = new ElementDefinitionInfo                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_FundsReserveRequested",                                                                                 // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.fundsReserveRequested",                                                                     // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.fundsReserveRequested",                                                                      // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 14. ExplanationOfBenefit.fundsReserve
-                this.Element_FundsReserve = new ElementDefinitionInfo
-                {
-                    Name = "Element_FundsReserve",
-                    Path= "ExplanationOfBenefit.fundsReserve",
-                    Id = "ExplanationOfBenefit.fundsReserve",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_FundsReserve = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_FundsReserve",                                                                                          // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.fundsReserve",                                                                              // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.fundsReserve",                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 15. ExplanationOfBenefit.related
-                this.Element_Related = new ElementDefinitionInfo
-                {
-                    Name = "Element_Related",
-                    Path= "ExplanationOfBenefit.related",
-                    Id = "ExplanationOfBenefit.related",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Related
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Related = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Related",                                                                                               // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.related",                                                                                   // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.related",                                                                                    // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Related                                                                                                    // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 19. ExplanationOfBenefit.prescription
-                this.Element_Prescription = new ElementDefinitionInfo
-                {
-                    Name = "Element_Prescription",
-                    Path= "ExplanationOfBenefit.prescription",
-                    Id = "ExplanationOfBenefit.prescription",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
-                                "http://hl7.org/fhir/StructureDefinition/VisionPrescription"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Prescription = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Prescription",                                                                                          // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.prescription",                                                                              // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.prescription",                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/MedicationRequest",                                                // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/VisionPrescription"                                                // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 20. ExplanationOfBenefit.originalPrescription
-                this.Element_OriginalPrescription = new ElementDefinitionInfo
-                {
-                    Name = "Element_OriginalPrescription",
-                    Path= "ExplanationOfBenefit.originalPrescription",
-                    Id = "ExplanationOfBenefit.originalPrescription",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/MedicationRequest"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_OriginalPrescription = new ElementDefinitionInfo                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_OriginalPrescription",                                                                                  // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.originalPrescription",                                                                      // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.originalPrescription",                                                                       // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/MedicationRequest"                                                 // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 21. ExplanationOfBenefit.payee
-                this.Element_Payee = new ElementDefinitionInfo
-                {
-                    Name = "Element_Payee",
-                    Path= "ExplanationOfBenefit.payee",
-                    Id = "ExplanationOfBenefit.payee",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Payee
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Payee = new ElementDefinitionInfo                                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Payee",                                                                                                 // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.payee",                                                                                     // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.payee",                                                                                      // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Payee                                                                                                      // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 24. ExplanationOfBenefit.referral
-                this.Element_Referral = new ElementDefinitionInfo
-                {
-                    Name = "Element_Referral",
-                    Path= "ExplanationOfBenefit.referral",
-                    Id = "ExplanationOfBenefit.referral",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/ServiceRequest"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Referral = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Referral",                                                                                              // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.referral",                                                                                  // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.referral",                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/ServiceRequest"                                                    // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 25. ExplanationOfBenefit.facility
-                this.Element_Facility = new ElementDefinitionInfo
-                {
-                    Name = "Element_Facility",
-                    Path= "ExplanationOfBenefit.facility",
-                    Id = "ExplanationOfBenefit.facility",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Location"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Facility = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Facility",                                                                                              // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.facility",                                                                                  // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.facility",                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Location"                                                          // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 26. ExplanationOfBenefit.claim
-                this.Element_Claim = new ElementDefinitionInfo
-                {
-                    Name = "Element_Claim",
-                    Path= "ExplanationOfBenefit.claim",
-                    Id = "ExplanationOfBenefit.claim",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Claim"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Claim = new ElementDefinitionInfo                                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Claim",                                                                                                 // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.claim",                                                                                     // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.claim",                                                                                      // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Claim"                                                             // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 27. ExplanationOfBenefit.claimResponse
-                this.Element_ClaimResponse = new ElementDefinitionInfo
-                {
-                    Name = "Element_ClaimResponse",
-                    Path= "ExplanationOfBenefit.claimResponse",
-                    Id = "ExplanationOfBenefit.claimResponse",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/ClaimResponse"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ClaimResponse = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ClaimResponse",                                                                                         // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.claimResponse",                                                                             // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.claimResponse",                                                                              // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/ClaimResponse"                                                     // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 28. ExplanationOfBenefit.outcome
-                this.Element_Outcome = new ElementDefinitionInfo
-                {
-                    Name = "Element_Outcome",
-                    Path= "ExplanationOfBenefit.outcome",
-                    Id = "ExplanationOfBenefit.outcome",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Outcome = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Outcome",                                                                                               // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.outcome",                                                                                   // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.outcome",                                                                                    // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 29. ExplanationOfBenefit.disposition
-                this.Element_Disposition = new ElementDefinitionInfo
-                {
-                    Name = "Element_Disposition",
-                    Path= "ExplanationOfBenefit.disposition",
-                    Id = "ExplanationOfBenefit.disposition",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Disposition = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Disposition",                                                                                           // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.disposition",                                                                               // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.disposition",                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 30. ExplanationOfBenefit.preAuthRef
-                this.Element_PreAuthRef = new ElementDefinitionInfo
-                {
-                    Name = "Element_PreAuthRef",
-                    Path= "ExplanationOfBenefit.preAuthRef",
-                    Id = "ExplanationOfBenefit.preAuthRef",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_PreAuthRef = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_PreAuthRef",                                                                                            // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.preAuthRef",                                                                                // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.preAuthRef",                                                                                 // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 31. ExplanationOfBenefit.preAuthRefPeriod
-                this.Element_PreAuthRefPeriod = new ElementDefinitionInfo
-                {
-                    Name = "Element_PreAuthRefPeriod",
-                    Path= "ExplanationOfBenefit.preAuthRefPeriod",
-                    Id = "ExplanationOfBenefit.preAuthRefPeriod",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Period
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_PreAuthRefPeriod = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_PreAuthRefPeriod",                                                                                      // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.preAuthRefPeriod",                                                                          // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.preAuthRefPeriod",                                                                           // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Period                                                                       // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 32. ExplanationOfBenefit.careTeam
-                this.Element_CareTeam = new ElementDefinitionInfo
-                {
-                    Name = "Element_CareTeam",
-                    Path= "ExplanationOfBenefit.careTeam",
-                    Id = "ExplanationOfBenefit.careTeam",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_CareTeam
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_CareTeam = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_CareTeam",                                                                                              // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.careTeam",                                                                                  // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.careTeam",                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_CareTeam                                                                                                   // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 38. ExplanationOfBenefit.supportingInfo
-                this.Element_SupportingInfo = new ElementDefinitionInfo
-                {
-                    Name = "Element_SupportingInfo",
-                    Path= "ExplanationOfBenefit.supportingInfo",
-                    Id = "ExplanationOfBenefit.supportingInfo",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_SupportingInfo
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_SupportingInfo = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_SupportingInfo",                                                                                        // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.supportingInfo",                                                                            // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.supportingInfo",                                                                             // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_SupportingInfo                                                                                             // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 45. ExplanationOfBenefit.diagnosis
-                this.Element_Diagnosis = new ElementDefinitionInfo
-                {
-                    Name = "Element_Diagnosis",
-                    Path= "ExplanationOfBenefit.diagnosis",
-                    Id = "ExplanationOfBenefit.diagnosis",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Diagnosis
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Diagnosis = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Diagnosis",                                                                                             // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.diagnosis",                                                                                 // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.diagnosis",                                                                                  // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Diagnosis                                                                                                  // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 51. ExplanationOfBenefit.procedure
-                this.Element_Procedure = new ElementDefinitionInfo
-                {
-                    Name = "Element_Procedure",
-                    Path= "ExplanationOfBenefit.procedure",
-                    Id = "ExplanationOfBenefit.procedure",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Procedure
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Procedure = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Procedure",                                                                                             // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.procedure",                                                                                 // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.procedure",                                                                                  // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Procedure                                                                                                  // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 57. ExplanationOfBenefit.precedence
-                this.Element_Precedence = new ElementDefinitionInfo
-                {
-                    Name = "Element_Precedence",
-                    Path= "ExplanationOfBenefit.precedence",
-                    Id = "ExplanationOfBenefit.precedence",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Precedence = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Precedence",                                                                                            // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.precedence",                                                                                // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.precedence",                                                                                 // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                           // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 58. ExplanationOfBenefit.insurance
-                this.Element_Insurance = new ElementDefinitionInfo
-                {
-                    Name = "Element_Insurance",
-                    Path= "ExplanationOfBenefit.insurance",
-                    Id = "ExplanationOfBenefit.insurance",
-                    Min = 1,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Insurance
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Insurance = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Insurance",                                                                                             // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.insurance",                                                                                 // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.insurance",                                                                                  // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Insurance                                                                                                  // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 62. ExplanationOfBenefit.accident
-                this.Element_Accident = new ElementDefinitionInfo
-                {
-                    Name = "Element_Accident",
-                    Path= "ExplanationOfBenefit.accident",
-                    Id = "ExplanationOfBenefit.accident",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Accident
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Accident = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Accident",                                                                                              // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.accident",                                                                                  // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.accident",                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Accident                                                                                                   // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 66. ExplanationOfBenefit.item
-                this.Element_Item = new ElementDefinitionInfo
-                {
-                    Name = "Element_Item",
-                    Path= "ExplanationOfBenefit.item",
-                    Id = "ExplanationOfBenefit.item",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Item
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Item = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Item",                                                                                                  // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.item",                                                                                      // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.item",                                                                                       // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Item                                                                                                       // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 121. ExplanationOfBenefit.addItem
-                this.Element_AddItem = new ElementDefinitionInfo
-                {
-                    Name = "Element_AddItem",
-                    Path= "ExplanationOfBenefit.addItem",
-                    Id = "ExplanationOfBenefit.addItem",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_AddItem
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_AddItem = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_AddItem",                                                                                               // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.addItem",                                                                                   // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.addItem",                                                                                    // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_AddItem                                                                                                    // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 157. ExplanationOfBenefit.adjudication
-                this.Element_Adjudication = new ElementDefinitionInfo
-                {
-                    Name = "Element_Adjudication",
-                    Path= "ExplanationOfBenefit.adjudication",
-                    Id = "ExplanationOfBenefit.adjudication",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                    }
-                };
-            }
-            {
+                this.Element_Adjudication = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Adjudication",                                                                                          // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.adjudication",                                                                              // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.adjudication",                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 158. ExplanationOfBenefit.total
-                this.Element_Total = new ElementDefinitionInfo
-                {
-                    Name = "Element_Total",
-                    Path= "ExplanationOfBenefit.total",
-                    Id = "ExplanationOfBenefit.total",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Total
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Total = new ElementDefinitionInfo                                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Total",                                                                                                 // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.total",                                                                                     // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.total",                                                                                      // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Total                                                                                                      // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 161. ExplanationOfBenefit.payment
-                this.Element_Payment = new ElementDefinitionInfo
-                {
-                    Name = "Element_Payment",
-                    Path= "ExplanationOfBenefit.payment",
-                    Id = "ExplanationOfBenefit.payment",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Payment
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Payment = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Payment",                                                                                               // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.payment",                                                                                   // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.payment",                                                                                    // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Payment                                                                                                    // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 168. ExplanationOfBenefit.formCode
-                this.Element_FormCode = new ElementDefinitionInfo
-                {
-                    Name = "Element_FormCode",
-                    Path= "ExplanationOfBenefit.formCode",
-                    Id = "ExplanationOfBenefit.formCode",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_FormCode = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_FormCode",                                                                                              // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.formCode",                                                                                  // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.formCode",                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 169. ExplanationOfBenefit.form
-                this.Element_Form = new ElementDefinitionInfo
-                {
-                    Name = "Element_Form",
-                    Path= "ExplanationOfBenefit.form",
-                    Id = "ExplanationOfBenefit.form",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Attachment
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Form = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Form",                                                                                                  // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.form",                                                                                      // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.form",                                                                                       // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Attachment                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 170. ExplanationOfBenefit.processNote
-                this.Element_ProcessNote = new ElementDefinitionInfo
-                {
-                    Name = "Element_ProcessNote",
-                    Path= "ExplanationOfBenefit.processNote",
-                    Id = "ExplanationOfBenefit.processNote",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_ProcessNote
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ProcessNote = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ProcessNote",                                                                                           // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.processNote",                                                                               // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.processNote",                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_ProcessNote                                                                                                // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 175. ExplanationOfBenefit.benefitPeriod
-                this.Element_BenefitPeriod = new ElementDefinitionInfo
-                {
-                    Name = "Element_BenefitPeriod",
-                    Path= "ExplanationOfBenefit.benefitPeriod",
-                    Id = "ExplanationOfBenefit.benefitPeriod",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Period
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_BenefitPeriod = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_BenefitPeriod",                                                                                         // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.benefitPeriod",                                                                             // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.benefitPeriod",                                                                              // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Period                                                                       // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 176. ExplanationOfBenefit.benefitBalance
-                this.Element_BenefitBalance = new ElementDefinitionInfo
-                {
-                    Name = "Element_BenefitBalance",
-                    Path= "ExplanationOfBenefit.benefitBalance",
-                    Id = "ExplanationOfBenefit.benefitBalance",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_BenefitBalance
-                        {
-                        }
-                    }
-                };
-            }
-            this.Name = "ExplanationOfBenefit";
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/ExplanationOfBenefit";
-        }
-    }
-}
+                this.Element_BenefitBalance = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_BenefitBalance",                                                                                        // MakerGen.cs:236
+                    Path= "ExplanationOfBenefit.benefitBalance",                                                                            // MakerGen.cs:237
+                    Id = "ExplanationOfBenefit.benefitBalance",                                                                             // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_BenefitBalance                                                                                             // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            this.Name = "ExplanationOfBenefit";                                                                                             // MakerGen.cs:468
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/ExplanationOfBenefit";                                                      // MakerGen.cs:469
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:449

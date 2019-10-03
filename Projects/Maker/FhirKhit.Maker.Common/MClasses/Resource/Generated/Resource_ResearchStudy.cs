@@ -1,13 +1,13 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Resource
-{
-    #region Json
-    #if NEVER
+using System;                                                                                                                               // MakerGen.cs:432
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:433
+using System.IO;                                                                                                                            // MakerGen.cs:434
+using System.Linq;                                                                                                                          // MakerGen.cs:435
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:436
+                                                                                                                                            // MakerGen.cs:437
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:438
+{                                                                                                                                           // MakerGen.cs:439
+    #region Json                                                                                                                            // MakerGen.cs:440
+    #if NEVER                                                                                                                               // MakerGen.cs:441
     {
       "resourceType": "StructureDefinition",
       "id": "ResearchStudy",
@@ -582,669 +582,669 @@ namespace FhirKhit.Maker.Common.Resource
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:444
     /// <summary>
     /// Fhir resource 'ResearchStudy'
     /// </summary>
     // 0. ResearchStudy
-    public partial class Resource_ResearchStudy : FhirKhit.Maker.Common.Resource.Resource_DomainResource
-    {
+    public partial class Resource_ResearchStudy : FhirKhit.Maker.Common.Resource.Resource_DomainResource                                    // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 23. ResearchStudy.arm
-        public partial class Type_Arm : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Arm : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 24. ResearchStudy.arm.name
-            public ElementDefinitionInfo Element_Name;
+            public ElementDefinitionInfo Element_Name;                                                                                      // MakerGen.cs:217
             // 25. ResearchStudy.arm.type
-            public ElementDefinitionInfo Element_Type;
+            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:217
             // 26. ResearchStudy.arm.description
-            public ElementDefinitionInfo Element_Description;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "ResearchStudy.arm",
-                    ElementId = "ResearchStudy.arm"
-                });
-                Element_Name.Write(sDef);
-                Element_Type.Write(sDef);
-                Element_Description.Write(sDef);
-            }
-            
-            public Type_Arm()
-            {
-                {
+            public ElementDefinitionInfo Element_Description;                                                                               // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "ResearchStudy.arm",                                                                                             // MakerGen.cs:393
+                    ElementId = "ResearchStudy.arm"                                                                                         // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Name.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Description.Write(sDef);                                                                                            // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Arm()                                                                                                               // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 24. ResearchStudy.arm.name
-                    this.Element_Name = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Name",
-                        Path= "ResearchStudy.arm.name",
-                        Id = "ResearchStudy.arm.name",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Name = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Name",                                                                                              // MakerGen.cs:236
+                        Path= "ResearchStudy.arm.name",                                                                                     // MakerGen.cs:237
+                        Id = "ResearchStudy.arm.name",                                                                                      // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 25. ResearchStudy.arm.type
-                    this.Element_Type = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Type",
-                        Path= "ResearchStudy.arm.type",
-                        Id = "ResearchStudy.arm.type",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Type",                                                                                              // MakerGen.cs:236
+                        Path= "ResearchStudy.arm.type",                                                                                     // MakerGen.cs:237
+                        Id = "ResearchStudy.arm.type",                                                                                      // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 26. ResearchStudy.arm.description
-                    this.Element_Description = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Description",
-                        Path= "ResearchStudy.arm.description",
-                        Id = "ResearchStudy.arm.description",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Description",                                                                                       // MakerGen.cs:236
+                        Path= "ResearchStudy.arm.description",                                                                              // MakerGen.cs:237
+                        Id = "ResearchStudy.arm.description",                                                                               // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 27. ResearchStudy.objective
-        public partial class Type_Objective : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Objective : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 28. ResearchStudy.objective.name
-            public ElementDefinitionInfo Element_Name;
+            public ElementDefinitionInfo Element_Name;                                                                                      // MakerGen.cs:217
             // 29. ResearchStudy.objective.type
-            public ElementDefinitionInfo Element_Type;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "ResearchStudy.objective",
-                    ElementId = "ResearchStudy.objective"
-                });
-                Element_Name.Write(sDef);
-                Element_Type.Write(sDef);
-            }
-            
-            public Type_Objective()
-            {
-                {
+            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "ResearchStudy.objective",                                                                                       // MakerGen.cs:393
+                    ElementId = "ResearchStudy.objective"                                                                                   // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Name.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Objective()                                                                                                         // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 28. ResearchStudy.objective.name
-                    this.Element_Name = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Name",
-                        Path= "ResearchStudy.objective.name",
-                        Id = "ResearchStudy.objective.name",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Name = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Name",                                                                                              // MakerGen.cs:236
+                        Path= "ResearchStudy.objective.name",                                                                               // MakerGen.cs:237
+                        Id = "ResearchStudy.objective.name",                                                                                // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 29. ResearchStudy.objective.type
-                    this.Element_Type = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Type",
-                        Path= "ResearchStudy.objective.type",
-                        Id = "ResearchStudy.objective.type",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Type",                                                                                              // MakerGen.cs:236
+                        Path= "ResearchStudy.objective.type",                                                                               // MakerGen.cs:237
+                        Id = "ResearchStudy.objective.type",                                                                                // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 1. ResearchStudy.identifier
-        public ElementDefinitionInfo Element_Identifier;
+        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:217
         // 2. ResearchStudy.title
-        public ElementDefinitionInfo Element_Title;
+        public ElementDefinitionInfo Element_Title;                                                                                         // MakerGen.cs:217
         // 3. ResearchStudy.protocol
-        public ElementDefinitionInfo Element_Protocol;
+        public ElementDefinitionInfo Element_Protocol;                                                                                      // MakerGen.cs:217
         // 4. ResearchStudy.partOf
-        public ElementDefinitionInfo Element_PartOf;
+        public ElementDefinitionInfo Element_PartOf;                                                                                        // MakerGen.cs:217
         // 5. ResearchStudy.status
-        public ElementDefinitionInfo Element_Status;
+        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:217
         // 6. ResearchStudy.primaryPurposeType
-        public ElementDefinitionInfo Element_PrimaryPurposeType;
+        public ElementDefinitionInfo Element_PrimaryPurposeType;                                                                            // MakerGen.cs:217
         // 7. ResearchStudy.phase
-        public ElementDefinitionInfo Element_Phase;
+        public ElementDefinitionInfo Element_Phase;                                                                                         // MakerGen.cs:217
         // 8. ResearchStudy.category
-        public ElementDefinitionInfo Element_Category;
+        public ElementDefinitionInfo Element_Category;                                                                                      // MakerGen.cs:217
         // 9. ResearchStudy.focus
-        public ElementDefinitionInfo Element_Focus;
+        public ElementDefinitionInfo Element_Focus;                                                                                         // MakerGen.cs:217
         // 10. ResearchStudy.condition
-        public ElementDefinitionInfo Element_Condition;
+        public ElementDefinitionInfo Element_Condition;                                                                                     // MakerGen.cs:217
         // 11. ResearchStudy.contact
-        public ElementDefinitionInfo Element_Contact;
+        public ElementDefinitionInfo Element_Contact;                                                                                       // MakerGen.cs:217
         // 12. ResearchStudy.relatedArtifact
-        public ElementDefinitionInfo Element_RelatedArtifact;
+        public ElementDefinitionInfo Element_RelatedArtifact;                                                                               // MakerGen.cs:217
         // 13. ResearchStudy.keyword
-        public ElementDefinitionInfo Element_Keyword;
+        public ElementDefinitionInfo Element_Keyword;                                                                                       // MakerGen.cs:217
         // 14. ResearchStudy.location
-        public ElementDefinitionInfo Element_Location;
+        public ElementDefinitionInfo Element_Location;                                                                                      // MakerGen.cs:217
         // 15. ResearchStudy.description
-        public ElementDefinitionInfo Element_Description;
+        public ElementDefinitionInfo Element_Description;                                                                                   // MakerGen.cs:217
         // 16. ResearchStudy.enrollment
-        public ElementDefinitionInfo Element_Enrollment;
+        public ElementDefinitionInfo Element_Enrollment;                                                                                    // MakerGen.cs:217
         // 17. ResearchStudy.period
-        public ElementDefinitionInfo Element_Period;
+        public ElementDefinitionInfo Element_Period;                                                                                        // MakerGen.cs:217
         // 18. ResearchStudy.sponsor
-        public ElementDefinitionInfo Element_Sponsor;
+        public ElementDefinitionInfo Element_Sponsor;                                                                                       // MakerGen.cs:217
         // 19. ResearchStudy.principalInvestigator
-        public ElementDefinitionInfo Element_PrincipalInvestigator;
+        public ElementDefinitionInfo Element_PrincipalInvestigator;                                                                         // MakerGen.cs:217
         // 20. ResearchStudy.site
-        public ElementDefinitionInfo Element_Site;
+        public ElementDefinitionInfo Element_Site;                                                                                          // MakerGen.cs:217
         // 21. ResearchStudy.reasonStopped
-        public ElementDefinitionInfo Element_ReasonStopped;
+        public ElementDefinitionInfo Element_ReasonStopped;                                                                                 // MakerGen.cs:217
         // 22. ResearchStudy.note
-        public ElementDefinitionInfo Element_Note;
+        public ElementDefinitionInfo Element_Note;                                                                                          // MakerGen.cs:217
         // 23. ResearchStudy.arm
-        public ElementDefinitionInfo Element_Arm;
+        public ElementDefinitionInfo Element_Arm;                                                                                           // MakerGen.cs:217
         // 27. ResearchStudy.objective
-        public ElementDefinitionInfo Element_Objective;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "ResearchStudy",
-                ElementId = "ResearchStudy"
-            });
-            Element_Identifier.Write(sDef);
-            Element_Title.Write(sDef);
-            Element_Protocol.Write(sDef);
-            Element_PartOf.Write(sDef);
-            Element_Status.Write(sDef);
-            Element_PrimaryPurposeType.Write(sDef);
-            Element_Phase.Write(sDef);
-            Element_Category.Write(sDef);
-            Element_Focus.Write(sDef);
-            Element_Condition.Write(sDef);
-            Element_Contact.Write(sDef);
-            Element_RelatedArtifact.Write(sDef);
-            Element_Keyword.Write(sDef);
-            Element_Location.Write(sDef);
-            Element_Description.Write(sDef);
-            Element_Enrollment.Write(sDef);
-            Element_Period.Write(sDef);
-            Element_Sponsor.Write(sDef);
-            Element_PrincipalInvestigator.Write(sDef);
-            Element_Site.Write(sDef);
-            Element_ReasonStopped.Write(sDef);
-            Element_Note.Write(sDef);
-            Element_Arm.Write(sDef);
-            Element_Objective.Write(sDef);
-        }
-        
-        public Resource_ResearchStudy()
-        {
-            {
+        public ElementDefinitionInfo Element_Objective;                                                                                     // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "ResearchStudy",                                                                                                     // MakerGen.cs:393
+                ElementId = "ResearchStudy"                                                                                                 // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Title.Write(sDef);                                                                                                      // MakerGen.cs:221
+            Element_Protocol.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_PartOf.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_PrimaryPurposeType.Write(sDef);                                                                                         // MakerGen.cs:221
+            Element_Phase.Write(sDef);                                                                                                      // MakerGen.cs:221
+            Element_Category.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_Focus.Write(sDef);                                                                                                      // MakerGen.cs:221
+            Element_Condition.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_Contact.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_RelatedArtifact.Write(sDef);                                                                                            // MakerGen.cs:221
+            Element_Keyword.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Location.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_Description.Write(sDef);                                                                                                // MakerGen.cs:221
+            Element_Enrollment.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Period.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Sponsor.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_PrincipalInvestigator.Write(sDef);                                                                                      // MakerGen.cs:221
+            Element_Site.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_ReasonStopped.Write(sDef);                                                                                              // MakerGen.cs:221
+            Element_Note.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Arm.Write(sDef);                                                                                                        // MakerGen.cs:221
+            Element_Objective.Write(sDef);                                                                                                  // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Resource_ResearchStudy()                                                                                                     // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. ResearchStudy.identifier
-                this.Element_Identifier = new ElementDefinitionInfo
-                {
-                    Name = "Element_Identifier",
-                    Path= "ResearchStudy.identifier",
-                    Id = "ResearchStudy.identifier",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:236
+                    Path= "ResearchStudy.identifier",                                                                                       // MakerGen.cs:237
+                    Id = "ResearchStudy.identifier",                                                                                        // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. ResearchStudy.title
-                this.Element_Title = new ElementDefinitionInfo
-                {
-                    Name = "Element_Title",
-                    Path= "ResearchStudy.title",
-                    Id = "ResearchStudy.title",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Title = new ElementDefinitionInfo                                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Title",                                                                                                 // MakerGen.cs:236
+                    Path= "ResearchStudy.title",                                                                                            // MakerGen.cs:237
+                    Id = "ResearchStudy.title",                                                                                             // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 3. ResearchStudy.protocol
-                this.Element_Protocol = new ElementDefinitionInfo
-                {
-                    Name = "Element_Protocol",
-                    Path= "ResearchStudy.protocol",
-                    Id = "ResearchStudy.protocol",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/PlanDefinition"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Protocol = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Protocol",                                                                                              // MakerGen.cs:236
+                    Path= "ResearchStudy.protocol",                                                                                         // MakerGen.cs:237
+                    Id = "ResearchStudy.protocol",                                                                                          // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/PlanDefinition"                                                    // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 4. ResearchStudy.partOf
-                this.Element_PartOf = new ElementDefinitionInfo
-                {
-                    Name = "Element_PartOf",
-                    Path= "ResearchStudy.partOf",
-                    Id = "ResearchStudy.partOf",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/ResearchStudy"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_PartOf = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_PartOf",                                                                                                // MakerGen.cs:236
+                    Path= "ResearchStudy.partOf",                                                                                           // MakerGen.cs:237
+                    Id = "ResearchStudy.partOf",                                                                                            // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/ResearchStudy"                                                     // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 5. ResearchStudy.status
-                this.Element_Status = new ElementDefinitionInfo
-                {
-                    Name = "Element_Status",
-                    Path= "ResearchStudy.status",
-                    Id = "ResearchStudy.status",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Status",                                                                                                // MakerGen.cs:236
+                    Path= "ResearchStudy.status",                                                                                           // MakerGen.cs:237
+                    Id = "ResearchStudy.status",                                                                                            // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 6. ResearchStudy.primaryPurposeType
-                this.Element_PrimaryPurposeType = new ElementDefinitionInfo
-                {
-                    Name = "Element_PrimaryPurposeType",
-                    Path= "ResearchStudy.primaryPurposeType",
-                    Id = "ResearchStudy.primaryPurposeType",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_PrimaryPurposeType = new ElementDefinitionInfo                                                                 // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_PrimaryPurposeType",                                                                                    // MakerGen.cs:236
+                    Path= "ResearchStudy.primaryPurposeType",                                                                               // MakerGen.cs:237
+                    Id = "ResearchStudy.primaryPurposeType",                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 7. ResearchStudy.phase
-                this.Element_Phase = new ElementDefinitionInfo
-                {
-                    Name = "Element_Phase",
-                    Path= "ResearchStudy.phase",
-                    Id = "ResearchStudy.phase",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Phase = new ElementDefinitionInfo                                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Phase",                                                                                                 // MakerGen.cs:236
+                    Path= "ResearchStudy.phase",                                                                                            // MakerGen.cs:237
+                    Id = "ResearchStudy.phase",                                                                                             // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 8. ResearchStudy.category
-                this.Element_Category = new ElementDefinitionInfo
-                {
-                    Name = "Element_Category",
-                    Path= "ResearchStudy.category",
-                    Id = "ResearchStudy.category",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Category = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Category",                                                                                              // MakerGen.cs:236
+                    Path= "ResearchStudy.category",                                                                                         // MakerGen.cs:237
+                    Id = "ResearchStudy.category",                                                                                          // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 9. ResearchStudy.focus
-                this.Element_Focus = new ElementDefinitionInfo
-                {
-                    Name = "Element_Focus",
-                    Path= "ResearchStudy.focus",
-                    Id = "ResearchStudy.focus",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Focus = new ElementDefinitionInfo                                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Focus",                                                                                                 // MakerGen.cs:236
+                    Path= "ResearchStudy.focus",                                                                                            // MakerGen.cs:237
+                    Id = "ResearchStudy.focus",                                                                                             // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 10. ResearchStudy.condition
-                this.Element_Condition = new ElementDefinitionInfo
-                {
-                    Name = "Element_Condition",
-                    Path= "ResearchStudy.condition",
-                    Id = "ResearchStudy.condition",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Condition = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Condition",                                                                                             // MakerGen.cs:236
+                    Path= "ResearchStudy.condition",                                                                                        // MakerGen.cs:237
+                    Id = "ResearchStudy.condition",                                                                                         // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 11. ResearchStudy.contact
-                this.Element_Contact = new ElementDefinitionInfo
-                {
-                    Name = "Element_Contact",
-                    Path= "ResearchStudy.contact",
-                    Id = "ResearchStudy.contact",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Contact = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Contact",                                                                                               // MakerGen.cs:236
+                    Path= "ResearchStudy.contact",                                                                                          // MakerGen.cs:237
+                    Id = "ResearchStudy.contact",                                                                                           // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                                // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 12. ResearchStudy.relatedArtifact
-                this.Element_RelatedArtifact = new ElementDefinitionInfo
-                {
-                    Name = "Element_RelatedArtifact",
-                    Path= "ResearchStudy.relatedArtifact",
-                    Id = "ResearchStudy.relatedArtifact",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_RelatedArtifact
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_RelatedArtifact = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_RelatedArtifact",                                                                                       // MakerGen.cs:236
+                    Path= "ResearchStudy.relatedArtifact",                                                                                  // MakerGen.cs:237
+                    Id = "ResearchStudy.relatedArtifact",                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_RelatedArtifact                                                              // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 13. ResearchStudy.keyword
-                this.Element_Keyword = new ElementDefinitionInfo
-                {
-                    Name = "Element_Keyword",
-                    Path= "ResearchStudy.keyword",
-                    Id = "ResearchStudy.keyword",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Keyword = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Keyword",                                                                                               // MakerGen.cs:236
+                    Path= "ResearchStudy.keyword",                                                                                          // MakerGen.cs:237
+                    Id = "ResearchStudy.keyword",                                                                                           // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 14. ResearchStudy.location
-                this.Element_Location = new ElementDefinitionInfo
-                {
-                    Name = "Element_Location",
-                    Path= "ResearchStudy.location",
-                    Id = "ResearchStudy.location",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Location = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Location",                                                                                              // MakerGen.cs:236
+                    Path= "ResearchStudy.location",                                                                                         // MakerGen.cs:237
+                    Id = "ResearchStudy.location",                                                                                          // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 15. ResearchStudy.description
-                this.Element_Description = new ElementDefinitionInfo
-                {
-                    Name = "Element_Description",
-                    Path= "ResearchStudy.description",
-                    Id = "ResearchStudy.description",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Description = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Description",                                                                                           // MakerGen.cs:236
+                    Path= "ResearchStudy.description",                                                                                      // MakerGen.cs:237
+                    Id = "ResearchStudy.description",                                                                                       // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 16. ResearchStudy.enrollment
-                this.Element_Enrollment = new ElementDefinitionInfo
-                {
-                    Name = "Element_Enrollment",
-                    Path= "ResearchStudy.enrollment",
-                    Id = "ResearchStudy.enrollment",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Group"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Enrollment = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Enrollment",                                                                                            // MakerGen.cs:236
+                    Path= "ResearchStudy.enrollment",                                                                                       // MakerGen.cs:237
+                    Id = "ResearchStudy.enrollment",                                                                                        // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Group"                                                             // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 17. ResearchStudy.period
-                this.Element_Period = new ElementDefinitionInfo
-                {
-                    Name = "Element_Period",
-                    Path= "ResearchStudy.period",
-                    Id = "ResearchStudy.period",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Period
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Period = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Period",                                                                                                // MakerGen.cs:236
+                    Path= "ResearchStudy.period",                                                                                           // MakerGen.cs:237
+                    Id = "ResearchStudy.period",                                                                                            // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Period                                                                       // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 18. ResearchStudy.sponsor
-                this.Element_Sponsor = new ElementDefinitionInfo
-                {
-                    Name = "Element_Sponsor",
-                    Path= "ResearchStudy.sponsor",
-                    Id = "ResearchStudy.sponsor",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Organization"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Sponsor = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Sponsor",                                                                                               // MakerGen.cs:236
+                    Path= "ResearchStudy.sponsor",                                                                                          // MakerGen.cs:237
+                    Id = "ResearchStudy.sponsor",                                                                                           // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 19. ResearchStudy.principalInvestigator
-                this.Element_PrincipalInvestigator = new ElementDefinitionInfo
-                {
-                    Name = "Element_PrincipalInvestigator",
-                    Path= "ResearchStudy.principalInvestigator",
-                    Id = "ResearchStudy.principalInvestigator",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_PrincipalInvestigator = new ElementDefinitionInfo                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_PrincipalInvestigator",                                                                                 // MakerGen.cs:236
+                    Path= "ResearchStudy.principalInvestigator",                                                                            // MakerGen.cs:237
+                    Id = "ResearchStudy.principalInvestigator",                                                                             // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole"                                                  // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 20. ResearchStudy.site
-                this.Element_Site = new ElementDefinitionInfo
-                {
-                    Name = "Element_Site",
-                    Path= "ResearchStudy.site",
-                    Id = "ResearchStudy.site",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Location"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Site = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Site",                                                                                                  // MakerGen.cs:236
+                    Path= "ResearchStudy.site",                                                                                             // MakerGen.cs:237
+                    Id = "ResearchStudy.site",                                                                                              // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Location"                                                          // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 21. ResearchStudy.reasonStopped
-                this.Element_ReasonStopped = new ElementDefinitionInfo
-                {
-                    Name = "Element_ReasonStopped",
-                    Path= "ResearchStudy.reasonStopped",
-                    Id = "ResearchStudy.reasonStopped",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ReasonStopped = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ReasonStopped",                                                                                         // MakerGen.cs:236
+                    Path= "ResearchStudy.reasonStopped",                                                                                    // MakerGen.cs:237
+                    Id = "ResearchStudy.reasonStopped",                                                                                     // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 22. ResearchStudy.note
-                this.Element_Note = new ElementDefinitionInfo
-                {
-                    Name = "Element_Note",
-                    Path= "ResearchStudy.note",
-                    Id = "ResearchStudy.note",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Annotation
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Note = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Note",                                                                                                  // MakerGen.cs:236
+                    Path= "ResearchStudy.note",                                                                                             // MakerGen.cs:237
+                    Id = "ResearchStudy.note",                                                                                              // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Annotation                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 23. ResearchStudy.arm
-                this.Element_Arm = new ElementDefinitionInfo
-                {
-                    Name = "Element_Arm",
-                    Path= "ResearchStudy.arm",
-                    Id = "ResearchStudy.arm",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Arm
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Arm = new ElementDefinitionInfo                                                                                // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Arm",                                                                                                   // MakerGen.cs:236
+                    Path= "ResearchStudy.arm",                                                                                              // MakerGen.cs:237
+                    Id = "ResearchStudy.arm",                                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Arm                                                                                                        // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 27. ResearchStudy.objective
-                this.Element_Objective = new ElementDefinitionInfo
-                {
-                    Name = "Element_Objective",
-                    Path= "ResearchStudy.objective",
-                    Id = "ResearchStudy.objective",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Objective
-                        {
-                        }
-                    }
-                };
-            }
-            this.Name = "ResearchStudy";
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/ResearchStudy";
-        }
-    }
-}
+                this.Element_Objective = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Objective",                                                                                             // MakerGen.cs:236
+                    Path= "ResearchStudy.objective",                                                                                        // MakerGen.cs:237
+                    Id = "ResearchStudy.objective",                                                                                         // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Objective                                                                                                  // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            this.Name = "ResearchStudy";                                                                                                    // MakerGen.cs:468
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/ResearchStudy";                                                             // MakerGen.cs:469
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:449

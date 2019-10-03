@@ -1,13 +1,13 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Resource
-{
-    #region Json
-    #if NEVER
+using System;                                                                                                                               // MakerGen.cs:432
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:433
+using System.IO;                                                                                                                            // MakerGen.cs:434
+using System.Linq;                                                                                                                          // MakerGen.cs:435
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:436
+                                                                                                                                            // MakerGen.cs:437
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:438
+{                                                                                                                                           // MakerGen.cs:439
+    #region Json                                                                                                                            // MakerGen.cs:440
+    #if NEVER                                                                                                                               // MakerGen.cs:441
     {
       "resourceType": "StructureDefinition",
       "id": "RelatedPerson",
@@ -297,330 +297,330 @@ namespace FhirKhit.Maker.Common.Resource
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:444
     /// <summary>
     /// Fhir resource 'RelatedPerson'
     /// </summary>
     // 0. RelatedPerson
-    public partial class Resource_RelatedPerson : FhirKhit.Maker.Common.Resource.Resource_DomainResource
-    {
+    public partial class Resource_RelatedPerson : FhirKhit.Maker.Common.Resource.Resource_DomainResource                                    // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 12. RelatedPerson.communication
-        public partial class Type_Communication : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Communication : FhirKhit.Maker.Common.Complex.ComplexBase                                                 // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 13. RelatedPerson.communication.language
-            public ElementDefinitionInfo Element_Language;
+            public ElementDefinitionInfo Element_Language;                                                                                  // MakerGen.cs:217
             // 14. RelatedPerson.communication.preferred
-            public ElementDefinitionInfo Element_Preferred;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "RelatedPerson.communication",
-                    ElementId = "RelatedPerson.communication"
-                });
-                Element_Language.Write(sDef);
-                Element_Preferred.Write(sDef);
-            }
-            
-            public Type_Communication()
-            {
-                {
+            public ElementDefinitionInfo Element_Preferred;                                                                                 // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "RelatedPerson.communication",                                                                                   // MakerGen.cs:393
+                    ElementId = "RelatedPerson.communication"                                                                               // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Language.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_Preferred.Write(sDef);                                                                                              // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Communication()                                                                                                     // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 13. RelatedPerson.communication.language
-                    this.Element_Language = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Language",
-                        Path= "RelatedPerson.communication.language",
-                        Id = "RelatedPerson.communication.language",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Language = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Language",                                                                                          // MakerGen.cs:236
+                        Path= "RelatedPerson.communication.language",                                                                       // MakerGen.cs:237
+                        Id = "RelatedPerson.communication.language",                                                                        // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 14. RelatedPerson.communication.preferred
-                    this.Element_Preferred = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Preferred",
-                        Path= "RelatedPerson.communication.preferred",
-                        Id = "RelatedPerson.communication.preferred",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Preferred = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Preferred",                                                                                         // MakerGen.cs:236
+                        Path= "RelatedPerson.communication.preferred",                                                                      // MakerGen.cs:237
+                        Id = "RelatedPerson.communication.preferred",                                                                       // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                           // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 1. RelatedPerson.identifier
-        public ElementDefinitionInfo Element_Identifier;
+        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:217
         // 2. RelatedPerson.active
-        public ElementDefinitionInfo Element_Active;
+        public ElementDefinitionInfo Element_Active;                                                                                        // MakerGen.cs:217
         // 3. RelatedPerson.patient
-        public ElementDefinitionInfo Element_Patient;
+        public ElementDefinitionInfo Element_Patient;                                                                                       // MakerGen.cs:217
         // 4. RelatedPerson.relationship
-        public ElementDefinitionInfo Element_Relationship;
+        public ElementDefinitionInfo Element_Relationship;                                                                                  // MakerGen.cs:217
         // 5. RelatedPerson.name
-        public ElementDefinitionInfo Element_Name;
+        public ElementDefinitionInfo Element_Name;                                                                                          // MakerGen.cs:217
         // 6. RelatedPerson.telecom
-        public ElementDefinitionInfo Element_Telecom;
+        public ElementDefinitionInfo Element_Telecom;                                                                                       // MakerGen.cs:217
         // 7. RelatedPerson.gender
-        public ElementDefinitionInfo Element_Gender;
+        public ElementDefinitionInfo Element_Gender;                                                                                        // MakerGen.cs:217
         // 8. RelatedPerson.birthDate
-        public ElementDefinitionInfo Element_BirthDate;
+        public ElementDefinitionInfo Element_BirthDate;                                                                                     // MakerGen.cs:217
         // 9. RelatedPerson.address
-        public ElementDefinitionInfo Element_Address;
+        public ElementDefinitionInfo Element_Address;                                                                                       // MakerGen.cs:217
         // 10. RelatedPerson.photo
-        public ElementDefinitionInfo Element_Photo;
+        public ElementDefinitionInfo Element_Photo;                                                                                         // MakerGen.cs:217
         // 11. RelatedPerson.period
-        public ElementDefinitionInfo Element_Period;
+        public ElementDefinitionInfo Element_Period;                                                                                        // MakerGen.cs:217
         // 12. RelatedPerson.communication
-        public ElementDefinitionInfo Element_Communication;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "RelatedPerson",
-                ElementId = "RelatedPerson"
-            });
-            Element_Identifier.Write(sDef);
-            Element_Active.Write(sDef);
-            Element_Patient.Write(sDef);
-            Element_Relationship.Write(sDef);
-            Element_Name.Write(sDef);
-            Element_Telecom.Write(sDef);
-            Element_Gender.Write(sDef);
-            Element_BirthDate.Write(sDef);
-            Element_Address.Write(sDef);
-            Element_Photo.Write(sDef);
-            Element_Period.Write(sDef);
-            Element_Communication.Write(sDef);
-        }
-        
-        public Resource_RelatedPerson()
-        {
-            {
+        public ElementDefinitionInfo Element_Communication;                                                                                 // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "RelatedPerson",                                                                                                     // MakerGen.cs:393
+                ElementId = "RelatedPerson"                                                                                                 // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Active.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Patient.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Relationship.Write(sDef);                                                                                               // MakerGen.cs:221
+            Element_Name.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Telecom.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Gender.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_BirthDate.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_Address.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Photo.Write(sDef);                                                                                                      // MakerGen.cs:221
+            Element_Period.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Communication.Write(sDef);                                                                                              // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Resource_RelatedPerson()                                                                                                     // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. RelatedPerson.identifier
-                this.Element_Identifier = new ElementDefinitionInfo
-                {
-                    Name = "Element_Identifier",
-                    Path= "RelatedPerson.identifier",
-                    Id = "RelatedPerson.identifier",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:236
+                    Path= "RelatedPerson.identifier",                                                                                       // MakerGen.cs:237
+                    Id = "RelatedPerson.identifier",                                                                                        // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. RelatedPerson.active
-                this.Element_Active = new ElementDefinitionInfo
-                {
-                    Name = "Element_Active",
-                    Path= "RelatedPerson.active",
-                    Id = "RelatedPerson.active",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Active = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Active",                                                                                                // MakerGen.cs:236
+                    Path= "RelatedPerson.active",                                                                                           // MakerGen.cs:237
+                    Id = "RelatedPerson.active",                                                                                            // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 3. RelatedPerson.patient
-                this.Element_Patient = new ElementDefinitionInfo
-                {
-                    Name = "Element_Patient",
-                    Path= "RelatedPerson.patient",
-                    Id = "RelatedPerson.patient",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Patient"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Patient = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Patient",                                                                                               // MakerGen.cs:236
+                    Path= "RelatedPerson.patient",                                                                                          // MakerGen.cs:237
+                    Id = "RelatedPerson.patient",                                                                                           // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Patient"                                                           // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 4. RelatedPerson.relationship
-                this.Element_Relationship = new ElementDefinitionInfo
-                {
-                    Name = "Element_Relationship",
-                    Path= "RelatedPerson.relationship",
-                    Id = "RelatedPerson.relationship",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Relationship = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Relationship",                                                                                          // MakerGen.cs:236
+                    Path= "RelatedPerson.relationship",                                                                                     // MakerGen.cs:237
+                    Id = "RelatedPerson.relationship",                                                                                      // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 5. RelatedPerson.name
-                this.Element_Name = new ElementDefinitionInfo
-                {
-                    Name = "Element_Name",
-                    Path= "RelatedPerson.name",
-                    Id = "RelatedPerson.name",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_HumanName
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Name = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Name",                                                                                                  // MakerGen.cs:236
+                    Path= "RelatedPerson.name",                                                                                             // MakerGen.cs:237
+                    Id = "RelatedPerson.name",                                                                                              // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_HumanName                                                                    // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 6. RelatedPerson.telecom
-                this.Element_Telecom = new ElementDefinitionInfo
-                {
-                    Name = "Element_Telecom",
-                    Path= "RelatedPerson.telecom",
-                    Id = "RelatedPerson.telecom",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_ContactPoint
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Telecom = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Telecom",                                                                                               // MakerGen.cs:236
+                    Path= "RelatedPerson.telecom",                                                                                          // MakerGen.cs:237
+                    Id = "RelatedPerson.telecom",                                                                                           // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_ContactPoint                                                                 // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 7. RelatedPerson.gender
-                this.Element_Gender = new ElementDefinitionInfo
-                {
-                    Name = "Element_Gender",
-                    Path= "RelatedPerson.gender",
-                    Id = "RelatedPerson.gender",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Gender = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Gender",                                                                                                // MakerGen.cs:236
+                    Path= "RelatedPerson.gender",                                                                                           // MakerGen.cs:237
+                    Id = "RelatedPerson.gender",                                                                                            // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 8. RelatedPerson.birthDate
-                this.Element_BirthDate = new ElementDefinitionInfo
-                {
-                    Name = "Element_BirthDate",
-                    Path= "RelatedPerson.birthDate",
-                    Id = "RelatedPerson.birthDate",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Date
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_BirthDate = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_BirthDate",                                                                                             // MakerGen.cs:236
+                    Path= "RelatedPerson.birthDate",                                                                                        // MakerGen.cs:237
+                    Id = "RelatedPerson.birthDate",                                                                                         // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Date                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 9. RelatedPerson.address
-                this.Element_Address = new ElementDefinitionInfo
-                {
-                    Name = "Element_Address",
-                    Path= "RelatedPerson.address",
-                    Id = "RelatedPerson.address",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Address
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Address = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Address",                                                                                               // MakerGen.cs:236
+                    Path= "RelatedPerson.address",                                                                                          // MakerGen.cs:237
+                    Id = "RelatedPerson.address",                                                                                           // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Address                                                                      // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 10. RelatedPerson.photo
-                this.Element_Photo = new ElementDefinitionInfo
-                {
-                    Name = "Element_Photo",
-                    Path= "RelatedPerson.photo",
-                    Id = "RelatedPerson.photo",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Attachment
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Photo = new ElementDefinitionInfo                                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Photo",                                                                                                 // MakerGen.cs:236
+                    Path= "RelatedPerson.photo",                                                                                            // MakerGen.cs:237
+                    Id = "RelatedPerson.photo",                                                                                             // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Attachment                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 11. RelatedPerson.period
-                this.Element_Period = new ElementDefinitionInfo
-                {
-                    Name = "Element_Period",
-                    Path= "RelatedPerson.period",
-                    Id = "RelatedPerson.period",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Period
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Period = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Period",                                                                                                // MakerGen.cs:236
+                    Path= "RelatedPerson.period",                                                                                           // MakerGen.cs:237
+                    Id = "RelatedPerson.period",                                                                                            // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Period                                                                       // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 12. RelatedPerson.communication
-                this.Element_Communication = new ElementDefinitionInfo
-                {
-                    Name = "Element_Communication",
-                    Path= "RelatedPerson.communication",
-                    Id = "RelatedPerson.communication",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Communication
-                        {
-                        }
-                    }
-                };
-            }
-            this.Name = "RelatedPerson";
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/RelatedPerson";
-        }
-    }
-}
+                this.Element_Communication = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Communication",                                                                                         // MakerGen.cs:236
+                    Path= "RelatedPerson.communication",                                                                                    // MakerGen.cs:237
+                    Id = "RelatedPerson.communication",                                                                                     // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Communication                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            this.Name = "RelatedPerson";                                                                                                    // MakerGen.cs:468
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/RelatedPerson";                                                             // MakerGen.cs:469
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:449

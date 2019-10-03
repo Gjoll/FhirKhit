@@ -1,13 +1,13 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Resource
-{
-    #region Json
-    #if NEVER
+using System;                                                                                                                               // MakerGen.cs:432
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:433
+using System.IO;                                                                                                                            // MakerGen.cs:434
+using System.Linq;                                                                                                                          // MakerGen.cs:435
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:436
+                                                                                                                                            // MakerGen.cs:437
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:438
+{                                                                                                                                           // MakerGen.cs:439
+    #region Json                                                                                                                            // MakerGen.cs:440
+    #if NEVER                                                                                                                               // MakerGen.cs:441
     {
       "resourceType": "StructureDefinition",
       "id": "DeviceUseStatement",
@@ -286,331 +286,331 @@ namespace FhirKhit.Maker.Common.Resource
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:444
     /// <summary>
     /// Fhir resource 'DeviceUseStatement'
     /// </summary>
     // 0. DeviceUseStatement
-    public partial class Resource_DeviceUseStatement : FhirKhit.Maker.Common.Resource.Resource_DomainResource
-    {
+    public partial class Resource_DeviceUseStatement : FhirKhit.Maker.Common.Resource.Resource_DomainResource                               // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 1. DeviceUseStatement.identifier
-        public ElementDefinitionInfo Element_Identifier;
+        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:217
         // 2. DeviceUseStatement.basedOn
-        public ElementDefinitionInfo Element_BasedOn;
+        public ElementDefinitionInfo Element_BasedOn;                                                                                       // MakerGen.cs:217
         // 3. DeviceUseStatement.status
-        public ElementDefinitionInfo Element_Status;
+        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:217
         // 4. DeviceUseStatement.subject
-        public ElementDefinitionInfo Element_Subject;
+        public ElementDefinitionInfo Element_Subject;                                                                                       // MakerGen.cs:217
         // 5. DeviceUseStatement.derivedFrom
-        public ElementDefinitionInfo Element_DerivedFrom;
+        public ElementDefinitionInfo Element_DerivedFrom;                                                                                   // MakerGen.cs:217
         // 6. DeviceUseStatement.timing[x]
-        public ElementDefinitionInfo Element_Timing;
+        public ElementDefinitionInfo Element_Timing;                                                                                        // MakerGen.cs:217
         // 7. DeviceUseStatement.recordedOn
-        public ElementDefinitionInfo Element_RecordedOn;
+        public ElementDefinitionInfo Element_RecordedOn;                                                                                    // MakerGen.cs:217
         // 8. DeviceUseStatement.source
-        public ElementDefinitionInfo Element_Source;
+        public ElementDefinitionInfo Element_Source;                                                                                        // MakerGen.cs:217
         // 9. DeviceUseStatement.device
-        public ElementDefinitionInfo Element_Device;
+        public ElementDefinitionInfo Element_Device;                                                                                        // MakerGen.cs:217
         // 10. DeviceUseStatement.reasonCode
-        public ElementDefinitionInfo Element_ReasonCode;
+        public ElementDefinitionInfo Element_ReasonCode;                                                                                    // MakerGen.cs:217
         // 11. DeviceUseStatement.reasonReference
-        public ElementDefinitionInfo Element_ReasonReference;
+        public ElementDefinitionInfo Element_ReasonReference;                                                                               // MakerGen.cs:217
         // 12. DeviceUseStatement.bodySite
-        public ElementDefinitionInfo Element_BodySite;
+        public ElementDefinitionInfo Element_BodySite;                                                                                      // MakerGen.cs:217
         // 13. DeviceUseStatement.note
-        public ElementDefinitionInfo Element_Note;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "DeviceUseStatement",
-                ElementId = "DeviceUseStatement"
-            });
-            Element_Identifier.Write(sDef);
-            Element_BasedOn.Write(sDef);
-            Element_Status.Write(sDef);
-            Element_Subject.Write(sDef);
-            Element_DerivedFrom.Write(sDef);
-            Element_Timing.Write(sDef);
-            Element_RecordedOn.Write(sDef);
-            Element_Source.Write(sDef);
-            Element_Device.Write(sDef);
-            Element_ReasonCode.Write(sDef);
-            Element_ReasonReference.Write(sDef);
-            Element_BodySite.Write(sDef);
-            Element_Note.Write(sDef);
-        }
-        
-        public Resource_DeviceUseStatement()
-        {
-            {
+        public ElementDefinitionInfo Element_Note;                                                                                          // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "DeviceUseStatement",                                                                                                // MakerGen.cs:393
+                ElementId = "DeviceUseStatement"                                                                                            // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_BasedOn.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Subject.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_DerivedFrom.Write(sDef);                                                                                                // MakerGen.cs:221
+            Element_Timing.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_RecordedOn.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Source.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Device.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_ReasonCode.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_ReasonReference.Write(sDef);                                                                                            // MakerGen.cs:221
+            Element_BodySite.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_Note.Write(sDef);                                                                                                       // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Resource_DeviceUseStatement()                                                                                                // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. DeviceUseStatement.identifier
-                this.Element_Identifier = new ElementDefinitionInfo
-                {
-                    Name = "Element_Identifier",
-                    Path= "DeviceUseStatement.identifier",
-                    Id = "DeviceUseStatement.identifier",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:236
+                    Path= "DeviceUseStatement.identifier",                                                                                  // MakerGen.cs:237
+                    Id = "DeviceUseStatement.identifier",                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. DeviceUseStatement.basedOn
-                this.Element_BasedOn = new ElementDefinitionInfo
-                {
-                    Name = "Element_BasedOn",
-                    Path= "DeviceUseStatement.basedOn",
-                    Id = "DeviceUseStatement.basedOn",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/ServiceRequest"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_BasedOn = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_BasedOn",                                                                                               // MakerGen.cs:236
+                    Path= "DeviceUseStatement.basedOn",                                                                                     // MakerGen.cs:237
+                    Id = "DeviceUseStatement.basedOn",                                                                                      // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/ServiceRequest"                                                    // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 3. DeviceUseStatement.status
-                this.Element_Status = new ElementDefinitionInfo
-                {
-                    Name = "Element_Status",
-                    Path= "DeviceUseStatement.status",
-                    Id = "DeviceUseStatement.status",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Status",                                                                                                // MakerGen.cs:236
+                    Path= "DeviceUseStatement.status",                                                                                      // MakerGen.cs:237
+                    Id = "DeviceUseStatement.status",                                                                                       // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 4. DeviceUseStatement.subject
-                this.Element_Subject = new ElementDefinitionInfo
-                {
-                    Name = "Element_Subject",
-                    Path= "DeviceUseStatement.subject",
-                    Id = "DeviceUseStatement.subject",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Patient",
-                                "http://hl7.org/fhir/StructureDefinition/Group"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Subject = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Subject",                                                                                               // MakerGen.cs:236
+                    Path= "DeviceUseStatement.subject",                                                                                     // MakerGen.cs:237
+                    Id = "DeviceUseStatement.subject",                                                                                      // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Patient",                                                          // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Group"                                                             // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 5. DeviceUseStatement.derivedFrom
-                this.Element_DerivedFrom = new ElementDefinitionInfo
-                {
-                    Name = "Element_DerivedFrom",
-                    Path= "DeviceUseStatement.derivedFrom",
-                    Id = "DeviceUseStatement.derivedFrom",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
-                                "http://hl7.org/fhir/StructureDefinition/Procedure",
-                                "http://hl7.org/fhir/StructureDefinition/Claim",
-                                "http://hl7.org/fhir/StructureDefinition/Observation",
-                                "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",
-                                "http://hl7.org/fhir/StructureDefinition/DocumentReference"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_DerivedFrom = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_DerivedFrom",                                                                                           // MakerGen.cs:236
+                    Path= "DeviceUseStatement.derivedFrom",                                                                                 // MakerGen.cs:237
+                    Id = "DeviceUseStatement.derivedFrom",                                                                                  // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/ServiceRequest",                                                   // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Procedure",                                                        // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Claim",                                                            // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Observation",                                                      // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",                                            // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/DocumentReference"                                                 // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 6. DeviceUseStatement.timing[x]
-                this.Element_Timing = new ElementDefinitionInfo
-                {
-                    Name = "Element_Timing",
-                    Path= "DeviceUseStatement.timing[x]",
-                    Id = "DeviceUseStatement.timing[x]",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Timing
-                        {
-                        },
-                        new FhirKhit.Maker.Common.Complex.Type_Period
-                        {
-                        },
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Timing = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Timing",                                                                                                // MakerGen.cs:236
+                    Path= "DeviceUseStatement.timing[x]",                                                                                   // MakerGen.cs:237
+                    Id = "DeviceUseStatement.timing[x]",                                                                                    // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Timing                                                                       // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        },                                                                                                                  // MakerGen.cs:358
+                        new FhirKhit.Maker.Common.Complex.Type_Period                                                                       // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        },                                                                                                                  // MakerGen.cs:358
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 7. DeviceUseStatement.recordedOn
-                this.Element_RecordedOn = new ElementDefinitionInfo
-                {
-                    Name = "Element_RecordedOn",
-                    Path= "DeviceUseStatement.recordedOn",
-                    Id = "DeviceUseStatement.recordedOn",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_RecordedOn = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_RecordedOn",                                                                                            // MakerGen.cs:236
+                    Path= "DeviceUseStatement.recordedOn",                                                                                  // MakerGen.cs:237
+                    Id = "DeviceUseStatement.recordedOn",                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 8. DeviceUseStatement.source
-                this.Element_Source = new ElementDefinitionInfo
-                {
-                    Name = "Element_Source",
-                    Path= "DeviceUseStatement.source",
-                    Id = "DeviceUseStatement.source",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Patient",
-                                "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                                "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Source = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Source",                                                                                                // MakerGen.cs:236
+                    Path= "DeviceUseStatement.source",                                                                                      // MakerGen.cs:237
+                    Id = "DeviceUseStatement.source",                                                                                       // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Patient",                                                          // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                                 // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/RelatedPerson"                                                     // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 9. DeviceUseStatement.device
-                this.Element_Device = new ElementDefinitionInfo
-                {
-                    Name = "Element_Device",
-                    Path= "DeviceUseStatement.device",
-                    Id = "DeviceUseStatement.device",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Device"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Device = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Device",                                                                                                // MakerGen.cs:236
+                    Path= "DeviceUseStatement.device",                                                                                      // MakerGen.cs:237
+                    Id = "DeviceUseStatement.device",                                                                                       // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Device"                                                            // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 10. DeviceUseStatement.reasonCode
-                this.Element_ReasonCode = new ElementDefinitionInfo
-                {
-                    Name = "Element_ReasonCode",
-                    Path= "DeviceUseStatement.reasonCode",
-                    Id = "DeviceUseStatement.reasonCode",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ReasonCode = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ReasonCode",                                                                                            // MakerGen.cs:236
+                    Path= "DeviceUseStatement.reasonCode",                                                                                  // MakerGen.cs:237
+                    Id = "DeviceUseStatement.reasonCode",                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 11. DeviceUseStatement.reasonReference
-                this.Element_ReasonReference = new ElementDefinitionInfo
-                {
-                    Name = "Element_ReasonReference",
-                    Path= "DeviceUseStatement.reasonReference",
-                    Id = "DeviceUseStatement.reasonReference",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Condition",
-                                "http://hl7.org/fhir/StructureDefinition/Observation",
-                                "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
-                                "http://hl7.org/fhir/StructureDefinition/DocumentReference",
-                                "http://hl7.org/fhir/StructureDefinition/Media"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ReasonReference = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ReasonReference",                                                                                       // MakerGen.cs:236
+                    Path= "DeviceUseStatement.reasonReference",                                                                             // MakerGen.cs:237
+                    Id = "DeviceUseStatement.reasonReference",                                                                              // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Condition",                                                        // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Observation",                                                      // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",                                                 // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/DocumentReference",                                                // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Media"                                                             // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 12. DeviceUseStatement.bodySite
-                this.Element_BodySite = new ElementDefinitionInfo
-                {
-                    Name = "Element_BodySite",
-                    Path= "DeviceUseStatement.bodySite",
-                    Id = "DeviceUseStatement.bodySite",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_BodySite = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_BodySite",                                                                                              // MakerGen.cs:236
+                    Path= "DeviceUseStatement.bodySite",                                                                                    // MakerGen.cs:237
+                    Id = "DeviceUseStatement.bodySite",                                                                                     // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 13. DeviceUseStatement.note
-                this.Element_Note = new ElementDefinitionInfo
-                {
-                    Name = "Element_Note",
-                    Path= "DeviceUseStatement.note",
-                    Id = "DeviceUseStatement.note",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Annotation
-                        {
-                        }
-                    }
-                };
-            }
-            this.Name = "DeviceUseStatement";
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/DeviceUseStatement";
-        }
-    }
-}
+                this.Element_Note = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Note",                                                                                                  // MakerGen.cs:236
+                    Path= "DeviceUseStatement.note",                                                                                        // MakerGen.cs:237
+                    Id = "DeviceUseStatement.note",                                                                                         // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Annotation                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            this.Name = "DeviceUseStatement";                                                                                               // MakerGen.cs:468
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/DeviceUseStatement";                                                        // MakerGen.cs:469
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:449

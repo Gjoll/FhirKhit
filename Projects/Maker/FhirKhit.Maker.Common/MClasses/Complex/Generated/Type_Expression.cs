@@ -1,12 +1,12 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Complex
-{
-    #region Json
+using System;                                                                                                                               // MakerGen.cs:490
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:491
+using System.IO;                                                                                                                            // MakerGen.cs:492
+using System.Linq;                                                                                                                          // MakerGen.cs:493
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:494
+                                                                                                                                            // MakerGen.cs:495
+namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:496
+{                                                                                                                                           // MakerGen.cs:497
+    #region Json                                                                                                                            // MakerGen.cs:498
     #if NEVER
     {
       "resourceType": "StructureDefinition",
@@ -123,126 +123,126 @@ namespace FhirKhit.Maker.Common.Complex
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:502
     /// <summary>
     /// Fhir complex 'Expression'
     /// </summary>
     // 0. Expression
-    public partial class Type_Expression : FhirKhit.Maker.Common.Complex.ComplexBase
-    {
+    public partial class Type_Expression : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 1. Expression.description
-        public ElementDefinitionInfo Element_Description;
+        public ElementDefinitionInfo Element_Description;                                                                                   // MakerGen.cs:217
         // 2. Expression.name
-        public ElementDefinitionInfo Element_Name;
+        public ElementDefinitionInfo Element_Name;                                                                                          // MakerGen.cs:217
         // 3. Expression.language
-        public ElementDefinitionInfo Element_Language;
+        public ElementDefinitionInfo Element_Language;                                                                                      // MakerGen.cs:217
         // 4. Expression.expression
-        public ElementDefinitionInfo Element_Expression;
+        public ElementDefinitionInfo Element_Expression;                                                                                    // MakerGen.cs:217
         // 5. Expression.reference
-        public ElementDefinitionInfo Element_Reference;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "Expression",
-                ElementId = "Expression"
-            });
-            Element_Description.Write(sDef);
-            Element_Name.Write(sDef);
-            Element_Language.Write(sDef);
-            Element_Expression.Write(sDef);
-            Element_Reference.Write(sDef);
-        }
-        
-        public Type_Expression()
-        {
-            {
+        public ElementDefinitionInfo Element_Reference;                                                                                     // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "Expression",                                                                                                        // MakerGen.cs:393
+                ElementId = "Expression"                                                                                                    // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Description.Write(sDef);                                                                                                // MakerGen.cs:221
+            Element_Name.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Language.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_Expression.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Reference.Write(sDef);                                                                                                  // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Type_Expression()                                                                                                            // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. Expression.description
-                this.Element_Description = new ElementDefinitionInfo
-                {
-                    Name = "Element_Description",
-                    Path= "Expression.description",
-                    Id = "Expression.description",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Description = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Description",                                                                                           // MakerGen.cs:236
+                    Path= "Expression.description",                                                                                         // MakerGen.cs:237
+                    Id = "Expression.description",                                                                                          // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. Expression.name
-                this.Element_Name = new ElementDefinitionInfo
-                {
-                    Name = "Element_Name",
-                    Path= "Expression.name",
-                    Id = "Expression.name",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Id
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Name = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Name",                                                                                                  // MakerGen.cs:236
+                    Path= "Expression.name",                                                                                                // MakerGen.cs:237
+                    Id = "Expression.name",                                                                                                 // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Id                                                                    // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 3. Expression.language
-                this.Element_Language = new ElementDefinitionInfo
-                {
-                    Name = "Element_Language",
-                    Path= "Expression.language",
-                    Id = "Expression.language",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Language = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Language",                                                                                              // MakerGen.cs:236
+                    Path= "Expression.language",                                                                                            // MakerGen.cs:237
+                    Id = "Expression.language",                                                                                             // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 4. Expression.expression
-                this.Element_Expression = new ElementDefinitionInfo
-                {
-                    Name = "Element_Expression",
-                    Path= "Expression.expression",
-                    Id = "Expression.expression",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Expression = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Expression",                                                                                            // MakerGen.cs:236
+                    Path= "Expression.expression",                                                                                          // MakerGen.cs:237
+                    Id = "Expression.expression",                                                                                           // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 5. Expression.reference
-                this.Element_Reference = new ElementDefinitionInfo
-                {
-                    Name = "Element_Reference",
-                    Path= "Expression.reference",
-                    Id = "Expression.reference",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri
-                        {
-                        }
-                    }
-                };
-            }
-        }
-    }
-}
+                this.Element_Reference = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Reference",                                                                                             // MakerGen.cs:236
+                    Path= "Expression.reference",                                                                                           // MakerGen.cs:237
+                    Id = "Expression.reference",                                                                                            // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                                   // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:507

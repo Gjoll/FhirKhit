@@ -1,13 +1,13 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Resource
-{
-    #region Json
-    #if NEVER
+using System;                                                                                                                               // MakerGen.cs:432
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:433
+using System.IO;                                                                                                                            // MakerGen.cs:434
+using System.Linq;                                                                                                                          // MakerGen.cs:435
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:436
+                                                                                                                                            // MakerGen.cs:437
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:438
+{                                                                                                                                           // MakerGen.cs:439
+    #region Json                                                                                                                            // MakerGen.cs:440
+    #if NEVER                                                                                                                               // MakerGen.cs:441
     {
       "resourceType": "StructureDefinition",
       "id": "MedicationRequest",
@@ -851,1033 +851,1033 @@ namespace FhirKhit.Maker.Common.Resource
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:444
     /// <summary>
     /// Fhir resource 'MedicationRequest'
     /// </summary>
     // 0. MedicationRequest
-    public partial class Resource_MedicationRequest : FhirKhit.Maker.Common.Resource.Resource_DomainResource
-    {
+    public partial class Resource_MedicationRequest : FhirKhit.Maker.Common.Resource.Resource_DomainResource                                // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 28. MedicationRequest.dispenseRequest
-        public partial class Type_DispenseRequest : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_DispenseRequest : FhirKhit.Maker.Common.Complex.ComplexBase                                               // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 29. MedicationRequest.dispenseRequest.initialFill
-            public partial class Type_InitialFill : FhirKhit.Maker.Common.Complex.ComplexBase
-            {
+            public partial class Type_InitialFill : FhirKhit.Maker.Common.Complex.ComplexBase                                               // MakerGen.cs:381
+            {                                                                                                                               // MakerGen.cs:382
                 // 30. MedicationRequest.dispenseRequest.initialFill.quantity
-                public ElementDefinitionInfo Element_Quantity;
+                public ElementDefinitionInfo Element_Quantity;                                                                              // MakerGen.cs:217
                 // 31. MedicationRequest.dispenseRequest.initialFill.duration
-                public ElementDefinitionInfo Element_Duration;
-                
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                {
-                    base.Write(sDef);
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                    {
-                        Path = "MedicationRequest.dispenseRequest.initialFill",
-                        ElementId = "MedicationRequest.dispenseRequest.initialFill"
-                    });
-                    Element_Quantity.Write(sDef);
-                    Element_Duration.Write(sDef);
-                }
-                
-                public Type_InitialFill()
-                {
-                    {
+                public ElementDefinitionInfo Element_Duration;                                                                              // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:389
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:390
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:391
+                    {                                                                                                                       // MakerGen.cs:392
+                        Path = "MedicationRequest.dispenseRequest.initialFill",                                                             // MakerGen.cs:393
+                        ElementId = "MedicationRequest.dispenseRequest.initialFill"                                                         // MakerGen.cs:394
+                    });                                                                                                                     // MakerGen.cs:395
+                    Element_Quantity.Write(sDef);                                                                                           // MakerGen.cs:221
+                    Element_Duration.Write(sDef);                                                                                           // MakerGen.cs:221
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                public Type_InitialFill()                                                                                                   // MakerGen.cs:400
+                {                                                                                                                           // MakerGen.cs:401
+                    {                                                                                                                       // MakerGen.cs:232
                         // 30. MedicationRequest.dispenseRequest.initialFill.quantity
-                        this.Element_Quantity = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Quantity",
-                            Path= "MedicationRequest.dispenseRequest.initialFill.quantity",
-                            Id = "MedicationRequest.dispenseRequest.initialFill.quantity",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Quantity
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Quantity = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Quantity",                                                                                      // MakerGen.cs:236
+                            Path= "MedicationRequest.dispenseRequest.initialFill.quantity",                                                 // MakerGen.cs:237
+                            Id = "MedicationRequest.dispenseRequest.initialFill.quantity",                                                  // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Quantity                                                             // MakerGen.cs:356
+                                {                                                                                                           // MakerGen.cs:357
+                                }                                                                                                           // MakerGen.cs:358
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 31. MedicationRequest.dispenseRequest.initialFill.duration
-                        this.Element_Duration = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Duration",
-                            Path= "MedicationRequest.dispenseRequest.initialFill.duration",
-                            Id = "MedicationRequest.dispenseRequest.initialFill.duration",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Duration
-                                {
-                                }
-                            }
-                        };
-                    }
-                }
-            }
+                        this.Element_Duration = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Duration",                                                                                      // MakerGen.cs:236
+                            Path= "MedicationRequest.dispenseRequest.initialFill.duration",                                                 // MakerGen.cs:237
+                            Id = "MedicationRequest.dispenseRequest.initialFill.duration",                                                  // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Duration                                                             // MakerGen.cs:356
+                                {                                                                                                           // MakerGen.cs:357
+                                }                                                                                                           // MakerGen.cs:358
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                }                                                                                                                           // MakerGen.cs:403
+            }                                                                                                                               // MakerGen.cs:405
             // 29. MedicationRequest.dispenseRequest.initialFill
-            public ElementDefinitionInfo Element_InitialFill;
+            public ElementDefinitionInfo Element_InitialFill;                                                                               // MakerGen.cs:217
             // 32. MedicationRequest.dispenseRequest.dispenseInterval
-            public ElementDefinitionInfo Element_DispenseInterval;
+            public ElementDefinitionInfo Element_DispenseInterval;                                                                          // MakerGen.cs:217
             // 33. MedicationRequest.dispenseRequest.validityPeriod
-            public ElementDefinitionInfo Element_ValidityPeriod;
+            public ElementDefinitionInfo Element_ValidityPeriod;                                                                            // MakerGen.cs:217
             // 34. MedicationRequest.dispenseRequest.numberOfRepeatsAllowed
-            public ElementDefinitionInfo Element_NumberOfRepeatsAllowed;
+            public ElementDefinitionInfo Element_NumberOfRepeatsAllowed;                                                                    // MakerGen.cs:217
             // 35. MedicationRequest.dispenseRequest.quantity
-            public ElementDefinitionInfo Element_Quantity;
+            public ElementDefinitionInfo Element_Quantity;                                                                                  // MakerGen.cs:217
             // 36. MedicationRequest.dispenseRequest.expectedSupplyDuration
-            public ElementDefinitionInfo Element_ExpectedSupplyDuration;
+            public ElementDefinitionInfo Element_ExpectedSupplyDuration;                                                                    // MakerGen.cs:217
             // 37. MedicationRequest.dispenseRequest.performer
-            public ElementDefinitionInfo Element_Performer;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "MedicationRequest.dispenseRequest",
-                    ElementId = "MedicationRequest.dispenseRequest"
-                });
-                Element_InitialFill.Write(sDef);
-                Element_DispenseInterval.Write(sDef);
-                Element_ValidityPeriod.Write(sDef);
-                Element_NumberOfRepeatsAllowed.Write(sDef);
-                Element_Quantity.Write(sDef);
-                Element_ExpectedSupplyDuration.Write(sDef);
-                Element_Performer.Write(sDef);
-            }
-            
-            public Type_DispenseRequest()
-            {
-                {
+            public ElementDefinitionInfo Element_Performer;                                                                                 // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "MedicationRequest.dispenseRequest",                                                                             // MakerGen.cs:393
+                    ElementId = "MedicationRequest.dispenseRequest"                                                                         // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_InitialFill.Write(sDef);                                                                                            // MakerGen.cs:221
+                Element_DispenseInterval.Write(sDef);                                                                                       // MakerGen.cs:221
+                Element_ValidityPeriod.Write(sDef);                                                                                         // MakerGen.cs:221
+                Element_NumberOfRepeatsAllowed.Write(sDef);                                                                                 // MakerGen.cs:221
+                Element_Quantity.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_ExpectedSupplyDuration.Write(sDef);                                                                                 // MakerGen.cs:221
+                Element_Performer.Write(sDef);                                                                                              // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_DispenseRequest()                                                                                                   // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 29. MedicationRequest.dispenseRequest.initialFill
-                    this.Element_InitialFill = new ElementDefinitionInfo
-                    {
-                        Name = "Element_InitialFill",
-                        Path= "MedicationRequest.dispenseRequest.initialFill",
-                        Id = "MedicationRequest.dispenseRequest.initialFill",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new Type_InitialFill
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_InitialFill = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_InitialFill",                                                                                       // MakerGen.cs:236
+                        Path= "MedicationRequest.dispenseRequest.initialFill",                                                              // MakerGen.cs:237
+                        Id = "MedicationRequest.dispenseRequest.initialFill",                                                               // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new Type_InitialFill                                                                                            // MakerGen.cs:260
+                            {                                                                                                               // MakerGen.cs:261
+                            }                                                                                                               // MakerGen.cs:262
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 32. MedicationRequest.dispenseRequest.dispenseInterval
-                    this.Element_DispenseInterval = new ElementDefinitionInfo
-                    {
-                        Name = "Element_DispenseInterval",
-                        Path= "MedicationRequest.dispenseRequest.dispenseInterval",
-                        Id = "MedicationRequest.dispenseRequest.dispenseInterval",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Duration
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_DispenseInterval = new ElementDefinitionInfo                                                               // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_DispenseInterval",                                                                                  // MakerGen.cs:236
+                        Path= "MedicationRequest.dispenseRequest.dispenseInterval",                                                         // MakerGen.cs:237
+                        Id = "MedicationRequest.dispenseRequest.dispenseInterval",                                                          // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Duration                                                                 // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 33. MedicationRequest.dispenseRequest.validityPeriod
-                    this.Element_ValidityPeriod = new ElementDefinitionInfo
-                    {
-                        Name = "Element_ValidityPeriod",
-                        Path= "MedicationRequest.dispenseRequest.validityPeriod",
-                        Id = "MedicationRequest.dispenseRequest.validityPeriod",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Period
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_ValidityPeriod = new ElementDefinitionInfo                                                                 // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_ValidityPeriod",                                                                                    // MakerGen.cs:236
+                        Path= "MedicationRequest.dispenseRequest.validityPeriod",                                                           // MakerGen.cs:237
+                        Id = "MedicationRequest.dispenseRequest.validityPeriod",                                                            // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Period                                                                   // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 34. MedicationRequest.dispenseRequest.numberOfRepeatsAllowed
-                    this.Element_NumberOfRepeatsAllowed = new ElementDefinitionInfo
-                    {
-                        Name = "Element_NumberOfRepeatsAllowed",
-                        Path= "MedicationRequest.dispenseRequest.numberOfRepeatsAllowed",
-                        Id = "MedicationRequest.dispenseRequest.numberOfRepeatsAllowed",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_UnsignedInt
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_NumberOfRepeatsAllowed = new ElementDefinitionInfo                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_NumberOfRepeatsAllowed",                                                                            // MakerGen.cs:236
+                        Path= "MedicationRequest.dispenseRequest.numberOfRepeatsAllowed",                                                   // MakerGen.cs:237
+                        Id = "MedicationRequest.dispenseRequest.numberOfRepeatsAllowed",                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_UnsignedInt                                                       // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 35. MedicationRequest.dispenseRequest.quantity
-                    this.Element_Quantity = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Quantity",
-                        Path= "MedicationRequest.dispenseRequest.quantity",
-                        Id = "MedicationRequest.dispenseRequest.quantity",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Quantity
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Quantity = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Quantity",                                                                                          // MakerGen.cs:236
+                        Path= "MedicationRequest.dispenseRequest.quantity",                                                                 // MakerGen.cs:237
+                        Id = "MedicationRequest.dispenseRequest.quantity",                                                                  // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Quantity                                                                 // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 36. MedicationRequest.dispenseRequest.expectedSupplyDuration
-                    this.Element_ExpectedSupplyDuration = new ElementDefinitionInfo
-                    {
-                        Name = "Element_ExpectedSupplyDuration",
-                        Path= "MedicationRequest.dispenseRequest.expectedSupplyDuration",
-                        Id = "MedicationRequest.dispenseRequest.expectedSupplyDuration",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Duration
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_ExpectedSupplyDuration = new ElementDefinitionInfo                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_ExpectedSupplyDuration",                                                                            // MakerGen.cs:236
+                        Path= "MedicationRequest.dispenseRequest.expectedSupplyDuration",                                                   // MakerGen.cs:237
+                        Id = "MedicationRequest.dispenseRequest.expectedSupplyDuration",                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Duration                                                                 // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 37. MedicationRequest.dispenseRequest.performer
-                    this.Element_Performer = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Performer",
-                        Path= "MedicationRequest.dispenseRequest.performer",
-                        Id = "MedicationRequest.dispenseRequest.performer",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Organization"
-                                }
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Performer = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Performer",                                                                                         // MakerGen.cs:236
+                        Path= "MedicationRequest.dispenseRequest.performer",                                                                // MakerGen.cs:237
+                        Id = "MedicationRequest.dispenseRequest.performer",                                                                 // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Organization"                                                  // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 38. MedicationRequest.substitution
-        public partial class Type_Substitution : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Substitution : FhirKhit.Maker.Common.Complex.ComplexBase                                                  // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 39. MedicationRequest.substitution.allowed[x]
-            public ElementDefinitionInfo Element_Allowed;
+            public ElementDefinitionInfo Element_Allowed;                                                                                   // MakerGen.cs:217
             // 40. MedicationRequest.substitution.reason
-            public ElementDefinitionInfo Element_Reason;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "MedicationRequest.substitution",
-                    ElementId = "MedicationRequest.substitution"
-                });
-                Element_Allowed.Write(sDef);
-                Element_Reason.Write(sDef);
-            }
-            
-            public Type_Substitution()
-            {
-                {
+            public ElementDefinitionInfo Element_Reason;                                                                                    // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "MedicationRequest.substitution",                                                                                // MakerGen.cs:393
+                    ElementId = "MedicationRequest.substitution"                                                                            // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Allowed.Write(sDef);                                                                                                // MakerGen.cs:221
+                Element_Reason.Write(sDef);                                                                                                 // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Substitution()                                                                                                      // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 39. MedicationRequest.substitution.allowed[x]
-                    this.Element_Allowed = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Allowed",
-                        Path= "MedicationRequest.substitution.allowed[x]",
-                        Id = "MedicationRequest.substitution.allowed[x]",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
-                            {
-                            },
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Allowed = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Allowed",                                                                                           // MakerGen.cs:236
+                        Path= "MedicationRequest.substitution.allowed[x]",                                                                  // MakerGen.cs:237
+                        Id = "MedicationRequest.substitution.allowed[x]",                                                                   // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                           // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            },                                                                                                              // MakerGen.cs:305
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 40. MedicationRequest.substitution.reason
-                    this.Element_Reason = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Reason",
-                        Path= "MedicationRequest.substitution.reason",
-                        Id = "MedicationRequest.substitution.reason",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Reason = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Reason",                                                                                            // MakerGen.cs:236
+                        Path= "MedicationRequest.substitution.reason",                                                                      // MakerGen.cs:237
+                        Id = "MedicationRequest.substitution.reason",                                                                       // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 1. MedicationRequest.identifier
-        public ElementDefinitionInfo Element_Identifier;
+        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:217
         // 2. MedicationRequest.status
-        public ElementDefinitionInfo Element_Status;
+        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:217
         // 3. MedicationRequest.statusReason
-        public ElementDefinitionInfo Element_StatusReason;
+        public ElementDefinitionInfo Element_StatusReason;                                                                                  // MakerGen.cs:217
         // 4. MedicationRequest.intent
-        public ElementDefinitionInfo Element_Intent;
+        public ElementDefinitionInfo Element_Intent;                                                                                        // MakerGen.cs:217
         // 5. MedicationRequest.category
-        public ElementDefinitionInfo Element_Category;
+        public ElementDefinitionInfo Element_Category;                                                                                      // MakerGen.cs:217
         // 6. MedicationRequest.priority
-        public ElementDefinitionInfo Element_Priority;
+        public ElementDefinitionInfo Element_Priority;                                                                                      // MakerGen.cs:217
         // 7. MedicationRequest.doNotPerform
-        public ElementDefinitionInfo Element_DoNotPerform;
+        public ElementDefinitionInfo Element_DoNotPerform;                                                                                  // MakerGen.cs:217
         // 8. MedicationRequest.reported[x]
-        public ElementDefinitionInfo Element_Reported;
+        public ElementDefinitionInfo Element_Reported;                                                                                      // MakerGen.cs:217
         // 9. MedicationRequest.medication[x]
-        public ElementDefinitionInfo Element_Medication;
+        public ElementDefinitionInfo Element_Medication;                                                                                    // MakerGen.cs:217
         // 10. MedicationRequest.subject
-        public ElementDefinitionInfo Element_Subject;
+        public ElementDefinitionInfo Element_Subject;                                                                                       // MakerGen.cs:217
         // 11. MedicationRequest.encounter
-        public ElementDefinitionInfo Element_Encounter;
+        public ElementDefinitionInfo Element_Encounter;                                                                                     // MakerGen.cs:217
         // 12. MedicationRequest.supportingInformation
-        public ElementDefinitionInfo Element_SupportingInformation;
+        public ElementDefinitionInfo Element_SupportingInformation;                                                                         // MakerGen.cs:217
         // 13. MedicationRequest.authoredOn
-        public ElementDefinitionInfo Element_AuthoredOn;
+        public ElementDefinitionInfo Element_AuthoredOn;                                                                                    // MakerGen.cs:217
         // 14. MedicationRequest.requester
-        public ElementDefinitionInfo Element_Requester;
+        public ElementDefinitionInfo Element_Requester;                                                                                     // MakerGen.cs:217
         // 15. MedicationRequest.performer
-        public ElementDefinitionInfo Element_Performer;
+        public ElementDefinitionInfo Element_Performer;                                                                                     // MakerGen.cs:217
         // 16. MedicationRequest.performerType
-        public ElementDefinitionInfo Element_PerformerType;
+        public ElementDefinitionInfo Element_PerformerType;                                                                                 // MakerGen.cs:217
         // 17. MedicationRequest.recorder
-        public ElementDefinitionInfo Element_Recorder;
+        public ElementDefinitionInfo Element_Recorder;                                                                                      // MakerGen.cs:217
         // 18. MedicationRequest.reasonCode
-        public ElementDefinitionInfo Element_ReasonCode;
+        public ElementDefinitionInfo Element_ReasonCode;                                                                                    // MakerGen.cs:217
         // 19. MedicationRequest.reasonReference
-        public ElementDefinitionInfo Element_ReasonReference;
+        public ElementDefinitionInfo Element_ReasonReference;                                                                               // MakerGen.cs:217
         // 20. MedicationRequest.instantiatesCanonical
-        public ElementDefinitionInfo Element_InstantiatesCanonical;
+        public ElementDefinitionInfo Element_InstantiatesCanonical;                                                                         // MakerGen.cs:217
         // 21. MedicationRequest.instantiatesUri
-        public ElementDefinitionInfo Element_InstantiatesUri;
+        public ElementDefinitionInfo Element_InstantiatesUri;                                                                               // MakerGen.cs:217
         // 22. MedicationRequest.basedOn
-        public ElementDefinitionInfo Element_BasedOn;
+        public ElementDefinitionInfo Element_BasedOn;                                                                                       // MakerGen.cs:217
         // 23. MedicationRequest.groupIdentifier
-        public ElementDefinitionInfo Element_GroupIdentifier;
+        public ElementDefinitionInfo Element_GroupIdentifier;                                                                               // MakerGen.cs:217
         // 24. MedicationRequest.courseOfTherapyType
-        public ElementDefinitionInfo Element_CourseOfTherapyType;
+        public ElementDefinitionInfo Element_CourseOfTherapyType;                                                                           // MakerGen.cs:217
         // 25. MedicationRequest.insurance
-        public ElementDefinitionInfo Element_Insurance;
+        public ElementDefinitionInfo Element_Insurance;                                                                                     // MakerGen.cs:217
         // 26. MedicationRequest.note
-        public ElementDefinitionInfo Element_Note;
+        public ElementDefinitionInfo Element_Note;                                                                                          // MakerGen.cs:217
         // 27. MedicationRequest.dosageInstruction
-        public ElementDefinitionInfo Element_DosageInstruction;
+        public ElementDefinitionInfo Element_DosageInstruction;                                                                             // MakerGen.cs:217
         // 28. MedicationRequest.dispenseRequest
-        public ElementDefinitionInfo Element_DispenseRequest;
+        public ElementDefinitionInfo Element_DispenseRequest;                                                                               // MakerGen.cs:217
         // 38. MedicationRequest.substitution
-        public ElementDefinitionInfo Element_Substitution;
+        public ElementDefinitionInfo Element_Substitution;                                                                                  // MakerGen.cs:217
         // 41. MedicationRequest.priorPrescription
-        public ElementDefinitionInfo Element_PriorPrescription;
+        public ElementDefinitionInfo Element_PriorPrescription;                                                                             // MakerGen.cs:217
         // 42. MedicationRequest.detectedIssue
-        public ElementDefinitionInfo Element_DetectedIssue;
+        public ElementDefinitionInfo Element_DetectedIssue;                                                                                 // MakerGen.cs:217
         // 43. MedicationRequest.eventHistory
-        public ElementDefinitionInfo Element_EventHistory;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "MedicationRequest",
-                ElementId = "MedicationRequest"
-            });
-            Element_Identifier.Write(sDef);
-            Element_Status.Write(sDef);
-            Element_StatusReason.Write(sDef);
-            Element_Intent.Write(sDef);
-            Element_Category.Write(sDef);
-            Element_Priority.Write(sDef);
-            Element_DoNotPerform.Write(sDef);
-            Element_Reported.Write(sDef);
-            Element_Medication.Write(sDef);
-            Element_Subject.Write(sDef);
-            Element_Encounter.Write(sDef);
-            Element_SupportingInformation.Write(sDef);
-            Element_AuthoredOn.Write(sDef);
-            Element_Requester.Write(sDef);
-            Element_Performer.Write(sDef);
-            Element_PerformerType.Write(sDef);
-            Element_Recorder.Write(sDef);
-            Element_ReasonCode.Write(sDef);
-            Element_ReasonReference.Write(sDef);
-            Element_InstantiatesCanonical.Write(sDef);
-            Element_InstantiatesUri.Write(sDef);
-            Element_BasedOn.Write(sDef);
-            Element_GroupIdentifier.Write(sDef);
-            Element_CourseOfTherapyType.Write(sDef);
-            Element_Insurance.Write(sDef);
-            Element_Note.Write(sDef);
-            Element_DosageInstruction.Write(sDef);
-            Element_DispenseRequest.Write(sDef);
-            Element_Substitution.Write(sDef);
-            Element_PriorPrescription.Write(sDef);
-            Element_DetectedIssue.Write(sDef);
-            Element_EventHistory.Write(sDef);
-        }
-        
-        public Resource_MedicationRequest()
-        {
-            {
+        public ElementDefinitionInfo Element_EventHistory;                                                                                  // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "MedicationRequest",                                                                                                 // MakerGen.cs:393
+                ElementId = "MedicationRequest"                                                                                             // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_StatusReason.Write(sDef);                                                                                               // MakerGen.cs:221
+            Element_Intent.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Category.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_Priority.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_DoNotPerform.Write(sDef);                                                                                               // MakerGen.cs:221
+            Element_Reported.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_Medication.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Subject.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Encounter.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_SupportingInformation.Write(sDef);                                                                                      // MakerGen.cs:221
+            Element_AuthoredOn.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Requester.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_Performer.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_PerformerType.Write(sDef);                                                                                              // MakerGen.cs:221
+            Element_Recorder.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_ReasonCode.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_ReasonReference.Write(sDef);                                                                                            // MakerGen.cs:221
+            Element_InstantiatesCanonical.Write(sDef);                                                                                      // MakerGen.cs:221
+            Element_InstantiatesUri.Write(sDef);                                                                                            // MakerGen.cs:221
+            Element_BasedOn.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_GroupIdentifier.Write(sDef);                                                                                            // MakerGen.cs:221
+            Element_CourseOfTherapyType.Write(sDef);                                                                                        // MakerGen.cs:221
+            Element_Insurance.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_Note.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_DosageInstruction.Write(sDef);                                                                                          // MakerGen.cs:221
+            Element_DispenseRequest.Write(sDef);                                                                                            // MakerGen.cs:221
+            Element_Substitution.Write(sDef);                                                                                               // MakerGen.cs:221
+            Element_PriorPrescription.Write(sDef);                                                                                          // MakerGen.cs:221
+            Element_DetectedIssue.Write(sDef);                                                                                              // MakerGen.cs:221
+            Element_EventHistory.Write(sDef);                                                                                               // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Resource_MedicationRequest()                                                                                                 // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. MedicationRequest.identifier
-                this.Element_Identifier = new ElementDefinitionInfo
-                {
-                    Name = "Element_Identifier",
-                    Path= "MedicationRequest.identifier",
-                    Id = "MedicationRequest.identifier",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:236
+                    Path= "MedicationRequest.identifier",                                                                                   // MakerGen.cs:237
+                    Id = "MedicationRequest.identifier",                                                                                    // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. MedicationRequest.status
-                this.Element_Status = new ElementDefinitionInfo
-                {
-                    Name = "Element_Status",
-                    Path= "MedicationRequest.status",
-                    Id = "MedicationRequest.status",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Status",                                                                                                // MakerGen.cs:236
+                    Path= "MedicationRequest.status",                                                                                       // MakerGen.cs:237
+                    Id = "MedicationRequest.status",                                                                                        // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 3. MedicationRequest.statusReason
-                this.Element_StatusReason = new ElementDefinitionInfo
-                {
-                    Name = "Element_StatusReason",
-                    Path= "MedicationRequest.statusReason",
-                    Id = "MedicationRequest.statusReason",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_StatusReason = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_StatusReason",                                                                                          // MakerGen.cs:236
+                    Path= "MedicationRequest.statusReason",                                                                                 // MakerGen.cs:237
+                    Id = "MedicationRequest.statusReason",                                                                                  // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 4. MedicationRequest.intent
-                this.Element_Intent = new ElementDefinitionInfo
-                {
-                    Name = "Element_Intent",
-                    Path= "MedicationRequest.intent",
-                    Id = "MedicationRequest.intent",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Intent = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Intent",                                                                                                // MakerGen.cs:236
+                    Path= "MedicationRequest.intent",                                                                                       // MakerGen.cs:237
+                    Id = "MedicationRequest.intent",                                                                                        // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 5. MedicationRequest.category
-                this.Element_Category = new ElementDefinitionInfo
-                {
-                    Name = "Element_Category",
-                    Path= "MedicationRequest.category",
-                    Id = "MedicationRequest.category",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Category = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Category",                                                                                              // MakerGen.cs:236
+                    Path= "MedicationRequest.category",                                                                                     // MakerGen.cs:237
+                    Id = "MedicationRequest.category",                                                                                      // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 6. MedicationRequest.priority
-                this.Element_Priority = new ElementDefinitionInfo
-                {
-                    Name = "Element_Priority",
-                    Path= "MedicationRequest.priority",
-                    Id = "MedicationRequest.priority",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Priority = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Priority",                                                                                              // MakerGen.cs:236
+                    Path= "MedicationRequest.priority",                                                                                     // MakerGen.cs:237
+                    Id = "MedicationRequest.priority",                                                                                      // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 7. MedicationRequest.doNotPerform
-                this.Element_DoNotPerform = new ElementDefinitionInfo
-                {
-                    Name = "Element_DoNotPerform",
-                    Path= "MedicationRequest.doNotPerform",
-                    Id = "MedicationRequest.doNotPerform",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_DoNotPerform = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_DoNotPerform",                                                                                          // MakerGen.cs:236
+                    Path= "MedicationRequest.doNotPerform",                                                                                 // MakerGen.cs:237
+                    Id = "MedicationRequest.doNotPerform",                                                                                  // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 8. MedicationRequest.reported[x]
-                this.Element_Reported = new ElementDefinitionInfo
-                {
-                    Name = "Element_Reported",
-                    Path= "MedicationRequest.reported[x]",
-                    Id = "MedicationRequest.reported[x]",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
-                        {
-                        },
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Patient",
-                                "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                                "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
-                                "http://hl7.org/fhir/StructureDefinition/Organization"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Reported = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Reported",                                                                                              // MakerGen.cs:236
+                    Path= "MedicationRequest.reported[x]",                                                                                  // MakerGen.cs:237
+                    Id = "MedicationRequest.reported[x]",                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        },                                                                                                                  // MakerGen.cs:305
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Patient",                                                          // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                                 // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/RelatedPerson",                                                    // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 9. MedicationRequest.medication[x]
-                this.Element_Medication = new ElementDefinitionInfo
-                {
-                    Name = "Element_Medication",
-                    Path= "MedicationRequest.medication[x]",
-                    Id = "MedicationRequest.medication[x]",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        },
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Medication"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Medication = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Medication",                                                                                            // MakerGen.cs:236
+                    Path= "MedicationRequest.medication[x]",                                                                                // MakerGen.cs:237
+                    Id = "MedicationRequest.medication[x]",                                                                                 // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        },                                                                                                                  // MakerGen.cs:320
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Medication"                                                        // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 10. MedicationRequest.subject
-                this.Element_Subject = new ElementDefinitionInfo
-                {
-                    Name = "Element_Subject",
-                    Path= "MedicationRequest.subject",
-                    Id = "MedicationRequest.subject",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Patient",
-                                "http://hl7.org/fhir/StructureDefinition/Group"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Subject = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Subject",                                                                                               // MakerGen.cs:236
+                    Path= "MedicationRequest.subject",                                                                                      // MakerGen.cs:237
+                    Id = "MedicationRequest.subject",                                                                                       // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Patient",                                                          // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Group"                                                             // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 11. MedicationRequest.encounter
-                this.Element_Encounter = new ElementDefinitionInfo
-                {
-                    Name = "Element_Encounter",
-                    Path= "MedicationRequest.encounter",
-                    Id = "MedicationRequest.encounter",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Encounter"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Encounter = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Encounter",                                                                                             // MakerGen.cs:236
+                    Path= "MedicationRequest.encounter",                                                                                    // MakerGen.cs:237
+                    Id = "MedicationRequest.encounter",                                                                                     // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Encounter"                                                         // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 12. MedicationRequest.supportingInformation
-                this.Element_SupportingInformation = new ElementDefinitionInfo
-                {
-                    Name = "Element_SupportingInformation",
-                    Path= "MedicationRequest.supportingInformation",
-                    Id = "MedicationRequest.supportingInformation",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Resource"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_SupportingInformation = new ElementDefinitionInfo                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_SupportingInformation",                                                                                 // MakerGen.cs:236
+                    Path= "MedicationRequest.supportingInformation",                                                                        // MakerGen.cs:237
+                    Id = "MedicationRequest.supportingInformation",                                                                         // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Resource"                                                          // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 13. MedicationRequest.authoredOn
-                this.Element_AuthoredOn = new ElementDefinitionInfo
-                {
-                    Name = "Element_AuthoredOn",
-                    Path= "MedicationRequest.authoredOn",
-                    Id = "MedicationRequest.authoredOn",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_AuthoredOn = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_AuthoredOn",                                                                                            // MakerGen.cs:236
+                    Path= "MedicationRequest.authoredOn",                                                                                   // MakerGen.cs:237
+                    Id = "MedicationRequest.authoredOn",                                                                                    // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 14. MedicationRequest.requester
-                this.Element_Requester = new ElementDefinitionInfo
-                {
-                    Name = "Element_Requester",
-                    Path= "MedicationRequest.requester",
-                    Id = "MedicationRequest.requester",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                                "http://hl7.org/fhir/StructureDefinition/Organization",
-                                "http://hl7.org/fhir/StructureDefinition/Patient",
-                                "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
-                                "http://hl7.org/fhir/StructureDefinition/Device"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Requester = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Requester",                                                                                             // MakerGen.cs:236
+                    Path= "MedicationRequest.requester",                                                                                    // MakerGen.cs:237
+                    Id = "MedicationRequest.requester",                                                                                     // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                                 // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Organization",                                                     // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Patient",                                                          // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/RelatedPerson",                                                    // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Device"                                                            // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 15. MedicationRequest.performer
-                this.Element_Performer = new ElementDefinitionInfo
-                {
-                    Name = "Element_Performer",
-                    Path= "MedicationRequest.performer",
-                    Id = "MedicationRequest.performer",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                                "http://hl7.org/fhir/StructureDefinition/Organization",
-                                "http://hl7.org/fhir/StructureDefinition/Patient",
-                                "http://hl7.org/fhir/StructureDefinition/Device",
-                                "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
-                                "http://hl7.org/fhir/StructureDefinition/CareTeam"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Performer = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Performer",                                                                                             // MakerGen.cs:236
+                    Path= "MedicationRequest.performer",                                                                                    // MakerGen.cs:237
+                    Id = "MedicationRequest.performer",                                                                                     // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                                 // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Organization",                                                     // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Patient",                                                          // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Device",                                                           // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/RelatedPerson",                                                    // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/CareTeam"                                                          // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 16. MedicationRequest.performerType
-                this.Element_PerformerType = new ElementDefinitionInfo
-                {
-                    Name = "Element_PerformerType",
-                    Path= "MedicationRequest.performerType",
-                    Id = "MedicationRequest.performerType",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_PerformerType = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_PerformerType",                                                                                         // MakerGen.cs:236
+                    Path= "MedicationRequest.performerType",                                                                                // MakerGen.cs:237
+                    Id = "MedicationRequest.performerType",                                                                                 // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 17. MedicationRequest.recorder
-                this.Element_Recorder = new ElementDefinitionInfo
-                {
-                    Name = "Element_Recorder",
-                    Path= "MedicationRequest.recorder",
-                    Id = "MedicationRequest.recorder",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Recorder = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Recorder",                                                                                              // MakerGen.cs:236
+                    Path= "MedicationRequest.recorder",                                                                                     // MakerGen.cs:237
+                    Id = "MedicationRequest.recorder",                                                                                      // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole"                                                  // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 18. MedicationRequest.reasonCode
-                this.Element_ReasonCode = new ElementDefinitionInfo
-                {
-                    Name = "Element_ReasonCode",
-                    Path= "MedicationRequest.reasonCode",
-                    Id = "MedicationRequest.reasonCode",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ReasonCode = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ReasonCode",                                                                                            // MakerGen.cs:236
+                    Path= "MedicationRequest.reasonCode",                                                                                   // MakerGen.cs:237
+                    Id = "MedicationRequest.reasonCode",                                                                                    // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 19. MedicationRequest.reasonReference
-                this.Element_ReasonReference = new ElementDefinitionInfo
-                {
-                    Name = "Element_ReasonReference",
-                    Path= "MedicationRequest.reasonReference",
-                    Id = "MedicationRequest.reasonReference",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Condition",
-                                "http://hl7.org/fhir/StructureDefinition/Observation"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ReasonReference = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ReasonReference",                                                                                       // MakerGen.cs:236
+                    Path= "MedicationRequest.reasonReference",                                                                              // MakerGen.cs:237
+                    Id = "MedicationRequest.reasonReference",                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Condition",                                                        // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Observation"                                                       // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 20. MedicationRequest.instantiatesCanonical
-                this.Element_InstantiatesCanonical = new ElementDefinitionInfo
-                {
-                    Name = "Element_InstantiatesCanonical",
-                    Path= "MedicationRequest.instantiatesCanonical",
-                    Id = "MedicationRequest.instantiatesCanonical",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_InstantiatesCanonical = new ElementDefinitionInfo                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_InstantiatesCanonical",                                                                                 // MakerGen.cs:236
+                    Path= "MedicationRequest.instantiatesCanonical",                                                                        // MakerGen.cs:237
+                    Id = "MedicationRequest.instantiatesCanonical",                                                                         // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                             // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 21. MedicationRequest.instantiatesUri
-                this.Element_InstantiatesUri = new ElementDefinitionInfo
-                {
-                    Name = "Element_InstantiatesUri",
-                    Path= "MedicationRequest.instantiatesUri",
-                    Id = "MedicationRequest.instantiatesUri",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_InstantiatesUri = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_InstantiatesUri",                                                                                       // MakerGen.cs:236
+                    Path= "MedicationRequest.instantiatesUri",                                                                              // MakerGen.cs:237
+                    Id = "MedicationRequest.instantiatesUri",                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                                   // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 22. MedicationRequest.basedOn
-                this.Element_BasedOn = new ElementDefinitionInfo
-                {
-                    Name = "Element_BasedOn",
-                    Path= "MedicationRequest.basedOn",
-                    Id = "MedicationRequest.basedOn",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/CarePlan",
-                                "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
-                                "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
-                                "http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_BasedOn = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_BasedOn",                                                                                               // MakerGen.cs:236
+                    Path= "MedicationRequest.basedOn",                                                                                      // MakerGen.cs:237
+                    Id = "MedicationRequest.basedOn",                                                                                       // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/CarePlan",                                                         // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/MedicationRequest",                                                // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/ServiceRequest",                                                   // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation"                                        // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 23. MedicationRequest.groupIdentifier
-                this.Element_GroupIdentifier = new ElementDefinitionInfo
-                {
-                    Name = "Element_GroupIdentifier",
-                    Path= "MedicationRequest.groupIdentifier",
-                    Id = "MedicationRequest.groupIdentifier",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_GroupIdentifier = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_GroupIdentifier",                                                                                       // MakerGen.cs:236
+                    Path= "MedicationRequest.groupIdentifier",                                                                              // MakerGen.cs:237
+                    Id = "MedicationRequest.groupIdentifier",                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 24. MedicationRequest.courseOfTherapyType
-                this.Element_CourseOfTherapyType = new ElementDefinitionInfo
-                {
-                    Name = "Element_CourseOfTherapyType",
-                    Path= "MedicationRequest.courseOfTherapyType",
-                    Id = "MedicationRequest.courseOfTherapyType",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_CourseOfTherapyType = new ElementDefinitionInfo                                                                // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_CourseOfTherapyType",                                                                                   // MakerGen.cs:236
+                    Path= "MedicationRequest.courseOfTherapyType",                                                                          // MakerGen.cs:237
+                    Id = "MedicationRequest.courseOfTherapyType",                                                                           // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 25. MedicationRequest.insurance
-                this.Element_Insurance = new ElementDefinitionInfo
-                {
-                    Name = "Element_Insurance",
-                    Path= "MedicationRequest.insurance",
-                    Id = "MedicationRequest.insurance",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Coverage",
-                                "http://hl7.org/fhir/StructureDefinition/ClaimResponse"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Insurance = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Insurance",                                                                                             // MakerGen.cs:236
+                    Path= "MedicationRequest.insurance",                                                                                    // MakerGen.cs:237
+                    Id = "MedicationRequest.insurance",                                                                                     // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Coverage",                                                         // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/ClaimResponse"                                                     // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 26. MedicationRequest.note
-                this.Element_Note = new ElementDefinitionInfo
-                {
-                    Name = "Element_Note",
-                    Path= "MedicationRequest.note",
-                    Id = "MedicationRequest.note",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Annotation
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Note = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Note",                                                                                                  // MakerGen.cs:236
+                    Path= "MedicationRequest.note",                                                                                         // MakerGen.cs:237
+                    Id = "MedicationRequest.note",                                                                                          // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Annotation                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 27. MedicationRequest.dosageInstruction
-                this.Element_DosageInstruction = new ElementDefinitionInfo
-                {
-                    Name = "Element_DosageInstruction",
-                    Path= "MedicationRequest.dosageInstruction",
-                    Id = "MedicationRequest.dosageInstruction",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Dosage
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_DosageInstruction = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_DosageInstruction",                                                                                     // MakerGen.cs:236
+                    Path= "MedicationRequest.dosageInstruction",                                                                            // MakerGen.cs:237
+                    Id = "MedicationRequest.dosageInstruction",                                                                             // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Dosage                                                                       // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 28. MedicationRequest.dispenseRequest
-                this.Element_DispenseRequest = new ElementDefinitionInfo
-                {
-                    Name = "Element_DispenseRequest",
-                    Path= "MedicationRequest.dispenseRequest",
-                    Id = "MedicationRequest.dispenseRequest",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new Type_DispenseRequest
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_DispenseRequest = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_DispenseRequest",                                                                                       // MakerGen.cs:236
+                    Path= "MedicationRequest.dispenseRequest",                                                                              // MakerGen.cs:237
+                    Id = "MedicationRequest.dispenseRequest",                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_DispenseRequest                                                                                            // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 38. MedicationRequest.substitution
-                this.Element_Substitution = new ElementDefinitionInfo
-                {
-                    Name = "Element_Substitution",
-                    Path= "MedicationRequest.substitution",
-                    Id = "MedicationRequest.substitution",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Substitution
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Substitution = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Substitution",                                                                                          // MakerGen.cs:236
+                    Path= "MedicationRequest.substitution",                                                                                 // MakerGen.cs:237
+                    Id = "MedicationRequest.substitution",                                                                                  // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Substitution                                                                                               // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 41. MedicationRequest.priorPrescription
-                this.Element_PriorPrescription = new ElementDefinitionInfo
-                {
-                    Name = "Element_PriorPrescription",
-                    Path= "MedicationRequest.priorPrescription",
-                    Id = "MedicationRequest.priorPrescription",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/MedicationRequest"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_PriorPrescription = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_PriorPrescription",                                                                                     // MakerGen.cs:236
+                    Path= "MedicationRequest.priorPrescription",                                                                            // MakerGen.cs:237
+                    Id = "MedicationRequest.priorPrescription",                                                                             // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/MedicationRequest"                                                 // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 42. MedicationRequest.detectedIssue
-                this.Element_DetectedIssue = new ElementDefinitionInfo
-                {
-                    Name = "Element_DetectedIssue",
-                    Path= "MedicationRequest.detectedIssue",
-                    Id = "MedicationRequest.detectedIssue",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/DetectedIssue"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_DetectedIssue = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_DetectedIssue",                                                                                         // MakerGen.cs:236
+                    Path= "MedicationRequest.detectedIssue",                                                                                // MakerGen.cs:237
+                    Id = "MedicationRequest.detectedIssue",                                                                                 // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/DetectedIssue"                                                     // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 43. MedicationRequest.eventHistory
-                this.Element_EventHistory = new ElementDefinitionInfo
-                {
-                    Name = "Element_EventHistory",
-                    Path= "MedicationRequest.eventHistory",
-                    Id = "MedicationRequest.eventHistory",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Provenance"
-                            }
-                        }
-                    }
-                };
-            }
-            this.Name = "MedicationRequest";
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/MedicationRequest";
-        }
-    }
-}
+                this.Element_EventHistory = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_EventHistory",                                                                                          // MakerGen.cs:236
+                    Path= "MedicationRequest.eventHistory",                                                                                 // MakerGen.cs:237
+                    Id = "MedicationRequest.eventHistory",                                                                                  // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Provenance"                                                        // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            this.Name = "MedicationRequest";                                                                                                // MakerGen.cs:468
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/MedicationRequest";                                                         // MakerGen.cs:469
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:449

@@ -1,12 +1,12 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Complex
-{
-    #region Json
+using System;                                                                                                                               // MakerGen.cs:490
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:491
+using System.IO;                                                                                                                            // MakerGen.cs:492
+using System.Linq;                                                                                                                          // MakerGen.cs:493
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:494
+                                                                                                                                            // MakerGen.cs:495
+namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:496
+{                                                                                                                                           // MakerGen.cs:497
+    #region Json                                                                                                                            // MakerGen.cs:498
     #if NEVER
     {
       "resourceType": "StructureDefinition",
@@ -75,66 +75,66 @@ namespace FhirKhit.Maker.Common.Complex
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:502
     /// <summary>
     /// Fhir complex 'Range'
     /// </summary>
     // 0. Range
-    public partial class Type_Range : FhirKhit.Maker.Common.Complex.ComplexBase
-    {
+    public partial class Type_Range : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 1. Range.low
-        public ElementDefinitionInfo Element_Low;
+        public ElementDefinitionInfo Element_Low;                                                                                           // MakerGen.cs:217
         // 2. Range.high
-        public ElementDefinitionInfo Element_High;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "Range",
-                ElementId = "Range"
-            });
-            Element_Low.Write(sDef);
-            Element_High.Write(sDef);
-        }
-        
-        public Type_Range()
-        {
-            {
+        public ElementDefinitionInfo Element_High;                                                                                          // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "Range",                                                                                                             // MakerGen.cs:393
+                ElementId = "Range"                                                                                                         // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Low.Write(sDef);                                                                                                        // MakerGen.cs:221
+            Element_High.Write(sDef);                                                                                                       // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Type_Range()                                                                                                                 // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. Range.low
-                this.Element_Low = new ElementDefinitionInfo
-                {
-                    Name = "Element_Low",
-                    Path= "Range.low",
-                    Id = "Range.low",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Quantity
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Low = new ElementDefinitionInfo                                                                                // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Low",                                                                                                   // MakerGen.cs:236
+                    Path= "Range.low",                                                                                                      // MakerGen.cs:237
+                    Id = "Range.low",                                                                                                       // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Quantity                                                                     // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. Range.high
-                this.Element_High = new ElementDefinitionInfo
-                {
-                    Name = "Element_High",
-                    Path= "Range.high",
-                    Id = "Range.high",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Quantity
-                        {
-                        }
-                    }
-                };
-            }
-        }
-    }
-}
+                this.Element_High = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_High",                                                                                                  // MakerGen.cs:236
+                    Path= "Range.high",                                                                                                     // MakerGen.cs:237
+                    Id = "Range.high",                                                                                                      // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Quantity                                                                     // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:507

@@ -1,13 +1,13 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Resource
-{
-    #region Json
-    #if NEVER
+using System;                                                                                                                               // MakerGen.cs:432
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:433
+using System.IO;                                                                                                                            // MakerGen.cs:434
+using System.Linq;                                                                                                                          // MakerGen.cs:435
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:436
+                                                                                                                                            // MakerGen.cs:437
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:438
+{                                                                                                                                           // MakerGen.cs:439
+    #region Json                                                                                                                            // MakerGen.cs:440
+    #if NEVER                                                                                                                               // MakerGen.cs:441
     {
       "resourceType": "StructureDefinition",
       "id": "MolecularSequence",
@@ -1121,1560 +1121,1560 @@ namespace FhirKhit.Maker.Common.Resource
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:444
     /// <summary>
     /// Fhir resource 'MolecularSequence'
     /// </summary>
     // 0. MolecularSequence
-    public partial class Resource_MolecularSequence : FhirKhit.Maker.Common.Resource.Resource_DomainResource
-    {
+    public partial class Resource_MolecularSequence : FhirKhit.Maker.Common.Resource.Resource_DomainResource                                // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 9. MolecularSequence.referenceSeq
-        public partial class Type_ReferenceSeq : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_ReferenceSeq : FhirKhit.Maker.Common.Complex.ComplexBase                                                  // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 10. MolecularSequence.referenceSeq.chromosome
-            public ElementDefinitionInfo Element_Chromosome;
+            public ElementDefinitionInfo Element_Chromosome;                                                                                // MakerGen.cs:217
             // 11. MolecularSequence.referenceSeq.genomeBuild
-            public ElementDefinitionInfo Element_GenomeBuild;
+            public ElementDefinitionInfo Element_GenomeBuild;                                                                               // MakerGen.cs:217
             // 12. MolecularSequence.referenceSeq.orientation
-            public ElementDefinitionInfo Element_Orientation;
+            public ElementDefinitionInfo Element_Orientation;                                                                               // MakerGen.cs:217
             // 13. MolecularSequence.referenceSeq.referenceSeqId
-            public ElementDefinitionInfo Element_ReferenceSeqId;
+            public ElementDefinitionInfo Element_ReferenceSeqId;                                                                            // MakerGen.cs:217
             // 14. MolecularSequence.referenceSeq.referenceSeqPointer
-            public ElementDefinitionInfo Element_ReferenceSeqPointer;
+            public ElementDefinitionInfo Element_ReferenceSeqPointer;                                                                       // MakerGen.cs:217
             // 15. MolecularSequence.referenceSeq.referenceSeqString
-            public ElementDefinitionInfo Element_ReferenceSeqString;
+            public ElementDefinitionInfo Element_ReferenceSeqString;                                                                        // MakerGen.cs:217
             // 16. MolecularSequence.referenceSeq.strand
-            public ElementDefinitionInfo Element_Strand;
+            public ElementDefinitionInfo Element_Strand;                                                                                    // MakerGen.cs:217
             // 17. MolecularSequence.referenceSeq.windowStart
-            public ElementDefinitionInfo Element_WindowStart;
+            public ElementDefinitionInfo Element_WindowStart;                                                                               // MakerGen.cs:217
             // 18. MolecularSequence.referenceSeq.windowEnd
-            public ElementDefinitionInfo Element_WindowEnd;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "MolecularSequence.referenceSeq",
-                    ElementId = "MolecularSequence.referenceSeq"
-                });
-                Element_Chromosome.Write(sDef);
-                Element_GenomeBuild.Write(sDef);
-                Element_Orientation.Write(sDef);
-                Element_ReferenceSeqId.Write(sDef);
-                Element_ReferenceSeqPointer.Write(sDef);
-                Element_ReferenceSeqString.Write(sDef);
-                Element_Strand.Write(sDef);
-                Element_WindowStart.Write(sDef);
-                Element_WindowEnd.Write(sDef);
-            }
-            
-            public Type_ReferenceSeq()
-            {
-                {
+            public ElementDefinitionInfo Element_WindowEnd;                                                                                 // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "MolecularSequence.referenceSeq",                                                                                // MakerGen.cs:393
+                    ElementId = "MolecularSequence.referenceSeq"                                                                            // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Chromosome.Write(sDef);                                                                                             // MakerGen.cs:221
+                Element_GenomeBuild.Write(sDef);                                                                                            // MakerGen.cs:221
+                Element_Orientation.Write(sDef);                                                                                            // MakerGen.cs:221
+                Element_ReferenceSeqId.Write(sDef);                                                                                         // MakerGen.cs:221
+                Element_ReferenceSeqPointer.Write(sDef);                                                                                    // MakerGen.cs:221
+                Element_ReferenceSeqString.Write(sDef);                                                                                     // MakerGen.cs:221
+                Element_Strand.Write(sDef);                                                                                                 // MakerGen.cs:221
+                Element_WindowStart.Write(sDef);                                                                                            // MakerGen.cs:221
+                Element_WindowEnd.Write(sDef);                                                                                              // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_ReferenceSeq()                                                                                                      // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 10. MolecularSequence.referenceSeq.chromosome
-                    this.Element_Chromosome = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Chromosome",
-                        Path= "MolecularSequence.referenceSeq.chromosome",
-                        Id = "MolecularSequence.referenceSeq.chromosome",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Chromosome = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Chromosome",                                                                                        // MakerGen.cs:236
+                        Path= "MolecularSequence.referenceSeq.chromosome",                                                                  // MakerGen.cs:237
+                        Id = "MolecularSequence.referenceSeq.chromosome",                                                                   // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 11. MolecularSequence.referenceSeq.genomeBuild
-                    this.Element_GenomeBuild = new ElementDefinitionInfo
-                    {
-                        Name = "Element_GenomeBuild",
-                        Path= "MolecularSequence.referenceSeq.genomeBuild",
-                        Id = "MolecularSequence.referenceSeq.genomeBuild",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_GenomeBuild = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_GenomeBuild",                                                                                       // MakerGen.cs:236
+                        Path= "MolecularSequence.referenceSeq.genomeBuild",                                                                 // MakerGen.cs:237
+                        Id = "MolecularSequence.referenceSeq.genomeBuild",                                                                  // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 12. MolecularSequence.referenceSeq.orientation
-                    this.Element_Orientation = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Orientation",
-                        Path= "MolecularSequence.referenceSeq.orientation",
-                        Id = "MolecularSequence.referenceSeq.orientation",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Orientation = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Orientation",                                                                                       // MakerGen.cs:236
+                        Path= "MolecularSequence.referenceSeq.orientation",                                                                 // MakerGen.cs:237
+                        Id = "MolecularSequence.referenceSeq.orientation",                                                                  // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 13. MolecularSequence.referenceSeq.referenceSeqId
-                    this.Element_ReferenceSeqId = new ElementDefinitionInfo
-                    {
-                        Name = "Element_ReferenceSeqId",
-                        Path= "MolecularSequence.referenceSeq.referenceSeqId",
-                        Id = "MolecularSequence.referenceSeq.referenceSeqId",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_ReferenceSeqId = new ElementDefinitionInfo                                                                 // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_ReferenceSeqId",                                                                                    // MakerGen.cs:236
+                        Path= "MolecularSequence.referenceSeq.referenceSeqId",                                                              // MakerGen.cs:237
+                        Id = "MolecularSequence.referenceSeq.referenceSeqId",                                                               // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 14. MolecularSequence.referenceSeq.referenceSeqPointer
-                    this.Element_ReferenceSeqPointer = new ElementDefinitionInfo
-                    {
-                        Name = "Element_ReferenceSeqPointer",
-                        Path= "MolecularSequence.referenceSeq.referenceSeqPointer",
-                        Id = "MolecularSequence.referenceSeq.referenceSeqPointer",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/MolecularSequence"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_ReferenceSeqPointer = new ElementDefinitionInfo                                                            // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_ReferenceSeqPointer",                                                                               // MakerGen.cs:236
+                        Path= "MolecularSequence.referenceSeq.referenceSeqPointer",                                                         // MakerGen.cs:237
+                        Id = "MolecularSequence.referenceSeq.referenceSeqPointer",                                                          // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/MolecularSequence"                                             // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 15. MolecularSequence.referenceSeq.referenceSeqString
-                    this.Element_ReferenceSeqString = new ElementDefinitionInfo
-                    {
-                        Name = "Element_ReferenceSeqString",
-                        Path= "MolecularSequence.referenceSeq.referenceSeqString",
-                        Id = "MolecularSequence.referenceSeq.referenceSeqString",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_ReferenceSeqString = new ElementDefinitionInfo                                                             // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_ReferenceSeqString",                                                                                // MakerGen.cs:236
+                        Path= "MolecularSequence.referenceSeq.referenceSeqString",                                                          // MakerGen.cs:237
+                        Id = "MolecularSequence.referenceSeq.referenceSeqString",                                                           // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 16. MolecularSequence.referenceSeq.strand
-                    this.Element_Strand = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Strand",
-                        Path= "MolecularSequence.referenceSeq.strand",
-                        Id = "MolecularSequence.referenceSeq.strand",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Strand = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Strand",                                                                                            // MakerGen.cs:236
+                        Path= "MolecularSequence.referenceSeq.strand",                                                                      // MakerGen.cs:237
+                        Id = "MolecularSequence.referenceSeq.strand",                                                                       // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 17. MolecularSequence.referenceSeq.windowStart
-                    this.Element_WindowStart = new ElementDefinitionInfo
-                    {
-                        Name = "Element_WindowStart",
-                        Path= "MolecularSequence.referenceSeq.windowStart",
-                        Id = "MolecularSequence.referenceSeq.windowStart",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_WindowStart = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_WindowStart",                                                                                       // MakerGen.cs:236
+                        Path= "MolecularSequence.referenceSeq.windowStart",                                                                 // MakerGen.cs:237
+                        Id = "MolecularSequence.referenceSeq.windowStart",                                                                  // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                           // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 18. MolecularSequence.referenceSeq.windowEnd
-                    this.Element_WindowEnd = new ElementDefinitionInfo
-                    {
-                        Name = "Element_WindowEnd",
-                        Path= "MolecularSequence.referenceSeq.windowEnd",
-                        Id = "MolecularSequence.referenceSeq.windowEnd",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_WindowEnd = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_WindowEnd",                                                                                         // MakerGen.cs:236
+                        Path= "MolecularSequence.referenceSeq.windowEnd",                                                                   // MakerGen.cs:237
+                        Id = "MolecularSequence.referenceSeq.windowEnd",                                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                           // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 19. MolecularSequence.variant
-        public partial class Type_Variant : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Variant : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 20. MolecularSequence.variant.start
-            public ElementDefinitionInfo Element_Start;
+            public ElementDefinitionInfo Element_Start;                                                                                     // MakerGen.cs:217
             // 21. MolecularSequence.variant.end
-            public ElementDefinitionInfo Element_End;
+            public ElementDefinitionInfo Element_End;                                                                                       // MakerGen.cs:217
             // 22. MolecularSequence.variant.observedAllele
-            public ElementDefinitionInfo Element_ObservedAllele;
+            public ElementDefinitionInfo Element_ObservedAllele;                                                                            // MakerGen.cs:217
             // 23. MolecularSequence.variant.referenceAllele
-            public ElementDefinitionInfo Element_ReferenceAllele;
+            public ElementDefinitionInfo Element_ReferenceAllele;                                                                           // MakerGen.cs:217
             // 24. MolecularSequence.variant.cigar
-            public ElementDefinitionInfo Element_Cigar;
+            public ElementDefinitionInfo Element_Cigar;                                                                                     // MakerGen.cs:217
             // 25. MolecularSequence.variant.variantPointer
-            public ElementDefinitionInfo Element_VariantPointer;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "MolecularSequence.variant",
-                    ElementId = "MolecularSequence.variant"
-                });
-                Element_Start.Write(sDef);
-                Element_End.Write(sDef);
-                Element_ObservedAllele.Write(sDef);
-                Element_ReferenceAllele.Write(sDef);
-                Element_Cigar.Write(sDef);
-                Element_VariantPointer.Write(sDef);
-            }
-            
-            public Type_Variant()
-            {
-                {
+            public ElementDefinitionInfo Element_VariantPointer;                                                                            // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "MolecularSequence.variant",                                                                                     // MakerGen.cs:393
+                    ElementId = "MolecularSequence.variant"                                                                                 // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Start.Write(sDef);                                                                                                  // MakerGen.cs:221
+                Element_End.Write(sDef);                                                                                                    // MakerGen.cs:221
+                Element_ObservedAllele.Write(sDef);                                                                                         // MakerGen.cs:221
+                Element_ReferenceAllele.Write(sDef);                                                                                        // MakerGen.cs:221
+                Element_Cigar.Write(sDef);                                                                                                  // MakerGen.cs:221
+                Element_VariantPointer.Write(sDef);                                                                                         // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Variant()                                                                                                           // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 20. MolecularSequence.variant.start
-                    this.Element_Start = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Start",
-                        Path= "MolecularSequence.variant.start",
-                        Id = "MolecularSequence.variant.start",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Start = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Start",                                                                                             // MakerGen.cs:236
+                        Path= "MolecularSequence.variant.start",                                                                            // MakerGen.cs:237
+                        Id = "MolecularSequence.variant.start",                                                                             // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                           // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 21. MolecularSequence.variant.end
-                    this.Element_End = new ElementDefinitionInfo
-                    {
-                        Name = "Element_End",
-                        Path= "MolecularSequence.variant.end",
-                        Id = "MolecularSequence.variant.end",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_End = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_End",                                                                                               // MakerGen.cs:236
+                        Path= "MolecularSequence.variant.end",                                                                              // MakerGen.cs:237
+                        Id = "MolecularSequence.variant.end",                                                                               // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                           // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 22. MolecularSequence.variant.observedAllele
-                    this.Element_ObservedAllele = new ElementDefinitionInfo
-                    {
-                        Name = "Element_ObservedAllele",
-                        Path= "MolecularSequence.variant.observedAllele",
-                        Id = "MolecularSequence.variant.observedAllele",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_ObservedAllele = new ElementDefinitionInfo                                                                 // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_ObservedAllele",                                                                                    // MakerGen.cs:236
+                        Path= "MolecularSequence.variant.observedAllele",                                                                   // MakerGen.cs:237
+                        Id = "MolecularSequence.variant.observedAllele",                                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 23. MolecularSequence.variant.referenceAllele
-                    this.Element_ReferenceAllele = new ElementDefinitionInfo
-                    {
-                        Name = "Element_ReferenceAllele",
-                        Path= "MolecularSequence.variant.referenceAllele",
-                        Id = "MolecularSequence.variant.referenceAllele",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_ReferenceAllele = new ElementDefinitionInfo                                                                // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_ReferenceAllele",                                                                                   // MakerGen.cs:236
+                        Path= "MolecularSequence.variant.referenceAllele",                                                                  // MakerGen.cs:237
+                        Id = "MolecularSequence.variant.referenceAllele",                                                                   // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 24. MolecularSequence.variant.cigar
-                    this.Element_Cigar = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Cigar",
-                        Path= "MolecularSequence.variant.cigar",
-                        Id = "MolecularSequence.variant.cigar",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Cigar = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Cigar",                                                                                             // MakerGen.cs:236
+                        Path= "MolecularSequence.variant.cigar",                                                                            // MakerGen.cs:237
+                        Id = "MolecularSequence.variant.cigar",                                                                             // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 25. MolecularSequence.variant.variantPointer
-                    this.Element_VariantPointer = new ElementDefinitionInfo
-                    {
-                        Name = "Element_VariantPointer",
-                        Path= "MolecularSequence.variant.variantPointer",
-                        Id = "MolecularSequence.variant.variantPointer",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Observation"
-                                }
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_VariantPointer = new ElementDefinitionInfo                                                                 // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_VariantPointer",                                                                                    // MakerGen.cs:236
+                        Path= "MolecularSequence.variant.variantPointer",                                                                   // MakerGen.cs:237
+                        Id = "MolecularSequence.variant.variantPointer",                                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Observation"                                                   // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 27. MolecularSequence.quality
-        public partial class Type_Quality : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Quality : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 42. MolecularSequence.quality.roc
-            public partial class Type_Roc : FhirKhit.Maker.Common.Complex.ComplexBase
-            {
+            public partial class Type_Roc : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:381
+            {                                                                                                                               // MakerGen.cs:382
                 // 43. MolecularSequence.quality.roc.score
-                public ElementDefinitionInfo Element_Score;
+                public ElementDefinitionInfo Element_Score;                                                                                 // MakerGen.cs:217
                 // 44. MolecularSequence.quality.roc.numTP
-                public ElementDefinitionInfo Element_NumTP;
+                public ElementDefinitionInfo Element_NumTP;                                                                                 // MakerGen.cs:217
                 // 45. MolecularSequence.quality.roc.numFP
-                public ElementDefinitionInfo Element_NumFP;
+                public ElementDefinitionInfo Element_NumFP;                                                                                 // MakerGen.cs:217
                 // 46. MolecularSequence.quality.roc.numFN
-                public ElementDefinitionInfo Element_NumFN;
+                public ElementDefinitionInfo Element_NumFN;                                                                                 // MakerGen.cs:217
                 // 47. MolecularSequence.quality.roc.precision
-                public ElementDefinitionInfo Element_Precision;
+                public ElementDefinitionInfo Element_Precision;                                                                             // MakerGen.cs:217
                 // 48. MolecularSequence.quality.roc.sensitivity
-                public ElementDefinitionInfo Element_Sensitivity;
+                public ElementDefinitionInfo Element_Sensitivity;                                                                           // MakerGen.cs:217
                 // 49. MolecularSequence.quality.roc.fMeasure
-                public ElementDefinitionInfo Element_FMeasure;
-                
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                {
-                    base.Write(sDef);
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                    {
-                        Path = "MolecularSequence.quality.roc",
-                        ElementId = "MolecularSequence.quality.roc"
-                    });
-                    Element_Score.Write(sDef);
-                    Element_NumTP.Write(sDef);
-                    Element_NumFP.Write(sDef);
-                    Element_NumFN.Write(sDef);
-                    Element_Precision.Write(sDef);
-                    Element_Sensitivity.Write(sDef);
-                    Element_FMeasure.Write(sDef);
-                }
-                
-                public Type_Roc()
-                {
-                    {
+                public ElementDefinitionInfo Element_FMeasure;                                                                              // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:389
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:390
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:391
+                    {                                                                                                                       // MakerGen.cs:392
+                        Path = "MolecularSequence.quality.roc",                                                                             // MakerGen.cs:393
+                        ElementId = "MolecularSequence.quality.roc"                                                                         // MakerGen.cs:394
+                    });                                                                                                                     // MakerGen.cs:395
+                    Element_Score.Write(sDef);                                                                                              // MakerGen.cs:221
+                    Element_NumTP.Write(sDef);                                                                                              // MakerGen.cs:221
+                    Element_NumFP.Write(sDef);                                                                                              // MakerGen.cs:221
+                    Element_NumFN.Write(sDef);                                                                                              // MakerGen.cs:221
+                    Element_Precision.Write(sDef);                                                                                          // MakerGen.cs:221
+                    Element_Sensitivity.Write(sDef);                                                                                        // MakerGen.cs:221
+                    Element_FMeasure.Write(sDef);                                                                                           // MakerGen.cs:221
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                public Type_Roc()                                                                                                           // MakerGen.cs:400
+                {                                                                                                                           // MakerGen.cs:401
+                    {                                                                                                                       // MakerGen.cs:232
                         // 43. MolecularSequence.quality.roc.score
-                        this.Element_Score = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Score",
-                            Path= "MolecularSequence.quality.roc.score",
-                            Id = "MolecularSequence.quality.roc.score",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Integer
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Score = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Score",                                                                                         // MakerGen.cs:236
+                            Path= "MolecularSequence.quality.roc.score",                                                                    // MakerGen.cs:237
+                            Id = "MolecularSequence.quality.roc.score",                                                                     // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                       // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 44. MolecularSequence.quality.roc.numTP
-                        this.Element_NumTP = new ElementDefinitionInfo
-                        {
-                            Name = "Element_NumTP",
-                            Path= "MolecularSequence.quality.roc.numTP",
-                            Id = "MolecularSequence.quality.roc.numTP",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Integer
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_NumTP = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_NumTP",                                                                                         // MakerGen.cs:236
+                            Path= "MolecularSequence.quality.roc.numTP",                                                                    // MakerGen.cs:237
+                            Id = "MolecularSequence.quality.roc.numTP",                                                                     // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                       // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 45. MolecularSequence.quality.roc.numFP
-                        this.Element_NumFP = new ElementDefinitionInfo
-                        {
-                            Name = "Element_NumFP",
-                            Path= "MolecularSequence.quality.roc.numFP",
-                            Id = "MolecularSequence.quality.roc.numFP",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Integer
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_NumFP = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_NumFP",                                                                                         // MakerGen.cs:236
+                            Path= "MolecularSequence.quality.roc.numFP",                                                                    // MakerGen.cs:237
+                            Id = "MolecularSequence.quality.roc.numFP",                                                                     // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                       // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 46. MolecularSequence.quality.roc.numFN
-                        this.Element_NumFN = new ElementDefinitionInfo
-                        {
-                            Name = "Element_NumFN",
-                            Path= "MolecularSequence.quality.roc.numFN",
-                            Id = "MolecularSequence.quality.roc.numFN",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Integer
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_NumFN = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_NumFN",                                                                                         // MakerGen.cs:236
+                            Path= "MolecularSequence.quality.roc.numFN",                                                                    // MakerGen.cs:237
+                            Id = "MolecularSequence.quality.roc.numFN",                                                                     // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                       // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 47. MolecularSequence.quality.roc.precision
-                        this.Element_Precision = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Precision",
-                            Path= "MolecularSequence.quality.roc.precision",
-                            Id = "MolecularSequence.quality.roc.precision",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Precision = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Precision",                                                                                     // MakerGen.cs:236
+                            Path= "MolecularSequence.quality.roc.precision",                                                                // MakerGen.cs:237
+                            Id = "MolecularSequence.quality.roc.precision",                                                                 // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                       // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 48. MolecularSequence.quality.roc.sensitivity
-                        this.Element_Sensitivity = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Sensitivity",
-                            Path= "MolecularSequence.quality.roc.sensitivity",
-                            Id = "MolecularSequence.quality.roc.sensitivity",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Sensitivity = new ElementDefinitionInfo                                                                // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Sensitivity",                                                                                   // MakerGen.cs:236
+                            Path= "MolecularSequence.quality.roc.sensitivity",                                                              // MakerGen.cs:237
+                            Id = "MolecularSequence.quality.roc.sensitivity",                                                               // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                       // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 49. MolecularSequence.quality.roc.fMeasure
-                        this.Element_FMeasure = new ElementDefinitionInfo
-                        {
-                            Name = "Element_FMeasure",
-                            Path= "MolecularSequence.quality.roc.fMeasure",
-                            Id = "MolecularSequence.quality.roc.fMeasure",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
-                                {
-                                }
-                            }
-                        };
-                    }
-                }
-            }
+                        this.Element_FMeasure = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_FMeasure",                                                                                      // MakerGen.cs:236
+                            Path= "MolecularSequence.quality.roc.fMeasure",                                                                 // MakerGen.cs:237
+                            Id = "MolecularSequence.quality.roc.fMeasure",                                                                  // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                       // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                }                                                                                                                           // MakerGen.cs:403
+            }                                                                                                                               // MakerGen.cs:405
             // 28. MolecularSequence.quality.type
-            public ElementDefinitionInfo Element_Type;
+            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:217
             // 29. MolecularSequence.quality.standardSequence
-            public ElementDefinitionInfo Element_StandardSequence;
+            public ElementDefinitionInfo Element_StandardSequence;                                                                          // MakerGen.cs:217
             // 30. MolecularSequence.quality.start
-            public ElementDefinitionInfo Element_Start;
+            public ElementDefinitionInfo Element_Start;                                                                                     // MakerGen.cs:217
             // 31. MolecularSequence.quality.end
-            public ElementDefinitionInfo Element_End;
+            public ElementDefinitionInfo Element_End;                                                                                       // MakerGen.cs:217
             // 32. MolecularSequence.quality.score
-            public ElementDefinitionInfo Element_Score;
+            public ElementDefinitionInfo Element_Score;                                                                                     // MakerGen.cs:217
             // 33. MolecularSequence.quality.method
-            public ElementDefinitionInfo Element_Method;
+            public ElementDefinitionInfo Element_Method;                                                                                    // MakerGen.cs:217
             // 34. MolecularSequence.quality.truthTP
-            public ElementDefinitionInfo Element_TruthTP;
+            public ElementDefinitionInfo Element_TruthTP;                                                                                   // MakerGen.cs:217
             // 35. MolecularSequence.quality.queryTP
-            public ElementDefinitionInfo Element_QueryTP;
+            public ElementDefinitionInfo Element_QueryTP;                                                                                   // MakerGen.cs:217
             // 36. MolecularSequence.quality.truthFN
-            public ElementDefinitionInfo Element_TruthFN;
+            public ElementDefinitionInfo Element_TruthFN;                                                                                   // MakerGen.cs:217
             // 37. MolecularSequence.quality.queryFP
-            public ElementDefinitionInfo Element_QueryFP;
+            public ElementDefinitionInfo Element_QueryFP;                                                                                   // MakerGen.cs:217
             // 38. MolecularSequence.quality.gtFP
-            public ElementDefinitionInfo Element_GtFP;
+            public ElementDefinitionInfo Element_GtFP;                                                                                      // MakerGen.cs:217
             // 39. MolecularSequence.quality.precision
-            public ElementDefinitionInfo Element_Precision;
+            public ElementDefinitionInfo Element_Precision;                                                                                 // MakerGen.cs:217
             // 40. MolecularSequence.quality.recall
-            public ElementDefinitionInfo Element_Recall;
+            public ElementDefinitionInfo Element_Recall;                                                                                    // MakerGen.cs:217
             // 41. MolecularSequence.quality.fScore
-            public ElementDefinitionInfo Element_FScore;
+            public ElementDefinitionInfo Element_FScore;                                                                                    // MakerGen.cs:217
             // 42. MolecularSequence.quality.roc
-            public ElementDefinitionInfo Element_Roc;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "MolecularSequence.quality",
-                    ElementId = "MolecularSequence.quality"
-                });
-                Element_Type.Write(sDef);
-                Element_StandardSequence.Write(sDef);
-                Element_Start.Write(sDef);
-                Element_End.Write(sDef);
-                Element_Score.Write(sDef);
-                Element_Method.Write(sDef);
-                Element_TruthTP.Write(sDef);
-                Element_QueryTP.Write(sDef);
-                Element_TruthFN.Write(sDef);
-                Element_QueryFP.Write(sDef);
-                Element_GtFP.Write(sDef);
-                Element_Precision.Write(sDef);
-                Element_Recall.Write(sDef);
-                Element_FScore.Write(sDef);
-                Element_Roc.Write(sDef);
-            }
-            
-            public Type_Quality()
-            {
-                {
+            public ElementDefinitionInfo Element_Roc;                                                                                       // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "MolecularSequence.quality",                                                                                     // MakerGen.cs:393
+                    ElementId = "MolecularSequence.quality"                                                                                 // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_StandardSequence.Write(sDef);                                                                                       // MakerGen.cs:221
+                Element_Start.Write(sDef);                                                                                                  // MakerGen.cs:221
+                Element_End.Write(sDef);                                                                                                    // MakerGen.cs:221
+                Element_Score.Write(sDef);                                                                                                  // MakerGen.cs:221
+                Element_Method.Write(sDef);                                                                                                 // MakerGen.cs:221
+                Element_TruthTP.Write(sDef);                                                                                                // MakerGen.cs:221
+                Element_QueryTP.Write(sDef);                                                                                                // MakerGen.cs:221
+                Element_TruthFN.Write(sDef);                                                                                                // MakerGen.cs:221
+                Element_QueryFP.Write(sDef);                                                                                                // MakerGen.cs:221
+                Element_GtFP.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Precision.Write(sDef);                                                                                              // MakerGen.cs:221
+                Element_Recall.Write(sDef);                                                                                                 // MakerGen.cs:221
+                Element_FScore.Write(sDef);                                                                                                 // MakerGen.cs:221
+                Element_Roc.Write(sDef);                                                                                                    // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Quality()                                                                                                           // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 28. MolecularSequence.quality.type
-                    this.Element_Type = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Type",
-                        Path= "MolecularSequence.quality.type",
-                        Id = "MolecularSequence.quality.type",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Type",                                                                                              // MakerGen.cs:236
+                        Path= "MolecularSequence.quality.type",                                                                             // MakerGen.cs:237
+                        Id = "MolecularSequence.quality.type",                                                                              // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 29. MolecularSequence.quality.standardSequence
-                    this.Element_StandardSequence = new ElementDefinitionInfo
-                    {
-                        Name = "Element_StandardSequence",
-                        Path= "MolecularSequence.quality.standardSequence",
-                        Id = "MolecularSequence.quality.standardSequence",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_StandardSequence = new ElementDefinitionInfo                                                               // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_StandardSequence",                                                                                  // MakerGen.cs:236
+                        Path= "MolecularSequence.quality.standardSequence",                                                                 // MakerGen.cs:237
+                        Id = "MolecularSequence.quality.standardSequence",                                                                  // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 30. MolecularSequence.quality.start
-                    this.Element_Start = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Start",
-                        Path= "MolecularSequence.quality.start",
-                        Id = "MolecularSequence.quality.start",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Start = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Start",                                                                                             // MakerGen.cs:236
+                        Path= "MolecularSequence.quality.start",                                                                            // MakerGen.cs:237
+                        Id = "MolecularSequence.quality.start",                                                                             // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                           // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 31. MolecularSequence.quality.end
-                    this.Element_End = new ElementDefinitionInfo
-                    {
-                        Name = "Element_End",
-                        Path= "MolecularSequence.quality.end",
-                        Id = "MolecularSequence.quality.end",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_End = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_End",                                                                                               // MakerGen.cs:236
+                        Path= "MolecularSequence.quality.end",                                                                              // MakerGen.cs:237
+                        Id = "MolecularSequence.quality.end",                                                                               // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                           // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 32. MolecularSequence.quality.score
-                    this.Element_Score = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Score",
-                        Path= "MolecularSequence.quality.score",
-                        Id = "MolecularSequence.quality.score",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Quantity
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Score = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Score",                                                                                             // MakerGen.cs:236
+                        Path= "MolecularSequence.quality.score",                                                                            // MakerGen.cs:237
+                        Id = "MolecularSequence.quality.score",                                                                             // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Quantity                                                                 // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 33. MolecularSequence.quality.method
-                    this.Element_Method = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Method",
-                        Path= "MolecularSequence.quality.method",
-                        Id = "MolecularSequence.quality.method",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Method = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Method",                                                                                            // MakerGen.cs:236
+                        Path= "MolecularSequence.quality.method",                                                                           // MakerGen.cs:237
+                        Id = "MolecularSequence.quality.method",                                                                            // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 34. MolecularSequence.quality.truthTP
-                    this.Element_TruthTP = new ElementDefinitionInfo
-                    {
-                        Name = "Element_TruthTP",
-                        Path= "MolecularSequence.quality.truthTP",
-                        Id = "MolecularSequence.quality.truthTP",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_TruthTP = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_TruthTP",                                                                                           // MakerGen.cs:236
+                        Path= "MolecularSequence.quality.truthTP",                                                                          // MakerGen.cs:237
+                        Id = "MolecularSequence.quality.truthTP",                                                                           // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                           // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 35. MolecularSequence.quality.queryTP
-                    this.Element_QueryTP = new ElementDefinitionInfo
-                    {
-                        Name = "Element_QueryTP",
-                        Path= "MolecularSequence.quality.queryTP",
-                        Id = "MolecularSequence.quality.queryTP",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_QueryTP = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_QueryTP",                                                                                           // MakerGen.cs:236
+                        Path= "MolecularSequence.quality.queryTP",                                                                          // MakerGen.cs:237
+                        Id = "MolecularSequence.quality.queryTP",                                                                           // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                           // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 36. MolecularSequence.quality.truthFN
-                    this.Element_TruthFN = new ElementDefinitionInfo
-                    {
-                        Name = "Element_TruthFN",
-                        Path= "MolecularSequence.quality.truthFN",
-                        Id = "MolecularSequence.quality.truthFN",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_TruthFN = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_TruthFN",                                                                                           // MakerGen.cs:236
+                        Path= "MolecularSequence.quality.truthFN",                                                                          // MakerGen.cs:237
+                        Id = "MolecularSequence.quality.truthFN",                                                                           // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                           // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 37. MolecularSequence.quality.queryFP
-                    this.Element_QueryFP = new ElementDefinitionInfo
-                    {
-                        Name = "Element_QueryFP",
-                        Path= "MolecularSequence.quality.queryFP",
-                        Id = "MolecularSequence.quality.queryFP",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_QueryFP = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_QueryFP",                                                                                           // MakerGen.cs:236
+                        Path= "MolecularSequence.quality.queryFP",                                                                          // MakerGen.cs:237
+                        Id = "MolecularSequence.quality.queryFP",                                                                           // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                           // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 38. MolecularSequence.quality.gtFP
-                    this.Element_GtFP = new ElementDefinitionInfo
-                    {
-                        Name = "Element_GtFP",
-                        Path= "MolecularSequence.quality.gtFP",
-                        Id = "MolecularSequence.quality.gtFP",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_GtFP = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_GtFP",                                                                                              // MakerGen.cs:236
+                        Path= "MolecularSequence.quality.gtFP",                                                                             // MakerGen.cs:237
+                        Id = "MolecularSequence.quality.gtFP",                                                                              // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                           // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 39. MolecularSequence.quality.precision
-                    this.Element_Precision = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Precision",
-                        Path= "MolecularSequence.quality.precision",
-                        Id = "MolecularSequence.quality.precision",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Precision = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Precision",                                                                                         // MakerGen.cs:236
+                        Path= "MolecularSequence.quality.precision",                                                                        // MakerGen.cs:237
+                        Id = "MolecularSequence.quality.precision",                                                                         // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                           // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 40. MolecularSequence.quality.recall
-                    this.Element_Recall = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Recall",
-                        Path= "MolecularSequence.quality.recall",
-                        Id = "MolecularSequence.quality.recall",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Recall = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Recall",                                                                                            // MakerGen.cs:236
+                        Path= "MolecularSequence.quality.recall",                                                                           // MakerGen.cs:237
+                        Id = "MolecularSequence.quality.recall",                                                                            // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                           // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 41. MolecularSequence.quality.fScore
-                    this.Element_FScore = new ElementDefinitionInfo
-                    {
-                        Name = "Element_FScore",
-                        Path= "MolecularSequence.quality.fScore",
-                        Id = "MolecularSequence.quality.fScore",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_FScore = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_FScore",                                                                                            // MakerGen.cs:236
+                        Path= "MolecularSequence.quality.fScore",                                                                           // MakerGen.cs:237
+                        Id = "MolecularSequence.quality.fScore",                                                                            // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                           // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 42. MolecularSequence.quality.roc
-                    this.Element_Roc = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Roc",
-                        Path= "MolecularSequence.quality.roc",
-                        Id = "MolecularSequence.quality.roc",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new Type_Roc
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Roc = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Roc",                                                                                               // MakerGen.cs:236
+                        Path= "MolecularSequence.quality.roc",                                                                              // MakerGen.cs:237
+                        Id = "MolecularSequence.quality.roc",                                                                               // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new Type_Roc                                                                                                    // MakerGen.cs:260
+                            {                                                                                                               // MakerGen.cs:261
+                            }                                                                                                               // MakerGen.cs:262
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 51. MolecularSequence.repository
-        public partial class Type_Repository : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Repository : FhirKhit.Maker.Common.Complex.ComplexBase                                                    // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 52. MolecularSequence.repository.type
-            public ElementDefinitionInfo Element_Type;
+            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:217
             // 53. MolecularSequence.repository.url
-            public ElementDefinitionInfo Element_Url;
+            public ElementDefinitionInfo Element_Url;                                                                                       // MakerGen.cs:217
             // 54. MolecularSequence.repository.name
-            public ElementDefinitionInfo Element_Name;
+            public ElementDefinitionInfo Element_Name;                                                                                      // MakerGen.cs:217
             // 55. MolecularSequence.repository.datasetId
-            public ElementDefinitionInfo Element_DatasetId;
+            public ElementDefinitionInfo Element_DatasetId;                                                                                 // MakerGen.cs:217
             // 56. MolecularSequence.repository.variantsetId
-            public ElementDefinitionInfo Element_VariantsetId;
+            public ElementDefinitionInfo Element_VariantsetId;                                                                              // MakerGen.cs:217
             // 57. MolecularSequence.repository.readsetId
-            public ElementDefinitionInfo Element_ReadsetId;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "MolecularSequence.repository",
-                    ElementId = "MolecularSequence.repository"
-                });
-                Element_Type.Write(sDef);
-                Element_Url.Write(sDef);
-                Element_Name.Write(sDef);
-                Element_DatasetId.Write(sDef);
-                Element_VariantsetId.Write(sDef);
-                Element_ReadsetId.Write(sDef);
-            }
-            
-            public Type_Repository()
-            {
-                {
+            public ElementDefinitionInfo Element_ReadsetId;                                                                                 // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "MolecularSequence.repository",                                                                                  // MakerGen.cs:393
+                    ElementId = "MolecularSequence.repository"                                                                              // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Url.Write(sDef);                                                                                                    // MakerGen.cs:221
+                Element_Name.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_DatasetId.Write(sDef);                                                                                              // MakerGen.cs:221
+                Element_VariantsetId.Write(sDef);                                                                                           // MakerGen.cs:221
+                Element_ReadsetId.Write(sDef);                                                                                              // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Repository()                                                                                                        // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 52. MolecularSequence.repository.type
-                    this.Element_Type = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Type",
-                        Path= "MolecularSequence.repository.type",
-                        Id = "MolecularSequence.repository.type",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Type",                                                                                              // MakerGen.cs:236
+                        Path= "MolecularSequence.repository.type",                                                                          // MakerGen.cs:237
+                        Id = "MolecularSequence.repository.type",                                                                           // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 53. MolecularSequence.repository.url
-                    this.Element_Url = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Url",
-                        Path= "MolecularSequence.repository.url",
-                        Id = "MolecularSequence.repository.url",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Uri
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Url = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Url",                                                                                               // MakerGen.cs:236
+                        Path= "MolecularSequence.repository.url",                                                                           // MakerGen.cs:237
+                        Id = "MolecularSequence.repository.url",                                                                            // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                               // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 54. MolecularSequence.repository.name
-                    this.Element_Name = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Name",
-                        Path= "MolecularSequence.repository.name",
-                        Id = "MolecularSequence.repository.name",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Name = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Name",                                                                                              // MakerGen.cs:236
+                        Path= "MolecularSequence.repository.name",                                                                          // MakerGen.cs:237
+                        Id = "MolecularSequence.repository.name",                                                                           // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 55. MolecularSequence.repository.datasetId
-                    this.Element_DatasetId = new ElementDefinitionInfo
-                    {
-                        Name = "Element_DatasetId",
-                        Path= "MolecularSequence.repository.datasetId",
-                        Id = "MolecularSequence.repository.datasetId",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_DatasetId = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_DatasetId",                                                                                         // MakerGen.cs:236
+                        Path= "MolecularSequence.repository.datasetId",                                                                     // MakerGen.cs:237
+                        Id = "MolecularSequence.repository.datasetId",                                                                      // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 56. MolecularSequence.repository.variantsetId
-                    this.Element_VariantsetId = new ElementDefinitionInfo
-                    {
-                        Name = "Element_VariantsetId",
-                        Path= "MolecularSequence.repository.variantsetId",
-                        Id = "MolecularSequence.repository.variantsetId",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_VariantsetId = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_VariantsetId",                                                                                      // MakerGen.cs:236
+                        Path= "MolecularSequence.repository.variantsetId",                                                                  // MakerGen.cs:237
+                        Id = "MolecularSequence.repository.variantsetId",                                                                   // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 57. MolecularSequence.repository.readsetId
-                    this.Element_ReadsetId = new ElementDefinitionInfo
-                    {
-                        Name = "Element_ReadsetId",
-                        Path= "MolecularSequence.repository.readsetId",
-                        Id = "MolecularSequence.repository.readsetId",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_ReadsetId = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_ReadsetId",                                                                                         // MakerGen.cs:236
+                        Path= "MolecularSequence.repository.readsetId",                                                                     // MakerGen.cs:237
+                        Id = "MolecularSequence.repository.readsetId",                                                                      // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 59. MolecularSequence.structureVariant
-        public partial class Type_StructureVariant : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_StructureVariant : FhirKhit.Maker.Common.Complex.ComplexBase                                              // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 63. MolecularSequence.structureVariant.outer
-            public partial class Type_Outer : FhirKhit.Maker.Common.Complex.ComplexBase
-            {
+            public partial class Type_Outer : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:381
+            {                                                                                                                               // MakerGen.cs:382
                 // 64. MolecularSequence.structureVariant.outer.start
-                public ElementDefinitionInfo Element_Start;
+                public ElementDefinitionInfo Element_Start;                                                                                 // MakerGen.cs:217
                 // 65. MolecularSequence.structureVariant.outer.end
-                public ElementDefinitionInfo Element_End;
-                
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                {
-                    base.Write(sDef);
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                    {
-                        Path = "MolecularSequence.structureVariant.outer",
-                        ElementId = "MolecularSequence.structureVariant.outer"
-                    });
-                    Element_Start.Write(sDef);
-                    Element_End.Write(sDef);
-                }
-                
-                public Type_Outer()
-                {
-                    {
+                public ElementDefinitionInfo Element_End;                                                                                   // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:389
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:390
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:391
+                    {                                                                                                                       // MakerGen.cs:392
+                        Path = "MolecularSequence.structureVariant.outer",                                                                  // MakerGen.cs:393
+                        ElementId = "MolecularSequence.structureVariant.outer"                                                              // MakerGen.cs:394
+                    });                                                                                                                     // MakerGen.cs:395
+                    Element_Start.Write(sDef);                                                                                              // MakerGen.cs:221
+                    Element_End.Write(sDef);                                                                                                // MakerGen.cs:221
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                public Type_Outer()                                                                                                         // MakerGen.cs:400
+                {                                                                                                                           // MakerGen.cs:401
+                    {                                                                                                                       // MakerGen.cs:232
                         // 64. MolecularSequence.structureVariant.outer.start
-                        this.Element_Start = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Start",
-                            Path= "MolecularSequence.structureVariant.outer.start",
-                            Id = "MolecularSequence.structureVariant.outer.start",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Integer
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Start = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Start",                                                                                         // MakerGen.cs:236
+                            Path= "MolecularSequence.structureVariant.outer.start",                                                         // MakerGen.cs:237
+                            Id = "MolecularSequence.structureVariant.outer.start",                                                          // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                       // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 65. MolecularSequence.structureVariant.outer.end
-                        this.Element_End = new ElementDefinitionInfo
-                        {
-                            Name = "Element_End",
-                            Path= "MolecularSequence.structureVariant.outer.end",
-                            Id = "MolecularSequence.structureVariant.outer.end",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Integer
-                                {
-                                }
-                            }
-                        };
-                    }
-                }
-            }
+                        this.Element_End = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_End",                                                                                           // MakerGen.cs:236
+                            Path= "MolecularSequence.structureVariant.outer.end",                                                           // MakerGen.cs:237
+                            Id = "MolecularSequence.structureVariant.outer.end",                                                            // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                       // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                }                                                                                                                           // MakerGen.cs:403
+            }                                                                                                                               // MakerGen.cs:405
             // 66. MolecularSequence.structureVariant.inner
-            public partial class Type_Inner : FhirKhit.Maker.Common.Complex.ComplexBase
-            {
+            public partial class Type_Inner : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:381
+            {                                                                                                                               // MakerGen.cs:382
                 // 67. MolecularSequence.structureVariant.inner.start
-                public ElementDefinitionInfo Element_Start;
+                public ElementDefinitionInfo Element_Start;                                                                                 // MakerGen.cs:217
                 // 68. MolecularSequence.structureVariant.inner.end
-                public ElementDefinitionInfo Element_End;
-                
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                {
-                    base.Write(sDef);
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                    {
-                        Path = "MolecularSequence.structureVariant.inner",
-                        ElementId = "MolecularSequence.structureVariant.inner"
-                    });
-                    Element_Start.Write(sDef);
-                    Element_End.Write(sDef);
-                }
-                
-                public Type_Inner()
-                {
-                    {
+                public ElementDefinitionInfo Element_End;                                                                                   // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:389
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:390
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:391
+                    {                                                                                                                       // MakerGen.cs:392
+                        Path = "MolecularSequence.structureVariant.inner",                                                                  // MakerGen.cs:393
+                        ElementId = "MolecularSequence.structureVariant.inner"                                                              // MakerGen.cs:394
+                    });                                                                                                                     // MakerGen.cs:395
+                    Element_Start.Write(sDef);                                                                                              // MakerGen.cs:221
+                    Element_End.Write(sDef);                                                                                                // MakerGen.cs:221
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                public Type_Inner()                                                                                                         // MakerGen.cs:400
+                {                                                                                                                           // MakerGen.cs:401
+                    {                                                                                                                       // MakerGen.cs:232
                         // 67. MolecularSequence.structureVariant.inner.start
-                        this.Element_Start = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Start",
-                            Path= "MolecularSequence.structureVariant.inner.start",
-                            Id = "MolecularSequence.structureVariant.inner.start",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Integer
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Start = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Start",                                                                                         // MakerGen.cs:236
+                            Path= "MolecularSequence.structureVariant.inner.start",                                                         // MakerGen.cs:237
+                            Id = "MolecularSequence.structureVariant.inner.start",                                                          // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                       // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 68. MolecularSequence.structureVariant.inner.end
-                        this.Element_End = new ElementDefinitionInfo
-                        {
-                            Name = "Element_End",
-                            Path= "MolecularSequence.structureVariant.inner.end",
-                            Id = "MolecularSequence.structureVariant.inner.end",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Integer
-                                {
-                                }
-                            }
-                        };
-                    }
-                }
-            }
+                        this.Element_End = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_End",                                                                                           // MakerGen.cs:236
+                            Path= "MolecularSequence.structureVariant.inner.end",                                                           // MakerGen.cs:237
+                            Id = "MolecularSequence.structureVariant.inner.end",                                                            // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                       // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                }                                                                                                                           // MakerGen.cs:403
+            }                                                                                                                               // MakerGen.cs:405
             // 60. MolecularSequence.structureVariant.variantType
-            public ElementDefinitionInfo Element_VariantType;
+            public ElementDefinitionInfo Element_VariantType;                                                                               // MakerGen.cs:217
             // 61. MolecularSequence.structureVariant.exact
-            public ElementDefinitionInfo Element_Exact;
+            public ElementDefinitionInfo Element_Exact;                                                                                     // MakerGen.cs:217
             // 62. MolecularSequence.structureVariant.length
-            public ElementDefinitionInfo Element_Length;
+            public ElementDefinitionInfo Element_Length;                                                                                    // MakerGen.cs:217
             // 63. MolecularSequence.structureVariant.outer
-            public ElementDefinitionInfo Element_Outer;
+            public ElementDefinitionInfo Element_Outer;                                                                                     // MakerGen.cs:217
             // 66. MolecularSequence.structureVariant.inner
-            public ElementDefinitionInfo Element_Inner;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "MolecularSequence.structureVariant",
-                    ElementId = "MolecularSequence.structureVariant"
-                });
-                Element_VariantType.Write(sDef);
-                Element_Exact.Write(sDef);
-                Element_Length.Write(sDef);
-                Element_Outer.Write(sDef);
-                Element_Inner.Write(sDef);
-            }
-            
-            public Type_StructureVariant()
-            {
-                {
+            public ElementDefinitionInfo Element_Inner;                                                                                     // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "MolecularSequence.structureVariant",                                                                            // MakerGen.cs:393
+                    ElementId = "MolecularSequence.structureVariant"                                                                        // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_VariantType.Write(sDef);                                                                                            // MakerGen.cs:221
+                Element_Exact.Write(sDef);                                                                                                  // MakerGen.cs:221
+                Element_Length.Write(sDef);                                                                                                 // MakerGen.cs:221
+                Element_Outer.Write(sDef);                                                                                                  // MakerGen.cs:221
+                Element_Inner.Write(sDef);                                                                                                  // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_StructureVariant()                                                                                                  // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 60. MolecularSequence.structureVariant.variantType
-                    this.Element_VariantType = new ElementDefinitionInfo
-                    {
-                        Name = "Element_VariantType",
-                        Path= "MolecularSequence.structureVariant.variantType",
-                        Id = "MolecularSequence.structureVariant.variantType",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_VariantType = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_VariantType",                                                                                       // MakerGen.cs:236
+                        Path= "MolecularSequence.structureVariant.variantType",                                                             // MakerGen.cs:237
+                        Id = "MolecularSequence.structureVariant.variantType",                                                              // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 61. MolecularSequence.structureVariant.exact
-                    this.Element_Exact = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Exact",
-                        Path= "MolecularSequence.structureVariant.exact",
-                        Id = "MolecularSequence.structureVariant.exact",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Exact = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Exact",                                                                                             // MakerGen.cs:236
+                        Path= "MolecularSequence.structureVariant.exact",                                                                   // MakerGen.cs:237
+                        Id = "MolecularSequence.structureVariant.exact",                                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                           // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 62. MolecularSequence.structureVariant.length
-                    this.Element_Length = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Length",
-                        Path= "MolecularSequence.structureVariant.length",
-                        Id = "MolecularSequence.structureVariant.length",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Length = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Length",                                                                                            // MakerGen.cs:236
+                        Path= "MolecularSequence.structureVariant.length",                                                                  // MakerGen.cs:237
+                        Id = "MolecularSequence.structureVariant.length",                                                                   // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                           // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 63. MolecularSequence.structureVariant.outer
-                    this.Element_Outer = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Outer",
-                        Path= "MolecularSequence.structureVariant.outer",
-                        Id = "MolecularSequence.structureVariant.outer",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new Type_Outer
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Outer = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Outer",                                                                                             // MakerGen.cs:236
+                        Path= "MolecularSequence.structureVariant.outer",                                                                   // MakerGen.cs:237
+                        Id = "MolecularSequence.structureVariant.outer",                                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new Type_Outer                                                                                                  // MakerGen.cs:260
+                            {                                                                                                               // MakerGen.cs:261
+                            }                                                                                                               // MakerGen.cs:262
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 66. MolecularSequence.structureVariant.inner
-                    this.Element_Inner = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Inner",
-                        Path= "MolecularSequence.structureVariant.inner",
-                        Id = "MolecularSequence.structureVariant.inner",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new Type_Inner
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Inner = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Inner",                                                                                             // MakerGen.cs:236
+                        Path= "MolecularSequence.structureVariant.inner",                                                                   // MakerGen.cs:237
+                        Id = "MolecularSequence.structureVariant.inner",                                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new Type_Inner                                                                                                  // MakerGen.cs:260
+                            {                                                                                                               // MakerGen.cs:261
+                            }                                                                                                               // MakerGen.cs:262
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 1. MolecularSequence.identifier
-        public ElementDefinitionInfo Element_Identifier;
+        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:217
         // 2. MolecularSequence.type
-        public ElementDefinitionInfo Element_Type;
+        public ElementDefinitionInfo Element_Type;                                                                                          // MakerGen.cs:217
         // 3. MolecularSequence.coordinateSystem
-        public ElementDefinitionInfo Element_CoordinateSystem;
+        public ElementDefinitionInfo Element_CoordinateSystem;                                                                              // MakerGen.cs:217
         // 4. MolecularSequence.patient
-        public ElementDefinitionInfo Element_Patient;
+        public ElementDefinitionInfo Element_Patient;                                                                                       // MakerGen.cs:217
         // 5. MolecularSequence.specimen
-        public ElementDefinitionInfo Element_Specimen;
+        public ElementDefinitionInfo Element_Specimen;                                                                                      // MakerGen.cs:217
         // 6. MolecularSequence.device
-        public ElementDefinitionInfo Element_Device;
+        public ElementDefinitionInfo Element_Device;                                                                                        // MakerGen.cs:217
         // 7. MolecularSequence.performer
-        public ElementDefinitionInfo Element_Performer;
+        public ElementDefinitionInfo Element_Performer;                                                                                     // MakerGen.cs:217
         // 8. MolecularSequence.quantity
-        public ElementDefinitionInfo Element_Quantity;
+        public ElementDefinitionInfo Element_Quantity;                                                                                      // MakerGen.cs:217
         // 9. MolecularSequence.referenceSeq
-        public ElementDefinitionInfo Element_ReferenceSeq;
+        public ElementDefinitionInfo Element_ReferenceSeq;                                                                                  // MakerGen.cs:217
         // 19. MolecularSequence.variant
-        public ElementDefinitionInfo Element_Variant;
+        public ElementDefinitionInfo Element_Variant;                                                                                       // MakerGen.cs:217
         // 26. MolecularSequence.observedSeq
-        public ElementDefinitionInfo Element_ObservedSeq;
+        public ElementDefinitionInfo Element_ObservedSeq;                                                                                   // MakerGen.cs:217
         // 27. MolecularSequence.quality
-        public ElementDefinitionInfo Element_Quality;
+        public ElementDefinitionInfo Element_Quality;                                                                                       // MakerGen.cs:217
         // 50. MolecularSequence.readCoverage
-        public ElementDefinitionInfo Element_ReadCoverage;
+        public ElementDefinitionInfo Element_ReadCoverage;                                                                                  // MakerGen.cs:217
         // 51. MolecularSequence.repository
-        public ElementDefinitionInfo Element_Repository;
+        public ElementDefinitionInfo Element_Repository;                                                                                    // MakerGen.cs:217
         // 58. MolecularSequence.pointer
-        public ElementDefinitionInfo Element_Pointer;
+        public ElementDefinitionInfo Element_Pointer;                                                                                       // MakerGen.cs:217
         // 59. MolecularSequence.structureVariant
-        public ElementDefinitionInfo Element_StructureVariant;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "MolecularSequence",
-                ElementId = "MolecularSequence"
-            });
-            Element_Identifier.Write(sDef);
-            Element_Type.Write(sDef);
-            Element_CoordinateSystem.Write(sDef);
-            Element_Patient.Write(sDef);
-            Element_Specimen.Write(sDef);
-            Element_Device.Write(sDef);
-            Element_Performer.Write(sDef);
-            Element_Quantity.Write(sDef);
-            Element_ReferenceSeq.Write(sDef);
-            Element_Variant.Write(sDef);
-            Element_ObservedSeq.Write(sDef);
-            Element_Quality.Write(sDef);
-            Element_ReadCoverage.Write(sDef);
-            Element_Repository.Write(sDef);
-            Element_Pointer.Write(sDef);
-            Element_StructureVariant.Write(sDef);
-        }
-        
-        public Resource_MolecularSequence()
-        {
-            {
+        public ElementDefinitionInfo Element_StructureVariant;                                                                              // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "MolecularSequence",                                                                                                 // MakerGen.cs:393
+                ElementId = "MolecularSequence"                                                                                             // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Type.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_CoordinateSystem.Write(sDef);                                                                                           // MakerGen.cs:221
+            Element_Patient.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Specimen.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_Device.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Performer.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_Quantity.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_ReferenceSeq.Write(sDef);                                                                                               // MakerGen.cs:221
+            Element_Variant.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_ObservedSeq.Write(sDef);                                                                                                // MakerGen.cs:221
+            Element_Quality.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_ReadCoverage.Write(sDef);                                                                                               // MakerGen.cs:221
+            Element_Repository.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Pointer.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_StructureVariant.Write(sDef);                                                                                           // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Resource_MolecularSequence()                                                                                                 // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. MolecularSequence.identifier
-                this.Element_Identifier = new ElementDefinitionInfo
-                {
-                    Name = "Element_Identifier",
-                    Path= "MolecularSequence.identifier",
-                    Id = "MolecularSequence.identifier",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:236
+                    Path= "MolecularSequence.identifier",                                                                                   // MakerGen.cs:237
+                    Id = "MolecularSequence.identifier",                                                                                    // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. MolecularSequence.type
-                this.Element_Type = new ElementDefinitionInfo
-                {
-                    Name = "Element_Type",
-                    Path= "MolecularSequence.type",
-                    Id = "MolecularSequence.type",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Type = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Type",                                                                                                  // MakerGen.cs:236
+                    Path= "MolecularSequence.type",                                                                                         // MakerGen.cs:237
+                    Id = "MolecularSequence.type",                                                                                          // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 3. MolecularSequence.coordinateSystem
-                this.Element_CoordinateSystem = new ElementDefinitionInfo
-                {
-                    Name = "Element_CoordinateSystem",
-                    Path= "MolecularSequence.coordinateSystem",
-                    Id = "MolecularSequence.coordinateSystem",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Integer
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_CoordinateSystem = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_CoordinateSystem",                                                                                      // MakerGen.cs:236
+                    Path= "MolecularSequence.coordinateSystem",                                                                             // MakerGen.cs:237
+                    Id = "MolecularSequence.coordinateSystem",                                                                              // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                               // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 4. MolecularSequence.patient
-                this.Element_Patient = new ElementDefinitionInfo
-                {
-                    Name = "Element_Patient",
-                    Path= "MolecularSequence.patient",
-                    Id = "MolecularSequence.patient",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Patient"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Patient = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Patient",                                                                                               // MakerGen.cs:236
+                    Path= "MolecularSequence.patient",                                                                                      // MakerGen.cs:237
+                    Id = "MolecularSequence.patient",                                                                                       // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Patient"                                                           // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 5. MolecularSequence.specimen
-                this.Element_Specimen = new ElementDefinitionInfo
-                {
-                    Name = "Element_Specimen",
-                    Path= "MolecularSequence.specimen",
-                    Id = "MolecularSequence.specimen",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Specimen"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Specimen = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Specimen",                                                                                              // MakerGen.cs:236
+                    Path= "MolecularSequence.specimen",                                                                                     // MakerGen.cs:237
+                    Id = "MolecularSequence.specimen",                                                                                      // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Specimen"                                                          // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 6. MolecularSequence.device
-                this.Element_Device = new ElementDefinitionInfo
-                {
-                    Name = "Element_Device",
-                    Path= "MolecularSequence.device",
-                    Id = "MolecularSequence.device",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Device"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Device = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Device",                                                                                                // MakerGen.cs:236
+                    Path= "MolecularSequence.device",                                                                                       // MakerGen.cs:237
+                    Id = "MolecularSequence.device",                                                                                        // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Device"                                                            // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 7. MolecularSequence.performer
-                this.Element_Performer = new ElementDefinitionInfo
-                {
-                    Name = "Element_Performer",
-                    Path= "MolecularSequence.performer",
-                    Id = "MolecularSequence.performer",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Organization"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Performer = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Performer",                                                                                             // MakerGen.cs:236
+                    Path= "MolecularSequence.performer",                                                                                    // MakerGen.cs:237
+                    Id = "MolecularSequence.performer",                                                                                     // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 8. MolecularSequence.quantity
-                this.Element_Quantity = new ElementDefinitionInfo
-                {
-                    Name = "Element_Quantity",
-                    Path= "MolecularSequence.quantity",
-                    Id = "MolecularSequence.quantity",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Quantity
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Quantity = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Quantity",                                                                                              // MakerGen.cs:236
+                    Path= "MolecularSequence.quantity",                                                                                     // MakerGen.cs:237
+                    Id = "MolecularSequence.quantity",                                                                                      // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Quantity                                                                     // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 9. MolecularSequence.referenceSeq
-                this.Element_ReferenceSeq = new ElementDefinitionInfo
-                {
-                    Name = "Element_ReferenceSeq",
-                    Path= "MolecularSequence.referenceSeq",
-                    Id = "MolecularSequence.referenceSeq",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new Type_ReferenceSeq
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ReferenceSeq = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ReferenceSeq",                                                                                          // MakerGen.cs:236
+                    Path= "MolecularSequence.referenceSeq",                                                                                 // MakerGen.cs:237
+                    Id = "MolecularSequence.referenceSeq",                                                                                  // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_ReferenceSeq                                                                                               // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 19. MolecularSequence.variant
-                this.Element_Variant = new ElementDefinitionInfo
-                {
-                    Name = "Element_Variant",
-                    Path= "MolecularSequence.variant",
-                    Id = "MolecularSequence.variant",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Variant
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Variant = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Variant",                                                                                               // MakerGen.cs:236
+                    Path= "MolecularSequence.variant",                                                                                      // MakerGen.cs:237
+                    Id = "MolecularSequence.variant",                                                                                       // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Variant                                                                                                    // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 26. MolecularSequence.observedSeq
-                this.Element_ObservedSeq = new ElementDefinitionInfo
-                {
-                    Name = "Element_ObservedSeq",
-                    Path= "MolecularSequence.observedSeq",
-                    Id = "MolecularSequence.observedSeq",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ObservedSeq = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ObservedSeq",                                                                                           // MakerGen.cs:236
+                    Path= "MolecularSequence.observedSeq",                                                                                  // MakerGen.cs:237
+                    Id = "MolecularSequence.observedSeq",                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 27. MolecularSequence.quality
-                this.Element_Quality = new ElementDefinitionInfo
-                {
-                    Name = "Element_Quality",
-                    Path= "MolecularSequence.quality",
-                    Id = "MolecularSequence.quality",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Quality
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Quality = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Quality",                                                                                               // MakerGen.cs:236
+                    Path= "MolecularSequence.quality",                                                                                      // MakerGen.cs:237
+                    Id = "MolecularSequence.quality",                                                                                       // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Quality                                                                                                    // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 50. MolecularSequence.readCoverage
-                this.Element_ReadCoverage = new ElementDefinitionInfo
-                {
-                    Name = "Element_ReadCoverage",
-                    Path= "MolecularSequence.readCoverage",
-                    Id = "MolecularSequence.readCoverage",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Integer
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ReadCoverage = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ReadCoverage",                                                                                          // MakerGen.cs:236
+                    Path= "MolecularSequence.readCoverage",                                                                                 // MakerGen.cs:237
+                    Id = "MolecularSequence.readCoverage",                                                                                  // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                               // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 51. MolecularSequence.repository
-                this.Element_Repository = new ElementDefinitionInfo
-                {
-                    Name = "Element_Repository",
-                    Path= "MolecularSequence.repository",
-                    Id = "MolecularSequence.repository",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Repository
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Repository = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Repository",                                                                                            // MakerGen.cs:236
+                    Path= "MolecularSequence.repository",                                                                                   // MakerGen.cs:237
+                    Id = "MolecularSequence.repository",                                                                                    // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Repository                                                                                                 // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 58. MolecularSequence.pointer
-                this.Element_Pointer = new ElementDefinitionInfo
-                {
-                    Name = "Element_Pointer",
-                    Path= "MolecularSequence.pointer",
-                    Id = "MolecularSequence.pointer",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/MolecularSequence"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Pointer = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Pointer",                                                                                               // MakerGen.cs:236
+                    Path= "MolecularSequence.pointer",                                                                                      // MakerGen.cs:237
+                    Id = "MolecularSequence.pointer",                                                                                       // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/MolecularSequence"                                                 // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 59. MolecularSequence.structureVariant
-                this.Element_StructureVariant = new ElementDefinitionInfo
-                {
-                    Name = "Element_StructureVariant",
-                    Path= "MolecularSequence.structureVariant",
-                    Id = "MolecularSequence.structureVariant",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_StructureVariant
-                        {
-                        }
-                    }
-                };
-            }
-            this.Name = "MolecularSequence";
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/MolecularSequence";
-        }
-    }
-}
+                this.Element_StructureVariant = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_StructureVariant",                                                                                      // MakerGen.cs:236
+                    Path= "MolecularSequence.structureVariant",                                                                             // MakerGen.cs:237
+                    Id = "MolecularSequence.structureVariant",                                                                              // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_StructureVariant                                                                                           // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            this.Name = "MolecularSequence";                                                                                                // MakerGen.cs:468
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/MolecularSequence";                                                         // MakerGen.cs:469
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:449

@@ -1,13 +1,13 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Resource
-{
-    #region Json
-    #if NEVER
+using System;                                                                                                                               // MakerGen.cs:432
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:433
+using System.IO;                                                                                                                            // MakerGen.cs:434
+using System.Linq;                                                                                                                          // MakerGen.cs:435
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:436
+                                                                                                                                            // MakerGen.cs:437
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:438
+{                                                                                                                                           // MakerGen.cs:439
+    #region Json                                                                                                                            // MakerGen.cs:440
+    #if NEVER                                                                                                                               // MakerGen.cs:441
     {
       "resourceType": "StructureDefinition",
       "id": "RiskEvidenceSynthesis",
@@ -901,1150 +901,1150 @@ namespace FhirKhit.Maker.Common.Resource
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:444
     /// <summary>
     /// Fhir resource 'RiskEvidenceSynthesis'
     /// </summary>
     // 0. RiskEvidenceSynthesis
-    public partial class Resource_RiskEvidenceSynthesis : FhirKhit.Maker.Common.Resource.Resource_DomainResource
-    {
+    public partial class Resource_RiskEvidenceSynthesis : FhirKhit.Maker.Common.Resource.Resource_DomainResource                            // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 29. RiskEvidenceSynthesis.sampleSize
-        public partial class Type_SampleSize : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_SampleSize : FhirKhit.Maker.Common.Complex.ComplexBase                                                    // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 30. RiskEvidenceSynthesis.sampleSize.description
-            public ElementDefinitionInfo Element_Description;
+            public ElementDefinitionInfo Element_Description;                                                                               // MakerGen.cs:217
             // 31. RiskEvidenceSynthesis.sampleSize.numberOfStudies
-            public ElementDefinitionInfo Element_NumberOfStudies;
+            public ElementDefinitionInfo Element_NumberOfStudies;                                                                           // MakerGen.cs:217
             // 32. RiskEvidenceSynthesis.sampleSize.numberOfParticipants
-            public ElementDefinitionInfo Element_NumberOfParticipants;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "RiskEvidenceSynthesis.sampleSize",
-                    ElementId = "RiskEvidenceSynthesis.sampleSize"
-                });
-                Element_Description.Write(sDef);
-                Element_NumberOfStudies.Write(sDef);
-                Element_NumberOfParticipants.Write(sDef);
-            }
-            
-            public Type_SampleSize()
-            {
-                {
+            public ElementDefinitionInfo Element_NumberOfParticipants;                                                                      // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "RiskEvidenceSynthesis.sampleSize",                                                                              // MakerGen.cs:393
+                    ElementId = "RiskEvidenceSynthesis.sampleSize"                                                                          // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Description.Write(sDef);                                                                                            // MakerGen.cs:221
+                Element_NumberOfStudies.Write(sDef);                                                                                        // MakerGen.cs:221
+                Element_NumberOfParticipants.Write(sDef);                                                                                   // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_SampleSize()                                                                                                        // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 30. RiskEvidenceSynthesis.sampleSize.description
-                    this.Element_Description = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Description",
-                        Path= "RiskEvidenceSynthesis.sampleSize.description",
-                        Id = "RiskEvidenceSynthesis.sampleSize.description",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Description",                                                                                       // MakerGen.cs:236
+                        Path= "RiskEvidenceSynthesis.sampleSize.description",                                                               // MakerGen.cs:237
+                        Id = "RiskEvidenceSynthesis.sampleSize.description",                                                                // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 31. RiskEvidenceSynthesis.sampleSize.numberOfStudies
-                    this.Element_NumberOfStudies = new ElementDefinitionInfo
-                    {
-                        Name = "Element_NumberOfStudies",
-                        Path= "RiskEvidenceSynthesis.sampleSize.numberOfStudies",
-                        Id = "RiskEvidenceSynthesis.sampleSize.numberOfStudies",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_NumberOfStudies = new ElementDefinitionInfo                                                                // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_NumberOfStudies",                                                                                   // MakerGen.cs:236
+                        Path= "RiskEvidenceSynthesis.sampleSize.numberOfStudies",                                                           // MakerGen.cs:237
+                        Id = "RiskEvidenceSynthesis.sampleSize.numberOfStudies",                                                            // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                           // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 32. RiskEvidenceSynthesis.sampleSize.numberOfParticipants
-                    this.Element_NumberOfParticipants = new ElementDefinitionInfo
-                    {
-                        Name = "Element_NumberOfParticipants",
-                        Path= "RiskEvidenceSynthesis.sampleSize.numberOfParticipants",
-                        Id = "RiskEvidenceSynthesis.sampleSize.numberOfParticipants",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_NumberOfParticipants = new ElementDefinitionInfo                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_NumberOfParticipants",                                                                              // MakerGen.cs:236
+                        Path= "RiskEvidenceSynthesis.sampleSize.numberOfParticipants",                                                      // MakerGen.cs:237
+                        Id = "RiskEvidenceSynthesis.sampleSize.numberOfParticipants",                                                       // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                           // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 33. RiskEvidenceSynthesis.riskEstimate
-        public partial class Type_RiskEstimate : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_RiskEstimate : FhirKhit.Maker.Common.Complex.ComplexBase                                                  // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 40. RiskEvidenceSynthesis.riskEstimate.precisionEstimate
-            public partial class Type_PrecisionEstimate : FhirKhit.Maker.Common.Complex.ComplexBase
-            {
+            public partial class Type_PrecisionEstimate : FhirKhit.Maker.Common.Complex.ComplexBase                                         // MakerGen.cs:381
+            {                                                                                                                               // MakerGen.cs:382
                 // 41. RiskEvidenceSynthesis.riskEstimate.precisionEstimate.type
-                public ElementDefinitionInfo Element_Type;
+                public ElementDefinitionInfo Element_Type;                                                                                  // MakerGen.cs:217
                 // 42. RiskEvidenceSynthesis.riskEstimate.precisionEstimate.level
-                public ElementDefinitionInfo Element_Level;
+                public ElementDefinitionInfo Element_Level;                                                                                 // MakerGen.cs:217
                 // 43. RiskEvidenceSynthesis.riskEstimate.precisionEstimate.from
-                public ElementDefinitionInfo Element_From;
+                public ElementDefinitionInfo Element_From;                                                                                  // MakerGen.cs:217
                 // 44. RiskEvidenceSynthesis.riskEstimate.precisionEstimate.to
-                public ElementDefinitionInfo Element_To;
-                
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                {
-                    base.Write(sDef);
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                    {
-                        Path = "RiskEvidenceSynthesis.riskEstimate.precisionEstimate",
-                        ElementId = "RiskEvidenceSynthesis.riskEstimate.precisionEstimate"
-                    });
-                    Element_Type.Write(sDef);
-                    Element_Level.Write(sDef);
-                    Element_From.Write(sDef);
-                    Element_To.Write(sDef);
-                }
-                
-                public Type_PrecisionEstimate()
-                {
-                    {
+                public ElementDefinitionInfo Element_To;                                                                                    // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:389
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:390
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:391
+                    {                                                                                                                       // MakerGen.cs:392
+                        Path = "RiskEvidenceSynthesis.riskEstimate.precisionEstimate",                                                      // MakerGen.cs:393
+                        ElementId = "RiskEvidenceSynthesis.riskEstimate.precisionEstimate"                                                  // MakerGen.cs:394
+                    });                                                                                                                     // MakerGen.cs:395
+                    Element_Type.Write(sDef);                                                                                               // MakerGen.cs:221
+                    Element_Level.Write(sDef);                                                                                              // MakerGen.cs:221
+                    Element_From.Write(sDef);                                                                                               // MakerGen.cs:221
+                    Element_To.Write(sDef);                                                                                                 // MakerGen.cs:221
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                public Type_PrecisionEstimate()                                                                                             // MakerGen.cs:400
+                {                                                                                                                           // MakerGen.cs:401
+                    {                                                                                                                       // MakerGen.cs:232
                         // 41. RiskEvidenceSynthesis.riskEstimate.precisionEstimate.type
-                        this.Element_Type = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Type",
-                            Path= "RiskEvidenceSynthesis.riskEstimate.precisionEstimate.type",
-                            Id = "RiskEvidenceSynthesis.riskEstimate.precisionEstimate.type",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Type = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Type",                                                                                          // MakerGen.cs:236
+                            Path= "RiskEvidenceSynthesis.riskEstimate.precisionEstimate.type",                                              // MakerGen.cs:237
+                            Id = "RiskEvidenceSynthesis.riskEstimate.precisionEstimate.type",                                               // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 42. RiskEvidenceSynthesis.riskEstimate.precisionEstimate.level
-                        this.Element_Level = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Level",
-                            Path= "RiskEvidenceSynthesis.riskEstimate.precisionEstimate.level",
-                            Id = "RiskEvidenceSynthesis.riskEstimate.precisionEstimate.level",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Level = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Level",                                                                                         // MakerGen.cs:236
+                            Path= "RiskEvidenceSynthesis.riskEstimate.precisionEstimate.level",                                             // MakerGen.cs:237
+                            Id = "RiskEvidenceSynthesis.riskEstimate.precisionEstimate.level",                                              // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                       // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 43. RiskEvidenceSynthesis.riskEstimate.precisionEstimate.from
-                        this.Element_From = new ElementDefinitionInfo
-                        {
-                            Name = "Element_From",
-                            Path= "RiskEvidenceSynthesis.riskEstimate.precisionEstimate.from",
-                            Id = "RiskEvidenceSynthesis.riskEstimate.precisionEstimate.from",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_From = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_From",                                                                                          // MakerGen.cs:236
+                            Path= "RiskEvidenceSynthesis.riskEstimate.precisionEstimate.from",                                              // MakerGen.cs:237
+                            Id = "RiskEvidenceSynthesis.riskEstimate.precisionEstimate.from",                                               // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                       // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 44. RiskEvidenceSynthesis.riskEstimate.precisionEstimate.to
-                        this.Element_To = new ElementDefinitionInfo
-                        {
-                            Name = "Element_To",
-                            Path= "RiskEvidenceSynthesis.riskEstimate.precisionEstimate.to",
-                            Id = "RiskEvidenceSynthesis.riskEstimate.precisionEstimate.to",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
-                                {
-                                }
-                            }
-                        };
-                    }
-                }
-            }
+                        this.Element_To = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_To",                                                                                            // MakerGen.cs:236
+                            Path= "RiskEvidenceSynthesis.riskEstimate.precisionEstimate.to",                                                // MakerGen.cs:237
+                            Id = "RiskEvidenceSynthesis.riskEstimate.precisionEstimate.to",                                                 // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                       // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                }                                                                                                                           // MakerGen.cs:403
+            }                                                                                                                               // MakerGen.cs:405
             // 34. RiskEvidenceSynthesis.riskEstimate.description
-            public ElementDefinitionInfo Element_Description;
+            public ElementDefinitionInfo Element_Description;                                                                               // MakerGen.cs:217
             // 35. RiskEvidenceSynthesis.riskEstimate.type
-            public ElementDefinitionInfo Element_Type;
+            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:217
             // 36. RiskEvidenceSynthesis.riskEstimate.value
-            public ElementDefinitionInfo Element_Value;
+            public ElementDefinitionInfo Element_Value;                                                                                     // MakerGen.cs:217
             // 37. RiskEvidenceSynthesis.riskEstimate.unitOfMeasure
-            public ElementDefinitionInfo Element_UnitOfMeasure;
+            public ElementDefinitionInfo Element_UnitOfMeasure;                                                                             // MakerGen.cs:217
             // 38. RiskEvidenceSynthesis.riskEstimate.denominatorCount
-            public ElementDefinitionInfo Element_DenominatorCount;
+            public ElementDefinitionInfo Element_DenominatorCount;                                                                          // MakerGen.cs:217
             // 39. RiskEvidenceSynthesis.riskEstimate.numeratorCount
-            public ElementDefinitionInfo Element_NumeratorCount;
+            public ElementDefinitionInfo Element_NumeratorCount;                                                                            // MakerGen.cs:217
             // 40. RiskEvidenceSynthesis.riskEstimate.precisionEstimate
-            public ElementDefinitionInfo Element_PrecisionEstimate;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "RiskEvidenceSynthesis.riskEstimate",
-                    ElementId = "RiskEvidenceSynthesis.riskEstimate"
-                });
-                Element_Description.Write(sDef);
-                Element_Type.Write(sDef);
-                Element_Value.Write(sDef);
-                Element_UnitOfMeasure.Write(sDef);
-                Element_DenominatorCount.Write(sDef);
-                Element_NumeratorCount.Write(sDef);
-                Element_PrecisionEstimate.Write(sDef);
-            }
-            
-            public Type_RiskEstimate()
-            {
-                {
+            public ElementDefinitionInfo Element_PrecisionEstimate;                                                                         // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "RiskEvidenceSynthesis.riskEstimate",                                                                            // MakerGen.cs:393
+                    ElementId = "RiskEvidenceSynthesis.riskEstimate"                                                                        // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Description.Write(sDef);                                                                                            // MakerGen.cs:221
+                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Value.Write(sDef);                                                                                                  // MakerGen.cs:221
+                Element_UnitOfMeasure.Write(sDef);                                                                                          // MakerGen.cs:221
+                Element_DenominatorCount.Write(sDef);                                                                                       // MakerGen.cs:221
+                Element_NumeratorCount.Write(sDef);                                                                                         // MakerGen.cs:221
+                Element_PrecisionEstimate.Write(sDef);                                                                                      // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_RiskEstimate()                                                                                                      // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 34. RiskEvidenceSynthesis.riskEstimate.description
-                    this.Element_Description = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Description",
-                        Path= "RiskEvidenceSynthesis.riskEstimate.description",
-                        Id = "RiskEvidenceSynthesis.riskEstimate.description",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Description",                                                                                       // MakerGen.cs:236
+                        Path= "RiskEvidenceSynthesis.riskEstimate.description",                                                             // MakerGen.cs:237
+                        Id = "RiskEvidenceSynthesis.riskEstimate.description",                                                              // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 35. RiskEvidenceSynthesis.riskEstimate.type
-                    this.Element_Type = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Type",
-                        Path= "RiskEvidenceSynthesis.riskEstimate.type",
-                        Id = "RiskEvidenceSynthesis.riskEstimate.type",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Type",                                                                                              // MakerGen.cs:236
+                        Path= "RiskEvidenceSynthesis.riskEstimate.type",                                                                    // MakerGen.cs:237
+                        Id = "RiskEvidenceSynthesis.riskEstimate.type",                                                                     // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 36. RiskEvidenceSynthesis.riskEstimate.value
-                    this.Element_Value = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Value",
-                        Path= "RiskEvidenceSynthesis.riskEstimate.value",
-                        Id = "RiskEvidenceSynthesis.riskEstimate.value",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Value = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Value",                                                                                             // MakerGen.cs:236
+                        Path= "RiskEvidenceSynthesis.riskEstimate.value",                                                                   // MakerGen.cs:237
+                        Id = "RiskEvidenceSynthesis.riskEstimate.value",                                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                           // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 37. RiskEvidenceSynthesis.riskEstimate.unitOfMeasure
-                    this.Element_UnitOfMeasure = new ElementDefinitionInfo
-                    {
-                        Name = "Element_UnitOfMeasure",
-                        Path= "RiskEvidenceSynthesis.riskEstimate.unitOfMeasure",
-                        Id = "RiskEvidenceSynthesis.riskEstimate.unitOfMeasure",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_UnitOfMeasure = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_UnitOfMeasure",                                                                                     // MakerGen.cs:236
+                        Path= "RiskEvidenceSynthesis.riskEstimate.unitOfMeasure",                                                           // MakerGen.cs:237
+                        Id = "RiskEvidenceSynthesis.riskEstimate.unitOfMeasure",                                                            // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 38. RiskEvidenceSynthesis.riskEstimate.denominatorCount
-                    this.Element_DenominatorCount = new ElementDefinitionInfo
-                    {
-                        Name = "Element_DenominatorCount",
-                        Path= "RiskEvidenceSynthesis.riskEstimate.denominatorCount",
-                        Id = "RiskEvidenceSynthesis.riskEstimate.denominatorCount",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_DenominatorCount = new ElementDefinitionInfo                                                               // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_DenominatorCount",                                                                                  // MakerGen.cs:236
+                        Path= "RiskEvidenceSynthesis.riskEstimate.denominatorCount",                                                        // MakerGen.cs:237
+                        Id = "RiskEvidenceSynthesis.riskEstimate.denominatorCount",                                                         // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                           // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 39. RiskEvidenceSynthesis.riskEstimate.numeratorCount
-                    this.Element_NumeratorCount = new ElementDefinitionInfo
-                    {
-                        Name = "Element_NumeratorCount",
-                        Path= "RiskEvidenceSynthesis.riskEstimate.numeratorCount",
-                        Id = "RiskEvidenceSynthesis.riskEstimate.numeratorCount",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_NumeratorCount = new ElementDefinitionInfo                                                                 // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_NumeratorCount",                                                                                    // MakerGen.cs:236
+                        Path= "RiskEvidenceSynthesis.riskEstimate.numeratorCount",                                                          // MakerGen.cs:237
+                        Id = "RiskEvidenceSynthesis.riskEstimate.numeratorCount",                                                           // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                           // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 40. RiskEvidenceSynthesis.riskEstimate.precisionEstimate
-                    this.Element_PrecisionEstimate = new ElementDefinitionInfo
-                    {
-                        Name = "Element_PrecisionEstimate",
-                        Path= "RiskEvidenceSynthesis.riskEstimate.precisionEstimate",
-                        Id = "RiskEvidenceSynthesis.riskEstimate.precisionEstimate",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new Type_PrecisionEstimate
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_PrecisionEstimate = new ElementDefinitionInfo                                                              // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_PrecisionEstimate",                                                                                 // MakerGen.cs:236
+                        Path= "RiskEvidenceSynthesis.riskEstimate.precisionEstimate",                                                       // MakerGen.cs:237
+                        Id = "RiskEvidenceSynthesis.riskEstimate.precisionEstimate",                                                        // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new Type_PrecisionEstimate                                                                                      // MakerGen.cs:260
+                            {                                                                                                               // MakerGen.cs:261
+                            }                                                                                                               // MakerGen.cs:262
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 45. RiskEvidenceSynthesis.certainty
-        public partial class Type_Certainty : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Certainty : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 48. RiskEvidenceSynthesis.certainty.certaintySubcomponent
-            public partial class Type_CertaintySubcomponent : FhirKhit.Maker.Common.Complex.ComplexBase
-            {
+            public partial class Type_CertaintySubcomponent : FhirKhit.Maker.Common.Complex.ComplexBase                                     // MakerGen.cs:381
+            {                                                                                                                               // MakerGen.cs:382
                 // 49. RiskEvidenceSynthesis.certainty.certaintySubcomponent.type
-                public ElementDefinitionInfo Element_Type;
+                public ElementDefinitionInfo Element_Type;                                                                                  // MakerGen.cs:217
                 // 50. RiskEvidenceSynthesis.certainty.certaintySubcomponent.rating
-                public ElementDefinitionInfo Element_Rating;
+                public ElementDefinitionInfo Element_Rating;                                                                                // MakerGen.cs:217
                 // 51. RiskEvidenceSynthesis.certainty.certaintySubcomponent.note
-                public ElementDefinitionInfo Element_Note;
-                
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                {
-                    base.Write(sDef);
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                    {
-                        Path = "RiskEvidenceSynthesis.certainty.certaintySubcomponent",
-                        ElementId = "RiskEvidenceSynthesis.certainty.certaintySubcomponent"
-                    });
-                    Element_Type.Write(sDef);
-                    Element_Rating.Write(sDef);
-                    Element_Note.Write(sDef);
-                }
-                
-                public Type_CertaintySubcomponent()
-                {
-                    {
+                public ElementDefinitionInfo Element_Note;                                                                                  // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:389
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:390
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:391
+                    {                                                                                                                       // MakerGen.cs:392
+                        Path = "RiskEvidenceSynthesis.certainty.certaintySubcomponent",                                                     // MakerGen.cs:393
+                        ElementId = "RiskEvidenceSynthesis.certainty.certaintySubcomponent"                                                 // MakerGen.cs:394
+                    });                                                                                                                     // MakerGen.cs:395
+                    Element_Type.Write(sDef);                                                                                               // MakerGen.cs:221
+                    Element_Rating.Write(sDef);                                                                                             // MakerGen.cs:221
+                    Element_Note.Write(sDef);                                                                                               // MakerGen.cs:221
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                public Type_CertaintySubcomponent()                                                                                         // MakerGen.cs:400
+                {                                                                                                                           // MakerGen.cs:401
+                    {                                                                                                                       // MakerGen.cs:232
                         // 49. RiskEvidenceSynthesis.certainty.certaintySubcomponent.type
-                        this.Element_Type = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Type",
-                            Path= "RiskEvidenceSynthesis.certainty.certaintySubcomponent.type",
-                            Id = "RiskEvidenceSynthesis.certainty.certaintySubcomponent.type",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Type = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Type",                                                                                          // MakerGen.cs:236
+                            Path= "RiskEvidenceSynthesis.certainty.certaintySubcomponent.type",                                             // MakerGen.cs:237
+                            Id = "RiskEvidenceSynthesis.certainty.certaintySubcomponent.type",                                              // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 50. RiskEvidenceSynthesis.certainty.certaintySubcomponent.rating
-                        this.Element_Rating = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Rating",
-                            Path= "RiskEvidenceSynthesis.certainty.certaintySubcomponent.rating",
-                            Id = "RiskEvidenceSynthesis.certainty.certaintySubcomponent.rating",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Rating = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Rating",                                                                                        // MakerGen.cs:236
+                            Path= "RiskEvidenceSynthesis.certainty.certaintySubcomponent.rating",                                           // MakerGen.cs:237
+                            Id = "RiskEvidenceSynthesis.certainty.certaintySubcomponent.rating",                                            // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 51. RiskEvidenceSynthesis.certainty.certaintySubcomponent.note
-                        this.Element_Note = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Note",
-                            Path= "RiskEvidenceSynthesis.certainty.certaintySubcomponent.note",
-                            Id = "RiskEvidenceSynthesis.certainty.certaintySubcomponent.note",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Annotation
-                                {
-                                }
-                            }
-                        };
-                    }
-                }
-            }
+                        this.Element_Note = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Note",                                                                                          // MakerGen.cs:236
+                            Path= "RiskEvidenceSynthesis.certainty.certaintySubcomponent.note",                                             // MakerGen.cs:237
+                            Id = "RiskEvidenceSynthesis.certainty.certaintySubcomponent.note",                                              // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Annotation                                                           // MakerGen.cs:356
+                                {                                                                                                           // MakerGen.cs:357
+                                }                                                                                                           // MakerGen.cs:358
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                }                                                                                                                           // MakerGen.cs:403
+            }                                                                                                                               // MakerGen.cs:405
             // 46. RiskEvidenceSynthesis.certainty.rating
-            public ElementDefinitionInfo Element_Rating;
+            public ElementDefinitionInfo Element_Rating;                                                                                    // MakerGen.cs:217
             // 47. RiskEvidenceSynthesis.certainty.note
-            public ElementDefinitionInfo Element_Note;
+            public ElementDefinitionInfo Element_Note;                                                                                      // MakerGen.cs:217
             // 48. RiskEvidenceSynthesis.certainty.certaintySubcomponent
-            public ElementDefinitionInfo Element_CertaintySubcomponent;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "RiskEvidenceSynthesis.certainty",
-                    ElementId = "RiskEvidenceSynthesis.certainty"
-                });
-                Element_Rating.Write(sDef);
-                Element_Note.Write(sDef);
-                Element_CertaintySubcomponent.Write(sDef);
-            }
-            
-            public Type_Certainty()
-            {
-                {
+            public ElementDefinitionInfo Element_CertaintySubcomponent;                                                                     // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "RiskEvidenceSynthesis.certainty",                                                                               // MakerGen.cs:393
+                    ElementId = "RiskEvidenceSynthesis.certainty"                                                                           // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Rating.Write(sDef);                                                                                                 // MakerGen.cs:221
+                Element_Note.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_CertaintySubcomponent.Write(sDef);                                                                                  // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Certainty()                                                                                                         // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 46. RiskEvidenceSynthesis.certainty.rating
-                    this.Element_Rating = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Rating",
-                        Path= "RiskEvidenceSynthesis.certainty.rating",
-                        Id = "RiskEvidenceSynthesis.certainty.rating",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Rating = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Rating",                                                                                            // MakerGen.cs:236
+                        Path= "RiskEvidenceSynthesis.certainty.rating",                                                                     // MakerGen.cs:237
+                        Id = "RiskEvidenceSynthesis.certainty.rating",                                                                      // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 47. RiskEvidenceSynthesis.certainty.note
-                    this.Element_Note = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Note",
-                        Path= "RiskEvidenceSynthesis.certainty.note",
-                        Id = "RiskEvidenceSynthesis.certainty.note",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Annotation
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Note = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Note",                                                                                              // MakerGen.cs:236
+                        Path= "RiskEvidenceSynthesis.certainty.note",                                                                       // MakerGen.cs:237
+                        Id = "RiskEvidenceSynthesis.certainty.note",                                                                        // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Annotation                                                               // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 48. RiskEvidenceSynthesis.certainty.certaintySubcomponent
-                    this.Element_CertaintySubcomponent = new ElementDefinitionInfo
-                    {
-                        Name = "Element_CertaintySubcomponent",
-                        Path= "RiskEvidenceSynthesis.certainty.certaintySubcomponent",
-                        Id = "RiskEvidenceSynthesis.certainty.certaintySubcomponent",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new Type_CertaintySubcomponent
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_CertaintySubcomponent = new ElementDefinitionInfo                                                          // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_CertaintySubcomponent",                                                                             // MakerGen.cs:236
+                        Path= "RiskEvidenceSynthesis.certainty.certaintySubcomponent",                                                      // MakerGen.cs:237
+                        Id = "RiskEvidenceSynthesis.certainty.certaintySubcomponent",                                                       // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new Type_CertaintySubcomponent                                                                                  // MakerGen.cs:260
+                            {                                                                                                               // MakerGen.cs:261
+                            }                                                                                                               // MakerGen.cs:262
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 1. RiskEvidenceSynthesis.url
-        public ElementDefinitionInfo Element_Url;
+        public ElementDefinitionInfo Element_Url;                                                                                           // MakerGen.cs:217
         // 2. RiskEvidenceSynthesis.identifier
-        public ElementDefinitionInfo Element_Identifier;
+        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:217
         // 3. RiskEvidenceSynthesis.version
-        public ElementDefinitionInfo Element_Version;
+        public ElementDefinitionInfo Element_Version;                                                                                       // MakerGen.cs:217
         // 4. RiskEvidenceSynthesis.name
-        public ElementDefinitionInfo Element_Name;
+        public ElementDefinitionInfo Element_Name;                                                                                          // MakerGen.cs:217
         // 5. RiskEvidenceSynthesis.title
-        public ElementDefinitionInfo Element_Title;
+        public ElementDefinitionInfo Element_Title;                                                                                         // MakerGen.cs:217
         // 6. RiskEvidenceSynthesis.status
-        public ElementDefinitionInfo Element_Status;
+        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:217
         // 7. RiskEvidenceSynthesis.date
-        public ElementDefinitionInfo Element_Date;
+        public ElementDefinitionInfo Element_Date;                                                                                          // MakerGen.cs:217
         // 8. RiskEvidenceSynthesis.publisher
-        public ElementDefinitionInfo Element_Publisher;
+        public ElementDefinitionInfo Element_Publisher;                                                                                     // MakerGen.cs:217
         // 9. RiskEvidenceSynthesis.contact
-        public ElementDefinitionInfo Element_Contact;
+        public ElementDefinitionInfo Element_Contact;                                                                                       // MakerGen.cs:217
         // 10. RiskEvidenceSynthesis.description
-        public ElementDefinitionInfo Element_Description;
+        public ElementDefinitionInfo Element_Description;                                                                                   // MakerGen.cs:217
         // 11. RiskEvidenceSynthesis.note
-        public ElementDefinitionInfo Element_Note;
+        public ElementDefinitionInfo Element_Note;                                                                                          // MakerGen.cs:217
         // 12. RiskEvidenceSynthesis.useContext
-        public ElementDefinitionInfo Element_UseContext;
+        public ElementDefinitionInfo Element_UseContext;                                                                                    // MakerGen.cs:217
         // 13. RiskEvidenceSynthesis.jurisdiction
-        public ElementDefinitionInfo Element_Jurisdiction;
+        public ElementDefinitionInfo Element_Jurisdiction;                                                                                  // MakerGen.cs:217
         // 14. RiskEvidenceSynthesis.copyright
-        public ElementDefinitionInfo Element_Copyright;
+        public ElementDefinitionInfo Element_Copyright;                                                                                     // MakerGen.cs:217
         // 15. RiskEvidenceSynthesis.approvalDate
-        public ElementDefinitionInfo Element_ApprovalDate;
+        public ElementDefinitionInfo Element_ApprovalDate;                                                                                  // MakerGen.cs:217
         // 16. RiskEvidenceSynthesis.lastReviewDate
-        public ElementDefinitionInfo Element_LastReviewDate;
+        public ElementDefinitionInfo Element_LastReviewDate;                                                                                // MakerGen.cs:217
         // 17. RiskEvidenceSynthesis.effectivePeriod
-        public ElementDefinitionInfo Element_EffectivePeriod;
+        public ElementDefinitionInfo Element_EffectivePeriod;                                                                               // MakerGen.cs:217
         // 18. RiskEvidenceSynthesis.topic
-        public ElementDefinitionInfo Element_Topic;
+        public ElementDefinitionInfo Element_Topic;                                                                                         // MakerGen.cs:217
         // 19. RiskEvidenceSynthesis.author
-        public ElementDefinitionInfo Element_Author;
+        public ElementDefinitionInfo Element_Author;                                                                                        // MakerGen.cs:217
         // 20. RiskEvidenceSynthesis.editor
-        public ElementDefinitionInfo Element_Editor;
+        public ElementDefinitionInfo Element_Editor;                                                                                        // MakerGen.cs:217
         // 21. RiskEvidenceSynthesis.reviewer
-        public ElementDefinitionInfo Element_Reviewer;
+        public ElementDefinitionInfo Element_Reviewer;                                                                                      // MakerGen.cs:217
         // 22. RiskEvidenceSynthesis.endorser
-        public ElementDefinitionInfo Element_Endorser;
+        public ElementDefinitionInfo Element_Endorser;                                                                                      // MakerGen.cs:217
         // 23. RiskEvidenceSynthesis.relatedArtifact
-        public ElementDefinitionInfo Element_RelatedArtifact;
+        public ElementDefinitionInfo Element_RelatedArtifact;                                                                               // MakerGen.cs:217
         // 24. RiskEvidenceSynthesis.synthesisType
-        public ElementDefinitionInfo Element_SynthesisType;
+        public ElementDefinitionInfo Element_SynthesisType;                                                                                 // MakerGen.cs:217
         // 25. RiskEvidenceSynthesis.studyType
-        public ElementDefinitionInfo Element_StudyType;
+        public ElementDefinitionInfo Element_StudyType;                                                                                     // MakerGen.cs:217
         // 26. RiskEvidenceSynthesis.population
-        public ElementDefinitionInfo Element_Population;
+        public ElementDefinitionInfo Element_Population;                                                                                    // MakerGen.cs:217
         // 27. RiskEvidenceSynthesis.exposure
-        public ElementDefinitionInfo Element_Exposure;
+        public ElementDefinitionInfo Element_Exposure;                                                                                      // MakerGen.cs:217
         // 28. RiskEvidenceSynthesis.outcome
-        public ElementDefinitionInfo Element_Outcome;
+        public ElementDefinitionInfo Element_Outcome;                                                                                       // MakerGen.cs:217
         // 29. RiskEvidenceSynthesis.sampleSize
-        public ElementDefinitionInfo Element_SampleSize;
+        public ElementDefinitionInfo Element_SampleSize;                                                                                    // MakerGen.cs:217
         // 33. RiskEvidenceSynthesis.riskEstimate
-        public ElementDefinitionInfo Element_RiskEstimate;
+        public ElementDefinitionInfo Element_RiskEstimate;                                                                                  // MakerGen.cs:217
         // 45. RiskEvidenceSynthesis.certainty
-        public ElementDefinitionInfo Element_Certainty;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "RiskEvidenceSynthesis",
-                ElementId = "RiskEvidenceSynthesis"
-            });
-            Element_Url.Write(sDef);
-            Element_Identifier.Write(sDef);
-            Element_Version.Write(sDef);
-            Element_Name.Write(sDef);
-            Element_Title.Write(sDef);
-            Element_Status.Write(sDef);
-            Element_Date.Write(sDef);
-            Element_Publisher.Write(sDef);
-            Element_Contact.Write(sDef);
-            Element_Description.Write(sDef);
-            Element_Note.Write(sDef);
-            Element_UseContext.Write(sDef);
-            Element_Jurisdiction.Write(sDef);
-            Element_Copyright.Write(sDef);
-            Element_ApprovalDate.Write(sDef);
-            Element_LastReviewDate.Write(sDef);
-            Element_EffectivePeriod.Write(sDef);
-            Element_Topic.Write(sDef);
-            Element_Author.Write(sDef);
-            Element_Editor.Write(sDef);
-            Element_Reviewer.Write(sDef);
-            Element_Endorser.Write(sDef);
-            Element_RelatedArtifact.Write(sDef);
-            Element_SynthesisType.Write(sDef);
-            Element_StudyType.Write(sDef);
-            Element_Population.Write(sDef);
-            Element_Exposure.Write(sDef);
-            Element_Outcome.Write(sDef);
-            Element_SampleSize.Write(sDef);
-            Element_RiskEstimate.Write(sDef);
-            Element_Certainty.Write(sDef);
-        }
-        
-        public Resource_RiskEvidenceSynthesis()
-        {
-            {
+        public ElementDefinitionInfo Element_Certainty;                                                                                     // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "RiskEvidenceSynthesis",                                                                                             // MakerGen.cs:393
+                ElementId = "RiskEvidenceSynthesis"                                                                                         // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Url.Write(sDef);                                                                                                        // MakerGen.cs:221
+            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Version.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Name.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Title.Write(sDef);                                                                                                      // MakerGen.cs:221
+            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Date.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Publisher.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_Contact.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Description.Write(sDef);                                                                                                // MakerGen.cs:221
+            Element_Note.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_UseContext.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Jurisdiction.Write(sDef);                                                                                               // MakerGen.cs:221
+            Element_Copyright.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_ApprovalDate.Write(sDef);                                                                                               // MakerGen.cs:221
+            Element_LastReviewDate.Write(sDef);                                                                                             // MakerGen.cs:221
+            Element_EffectivePeriod.Write(sDef);                                                                                            // MakerGen.cs:221
+            Element_Topic.Write(sDef);                                                                                                      // MakerGen.cs:221
+            Element_Author.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Editor.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Reviewer.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_Endorser.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_RelatedArtifact.Write(sDef);                                                                                            // MakerGen.cs:221
+            Element_SynthesisType.Write(sDef);                                                                                              // MakerGen.cs:221
+            Element_StudyType.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_Population.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Exposure.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_Outcome.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_SampleSize.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_RiskEstimate.Write(sDef);                                                                                               // MakerGen.cs:221
+            Element_Certainty.Write(sDef);                                                                                                  // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Resource_RiskEvidenceSynthesis()                                                                                             // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. RiskEvidenceSynthesis.url
-                this.Element_Url = new ElementDefinitionInfo
-                {
-                    Name = "Element_Url",
-                    Path= "RiskEvidenceSynthesis.url",
-                    Id = "RiskEvidenceSynthesis.url",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Url = new ElementDefinitionInfo                                                                                // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Url",                                                                                                   // MakerGen.cs:236
+                    Path= "RiskEvidenceSynthesis.url",                                                                                      // MakerGen.cs:237
+                    Id = "RiskEvidenceSynthesis.url",                                                                                       // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                                   // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. RiskEvidenceSynthesis.identifier
-                this.Element_Identifier = new ElementDefinitionInfo
-                {
-                    Name = "Element_Identifier",
-                    Path= "RiskEvidenceSynthesis.identifier",
-                    Id = "RiskEvidenceSynthesis.identifier",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:236
+                    Path= "RiskEvidenceSynthesis.identifier",                                                                               // MakerGen.cs:237
+                    Id = "RiskEvidenceSynthesis.identifier",                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 3. RiskEvidenceSynthesis.version
-                this.Element_Version = new ElementDefinitionInfo
-                {
-                    Name = "Element_Version",
-                    Path= "RiskEvidenceSynthesis.version",
-                    Id = "RiskEvidenceSynthesis.version",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Version = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Version",                                                                                               // MakerGen.cs:236
+                    Path= "RiskEvidenceSynthesis.version",                                                                                  // MakerGen.cs:237
+                    Id = "RiskEvidenceSynthesis.version",                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 4. RiskEvidenceSynthesis.name
-                this.Element_Name = new ElementDefinitionInfo
-                {
-                    Name = "Element_Name",
-                    Path= "RiskEvidenceSynthesis.name",
-                    Id = "RiskEvidenceSynthesis.name",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Name = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Name",                                                                                                  // MakerGen.cs:236
+                    Path= "RiskEvidenceSynthesis.name",                                                                                     // MakerGen.cs:237
+                    Id = "RiskEvidenceSynthesis.name",                                                                                      // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 5. RiskEvidenceSynthesis.title
-                this.Element_Title = new ElementDefinitionInfo
-                {
-                    Name = "Element_Title",
-                    Path= "RiskEvidenceSynthesis.title",
-                    Id = "RiskEvidenceSynthesis.title",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Title = new ElementDefinitionInfo                                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Title",                                                                                                 // MakerGen.cs:236
+                    Path= "RiskEvidenceSynthesis.title",                                                                                    // MakerGen.cs:237
+                    Id = "RiskEvidenceSynthesis.title",                                                                                     // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 6. RiskEvidenceSynthesis.status
-                this.Element_Status = new ElementDefinitionInfo
-                {
-                    Name = "Element_Status",
-                    Path= "RiskEvidenceSynthesis.status",
-                    Id = "RiskEvidenceSynthesis.status",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Status",                                                                                                // MakerGen.cs:236
+                    Path= "RiskEvidenceSynthesis.status",                                                                                   // MakerGen.cs:237
+                    Id = "RiskEvidenceSynthesis.status",                                                                                    // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 7. RiskEvidenceSynthesis.date
-                this.Element_Date = new ElementDefinitionInfo
-                {
-                    Name = "Element_Date",
-                    Path= "RiskEvidenceSynthesis.date",
-                    Id = "RiskEvidenceSynthesis.date",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Date = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Date",                                                                                                  // MakerGen.cs:236
+                    Path= "RiskEvidenceSynthesis.date",                                                                                     // MakerGen.cs:237
+                    Id = "RiskEvidenceSynthesis.date",                                                                                      // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 8. RiskEvidenceSynthesis.publisher
-                this.Element_Publisher = new ElementDefinitionInfo
-                {
-                    Name = "Element_Publisher",
-                    Path= "RiskEvidenceSynthesis.publisher",
-                    Id = "RiskEvidenceSynthesis.publisher",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Publisher = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Publisher",                                                                                             // MakerGen.cs:236
+                    Path= "RiskEvidenceSynthesis.publisher",                                                                                // MakerGen.cs:237
+                    Id = "RiskEvidenceSynthesis.publisher",                                                                                 // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 9. RiskEvidenceSynthesis.contact
-                this.Element_Contact = new ElementDefinitionInfo
-                {
-                    Name = "Element_Contact",
-                    Path= "RiskEvidenceSynthesis.contact",
-                    Id = "RiskEvidenceSynthesis.contact",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Contact = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Contact",                                                                                               // MakerGen.cs:236
+                    Path= "RiskEvidenceSynthesis.contact",                                                                                  // MakerGen.cs:237
+                    Id = "RiskEvidenceSynthesis.contact",                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                                // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 10. RiskEvidenceSynthesis.description
-                this.Element_Description = new ElementDefinitionInfo
-                {
-                    Name = "Element_Description",
-                    Path= "RiskEvidenceSynthesis.description",
-                    Id = "RiskEvidenceSynthesis.description",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Description = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Description",                                                                                           // MakerGen.cs:236
+                    Path= "RiskEvidenceSynthesis.description",                                                                              // MakerGen.cs:237
+                    Id = "RiskEvidenceSynthesis.description",                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 11. RiskEvidenceSynthesis.note
-                this.Element_Note = new ElementDefinitionInfo
-                {
-                    Name = "Element_Note",
-                    Path= "RiskEvidenceSynthesis.note",
-                    Id = "RiskEvidenceSynthesis.note",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Annotation
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Note = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Note",                                                                                                  // MakerGen.cs:236
+                    Path= "RiskEvidenceSynthesis.note",                                                                                     // MakerGen.cs:237
+                    Id = "RiskEvidenceSynthesis.note",                                                                                      // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Annotation                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 12. RiskEvidenceSynthesis.useContext
-                this.Element_UseContext = new ElementDefinitionInfo
-                {
-                    Name = "Element_UseContext",
-                    Path= "RiskEvidenceSynthesis.useContext",
-                    Id = "RiskEvidenceSynthesis.useContext",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_UsageContext
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_UseContext = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_UseContext",                                                                                            // MakerGen.cs:236
+                    Path= "RiskEvidenceSynthesis.useContext",                                                                               // MakerGen.cs:237
+                    Id = "RiskEvidenceSynthesis.useContext",                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_UsageContext                                                                 // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 13. RiskEvidenceSynthesis.jurisdiction
-                this.Element_Jurisdiction = new ElementDefinitionInfo
-                {
-                    Name = "Element_Jurisdiction",
-                    Path= "RiskEvidenceSynthesis.jurisdiction",
-                    Id = "RiskEvidenceSynthesis.jurisdiction",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Jurisdiction = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Jurisdiction",                                                                                          // MakerGen.cs:236
+                    Path= "RiskEvidenceSynthesis.jurisdiction",                                                                             // MakerGen.cs:237
+                    Id = "RiskEvidenceSynthesis.jurisdiction",                                                                              // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 14. RiskEvidenceSynthesis.copyright
-                this.Element_Copyright = new ElementDefinitionInfo
-                {
-                    Name = "Element_Copyright",
-                    Path= "RiskEvidenceSynthesis.copyright",
-                    Id = "RiskEvidenceSynthesis.copyright",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Copyright = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Copyright",                                                                                             // MakerGen.cs:236
+                    Path= "RiskEvidenceSynthesis.copyright",                                                                                // MakerGen.cs:237
+                    Id = "RiskEvidenceSynthesis.copyright",                                                                                 // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 15. RiskEvidenceSynthesis.approvalDate
-                this.Element_ApprovalDate = new ElementDefinitionInfo
-                {
-                    Name = "Element_ApprovalDate",
-                    Path= "RiskEvidenceSynthesis.approvalDate",
-                    Id = "RiskEvidenceSynthesis.approvalDate",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Date
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ApprovalDate = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ApprovalDate",                                                                                          // MakerGen.cs:236
+                    Path= "RiskEvidenceSynthesis.approvalDate",                                                                             // MakerGen.cs:237
+                    Id = "RiskEvidenceSynthesis.approvalDate",                                                                              // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Date                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 16. RiskEvidenceSynthesis.lastReviewDate
-                this.Element_LastReviewDate = new ElementDefinitionInfo
-                {
-                    Name = "Element_LastReviewDate",
-                    Path= "RiskEvidenceSynthesis.lastReviewDate",
-                    Id = "RiskEvidenceSynthesis.lastReviewDate",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Date
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_LastReviewDate = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_LastReviewDate",                                                                                        // MakerGen.cs:236
+                    Path= "RiskEvidenceSynthesis.lastReviewDate",                                                                           // MakerGen.cs:237
+                    Id = "RiskEvidenceSynthesis.lastReviewDate",                                                                            // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Date                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 17. RiskEvidenceSynthesis.effectivePeriod
-                this.Element_EffectivePeriod = new ElementDefinitionInfo
-                {
-                    Name = "Element_EffectivePeriod",
-                    Path= "RiskEvidenceSynthesis.effectivePeriod",
-                    Id = "RiskEvidenceSynthesis.effectivePeriod",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Period
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_EffectivePeriod = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_EffectivePeriod",                                                                                       // MakerGen.cs:236
+                    Path= "RiskEvidenceSynthesis.effectivePeriod",                                                                          // MakerGen.cs:237
+                    Id = "RiskEvidenceSynthesis.effectivePeriod",                                                                           // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Period                                                                       // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 18. RiskEvidenceSynthesis.topic
-                this.Element_Topic = new ElementDefinitionInfo
-                {
-                    Name = "Element_Topic",
-                    Path= "RiskEvidenceSynthesis.topic",
-                    Id = "RiskEvidenceSynthesis.topic",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Topic = new ElementDefinitionInfo                                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Topic",                                                                                                 // MakerGen.cs:236
+                    Path= "RiskEvidenceSynthesis.topic",                                                                                    // MakerGen.cs:237
+                    Id = "RiskEvidenceSynthesis.topic",                                                                                     // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 19. RiskEvidenceSynthesis.author
-                this.Element_Author = new ElementDefinitionInfo
-                {
-                    Name = "Element_Author",
-                    Path= "RiskEvidenceSynthesis.author",
-                    Id = "RiskEvidenceSynthesis.author",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Author = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Author",                                                                                                // MakerGen.cs:236
+                    Path= "RiskEvidenceSynthesis.author",                                                                                   // MakerGen.cs:237
+                    Id = "RiskEvidenceSynthesis.author",                                                                                    // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                                // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 20. RiskEvidenceSynthesis.editor
-                this.Element_Editor = new ElementDefinitionInfo
-                {
-                    Name = "Element_Editor",
-                    Path= "RiskEvidenceSynthesis.editor",
-                    Id = "RiskEvidenceSynthesis.editor",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Editor = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Editor",                                                                                                // MakerGen.cs:236
+                    Path= "RiskEvidenceSynthesis.editor",                                                                                   // MakerGen.cs:237
+                    Id = "RiskEvidenceSynthesis.editor",                                                                                    // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                                // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 21. RiskEvidenceSynthesis.reviewer
-                this.Element_Reviewer = new ElementDefinitionInfo
-                {
-                    Name = "Element_Reviewer",
-                    Path= "RiskEvidenceSynthesis.reviewer",
-                    Id = "RiskEvidenceSynthesis.reviewer",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Reviewer = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Reviewer",                                                                                              // MakerGen.cs:236
+                    Path= "RiskEvidenceSynthesis.reviewer",                                                                                 // MakerGen.cs:237
+                    Id = "RiskEvidenceSynthesis.reviewer",                                                                                  // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                                // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 22. RiskEvidenceSynthesis.endorser
-                this.Element_Endorser = new ElementDefinitionInfo
-                {
-                    Name = "Element_Endorser",
-                    Path= "RiskEvidenceSynthesis.endorser",
-                    Id = "RiskEvidenceSynthesis.endorser",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Endorser = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Endorser",                                                                                              // MakerGen.cs:236
+                    Path= "RiskEvidenceSynthesis.endorser",                                                                                 // MakerGen.cs:237
+                    Id = "RiskEvidenceSynthesis.endorser",                                                                                  // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                                // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 23. RiskEvidenceSynthesis.relatedArtifact
-                this.Element_RelatedArtifact = new ElementDefinitionInfo
-                {
-                    Name = "Element_RelatedArtifact",
-                    Path= "RiskEvidenceSynthesis.relatedArtifact",
-                    Id = "RiskEvidenceSynthesis.relatedArtifact",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_RelatedArtifact
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_RelatedArtifact = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_RelatedArtifact",                                                                                       // MakerGen.cs:236
+                    Path= "RiskEvidenceSynthesis.relatedArtifact",                                                                          // MakerGen.cs:237
+                    Id = "RiskEvidenceSynthesis.relatedArtifact",                                                                           // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_RelatedArtifact                                                              // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 24. RiskEvidenceSynthesis.synthesisType
-                this.Element_SynthesisType = new ElementDefinitionInfo
-                {
-                    Name = "Element_SynthesisType",
-                    Path= "RiskEvidenceSynthesis.synthesisType",
-                    Id = "RiskEvidenceSynthesis.synthesisType",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_SynthesisType = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_SynthesisType",                                                                                         // MakerGen.cs:236
+                    Path= "RiskEvidenceSynthesis.synthesisType",                                                                            // MakerGen.cs:237
+                    Id = "RiskEvidenceSynthesis.synthesisType",                                                                             // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 25. RiskEvidenceSynthesis.studyType
-                this.Element_StudyType = new ElementDefinitionInfo
-                {
-                    Name = "Element_StudyType",
-                    Path= "RiskEvidenceSynthesis.studyType",
-                    Id = "RiskEvidenceSynthesis.studyType",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_StudyType = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_StudyType",                                                                                             // MakerGen.cs:236
+                    Path= "RiskEvidenceSynthesis.studyType",                                                                                // MakerGen.cs:237
+                    Id = "RiskEvidenceSynthesis.studyType",                                                                                 // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 26. RiskEvidenceSynthesis.population
-                this.Element_Population = new ElementDefinitionInfo
-                {
-                    Name = "Element_Population",
-                    Path= "RiskEvidenceSynthesis.population",
-                    Id = "RiskEvidenceSynthesis.population",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/EvidenceVariable"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Population = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Population",                                                                                            // MakerGen.cs:236
+                    Path= "RiskEvidenceSynthesis.population",                                                                               // MakerGen.cs:237
+                    Id = "RiskEvidenceSynthesis.population",                                                                                // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/EvidenceVariable"                                                  // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 27. RiskEvidenceSynthesis.exposure
-                this.Element_Exposure = new ElementDefinitionInfo
-                {
-                    Name = "Element_Exposure",
-                    Path= "RiskEvidenceSynthesis.exposure",
-                    Id = "RiskEvidenceSynthesis.exposure",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/EvidenceVariable"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Exposure = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Exposure",                                                                                              // MakerGen.cs:236
+                    Path= "RiskEvidenceSynthesis.exposure",                                                                                 // MakerGen.cs:237
+                    Id = "RiskEvidenceSynthesis.exposure",                                                                                  // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/EvidenceVariable"                                                  // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 28. RiskEvidenceSynthesis.outcome
-                this.Element_Outcome = new ElementDefinitionInfo
-                {
-                    Name = "Element_Outcome",
-                    Path= "RiskEvidenceSynthesis.outcome",
-                    Id = "RiskEvidenceSynthesis.outcome",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/EvidenceVariable"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Outcome = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Outcome",                                                                                               // MakerGen.cs:236
+                    Path= "RiskEvidenceSynthesis.outcome",                                                                                  // MakerGen.cs:237
+                    Id = "RiskEvidenceSynthesis.outcome",                                                                                   // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/EvidenceVariable"                                                  // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 29. RiskEvidenceSynthesis.sampleSize
-                this.Element_SampleSize = new ElementDefinitionInfo
-                {
-                    Name = "Element_SampleSize",
-                    Path= "RiskEvidenceSynthesis.sampleSize",
-                    Id = "RiskEvidenceSynthesis.sampleSize",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new Type_SampleSize
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_SampleSize = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_SampleSize",                                                                                            // MakerGen.cs:236
+                    Path= "RiskEvidenceSynthesis.sampleSize",                                                                               // MakerGen.cs:237
+                    Id = "RiskEvidenceSynthesis.sampleSize",                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_SampleSize                                                                                                 // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 33. RiskEvidenceSynthesis.riskEstimate
-                this.Element_RiskEstimate = new ElementDefinitionInfo
-                {
-                    Name = "Element_RiskEstimate",
-                    Path= "RiskEvidenceSynthesis.riskEstimate",
-                    Id = "RiskEvidenceSynthesis.riskEstimate",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new Type_RiskEstimate
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_RiskEstimate = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_RiskEstimate",                                                                                          // MakerGen.cs:236
+                    Path= "RiskEvidenceSynthesis.riskEstimate",                                                                             // MakerGen.cs:237
+                    Id = "RiskEvidenceSynthesis.riskEstimate",                                                                              // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_RiskEstimate                                                                                               // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 45. RiskEvidenceSynthesis.certainty
-                this.Element_Certainty = new ElementDefinitionInfo
-                {
-                    Name = "Element_Certainty",
-                    Path= "RiskEvidenceSynthesis.certainty",
-                    Id = "RiskEvidenceSynthesis.certainty",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Certainty
-                        {
-                        }
-                    }
-                };
-            }
-            this.Name = "RiskEvidenceSynthesis";
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/RiskEvidenceSynthesis";
-        }
-    }
-}
+                this.Element_Certainty = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Certainty",                                                                                             // MakerGen.cs:236
+                    Path= "RiskEvidenceSynthesis.certainty",                                                                                // MakerGen.cs:237
+                    Id = "RiskEvidenceSynthesis.certainty",                                                                                 // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Certainty                                                                                                  // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            this.Name = "RiskEvidenceSynthesis";                                                                                            // MakerGen.cs:468
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/RiskEvidenceSynthesis";                                                     // MakerGen.cs:469
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:449

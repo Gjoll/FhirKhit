@@ -1,12 +1,12 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Complex
-{
-    #region Json
+using System;                                                                                                                               // MakerGen.cs:490
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:491
+using System.IO;                                                                                                                            // MakerGen.cs:492
+using System.Linq;                                                                                                                          // MakerGen.cs:493
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:494
+                                                                                                                                            // MakerGen.cs:495
+namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:496
+{                                                                                                                                           // MakerGen.cs:497
+    #region Json                                                                                                                            // MakerGen.cs:498
     #if NEVER
     {
       "resourceType": "StructureDefinition",
@@ -93,106 +93,106 @@ namespace FhirKhit.Maker.Common.Complex
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:502
     /// <summary>
     /// Fhir complex 'ProductShelfLife'
     /// </summary>
     // 0. ProductShelfLife
-    public partial class Type_ProductShelfLife : FhirKhit.Maker.Common.Complex.ComplexBase
-    {
+    public partial class Type_ProductShelfLife : FhirKhit.Maker.Common.Complex.ComplexBase                                                  // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 1. ProductShelfLife.identifier
-        public ElementDefinitionInfo Element_Identifier;
+        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:217
         // 2. ProductShelfLife.type
-        public ElementDefinitionInfo Element_Type;
+        public ElementDefinitionInfo Element_Type;                                                                                          // MakerGen.cs:217
         // 3. ProductShelfLife.period
-        public ElementDefinitionInfo Element_Period;
+        public ElementDefinitionInfo Element_Period;                                                                                        // MakerGen.cs:217
         // 4. ProductShelfLife.specialPrecautionsForStorage
-        public ElementDefinitionInfo Element_SpecialPrecautionsForStorage;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "ProductShelfLife",
-                ElementId = "ProductShelfLife"
-            });
-            Element_Identifier.Write(sDef);
-            Element_Type.Write(sDef);
-            Element_Period.Write(sDef);
-            Element_SpecialPrecautionsForStorage.Write(sDef);
-        }
-        
-        public Type_ProductShelfLife()
-        {
-            {
+        public ElementDefinitionInfo Element_SpecialPrecautionsForStorage;                                                                  // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "ProductShelfLife",                                                                                                  // MakerGen.cs:393
+                ElementId = "ProductShelfLife"                                                                                              // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Type.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Period.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_SpecialPrecautionsForStorage.Write(sDef);                                                                               // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Type_ProductShelfLife()                                                                                                      // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. ProductShelfLife.identifier
-                this.Element_Identifier = new ElementDefinitionInfo
-                {
-                    Name = "Element_Identifier",
-                    Path= "ProductShelfLife.identifier",
-                    Id = "ProductShelfLife.identifier",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:236
+                    Path= "ProductShelfLife.identifier",                                                                                    // MakerGen.cs:237
+                    Id = "ProductShelfLife.identifier",                                                                                     // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. ProductShelfLife.type
-                this.Element_Type = new ElementDefinitionInfo
-                {
-                    Name = "Element_Type",
-                    Path= "ProductShelfLife.type",
-                    Id = "ProductShelfLife.type",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Type = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Type",                                                                                                  // MakerGen.cs:236
+                    Path= "ProductShelfLife.type",                                                                                          // MakerGen.cs:237
+                    Id = "ProductShelfLife.type",                                                                                           // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 3. ProductShelfLife.period
-                this.Element_Period = new ElementDefinitionInfo
-                {
-                    Name = "Element_Period",
-                    Path= "ProductShelfLife.period",
-                    Id = "ProductShelfLife.period",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Quantity
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Period = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Period",                                                                                                // MakerGen.cs:236
+                    Path= "ProductShelfLife.period",                                                                                        // MakerGen.cs:237
+                    Id = "ProductShelfLife.period",                                                                                         // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Quantity                                                                     // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 4. ProductShelfLife.specialPrecautionsForStorage
-                this.Element_SpecialPrecautionsForStorage = new ElementDefinitionInfo
-                {
-                    Name = "Element_SpecialPrecautionsForStorage",
-                    Path= "ProductShelfLife.specialPrecautionsForStorage",
-                    Id = "ProductShelfLife.specialPrecautionsForStorage",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-        }
-    }
-}
+                this.Element_SpecialPrecautionsForStorage = new ElementDefinitionInfo                                                       // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_SpecialPrecautionsForStorage",                                                                          // MakerGen.cs:236
+                    Path= "ProductShelfLife.specialPrecautionsForStorage",                                                                  // MakerGen.cs:237
+                    Id = "ProductShelfLife.specialPrecautionsForStorage",                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:507

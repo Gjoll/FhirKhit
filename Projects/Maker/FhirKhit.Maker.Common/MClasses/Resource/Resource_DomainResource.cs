@@ -1,4 +1,5 @@
-﻿using Hl7.Fhir.Model;
+﻿using FhirKhit.Tools;
+using Hl7.Fhir.Model;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -111,11 +112,16 @@ namespace FhirKhit.Maker.Common.Resource
           </differential>
         </StructureDefinition>
         */
-        public void AddExtensionSlice()
+
+        /// <summary>
+        /// Configure the extension element to have the corret slicing discriminator. This does not
+        /// add the slice, just the discriminator.
+        /// </summary>
+        void ConfigureExtensionSlice()
         {
             ElementDefinition extDef = this.Element_Extension.CreateConstraint();
-            // I assume that if slicing exists, it is how I want it. If someone else adds
-            // slicing it may not be correct.
+            // I assume that if slicing exists, it was added by the code below.
+            // If someone else adds slicing differently than below there will be a problem....
             if (extDef.Slicing == null)
             {
                 extDef.Slicing = new ElementDefinition.SlicingComponent
@@ -131,8 +137,38 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
 
-        public void SimpleExtension()
+        /// <summary>
+        /// Add the indicated slice to the extension.
+        /// </summary>
+        void AddExtensionSlice(String sliceUrl,
+            String sliceName,
+            String shortText,
+            Markdown definition,
+            Int32 max)
         {
+            ElementDefinition extSlice = this.Element_Extension.AppendElement();
+            extSlice.ElementId += $":{sliceName}";
+            extSlice.SliceName = sliceName;
+            extSlice.Short = shortText;
+            extSlice.Definition = definition;
+            extSlice.Min = 1;
+            extSlice.Max = (max == -1) ? "*" : max.ToString();
+            extSlice.IsModifier = false;
+            extSlice.Type.Add(new ElementDefinition.TypeRefComponent
+            {
+                Code = "Extension",
+                Profile = new String[] {sliceUrl}
+            });
+        }
+
+        public void SimpleExtension(String name,
+            String shortText,
+            String definition,
+            Int32 max)
+        {
+            String sliceUrl = $"{this.Uri.BaseUriPart()}/{name}-extension";
+            ConfigureExtensionSlice();
+            AddExtensionSlice(sliceUrl, name, shortText, new Markdown(definition), max);
         }
     }
 }

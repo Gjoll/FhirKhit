@@ -1,13 +1,13 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Resource
-{
-    #region Json
-    #if NEVER
+using System;                                                                                                                               // MakerGen.cs:432
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:433
+using System.IO;                                                                                                                            // MakerGen.cs:434
+using System.Linq;                                                                                                                          // MakerGen.cs:435
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:436
+                                                                                                                                            // MakerGen.cs:437
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:438
+{                                                                                                                                           // MakerGen.cs:439
+    #region Json                                                                                                                            // MakerGen.cs:440
+    #if NEVER                                                                                                                               // MakerGen.cs:441
     {
       "resourceType": "StructureDefinition",
       "id": "ImmunizationRecommendation",
@@ -383,467 +383,467 @@ namespace FhirKhit.Maker.Common.Resource
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:444
     /// <summary>
     /// Fhir resource 'ImmunizationRecommendation'
     /// </summary>
     // 0. ImmunizationRecommendation
-    public partial class Resource_ImmunizationRecommendation : FhirKhit.Maker.Common.Resource.Resource_DomainResource
-    {
+    public partial class Resource_ImmunizationRecommendation : FhirKhit.Maker.Common.Resource.Resource_DomainResource                       // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 5. ImmunizationRecommendation.recommendation
-        public partial class Type_Recommendation : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Recommendation : FhirKhit.Maker.Common.Complex.ComplexBase                                                // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 11. ImmunizationRecommendation.recommendation.dateCriterion
-            public partial class Type_DateCriterion : FhirKhit.Maker.Common.Complex.ComplexBase
-            {
+            public partial class Type_DateCriterion : FhirKhit.Maker.Common.Complex.ComplexBase                                             // MakerGen.cs:381
+            {                                                                                                                               // MakerGen.cs:382
                 // 12. ImmunizationRecommendation.recommendation.dateCriterion.code
-                public ElementDefinitionInfo Element_Code;
+                public ElementDefinitionInfo Element_Code;                                                                                  // MakerGen.cs:217
                 // 13. ImmunizationRecommendation.recommendation.dateCriterion.value
-                public ElementDefinitionInfo Element_Value;
-                
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                {
-                    base.Write(sDef);
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                    {
-                        Path = "ImmunizationRecommendation.recommendation.dateCriterion",
-                        ElementId = "ImmunizationRecommendation.recommendation.dateCriterion"
-                    });
-                    Element_Code.Write(sDef);
-                    Element_Value.Write(sDef);
-                }
-                
-                public Type_DateCriterion()
-                {
-                    {
+                public ElementDefinitionInfo Element_Value;                                                                                 // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:389
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:390
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:391
+                    {                                                                                                                       // MakerGen.cs:392
+                        Path = "ImmunizationRecommendation.recommendation.dateCriterion",                                                   // MakerGen.cs:393
+                        ElementId = "ImmunizationRecommendation.recommendation.dateCriterion"                                               // MakerGen.cs:394
+                    });                                                                                                                     // MakerGen.cs:395
+                    Element_Code.Write(sDef);                                                                                               // MakerGen.cs:221
+                    Element_Value.Write(sDef);                                                                                              // MakerGen.cs:221
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                public Type_DateCriterion()                                                                                                 // MakerGen.cs:400
+                {                                                                                                                           // MakerGen.cs:401
+                    {                                                                                                                       // MakerGen.cs:232
                         // 12. ImmunizationRecommendation.recommendation.dateCriterion.code
-                        this.Element_Code = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Code",
-                            Path= "ImmunizationRecommendation.recommendation.dateCriterion.code",
-                            Id = "ImmunizationRecommendation.recommendation.dateCriterion.code",
-                            Min = 1,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Code = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Code",                                                                                          // MakerGen.cs:236
+                            Path= "ImmunizationRecommendation.recommendation.dateCriterion.code",                                           // MakerGen.cs:237
+                            Id = "ImmunizationRecommendation.recommendation.dateCriterion.code",                                            // MakerGen.cs:238
+                            Min = 1,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 13. ImmunizationRecommendation.recommendation.dateCriterion.value
-                        this.Element_Value = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Value",
-                            Path= "ImmunizationRecommendation.recommendation.dateCriterion.value",
-                            Id = "ImmunizationRecommendation.recommendation.dateCriterion.value",
-                            Min = 1,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
-                                {
-                                }
-                            }
-                        };
-                    }
-                }
-            }
+                        this.Element_Value = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Value",                                                                                         // MakerGen.cs:236
+                            Path= "ImmunizationRecommendation.recommendation.dateCriterion.value",                                          // MakerGen.cs:237
+                            Id = "ImmunizationRecommendation.recommendation.dateCriterion.value",                                           // MakerGen.cs:238
+                            Min = 1,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                      // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                }                                                                                                                           // MakerGen.cs:403
+            }                                                                                                                               // MakerGen.cs:405
             // 6. ImmunizationRecommendation.recommendation.vaccineCode
-            public ElementDefinitionInfo Element_VaccineCode;
+            public ElementDefinitionInfo Element_VaccineCode;                                                                               // MakerGen.cs:217
             // 7. ImmunizationRecommendation.recommendation.targetDisease
-            public ElementDefinitionInfo Element_TargetDisease;
+            public ElementDefinitionInfo Element_TargetDisease;                                                                             // MakerGen.cs:217
             // 8. ImmunizationRecommendation.recommendation.contraindicatedVaccineCode
-            public ElementDefinitionInfo Element_ContraindicatedVaccineCode;
+            public ElementDefinitionInfo Element_ContraindicatedVaccineCode;                                                                // MakerGen.cs:217
             // 9. ImmunizationRecommendation.recommendation.forecastStatus
-            public ElementDefinitionInfo Element_ForecastStatus;
+            public ElementDefinitionInfo Element_ForecastStatus;                                                                            // MakerGen.cs:217
             // 10. ImmunizationRecommendation.recommendation.forecastReason
-            public ElementDefinitionInfo Element_ForecastReason;
+            public ElementDefinitionInfo Element_ForecastReason;                                                                            // MakerGen.cs:217
             // 11. ImmunizationRecommendation.recommendation.dateCriterion
-            public ElementDefinitionInfo Element_DateCriterion;
+            public ElementDefinitionInfo Element_DateCriterion;                                                                             // MakerGen.cs:217
             // 14. ImmunizationRecommendation.recommendation.description
-            public ElementDefinitionInfo Element_Description;
+            public ElementDefinitionInfo Element_Description;                                                                               // MakerGen.cs:217
             // 15. ImmunizationRecommendation.recommendation.series
-            public ElementDefinitionInfo Element_Series;
+            public ElementDefinitionInfo Element_Series;                                                                                    // MakerGen.cs:217
             // 16. ImmunizationRecommendation.recommendation.doseNumber[x]
-            public ElementDefinitionInfo Element_DoseNumber;
+            public ElementDefinitionInfo Element_DoseNumber;                                                                                // MakerGen.cs:217
             // 17. ImmunizationRecommendation.recommendation.seriesDoses[x]
-            public ElementDefinitionInfo Element_SeriesDoses;
+            public ElementDefinitionInfo Element_SeriesDoses;                                                                               // MakerGen.cs:217
             // 18. ImmunizationRecommendation.recommendation.supportingImmunization
-            public ElementDefinitionInfo Element_SupportingImmunization;
+            public ElementDefinitionInfo Element_SupportingImmunization;                                                                    // MakerGen.cs:217
             // 19. ImmunizationRecommendation.recommendation.supportingPatientInformation
-            public ElementDefinitionInfo Element_SupportingPatientInformation;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "ImmunizationRecommendation.recommendation",
-                    ElementId = "ImmunizationRecommendation.recommendation"
-                });
-                Element_VaccineCode.Write(sDef);
-                Element_TargetDisease.Write(sDef);
-                Element_ContraindicatedVaccineCode.Write(sDef);
-                Element_ForecastStatus.Write(sDef);
-                Element_ForecastReason.Write(sDef);
-                Element_DateCriterion.Write(sDef);
-                Element_Description.Write(sDef);
-                Element_Series.Write(sDef);
-                Element_DoseNumber.Write(sDef);
-                Element_SeriesDoses.Write(sDef);
-                Element_SupportingImmunization.Write(sDef);
-                Element_SupportingPatientInformation.Write(sDef);
-            }
-            
-            public Type_Recommendation()
-            {
-                {
+            public ElementDefinitionInfo Element_SupportingPatientInformation;                                                              // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "ImmunizationRecommendation.recommendation",                                                                     // MakerGen.cs:393
+                    ElementId = "ImmunizationRecommendation.recommendation"                                                                 // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_VaccineCode.Write(sDef);                                                                                            // MakerGen.cs:221
+                Element_TargetDisease.Write(sDef);                                                                                          // MakerGen.cs:221
+                Element_ContraindicatedVaccineCode.Write(sDef);                                                                             // MakerGen.cs:221
+                Element_ForecastStatus.Write(sDef);                                                                                         // MakerGen.cs:221
+                Element_ForecastReason.Write(sDef);                                                                                         // MakerGen.cs:221
+                Element_DateCriterion.Write(sDef);                                                                                          // MakerGen.cs:221
+                Element_Description.Write(sDef);                                                                                            // MakerGen.cs:221
+                Element_Series.Write(sDef);                                                                                                 // MakerGen.cs:221
+                Element_DoseNumber.Write(sDef);                                                                                             // MakerGen.cs:221
+                Element_SeriesDoses.Write(sDef);                                                                                            // MakerGen.cs:221
+                Element_SupportingImmunization.Write(sDef);                                                                                 // MakerGen.cs:221
+                Element_SupportingPatientInformation.Write(sDef);                                                                           // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Recommendation()                                                                                                    // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 6. ImmunizationRecommendation.recommendation.vaccineCode
-                    this.Element_VaccineCode = new ElementDefinitionInfo
-                    {
-                        Name = "Element_VaccineCode",
-                        Path= "ImmunizationRecommendation.recommendation.vaccineCode",
-                        Id = "ImmunizationRecommendation.recommendation.vaccineCode",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_VaccineCode = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_VaccineCode",                                                                                       // MakerGen.cs:236
+                        Path= "ImmunizationRecommendation.recommendation.vaccineCode",                                                      // MakerGen.cs:237
+                        Id = "ImmunizationRecommendation.recommendation.vaccineCode",                                                       // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 7. ImmunizationRecommendation.recommendation.targetDisease
-                    this.Element_TargetDisease = new ElementDefinitionInfo
-                    {
-                        Name = "Element_TargetDisease",
-                        Path= "ImmunizationRecommendation.recommendation.targetDisease",
-                        Id = "ImmunizationRecommendation.recommendation.targetDisease",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_TargetDisease = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_TargetDisease",                                                                                     // MakerGen.cs:236
+                        Path= "ImmunizationRecommendation.recommendation.targetDisease",                                                    // MakerGen.cs:237
+                        Id = "ImmunizationRecommendation.recommendation.targetDisease",                                                     // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 8. ImmunizationRecommendation.recommendation.contraindicatedVaccineCode
-                    this.Element_ContraindicatedVaccineCode = new ElementDefinitionInfo
-                    {
-                        Name = "Element_ContraindicatedVaccineCode",
-                        Path= "ImmunizationRecommendation.recommendation.contraindicatedVaccineCode",
-                        Id = "ImmunizationRecommendation.recommendation.contraindicatedVaccineCode",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_ContraindicatedVaccineCode = new ElementDefinitionInfo                                                     // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_ContraindicatedVaccineCode",                                                                        // MakerGen.cs:236
+                        Path= "ImmunizationRecommendation.recommendation.contraindicatedVaccineCode",                                       // MakerGen.cs:237
+                        Id = "ImmunizationRecommendation.recommendation.contraindicatedVaccineCode",                                        // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 9. ImmunizationRecommendation.recommendation.forecastStatus
-                    this.Element_ForecastStatus = new ElementDefinitionInfo
-                    {
-                        Name = "Element_ForecastStatus",
-                        Path= "ImmunizationRecommendation.recommendation.forecastStatus",
-                        Id = "ImmunizationRecommendation.recommendation.forecastStatus",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_ForecastStatus = new ElementDefinitionInfo                                                                 // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_ForecastStatus",                                                                                    // MakerGen.cs:236
+                        Path= "ImmunizationRecommendation.recommendation.forecastStatus",                                                   // MakerGen.cs:237
+                        Id = "ImmunizationRecommendation.recommendation.forecastStatus",                                                    // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 10. ImmunizationRecommendation.recommendation.forecastReason
-                    this.Element_ForecastReason = new ElementDefinitionInfo
-                    {
-                        Name = "Element_ForecastReason",
-                        Path= "ImmunizationRecommendation.recommendation.forecastReason",
-                        Id = "ImmunizationRecommendation.recommendation.forecastReason",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_ForecastReason = new ElementDefinitionInfo                                                                 // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_ForecastReason",                                                                                    // MakerGen.cs:236
+                        Path= "ImmunizationRecommendation.recommendation.forecastReason",                                                   // MakerGen.cs:237
+                        Id = "ImmunizationRecommendation.recommendation.forecastReason",                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 11. ImmunizationRecommendation.recommendation.dateCriterion
-                    this.Element_DateCriterion = new ElementDefinitionInfo
-                    {
-                        Name = "Element_DateCriterion",
-                        Path= "ImmunizationRecommendation.recommendation.dateCriterion",
-                        Id = "ImmunizationRecommendation.recommendation.dateCriterion",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new Type_DateCriterion
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_DateCriterion = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_DateCriterion",                                                                                     // MakerGen.cs:236
+                        Path= "ImmunizationRecommendation.recommendation.dateCriterion",                                                    // MakerGen.cs:237
+                        Id = "ImmunizationRecommendation.recommendation.dateCriterion",                                                     // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new Type_DateCriterion                                                                                          // MakerGen.cs:260
+                            {                                                                                                               // MakerGen.cs:261
+                            }                                                                                                               // MakerGen.cs:262
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 14. ImmunizationRecommendation.recommendation.description
-                    this.Element_Description = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Description",
-                        Path= "ImmunizationRecommendation.recommendation.description",
-                        Id = "ImmunizationRecommendation.recommendation.description",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Description",                                                                                       // MakerGen.cs:236
+                        Path= "ImmunizationRecommendation.recommendation.description",                                                      // MakerGen.cs:237
+                        Id = "ImmunizationRecommendation.recommendation.description",                                                       // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 15. ImmunizationRecommendation.recommendation.series
-                    this.Element_Series = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Series",
-                        Path= "ImmunizationRecommendation.recommendation.series",
-                        Id = "ImmunizationRecommendation.recommendation.series",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Series = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Series",                                                                                            // MakerGen.cs:236
+                        Path= "ImmunizationRecommendation.recommendation.series",                                                           // MakerGen.cs:237
+                        Id = "ImmunizationRecommendation.recommendation.series",                                                            // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 16. ImmunizationRecommendation.recommendation.doseNumber[x]
-                    this.Element_DoseNumber = new ElementDefinitionInfo
-                    {
-                        Name = "Element_DoseNumber",
-                        Path= "ImmunizationRecommendation.recommendation.doseNumber[x]",
-                        Id = "ImmunizationRecommendation.recommendation.doseNumber[x]",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                            {
-                            },
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_DoseNumber = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_DoseNumber",                                                                                        // MakerGen.cs:236
+                        Path= "ImmunizationRecommendation.recommendation.doseNumber[x]",                                                    // MakerGen.cs:237
+                        Id = "ImmunizationRecommendation.recommendation.doseNumber[x]",                                                     // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                       // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            },                                                                                                              // MakerGen.cs:305
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 17. ImmunizationRecommendation.recommendation.seriesDoses[x]
-                    this.Element_SeriesDoses = new ElementDefinitionInfo
-                    {
-                        Name = "Element_SeriesDoses",
-                        Path= "ImmunizationRecommendation.recommendation.seriesDoses[x]",
-                        Id = "ImmunizationRecommendation.recommendation.seriesDoses[x]",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                            {
-                            },
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_SeriesDoses = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_SeriesDoses",                                                                                       // MakerGen.cs:236
+                        Path= "ImmunizationRecommendation.recommendation.seriesDoses[x]",                                                   // MakerGen.cs:237
+                        Id = "ImmunizationRecommendation.recommendation.seriesDoses[x]",                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                       // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            },                                                                                                              // MakerGen.cs:305
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 18. ImmunizationRecommendation.recommendation.supportingImmunization
-                    this.Element_SupportingImmunization = new ElementDefinitionInfo
-                    {
-                        Name = "Element_SupportingImmunization",
-                        Path= "ImmunizationRecommendation.recommendation.supportingImmunization",
-                        Id = "ImmunizationRecommendation.recommendation.supportingImmunization",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Immunization",
-                                    "http://hl7.org/fhir/StructureDefinition/ImmunizationEvaluation"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_SupportingImmunization = new ElementDefinitionInfo                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_SupportingImmunization",                                                                            // MakerGen.cs:236
+                        Path= "ImmunizationRecommendation.recommendation.supportingImmunization",                                           // MakerGen.cs:237
+                        Id = "ImmunizationRecommendation.recommendation.supportingImmunization",                                            // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Immunization",                                                 // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/ImmunizationEvaluation"                                        // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 19. ImmunizationRecommendation.recommendation.supportingPatientInformation
-                    this.Element_SupportingPatientInformation = new ElementDefinitionInfo
-                    {
-                        Name = "Element_SupportingPatientInformation",
-                        Path= "ImmunizationRecommendation.recommendation.supportingPatientInformation",
-                        Id = "ImmunizationRecommendation.recommendation.supportingPatientInformation",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Resource"
-                                }
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_SupportingPatientInformation = new ElementDefinitionInfo                                                   // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_SupportingPatientInformation",                                                                      // MakerGen.cs:236
+                        Path= "ImmunizationRecommendation.recommendation.supportingPatientInformation",                                     // MakerGen.cs:237
+                        Id = "ImmunizationRecommendation.recommendation.supportingPatientInformation",                                      // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Resource"                                                      // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 1. ImmunizationRecommendation.identifier
-        public ElementDefinitionInfo Element_Identifier;
+        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:217
         // 2. ImmunizationRecommendation.patient
-        public ElementDefinitionInfo Element_Patient;
+        public ElementDefinitionInfo Element_Patient;                                                                                       // MakerGen.cs:217
         // 3. ImmunizationRecommendation.date
-        public ElementDefinitionInfo Element_Date;
+        public ElementDefinitionInfo Element_Date;                                                                                          // MakerGen.cs:217
         // 4. ImmunizationRecommendation.authority
-        public ElementDefinitionInfo Element_Authority;
+        public ElementDefinitionInfo Element_Authority;                                                                                     // MakerGen.cs:217
         // 5. ImmunizationRecommendation.recommendation
-        public ElementDefinitionInfo Element_Recommendation;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "ImmunizationRecommendation",
-                ElementId = "ImmunizationRecommendation"
-            });
-            Element_Identifier.Write(sDef);
-            Element_Patient.Write(sDef);
-            Element_Date.Write(sDef);
-            Element_Authority.Write(sDef);
-            Element_Recommendation.Write(sDef);
-        }
-        
-        public Resource_ImmunizationRecommendation()
-        {
-            {
+        public ElementDefinitionInfo Element_Recommendation;                                                                                // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "ImmunizationRecommendation",                                                                                        // MakerGen.cs:393
+                ElementId = "ImmunizationRecommendation"                                                                                    // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Patient.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Date.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Authority.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_Recommendation.Write(sDef);                                                                                             // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Resource_ImmunizationRecommendation()                                                                                        // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. ImmunizationRecommendation.identifier
-                this.Element_Identifier = new ElementDefinitionInfo
-                {
-                    Name = "Element_Identifier",
-                    Path= "ImmunizationRecommendation.identifier",
-                    Id = "ImmunizationRecommendation.identifier",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:236
+                    Path= "ImmunizationRecommendation.identifier",                                                                          // MakerGen.cs:237
+                    Id = "ImmunizationRecommendation.identifier",                                                                           // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. ImmunizationRecommendation.patient
-                this.Element_Patient = new ElementDefinitionInfo
-                {
-                    Name = "Element_Patient",
-                    Path= "ImmunizationRecommendation.patient",
-                    Id = "ImmunizationRecommendation.patient",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Patient"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Patient = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Patient",                                                                                               // MakerGen.cs:236
+                    Path= "ImmunizationRecommendation.patient",                                                                             // MakerGen.cs:237
+                    Id = "ImmunizationRecommendation.patient",                                                                              // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Patient"                                                           // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 3. ImmunizationRecommendation.date
-                this.Element_Date = new ElementDefinitionInfo
-                {
-                    Name = "Element_Date",
-                    Path= "ImmunizationRecommendation.date",
-                    Id = "ImmunizationRecommendation.date",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Date = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Date",                                                                                                  // MakerGen.cs:236
+                    Path= "ImmunizationRecommendation.date",                                                                                // MakerGen.cs:237
+                    Id = "ImmunizationRecommendation.date",                                                                                 // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 4. ImmunizationRecommendation.authority
-                this.Element_Authority = new ElementDefinitionInfo
-                {
-                    Name = "Element_Authority",
-                    Path= "ImmunizationRecommendation.authority",
-                    Id = "ImmunizationRecommendation.authority",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Organization"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Authority = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Authority",                                                                                             // MakerGen.cs:236
+                    Path= "ImmunizationRecommendation.authority",                                                                           // MakerGen.cs:237
+                    Id = "ImmunizationRecommendation.authority",                                                                            // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 5. ImmunizationRecommendation.recommendation
-                this.Element_Recommendation = new ElementDefinitionInfo
-                {
-                    Name = "Element_Recommendation",
-                    Path= "ImmunizationRecommendation.recommendation",
-                    Id = "ImmunizationRecommendation.recommendation",
-                    Min = 1,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Recommendation
-                        {
-                        }
-                    }
-                };
-            }
-            this.Name = "ImmunizationRecommendation";
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation";
-        }
-    }
-}
+                this.Element_Recommendation = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Recommendation",                                                                                        // MakerGen.cs:236
+                    Path= "ImmunizationRecommendation.recommendation",                                                                      // MakerGen.cs:237
+                    Id = "ImmunizationRecommendation.recommendation",                                                                       // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Recommendation                                                                                             // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            this.Name = "ImmunizationRecommendation";                                                                                       // MakerGen.cs:468
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation";                                                // MakerGen.cs:469
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:449

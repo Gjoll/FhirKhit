@@ -1,13 +1,13 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Resource
-{
-    #region Json
-    #if NEVER
+using System;                                                                                                                               // MakerGen.cs:432
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:433
+using System.IO;                                                                                                                            // MakerGen.cs:434
+using System.Linq;                                                                                                                          // MakerGen.cs:435
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:436
+                                                                                                                                            // MakerGen.cs:437
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:438
+{                                                                                                                                           // MakerGen.cs:439
+    #region Json                                                                                                                            // MakerGen.cs:440
+    #if NEVER                                                                                                                               // MakerGen.cs:441
     {
       "resourceType": "StructureDefinition",
       "id": "Slot",
@@ -245,252 +245,252 @@ namespace FhirKhit.Maker.Common.Resource
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:444
     /// <summary>
     /// Fhir resource 'Slot'
     /// </summary>
     // 0. Slot
-    public partial class Resource_Slot : FhirKhit.Maker.Common.Resource.Resource_DomainResource
-    {
+    public partial class Resource_Slot : FhirKhit.Maker.Common.Resource.Resource_DomainResource                                             // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 1. Slot.identifier
-        public ElementDefinitionInfo Element_Identifier;
+        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:217
         // 2. Slot.serviceCategory
-        public ElementDefinitionInfo Element_ServiceCategory;
+        public ElementDefinitionInfo Element_ServiceCategory;                                                                               // MakerGen.cs:217
         // 3. Slot.serviceType
-        public ElementDefinitionInfo Element_ServiceType;
+        public ElementDefinitionInfo Element_ServiceType;                                                                                   // MakerGen.cs:217
         // 4. Slot.specialty
-        public ElementDefinitionInfo Element_Specialty;
+        public ElementDefinitionInfo Element_Specialty;                                                                                     // MakerGen.cs:217
         // 5. Slot.appointmentType
-        public ElementDefinitionInfo Element_AppointmentType;
+        public ElementDefinitionInfo Element_AppointmentType;                                                                               // MakerGen.cs:217
         // 6. Slot.schedule
-        public ElementDefinitionInfo Element_Schedule;
+        public ElementDefinitionInfo Element_Schedule;                                                                                      // MakerGen.cs:217
         // 7. Slot.status
-        public ElementDefinitionInfo Element_Status;
+        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:217
         // 8. Slot.start
-        public ElementDefinitionInfo Element_Start;
+        public ElementDefinitionInfo Element_Start;                                                                                         // MakerGen.cs:217
         // 9. Slot.end
-        public ElementDefinitionInfo Element_End;
+        public ElementDefinitionInfo Element_End;                                                                                           // MakerGen.cs:217
         // 10. Slot.overbooked
-        public ElementDefinitionInfo Element_Overbooked;
+        public ElementDefinitionInfo Element_Overbooked;                                                                                    // MakerGen.cs:217
         // 11. Slot.comment
-        public ElementDefinitionInfo Element_Comment;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "Slot",
-                ElementId = "Slot"
-            });
-            Element_Identifier.Write(sDef);
-            Element_ServiceCategory.Write(sDef);
-            Element_ServiceType.Write(sDef);
-            Element_Specialty.Write(sDef);
-            Element_AppointmentType.Write(sDef);
-            Element_Schedule.Write(sDef);
-            Element_Status.Write(sDef);
-            Element_Start.Write(sDef);
-            Element_End.Write(sDef);
-            Element_Overbooked.Write(sDef);
-            Element_Comment.Write(sDef);
-        }
-        
-        public Resource_Slot()
-        {
-            {
+        public ElementDefinitionInfo Element_Comment;                                                                                       // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "Slot",                                                                                                              // MakerGen.cs:393
+                ElementId = "Slot"                                                                                                          // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_ServiceCategory.Write(sDef);                                                                                            // MakerGen.cs:221
+            Element_ServiceType.Write(sDef);                                                                                                // MakerGen.cs:221
+            Element_Specialty.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_AppointmentType.Write(sDef);                                                                                            // MakerGen.cs:221
+            Element_Schedule.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Start.Write(sDef);                                                                                                      // MakerGen.cs:221
+            Element_End.Write(sDef);                                                                                                        // MakerGen.cs:221
+            Element_Overbooked.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Comment.Write(sDef);                                                                                                    // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Resource_Slot()                                                                                                              // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. Slot.identifier
-                this.Element_Identifier = new ElementDefinitionInfo
-                {
-                    Name = "Element_Identifier",
-                    Path= "Slot.identifier",
-                    Id = "Slot.identifier",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:236
+                    Path= "Slot.identifier",                                                                                                // MakerGen.cs:237
+                    Id = "Slot.identifier",                                                                                                 // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. Slot.serviceCategory
-                this.Element_ServiceCategory = new ElementDefinitionInfo
-                {
-                    Name = "Element_ServiceCategory",
-                    Path= "Slot.serviceCategory",
-                    Id = "Slot.serviceCategory",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ServiceCategory = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ServiceCategory",                                                                                       // MakerGen.cs:236
+                    Path= "Slot.serviceCategory",                                                                                           // MakerGen.cs:237
+                    Id = "Slot.serviceCategory",                                                                                            // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 3. Slot.serviceType
-                this.Element_ServiceType = new ElementDefinitionInfo
-                {
-                    Name = "Element_ServiceType",
-                    Path= "Slot.serviceType",
-                    Id = "Slot.serviceType",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ServiceType = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ServiceType",                                                                                           // MakerGen.cs:236
+                    Path= "Slot.serviceType",                                                                                               // MakerGen.cs:237
+                    Id = "Slot.serviceType",                                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 4. Slot.specialty
-                this.Element_Specialty = new ElementDefinitionInfo
-                {
-                    Name = "Element_Specialty",
-                    Path= "Slot.specialty",
-                    Id = "Slot.specialty",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Specialty = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Specialty",                                                                                             // MakerGen.cs:236
+                    Path= "Slot.specialty",                                                                                                 // MakerGen.cs:237
+                    Id = "Slot.specialty",                                                                                                  // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 5. Slot.appointmentType
-                this.Element_AppointmentType = new ElementDefinitionInfo
-                {
-                    Name = "Element_AppointmentType",
-                    Path= "Slot.appointmentType",
-                    Id = "Slot.appointmentType",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_AppointmentType = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_AppointmentType",                                                                                       // MakerGen.cs:236
+                    Path= "Slot.appointmentType",                                                                                           // MakerGen.cs:237
+                    Id = "Slot.appointmentType",                                                                                            // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 6. Slot.schedule
-                this.Element_Schedule = new ElementDefinitionInfo
-                {
-                    Name = "Element_Schedule",
-                    Path= "Slot.schedule",
-                    Id = "Slot.schedule",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Schedule"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Schedule = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Schedule",                                                                                              // MakerGen.cs:236
+                    Path= "Slot.schedule",                                                                                                  // MakerGen.cs:237
+                    Id = "Slot.schedule",                                                                                                   // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Schedule"                                                          // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 7. Slot.status
-                this.Element_Status = new ElementDefinitionInfo
-                {
-                    Name = "Element_Status",
-                    Path= "Slot.status",
-                    Id = "Slot.status",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Status",                                                                                                // MakerGen.cs:236
+                    Path= "Slot.status",                                                                                                    // MakerGen.cs:237
+                    Id = "Slot.status",                                                                                                     // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 8. Slot.start
-                this.Element_Start = new ElementDefinitionInfo
-                {
-                    Name = "Element_Start",
-                    Path= "Slot.start",
-                    Id = "Slot.start",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Instant
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Start = new ElementDefinitionInfo                                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Start",                                                                                                 // MakerGen.cs:236
+                    Path= "Slot.start",                                                                                                     // MakerGen.cs:237
+                    Id = "Slot.start",                                                                                                      // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Instant                                                               // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 9. Slot.end
-                this.Element_End = new ElementDefinitionInfo
-                {
-                    Name = "Element_End",
-                    Path= "Slot.end",
-                    Id = "Slot.end",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Instant
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_End = new ElementDefinitionInfo                                                                                // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_End",                                                                                                   // MakerGen.cs:236
+                    Path= "Slot.end",                                                                                                       // MakerGen.cs:237
+                    Id = "Slot.end",                                                                                                        // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Instant                                                               // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 10. Slot.overbooked
-                this.Element_Overbooked = new ElementDefinitionInfo
-                {
-                    Name = "Element_Overbooked",
-                    Path= "Slot.overbooked",
-                    Id = "Slot.overbooked",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Overbooked = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Overbooked",                                                                                            // MakerGen.cs:236
+                    Path= "Slot.overbooked",                                                                                                // MakerGen.cs:237
+                    Id = "Slot.overbooked",                                                                                                 // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 11. Slot.comment
-                this.Element_Comment = new ElementDefinitionInfo
-                {
-                    Name = "Element_Comment",
-                    Path= "Slot.comment",
-                    Id = "Slot.comment",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            this.Name = "Slot";
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/Slot";
-        }
-    }
-}
+                this.Element_Comment = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Comment",                                                                                               // MakerGen.cs:236
+                    Path= "Slot.comment",                                                                                                   // MakerGen.cs:237
+                    Id = "Slot.comment",                                                                                                    // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            this.Name = "Slot";                                                                                                             // MakerGen.cs:468
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/Slot";                                                                      // MakerGen.cs:469
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:449

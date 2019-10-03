@@ -1,13 +1,13 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Resource
-{
-    #region Json
-    #if NEVER
+using System;                                                                                                                               // MakerGen.cs:432
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:433
+using System.IO;                                                                                                                            // MakerGen.cs:434
+using System.Linq;                                                                                                                          // MakerGen.cs:435
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:436
+                                                                                                                                            // MakerGen.cs:437
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:438
+{                                                                                                                                           // MakerGen.cs:439
+    #region Json                                                                                                                            // MakerGen.cs:440
+    #if NEVER                                                                                                                               // MakerGen.cs:441
     {
       "resourceType": "StructureDefinition",
       "id": "MedicationStatement",
@@ -381,420 +381,420 @@ namespace FhirKhit.Maker.Common.Resource
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:444
     /// <summary>
     /// Fhir resource 'MedicationStatement'
     /// </summary>
     // 0. MedicationStatement
-    public partial class Resource_MedicationStatement : FhirKhit.Maker.Common.Resource.Resource_DomainResource
-    {
+    public partial class Resource_MedicationStatement : FhirKhit.Maker.Common.Resource.Resource_DomainResource                              // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 1. MedicationStatement.identifier
-        public ElementDefinitionInfo Element_Identifier;
+        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:217
         // 2. MedicationStatement.basedOn
-        public ElementDefinitionInfo Element_BasedOn;
+        public ElementDefinitionInfo Element_BasedOn;                                                                                       // MakerGen.cs:217
         // 3. MedicationStatement.partOf
-        public ElementDefinitionInfo Element_PartOf;
+        public ElementDefinitionInfo Element_PartOf;                                                                                        // MakerGen.cs:217
         // 4. MedicationStatement.status
-        public ElementDefinitionInfo Element_Status;
+        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:217
         // 5. MedicationStatement.statusReason
-        public ElementDefinitionInfo Element_StatusReason;
+        public ElementDefinitionInfo Element_StatusReason;                                                                                  // MakerGen.cs:217
         // 6. MedicationStatement.category
-        public ElementDefinitionInfo Element_Category;
+        public ElementDefinitionInfo Element_Category;                                                                                      // MakerGen.cs:217
         // 7. MedicationStatement.medication[x]
-        public ElementDefinitionInfo Element_Medication;
+        public ElementDefinitionInfo Element_Medication;                                                                                    // MakerGen.cs:217
         // 8. MedicationStatement.subject
-        public ElementDefinitionInfo Element_Subject;
+        public ElementDefinitionInfo Element_Subject;                                                                                       // MakerGen.cs:217
         // 9. MedicationStatement.context
-        public ElementDefinitionInfo Element_Context;
+        public ElementDefinitionInfo Element_Context;                                                                                       // MakerGen.cs:217
         // 10. MedicationStatement.effective[x]
-        public ElementDefinitionInfo Element_Effective;
+        public ElementDefinitionInfo Element_Effective;                                                                                     // MakerGen.cs:217
         // 11. MedicationStatement.dateAsserted
-        public ElementDefinitionInfo Element_DateAsserted;
+        public ElementDefinitionInfo Element_DateAsserted;                                                                                  // MakerGen.cs:217
         // 12. MedicationStatement.informationSource
-        public ElementDefinitionInfo Element_InformationSource;
+        public ElementDefinitionInfo Element_InformationSource;                                                                             // MakerGen.cs:217
         // 13. MedicationStatement.derivedFrom
-        public ElementDefinitionInfo Element_DerivedFrom;
+        public ElementDefinitionInfo Element_DerivedFrom;                                                                                   // MakerGen.cs:217
         // 14. MedicationStatement.reasonCode
-        public ElementDefinitionInfo Element_ReasonCode;
+        public ElementDefinitionInfo Element_ReasonCode;                                                                                    // MakerGen.cs:217
         // 15. MedicationStatement.reasonReference
-        public ElementDefinitionInfo Element_ReasonReference;
+        public ElementDefinitionInfo Element_ReasonReference;                                                                               // MakerGen.cs:217
         // 16. MedicationStatement.note
-        public ElementDefinitionInfo Element_Note;
+        public ElementDefinitionInfo Element_Note;                                                                                          // MakerGen.cs:217
         // 17. MedicationStatement.dosage
-        public ElementDefinitionInfo Element_Dosage;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "MedicationStatement",
-                ElementId = "MedicationStatement"
-            });
-            Element_Identifier.Write(sDef);
-            Element_BasedOn.Write(sDef);
-            Element_PartOf.Write(sDef);
-            Element_Status.Write(sDef);
-            Element_StatusReason.Write(sDef);
-            Element_Category.Write(sDef);
-            Element_Medication.Write(sDef);
-            Element_Subject.Write(sDef);
-            Element_Context.Write(sDef);
-            Element_Effective.Write(sDef);
-            Element_DateAsserted.Write(sDef);
-            Element_InformationSource.Write(sDef);
-            Element_DerivedFrom.Write(sDef);
-            Element_ReasonCode.Write(sDef);
-            Element_ReasonReference.Write(sDef);
-            Element_Note.Write(sDef);
-            Element_Dosage.Write(sDef);
-        }
-        
-        public Resource_MedicationStatement()
-        {
-            {
+        public ElementDefinitionInfo Element_Dosage;                                                                                        // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "MedicationStatement",                                                                                               // MakerGen.cs:393
+                ElementId = "MedicationStatement"                                                                                           // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_BasedOn.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_PartOf.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_StatusReason.Write(sDef);                                                                                               // MakerGen.cs:221
+            Element_Category.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_Medication.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Subject.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Context.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Effective.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_DateAsserted.Write(sDef);                                                                                               // MakerGen.cs:221
+            Element_InformationSource.Write(sDef);                                                                                          // MakerGen.cs:221
+            Element_DerivedFrom.Write(sDef);                                                                                                // MakerGen.cs:221
+            Element_ReasonCode.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_ReasonReference.Write(sDef);                                                                                            // MakerGen.cs:221
+            Element_Note.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Dosage.Write(sDef);                                                                                                     // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Resource_MedicationStatement()                                                                                               // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. MedicationStatement.identifier
-                this.Element_Identifier = new ElementDefinitionInfo
-                {
-                    Name = "Element_Identifier",
-                    Path= "MedicationStatement.identifier",
-                    Id = "MedicationStatement.identifier",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:236
+                    Path= "MedicationStatement.identifier",                                                                                 // MakerGen.cs:237
+                    Id = "MedicationStatement.identifier",                                                                                  // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. MedicationStatement.basedOn
-                this.Element_BasedOn = new ElementDefinitionInfo
-                {
-                    Name = "Element_BasedOn",
-                    Path= "MedicationStatement.basedOn",
-                    Id = "MedicationStatement.basedOn",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
-                                "http://hl7.org/fhir/StructureDefinition/CarePlan",
-                                "http://hl7.org/fhir/StructureDefinition/ServiceRequest"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_BasedOn = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_BasedOn",                                                                                               // MakerGen.cs:236
+                    Path= "MedicationStatement.basedOn",                                                                                    // MakerGen.cs:237
+                    Id = "MedicationStatement.basedOn",                                                                                     // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/MedicationRequest",                                                // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/CarePlan",                                                         // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/ServiceRequest"                                                    // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 3. MedicationStatement.partOf
-                this.Element_PartOf = new ElementDefinitionInfo
-                {
-                    Name = "Element_PartOf",
-                    Path= "MedicationStatement.partOf",
-                    Id = "MedicationStatement.partOf",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/MedicationAdministration",
-                                "http://hl7.org/fhir/StructureDefinition/MedicationDispense",
-                                "http://hl7.org/fhir/StructureDefinition/MedicationStatement",
-                                "http://hl7.org/fhir/StructureDefinition/Procedure",
-                                "http://hl7.org/fhir/StructureDefinition/Observation"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_PartOf = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_PartOf",                                                                                                // MakerGen.cs:236
+                    Path= "MedicationStatement.partOf",                                                                                     // MakerGen.cs:237
+                    Id = "MedicationStatement.partOf",                                                                                      // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/MedicationAdministration",                                         // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/MedicationDispense",                                               // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/MedicationStatement",                                              // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Procedure",                                                        // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Observation"                                                       // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 4. MedicationStatement.status
-                this.Element_Status = new ElementDefinitionInfo
-                {
-                    Name = "Element_Status",
-                    Path= "MedicationStatement.status",
-                    Id = "MedicationStatement.status",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Status",                                                                                                // MakerGen.cs:236
+                    Path= "MedicationStatement.status",                                                                                     // MakerGen.cs:237
+                    Id = "MedicationStatement.status",                                                                                      // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 5. MedicationStatement.statusReason
-                this.Element_StatusReason = new ElementDefinitionInfo
-                {
-                    Name = "Element_StatusReason",
-                    Path= "MedicationStatement.statusReason",
-                    Id = "MedicationStatement.statusReason",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_StatusReason = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_StatusReason",                                                                                          // MakerGen.cs:236
+                    Path= "MedicationStatement.statusReason",                                                                               // MakerGen.cs:237
+                    Id = "MedicationStatement.statusReason",                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 6. MedicationStatement.category
-                this.Element_Category = new ElementDefinitionInfo
-                {
-                    Name = "Element_Category",
-                    Path= "MedicationStatement.category",
-                    Id = "MedicationStatement.category",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Category = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Category",                                                                                              // MakerGen.cs:236
+                    Path= "MedicationStatement.category",                                                                                   // MakerGen.cs:237
+                    Id = "MedicationStatement.category",                                                                                    // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 7. MedicationStatement.medication[x]
-                this.Element_Medication = new ElementDefinitionInfo
-                {
-                    Name = "Element_Medication",
-                    Path= "MedicationStatement.medication[x]",
-                    Id = "MedicationStatement.medication[x]",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        },
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Medication"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Medication = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Medication",                                                                                            // MakerGen.cs:236
+                    Path= "MedicationStatement.medication[x]",                                                                              // MakerGen.cs:237
+                    Id = "MedicationStatement.medication[x]",                                                                               // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        },                                                                                                                  // MakerGen.cs:320
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Medication"                                                        // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 8. MedicationStatement.subject
-                this.Element_Subject = new ElementDefinitionInfo
-                {
-                    Name = "Element_Subject",
-                    Path= "MedicationStatement.subject",
-                    Id = "MedicationStatement.subject",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Patient",
-                                "http://hl7.org/fhir/StructureDefinition/Group"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Subject = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Subject",                                                                                               // MakerGen.cs:236
+                    Path= "MedicationStatement.subject",                                                                                    // MakerGen.cs:237
+                    Id = "MedicationStatement.subject",                                                                                     // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Patient",                                                          // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Group"                                                             // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 9. MedicationStatement.context
-                this.Element_Context = new ElementDefinitionInfo
-                {
-                    Name = "Element_Context",
-                    Path= "MedicationStatement.context",
-                    Id = "MedicationStatement.context",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Encounter",
-                                "http://hl7.org/fhir/StructureDefinition/EpisodeOfCare"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Context = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Context",                                                                                               // MakerGen.cs:236
+                    Path= "MedicationStatement.context",                                                                                    // MakerGen.cs:237
+                    Id = "MedicationStatement.context",                                                                                     // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Encounter",                                                        // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/EpisodeOfCare"                                                     // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 10. MedicationStatement.effective[x]
-                this.Element_Effective = new ElementDefinitionInfo
-                {
-                    Name = "Element_Effective",
-                    Path= "MedicationStatement.effective[x]",
-                    Id = "MedicationStatement.effective[x]",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
-                        {
-                        },
-                        new FhirKhit.Maker.Common.Complex.Type_Period
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Effective = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Effective",                                                                                             // MakerGen.cs:236
+                    Path= "MedicationStatement.effective[x]",                                                                               // MakerGen.cs:237
+                    Id = "MedicationStatement.effective[x]",                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        },                                                                                                                  // MakerGen.cs:305
+                        new FhirKhit.Maker.Common.Complex.Type_Period                                                                       // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 11. MedicationStatement.dateAsserted
-                this.Element_DateAsserted = new ElementDefinitionInfo
-                {
-                    Name = "Element_DateAsserted",
-                    Path= "MedicationStatement.dateAsserted",
-                    Id = "MedicationStatement.dateAsserted",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_DateAsserted = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_DateAsserted",                                                                                          // MakerGen.cs:236
+                    Path= "MedicationStatement.dateAsserted",                                                                               // MakerGen.cs:237
+                    Id = "MedicationStatement.dateAsserted",                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 12. MedicationStatement.informationSource
-                this.Element_InformationSource = new ElementDefinitionInfo
-                {
-                    Name = "Element_InformationSource",
-                    Path= "MedicationStatement.informationSource",
-                    Id = "MedicationStatement.informationSource",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Patient",
-                                "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                                "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
-                                "http://hl7.org/fhir/StructureDefinition/Organization"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_InformationSource = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_InformationSource",                                                                                     // MakerGen.cs:236
+                    Path= "MedicationStatement.informationSource",                                                                          // MakerGen.cs:237
+                    Id = "MedicationStatement.informationSource",                                                                           // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Patient",                                                          // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                                 // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/RelatedPerson",                                                    // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 13. MedicationStatement.derivedFrom
-                this.Element_DerivedFrom = new ElementDefinitionInfo
-                {
-                    Name = "Element_DerivedFrom",
-                    Path= "MedicationStatement.derivedFrom",
-                    Id = "MedicationStatement.derivedFrom",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Resource"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_DerivedFrom = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_DerivedFrom",                                                                                           // MakerGen.cs:236
+                    Path= "MedicationStatement.derivedFrom",                                                                                // MakerGen.cs:237
+                    Id = "MedicationStatement.derivedFrom",                                                                                 // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Resource"                                                          // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 14. MedicationStatement.reasonCode
-                this.Element_ReasonCode = new ElementDefinitionInfo
-                {
-                    Name = "Element_ReasonCode",
-                    Path= "MedicationStatement.reasonCode",
-                    Id = "MedicationStatement.reasonCode",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ReasonCode = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ReasonCode",                                                                                            // MakerGen.cs:236
+                    Path= "MedicationStatement.reasonCode",                                                                                 // MakerGen.cs:237
+                    Id = "MedicationStatement.reasonCode",                                                                                  // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 15. MedicationStatement.reasonReference
-                this.Element_ReasonReference = new ElementDefinitionInfo
-                {
-                    Name = "Element_ReasonReference",
-                    Path= "MedicationStatement.reasonReference",
-                    Id = "MedicationStatement.reasonReference",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Condition",
-                                "http://hl7.org/fhir/StructureDefinition/Observation",
-                                "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ReasonReference = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ReasonReference",                                                                                       // MakerGen.cs:236
+                    Path= "MedicationStatement.reasonReference",                                                                            // MakerGen.cs:237
+                    Id = "MedicationStatement.reasonReference",                                                                             // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Condition",                                                        // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Observation",                                                      // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"                                                  // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 16. MedicationStatement.note
-                this.Element_Note = new ElementDefinitionInfo
-                {
-                    Name = "Element_Note",
-                    Path= "MedicationStatement.note",
-                    Id = "MedicationStatement.note",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Annotation
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Note = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Note",                                                                                                  // MakerGen.cs:236
+                    Path= "MedicationStatement.note",                                                                                       // MakerGen.cs:237
+                    Id = "MedicationStatement.note",                                                                                        // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Annotation                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 17. MedicationStatement.dosage
-                this.Element_Dosage = new ElementDefinitionInfo
-                {
-                    Name = "Element_Dosage",
-                    Path= "MedicationStatement.dosage",
-                    Id = "MedicationStatement.dosage",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Dosage
-                        {
-                        }
-                    }
-                };
-            }
-            this.Name = "MedicationStatement";
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/MedicationStatement";
-        }
-    }
-}
+                this.Element_Dosage = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Dosage",                                                                                                // MakerGen.cs:236
+                    Path= "MedicationStatement.dosage",                                                                                     // MakerGen.cs:237
+                    Id = "MedicationStatement.dosage",                                                                                      // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Dosage                                                                       // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            this.Name = "MedicationStatement";                                                                                              // MakerGen.cs:468
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/MedicationStatement";                                                       // MakerGen.cs:469
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:449

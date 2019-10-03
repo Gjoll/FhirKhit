@@ -1,13 +1,13 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Resource
-{
-    #region Json
-    #if NEVER
+using System;                                                                                                                               // MakerGen.cs:432
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:433
+using System.IO;                                                                                                                            // MakerGen.cs:434
+using System.Linq;                                                                                                                          // MakerGen.cs:435
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:436
+                                                                                                                                            // MakerGen.cs:437
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:438
+{                                                                                                                                           // MakerGen.cs:439
+    #region Json                                                                                                                            // MakerGen.cs:440
+    #if NEVER                                                                                                                               // MakerGen.cs:441
     {
       "resourceType": "StructureDefinition",
       "id": "EpisodeOfCare",
@@ -348,433 +348,433 @@ namespace FhirKhit.Maker.Common.Resource
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:444
     /// <summary>
     /// Fhir resource 'EpisodeOfCare'
     /// </summary>
     // 0. EpisodeOfCare
-    public partial class Resource_EpisodeOfCare : FhirKhit.Maker.Common.Resource.Resource_DomainResource
-    {
+    public partial class Resource_EpisodeOfCare : FhirKhit.Maker.Common.Resource.Resource_DomainResource                                    // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 3. EpisodeOfCare.statusHistory
-        public partial class Type_StatusHistory : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_StatusHistory : FhirKhit.Maker.Common.Complex.ComplexBase                                                 // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 4. EpisodeOfCare.statusHistory.status
-            public ElementDefinitionInfo Element_Status;
+            public ElementDefinitionInfo Element_Status;                                                                                    // MakerGen.cs:217
             // 5. EpisodeOfCare.statusHistory.period
-            public ElementDefinitionInfo Element_Period;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "EpisodeOfCare.statusHistory",
-                    ElementId = "EpisodeOfCare.statusHistory"
-                });
-                Element_Status.Write(sDef);
-                Element_Period.Write(sDef);
-            }
-            
-            public Type_StatusHistory()
-            {
-                {
+            public ElementDefinitionInfo Element_Period;                                                                                    // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "EpisodeOfCare.statusHistory",                                                                                   // MakerGen.cs:393
+                    ElementId = "EpisodeOfCare.statusHistory"                                                                               // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Status.Write(sDef);                                                                                                 // MakerGen.cs:221
+                Element_Period.Write(sDef);                                                                                                 // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_StatusHistory()                                                                                                     // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 4. EpisodeOfCare.statusHistory.status
-                    this.Element_Status = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Status",
-                        Path= "EpisodeOfCare.statusHistory.status",
-                        Id = "EpisodeOfCare.statusHistory.status",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Status = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Status",                                                                                            // MakerGen.cs:236
+                        Path= "EpisodeOfCare.statusHistory.status",                                                                         // MakerGen.cs:237
+                        Id = "EpisodeOfCare.statusHistory.status",                                                                          // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 5. EpisodeOfCare.statusHistory.period
-                    this.Element_Period = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Period",
-                        Path= "EpisodeOfCare.statusHistory.period",
-                        Id = "EpisodeOfCare.statusHistory.period",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Period
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Period = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Period",                                                                                            // MakerGen.cs:236
+                        Path= "EpisodeOfCare.statusHistory.period",                                                                         // MakerGen.cs:237
+                        Id = "EpisodeOfCare.statusHistory.period",                                                                          // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Period                                                                   // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 7. EpisodeOfCare.diagnosis
-        public partial class Type_Diagnosis : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Diagnosis : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 8. EpisodeOfCare.diagnosis.condition
-            public ElementDefinitionInfo Element_Condition;
+            public ElementDefinitionInfo Element_Condition;                                                                                 // MakerGen.cs:217
             // 9. EpisodeOfCare.diagnosis.role
-            public ElementDefinitionInfo Element_Role;
+            public ElementDefinitionInfo Element_Role;                                                                                      // MakerGen.cs:217
             // 10. EpisodeOfCare.diagnosis.rank
-            public ElementDefinitionInfo Element_Rank;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "EpisodeOfCare.diagnosis",
-                    ElementId = "EpisodeOfCare.diagnosis"
-                });
-                Element_Condition.Write(sDef);
-                Element_Role.Write(sDef);
-                Element_Rank.Write(sDef);
-            }
-            
-            public Type_Diagnosis()
-            {
-                {
+            public ElementDefinitionInfo Element_Rank;                                                                                      // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "EpisodeOfCare.diagnosis",                                                                                       // MakerGen.cs:393
+                    ElementId = "EpisodeOfCare.diagnosis"                                                                                   // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Condition.Write(sDef);                                                                                              // MakerGen.cs:221
+                Element_Role.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Rank.Write(sDef);                                                                                                   // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Diagnosis()                                                                                                         // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 8. EpisodeOfCare.diagnosis.condition
-                    this.Element_Condition = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Condition",
-                        Path= "EpisodeOfCare.diagnosis.condition",
-                        Id = "EpisodeOfCare.diagnosis.condition",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Condition"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Condition = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Condition",                                                                                         // MakerGen.cs:236
+                        Path= "EpisodeOfCare.diagnosis.condition",                                                                          // MakerGen.cs:237
+                        Id = "EpisodeOfCare.diagnosis.condition",                                                                           // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Condition"                                                     // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 9. EpisodeOfCare.diagnosis.role
-                    this.Element_Role = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Role",
-                        Path= "EpisodeOfCare.diagnosis.role",
-                        Id = "EpisodeOfCare.diagnosis.role",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Role = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Role",                                                                                              // MakerGen.cs:236
+                        Path= "EpisodeOfCare.diagnosis.role",                                                                               // MakerGen.cs:237
+                        Id = "EpisodeOfCare.diagnosis.role",                                                                                // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 10. EpisodeOfCare.diagnosis.rank
-                    this.Element_Rank = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Rank",
-                        Path= "EpisodeOfCare.diagnosis.rank",
-                        Id = "EpisodeOfCare.diagnosis.rank",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Rank = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Rank",                                                                                              // MakerGen.cs:236
+                        Path= "EpisodeOfCare.diagnosis.rank",                                                                               // MakerGen.cs:237
+                        Id = "EpisodeOfCare.diagnosis.rank",                                                                                // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                       // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 1. EpisodeOfCare.identifier
-        public ElementDefinitionInfo Element_Identifier;
+        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:217
         // 2. EpisodeOfCare.status
-        public ElementDefinitionInfo Element_Status;
+        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:217
         // 3. EpisodeOfCare.statusHistory
-        public ElementDefinitionInfo Element_StatusHistory;
+        public ElementDefinitionInfo Element_StatusHistory;                                                                                 // MakerGen.cs:217
         // 6. EpisodeOfCare.type
-        public ElementDefinitionInfo Element_Type;
+        public ElementDefinitionInfo Element_Type;                                                                                          // MakerGen.cs:217
         // 7. EpisodeOfCare.diagnosis
-        public ElementDefinitionInfo Element_Diagnosis;
+        public ElementDefinitionInfo Element_Diagnosis;                                                                                     // MakerGen.cs:217
         // 11. EpisodeOfCare.patient
-        public ElementDefinitionInfo Element_Patient;
+        public ElementDefinitionInfo Element_Patient;                                                                                       // MakerGen.cs:217
         // 12. EpisodeOfCare.managingOrganization
-        public ElementDefinitionInfo Element_ManagingOrganization;
+        public ElementDefinitionInfo Element_ManagingOrganization;                                                                          // MakerGen.cs:217
         // 13. EpisodeOfCare.period
-        public ElementDefinitionInfo Element_Period;
+        public ElementDefinitionInfo Element_Period;                                                                                        // MakerGen.cs:217
         // 14. EpisodeOfCare.referralRequest
-        public ElementDefinitionInfo Element_ReferralRequest;
+        public ElementDefinitionInfo Element_ReferralRequest;                                                                               // MakerGen.cs:217
         // 15. EpisodeOfCare.careManager
-        public ElementDefinitionInfo Element_CareManager;
+        public ElementDefinitionInfo Element_CareManager;                                                                                   // MakerGen.cs:217
         // 16. EpisodeOfCare.team
-        public ElementDefinitionInfo Element_Team;
+        public ElementDefinitionInfo Element_Team;                                                                                          // MakerGen.cs:217
         // 17. EpisodeOfCare.account
-        public ElementDefinitionInfo Element_Account;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "EpisodeOfCare",
-                ElementId = "EpisodeOfCare"
-            });
-            Element_Identifier.Write(sDef);
-            Element_Status.Write(sDef);
-            Element_StatusHistory.Write(sDef);
-            Element_Type.Write(sDef);
-            Element_Diagnosis.Write(sDef);
-            Element_Patient.Write(sDef);
-            Element_ManagingOrganization.Write(sDef);
-            Element_Period.Write(sDef);
-            Element_ReferralRequest.Write(sDef);
-            Element_CareManager.Write(sDef);
-            Element_Team.Write(sDef);
-            Element_Account.Write(sDef);
-        }
-        
-        public Resource_EpisodeOfCare()
-        {
-            {
+        public ElementDefinitionInfo Element_Account;                                                                                       // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "EpisodeOfCare",                                                                                                     // MakerGen.cs:393
+                ElementId = "EpisodeOfCare"                                                                                                 // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_StatusHistory.Write(sDef);                                                                                              // MakerGen.cs:221
+            Element_Type.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Diagnosis.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_Patient.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_ManagingOrganization.Write(sDef);                                                                                       // MakerGen.cs:221
+            Element_Period.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_ReferralRequest.Write(sDef);                                                                                            // MakerGen.cs:221
+            Element_CareManager.Write(sDef);                                                                                                // MakerGen.cs:221
+            Element_Team.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Account.Write(sDef);                                                                                                    // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Resource_EpisodeOfCare()                                                                                                     // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. EpisodeOfCare.identifier
-                this.Element_Identifier = new ElementDefinitionInfo
-                {
-                    Name = "Element_Identifier",
-                    Path= "EpisodeOfCare.identifier",
-                    Id = "EpisodeOfCare.identifier",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:236
+                    Path= "EpisodeOfCare.identifier",                                                                                       // MakerGen.cs:237
+                    Id = "EpisodeOfCare.identifier",                                                                                        // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. EpisodeOfCare.status
-                this.Element_Status = new ElementDefinitionInfo
-                {
-                    Name = "Element_Status",
-                    Path= "EpisodeOfCare.status",
-                    Id = "EpisodeOfCare.status",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Status",                                                                                                // MakerGen.cs:236
+                    Path= "EpisodeOfCare.status",                                                                                           // MakerGen.cs:237
+                    Id = "EpisodeOfCare.status",                                                                                            // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 3. EpisodeOfCare.statusHistory
-                this.Element_StatusHistory = new ElementDefinitionInfo
-                {
-                    Name = "Element_StatusHistory",
-                    Path= "EpisodeOfCare.statusHistory",
-                    Id = "EpisodeOfCare.statusHistory",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_StatusHistory
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_StatusHistory = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_StatusHistory",                                                                                         // MakerGen.cs:236
+                    Path= "EpisodeOfCare.statusHistory",                                                                                    // MakerGen.cs:237
+                    Id = "EpisodeOfCare.statusHistory",                                                                                     // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_StatusHistory                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 6. EpisodeOfCare.type
-                this.Element_Type = new ElementDefinitionInfo
-                {
-                    Name = "Element_Type",
-                    Path= "EpisodeOfCare.type",
-                    Id = "EpisodeOfCare.type",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Type = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Type",                                                                                                  // MakerGen.cs:236
+                    Path= "EpisodeOfCare.type",                                                                                             // MakerGen.cs:237
+                    Id = "EpisodeOfCare.type",                                                                                              // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 7. EpisodeOfCare.diagnosis
-                this.Element_Diagnosis = new ElementDefinitionInfo
-                {
-                    Name = "Element_Diagnosis",
-                    Path= "EpisodeOfCare.diagnosis",
-                    Id = "EpisodeOfCare.diagnosis",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Diagnosis
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Diagnosis = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Diagnosis",                                                                                             // MakerGen.cs:236
+                    Path= "EpisodeOfCare.diagnosis",                                                                                        // MakerGen.cs:237
+                    Id = "EpisodeOfCare.diagnosis",                                                                                         // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Diagnosis                                                                                                  // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 11. EpisodeOfCare.patient
-                this.Element_Patient = new ElementDefinitionInfo
-                {
-                    Name = "Element_Patient",
-                    Path= "EpisodeOfCare.patient",
-                    Id = "EpisodeOfCare.patient",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Patient"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Patient = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Patient",                                                                                               // MakerGen.cs:236
+                    Path= "EpisodeOfCare.patient",                                                                                          // MakerGen.cs:237
+                    Id = "EpisodeOfCare.patient",                                                                                           // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Patient"                                                           // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 12. EpisodeOfCare.managingOrganization
-                this.Element_ManagingOrganization = new ElementDefinitionInfo
-                {
-                    Name = "Element_ManagingOrganization",
-                    Path= "EpisodeOfCare.managingOrganization",
-                    Id = "EpisodeOfCare.managingOrganization",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Organization"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ManagingOrganization = new ElementDefinitionInfo                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ManagingOrganization",                                                                                  // MakerGen.cs:236
+                    Path= "EpisodeOfCare.managingOrganization",                                                                             // MakerGen.cs:237
+                    Id = "EpisodeOfCare.managingOrganization",                                                                              // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 13. EpisodeOfCare.period
-                this.Element_Period = new ElementDefinitionInfo
-                {
-                    Name = "Element_Period",
-                    Path= "EpisodeOfCare.period",
-                    Id = "EpisodeOfCare.period",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Period
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Period = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Period",                                                                                                // MakerGen.cs:236
+                    Path= "EpisodeOfCare.period",                                                                                           // MakerGen.cs:237
+                    Id = "EpisodeOfCare.period",                                                                                            // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Period                                                                       // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 14. EpisodeOfCare.referralRequest
-                this.Element_ReferralRequest = new ElementDefinitionInfo
-                {
-                    Name = "Element_ReferralRequest",
-                    Path= "EpisodeOfCare.referralRequest",
-                    Id = "EpisodeOfCare.referralRequest",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/ServiceRequest"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ReferralRequest = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ReferralRequest",                                                                                       // MakerGen.cs:236
+                    Path= "EpisodeOfCare.referralRequest",                                                                                  // MakerGen.cs:237
+                    Id = "EpisodeOfCare.referralRequest",                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/ServiceRequest"                                                    // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 15. EpisodeOfCare.careManager
-                this.Element_CareManager = new ElementDefinitionInfo
-                {
-                    Name = "Element_CareManager",
-                    Path= "EpisodeOfCare.careManager",
-                    Id = "EpisodeOfCare.careManager",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_CareManager = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_CareManager",                                                                                           // MakerGen.cs:236
+                    Path= "EpisodeOfCare.careManager",                                                                                      // MakerGen.cs:237
+                    Id = "EpisodeOfCare.careManager",                                                                                       // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole"                                                  // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 16. EpisodeOfCare.team
-                this.Element_Team = new ElementDefinitionInfo
-                {
-                    Name = "Element_Team",
-                    Path= "EpisodeOfCare.team",
-                    Id = "EpisodeOfCare.team",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/CareTeam"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Team = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Team",                                                                                                  // MakerGen.cs:236
+                    Path= "EpisodeOfCare.team",                                                                                             // MakerGen.cs:237
+                    Id = "EpisodeOfCare.team",                                                                                              // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/CareTeam"                                                          // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 17. EpisodeOfCare.account
-                this.Element_Account = new ElementDefinitionInfo
-                {
-                    Name = "Element_Account",
-                    Path= "EpisodeOfCare.account",
-                    Id = "EpisodeOfCare.account",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Account"
-                            }
-                        }
-                    }
-                };
-            }
-            this.Name = "EpisodeOfCare";
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/EpisodeOfCare";
-        }
-    }
-}
+                this.Element_Account = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Account",                                                                                               // MakerGen.cs:236
+                    Path= "EpisodeOfCare.account",                                                                                          // MakerGen.cs:237
+                    Id = "EpisodeOfCare.account",                                                                                           // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Account"                                                           // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            this.Name = "EpisodeOfCare";                                                                                                    // MakerGen.cs:468
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/EpisodeOfCare";                                                             // MakerGen.cs:469
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:449

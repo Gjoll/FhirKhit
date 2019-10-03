@@ -1,13 +1,13 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Resource
-{
-    #region Json
-    #if NEVER
+using System;                                                                                                                               // MakerGen.cs:432
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:433
+using System.IO;                                                                                                                            // MakerGen.cs:434
+using System.Linq;                                                                                                                          // MakerGen.cs:435
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:436
+                                                                                                                                            // MakerGen.cs:437
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:438
+{                                                                                                                                           // MakerGen.cs:439
+    #region Json                                                                                                                            // MakerGen.cs:440
+    #if NEVER                                                                                                                               // MakerGen.cs:441
     {
       "resourceType": "StructureDefinition",
       "id": "Composition",
@@ -708,814 +708,814 @@ namespace FhirKhit.Maker.Common.Resource
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:444
     /// <summary>
     /// Fhir resource 'Composition'
     /// </summary>
     // 0. Composition
-    public partial class Resource_Composition : FhirKhit.Maker.Common.Resource.Resource_DomainResource
-    {
+    public partial class Resource_Composition : FhirKhit.Maker.Common.Resource.Resource_DomainResource                                      // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 11. Composition.attester
-        public partial class Type_Attester : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Attester : FhirKhit.Maker.Common.Complex.ComplexBase                                                      // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 12. Composition.attester.mode
-            public ElementDefinitionInfo Element_Mode;
+            public ElementDefinitionInfo Element_Mode;                                                                                      // MakerGen.cs:217
             // 13. Composition.attester.time
-            public ElementDefinitionInfo Element_Time;
+            public ElementDefinitionInfo Element_Time;                                                                                      // MakerGen.cs:217
             // 14. Composition.attester.party
-            public ElementDefinitionInfo Element_Party;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "Composition.attester",
-                    ElementId = "Composition.attester"
-                });
-                Element_Mode.Write(sDef);
-                Element_Time.Write(sDef);
-                Element_Party.Write(sDef);
-            }
-            
-            public Type_Attester()
-            {
-                {
+            public ElementDefinitionInfo Element_Party;                                                                                     // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "Composition.attester",                                                                                          // MakerGen.cs:393
+                    ElementId = "Composition.attester"                                                                                      // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Mode.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Time.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Party.Write(sDef);                                                                                                  // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Attester()                                                                                                          // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 12. Composition.attester.mode
-                    this.Element_Mode = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Mode",
-                        Path= "Composition.attester.mode",
-                        Id = "Composition.attester.mode",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Mode = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Mode",                                                                                              // MakerGen.cs:236
+                        Path= "Composition.attester.mode",                                                                                  // MakerGen.cs:237
+                        Id = "Composition.attester.mode",                                                                                   // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 13. Composition.attester.time
-                    this.Element_Time = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Time",
-                        Path= "Composition.attester.time",
-                        Id = "Composition.attester.time",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Time = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Time",                                                                                              // MakerGen.cs:236
+                        Path= "Composition.attester.time",                                                                                  // MakerGen.cs:237
+                        Id = "Composition.attester.time",                                                                                   // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                          // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 14. Composition.attester.party
-                    this.Element_Party = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Party",
-                        Path= "Composition.attester.party",
-                        Id = "Composition.attester.party",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Patient",
-                                    "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
-                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                                    "http://hl7.org/fhir/StructureDefinition/Organization"
-                                }
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Party = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Party",                                                                                             // MakerGen.cs:236
+                        Path= "Composition.attester.party",                                                                                 // MakerGen.cs:237
+                        Id = "Composition.attester.party",                                                                                  // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Patient",                                                      // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/RelatedPerson",                                                // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                 // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                             // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/Organization"                                                  // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 16. Composition.relatesTo
-        public partial class Type_RelatesTo : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_RelatesTo : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 17. Composition.relatesTo.code
-            public ElementDefinitionInfo Element_Code;
+            public ElementDefinitionInfo Element_Code;                                                                                      // MakerGen.cs:217
             // 18. Composition.relatesTo.target[x]
-            public ElementDefinitionInfo Element_Target;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "Composition.relatesTo",
-                    ElementId = "Composition.relatesTo"
-                });
-                Element_Code.Write(sDef);
-                Element_Target.Write(sDef);
-            }
-            
-            public Type_RelatesTo()
-            {
-                {
+            public ElementDefinitionInfo Element_Target;                                                                                    // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "Composition.relatesTo",                                                                                         // MakerGen.cs:393
+                    ElementId = "Composition.relatesTo"                                                                                     // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Code.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Target.Write(sDef);                                                                                                 // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_RelatesTo()                                                                                                         // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 17. Composition.relatesTo.code
-                    this.Element_Code = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Code",
-                        Path= "Composition.relatesTo.code",
-                        Id = "Composition.relatesTo.code",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Code = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Code",                                                                                              // MakerGen.cs:236
+                        Path= "Composition.relatesTo.code",                                                                                 // MakerGen.cs:237
+                        Id = "Composition.relatesTo.code",                                                                                  // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 18. Composition.relatesTo.target[x]
-                    this.Element_Target = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Target",
-                        Path= "Composition.relatesTo.target[x]",
-                        Id = "Composition.relatesTo.target[x]",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Identifier
-                            {
-                            },
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Composition"
-                                }
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Target = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Target",                                                                                            // MakerGen.cs:236
+                        Path= "Composition.relatesTo.target[x]",                                                                            // MakerGen.cs:237
+                        Id = "Composition.relatesTo.target[x]",                                                                             // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Identifier                                                               // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            },                                                                                                              // MakerGen.cs:358
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Composition"                                                   // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 19. Composition.event
-        public partial class Type_Event : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Event : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 20. Composition.event.code
-            public ElementDefinitionInfo Element_Code;
+            public ElementDefinitionInfo Element_Code;                                                                                      // MakerGen.cs:217
             // 21. Composition.event.period
-            public ElementDefinitionInfo Element_Period;
+            public ElementDefinitionInfo Element_Period;                                                                                    // MakerGen.cs:217
             // 22. Composition.event.detail
-            public ElementDefinitionInfo Element_Detail;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "Composition.event",
-                    ElementId = "Composition.event"
-                });
-                Element_Code.Write(sDef);
-                Element_Period.Write(sDef);
-                Element_Detail.Write(sDef);
-            }
-            
-            public Type_Event()
-            {
-                {
+            public ElementDefinitionInfo Element_Detail;                                                                                    // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "Composition.event",                                                                                             // MakerGen.cs:393
+                    ElementId = "Composition.event"                                                                                         // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Code.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Period.Write(sDef);                                                                                                 // MakerGen.cs:221
+                Element_Detail.Write(sDef);                                                                                                 // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Event()                                                                                                             // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 20. Composition.event.code
-                    this.Element_Code = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Code",
-                        Path= "Composition.event.code",
-                        Id = "Composition.event.code",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Code = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Code",                                                                                              // MakerGen.cs:236
+                        Path= "Composition.event.code",                                                                                     // MakerGen.cs:237
+                        Id = "Composition.event.code",                                                                                      // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 21. Composition.event.period
-                    this.Element_Period = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Period",
-                        Path= "Composition.event.period",
-                        Id = "Composition.event.period",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Period
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Period = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Period",                                                                                            // MakerGen.cs:236
+                        Path= "Composition.event.period",                                                                                   // MakerGen.cs:237
+                        Id = "Composition.event.period",                                                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Period                                                                   // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 22. Composition.event.detail
-                    this.Element_Detail = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Detail",
-                        Path= "Composition.event.detail",
-                        Id = "Composition.event.detail",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Resource"
-                                }
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Detail = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Detail",                                                                                            // MakerGen.cs:236
+                        Path= "Composition.event.detail",                                                                                   // MakerGen.cs:237
+                        Id = "Composition.event.detail",                                                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Resource"                                                      // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 23. Composition.section
-        public partial class Type_Section : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Section : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 24. Composition.section.title
-            public ElementDefinitionInfo Element_Title;
+            public ElementDefinitionInfo Element_Title;                                                                                     // MakerGen.cs:217
             // 25. Composition.section.code
-            public ElementDefinitionInfo Element_Code;
+            public ElementDefinitionInfo Element_Code;                                                                                      // MakerGen.cs:217
             // 26. Composition.section.author
-            public ElementDefinitionInfo Element_Author;
+            public ElementDefinitionInfo Element_Author;                                                                                    // MakerGen.cs:217
             // 27. Composition.section.focus
-            public ElementDefinitionInfo Element_Focus;
+            public ElementDefinitionInfo Element_Focus;                                                                                     // MakerGen.cs:217
             // 28. Composition.section.text
-            public ElementDefinitionInfo Element_Text;
+            public ElementDefinitionInfo Element_Text;                                                                                      // MakerGen.cs:217
             // 29. Composition.section.mode
-            public ElementDefinitionInfo Element_Mode;
+            public ElementDefinitionInfo Element_Mode;                                                                                      // MakerGen.cs:217
             // 30. Composition.section.orderedBy
-            public ElementDefinitionInfo Element_OrderedBy;
+            public ElementDefinitionInfo Element_OrderedBy;                                                                                 // MakerGen.cs:217
             // 31. Composition.section.entry
-            public ElementDefinitionInfo Element_Entry;
+            public ElementDefinitionInfo Element_Entry;                                                                                     // MakerGen.cs:217
             // 32. Composition.section.emptyReason
-            public ElementDefinitionInfo Element_EmptyReason;
+            public ElementDefinitionInfo Element_EmptyReason;                                                                               // MakerGen.cs:217
             // 33. Composition.section.section
-            public ElementDefinitionInfo Element_Section;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "Composition.section",
-                    ElementId = "Composition.section"
-                });
-                Element_Title.Write(sDef);
-                Element_Code.Write(sDef);
-                Element_Author.Write(sDef);
-                Element_Focus.Write(sDef);
-                Element_Text.Write(sDef);
-                Element_Mode.Write(sDef);
-                Element_OrderedBy.Write(sDef);
-                Element_Entry.Write(sDef);
-                Element_EmptyReason.Write(sDef);
-                Element_Section.Write(sDef);
-            }
-            
-            public Type_Section()
-            {
-                {
+            public ElementDefinitionInfo Element_Section;                                                                                   // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "Composition.section",                                                                                           // MakerGen.cs:393
+                    ElementId = "Composition.section"                                                                                       // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Title.Write(sDef);                                                                                                  // MakerGen.cs:221
+                Element_Code.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Author.Write(sDef);                                                                                                 // MakerGen.cs:221
+                Element_Focus.Write(sDef);                                                                                                  // MakerGen.cs:221
+                Element_Text.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Mode.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_OrderedBy.Write(sDef);                                                                                              // MakerGen.cs:221
+                Element_Entry.Write(sDef);                                                                                                  // MakerGen.cs:221
+                Element_EmptyReason.Write(sDef);                                                                                            // MakerGen.cs:221
+                Element_Section.Write(sDef);                                                                                                // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Section()                                                                                                           // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 24. Composition.section.title
-                    this.Element_Title = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Title",
-                        Path= "Composition.section.title",
-                        Id = "Composition.section.title",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Title = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Title",                                                                                             // MakerGen.cs:236
+                        Path= "Composition.section.title",                                                                                  // MakerGen.cs:237
+                        Id = "Composition.section.title",                                                                                   // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 25. Composition.section.code
-                    this.Element_Code = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Code",
-                        Path= "Composition.section.code",
-                        Id = "Composition.section.code",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Code = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Code",                                                                                              // MakerGen.cs:236
+                        Path= "Composition.section.code",                                                                                   // MakerGen.cs:237
+                        Id = "Composition.section.code",                                                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 26. Composition.section.author
-                    this.Element_Author = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Author",
-                        Path= "Composition.section.author",
-                        Id = "Composition.section.author",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                                    "http://hl7.org/fhir/StructureDefinition/Device",
-                                    "http://hl7.org/fhir/StructureDefinition/Patient",
-                                    "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
-                                    "http://hl7.org/fhir/StructureDefinition/Organization"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Author = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Author",                                                                                            // MakerGen.cs:236
+                        Path= "Composition.section.author",                                                                                 // MakerGen.cs:237
+                        Id = "Composition.section.author",                                                                                  // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                 // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                             // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/Device",                                                       // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/Patient",                                                      // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/RelatedPerson",                                                // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/Organization"                                                  // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 27. Composition.section.focus
-                    this.Element_Focus = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Focus",
-                        Path= "Composition.section.focus",
-                        Id = "Composition.section.focus",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Resource"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Focus = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Focus",                                                                                             // MakerGen.cs:236
+                        Path= "Composition.section.focus",                                                                                  // MakerGen.cs:237
+                        Id = "Composition.section.focus",                                                                                   // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Resource"                                                      // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 28. Composition.section.text
-                    this.Element_Text = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Text",
-                        Path= "Composition.section.text",
-                        Id = "Composition.section.text",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Narrative
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Text = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Text",                                                                                              // MakerGen.cs:236
+                        Path= "Composition.section.text",                                                                                   // MakerGen.cs:237
+                        Id = "Composition.section.text",                                                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Narrative                                                                // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 29. Composition.section.mode
-                    this.Element_Mode = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Mode",
-                        Path= "Composition.section.mode",
-                        Id = "Composition.section.mode",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Mode = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Mode",                                                                                              // MakerGen.cs:236
+                        Path= "Composition.section.mode",                                                                                   // MakerGen.cs:237
+                        Id = "Composition.section.mode",                                                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 30. Composition.section.orderedBy
-                    this.Element_OrderedBy = new ElementDefinitionInfo
-                    {
-                        Name = "Element_OrderedBy",
-                        Path= "Composition.section.orderedBy",
-                        Id = "Composition.section.orderedBy",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_OrderedBy = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_OrderedBy",                                                                                         // MakerGen.cs:236
+                        Path= "Composition.section.orderedBy",                                                                              // MakerGen.cs:237
+                        Id = "Composition.section.orderedBy",                                                                               // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 31. Composition.section.entry
-                    this.Element_Entry = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Entry",
-                        Path= "Composition.section.entry",
-                        Id = "Composition.section.entry",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Resource"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Entry = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Entry",                                                                                             // MakerGen.cs:236
+                        Path= "Composition.section.entry",                                                                                  // MakerGen.cs:237
+                        Id = "Composition.section.entry",                                                                                   // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Resource"                                                      // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 32. Composition.section.emptyReason
-                    this.Element_EmptyReason = new ElementDefinitionInfo
-                    {
-                        Name = "Element_EmptyReason",
-                        Path= "Composition.section.emptyReason",
-                        Id = "Composition.section.emptyReason",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_EmptyReason = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_EmptyReason",                                                                                       // MakerGen.cs:236
+                        Path= "Composition.section.emptyReason",                                                                            // MakerGen.cs:237
+                        Id = "Composition.section.emptyReason",                                                                             // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 33. Composition.section.section
-                    this.Element_Section = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Section",
-                        Path= "Composition.section.section",
-                        Id = "Composition.section.section",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Section = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Section",                                                                                           // MakerGen.cs:236
+                        Path= "Composition.section.section",                                                                                // MakerGen.cs:237
+                        Id = "Composition.section.section",                                                                                 // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 1. Composition.identifier
-        public ElementDefinitionInfo Element_Identifier;
+        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:217
         // 2. Composition.status
-        public ElementDefinitionInfo Element_Status;
+        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:217
         // 3. Composition.type
-        public ElementDefinitionInfo Element_Type;
+        public ElementDefinitionInfo Element_Type;                                                                                          // MakerGen.cs:217
         // 4. Composition.category
-        public ElementDefinitionInfo Element_Category;
+        public ElementDefinitionInfo Element_Category;                                                                                      // MakerGen.cs:217
         // 5. Composition.subject
-        public ElementDefinitionInfo Element_Subject;
+        public ElementDefinitionInfo Element_Subject;                                                                                       // MakerGen.cs:217
         // 6. Composition.encounter
-        public ElementDefinitionInfo Element_Encounter;
+        public ElementDefinitionInfo Element_Encounter;                                                                                     // MakerGen.cs:217
         // 7. Composition.date
-        public ElementDefinitionInfo Element_Date;
+        public ElementDefinitionInfo Element_Date;                                                                                          // MakerGen.cs:217
         // 8. Composition.author
-        public ElementDefinitionInfo Element_Author;
+        public ElementDefinitionInfo Element_Author;                                                                                        // MakerGen.cs:217
         // 9. Composition.title
-        public ElementDefinitionInfo Element_Title;
+        public ElementDefinitionInfo Element_Title;                                                                                         // MakerGen.cs:217
         // 10. Composition.confidentiality
-        public ElementDefinitionInfo Element_Confidentiality;
+        public ElementDefinitionInfo Element_Confidentiality;                                                                               // MakerGen.cs:217
         // 11. Composition.attester
-        public ElementDefinitionInfo Element_Attester;
+        public ElementDefinitionInfo Element_Attester;                                                                                      // MakerGen.cs:217
         // 15. Composition.custodian
-        public ElementDefinitionInfo Element_Custodian;
+        public ElementDefinitionInfo Element_Custodian;                                                                                     // MakerGen.cs:217
         // 16. Composition.relatesTo
-        public ElementDefinitionInfo Element_RelatesTo;
+        public ElementDefinitionInfo Element_RelatesTo;                                                                                     // MakerGen.cs:217
         // 19. Composition.event
-        public ElementDefinitionInfo Element_Event;
+        public ElementDefinitionInfo Element_Event;                                                                                         // MakerGen.cs:217
         // 23. Composition.section
-        public ElementDefinitionInfo Element_Section;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "Composition",
-                ElementId = "Composition"
-            });
-            Element_Identifier.Write(sDef);
-            Element_Status.Write(sDef);
-            Element_Type.Write(sDef);
-            Element_Category.Write(sDef);
-            Element_Subject.Write(sDef);
-            Element_Encounter.Write(sDef);
-            Element_Date.Write(sDef);
-            Element_Author.Write(sDef);
-            Element_Title.Write(sDef);
-            Element_Confidentiality.Write(sDef);
-            Element_Attester.Write(sDef);
-            Element_Custodian.Write(sDef);
-            Element_RelatesTo.Write(sDef);
-            Element_Event.Write(sDef);
-            Element_Section.Write(sDef);
-        }
-        
-        public Resource_Composition()
-        {
-            {
+        public ElementDefinitionInfo Element_Section;                                                                                       // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "Composition",                                                                                                       // MakerGen.cs:393
+                ElementId = "Composition"                                                                                                   // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Type.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Category.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_Subject.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Encounter.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_Date.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Author.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Title.Write(sDef);                                                                                                      // MakerGen.cs:221
+            Element_Confidentiality.Write(sDef);                                                                                            // MakerGen.cs:221
+            Element_Attester.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_Custodian.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_RelatesTo.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_Event.Write(sDef);                                                                                                      // MakerGen.cs:221
+            Element_Section.Write(sDef);                                                                                                    // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Resource_Composition()                                                                                                       // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. Composition.identifier
-                this.Element_Identifier = new ElementDefinitionInfo
-                {
-                    Name = "Element_Identifier",
-                    Path= "Composition.identifier",
-                    Id = "Composition.identifier",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:236
+                    Path= "Composition.identifier",                                                                                         // MakerGen.cs:237
+                    Id = "Composition.identifier",                                                                                          // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. Composition.status
-                this.Element_Status = new ElementDefinitionInfo
-                {
-                    Name = "Element_Status",
-                    Path= "Composition.status",
-                    Id = "Composition.status",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Status",                                                                                                // MakerGen.cs:236
+                    Path= "Composition.status",                                                                                             // MakerGen.cs:237
+                    Id = "Composition.status",                                                                                              // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 3. Composition.type
-                this.Element_Type = new ElementDefinitionInfo
-                {
-                    Name = "Element_Type",
-                    Path= "Composition.type",
-                    Id = "Composition.type",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Type = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Type",                                                                                                  // MakerGen.cs:236
+                    Path= "Composition.type",                                                                                               // MakerGen.cs:237
+                    Id = "Composition.type",                                                                                                // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 4. Composition.category
-                this.Element_Category = new ElementDefinitionInfo
-                {
-                    Name = "Element_Category",
-                    Path= "Composition.category",
-                    Id = "Composition.category",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Category = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Category",                                                                                              // MakerGen.cs:236
+                    Path= "Composition.category",                                                                                           // MakerGen.cs:237
+                    Id = "Composition.category",                                                                                            // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 5. Composition.subject
-                this.Element_Subject = new ElementDefinitionInfo
-                {
-                    Name = "Element_Subject",
-                    Path= "Composition.subject",
-                    Id = "Composition.subject",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Resource"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Subject = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Subject",                                                                                               // MakerGen.cs:236
+                    Path= "Composition.subject",                                                                                            // MakerGen.cs:237
+                    Id = "Composition.subject",                                                                                             // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Resource"                                                          // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 6. Composition.encounter
-                this.Element_Encounter = new ElementDefinitionInfo
-                {
-                    Name = "Element_Encounter",
-                    Path= "Composition.encounter",
-                    Id = "Composition.encounter",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Encounter"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Encounter = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Encounter",                                                                                             // MakerGen.cs:236
+                    Path= "Composition.encounter",                                                                                          // MakerGen.cs:237
+                    Id = "Composition.encounter",                                                                                           // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Encounter"                                                         // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 7. Composition.date
-                this.Element_Date = new ElementDefinitionInfo
-                {
-                    Name = "Element_Date",
-                    Path= "Composition.date",
-                    Id = "Composition.date",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Date = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Date",                                                                                                  // MakerGen.cs:236
+                    Path= "Composition.date",                                                                                               // MakerGen.cs:237
+                    Id = "Composition.date",                                                                                                // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 8. Composition.author
-                this.Element_Author = new ElementDefinitionInfo
-                {
-                    Name = "Element_Author",
-                    Path= "Composition.author",
-                    Id = "Composition.author",
-                    Min = 1,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                                "http://hl7.org/fhir/StructureDefinition/Device",
-                                "http://hl7.org/fhir/StructureDefinition/Patient",
-                                "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
-                                "http://hl7.org/fhir/StructureDefinition/Organization"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Author = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Author",                                                                                                // MakerGen.cs:236
+                    Path= "Composition.author",                                                                                             // MakerGen.cs:237
+                    Id = "Composition.author",                                                                                              // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                                 // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Device",                                                           // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Patient",                                                          // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/RelatedPerson",                                                    // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 9. Composition.title
-                this.Element_Title = new ElementDefinitionInfo
-                {
-                    Name = "Element_Title",
-                    Path= "Composition.title",
-                    Id = "Composition.title",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Title = new ElementDefinitionInfo                                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Title",                                                                                                 // MakerGen.cs:236
+                    Path= "Composition.title",                                                                                              // MakerGen.cs:237
+                    Id = "Composition.title",                                                                                               // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 10. Composition.confidentiality
-                this.Element_Confidentiality = new ElementDefinitionInfo
-                {
-                    Name = "Element_Confidentiality",
-                    Path= "Composition.confidentiality",
-                    Id = "Composition.confidentiality",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Confidentiality = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Confidentiality",                                                                                       // MakerGen.cs:236
+                    Path= "Composition.confidentiality",                                                                                    // MakerGen.cs:237
+                    Id = "Composition.confidentiality",                                                                                     // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 11. Composition.attester
-                this.Element_Attester = new ElementDefinitionInfo
-                {
-                    Name = "Element_Attester",
-                    Path= "Composition.attester",
-                    Id = "Composition.attester",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Attester
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Attester = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Attester",                                                                                              // MakerGen.cs:236
+                    Path= "Composition.attester",                                                                                           // MakerGen.cs:237
+                    Id = "Composition.attester",                                                                                            // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Attester                                                                                                   // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 15. Composition.custodian
-                this.Element_Custodian = new ElementDefinitionInfo
-                {
-                    Name = "Element_Custodian",
-                    Path= "Composition.custodian",
-                    Id = "Composition.custodian",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Organization"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Custodian = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Custodian",                                                                                             // MakerGen.cs:236
+                    Path= "Composition.custodian",                                                                                          // MakerGen.cs:237
+                    Id = "Composition.custodian",                                                                                           // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 16. Composition.relatesTo
-                this.Element_RelatesTo = new ElementDefinitionInfo
-                {
-                    Name = "Element_RelatesTo",
-                    Path= "Composition.relatesTo",
-                    Id = "Composition.relatesTo",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_RelatesTo
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_RelatesTo = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_RelatesTo",                                                                                             // MakerGen.cs:236
+                    Path= "Composition.relatesTo",                                                                                          // MakerGen.cs:237
+                    Id = "Composition.relatesTo",                                                                                           // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_RelatesTo                                                                                                  // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 19. Composition.event
-                this.Element_Event = new ElementDefinitionInfo
-                {
-                    Name = "Element_Event",
-                    Path= "Composition.event",
-                    Id = "Composition.event",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Event
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Event = new ElementDefinitionInfo                                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Event",                                                                                                 // MakerGen.cs:236
+                    Path= "Composition.event",                                                                                              // MakerGen.cs:237
+                    Id = "Composition.event",                                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Event                                                                                                      // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 23. Composition.section
-                this.Element_Section = new ElementDefinitionInfo
-                {
-                    Name = "Element_Section",
-                    Path= "Composition.section",
-                    Id = "Composition.section",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Section
-                        {
-                        }
-                    }
-                };
-            }
-            this.Name = "Composition";
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/Composition";
-        }
-    }
-}
+                this.Element_Section = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Section",                                                                                               // MakerGen.cs:236
+                    Path= "Composition.section",                                                                                            // MakerGen.cs:237
+                    Id = "Composition.section",                                                                                             // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Section                                                                                                    // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            this.Name = "Composition";                                                                                                      // MakerGen.cs:468
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/Composition";                                                               // MakerGen.cs:469
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:449

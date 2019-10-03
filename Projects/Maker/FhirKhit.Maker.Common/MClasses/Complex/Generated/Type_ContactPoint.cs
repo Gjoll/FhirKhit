@@ -1,12 +1,12 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Complex
-{
-    #region Json
+using System;                                                                                                                               // MakerGen.cs:490
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:491
+using System.IO;                                                                                                                            // MakerGen.cs:492
+using System.Linq;                                                                                                                          // MakerGen.cs:493
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:494
+                                                                                                                                            // MakerGen.cs:495
+namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:496
+{                                                                                                                                           // MakerGen.cs:497
+    #region Json                                                                                                                            // MakerGen.cs:498
     #if NEVER
     {
       "resourceType": "StructureDefinition",
@@ -140,126 +140,126 @@ namespace FhirKhit.Maker.Common.Complex
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:502
     /// <summary>
     /// Fhir complex 'ContactPoint'
     /// </summary>
     // 0. ContactPoint
-    public partial class Type_ContactPoint : FhirKhit.Maker.Common.Complex.ComplexBase
-    {
+    public partial class Type_ContactPoint : FhirKhit.Maker.Common.Complex.ComplexBase                                                      // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 1. ContactPoint.system
-        public ElementDefinitionInfo Element_System;
+        public ElementDefinitionInfo Element_System;                                                                                        // MakerGen.cs:217
         // 2. ContactPoint.value
-        public ElementDefinitionInfo Element_Value;
+        public ElementDefinitionInfo Element_Value;                                                                                         // MakerGen.cs:217
         // 3. ContactPoint.use
-        public ElementDefinitionInfo Element_Use;
+        public ElementDefinitionInfo Element_Use;                                                                                           // MakerGen.cs:217
         // 4. ContactPoint.rank
-        public ElementDefinitionInfo Element_Rank;
+        public ElementDefinitionInfo Element_Rank;                                                                                          // MakerGen.cs:217
         // 5. ContactPoint.period
-        public ElementDefinitionInfo Element_Period;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "ContactPoint",
-                ElementId = "ContactPoint"
-            });
-            Element_System.Write(sDef);
-            Element_Value.Write(sDef);
-            Element_Use.Write(sDef);
-            Element_Rank.Write(sDef);
-            Element_Period.Write(sDef);
-        }
-        
-        public Type_ContactPoint()
-        {
-            {
+        public ElementDefinitionInfo Element_Period;                                                                                        // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "ContactPoint",                                                                                                      // MakerGen.cs:393
+                ElementId = "ContactPoint"                                                                                                  // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_System.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Value.Write(sDef);                                                                                                      // MakerGen.cs:221
+            Element_Use.Write(sDef);                                                                                                        // MakerGen.cs:221
+            Element_Rank.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Period.Write(sDef);                                                                                                     // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Type_ContactPoint()                                                                                                          // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. ContactPoint.system
-                this.Element_System = new ElementDefinitionInfo
-                {
-                    Name = "Element_System",
-                    Path= "ContactPoint.system",
-                    Id = "ContactPoint.system",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_System = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_System",                                                                                                // MakerGen.cs:236
+                    Path= "ContactPoint.system",                                                                                            // MakerGen.cs:237
+                    Id = "ContactPoint.system",                                                                                             // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. ContactPoint.value
-                this.Element_Value = new ElementDefinitionInfo
-                {
-                    Name = "Element_Value",
-                    Path= "ContactPoint.value",
-                    Id = "ContactPoint.value",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Value = new ElementDefinitionInfo                                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Value",                                                                                                 // MakerGen.cs:236
+                    Path= "ContactPoint.value",                                                                                             // MakerGen.cs:237
+                    Id = "ContactPoint.value",                                                                                              // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 3. ContactPoint.use
-                this.Element_Use = new ElementDefinitionInfo
-                {
-                    Name = "Element_Use",
-                    Path= "ContactPoint.use",
-                    Id = "ContactPoint.use",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Use = new ElementDefinitionInfo                                                                                // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Use",                                                                                                   // MakerGen.cs:236
+                    Path= "ContactPoint.use",                                                                                               // MakerGen.cs:237
+                    Id = "ContactPoint.use",                                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 4. ContactPoint.rank
-                this.Element_Rank = new ElementDefinitionInfo
-                {
-                    Name = "Element_Rank",
-                    Path= "ContactPoint.rank",
-                    Id = "ContactPoint.rank",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Rank = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Rank",                                                                                                  // MakerGen.cs:236
+                    Path= "ContactPoint.rank",                                                                                              // MakerGen.cs:237
+                    Id = "ContactPoint.rank",                                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                           // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 5. ContactPoint.period
-                this.Element_Period = new ElementDefinitionInfo
-                {
-                    Name = "Element_Period",
-                    Path= "ContactPoint.period",
-                    Id = "ContactPoint.period",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Period
-                        {
-                        }
-                    }
-                };
-            }
-        }
-    }
-}
+                this.Element_Period = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Period",                                                                                                // MakerGen.cs:236
+                    Path= "ContactPoint.period",                                                                                            // MakerGen.cs:237
+                    Id = "ContactPoint.period",                                                                                             // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Period                                                                       // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:507

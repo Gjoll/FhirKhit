@@ -1,12 +1,12 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Complex
-{
-    #region Json
+using System;                                                                                                                               // MakerGen.cs:490
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:491
+using System.IO;                                                                                                                            // MakerGen.cs:492
+using System.Linq;                                                                                                                          // MakerGen.cs:493
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:494
+                                                                                                                                            // MakerGen.cs:495
+namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:496
+{                                                                                                                                           // MakerGen.cs:497
+    #region Json                                                                                                                            // MakerGen.cs:498
     #if NEVER
     {
       "resourceType": "StructureDefinition",
@@ -67,66 +67,66 @@ namespace FhirKhit.Maker.Common.Complex
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:502
     /// <summary>
     /// Fhir complex 'Ratio'
     /// </summary>
     // 0. Ratio
-    public partial class Type_Ratio : FhirKhit.Maker.Common.Complex.ComplexBase
-    {
+    public partial class Type_Ratio : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 1. Ratio.numerator
-        public ElementDefinitionInfo Element_Numerator;
+        public ElementDefinitionInfo Element_Numerator;                                                                                     // MakerGen.cs:217
         // 2. Ratio.denominator
-        public ElementDefinitionInfo Element_Denominator;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "Ratio",
-                ElementId = "Ratio"
-            });
-            Element_Numerator.Write(sDef);
-            Element_Denominator.Write(sDef);
-        }
-        
-        public Type_Ratio()
-        {
-            {
+        public ElementDefinitionInfo Element_Denominator;                                                                                   // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "Ratio",                                                                                                             // MakerGen.cs:393
+                ElementId = "Ratio"                                                                                                         // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Numerator.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_Denominator.Write(sDef);                                                                                                // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Type_Ratio()                                                                                                                 // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. Ratio.numerator
-                this.Element_Numerator = new ElementDefinitionInfo
-                {
-                    Name = "Element_Numerator",
-                    Path= "Ratio.numerator",
-                    Id = "Ratio.numerator",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Quantity
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Numerator = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Numerator",                                                                                             // MakerGen.cs:236
+                    Path= "Ratio.numerator",                                                                                                // MakerGen.cs:237
+                    Id = "Ratio.numerator",                                                                                                 // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Quantity                                                                     // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. Ratio.denominator
-                this.Element_Denominator = new ElementDefinitionInfo
-                {
-                    Name = "Element_Denominator",
-                    Path= "Ratio.denominator",
-                    Id = "Ratio.denominator",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Quantity
-                        {
-                        }
-                    }
-                };
-            }
-        }
-    }
-}
+                this.Element_Denominator = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Denominator",                                                                                           // MakerGen.cs:236
+                    Path= "Ratio.denominator",                                                                                              // MakerGen.cs:237
+                    Id = "Ratio.denominator",                                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Quantity                                                                     // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:507

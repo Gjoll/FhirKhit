@@ -57,6 +57,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FhirKhit.Maker", "Projects\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FhirKhit.Maker.BreastRadiology", "Projects\Maker\FhirKhit.Maker.BreastRadiology\FhirKhit.Maker.BreastRadiology.csproj", "{EFDAD21B-0488-45DD-85C5-BF286965F688}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BreastRadiology", "BreastRadiology", "{5FC18CA0-0C9C-46E8-842C-195480DD8F0A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FhirKhit.BreastRadiology", "Projects\BreastRadiology\FhirKhit.BreastRadiology\FhirKhit.BreastRadiology.csproj", "{0C14EAE0-E8CC-45EF-8E9D-5CE46D8AAFCE}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Projects\SliceGen\Share\FhirKhit.SliceGen.SharedLib\FhirKhit.SliceGen.SharedLib.projitems*{3d046d87-3bc6-42a7-86c7-381d3b8fa711}*SharedItemsImports = 13
@@ -207,6 +211,14 @@ Global
 		{EFDAD21B-0488-45DD-85C5-BF286965F688}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EFDAD21B-0488-45DD-85C5-BF286965F688}.Release|x64.ActiveCfg = Release|Any CPU
 		{EFDAD21B-0488-45DD-85C5-BF286965F688}.Release|x64.Build.0 = Release|Any CPU
+		{0C14EAE0-E8CC-45EF-8E9D-5CE46D8AAFCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C14EAE0-E8CC-45EF-8E9D-5CE46D8AAFCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C14EAE0-E8CC-45EF-8E9D-5CE46D8AAFCE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0C14EAE0-E8CC-45EF-8E9D-5CE46D8AAFCE}.Debug|x64.Build.0 = Debug|Any CPU
+		{0C14EAE0-E8CC-45EF-8E9D-5CE46D8AAFCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C14EAE0-E8CC-45EF-8E9D-5CE46D8AAFCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C14EAE0-E8CC-45EF-8E9D-5CE46D8AAFCE}.Release|x64.ActiveCfg = Release|Any CPU
+		{0C14EAE0-E8CC-45EF-8E9D-5CE46D8AAFCE}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -234,6 +246,7 @@ Global
 		{B4701E66-9CF2-4ADF-BFB2-C900043F6BF9} = {9C2E9018-605A-4D21-A850-4147EA532A38}
 		{467789AD-0ACE-416D-AC28-AE7AA5B4C395} = {9C2E9018-605A-4D21-A850-4147EA532A38}
 		{EFDAD21B-0488-45DD-85C5-BF286965F688} = {9C2E9018-605A-4D21-A850-4147EA532A38}
+		{0C14EAE0-E8CC-45EF-8E9D-5CE46D8AAFCE} = {5FC18CA0-0C9C-46E8-842C-195480DD8F0A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {90499BD7-964F-4CE5-A761-BDF9EC6DCE28}

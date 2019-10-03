@@ -1,13 +1,13 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Resource
-{
-    #region Json
-    #if NEVER
+using System;                                                                                                                               // MakerGen.cs:432
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:433
+using System.IO;                                                                                                                            // MakerGen.cs:434
+using System.Linq;                                                                                                                          // MakerGen.cs:435
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:436
+                                                                                                                                            // MakerGen.cs:437
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:438
+{                                                                                                                                           // MakerGen.cs:439
+    #region Json                                                                                                                            // MakerGen.cs:440
+    #if NEVER                                                                                                                               // MakerGen.cs:441
     {
       "resourceType": "StructureDefinition",
       "id": "Encounter",
@@ -948,1117 +948,1117 @@ namespace FhirKhit.Maker.Common.Resource
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:444
     /// <summary>
     /// Fhir resource 'Encounter'
     /// </summary>
     // 0. Encounter
-    public partial class Resource_Encounter : FhirKhit.Maker.Common.Resource.Resource_DomainResource
-    {
+    public partial class Resource_Encounter : FhirKhit.Maker.Common.Resource.Resource_DomainResource                                        // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 3. Encounter.statusHistory
-        public partial class Type_StatusHistory : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_StatusHistory : FhirKhit.Maker.Common.Complex.ComplexBase                                                 // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 4. Encounter.statusHistory.status
-            public ElementDefinitionInfo Element_Status;
+            public ElementDefinitionInfo Element_Status;                                                                                    // MakerGen.cs:217
             // 5. Encounter.statusHistory.period
-            public ElementDefinitionInfo Element_Period;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "Encounter.statusHistory",
-                    ElementId = "Encounter.statusHistory"
-                });
-                Element_Status.Write(sDef);
-                Element_Period.Write(sDef);
-            }
-            
-            public Type_StatusHistory()
-            {
-                {
+            public ElementDefinitionInfo Element_Period;                                                                                    // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "Encounter.statusHistory",                                                                                       // MakerGen.cs:393
+                    ElementId = "Encounter.statusHistory"                                                                                   // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Status.Write(sDef);                                                                                                 // MakerGen.cs:221
+                Element_Period.Write(sDef);                                                                                                 // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_StatusHistory()                                                                                                     // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 4. Encounter.statusHistory.status
-                    this.Element_Status = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Status",
-                        Path= "Encounter.statusHistory.status",
-                        Id = "Encounter.statusHistory.status",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Status = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Status",                                                                                            // MakerGen.cs:236
+                        Path= "Encounter.statusHistory.status",                                                                             // MakerGen.cs:237
+                        Id = "Encounter.statusHistory.status",                                                                              // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 5. Encounter.statusHistory.period
-                    this.Element_Period = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Period",
-                        Path= "Encounter.statusHistory.period",
-                        Id = "Encounter.statusHistory.period",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Period
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Period = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Period",                                                                                            // MakerGen.cs:236
+                        Path= "Encounter.statusHistory.period",                                                                             // MakerGen.cs:237
+                        Id = "Encounter.statusHistory.period",                                                                              // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Period                                                                   // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 7. Encounter.classHistory
-        public partial class Type_ClassHistory : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_ClassHistory : FhirKhit.Maker.Common.Complex.ComplexBase                                                  // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 8. Encounter.classHistory.class
-            public ElementDefinitionInfo Element_Class;
+            public ElementDefinitionInfo Element_Class;                                                                                     // MakerGen.cs:217
             // 9. Encounter.classHistory.period
-            public ElementDefinitionInfo Element_Period;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "Encounter.classHistory",
-                    ElementId = "Encounter.classHistory"
-                });
-                Element_Class.Write(sDef);
-                Element_Period.Write(sDef);
-            }
-            
-            public Type_ClassHistory()
-            {
-                {
+            public ElementDefinitionInfo Element_Period;                                                                                    // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "Encounter.classHistory",                                                                                        // MakerGen.cs:393
+                    ElementId = "Encounter.classHistory"                                                                                    // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Class.Write(sDef);                                                                                                  // MakerGen.cs:221
+                Element_Period.Write(sDef);                                                                                                 // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_ClassHistory()                                                                                                      // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 8. Encounter.classHistory.class
-                    this.Element_Class = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Class",
-                        Path= "Encounter.classHistory.class",
-                        Id = "Encounter.classHistory.class",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Coding
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Class = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Class",                                                                                             // MakerGen.cs:236
+                        Path= "Encounter.classHistory.class",                                                                               // MakerGen.cs:237
+                        Id = "Encounter.classHistory.class",                                                                                // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Coding                                                                   // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 9. Encounter.classHistory.period
-                    this.Element_Period = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Period",
-                        Path= "Encounter.classHistory.period",
-                        Id = "Encounter.classHistory.period",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Period
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Period = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Period",                                                                                            // MakerGen.cs:236
+                        Path= "Encounter.classHistory.period",                                                                              // MakerGen.cs:237
+                        Id = "Encounter.classHistory.period",                                                                               // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Period                                                                   // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 16. Encounter.participant
-        public partial class Type_Participant : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Participant : FhirKhit.Maker.Common.Complex.ComplexBase                                                   // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 17. Encounter.participant.type
-            public ElementDefinitionInfo Element_Type;
+            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:217
             // 18. Encounter.participant.period
-            public ElementDefinitionInfo Element_Period;
+            public ElementDefinitionInfo Element_Period;                                                                                    // MakerGen.cs:217
             // 19. Encounter.participant.individual
-            public ElementDefinitionInfo Element_Individual;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "Encounter.participant",
-                    ElementId = "Encounter.participant"
-                });
-                Element_Type.Write(sDef);
-                Element_Period.Write(sDef);
-                Element_Individual.Write(sDef);
-            }
-            
-            public Type_Participant()
-            {
-                {
+            public ElementDefinitionInfo Element_Individual;                                                                                // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "Encounter.participant",                                                                                         // MakerGen.cs:393
+                    ElementId = "Encounter.participant"                                                                                     // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Period.Write(sDef);                                                                                                 // MakerGen.cs:221
+                Element_Individual.Write(sDef);                                                                                             // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Participant()                                                                                                       // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 17. Encounter.participant.type
-                    this.Element_Type = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Type",
-                        Path= "Encounter.participant.type",
-                        Id = "Encounter.participant.type",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Type",                                                                                              // MakerGen.cs:236
+                        Path= "Encounter.participant.type",                                                                                 // MakerGen.cs:237
+                        Id = "Encounter.participant.type",                                                                                  // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 18. Encounter.participant.period
-                    this.Element_Period = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Period",
-                        Path= "Encounter.participant.period",
-                        Id = "Encounter.participant.period",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Period
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Period = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Period",                                                                                            // MakerGen.cs:236
+                        Path= "Encounter.participant.period",                                                                               // MakerGen.cs:237
+                        Id = "Encounter.participant.period",                                                                                // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Period                                                                   // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 19. Encounter.participant.individual
-                    this.Element_Individual = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Individual",
-                        Path= "Encounter.participant.individual",
-                        Id = "Encounter.participant.individual",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                                    "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
-                                }
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Individual = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Individual",                                                                                        // MakerGen.cs:236
+                        Path= "Encounter.participant.individual",                                                                           // MakerGen.cs:237
+                        Id = "Encounter.participant.individual",                                                                            // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                 // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                             // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/RelatedPerson"                                                 // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 25. Encounter.diagnosis
-        public partial class Type_Diagnosis : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Diagnosis : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 26. Encounter.diagnosis.condition
-            public ElementDefinitionInfo Element_Condition;
+            public ElementDefinitionInfo Element_Condition;                                                                                 // MakerGen.cs:217
             // 27. Encounter.diagnosis.use
-            public ElementDefinitionInfo Element_Use;
+            public ElementDefinitionInfo Element_Use;                                                                                       // MakerGen.cs:217
             // 28. Encounter.diagnosis.rank
-            public ElementDefinitionInfo Element_Rank;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "Encounter.diagnosis",
-                    ElementId = "Encounter.diagnosis"
-                });
-                Element_Condition.Write(sDef);
-                Element_Use.Write(sDef);
-                Element_Rank.Write(sDef);
-            }
-            
-            public Type_Diagnosis()
-            {
-                {
+            public ElementDefinitionInfo Element_Rank;                                                                                      // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "Encounter.diagnosis",                                                                                           // MakerGen.cs:393
+                    ElementId = "Encounter.diagnosis"                                                                                       // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Condition.Write(sDef);                                                                                              // MakerGen.cs:221
+                Element_Use.Write(sDef);                                                                                                    // MakerGen.cs:221
+                Element_Rank.Write(sDef);                                                                                                   // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Diagnosis()                                                                                                         // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 26. Encounter.diagnosis.condition
-                    this.Element_Condition = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Condition",
-                        Path= "Encounter.diagnosis.condition",
-                        Id = "Encounter.diagnosis.condition",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Condition",
-                                    "http://hl7.org/fhir/StructureDefinition/Procedure"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Condition = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Condition",                                                                                         // MakerGen.cs:236
+                        Path= "Encounter.diagnosis.condition",                                                                              // MakerGen.cs:237
+                        Id = "Encounter.diagnosis.condition",                                                                               // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Condition",                                                    // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/Procedure"                                                     // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 27. Encounter.diagnosis.use
-                    this.Element_Use = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Use",
-                        Path= "Encounter.diagnosis.use",
-                        Id = "Encounter.diagnosis.use",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Use = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Use",                                                                                               // MakerGen.cs:236
+                        Path= "Encounter.diagnosis.use",                                                                                    // MakerGen.cs:237
+                        Id = "Encounter.diagnosis.use",                                                                                     // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 28. Encounter.diagnosis.rank
-                    this.Element_Rank = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Rank",
-                        Path= "Encounter.diagnosis.rank",
-                        Id = "Encounter.diagnosis.rank",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Rank = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Rank",                                                                                              // MakerGen.cs:236
+                        Path= "Encounter.diagnosis.rank",                                                                                   // MakerGen.cs:237
+                        Id = "Encounter.diagnosis.rank",                                                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                       // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 30. Encounter.hospitalization
-        public partial class Type_Hospitalization : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Hospitalization : FhirKhit.Maker.Common.Complex.ComplexBase                                               // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 31. Encounter.hospitalization.preAdmissionIdentifier
-            public ElementDefinitionInfo Element_PreAdmissionIdentifier;
+            public ElementDefinitionInfo Element_PreAdmissionIdentifier;                                                                    // MakerGen.cs:217
             // 32. Encounter.hospitalization.origin
-            public ElementDefinitionInfo Element_Origin;
+            public ElementDefinitionInfo Element_Origin;                                                                                    // MakerGen.cs:217
             // 33. Encounter.hospitalization.admitSource
-            public ElementDefinitionInfo Element_AdmitSource;
+            public ElementDefinitionInfo Element_AdmitSource;                                                                               // MakerGen.cs:217
             // 34. Encounter.hospitalization.reAdmission
-            public ElementDefinitionInfo Element_ReAdmission;
+            public ElementDefinitionInfo Element_ReAdmission;                                                                               // MakerGen.cs:217
             // 35. Encounter.hospitalization.dietPreference
-            public ElementDefinitionInfo Element_DietPreference;
+            public ElementDefinitionInfo Element_DietPreference;                                                                            // MakerGen.cs:217
             // 36. Encounter.hospitalization.specialCourtesy
-            public ElementDefinitionInfo Element_SpecialCourtesy;
+            public ElementDefinitionInfo Element_SpecialCourtesy;                                                                           // MakerGen.cs:217
             // 37. Encounter.hospitalization.specialArrangement
-            public ElementDefinitionInfo Element_SpecialArrangement;
+            public ElementDefinitionInfo Element_SpecialArrangement;                                                                        // MakerGen.cs:217
             // 38. Encounter.hospitalization.destination
-            public ElementDefinitionInfo Element_Destination;
+            public ElementDefinitionInfo Element_Destination;                                                                               // MakerGen.cs:217
             // 39. Encounter.hospitalization.dischargeDisposition
-            public ElementDefinitionInfo Element_DischargeDisposition;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "Encounter.hospitalization",
-                    ElementId = "Encounter.hospitalization"
-                });
-                Element_PreAdmissionIdentifier.Write(sDef);
-                Element_Origin.Write(sDef);
-                Element_AdmitSource.Write(sDef);
-                Element_ReAdmission.Write(sDef);
-                Element_DietPreference.Write(sDef);
-                Element_SpecialCourtesy.Write(sDef);
-                Element_SpecialArrangement.Write(sDef);
-                Element_Destination.Write(sDef);
-                Element_DischargeDisposition.Write(sDef);
-            }
-            
-            public Type_Hospitalization()
-            {
-                {
+            public ElementDefinitionInfo Element_DischargeDisposition;                                                                      // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "Encounter.hospitalization",                                                                                     // MakerGen.cs:393
+                    ElementId = "Encounter.hospitalization"                                                                                 // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_PreAdmissionIdentifier.Write(sDef);                                                                                 // MakerGen.cs:221
+                Element_Origin.Write(sDef);                                                                                                 // MakerGen.cs:221
+                Element_AdmitSource.Write(sDef);                                                                                            // MakerGen.cs:221
+                Element_ReAdmission.Write(sDef);                                                                                            // MakerGen.cs:221
+                Element_DietPreference.Write(sDef);                                                                                         // MakerGen.cs:221
+                Element_SpecialCourtesy.Write(sDef);                                                                                        // MakerGen.cs:221
+                Element_SpecialArrangement.Write(sDef);                                                                                     // MakerGen.cs:221
+                Element_Destination.Write(sDef);                                                                                            // MakerGen.cs:221
+                Element_DischargeDisposition.Write(sDef);                                                                                   // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Hospitalization()                                                                                                   // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 31. Encounter.hospitalization.preAdmissionIdentifier
-                    this.Element_PreAdmissionIdentifier = new ElementDefinitionInfo
-                    {
-                        Name = "Element_PreAdmissionIdentifier",
-                        Path= "Encounter.hospitalization.preAdmissionIdentifier",
-                        Id = "Encounter.hospitalization.preAdmissionIdentifier",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Identifier
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_PreAdmissionIdentifier = new ElementDefinitionInfo                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_PreAdmissionIdentifier",                                                                            // MakerGen.cs:236
+                        Path= "Encounter.hospitalization.preAdmissionIdentifier",                                                           // MakerGen.cs:237
+                        Id = "Encounter.hospitalization.preAdmissionIdentifier",                                                            // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Identifier                                                               // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 32. Encounter.hospitalization.origin
-                    this.Element_Origin = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Origin",
-                        Path= "Encounter.hospitalization.origin",
-                        Id = "Encounter.hospitalization.origin",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Location",
-                                    "http://hl7.org/fhir/StructureDefinition/Organization"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Origin = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Origin",                                                                                            // MakerGen.cs:236
+                        Path= "Encounter.hospitalization.origin",                                                                           // MakerGen.cs:237
+                        Id = "Encounter.hospitalization.origin",                                                                            // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Location",                                                     // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/Organization"                                                  // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 33. Encounter.hospitalization.admitSource
-                    this.Element_AdmitSource = new ElementDefinitionInfo
-                    {
-                        Name = "Element_AdmitSource",
-                        Path= "Encounter.hospitalization.admitSource",
-                        Id = "Encounter.hospitalization.admitSource",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_AdmitSource = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_AdmitSource",                                                                                       // MakerGen.cs:236
+                        Path= "Encounter.hospitalization.admitSource",                                                                      // MakerGen.cs:237
+                        Id = "Encounter.hospitalization.admitSource",                                                                       // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 34. Encounter.hospitalization.reAdmission
-                    this.Element_ReAdmission = new ElementDefinitionInfo
-                    {
-                        Name = "Element_ReAdmission",
-                        Path= "Encounter.hospitalization.reAdmission",
-                        Id = "Encounter.hospitalization.reAdmission",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_ReAdmission = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_ReAdmission",                                                                                       // MakerGen.cs:236
+                        Path= "Encounter.hospitalization.reAdmission",                                                                      // MakerGen.cs:237
+                        Id = "Encounter.hospitalization.reAdmission",                                                                       // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 35. Encounter.hospitalization.dietPreference
-                    this.Element_DietPreference = new ElementDefinitionInfo
-                    {
-                        Name = "Element_DietPreference",
-                        Path= "Encounter.hospitalization.dietPreference",
-                        Id = "Encounter.hospitalization.dietPreference",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_DietPreference = new ElementDefinitionInfo                                                                 // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_DietPreference",                                                                                    // MakerGen.cs:236
+                        Path= "Encounter.hospitalization.dietPreference",                                                                   // MakerGen.cs:237
+                        Id = "Encounter.hospitalization.dietPreference",                                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 36. Encounter.hospitalization.specialCourtesy
-                    this.Element_SpecialCourtesy = new ElementDefinitionInfo
-                    {
-                        Name = "Element_SpecialCourtesy",
-                        Path= "Encounter.hospitalization.specialCourtesy",
-                        Id = "Encounter.hospitalization.specialCourtesy",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_SpecialCourtesy = new ElementDefinitionInfo                                                                // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_SpecialCourtesy",                                                                                   // MakerGen.cs:236
+                        Path= "Encounter.hospitalization.specialCourtesy",                                                                  // MakerGen.cs:237
+                        Id = "Encounter.hospitalization.specialCourtesy",                                                                   // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 37. Encounter.hospitalization.specialArrangement
-                    this.Element_SpecialArrangement = new ElementDefinitionInfo
-                    {
-                        Name = "Element_SpecialArrangement",
-                        Path= "Encounter.hospitalization.specialArrangement",
-                        Id = "Encounter.hospitalization.specialArrangement",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_SpecialArrangement = new ElementDefinitionInfo                                                             // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_SpecialArrangement",                                                                                // MakerGen.cs:236
+                        Path= "Encounter.hospitalization.specialArrangement",                                                               // MakerGen.cs:237
+                        Id = "Encounter.hospitalization.specialArrangement",                                                                // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 38. Encounter.hospitalization.destination
-                    this.Element_Destination = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Destination",
-                        Path= "Encounter.hospitalization.destination",
-                        Id = "Encounter.hospitalization.destination",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Location",
-                                    "http://hl7.org/fhir/StructureDefinition/Organization"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Destination = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Destination",                                                                                       // MakerGen.cs:236
+                        Path= "Encounter.hospitalization.destination",                                                                      // MakerGen.cs:237
+                        Id = "Encounter.hospitalization.destination",                                                                       // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Location",                                                     // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/Organization"                                                  // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 39. Encounter.hospitalization.dischargeDisposition
-                    this.Element_DischargeDisposition = new ElementDefinitionInfo
-                    {
-                        Name = "Element_DischargeDisposition",
-                        Path= "Encounter.hospitalization.dischargeDisposition",
-                        Id = "Encounter.hospitalization.dischargeDisposition",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_DischargeDisposition = new ElementDefinitionInfo                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_DischargeDisposition",                                                                              // MakerGen.cs:236
+                        Path= "Encounter.hospitalization.dischargeDisposition",                                                             // MakerGen.cs:237
+                        Id = "Encounter.hospitalization.dischargeDisposition",                                                              // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 40. Encounter.location
-        public partial class Type_Location : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Location : FhirKhit.Maker.Common.Complex.ComplexBase                                                      // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 41. Encounter.location.location
-            public ElementDefinitionInfo Element_Location;
+            public ElementDefinitionInfo Element_Location;                                                                                  // MakerGen.cs:217
             // 42. Encounter.location.status
-            public ElementDefinitionInfo Element_Status;
+            public ElementDefinitionInfo Element_Status;                                                                                    // MakerGen.cs:217
             // 43. Encounter.location.physicalType
-            public ElementDefinitionInfo Element_PhysicalType;
+            public ElementDefinitionInfo Element_PhysicalType;                                                                              // MakerGen.cs:217
             // 44. Encounter.location.period
-            public ElementDefinitionInfo Element_Period;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "Encounter.location",
-                    ElementId = "Encounter.location"
-                });
-                Element_Location.Write(sDef);
-                Element_Status.Write(sDef);
-                Element_PhysicalType.Write(sDef);
-                Element_Period.Write(sDef);
-            }
-            
-            public Type_Location()
-            {
-                {
+            public ElementDefinitionInfo Element_Period;                                                                                    // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "Encounter.location",                                                                                            // MakerGen.cs:393
+                    ElementId = "Encounter.location"                                                                                        // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Location.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_Status.Write(sDef);                                                                                                 // MakerGen.cs:221
+                Element_PhysicalType.Write(sDef);                                                                                           // MakerGen.cs:221
+                Element_Period.Write(sDef);                                                                                                 // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Location()                                                                                                          // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 41. Encounter.location.location
-                    this.Element_Location = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Location",
-                        Path= "Encounter.location.location",
-                        Id = "Encounter.location.location",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Location"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Location = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Location",                                                                                          // MakerGen.cs:236
+                        Path= "Encounter.location.location",                                                                                // MakerGen.cs:237
+                        Id = "Encounter.location.location",                                                                                 // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Location"                                                      // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 42. Encounter.location.status
-                    this.Element_Status = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Status",
-                        Path= "Encounter.location.status",
-                        Id = "Encounter.location.status",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Status = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Status",                                                                                            // MakerGen.cs:236
+                        Path= "Encounter.location.status",                                                                                  // MakerGen.cs:237
+                        Id = "Encounter.location.status",                                                                                   // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 43. Encounter.location.physicalType
-                    this.Element_PhysicalType = new ElementDefinitionInfo
-                    {
-                        Name = "Element_PhysicalType",
-                        Path= "Encounter.location.physicalType",
-                        Id = "Encounter.location.physicalType",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_PhysicalType = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_PhysicalType",                                                                                      // MakerGen.cs:236
+                        Path= "Encounter.location.physicalType",                                                                            // MakerGen.cs:237
+                        Id = "Encounter.location.physicalType",                                                                             // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 44. Encounter.location.period
-                    this.Element_Period = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Period",
-                        Path= "Encounter.location.period",
-                        Id = "Encounter.location.period",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Period
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Period = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Period",                                                                                            // MakerGen.cs:236
+                        Path= "Encounter.location.period",                                                                                  // MakerGen.cs:237
+                        Id = "Encounter.location.period",                                                                                   // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Period                                                                   // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 1. Encounter.identifier
-        public ElementDefinitionInfo Element_Identifier;
+        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:217
         // 2. Encounter.status
-        public ElementDefinitionInfo Element_Status;
+        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:217
         // 3. Encounter.statusHistory
-        public ElementDefinitionInfo Element_StatusHistory;
+        public ElementDefinitionInfo Element_StatusHistory;                                                                                 // MakerGen.cs:217
         // 6. Encounter.class
-        public ElementDefinitionInfo Element_Class;
+        public ElementDefinitionInfo Element_Class;                                                                                         // MakerGen.cs:217
         // 7. Encounter.classHistory
-        public ElementDefinitionInfo Element_ClassHistory;
+        public ElementDefinitionInfo Element_ClassHistory;                                                                                  // MakerGen.cs:217
         // 10. Encounter.type
-        public ElementDefinitionInfo Element_Type;
+        public ElementDefinitionInfo Element_Type;                                                                                          // MakerGen.cs:217
         // 11. Encounter.serviceType
-        public ElementDefinitionInfo Element_ServiceType;
+        public ElementDefinitionInfo Element_ServiceType;                                                                                   // MakerGen.cs:217
         // 12. Encounter.priority
-        public ElementDefinitionInfo Element_Priority;
+        public ElementDefinitionInfo Element_Priority;                                                                                      // MakerGen.cs:217
         // 13. Encounter.subject
-        public ElementDefinitionInfo Element_Subject;
+        public ElementDefinitionInfo Element_Subject;                                                                                       // MakerGen.cs:217
         // 14. Encounter.episodeOfCare
-        public ElementDefinitionInfo Element_EpisodeOfCare;
+        public ElementDefinitionInfo Element_EpisodeOfCare;                                                                                 // MakerGen.cs:217
         // 15. Encounter.basedOn
-        public ElementDefinitionInfo Element_BasedOn;
+        public ElementDefinitionInfo Element_BasedOn;                                                                                       // MakerGen.cs:217
         // 16. Encounter.participant
-        public ElementDefinitionInfo Element_Participant;
+        public ElementDefinitionInfo Element_Participant;                                                                                   // MakerGen.cs:217
         // 20. Encounter.appointment
-        public ElementDefinitionInfo Element_Appointment;
+        public ElementDefinitionInfo Element_Appointment;                                                                                   // MakerGen.cs:217
         // 21. Encounter.period
-        public ElementDefinitionInfo Element_Period;
+        public ElementDefinitionInfo Element_Period;                                                                                        // MakerGen.cs:217
         // 22. Encounter.length
-        public ElementDefinitionInfo Element_Length;
+        public ElementDefinitionInfo Element_Length;                                                                                        // MakerGen.cs:217
         // 23. Encounter.reasonCode
-        public ElementDefinitionInfo Element_ReasonCode;
+        public ElementDefinitionInfo Element_ReasonCode;                                                                                    // MakerGen.cs:217
         // 24. Encounter.reasonReference
-        public ElementDefinitionInfo Element_ReasonReference;
+        public ElementDefinitionInfo Element_ReasonReference;                                                                               // MakerGen.cs:217
         // 25. Encounter.diagnosis
-        public ElementDefinitionInfo Element_Diagnosis;
+        public ElementDefinitionInfo Element_Diagnosis;                                                                                     // MakerGen.cs:217
         // 29. Encounter.account
-        public ElementDefinitionInfo Element_Account;
+        public ElementDefinitionInfo Element_Account;                                                                                       // MakerGen.cs:217
         // 30. Encounter.hospitalization
-        public ElementDefinitionInfo Element_Hospitalization;
+        public ElementDefinitionInfo Element_Hospitalization;                                                                               // MakerGen.cs:217
         // 40. Encounter.location
-        public ElementDefinitionInfo Element_Location;
+        public ElementDefinitionInfo Element_Location;                                                                                      // MakerGen.cs:217
         // 45. Encounter.serviceProvider
-        public ElementDefinitionInfo Element_ServiceProvider;
+        public ElementDefinitionInfo Element_ServiceProvider;                                                                               // MakerGen.cs:217
         // 46. Encounter.partOf
-        public ElementDefinitionInfo Element_PartOf;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "Encounter",
-                ElementId = "Encounter"
-            });
-            Element_Identifier.Write(sDef);
-            Element_Status.Write(sDef);
-            Element_StatusHistory.Write(sDef);
-            Element_Class.Write(sDef);
-            Element_ClassHistory.Write(sDef);
-            Element_Type.Write(sDef);
-            Element_ServiceType.Write(sDef);
-            Element_Priority.Write(sDef);
-            Element_Subject.Write(sDef);
-            Element_EpisodeOfCare.Write(sDef);
-            Element_BasedOn.Write(sDef);
-            Element_Participant.Write(sDef);
-            Element_Appointment.Write(sDef);
-            Element_Period.Write(sDef);
-            Element_Length.Write(sDef);
-            Element_ReasonCode.Write(sDef);
-            Element_ReasonReference.Write(sDef);
-            Element_Diagnosis.Write(sDef);
-            Element_Account.Write(sDef);
-            Element_Hospitalization.Write(sDef);
-            Element_Location.Write(sDef);
-            Element_ServiceProvider.Write(sDef);
-            Element_PartOf.Write(sDef);
-        }
-        
-        public Resource_Encounter()
-        {
-            {
+        public ElementDefinitionInfo Element_PartOf;                                                                                        // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "Encounter",                                                                                                         // MakerGen.cs:393
+                ElementId = "Encounter"                                                                                                     // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_StatusHistory.Write(sDef);                                                                                              // MakerGen.cs:221
+            Element_Class.Write(sDef);                                                                                                      // MakerGen.cs:221
+            Element_ClassHistory.Write(sDef);                                                                                               // MakerGen.cs:221
+            Element_Type.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_ServiceType.Write(sDef);                                                                                                // MakerGen.cs:221
+            Element_Priority.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_Subject.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_EpisodeOfCare.Write(sDef);                                                                                              // MakerGen.cs:221
+            Element_BasedOn.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Participant.Write(sDef);                                                                                                // MakerGen.cs:221
+            Element_Appointment.Write(sDef);                                                                                                // MakerGen.cs:221
+            Element_Period.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Length.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_ReasonCode.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_ReasonReference.Write(sDef);                                                                                            // MakerGen.cs:221
+            Element_Diagnosis.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_Account.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Hospitalization.Write(sDef);                                                                                            // MakerGen.cs:221
+            Element_Location.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_ServiceProvider.Write(sDef);                                                                                            // MakerGen.cs:221
+            Element_PartOf.Write(sDef);                                                                                                     // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Resource_Encounter()                                                                                                         // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. Encounter.identifier
-                this.Element_Identifier = new ElementDefinitionInfo
-                {
-                    Name = "Element_Identifier",
-                    Path= "Encounter.identifier",
-                    Id = "Encounter.identifier",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:236
+                    Path= "Encounter.identifier",                                                                                           // MakerGen.cs:237
+                    Id = "Encounter.identifier",                                                                                            // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. Encounter.status
-                this.Element_Status = new ElementDefinitionInfo
-                {
-                    Name = "Element_Status",
-                    Path= "Encounter.status",
-                    Id = "Encounter.status",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Status",                                                                                                // MakerGen.cs:236
+                    Path= "Encounter.status",                                                                                               // MakerGen.cs:237
+                    Id = "Encounter.status",                                                                                                // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 3. Encounter.statusHistory
-                this.Element_StatusHistory = new ElementDefinitionInfo
-                {
-                    Name = "Element_StatusHistory",
-                    Path= "Encounter.statusHistory",
-                    Id = "Encounter.statusHistory",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_StatusHistory
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_StatusHistory = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_StatusHistory",                                                                                         // MakerGen.cs:236
+                    Path= "Encounter.statusHistory",                                                                                        // MakerGen.cs:237
+                    Id = "Encounter.statusHistory",                                                                                         // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_StatusHistory                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 6. Encounter.class
-                this.Element_Class = new ElementDefinitionInfo
-                {
-                    Name = "Element_Class",
-                    Path= "Encounter.class",
-                    Id = "Encounter.class",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Coding
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Class = new ElementDefinitionInfo                                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Class",                                                                                                 // MakerGen.cs:236
+                    Path= "Encounter.class",                                                                                                // MakerGen.cs:237
+                    Id = "Encounter.class",                                                                                                 // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Coding                                                                       // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 7. Encounter.classHistory
-                this.Element_ClassHistory = new ElementDefinitionInfo
-                {
-                    Name = "Element_ClassHistory",
-                    Path= "Encounter.classHistory",
-                    Id = "Encounter.classHistory",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_ClassHistory
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ClassHistory = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ClassHistory",                                                                                          // MakerGen.cs:236
+                    Path= "Encounter.classHistory",                                                                                         // MakerGen.cs:237
+                    Id = "Encounter.classHistory",                                                                                          // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_ClassHistory                                                                                               // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 10. Encounter.type
-                this.Element_Type = new ElementDefinitionInfo
-                {
-                    Name = "Element_Type",
-                    Path= "Encounter.type",
-                    Id = "Encounter.type",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Type = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Type",                                                                                                  // MakerGen.cs:236
+                    Path= "Encounter.type",                                                                                                 // MakerGen.cs:237
+                    Id = "Encounter.type",                                                                                                  // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 11. Encounter.serviceType
-                this.Element_ServiceType = new ElementDefinitionInfo
-                {
-                    Name = "Element_ServiceType",
-                    Path= "Encounter.serviceType",
-                    Id = "Encounter.serviceType",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ServiceType = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ServiceType",                                                                                           // MakerGen.cs:236
+                    Path= "Encounter.serviceType",                                                                                          // MakerGen.cs:237
+                    Id = "Encounter.serviceType",                                                                                           // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 12. Encounter.priority
-                this.Element_Priority = new ElementDefinitionInfo
-                {
-                    Name = "Element_Priority",
-                    Path= "Encounter.priority",
-                    Id = "Encounter.priority",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Priority = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Priority",                                                                                              // MakerGen.cs:236
+                    Path= "Encounter.priority",                                                                                             // MakerGen.cs:237
+                    Id = "Encounter.priority",                                                                                              // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 13. Encounter.subject
-                this.Element_Subject = new ElementDefinitionInfo
-                {
-                    Name = "Element_Subject",
-                    Path= "Encounter.subject",
-                    Id = "Encounter.subject",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Patient",
-                                "http://hl7.org/fhir/StructureDefinition/Group"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Subject = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Subject",                                                                                               // MakerGen.cs:236
+                    Path= "Encounter.subject",                                                                                              // MakerGen.cs:237
+                    Id = "Encounter.subject",                                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Patient",                                                          // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Group"                                                             // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 14. Encounter.episodeOfCare
-                this.Element_EpisodeOfCare = new ElementDefinitionInfo
-                {
-                    Name = "Element_EpisodeOfCare",
-                    Path= "Encounter.episodeOfCare",
-                    Id = "Encounter.episodeOfCare",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/EpisodeOfCare"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_EpisodeOfCare = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_EpisodeOfCare",                                                                                         // MakerGen.cs:236
+                    Path= "Encounter.episodeOfCare",                                                                                        // MakerGen.cs:237
+                    Id = "Encounter.episodeOfCare",                                                                                         // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/EpisodeOfCare"                                                     // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 15. Encounter.basedOn
-                this.Element_BasedOn = new ElementDefinitionInfo
-                {
-                    Name = "Element_BasedOn",
-                    Path= "Encounter.basedOn",
-                    Id = "Encounter.basedOn",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/ServiceRequest"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_BasedOn = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_BasedOn",                                                                                               // MakerGen.cs:236
+                    Path= "Encounter.basedOn",                                                                                              // MakerGen.cs:237
+                    Id = "Encounter.basedOn",                                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/ServiceRequest"                                                    // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 16. Encounter.participant
-                this.Element_Participant = new ElementDefinitionInfo
-                {
-                    Name = "Element_Participant",
-                    Path= "Encounter.participant",
-                    Id = "Encounter.participant",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Participant
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Participant = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Participant",                                                                                           // MakerGen.cs:236
+                    Path= "Encounter.participant",                                                                                          // MakerGen.cs:237
+                    Id = "Encounter.participant",                                                                                           // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Participant                                                                                                // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 20. Encounter.appointment
-                this.Element_Appointment = new ElementDefinitionInfo
-                {
-                    Name = "Element_Appointment",
-                    Path= "Encounter.appointment",
-                    Id = "Encounter.appointment",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Appointment"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Appointment = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Appointment",                                                                                           // MakerGen.cs:236
+                    Path= "Encounter.appointment",                                                                                          // MakerGen.cs:237
+                    Id = "Encounter.appointment",                                                                                           // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Appointment"                                                       // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 21. Encounter.period
-                this.Element_Period = new ElementDefinitionInfo
-                {
-                    Name = "Element_Period",
-                    Path= "Encounter.period",
-                    Id = "Encounter.period",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Period
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Period = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Period",                                                                                                // MakerGen.cs:236
+                    Path= "Encounter.period",                                                                                               // MakerGen.cs:237
+                    Id = "Encounter.period",                                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Period                                                                       // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 22. Encounter.length
-                this.Element_Length = new ElementDefinitionInfo
-                {
-                    Name = "Element_Length",
-                    Path= "Encounter.length",
-                    Id = "Encounter.length",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Duration
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Length = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Length",                                                                                                // MakerGen.cs:236
+                    Path= "Encounter.length",                                                                                               // MakerGen.cs:237
+                    Id = "Encounter.length",                                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Duration                                                                     // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 23. Encounter.reasonCode
-                this.Element_ReasonCode = new ElementDefinitionInfo
-                {
-                    Name = "Element_ReasonCode",
-                    Path= "Encounter.reasonCode",
-                    Id = "Encounter.reasonCode",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ReasonCode = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ReasonCode",                                                                                            // MakerGen.cs:236
+                    Path= "Encounter.reasonCode",                                                                                           // MakerGen.cs:237
+                    Id = "Encounter.reasonCode",                                                                                            // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 24. Encounter.reasonReference
-                this.Element_ReasonReference = new ElementDefinitionInfo
-                {
-                    Name = "Element_ReasonReference",
-                    Path= "Encounter.reasonReference",
-                    Id = "Encounter.reasonReference",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Condition",
-                                "http://hl7.org/fhir/StructureDefinition/Procedure",
-                                "http://hl7.org/fhir/StructureDefinition/Observation",
-                                "http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ReasonReference = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ReasonReference",                                                                                       // MakerGen.cs:236
+                    Path= "Encounter.reasonReference",                                                                                      // MakerGen.cs:237
+                    Id = "Encounter.reasonReference",                                                                                       // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Condition",                                                        // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Procedure",                                                        // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Observation",                                                      // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation"                                        // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 25. Encounter.diagnosis
-                this.Element_Diagnosis = new ElementDefinitionInfo
-                {
-                    Name = "Element_Diagnosis",
-                    Path= "Encounter.diagnosis",
-                    Id = "Encounter.diagnosis",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Diagnosis
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Diagnosis = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Diagnosis",                                                                                             // MakerGen.cs:236
+                    Path= "Encounter.diagnosis",                                                                                            // MakerGen.cs:237
+                    Id = "Encounter.diagnosis",                                                                                             // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Diagnosis                                                                                                  // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 29. Encounter.account
-                this.Element_Account = new ElementDefinitionInfo
-                {
-                    Name = "Element_Account",
-                    Path= "Encounter.account",
-                    Id = "Encounter.account",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Account"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Account = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Account",                                                                                               // MakerGen.cs:236
+                    Path= "Encounter.account",                                                                                              // MakerGen.cs:237
+                    Id = "Encounter.account",                                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Account"                                                           // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 30. Encounter.hospitalization
-                this.Element_Hospitalization = new ElementDefinitionInfo
-                {
-                    Name = "Element_Hospitalization",
-                    Path= "Encounter.hospitalization",
-                    Id = "Encounter.hospitalization",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Hospitalization
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Hospitalization = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Hospitalization",                                                                                       // MakerGen.cs:236
+                    Path= "Encounter.hospitalization",                                                                                      // MakerGen.cs:237
+                    Id = "Encounter.hospitalization",                                                                                       // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Hospitalization                                                                                            // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 40. Encounter.location
-                this.Element_Location = new ElementDefinitionInfo
-                {
-                    Name = "Element_Location",
-                    Path= "Encounter.location",
-                    Id = "Encounter.location",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Location
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Location = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Location",                                                                                              // MakerGen.cs:236
+                    Path= "Encounter.location",                                                                                             // MakerGen.cs:237
+                    Id = "Encounter.location",                                                                                              // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Location                                                                                                   // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 45. Encounter.serviceProvider
-                this.Element_ServiceProvider = new ElementDefinitionInfo
-                {
-                    Name = "Element_ServiceProvider",
-                    Path= "Encounter.serviceProvider",
-                    Id = "Encounter.serviceProvider",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Organization"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ServiceProvider = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ServiceProvider",                                                                                       // MakerGen.cs:236
+                    Path= "Encounter.serviceProvider",                                                                                      // MakerGen.cs:237
+                    Id = "Encounter.serviceProvider",                                                                                       // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 46. Encounter.partOf
-                this.Element_PartOf = new ElementDefinitionInfo
-                {
-                    Name = "Element_PartOf",
-                    Path= "Encounter.partOf",
-                    Id = "Encounter.partOf",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Encounter"
-                            }
-                        }
-                    }
-                };
-            }
-            this.Name = "Encounter";
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/Encounter";
-        }
-    }
-}
+                this.Element_PartOf = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_PartOf",                                                                                                // MakerGen.cs:236
+                    Path= "Encounter.partOf",                                                                                               // MakerGen.cs:237
+                    Id = "Encounter.partOf",                                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Encounter"                                                         // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            this.Name = "Encounter";                                                                                                        // MakerGen.cs:468
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/Encounter";                                                                 // MakerGen.cs:469
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:449

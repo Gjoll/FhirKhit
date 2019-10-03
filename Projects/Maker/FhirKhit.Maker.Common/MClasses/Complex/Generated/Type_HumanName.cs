@@ -1,12 +1,12 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Complex
-{
-    #region Json
+using System;                                                                                                                               // MakerGen.cs:490
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:491
+using System.IO;                                                                                                                            // MakerGen.cs:492
+using System.Linq;                                                                                                                          // MakerGen.cs:493
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:494
+                                                                                                                                            // MakerGen.cs:495
+namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:496
+{                                                                                                                                           // MakerGen.cs:497
+    #region Json                                                                                                                            // MakerGen.cs:498
     #if NEVER
     {
       "resourceType": "StructureDefinition",
@@ -167,166 +167,166 @@ namespace FhirKhit.Maker.Common.Complex
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:502
     /// <summary>
     /// Fhir complex 'HumanName'
     /// </summary>
     // 0. HumanName
-    public partial class Type_HumanName : FhirKhit.Maker.Common.Complex.ComplexBase
-    {
+    public partial class Type_HumanName : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 1. HumanName.use
-        public ElementDefinitionInfo Element_Use;
+        public ElementDefinitionInfo Element_Use;                                                                                           // MakerGen.cs:217
         // 2. HumanName.text
-        public ElementDefinitionInfo Element_Text;
+        public ElementDefinitionInfo Element_Text;                                                                                          // MakerGen.cs:217
         // 3. HumanName.family
-        public ElementDefinitionInfo Element_Family;
+        public ElementDefinitionInfo Element_Family;                                                                                        // MakerGen.cs:217
         // 4. HumanName.given
-        public ElementDefinitionInfo Element_Given;
+        public ElementDefinitionInfo Element_Given;                                                                                         // MakerGen.cs:217
         // 5. HumanName.prefix
-        public ElementDefinitionInfo Element_Prefix;
+        public ElementDefinitionInfo Element_Prefix;                                                                                        // MakerGen.cs:217
         // 6. HumanName.suffix
-        public ElementDefinitionInfo Element_Suffix;
+        public ElementDefinitionInfo Element_Suffix;                                                                                        // MakerGen.cs:217
         // 7. HumanName.period
-        public ElementDefinitionInfo Element_Period;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "HumanName",
-                ElementId = "HumanName"
-            });
-            Element_Use.Write(sDef);
-            Element_Text.Write(sDef);
-            Element_Family.Write(sDef);
-            Element_Given.Write(sDef);
-            Element_Prefix.Write(sDef);
-            Element_Suffix.Write(sDef);
-            Element_Period.Write(sDef);
-        }
-        
-        public Type_HumanName()
-        {
-            {
+        public ElementDefinitionInfo Element_Period;                                                                                        // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "HumanName",                                                                                                         // MakerGen.cs:393
+                ElementId = "HumanName"                                                                                                     // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Use.Write(sDef);                                                                                                        // MakerGen.cs:221
+            Element_Text.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Family.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Given.Write(sDef);                                                                                                      // MakerGen.cs:221
+            Element_Prefix.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Suffix.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Period.Write(sDef);                                                                                                     // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Type_HumanName()                                                                                                             // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. HumanName.use
-                this.Element_Use = new ElementDefinitionInfo
-                {
-                    Name = "Element_Use",
-                    Path= "HumanName.use",
-                    Id = "HumanName.use",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Use = new ElementDefinitionInfo                                                                                // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Use",                                                                                                   // MakerGen.cs:236
+                    Path= "HumanName.use",                                                                                                  // MakerGen.cs:237
+                    Id = "HumanName.use",                                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. HumanName.text
-                this.Element_Text = new ElementDefinitionInfo
-                {
-                    Name = "Element_Text",
-                    Path= "HumanName.text",
-                    Id = "HumanName.text",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Text = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Text",                                                                                                  // MakerGen.cs:236
+                    Path= "HumanName.text",                                                                                                 // MakerGen.cs:237
+                    Id = "HumanName.text",                                                                                                  // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 3. HumanName.family
-                this.Element_Family = new ElementDefinitionInfo
-                {
-                    Name = "Element_Family",
-                    Path= "HumanName.family",
-                    Id = "HumanName.family",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Family = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Family",                                                                                                // MakerGen.cs:236
+                    Path= "HumanName.family",                                                                                               // MakerGen.cs:237
+                    Id = "HumanName.family",                                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 4. HumanName.given
-                this.Element_Given = new ElementDefinitionInfo
-                {
-                    Name = "Element_Given",
-                    Path= "HumanName.given",
-                    Id = "HumanName.given",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Given = new ElementDefinitionInfo                                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Given",                                                                                                 // MakerGen.cs:236
+                    Path= "HumanName.given",                                                                                                // MakerGen.cs:237
+                    Id = "HumanName.given",                                                                                                 // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 5. HumanName.prefix
-                this.Element_Prefix = new ElementDefinitionInfo
-                {
-                    Name = "Element_Prefix",
-                    Path= "HumanName.prefix",
-                    Id = "HumanName.prefix",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Prefix = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Prefix",                                                                                                // MakerGen.cs:236
+                    Path= "HumanName.prefix",                                                                                               // MakerGen.cs:237
+                    Id = "HumanName.prefix",                                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 6. HumanName.suffix
-                this.Element_Suffix = new ElementDefinitionInfo
-                {
-                    Name = "Element_Suffix",
-                    Path= "HumanName.suffix",
-                    Id = "HumanName.suffix",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Suffix = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Suffix",                                                                                                // MakerGen.cs:236
+                    Path= "HumanName.suffix",                                                                                               // MakerGen.cs:237
+                    Id = "HumanName.suffix",                                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 7. HumanName.period
-                this.Element_Period = new ElementDefinitionInfo
-                {
-                    Name = "Element_Period",
-                    Path= "HumanName.period",
-                    Id = "HumanName.period",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Period
-                        {
-                        }
-                    }
-                };
-            }
-        }
-    }
-}
+                this.Element_Period = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Period",                                                                                                // MakerGen.cs:236
+                    Path= "HumanName.period",                                                                                               // MakerGen.cs:237
+                    Id = "HumanName.period",                                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Period                                                                       // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:507

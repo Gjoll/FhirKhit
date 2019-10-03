@@ -1,12 +1,12 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Complex
-{
-    #region Json
+using System;                                                                                                                               // MakerGen.cs:490
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:491
+using System.IO;                                                                                                                            // MakerGen.cs:492
+using System.Linq;                                                                                                                          // MakerGen.cs:493
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:494
+                                                                                                                                            // MakerGen.cs:495
+namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:496
+{                                                                                                                                           // MakerGen.cs:497
+    #region Json                                                                                                                            // MakerGen.cs:498
     #if NEVER
     {
       "resourceType": "StructureDefinition",
@@ -71,66 +71,66 @@ namespace FhirKhit.Maker.Common.Complex
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:502
     /// <summary>
     /// Fhir complex 'CodeableConcept'
     /// </summary>
     // 0. CodeableConcept
-    public partial class Type_CodeableConcept : FhirKhit.Maker.Common.Complex.ComplexBase
-    {
+    public partial class Type_CodeableConcept : FhirKhit.Maker.Common.Complex.ComplexBase                                                   // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 1. CodeableConcept.coding
-        public ElementDefinitionInfo Element_Coding;
+        public ElementDefinitionInfo Element_Coding;                                                                                        // MakerGen.cs:217
         // 2. CodeableConcept.text
-        public ElementDefinitionInfo Element_Text;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "CodeableConcept",
-                ElementId = "CodeableConcept"
-            });
-            Element_Coding.Write(sDef);
-            Element_Text.Write(sDef);
-        }
-        
-        public Type_CodeableConcept()
-        {
-            {
+        public ElementDefinitionInfo Element_Text;                                                                                          // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "CodeableConcept",                                                                                                   // MakerGen.cs:393
+                ElementId = "CodeableConcept"                                                                                               // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Coding.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Text.Write(sDef);                                                                                                       // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Type_CodeableConcept()                                                                                                       // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. CodeableConcept.coding
-                this.Element_Coding = new ElementDefinitionInfo
-                {
-                    Name = "Element_Coding",
-                    Path= "CodeableConcept.coding",
-                    Id = "CodeableConcept.coding",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Coding
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Coding = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Coding",                                                                                                // MakerGen.cs:236
+                    Path= "CodeableConcept.coding",                                                                                         // MakerGen.cs:237
+                    Id = "CodeableConcept.coding",                                                                                          // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Coding                                                                       // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. CodeableConcept.text
-                this.Element_Text = new ElementDefinitionInfo
-                {
-                    Name = "Element_Text",
-                    Path= "CodeableConcept.text",
-                    Id = "CodeableConcept.text",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-        }
-    }
-}
+                this.Element_Text = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Text",                                                                                                  // MakerGen.cs:236
+                    Path= "CodeableConcept.text",                                                                                           // MakerGen.cs:237
+                    Id = "CodeableConcept.text",                                                                                            // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:507

@@ -1,13 +1,13 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Resource
-{
-    #region Json
-    #if NEVER
+using System;                                                                                                                               // MakerGen.cs:432
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:433
+using System.IO;                                                                                                                            // MakerGen.cs:434
+using System.Linq;                                                                                                                          // MakerGen.cs:435
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:436
+                                                                                                                                            // MakerGen.cs:437
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:438
+{                                                                                                                                           // MakerGen.cs:439
+    #region Json                                                                                                                            // MakerGen.cs:440
+    #if NEVER                                                                                                                               // MakerGen.cs:441
     {
       "resourceType": "StructureDefinition",
       "id": "BiologicallyDerivedProduct",
@@ -432,611 +432,611 @@ namespace FhirKhit.Maker.Common.Resource
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:444
     /// <summary>
     /// Fhir resource 'BiologicallyDerivedProduct'
     /// </summary>
     // 0. BiologicallyDerivedProduct
-    public partial class Resource_BiologicallyDerivedProduct : FhirKhit.Maker.Common.Resource.Resource_DomainResource
-    {
+    public partial class Resource_BiologicallyDerivedProduct : FhirKhit.Maker.Common.Resource.Resource_DomainResource                       // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 8. BiologicallyDerivedProduct.collection
-        public partial class Type_Collection : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Collection : FhirKhit.Maker.Common.Complex.ComplexBase                                                    // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 9. BiologicallyDerivedProduct.collection.collector
-            public ElementDefinitionInfo Element_Collector;
+            public ElementDefinitionInfo Element_Collector;                                                                                 // MakerGen.cs:217
             // 10. BiologicallyDerivedProduct.collection.source
-            public ElementDefinitionInfo Element_Source;
+            public ElementDefinitionInfo Element_Source;                                                                                    // MakerGen.cs:217
             // 11. BiologicallyDerivedProduct.collection.collected[x]
-            public ElementDefinitionInfo Element_Collected;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "BiologicallyDerivedProduct.collection",
-                    ElementId = "BiologicallyDerivedProduct.collection"
-                });
-                Element_Collector.Write(sDef);
-                Element_Source.Write(sDef);
-                Element_Collected.Write(sDef);
-            }
-            
-            public Type_Collection()
-            {
-                {
+            public ElementDefinitionInfo Element_Collected;                                                                                 // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "BiologicallyDerivedProduct.collection",                                                                         // MakerGen.cs:393
+                    ElementId = "BiologicallyDerivedProduct.collection"                                                                     // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Collector.Write(sDef);                                                                                              // MakerGen.cs:221
+                Element_Source.Write(sDef);                                                                                                 // MakerGen.cs:221
+                Element_Collected.Write(sDef);                                                                                              // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Collection()                                                                                                        // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 9. BiologicallyDerivedProduct.collection.collector
-                    this.Element_Collector = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Collector",
-                        Path= "BiologicallyDerivedProduct.collection.collector",
-                        Id = "BiologicallyDerivedProduct.collection.collector",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Collector = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Collector",                                                                                         // MakerGen.cs:236
+                        Path= "BiologicallyDerivedProduct.collection.collector",                                                            // MakerGen.cs:237
+                        Id = "BiologicallyDerivedProduct.collection.collector",                                                             // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                 // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole"                                              // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 10. BiologicallyDerivedProduct.collection.source
-                    this.Element_Source = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Source",
-                        Path= "BiologicallyDerivedProduct.collection.source",
-                        Id = "BiologicallyDerivedProduct.collection.source",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Patient",
-                                    "http://hl7.org/fhir/StructureDefinition/Organization"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Source = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Source",                                                                                            // MakerGen.cs:236
+                        Path= "BiologicallyDerivedProduct.collection.source",                                                               // MakerGen.cs:237
+                        Id = "BiologicallyDerivedProduct.collection.source",                                                                // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Patient",                                                      // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/Organization"                                                  // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 11. BiologicallyDerivedProduct.collection.collected[x]
-                    this.Element_Collected = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Collected",
-                        Path= "BiologicallyDerivedProduct.collection.collected[x]",
-                        Id = "BiologicallyDerivedProduct.collection.collected[x]",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
-                            {
-                            },
-                            new FhirKhit.Maker.Common.Complex.Type_Period
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Collected = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Collected",                                                                                         // MakerGen.cs:236
+                        Path= "BiologicallyDerivedProduct.collection.collected[x]",                                                         // MakerGen.cs:237
+                        Id = "BiologicallyDerivedProduct.collection.collected[x]",                                                          // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                          // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            },                                                                                                              // MakerGen.cs:305
+                            new FhirKhit.Maker.Common.Complex.Type_Period                                                                   // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 12. BiologicallyDerivedProduct.processing
-        public partial class Type_Processing : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Processing : FhirKhit.Maker.Common.Complex.ComplexBase                                                    // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 13. BiologicallyDerivedProduct.processing.description
-            public ElementDefinitionInfo Element_Description;
+            public ElementDefinitionInfo Element_Description;                                                                               // MakerGen.cs:217
             // 14. BiologicallyDerivedProduct.processing.procedure
-            public ElementDefinitionInfo Element_Procedure;
+            public ElementDefinitionInfo Element_Procedure;                                                                                 // MakerGen.cs:217
             // 15. BiologicallyDerivedProduct.processing.additive
-            public ElementDefinitionInfo Element_Additive;
+            public ElementDefinitionInfo Element_Additive;                                                                                  // MakerGen.cs:217
             // 16. BiologicallyDerivedProduct.processing.time[x]
-            public ElementDefinitionInfo Element_Time;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "BiologicallyDerivedProduct.processing",
-                    ElementId = "BiologicallyDerivedProduct.processing"
-                });
-                Element_Description.Write(sDef);
-                Element_Procedure.Write(sDef);
-                Element_Additive.Write(sDef);
-                Element_Time.Write(sDef);
-            }
-            
-            public Type_Processing()
-            {
-                {
+            public ElementDefinitionInfo Element_Time;                                                                                      // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "BiologicallyDerivedProduct.processing",                                                                         // MakerGen.cs:393
+                    ElementId = "BiologicallyDerivedProduct.processing"                                                                     // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Description.Write(sDef);                                                                                            // MakerGen.cs:221
+                Element_Procedure.Write(sDef);                                                                                              // MakerGen.cs:221
+                Element_Additive.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_Time.Write(sDef);                                                                                                   // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Processing()                                                                                                        // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 13. BiologicallyDerivedProduct.processing.description
-                    this.Element_Description = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Description",
-                        Path= "BiologicallyDerivedProduct.processing.description",
-                        Id = "BiologicallyDerivedProduct.processing.description",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Description",                                                                                       // MakerGen.cs:236
+                        Path= "BiologicallyDerivedProduct.processing.description",                                                          // MakerGen.cs:237
+                        Id = "BiologicallyDerivedProduct.processing.description",                                                           // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 14. BiologicallyDerivedProduct.processing.procedure
-                    this.Element_Procedure = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Procedure",
-                        Path= "BiologicallyDerivedProduct.processing.procedure",
-                        Id = "BiologicallyDerivedProduct.processing.procedure",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Procedure = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Procedure",                                                                                         // MakerGen.cs:236
+                        Path= "BiologicallyDerivedProduct.processing.procedure",                                                            // MakerGen.cs:237
+                        Id = "BiologicallyDerivedProduct.processing.procedure",                                                             // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 15. BiologicallyDerivedProduct.processing.additive
-                    this.Element_Additive = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Additive",
-                        Path= "BiologicallyDerivedProduct.processing.additive",
-                        Id = "BiologicallyDerivedProduct.processing.additive",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Substance"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Additive = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Additive",                                                                                          // MakerGen.cs:236
+                        Path= "BiologicallyDerivedProduct.processing.additive",                                                             // MakerGen.cs:237
+                        Id = "BiologicallyDerivedProduct.processing.additive",                                                              // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Substance"                                                     // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 16. BiologicallyDerivedProduct.processing.time[x]
-                    this.Element_Time = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Time",
-                        Path= "BiologicallyDerivedProduct.processing.time[x]",
-                        Id = "BiologicallyDerivedProduct.processing.time[x]",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
-                            {
-                            },
-                            new FhirKhit.Maker.Common.Complex.Type_Period
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Time = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Time",                                                                                              // MakerGen.cs:236
+                        Path= "BiologicallyDerivedProduct.processing.time[x]",                                                              // MakerGen.cs:237
+                        Id = "BiologicallyDerivedProduct.processing.time[x]",                                                               // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                          // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            },                                                                                                              // MakerGen.cs:305
+                            new FhirKhit.Maker.Common.Complex.Type_Period                                                                   // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 17. BiologicallyDerivedProduct.manipulation
-        public partial class Type_Manipulation : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Manipulation : FhirKhit.Maker.Common.Complex.ComplexBase                                                  // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 18. BiologicallyDerivedProduct.manipulation.description
-            public ElementDefinitionInfo Element_Description;
+            public ElementDefinitionInfo Element_Description;                                                                               // MakerGen.cs:217
             // 19. BiologicallyDerivedProduct.manipulation.time[x]
-            public ElementDefinitionInfo Element_Time;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "BiologicallyDerivedProduct.manipulation",
-                    ElementId = "BiologicallyDerivedProduct.manipulation"
-                });
-                Element_Description.Write(sDef);
-                Element_Time.Write(sDef);
-            }
-            
-            public Type_Manipulation()
-            {
-                {
+            public ElementDefinitionInfo Element_Time;                                                                                      // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "BiologicallyDerivedProduct.manipulation",                                                                       // MakerGen.cs:393
+                    ElementId = "BiologicallyDerivedProduct.manipulation"                                                                   // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Description.Write(sDef);                                                                                            // MakerGen.cs:221
+                Element_Time.Write(sDef);                                                                                                   // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Manipulation()                                                                                                      // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 18. BiologicallyDerivedProduct.manipulation.description
-                    this.Element_Description = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Description",
-                        Path= "BiologicallyDerivedProduct.manipulation.description",
-                        Id = "BiologicallyDerivedProduct.manipulation.description",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Description",                                                                                       // MakerGen.cs:236
+                        Path= "BiologicallyDerivedProduct.manipulation.description",                                                        // MakerGen.cs:237
+                        Id = "BiologicallyDerivedProduct.manipulation.description",                                                         // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 19. BiologicallyDerivedProduct.manipulation.time[x]
-                    this.Element_Time = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Time",
-                        Path= "BiologicallyDerivedProduct.manipulation.time[x]",
-                        Id = "BiologicallyDerivedProduct.manipulation.time[x]",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
-                            {
-                            },
-                            new FhirKhit.Maker.Common.Complex.Type_Period
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Time = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Time",                                                                                              // MakerGen.cs:236
+                        Path= "BiologicallyDerivedProduct.manipulation.time[x]",                                                            // MakerGen.cs:237
+                        Id = "BiologicallyDerivedProduct.manipulation.time[x]",                                                             // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                          // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            },                                                                                                              // MakerGen.cs:305
+                            new FhirKhit.Maker.Common.Complex.Type_Period                                                                   // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 20. BiologicallyDerivedProduct.storage
-        public partial class Type_Storage : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Storage : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 21. BiologicallyDerivedProduct.storage.description
-            public ElementDefinitionInfo Element_Description;
+            public ElementDefinitionInfo Element_Description;                                                                               // MakerGen.cs:217
             // 22. BiologicallyDerivedProduct.storage.temperature
-            public ElementDefinitionInfo Element_Temperature;
+            public ElementDefinitionInfo Element_Temperature;                                                                               // MakerGen.cs:217
             // 23. BiologicallyDerivedProduct.storage.scale
-            public ElementDefinitionInfo Element_Scale;
+            public ElementDefinitionInfo Element_Scale;                                                                                     // MakerGen.cs:217
             // 24. BiologicallyDerivedProduct.storage.duration
-            public ElementDefinitionInfo Element_Duration;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "BiologicallyDerivedProduct.storage",
-                    ElementId = "BiologicallyDerivedProduct.storage"
-                });
-                Element_Description.Write(sDef);
-                Element_Temperature.Write(sDef);
-                Element_Scale.Write(sDef);
-                Element_Duration.Write(sDef);
-            }
-            
-            public Type_Storage()
-            {
-                {
+            public ElementDefinitionInfo Element_Duration;                                                                                  // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "BiologicallyDerivedProduct.storage",                                                                            // MakerGen.cs:393
+                    ElementId = "BiologicallyDerivedProduct.storage"                                                                        // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Description.Write(sDef);                                                                                            // MakerGen.cs:221
+                Element_Temperature.Write(sDef);                                                                                            // MakerGen.cs:221
+                Element_Scale.Write(sDef);                                                                                                  // MakerGen.cs:221
+                Element_Duration.Write(sDef);                                                                                               // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Storage()                                                                                                           // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 21. BiologicallyDerivedProduct.storage.description
-                    this.Element_Description = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Description",
-                        Path= "BiologicallyDerivedProduct.storage.description",
-                        Id = "BiologicallyDerivedProduct.storage.description",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Description",                                                                                       // MakerGen.cs:236
+                        Path= "BiologicallyDerivedProduct.storage.description",                                                             // MakerGen.cs:237
+                        Id = "BiologicallyDerivedProduct.storage.description",                                                              // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 22. BiologicallyDerivedProduct.storage.temperature
-                    this.Element_Temperature = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Temperature",
-                        Path= "BiologicallyDerivedProduct.storage.temperature",
-                        Id = "BiologicallyDerivedProduct.storage.temperature",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Temperature = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Temperature",                                                                                       // MakerGen.cs:236
+                        Path= "BiologicallyDerivedProduct.storage.temperature",                                                             // MakerGen.cs:237
+                        Id = "BiologicallyDerivedProduct.storage.temperature",                                                              // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                           // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 23. BiologicallyDerivedProduct.storage.scale
-                    this.Element_Scale = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Scale",
-                        Path= "BiologicallyDerivedProduct.storage.scale",
-                        Id = "BiologicallyDerivedProduct.storage.scale",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Scale = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Scale",                                                                                             // MakerGen.cs:236
+                        Path= "BiologicallyDerivedProduct.storage.scale",                                                                   // MakerGen.cs:237
+                        Id = "BiologicallyDerivedProduct.storage.scale",                                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 24. BiologicallyDerivedProduct.storage.duration
-                    this.Element_Duration = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Duration",
-                        Path= "BiologicallyDerivedProduct.storage.duration",
-                        Id = "BiologicallyDerivedProduct.storage.duration",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Period
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Duration = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Duration",                                                                                          // MakerGen.cs:236
+                        Path= "BiologicallyDerivedProduct.storage.duration",                                                                // MakerGen.cs:237
+                        Id = "BiologicallyDerivedProduct.storage.duration",                                                                 // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Period                                                                   // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 1. BiologicallyDerivedProduct.identifier
-        public ElementDefinitionInfo Element_Identifier;
+        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:217
         // 2. BiologicallyDerivedProduct.productCategory
-        public ElementDefinitionInfo Element_ProductCategory;
+        public ElementDefinitionInfo Element_ProductCategory;                                                                               // MakerGen.cs:217
         // 3. BiologicallyDerivedProduct.productCode
-        public ElementDefinitionInfo Element_ProductCode;
+        public ElementDefinitionInfo Element_ProductCode;                                                                                   // MakerGen.cs:217
         // 4. BiologicallyDerivedProduct.status
-        public ElementDefinitionInfo Element_Status;
+        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:217
         // 5. BiologicallyDerivedProduct.request
-        public ElementDefinitionInfo Element_Request;
+        public ElementDefinitionInfo Element_Request;                                                                                       // MakerGen.cs:217
         // 6. BiologicallyDerivedProduct.quantity
-        public ElementDefinitionInfo Element_Quantity;
+        public ElementDefinitionInfo Element_Quantity;                                                                                      // MakerGen.cs:217
         // 7. BiologicallyDerivedProduct.parent
-        public ElementDefinitionInfo Element_Parent;
+        public ElementDefinitionInfo Element_Parent;                                                                                        // MakerGen.cs:217
         // 8. BiologicallyDerivedProduct.collection
-        public ElementDefinitionInfo Element_Collection;
+        public ElementDefinitionInfo Element_Collection;                                                                                    // MakerGen.cs:217
         // 12. BiologicallyDerivedProduct.processing
-        public ElementDefinitionInfo Element_Processing;
+        public ElementDefinitionInfo Element_Processing;                                                                                    // MakerGen.cs:217
         // 17. BiologicallyDerivedProduct.manipulation
-        public ElementDefinitionInfo Element_Manipulation;
+        public ElementDefinitionInfo Element_Manipulation;                                                                                  // MakerGen.cs:217
         // 20. BiologicallyDerivedProduct.storage
-        public ElementDefinitionInfo Element_Storage;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "BiologicallyDerivedProduct",
-                ElementId = "BiologicallyDerivedProduct"
-            });
-            Element_Identifier.Write(sDef);
-            Element_ProductCategory.Write(sDef);
-            Element_ProductCode.Write(sDef);
-            Element_Status.Write(sDef);
-            Element_Request.Write(sDef);
-            Element_Quantity.Write(sDef);
-            Element_Parent.Write(sDef);
-            Element_Collection.Write(sDef);
-            Element_Processing.Write(sDef);
-            Element_Manipulation.Write(sDef);
-            Element_Storage.Write(sDef);
-        }
-        
-        public Resource_BiologicallyDerivedProduct()
-        {
-            {
+        public ElementDefinitionInfo Element_Storage;                                                                                       // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "BiologicallyDerivedProduct",                                                                                        // MakerGen.cs:393
+                ElementId = "BiologicallyDerivedProduct"                                                                                    // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_ProductCategory.Write(sDef);                                                                                            // MakerGen.cs:221
+            Element_ProductCode.Write(sDef);                                                                                                // MakerGen.cs:221
+            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Request.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Quantity.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_Parent.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Collection.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Processing.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Manipulation.Write(sDef);                                                                                               // MakerGen.cs:221
+            Element_Storage.Write(sDef);                                                                                                    // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Resource_BiologicallyDerivedProduct()                                                                                        // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. BiologicallyDerivedProduct.identifier
-                this.Element_Identifier = new ElementDefinitionInfo
-                {
-                    Name = "Element_Identifier",
-                    Path= "BiologicallyDerivedProduct.identifier",
-                    Id = "BiologicallyDerivedProduct.identifier",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:236
+                    Path= "BiologicallyDerivedProduct.identifier",                                                                          // MakerGen.cs:237
+                    Id = "BiologicallyDerivedProduct.identifier",                                                                           // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. BiologicallyDerivedProduct.productCategory
-                this.Element_ProductCategory = new ElementDefinitionInfo
-                {
-                    Name = "Element_ProductCategory",
-                    Path= "BiologicallyDerivedProduct.productCategory",
-                    Id = "BiologicallyDerivedProduct.productCategory",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ProductCategory = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ProductCategory",                                                                                       // MakerGen.cs:236
+                    Path= "BiologicallyDerivedProduct.productCategory",                                                                     // MakerGen.cs:237
+                    Id = "BiologicallyDerivedProduct.productCategory",                                                                      // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 3. BiologicallyDerivedProduct.productCode
-                this.Element_ProductCode = new ElementDefinitionInfo
-                {
-                    Name = "Element_ProductCode",
-                    Path= "BiologicallyDerivedProduct.productCode",
-                    Id = "BiologicallyDerivedProduct.productCode",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ProductCode = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ProductCode",                                                                                           // MakerGen.cs:236
+                    Path= "BiologicallyDerivedProduct.productCode",                                                                         // MakerGen.cs:237
+                    Id = "BiologicallyDerivedProduct.productCode",                                                                          // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 4. BiologicallyDerivedProduct.status
-                this.Element_Status = new ElementDefinitionInfo
-                {
-                    Name = "Element_Status",
-                    Path= "BiologicallyDerivedProduct.status",
-                    Id = "BiologicallyDerivedProduct.status",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Status",                                                                                                // MakerGen.cs:236
+                    Path= "BiologicallyDerivedProduct.status",                                                                              // MakerGen.cs:237
+                    Id = "BiologicallyDerivedProduct.status",                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 5. BiologicallyDerivedProduct.request
-                this.Element_Request = new ElementDefinitionInfo
-                {
-                    Name = "Element_Request",
-                    Path= "BiologicallyDerivedProduct.request",
-                    Id = "BiologicallyDerivedProduct.request",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/ServiceRequest"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Request = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Request",                                                                                               // MakerGen.cs:236
+                    Path= "BiologicallyDerivedProduct.request",                                                                             // MakerGen.cs:237
+                    Id = "BiologicallyDerivedProduct.request",                                                                              // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/ServiceRequest"                                                    // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 6. BiologicallyDerivedProduct.quantity
-                this.Element_Quantity = new ElementDefinitionInfo
-                {
-                    Name = "Element_Quantity",
-                    Path= "BiologicallyDerivedProduct.quantity",
-                    Id = "BiologicallyDerivedProduct.quantity",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Integer
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Quantity = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Quantity",                                                                                              // MakerGen.cs:236
+                    Path= "BiologicallyDerivedProduct.quantity",                                                                            // MakerGen.cs:237
+                    Id = "BiologicallyDerivedProduct.quantity",                                                                             // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                               // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 7. BiologicallyDerivedProduct.parent
-                this.Element_Parent = new ElementDefinitionInfo
-                {
-                    Name = "Element_Parent",
-                    Path= "BiologicallyDerivedProduct.parent",
-                    Id = "BiologicallyDerivedProduct.parent",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProduct"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Parent = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Parent",                                                                                                // MakerGen.cs:236
+                    Path= "BiologicallyDerivedProduct.parent",                                                                              // MakerGen.cs:237
+                    Id = "BiologicallyDerivedProduct.parent",                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProduct"                                        // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 8. BiologicallyDerivedProduct.collection
-                this.Element_Collection = new ElementDefinitionInfo
-                {
-                    Name = "Element_Collection",
-                    Path= "BiologicallyDerivedProduct.collection",
-                    Id = "BiologicallyDerivedProduct.collection",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Collection
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Collection = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Collection",                                                                                            // MakerGen.cs:236
+                    Path= "BiologicallyDerivedProduct.collection",                                                                          // MakerGen.cs:237
+                    Id = "BiologicallyDerivedProduct.collection",                                                                           // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Collection                                                                                                 // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 12. BiologicallyDerivedProduct.processing
-                this.Element_Processing = new ElementDefinitionInfo
-                {
-                    Name = "Element_Processing",
-                    Path= "BiologicallyDerivedProduct.processing",
-                    Id = "BiologicallyDerivedProduct.processing",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Processing
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Processing = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Processing",                                                                                            // MakerGen.cs:236
+                    Path= "BiologicallyDerivedProduct.processing",                                                                          // MakerGen.cs:237
+                    Id = "BiologicallyDerivedProduct.processing",                                                                           // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Processing                                                                                                 // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 17. BiologicallyDerivedProduct.manipulation
-                this.Element_Manipulation = new ElementDefinitionInfo
-                {
-                    Name = "Element_Manipulation",
-                    Path= "BiologicallyDerivedProduct.manipulation",
-                    Id = "BiologicallyDerivedProduct.manipulation",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Manipulation
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Manipulation = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Manipulation",                                                                                          // MakerGen.cs:236
+                    Path= "BiologicallyDerivedProduct.manipulation",                                                                        // MakerGen.cs:237
+                    Id = "BiologicallyDerivedProduct.manipulation",                                                                         // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Manipulation                                                                                               // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 20. BiologicallyDerivedProduct.storage
-                this.Element_Storage = new ElementDefinitionInfo
-                {
-                    Name = "Element_Storage",
-                    Path= "BiologicallyDerivedProduct.storage",
-                    Id = "BiologicallyDerivedProduct.storage",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Storage
-                        {
-                        }
-                    }
-                };
-            }
-            this.Name = "BiologicallyDerivedProduct";
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProduct";
-        }
-    }
-}
+                this.Element_Storage = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Storage",                                                                                               // MakerGen.cs:236
+                    Path= "BiologicallyDerivedProduct.storage",                                                                             // MakerGen.cs:237
+                    Id = "BiologicallyDerivedProduct.storage",                                                                              // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Storage                                                                                                    // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            this.Name = "BiologicallyDerivedProduct";                                                                                       // MakerGen.cs:468
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProduct";                                                // MakerGen.cs:469
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:449

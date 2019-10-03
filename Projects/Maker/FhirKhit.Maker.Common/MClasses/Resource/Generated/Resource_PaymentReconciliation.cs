@@ -1,13 +1,13 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Resource
-{
-    #region Json
-    #if NEVER
+using System;                                                                                                                               // MakerGen.cs:432
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:433
+using System.IO;                                                                                                                            // MakerGen.cs:434
+using System.Linq;                                                                                                                          // MakerGen.cs:435
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:436
+                                                                                                                                            // MakerGen.cs:437
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:438
+{                                                                                                                                           // MakerGen.cs:439
+    #region Json                                                                                                                            // MakerGen.cs:440
+    #if NEVER                                                                                                                               // MakerGen.cs:441
     {
       "resourceType": "StructureDefinition",
       "id": "PaymentReconciliation",
@@ -526,642 +526,642 @@ namespace FhirKhit.Maker.Common.Resource
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:444
     /// <summary>
     /// Fhir resource 'PaymentReconciliation'
     /// </summary>
     // 0. PaymentReconciliation
-    public partial class Resource_PaymentReconciliation : FhirKhit.Maker.Common.Resource.Resource_DomainResource
-    {
+    public partial class Resource_PaymentReconciliation : FhirKhit.Maker.Common.Resource.Resource_DomainResource                            // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 13. PaymentReconciliation.detail
-        public partial class Type_Detail : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Detail : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 14. PaymentReconciliation.detail.identifier
-            public ElementDefinitionInfo Element_Identifier;
+            public ElementDefinitionInfo Element_Identifier;                                                                                // MakerGen.cs:217
             // 15. PaymentReconciliation.detail.predecessor
-            public ElementDefinitionInfo Element_Predecessor;
+            public ElementDefinitionInfo Element_Predecessor;                                                                               // MakerGen.cs:217
             // 16. PaymentReconciliation.detail.type
-            public ElementDefinitionInfo Element_Type;
+            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:217
             // 17. PaymentReconciliation.detail.request
-            public ElementDefinitionInfo Element_Request;
+            public ElementDefinitionInfo Element_Request;                                                                                   // MakerGen.cs:217
             // 18. PaymentReconciliation.detail.submitter
-            public ElementDefinitionInfo Element_Submitter;
+            public ElementDefinitionInfo Element_Submitter;                                                                                 // MakerGen.cs:217
             // 19. PaymentReconciliation.detail.response
-            public ElementDefinitionInfo Element_Response;
+            public ElementDefinitionInfo Element_Response;                                                                                  // MakerGen.cs:217
             // 20. PaymentReconciliation.detail.date
-            public ElementDefinitionInfo Element_Date;
+            public ElementDefinitionInfo Element_Date;                                                                                      // MakerGen.cs:217
             // 21. PaymentReconciliation.detail.responsible
-            public ElementDefinitionInfo Element_Responsible;
+            public ElementDefinitionInfo Element_Responsible;                                                                               // MakerGen.cs:217
             // 22. PaymentReconciliation.detail.payee
-            public ElementDefinitionInfo Element_Payee;
+            public ElementDefinitionInfo Element_Payee;                                                                                     // MakerGen.cs:217
             // 23. PaymentReconciliation.detail.amount
-            public ElementDefinitionInfo Element_Amount;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "PaymentReconciliation.detail",
-                    ElementId = "PaymentReconciliation.detail"
-                });
-                Element_Identifier.Write(sDef);
-                Element_Predecessor.Write(sDef);
-                Element_Type.Write(sDef);
-                Element_Request.Write(sDef);
-                Element_Submitter.Write(sDef);
-                Element_Response.Write(sDef);
-                Element_Date.Write(sDef);
-                Element_Responsible.Write(sDef);
-                Element_Payee.Write(sDef);
-                Element_Amount.Write(sDef);
-            }
-            
-            public Type_Detail()
-            {
-                {
+            public ElementDefinitionInfo Element_Amount;                                                                                    // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "PaymentReconciliation.detail",                                                                                  // MakerGen.cs:393
+                    ElementId = "PaymentReconciliation.detail"                                                                              // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Identifier.Write(sDef);                                                                                             // MakerGen.cs:221
+                Element_Predecessor.Write(sDef);                                                                                            // MakerGen.cs:221
+                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Request.Write(sDef);                                                                                                // MakerGen.cs:221
+                Element_Submitter.Write(sDef);                                                                                              // MakerGen.cs:221
+                Element_Response.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_Date.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Responsible.Write(sDef);                                                                                            // MakerGen.cs:221
+                Element_Payee.Write(sDef);                                                                                                  // MakerGen.cs:221
+                Element_Amount.Write(sDef);                                                                                                 // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Detail()                                                                                                            // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 14. PaymentReconciliation.detail.identifier
-                    this.Element_Identifier = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Identifier",
-                        Path= "PaymentReconciliation.detail.identifier",
-                        Id = "PaymentReconciliation.detail.identifier",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Identifier
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Identifier = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Identifier",                                                                                        // MakerGen.cs:236
+                        Path= "PaymentReconciliation.detail.identifier",                                                                    // MakerGen.cs:237
+                        Id = "PaymentReconciliation.detail.identifier",                                                                     // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Identifier                                                               // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 15. PaymentReconciliation.detail.predecessor
-                    this.Element_Predecessor = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Predecessor",
-                        Path= "PaymentReconciliation.detail.predecessor",
-                        Id = "PaymentReconciliation.detail.predecessor",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Identifier
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Predecessor = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Predecessor",                                                                                       // MakerGen.cs:236
+                        Path= "PaymentReconciliation.detail.predecessor",                                                                   // MakerGen.cs:237
+                        Id = "PaymentReconciliation.detail.predecessor",                                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Identifier                                                               // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 16. PaymentReconciliation.detail.type
-                    this.Element_Type = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Type",
-                        Path= "PaymentReconciliation.detail.type",
-                        Id = "PaymentReconciliation.detail.type",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Type",                                                                                              // MakerGen.cs:236
+                        Path= "PaymentReconciliation.detail.type",                                                                          // MakerGen.cs:237
+                        Id = "PaymentReconciliation.detail.type",                                                                           // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 17. PaymentReconciliation.detail.request
-                    this.Element_Request = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Request",
-                        Path= "PaymentReconciliation.detail.request",
-                        Id = "PaymentReconciliation.detail.request",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Resource"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Request = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Request",                                                                                           // MakerGen.cs:236
+                        Path= "PaymentReconciliation.detail.request",                                                                       // MakerGen.cs:237
+                        Id = "PaymentReconciliation.detail.request",                                                                        // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Resource"                                                      // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 18. PaymentReconciliation.detail.submitter
-                    this.Element_Submitter = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Submitter",
-                        Path= "PaymentReconciliation.detail.submitter",
-                        Id = "PaymentReconciliation.detail.submitter",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                                    "http://hl7.org/fhir/StructureDefinition/Organization"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Submitter = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Submitter",                                                                                         // MakerGen.cs:236
+                        Path= "PaymentReconciliation.detail.submitter",                                                                     // MakerGen.cs:237
+                        Id = "PaymentReconciliation.detail.submitter",                                                                      // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                 // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                             // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/Organization"                                                  // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 19. PaymentReconciliation.detail.response
-                    this.Element_Response = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Response",
-                        Path= "PaymentReconciliation.detail.response",
-                        Id = "PaymentReconciliation.detail.response",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Resource"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Response = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Response",                                                                                          // MakerGen.cs:236
+                        Path= "PaymentReconciliation.detail.response",                                                                      // MakerGen.cs:237
+                        Id = "PaymentReconciliation.detail.response",                                                                       // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Resource"                                                      // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 20. PaymentReconciliation.detail.date
-                    this.Element_Date = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Date",
-                        Path= "PaymentReconciliation.detail.date",
-                        Id = "PaymentReconciliation.detail.date",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Date
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Date = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Date",                                                                                              // MakerGen.cs:236
+                        Path= "PaymentReconciliation.detail.date",                                                                          // MakerGen.cs:237
+                        Id = "PaymentReconciliation.detail.date",                                                                           // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Date                                                              // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 21. PaymentReconciliation.detail.responsible
-                    this.Element_Responsible = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Responsible",
-                        Path= "PaymentReconciliation.detail.responsible",
-                        Id = "PaymentReconciliation.detail.responsible",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Responsible = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Responsible",                                                                                       // MakerGen.cs:236
+                        Path= "PaymentReconciliation.detail.responsible",                                                                   // MakerGen.cs:237
+                        Id = "PaymentReconciliation.detail.responsible",                                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole"                                              // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 22. PaymentReconciliation.detail.payee
-                    this.Element_Payee = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Payee",
-                        Path= "PaymentReconciliation.detail.payee",
-                        Id = "PaymentReconciliation.detail.payee",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                                    "http://hl7.org/fhir/StructureDefinition/Organization"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Payee = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Payee",                                                                                             // MakerGen.cs:236
+                        Path= "PaymentReconciliation.detail.payee",                                                                         // MakerGen.cs:237
+                        Id = "PaymentReconciliation.detail.payee",                                                                          // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                 // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                             // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/Organization"                                                  // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 23. PaymentReconciliation.detail.amount
-                    this.Element_Amount = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Amount",
-                        Path= "PaymentReconciliation.detail.amount",
-                        Id = "PaymentReconciliation.detail.amount",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Money
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Amount = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Amount",                                                                                            // MakerGen.cs:236
+                        Path= "PaymentReconciliation.detail.amount",                                                                        // MakerGen.cs:237
+                        Id = "PaymentReconciliation.detail.amount",                                                                         // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Money                                                                    // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 25. PaymentReconciliation.processNote
-        public partial class Type_ProcessNote : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_ProcessNote : FhirKhit.Maker.Common.Complex.ComplexBase                                                   // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 26. PaymentReconciliation.processNote.type
-            public ElementDefinitionInfo Element_Type;
+            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:217
             // 27. PaymentReconciliation.processNote.text
-            public ElementDefinitionInfo Element_Text;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "PaymentReconciliation.processNote",
-                    ElementId = "PaymentReconciliation.processNote"
-                });
-                Element_Type.Write(sDef);
-                Element_Text.Write(sDef);
-            }
-            
-            public Type_ProcessNote()
-            {
-                {
+            public ElementDefinitionInfo Element_Text;                                                                                      // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "PaymentReconciliation.processNote",                                                                             // MakerGen.cs:393
+                    ElementId = "PaymentReconciliation.processNote"                                                                         // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Text.Write(sDef);                                                                                                   // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_ProcessNote()                                                                                                       // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 26. PaymentReconciliation.processNote.type
-                    this.Element_Type = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Type",
-                        Path= "PaymentReconciliation.processNote.type",
-                        Id = "PaymentReconciliation.processNote.type",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Type",                                                                                              // MakerGen.cs:236
+                        Path= "PaymentReconciliation.processNote.type",                                                                     // MakerGen.cs:237
+                        Id = "PaymentReconciliation.processNote.type",                                                                      // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 27. PaymentReconciliation.processNote.text
-                    this.Element_Text = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Text",
-                        Path= "PaymentReconciliation.processNote.text",
-                        Id = "PaymentReconciliation.processNote.text",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Text = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Text",                                                                                              // MakerGen.cs:236
+                        Path= "PaymentReconciliation.processNote.text",                                                                     // MakerGen.cs:237
+                        Id = "PaymentReconciliation.processNote.text",                                                                      // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 1. PaymentReconciliation.identifier
-        public ElementDefinitionInfo Element_Identifier;
+        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:217
         // 2. PaymentReconciliation.status
-        public ElementDefinitionInfo Element_Status;
+        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:217
         // 3. PaymentReconciliation.period
-        public ElementDefinitionInfo Element_Period;
+        public ElementDefinitionInfo Element_Period;                                                                                        // MakerGen.cs:217
         // 4. PaymentReconciliation.created
-        public ElementDefinitionInfo Element_Created;
+        public ElementDefinitionInfo Element_Created;                                                                                       // MakerGen.cs:217
         // 5. PaymentReconciliation.paymentIssuer
-        public ElementDefinitionInfo Element_PaymentIssuer;
+        public ElementDefinitionInfo Element_PaymentIssuer;                                                                                 // MakerGen.cs:217
         // 6. PaymentReconciliation.request
-        public ElementDefinitionInfo Element_Request;
+        public ElementDefinitionInfo Element_Request;                                                                                       // MakerGen.cs:217
         // 7. PaymentReconciliation.requestor
-        public ElementDefinitionInfo Element_Requestor;
+        public ElementDefinitionInfo Element_Requestor;                                                                                     // MakerGen.cs:217
         // 8. PaymentReconciliation.outcome
-        public ElementDefinitionInfo Element_Outcome;
+        public ElementDefinitionInfo Element_Outcome;                                                                                       // MakerGen.cs:217
         // 9. PaymentReconciliation.disposition
-        public ElementDefinitionInfo Element_Disposition;
+        public ElementDefinitionInfo Element_Disposition;                                                                                   // MakerGen.cs:217
         // 10. PaymentReconciliation.paymentDate
-        public ElementDefinitionInfo Element_PaymentDate;
+        public ElementDefinitionInfo Element_PaymentDate;                                                                                   // MakerGen.cs:217
         // 11. PaymentReconciliation.paymentAmount
-        public ElementDefinitionInfo Element_PaymentAmount;
+        public ElementDefinitionInfo Element_PaymentAmount;                                                                                 // MakerGen.cs:217
         // 12. PaymentReconciliation.paymentIdentifier
-        public ElementDefinitionInfo Element_PaymentIdentifier;
+        public ElementDefinitionInfo Element_PaymentIdentifier;                                                                             // MakerGen.cs:217
         // 13. PaymentReconciliation.detail
-        public ElementDefinitionInfo Element_Detail;
+        public ElementDefinitionInfo Element_Detail;                                                                                        // MakerGen.cs:217
         // 24. PaymentReconciliation.formCode
-        public ElementDefinitionInfo Element_FormCode;
+        public ElementDefinitionInfo Element_FormCode;                                                                                      // MakerGen.cs:217
         // 25. PaymentReconciliation.processNote
-        public ElementDefinitionInfo Element_ProcessNote;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "PaymentReconciliation",
-                ElementId = "PaymentReconciliation"
-            });
-            Element_Identifier.Write(sDef);
-            Element_Status.Write(sDef);
-            Element_Period.Write(sDef);
-            Element_Created.Write(sDef);
-            Element_PaymentIssuer.Write(sDef);
-            Element_Request.Write(sDef);
-            Element_Requestor.Write(sDef);
-            Element_Outcome.Write(sDef);
-            Element_Disposition.Write(sDef);
-            Element_PaymentDate.Write(sDef);
-            Element_PaymentAmount.Write(sDef);
-            Element_PaymentIdentifier.Write(sDef);
-            Element_Detail.Write(sDef);
-            Element_FormCode.Write(sDef);
-            Element_ProcessNote.Write(sDef);
-        }
-        
-        public Resource_PaymentReconciliation()
-        {
-            {
+        public ElementDefinitionInfo Element_ProcessNote;                                                                                   // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "PaymentReconciliation",                                                                                             // MakerGen.cs:393
+                ElementId = "PaymentReconciliation"                                                                                         // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Period.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Created.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_PaymentIssuer.Write(sDef);                                                                                              // MakerGen.cs:221
+            Element_Request.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Requestor.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_Outcome.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Disposition.Write(sDef);                                                                                                // MakerGen.cs:221
+            Element_PaymentDate.Write(sDef);                                                                                                // MakerGen.cs:221
+            Element_PaymentAmount.Write(sDef);                                                                                              // MakerGen.cs:221
+            Element_PaymentIdentifier.Write(sDef);                                                                                          // MakerGen.cs:221
+            Element_Detail.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_FormCode.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_ProcessNote.Write(sDef);                                                                                                // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Resource_PaymentReconciliation()                                                                                             // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. PaymentReconciliation.identifier
-                this.Element_Identifier = new ElementDefinitionInfo
-                {
-                    Name = "Element_Identifier",
-                    Path= "PaymentReconciliation.identifier",
-                    Id = "PaymentReconciliation.identifier",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:236
+                    Path= "PaymentReconciliation.identifier",                                                                               // MakerGen.cs:237
+                    Id = "PaymentReconciliation.identifier",                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. PaymentReconciliation.status
-                this.Element_Status = new ElementDefinitionInfo
-                {
-                    Name = "Element_Status",
-                    Path= "PaymentReconciliation.status",
-                    Id = "PaymentReconciliation.status",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Status",                                                                                                // MakerGen.cs:236
+                    Path= "PaymentReconciliation.status",                                                                                   // MakerGen.cs:237
+                    Id = "PaymentReconciliation.status",                                                                                    // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 3. PaymentReconciliation.period
-                this.Element_Period = new ElementDefinitionInfo
-                {
-                    Name = "Element_Period",
-                    Path= "PaymentReconciliation.period",
-                    Id = "PaymentReconciliation.period",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Period
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Period = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Period",                                                                                                // MakerGen.cs:236
+                    Path= "PaymentReconciliation.period",                                                                                   // MakerGen.cs:237
+                    Id = "PaymentReconciliation.period",                                                                                    // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Period                                                                       // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 4. PaymentReconciliation.created
-                this.Element_Created = new ElementDefinitionInfo
-                {
-                    Name = "Element_Created",
-                    Path= "PaymentReconciliation.created",
-                    Id = "PaymentReconciliation.created",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Created = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Created",                                                                                               // MakerGen.cs:236
+                    Path= "PaymentReconciliation.created",                                                                                  // MakerGen.cs:237
+                    Id = "PaymentReconciliation.created",                                                                                   // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 5. PaymentReconciliation.paymentIssuer
-                this.Element_PaymentIssuer = new ElementDefinitionInfo
-                {
-                    Name = "Element_PaymentIssuer",
-                    Path= "PaymentReconciliation.paymentIssuer",
-                    Id = "PaymentReconciliation.paymentIssuer",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Organization"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_PaymentIssuer = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_PaymentIssuer",                                                                                         // MakerGen.cs:236
+                    Path= "PaymentReconciliation.paymentIssuer",                                                                            // MakerGen.cs:237
+                    Id = "PaymentReconciliation.paymentIssuer",                                                                             // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 6. PaymentReconciliation.request
-                this.Element_Request = new ElementDefinitionInfo
-                {
-                    Name = "Element_Request",
-                    Path= "PaymentReconciliation.request",
-                    Id = "PaymentReconciliation.request",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Task"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Request = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Request",                                                                                               // MakerGen.cs:236
+                    Path= "PaymentReconciliation.request",                                                                                  // MakerGen.cs:237
+                    Id = "PaymentReconciliation.request",                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Task"                                                              // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 7. PaymentReconciliation.requestor
-                this.Element_Requestor = new ElementDefinitionInfo
-                {
-                    Name = "Element_Requestor",
-                    Path= "PaymentReconciliation.requestor",
-                    Id = "PaymentReconciliation.requestor",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                                "http://hl7.org/fhir/StructureDefinition/Organization"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Requestor = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Requestor",                                                                                             // MakerGen.cs:236
+                    Path= "PaymentReconciliation.requestor",                                                                                // MakerGen.cs:237
+                    Id = "PaymentReconciliation.requestor",                                                                                 // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                                 // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 8. PaymentReconciliation.outcome
-                this.Element_Outcome = new ElementDefinitionInfo
-                {
-                    Name = "Element_Outcome",
-                    Path= "PaymentReconciliation.outcome",
-                    Id = "PaymentReconciliation.outcome",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Outcome = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Outcome",                                                                                               // MakerGen.cs:236
+                    Path= "PaymentReconciliation.outcome",                                                                                  // MakerGen.cs:237
+                    Id = "PaymentReconciliation.outcome",                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 9. PaymentReconciliation.disposition
-                this.Element_Disposition = new ElementDefinitionInfo
-                {
-                    Name = "Element_Disposition",
-                    Path= "PaymentReconciliation.disposition",
-                    Id = "PaymentReconciliation.disposition",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Disposition = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Disposition",                                                                                           // MakerGen.cs:236
+                    Path= "PaymentReconciliation.disposition",                                                                              // MakerGen.cs:237
+                    Id = "PaymentReconciliation.disposition",                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 10. PaymentReconciliation.paymentDate
-                this.Element_PaymentDate = new ElementDefinitionInfo
-                {
-                    Name = "Element_PaymentDate",
-                    Path= "PaymentReconciliation.paymentDate",
-                    Id = "PaymentReconciliation.paymentDate",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Date
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_PaymentDate = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_PaymentDate",                                                                                           // MakerGen.cs:236
+                    Path= "PaymentReconciliation.paymentDate",                                                                              // MakerGen.cs:237
+                    Id = "PaymentReconciliation.paymentDate",                                                                               // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Date                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 11. PaymentReconciliation.paymentAmount
-                this.Element_PaymentAmount = new ElementDefinitionInfo
-                {
-                    Name = "Element_PaymentAmount",
-                    Path= "PaymentReconciliation.paymentAmount",
-                    Id = "PaymentReconciliation.paymentAmount",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Money
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_PaymentAmount = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_PaymentAmount",                                                                                         // MakerGen.cs:236
+                    Path= "PaymentReconciliation.paymentAmount",                                                                            // MakerGen.cs:237
+                    Id = "PaymentReconciliation.paymentAmount",                                                                             // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Money                                                                        // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 12. PaymentReconciliation.paymentIdentifier
-                this.Element_PaymentIdentifier = new ElementDefinitionInfo
-                {
-                    Name = "Element_PaymentIdentifier",
-                    Path= "PaymentReconciliation.paymentIdentifier",
-                    Id = "PaymentReconciliation.paymentIdentifier",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_PaymentIdentifier = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_PaymentIdentifier",                                                                                     // MakerGen.cs:236
+                    Path= "PaymentReconciliation.paymentIdentifier",                                                                        // MakerGen.cs:237
+                    Id = "PaymentReconciliation.paymentIdentifier",                                                                         // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 13. PaymentReconciliation.detail
-                this.Element_Detail = new ElementDefinitionInfo
-                {
-                    Name = "Element_Detail",
-                    Path= "PaymentReconciliation.detail",
-                    Id = "PaymentReconciliation.detail",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Detail
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Detail = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Detail",                                                                                                // MakerGen.cs:236
+                    Path= "PaymentReconciliation.detail",                                                                                   // MakerGen.cs:237
+                    Id = "PaymentReconciliation.detail",                                                                                    // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Detail                                                                                                     // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 24. PaymentReconciliation.formCode
-                this.Element_FormCode = new ElementDefinitionInfo
-                {
-                    Name = "Element_FormCode",
-                    Path= "PaymentReconciliation.formCode",
-                    Id = "PaymentReconciliation.formCode",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_FormCode = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_FormCode",                                                                                              // MakerGen.cs:236
+                    Path= "PaymentReconciliation.formCode",                                                                                 // MakerGen.cs:237
+                    Id = "PaymentReconciliation.formCode",                                                                                  // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 25. PaymentReconciliation.processNote
-                this.Element_ProcessNote = new ElementDefinitionInfo
-                {
-                    Name = "Element_ProcessNote",
-                    Path= "PaymentReconciliation.processNote",
-                    Id = "PaymentReconciliation.processNote",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_ProcessNote
-                        {
-                        }
-                    }
-                };
-            }
-            this.Name = "PaymentReconciliation";
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/PaymentReconciliation";
-        }
-    }
-}
+                this.Element_ProcessNote = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ProcessNote",                                                                                           // MakerGen.cs:236
+                    Path= "PaymentReconciliation.processNote",                                                                              // MakerGen.cs:237
+                    Id = "PaymentReconciliation.processNote",                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_ProcessNote                                                                                                // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            this.Name = "PaymentReconciliation";                                                                                            // MakerGen.cs:468
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/PaymentReconciliation";                                                     // MakerGen.cs:469
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:449

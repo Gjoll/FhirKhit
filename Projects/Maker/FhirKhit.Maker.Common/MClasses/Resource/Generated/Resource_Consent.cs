@@ -1,13 +1,13 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Resource
-{
-    #region Json
-    #if NEVER
+using System;                                                                                                                               // MakerGen.cs:432
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:433
+using System.IO;                                                                                                                            // MakerGen.cs:434
+using System.Linq;                                                                                                                          // MakerGen.cs:435
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:436
+                                                                                                                                            // MakerGen.cs:437
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:438
+{                                                                                                                                           // MakerGen.cs:439
+    #region Json                                                                                                                            // MakerGen.cs:440
+    #if NEVER                                                                                                                               // MakerGen.cs:441
     {
       "resourceType": "StructureDefinition",
       "id": "Consent",
@@ -709,821 +709,821 @@ namespace FhirKhit.Maker.Common.Resource
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:444
     /// <summary>
     /// Fhir resource 'Consent'
     /// </summary>
     // 0. Consent
-    public partial class Resource_Consent : FhirKhit.Maker.Common.Resource.Resource_DomainResource
-    {
+    public partial class Resource_Consent : FhirKhit.Maker.Common.Resource.Resource_DomainResource                                          // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 10. Consent.policy
-        public partial class Type_Policy : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Policy : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 11. Consent.policy.authority
-            public ElementDefinitionInfo Element_Authority;
+            public ElementDefinitionInfo Element_Authority;                                                                                 // MakerGen.cs:217
             // 12. Consent.policy.uri
-            public ElementDefinitionInfo Element_Uri;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "Consent.policy",
-                    ElementId = "Consent.policy"
-                });
-                Element_Authority.Write(sDef);
-                Element_Uri.Write(sDef);
-            }
-            
-            public Type_Policy()
-            {
-                {
+            public ElementDefinitionInfo Element_Uri;                                                                                       // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "Consent.policy",                                                                                                // MakerGen.cs:393
+                    ElementId = "Consent.policy"                                                                                            // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Authority.Write(sDef);                                                                                              // MakerGen.cs:221
+                Element_Uri.Write(sDef);                                                                                                    // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Policy()                                                                                                            // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 11. Consent.policy.authority
-                    this.Element_Authority = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Authority",
-                        Path= "Consent.policy.authority",
-                        Id = "Consent.policy.authority",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Uri
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Authority = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Authority",                                                                                         // MakerGen.cs:236
+                        Path= "Consent.policy.authority",                                                                                   // MakerGen.cs:237
+                        Id = "Consent.policy.authority",                                                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                               // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 12. Consent.policy.uri
-                    this.Element_Uri = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Uri",
-                        Path= "Consent.policy.uri",
-                        Id = "Consent.policy.uri",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Uri
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Uri = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Uri",                                                                                               // MakerGen.cs:236
+                        Path= "Consent.policy.uri",                                                                                         // MakerGen.cs:237
+                        Id = "Consent.policy.uri",                                                                                          // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                               // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 14. Consent.verification
-        public partial class Type_Verification : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Verification : FhirKhit.Maker.Common.Complex.ComplexBase                                                  // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 15. Consent.verification.verified
-            public ElementDefinitionInfo Element_Verified;
+            public ElementDefinitionInfo Element_Verified;                                                                                  // MakerGen.cs:217
             // 16. Consent.verification.verifiedWith
-            public ElementDefinitionInfo Element_VerifiedWith;
+            public ElementDefinitionInfo Element_VerifiedWith;                                                                              // MakerGen.cs:217
             // 17. Consent.verification.verificationDate
-            public ElementDefinitionInfo Element_VerificationDate;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "Consent.verification",
-                    ElementId = "Consent.verification"
-                });
-                Element_Verified.Write(sDef);
-                Element_VerifiedWith.Write(sDef);
-                Element_VerificationDate.Write(sDef);
-            }
-            
-            public Type_Verification()
-            {
-                {
+            public ElementDefinitionInfo Element_VerificationDate;                                                                          // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "Consent.verification",                                                                                          // MakerGen.cs:393
+                    ElementId = "Consent.verification"                                                                                      // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Verified.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_VerifiedWith.Write(sDef);                                                                                           // MakerGen.cs:221
+                Element_VerificationDate.Write(sDef);                                                                                       // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Verification()                                                                                                      // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 15. Consent.verification.verified
-                    this.Element_Verified = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Verified",
-                        Path= "Consent.verification.verified",
-                        Id = "Consent.verification.verified",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Verified = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Verified",                                                                                          // MakerGen.cs:236
+                        Path= "Consent.verification.verified",                                                                              // MakerGen.cs:237
+                        Id = "Consent.verification.verified",                                                                               // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                           // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 16. Consent.verification.verifiedWith
-                    this.Element_VerifiedWith = new ElementDefinitionInfo
-                    {
-                        Name = "Element_VerifiedWith",
-                        Path= "Consent.verification.verifiedWith",
-                        Id = "Consent.verification.verifiedWith",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Patient",
-                                    "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_VerifiedWith = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_VerifiedWith",                                                                                      // MakerGen.cs:236
+                        Path= "Consent.verification.verifiedWith",                                                                          // MakerGen.cs:237
+                        Id = "Consent.verification.verifiedWith",                                                                           // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Patient",                                                      // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/RelatedPerson"                                                 // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 17. Consent.verification.verificationDate
-                    this.Element_VerificationDate = new ElementDefinitionInfo
-                    {
-                        Name = "Element_VerificationDate",
-                        Path= "Consent.verification.verificationDate",
-                        Id = "Consent.verification.verificationDate",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_VerificationDate = new ElementDefinitionInfo                                                               // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_VerificationDate",                                                                                  // MakerGen.cs:236
+                        Path= "Consent.verification.verificationDate",                                                                      // MakerGen.cs:237
+                        Id = "Consent.verification.verificationDate",                                                                       // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                          // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 18. Consent.provision
-        public partial class Type_Provision : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Provision : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 21. Consent.provision.actor
-            public partial class Type_Actor : FhirKhit.Maker.Common.Complex.ComplexBase
-            {
+            public partial class Type_Actor : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:381
+            {                                                                                                                               // MakerGen.cs:382
                 // 22. Consent.provision.actor.role
-                public ElementDefinitionInfo Element_Role;
+                public ElementDefinitionInfo Element_Role;                                                                                  // MakerGen.cs:217
                 // 23. Consent.provision.actor.reference
-                public ElementDefinitionInfo Element_Reference;
-                
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                {
-                    base.Write(sDef);
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                    {
-                        Path = "Consent.provision.actor",
-                        ElementId = "Consent.provision.actor"
-                    });
-                    Element_Role.Write(sDef);
-                    Element_Reference.Write(sDef);
-                }
-                
-                public Type_Actor()
-                {
-                    {
+                public ElementDefinitionInfo Element_Reference;                                                                             // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:389
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:390
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:391
+                    {                                                                                                                       // MakerGen.cs:392
+                        Path = "Consent.provision.actor",                                                                                   // MakerGen.cs:393
+                        ElementId = "Consent.provision.actor"                                                                               // MakerGen.cs:394
+                    });                                                                                                                     // MakerGen.cs:395
+                    Element_Role.Write(sDef);                                                                                               // MakerGen.cs:221
+                    Element_Reference.Write(sDef);                                                                                          // MakerGen.cs:221
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                public Type_Actor()                                                                                                         // MakerGen.cs:400
+                {                                                                                                                           // MakerGen.cs:401
+                    {                                                                                                                       // MakerGen.cs:232
                         // 22. Consent.provision.actor.role
-                        this.Element_Role = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Role",
-                            Path= "Consent.provision.actor.role",
-                            Id = "Consent.provision.actor.role",
-                            Min = 1,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Role = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Role",                                                                                          // MakerGen.cs:236
+                            Path= "Consent.provision.actor.role",                                                                           // MakerGen.cs:237
+                            Id = "Consent.provision.actor.role",                                                                            // MakerGen.cs:238
+                            Min = 1,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 23. Consent.provision.actor.reference
-                        this.Element_Reference = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Reference",
-                            Path= "Consent.provision.actor.reference",
-                            Id = "Consent.provision.actor.reference",
-                            Min = 1,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Reference
-                                {
-                                    TargetProfile = new String[]
-                                    {
-                                        "http://hl7.org/fhir/StructureDefinition/Device",
-                                        "http://hl7.org/fhir/StructureDefinition/Group",
-                                        "http://hl7.org/fhir/StructureDefinition/CareTeam",
-                                        "http://hl7.org/fhir/StructureDefinition/Organization",
-                                        "http://hl7.org/fhir/StructureDefinition/Patient",
-                                        "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                        "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
-                                        "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
-                                    }
-                                }
-                            }
-                        };
-                    }
-                }
-            }
+                        this.Element_Reference = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Reference",                                                                                     // MakerGen.cs:236
+                            Path= "Consent.provision.actor.reference",                                                                      // MakerGen.cs:237
+                            Id = "Consent.provision.actor.reference",                                                                       // MakerGen.cs:238
+                            Min = 1,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Reference                                                            // MakerGen.cs:344
+                                {                                                                                                           // MakerGen.cs:345
+                                    TargetProfile = new String[]                                                                            // MakerGen.cs:347
+                                    {                                                                                                       // CodeEditorExtensions.cs:28
+                                        "http://hl7.org/fhir/StructureDefinition/Device",                                                   // MakerGen.cs:347
+                                        "http://hl7.org/fhir/StructureDefinition/Group",                                                    // MakerGen.cs:347
+                                        "http://hl7.org/fhir/StructureDefinition/CareTeam",                                                 // MakerGen.cs:347
+                                        "http://hl7.org/fhir/StructureDefinition/Organization",                                             // MakerGen.cs:347
+                                        "http://hl7.org/fhir/StructureDefinition/Patient",                                                  // MakerGen.cs:347
+                                        "http://hl7.org/fhir/StructureDefinition/Practitioner",                                             // MakerGen.cs:347
+                                        "http://hl7.org/fhir/StructureDefinition/RelatedPerson",                                            // MakerGen.cs:347
+                                        "http://hl7.org/fhir/StructureDefinition/PractitionerRole"                                          // MakerGen.cs:347
+                                    }                                                                                                       // CodeEditorExtensions.cs:34
+                                }                                                                                                           // MakerGen.cs:348
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                }                                                                                                                           // MakerGen.cs:403
+            }                                                                                                                               // MakerGen.cs:405
             // 30. Consent.provision.data
-            public partial class Type_Data : FhirKhit.Maker.Common.Complex.ComplexBase
-            {
+            public partial class Type_Data : FhirKhit.Maker.Common.Complex.ComplexBase                                                      // MakerGen.cs:381
+            {                                                                                                                               // MakerGen.cs:382
                 // 31. Consent.provision.data.meaning
-                public ElementDefinitionInfo Element_Meaning;
+                public ElementDefinitionInfo Element_Meaning;                                                                               // MakerGen.cs:217
                 // 32. Consent.provision.data.reference
-                public ElementDefinitionInfo Element_Reference;
-                
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                {
-                    base.Write(sDef);
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                    {
-                        Path = "Consent.provision.data",
-                        ElementId = "Consent.provision.data"
-                    });
-                    Element_Meaning.Write(sDef);
-                    Element_Reference.Write(sDef);
-                }
-                
-                public Type_Data()
-                {
-                    {
+                public ElementDefinitionInfo Element_Reference;                                                                             // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:389
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:390
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:391
+                    {                                                                                                                       // MakerGen.cs:392
+                        Path = "Consent.provision.data",                                                                                    // MakerGen.cs:393
+                        ElementId = "Consent.provision.data"                                                                                // MakerGen.cs:394
+                    });                                                                                                                     // MakerGen.cs:395
+                    Element_Meaning.Write(sDef);                                                                                            // MakerGen.cs:221
+                    Element_Reference.Write(sDef);                                                                                          // MakerGen.cs:221
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                public Type_Data()                                                                                                          // MakerGen.cs:400
+                {                                                                                                                           // MakerGen.cs:401
+                    {                                                                                                                       // MakerGen.cs:232
                         // 31. Consent.provision.data.meaning
-                        this.Element_Meaning = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Meaning",
-                            Path= "Consent.provision.data.meaning",
-                            Id = "Consent.provision.data.meaning",
-                            Min = 1,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Meaning = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Meaning",                                                                                       // MakerGen.cs:236
+                            Path= "Consent.provision.data.meaning",                                                                         // MakerGen.cs:237
+                            Id = "Consent.provision.data.meaning",                                                                          // MakerGen.cs:238
+                            Min = 1,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                          // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 32. Consent.provision.data.reference
-                        this.Element_Reference = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Reference",
-                            Path= "Consent.provision.data.reference",
-                            Id = "Consent.provision.data.reference",
-                            Min = 1,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Reference
-                                {
-                                    TargetProfile = new String[]
-                                    {
-                                        "http://hl7.org/fhir/StructureDefinition/Resource"
-                                    }
-                                }
-                            }
-                        };
-                    }
-                }
-            }
+                        this.Element_Reference = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Reference",                                                                                     // MakerGen.cs:236
+                            Path= "Consent.provision.data.reference",                                                                       // MakerGen.cs:237
+                            Id = "Consent.provision.data.reference",                                                                        // MakerGen.cs:238
+                            Min = 1,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Reference                                                            // MakerGen.cs:344
+                                {                                                                                                           // MakerGen.cs:345
+                                    TargetProfile = new String[]                                                                            // MakerGen.cs:347
+                                    {                                                                                                       // CodeEditorExtensions.cs:28
+                                        "http://hl7.org/fhir/StructureDefinition/Resource"                                                  // MakerGen.cs:347
+                                    }                                                                                                       // CodeEditorExtensions.cs:34
+                                }                                                                                                           // MakerGen.cs:348
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                }                                                                                                                           // MakerGen.cs:403
+            }                                                                                                                               // MakerGen.cs:405
             // 19. Consent.provision.type
-            public ElementDefinitionInfo Element_Type;
+            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:217
             // 20. Consent.provision.period
-            public ElementDefinitionInfo Element_Period;
+            public ElementDefinitionInfo Element_Period;                                                                                    // MakerGen.cs:217
             // 21. Consent.provision.actor
-            public ElementDefinitionInfo Element_Actor;
+            public ElementDefinitionInfo Element_Actor;                                                                                     // MakerGen.cs:217
             // 24. Consent.provision.action
-            public ElementDefinitionInfo Element_Action;
+            public ElementDefinitionInfo Element_Action;                                                                                    // MakerGen.cs:217
             // 25. Consent.provision.securityLabel
-            public ElementDefinitionInfo Element_SecurityLabel;
+            public ElementDefinitionInfo Element_SecurityLabel;                                                                             // MakerGen.cs:217
             // 26. Consent.provision.purpose
-            public ElementDefinitionInfo Element_Purpose;
+            public ElementDefinitionInfo Element_Purpose;                                                                                   // MakerGen.cs:217
             // 27. Consent.provision.class
-            public ElementDefinitionInfo Element_Class;
+            public ElementDefinitionInfo Element_Class;                                                                                     // MakerGen.cs:217
             // 28. Consent.provision.code
-            public ElementDefinitionInfo Element_Code;
+            public ElementDefinitionInfo Element_Code;                                                                                      // MakerGen.cs:217
             // 29. Consent.provision.dataPeriod
-            public ElementDefinitionInfo Element_DataPeriod;
+            public ElementDefinitionInfo Element_DataPeriod;                                                                                // MakerGen.cs:217
             // 30. Consent.provision.data
-            public ElementDefinitionInfo Element_Data;
+            public ElementDefinitionInfo Element_Data;                                                                                      // MakerGen.cs:217
             // 33. Consent.provision.provision
-            public ElementDefinitionInfo Element_Provision;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "Consent.provision",
-                    ElementId = "Consent.provision"
-                });
-                Element_Type.Write(sDef);
-                Element_Period.Write(sDef);
-                Element_Actor.Write(sDef);
-                Element_Action.Write(sDef);
-                Element_SecurityLabel.Write(sDef);
-                Element_Purpose.Write(sDef);
-                Element_Class.Write(sDef);
-                Element_Code.Write(sDef);
-                Element_DataPeriod.Write(sDef);
-                Element_Data.Write(sDef);
-                Element_Provision.Write(sDef);
-            }
-            
-            public Type_Provision()
-            {
-                {
+            public ElementDefinitionInfo Element_Provision;                                                                                 // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "Consent.provision",                                                                                             // MakerGen.cs:393
+                    ElementId = "Consent.provision"                                                                                         // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Period.Write(sDef);                                                                                                 // MakerGen.cs:221
+                Element_Actor.Write(sDef);                                                                                                  // MakerGen.cs:221
+                Element_Action.Write(sDef);                                                                                                 // MakerGen.cs:221
+                Element_SecurityLabel.Write(sDef);                                                                                          // MakerGen.cs:221
+                Element_Purpose.Write(sDef);                                                                                                // MakerGen.cs:221
+                Element_Class.Write(sDef);                                                                                                  // MakerGen.cs:221
+                Element_Code.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_DataPeriod.Write(sDef);                                                                                             // MakerGen.cs:221
+                Element_Data.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Provision.Write(sDef);                                                                                              // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Provision()                                                                                                         // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 19. Consent.provision.type
-                    this.Element_Type = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Type",
-                        Path= "Consent.provision.type",
-                        Id = "Consent.provision.type",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Type",                                                                                              // MakerGen.cs:236
+                        Path= "Consent.provision.type",                                                                                     // MakerGen.cs:237
+                        Id = "Consent.provision.type",                                                                                      // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 20. Consent.provision.period
-                    this.Element_Period = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Period",
-                        Path= "Consent.provision.period",
-                        Id = "Consent.provision.period",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Period
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Period = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Period",                                                                                            // MakerGen.cs:236
+                        Path= "Consent.provision.period",                                                                                   // MakerGen.cs:237
+                        Id = "Consent.provision.period",                                                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Period                                                                   // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 21. Consent.provision.actor
-                    this.Element_Actor = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Actor",
-                        Path= "Consent.provision.actor",
-                        Id = "Consent.provision.actor",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new Type_Actor
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Actor = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Actor",                                                                                             // MakerGen.cs:236
+                        Path= "Consent.provision.actor",                                                                                    // MakerGen.cs:237
+                        Id = "Consent.provision.actor",                                                                                     // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new Type_Actor                                                                                                  // MakerGen.cs:260
+                            {                                                                                                               // MakerGen.cs:261
+                            }                                                                                                               // MakerGen.cs:262
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 24. Consent.provision.action
-                    this.Element_Action = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Action",
-                        Path= "Consent.provision.action",
-                        Id = "Consent.provision.action",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Action = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Action",                                                                                            // MakerGen.cs:236
+                        Path= "Consent.provision.action",                                                                                   // MakerGen.cs:237
+                        Id = "Consent.provision.action",                                                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 25. Consent.provision.securityLabel
-                    this.Element_SecurityLabel = new ElementDefinitionInfo
-                    {
-                        Name = "Element_SecurityLabel",
-                        Path= "Consent.provision.securityLabel",
-                        Id = "Consent.provision.securityLabel",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Coding
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_SecurityLabel = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_SecurityLabel",                                                                                     // MakerGen.cs:236
+                        Path= "Consent.provision.securityLabel",                                                                            // MakerGen.cs:237
+                        Id = "Consent.provision.securityLabel",                                                                             // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Coding                                                                   // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 26. Consent.provision.purpose
-                    this.Element_Purpose = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Purpose",
-                        Path= "Consent.provision.purpose",
-                        Id = "Consent.provision.purpose",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Coding
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Purpose = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Purpose",                                                                                           // MakerGen.cs:236
+                        Path= "Consent.provision.purpose",                                                                                  // MakerGen.cs:237
+                        Id = "Consent.provision.purpose",                                                                                   // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Coding                                                                   // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 27. Consent.provision.class
-                    this.Element_Class = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Class",
-                        Path= "Consent.provision.class",
-                        Id = "Consent.provision.class",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Coding
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Class = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Class",                                                                                             // MakerGen.cs:236
+                        Path= "Consent.provision.class",                                                                                    // MakerGen.cs:237
+                        Id = "Consent.provision.class",                                                                                     // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Coding                                                                   // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 28. Consent.provision.code
-                    this.Element_Code = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Code",
-                        Path= "Consent.provision.code",
-                        Id = "Consent.provision.code",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Code = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Code",                                                                                              // MakerGen.cs:236
+                        Path= "Consent.provision.code",                                                                                     // MakerGen.cs:237
+                        Id = "Consent.provision.code",                                                                                      // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 29. Consent.provision.dataPeriod
-                    this.Element_DataPeriod = new ElementDefinitionInfo
-                    {
-                        Name = "Element_DataPeriod",
-                        Path= "Consent.provision.dataPeriod",
-                        Id = "Consent.provision.dataPeriod",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Period
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_DataPeriod = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_DataPeriod",                                                                                        // MakerGen.cs:236
+                        Path= "Consent.provision.dataPeriod",                                                                               // MakerGen.cs:237
+                        Id = "Consent.provision.dataPeriod",                                                                                // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Period                                                                   // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 30. Consent.provision.data
-                    this.Element_Data = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Data",
-                        Path= "Consent.provision.data",
-                        Id = "Consent.provision.data",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new Type_Data
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Data = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Data",                                                                                              // MakerGen.cs:236
+                        Path= "Consent.provision.data",                                                                                     // MakerGen.cs:237
+                        Id = "Consent.provision.data",                                                                                      // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new Type_Data                                                                                                   // MakerGen.cs:260
+                            {                                                                                                               // MakerGen.cs:261
+                            }                                                                                                               // MakerGen.cs:262
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 33. Consent.provision.provision
-                    this.Element_Provision = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Provision",
-                        Path= "Consent.provision.provision",
-                        Id = "Consent.provision.provision",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Provision = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Provision",                                                                                         // MakerGen.cs:236
+                        Path= "Consent.provision.provision",                                                                                // MakerGen.cs:237
+                        Id = "Consent.provision.provision",                                                                                 // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 1. Consent.identifier
-        public ElementDefinitionInfo Element_Identifier;
+        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:217
         // 2. Consent.status
-        public ElementDefinitionInfo Element_Status;
+        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:217
         // 3. Consent.scope
-        public ElementDefinitionInfo Element_Scope;
+        public ElementDefinitionInfo Element_Scope;                                                                                         // MakerGen.cs:217
         // 4. Consent.category
-        public ElementDefinitionInfo Element_Category;
+        public ElementDefinitionInfo Element_Category;                                                                                      // MakerGen.cs:217
         // 5. Consent.patient
-        public ElementDefinitionInfo Element_Patient;
+        public ElementDefinitionInfo Element_Patient;                                                                                       // MakerGen.cs:217
         // 6. Consent.dateTime
-        public ElementDefinitionInfo Element_DateTime;
+        public ElementDefinitionInfo Element_DateTime;                                                                                      // MakerGen.cs:217
         // 7. Consent.performer
-        public ElementDefinitionInfo Element_Performer;
+        public ElementDefinitionInfo Element_Performer;                                                                                     // MakerGen.cs:217
         // 8. Consent.organization
-        public ElementDefinitionInfo Element_Organization;
+        public ElementDefinitionInfo Element_Organization;                                                                                  // MakerGen.cs:217
         // 9. Consent.source[x]
-        public ElementDefinitionInfo Element_Source;
+        public ElementDefinitionInfo Element_Source;                                                                                        // MakerGen.cs:217
         // 10. Consent.policy
-        public ElementDefinitionInfo Element_Policy;
+        public ElementDefinitionInfo Element_Policy;                                                                                        // MakerGen.cs:217
         // 13. Consent.policyRule
-        public ElementDefinitionInfo Element_PolicyRule;
+        public ElementDefinitionInfo Element_PolicyRule;                                                                                    // MakerGen.cs:217
         // 14. Consent.verification
-        public ElementDefinitionInfo Element_Verification;
+        public ElementDefinitionInfo Element_Verification;                                                                                  // MakerGen.cs:217
         // 18. Consent.provision
-        public ElementDefinitionInfo Element_Provision;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "Consent",
-                ElementId = "Consent"
-            });
-            Element_Identifier.Write(sDef);
-            Element_Status.Write(sDef);
-            Element_Scope.Write(sDef);
-            Element_Category.Write(sDef);
-            Element_Patient.Write(sDef);
-            Element_DateTime.Write(sDef);
-            Element_Performer.Write(sDef);
-            Element_Organization.Write(sDef);
-            Element_Source.Write(sDef);
-            Element_Policy.Write(sDef);
-            Element_PolicyRule.Write(sDef);
-            Element_Verification.Write(sDef);
-            Element_Provision.Write(sDef);
-        }
-        
-        public Resource_Consent()
-        {
-            {
+        public ElementDefinitionInfo Element_Provision;                                                                                     // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "Consent",                                                                                                           // MakerGen.cs:393
+                ElementId = "Consent"                                                                                                       // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Scope.Write(sDef);                                                                                                      // MakerGen.cs:221
+            Element_Category.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_Patient.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_DateTime.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_Performer.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_Organization.Write(sDef);                                                                                               // MakerGen.cs:221
+            Element_Source.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Policy.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_PolicyRule.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Verification.Write(sDef);                                                                                               // MakerGen.cs:221
+            Element_Provision.Write(sDef);                                                                                                  // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Resource_Consent()                                                                                                           // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. Consent.identifier
-                this.Element_Identifier = new ElementDefinitionInfo
-                {
-                    Name = "Element_Identifier",
-                    Path= "Consent.identifier",
-                    Id = "Consent.identifier",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:236
+                    Path= "Consent.identifier",                                                                                             // MakerGen.cs:237
+                    Id = "Consent.identifier",                                                                                              // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. Consent.status
-                this.Element_Status = new ElementDefinitionInfo
-                {
-                    Name = "Element_Status",
-                    Path= "Consent.status",
-                    Id = "Consent.status",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Status",                                                                                                // MakerGen.cs:236
+                    Path= "Consent.status",                                                                                                 // MakerGen.cs:237
+                    Id = "Consent.status",                                                                                                  // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 3. Consent.scope
-                this.Element_Scope = new ElementDefinitionInfo
-                {
-                    Name = "Element_Scope",
-                    Path= "Consent.scope",
-                    Id = "Consent.scope",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Scope = new ElementDefinitionInfo                                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Scope",                                                                                                 // MakerGen.cs:236
+                    Path= "Consent.scope",                                                                                                  // MakerGen.cs:237
+                    Id = "Consent.scope",                                                                                                   // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 4. Consent.category
-                this.Element_Category = new ElementDefinitionInfo
-                {
-                    Name = "Element_Category",
-                    Path= "Consent.category",
-                    Id = "Consent.category",
-                    Min = 1,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Category = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Category",                                                                                              // MakerGen.cs:236
+                    Path= "Consent.category",                                                                                               // MakerGen.cs:237
+                    Id = "Consent.category",                                                                                                // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 5. Consent.patient
-                this.Element_Patient = new ElementDefinitionInfo
-                {
-                    Name = "Element_Patient",
-                    Path= "Consent.patient",
-                    Id = "Consent.patient",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Patient"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Patient = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Patient",                                                                                               // MakerGen.cs:236
+                    Path= "Consent.patient",                                                                                                // MakerGen.cs:237
+                    Id = "Consent.patient",                                                                                                 // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Patient"                                                           // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 6. Consent.dateTime
-                this.Element_DateTime = new ElementDefinitionInfo
-                {
-                    Name = "Element_DateTime",
-                    Path= "Consent.dateTime",
-                    Id = "Consent.dateTime",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_DateTime = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_DateTime",                                                                                              // MakerGen.cs:236
+                    Path= "Consent.dateTime",                                                                                               // MakerGen.cs:237
+                    Id = "Consent.dateTime",                                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 7. Consent.performer
-                this.Element_Performer = new ElementDefinitionInfo
-                {
-                    Name = "Element_Performer",
-                    Path= "Consent.performer",
-                    Id = "Consent.performer",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Organization",
-                                "http://hl7.org/fhir/StructureDefinition/Patient",
-                                "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
-                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Performer = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Performer",                                                                                             // MakerGen.cs:236
+                    Path= "Consent.performer",                                                                                              // MakerGen.cs:237
+                    Id = "Consent.performer",                                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Organization",                                                     // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Patient",                                                          // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/RelatedPerson",                                                    // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole"                                                  // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 8. Consent.organization
-                this.Element_Organization = new ElementDefinitionInfo
-                {
-                    Name = "Element_Organization",
-                    Path= "Consent.organization",
-                    Id = "Consent.organization",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Organization"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Organization = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Organization",                                                                                          // MakerGen.cs:236
+                    Path= "Consent.organization",                                                                                           // MakerGen.cs:237
+                    Id = "Consent.organization",                                                                                            // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 9. Consent.source[x]
-                this.Element_Source = new ElementDefinitionInfo
-                {
-                    Name = "Element_Source",
-                    Path= "Consent.source[x]",
-                    Id = "Consent.source[x]",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Attachment
-                        {
-                        },
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Consent",
-                                "http://hl7.org/fhir/StructureDefinition/DocumentReference",
-                                "http://hl7.org/fhir/StructureDefinition/Contract",
-                                "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Source = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Source",                                                                                                // MakerGen.cs:236
+                    Path= "Consent.source[x]",                                                                                              // MakerGen.cs:237
+                    Id = "Consent.source[x]",                                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Attachment                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        },                                                                                                                  // MakerGen.cs:358
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Consent",                                                          // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/DocumentReference",                                                // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Contract",                                                         // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse"                                             // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 10. Consent.policy
-                this.Element_Policy = new ElementDefinitionInfo
-                {
-                    Name = "Element_Policy",
-                    Path= "Consent.policy",
-                    Id = "Consent.policy",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Policy
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Policy = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Policy",                                                                                                // MakerGen.cs:236
+                    Path= "Consent.policy",                                                                                                 // MakerGen.cs:237
+                    Id = "Consent.policy",                                                                                                  // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Policy                                                                                                     // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 13. Consent.policyRule
-                this.Element_PolicyRule = new ElementDefinitionInfo
-                {
-                    Name = "Element_PolicyRule",
-                    Path= "Consent.policyRule",
-                    Id = "Consent.policyRule",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_PolicyRule = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_PolicyRule",                                                                                            // MakerGen.cs:236
+                    Path= "Consent.policyRule",                                                                                             // MakerGen.cs:237
+                    Id = "Consent.policyRule",                                                                                              // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 14. Consent.verification
-                this.Element_Verification = new ElementDefinitionInfo
-                {
-                    Name = "Element_Verification",
-                    Path= "Consent.verification",
-                    Id = "Consent.verification",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Verification
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Verification = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Verification",                                                                                          // MakerGen.cs:236
+                    Path= "Consent.verification",                                                                                           // MakerGen.cs:237
+                    Id = "Consent.verification",                                                                                            // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Verification                                                                                               // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 18. Consent.provision
-                this.Element_Provision = new ElementDefinitionInfo
-                {
-                    Name = "Element_Provision",
-                    Path= "Consent.provision",
-                    Id = "Consent.provision",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Provision
-                        {
-                        }
-                    }
-                };
-            }
-            this.Name = "Consent";
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/Consent";
-        }
-    }
-}
+                this.Element_Provision = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Provision",                                                                                             // MakerGen.cs:236
+                    Path= "Consent.provision",                                                                                              // MakerGen.cs:237
+                    Id = "Consent.provision",                                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Provision                                                                                                  // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            this.Name = "Consent";                                                                                                          // MakerGen.cs:468
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/Consent";                                                                   // MakerGen.cs:469
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:449

@@ -1,13 +1,13 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Resource
-{
-    #region Json
-    #if NEVER
+using System;                                                                                                                               // MakerGen.cs:432
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:433
+using System.IO;                                                                                                                            // MakerGen.cs:434
+using System.Linq;                                                                                                                          // MakerGen.cs:435
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:436
+                                                                                                                                            // MakerGen.cs:437
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:438
+{                                                                                                                                           // MakerGen.cs:439
+    #region Json                                                                                                                            // MakerGen.cs:440
+    #if NEVER                                                                                                                               // MakerGen.cs:441
     {
       "resourceType": "StructureDefinition",
       "id": "OperationDefinition",
@@ -801,977 +801,977 @@ namespace FhirKhit.Maker.Common.Resource
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:444
     /// <summary>
     /// Fhir resource 'OperationDefinition'
     /// </summary>
     // 0. OperationDefinition
-    public partial class Resource_OperationDefinition : FhirKhit.Maker.Common.Resource.Resource_DomainResource
-    {
+    public partial class Resource_OperationDefinition : FhirKhit.Maker.Common.Resource.Resource_DomainResource                              // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 25. OperationDefinition.parameter
-        public partial class Type_Parameter : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Parameter : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 34. OperationDefinition.parameter.binding
-            public partial class Type_Binding : FhirKhit.Maker.Common.Complex.ComplexBase
-            {
+            public partial class Type_Binding : FhirKhit.Maker.Common.Complex.ComplexBase                                                   // MakerGen.cs:381
+            {                                                                                                                               // MakerGen.cs:382
                 // 35. OperationDefinition.parameter.binding.strength
-                public ElementDefinitionInfo Element_Strength;
+                public ElementDefinitionInfo Element_Strength;                                                                              // MakerGen.cs:217
                 // 36. OperationDefinition.parameter.binding.valueSet
-                public ElementDefinitionInfo Element_ValueSet;
-                
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                {
-                    base.Write(sDef);
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                    {
-                        Path = "OperationDefinition.parameter.binding",
-                        ElementId = "OperationDefinition.parameter.binding"
-                    });
-                    Element_Strength.Write(sDef);
-                    Element_ValueSet.Write(sDef);
-                }
-                
-                public Type_Binding()
-                {
-                    {
+                public ElementDefinitionInfo Element_ValueSet;                                                                              // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:389
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:390
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:391
+                    {                                                                                                                       // MakerGen.cs:392
+                        Path = "OperationDefinition.parameter.binding",                                                                     // MakerGen.cs:393
+                        ElementId = "OperationDefinition.parameter.binding"                                                                 // MakerGen.cs:394
+                    });                                                                                                                     // MakerGen.cs:395
+                    Element_Strength.Write(sDef);                                                                                           // MakerGen.cs:221
+                    Element_ValueSet.Write(sDef);                                                                                           // MakerGen.cs:221
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                public Type_Binding()                                                                                                       // MakerGen.cs:400
+                {                                                                                                                           // MakerGen.cs:401
+                    {                                                                                                                       // MakerGen.cs:232
                         // 35. OperationDefinition.parameter.binding.strength
-                        this.Element_Strength = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Strength",
-                            Path= "OperationDefinition.parameter.binding.strength",
-                            Id = "OperationDefinition.parameter.binding.strength",
-                            Min = 1,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Strength = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Strength",                                                                                      // MakerGen.cs:236
+                            Path= "OperationDefinition.parameter.binding.strength",                                                         // MakerGen.cs:237
+                            Id = "OperationDefinition.parameter.binding.strength",                                                          // MakerGen.cs:238
+                            Min = 1,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                          // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 36. OperationDefinition.parameter.binding.valueSet
-                        this.Element_ValueSet = new ElementDefinitionInfo
-                        {
-                            Name = "Element_ValueSet",
-                            Path= "OperationDefinition.parameter.binding.valueSet",
-                            Id = "OperationDefinition.parameter.binding.valueSet",
-                            Min = 1,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Canonical
-                                {
-                                    TargetProfile = new String[]
-                                    {
-                                        "http://hl7.org/fhir/StructureDefinition/ValueSet"
-                                    }
-                                }
-                            }
-                        };
-                    }
-                }
-            }
+                        this.Element_ValueSet = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_ValueSet",                                                                                      // MakerGen.cs:236
+                            Path= "OperationDefinition.parameter.binding.valueSet",                                                         // MakerGen.cs:237
+                            Id = "OperationDefinition.parameter.binding.valueSet",                                                          // MakerGen.cs:238
+                            Min = 1,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                     // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                    TargetProfile = new String[]                                                                            // MakerGen.cs:304
+                                    {                                                                                                       // CodeEditorExtensions.cs:28
+                                        "http://hl7.org/fhir/StructureDefinition/ValueSet"                                                  // MakerGen.cs:304
+                                    }                                                                                                       // CodeEditorExtensions.cs:34
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                }                                                                                                                           // MakerGen.cs:403
+            }                                                                                                                               // MakerGen.cs:405
             // 37. OperationDefinition.parameter.referencedFrom
-            public partial class Type_ReferencedFrom : FhirKhit.Maker.Common.Complex.ComplexBase
-            {
+            public partial class Type_ReferencedFrom : FhirKhit.Maker.Common.Complex.ComplexBase                                            // MakerGen.cs:381
+            {                                                                                                                               // MakerGen.cs:382
                 // 38. OperationDefinition.parameter.referencedFrom.source
-                public ElementDefinitionInfo Element_Source;
+                public ElementDefinitionInfo Element_Source;                                                                                // MakerGen.cs:217
                 // 39. OperationDefinition.parameter.referencedFrom.sourceId
-                public ElementDefinitionInfo Element_SourceId;
-                
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                {
-                    base.Write(sDef);
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                    {
-                        Path = "OperationDefinition.parameter.referencedFrom",
-                        ElementId = "OperationDefinition.parameter.referencedFrom"
-                    });
-                    Element_Source.Write(sDef);
-                    Element_SourceId.Write(sDef);
-                }
-                
-                public Type_ReferencedFrom()
-                {
-                    {
+                public ElementDefinitionInfo Element_SourceId;                                                                              // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:389
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:390
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:391
+                    {                                                                                                                       // MakerGen.cs:392
+                        Path = "OperationDefinition.parameter.referencedFrom",                                                              // MakerGen.cs:393
+                        ElementId = "OperationDefinition.parameter.referencedFrom"                                                          // MakerGen.cs:394
+                    });                                                                                                                     // MakerGen.cs:395
+                    Element_Source.Write(sDef);                                                                                             // MakerGen.cs:221
+                    Element_SourceId.Write(sDef);                                                                                           // MakerGen.cs:221
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                public Type_ReferencedFrom()                                                                                                // MakerGen.cs:400
+                {                                                                                                                           // MakerGen.cs:401
+                    {                                                                                                                       // MakerGen.cs:232
                         // 38. OperationDefinition.parameter.referencedFrom.source
-                        this.Element_Source = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Source",
-                            Path= "OperationDefinition.parameter.referencedFrom.source",
-                            Id = "OperationDefinition.parameter.referencedFrom.source",
-                            Min = 1,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Source = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Source",                                                                                        // MakerGen.cs:236
+                            Path= "OperationDefinition.parameter.referencedFrom.source",                                                    // MakerGen.cs:237
+                            Id = "OperationDefinition.parameter.referencedFrom.source",                                                     // MakerGen.cs:238
+                            Min = 1,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 39. OperationDefinition.parameter.referencedFrom.sourceId
-                        this.Element_SourceId = new ElementDefinitionInfo
-                        {
-                            Name = "Element_SourceId",
-                            Path= "OperationDefinition.parameter.referencedFrom.sourceId",
-                            Id = "OperationDefinition.parameter.referencedFrom.sourceId",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String
-                                {
-                                }
-                            }
-                        };
-                    }
-                }
-            }
+                        this.Element_SourceId = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_SourceId",                                                                                      // MakerGen.cs:236
+                            Path= "OperationDefinition.parameter.referencedFrom.sourceId",                                                  // MakerGen.cs:237
+                            Id = "OperationDefinition.parameter.referencedFrom.sourceId",                                                   // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                }                                                                                                                           // MakerGen.cs:403
+            }                                                                                                                               // MakerGen.cs:405
             // 26. OperationDefinition.parameter.name
-            public ElementDefinitionInfo Element_Name;
+            public ElementDefinitionInfo Element_Name;                                                                                      // MakerGen.cs:217
             // 27. OperationDefinition.parameter.use
-            public ElementDefinitionInfo Element_Use;
+            public ElementDefinitionInfo Element_Use;                                                                                       // MakerGen.cs:217
             // 28. OperationDefinition.parameter.min
-            public ElementDefinitionInfo Element_Min;
+            public ElementDefinitionInfo Element_Min;                                                                                       // MakerGen.cs:217
             // 29. OperationDefinition.parameter.max
-            public ElementDefinitionInfo Element_Max;
+            public ElementDefinitionInfo Element_Max;                                                                                       // MakerGen.cs:217
             // 30. OperationDefinition.parameter.documentation
-            public ElementDefinitionInfo Element_Documentation;
+            public ElementDefinitionInfo Element_Documentation;                                                                             // MakerGen.cs:217
             // 31. OperationDefinition.parameter.type
-            public ElementDefinitionInfo Element_Type;
+            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:217
             // 32. OperationDefinition.parameter.targetProfile
-            public ElementDefinitionInfo Element_TargetProfile;
+            public ElementDefinitionInfo Element_TargetProfile;                                                                             // MakerGen.cs:217
             // 33. OperationDefinition.parameter.searchType
-            public ElementDefinitionInfo Element_SearchType;
+            public ElementDefinitionInfo Element_SearchType;                                                                                // MakerGen.cs:217
             // 34. OperationDefinition.parameter.binding
-            public ElementDefinitionInfo Element_Binding;
+            public ElementDefinitionInfo Element_Binding;                                                                                   // MakerGen.cs:217
             // 37. OperationDefinition.parameter.referencedFrom
-            public ElementDefinitionInfo Element_ReferencedFrom;
+            public ElementDefinitionInfo Element_ReferencedFrom;                                                                            // MakerGen.cs:217
             // 40. OperationDefinition.parameter.part
-            public ElementDefinitionInfo Element_Part;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "OperationDefinition.parameter",
-                    ElementId = "OperationDefinition.parameter"
-                });
-                Element_Name.Write(sDef);
-                Element_Use.Write(sDef);
-                Element_Min.Write(sDef);
-                Element_Max.Write(sDef);
-                Element_Documentation.Write(sDef);
-                Element_Type.Write(sDef);
-                Element_TargetProfile.Write(sDef);
-                Element_SearchType.Write(sDef);
-                Element_Binding.Write(sDef);
-                Element_ReferencedFrom.Write(sDef);
-                Element_Part.Write(sDef);
-            }
-            
-            public Type_Parameter()
-            {
-                {
+            public ElementDefinitionInfo Element_Part;                                                                                      // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "OperationDefinition.parameter",                                                                                 // MakerGen.cs:393
+                    ElementId = "OperationDefinition.parameter"                                                                             // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Name.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Use.Write(sDef);                                                                                                    // MakerGen.cs:221
+                Element_Min.Write(sDef);                                                                                                    // MakerGen.cs:221
+                Element_Max.Write(sDef);                                                                                                    // MakerGen.cs:221
+                Element_Documentation.Write(sDef);                                                                                          // MakerGen.cs:221
+                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_TargetProfile.Write(sDef);                                                                                          // MakerGen.cs:221
+                Element_SearchType.Write(sDef);                                                                                             // MakerGen.cs:221
+                Element_Binding.Write(sDef);                                                                                                // MakerGen.cs:221
+                Element_ReferencedFrom.Write(sDef);                                                                                         // MakerGen.cs:221
+                Element_Part.Write(sDef);                                                                                                   // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Parameter()                                                                                                         // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 26. OperationDefinition.parameter.name
-                    this.Element_Name = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Name",
-                        Path= "OperationDefinition.parameter.name",
-                        Id = "OperationDefinition.parameter.name",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Name = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Name",                                                                                              // MakerGen.cs:236
+                        Path= "OperationDefinition.parameter.name",                                                                         // MakerGen.cs:237
+                        Id = "OperationDefinition.parameter.name",                                                                          // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 27. OperationDefinition.parameter.use
-                    this.Element_Use = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Use",
-                        Path= "OperationDefinition.parameter.use",
-                        Id = "OperationDefinition.parameter.use",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Use = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Use",                                                                                               // MakerGen.cs:236
+                        Path= "OperationDefinition.parameter.use",                                                                          // MakerGen.cs:237
+                        Id = "OperationDefinition.parameter.use",                                                                           // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 28. OperationDefinition.parameter.min
-                    this.Element_Min = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Min",
-                        Path= "OperationDefinition.parameter.min",
-                        Id = "OperationDefinition.parameter.min",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Min = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Min",                                                                                               // MakerGen.cs:236
+                        Path= "OperationDefinition.parameter.min",                                                                          // MakerGen.cs:237
+                        Id = "OperationDefinition.parameter.min",                                                                           // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                           // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 29. OperationDefinition.parameter.max
-                    this.Element_Max = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Max",
-                        Path= "OperationDefinition.parameter.max",
-                        Id = "OperationDefinition.parameter.max",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Max = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Max",                                                                                               // MakerGen.cs:236
+                        Path= "OperationDefinition.parameter.max",                                                                          // MakerGen.cs:237
+                        Id = "OperationDefinition.parameter.max",                                                                           // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 30. OperationDefinition.parameter.documentation
-                    this.Element_Documentation = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Documentation",
-                        Path= "OperationDefinition.parameter.documentation",
-                        Id = "OperationDefinition.parameter.documentation",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Documentation = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Documentation",                                                                                     // MakerGen.cs:236
+                        Path= "OperationDefinition.parameter.documentation",                                                                // MakerGen.cs:237
+                        Id = "OperationDefinition.parameter.documentation",                                                                 // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 31. OperationDefinition.parameter.type
-                    this.Element_Type = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Type",
-                        Path= "OperationDefinition.parameter.type",
-                        Id = "OperationDefinition.parameter.type",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Type",                                                                                              // MakerGen.cs:236
+                        Path= "OperationDefinition.parameter.type",                                                                         // MakerGen.cs:237
+                        Id = "OperationDefinition.parameter.type",                                                                          // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 32. OperationDefinition.parameter.targetProfile
-                    this.Element_TargetProfile = new ElementDefinitionInfo
-                    {
-                        Name = "Element_TargetProfile",
-                        Path= "OperationDefinition.parameter.targetProfile",
-                        Id = "OperationDefinition.parameter.targetProfile",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Canonical
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/StructureDefinition"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_TargetProfile = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_TargetProfile",                                                                                     // MakerGen.cs:236
+                        Path= "OperationDefinition.parameter.targetProfile",                                                                // MakerGen.cs:237
+                        Id = "OperationDefinition.parameter.targetProfile",                                                                 // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                         // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:304
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/StructureDefinition"                                           // MakerGen.cs:304
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 33. OperationDefinition.parameter.searchType
-                    this.Element_SearchType = new ElementDefinitionInfo
-                    {
-                        Name = "Element_SearchType",
-                        Path= "OperationDefinition.parameter.searchType",
-                        Id = "OperationDefinition.parameter.searchType",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_SearchType = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_SearchType",                                                                                        // MakerGen.cs:236
+                        Path= "OperationDefinition.parameter.searchType",                                                                   // MakerGen.cs:237
+                        Id = "OperationDefinition.parameter.searchType",                                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 34. OperationDefinition.parameter.binding
-                    this.Element_Binding = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Binding",
-                        Path= "OperationDefinition.parameter.binding",
-                        Id = "OperationDefinition.parameter.binding",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new Type_Binding
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Binding = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Binding",                                                                                           // MakerGen.cs:236
+                        Path= "OperationDefinition.parameter.binding",                                                                      // MakerGen.cs:237
+                        Id = "OperationDefinition.parameter.binding",                                                                       // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new Type_Binding                                                                                                // MakerGen.cs:260
+                            {                                                                                                               // MakerGen.cs:261
+                            }                                                                                                               // MakerGen.cs:262
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 37. OperationDefinition.parameter.referencedFrom
-                    this.Element_ReferencedFrom = new ElementDefinitionInfo
-                    {
-                        Name = "Element_ReferencedFrom",
-                        Path= "OperationDefinition.parameter.referencedFrom",
-                        Id = "OperationDefinition.parameter.referencedFrom",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new Type_ReferencedFrom
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_ReferencedFrom = new ElementDefinitionInfo                                                                 // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_ReferencedFrom",                                                                                    // MakerGen.cs:236
+                        Path= "OperationDefinition.parameter.referencedFrom",                                                               // MakerGen.cs:237
+                        Id = "OperationDefinition.parameter.referencedFrom",                                                                // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new Type_ReferencedFrom                                                                                         // MakerGen.cs:260
+                            {                                                                                                               // MakerGen.cs:261
+                            }                                                                                                               // MakerGen.cs:262
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 40. OperationDefinition.parameter.part
-                    this.Element_Part = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Part",
-                        Path= "OperationDefinition.parameter.part",
-                        Id = "OperationDefinition.parameter.part",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Part = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Part",                                                                                              // MakerGen.cs:236
+                        Path= "OperationDefinition.parameter.part",                                                                         // MakerGen.cs:237
+                        Id = "OperationDefinition.parameter.part",                                                                          // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 41. OperationDefinition.overload
-        public partial class Type_Overload : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Overload : FhirKhit.Maker.Common.Complex.ComplexBase                                                      // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 42. OperationDefinition.overload.parameterName
-            public ElementDefinitionInfo Element_ParameterName;
+            public ElementDefinitionInfo Element_ParameterName;                                                                             // MakerGen.cs:217
             // 43. OperationDefinition.overload.comment
-            public ElementDefinitionInfo Element_Comment;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "OperationDefinition.overload",
-                    ElementId = "OperationDefinition.overload"
-                });
-                Element_ParameterName.Write(sDef);
-                Element_Comment.Write(sDef);
-            }
-            
-            public Type_Overload()
-            {
-                {
+            public ElementDefinitionInfo Element_Comment;                                                                                   // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "OperationDefinition.overload",                                                                                  // MakerGen.cs:393
+                    ElementId = "OperationDefinition.overload"                                                                              // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_ParameterName.Write(sDef);                                                                                          // MakerGen.cs:221
+                Element_Comment.Write(sDef);                                                                                                // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Overload()                                                                                                          // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 42. OperationDefinition.overload.parameterName
-                    this.Element_ParameterName = new ElementDefinitionInfo
-                    {
-                        Name = "Element_ParameterName",
-                        Path= "OperationDefinition.overload.parameterName",
-                        Id = "OperationDefinition.overload.parameterName",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_ParameterName = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_ParameterName",                                                                                     // MakerGen.cs:236
+                        Path= "OperationDefinition.overload.parameterName",                                                                 // MakerGen.cs:237
+                        Id = "OperationDefinition.overload.parameterName",                                                                  // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 43. OperationDefinition.overload.comment
-                    this.Element_Comment = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Comment",
-                        Path= "OperationDefinition.overload.comment",
-                        Id = "OperationDefinition.overload.comment",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Comment = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Comment",                                                                                           // MakerGen.cs:236
+                        Path= "OperationDefinition.overload.comment",                                                                       // MakerGen.cs:237
+                        Id = "OperationDefinition.overload.comment",                                                                        // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 1. OperationDefinition.url
-        public ElementDefinitionInfo Element_Url;
+        public ElementDefinitionInfo Element_Url;                                                                                           // MakerGen.cs:217
         // 2. OperationDefinition.version
-        public ElementDefinitionInfo Element_Version;
+        public ElementDefinitionInfo Element_Version;                                                                                       // MakerGen.cs:217
         // 3. OperationDefinition.name
-        public ElementDefinitionInfo Element_Name;
+        public ElementDefinitionInfo Element_Name;                                                                                          // MakerGen.cs:217
         // 4. OperationDefinition.title
-        public ElementDefinitionInfo Element_Title;
+        public ElementDefinitionInfo Element_Title;                                                                                         // MakerGen.cs:217
         // 5. OperationDefinition.status
-        public ElementDefinitionInfo Element_Status;
+        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:217
         // 6. OperationDefinition.kind
-        public ElementDefinitionInfo Element_Kind;
+        public ElementDefinitionInfo Element_Kind;                                                                                          // MakerGen.cs:217
         // 7. OperationDefinition.experimental
-        public ElementDefinitionInfo Element_Experimental;
+        public ElementDefinitionInfo Element_Experimental;                                                                                  // MakerGen.cs:217
         // 8. OperationDefinition.date
-        public ElementDefinitionInfo Element_Date;
+        public ElementDefinitionInfo Element_Date;                                                                                          // MakerGen.cs:217
         // 9. OperationDefinition.publisher
-        public ElementDefinitionInfo Element_Publisher;
+        public ElementDefinitionInfo Element_Publisher;                                                                                     // MakerGen.cs:217
         // 10. OperationDefinition.contact
-        public ElementDefinitionInfo Element_Contact;
+        public ElementDefinitionInfo Element_Contact;                                                                                       // MakerGen.cs:217
         // 11. OperationDefinition.description
-        public ElementDefinitionInfo Element_Description;
+        public ElementDefinitionInfo Element_Description;                                                                                   // MakerGen.cs:217
         // 12. OperationDefinition.useContext
-        public ElementDefinitionInfo Element_UseContext;
+        public ElementDefinitionInfo Element_UseContext;                                                                                    // MakerGen.cs:217
         // 13. OperationDefinition.jurisdiction
-        public ElementDefinitionInfo Element_Jurisdiction;
+        public ElementDefinitionInfo Element_Jurisdiction;                                                                                  // MakerGen.cs:217
         // 14. OperationDefinition.purpose
-        public ElementDefinitionInfo Element_Purpose;
+        public ElementDefinitionInfo Element_Purpose;                                                                                       // MakerGen.cs:217
         // 15. OperationDefinition.affectsState
-        public ElementDefinitionInfo Element_AffectsState;
+        public ElementDefinitionInfo Element_AffectsState;                                                                                  // MakerGen.cs:217
         // 16. OperationDefinition.code
-        public ElementDefinitionInfo Element_Code;
+        public ElementDefinitionInfo Element_Code;                                                                                          // MakerGen.cs:217
         // 17. OperationDefinition.comment
-        public ElementDefinitionInfo Element_Comment;
+        public ElementDefinitionInfo Element_Comment;                                                                                       // MakerGen.cs:217
         // 18. OperationDefinition.base
-        public ElementDefinitionInfo Element_Base;
+        public ElementDefinitionInfo Element_Base;                                                                                          // MakerGen.cs:217
         // 19. OperationDefinition.resource
-        public ElementDefinitionInfo Element_Resource;
+        public ElementDefinitionInfo Element_Resource;                                                                                      // MakerGen.cs:217
         // 20. OperationDefinition.system
-        public ElementDefinitionInfo Element_System;
+        public ElementDefinitionInfo Element_System;                                                                                        // MakerGen.cs:217
         // 21. OperationDefinition.type
-        public ElementDefinitionInfo Element_Type;
+        public ElementDefinitionInfo Element_Type;                                                                                          // MakerGen.cs:217
         // 22. OperationDefinition.instance
-        public ElementDefinitionInfo Element_Instance;
+        public ElementDefinitionInfo Element_Instance;                                                                                      // MakerGen.cs:217
         // 23. OperationDefinition.inputProfile
-        public ElementDefinitionInfo Element_InputProfile;
+        public ElementDefinitionInfo Element_InputProfile;                                                                                  // MakerGen.cs:217
         // 24. OperationDefinition.outputProfile
-        public ElementDefinitionInfo Element_OutputProfile;
+        public ElementDefinitionInfo Element_OutputProfile;                                                                                 // MakerGen.cs:217
         // 25. OperationDefinition.parameter
-        public ElementDefinitionInfo Element_Parameter;
+        public ElementDefinitionInfo Element_Parameter;                                                                                     // MakerGen.cs:217
         // 41. OperationDefinition.overload
-        public ElementDefinitionInfo Element_Overload;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "OperationDefinition",
-                ElementId = "OperationDefinition"
-            });
-            Element_Url.Write(sDef);
-            Element_Version.Write(sDef);
-            Element_Name.Write(sDef);
-            Element_Title.Write(sDef);
-            Element_Status.Write(sDef);
-            Element_Kind.Write(sDef);
-            Element_Experimental.Write(sDef);
-            Element_Date.Write(sDef);
-            Element_Publisher.Write(sDef);
-            Element_Contact.Write(sDef);
-            Element_Description.Write(sDef);
-            Element_UseContext.Write(sDef);
-            Element_Jurisdiction.Write(sDef);
-            Element_Purpose.Write(sDef);
-            Element_AffectsState.Write(sDef);
-            Element_Code.Write(sDef);
-            Element_Comment.Write(sDef);
-            Element_Base.Write(sDef);
-            Element_Resource.Write(sDef);
-            Element_System.Write(sDef);
-            Element_Type.Write(sDef);
-            Element_Instance.Write(sDef);
-            Element_InputProfile.Write(sDef);
-            Element_OutputProfile.Write(sDef);
-            Element_Parameter.Write(sDef);
-            Element_Overload.Write(sDef);
-        }
-        
-        public Resource_OperationDefinition()
-        {
-            {
+        public ElementDefinitionInfo Element_Overload;                                                                                      // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "OperationDefinition",                                                                                               // MakerGen.cs:393
+                ElementId = "OperationDefinition"                                                                                           // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Url.Write(sDef);                                                                                                        // MakerGen.cs:221
+            Element_Version.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Name.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Title.Write(sDef);                                                                                                      // MakerGen.cs:221
+            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Kind.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Experimental.Write(sDef);                                                                                               // MakerGen.cs:221
+            Element_Date.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Publisher.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_Contact.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Description.Write(sDef);                                                                                                // MakerGen.cs:221
+            Element_UseContext.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Jurisdiction.Write(sDef);                                                                                               // MakerGen.cs:221
+            Element_Purpose.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_AffectsState.Write(sDef);                                                                                               // MakerGen.cs:221
+            Element_Code.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Comment.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Base.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Resource.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_System.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Type.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Instance.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_InputProfile.Write(sDef);                                                                                               // MakerGen.cs:221
+            Element_OutputProfile.Write(sDef);                                                                                              // MakerGen.cs:221
+            Element_Parameter.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_Overload.Write(sDef);                                                                                                   // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Resource_OperationDefinition()                                                                                               // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. OperationDefinition.url
-                this.Element_Url = new ElementDefinitionInfo
-                {
-                    Name = "Element_Url",
-                    Path= "OperationDefinition.url",
-                    Id = "OperationDefinition.url",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Url = new ElementDefinitionInfo                                                                                // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Url",                                                                                                   // MakerGen.cs:236
+                    Path= "OperationDefinition.url",                                                                                        // MakerGen.cs:237
+                    Id = "OperationDefinition.url",                                                                                         // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                                   // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. OperationDefinition.version
-                this.Element_Version = new ElementDefinitionInfo
-                {
-                    Name = "Element_Version",
-                    Path= "OperationDefinition.version",
-                    Id = "OperationDefinition.version",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Version = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Version",                                                                                               // MakerGen.cs:236
+                    Path= "OperationDefinition.version",                                                                                    // MakerGen.cs:237
+                    Id = "OperationDefinition.version",                                                                                     // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 3. OperationDefinition.name
-                this.Element_Name = new ElementDefinitionInfo
-                {
-                    Name = "Element_Name",
-                    Path= "OperationDefinition.name",
-                    Id = "OperationDefinition.name",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Name = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Name",                                                                                                  // MakerGen.cs:236
+                    Path= "OperationDefinition.name",                                                                                       // MakerGen.cs:237
+                    Id = "OperationDefinition.name",                                                                                        // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 4. OperationDefinition.title
-                this.Element_Title = new ElementDefinitionInfo
-                {
-                    Name = "Element_Title",
-                    Path= "OperationDefinition.title",
-                    Id = "OperationDefinition.title",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Title = new ElementDefinitionInfo                                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Title",                                                                                                 // MakerGen.cs:236
+                    Path= "OperationDefinition.title",                                                                                      // MakerGen.cs:237
+                    Id = "OperationDefinition.title",                                                                                       // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 5. OperationDefinition.status
-                this.Element_Status = new ElementDefinitionInfo
-                {
-                    Name = "Element_Status",
-                    Path= "OperationDefinition.status",
-                    Id = "OperationDefinition.status",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Status",                                                                                                // MakerGen.cs:236
+                    Path= "OperationDefinition.status",                                                                                     // MakerGen.cs:237
+                    Id = "OperationDefinition.status",                                                                                      // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 6. OperationDefinition.kind
-                this.Element_Kind = new ElementDefinitionInfo
-                {
-                    Name = "Element_Kind",
-                    Path= "OperationDefinition.kind",
-                    Id = "OperationDefinition.kind",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Kind = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Kind",                                                                                                  // MakerGen.cs:236
+                    Path= "OperationDefinition.kind",                                                                                       // MakerGen.cs:237
+                    Id = "OperationDefinition.kind",                                                                                        // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 7. OperationDefinition.experimental
-                this.Element_Experimental = new ElementDefinitionInfo
-                {
-                    Name = "Element_Experimental",
-                    Path= "OperationDefinition.experimental",
-                    Id = "OperationDefinition.experimental",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Experimental = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Experimental",                                                                                          // MakerGen.cs:236
+                    Path= "OperationDefinition.experimental",                                                                               // MakerGen.cs:237
+                    Id = "OperationDefinition.experimental",                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 8. OperationDefinition.date
-                this.Element_Date = new ElementDefinitionInfo
-                {
-                    Name = "Element_Date",
-                    Path= "OperationDefinition.date",
-                    Id = "OperationDefinition.date",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Date = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Date",                                                                                                  // MakerGen.cs:236
+                    Path= "OperationDefinition.date",                                                                                       // MakerGen.cs:237
+                    Id = "OperationDefinition.date",                                                                                        // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 9. OperationDefinition.publisher
-                this.Element_Publisher = new ElementDefinitionInfo
-                {
-                    Name = "Element_Publisher",
-                    Path= "OperationDefinition.publisher",
-                    Id = "OperationDefinition.publisher",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Publisher = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Publisher",                                                                                             // MakerGen.cs:236
+                    Path= "OperationDefinition.publisher",                                                                                  // MakerGen.cs:237
+                    Id = "OperationDefinition.publisher",                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 10. OperationDefinition.contact
-                this.Element_Contact = new ElementDefinitionInfo
-                {
-                    Name = "Element_Contact",
-                    Path= "OperationDefinition.contact",
-                    Id = "OperationDefinition.contact",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Contact = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Contact",                                                                                               // MakerGen.cs:236
+                    Path= "OperationDefinition.contact",                                                                                    // MakerGen.cs:237
+                    Id = "OperationDefinition.contact",                                                                                     // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                                // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 11. OperationDefinition.description
-                this.Element_Description = new ElementDefinitionInfo
-                {
-                    Name = "Element_Description",
-                    Path= "OperationDefinition.description",
-                    Id = "OperationDefinition.description",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Description = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Description",                                                                                           // MakerGen.cs:236
+                    Path= "OperationDefinition.description",                                                                                // MakerGen.cs:237
+                    Id = "OperationDefinition.description",                                                                                 // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 12. OperationDefinition.useContext
-                this.Element_UseContext = new ElementDefinitionInfo
-                {
-                    Name = "Element_UseContext",
-                    Path= "OperationDefinition.useContext",
-                    Id = "OperationDefinition.useContext",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_UsageContext
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_UseContext = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_UseContext",                                                                                            // MakerGen.cs:236
+                    Path= "OperationDefinition.useContext",                                                                                 // MakerGen.cs:237
+                    Id = "OperationDefinition.useContext",                                                                                  // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_UsageContext                                                                 // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 13. OperationDefinition.jurisdiction
-                this.Element_Jurisdiction = new ElementDefinitionInfo
-                {
-                    Name = "Element_Jurisdiction",
-                    Path= "OperationDefinition.jurisdiction",
-                    Id = "OperationDefinition.jurisdiction",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Jurisdiction = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Jurisdiction",                                                                                          // MakerGen.cs:236
+                    Path= "OperationDefinition.jurisdiction",                                                                               // MakerGen.cs:237
+                    Id = "OperationDefinition.jurisdiction",                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 14. OperationDefinition.purpose
-                this.Element_Purpose = new ElementDefinitionInfo
-                {
-                    Name = "Element_Purpose",
-                    Path= "OperationDefinition.purpose",
-                    Id = "OperationDefinition.purpose",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Purpose = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Purpose",                                                                                               // MakerGen.cs:236
+                    Path= "OperationDefinition.purpose",                                                                                    // MakerGen.cs:237
+                    Id = "OperationDefinition.purpose",                                                                                     // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 15. OperationDefinition.affectsState
-                this.Element_AffectsState = new ElementDefinitionInfo
-                {
-                    Name = "Element_AffectsState",
-                    Path= "OperationDefinition.affectsState",
-                    Id = "OperationDefinition.affectsState",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_AffectsState = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_AffectsState",                                                                                          // MakerGen.cs:236
+                    Path= "OperationDefinition.affectsState",                                                                               // MakerGen.cs:237
+                    Id = "OperationDefinition.affectsState",                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 16. OperationDefinition.code
-                this.Element_Code = new ElementDefinitionInfo
-                {
-                    Name = "Element_Code",
-                    Path= "OperationDefinition.code",
-                    Id = "OperationDefinition.code",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Code = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Code",                                                                                                  // MakerGen.cs:236
+                    Path= "OperationDefinition.code",                                                                                       // MakerGen.cs:237
+                    Id = "OperationDefinition.code",                                                                                        // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 17. OperationDefinition.comment
-                this.Element_Comment = new ElementDefinitionInfo
-                {
-                    Name = "Element_Comment",
-                    Path= "OperationDefinition.comment",
-                    Id = "OperationDefinition.comment",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Comment = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Comment",                                                                                               // MakerGen.cs:236
+                    Path= "OperationDefinition.comment",                                                                                    // MakerGen.cs:237
+                    Id = "OperationDefinition.comment",                                                                                     // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 18. OperationDefinition.base
-                this.Element_Base = new ElementDefinitionInfo
-                {
-                    Name = "Element_Base",
-                    Path= "OperationDefinition.base",
-                    Id = "OperationDefinition.base",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/OperationDefinition"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Base = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Base",                                                                                                  // MakerGen.cs:236
+                    Path= "OperationDefinition.base",                                                                                       // MakerGen.cs:237
+                    Id = "OperationDefinition.base",                                                                                        // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                             // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:304
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/OperationDefinition"                                               // MakerGen.cs:304
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 19. OperationDefinition.resource
-                this.Element_Resource = new ElementDefinitionInfo
-                {
-                    Name = "Element_Resource",
-                    Path= "OperationDefinition.resource",
-                    Id = "OperationDefinition.resource",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Resource = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Resource",                                                                                              // MakerGen.cs:236
+                    Path= "OperationDefinition.resource",                                                                                   // MakerGen.cs:237
+                    Id = "OperationDefinition.resource",                                                                                    // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 20. OperationDefinition.system
-                this.Element_System = new ElementDefinitionInfo
-                {
-                    Name = "Element_System",
-                    Path= "OperationDefinition.system",
-                    Id = "OperationDefinition.system",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_System = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_System",                                                                                                // MakerGen.cs:236
+                    Path= "OperationDefinition.system",                                                                                     // MakerGen.cs:237
+                    Id = "OperationDefinition.system",                                                                                      // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 21. OperationDefinition.type
-                this.Element_Type = new ElementDefinitionInfo
-                {
-                    Name = "Element_Type",
-                    Path= "OperationDefinition.type",
-                    Id = "OperationDefinition.type",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Type = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Type",                                                                                                  // MakerGen.cs:236
+                    Path= "OperationDefinition.type",                                                                                       // MakerGen.cs:237
+                    Id = "OperationDefinition.type",                                                                                        // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 22. OperationDefinition.instance
-                this.Element_Instance = new ElementDefinitionInfo
-                {
-                    Name = "Element_Instance",
-                    Path= "OperationDefinition.instance",
-                    Id = "OperationDefinition.instance",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Instance = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Instance",                                                                                              // MakerGen.cs:236
+                    Path= "OperationDefinition.instance",                                                                                   // MakerGen.cs:237
+                    Id = "OperationDefinition.instance",                                                                                    // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 23. OperationDefinition.inputProfile
-                this.Element_InputProfile = new ElementDefinitionInfo
-                {
-                    Name = "Element_InputProfile",
-                    Path= "OperationDefinition.inputProfile",
-                    Id = "OperationDefinition.inputProfile",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/StructureDefinition"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_InputProfile = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_InputProfile",                                                                                          // MakerGen.cs:236
+                    Path= "OperationDefinition.inputProfile",                                                                               // MakerGen.cs:237
+                    Id = "OperationDefinition.inputProfile",                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                             // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:304
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/StructureDefinition"                                               // MakerGen.cs:304
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 24. OperationDefinition.outputProfile
-                this.Element_OutputProfile = new ElementDefinitionInfo
-                {
-                    Name = "Element_OutputProfile",
-                    Path= "OperationDefinition.outputProfile",
-                    Id = "OperationDefinition.outputProfile",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/StructureDefinition"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_OutputProfile = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_OutputProfile",                                                                                         // MakerGen.cs:236
+                    Path= "OperationDefinition.outputProfile",                                                                              // MakerGen.cs:237
+                    Id = "OperationDefinition.outputProfile",                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                             // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:304
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/StructureDefinition"                                               // MakerGen.cs:304
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 25. OperationDefinition.parameter
-                this.Element_Parameter = new ElementDefinitionInfo
-                {
-                    Name = "Element_Parameter",
-                    Path= "OperationDefinition.parameter",
-                    Id = "OperationDefinition.parameter",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Parameter
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Parameter = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Parameter",                                                                                             // MakerGen.cs:236
+                    Path= "OperationDefinition.parameter",                                                                                  // MakerGen.cs:237
+                    Id = "OperationDefinition.parameter",                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Parameter                                                                                                  // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 41. OperationDefinition.overload
-                this.Element_Overload = new ElementDefinitionInfo
-                {
-                    Name = "Element_Overload",
-                    Path= "OperationDefinition.overload",
-                    Id = "OperationDefinition.overload",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Overload
-                        {
-                        }
-                    }
-                };
-            }
-            this.Name = "OperationDefinition";
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/OperationDefinition";
-        }
-    }
-}
+                this.Element_Overload = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Overload",                                                                                              // MakerGen.cs:236
+                    Path= "OperationDefinition.overload",                                                                                   // MakerGen.cs:237
+                    Id = "OperationDefinition.overload",                                                                                    // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Overload                                                                                                   // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            this.Name = "OperationDefinition";                                                                                              // MakerGen.cs:468
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/OperationDefinition";                                                       // MakerGen.cs:469
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:449

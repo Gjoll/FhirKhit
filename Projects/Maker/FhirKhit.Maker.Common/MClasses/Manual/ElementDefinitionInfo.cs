@@ -30,7 +30,11 @@ namespace FhirKhit.Maker.Common
         {
             if (this.elements == null)
                 this.elements = new List<ElementDefinition>();
-            ElementDefinition retVal = new ElementDefinition();
+            ElementDefinition retVal = new ElementDefinition
+            {
+                Path = this.Path,
+                ElementId = this.Id
+            };
             this.elements.Add(retVal);
             return retVal;
         }
@@ -38,14 +42,7 @@ namespace FhirKhit.Maker.Common
         public ElementDefinition CreateConstraint()
         {
             if (this.elements == null)
-            {
-                this.elements = new List<ElementDefinition>();
-                this.elements.Add(new ElementDefinition
-                {
-                    Path = this.Path,
-                    ElementId = this.Id
-                });
-            }
+                AppendElement();
             return this.elements[0];
         }
 

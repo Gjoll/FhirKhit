@@ -1,12 +1,12 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Complex
-{
-    #region Json
+using System;                                                                                                                               // MakerGen.cs:490
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:491
+using System.IO;                                                                                                                            // MakerGen.cs:492
+using System.Linq;                                                                                                                          // MakerGen.cs:493
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:494
+                                                                                                                                            // MakerGen.cs:495
+namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:496
+{                                                                                                                                           // MakerGen.cs:497
+    #region Json                                                                                                                            // MakerGen.cs:498
     #if NEVER
     {
       "resourceType": "StructureDefinition",
@@ -143,166 +143,166 @@ namespace FhirKhit.Maker.Common.Complex
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:502
     /// <summary>
     /// Fhir complex 'SampledData'
     /// </summary>
     // 0. SampledData
-    public partial class Type_SampledData : FhirKhit.Maker.Common.Complex.ComplexBase
-    {
+    public partial class Type_SampledData : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 1. SampledData.origin
-        public ElementDefinitionInfo Element_Origin;
+        public ElementDefinitionInfo Element_Origin;                                                                                        // MakerGen.cs:217
         // 2. SampledData.period
-        public ElementDefinitionInfo Element_Period;
+        public ElementDefinitionInfo Element_Period;                                                                                        // MakerGen.cs:217
         // 3. SampledData.factor
-        public ElementDefinitionInfo Element_Factor;
+        public ElementDefinitionInfo Element_Factor;                                                                                        // MakerGen.cs:217
         // 4. SampledData.lowerLimit
-        public ElementDefinitionInfo Element_LowerLimit;
+        public ElementDefinitionInfo Element_LowerLimit;                                                                                    // MakerGen.cs:217
         // 5. SampledData.upperLimit
-        public ElementDefinitionInfo Element_UpperLimit;
+        public ElementDefinitionInfo Element_UpperLimit;                                                                                    // MakerGen.cs:217
         // 6. SampledData.dimensions
-        public ElementDefinitionInfo Element_Dimensions;
+        public ElementDefinitionInfo Element_Dimensions;                                                                                    // MakerGen.cs:217
         // 7. SampledData.data
-        public ElementDefinitionInfo Element_Data;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "SampledData",
-                ElementId = "SampledData"
-            });
-            Element_Origin.Write(sDef);
-            Element_Period.Write(sDef);
-            Element_Factor.Write(sDef);
-            Element_LowerLimit.Write(sDef);
-            Element_UpperLimit.Write(sDef);
-            Element_Dimensions.Write(sDef);
-            Element_Data.Write(sDef);
-        }
-        
-        public Type_SampledData()
-        {
-            {
+        public ElementDefinitionInfo Element_Data;                                                                                          // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "SampledData",                                                                                                       // MakerGen.cs:393
+                ElementId = "SampledData"                                                                                                   // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Origin.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Period.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Factor.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_LowerLimit.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_UpperLimit.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Dimensions.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Data.Write(sDef);                                                                                                       // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Type_SampledData()                                                                                                           // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. SampledData.origin
-                this.Element_Origin = new ElementDefinitionInfo
-                {
-                    Name = "Element_Origin",
-                    Path= "SampledData.origin",
-                    Id = "SampledData.origin",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Quantity
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Origin = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Origin",                                                                                                // MakerGen.cs:236
+                    Path= "SampledData.origin",                                                                                             // MakerGen.cs:237
+                    Id = "SampledData.origin",                                                                                              // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Quantity                                                                     // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. SampledData.period
-                this.Element_Period = new ElementDefinitionInfo
-                {
-                    Name = "Element_Period",
-                    Path= "SampledData.period",
-                    Id = "SampledData.period",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Period = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Period",                                                                                                // MakerGen.cs:236
+                    Path= "SampledData.period",                                                                                             // MakerGen.cs:237
+                    Id = "SampledData.period",                                                                                              // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                               // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 3. SampledData.factor
-                this.Element_Factor = new ElementDefinitionInfo
-                {
-                    Name = "Element_Factor",
-                    Path= "SampledData.factor",
-                    Id = "SampledData.factor",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Factor = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Factor",                                                                                                // MakerGen.cs:236
+                    Path= "SampledData.factor",                                                                                             // MakerGen.cs:237
+                    Id = "SampledData.factor",                                                                                              // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                               // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 4. SampledData.lowerLimit
-                this.Element_LowerLimit = new ElementDefinitionInfo
-                {
-                    Name = "Element_LowerLimit",
-                    Path= "SampledData.lowerLimit",
-                    Id = "SampledData.lowerLimit",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_LowerLimit = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_LowerLimit",                                                                                            // MakerGen.cs:236
+                    Path= "SampledData.lowerLimit",                                                                                         // MakerGen.cs:237
+                    Id = "SampledData.lowerLimit",                                                                                          // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                               // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 5. SampledData.upperLimit
-                this.Element_UpperLimit = new ElementDefinitionInfo
-                {
-                    Name = "Element_UpperLimit",
-                    Path= "SampledData.upperLimit",
-                    Id = "SampledData.upperLimit",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_UpperLimit = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_UpperLimit",                                                                                            // MakerGen.cs:236
+                    Path= "SampledData.upperLimit",                                                                                         // MakerGen.cs:237
+                    Id = "SampledData.upperLimit",                                                                                          // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                               // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 6. SampledData.dimensions
-                this.Element_Dimensions = new ElementDefinitionInfo
-                {
-                    Name = "Element_Dimensions",
-                    Path= "SampledData.dimensions",
-                    Id = "SampledData.dimensions",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Dimensions = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Dimensions",                                                                                            // MakerGen.cs:236
+                    Path= "SampledData.dimensions",                                                                                         // MakerGen.cs:237
+                    Id = "SampledData.dimensions",                                                                                          // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                           // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 7. SampledData.data
-                this.Element_Data = new ElementDefinitionInfo
-                {
-                    Name = "Element_Data",
-                    Path= "SampledData.data",
-                    Id = "SampledData.data",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-        }
-    }
-}
+                this.Element_Data = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Data",                                                                                                  // MakerGen.cs:236
+                    Path= "SampledData.data",                                                                                               // MakerGen.cs:237
+                    Id = "SampledData.data",                                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:507

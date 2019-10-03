@@ -1,13 +1,13 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Resource
-{
-    #region Json
-    #if NEVER
+using System;                                                                                                                               // MakerGen.cs:432
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:433
+using System.IO;                                                                                                                            // MakerGen.cs:434
+using System.Linq;                                                                                                                          // MakerGen.cs:435
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:436
+                                                                                                                                            // MakerGen.cs:437
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:438
+{                                                                                                                                           // MakerGen.cs:439
+    #region Json                                                                                                                            // MakerGen.cs:440
+    #if NEVER                                                                                                                               // MakerGen.cs:441
     {
       "resourceType": "StructureDefinition",
       "id": "EffectEvidenceSynthesis",
@@ -1006,1276 +1006,1276 @@ namespace FhirKhit.Maker.Common.Resource
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:444
     /// <summary>
     /// Fhir resource 'EffectEvidenceSynthesis'
     /// </summary>
     // 0. EffectEvidenceSynthesis
-    public partial class Resource_EffectEvidenceSynthesis : FhirKhit.Maker.Common.Resource.Resource_DomainResource
-    {
+    public partial class Resource_EffectEvidenceSynthesis : FhirKhit.Maker.Common.Resource.Resource_DomainResource                          // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 30. EffectEvidenceSynthesis.sampleSize
-        public partial class Type_SampleSize : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_SampleSize : FhirKhit.Maker.Common.Complex.ComplexBase                                                    // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 31. EffectEvidenceSynthesis.sampleSize.description
-            public ElementDefinitionInfo Element_Description;
+            public ElementDefinitionInfo Element_Description;                                                                               // MakerGen.cs:217
             // 32. EffectEvidenceSynthesis.sampleSize.numberOfStudies
-            public ElementDefinitionInfo Element_NumberOfStudies;
+            public ElementDefinitionInfo Element_NumberOfStudies;                                                                           // MakerGen.cs:217
             // 33. EffectEvidenceSynthesis.sampleSize.numberOfParticipants
-            public ElementDefinitionInfo Element_NumberOfParticipants;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "EffectEvidenceSynthesis.sampleSize",
-                    ElementId = "EffectEvidenceSynthesis.sampleSize"
-                });
-                Element_Description.Write(sDef);
-                Element_NumberOfStudies.Write(sDef);
-                Element_NumberOfParticipants.Write(sDef);
-            }
-            
-            public Type_SampleSize()
-            {
-                {
+            public ElementDefinitionInfo Element_NumberOfParticipants;                                                                      // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "EffectEvidenceSynthesis.sampleSize",                                                                            // MakerGen.cs:393
+                    ElementId = "EffectEvidenceSynthesis.sampleSize"                                                                        // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Description.Write(sDef);                                                                                            // MakerGen.cs:221
+                Element_NumberOfStudies.Write(sDef);                                                                                        // MakerGen.cs:221
+                Element_NumberOfParticipants.Write(sDef);                                                                                   // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_SampleSize()                                                                                                        // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 31. EffectEvidenceSynthesis.sampleSize.description
-                    this.Element_Description = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Description",
-                        Path= "EffectEvidenceSynthesis.sampleSize.description",
-                        Id = "EffectEvidenceSynthesis.sampleSize.description",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Description",                                                                                       // MakerGen.cs:236
+                        Path= "EffectEvidenceSynthesis.sampleSize.description",                                                             // MakerGen.cs:237
+                        Id = "EffectEvidenceSynthesis.sampleSize.description",                                                              // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 32. EffectEvidenceSynthesis.sampleSize.numberOfStudies
-                    this.Element_NumberOfStudies = new ElementDefinitionInfo
-                    {
-                        Name = "Element_NumberOfStudies",
-                        Path= "EffectEvidenceSynthesis.sampleSize.numberOfStudies",
-                        Id = "EffectEvidenceSynthesis.sampleSize.numberOfStudies",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_NumberOfStudies = new ElementDefinitionInfo                                                                // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_NumberOfStudies",                                                                                   // MakerGen.cs:236
+                        Path= "EffectEvidenceSynthesis.sampleSize.numberOfStudies",                                                         // MakerGen.cs:237
+                        Id = "EffectEvidenceSynthesis.sampleSize.numberOfStudies",                                                          // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                           // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 33. EffectEvidenceSynthesis.sampleSize.numberOfParticipants
-                    this.Element_NumberOfParticipants = new ElementDefinitionInfo
-                    {
-                        Name = "Element_NumberOfParticipants",
-                        Path= "EffectEvidenceSynthesis.sampleSize.numberOfParticipants",
-                        Id = "EffectEvidenceSynthesis.sampleSize.numberOfParticipants",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_NumberOfParticipants = new ElementDefinitionInfo                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_NumberOfParticipants",                                                                              // MakerGen.cs:236
+                        Path= "EffectEvidenceSynthesis.sampleSize.numberOfParticipants",                                                    // MakerGen.cs:237
+                        Id = "EffectEvidenceSynthesis.sampleSize.numberOfParticipants",                                                     // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                           // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 34. EffectEvidenceSynthesis.resultsByExposure
-        public partial class Type_ResultsByExposure : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_ResultsByExposure : FhirKhit.Maker.Common.Complex.ComplexBase                                             // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 35. EffectEvidenceSynthesis.resultsByExposure.description
-            public ElementDefinitionInfo Element_Description;
+            public ElementDefinitionInfo Element_Description;                                                                               // MakerGen.cs:217
             // 36. EffectEvidenceSynthesis.resultsByExposure.exposureState
-            public ElementDefinitionInfo Element_ExposureState;
+            public ElementDefinitionInfo Element_ExposureState;                                                                             // MakerGen.cs:217
             // 37. EffectEvidenceSynthesis.resultsByExposure.variantState
-            public ElementDefinitionInfo Element_VariantState;
+            public ElementDefinitionInfo Element_VariantState;                                                                              // MakerGen.cs:217
             // 38. EffectEvidenceSynthesis.resultsByExposure.riskEvidenceSynthesis
-            public ElementDefinitionInfo Element_RiskEvidenceSynthesis;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "EffectEvidenceSynthesis.resultsByExposure",
-                    ElementId = "EffectEvidenceSynthesis.resultsByExposure"
-                });
-                Element_Description.Write(sDef);
-                Element_ExposureState.Write(sDef);
-                Element_VariantState.Write(sDef);
-                Element_RiskEvidenceSynthesis.Write(sDef);
-            }
-            
-            public Type_ResultsByExposure()
-            {
-                {
+            public ElementDefinitionInfo Element_RiskEvidenceSynthesis;                                                                     // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "EffectEvidenceSynthesis.resultsByExposure",                                                                     // MakerGen.cs:393
+                    ElementId = "EffectEvidenceSynthesis.resultsByExposure"                                                                 // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Description.Write(sDef);                                                                                            // MakerGen.cs:221
+                Element_ExposureState.Write(sDef);                                                                                          // MakerGen.cs:221
+                Element_VariantState.Write(sDef);                                                                                           // MakerGen.cs:221
+                Element_RiskEvidenceSynthesis.Write(sDef);                                                                                  // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_ResultsByExposure()                                                                                                 // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 35. EffectEvidenceSynthesis.resultsByExposure.description
-                    this.Element_Description = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Description",
-                        Path= "EffectEvidenceSynthesis.resultsByExposure.description",
-                        Id = "EffectEvidenceSynthesis.resultsByExposure.description",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Description",                                                                                       // MakerGen.cs:236
+                        Path= "EffectEvidenceSynthesis.resultsByExposure.description",                                                      // MakerGen.cs:237
+                        Id = "EffectEvidenceSynthesis.resultsByExposure.description",                                                       // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 36. EffectEvidenceSynthesis.resultsByExposure.exposureState
-                    this.Element_ExposureState = new ElementDefinitionInfo
-                    {
-                        Name = "Element_ExposureState",
-                        Path= "EffectEvidenceSynthesis.resultsByExposure.exposureState",
-                        Id = "EffectEvidenceSynthesis.resultsByExposure.exposureState",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_ExposureState = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_ExposureState",                                                                                     // MakerGen.cs:236
+                        Path= "EffectEvidenceSynthesis.resultsByExposure.exposureState",                                                    // MakerGen.cs:237
+                        Id = "EffectEvidenceSynthesis.resultsByExposure.exposureState",                                                     // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 37. EffectEvidenceSynthesis.resultsByExposure.variantState
-                    this.Element_VariantState = new ElementDefinitionInfo
-                    {
-                        Name = "Element_VariantState",
-                        Path= "EffectEvidenceSynthesis.resultsByExposure.variantState",
-                        Id = "EffectEvidenceSynthesis.resultsByExposure.variantState",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_VariantState = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_VariantState",                                                                                      // MakerGen.cs:236
+                        Path= "EffectEvidenceSynthesis.resultsByExposure.variantState",                                                     // MakerGen.cs:237
+                        Id = "EffectEvidenceSynthesis.resultsByExposure.variantState",                                                      // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 38. EffectEvidenceSynthesis.resultsByExposure.riskEvidenceSynthesis
-                    this.Element_RiskEvidenceSynthesis = new ElementDefinitionInfo
-                    {
-                        Name = "Element_RiskEvidenceSynthesis",
-                        Path= "EffectEvidenceSynthesis.resultsByExposure.riskEvidenceSynthesis",
-                        Id = "EffectEvidenceSynthesis.resultsByExposure.riskEvidenceSynthesis",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/RiskEvidenceSynthesis"
-                                }
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_RiskEvidenceSynthesis = new ElementDefinitionInfo                                                          // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_RiskEvidenceSynthesis",                                                                             // MakerGen.cs:236
+                        Path= "EffectEvidenceSynthesis.resultsByExposure.riskEvidenceSynthesis",                                            // MakerGen.cs:237
+                        Id = "EffectEvidenceSynthesis.resultsByExposure.riskEvidenceSynthesis",                                             // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/RiskEvidenceSynthesis"                                         // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 39. EffectEvidenceSynthesis.effectEstimate
-        public partial class Type_EffectEstimate : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_EffectEstimate : FhirKhit.Maker.Common.Complex.ComplexBase                                                // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 45. EffectEvidenceSynthesis.effectEstimate.precisionEstimate
-            public partial class Type_PrecisionEstimate : FhirKhit.Maker.Common.Complex.ComplexBase
-            {
+            public partial class Type_PrecisionEstimate : FhirKhit.Maker.Common.Complex.ComplexBase                                         // MakerGen.cs:381
+            {                                                                                                                               // MakerGen.cs:382
                 // 46. EffectEvidenceSynthesis.effectEstimate.precisionEstimate.type
-                public ElementDefinitionInfo Element_Type;
+                public ElementDefinitionInfo Element_Type;                                                                                  // MakerGen.cs:217
                 // 47. EffectEvidenceSynthesis.effectEstimate.precisionEstimate.level
-                public ElementDefinitionInfo Element_Level;
+                public ElementDefinitionInfo Element_Level;                                                                                 // MakerGen.cs:217
                 // 48. EffectEvidenceSynthesis.effectEstimate.precisionEstimate.from
-                public ElementDefinitionInfo Element_From;
+                public ElementDefinitionInfo Element_From;                                                                                  // MakerGen.cs:217
                 // 49. EffectEvidenceSynthesis.effectEstimate.precisionEstimate.to
-                public ElementDefinitionInfo Element_To;
-                
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                {
-                    base.Write(sDef);
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                    {
-                        Path = "EffectEvidenceSynthesis.effectEstimate.precisionEstimate",
-                        ElementId = "EffectEvidenceSynthesis.effectEstimate.precisionEstimate"
-                    });
-                    Element_Type.Write(sDef);
-                    Element_Level.Write(sDef);
-                    Element_From.Write(sDef);
-                    Element_To.Write(sDef);
-                }
-                
-                public Type_PrecisionEstimate()
-                {
-                    {
+                public ElementDefinitionInfo Element_To;                                                                                    // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:389
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:390
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:391
+                    {                                                                                                                       // MakerGen.cs:392
+                        Path = "EffectEvidenceSynthesis.effectEstimate.precisionEstimate",                                                  // MakerGen.cs:393
+                        ElementId = "EffectEvidenceSynthesis.effectEstimate.precisionEstimate"                                              // MakerGen.cs:394
+                    });                                                                                                                     // MakerGen.cs:395
+                    Element_Type.Write(sDef);                                                                                               // MakerGen.cs:221
+                    Element_Level.Write(sDef);                                                                                              // MakerGen.cs:221
+                    Element_From.Write(sDef);                                                                                               // MakerGen.cs:221
+                    Element_To.Write(sDef);                                                                                                 // MakerGen.cs:221
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                public Type_PrecisionEstimate()                                                                                             // MakerGen.cs:400
+                {                                                                                                                           // MakerGen.cs:401
+                    {                                                                                                                       // MakerGen.cs:232
                         // 46. EffectEvidenceSynthesis.effectEstimate.precisionEstimate.type
-                        this.Element_Type = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Type",
-                            Path= "EffectEvidenceSynthesis.effectEstimate.precisionEstimate.type",
-                            Id = "EffectEvidenceSynthesis.effectEstimate.precisionEstimate.type",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Type = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Type",                                                                                          // MakerGen.cs:236
+                            Path= "EffectEvidenceSynthesis.effectEstimate.precisionEstimate.type",                                          // MakerGen.cs:237
+                            Id = "EffectEvidenceSynthesis.effectEstimate.precisionEstimate.type",                                           // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 47. EffectEvidenceSynthesis.effectEstimate.precisionEstimate.level
-                        this.Element_Level = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Level",
-                            Path= "EffectEvidenceSynthesis.effectEstimate.precisionEstimate.level",
-                            Id = "EffectEvidenceSynthesis.effectEstimate.precisionEstimate.level",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Level = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Level",                                                                                         // MakerGen.cs:236
+                            Path= "EffectEvidenceSynthesis.effectEstimate.precisionEstimate.level",                                         // MakerGen.cs:237
+                            Id = "EffectEvidenceSynthesis.effectEstimate.precisionEstimate.level",                                          // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                       // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 48. EffectEvidenceSynthesis.effectEstimate.precisionEstimate.from
-                        this.Element_From = new ElementDefinitionInfo
-                        {
-                            Name = "Element_From",
-                            Path= "EffectEvidenceSynthesis.effectEstimate.precisionEstimate.from",
-                            Id = "EffectEvidenceSynthesis.effectEstimate.precisionEstimate.from",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_From = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_From",                                                                                          // MakerGen.cs:236
+                            Path= "EffectEvidenceSynthesis.effectEstimate.precisionEstimate.from",                                          // MakerGen.cs:237
+                            Id = "EffectEvidenceSynthesis.effectEstimate.precisionEstimate.from",                                           // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                       // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 49. EffectEvidenceSynthesis.effectEstimate.precisionEstimate.to
-                        this.Element_To = new ElementDefinitionInfo
-                        {
-                            Name = "Element_To",
-                            Path= "EffectEvidenceSynthesis.effectEstimate.precisionEstimate.to",
-                            Id = "EffectEvidenceSynthesis.effectEstimate.precisionEstimate.to",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
-                                {
-                                }
-                            }
-                        };
-                    }
-                }
-            }
+                        this.Element_To = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_To",                                                                                            // MakerGen.cs:236
+                            Path= "EffectEvidenceSynthesis.effectEstimate.precisionEstimate.to",                                            // MakerGen.cs:237
+                            Id = "EffectEvidenceSynthesis.effectEstimate.precisionEstimate.to",                                             // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                       // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                }                                                                                                                           // MakerGen.cs:403
+            }                                                                                                                               // MakerGen.cs:405
             // 40. EffectEvidenceSynthesis.effectEstimate.description
-            public ElementDefinitionInfo Element_Description;
+            public ElementDefinitionInfo Element_Description;                                                                               // MakerGen.cs:217
             // 41. EffectEvidenceSynthesis.effectEstimate.type
-            public ElementDefinitionInfo Element_Type;
+            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:217
             // 42. EffectEvidenceSynthesis.effectEstimate.variantState
-            public ElementDefinitionInfo Element_VariantState;
+            public ElementDefinitionInfo Element_VariantState;                                                                              // MakerGen.cs:217
             // 43. EffectEvidenceSynthesis.effectEstimate.value
-            public ElementDefinitionInfo Element_Value;
+            public ElementDefinitionInfo Element_Value;                                                                                     // MakerGen.cs:217
             // 44. EffectEvidenceSynthesis.effectEstimate.unitOfMeasure
-            public ElementDefinitionInfo Element_UnitOfMeasure;
+            public ElementDefinitionInfo Element_UnitOfMeasure;                                                                             // MakerGen.cs:217
             // 45. EffectEvidenceSynthesis.effectEstimate.precisionEstimate
-            public ElementDefinitionInfo Element_PrecisionEstimate;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "EffectEvidenceSynthesis.effectEstimate",
-                    ElementId = "EffectEvidenceSynthesis.effectEstimate"
-                });
-                Element_Description.Write(sDef);
-                Element_Type.Write(sDef);
-                Element_VariantState.Write(sDef);
-                Element_Value.Write(sDef);
-                Element_UnitOfMeasure.Write(sDef);
-                Element_PrecisionEstimate.Write(sDef);
-            }
-            
-            public Type_EffectEstimate()
-            {
-                {
+            public ElementDefinitionInfo Element_PrecisionEstimate;                                                                         // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "EffectEvidenceSynthesis.effectEstimate",                                                                        // MakerGen.cs:393
+                    ElementId = "EffectEvidenceSynthesis.effectEstimate"                                                                    // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Description.Write(sDef);                                                                                            // MakerGen.cs:221
+                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_VariantState.Write(sDef);                                                                                           // MakerGen.cs:221
+                Element_Value.Write(sDef);                                                                                                  // MakerGen.cs:221
+                Element_UnitOfMeasure.Write(sDef);                                                                                          // MakerGen.cs:221
+                Element_PrecisionEstimate.Write(sDef);                                                                                      // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_EffectEstimate()                                                                                                    // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 40. EffectEvidenceSynthesis.effectEstimate.description
-                    this.Element_Description = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Description",
-                        Path= "EffectEvidenceSynthesis.effectEstimate.description",
-                        Id = "EffectEvidenceSynthesis.effectEstimate.description",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Description",                                                                                       // MakerGen.cs:236
+                        Path= "EffectEvidenceSynthesis.effectEstimate.description",                                                         // MakerGen.cs:237
+                        Id = "EffectEvidenceSynthesis.effectEstimate.description",                                                          // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 41. EffectEvidenceSynthesis.effectEstimate.type
-                    this.Element_Type = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Type",
-                        Path= "EffectEvidenceSynthesis.effectEstimate.type",
-                        Id = "EffectEvidenceSynthesis.effectEstimate.type",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Type",                                                                                              // MakerGen.cs:236
+                        Path= "EffectEvidenceSynthesis.effectEstimate.type",                                                                // MakerGen.cs:237
+                        Id = "EffectEvidenceSynthesis.effectEstimate.type",                                                                 // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 42. EffectEvidenceSynthesis.effectEstimate.variantState
-                    this.Element_VariantState = new ElementDefinitionInfo
-                    {
-                        Name = "Element_VariantState",
-                        Path= "EffectEvidenceSynthesis.effectEstimate.variantState",
-                        Id = "EffectEvidenceSynthesis.effectEstimate.variantState",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_VariantState = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_VariantState",                                                                                      // MakerGen.cs:236
+                        Path= "EffectEvidenceSynthesis.effectEstimate.variantState",                                                        // MakerGen.cs:237
+                        Id = "EffectEvidenceSynthesis.effectEstimate.variantState",                                                         // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 43. EffectEvidenceSynthesis.effectEstimate.value
-                    this.Element_Value = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Value",
-                        Path= "EffectEvidenceSynthesis.effectEstimate.value",
-                        Id = "EffectEvidenceSynthesis.effectEstimate.value",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Value = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Value",                                                                                             // MakerGen.cs:236
+                        Path= "EffectEvidenceSynthesis.effectEstimate.value",                                                               // MakerGen.cs:237
+                        Id = "EffectEvidenceSynthesis.effectEstimate.value",                                                                // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                           // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 44. EffectEvidenceSynthesis.effectEstimate.unitOfMeasure
-                    this.Element_UnitOfMeasure = new ElementDefinitionInfo
-                    {
-                        Name = "Element_UnitOfMeasure",
-                        Path= "EffectEvidenceSynthesis.effectEstimate.unitOfMeasure",
-                        Id = "EffectEvidenceSynthesis.effectEstimate.unitOfMeasure",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_UnitOfMeasure = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_UnitOfMeasure",                                                                                     // MakerGen.cs:236
+                        Path= "EffectEvidenceSynthesis.effectEstimate.unitOfMeasure",                                                       // MakerGen.cs:237
+                        Id = "EffectEvidenceSynthesis.effectEstimate.unitOfMeasure",                                                        // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 45. EffectEvidenceSynthesis.effectEstimate.precisionEstimate
-                    this.Element_PrecisionEstimate = new ElementDefinitionInfo
-                    {
-                        Name = "Element_PrecisionEstimate",
-                        Path= "EffectEvidenceSynthesis.effectEstimate.precisionEstimate",
-                        Id = "EffectEvidenceSynthesis.effectEstimate.precisionEstimate",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new Type_PrecisionEstimate
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_PrecisionEstimate = new ElementDefinitionInfo                                                              // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_PrecisionEstimate",                                                                                 // MakerGen.cs:236
+                        Path= "EffectEvidenceSynthesis.effectEstimate.precisionEstimate",                                                   // MakerGen.cs:237
+                        Id = "EffectEvidenceSynthesis.effectEstimate.precisionEstimate",                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new Type_PrecisionEstimate                                                                                      // MakerGen.cs:260
+                            {                                                                                                               // MakerGen.cs:261
+                            }                                                                                                               // MakerGen.cs:262
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 50. EffectEvidenceSynthesis.certainty
-        public partial class Type_Certainty : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Certainty : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 53. EffectEvidenceSynthesis.certainty.certaintySubcomponent
-            public partial class Type_CertaintySubcomponent : FhirKhit.Maker.Common.Complex.ComplexBase
-            {
+            public partial class Type_CertaintySubcomponent : FhirKhit.Maker.Common.Complex.ComplexBase                                     // MakerGen.cs:381
+            {                                                                                                                               // MakerGen.cs:382
                 // 54. EffectEvidenceSynthesis.certainty.certaintySubcomponent.type
-                public ElementDefinitionInfo Element_Type;
+                public ElementDefinitionInfo Element_Type;                                                                                  // MakerGen.cs:217
                 // 55. EffectEvidenceSynthesis.certainty.certaintySubcomponent.rating
-                public ElementDefinitionInfo Element_Rating;
+                public ElementDefinitionInfo Element_Rating;                                                                                // MakerGen.cs:217
                 // 56. EffectEvidenceSynthesis.certainty.certaintySubcomponent.note
-                public ElementDefinitionInfo Element_Note;
-                
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                {
-                    base.Write(sDef);
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                    {
-                        Path = "EffectEvidenceSynthesis.certainty.certaintySubcomponent",
-                        ElementId = "EffectEvidenceSynthesis.certainty.certaintySubcomponent"
-                    });
-                    Element_Type.Write(sDef);
-                    Element_Rating.Write(sDef);
-                    Element_Note.Write(sDef);
-                }
-                
-                public Type_CertaintySubcomponent()
-                {
-                    {
+                public ElementDefinitionInfo Element_Note;                                                                                  // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:389
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:390
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:391
+                    {                                                                                                                       // MakerGen.cs:392
+                        Path = "EffectEvidenceSynthesis.certainty.certaintySubcomponent",                                                   // MakerGen.cs:393
+                        ElementId = "EffectEvidenceSynthesis.certainty.certaintySubcomponent"                                               // MakerGen.cs:394
+                    });                                                                                                                     // MakerGen.cs:395
+                    Element_Type.Write(sDef);                                                                                               // MakerGen.cs:221
+                    Element_Rating.Write(sDef);                                                                                             // MakerGen.cs:221
+                    Element_Note.Write(sDef);                                                                                               // MakerGen.cs:221
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                public Type_CertaintySubcomponent()                                                                                         // MakerGen.cs:400
+                {                                                                                                                           // MakerGen.cs:401
+                    {                                                                                                                       // MakerGen.cs:232
                         // 54. EffectEvidenceSynthesis.certainty.certaintySubcomponent.type
-                        this.Element_Type = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Type",
-                            Path= "EffectEvidenceSynthesis.certainty.certaintySubcomponent.type",
-                            Id = "EffectEvidenceSynthesis.certainty.certaintySubcomponent.type",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Type = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Type",                                                                                          // MakerGen.cs:236
+                            Path= "EffectEvidenceSynthesis.certainty.certaintySubcomponent.type",                                           // MakerGen.cs:237
+                            Id = "EffectEvidenceSynthesis.certainty.certaintySubcomponent.type",                                            // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 55. EffectEvidenceSynthesis.certainty.certaintySubcomponent.rating
-                        this.Element_Rating = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Rating",
-                            Path= "EffectEvidenceSynthesis.certainty.certaintySubcomponent.rating",
-                            Id = "EffectEvidenceSynthesis.certainty.certaintySubcomponent.rating",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Rating = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Rating",                                                                                        // MakerGen.cs:236
+                            Path= "EffectEvidenceSynthesis.certainty.certaintySubcomponent.rating",                                         // MakerGen.cs:237
+                            Id = "EffectEvidenceSynthesis.certainty.certaintySubcomponent.rating",                                          // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 56. EffectEvidenceSynthesis.certainty.certaintySubcomponent.note
-                        this.Element_Note = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Note",
-                            Path= "EffectEvidenceSynthesis.certainty.certaintySubcomponent.note",
-                            Id = "EffectEvidenceSynthesis.certainty.certaintySubcomponent.note",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Annotation
-                                {
-                                }
-                            }
-                        };
-                    }
-                }
-            }
+                        this.Element_Note = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Note",                                                                                          // MakerGen.cs:236
+                            Path= "EffectEvidenceSynthesis.certainty.certaintySubcomponent.note",                                           // MakerGen.cs:237
+                            Id = "EffectEvidenceSynthesis.certainty.certaintySubcomponent.note",                                            // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Annotation                                                           // MakerGen.cs:356
+                                {                                                                                                           // MakerGen.cs:357
+                                }                                                                                                           // MakerGen.cs:358
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                }                                                                                                                           // MakerGen.cs:403
+            }                                                                                                                               // MakerGen.cs:405
             // 51. EffectEvidenceSynthesis.certainty.rating
-            public ElementDefinitionInfo Element_Rating;
+            public ElementDefinitionInfo Element_Rating;                                                                                    // MakerGen.cs:217
             // 52. EffectEvidenceSynthesis.certainty.note
-            public ElementDefinitionInfo Element_Note;
+            public ElementDefinitionInfo Element_Note;                                                                                      // MakerGen.cs:217
             // 53. EffectEvidenceSynthesis.certainty.certaintySubcomponent
-            public ElementDefinitionInfo Element_CertaintySubcomponent;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "EffectEvidenceSynthesis.certainty",
-                    ElementId = "EffectEvidenceSynthesis.certainty"
-                });
-                Element_Rating.Write(sDef);
-                Element_Note.Write(sDef);
-                Element_CertaintySubcomponent.Write(sDef);
-            }
-            
-            public Type_Certainty()
-            {
-                {
+            public ElementDefinitionInfo Element_CertaintySubcomponent;                                                                     // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "EffectEvidenceSynthesis.certainty",                                                                             // MakerGen.cs:393
+                    ElementId = "EffectEvidenceSynthesis.certainty"                                                                         // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Rating.Write(sDef);                                                                                                 // MakerGen.cs:221
+                Element_Note.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_CertaintySubcomponent.Write(sDef);                                                                                  // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Certainty()                                                                                                         // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 51. EffectEvidenceSynthesis.certainty.rating
-                    this.Element_Rating = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Rating",
-                        Path= "EffectEvidenceSynthesis.certainty.rating",
-                        Id = "EffectEvidenceSynthesis.certainty.rating",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Rating = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Rating",                                                                                            // MakerGen.cs:236
+                        Path= "EffectEvidenceSynthesis.certainty.rating",                                                                   // MakerGen.cs:237
+                        Id = "EffectEvidenceSynthesis.certainty.rating",                                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 52. EffectEvidenceSynthesis.certainty.note
-                    this.Element_Note = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Note",
-                        Path= "EffectEvidenceSynthesis.certainty.note",
-                        Id = "EffectEvidenceSynthesis.certainty.note",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Annotation
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Note = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Note",                                                                                              // MakerGen.cs:236
+                        Path= "EffectEvidenceSynthesis.certainty.note",                                                                     // MakerGen.cs:237
+                        Id = "EffectEvidenceSynthesis.certainty.note",                                                                      // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Annotation                                                               // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 53. EffectEvidenceSynthesis.certainty.certaintySubcomponent
-                    this.Element_CertaintySubcomponent = new ElementDefinitionInfo
-                    {
-                        Name = "Element_CertaintySubcomponent",
-                        Path= "EffectEvidenceSynthesis.certainty.certaintySubcomponent",
-                        Id = "EffectEvidenceSynthesis.certainty.certaintySubcomponent",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new Type_CertaintySubcomponent
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_CertaintySubcomponent = new ElementDefinitionInfo                                                          // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_CertaintySubcomponent",                                                                             // MakerGen.cs:236
+                        Path= "EffectEvidenceSynthesis.certainty.certaintySubcomponent",                                                    // MakerGen.cs:237
+                        Id = "EffectEvidenceSynthesis.certainty.certaintySubcomponent",                                                     // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new Type_CertaintySubcomponent                                                                                  // MakerGen.cs:260
+                            {                                                                                                               // MakerGen.cs:261
+                            }                                                                                                               // MakerGen.cs:262
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 1. EffectEvidenceSynthesis.url
-        public ElementDefinitionInfo Element_Url;
+        public ElementDefinitionInfo Element_Url;                                                                                           // MakerGen.cs:217
         // 2. EffectEvidenceSynthesis.identifier
-        public ElementDefinitionInfo Element_Identifier;
+        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:217
         // 3. EffectEvidenceSynthesis.version
-        public ElementDefinitionInfo Element_Version;
+        public ElementDefinitionInfo Element_Version;                                                                                       // MakerGen.cs:217
         // 4. EffectEvidenceSynthesis.name
-        public ElementDefinitionInfo Element_Name;
+        public ElementDefinitionInfo Element_Name;                                                                                          // MakerGen.cs:217
         // 5. EffectEvidenceSynthesis.title
-        public ElementDefinitionInfo Element_Title;
+        public ElementDefinitionInfo Element_Title;                                                                                         // MakerGen.cs:217
         // 6. EffectEvidenceSynthesis.status
-        public ElementDefinitionInfo Element_Status;
+        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:217
         // 7. EffectEvidenceSynthesis.date
-        public ElementDefinitionInfo Element_Date;
+        public ElementDefinitionInfo Element_Date;                                                                                          // MakerGen.cs:217
         // 8. EffectEvidenceSynthesis.publisher
-        public ElementDefinitionInfo Element_Publisher;
+        public ElementDefinitionInfo Element_Publisher;                                                                                     // MakerGen.cs:217
         // 9. EffectEvidenceSynthesis.contact
-        public ElementDefinitionInfo Element_Contact;
+        public ElementDefinitionInfo Element_Contact;                                                                                       // MakerGen.cs:217
         // 10. EffectEvidenceSynthesis.description
-        public ElementDefinitionInfo Element_Description;
+        public ElementDefinitionInfo Element_Description;                                                                                   // MakerGen.cs:217
         // 11. EffectEvidenceSynthesis.note
-        public ElementDefinitionInfo Element_Note;
+        public ElementDefinitionInfo Element_Note;                                                                                          // MakerGen.cs:217
         // 12. EffectEvidenceSynthesis.useContext
-        public ElementDefinitionInfo Element_UseContext;
+        public ElementDefinitionInfo Element_UseContext;                                                                                    // MakerGen.cs:217
         // 13. EffectEvidenceSynthesis.jurisdiction
-        public ElementDefinitionInfo Element_Jurisdiction;
+        public ElementDefinitionInfo Element_Jurisdiction;                                                                                  // MakerGen.cs:217
         // 14. EffectEvidenceSynthesis.copyright
-        public ElementDefinitionInfo Element_Copyright;
+        public ElementDefinitionInfo Element_Copyright;                                                                                     // MakerGen.cs:217
         // 15. EffectEvidenceSynthesis.approvalDate
-        public ElementDefinitionInfo Element_ApprovalDate;
+        public ElementDefinitionInfo Element_ApprovalDate;                                                                                  // MakerGen.cs:217
         // 16. EffectEvidenceSynthesis.lastReviewDate
-        public ElementDefinitionInfo Element_LastReviewDate;
+        public ElementDefinitionInfo Element_LastReviewDate;                                                                                // MakerGen.cs:217
         // 17. EffectEvidenceSynthesis.effectivePeriod
-        public ElementDefinitionInfo Element_EffectivePeriod;
+        public ElementDefinitionInfo Element_EffectivePeriod;                                                                               // MakerGen.cs:217
         // 18. EffectEvidenceSynthesis.topic
-        public ElementDefinitionInfo Element_Topic;
+        public ElementDefinitionInfo Element_Topic;                                                                                         // MakerGen.cs:217
         // 19. EffectEvidenceSynthesis.author
-        public ElementDefinitionInfo Element_Author;
+        public ElementDefinitionInfo Element_Author;                                                                                        // MakerGen.cs:217
         // 20. EffectEvidenceSynthesis.editor
-        public ElementDefinitionInfo Element_Editor;
+        public ElementDefinitionInfo Element_Editor;                                                                                        // MakerGen.cs:217
         // 21. EffectEvidenceSynthesis.reviewer
-        public ElementDefinitionInfo Element_Reviewer;
+        public ElementDefinitionInfo Element_Reviewer;                                                                                      // MakerGen.cs:217
         // 22. EffectEvidenceSynthesis.endorser
-        public ElementDefinitionInfo Element_Endorser;
+        public ElementDefinitionInfo Element_Endorser;                                                                                      // MakerGen.cs:217
         // 23. EffectEvidenceSynthesis.relatedArtifact
-        public ElementDefinitionInfo Element_RelatedArtifact;
+        public ElementDefinitionInfo Element_RelatedArtifact;                                                                               // MakerGen.cs:217
         // 24. EffectEvidenceSynthesis.synthesisType
-        public ElementDefinitionInfo Element_SynthesisType;
+        public ElementDefinitionInfo Element_SynthesisType;                                                                                 // MakerGen.cs:217
         // 25. EffectEvidenceSynthesis.studyType
-        public ElementDefinitionInfo Element_StudyType;
+        public ElementDefinitionInfo Element_StudyType;                                                                                     // MakerGen.cs:217
         // 26. EffectEvidenceSynthesis.population
-        public ElementDefinitionInfo Element_Population;
+        public ElementDefinitionInfo Element_Population;                                                                                    // MakerGen.cs:217
         // 27. EffectEvidenceSynthesis.exposure
-        public ElementDefinitionInfo Element_Exposure;
+        public ElementDefinitionInfo Element_Exposure;                                                                                      // MakerGen.cs:217
         // 28. EffectEvidenceSynthesis.exposureAlternative
-        public ElementDefinitionInfo Element_ExposureAlternative;
+        public ElementDefinitionInfo Element_ExposureAlternative;                                                                           // MakerGen.cs:217
         // 29. EffectEvidenceSynthesis.outcome
-        public ElementDefinitionInfo Element_Outcome;
+        public ElementDefinitionInfo Element_Outcome;                                                                                       // MakerGen.cs:217
         // 30. EffectEvidenceSynthesis.sampleSize
-        public ElementDefinitionInfo Element_SampleSize;
+        public ElementDefinitionInfo Element_SampleSize;                                                                                    // MakerGen.cs:217
         // 34. EffectEvidenceSynthesis.resultsByExposure
-        public ElementDefinitionInfo Element_ResultsByExposure;
+        public ElementDefinitionInfo Element_ResultsByExposure;                                                                             // MakerGen.cs:217
         // 39. EffectEvidenceSynthesis.effectEstimate
-        public ElementDefinitionInfo Element_EffectEstimate;
+        public ElementDefinitionInfo Element_EffectEstimate;                                                                                // MakerGen.cs:217
         // 50. EffectEvidenceSynthesis.certainty
-        public ElementDefinitionInfo Element_Certainty;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "EffectEvidenceSynthesis",
-                ElementId = "EffectEvidenceSynthesis"
-            });
-            Element_Url.Write(sDef);
-            Element_Identifier.Write(sDef);
-            Element_Version.Write(sDef);
-            Element_Name.Write(sDef);
-            Element_Title.Write(sDef);
-            Element_Status.Write(sDef);
-            Element_Date.Write(sDef);
-            Element_Publisher.Write(sDef);
-            Element_Contact.Write(sDef);
-            Element_Description.Write(sDef);
-            Element_Note.Write(sDef);
-            Element_UseContext.Write(sDef);
-            Element_Jurisdiction.Write(sDef);
-            Element_Copyright.Write(sDef);
-            Element_ApprovalDate.Write(sDef);
-            Element_LastReviewDate.Write(sDef);
-            Element_EffectivePeriod.Write(sDef);
-            Element_Topic.Write(sDef);
-            Element_Author.Write(sDef);
-            Element_Editor.Write(sDef);
-            Element_Reviewer.Write(sDef);
-            Element_Endorser.Write(sDef);
-            Element_RelatedArtifact.Write(sDef);
-            Element_SynthesisType.Write(sDef);
-            Element_StudyType.Write(sDef);
-            Element_Population.Write(sDef);
-            Element_Exposure.Write(sDef);
-            Element_ExposureAlternative.Write(sDef);
-            Element_Outcome.Write(sDef);
-            Element_SampleSize.Write(sDef);
-            Element_ResultsByExposure.Write(sDef);
-            Element_EffectEstimate.Write(sDef);
-            Element_Certainty.Write(sDef);
-        }
-        
-        public Resource_EffectEvidenceSynthesis()
-        {
-            {
+        public ElementDefinitionInfo Element_Certainty;                                                                                     // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "EffectEvidenceSynthesis",                                                                                           // MakerGen.cs:393
+                ElementId = "EffectEvidenceSynthesis"                                                                                       // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Url.Write(sDef);                                                                                                        // MakerGen.cs:221
+            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Version.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Name.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Title.Write(sDef);                                                                                                      // MakerGen.cs:221
+            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Date.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Publisher.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_Contact.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Description.Write(sDef);                                                                                                // MakerGen.cs:221
+            Element_Note.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_UseContext.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Jurisdiction.Write(sDef);                                                                                               // MakerGen.cs:221
+            Element_Copyright.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_ApprovalDate.Write(sDef);                                                                                               // MakerGen.cs:221
+            Element_LastReviewDate.Write(sDef);                                                                                             // MakerGen.cs:221
+            Element_EffectivePeriod.Write(sDef);                                                                                            // MakerGen.cs:221
+            Element_Topic.Write(sDef);                                                                                                      // MakerGen.cs:221
+            Element_Author.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Editor.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Reviewer.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_Endorser.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_RelatedArtifact.Write(sDef);                                                                                            // MakerGen.cs:221
+            Element_SynthesisType.Write(sDef);                                                                                              // MakerGen.cs:221
+            Element_StudyType.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_Population.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Exposure.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_ExposureAlternative.Write(sDef);                                                                                        // MakerGen.cs:221
+            Element_Outcome.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_SampleSize.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_ResultsByExposure.Write(sDef);                                                                                          // MakerGen.cs:221
+            Element_EffectEstimate.Write(sDef);                                                                                             // MakerGen.cs:221
+            Element_Certainty.Write(sDef);                                                                                                  // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Resource_EffectEvidenceSynthesis()                                                                                           // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. EffectEvidenceSynthesis.url
-                this.Element_Url = new ElementDefinitionInfo
-                {
-                    Name = "Element_Url",
-                    Path= "EffectEvidenceSynthesis.url",
-                    Id = "EffectEvidenceSynthesis.url",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Url = new ElementDefinitionInfo                                                                                // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Url",                                                                                                   // MakerGen.cs:236
+                    Path= "EffectEvidenceSynthesis.url",                                                                                    // MakerGen.cs:237
+                    Id = "EffectEvidenceSynthesis.url",                                                                                     // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                                   // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. EffectEvidenceSynthesis.identifier
-                this.Element_Identifier = new ElementDefinitionInfo
-                {
-                    Name = "Element_Identifier",
-                    Path= "EffectEvidenceSynthesis.identifier",
-                    Id = "EffectEvidenceSynthesis.identifier",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:236
+                    Path= "EffectEvidenceSynthesis.identifier",                                                                             // MakerGen.cs:237
+                    Id = "EffectEvidenceSynthesis.identifier",                                                                              // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 3. EffectEvidenceSynthesis.version
-                this.Element_Version = new ElementDefinitionInfo
-                {
-                    Name = "Element_Version",
-                    Path= "EffectEvidenceSynthesis.version",
-                    Id = "EffectEvidenceSynthesis.version",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Version = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Version",                                                                                               // MakerGen.cs:236
+                    Path= "EffectEvidenceSynthesis.version",                                                                                // MakerGen.cs:237
+                    Id = "EffectEvidenceSynthesis.version",                                                                                 // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 4. EffectEvidenceSynthesis.name
-                this.Element_Name = new ElementDefinitionInfo
-                {
-                    Name = "Element_Name",
-                    Path= "EffectEvidenceSynthesis.name",
-                    Id = "EffectEvidenceSynthesis.name",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Name = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Name",                                                                                                  // MakerGen.cs:236
+                    Path= "EffectEvidenceSynthesis.name",                                                                                   // MakerGen.cs:237
+                    Id = "EffectEvidenceSynthesis.name",                                                                                    // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 5. EffectEvidenceSynthesis.title
-                this.Element_Title = new ElementDefinitionInfo
-                {
-                    Name = "Element_Title",
-                    Path= "EffectEvidenceSynthesis.title",
-                    Id = "EffectEvidenceSynthesis.title",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Title = new ElementDefinitionInfo                                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Title",                                                                                                 // MakerGen.cs:236
+                    Path= "EffectEvidenceSynthesis.title",                                                                                  // MakerGen.cs:237
+                    Id = "EffectEvidenceSynthesis.title",                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 6. EffectEvidenceSynthesis.status
-                this.Element_Status = new ElementDefinitionInfo
-                {
-                    Name = "Element_Status",
-                    Path= "EffectEvidenceSynthesis.status",
-                    Id = "EffectEvidenceSynthesis.status",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Status",                                                                                                // MakerGen.cs:236
+                    Path= "EffectEvidenceSynthesis.status",                                                                                 // MakerGen.cs:237
+                    Id = "EffectEvidenceSynthesis.status",                                                                                  // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 7. EffectEvidenceSynthesis.date
-                this.Element_Date = new ElementDefinitionInfo
-                {
-                    Name = "Element_Date",
-                    Path= "EffectEvidenceSynthesis.date",
-                    Id = "EffectEvidenceSynthesis.date",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Date = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Date",                                                                                                  // MakerGen.cs:236
+                    Path= "EffectEvidenceSynthesis.date",                                                                                   // MakerGen.cs:237
+                    Id = "EffectEvidenceSynthesis.date",                                                                                    // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 8. EffectEvidenceSynthesis.publisher
-                this.Element_Publisher = new ElementDefinitionInfo
-                {
-                    Name = "Element_Publisher",
-                    Path= "EffectEvidenceSynthesis.publisher",
-                    Id = "EffectEvidenceSynthesis.publisher",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Publisher = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Publisher",                                                                                             // MakerGen.cs:236
+                    Path= "EffectEvidenceSynthesis.publisher",                                                                              // MakerGen.cs:237
+                    Id = "EffectEvidenceSynthesis.publisher",                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 9. EffectEvidenceSynthesis.contact
-                this.Element_Contact = new ElementDefinitionInfo
-                {
-                    Name = "Element_Contact",
-                    Path= "EffectEvidenceSynthesis.contact",
-                    Id = "EffectEvidenceSynthesis.contact",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Contact = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Contact",                                                                                               // MakerGen.cs:236
+                    Path= "EffectEvidenceSynthesis.contact",                                                                                // MakerGen.cs:237
+                    Id = "EffectEvidenceSynthesis.contact",                                                                                 // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                                // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 10. EffectEvidenceSynthesis.description
-                this.Element_Description = new ElementDefinitionInfo
-                {
-                    Name = "Element_Description",
-                    Path= "EffectEvidenceSynthesis.description",
-                    Id = "EffectEvidenceSynthesis.description",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Description = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Description",                                                                                           // MakerGen.cs:236
+                    Path= "EffectEvidenceSynthesis.description",                                                                            // MakerGen.cs:237
+                    Id = "EffectEvidenceSynthesis.description",                                                                             // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 11. EffectEvidenceSynthesis.note
-                this.Element_Note = new ElementDefinitionInfo
-                {
-                    Name = "Element_Note",
-                    Path= "EffectEvidenceSynthesis.note",
-                    Id = "EffectEvidenceSynthesis.note",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Annotation
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Note = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Note",                                                                                                  // MakerGen.cs:236
+                    Path= "EffectEvidenceSynthesis.note",                                                                                   // MakerGen.cs:237
+                    Id = "EffectEvidenceSynthesis.note",                                                                                    // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Annotation                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 12. EffectEvidenceSynthesis.useContext
-                this.Element_UseContext = new ElementDefinitionInfo
-                {
-                    Name = "Element_UseContext",
-                    Path= "EffectEvidenceSynthesis.useContext",
-                    Id = "EffectEvidenceSynthesis.useContext",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_UsageContext
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_UseContext = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_UseContext",                                                                                            // MakerGen.cs:236
+                    Path= "EffectEvidenceSynthesis.useContext",                                                                             // MakerGen.cs:237
+                    Id = "EffectEvidenceSynthesis.useContext",                                                                              // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_UsageContext                                                                 // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 13. EffectEvidenceSynthesis.jurisdiction
-                this.Element_Jurisdiction = new ElementDefinitionInfo
-                {
-                    Name = "Element_Jurisdiction",
-                    Path= "EffectEvidenceSynthesis.jurisdiction",
-                    Id = "EffectEvidenceSynthesis.jurisdiction",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Jurisdiction = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Jurisdiction",                                                                                          // MakerGen.cs:236
+                    Path= "EffectEvidenceSynthesis.jurisdiction",                                                                           // MakerGen.cs:237
+                    Id = "EffectEvidenceSynthesis.jurisdiction",                                                                            // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 14. EffectEvidenceSynthesis.copyright
-                this.Element_Copyright = new ElementDefinitionInfo
-                {
-                    Name = "Element_Copyright",
-                    Path= "EffectEvidenceSynthesis.copyright",
-                    Id = "EffectEvidenceSynthesis.copyright",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Copyright = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Copyright",                                                                                             // MakerGen.cs:236
+                    Path= "EffectEvidenceSynthesis.copyright",                                                                              // MakerGen.cs:237
+                    Id = "EffectEvidenceSynthesis.copyright",                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 15. EffectEvidenceSynthesis.approvalDate
-                this.Element_ApprovalDate = new ElementDefinitionInfo
-                {
-                    Name = "Element_ApprovalDate",
-                    Path= "EffectEvidenceSynthesis.approvalDate",
-                    Id = "EffectEvidenceSynthesis.approvalDate",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Date
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ApprovalDate = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ApprovalDate",                                                                                          // MakerGen.cs:236
+                    Path= "EffectEvidenceSynthesis.approvalDate",                                                                           // MakerGen.cs:237
+                    Id = "EffectEvidenceSynthesis.approvalDate",                                                                            // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Date                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 16. EffectEvidenceSynthesis.lastReviewDate
-                this.Element_LastReviewDate = new ElementDefinitionInfo
-                {
-                    Name = "Element_LastReviewDate",
-                    Path= "EffectEvidenceSynthesis.lastReviewDate",
-                    Id = "EffectEvidenceSynthesis.lastReviewDate",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Date
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_LastReviewDate = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_LastReviewDate",                                                                                        // MakerGen.cs:236
+                    Path= "EffectEvidenceSynthesis.lastReviewDate",                                                                         // MakerGen.cs:237
+                    Id = "EffectEvidenceSynthesis.lastReviewDate",                                                                          // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Date                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 17. EffectEvidenceSynthesis.effectivePeriod
-                this.Element_EffectivePeriod = new ElementDefinitionInfo
-                {
-                    Name = "Element_EffectivePeriod",
-                    Path= "EffectEvidenceSynthesis.effectivePeriod",
-                    Id = "EffectEvidenceSynthesis.effectivePeriod",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Period
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_EffectivePeriod = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_EffectivePeriod",                                                                                       // MakerGen.cs:236
+                    Path= "EffectEvidenceSynthesis.effectivePeriod",                                                                        // MakerGen.cs:237
+                    Id = "EffectEvidenceSynthesis.effectivePeriod",                                                                         // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Period                                                                       // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 18. EffectEvidenceSynthesis.topic
-                this.Element_Topic = new ElementDefinitionInfo
-                {
-                    Name = "Element_Topic",
-                    Path= "EffectEvidenceSynthesis.topic",
-                    Id = "EffectEvidenceSynthesis.topic",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Topic = new ElementDefinitionInfo                                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Topic",                                                                                                 // MakerGen.cs:236
+                    Path= "EffectEvidenceSynthesis.topic",                                                                                  // MakerGen.cs:237
+                    Id = "EffectEvidenceSynthesis.topic",                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 19. EffectEvidenceSynthesis.author
-                this.Element_Author = new ElementDefinitionInfo
-                {
-                    Name = "Element_Author",
-                    Path= "EffectEvidenceSynthesis.author",
-                    Id = "EffectEvidenceSynthesis.author",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Author = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Author",                                                                                                // MakerGen.cs:236
+                    Path= "EffectEvidenceSynthesis.author",                                                                                 // MakerGen.cs:237
+                    Id = "EffectEvidenceSynthesis.author",                                                                                  // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                                // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 20. EffectEvidenceSynthesis.editor
-                this.Element_Editor = new ElementDefinitionInfo
-                {
-                    Name = "Element_Editor",
-                    Path= "EffectEvidenceSynthesis.editor",
-                    Id = "EffectEvidenceSynthesis.editor",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Editor = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Editor",                                                                                                // MakerGen.cs:236
+                    Path= "EffectEvidenceSynthesis.editor",                                                                                 // MakerGen.cs:237
+                    Id = "EffectEvidenceSynthesis.editor",                                                                                  // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                                // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 21. EffectEvidenceSynthesis.reviewer
-                this.Element_Reviewer = new ElementDefinitionInfo
-                {
-                    Name = "Element_Reviewer",
-                    Path= "EffectEvidenceSynthesis.reviewer",
-                    Id = "EffectEvidenceSynthesis.reviewer",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Reviewer = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Reviewer",                                                                                              // MakerGen.cs:236
+                    Path= "EffectEvidenceSynthesis.reviewer",                                                                               // MakerGen.cs:237
+                    Id = "EffectEvidenceSynthesis.reviewer",                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                                // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 22. EffectEvidenceSynthesis.endorser
-                this.Element_Endorser = new ElementDefinitionInfo
-                {
-                    Name = "Element_Endorser",
-                    Path= "EffectEvidenceSynthesis.endorser",
-                    Id = "EffectEvidenceSynthesis.endorser",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Endorser = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Endorser",                                                                                              // MakerGen.cs:236
+                    Path= "EffectEvidenceSynthesis.endorser",                                                                               // MakerGen.cs:237
+                    Id = "EffectEvidenceSynthesis.endorser",                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                                // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 23. EffectEvidenceSynthesis.relatedArtifact
-                this.Element_RelatedArtifact = new ElementDefinitionInfo
-                {
-                    Name = "Element_RelatedArtifact",
-                    Path= "EffectEvidenceSynthesis.relatedArtifact",
-                    Id = "EffectEvidenceSynthesis.relatedArtifact",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_RelatedArtifact
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_RelatedArtifact = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_RelatedArtifact",                                                                                       // MakerGen.cs:236
+                    Path= "EffectEvidenceSynthesis.relatedArtifact",                                                                        // MakerGen.cs:237
+                    Id = "EffectEvidenceSynthesis.relatedArtifact",                                                                         // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_RelatedArtifact                                                              // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 24. EffectEvidenceSynthesis.synthesisType
-                this.Element_SynthesisType = new ElementDefinitionInfo
-                {
-                    Name = "Element_SynthesisType",
-                    Path= "EffectEvidenceSynthesis.synthesisType",
-                    Id = "EffectEvidenceSynthesis.synthesisType",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_SynthesisType = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_SynthesisType",                                                                                         // MakerGen.cs:236
+                    Path= "EffectEvidenceSynthesis.synthesisType",                                                                          // MakerGen.cs:237
+                    Id = "EffectEvidenceSynthesis.synthesisType",                                                                           // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 25. EffectEvidenceSynthesis.studyType
-                this.Element_StudyType = new ElementDefinitionInfo
-                {
-                    Name = "Element_StudyType",
-                    Path= "EffectEvidenceSynthesis.studyType",
-                    Id = "EffectEvidenceSynthesis.studyType",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_StudyType = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_StudyType",                                                                                             // MakerGen.cs:236
+                    Path= "EffectEvidenceSynthesis.studyType",                                                                              // MakerGen.cs:237
+                    Id = "EffectEvidenceSynthesis.studyType",                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 26. EffectEvidenceSynthesis.population
-                this.Element_Population = new ElementDefinitionInfo
-                {
-                    Name = "Element_Population",
-                    Path= "EffectEvidenceSynthesis.population",
-                    Id = "EffectEvidenceSynthesis.population",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/EvidenceVariable"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Population = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Population",                                                                                            // MakerGen.cs:236
+                    Path= "EffectEvidenceSynthesis.population",                                                                             // MakerGen.cs:237
+                    Id = "EffectEvidenceSynthesis.population",                                                                              // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/EvidenceVariable"                                                  // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 27. EffectEvidenceSynthesis.exposure
-                this.Element_Exposure = new ElementDefinitionInfo
-                {
-                    Name = "Element_Exposure",
-                    Path= "EffectEvidenceSynthesis.exposure",
-                    Id = "EffectEvidenceSynthesis.exposure",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/EvidenceVariable"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Exposure = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Exposure",                                                                                              // MakerGen.cs:236
+                    Path= "EffectEvidenceSynthesis.exposure",                                                                               // MakerGen.cs:237
+                    Id = "EffectEvidenceSynthesis.exposure",                                                                                // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/EvidenceVariable"                                                  // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 28. EffectEvidenceSynthesis.exposureAlternative
-                this.Element_ExposureAlternative = new ElementDefinitionInfo
-                {
-                    Name = "Element_ExposureAlternative",
-                    Path= "EffectEvidenceSynthesis.exposureAlternative",
-                    Id = "EffectEvidenceSynthesis.exposureAlternative",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/EvidenceVariable"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ExposureAlternative = new ElementDefinitionInfo                                                                // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ExposureAlternative",                                                                                   // MakerGen.cs:236
+                    Path= "EffectEvidenceSynthesis.exposureAlternative",                                                                    // MakerGen.cs:237
+                    Id = "EffectEvidenceSynthesis.exposureAlternative",                                                                     // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/EvidenceVariable"                                                  // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 29. EffectEvidenceSynthesis.outcome
-                this.Element_Outcome = new ElementDefinitionInfo
-                {
-                    Name = "Element_Outcome",
-                    Path= "EffectEvidenceSynthesis.outcome",
-                    Id = "EffectEvidenceSynthesis.outcome",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/EvidenceVariable"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Outcome = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Outcome",                                                                                               // MakerGen.cs:236
+                    Path= "EffectEvidenceSynthesis.outcome",                                                                                // MakerGen.cs:237
+                    Id = "EffectEvidenceSynthesis.outcome",                                                                                 // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/EvidenceVariable"                                                  // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 30. EffectEvidenceSynthesis.sampleSize
-                this.Element_SampleSize = new ElementDefinitionInfo
-                {
-                    Name = "Element_SampleSize",
-                    Path= "EffectEvidenceSynthesis.sampleSize",
-                    Id = "EffectEvidenceSynthesis.sampleSize",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new Type_SampleSize
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_SampleSize = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_SampleSize",                                                                                            // MakerGen.cs:236
+                    Path= "EffectEvidenceSynthesis.sampleSize",                                                                             // MakerGen.cs:237
+                    Id = "EffectEvidenceSynthesis.sampleSize",                                                                              // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_SampleSize                                                                                                 // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 34. EffectEvidenceSynthesis.resultsByExposure
-                this.Element_ResultsByExposure = new ElementDefinitionInfo
-                {
-                    Name = "Element_ResultsByExposure",
-                    Path= "EffectEvidenceSynthesis.resultsByExposure",
-                    Id = "EffectEvidenceSynthesis.resultsByExposure",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_ResultsByExposure
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ResultsByExposure = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ResultsByExposure",                                                                                     // MakerGen.cs:236
+                    Path= "EffectEvidenceSynthesis.resultsByExposure",                                                                      // MakerGen.cs:237
+                    Id = "EffectEvidenceSynthesis.resultsByExposure",                                                                       // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_ResultsByExposure                                                                                          // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 39. EffectEvidenceSynthesis.effectEstimate
-                this.Element_EffectEstimate = new ElementDefinitionInfo
-                {
-                    Name = "Element_EffectEstimate",
-                    Path= "EffectEvidenceSynthesis.effectEstimate",
-                    Id = "EffectEvidenceSynthesis.effectEstimate",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_EffectEstimate
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_EffectEstimate = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_EffectEstimate",                                                                                        // MakerGen.cs:236
+                    Path= "EffectEvidenceSynthesis.effectEstimate",                                                                         // MakerGen.cs:237
+                    Id = "EffectEvidenceSynthesis.effectEstimate",                                                                          // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_EffectEstimate                                                                                             // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 50. EffectEvidenceSynthesis.certainty
-                this.Element_Certainty = new ElementDefinitionInfo
-                {
-                    Name = "Element_Certainty",
-                    Path= "EffectEvidenceSynthesis.certainty",
-                    Id = "EffectEvidenceSynthesis.certainty",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Certainty
-                        {
-                        }
-                    }
-                };
-            }
-            this.Name = "EffectEvidenceSynthesis";
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/EffectEvidenceSynthesis";
-        }
-    }
-}
+                this.Element_Certainty = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Certainty",                                                                                             // MakerGen.cs:236
+                    Path= "EffectEvidenceSynthesis.certainty",                                                                              // MakerGen.cs:237
+                    Id = "EffectEvidenceSynthesis.certainty",                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Certainty                                                                                                  // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            this.Name = "EffectEvidenceSynthesis";                                                                                          // MakerGen.cs:468
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/EffectEvidenceSynthesis";                                                   // MakerGen.cs:469
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:449

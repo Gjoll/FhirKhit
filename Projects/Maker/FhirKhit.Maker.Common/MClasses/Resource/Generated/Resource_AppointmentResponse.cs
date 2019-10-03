@@ -1,13 +1,13 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Resource
-{
-    #region Json
-    #if NEVER
+using System;                                                                                                                               // MakerGen.cs:432
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:433
+using System.IO;                                                                                                                            // MakerGen.cs:434
+using System.Linq;                                                                                                                          // MakerGen.cs:435
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:436
+                                                                                                                                            // MakerGen.cs:437
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:438
+{                                                                                                                                           // MakerGen.cs:439
+    #region Json                                                                                                                            // MakerGen.cs:440
+    #if NEVER                                                                                                                               // MakerGen.cs:441
     {
       "resourceType": "StructureDefinition",
       "id": "AppointmentResponse",
@@ -186,202 +186,202 @@ namespace FhirKhit.Maker.Common.Resource
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:444
     /// <summary>
     /// Fhir resource 'AppointmentResponse'
     /// </summary>
     // 0. AppointmentResponse
-    public partial class Resource_AppointmentResponse : FhirKhit.Maker.Common.Resource.Resource_DomainResource
-    {
+    public partial class Resource_AppointmentResponse : FhirKhit.Maker.Common.Resource.Resource_DomainResource                              // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 1. AppointmentResponse.identifier
-        public ElementDefinitionInfo Element_Identifier;
+        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:217
         // 2. AppointmentResponse.appointment
-        public ElementDefinitionInfo Element_Appointment;
+        public ElementDefinitionInfo Element_Appointment;                                                                                   // MakerGen.cs:217
         // 3. AppointmentResponse.start
-        public ElementDefinitionInfo Element_Start;
+        public ElementDefinitionInfo Element_Start;                                                                                         // MakerGen.cs:217
         // 4. AppointmentResponse.end
-        public ElementDefinitionInfo Element_End;
+        public ElementDefinitionInfo Element_End;                                                                                           // MakerGen.cs:217
         // 5. AppointmentResponse.participantType
-        public ElementDefinitionInfo Element_ParticipantType;
+        public ElementDefinitionInfo Element_ParticipantType;                                                                               // MakerGen.cs:217
         // 6. AppointmentResponse.actor
-        public ElementDefinitionInfo Element_Actor;
+        public ElementDefinitionInfo Element_Actor;                                                                                         // MakerGen.cs:217
         // 7. AppointmentResponse.participantStatus
-        public ElementDefinitionInfo Element_ParticipantStatus;
+        public ElementDefinitionInfo Element_ParticipantStatus;                                                                             // MakerGen.cs:217
         // 8. AppointmentResponse.comment
-        public ElementDefinitionInfo Element_Comment;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "AppointmentResponse",
-                ElementId = "AppointmentResponse"
-            });
-            Element_Identifier.Write(sDef);
-            Element_Appointment.Write(sDef);
-            Element_Start.Write(sDef);
-            Element_End.Write(sDef);
-            Element_ParticipantType.Write(sDef);
-            Element_Actor.Write(sDef);
-            Element_ParticipantStatus.Write(sDef);
-            Element_Comment.Write(sDef);
-        }
-        
-        public Resource_AppointmentResponse()
-        {
-            {
+        public ElementDefinitionInfo Element_Comment;                                                                                       // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "AppointmentResponse",                                                                                               // MakerGen.cs:393
+                ElementId = "AppointmentResponse"                                                                                           // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Appointment.Write(sDef);                                                                                                // MakerGen.cs:221
+            Element_Start.Write(sDef);                                                                                                      // MakerGen.cs:221
+            Element_End.Write(sDef);                                                                                                        // MakerGen.cs:221
+            Element_ParticipantType.Write(sDef);                                                                                            // MakerGen.cs:221
+            Element_Actor.Write(sDef);                                                                                                      // MakerGen.cs:221
+            Element_ParticipantStatus.Write(sDef);                                                                                          // MakerGen.cs:221
+            Element_Comment.Write(sDef);                                                                                                    // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Resource_AppointmentResponse()                                                                                               // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. AppointmentResponse.identifier
-                this.Element_Identifier = new ElementDefinitionInfo
-                {
-                    Name = "Element_Identifier",
-                    Path= "AppointmentResponse.identifier",
-                    Id = "AppointmentResponse.identifier",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:236
+                    Path= "AppointmentResponse.identifier",                                                                                 // MakerGen.cs:237
+                    Id = "AppointmentResponse.identifier",                                                                                  // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. AppointmentResponse.appointment
-                this.Element_Appointment = new ElementDefinitionInfo
-                {
-                    Name = "Element_Appointment",
-                    Path= "AppointmentResponse.appointment",
-                    Id = "AppointmentResponse.appointment",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Appointment"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Appointment = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Appointment",                                                                                           // MakerGen.cs:236
+                    Path= "AppointmentResponse.appointment",                                                                                // MakerGen.cs:237
+                    Id = "AppointmentResponse.appointment",                                                                                 // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Appointment"                                                       // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 3. AppointmentResponse.start
-                this.Element_Start = new ElementDefinitionInfo
-                {
-                    Name = "Element_Start",
-                    Path= "AppointmentResponse.start",
-                    Id = "AppointmentResponse.start",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Instant
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Start = new ElementDefinitionInfo                                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Start",                                                                                                 // MakerGen.cs:236
+                    Path= "AppointmentResponse.start",                                                                                      // MakerGen.cs:237
+                    Id = "AppointmentResponse.start",                                                                                       // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Instant                                                               // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 4. AppointmentResponse.end
-                this.Element_End = new ElementDefinitionInfo
-                {
-                    Name = "Element_End",
-                    Path= "AppointmentResponse.end",
-                    Id = "AppointmentResponse.end",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Instant
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_End = new ElementDefinitionInfo                                                                                // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_End",                                                                                                   // MakerGen.cs:236
+                    Path= "AppointmentResponse.end",                                                                                        // MakerGen.cs:237
+                    Id = "AppointmentResponse.end",                                                                                         // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Instant                                                               // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 5. AppointmentResponse.participantType
-                this.Element_ParticipantType = new ElementDefinitionInfo
-                {
-                    Name = "Element_ParticipantType",
-                    Path= "AppointmentResponse.participantType",
-                    Id = "AppointmentResponse.participantType",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ParticipantType = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ParticipantType",                                                                                       // MakerGen.cs:236
+                    Path= "AppointmentResponse.participantType",                                                                            // MakerGen.cs:237
+                    Id = "AppointmentResponse.participantType",                                                                             // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 6. AppointmentResponse.actor
-                this.Element_Actor = new ElementDefinitionInfo
-                {
-                    Name = "Element_Actor",
-                    Path= "AppointmentResponse.actor",
-                    Id = "AppointmentResponse.actor",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Patient",
-                                "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                                "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
-                                "http://hl7.org/fhir/StructureDefinition/Device",
-                                "http://hl7.org/fhir/StructureDefinition/HealthcareService",
-                                "http://hl7.org/fhir/StructureDefinition/Location"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Actor = new ElementDefinitionInfo                                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Actor",                                                                                                 // MakerGen.cs:236
+                    Path= "AppointmentResponse.actor",                                                                                      // MakerGen.cs:237
+                    Id = "AppointmentResponse.actor",                                                                                       // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Patient",                                                          // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                                 // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/RelatedPerson",                                                    // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Device",                                                           // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/HealthcareService",                                                // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Location"                                                          // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 7. AppointmentResponse.participantStatus
-                this.Element_ParticipantStatus = new ElementDefinitionInfo
-                {
-                    Name = "Element_ParticipantStatus",
-                    Path= "AppointmentResponse.participantStatus",
-                    Id = "AppointmentResponse.participantStatus",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ParticipantStatus = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ParticipantStatus",                                                                                     // MakerGen.cs:236
+                    Path= "AppointmentResponse.participantStatus",                                                                          // MakerGen.cs:237
+                    Id = "AppointmentResponse.participantStatus",                                                                           // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 8. AppointmentResponse.comment
-                this.Element_Comment = new ElementDefinitionInfo
-                {
-                    Name = "Element_Comment",
-                    Path= "AppointmentResponse.comment",
-                    Id = "AppointmentResponse.comment",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            this.Name = "AppointmentResponse";
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/AppointmentResponse";
-        }
-    }
-}
+                this.Element_Comment = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Comment",                                                                                               // MakerGen.cs:236
+                    Path= "AppointmentResponse.comment",                                                                                    // MakerGen.cs:237
+                    Id = "AppointmentResponse.comment",                                                                                     // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            this.Name = "AppointmentResponse";                                                                                              // MakerGen.cs:468
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/AppointmentResponse";                                                       // MakerGen.cs:469
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:449

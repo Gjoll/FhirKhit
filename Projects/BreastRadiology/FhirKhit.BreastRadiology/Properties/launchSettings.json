@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "FhirKhit.CIMPL.DirectFhir": {
+      "commandName": "Project",
+      "commandLineArgs": "-d"
+    }
+  }
+}

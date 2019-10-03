@@ -1,13 +1,13 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Resource
-{
-    #region Json
-    #if NEVER
+using System;                                                                                                                               // MakerGen.cs:432
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:433
+using System.IO;                                                                                                                            // MakerGen.cs:434
+using System.Linq;                                                                                                                          // MakerGen.cs:435
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:436
+                                                                                                                                            // MakerGen.cs:437
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:438
+{                                                                                                                                           // MakerGen.cs:439
+    #region Json                                                                                                                            // MakerGen.cs:440
+    #if NEVER                                                                                                                               // MakerGen.cs:441
     {
       "resourceType": "StructureDefinition",
       "id": "CapabilityStatement",
@@ -1513,1940 +1513,1940 @@ namespace FhirKhit.Maker.Common.Resource
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:444
     /// <summary>
     /// Fhir resource 'CapabilityStatement'
     /// </summary>
     // 0. CapabilityStatement
-    public partial class Resource_CapabilityStatement : FhirKhit.Maker.Common.Resource.Resource_DomainResource
-    {
+    public partial class Resource_CapabilityStatement : FhirKhit.Maker.Common.Resource.Resource_DomainResource                              // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 18. CapabilityStatement.software
-        public partial class Type_Software : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Software : FhirKhit.Maker.Common.Complex.ComplexBase                                                      // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 19. CapabilityStatement.software.name
-            public ElementDefinitionInfo Element_Name;
+            public ElementDefinitionInfo Element_Name;                                                                                      // MakerGen.cs:217
             // 20. CapabilityStatement.software.version
-            public ElementDefinitionInfo Element_Version;
+            public ElementDefinitionInfo Element_Version;                                                                                   // MakerGen.cs:217
             // 21. CapabilityStatement.software.releaseDate
-            public ElementDefinitionInfo Element_ReleaseDate;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "CapabilityStatement.software",
-                    ElementId = "CapabilityStatement.software"
-                });
-                Element_Name.Write(sDef);
-                Element_Version.Write(sDef);
-                Element_ReleaseDate.Write(sDef);
-            }
-            
-            public Type_Software()
-            {
-                {
+            public ElementDefinitionInfo Element_ReleaseDate;                                                                               // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "CapabilityStatement.software",                                                                                  // MakerGen.cs:393
+                    ElementId = "CapabilityStatement.software"                                                                              // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Name.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Version.Write(sDef);                                                                                                // MakerGen.cs:221
+                Element_ReleaseDate.Write(sDef);                                                                                            // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Software()                                                                                                          // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 19. CapabilityStatement.software.name
-                    this.Element_Name = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Name",
-                        Path= "CapabilityStatement.software.name",
-                        Id = "CapabilityStatement.software.name",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Name = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Name",                                                                                              // MakerGen.cs:236
+                        Path= "CapabilityStatement.software.name",                                                                          // MakerGen.cs:237
+                        Id = "CapabilityStatement.software.name",                                                                           // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 20. CapabilityStatement.software.version
-                    this.Element_Version = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Version",
-                        Path= "CapabilityStatement.software.version",
-                        Id = "CapabilityStatement.software.version",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Version = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Version",                                                                                           // MakerGen.cs:236
+                        Path= "CapabilityStatement.software.version",                                                                       // MakerGen.cs:237
+                        Id = "CapabilityStatement.software.version",                                                                        // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 21. CapabilityStatement.software.releaseDate
-                    this.Element_ReleaseDate = new ElementDefinitionInfo
-                    {
-                        Name = "Element_ReleaseDate",
-                        Path= "CapabilityStatement.software.releaseDate",
-                        Id = "CapabilityStatement.software.releaseDate",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_ReleaseDate = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_ReleaseDate",                                                                                       // MakerGen.cs:236
+                        Path= "CapabilityStatement.software.releaseDate",                                                                   // MakerGen.cs:237
+                        Id = "CapabilityStatement.software.releaseDate",                                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                          // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 22. CapabilityStatement.implementation
-        public partial class Type_Implementation : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Implementation : FhirKhit.Maker.Common.Complex.ComplexBase                                                // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 23. CapabilityStatement.implementation.description
-            public ElementDefinitionInfo Element_Description;
+            public ElementDefinitionInfo Element_Description;                                                                               // MakerGen.cs:217
             // 24. CapabilityStatement.implementation.url
-            public ElementDefinitionInfo Element_Url;
+            public ElementDefinitionInfo Element_Url;                                                                                       // MakerGen.cs:217
             // 25. CapabilityStatement.implementation.custodian
-            public ElementDefinitionInfo Element_Custodian;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "CapabilityStatement.implementation",
-                    ElementId = "CapabilityStatement.implementation"
-                });
-                Element_Description.Write(sDef);
-                Element_Url.Write(sDef);
-                Element_Custodian.Write(sDef);
-            }
-            
-            public Type_Implementation()
-            {
-                {
+            public ElementDefinitionInfo Element_Custodian;                                                                                 // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "CapabilityStatement.implementation",                                                                            // MakerGen.cs:393
+                    ElementId = "CapabilityStatement.implementation"                                                                        // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Description.Write(sDef);                                                                                            // MakerGen.cs:221
+                Element_Url.Write(sDef);                                                                                                    // MakerGen.cs:221
+                Element_Custodian.Write(sDef);                                                                                              // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Implementation()                                                                                                    // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 23. CapabilityStatement.implementation.description
-                    this.Element_Description = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Description",
-                        Path= "CapabilityStatement.implementation.description",
-                        Id = "CapabilityStatement.implementation.description",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Description",                                                                                       // MakerGen.cs:236
+                        Path= "CapabilityStatement.implementation.description",                                                             // MakerGen.cs:237
+                        Id = "CapabilityStatement.implementation.description",                                                              // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 24. CapabilityStatement.implementation.url
-                    this.Element_Url = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Url",
-                        Path= "CapabilityStatement.implementation.url",
-                        Id = "CapabilityStatement.implementation.url",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Url
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Url = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Url",                                                                                               // MakerGen.cs:236
+                        Path= "CapabilityStatement.implementation.url",                                                                     // MakerGen.cs:237
+                        Id = "CapabilityStatement.implementation.url",                                                                      // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Url                                                               // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 25. CapabilityStatement.implementation.custodian
-                    this.Element_Custodian = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Custodian",
-                        Path= "CapabilityStatement.implementation.custodian",
-                        Id = "CapabilityStatement.implementation.custodian",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Organization"
-                                }
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Custodian = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Custodian",                                                                                         // MakerGen.cs:236
+                        Path= "CapabilityStatement.implementation.custodian",                                                               // MakerGen.cs:237
+                        Id = "CapabilityStatement.implementation.custodian",                                                                // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Organization"                                                  // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 30. CapabilityStatement.rest
-        public partial class Type_Rest : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Rest : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 33. CapabilityStatement.rest.security
-            public partial class Type_Security : FhirKhit.Maker.Common.Complex.ComplexBase
-            {
+            public partial class Type_Security : FhirKhit.Maker.Common.Complex.ComplexBase                                                  // MakerGen.cs:381
+            {                                                                                                                               // MakerGen.cs:382
                 // 34. CapabilityStatement.rest.security.cors
-                public ElementDefinitionInfo Element_Cors;
+                public ElementDefinitionInfo Element_Cors;                                                                                  // MakerGen.cs:217
                 // 35. CapabilityStatement.rest.security.service
-                public ElementDefinitionInfo Element_Service;
+                public ElementDefinitionInfo Element_Service;                                                                               // MakerGen.cs:217
                 // 36. CapabilityStatement.rest.security.description
-                public ElementDefinitionInfo Element_Description;
-                
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                {
-                    base.Write(sDef);
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                    {
-                        Path = "CapabilityStatement.rest.security",
-                        ElementId = "CapabilityStatement.rest.security"
-                    });
-                    Element_Cors.Write(sDef);
-                    Element_Service.Write(sDef);
-                    Element_Description.Write(sDef);
-                }
-                
-                public Type_Security()
-                {
-                    {
+                public ElementDefinitionInfo Element_Description;                                                                           // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:389
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:390
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:391
+                    {                                                                                                                       // MakerGen.cs:392
+                        Path = "CapabilityStatement.rest.security",                                                                         // MakerGen.cs:393
+                        ElementId = "CapabilityStatement.rest.security"                                                                     // MakerGen.cs:394
+                    });                                                                                                                     // MakerGen.cs:395
+                    Element_Cors.Write(sDef);                                                                                               // MakerGen.cs:221
+                    Element_Service.Write(sDef);                                                                                            // MakerGen.cs:221
+                    Element_Description.Write(sDef);                                                                                        // MakerGen.cs:221
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                public Type_Security()                                                                                                      // MakerGen.cs:400
+                {                                                                                                                           // MakerGen.cs:401
+                    {                                                                                                                       // MakerGen.cs:232
                         // 34. CapabilityStatement.rest.security.cors
-                        this.Element_Cors = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Cors",
-                            Path= "CapabilityStatement.rest.security.cors",
-                            Id = "CapabilityStatement.rest.security.cors",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Cors = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Cors",                                                                                          // MakerGen.cs:236
+                            Path= "CapabilityStatement.rest.security.cors",                                                                 // MakerGen.cs:237
+                            Id = "CapabilityStatement.rest.security.cors",                                                                  // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                       // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 35. CapabilityStatement.rest.security.service
-                        this.Element_Service = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Service",
-                            Path= "CapabilityStatement.rest.security.service",
-                            Id = "CapabilityStatement.rest.security.service",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Service = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Service",                                                                                       // MakerGen.cs:236
+                            Path= "CapabilityStatement.rest.security.service",                                                              // MakerGen.cs:237
+                            Id = "CapabilityStatement.rest.security.service",                                                               // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 36. CapabilityStatement.rest.security.description
-                        this.Element_Description = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Description",
-                            Path= "CapabilityStatement.rest.security.description",
-                            Id = "CapabilityStatement.rest.security.description",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
-                                {
-                                }
-                            }
-                        };
-                    }
-                }
-            }
+                        this.Element_Description = new ElementDefinitionInfo                                                                // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Description",                                                                                   // MakerGen.cs:236
+                            Path= "CapabilityStatement.rest.security.description",                                                          // MakerGen.cs:237
+                            Id = "CapabilityStatement.rest.security.description",                                                           // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                      // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                }                                                                                                                           // MakerGen.cs:403
+            }                                                                                                                               // MakerGen.cs:405
             // 37. CapabilityStatement.rest.resource
-            public partial class Type_Resource : FhirKhit.Maker.Common.Complex.ComplexBase
-            {
+            public partial class Type_Resource : FhirKhit.Maker.Common.Complex.ComplexBase                                                  // MakerGen.cs:381
+            {                                                                                                                               // MakerGen.cs:382
                 // 42. CapabilityStatement.rest.resource.interaction
-                public partial class Type_Interaction : FhirKhit.Maker.Common.Complex.ComplexBase
-                {
+                public partial class Type_Interaction : FhirKhit.Maker.Common.Complex.ComplexBase                                           // MakerGen.cs:381
+                {                                                                                                                           // MakerGen.cs:382
                     // 43. CapabilityStatement.rest.resource.interaction.code
-                    public ElementDefinitionInfo Element_Code;
+                    public ElementDefinitionInfo Element_Code;                                                                              // MakerGen.cs:217
                     // 44. CapabilityStatement.rest.resource.interaction.documentation
-                    public ElementDefinitionInfo Element_Documentation;
-                    
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                    {
-                        base.Write(sDef);
-                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                        {
-                            Path = "CapabilityStatement.rest.resource.interaction",
-                            ElementId = "CapabilityStatement.rest.resource.interaction"
-                        });
-                        Element_Code.Write(sDef);
-                        Element_Documentation.Write(sDef);
-                    }
-                    
-                    public Type_Interaction()
-                    {
-                        {
+                    public ElementDefinitionInfo Element_Documentation;                                                                     // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:388
+                    {                                                                                                                       // MakerGen.cs:389
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:390
+                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                  // MakerGen.cs:391
+                        {                                                                                                                   // MakerGen.cs:392
+                            Path = "CapabilityStatement.rest.resource.interaction",                                                         // MakerGen.cs:393
+                            ElementId = "CapabilityStatement.rest.resource.interaction"                                                     // MakerGen.cs:394
+                        });                                                                                                                 // MakerGen.cs:395
+                        Element_Code.Write(sDef);                                                                                           // MakerGen.cs:221
+                        Element_Documentation.Write(sDef);                                                                                  // MakerGen.cs:221
+                    }                                                                                                                       // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                    public Type_Interaction()                                                                                               // MakerGen.cs:400
+                    {                                                                                                                       // MakerGen.cs:401
+                        {                                                                                                                   // MakerGen.cs:232
                             // 43. CapabilityStatement.rest.resource.interaction.code
-                            this.Element_Code = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Code",
-                                Path= "CapabilityStatement.rest.resource.interaction.code",
-                                Id = "CapabilityStatement.rest.resource.interaction.code",
-                                Min = 1,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_Code = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Code",                                                                                      // MakerGen.cs:236
+                                Path= "CapabilityStatement.rest.resource.interaction.code",                                                 // MakerGen.cs:237
+                                Id = "CapabilityStatement.rest.resource.interaction.code",                                                  // MakerGen.cs:238
+                                Min = 1,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                      // MakerGen.cs:301
+                                    {                                                                                                       // MakerGen.cs:302
+                                    }                                                                                                       // MakerGen.cs:305
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 44. CapabilityStatement.rest.resource.interaction.documentation
-                            this.Element_Documentation = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Documentation",
-                                Path= "CapabilityStatement.rest.resource.interaction.documentation",
-                                Id = "CapabilityStatement.rest.resource.interaction.documentation",
-                                Min = 0,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                    }
-                }
+                            this.Element_Documentation = new ElementDefinitionInfo                                                          // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Documentation",                                                                             // MakerGen.cs:236
+                                Path= "CapabilityStatement.rest.resource.interaction.documentation",                                        // MakerGen.cs:237
+                                Id = "CapabilityStatement.rest.resource.interaction.documentation",                                         // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                  // MakerGen.cs:301
+                                    {                                                                                                       // MakerGen.cs:302
+                                    }                                                                                                       // MakerGen.cs:305
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                    }                                                                                                                       // MakerGen.cs:403
+                }                                                                                                                           // MakerGen.cs:405
                 // 55. CapabilityStatement.rest.resource.searchParam
-                public partial class Type_SearchParam : FhirKhit.Maker.Common.Complex.ComplexBase
-                {
+                public partial class Type_SearchParam : FhirKhit.Maker.Common.Complex.ComplexBase                                           // MakerGen.cs:381
+                {                                                                                                                           // MakerGen.cs:382
                     // 56. CapabilityStatement.rest.resource.searchParam.name
-                    public ElementDefinitionInfo Element_Name;
+                    public ElementDefinitionInfo Element_Name;                                                                              // MakerGen.cs:217
                     // 57. CapabilityStatement.rest.resource.searchParam.definition
-                    public ElementDefinitionInfo Element_Definition;
+                    public ElementDefinitionInfo Element_Definition;                                                                        // MakerGen.cs:217
                     // 58. CapabilityStatement.rest.resource.searchParam.type
-                    public ElementDefinitionInfo Element_Type;
+                    public ElementDefinitionInfo Element_Type;                                                                              // MakerGen.cs:217
                     // 59. CapabilityStatement.rest.resource.searchParam.documentation
-                    public ElementDefinitionInfo Element_Documentation;
-                    
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                    {
-                        base.Write(sDef);
-                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                        {
-                            Path = "CapabilityStatement.rest.resource.searchParam",
-                            ElementId = "CapabilityStatement.rest.resource.searchParam"
-                        });
-                        Element_Name.Write(sDef);
-                        Element_Definition.Write(sDef);
-                        Element_Type.Write(sDef);
-                        Element_Documentation.Write(sDef);
-                    }
-                    
-                    public Type_SearchParam()
-                    {
-                        {
+                    public ElementDefinitionInfo Element_Documentation;                                                                     // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:388
+                    {                                                                                                                       // MakerGen.cs:389
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:390
+                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                  // MakerGen.cs:391
+                        {                                                                                                                   // MakerGen.cs:392
+                            Path = "CapabilityStatement.rest.resource.searchParam",                                                         // MakerGen.cs:393
+                            ElementId = "CapabilityStatement.rest.resource.searchParam"                                                     // MakerGen.cs:394
+                        });                                                                                                                 // MakerGen.cs:395
+                        Element_Name.Write(sDef);                                                                                           // MakerGen.cs:221
+                        Element_Definition.Write(sDef);                                                                                     // MakerGen.cs:221
+                        Element_Type.Write(sDef);                                                                                           // MakerGen.cs:221
+                        Element_Documentation.Write(sDef);                                                                                  // MakerGen.cs:221
+                    }                                                                                                                       // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                    public Type_SearchParam()                                                                                               // MakerGen.cs:400
+                    {                                                                                                                       // MakerGen.cs:401
+                        {                                                                                                                   // MakerGen.cs:232
                             // 56. CapabilityStatement.rest.resource.searchParam.name
-                            this.Element_Name = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Name",
-                                Path= "CapabilityStatement.rest.resource.searchParam.name",
-                                Id = "CapabilityStatement.rest.resource.searchParam.name",
-                                Min = 1,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_String
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_Name = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Name",                                                                                      // MakerGen.cs:236
+                                Path= "CapabilityStatement.rest.resource.searchParam.name",                                                 // MakerGen.cs:237
+                                Id = "CapabilityStatement.rest.resource.searchParam.name",                                                  // MakerGen.cs:238
+                                Min = 1,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:301
+                                    {                                                                                                       // MakerGen.cs:302
+                                    }                                                                                                       // MakerGen.cs:305
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 57. CapabilityStatement.rest.resource.searchParam.definition
-                            this.Element_Definition = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Definition",
-                                Path= "CapabilityStatement.rest.resource.searchParam.definition",
-                                Id = "CapabilityStatement.rest.resource.searchParam.definition",
-                                Min = 0,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Canonical
-                                    {
-                                        TargetProfile = new String[]
-                                        {
-                                            "http://hl7.org/fhir/StructureDefinition/SearchParameter"
-                                        }
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_Definition = new ElementDefinitionInfo                                                             // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Definition",                                                                                // MakerGen.cs:236
+                                Path= "CapabilityStatement.rest.resource.searchParam.definition",                                           // MakerGen.cs:237
+                                Id = "CapabilityStatement.rest.resource.searchParam.definition",                                            // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                 // MakerGen.cs:301
+                                    {                                                                                                       // MakerGen.cs:302
+                                        TargetProfile = new String[]                                                                        // MakerGen.cs:304
+                                        {                                                                                                   // CodeEditorExtensions.cs:28
+                                            "http://hl7.org/fhir/StructureDefinition/SearchParameter"                                       // MakerGen.cs:304
+                                        }                                                                                                   // CodeEditorExtensions.cs:34
+                                    }                                                                                                       // MakerGen.cs:305
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 58. CapabilityStatement.rest.resource.searchParam.type
-                            this.Element_Type = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Type",
-                                Path= "CapabilityStatement.rest.resource.searchParam.type",
-                                Id = "CapabilityStatement.rest.resource.searchParam.type",
-                                Min = 1,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_Type = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Type",                                                                                      // MakerGen.cs:236
+                                Path= "CapabilityStatement.rest.resource.searchParam.type",                                                 // MakerGen.cs:237
+                                Id = "CapabilityStatement.rest.resource.searchParam.type",                                                  // MakerGen.cs:238
+                                Min = 1,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                      // MakerGen.cs:301
+                                    {                                                                                                       // MakerGen.cs:302
+                                    }                                                                                                       // MakerGen.cs:305
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 59. CapabilityStatement.rest.resource.searchParam.documentation
-                            this.Element_Documentation = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Documentation",
-                                Path= "CapabilityStatement.rest.resource.searchParam.documentation",
-                                Id = "CapabilityStatement.rest.resource.searchParam.documentation",
-                                Min = 0,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                    }
-                }
+                            this.Element_Documentation = new ElementDefinitionInfo                                                          // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Documentation",                                                                             // MakerGen.cs:236
+                                Path= "CapabilityStatement.rest.resource.searchParam.documentation",                                        // MakerGen.cs:237
+                                Id = "CapabilityStatement.rest.resource.searchParam.documentation",                                         // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                  // MakerGen.cs:301
+                                    {                                                                                                       // MakerGen.cs:302
+                                    }                                                                                                       // MakerGen.cs:305
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                    }                                                                                                                       // MakerGen.cs:403
+                }                                                                                                                           // MakerGen.cs:405
                 // 60. CapabilityStatement.rest.resource.operation
-                public partial class Type_Operation : FhirKhit.Maker.Common.Complex.ComplexBase
-                {
+                public partial class Type_Operation : FhirKhit.Maker.Common.Complex.ComplexBase                                             // MakerGen.cs:381
+                {                                                                                                                           // MakerGen.cs:382
                     // 61. CapabilityStatement.rest.resource.operation.name
-                    public ElementDefinitionInfo Element_Name;
+                    public ElementDefinitionInfo Element_Name;                                                                              // MakerGen.cs:217
                     // 62. CapabilityStatement.rest.resource.operation.definition
-                    public ElementDefinitionInfo Element_Definition;
+                    public ElementDefinitionInfo Element_Definition;                                                                        // MakerGen.cs:217
                     // 63. CapabilityStatement.rest.resource.operation.documentation
-                    public ElementDefinitionInfo Element_Documentation;
-                    
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                    {
-                        base.Write(sDef);
-                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                        {
-                            Path = "CapabilityStatement.rest.resource.operation",
-                            ElementId = "CapabilityStatement.rest.resource.operation"
-                        });
-                        Element_Name.Write(sDef);
-                        Element_Definition.Write(sDef);
-                        Element_Documentation.Write(sDef);
-                    }
-                    
-                    public Type_Operation()
-                    {
-                        {
+                    public ElementDefinitionInfo Element_Documentation;                                                                     // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:388
+                    {                                                                                                                       // MakerGen.cs:389
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:390
+                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                  // MakerGen.cs:391
+                        {                                                                                                                   // MakerGen.cs:392
+                            Path = "CapabilityStatement.rest.resource.operation",                                                           // MakerGen.cs:393
+                            ElementId = "CapabilityStatement.rest.resource.operation"                                                       // MakerGen.cs:394
+                        });                                                                                                                 // MakerGen.cs:395
+                        Element_Name.Write(sDef);                                                                                           // MakerGen.cs:221
+                        Element_Definition.Write(sDef);                                                                                     // MakerGen.cs:221
+                        Element_Documentation.Write(sDef);                                                                                  // MakerGen.cs:221
+                    }                                                                                                                       // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                    public Type_Operation()                                                                                                 // MakerGen.cs:400
+                    {                                                                                                                       // MakerGen.cs:401
+                        {                                                                                                                   // MakerGen.cs:232
                             // 61. CapabilityStatement.rest.resource.operation.name
-                            this.Element_Name = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Name",
-                                Path= "CapabilityStatement.rest.resource.operation.name",
-                                Id = "CapabilityStatement.rest.resource.operation.name",
-                                Min = 1,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_String
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_Name = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Name",                                                                                      // MakerGen.cs:236
+                                Path= "CapabilityStatement.rest.resource.operation.name",                                                   // MakerGen.cs:237
+                                Id = "CapabilityStatement.rest.resource.operation.name",                                                    // MakerGen.cs:238
+                                Min = 1,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:301
+                                    {                                                                                                       // MakerGen.cs:302
+                                    }                                                                                                       // MakerGen.cs:305
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 62. CapabilityStatement.rest.resource.operation.definition
-                            this.Element_Definition = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Definition",
-                                Path= "CapabilityStatement.rest.resource.operation.definition",
-                                Id = "CapabilityStatement.rest.resource.operation.definition",
-                                Min = 1,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Canonical
-                                    {
-                                        TargetProfile = new String[]
-                                        {
-                                            "http://hl7.org/fhir/StructureDefinition/OperationDefinition"
-                                        }
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_Definition = new ElementDefinitionInfo                                                             // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Definition",                                                                                // MakerGen.cs:236
+                                Path= "CapabilityStatement.rest.resource.operation.definition",                                             // MakerGen.cs:237
+                                Id = "CapabilityStatement.rest.resource.operation.definition",                                              // MakerGen.cs:238
+                                Min = 1,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                 // MakerGen.cs:301
+                                    {                                                                                                       // MakerGen.cs:302
+                                        TargetProfile = new String[]                                                                        // MakerGen.cs:304
+                                        {                                                                                                   // CodeEditorExtensions.cs:28
+                                            "http://hl7.org/fhir/StructureDefinition/OperationDefinition"                                   // MakerGen.cs:304
+                                        }                                                                                                   // CodeEditorExtensions.cs:34
+                                    }                                                                                                       // MakerGen.cs:305
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 63. CapabilityStatement.rest.resource.operation.documentation
-                            this.Element_Documentation = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Documentation",
-                                Path= "CapabilityStatement.rest.resource.operation.documentation",
-                                Id = "CapabilityStatement.rest.resource.operation.documentation",
-                                Min = 0,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                    }
-                }
+                            this.Element_Documentation = new ElementDefinitionInfo                                                          // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Documentation",                                                                             // MakerGen.cs:236
+                                Path= "CapabilityStatement.rest.resource.operation.documentation",                                          // MakerGen.cs:237
+                                Id = "CapabilityStatement.rest.resource.operation.documentation",                                           // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                  // MakerGen.cs:301
+                                    {                                                                                                       // MakerGen.cs:302
+                                    }                                                                                                       // MakerGen.cs:305
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                    }                                                                                                                       // MakerGen.cs:403
+                }                                                                                                                           // MakerGen.cs:405
                 // 38. CapabilityStatement.rest.resource.type
-                public ElementDefinitionInfo Element_Type;
+                public ElementDefinitionInfo Element_Type;                                                                                  // MakerGen.cs:217
                 // 39. CapabilityStatement.rest.resource.profile
-                public ElementDefinitionInfo Element_Profile;
+                public ElementDefinitionInfo Element_Profile;                                                                               // MakerGen.cs:217
                 // 40. CapabilityStatement.rest.resource.supportedProfile
-                public ElementDefinitionInfo Element_SupportedProfile;
+                public ElementDefinitionInfo Element_SupportedProfile;                                                                      // MakerGen.cs:217
                 // 41. CapabilityStatement.rest.resource.documentation
-                public ElementDefinitionInfo Element_Documentation;
+                public ElementDefinitionInfo Element_Documentation;                                                                         // MakerGen.cs:217
                 // 42. CapabilityStatement.rest.resource.interaction
-                public ElementDefinitionInfo Element_Interaction;
+                public ElementDefinitionInfo Element_Interaction;                                                                           // MakerGen.cs:217
                 // 45. CapabilityStatement.rest.resource.versioning
-                public ElementDefinitionInfo Element_Versioning;
+                public ElementDefinitionInfo Element_Versioning;                                                                            // MakerGen.cs:217
                 // 46. CapabilityStatement.rest.resource.readHistory
-                public ElementDefinitionInfo Element_ReadHistory;
+                public ElementDefinitionInfo Element_ReadHistory;                                                                           // MakerGen.cs:217
                 // 47. CapabilityStatement.rest.resource.updateCreate
-                public ElementDefinitionInfo Element_UpdateCreate;
+                public ElementDefinitionInfo Element_UpdateCreate;                                                                          // MakerGen.cs:217
                 // 48. CapabilityStatement.rest.resource.conditionalCreate
-                public ElementDefinitionInfo Element_ConditionalCreate;
+                public ElementDefinitionInfo Element_ConditionalCreate;                                                                     // MakerGen.cs:217
                 // 49. CapabilityStatement.rest.resource.conditionalRead
-                public ElementDefinitionInfo Element_ConditionalRead;
+                public ElementDefinitionInfo Element_ConditionalRead;                                                                       // MakerGen.cs:217
                 // 50. CapabilityStatement.rest.resource.conditionalUpdate
-                public ElementDefinitionInfo Element_ConditionalUpdate;
+                public ElementDefinitionInfo Element_ConditionalUpdate;                                                                     // MakerGen.cs:217
                 // 51. CapabilityStatement.rest.resource.conditionalDelete
-                public ElementDefinitionInfo Element_ConditionalDelete;
+                public ElementDefinitionInfo Element_ConditionalDelete;                                                                     // MakerGen.cs:217
                 // 52. CapabilityStatement.rest.resource.referencePolicy
-                public ElementDefinitionInfo Element_ReferencePolicy;
+                public ElementDefinitionInfo Element_ReferencePolicy;                                                                       // MakerGen.cs:217
                 // 53. CapabilityStatement.rest.resource.searchInclude
-                public ElementDefinitionInfo Element_SearchInclude;
+                public ElementDefinitionInfo Element_SearchInclude;                                                                         // MakerGen.cs:217
                 // 54. CapabilityStatement.rest.resource.searchRevInclude
-                public ElementDefinitionInfo Element_SearchRevInclude;
+                public ElementDefinitionInfo Element_SearchRevInclude;                                                                      // MakerGen.cs:217
                 // 55. CapabilityStatement.rest.resource.searchParam
-                public ElementDefinitionInfo Element_SearchParam;
+                public ElementDefinitionInfo Element_SearchParam;                                                                           // MakerGen.cs:217
                 // 60. CapabilityStatement.rest.resource.operation
-                public ElementDefinitionInfo Element_Operation;
-                
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                {
-                    base.Write(sDef);
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                    {
-                        Path = "CapabilityStatement.rest.resource",
-                        ElementId = "CapabilityStatement.rest.resource"
-                    });
-                    Element_Type.Write(sDef);
-                    Element_Profile.Write(sDef);
-                    Element_SupportedProfile.Write(sDef);
-                    Element_Documentation.Write(sDef);
-                    Element_Interaction.Write(sDef);
-                    Element_Versioning.Write(sDef);
-                    Element_ReadHistory.Write(sDef);
-                    Element_UpdateCreate.Write(sDef);
-                    Element_ConditionalCreate.Write(sDef);
-                    Element_ConditionalRead.Write(sDef);
-                    Element_ConditionalUpdate.Write(sDef);
-                    Element_ConditionalDelete.Write(sDef);
-                    Element_ReferencePolicy.Write(sDef);
-                    Element_SearchInclude.Write(sDef);
-                    Element_SearchRevInclude.Write(sDef);
-                    Element_SearchParam.Write(sDef);
-                    Element_Operation.Write(sDef);
-                }
-                
-                public Type_Resource()
-                {
-                    {
+                public ElementDefinitionInfo Element_Operation;                                                                             // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:389
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:390
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:391
+                    {                                                                                                                       // MakerGen.cs:392
+                        Path = "CapabilityStatement.rest.resource",                                                                         // MakerGen.cs:393
+                        ElementId = "CapabilityStatement.rest.resource"                                                                     // MakerGen.cs:394
+                    });                                                                                                                     // MakerGen.cs:395
+                    Element_Type.Write(sDef);                                                                                               // MakerGen.cs:221
+                    Element_Profile.Write(sDef);                                                                                            // MakerGen.cs:221
+                    Element_SupportedProfile.Write(sDef);                                                                                   // MakerGen.cs:221
+                    Element_Documentation.Write(sDef);                                                                                      // MakerGen.cs:221
+                    Element_Interaction.Write(sDef);                                                                                        // MakerGen.cs:221
+                    Element_Versioning.Write(sDef);                                                                                         // MakerGen.cs:221
+                    Element_ReadHistory.Write(sDef);                                                                                        // MakerGen.cs:221
+                    Element_UpdateCreate.Write(sDef);                                                                                       // MakerGen.cs:221
+                    Element_ConditionalCreate.Write(sDef);                                                                                  // MakerGen.cs:221
+                    Element_ConditionalRead.Write(sDef);                                                                                    // MakerGen.cs:221
+                    Element_ConditionalUpdate.Write(sDef);                                                                                  // MakerGen.cs:221
+                    Element_ConditionalDelete.Write(sDef);                                                                                  // MakerGen.cs:221
+                    Element_ReferencePolicy.Write(sDef);                                                                                    // MakerGen.cs:221
+                    Element_SearchInclude.Write(sDef);                                                                                      // MakerGen.cs:221
+                    Element_SearchRevInclude.Write(sDef);                                                                                   // MakerGen.cs:221
+                    Element_SearchParam.Write(sDef);                                                                                        // MakerGen.cs:221
+                    Element_Operation.Write(sDef);                                                                                          // MakerGen.cs:221
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                public Type_Resource()                                                                                                      // MakerGen.cs:400
+                {                                                                                                                           // MakerGen.cs:401
+                    {                                                                                                                       // MakerGen.cs:232
                         // 38. CapabilityStatement.rest.resource.type
-                        this.Element_Type = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Type",
-                            Path= "CapabilityStatement.rest.resource.type",
-                            Id = "CapabilityStatement.rest.resource.type",
-                            Min = 1,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Type = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Type",                                                                                          // MakerGen.cs:236
+                            Path= "CapabilityStatement.rest.resource.type",                                                                 // MakerGen.cs:237
+                            Id = "CapabilityStatement.rest.resource.type",                                                                  // MakerGen.cs:238
+                            Min = 1,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                          // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 39. CapabilityStatement.rest.resource.profile
-                        this.Element_Profile = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Profile",
-                            Path= "CapabilityStatement.rest.resource.profile",
-                            Id = "CapabilityStatement.rest.resource.profile",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Canonical
-                                {
-                                    TargetProfile = new String[]
-                                    {
-                                        "http://hl7.org/fhir/StructureDefinition/StructureDefinition"
-                                    }
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Profile = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Profile",                                                                                       // MakerGen.cs:236
+                            Path= "CapabilityStatement.rest.resource.profile",                                                              // MakerGen.cs:237
+                            Id = "CapabilityStatement.rest.resource.profile",                                                               // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                     // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                    TargetProfile = new String[]                                                                            // MakerGen.cs:304
+                                    {                                                                                                       // CodeEditorExtensions.cs:28
+                                        "http://hl7.org/fhir/StructureDefinition/StructureDefinition"                                       // MakerGen.cs:304
+                                    }                                                                                                       // CodeEditorExtensions.cs:34
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 40. CapabilityStatement.rest.resource.supportedProfile
-                        this.Element_SupportedProfile = new ElementDefinitionInfo
-                        {
-                            Name = "Element_SupportedProfile",
-                            Path= "CapabilityStatement.rest.resource.supportedProfile",
-                            Id = "CapabilityStatement.rest.resource.supportedProfile",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Canonical
-                                {
-                                    TargetProfile = new String[]
-                                    {
-                                        "http://hl7.org/fhir/StructureDefinition/StructureDefinition"
-                                    }
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_SupportedProfile = new ElementDefinitionInfo                                                           // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_SupportedProfile",                                                                              // MakerGen.cs:236
+                            Path= "CapabilityStatement.rest.resource.supportedProfile",                                                     // MakerGen.cs:237
+                            Id = "CapabilityStatement.rest.resource.supportedProfile",                                                      // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                     // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                    TargetProfile = new String[]                                                                            // MakerGen.cs:304
+                                    {                                                                                                       // CodeEditorExtensions.cs:28
+                                        "http://hl7.org/fhir/StructureDefinition/StructureDefinition"                                       // MakerGen.cs:304
+                                    }                                                                                                       // CodeEditorExtensions.cs:34
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 41. CapabilityStatement.rest.resource.documentation
-                        this.Element_Documentation = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Documentation",
-                            Path= "CapabilityStatement.rest.resource.documentation",
-                            Id = "CapabilityStatement.rest.resource.documentation",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Documentation = new ElementDefinitionInfo                                                              // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Documentation",                                                                                 // MakerGen.cs:236
+                            Path= "CapabilityStatement.rest.resource.documentation",                                                        // MakerGen.cs:237
+                            Id = "CapabilityStatement.rest.resource.documentation",                                                         // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                      // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 42. CapabilityStatement.rest.resource.interaction
-                        this.Element_Interaction = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Interaction",
-                            Path= "CapabilityStatement.rest.resource.interaction",
-                            Id = "CapabilityStatement.rest.resource.interaction",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new Type_Interaction
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Interaction = new ElementDefinitionInfo                                                                // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Interaction",                                                                                   // MakerGen.cs:236
+                            Path= "CapabilityStatement.rest.resource.interaction",                                                          // MakerGen.cs:237
+                            Id = "CapabilityStatement.rest.resource.interaction",                                                           // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new Type_Interaction                                                                                        // MakerGen.cs:260
+                                {                                                                                                           // MakerGen.cs:261
+                                }                                                                                                           // MakerGen.cs:262
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 45. CapabilityStatement.rest.resource.versioning
-                        this.Element_Versioning = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Versioning",
-                            Path= "CapabilityStatement.rest.resource.versioning",
-                            Id = "CapabilityStatement.rest.resource.versioning",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Versioning = new ElementDefinitionInfo                                                                 // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Versioning",                                                                                    // MakerGen.cs:236
+                            Path= "CapabilityStatement.rest.resource.versioning",                                                           // MakerGen.cs:237
+                            Id = "CapabilityStatement.rest.resource.versioning",                                                            // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                          // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 46. CapabilityStatement.rest.resource.readHistory
-                        this.Element_ReadHistory = new ElementDefinitionInfo
-                        {
-                            Name = "Element_ReadHistory",
-                            Path= "CapabilityStatement.rest.resource.readHistory",
-                            Id = "CapabilityStatement.rest.resource.readHistory",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_ReadHistory = new ElementDefinitionInfo                                                                // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_ReadHistory",                                                                                   // MakerGen.cs:236
+                            Path= "CapabilityStatement.rest.resource.readHistory",                                                          // MakerGen.cs:237
+                            Id = "CapabilityStatement.rest.resource.readHistory",                                                           // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                       // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 47. CapabilityStatement.rest.resource.updateCreate
-                        this.Element_UpdateCreate = new ElementDefinitionInfo
-                        {
-                            Name = "Element_UpdateCreate",
-                            Path= "CapabilityStatement.rest.resource.updateCreate",
-                            Id = "CapabilityStatement.rest.resource.updateCreate",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_UpdateCreate = new ElementDefinitionInfo                                                               // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_UpdateCreate",                                                                                  // MakerGen.cs:236
+                            Path= "CapabilityStatement.rest.resource.updateCreate",                                                         // MakerGen.cs:237
+                            Id = "CapabilityStatement.rest.resource.updateCreate",                                                          // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                       // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 48. CapabilityStatement.rest.resource.conditionalCreate
-                        this.Element_ConditionalCreate = new ElementDefinitionInfo
-                        {
-                            Name = "Element_ConditionalCreate",
-                            Path= "CapabilityStatement.rest.resource.conditionalCreate",
-                            Id = "CapabilityStatement.rest.resource.conditionalCreate",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_ConditionalCreate = new ElementDefinitionInfo                                                          // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_ConditionalCreate",                                                                             // MakerGen.cs:236
+                            Path= "CapabilityStatement.rest.resource.conditionalCreate",                                                    // MakerGen.cs:237
+                            Id = "CapabilityStatement.rest.resource.conditionalCreate",                                                     // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                       // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 49. CapabilityStatement.rest.resource.conditionalRead
-                        this.Element_ConditionalRead = new ElementDefinitionInfo
-                        {
-                            Name = "Element_ConditionalRead",
-                            Path= "CapabilityStatement.rest.resource.conditionalRead",
-                            Id = "CapabilityStatement.rest.resource.conditionalRead",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_ConditionalRead = new ElementDefinitionInfo                                                            // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_ConditionalRead",                                                                               // MakerGen.cs:236
+                            Path= "CapabilityStatement.rest.resource.conditionalRead",                                                      // MakerGen.cs:237
+                            Id = "CapabilityStatement.rest.resource.conditionalRead",                                                       // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                          // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 50. CapabilityStatement.rest.resource.conditionalUpdate
-                        this.Element_ConditionalUpdate = new ElementDefinitionInfo
-                        {
-                            Name = "Element_ConditionalUpdate",
-                            Path= "CapabilityStatement.rest.resource.conditionalUpdate",
-                            Id = "CapabilityStatement.rest.resource.conditionalUpdate",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_ConditionalUpdate = new ElementDefinitionInfo                                                          // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_ConditionalUpdate",                                                                             // MakerGen.cs:236
+                            Path= "CapabilityStatement.rest.resource.conditionalUpdate",                                                    // MakerGen.cs:237
+                            Id = "CapabilityStatement.rest.resource.conditionalUpdate",                                                     // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                       // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 51. CapabilityStatement.rest.resource.conditionalDelete
-                        this.Element_ConditionalDelete = new ElementDefinitionInfo
-                        {
-                            Name = "Element_ConditionalDelete",
-                            Path= "CapabilityStatement.rest.resource.conditionalDelete",
-                            Id = "CapabilityStatement.rest.resource.conditionalDelete",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_ConditionalDelete = new ElementDefinitionInfo                                                          // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_ConditionalDelete",                                                                             // MakerGen.cs:236
+                            Path= "CapabilityStatement.rest.resource.conditionalDelete",                                                    // MakerGen.cs:237
+                            Id = "CapabilityStatement.rest.resource.conditionalDelete",                                                     // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                          // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 52. CapabilityStatement.rest.resource.referencePolicy
-                        this.Element_ReferencePolicy = new ElementDefinitionInfo
-                        {
-                            Name = "Element_ReferencePolicy",
-                            Path= "CapabilityStatement.rest.resource.referencePolicy",
-                            Id = "CapabilityStatement.rest.resource.referencePolicy",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_ReferencePolicy = new ElementDefinitionInfo                                                            // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_ReferencePolicy",                                                                               // MakerGen.cs:236
+                            Path= "CapabilityStatement.rest.resource.referencePolicy",                                                      // MakerGen.cs:237
+                            Id = "CapabilityStatement.rest.resource.referencePolicy",                                                       // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                          // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 53. CapabilityStatement.rest.resource.searchInclude
-                        this.Element_SearchInclude = new ElementDefinitionInfo
-                        {
-                            Name = "Element_SearchInclude",
-                            Path= "CapabilityStatement.rest.resource.searchInclude",
-                            Id = "CapabilityStatement.rest.resource.searchInclude",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_SearchInclude = new ElementDefinitionInfo                                                              // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_SearchInclude",                                                                                 // MakerGen.cs:236
+                            Path= "CapabilityStatement.rest.resource.searchInclude",                                                        // MakerGen.cs:237
+                            Id = "CapabilityStatement.rest.resource.searchInclude",                                                         // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 54. CapabilityStatement.rest.resource.searchRevInclude
-                        this.Element_SearchRevInclude = new ElementDefinitionInfo
-                        {
-                            Name = "Element_SearchRevInclude",
-                            Path= "CapabilityStatement.rest.resource.searchRevInclude",
-                            Id = "CapabilityStatement.rest.resource.searchRevInclude",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_SearchRevInclude = new ElementDefinitionInfo                                                           // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_SearchRevInclude",                                                                              // MakerGen.cs:236
+                            Path= "CapabilityStatement.rest.resource.searchRevInclude",                                                     // MakerGen.cs:237
+                            Id = "CapabilityStatement.rest.resource.searchRevInclude",                                                      // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 55. CapabilityStatement.rest.resource.searchParam
-                        this.Element_SearchParam = new ElementDefinitionInfo
-                        {
-                            Name = "Element_SearchParam",
-                            Path= "CapabilityStatement.rest.resource.searchParam",
-                            Id = "CapabilityStatement.rest.resource.searchParam",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new Type_SearchParam
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_SearchParam = new ElementDefinitionInfo                                                                // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_SearchParam",                                                                                   // MakerGen.cs:236
+                            Path= "CapabilityStatement.rest.resource.searchParam",                                                          // MakerGen.cs:237
+                            Id = "CapabilityStatement.rest.resource.searchParam",                                                           // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new Type_SearchParam                                                                                        // MakerGen.cs:260
+                                {                                                                                                           // MakerGen.cs:261
+                                }                                                                                                           // MakerGen.cs:262
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 60. CapabilityStatement.rest.resource.operation
-                        this.Element_Operation = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Operation",
-                            Path= "CapabilityStatement.rest.resource.operation",
-                            Id = "CapabilityStatement.rest.resource.operation",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new Type_Operation
-                                {
-                                }
-                            }
-                        };
-                    }
-                }
-            }
+                        this.Element_Operation = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Operation",                                                                                     // MakerGen.cs:236
+                            Path= "CapabilityStatement.rest.resource.operation",                                                            // MakerGen.cs:237
+                            Id = "CapabilityStatement.rest.resource.operation",                                                             // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new Type_Operation                                                                                          // MakerGen.cs:260
+                                {                                                                                                           // MakerGen.cs:261
+                                }                                                                                                           // MakerGen.cs:262
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                }                                                                                                                           // MakerGen.cs:403
+            }                                                                                                                               // MakerGen.cs:405
             // 64. CapabilityStatement.rest.interaction
-            public partial class Type_Interaction : FhirKhit.Maker.Common.Complex.ComplexBase
-            {
+            public partial class Type_Interaction : FhirKhit.Maker.Common.Complex.ComplexBase                                               // MakerGen.cs:381
+            {                                                                                                                               // MakerGen.cs:382
                 // 65. CapabilityStatement.rest.interaction.code
-                public ElementDefinitionInfo Element_Code;
+                public ElementDefinitionInfo Element_Code;                                                                                  // MakerGen.cs:217
                 // 66. CapabilityStatement.rest.interaction.documentation
-                public ElementDefinitionInfo Element_Documentation;
-                
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                {
-                    base.Write(sDef);
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                    {
-                        Path = "CapabilityStatement.rest.interaction",
-                        ElementId = "CapabilityStatement.rest.interaction"
-                    });
-                    Element_Code.Write(sDef);
-                    Element_Documentation.Write(sDef);
-                }
-                
-                public Type_Interaction()
-                {
-                    {
+                public ElementDefinitionInfo Element_Documentation;                                                                         // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:389
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:390
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:391
+                    {                                                                                                                       // MakerGen.cs:392
+                        Path = "CapabilityStatement.rest.interaction",                                                                      // MakerGen.cs:393
+                        ElementId = "CapabilityStatement.rest.interaction"                                                                  // MakerGen.cs:394
+                    });                                                                                                                     // MakerGen.cs:395
+                    Element_Code.Write(sDef);                                                                                               // MakerGen.cs:221
+                    Element_Documentation.Write(sDef);                                                                                      // MakerGen.cs:221
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                public Type_Interaction()                                                                                                   // MakerGen.cs:400
+                {                                                                                                                           // MakerGen.cs:401
+                    {                                                                                                                       // MakerGen.cs:232
                         // 65. CapabilityStatement.rest.interaction.code
-                        this.Element_Code = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Code",
-                            Path= "CapabilityStatement.rest.interaction.code",
-                            Id = "CapabilityStatement.rest.interaction.code",
-                            Min = 1,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Code = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Code",                                                                                          // MakerGen.cs:236
+                            Path= "CapabilityStatement.rest.interaction.code",                                                              // MakerGen.cs:237
+                            Id = "CapabilityStatement.rest.interaction.code",                                                               // MakerGen.cs:238
+                            Min = 1,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                          // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 66. CapabilityStatement.rest.interaction.documentation
-                        this.Element_Documentation = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Documentation",
-                            Path= "CapabilityStatement.rest.interaction.documentation",
-                            Id = "CapabilityStatement.rest.interaction.documentation",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
-                                {
-                                }
-                            }
-                        };
-                    }
-                }
-            }
+                        this.Element_Documentation = new ElementDefinitionInfo                                                              // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Documentation",                                                                                 // MakerGen.cs:236
+                            Path= "CapabilityStatement.rest.interaction.documentation",                                                     // MakerGen.cs:237
+                            Id = "CapabilityStatement.rest.interaction.documentation",                                                      // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                      // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                }                                                                                                                           // MakerGen.cs:403
+            }                                                                                                                               // MakerGen.cs:405
             // 31. CapabilityStatement.rest.mode
-            public ElementDefinitionInfo Element_Mode;
+            public ElementDefinitionInfo Element_Mode;                                                                                      // MakerGen.cs:217
             // 32. CapabilityStatement.rest.documentation
-            public ElementDefinitionInfo Element_Documentation;
+            public ElementDefinitionInfo Element_Documentation;                                                                             // MakerGen.cs:217
             // 33. CapabilityStatement.rest.security
-            public ElementDefinitionInfo Element_Security;
+            public ElementDefinitionInfo Element_Security;                                                                                  // MakerGen.cs:217
             // 37. CapabilityStatement.rest.resource
-            public ElementDefinitionInfo Element_Resource;
+            public ElementDefinitionInfo Element_Resource;                                                                                  // MakerGen.cs:217
             // 64. CapabilityStatement.rest.interaction
-            public ElementDefinitionInfo Element_Interaction;
+            public ElementDefinitionInfo Element_Interaction;                                                                               // MakerGen.cs:217
             // 67. CapabilityStatement.rest.searchParam
-            public ElementDefinitionInfo Element_SearchParam;
+            public ElementDefinitionInfo Element_SearchParam;                                                                               // MakerGen.cs:217
             // 68. CapabilityStatement.rest.operation
-            public ElementDefinitionInfo Element_Operation;
+            public ElementDefinitionInfo Element_Operation;                                                                                 // MakerGen.cs:217
             // 69. CapabilityStatement.rest.compartment
-            public ElementDefinitionInfo Element_Compartment;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "CapabilityStatement.rest",
-                    ElementId = "CapabilityStatement.rest"
-                });
-                Element_Mode.Write(sDef);
-                Element_Documentation.Write(sDef);
-                Element_Security.Write(sDef);
-                Element_Resource.Write(sDef);
-                Element_Interaction.Write(sDef);
-                Element_SearchParam.Write(sDef);
-                Element_Operation.Write(sDef);
-                Element_Compartment.Write(sDef);
-            }
-            
-            public Type_Rest()
-            {
-                {
+            public ElementDefinitionInfo Element_Compartment;                                                                               // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "CapabilityStatement.rest",                                                                                      // MakerGen.cs:393
+                    ElementId = "CapabilityStatement.rest"                                                                                  // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Mode.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Documentation.Write(sDef);                                                                                          // MakerGen.cs:221
+                Element_Security.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_Resource.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_Interaction.Write(sDef);                                                                                            // MakerGen.cs:221
+                Element_SearchParam.Write(sDef);                                                                                            // MakerGen.cs:221
+                Element_Operation.Write(sDef);                                                                                              // MakerGen.cs:221
+                Element_Compartment.Write(sDef);                                                                                            // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Rest()                                                                                                              // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 31. CapabilityStatement.rest.mode
-                    this.Element_Mode = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Mode",
-                        Path= "CapabilityStatement.rest.mode",
-                        Id = "CapabilityStatement.rest.mode",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Mode = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Mode",                                                                                              // MakerGen.cs:236
+                        Path= "CapabilityStatement.rest.mode",                                                                              // MakerGen.cs:237
+                        Id = "CapabilityStatement.rest.mode",                                                                               // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 32. CapabilityStatement.rest.documentation
-                    this.Element_Documentation = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Documentation",
-                        Path= "CapabilityStatement.rest.documentation",
-                        Id = "CapabilityStatement.rest.documentation",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Documentation = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Documentation",                                                                                     // MakerGen.cs:236
+                        Path= "CapabilityStatement.rest.documentation",                                                                     // MakerGen.cs:237
+                        Id = "CapabilityStatement.rest.documentation",                                                                      // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                          // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 33. CapabilityStatement.rest.security
-                    this.Element_Security = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Security",
-                        Path= "CapabilityStatement.rest.security",
-                        Id = "CapabilityStatement.rest.security",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new Type_Security
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Security = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Security",                                                                                          // MakerGen.cs:236
+                        Path= "CapabilityStatement.rest.security",                                                                          // MakerGen.cs:237
+                        Id = "CapabilityStatement.rest.security",                                                                           // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new Type_Security                                                                                               // MakerGen.cs:260
+                            {                                                                                                               // MakerGen.cs:261
+                            }                                                                                                               // MakerGen.cs:262
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 37. CapabilityStatement.rest.resource
-                    this.Element_Resource = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Resource",
-                        Path= "CapabilityStatement.rest.resource",
-                        Id = "CapabilityStatement.rest.resource",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new Type_Resource
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Resource = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Resource",                                                                                          // MakerGen.cs:236
+                        Path= "CapabilityStatement.rest.resource",                                                                          // MakerGen.cs:237
+                        Id = "CapabilityStatement.rest.resource",                                                                           // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new Type_Resource                                                                                               // MakerGen.cs:260
+                            {                                                                                                               // MakerGen.cs:261
+                            }                                                                                                               // MakerGen.cs:262
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 64. CapabilityStatement.rest.interaction
-                    this.Element_Interaction = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Interaction",
-                        Path= "CapabilityStatement.rest.interaction",
-                        Id = "CapabilityStatement.rest.interaction",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new Type_Interaction
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Interaction = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Interaction",                                                                                       // MakerGen.cs:236
+                        Path= "CapabilityStatement.rest.interaction",                                                                       // MakerGen.cs:237
+                        Id = "CapabilityStatement.rest.interaction",                                                                        // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new Type_Interaction                                                                                            // MakerGen.cs:260
+                            {                                                                                                               // MakerGen.cs:261
+                            }                                                                                                               // MakerGen.cs:262
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 67. CapabilityStatement.rest.searchParam
-                    this.Element_SearchParam = new ElementDefinitionInfo
-                    {
-                        Name = "Element_SearchParam",
-                        Path= "CapabilityStatement.rest.searchParam",
-                        Id = "CapabilityStatement.rest.searchParam",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                        }
-                    };
-                }
-                {
+                    this.Element_SearchParam = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_SearchParam",                                                                                       // MakerGen.cs:236
+                        Path= "CapabilityStatement.rest.searchParam",                                                                       // MakerGen.cs:237
+                        Id = "CapabilityStatement.rest.searchParam",                                                                        // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 68. CapabilityStatement.rest.operation
-                    this.Element_Operation = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Operation",
-                        Path= "CapabilityStatement.rest.operation",
-                        Id = "CapabilityStatement.rest.operation",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                        }
-                    };
-                }
-                {
+                    this.Element_Operation = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Operation",                                                                                         // MakerGen.cs:236
+                        Path= "CapabilityStatement.rest.operation",                                                                         // MakerGen.cs:237
+                        Id = "CapabilityStatement.rest.operation",                                                                          // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 69. CapabilityStatement.rest.compartment
-                    this.Element_Compartment = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Compartment",
-                        Path= "CapabilityStatement.rest.compartment",
-                        Id = "CapabilityStatement.rest.compartment",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Canonical
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/CompartmentDefinition"
-                                }
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Compartment = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Compartment",                                                                                       // MakerGen.cs:236
+                        Path= "CapabilityStatement.rest.compartment",                                                                       // MakerGen.cs:237
+                        Id = "CapabilityStatement.rest.compartment",                                                                        // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                         // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:304
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/CompartmentDefinition"                                         // MakerGen.cs:304
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 70. CapabilityStatement.messaging
-        public partial class Type_Messaging : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Messaging : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 71. CapabilityStatement.messaging.endpoint
-            public partial class Type_Endpoint : FhirKhit.Maker.Common.Complex.ComplexBase
-            {
+            public partial class Type_Endpoint : FhirKhit.Maker.Common.Complex.ComplexBase                                                  // MakerGen.cs:381
+            {                                                                                                                               // MakerGen.cs:382
                 // 72. CapabilityStatement.messaging.endpoint.protocol
-                public ElementDefinitionInfo Element_Protocol;
+                public ElementDefinitionInfo Element_Protocol;                                                                              // MakerGen.cs:217
                 // 73. CapabilityStatement.messaging.endpoint.address
-                public ElementDefinitionInfo Element_Address;
-                
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                {
-                    base.Write(sDef);
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                    {
-                        Path = "CapabilityStatement.messaging.endpoint",
-                        ElementId = "CapabilityStatement.messaging.endpoint"
-                    });
-                    Element_Protocol.Write(sDef);
-                    Element_Address.Write(sDef);
-                }
-                
-                public Type_Endpoint()
-                {
-                    {
+                public ElementDefinitionInfo Element_Address;                                                                               // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:389
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:390
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:391
+                    {                                                                                                                       // MakerGen.cs:392
+                        Path = "CapabilityStatement.messaging.endpoint",                                                                    // MakerGen.cs:393
+                        ElementId = "CapabilityStatement.messaging.endpoint"                                                                // MakerGen.cs:394
+                    });                                                                                                                     // MakerGen.cs:395
+                    Element_Protocol.Write(sDef);                                                                                           // MakerGen.cs:221
+                    Element_Address.Write(sDef);                                                                                            // MakerGen.cs:221
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                public Type_Endpoint()                                                                                                      // MakerGen.cs:400
+                {                                                                                                                           // MakerGen.cs:401
+                    {                                                                                                                       // MakerGen.cs:232
                         // 72. CapabilityStatement.messaging.endpoint.protocol
-                        this.Element_Protocol = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Protocol",
-                            Path= "CapabilityStatement.messaging.endpoint.protocol",
-                            Id = "CapabilityStatement.messaging.endpoint.protocol",
-                            Min = 1,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Coding
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Protocol = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Protocol",                                                                                      // MakerGen.cs:236
+                            Path= "CapabilityStatement.messaging.endpoint.protocol",                                                        // MakerGen.cs:237
+                            Id = "CapabilityStatement.messaging.endpoint.protocol",                                                         // MakerGen.cs:238
+                            Min = 1,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Coding                                                               // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 73. CapabilityStatement.messaging.endpoint.address
-                        this.Element_Address = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Address",
-                            Path= "CapabilityStatement.messaging.endpoint.address",
-                            Id = "CapabilityStatement.messaging.endpoint.address",
-                            Min = 1,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Url
-                                {
-                                }
-                            }
-                        };
-                    }
-                }
-            }
+                        this.Element_Address = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Address",                                                                                       // MakerGen.cs:236
+                            Path= "CapabilityStatement.messaging.endpoint.address",                                                         // MakerGen.cs:237
+                            Id = "CapabilityStatement.messaging.endpoint.address",                                                          // MakerGen.cs:238
+                            Min = 1,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Url                                                           // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                }                                                                                                                           // MakerGen.cs:403
+            }                                                                                                                               // MakerGen.cs:405
             // 76. CapabilityStatement.messaging.supportedMessage
-            public partial class Type_SupportedMessage : FhirKhit.Maker.Common.Complex.ComplexBase
-            {
+            public partial class Type_SupportedMessage : FhirKhit.Maker.Common.Complex.ComplexBase                                          // MakerGen.cs:381
+            {                                                                                                                               // MakerGen.cs:382
                 // 77. CapabilityStatement.messaging.supportedMessage.mode
-                public ElementDefinitionInfo Element_Mode;
+                public ElementDefinitionInfo Element_Mode;                                                                                  // MakerGen.cs:217
                 // 78. CapabilityStatement.messaging.supportedMessage.definition
-                public ElementDefinitionInfo Element_Definition;
-                
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                {
-                    base.Write(sDef);
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                    {
-                        Path = "CapabilityStatement.messaging.supportedMessage",
-                        ElementId = "CapabilityStatement.messaging.supportedMessage"
-                    });
-                    Element_Mode.Write(sDef);
-                    Element_Definition.Write(sDef);
-                }
-                
-                public Type_SupportedMessage()
-                {
-                    {
+                public ElementDefinitionInfo Element_Definition;                                                                            // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:389
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:390
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:391
+                    {                                                                                                                       // MakerGen.cs:392
+                        Path = "CapabilityStatement.messaging.supportedMessage",                                                            // MakerGen.cs:393
+                        ElementId = "CapabilityStatement.messaging.supportedMessage"                                                        // MakerGen.cs:394
+                    });                                                                                                                     // MakerGen.cs:395
+                    Element_Mode.Write(sDef);                                                                                               // MakerGen.cs:221
+                    Element_Definition.Write(sDef);                                                                                         // MakerGen.cs:221
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                public Type_SupportedMessage()                                                                                              // MakerGen.cs:400
+                {                                                                                                                           // MakerGen.cs:401
+                    {                                                                                                                       // MakerGen.cs:232
                         // 77. CapabilityStatement.messaging.supportedMessage.mode
-                        this.Element_Mode = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Mode",
-                            Path= "CapabilityStatement.messaging.supportedMessage.mode",
-                            Id = "CapabilityStatement.messaging.supportedMessage.mode",
-                            Min = 1,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Mode = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Mode",                                                                                          // MakerGen.cs:236
+                            Path= "CapabilityStatement.messaging.supportedMessage.mode",                                                    // MakerGen.cs:237
+                            Id = "CapabilityStatement.messaging.supportedMessage.mode",                                                     // MakerGen.cs:238
+                            Min = 1,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                          // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 78. CapabilityStatement.messaging.supportedMessage.definition
-                        this.Element_Definition = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Definition",
-                            Path= "CapabilityStatement.messaging.supportedMessage.definition",
-                            Id = "CapabilityStatement.messaging.supportedMessage.definition",
-                            Min = 1,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Canonical
-                                {
-                                    TargetProfile = new String[]
-                                    {
-                                        "http://hl7.org/fhir/StructureDefinition/MessageDefinition"
-                                    }
-                                }
-                            }
-                        };
-                    }
-                }
-            }
+                        this.Element_Definition = new ElementDefinitionInfo                                                                 // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Definition",                                                                                    // MakerGen.cs:236
+                            Path= "CapabilityStatement.messaging.supportedMessage.definition",                                              // MakerGen.cs:237
+                            Id = "CapabilityStatement.messaging.supportedMessage.definition",                                               // MakerGen.cs:238
+                            Min = 1,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                     // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                    TargetProfile = new String[]                                                                            // MakerGen.cs:304
+                                    {                                                                                                       // CodeEditorExtensions.cs:28
+                                        "http://hl7.org/fhir/StructureDefinition/MessageDefinition"                                         // MakerGen.cs:304
+                                    }                                                                                                       // CodeEditorExtensions.cs:34
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                }                                                                                                                           // MakerGen.cs:403
+            }                                                                                                                               // MakerGen.cs:405
             // 71. CapabilityStatement.messaging.endpoint
-            public ElementDefinitionInfo Element_Endpoint;
+            public ElementDefinitionInfo Element_Endpoint;                                                                                  // MakerGen.cs:217
             // 74. CapabilityStatement.messaging.reliableCache
-            public ElementDefinitionInfo Element_ReliableCache;
+            public ElementDefinitionInfo Element_ReliableCache;                                                                             // MakerGen.cs:217
             // 75. CapabilityStatement.messaging.documentation
-            public ElementDefinitionInfo Element_Documentation;
+            public ElementDefinitionInfo Element_Documentation;                                                                             // MakerGen.cs:217
             // 76. CapabilityStatement.messaging.supportedMessage
-            public ElementDefinitionInfo Element_SupportedMessage;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "CapabilityStatement.messaging",
-                    ElementId = "CapabilityStatement.messaging"
-                });
-                Element_Endpoint.Write(sDef);
-                Element_ReliableCache.Write(sDef);
-                Element_Documentation.Write(sDef);
-                Element_SupportedMessage.Write(sDef);
-            }
-            
-            public Type_Messaging()
-            {
-                {
+            public ElementDefinitionInfo Element_SupportedMessage;                                                                          // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "CapabilityStatement.messaging",                                                                                 // MakerGen.cs:393
+                    ElementId = "CapabilityStatement.messaging"                                                                             // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Endpoint.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_ReliableCache.Write(sDef);                                                                                          // MakerGen.cs:221
+                Element_Documentation.Write(sDef);                                                                                          // MakerGen.cs:221
+                Element_SupportedMessage.Write(sDef);                                                                                       // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Messaging()                                                                                                         // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 71. CapabilityStatement.messaging.endpoint
-                    this.Element_Endpoint = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Endpoint",
-                        Path= "CapabilityStatement.messaging.endpoint",
-                        Id = "CapabilityStatement.messaging.endpoint",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new Type_Endpoint
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Endpoint = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Endpoint",                                                                                          // MakerGen.cs:236
+                        Path= "CapabilityStatement.messaging.endpoint",                                                                     // MakerGen.cs:237
+                        Id = "CapabilityStatement.messaging.endpoint",                                                                      // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new Type_Endpoint                                                                                               // MakerGen.cs:260
+                            {                                                                                                               // MakerGen.cs:261
+                            }                                                                                                               // MakerGen.cs:262
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 74. CapabilityStatement.messaging.reliableCache
-                    this.Element_ReliableCache = new ElementDefinitionInfo
-                    {
-                        Name = "Element_ReliableCache",
-                        Path= "CapabilityStatement.messaging.reliableCache",
-                        Id = "CapabilityStatement.messaging.reliableCache",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_UnsignedInt
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_ReliableCache = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_ReliableCache",                                                                                     // MakerGen.cs:236
+                        Path= "CapabilityStatement.messaging.reliableCache",                                                                // MakerGen.cs:237
+                        Id = "CapabilityStatement.messaging.reliableCache",                                                                 // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_UnsignedInt                                                       // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 75. CapabilityStatement.messaging.documentation
-                    this.Element_Documentation = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Documentation",
-                        Path= "CapabilityStatement.messaging.documentation",
-                        Id = "CapabilityStatement.messaging.documentation",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Documentation = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Documentation",                                                                                     // MakerGen.cs:236
+                        Path= "CapabilityStatement.messaging.documentation",                                                                // MakerGen.cs:237
+                        Id = "CapabilityStatement.messaging.documentation",                                                                 // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                          // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 76. CapabilityStatement.messaging.supportedMessage
-                    this.Element_SupportedMessage = new ElementDefinitionInfo
-                    {
-                        Name = "Element_SupportedMessage",
-                        Path= "CapabilityStatement.messaging.supportedMessage",
-                        Id = "CapabilityStatement.messaging.supportedMessage",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new Type_SupportedMessage
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_SupportedMessage = new ElementDefinitionInfo                                                               // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_SupportedMessage",                                                                                  // MakerGen.cs:236
+                        Path= "CapabilityStatement.messaging.supportedMessage",                                                             // MakerGen.cs:237
+                        Id = "CapabilityStatement.messaging.supportedMessage",                                                              // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new Type_SupportedMessage                                                                                       // MakerGen.cs:260
+                            {                                                                                                               // MakerGen.cs:261
+                            }                                                                                                               // MakerGen.cs:262
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 79. CapabilityStatement.document
-        public partial class Type_Document : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Document : FhirKhit.Maker.Common.Complex.ComplexBase                                                      // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 80. CapabilityStatement.document.mode
-            public ElementDefinitionInfo Element_Mode;
+            public ElementDefinitionInfo Element_Mode;                                                                                      // MakerGen.cs:217
             // 81. CapabilityStatement.document.documentation
-            public ElementDefinitionInfo Element_Documentation;
+            public ElementDefinitionInfo Element_Documentation;                                                                             // MakerGen.cs:217
             // 82. CapabilityStatement.document.profile
-            public ElementDefinitionInfo Element_Profile;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "CapabilityStatement.document",
-                    ElementId = "CapabilityStatement.document"
-                });
-                Element_Mode.Write(sDef);
-                Element_Documentation.Write(sDef);
-                Element_Profile.Write(sDef);
-            }
-            
-            public Type_Document()
-            {
-                {
+            public ElementDefinitionInfo Element_Profile;                                                                                   // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "CapabilityStatement.document",                                                                                  // MakerGen.cs:393
+                    ElementId = "CapabilityStatement.document"                                                                              // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Mode.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Documentation.Write(sDef);                                                                                          // MakerGen.cs:221
+                Element_Profile.Write(sDef);                                                                                                // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Document()                                                                                                          // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 80. CapabilityStatement.document.mode
-                    this.Element_Mode = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Mode",
-                        Path= "CapabilityStatement.document.mode",
-                        Id = "CapabilityStatement.document.mode",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Mode = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Mode",                                                                                              // MakerGen.cs:236
+                        Path= "CapabilityStatement.document.mode",                                                                          // MakerGen.cs:237
+                        Id = "CapabilityStatement.document.mode",                                                                           // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 81. CapabilityStatement.document.documentation
-                    this.Element_Documentation = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Documentation",
-                        Path= "CapabilityStatement.document.documentation",
-                        Id = "CapabilityStatement.document.documentation",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Documentation = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Documentation",                                                                                     // MakerGen.cs:236
+                        Path= "CapabilityStatement.document.documentation",                                                                 // MakerGen.cs:237
+                        Id = "CapabilityStatement.document.documentation",                                                                  // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                          // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 82. CapabilityStatement.document.profile
-                    this.Element_Profile = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Profile",
-                        Path= "CapabilityStatement.document.profile",
-                        Id = "CapabilityStatement.document.profile",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Canonical
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/StructureDefinition"
-                                }
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Profile = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Profile",                                                                                           // MakerGen.cs:236
+                        Path= "CapabilityStatement.document.profile",                                                                       // MakerGen.cs:237
+                        Id = "CapabilityStatement.document.profile",                                                                        // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                         // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:304
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/StructureDefinition"                                           // MakerGen.cs:304
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 1. CapabilityStatement.url
-        public ElementDefinitionInfo Element_Url;
+        public ElementDefinitionInfo Element_Url;                                                                                           // MakerGen.cs:217
         // 2. CapabilityStatement.version
-        public ElementDefinitionInfo Element_Version;
+        public ElementDefinitionInfo Element_Version;                                                                                       // MakerGen.cs:217
         // 3. CapabilityStatement.name
-        public ElementDefinitionInfo Element_Name;
+        public ElementDefinitionInfo Element_Name;                                                                                          // MakerGen.cs:217
         // 4. CapabilityStatement.title
-        public ElementDefinitionInfo Element_Title;
+        public ElementDefinitionInfo Element_Title;                                                                                         // MakerGen.cs:217
         // 5. CapabilityStatement.status
-        public ElementDefinitionInfo Element_Status;
+        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:217
         // 6. CapabilityStatement.experimental
-        public ElementDefinitionInfo Element_Experimental;
+        public ElementDefinitionInfo Element_Experimental;                                                                                  // MakerGen.cs:217
         // 7. CapabilityStatement.date
-        public ElementDefinitionInfo Element_Date;
+        public ElementDefinitionInfo Element_Date;                                                                                          // MakerGen.cs:217
         // 8. CapabilityStatement.publisher
-        public ElementDefinitionInfo Element_Publisher;
+        public ElementDefinitionInfo Element_Publisher;                                                                                     // MakerGen.cs:217
         // 9. CapabilityStatement.contact
-        public ElementDefinitionInfo Element_Contact;
+        public ElementDefinitionInfo Element_Contact;                                                                                       // MakerGen.cs:217
         // 10. CapabilityStatement.description
-        public ElementDefinitionInfo Element_Description;
+        public ElementDefinitionInfo Element_Description;                                                                                   // MakerGen.cs:217
         // 11. CapabilityStatement.useContext
-        public ElementDefinitionInfo Element_UseContext;
+        public ElementDefinitionInfo Element_UseContext;                                                                                    // MakerGen.cs:217
         // 12. CapabilityStatement.jurisdiction
-        public ElementDefinitionInfo Element_Jurisdiction;
+        public ElementDefinitionInfo Element_Jurisdiction;                                                                                  // MakerGen.cs:217
         // 13. CapabilityStatement.purpose
-        public ElementDefinitionInfo Element_Purpose;
+        public ElementDefinitionInfo Element_Purpose;                                                                                       // MakerGen.cs:217
         // 14. CapabilityStatement.copyright
-        public ElementDefinitionInfo Element_Copyright;
+        public ElementDefinitionInfo Element_Copyright;                                                                                     // MakerGen.cs:217
         // 15. CapabilityStatement.kind
-        public ElementDefinitionInfo Element_Kind;
+        public ElementDefinitionInfo Element_Kind;                                                                                          // MakerGen.cs:217
         // 16. CapabilityStatement.instantiates
-        public ElementDefinitionInfo Element_Instantiates;
+        public ElementDefinitionInfo Element_Instantiates;                                                                                  // MakerGen.cs:217
         // 17. CapabilityStatement.imports
-        public ElementDefinitionInfo Element_Imports;
+        public ElementDefinitionInfo Element_Imports;                                                                                       // MakerGen.cs:217
         // 18. CapabilityStatement.software
-        public ElementDefinitionInfo Element_Software;
+        public ElementDefinitionInfo Element_Software;                                                                                      // MakerGen.cs:217
         // 22. CapabilityStatement.implementation
-        public ElementDefinitionInfo Element_Implementation;
+        public ElementDefinitionInfo Element_Implementation;                                                                                // MakerGen.cs:217
         // 26. CapabilityStatement.fhirVersion
-        public ElementDefinitionInfo Element_FhirVersion;
+        public ElementDefinitionInfo Element_FhirVersion;                                                                                   // MakerGen.cs:217
         // 27. CapabilityStatement.format
-        public ElementDefinitionInfo Element_Format;
+        public ElementDefinitionInfo Element_Format;                                                                                        // MakerGen.cs:217
         // 28. CapabilityStatement.patchFormat
-        public ElementDefinitionInfo Element_PatchFormat;
+        public ElementDefinitionInfo Element_PatchFormat;                                                                                   // MakerGen.cs:217
         // 29. CapabilityStatement.implementationGuide
-        public ElementDefinitionInfo Element_ImplementationGuide;
+        public ElementDefinitionInfo Element_ImplementationGuide;                                                                           // MakerGen.cs:217
         // 30. CapabilityStatement.rest
-        public ElementDefinitionInfo Element_Rest;
+        public ElementDefinitionInfo Element_Rest;                                                                                          // MakerGen.cs:217
         // 70. CapabilityStatement.messaging
-        public ElementDefinitionInfo Element_Messaging;
+        public ElementDefinitionInfo Element_Messaging;                                                                                     // MakerGen.cs:217
         // 79. CapabilityStatement.document
-        public ElementDefinitionInfo Element_Document;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "CapabilityStatement",
-                ElementId = "CapabilityStatement"
-            });
-            Element_Url.Write(sDef);
-            Element_Version.Write(sDef);
-            Element_Name.Write(sDef);
-            Element_Title.Write(sDef);
-            Element_Status.Write(sDef);
-            Element_Experimental.Write(sDef);
-            Element_Date.Write(sDef);
-            Element_Publisher.Write(sDef);
-            Element_Contact.Write(sDef);
-            Element_Description.Write(sDef);
-            Element_UseContext.Write(sDef);
-            Element_Jurisdiction.Write(sDef);
-            Element_Purpose.Write(sDef);
-            Element_Copyright.Write(sDef);
-            Element_Kind.Write(sDef);
-            Element_Instantiates.Write(sDef);
-            Element_Imports.Write(sDef);
-            Element_Software.Write(sDef);
-            Element_Implementation.Write(sDef);
-            Element_FhirVersion.Write(sDef);
-            Element_Format.Write(sDef);
-            Element_PatchFormat.Write(sDef);
-            Element_ImplementationGuide.Write(sDef);
-            Element_Rest.Write(sDef);
-            Element_Messaging.Write(sDef);
-            Element_Document.Write(sDef);
-        }
-        
-        public Resource_CapabilityStatement()
-        {
-            {
+        public ElementDefinitionInfo Element_Document;                                                                                      // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "CapabilityStatement",                                                                                               // MakerGen.cs:393
+                ElementId = "CapabilityStatement"                                                                                           // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Url.Write(sDef);                                                                                                        // MakerGen.cs:221
+            Element_Version.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Name.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Title.Write(sDef);                                                                                                      // MakerGen.cs:221
+            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Experimental.Write(sDef);                                                                                               // MakerGen.cs:221
+            Element_Date.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Publisher.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_Contact.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Description.Write(sDef);                                                                                                // MakerGen.cs:221
+            Element_UseContext.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Jurisdiction.Write(sDef);                                                                                               // MakerGen.cs:221
+            Element_Purpose.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Copyright.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_Kind.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Instantiates.Write(sDef);                                                                                               // MakerGen.cs:221
+            Element_Imports.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Software.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_Implementation.Write(sDef);                                                                                             // MakerGen.cs:221
+            Element_FhirVersion.Write(sDef);                                                                                                // MakerGen.cs:221
+            Element_Format.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_PatchFormat.Write(sDef);                                                                                                // MakerGen.cs:221
+            Element_ImplementationGuide.Write(sDef);                                                                                        // MakerGen.cs:221
+            Element_Rest.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Messaging.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_Document.Write(sDef);                                                                                                   // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Resource_CapabilityStatement()                                                                                               // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. CapabilityStatement.url
-                this.Element_Url = new ElementDefinitionInfo
-                {
-                    Name = "Element_Url",
-                    Path= "CapabilityStatement.url",
-                    Id = "CapabilityStatement.url",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Url = new ElementDefinitionInfo                                                                                // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Url",                                                                                                   // MakerGen.cs:236
+                    Path= "CapabilityStatement.url",                                                                                        // MakerGen.cs:237
+                    Id = "CapabilityStatement.url",                                                                                         // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                                   // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. CapabilityStatement.version
-                this.Element_Version = new ElementDefinitionInfo
-                {
-                    Name = "Element_Version",
-                    Path= "CapabilityStatement.version",
-                    Id = "CapabilityStatement.version",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Version = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Version",                                                                                               // MakerGen.cs:236
+                    Path= "CapabilityStatement.version",                                                                                    // MakerGen.cs:237
+                    Id = "CapabilityStatement.version",                                                                                     // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 3. CapabilityStatement.name
-                this.Element_Name = new ElementDefinitionInfo
-                {
-                    Name = "Element_Name",
-                    Path= "CapabilityStatement.name",
-                    Id = "CapabilityStatement.name",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Name = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Name",                                                                                                  // MakerGen.cs:236
+                    Path= "CapabilityStatement.name",                                                                                       // MakerGen.cs:237
+                    Id = "CapabilityStatement.name",                                                                                        // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 4. CapabilityStatement.title
-                this.Element_Title = new ElementDefinitionInfo
-                {
-                    Name = "Element_Title",
-                    Path= "CapabilityStatement.title",
-                    Id = "CapabilityStatement.title",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Title = new ElementDefinitionInfo                                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Title",                                                                                                 // MakerGen.cs:236
+                    Path= "CapabilityStatement.title",                                                                                      // MakerGen.cs:237
+                    Id = "CapabilityStatement.title",                                                                                       // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 5. CapabilityStatement.status
-                this.Element_Status = new ElementDefinitionInfo
-                {
-                    Name = "Element_Status",
-                    Path= "CapabilityStatement.status",
-                    Id = "CapabilityStatement.status",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Status",                                                                                                // MakerGen.cs:236
+                    Path= "CapabilityStatement.status",                                                                                     // MakerGen.cs:237
+                    Id = "CapabilityStatement.status",                                                                                      // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 6. CapabilityStatement.experimental
-                this.Element_Experimental = new ElementDefinitionInfo
-                {
-                    Name = "Element_Experimental",
-                    Path= "CapabilityStatement.experimental",
-                    Id = "CapabilityStatement.experimental",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Experimental = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Experimental",                                                                                          // MakerGen.cs:236
+                    Path= "CapabilityStatement.experimental",                                                                               // MakerGen.cs:237
+                    Id = "CapabilityStatement.experimental",                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 7. CapabilityStatement.date
-                this.Element_Date = new ElementDefinitionInfo
-                {
-                    Name = "Element_Date",
-                    Path= "CapabilityStatement.date",
-                    Id = "CapabilityStatement.date",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Date = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Date",                                                                                                  // MakerGen.cs:236
+                    Path= "CapabilityStatement.date",                                                                                       // MakerGen.cs:237
+                    Id = "CapabilityStatement.date",                                                                                        // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 8. CapabilityStatement.publisher
-                this.Element_Publisher = new ElementDefinitionInfo
-                {
-                    Name = "Element_Publisher",
-                    Path= "CapabilityStatement.publisher",
-                    Id = "CapabilityStatement.publisher",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Publisher = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Publisher",                                                                                             // MakerGen.cs:236
+                    Path= "CapabilityStatement.publisher",                                                                                  // MakerGen.cs:237
+                    Id = "CapabilityStatement.publisher",                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 9. CapabilityStatement.contact
-                this.Element_Contact = new ElementDefinitionInfo
-                {
-                    Name = "Element_Contact",
-                    Path= "CapabilityStatement.contact",
-                    Id = "CapabilityStatement.contact",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Contact = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Contact",                                                                                               // MakerGen.cs:236
+                    Path= "CapabilityStatement.contact",                                                                                    // MakerGen.cs:237
+                    Id = "CapabilityStatement.contact",                                                                                     // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                                // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 10. CapabilityStatement.description
-                this.Element_Description = new ElementDefinitionInfo
-                {
-                    Name = "Element_Description",
-                    Path= "CapabilityStatement.description",
-                    Id = "CapabilityStatement.description",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Description = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Description",                                                                                           // MakerGen.cs:236
+                    Path= "CapabilityStatement.description",                                                                                // MakerGen.cs:237
+                    Id = "CapabilityStatement.description",                                                                                 // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 11. CapabilityStatement.useContext
-                this.Element_UseContext = new ElementDefinitionInfo
-                {
-                    Name = "Element_UseContext",
-                    Path= "CapabilityStatement.useContext",
-                    Id = "CapabilityStatement.useContext",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_UsageContext
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_UseContext = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_UseContext",                                                                                            // MakerGen.cs:236
+                    Path= "CapabilityStatement.useContext",                                                                                 // MakerGen.cs:237
+                    Id = "CapabilityStatement.useContext",                                                                                  // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_UsageContext                                                                 // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 12. CapabilityStatement.jurisdiction
-                this.Element_Jurisdiction = new ElementDefinitionInfo
-                {
-                    Name = "Element_Jurisdiction",
-                    Path= "CapabilityStatement.jurisdiction",
-                    Id = "CapabilityStatement.jurisdiction",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Jurisdiction = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Jurisdiction",                                                                                          // MakerGen.cs:236
+                    Path= "CapabilityStatement.jurisdiction",                                                                               // MakerGen.cs:237
+                    Id = "CapabilityStatement.jurisdiction",                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 13. CapabilityStatement.purpose
-                this.Element_Purpose = new ElementDefinitionInfo
-                {
-                    Name = "Element_Purpose",
-                    Path= "CapabilityStatement.purpose",
-                    Id = "CapabilityStatement.purpose",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Purpose = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Purpose",                                                                                               // MakerGen.cs:236
+                    Path= "CapabilityStatement.purpose",                                                                                    // MakerGen.cs:237
+                    Id = "CapabilityStatement.purpose",                                                                                     // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 14. CapabilityStatement.copyright
-                this.Element_Copyright = new ElementDefinitionInfo
-                {
-                    Name = "Element_Copyright",
-                    Path= "CapabilityStatement.copyright",
-                    Id = "CapabilityStatement.copyright",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Copyright = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Copyright",                                                                                             // MakerGen.cs:236
+                    Path= "CapabilityStatement.copyright",                                                                                  // MakerGen.cs:237
+                    Id = "CapabilityStatement.copyright",                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 15. CapabilityStatement.kind
-                this.Element_Kind = new ElementDefinitionInfo
-                {
-                    Name = "Element_Kind",
-                    Path= "CapabilityStatement.kind",
-                    Id = "CapabilityStatement.kind",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Kind = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Kind",                                                                                                  // MakerGen.cs:236
+                    Path= "CapabilityStatement.kind",                                                                                       // MakerGen.cs:237
+                    Id = "CapabilityStatement.kind",                                                                                        // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 16. CapabilityStatement.instantiates
-                this.Element_Instantiates = new ElementDefinitionInfo
-                {
-                    Name = "Element_Instantiates",
-                    Path= "CapabilityStatement.instantiates",
-                    Id = "CapabilityStatement.instantiates",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/CapabilityStatement"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Instantiates = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Instantiates",                                                                                          // MakerGen.cs:236
+                    Path= "CapabilityStatement.instantiates",                                                                               // MakerGen.cs:237
+                    Id = "CapabilityStatement.instantiates",                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                             // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:304
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/CapabilityStatement"                                               // MakerGen.cs:304
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 17. CapabilityStatement.imports
-                this.Element_Imports = new ElementDefinitionInfo
-                {
-                    Name = "Element_Imports",
-                    Path= "CapabilityStatement.imports",
-                    Id = "CapabilityStatement.imports",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/CapabilityStatement"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Imports = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Imports",                                                                                               // MakerGen.cs:236
+                    Path= "CapabilityStatement.imports",                                                                                    // MakerGen.cs:237
+                    Id = "CapabilityStatement.imports",                                                                                     // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                             // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:304
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/CapabilityStatement"                                               // MakerGen.cs:304
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 18. CapabilityStatement.software
-                this.Element_Software = new ElementDefinitionInfo
-                {
-                    Name = "Element_Software",
-                    Path= "CapabilityStatement.software",
-                    Id = "CapabilityStatement.software",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Software
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Software = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Software",                                                                                              // MakerGen.cs:236
+                    Path= "CapabilityStatement.software",                                                                                   // MakerGen.cs:237
+                    Id = "CapabilityStatement.software",                                                                                    // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Software                                                                                                   // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 22. CapabilityStatement.implementation
-                this.Element_Implementation = new ElementDefinitionInfo
-                {
-                    Name = "Element_Implementation",
-                    Path= "CapabilityStatement.implementation",
-                    Id = "CapabilityStatement.implementation",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Implementation
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Implementation = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Implementation",                                                                                        // MakerGen.cs:236
+                    Path= "CapabilityStatement.implementation",                                                                             // MakerGen.cs:237
+                    Id = "CapabilityStatement.implementation",                                                                              // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Implementation                                                                                             // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 26. CapabilityStatement.fhirVersion
-                this.Element_FhirVersion = new ElementDefinitionInfo
-                {
-                    Name = "Element_FhirVersion",
-                    Path= "CapabilityStatement.fhirVersion",
-                    Id = "CapabilityStatement.fhirVersion",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_FhirVersion = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_FhirVersion",                                                                                           // MakerGen.cs:236
+                    Path= "CapabilityStatement.fhirVersion",                                                                                // MakerGen.cs:237
+                    Id = "CapabilityStatement.fhirVersion",                                                                                 // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 27. CapabilityStatement.format
-                this.Element_Format = new ElementDefinitionInfo
-                {
-                    Name = "Element_Format",
-                    Path= "CapabilityStatement.format",
-                    Id = "CapabilityStatement.format",
-                    Min = 1,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Format = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Format",                                                                                                // MakerGen.cs:236
+                    Path= "CapabilityStatement.format",                                                                                     // MakerGen.cs:237
+                    Id = "CapabilityStatement.format",                                                                                      // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 28. CapabilityStatement.patchFormat
-                this.Element_PatchFormat = new ElementDefinitionInfo
-                {
-                    Name = "Element_PatchFormat",
-                    Path= "CapabilityStatement.patchFormat",
-                    Id = "CapabilityStatement.patchFormat",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_PatchFormat = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_PatchFormat",                                                                                           // MakerGen.cs:236
+                    Path= "CapabilityStatement.patchFormat",                                                                                // MakerGen.cs:237
+                    Id = "CapabilityStatement.patchFormat",                                                                                 // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 29. CapabilityStatement.implementationGuide
-                this.Element_ImplementationGuide = new ElementDefinitionInfo
-                {
-                    Name = "Element_ImplementationGuide",
-                    Path= "CapabilityStatement.implementationGuide",
-                    Id = "CapabilityStatement.implementationGuide",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/ImplementationGuide"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ImplementationGuide = new ElementDefinitionInfo                                                                // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ImplementationGuide",                                                                                   // MakerGen.cs:236
+                    Path= "CapabilityStatement.implementationGuide",                                                                        // MakerGen.cs:237
+                    Id = "CapabilityStatement.implementationGuide",                                                                         // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                             // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:304
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/ImplementationGuide"                                               // MakerGen.cs:304
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 30. CapabilityStatement.rest
-                this.Element_Rest = new ElementDefinitionInfo
-                {
-                    Name = "Element_Rest",
-                    Path= "CapabilityStatement.rest",
-                    Id = "CapabilityStatement.rest",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Rest
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Rest = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Rest",                                                                                                  // MakerGen.cs:236
+                    Path= "CapabilityStatement.rest",                                                                                       // MakerGen.cs:237
+                    Id = "CapabilityStatement.rest",                                                                                        // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Rest                                                                                                       // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 70. CapabilityStatement.messaging
-                this.Element_Messaging = new ElementDefinitionInfo
-                {
-                    Name = "Element_Messaging",
-                    Path= "CapabilityStatement.messaging",
-                    Id = "CapabilityStatement.messaging",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Messaging
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Messaging = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Messaging",                                                                                             // MakerGen.cs:236
+                    Path= "CapabilityStatement.messaging",                                                                                  // MakerGen.cs:237
+                    Id = "CapabilityStatement.messaging",                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Messaging                                                                                                  // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 79. CapabilityStatement.document
-                this.Element_Document = new ElementDefinitionInfo
-                {
-                    Name = "Element_Document",
-                    Path= "CapabilityStatement.document",
-                    Id = "CapabilityStatement.document",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Document
-                        {
-                        }
-                    }
-                };
-            }
-            this.Name = "CapabilityStatement";
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/CapabilityStatement";
-        }
-    }
-}
+                this.Element_Document = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Document",                                                                                              // MakerGen.cs:236
+                    Path= "CapabilityStatement.document",                                                                                   // MakerGen.cs:237
+                    Id = "CapabilityStatement.document",                                                                                    // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Document                                                                                                   // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            this.Name = "CapabilityStatement";                                                                                              // MakerGen.cs:468
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/CapabilityStatement";                                                       // MakerGen.cs:469
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:449

@@ -1,13 +1,13 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Resource
-{
-    #region Json
-    #if NEVER
+using System;                                                                                                                               // MakerGen.cs:432
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:433
+using System.IO;                                                                                                                            // MakerGen.cs:434
+using System.Linq;                                                                                                                          // MakerGen.cs:435
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:436
+                                                                                                                                            // MakerGen.cs:437
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:438
+{                                                                                                                                           // MakerGen.cs:439
+    #region Json                                                                                                                            // MakerGen.cs:440
+    #if NEVER                                                                                                                               // MakerGen.cs:441
     {
       "resourceType": "StructureDefinition",
       "id": "CarePlan",
@@ -963,1093 +963,1093 @@ namespace FhirKhit.Maker.Common.Resource
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:444
     /// <summary>
     /// Fhir resource 'CarePlan'
     /// </summary>
     // 0. CarePlan
-    public partial class Resource_CarePlan : FhirKhit.Maker.Common.Resource.Resource_DomainResource
-    {
+    public partial class Resource_CarePlan : FhirKhit.Maker.Common.Resource.Resource_DomainResource                                         // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 22. CarePlan.activity
-        public partial class Type_Activity : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Activity : FhirKhit.Maker.Common.Complex.ComplexBase                                                      // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 27. CarePlan.activity.detail
-            public partial class Type_Detail : FhirKhit.Maker.Common.Complex.ComplexBase
-            {
+            public partial class Type_Detail : FhirKhit.Maker.Common.Complex.ComplexBase                                                    // MakerGen.cs:381
+            {                                                                                                                               // MakerGen.cs:382
                 // 28. CarePlan.activity.detail.kind
-                public ElementDefinitionInfo Element_Kind;
+                public ElementDefinitionInfo Element_Kind;                                                                                  // MakerGen.cs:217
                 // 29. CarePlan.activity.detail.instantiatesCanonical
-                public ElementDefinitionInfo Element_InstantiatesCanonical;
+                public ElementDefinitionInfo Element_InstantiatesCanonical;                                                                 // MakerGen.cs:217
                 // 30. CarePlan.activity.detail.instantiatesUri
-                public ElementDefinitionInfo Element_InstantiatesUri;
+                public ElementDefinitionInfo Element_InstantiatesUri;                                                                       // MakerGen.cs:217
                 // 31. CarePlan.activity.detail.code
-                public ElementDefinitionInfo Element_Code;
+                public ElementDefinitionInfo Element_Code;                                                                                  // MakerGen.cs:217
                 // 32. CarePlan.activity.detail.reasonCode
-                public ElementDefinitionInfo Element_ReasonCode;
+                public ElementDefinitionInfo Element_ReasonCode;                                                                            // MakerGen.cs:217
                 // 33. CarePlan.activity.detail.reasonReference
-                public ElementDefinitionInfo Element_ReasonReference;
+                public ElementDefinitionInfo Element_ReasonReference;                                                                       // MakerGen.cs:217
                 // 34. CarePlan.activity.detail.goal
-                public ElementDefinitionInfo Element_Goal;
+                public ElementDefinitionInfo Element_Goal;                                                                                  // MakerGen.cs:217
                 // 35. CarePlan.activity.detail.status
-                public ElementDefinitionInfo Element_Status;
+                public ElementDefinitionInfo Element_Status;                                                                                // MakerGen.cs:217
                 // 36. CarePlan.activity.detail.statusReason
-                public ElementDefinitionInfo Element_StatusReason;
+                public ElementDefinitionInfo Element_StatusReason;                                                                          // MakerGen.cs:217
                 // 37. CarePlan.activity.detail.doNotPerform
-                public ElementDefinitionInfo Element_DoNotPerform;
+                public ElementDefinitionInfo Element_DoNotPerform;                                                                          // MakerGen.cs:217
                 // 38. CarePlan.activity.detail.scheduled[x]
-                public ElementDefinitionInfo Element_Scheduled;
+                public ElementDefinitionInfo Element_Scheduled;                                                                             // MakerGen.cs:217
                 // 39. CarePlan.activity.detail.location
-                public ElementDefinitionInfo Element_Location;
+                public ElementDefinitionInfo Element_Location;                                                                              // MakerGen.cs:217
                 // 40. CarePlan.activity.detail.performer
-                public ElementDefinitionInfo Element_Performer;
+                public ElementDefinitionInfo Element_Performer;                                                                             // MakerGen.cs:217
                 // 41. CarePlan.activity.detail.product[x]
-                public ElementDefinitionInfo Element_Product;
+                public ElementDefinitionInfo Element_Product;                                                                               // MakerGen.cs:217
                 // 42. CarePlan.activity.detail.dailyAmount
-                public ElementDefinitionInfo Element_DailyAmount;
+                public ElementDefinitionInfo Element_DailyAmount;                                                                           // MakerGen.cs:217
                 // 43. CarePlan.activity.detail.quantity
-                public ElementDefinitionInfo Element_Quantity;
+                public ElementDefinitionInfo Element_Quantity;                                                                              // MakerGen.cs:217
                 // 44. CarePlan.activity.detail.description
-                public ElementDefinitionInfo Element_Description;
-                
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                {
-                    base.Write(sDef);
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                    {
-                        Path = "CarePlan.activity.detail",
-                        ElementId = "CarePlan.activity.detail"
-                    });
-                    Element_Kind.Write(sDef);
-                    Element_InstantiatesCanonical.Write(sDef);
-                    Element_InstantiatesUri.Write(sDef);
-                    Element_Code.Write(sDef);
-                    Element_ReasonCode.Write(sDef);
-                    Element_ReasonReference.Write(sDef);
-                    Element_Goal.Write(sDef);
-                    Element_Status.Write(sDef);
-                    Element_StatusReason.Write(sDef);
-                    Element_DoNotPerform.Write(sDef);
-                    Element_Scheduled.Write(sDef);
-                    Element_Location.Write(sDef);
-                    Element_Performer.Write(sDef);
-                    Element_Product.Write(sDef);
-                    Element_DailyAmount.Write(sDef);
-                    Element_Quantity.Write(sDef);
-                    Element_Description.Write(sDef);
-                }
-                
-                public Type_Detail()
-                {
-                    {
+                public ElementDefinitionInfo Element_Description;                                                                           // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:389
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:390
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:391
+                    {                                                                                                                       // MakerGen.cs:392
+                        Path = "CarePlan.activity.detail",                                                                                  // MakerGen.cs:393
+                        ElementId = "CarePlan.activity.detail"                                                                              // MakerGen.cs:394
+                    });                                                                                                                     // MakerGen.cs:395
+                    Element_Kind.Write(sDef);                                                                                               // MakerGen.cs:221
+                    Element_InstantiatesCanonical.Write(sDef);                                                                              // MakerGen.cs:221
+                    Element_InstantiatesUri.Write(sDef);                                                                                    // MakerGen.cs:221
+                    Element_Code.Write(sDef);                                                                                               // MakerGen.cs:221
+                    Element_ReasonCode.Write(sDef);                                                                                         // MakerGen.cs:221
+                    Element_ReasonReference.Write(sDef);                                                                                    // MakerGen.cs:221
+                    Element_Goal.Write(sDef);                                                                                               // MakerGen.cs:221
+                    Element_Status.Write(sDef);                                                                                             // MakerGen.cs:221
+                    Element_StatusReason.Write(sDef);                                                                                       // MakerGen.cs:221
+                    Element_DoNotPerform.Write(sDef);                                                                                       // MakerGen.cs:221
+                    Element_Scheduled.Write(sDef);                                                                                          // MakerGen.cs:221
+                    Element_Location.Write(sDef);                                                                                           // MakerGen.cs:221
+                    Element_Performer.Write(sDef);                                                                                          // MakerGen.cs:221
+                    Element_Product.Write(sDef);                                                                                            // MakerGen.cs:221
+                    Element_DailyAmount.Write(sDef);                                                                                        // MakerGen.cs:221
+                    Element_Quantity.Write(sDef);                                                                                           // MakerGen.cs:221
+                    Element_Description.Write(sDef);                                                                                        // MakerGen.cs:221
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                public Type_Detail()                                                                                                        // MakerGen.cs:400
+                {                                                                                                                           // MakerGen.cs:401
+                    {                                                                                                                       // MakerGen.cs:232
                         // 28. CarePlan.activity.detail.kind
-                        this.Element_Kind = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Kind",
-                            Path= "CarePlan.activity.detail.kind",
-                            Id = "CarePlan.activity.detail.kind",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Kind = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Kind",                                                                                          // MakerGen.cs:236
+                            Path= "CarePlan.activity.detail.kind",                                                                          // MakerGen.cs:237
+                            Id = "CarePlan.activity.detail.kind",                                                                           // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                          // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 29. CarePlan.activity.detail.instantiatesCanonical
-                        this.Element_InstantiatesCanonical = new ElementDefinitionInfo
-                        {
-                            Name = "Element_InstantiatesCanonical",
-                            Path= "CarePlan.activity.detail.instantiatesCanonical",
-                            Id = "CarePlan.activity.detail.instantiatesCanonical",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Canonical
-                                {
-                                    TargetProfile = new String[]
-                                    {
-                                        "http://hl7.org/fhir/StructureDefinition/PlanDefinition",
-                                        "http://hl7.org/fhir/StructureDefinition/ActivityDefinition",
-                                        "http://hl7.org/fhir/StructureDefinition/Questionnaire",
-                                        "http://hl7.org/fhir/StructureDefinition/Measure",
-                                        "http://hl7.org/fhir/StructureDefinition/OperationDefinition"
-                                    }
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_InstantiatesCanonical = new ElementDefinitionInfo                                                      // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_InstantiatesCanonical",                                                                         // MakerGen.cs:236
+                            Path= "CarePlan.activity.detail.instantiatesCanonical",                                                         // MakerGen.cs:237
+                            Id = "CarePlan.activity.detail.instantiatesCanonical",                                                          // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                     // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                    TargetProfile = new String[]                                                                            // MakerGen.cs:304
+                                    {                                                                                                       // CodeEditorExtensions.cs:28
+                                        "http://hl7.org/fhir/StructureDefinition/PlanDefinition",                                           // MakerGen.cs:304
+                                        "http://hl7.org/fhir/StructureDefinition/ActivityDefinition",                                       // MakerGen.cs:304
+                                        "http://hl7.org/fhir/StructureDefinition/Questionnaire",                                            // MakerGen.cs:304
+                                        "http://hl7.org/fhir/StructureDefinition/Measure",                                                  // MakerGen.cs:304
+                                        "http://hl7.org/fhir/StructureDefinition/OperationDefinition"                                       // MakerGen.cs:304
+                                    }                                                                                                       // CodeEditorExtensions.cs:34
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 30. CarePlan.activity.detail.instantiatesUri
-                        this.Element_InstantiatesUri = new ElementDefinitionInfo
-                        {
-                            Name = "Element_InstantiatesUri",
-                            Path= "CarePlan.activity.detail.instantiatesUri",
-                            Id = "CarePlan.activity.detail.instantiatesUri",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Uri
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_InstantiatesUri = new ElementDefinitionInfo                                                            // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_InstantiatesUri",                                                                               // MakerGen.cs:236
+                            Path= "CarePlan.activity.detail.instantiatesUri",                                                               // MakerGen.cs:237
+                            Id = "CarePlan.activity.detail.instantiatesUri",                                                                // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                           // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 31. CarePlan.activity.detail.code
-                        this.Element_Code = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Code",
-                            Path= "CarePlan.activity.detail.code",
-                            Id = "CarePlan.activity.detail.code",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Code = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Code",                                                                                          // MakerGen.cs:236
+                            Path= "CarePlan.activity.detail.code",                                                                          // MakerGen.cs:237
+                            Id = "CarePlan.activity.detail.code",                                                                           // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 32. CarePlan.activity.detail.reasonCode
-                        this.Element_ReasonCode = new ElementDefinitionInfo
-                        {
-                            Name = "Element_ReasonCode",
-                            Path= "CarePlan.activity.detail.reasonCode",
-                            Id = "CarePlan.activity.detail.reasonCode",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_ReasonCode = new ElementDefinitionInfo                                                                 // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_ReasonCode",                                                                                    // MakerGen.cs:236
+                            Path= "CarePlan.activity.detail.reasonCode",                                                                    // MakerGen.cs:237
+                            Id = "CarePlan.activity.detail.reasonCode",                                                                     // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 33. CarePlan.activity.detail.reasonReference
-                        this.Element_ReasonReference = new ElementDefinitionInfo
-                        {
-                            Name = "Element_ReasonReference",
-                            Path= "CarePlan.activity.detail.reasonReference",
-                            Id = "CarePlan.activity.detail.reasonReference",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Reference
-                                {
-                                    TargetProfile = new String[]
-                                    {
-                                        "http://hl7.org/fhir/StructureDefinition/Condition",
-                                        "http://hl7.org/fhir/StructureDefinition/Observation",
-                                        "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
-                                        "http://hl7.org/fhir/StructureDefinition/DocumentReference"
-                                    }
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_ReasonReference = new ElementDefinitionInfo                                                            // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_ReasonReference",                                                                               // MakerGen.cs:236
+                            Path= "CarePlan.activity.detail.reasonReference",                                                               // MakerGen.cs:237
+                            Id = "CarePlan.activity.detail.reasonReference",                                                                // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Reference                                                            // MakerGen.cs:344
+                                {                                                                                                           // MakerGen.cs:345
+                                    TargetProfile = new String[]                                                                            // MakerGen.cs:347
+                                    {                                                                                                       // CodeEditorExtensions.cs:28
+                                        "http://hl7.org/fhir/StructureDefinition/Condition",                                                // MakerGen.cs:347
+                                        "http://hl7.org/fhir/StructureDefinition/Observation",                                              // MakerGen.cs:347
+                                        "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",                                         // MakerGen.cs:347
+                                        "http://hl7.org/fhir/StructureDefinition/DocumentReference"                                         // MakerGen.cs:347
+                                    }                                                                                                       // CodeEditorExtensions.cs:34
+                                }                                                                                                           // MakerGen.cs:348
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 34. CarePlan.activity.detail.goal
-                        this.Element_Goal = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Goal",
-                            Path= "CarePlan.activity.detail.goal",
-                            Id = "CarePlan.activity.detail.goal",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Reference
-                                {
-                                    TargetProfile = new String[]
-                                    {
-                                        "http://hl7.org/fhir/StructureDefinition/Goal"
-                                    }
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Goal = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Goal",                                                                                          // MakerGen.cs:236
+                            Path= "CarePlan.activity.detail.goal",                                                                          // MakerGen.cs:237
+                            Id = "CarePlan.activity.detail.goal",                                                                           // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Reference                                                            // MakerGen.cs:344
+                                {                                                                                                           // MakerGen.cs:345
+                                    TargetProfile = new String[]                                                                            // MakerGen.cs:347
+                                    {                                                                                                       // CodeEditorExtensions.cs:28
+                                        "http://hl7.org/fhir/StructureDefinition/Goal"                                                      // MakerGen.cs:347
+                                    }                                                                                                       // CodeEditorExtensions.cs:34
+                                }                                                                                                           // MakerGen.cs:348
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 35. CarePlan.activity.detail.status
-                        this.Element_Status = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Status",
-                            Path= "CarePlan.activity.detail.status",
-                            Id = "CarePlan.activity.detail.status",
-                            Min = 1,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Status = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Status",                                                                                        // MakerGen.cs:236
+                            Path= "CarePlan.activity.detail.status",                                                                        // MakerGen.cs:237
+                            Id = "CarePlan.activity.detail.status",                                                                         // MakerGen.cs:238
+                            Min = 1,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                          // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 36. CarePlan.activity.detail.statusReason
-                        this.Element_StatusReason = new ElementDefinitionInfo
-                        {
-                            Name = "Element_StatusReason",
-                            Path= "CarePlan.activity.detail.statusReason",
-                            Id = "CarePlan.activity.detail.statusReason",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_StatusReason = new ElementDefinitionInfo                                                               // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_StatusReason",                                                                                  // MakerGen.cs:236
+                            Path= "CarePlan.activity.detail.statusReason",                                                                  // MakerGen.cs:237
+                            Id = "CarePlan.activity.detail.statusReason",                                                                   // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 37. CarePlan.activity.detail.doNotPerform
-                        this.Element_DoNotPerform = new ElementDefinitionInfo
-                        {
-                            Name = "Element_DoNotPerform",
-                            Path= "CarePlan.activity.detail.doNotPerform",
-                            Id = "CarePlan.activity.detail.doNotPerform",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_DoNotPerform = new ElementDefinitionInfo                                                               // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_DoNotPerform",                                                                                  // MakerGen.cs:236
+                            Path= "CarePlan.activity.detail.doNotPerform",                                                                  // MakerGen.cs:237
+                            Id = "CarePlan.activity.detail.doNotPerform",                                                                   // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                       // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 38. CarePlan.activity.detail.scheduled[x]
-                        this.Element_Scheduled = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Scheduled",
-                            Path= "CarePlan.activity.detail.scheduled[x]",
-                            Id = "CarePlan.activity.detail.scheduled[x]",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Timing
-                                {
-                                },
-                                new FhirKhit.Maker.Common.Complex.Type_Period
-                                {
-                                },
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Scheduled = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Scheduled",                                                                                     // MakerGen.cs:236
+                            Path= "CarePlan.activity.detail.scheduled[x]",                                                                  // MakerGen.cs:237
+                            Id = "CarePlan.activity.detail.scheduled[x]",                                                                   // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Timing                                                               // MakerGen.cs:356
+                                {                                                                                                           // MakerGen.cs:357
+                                },                                                                                                          // MakerGen.cs:358
+                                new FhirKhit.Maker.Common.Complex.Type_Period                                                               // MakerGen.cs:356
+                                {                                                                                                           // MakerGen.cs:357
+                                },                                                                                                          // MakerGen.cs:358
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 39. CarePlan.activity.detail.location
-                        this.Element_Location = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Location",
-                            Path= "CarePlan.activity.detail.location",
-                            Id = "CarePlan.activity.detail.location",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Reference
-                                {
-                                    TargetProfile = new String[]
-                                    {
-                                        "http://hl7.org/fhir/StructureDefinition/Location"
-                                    }
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Location = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Location",                                                                                      // MakerGen.cs:236
+                            Path= "CarePlan.activity.detail.location",                                                                      // MakerGen.cs:237
+                            Id = "CarePlan.activity.detail.location",                                                                       // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Reference                                                            // MakerGen.cs:344
+                                {                                                                                                           // MakerGen.cs:345
+                                    TargetProfile = new String[]                                                                            // MakerGen.cs:347
+                                    {                                                                                                       // CodeEditorExtensions.cs:28
+                                        "http://hl7.org/fhir/StructureDefinition/Location"                                                  // MakerGen.cs:347
+                                    }                                                                                                       // CodeEditorExtensions.cs:34
+                                }                                                                                                           // MakerGen.cs:348
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 40. CarePlan.activity.detail.performer
-                        this.Element_Performer = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Performer",
-                            Path= "CarePlan.activity.detail.performer",
-                            Id = "CarePlan.activity.detail.performer",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Reference
-                                {
-                                    TargetProfile = new String[]
-                                    {
-                                        "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                        "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                                        "http://hl7.org/fhir/StructureDefinition/Organization",
-                                        "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
-                                        "http://hl7.org/fhir/StructureDefinition/Patient",
-                                        "http://hl7.org/fhir/StructureDefinition/CareTeam",
-                                        "http://hl7.org/fhir/StructureDefinition/HealthcareService",
-                                        "http://hl7.org/fhir/StructureDefinition/Device"
-                                    }
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Performer = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Performer",                                                                                     // MakerGen.cs:236
+                            Path= "CarePlan.activity.detail.performer",                                                                     // MakerGen.cs:237
+                            Id = "CarePlan.activity.detail.performer",                                                                      // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Reference                                                            // MakerGen.cs:344
+                                {                                                                                                           // MakerGen.cs:345
+                                    TargetProfile = new String[]                                                                            // MakerGen.cs:347
+                                    {                                                                                                       // CodeEditorExtensions.cs:28
+                                        "http://hl7.org/fhir/StructureDefinition/Practitioner",                                             // MakerGen.cs:347
+                                        "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                         // MakerGen.cs:347
+                                        "http://hl7.org/fhir/StructureDefinition/Organization",                                             // MakerGen.cs:347
+                                        "http://hl7.org/fhir/StructureDefinition/RelatedPerson",                                            // MakerGen.cs:347
+                                        "http://hl7.org/fhir/StructureDefinition/Patient",                                                  // MakerGen.cs:347
+                                        "http://hl7.org/fhir/StructureDefinition/CareTeam",                                                 // MakerGen.cs:347
+                                        "http://hl7.org/fhir/StructureDefinition/HealthcareService",                                        // MakerGen.cs:347
+                                        "http://hl7.org/fhir/StructureDefinition/Device"                                                    // MakerGen.cs:347
+                                    }                                                                                                       // CodeEditorExtensions.cs:34
+                                }                                                                                                           // MakerGen.cs:348
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 41. CarePlan.activity.detail.product[x]
-                        this.Element_Product = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Product",
-                            Path= "CarePlan.activity.detail.product[x]",
-                            Id = "CarePlan.activity.detail.product[x]",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                },
-                                new FhirKhit.Maker.Common.Complex.Type_Reference
-                                {
-                                    TargetProfile = new String[]
-                                    {
-                                        "http://hl7.org/fhir/StructureDefinition/Medication",
-                                        "http://hl7.org/fhir/StructureDefinition/Substance"
-                                    }
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Product = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Product",                                                                                       // MakerGen.cs:236
+                            Path= "CarePlan.activity.detail.product[x]",                                                                    // MakerGen.cs:237
+                            Id = "CarePlan.activity.detail.product[x]",                                                                     // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                },                                                                                                          // MakerGen.cs:320
+                                new FhirKhit.Maker.Common.Complex.Type_Reference                                                            // MakerGen.cs:344
+                                {                                                                                                           // MakerGen.cs:345
+                                    TargetProfile = new String[]                                                                            // MakerGen.cs:347
+                                    {                                                                                                       // CodeEditorExtensions.cs:28
+                                        "http://hl7.org/fhir/StructureDefinition/Medication",                                               // MakerGen.cs:347
+                                        "http://hl7.org/fhir/StructureDefinition/Substance"                                                 // MakerGen.cs:347
+                                    }                                                                                                       // CodeEditorExtensions.cs:34
+                                }                                                                                                           // MakerGen.cs:348
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 42. CarePlan.activity.detail.dailyAmount
-                        this.Element_DailyAmount = new ElementDefinitionInfo
-                        {
-                            Name = "Element_DailyAmount",
-                            Path= "CarePlan.activity.detail.dailyAmount",
-                            Id = "CarePlan.activity.detail.dailyAmount",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Quantity
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_DailyAmount = new ElementDefinitionInfo                                                                // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_DailyAmount",                                                                                   // MakerGen.cs:236
+                            Path= "CarePlan.activity.detail.dailyAmount",                                                                   // MakerGen.cs:237
+                            Id = "CarePlan.activity.detail.dailyAmount",                                                                    // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Quantity                                                             // MakerGen.cs:356
+                                {                                                                                                           // MakerGen.cs:357
+                                }                                                                                                           // MakerGen.cs:358
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 43. CarePlan.activity.detail.quantity
-                        this.Element_Quantity = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Quantity",
-                            Path= "CarePlan.activity.detail.quantity",
-                            Id = "CarePlan.activity.detail.quantity",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Quantity
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Quantity = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Quantity",                                                                                      // MakerGen.cs:236
+                            Path= "CarePlan.activity.detail.quantity",                                                                      // MakerGen.cs:237
+                            Id = "CarePlan.activity.detail.quantity",                                                                       // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Quantity                                                             // MakerGen.cs:356
+                                {                                                                                                           // MakerGen.cs:357
+                                }                                                                                                           // MakerGen.cs:358
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 44. CarePlan.activity.detail.description
-                        this.Element_Description = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Description",
-                            Path= "CarePlan.activity.detail.description",
-                            Id = "CarePlan.activity.detail.description",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String
-                                {
-                                }
-                            }
-                        };
-                    }
-                }
-            }
+                        this.Element_Description = new ElementDefinitionInfo                                                                // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Description",                                                                                   // MakerGen.cs:236
+                            Path= "CarePlan.activity.detail.description",                                                                   // MakerGen.cs:237
+                            Id = "CarePlan.activity.detail.description",                                                                    // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                }                                                                                                                           // MakerGen.cs:403
+            }                                                                                                                               // MakerGen.cs:405
             // 23. CarePlan.activity.outcomeCodeableConcept
-            public ElementDefinitionInfo Element_OutcomeCodeableConcept;
+            public ElementDefinitionInfo Element_OutcomeCodeableConcept;                                                                    // MakerGen.cs:217
             // 24. CarePlan.activity.outcomeReference
-            public ElementDefinitionInfo Element_OutcomeReference;
+            public ElementDefinitionInfo Element_OutcomeReference;                                                                          // MakerGen.cs:217
             // 25. CarePlan.activity.progress
-            public ElementDefinitionInfo Element_Progress;
+            public ElementDefinitionInfo Element_Progress;                                                                                  // MakerGen.cs:217
             // 26. CarePlan.activity.reference
-            public ElementDefinitionInfo Element_Reference;
+            public ElementDefinitionInfo Element_Reference;                                                                                 // MakerGen.cs:217
             // 27. CarePlan.activity.detail
-            public ElementDefinitionInfo Element_Detail;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "CarePlan.activity",
-                    ElementId = "CarePlan.activity"
-                });
-                Element_OutcomeCodeableConcept.Write(sDef);
-                Element_OutcomeReference.Write(sDef);
-                Element_Progress.Write(sDef);
-                Element_Reference.Write(sDef);
-                Element_Detail.Write(sDef);
-            }
-            
-            public Type_Activity()
-            {
-                {
+            public ElementDefinitionInfo Element_Detail;                                                                                    // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "CarePlan.activity",                                                                                             // MakerGen.cs:393
+                    ElementId = "CarePlan.activity"                                                                                         // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_OutcomeCodeableConcept.Write(sDef);                                                                                 // MakerGen.cs:221
+                Element_OutcomeReference.Write(sDef);                                                                                       // MakerGen.cs:221
+                Element_Progress.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_Reference.Write(sDef);                                                                                              // MakerGen.cs:221
+                Element_Detail.Write(sDef);                                                                                                 // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Activity()                                                                                                          // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 23. CarePlan.activity.outcomeCodeableConcept
-                    this.Element_OutcomeCodeableConcept = new ElementDefinitionInfo
-                    {
-                        Name = "Element_OutcomeCodeableConcept",
-                        Path= "CarePlan.activity.outcomeCodeableConcept",
-                        Id = "CarePlan.activity.outcomeCodeableConcept",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_OutcomeCodeableConcept = new ElementDefinitionInfo                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_OutcomeCodeableConcept",                                                                            // MakerGen.cs:236
+                        Path= "CarePlan.activity.outcomeCodeableConcept",                                                                   // MakerGen.cs:237
+                        Id = "CarePlan.activity.outcomeCodeableConcept",                                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 24. CarePlan.activity.outcomeReference
-                    this.Element_OutcomeReference = new ElementDefinitionInfo
-                    {
-                        Name = "Element_OutcomeReference",
-                        Path= "CarePlan.activity.outcomeReference",
-                        Id = "CarePlan.activity.outcomeReference",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Resource"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_OutcomeReference = new ElementDefinitionInfo                                                               // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_OutcomeReference",                                                                                  // MakerGen.cs:236
+                        Path= "CarePlan.activity.outcomeReference",                                                                         // MakerGen.cs:237
+                        Id = "CarePlan.activity.outcomeReference",                                                                          // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Resource"                                                      // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 25. CarePlan.activity.progress
-                    this.Element_Progress = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Progress",
-                        Path= "CarePlan.activity.progress",
-                        Id = "CarePlan.activity.progress",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Annotation
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Progress = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Progress",                                                                                          // MakerGen.cs:236
+                        Path= "CarePlan.activity.progress",                                                                                 // MakerGen.cs:237
+                        Id = "CarePlan.activity.progress",                                                                                  // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Annotation                                                               // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 26. CarePlan.activity.reference
-                    this.Element_Reference = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Reference",
-                        Path= "CarePlan.activity.reference",
-                        Id = "CarePlan.activity.reference",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Appointment",
-                                    "http://hl7.org/fhir/StructureDefinition/CommunicationRequest",
-                                    "http://hl7.org/fhir/StructureDefinition/DeviceRequest",
-                                    "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
-                                    "http://hl7.org/fhir/StructureDefinition/NutritionOrder",
-                                    "http://hl7.org/fhir/StructureDefinition/Task",
-                                    "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
-                                    "http://hl7.org/fhir/StructureDefinition/VisionPrescription",
-                                    "http://hl7.org/fhir/StructureDefinition/RequestGroup"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Reference = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Reference",                                                                                         // MakerGen.cs:236
+                        Path= "CarePlan.activity.reference",                                                                                // MakerGen.cs:237
+                        Id = "CarePlan.activity.reference",                                                                                 // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Appointment",                                                  // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/CommunicationRequest",                                         // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/DeviceRequest",                                                // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/MedicationRequest",                                            // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/NutritionOrder",                                               // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/Task",                                                         // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/ServiceRequest",                                               // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/VisionPrescription",                                           // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/RequestGroup"                                                  // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 27. CarePlan.activity.detail
-                    this.Element_Detail = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Detail",
-                        Path= "CarePlan.activity.detail",
-                        Id = "CarePlan.activity.detail",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new Type_Detail
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Detail = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Detail",                                                                                            // MakerGen.cs:236
+                        Path= "CarePlan.activity.detail",                                                                                   // MakerGen.cs:237
+                        Id = "CarePlan.activity.detail",                                                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new Type_Detail                                                                                                 // MakerGen.cs:260
+                            {                                                                                                               // MakerGen.cs:261
+                            }                                                                                                               // MakerGen.cs:262
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 1. CarePlan.identifier
-        public ElementDefinitionInfo Element_Identifier;
+        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:217
         // 2. CarePlan.instantiatesCanonical
-        public ElementDefinitionInfo Element_InstantiatesCanonical;
+        public ElementDefinitionInfo Element_InstantiatesCanonical;                                                                         // MakerGen.cs:217
         // 3. CarePlan.instantiatesUri
-        public ElementDefinitionInfo Element_InstantiatesUri;
+        public ElementDefinitionInfo Element_InstantiatesUri;                                                                               // MakerGen.cs:217
         // 4. CarePlan.basedOn
-        public ElementDefinitionInfo Element_BasedOn;
+        public ElementDefinitionInfo Element_BasedOn;                                                                                       // MakerGen.cs:217
         // 5. CarePlan.replaces
-        public ElementDefinitionInfo Element_Replaces;
+        public ElementDefinitionInfo Element_Replaces;                                                                                      // MakerGen.cs:217
         // 6. CarePlan.partOf
-        public ElementDefinitionInfo Element_PartOf;
+        public ElementDefinitionInfo Element_PartOf;                                                                                        // MakerGen.cs:217
         // 7. CarePlan.status
-        public ElementDefinitionInfo Element_Status;
+        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:217
         // 8. CarePlan.intent
-        public ElementDefinitionInfo Element_Intent;
+        public ElementDefinitionInfo Element_Intent;                                                                                        // MakerGen.cs:217
         // 9. CarePlan.category
-        public ElementDefinitionInfo Element_Category;
+        public ElementDefinitionInfo Element_Category;                                                                                      // MakerGen.cs:217
         // 10. CarePlan.title
-        public ElementDefinitionInfo Element_Title;
+        public ElementDefinitionInfo Element_Title;                                                                                         // MakerGen.cs:217
         // 11. CarePlan.description
-        public ElementDefinitionInfo Element_Description;
+        public ElementDefinitionInfo Element_Description;                                                                                   // MakerGen.cs:217
         // 12. CarePlan.subject
-        public ElementDefinitionInfo Element_Subject;
+        public ElementDefinitionInfo Element_Subject;                                                                                       // MakerGen.cs:217
         // 13. CarePlan.encounter
-        public ElementDefinitionInfo Element_Encounter;
+        public ElementDefinitionInfo Element_Encounter;                                                                                     // MakerGen.cs:217
         // 14. CarePlan.period
-        public ElementDefinitionInfo Element_Period;
+        public ElementDefinitionInfo Element_Period;                                                                                        // MakerGen.cs:217
         // 15. CarePlan.created
-        public ElementDefinitionInfo Element_Created;
+        public ElementDefinitionInfo Element_Created;                                                                                       // MakerGen.cs:217
         // 16. CarePlan.author
-        public ElementDefinitionInfo Element_Author;
+        public ElementDefinitionInfo Element_Author;                                                                                        // MakerGen.cs:217
         // 17. CarePlan.contributor
-        public ElementDefinitionInfo Element_Contributor;
+        public ElementDefinitionInfo Element_Contributor;                                                                                   // MakerGen.cs:217
         // 18. CarePlan.careTeam
-        public ElementDefinitionInfo Element_CareTeam;
+        public ElementDefinitionInfo Element_CareTeam;                                                                                      // MakerGen.cs:217
         // 19. CarePlan.addresses
-        public ElementDefinitionInfo Element_Addresses;
+        public ElementDefinitionInfo Element_Addresses;                                                                                     // MakerGen.cs:217
         // 20. CarePlan.supportingInfo
-        public ElementDefinitionInfo Element_SupportingInfo;
+        public ElementDefinitionInfo Element_SupportingInfo;                                                                                // MakerGen.cs:217
         // 21. CarePlan.goal
-        public ElementDefinitionInfo Element_Goal;
+        public ElementDefinitionInfo Element_Goal;                                                                                          // MakerGen.cs:217
         // 22. CarePlan.activity
-        public ElementDefinitionInfo Element_Activity;
+        public ElementDefinitionInfo Element_Activity;                                                                                      // MakerGen.cs:217
         // 45. CarePlan.note
-        public ElementDefinitionInfo Element_Note;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "CarePlan",
-                ElementId = "CarePlan"
-            });
-            Element_Identifier.Write(sDef);
-            Element_InstantiatesCanonical.Write(sDef);
-            Element_InstantiatesUri.Write(sDef);
-            Element_BasedOn.Write(sDef);
-            Element_Replaces.Write(sDef);
-            Element_PartOf.Write(sDef);
-            Element_Status.Write(sDef);
-            Element_Intent.Write(sDef);
-            Element_Category.Write(sDef);
-            Element_Title.Write(sDef);
-            Element_Description.Write(sDef);
-            Element_Subject.Write(sDef);
-            Element_Encounter.Write(sDef);
-            Element_Period.Write(sDef);
-            Element_Created.Write(sDef);
-            Element_Author.Write(sDef);
-            Element_Contributor.Write(sDef);
-            Element_CareTeam.Write(sDef);
-            Element_Addresses.Write(sDef);
-            Element_SupportingInfo.Write(sDef);
-            Element_Goal.Write(sDef);
-            Element_Activity.Write(sDef);
-            Element_Note.Write(sDef);
-        }
-        
-        public Resource_CarePlan()
-        {
-            {
+        public ElementDefinitionInfo Element_Note;                                                                                          // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "CarePlan",                                                                                                          // MakerGen.cs:393
+                ElementId = "CarePlan"                                                                                                      // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_InstantiatesCanonical.Write(sDef);                                                                                      // MakerGen.cs:221
+            Element_InstantiatesUri.Write(sDef);                                                                                            // MakerGen.cs:221
+            Element_BasedOn.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Replaces.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_PartOf.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Intent.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Category.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_Title.Write(sDef);                                                                                                      // MakerGen.cs:221
+            Element_Description.Write(sDef);                                                                                                // MakerGen.cs:221
+            Element_Subject.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Encounter.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_Period.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Created.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Author.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Contributor.Write(sDef);                                                                                                // MakerGen.cs:221
+            Element_CareTeam.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_Addresses.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_SupportingInfo.Write(sDef);                                                                                             // MakerGen.cs:221
+            Element_Goal.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Activity.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_Note.Write(sDef);                                                                                                       // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Resource_CarePlan()                                                                                                          // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. CarePlan.identifier
-                this.Element_Identifier = new ElementDefinitionInfo
-                {
-                    Name = "Element_Identifier",
-                    Path= "CarePlan.identifier",
-                    Id = "CarePlan.identifier",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:236
+                    Path= "CarePlan.identifier",                                                                                            // MakerGen.cs:237
+                    Id = "CarePlan.identifier",                                                                                             // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. CarePlan.instantiatesCanonical
-                this.Element_InstantiatesCanonical = new ElementDefinitionInfo
-                {
-                    Name = "Element_InstantiatesCanonical",
-                    Path= "CarePlan.instantiatesCanonical",
-                    Id = "CarePlan.instantiatesCanonical",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/PlanDefinition",
-                                "http://hl7.org/fhir/StructureDefinition/Questionnaire",
-                                "http://hl7.org/fhir/StructureDefinition/Measure",
-                                "http://hl7.org/fhir/StructureDefinition/ActivityDefinition",
-                                "http://hl7.org/fhir/StructureDefinition/OperationDefinition"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_InstantiatesCanonical = new ElementDefinitionInfo                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_InstantiatesCanonical",                                                                                 // MakerGen.cs:236
+                    Path= "CarePlan.instantiatesCanonical",                                                                                 // MakerGen.cs:237
+                    Id = "CarePlan.instantiatesCanonical",                                                                                  // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                             // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:304
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/PlanDefinition",                                                   // MakerGen.cs:304
+                                "http://hl7.org/fhir/StructureDefinition/Questionnaire",                                                    // MakerGen.cs:304
+                                "http://hl7.org/fhir/StructureDefinition/Measure",                                                          // MakerGen.cs:304
+                                "http://hl7.org/fhir/StructureDefinition/ActivityDefinition",                                               // MakerGen.cs:304
+                                "http://hl7.org/fhir/StructureDefinition/OperationDefinition"                                               // MakerGen.cs:304
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 3. CarePlan.instantiatesUri
-                this.Element_InstantiatesUri = new ElementDefinitionInfo
-                {
-                    Name = "Element_InstantiatesUri",
-                    Path= "CarePlan.instantiatesUri",
-                    Id = "CarePlan.instantiatesUri",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_InstantiatesUri = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_InstantiatesUri",                                                                                       // MakerGen.cs:236
+                    Path= "CarePlan.instantiatesUri",                                                                                       // MakerGen.cs:237
+                    Id = "CarePlan.instantiatesUri",                                                                                        // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                                   // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 4. CarePlan.basedOn
-                this.Element_BasedOn = new ElementDefinitionInfo
-                {
-                    Name = "Element_BasedOn",
-                    Path= "CarePlan.basedOn",
-                    Id = "CarePlan.basedOn",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/CarePlan"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_BasedOn = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_BasedOn",                                                                                               // MakerGen.cs:236
+                    Path= "CarePlan.basedOn",                                                                                               // MakerGen.cs:237
+                    Id = "CarePlan.basedOn",                                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/CarePlan"                                                          // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 5. CarePlan.replaces
-                this.Element_Replaces = new ElementDefinitionInfo
-                {
-                    Name = "Element_Replaces",
-                    Path= "CarePlan.replaces",
-                    Id = "CarePlan.replaces",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/CarePlan"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Replaces = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Replaces",                                                                                              // MakerGen.cs:236
+                    Path= "CarePlan.replaces",                                                                                              // MakerGen.cs:237
+                    Id = "CarePlan.replaces",                                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/CarePlan"                                                          // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 6. CarePlan.partOf
-                this.Element_PartOf = new ElementDefinitionInfo
-                {
-                    Name = "Element_PartOf",
-                    Path= "CarePlan.partOf",
-                    Id = "CarePlan.partOf",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/CarePlan"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_PartOf = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_PartOf",                                                                                                // MakerGen.cs:236
+                    Path= "CarePlan.partOf",                                                                                                // MakerGen.cs:237
+                    Id = "CarePlan.partOf",                                                                                                 // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/CarePlan"                                                          // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 7. CarePlan.status
-                this.Element_Status = new ElementDefinitionInfo
-                {
-                    Name = "Element_Status",
-                    Path= "CarePlan.status",
-                    Id = "CarePlan.status",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Status",                                                                                                // MakerGen.cs:236
+                    Path= "CarePlan.status",                                                                                                // MakerGen.cs:237
+                    Id = "CarePlan.status",                                                                                                 // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 8. CarePlan.intent
-                this.Element_Intent = new ElementDefinitionInfo
-                {
-                    Name = "Element_Intent",
-                    Path= "CarePlan.intent",
-                    Id = "CarePlan.intent",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Intent = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Intent",                                                                                                // MakerGen.cs:236
+                    Path= "CarePlan.intent",                                                                                                // MakerGen.cs:237
+                    Id = "CarePlan.intent",                                                                                                 // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 9. CarePlan.category
-                this.Element_Category = new ElementDefinitionInfo
-                {
-                    Name = "Element_Category",
-                    Path= "CarePlan.category",
-                    Id = "CarePlan.category",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Category = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Category",                                                                                              // MakerGen.cs:236
+                    Path= "CarePlan.category",                                                                                              // MakerGen.cs:237
+                    Id = "CarePlan.category",                                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 10. CarePlan.title
-                this.Element_Title = new ElementDefinitionInfo
-                {
-                    Name = "Element_Title",
-                    Path= "CarePlan.title",
-                    Id = "CarePlan.title",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Title = new ElementDefinitionInfo                                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Title",                                                                                                 // MakerGen.cs:236
+                    Path= "CarePlan.title",                                                                                                 // MakerGen.cs:237
+                    Id = "CarePlan.title",                                                                                                  // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 11. CarePlan.description
-                this.Element_Description = new ElementDefinitionInfo
-                {
-                    Name = "Element_Description",
-                    Path= "CarePlan.description",
-                    Id = "CarePlan.description",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Description = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Description",                                                                                           // MakerGen.cs:236
+                    Path= "CarePlan.description",                                                                                           // MakerGen.cs:237
+                    Id = "CarePlan.description",                                                                                            // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 12. CarePlan.subject
-                this.Element_Subject = new ElementDefinitionInfo
-                {
-                    Name = "Element_Subject",
-                    Path= "CarePlan.subject",
-                    Id = "CarePlan.subject",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Patient",
-                                "http://hl7.org/fhir/StructureDefinition/Group"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Subject = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Subject",                                                                                               // MakerGen.cs:236
+                    Path= "CarePlan.subject",                                                                                               // MakerGen.cs:237
+                    Id = "CarePlan.subject",                                                                                                // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Patient",                                                          // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Group"                                                             // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 13. CarePlan.encounter
-                this.Element_Encounter = new ElementDefinitionInfo
-                {
-                    Name = "Element_Encounter",
-                    Path= "CarePlan.encounter",
-                    Id = "CarePlan.encounter",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Encounter"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Encounter = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Encounter",                                                                                             // MakerGen.cs:236
+                    Path= "CarePlan.encounter",                                                                                             // MakerGen.cs:237
+                    Id = "CarePlan.encounter",                                                                                              // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Encounter"                                                         // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 14. CarePlan.period
-                this.Element_Period = new ElementDefinitionInfo
-                {
-                    Name = "Element_Period",
-                    Path= "CarePlan.period",
-                    Id = "CarePlan.period",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Period
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Period = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Period",                                                                                                // MakerGen.cs:236
+                    Path= "CarePlan.period",                                                                                                // MakerGen.cs:237
+                    Id = "CarePlan.period",                                                                                                 // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Period                                                                       // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 15. CarePlan.created
-                this.Element_Created = new ElementDefinitionInfo
-                {
-                    Name = "Element_Created",
-                    Path= "CarePlan.created",
-                    Id = "CarePlan.created",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Created = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Created",                                                                                               // MakerGen.cs:236
+                    Path= "CarePlan.created",                                                                                               // MakerGen.cs:237
+                    Id = "CarePlan.created",                                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 16. CarePlan.author
-                this.Element_Author = new ElementDefinitionInfo
-                {
-                    Name = "Element_Author",
-                    Path= "CarePlan.author",
-                    Id = "CarePlan.author",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Patient",
-                                "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                                "http://hl7.org/fhir/StructureDefinition/Device",
-                                "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
-                                "http://hl7.org/fhir/StructureDefinition/Organization",
-                                "http://hl7.org/fhir/StructureDefinition/CareTeam"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Author = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Author",                                                                                                // MakerGen.cs:236
+                    Path= "CarePlan.author",                                                                                                // MakerGen.cs:237
+                    Id = "CarePlan.author",                                                                                                 // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Patient",                                                          // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                                 // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Device",                                                           // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/RelatedPerson",                                                    // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Organization",                                                     // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/CareTeam"                                                          // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 17. CarePlan.contributor
-                this.Element_Contributor = new ElementDefinitionInfo
-                {
-                    Name = "Element_Contributor",
-                    Path= "CarePlan.contributor",
-                    Id = "CarePlan.contributor",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Patient",
-                                "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                                "http://hl7.org/fhir/StructureDefinition/Device",
-                                "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
-                                "http://hl7.org/fhir/StructureDefinition/Organization",
-                                "http://hl7.org/fhir/StructureDefinition/CareTeam"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Contributor = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Contributor",                                                                                           // MakerGen.cs:236
+                    Path= "CarePlan.contributor",                                                                                           // MakerGen.cs:237
+                    Id = "CarePlan.contributor",                                                                                            // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Patient",                                                          // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                                 // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Device",                                                           // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/RelatedPerson",                                                    // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Organization",                                                     // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/CareTeam"                                                          // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 18. CarePlan.careTeam
-                this.Element_CareTeam = new ElementDefinitionInfo
-                {
-                    Name = "Element_CareTeam",
-                    Path= "CarePlan.careTeam",
-                    Id = "CarePlan.careTeam",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/CareTeam"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_CareTeam = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_CareTeam",                                                                                              // MakerGen.cs:236
+                    Path= "CarePlan.careTeam",                                                                                              // MakerGen.cs:237
+                    Id = "CarePlan.careTeam",                                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/CareTeam"                                                          // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 19. CarePlan.addresses
-                this.Element_Addresses = new ElementDefinitionInfo
-                {
-                    Name = "Element_Addresses",
-                    Path= "CarePlan.addresses",
-                    Id = "CarePlan.addresses",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Condition"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Addresses = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Addresses",                                                                                             // MakerGen.cs:236
+                    Path= "CarePlan.addresses",                                                                                             // MakerGen.cs:237
+                    Id = "CarePlan.addresses",                                                                                              // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Condition"                                                         // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 20. CarePlan.supportingInfo
-                this.Element_SupportingInfo = new ElementDefinitionInfo
-                {
-                    Name = "Element_SupportingInfo",
-                    Path= "CarePlan.supportingInfo",
-                    Id = "CarePlan.supportingInfo",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Resource"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_SupportingInfo = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_SupportingInfo",                                                                                        // MakerGen.cs:236
+                    Path= "CarePlan.supportingInfo",                                                                                        // MakerGen.cs:237
+                    Id = "CarePlan.supportingInfo",                                                                                         // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Resource"                                                          // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 21. CarePlan.goal
-                this.Element_Goal = new ElementDefinitionInfo
-                {
-                    Name = "Element_Goal",
-                    Path= "CarePlan.goal",
-                    Id = "CarePlan.goal",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Goal"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Goal = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Goal",                                                                                                  // MakerGen.cs:236
+                    Path= "CarePlan.goal",                                                                                                  // MakerGen.cs:237
+                    Id = "CarePlan.goal",                                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Goal"                                                              // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 22. CarePlan.activity
-                this.Element_Activity = new ElementDefinitionInfo
-                {
-                    Name = "Element_Activity",
-                    Path= "CarePlan.activity",
-                    Id = "CarePlan.activity",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Activity
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Activity = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Activity",                                                                                              // MakerGen.cs:236
+                    Path= "CarePlan.activity",                                                                                              // MakerGen.cs:237
+                    Id = "CarePlan.activity",                                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Activity                                                                                                   // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 45. CarePlan.note
-                this.Element_Note = new ElementDefinitionInfo
-                {
-                    Name = "Element_Note",
-                    Path= "CarePlan.note",
-                    Id = "CarePlan.note",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Annotation
-                        {
-                        }
-                    }
-                };
-            }
-            this.Name = "CarePlan";
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/CarePlan";
-        }
-    }
-}
+                this.Element_Note = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Note",                                                                                                  // MakerGen.cs:236
+                    Path= "CarePlan.note",                                                                                                  // MakerGen.cs:237
+                    Id = "CarePlan.note",                                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Annotation                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            this.Name = "CarePlan";                                                                                                         // MakerGen.cs:468
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/CarePlan";                                                                  // MakerGen.cs:469
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:449

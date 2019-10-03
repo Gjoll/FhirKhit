@@ -1,13 +1,13 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Resource
-{
-    #region Json
-    #if NEVER
+using System;                                                                                                                               // MakerGen.cs:432
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:433
+using System.IO;                                                                                                                            // MakerGen.cs:434
+using System.Linq;                                                                                                                          // MakerGen.cs:435
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:436
+                                                                                                                                            // MakerGen.cs:437
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:438
+{                                                                                                                                           // MakerGen.cs:439
+    #region Json                                                                                                                            // MakerGen.cs:440
+    #if NEVER                                                                                                                               // MakerGen.cs:441
     {
       "resourceType": "StructureDefinition",
       "id": "ClaimResponse",
@@ -1788,2235 +1788,2235 @@ namespace FhirKhit.Maker.Common.Resource
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:444
     /// <summary>
     /// Fhir resource 'ClaimResponse'
     /// </summary>
     // 0. ClaimResponse
-    public partial class Resource_ClaimResponse : FhirKhit.Maker.Common.Resource.Resource_DomainResource
-    {
+    public partial class Resource_ClaimResponse : FhirKhit.Maker.Common.Resource.Resource_DomainResource                                    // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 16. ClaimResponse.item
-        public partial class Type_Item : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Item : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 19. ClaimResponse.item.adjudication
-            public partial class Type_Adjudication : FhirKhit.Maker.Common.Complex.ComplexBase
-            {
+            public partial class Type_Adjudication : FhirKhit.Maker.Common.Complex.ComplexBase                                              // MakerGen.cs:381
+            {                                                                                                                               // MakerGen.cs:382
                 // 20. ClaimResponse.item.adjudication.category
-                public ElementDefinitionInfo Element_Category;
+                public ElementDefinitionInfo Element_Category;                                                                              // MakerGen.cs:217
                 // 21. ClaimResponse.item.adjudication.reason
-                public ElementDefinitionInfo Element_Reason;
+                public ElementDefinitionInfo Element_Reason;                                                                                // MakerGen.cs:217
                 // 22. ClaimResponse.item.adjudication.amount
-                public ElementDefinitionInfo Element_Amount;
+                public ElementDefinitionInfo Element_Amount;                                                                                // MakerGen.cs:217
                 // 23. ClaimResponse.item.adjudication.value
-                public ElementDefinitionInfo Element_Value;
-                
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                {
-                    base.Write(sDef);
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                    {
-                        Path = "ClaimResponse.item.adjudication",
-                        ElementId = "ClaimResponse.item.adjudication"
-                    });
-                    Element_Category.Write(sDef);
-                    Element_Reason.Write(sDef);
-                    Element_Amount.Write(sDef);
-                    Element_Value.Write(sDef);
-                }
-                
-                public Type_Adjudication()
-                {
-                    {
+                public ElementDefinitionInfo Element_Value;                                                                                 // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:389
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:390
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:391
+                    {                                                                                                                       // MakerGen.cs:392
+                        Path = "ClaimResponse.item.adjudication",                                                                           // MakerGen.cs:393
+                        ElementId = "ClaimResponse.item.adjudication"                                                                       // MakerGen.cs:394
+                    });                                                                                                                     // MakerGen.cs:395
+                    Element_Category.Write(sDef);                                                                                           // MakerGen.cs:221
+                    Element_Reason.Write(sDef);                                                                                             // MakerGen.cs:221
+                    Element_Amount.Write(sDef);                                                                                             // MakerGen.cs:221
+                    Element_Value.Write(sDef);                                                                                              // MakerGen.cs:221
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                public Type_Adjudication()                                                                                                  // MakerGen.cs:400
+                {                                                                                                                           // MakerGen.cs:401
+                    {                                                                                                                       // MakerGen.cs:232
                         // 20. ClaimResponse.item.adjudication.category
-                        this.Element_Category = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Category",
-                            Path= "ClaimResponse.item.adjudication.category",
-                            Id = "ClaimResponse.item.adjudication.category",
-                            Min = 1,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Category = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Category",                                                                                      // MakerGen.cs:236
+                            Path= "ClaimResponse.item.adjudication.category",                                                               // MakerGen.cs:237
+                            Id = "ClaimResponse.item.adjudication.category",                                                                // MakerGen.cs:238
+                            Min = 1,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 21. ClaimResponse.item.adjudication.reason
-                        this.Element_Reason = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Reason",
-                            Path= "ClaimResponse.item.adjudication.reason",
-                            Id = "ClaimResponse.item.adjudication.reason",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Reason = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Reason",                                                                                        // MakerGen.cs:236
+                            Path= "ClaimResponse.item.adjudication.reason",                                                                 // MakerGen.cs:237
+                            Id = "ClaimResponse.item.adjudication.reason",                                                                  // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 22. ClaimResponse.item.adjudication.amount
-                        this.Element_Amount = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Amount",
-                            Path= "ClaimResponse.item.adjudication.amount",
-                            Id = "ClaimResponse.item.adjudication.amount",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Money
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Amount = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Amount",                                                                                        // MakerGen.cs:236
+                            Path= "ClaimResponse.item.adjudication.amount",                                                                 // MakerGen.cs:237
+                            Id = "ClaimResponse.item.adjudication.amount",                                                                  // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Money                                                                // MakerGen.cs:356
+                                {                                                                                                           // MakerGen.cs:357
+                                }                                                                                                           // MakerGen.cs:358
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 23. ClaimResponse.item.adjudication.value
-                        this.Element_Value = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Value",
-                            Path= "ClaimResponse.item.adjudication.value",
-                            Id = "ClaimResponse.item.adjudication.value",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
-                                {
-                                }
-                            }
-                        };
-                    }
-                }
-            }
+                        this.Element_Value = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Value",                                                                                         // MakerGen.cs:236
+                            Path= "ClaimResponse.item.adjudication.value",                                                                  // MakerGen.cs:237
+                            Id = "ClaimResponse.item.adjudication.value",                                                                   // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                       // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                }                                                                                                                           // MakerGen.cs:403
+            }                                                                                                                               // MakerGen.cs:405
             // 24. ClaimResponse.item.detail
-            public partial class Type_Detail : FhirKhit.Maker.Common.Complex.ComplexBase
-            {
+            public partial class Type_Detail : FhirKhit.Maker.Common.Complex.ComplexBase                                                    // MakerGen.cs:381
+            {                                                                                                                               // MakerGen.cs:382
                 // 28. ClaimResponse.item.detail.subDetail
-                public partial class Type_SubDetail : FhirKhit.Maker.Common.Complex.ComplexBase
-                {
+                public partial class Type_SubDetail : FhirKhit.Maker.Common.Complex.ComplexBase                                             // MakerGen.cs:381
+                {                                                                                                                           // MakerGen.cs:382
                     // 29. ClaimResponse.item.detail.subDetail.subDetailSequence
-                    public ElementDefinitionInfo Element_SubDetailSequence;
+                    public ElementDefinitionInfo Element_SubDetailSequence;                                                                 // MakerGen.cs:217
                     // 30. ClaimResponse.item.detail.subDetail.noteNumber
-                    public ElementDefinitionInfo Element_NoteNumber;
+                    public ElementDefinitionInfo Element_NoteNumber;                                                                        // MakerGen.cs:217
                     // 31. ClaimResponse.item.detail.subDetail.adjudication
-                    public ElementDefinitionInfo Element_Adjudication;
-                    
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                    {
-                        base.Write(sDef);
-                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                        {
-                            Path = "ClaimResponse.item.detail.subDetail",
-                            ElementId = "ClaimResponse.item.detail.subDetail"
-                        });
-                        Element_SubDetailSequence.Write(sDef);
-                        Element_NoteNumber.Write(sDef);
-                        Element_Adjudication.Write(sDef);
-                    }
-                    
-                    public Type_SubDetail()
-                    {
-                        {
+                    public ElementDefinitionInfo Element_Adjudication;                                                                      // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:388
+                    {                                                                                                                       // MakerGen.cs:389
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:390
+                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                  // MakerGen.cs:391
+                        {                                                                                                                   // MakerGen.cs:392
+                            Path = "ClaimResponse.item.detail.subDetail",                                                                   // MakerGen.cs:393
+                            ElementId = "ClaimResponse.item.detail.subDetail"                                                               // MakerGen.cs:394
+                        });                                                                                                                 // MakerGen.cs:395
+                        Element_SubDetailSequence.Write(sDef);                                                                              // MakerGen.cs:221
+                        Element_NoteNumber.Write(sDef);                                                                                     // MakerGen.cs:221
+                        Element_Adjudication.Write(sDef);                                                                                   // MakerGen.cs:221
+                    }                                                                                                                       // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                    public Type_SubDetail()                                                                                                 // MakerGen.cs:400
+                    {                                                                                                                       // MakerGen.cs:401
+                        {                                                                                                                   // MakerGen.cs:232
                             // 29. ClaimResponse.item.detail.subDetail.subDetailSequence
-                            this.Element_SubDetailSequence = new ElementDefinitionInfo
-                            {
-                                Name = "Element_SubDetailSequence",
-                                Path= "ClaimResponse.item.detail.subDetail.subDetailSequence",
-                                Id = "ClaimResponse.item.detail.subDetail.subDetailSequence",
-                                Min = 1,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_SubDetailSequence = new ElementDefinitionInfo                                                      // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_SubDetailSequence",                                                                         // MakerGen.cs:236
+                                Path= "ClaimResponse.item.detail.subDetail.subDetailSequence",                                              // MakerGen.cs:237
+                                Id = "ClaimResponse.item.detail.subDetail.subDetailSequence",                                               // MakerGen.cs:238
+                                Min = 1,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                               // MakerGen.cs:301
+                                    {                                                                                                       // MakerGen.cs:302
+                                    }                                                                                                       // MakerGen.cs:305
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 30. ClaimResponse.item.detail.subDetail.noteNumber
-                            this.Element_NoteNumber = new ElementDefinitionInfo
-                            {
-                                Name = "Element_NoteNumber",
-                                Path= "ClaimResponse.item.detail.subDetail.noteNumber",
-                                Id = "ClaimResponse.item.detail.subDetail.noteNumber",
-                                Min = 0,
-                                Max = -1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_NoteNumber = new ElementDefinitionInfo                                                             // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_NoteNumber",                                                                                // MakerGen.cs:236
+                                Path= "ClaimResponse.item.detail.subDetail.noteNumber",                                                     // MakerGen.cs:237
+                                Id = "ClaimResponse.item.detail.subDetail.noteNumber",                                                      // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = -1,                                                                                                   // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                               // MakerGen.cs:301
+                                    {                                                                                                       // MakerGen.cs:302
+                                    }                                                                                                       // MakerGen.cs:305
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 31. ClaimResponse.item.detail.subDetail.adjudication
-                            this.Element_Adjudication = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Adjudication",
-                                Path= "ClaimResponse.item.detail.subDetail.adjudication",
-                                Id = "ClaimResponse.item.detail.subDetail.adjudication",
-                                Min = 0,
-                                Max = -1,
-                                Types = new BaseType[]
-                                {
-                                }
-                            };
-                        }
-                    }
-                }
+                            this.Element_Adjudication = new ElementDefinitionInfo                                                           // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Adjudication",                                                                              // MakerGen.cs:236
+                                Path= "ClaimResponse.item.detail.subDetail.adjudication",                                                   // MakerGen.cs:237
+                                Id = "ClaimResponse.item.detail.subDetail.adjudication",                                                    // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = -1,                                                                                                   // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                    }                                                                                                                       // MakerGen.cs:403
+                }                                                                                                                           // MakerGen.cs:405
                 // 25. ClaimResponse.item.detail.detailSequence
-                public ElementDefinitionInfo Element_DetailSequence;
+                public ElementDefinitionInfo Element_DetailSequence;                                                                        // MakerGen.cs:217
                 // 26. ClaimResponse.item.detail.noteNumber
-                public ElementDefinitionInfo Element_NoteNumber;
+                public ElementDefinitionInfo Element_NoteNumber;                                                                            // MakerGen.cs:217
                 // 27. ClaimResponse.item.detail.adjudication
-                public ElementDefinitionInfo Element_Adjudication;
+                public ElementDefinitionInfo Element_Adjudication;                                                                          // MakerGen.cs:217
                 // 28. ClaimResponse.item.detail.subDetail
-                public ElementDefinitionInfo Element_SubDetail;
-                
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                {
-                    base.Write(sDef);
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                    {
-                        Path = "ClaimResponse.item.detail",
-                        ElementId = "ClaimResponse.item.detail"
-                    });
-                    Element_DetailSequence.Write(sDef);
-                    Element_NoteNumber.Write(sDef);
-                    Element_Adjudication.Write(sDef);
-                    Element_SubDetail.Write(sDef);
-                }
-                
-                public Type_Detail()
-                {
-                    {
+                public ElementDefinitionInfo Element_SubDetail;                                                                             // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:389
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:390
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:391
+                    {                                                                                                                       // MakerGen.cs:392
+                        Path = "ClaimResponse.item.detail",                                                                                 // MakerGen.cs:393
+                        ElementId = "ClaimResponse.item.detail"                                                                             // MakerGen.cs:394
+                    });                                                                                                                     // MakerGen.cs:395
+                    Element_DetailSequence.Write(sDef);                                                                                     // MakerGen.cs:221
+                    Element_NoteNumber.Write(sDef);                                                                                         // MakerGen.cs:221
+                    Element_Adjudication.Write(sDef);                                                                                       // MakerGen.cs:221
+                    Element_SubDetail.Write(sDef);                                                                                          // MakerGen.cs:221
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                public Type_Detail()                                                                                                        // MakerGen.cs:400
+                {                                                                                                                           // MakerGen.cs:401
+                    {                                                                                                                       // MakerGen.cs:232
                         // 25. ClaimResponse.item.detail.detailSequence
-                        this.Element_DetailSequence = new ElementDefinitionInfo
-                        {
-                            Name = "Element_DetailSequence",
-                            Path= "ClaimResponse.item.detail.detailSequence",
-                            Id = "ClaimResponse.item.detail.detailSequence",
-                            Min = 1,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_DetailSequence = new ElementDefinitionInfo                                                             // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_DetailSequence",                                                                                // MakerGen.cs:236
+                            Path= "ClaimResponse.item.detail.detailSequence",                                                               // MakerGen.cs:237
+                            Id = "ClaimResponse.item.detail.detailSequence",                                                                // MakerGen.cs:238
+                            Min = 1,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                   // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 26. ClaimResponse.item.detail.noteNumber
-                        this.Element_NoteNumber = new ElementDefinitionInfo
-                        {
-                            Name = "Element_NoteNumber",
-                            Path= "ClaimResponse.item.detail.noteNumber",
-                            Id = "ClaimResponse.item.detail.noteNumber",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_NoteNumber = new ElementDefinitionInfo                                                                 // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_NoteNumber",                                                                                    // MakerGen.cs:236
+                            Path= "ClaimResponse.item.detail.noteNumber",                                                                   // MakerGen.cs:237
+                            Id = "ClaimResponse.item.detail.noteNumber",                                                                    // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                   // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 27. ClaimResponse.item.detail.adjudication
-                        this.Element_Adjudication = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Adjudication",
-                            Path= "ClaimResponse.item.detail.adjudication",
-                            Id = "ClaimResponse.item.detail.adjudication",
-                            Min = 1,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Adjudication = new ElementDefinitionInfo                                                               // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Adjudication",                                                                                  // MakerGen.cs:236
+                            Path= "ClaimResponse.item.detail.adjudication",                                                                 // MakerGen.cs:237
+                            Id = "ClaimResponse.item.detail.adjudication",                                                                  // MakerGen.cs:238
+                            Min = 1,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 28. ClaimResponse.item.detail.subDetail
-                        this.Element_SubDetail = new ElementDefinitionInfo
-                        {
-                            Name = "Element_SubDetail",
-                            Path= "ClaimResponse.item.detail.subDetail",
-                            Id = "ClaimResponse.item.detail.subDetail",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new Type_SubDetail
-                                {
-                                }
-                            }
-                        };
-                    }
-                }
-            }
+                        this.Element_SubDetail = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_SubDetail",                                                                                     // MakerGen.cs:236
+                            Path= "ClaimResponse.item.detail.subDetail",                                                                    // MakerGen.cs:237
+                            Id = "ClaimResponse.item.detail.subDetail",                                                                     // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new Type_SubDetail                                                                                          // MakerGen.cs:260
+                                {                                                                                                           // MakerGen.cs:261
+                                }                                                                                                           // MakerGen.cs:262
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                }                                                                                                                           // MakerGen.cs:403
+            }                                                                                                                               // MakerGen.cs:405
             // 17. ClaimResponse.item.itemSequence
-            public ElementDefinitionInfo Element_ItemSequence;
+            public ElementDefinitionInfo Element_ItemSequence;                                                                              // MakerGen.cs:217
             // 18. ClaimResponse.item.noteNumber
-            public ElementDefinitionInfo Element_NoteNumber;
+            public ElementDefinitionInfo Element_NoteNumber;                                                                                // MakerGen.cs:217
             // 19. ClaimResponse.item.adjudication
-            public ElementDefinitionInfo Element_Adjudication;
+            public ElementDefinitionInfo Element_Adjudication;                                                                              // MakerGen.cs:217
             // 24. ClaimResponse.item.detail
-            public ElementDefinitionInfo Element_Detail;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "ClaimResponse.item",
-                    ElementId = "ClaimResponse.item"
-                });
-                Element_ItemSequence.Write(sDef);
-                Element_NoteNumber.Write(sDef);
-                Element_Adjudication.Write(sDef);
-                Element_Detail.Write(sDef);
-            }
-            
-            public Type_Item()
-            {
-                {
+            public ElementDefinitionInfo Element_Detail;                                                                                    // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "ClaimResponse.item",                                                                                            // MakerGen.cs:393
+                    ElementId = "ClaimResponse.item"                                                                                        // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_ItemSequence.Write(sDef);                                                                                           // MakerGen.cs:221
+                Element_NoteNumber.Write(sDef);                                                                                             // MakerGen.cs:221
+                Element_Adjudication.Write(sDef);                                                                                           // MakerGen.cs:221
+                Element_Detail.Write(sDef);                                                                                                 // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Item()                                                                                                              // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 17. ClaimResponse.item.itemSequence
-                    this.Element_ItemSequence = new ElementDefinitionInfo
-                    {
-                        Name = "Element_ItemSequence",
-                        Path= "ClaimResponse.item.itemSequence",
-                        Id = "ClaimResponse.item.itemSequence",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_ItemSequence = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_ItemSequence",                                                                                      // MakerGen.cs:236
+                        Path= "ClaimResponse.item.itemSequence",                                                                            // MakerGen.cs:237
+                        Id = "ClaimResponse.item.itemSequence",                                                                             // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                       // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 18. ClaimResponse.item.noteNumber
-                    this.Element_NoteNumber = new ElementDefinitionInfo
-                    {
-                        Name = "Element_NoteNumber",
-                        Path= "ClaimResponse.item.noteNumber",
-                        Id = "ClaimResponse.item.noteNumber",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_NoteNumber = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_NoteNumber",                                                                                        // MakerGen.cs:236
+                        Path= "ClaimResponse.item.noteNumber",                                                                              // MakerGen.cs:237
+                        Id = "ClaimResponse.item.noteNumber",                                                                               // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                       // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 19. ClaimResponse.item.adjudication
-                    this.Element_Adjudication = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Adjudication",
-                        Path= "ClaimResponse.item.adjudication",
-                        Id = "ClaimResponse.item.adjudication",
-                        Min = 1,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new Type_Adjudication
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Adjudication = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Adjudication",                                                                                      // MakerGen.cs:236
+                        Path= "ClaimResponse.item.adjudication",                                                                            // MakerGen.cs:237
+                        Id = "ClaimResponse.item.adjudication",                                                                             // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new Type_Adjudication                                                                                           // MakerGen.cs:260
+                            {                                                                                                               // MakerGen.cs:261
+                            }                                                                                                               // MakerGen.cs:262
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 24. ClaimResponse.item.detail
-                    this.Element_Detail = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Detail",
-                        Path= "ClaimResponse.item.detail",
-                        Id = "ClaimResponse.item.detail",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new Type_Detail
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Detail = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Detail",                                                                                            // MakerGen.cs:236
+                        Path= "ClaimResponse.item.detail",                                                                                  // MakerGen.cs:237
+                        Id = "ClaimResponse.item.detail",                                                                                   // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new Type_Detail                                                                                                 // MakerGen.cs:260
+                            {                                                                                                               // MakerGen.cs:261
+                            }                                                                                                               // MakerGen.cs:262
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 32. ClaimResponse.addItem
-        public partial class Type_AddItem : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_AddItem : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 50. ClaimResponse.addItem.detail
-            public partial class Type_Detail : FhirKhit.Maker.Common.Complex.ComplexBase
-            {
+            public partial class Type_Detail : FhirKhit.Maker.Common.Complex.ComplexBase                                                    // MakerGen.cs:381
+            {                                                                                                                               // MakerGen.cs:382
                 // 59. ClaimResponse.addItem.detail.subDetail
-                public partial class Type_SubDetail : FhirKhit.Maker.Common.Complex.ComplexBase
-                {
+                public partial class Type_SubDetail : FhirKhit.Maker.Common.Complex.ComplexBase                                             // MakerGen.cs:381
+                {                                                                                                                           // MakerGen.cs:382
                     // 60. ClaimResponse.addItem.detail.subDetail.productOrService
-                    public ElementDefinitionInfo Element_ProductOrService;
+                    public ElementDefinitionInfo Element_ProductOrService;                                                                  // MakerGen.cs:217
                     // 61. ClaimResponse.addItem.detail.subDetail.modifier
-                    public ElementDefinitionInfo Element_Modifier;
+                    public ElementDefinitionInfo Element_Modifier;                                                                          // MakerGen.cs:217
                     // 62. ClaimResponse.addItem.detail.subDetail.quantity
-                    public ElementDefinitionInfo Element_Quantity;
+                    public ElementDefinitionInfo Element_Quantity;                                                                          // MakerGen.cs:217
                     // 63. ClaimResponse.addItem.detail.subDetail.unitPrice
-                    public ElementDefinitionInfo Element_UnitPrice;
+                    public ElementDefinitionInfo Element_UnitPrice;                                                                         // MakerGen.cs:217
                     // 64. ClaimResponse.addItem.detail.subDetail.factor
-                    public ElementDefinitionInfo Element_Factor;
+                    public ElementDefinitionInfo Element_Factor;                                                                            // MakerGen.cs:217
                     // 65. ClaimResponse.addItem.detail.subDetail.net
-                    public ElementDefinitionInfo Element_Net;
+                    public ElementDefinitionInfo Element_Net;                                                                               // MakerGen.cs:217
                     // 66. ClaimResponse.addItem.detail.subDetail.noteNumber
-                    public ElementDefinitionInfo Element_NoteNumber;
+                    public ElementDefinitionInfo Element_NoteNumber;                                                                        // MakerGen.cs:217
                     // 67. ClaimResponse.addItem.detail.subDetail.adjudication
-                    public ElementDefinitionInfo Element_Adjudication;
-                    
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                    {
-                        base.Write(sDef);
-                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                        {
-                            Path = "ClaimResponse.addItem.detail.subDetail",
-                            ElementId = "ClaimResponse.addItem.detail.subDetail"
-                        });
-                        Element_ProductOrService.Write(sDef);
-                        Element_Modifier.Write(sDef);
-                        Element_Quantity.Write(sDef);
-                        Element_UnitPrice.Write(sDef);
-                        Element_Factor.Write(sDef);
-                        Element_Net.Write(sDef);
-                        Element_NoteNumber.Write(sDef);
-                        Element_Adjudication.Write(sDef);
-                    }
-                    
-                    public Type_SubDetail()
-                    {
-                        {
+                    public ElementDefinitionInfo Element_Adjudication;                                                                      // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:388
+                    {                                                                                                                       // MakerGen.cs:389
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:390
+                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                  // MakerGen.cs:391
+                        {                                                                                                                   // MakerGen.cs:392
+                            Path = "ClaimResponse.addItem.detail.subDetail",                                                                // MakerGen.cs:393
+                            ElementId = "ClaimResponse.addItem.detail.subDetail"                                                            // MakerGen.cs:394
+                        });                                                                                                                 // MakerGen.cs:395
+                        Element_ProductOrService.Write(sDef);                                                                               // MakerGen.cs:221
+                        Element_Modifier.Write(sDef);                                                                                       // MakerGen.cs:221
+                        Element_Quantity.Write(sDef);                                                                                       // MakerGen.cs:221
+                        Element_UnitPrice.Write(sDef);                                                                                      // MakerGen.cs:221
+                        Element_Factor.Write(sDef);                                                                                         // MakerGen.cs:221
+                        Element_Net.Write(sDef);                                                                                            // MakerGen.cs:221
+                        Element_NoteNumber.Write(sDef);                                                                                     // MakerGen.cs:221
+                        Element_Adjudication.Write(sDef);                                                                                   // MakerGen.cs:221
+                    }                                                                                                                       // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                    public Type_SubDetail()                                                                                                 // MakerGen.cs:400
+                    {                                                                                                                       // MakerGen.cs:401
+                        {                                                                                                                   // MakerGen.cs:232
                             // 60. ClaimResponse.addItem.detail.subDetail.productOrService
-                            this.Element_ProductOrService = new ElementDefinitionInfo
-                            {
-                                Name = "Element_ProductOrService",
-                                Path= "ClaimResponse.addItem.detail.subDetail.productOrService",
-                                Id = "ClaimResponse.addItem.detail.subDetail.productOrService",
-                                Min = 1,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_ProductOrService = new ElementDefinitionInfo                                                       // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_ProductOrService",                                                                          // MakerGen.cs:236
+                                Path= "ClaimResponse.addItem.detail.subDetail.productOrService",                                            // MakerGen.cs:237
+                                Id = "ClaimResponse.addItem.detail.subDetail.productOrService",                                             // MakerGen.cs:238
+                                Min = 1,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                  // MakerGen.cs:316
+                                    {                                                                                                       // MakerGen.cs:317
+                                    }                                                                                                       // MakerGen.cs:320
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 61. ClaimResponse.addItem.detail.subDetail.modifier
-                            this.Element_Modifier = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Modifier",
-                                Path= "ClaimResponse.addItem.detail.subDetail.modifier",
-                                Id = "ClaimResponse.addItem.detail.subDetail.modifier",
-                                Min = 0,
-                                Max = -1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_Modifier = new ElementDefinitionInfo                                                               // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Modifier",                                                                                  // MakerGen.cs:236
+                                Path= "ClaimResponse.addItem.detail.subDetail.modifier",                                                    // MakerGen.cs:237
+                                Id = "ClaimResponse.addItem.detail.subDetail.modifier",                                                     // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = -1,                                                                                                   // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                  // MakerGen.cs:316
+                                    {                                                                                                       // MakerGen.cs:317
+                                    }                                                                                                       // MakerGen.cs:320
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 62. ClaimResponse.addItem.detail.subDetail.quantity
-                            this.Element_Quantity = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Quantity",
-                                Path= "ClaimResponse.addItem.detail.subDetail.quantity",
-                                Id = "ClaimResponse.addItem.detail.subDetail.quantity",
-                                Min = 0,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Complex.Type_Quantity
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_Quantity = new ElementDefinitionInfo                                                               // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Quantity",                                                                                  // MakerGen.cs:236
+                                Path= "ClaimResponse.addItem.detail.subDetail.quantity",                                                    // MakerGen.cs:237
+                                Id = "ClaimResponse.addItem.detail.subDetail.quantity",                                                     // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Complex.Type_Quantity                                                         // MakerGen.cs:356
+                                    {                                                                                                       // MakerGen.cs:357
+                                    }                                                                                                       // MakerGen.cs:358
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 63. ClaimResponse.addItem.detail.subDetail.unitPrice
-                            this.Element_UnitPrice = new ElementDefinitionInfo
-                            {
-                                Name = "Element_UnitPrice",
-                                Path= "ClaimResponse.addItem.detail.subDetail.unitPrice",
-                                Id = "ClaimResponse.addItem.detail.subDetail.unitPrice",
-                                Min = 0,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Complex.Type_Money
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_UnitPrice = new ElementDefinitionInfo                                                              // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_UnitPrice",                                                                                 // MakerGen.cs:236
+                                Path= "ClaimResponse.addItem.detail.subDetail.unitPrice",                                                   // MakerGen.cs:237
+                                Id = "ClaimResponse.addItem.detail.subDetail.unitPrice",                                                    // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Complex.Type_Money                                                            // MakerGen.cs:356
+                                    {                                                                                                       // MakerGen.cs:357
+                                    }                                                                                                       // MakerGen.cs:358
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 64. ClaimResponse.addItem.detail.subDetail.factor
-                            this.Element_Factor = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Factor",
-                                Path= "ClaimResponse.addItem.detail.subDetail.factor",
-                                Id = "ClaimResponse.addItem.detail.subDetail.factor",
-                                Min = 0,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_Factor = new ElementDefinitionInfo                                                                 // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Factor",                                                                                    // MakerGen.cs:236
+                                Path= "ClaimResponse.addItem.detail.subDetail.factor",                                                      // MakerGen.cs:237
+                                Id = "ClaimResponse.addItem.detail.subDetail.factor",                                                       // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                   // MakerGen.cs:301
+                                    {                                                                                                       // MakerGen.cs:302
+                                    }                                                                                                       // MakerGen.cs:305
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 65. ClaimResponse.addItem.detail.subDetail.net
-                            this.Element_Net = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Net",
-                                Path= "ClaimResponse.addItem.detail.subDetail.net",
-                                Id = "ClaimResponse.addItem.detail.subDetail.net",
-                                Min = 0,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Complex.Type_Money
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_Net = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Net",                                                                                       // MakerGen.cs:236
+                                Path= "ClaimResponse.addItem.detail.subDetail.net",                                                         // MakerGen.cs:237
+                                Id = "ClaimResponse.addItem.detail.subDetail.net",                                                          // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Complex.Type_Money                                                            // MakerGen.cs:356
+                                    {                                                                                                       // MakerGen.cs:357
+                                    }                                                                                                       // MakerGen.cs:358
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 66. ClaimResponse.addItem.detail.subDetail.noteNumber
-                            this.Element_NoteNumber = new ElementDefinitionInfo
-                            {
-                                Name = "Element_NoteNumber",
-                                Path= "ClaimResponse.addItem.detail.subDetail.noteNumber",
-                                Id = "ClaimResponse.addItem.detail.subDetail.noteNumber",
-                                Min = 0,
-                                Max = -1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_NoteNumber = new ElementDefinitionInfo                                                             // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_NoteNumber",                                                                                // MakerGen.cs:236
+                                Path= "ClaimResponse.addItem.detail.subDetail.noteNumber",                                                  // MakerGen.cs:237
+                                Id = "ClaimResponse.addItem.detail.subDetail.noteNumber",                                                   // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = -1,                                                                                                   // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                               // MakerGen.cs:301
+                                    {                                                                                                       // MakerGen.cs:302
+                                    }                                                                                                       // MakerGen.cs:305
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 67. ClaimResponse.addItem.detail.subDetail.adjudication
-                            this.Element_Adjudication = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Adjudication",
-                                Path= "ClaimResponse.addItem.detail.subDetail.adjudication",
-                                Id = "ClaimResponse.addItem.detail.subDetail.adjudication",
-                                Min = 1,
-                                Max = -1,
-                                Types = new BaseType[]
-                                {
-                                }
-                            };
-                        }
-                    }
-                }
+                            this.Element_Adjudication = new ElementDefinitionInfo                                                           // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Adjudication",                                                                              // MakerGen.cs:236
+                                Path= "ClaimResponse.addItem.detail.subDetail.adjudication",                                                // MakerGen.cs:237
+                                Id = "ClaimResponse.addItem.detail.subDetail.adjudication",                                                 // MakerGen.cs:238
+                                Min = 1,                                                                                                    // MakerGen.cs:239
+                                Max = -1,                                                                                                   // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                    }                                                                                                                       // MakerGen.cs:403
+                }                                                                                                                           // MakerGen.cs:405
                 // 51. ClaimResponse.addItem.detail.productOrService
-                public ElementDefinitionInfo Element_ProductOrService;
+                public ElementDefinitionInfo Element_ProductOrService;                                                                      // MakerGen.cs:217
                 // 52. ClaimResponse.addItem.detail.modifier
-                public ElementDefinitionInfo Element_Modifier;
+                public ElementDefinitionInfo Element_Modifier;                                                                              // MakerGen.cs:217
                 // 53. ClaimResponse.addItem.detail.quantity
-                public ElementDefinitionInfo Element_Quantity;
+                public ElementDefinitionInfo Element_Quantity;                                                                              // MakerGen.cs:217
                 // 54. ClaimResponse.addItem.detail.unitPrice
-                public ElementDefinitionInfo Element_UnitPrice;
+                public ElementDefinitionInfo Element_UnitPrice;                                                                             // MakerGen.cs:217
                 // 55. ClaimResponse.addItem.detail.factor
-                public ElementDefinitionInfo Element_Factor;
+                public ElementDefinitionInfo Element_Factor;                                                                                // MakerGen.cs:217
                 // 56. ClaimResponse.addItem.detail.net
-                public ElementDefinitionInfo Element_Net;
+                public ElementDefinitionInfo Element_Net;                                                                                   // MakerGen.cs:217
                 // 57. ClaimResponse.addItem.detail.noteNumber
-                public ElementDefinitionInfo Element_NoteNumber;
+                public ElementDefinitionInfo Element_NoteNumber;                                                                            // MakerGen.cs:217
                 // 58. ClaimResponse.addItem.detail.adjudication
-                public ElementDefinitionInfo Element_Adjudication;
+                public ElementDefinitionInfo Element_Adjudication;                                                                          // MakerGen.cs:217
                 // 59. ClaimResponse.addItem.detail.subDetail
-                public ElementDefinitionInfo Element_SubDetail;
-                
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                {
-                    base.Write(sDef);
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                    {
-                        Path = "ClaimResponse.addItem.detail",
-                        ElementId = "ClaimResponse.addItem.detail"
-                    });
-                    Element_ProductOrService.Write(sDef);
-                    Element_Modifier.Write(sDef);
-                    Element_Quantity.Write(sDef);
-                    Element_UnitPrice.Write(sDef);
-                    Element_Factor.Write(sDef);
-                    Element_Net.Write(sDef);
-                    Element_NoteNumber.Write(sDef);
-                    Element_Adjudication.Write(sDef);
-                    Element_SubDetail.Write(sDef);
-                }
-                
-                public Type_Detail()
-                {
-                    {
+                public ElementDefinitionInfo Element_SubDetail;                                                                             // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:389
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:390
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:391
+                    {                                                                                                                       // MakerGen.cs:392
+                        Path = "ClaimResponse.addItem.detail",                                                                              // MakerGen.cs:393
+                        ElementId = "ClaimResponse.addItem.detail"                                                                          // MakerGen.cs:394
+                    });                                                                                                                     // MakerGen.cs:395
+                    Element_ProductOrService.Write(sDef);                                                                                   // MakerGen.cs:221
+                    Element_Modifier.Write(sDef);                                                                                           // MakerGen.cs:221
+                    Element_Quantity.Write(sDef);                                                                                           // MakerGen.cs:221
+                    Element_UnitPrice.Write(sDef);                                                                                          // MakerGen.cs:221
+                    Element_Factor.Write(sDef);                                                                                             // MakerGen.cs:221
+                    Element_Net.Write(sDef);                                                                                                // MakerGen.cs:221
+                    Element_NoteNumber.Write(sDef);                                                                                         // MakerGen.cs:221
+                    Element_Adjudication.Write(sDef);                                                                                       // MakerGen.cs:221
+                    Element_SubDetail.Write(sDef);                                                                                          // MakerGen.cs:221
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                public Type_Detail()                                                                                                        // MakerGen.cs:400
+                {                                                                                                                           // MakerGen.cs:401
+                    {                                                                                                                       // MakerGen.cs:232
                         // 51. ClaimResponse.addItem.detail.productOrService
-                        this.Element_ProductOrService = new ElementDefinitionInfo
-                        {
-                            Name = "Element_ProductOrService",
-                            Path= "ClaimResponse.addItem.detail.productOrService",
-                            Id = "ClaimResponse.addItem.detail.productOrService",
-                            Min = 1,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_ProductOrService = new ElementDefinitionInfo                                                           // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_ProductOrService",                                                                              // MakerGen.cs:236
+                            Path= "ClaimResponse.addItem.detail.productOrService",                                                          // MakerGen.cs:237
+                            Id = "ClaimResponse.addItem.detail.productOrService",                                                           // MakerGen.cs:238
+                            Min = 1,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 52. ClaimResponse.addItem.detail.modifier
-                        this.Element_Modifier = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Modifier",
-                            Path= "ClaimResponse.addItem.detail.modifier",
-                            Id = "ClaimResponse.addItem.detail.modifier",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Modifier = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Modifier",                                                                                      // MakerGen.cs:236
+                            Path= "ClaimResponse.addItem.detail.modifier",                                                                  // MakerGen.cs:237
+                            Id = "ClaimResponse.addItem.detail.modifier",                                                                   // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 53. ClaimResponse.addItem.detail.quantity
-                        this.Element_Quantity = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Quantity",
-                            Path= "ClaimResponse.addItem.detail.quantity",
-                            Id = "ClaimResponse.addItem.detail.quantity",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Quantity
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Quantity = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Quantity",                                                                                      // MakerGen.cs:236
+                            Path= "ClaimResponse.addItem.detail.quantity",                                                                  // MakerGen.cs:237
+                            Id = "ClaimResponse.addItem.detail.quantity",                                                                   // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Quantity                                                             // MakerGen.cs:356
+                                {                                                                                                           // MakerGen.cs:357
+                                }                                                                                                           // MakerGen.cs:358
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 54. ClaimResponse.addItem.detail.unitPrice
-                        this.Element_UnitPrice = new ElementDefinitionInfo
-                        {
-                            Name = "Element_UnitPrice",
-                            Path= "ClaimResponse.addItem.detail.unitPrice",
-                            Id = "ClaimResponse.addItem.detail.unitPrice",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Money
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_UnitPrice = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_UnitPrice",                                                                                     // MakerGen.cs:236
+                            Path= "ClaimResponse.addItem.detail.unitPrice",                                                                 // MakerGen.cs:237
+                            Id = "ClaimResponse.addItem.detail.unitPrice",                                                                  // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Money                                                                // MakerGen.cs:356
+                                {                                                                                                           // MakerGen.cs:357
+                                }                                                                                                           // MakerGen.cs:358
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 55. ClaimResponse.addItem.detail.factor
-                        this.Element_Factor = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Factor",
-                            Path= "ClaimResponse.addItem.detail.factor",
-                            Id = "ClaimResponse.addItem.detail.factor",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Factor = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Factor",                                                                                        // MakerGen.cs:236
+                            Path= "ClaimResponse.addItem.detail.factor",                                                                    // MakerGen.cs:237
+                            Id = "ClaimResponse.addItem.detail.factor",                                                                     // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                       // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 56. ClaimResponse.addItem.detail.net
-                        this.Element_Net = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Net",
-                            Path= "ClaimResponse.addItem.detail.net",
-                            Id = "ClaimResponse.addItem.detail.net",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Money
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Net = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Net",                                                                                           // MakerGen.cs:236
+                            Path= "ClaimResponse.addItem.detail.net",                                                                       // MakerGen.cs:237
+                            Id = "ClaimResponse.addItem.detail.net",                                                                        // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Money                                                                // MakerGen.cs:356
+                                {                                                                                                           // MakerGen.cs:357
+                                }                                                                                                           // MakerGen.cs:358
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 57. ClaimResponse.addItem.detail.noteNumber
-                        this.Element_NoteNumber = new ElementDefinitionInfo
-                        {
-                            Name = "Element_NoteNumber",
-                            Path= "ClaimResponse.addItem.detail.noteNumber",
-                            Id = "ClaimResponse.addItem.detail.noteNumber",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_NoteNumber = new ElementDefinitionInfo                                                                 // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_NoteNumber",                                                                                    // MakerGen.cs:236
+                            Path= "ClaimResponse.addItem.detail.noteNumber",                                                                // MakerGen.cs:237
+                            Id = "ClaimResponse.addItem.detail.noteNumber",                                                                 // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                   // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 58. ClaimResponse.addItem.detail.adjudication
-                        this.Element_Adjudication = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Adjudication",
-                            Path= "ClaimResponse.addItem.detail.adjudication",
-                            Id = "ClaimResponse.addItem.detail.adjudication",
-                            Min = 1,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Adjudication = new ElementDefinitionInfo                                                               // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Adjudication",                                                                                  // MakerGen.cs:236
+                            Path= "ClaimResponse.addItem.detail.adjudication",                                                              // MakerGen.cs:237
+                            Id = "ClaimResponse.addItem.detail.adjudication",                                                               // MakerGen.cs:238
+                            Min = 1,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 59. ClaimResponse.addItem.detail.subDetail
-                        this.Element_SubDetail = new ElementDefinitionInfo
-                        {
-                            Name = "Element_SubDetail",
-                            Path= "ClaimResponse.addItem.detail.subDetail",
-                            Id = "ClaimResponse.addItem.detail.subDetail",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new Type_SubDetail
-                                {
-                                }
-                            }
-                        };
-                    }
-                }
-            }
+                        this.Element_SubDetail = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_SubDetail",                                                                                     // MakerGen.cs:236
+                            Path= "ClaimResponse.addItem.detail.subDetail",                                                                 // MakerGen.cs:237
+                            Id = "ClaimResponse.addItem.detail.subDetail",                                                                  // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new Type_SubDetail                                                                                          // MakerGen.cs:260
+                                {                                                                                                           // MakerGen.cs:261
+                                }                                                                                                           // MakerGen.cs:262
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                }                                                                                                                           // MakerGen.cs:403
+            }                                                                                                                               // MakerGen.cs:405
             // 33. ClaimResponse.addItem.itemSequence
-            public ElementDefinitionInfo Element_ItemSequence;
+            public ElementDefinitionInfo Element_ItemSequence;                                                                              // MakerGen.cs:217
             // 34. ClaimResponse.addItem.detailSequence
-            public ElementDefinitionInfo Element_DetailSequence;
+            public ElementDefinitionInfo Element_DetailSequence;                                                                            // MakerGen.cs:217
             // 35. ClaimResponse.addItem.subdetailSequence
-            public ElementDefinitionInfo Element_SubdetailSequence;
+            public ElementDefinitionInfo Element_SubdetailSequence;                                                                         // MakerGen.cs:217
             // 36. ClaimResponse.addItem.provider
-            public ElementDefinitionInfo Element_Provider;
+            public ElementDefinitionInfo Element_Provider;                                                                                  // MakerGen.cs:217
             // 37. ClaimResponse.addItem.productOrService
-            public ElementDefinitionInfo Element_ProductOrService;
+            public ElementDefinitionInfo Element_ProductOrService;                                                                          // MakerGen.cs:217
             // 38. ClaimResponse.addItem.modifier
-            public ElementDefinitionInfo Element_Modifier;
+            public ElementDefinitionInfo Element_Modifier;                                                                                  // MakerGen.cs:217
             // 39. ClaimResponse.addItem.programCode
-            public ElementDefinitionInfo Element_ProgramCode;
+            public ElementDefinitionInfo Element_ProgramCode;                                                                               // MakerGen.cs:217
             // 40. ClaimResponse.addItem.serviced[x]
-            public ElementDefinitionInfo Element_Serviced;
+            public ElementDefinitionInfo Element_Serviced;                                                                                  // MakerGen.cs:217
             // 41. ClaimResponse.addItem.location[x]
-            public ElementDefinitionInfo Element_Location;
+            public ElementDefinitionInfo Element_Location;                                                                                  // MakerGen.cs:217
             // 42. ClaimResponse.addItem.quantity
-            public ElementDefinitionInfo Element_Quantity;
+            public ElementDefinitionInfo Element_Quantity;                                                                                  // MakerGen.cs:217
             // 43. ClaimResponse.addItem.unitPrice
-            public ElementDefinitionInfo Element_UnitPrice;
+            public ElementDefinitionInfo Element_UnitPrice;                                                                                 // MakerGen.cs:217
             // 44. ClaimResponse.addItem.factor
-            public ElementDefinitionInfo Element_Factor;
+            public ElementDefinitionInfo Element_Factor;                                                                                    // MakerGen.cs:217
             // 45. ClaimResponse.addItem.net
-            public ElementDefinitionInfo Element_Net;
+            public ElementDefinitionInfo Element_Net;                                                                                       // MakerGen.cs:217
             // 46. ClaimResponse.addItem.bodySite
-            public ElementDefinitionInfo Element_BodySite;
+            public ElementDefinitionInfo Element_BodySite;                                                                                  // MakerGen.cs:217
             // 47. ClaimResponse.addItem.subSite
-            public ElementDefinitionInfo Element_SubSite;
+            public ElementDefinitionInfo Element_SubSite;                                                                                   // MakerGen.cs:217
             // 48. ClaimResponse.addItem.noteNumber
-            public ElementDefinitionInfo Element_NoteNumber;
+            public ElementDefinitionInfo Element_NoteNumber;                                                                                // MakerGen.cs:217
             // 49. ClaimResponse.addItem.adjudication
-            public ElementDefinitionInfo Element_Adjudication;
+            public ElementDefinitionInfo Element_Adjudication;                                                                              // MakerGen.cs:217
             // 50. ClaimResponse.addItem.detail
-            public ElementDefinitionInfo Element_Detail;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "ClaimResponse.addItem",
-                    ElementId = "ClaimResponse.addItem"
-                });
-                Element_ItemSequence.Write(sDef);
-                Element_DetailSequence.Write(sDef);
-                Element_SubdetailSequence.Write(sDef);
-                Element_Provider.Write(sDef);
-                Element_ProductOrService.Write(sDef);
-                Element_Modifier.Write(sDef);
-                Element_ProgramCode.Write(sDef);
-                Element_Serviced.Write(sDef);
-                Element_Location.Write(sDef);
-                Element_Quantity.Write(sDef);
-                Element_UnitPrice.Write(sDef);
-                Element_Factor.Write(sDef);
-                Element_Net.Write(sDef);
-                Element_BodySite.Write(sDef);
-                Element_SubSite.Write(sDef);
-                Element_NoteNumber.Write(sDef);
-                Element_Adjudication.Write(sDef);
-                Element_Detail.Write(sDef);
-            }
-            
-            public Type_AddItem()
-            {
-                {
+            public ElementDefinitionInfo Element_Detail;                                                                                    // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "ClaimResponse.addItem",                                                                                         // MakerGen.cs:393
+                    ElementId = "ClaimResponse.addItem"                                                                                     // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_ItemSequence.Write(sDef);                                                                                           // MakerGen.cs:221
+                Element_DetailSequence.Write(sDef);                                                                                         // MakerGen.cs:221
+                Element_SubdetailSequence.Write(sDef);                                                                                      // MakerGen.cs:221
+                Element_Provider.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_ProductOrService.Write(sDef);                                                                                       // MakerGen.cs:221
+                Element_Modifier.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_ProgramCode.Write(sDef);                                                                                            // MakerGen.cs:221
+                Element_Serviced.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_Location.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_Quantity.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_UnitPrice.Write(sDef);                                                                                              // MakerGen.cs:221
+                Element_Factor.Write(sDef);                                                                                                 // MakerGen.cs:221
+                Element_Net.Write(sDef);                                                                                                    // MakerGen.cs:221
+                Element_BodySite.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_SubSite.Write(sDef);                                                                                                // MakerGen.cs:221
+                Element_NoteNumber.Write(sDef);                                                                                             // MakerGen.cs:221
+                Element_Adjudication.Write(sDef);                                                                                           // MakerGen.cs:221
+                Element_Detail.Write(sDef);                                                                                                 // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_AddItem()                                                                                                           // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 33. ClaimResponse.addItem.itemSequence
-                    this.Element_ItemSequence = new ElementDefinitionInfo
-                    {
-                        Name = "Element_ItemSequence",
-                        Path= "ClaimResponse.addItem.itemSequence",
-                        Id = "ClaimResponse.addItem.itemSequence",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_ItemSequence = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_ItemSequence",                                                                                      // MakerGen.cs:236
+                        Path= "ClaimResponse.addItem.itemSequence",                                                                         // MakerGen.cs:237
+                        Id = "ClaimResponse.addItem.itemSequence",                                                                          // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                       // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 34. ClaimResponse.addItem.detailSequence
-                    this.Element_DetailSequence = new ElementDefinitionInfo
-                    {
-                        Name = "Element_DetailSequence",
-                        Path= "ClaimResponse.addItem.detailSequence",
-                        Id = "ClaimResponse.addItem.detailSequence",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_DetailSequence = new ElementDefinitionInfo                                                                 // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_DetailSequence",                                                                                    // MakerGen.cs:236
+                        Path= "ClaimResponse.addItem.detailSequence",                                                                       // MakerGen.cs:237
+                        Id = "ClaimResponse.addItem.detailSequence",                                                                        // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                       // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 35. ClaimResponse.addItem.subdetailSequence
-                    this.Element_SubdetailSequence = new ElementDefinitionInfo
-                    {
-                        Name = "Element_SubdetailSequence",
-                        Path= "ClaimResponse.addItem.subdetailSequence",
-                        Id = "ClaimResponse.addItem.subdetailSequence",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_SubdetailSequence = new ElementDefinitionInfo                                                              // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_SubdetailSequence",                                                                                 // MakerGen.cs:236
+                        Path= "ClaimResponse.addItem.subdetailSequence",                                                                    // MakerGen.cs:237
+                        Id = "ClaimResponse.addItem.subdetailSequence",                                                                     // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                       // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 36. ClaimResponse.addItem.provider
-                    this.Element_Provider = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Provider",
-                        Path= "ClaimResponse.addItem.provider",
-                        Id = "ClaimResponse.addItem.provider",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                                    "http://hl7.org/fhir/StructureDefinition/Organization"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Provider = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Provider",                                                                                          // MakerGen.cs:236
+                        Path= "ClaimResponse.addItem.provider",                                                                             // MakerGen.cs:237
+                        Id = "ClaimResponse.addItem.provider",                                                                              // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                 // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                             // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/Organization"                                                  // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 37. ClaimResponse.addItem.productOrService
-                    this.Element_ProductOrService = new ElementDefinitionInfo
-                    {
-                        Name = "Element_ProductOrService",
-                        Path= "ClaimResponse.addItem.productOrService",
-                        Id = "ClaimResponse.addItem.productOrService",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_ProductOrService = new ElementDefinitionInfo                                                               // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_ProductOrService",                                                                                  // MakerGen.cs:236
+                        Path= "ClaimResponse.addItem.productOrService",                                                                     // MakerGen.cs:237
+                        Id = "ClaimResponse.addItem.productOrService",                                                                      // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 38. ClaimResponse.addItem.modifier
-                    this.Element_Modifier = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Modifier",
-                        Path= "ClaimResponse.addItem.modifier",
-                        Id = "ClaimResponse.addItem.modifier",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Modifier = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Modifier",                                                                                          // MakerGen.cs:236
+                        Path= "ClaimResponse.addItem.modifier",                                                                             // MakerGen.cs:237
+                        Id = "ClaimResponse.addItem.modifier",                                                                              // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 39. ClaimResponse.addItem.programCode
-                    this.Element_ProgramCode = new ElementDefinitionInfo
-                    {
-                        Name = "Element_ProgramCode",
-                        Path= "ClaimResponse.addItem.programCode",
-                        Id = "ClaimResponse.addItem.programCode",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_ProgramCode = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_ProgramCode",                                                                                       // MakerGen.cs:236
+                        Path= "ClaimResponse.addItem.programCode",                                                                          // MakerGen.cs:237
+                        Id = "ClaimResponse.addItem.programCode",                                                                           // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 40. ClaimResponse.addItem.serviced[x]
-                    this.Element_Serviced = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Serviced",
-                        Path= "ClaimResponse.addItem.serviced[x]",
-                        Id = "ClaimResponse.addItem.serviced[x]",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Date
-                            {
-                            },
-                            new FhirKhit.Maker.Common.Complex.Type_Period
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Serviced = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Serviced",                                                                                          // MakerGen.cs:236
+                        Path= "ClaimResponse.addItem.serviced[x]",                                                                          // MakerGen.cs:237
+                        Id = "ClaimResponse.addItem.serviced[x]",                                                                           // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Date                                                              // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            },                                                                                                              // MakerGen.cs:305
+                            new FhirKhit.Maker.Common.Complex.Type_Period                                                                   // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 41. ClaimResponse.addItem.location[x]
-                    this.Element_Location = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Location",
-                        Path= "ClaimResponse.addItem.location[x]",
-                        Id = "ClaimResponse.addItem.location[x]",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            },
-                            new FhirKhit.Maker.Common.Complex.Type_Address
-                            {
-                            },
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Location"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Location = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Location",                                                                                          // MakerGen.cs:236
+                        Path= "ClaimResponse.addItem.location[x]",                                                                          // MakerGen.cs:237
+                        Id = "ClaimResponse.addItem.location[x]",                                                                           // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            },                                                                                                              // MakerGen.cs:320
+                            new FhirKhit.Maker.Common.Complex.Type_Address                                                                  // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            },                                                                                                              // MakerGen.cs:358
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Location"                                                      // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 42. ClaimResponse.addItem.quantity
-                    this.Element_Quantity = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Quantity",
-                        Path= "ClaimResponse.addItem.quantity",
-                        Id = "ClaimResponse.addItem.quantity",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Quantity
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Quantity = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Quantity",                                                                                          // MakerGen.cs:236
+                        Path= "ClaimResponse.addItem.quantity",                                                                             // MakerGen.cs:237
+                        Id = "ClaimResponse.addItem.quantity",                                                                              // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Quantity                                                                 // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 43. ClaimResponse.addItem.unitPrice
-                    this.Element_UnitPrice = new ElementDefinitionInfo
-                    {
-                        Name = "Element_UnitPrice",
-                        Path= "ClaimResponse.addItem.unitPrice",
-                        Id = "ClaimResponse.addItem.unitPrice",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Money
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_UnitPrice = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_UnitPrice",                                                                                         // MakerGen.cs:236
+                        Path= "ClaimResponse.addItem.unitPrice",                                                                            // MakerGen.cs:237
+                        Id = "ClaimResponse.addItem.unitPrice",                                                                             // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Money                                                                    // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 44. ClaimResponse.addItem.factor
-                    this.Element_Factor = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Factor",
-                        Path= "ClaimResponse.addItem.factor",
-                        Id = "ClaimResponse.addItem.factor",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Factor = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Factor",                                                                                            // MakerGen.cs:236
+                        Path= "ClaimResponse.addItem.factor",                                                                               // MakerGen.cs:237
+                        Id = "ClaimResponse.addItem.factor",                                                                                // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                           // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 45. ClaimResponse.addItem.net
-                    this.Element_Net = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Net",
-                        Path= "ClaimResponse.addItem.net",
-                        Id = "ClaimResponse.addItem.net",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Money
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Net = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Net",                                                                                               // MakerGen.cs:236
+                        Path= "ClaimResponse.addItem.net",                                                                                  // MakerGen.cs:237
+                        Id = "ClaimResponse.addItem.net",                                                                                   // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Money                                                                    // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 46. ClaimResponse.addItem.bodySite
-                    this.Element_BodySite = new ElementDefinitionInfo
-                    {
-                        Name = "Element_BodySite",
-                        Path= "ClaimResponse.addItem.bodySite",
-                        Id = "ClaimResponse.addItem.bodySite",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_BodySite = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_BodySite",                                                                                          // MakerGen.cs:236
+                        Path= "ClaimResponse.addItem.bodySite",                                                                             // MakerGen.cs:237
+                        Id = "ClaimResponse.addItem.bodySite",                                                                              // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 47. ClaimResponse.addItem.subSite
-                    this.Element_SubSite = new ElementDefinitionInfo
-                    {
-                        Name = "Element_SubSite",
-                        Path= "ClaimResponse.addItem.subSite",
-                        Id = "ClaimResponse.addItem.subSite",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_SubSite = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_SubSite",                                                                                           // MakerGen.cs:236
+                        Path= "ClaimResponse.addItem.subSite",                                                                              // MakerGen.cs:237
+                        Id = "ClaimResponse.addItem.subSite",                                                                               // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 48. ClaimResponse.addItem.noteNumber
-                    this.Element_NoteNumber = new ElementDefinitionInfo
-                    {
-                        Name = "Element_NoteNumber",
-                        Path= "ClaimResponse.addItem.noteNumber",
-                        Id = "ClaimResponse.addItem.noteNumber",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_NoteNumber = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_NoteNumber",                                                                                        // MakerGen.cs:236
+                        Path= "ClaimResponse.addItem.noteNumber",                                                                           // MakerGen.cs:237
+                        Id = "ClaimResponse.addItem.noteNumber",                                                                            // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                       // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 49. ClaimResponse.addItem.adjudication
-                    this.Element_Adjudication = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Adjudication",
-                        Path= "ClaimResponse.addItem.adjudication",
-                        Id = "ClaimResponse.addItem.adjudication",
-                        Min = 1,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                        }
-                    };
-                }
-                {
+                    this.Element_Adjudication = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Adjudication",                                                                                      // MakerGen.cs:236
+                        Path= "ClaimResponse.addItem.adjudication",                                                                         // MakerGen.cs:237
+                        Id = "ClaimResponse.addItem.adjudication",                                                                          // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 50. ClaimResponse.addItem.detail
-                    this.Element_Detail = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Detail",
-                        Path= "ClaimResponse.addItem.detail",
-                        Id = "ClaimResponse.addItem.detail",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new Type_Detail
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Detail = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Detail",                                                                                            // MakerGen.cs:236
+                        Path= "ClaimResponse.addItem.detail",                                                                               // MakerGen.cs:237
+                        Id = "ClaimResponse.addItem.detail",                                                                                // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new Type_Detail                                                                                                 // MakerGen.cs:260
+                            {                                                                                                               // MakerGen.cs:261
+                            }                                                                                                               // MakerGen.cs:262
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 69. ClaimResponse.total
-        public partial class Type_Total : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Total : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 70. ClaimResponse.total.category
-            public ElementDefinitionInfo Element_Category;
+            public ElementDefinitionInfo Element_Category;                                                                                  // MakerGen.cs:217
             // 71. ClaimResponse.total.amount
-            public ElementDefinitionInfo Element_Amount;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "ClaimResponse.total",
-                    ElementId = "ClaimResponse.total"
-                });
-                Element_Category.Write(sDef);
-                Element_Amount.Write(sDef);
-            }
-            
-            public Type_Total()
-            {
-                {
+            public ElementDefinitionInfo Element_Amount;                                                                                    // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "ClaimResponse.total",                                                                                           // MakerGen.cs:393
+                    ElementId = "ClaimResponse.total"                                                                                       // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Category.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_Amount.Write(sDef);                                                                                                 // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Total()                                                                                                             // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 70. ClaimResponse.total.category
-                    this.Element_Category = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Category",
-                        Path= "ClaimResponse.total.category",
-                        Id = "ClaimResponse.total.category",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Category = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Category",                                                                                          // MakerGen.cs:236
+                        Path= "ClaimResponse.total.category",                                                                               // MakerGen.cs:237
+                        Id = "ClaimResponse.total.category",                                                                                // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 71. ClaimResponse.total.amount
-                    this.Element_Amount = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Amount",
-                        Path= "ClaimResponse.total.amount",
-                        Id = "ClaimResponse.total.amount",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Money
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Amount = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Amount",                                                                                            // MakerGen.cs:236
+                        Path= "ClaimResponse.total.amount",                                                                                 // MakerGen.cs:237
+                        Id = "ClaimResponse.total.amount",                                                                                  // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Money                                                                    // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 72. ClaimResponse.payment
-        public partial class Type_Payment : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Payment : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 73. ClaimResponse.payment.type
-            public ElementDefinitionInfo Element_Type;
+            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:217
             // 74. ClaimResponse.payment.adjustment
-            public ElementDefinitionInfo Element_Adjustment;
+            public ElementDefinitionInfo Element_Adjustment;                                                                                // MakerGen.cs:217
             // 75. ClaimResponse.payment.adjustmentReason
-            public ElementDefinitionInfo Element_AdjustmentReason;
+            public ElementDefinitionInfo Element_AdjustmentReason;                                                                          // MakerGen.cs:217
             // 76. ClaimResponse.payment.date
-            public ElementDefinitionInfo Element_Date;
+            public ElementDefinitionInfo Element_Date;                                                                                      // MakerGen.cs:217
             // 77. ClaimResponse.payment.amount
-            public ElementDefinitionInfo Element_Amount;
+            public ElementDefinitionInfo Element_Amount;                                                                                    // MakerGen.cs:217
             // 78. ClaimResponse.payment.identifier
-            public ElementDefinitionInfo Element_Identifier;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "ClaimResponse.payment",
-                    ElementId = "ClaimResponse.payment"
-                });
-                Element_Type.Write(sDef);
-                Element_Adjustment.Write(sDef);
-                Element_AdjustmentReason.Write(sDef);
-                Element_Date.Write(sDef);
-                Element_Amount.Write(sDef);
-                Element_Identifier.Write(sDef);
-            }
-            
-            public Type_Payment()
-            {
-                {
+            public ElementDefinitionInfo Element_Identifier;                                                                                // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "ClaimResponse.payment",                                                                                         // MakerGen.cs:393
+                    ElementId = "ClaimResponse.payment"                                                                                     // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Adjustment.Write(sDef);                                                                                             // MakerGen.cs:221
+                Element_AdjustmentReason.Write(sDef);                                                                                       // MakerGen.cs:221
+                Element_Date.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Amount.Write(sDef);                                                                                                 // MakerGen.cs:221
+                Element_Identifier.Write(sDef);                                                                                             // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Payment()                                                                                                           // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 73. ClaimResponse.payment.type
-                    this.Element_Type = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Type",
-                        Path= "ClaimResponse.payment.type",
-                        Id = "ClaimResponse.payment.type",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Type",                                                                                              // MakerGen.cs:236
+                        Path= "ClaimResponse.payment.type",                                                                                 // MakerGen.cs:237
+                        Id = "ClaimResponse.payment.type",                                                                                  // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 74. ClaimResponse.payment.adjustment
-                    this.Element_Adjustment = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Adjustment",
-                        Path= "ClaimResponse.payment.adjustment",
-                        Id = "ClaimResponse.payment.adjustment",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Money
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Adjustment = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Adjustment",                                                                                        // MakerGen.cs:236
+                        Path= "ClaimResponse.payment.adjustment",                                                                           // MakerGen.cs:237
+                        Id = "ClaimResponse.payment.adjustment",                                                                            // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Money                                                                    // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 75. ClaimResponse.payment.adjustmentReason
-                    this.Element_AdjustmentReason = new ElementDefinitionInfo
-                    {
-                        Name = "Element_AdjustmentReason",
-                        Path= "ClaimResponse.payment.adjustmentReason",
-                        Id = "ClaimResponse.payment.adjustmentReason",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_AdjustmentReason = new ElementDefinitionInfo                                                               // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_AdjustmentReason",                                                                                  // MakerGen.cs:236
+                        Path= "ClaimResponse.payment.adjustmentReason",                                                                     // MakerGen.cs:237
+                        Id = "ClaimResponse.payment.adjustmentReason",                                                                      // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 76. ClaimResponse.payment.date
-                    this.Element_Date = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Date",
-                        Path= "ClaimResponse.payment.date",
-                        Id = "ClaimResponse.payment.date",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Date
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Date = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Date",                                                                                              // MakerGen.cs:236
+                        Path= "ClaimResponse.payment.date",                                                                                 // MakerGen.cs:237
+                        Id = "ClaimResponse.payment.date",                                                                                  // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Date                                                              // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 77. ClaimResponse.payment.amount
-                    this.Element_Amount = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Amount",
-                        Path= "ClaimResponse.payment.amount",
-                        Id = "ClaimResponse.payment.amount",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Money
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Amount = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Amount",                                                                                            // MakerGen.cs:236
+                        Path= "ClaimResponse.payment.amount",                                                                               // MakerGen.cs:237
+                        Id = "ClaimResponse.payment.amount",                                                                                // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Money                                                                    // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 78. ClaimResponse.payment.identifier
-                    this.Element_Identifier = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Identifier",
-                        Path= "ClaimResponse.payment.identifier",
-                        Id = "ClaimResponse.payment.identifier",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Identifier
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Identifier = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Identifier",                                                                                        // MakerGen.cs:236
+                        Path= "ClaimResponse.payment.identifier",                                                                           // MakerGen.cs:237
+                        Id = "ClaimResponse.payment.identifier",                                                                            // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Identifier                                                               // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 82. ClaimResponse.processNote
-        public partial class Type_ProcessNote : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_ProcessNote : FhirKhit.Maker.Common.Complex.ComplexBase                                                   // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 83. ClaimResponse.processNote.number
-            public ElementDefinitionInfo Element_Number;
+            public ElementDefinitionInfo Element_Number;                                                                                    // MakerGen.cs:217
             // 84. ClaimResponse.processNote.type
-            public ElementDefinitionInfo Element_Type;
+            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:217
             // 85. ClaimResponse.processNote.text
-            public ElementDefinitionInfo Element_Text;
+            public ElementDefinitionInfo Element_Text;                                                                                      // MakerGen.cs:217
             // 86. ClaimResponse.processNote.language
-            public ElementDefinitionInfo Element_Language;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "ClaimResponse.processNote",
-                    ElementId = "ClaimResponse.processNote"
-                });
-                Element_Number.Write(sDef);
-                Element_Type.Write(sDef);
-                Element_Text.Write(sDef);
-                Element_Language.Write(sDef);
-            }
-            
-            public Type_ProcessNote()
-            {
-                {
+            public ElementDefinitionInfo Element_Language;                                                                                  // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "ClaimResponse.processNote",                                                                                     // MakerGen.cs:393
+                    ElementId = "ClaimResponse.processNote"                                                                                 // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Number.Write(sDef);                                                                                                 // MakerGen.cs:221
+                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Text.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Language.Write(sDef);                                                                                               // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_ProcessNote()                                                                                                       // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 83. ClaimResponse.processNote.number
-                    this.Element_Number = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Number",
-                        Path= "ClaimResponse.processNote.number",
-                        Id = "ClaimResponse.processNote.number",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Number = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Number",                                                                                            // MakerGen.cs:236
+                        Path= "ClaimResponse.processNote.number",                                                                           // MakerGen.cs:237
+                        Id = "ClaimResponse.processNote.number",                                                                            // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                       // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 84. ClaimResponse.processNote.type
-                    this.Element_Type = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Type",
-                        Path= "ClaimResponse.processNote.type",
-                        Id = "ClaimResponse.processNote.type",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Type",                                                                                              // MakerGen.cs:236
+                        Path= "ClaimResponse.processNote.type",                                                                             // MakerGen.cs:237
+                        Id = "ClaimResponse.processNote.type",                                                                              // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 85. ClaimResponse.processNote.text
-                    this.Element_Text = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Text",
-                        Path= "ClaimResponse.processNote.text",
-                        Id = "ClaimResponse.processNote.text",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Text = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Text",                                                                                              // MakerGen.cs:236
+                        Path= "ClaimResponse.processNote.text",                                                                             // MakerGen.cs:237
+                        Id = "ClaimResponse.processNote.text",                                                                              // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 86. ClaimResponse.processNote.language
-                    this.Element_Language = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Language",
-                        Path= "ClaimResponse.processNote.language",
-                        Id = "ClaimResponse.processNote.language",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Language = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Language",                                                                                          // MakerGen.cs:236
+                        Path= "ClaimResponse.processNote.language",                                                                         // MakerGen.cs:237
+                        Id = "ClaimResponse.processNote.language",                                                                          // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 88. ClaimResponse.insurance
-        public partial class Type_Insurance : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Insurance : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 89. ClaimResponse.insurance.sequence
-            public ElementDefinitionInfo Element_Sequence;
+            public ElementDefinitionInfo Element_Sequence;                                                                                  // MakerGen.cs:217
             // 90. ClaimResponse.insurance.focal
-            public ElementDefinitionInfo Element_Focal;
+            public ElementDefinitionInfo Element_Focal;                                                                                     // MakerGen.cs:217
             // 91. ClaimResponse.insurance.coverage
-            public ElementDefinitionInfo Element_Coverage;
+            public ElementDefinitionInfo Element_Coverage;                                                                                  // MakerGen.cs:217
             // 92. ClaimResponse.insurance.businessArrangement
-            public ElementDefinitionInfo Element_BusinessArrangement;
+            public ElementDefinitionInfo Element_BusinessArrangement;                                                                       // MakerGen.cs:217
             // 93. ClaimResponse.insurance.claimResponse
-            public ElementDefinitionInfo Element_ClaimResponse;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "ClaimResponse.insurance",
-                    ElementId = "ClaimResponse.insurance"
-                });
-                Element_Sequence.Write(sDef);
-                Element_Focal.Write(sDef);
-                Element_Coverage.Write(sDef);
-                Element_BusinessArrangement.Write(sDef);
-                Element_ClaimResponse.Write(sDef);
-            }
-            
-            public Type_Insurance()
-            {
-                {
+            public ElementDefinitionInfo Element_ClaimResponse;                                                                             // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "ClaimResponse.insurance",                                                                                       // MakerGen.cs:393
+                    ElementId = "ClaimResponse.insurance"                                                                                   // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Sequence.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_Focal.Write(sDef);                                                                                                  // MakerGen.cs:221
+                Element_Coverage.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_BusinessArrangement.Write(sDef);                                                                                    // MakerGen.cs:221
+                Element_ClaimResponse.Write(sDef);                                                                                          // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Insurance()                                                                                                         // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 89. ClaimResponse.insurance.sequence
-                    this.Element_Sequence = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Sequence",
-                        Path= "ClaimResponse.insurance.sequence",
-                        Id = "ClaimResponse.insurance.sequence",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Sequence = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Sequence",                                                                                          // MakerGen.cs:236
+                        Path= "ClaimResponse.insurance.sequence",                                                                           // MakerGen.cs:237
+                        Id = "ClaimResponse.insurance.sequence",                                                                            // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                       // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 90. ClaimResponse.insurance.focal
-                    this.Element_Focal = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Focal",
-                        Path= "ClaimResponse.insurance.focal",
-                        Id = "ClaimResponse.insurance.focal",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Focal = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Focal",                                                                                             // MakerGen.cs:236
+                        Path= "ClaimResponse.insurance.focal",                                                                              // MakerGen.cs:237
+                        Id = "ClaimResponse.insurance.focal",                                                                               // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                           // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 91. ClaimResponse.insurance.coverage
-                    this.Element_Coverage = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Coverage",
-                        Path= "ClaimResponse.insurance.coverage",
-                        Id = "ClaimResponse.insurance.coverage",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Coverage"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Coverage = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Coverage",                                                                                          // MakerGen.cs:236
+                        Path= "ClaimResponse.insurance.coverage",                                                                           // MakerGen.cs:237
+                        Id = "ClaimResponse.insurance.coverage",                                                                            // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Coverage"                                                      // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 92. ClaimResponse.insurance.businessArrangement
-                    this.Element_BusinessArrangement = new ElementDefinitionInfo
-                    {
-                        Name = "Element_BusinessArrangement",
-                        Path= "ClaimResponse.insurance.businessArrangement",
-                        Id = "ClaimResponse.insurance.businessArrangement",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_BusinessArrangement = new ElementDefinitionInfo                                                            // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_BusinessArrangement",                                                                               // MakerGen.cs:236
+                        Path= "ClaimResponse.insurance.businessArrangement",                                                                // MakerGen.cs:237
+                        Id = "ClaimResponse.insurance.businessArrangement",                                                                 // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 93. ClaimResponse.insurance.claimResponse
-                    this.Element_ClaimResponse = new ElementDefinitionInfo
-                    {
-                        Name = "Element_ClaimResponse",
-                        Path= "ClaimResponse.insurance.claimResponse",
-                        Id = "ClaimResponse.insurance.claimResponse",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/ClaimResponse"
-                                }
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_ClaimResponse = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_ClaimResponse",                                                                                     // MakerGen.cs:236
+                        Path= "ClaimResponse.insurance.claimResponse",                                                                      // MakerGen.cs:237
+                        Id = "ClaimResponse.insurance.claimResponse",                                                                       // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/ClaimResponse"                                                 // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 94. ClaimResponse.error
-        public partial class Type_Error : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Error : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 95. ClaimResponse.error.itemSequence
-            public ElementDefinitionInfo Element_ItemSequence;
+            public ElementDefinitionInfo Element_ItemSequence;                                                                              // MakerGen.cs:217
             // 96. ClaimResponse.error.detailSequence
-            public ElementDefinitionInfo Element_DetailSequence;
+            public ElementDefinitionInfo Element_DetailSequence;                                                                            // MakerGen.cs:217
             // 97. ClaimResponse.error.subDetailSequence
-            public ElementDefinitionInfo Element_SubDetailSequence;
+            public ElementDefinitionInfo Element_SubDetailSequence;                                                                         // MakerGen.cs:217
             // 98. ClaimResponse.error.code
-            public ElementDefinitionInfo Element_Code;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "ClaimResponse.error",
-                    ElementId = "ClaimResponse.error"
-                });
-                Element_ItemSequence.Write(sDef);
-                Element_DetailSequence.Write(sDef);
-                Element_SubDetailSequence.Write(sDef);
-                Element_Code.Write(sDef);
-            }
-            
-            public Type_Error()
-            {
-                {
+            public ElementDefinitionInfo Element_Code;                                                                                      // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "ClaimResponse.error",                                                                                           // MakerGen.cs:393
+                    ElementId = "ClaimResponse.error"                                                                                       // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_ItemSequence.Write(sDef);                                                                                           // MakerGen.cs:221
+                Element_DetailSequence.Write(sDef);                                                                                         // MakerGen.cs:221
+                Element_SubDetailSequence.Write(sDef);                                                                                      // MakerGen.cs:221
+                Element_Code.Write(sDef);                                                                                                   // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Error()                                                                                                             // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 95. ClaimResponse.error.itemSequence
-                    this.Element_ItemSequence = new ElementDefinitionInfo
-                    {
-                        Name = "Element_ItemSequence",
-                        Path= "ClaimResponse.error.itemSequence",
-                        Id = "ClaimResponse.error.itemSequence",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_ItemSequence = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_ItemSequence",                                                                                      // MakerGen.cs:236
+                        Path= "ClaimResponse.error.itemSequence",                                                                           // MakerGen.cs:237
+                        Id = "ClaimResponse.error.itemSequence",                                                                            // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                       // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 96. ClaimResponse.error.detailSequence
-                    this.Element_DetailSequence = new ElementDefinitionInfo
-                    {
-                        Name = "Element_DetailSequence",
-                        Path= "ClaimResponse.error.detailSequence",
-                        Id = "ClaimResponse.error.detailSequence",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_DetailSequence = new ElementDefinitionInfo                                                                 // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_DetailSequence",                                                                                    // MakerGen.cs:236
+                        Path= "ClaimResponse.error.detailSequence",                                                                         // MakerGen.cs:237
+                        Id = "ClaimResponse.error.detailSequence",                                                                          // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                       // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 97. ClaimResponse.error.subDetailSequence
-                    this.Element_SubDetailSequence = new ElementDefinitionInfo
-                    {
-                        Name = "Element_SubDetailSequence",
-                        Path= "ClaimResponse.error.subDetailSequence",
-                        Id = "ClaimResponse.error.subDetailSequence",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_SubDetailSequence = new ElementDefinitionInfo                                                              // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_SubDetailSequence",                                                                                 // MakerGen.cs:236
+                        Path= "ClaimResponse.error.subDetailSequence",                                                                      // MakerGen.cs:237
+                        Id = "ClaimResponse.error.subDetailSequence",                                                                       // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                       // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 98. ClaimResponse.error.code
-                    this.Element_Code = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Code",
-                        Path= "ClaimResponse.error.code",
-                        Id = "ClaimResponse.error.code",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Code = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Code",                                                                                              // MakerGen.cs:236
+                        Path= "ClaimResponse.error.code",                                                                                   // MakerGen.cs:237
+                        Id = "ClaimResponse.error.code",                                                                                    // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 1. ClaimResponse.identifier
-        public ElementDefinitionInfo Element_Identifier;
+        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:217
         // 2. ClaimResponse.status
-        public ElementDefinitionInfo Element_Status;
+        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:217
         // 3. ClaimResponse.type
-        public ElementDefinitionInfo Element_Type;
+        public ElementDefinitionInfo Element_Type;                                                                                          // MakerGen.cs:217
         // 4. ClaimResponse.subType
-        public ElementDefinitionInfo Element_SubType;
+        public ElementDefinitionInfo Element_SubType;                                                                                       // MakerGen.cs:217
         // 5. ClaimResponse.use
-        public ElementDefinitionInfo Element_Use;
+        public ElementDefinitionInfo Element_Use;                                                                                           // MakerGen.cs:217
         // 6. ClaimResponse.patient
-        public ElementDefinitionInfo Element_Patient;
+        public ElementDefinitionInfo Element_Patient;                                                                                       // MakerGen.cs:217
         // 7. ClaimResponse.created
-        public ElementDefinitionInfo Element_Created;
+        public ElementDefinitionInfo Element_Created;                                                                                       // MakerGen.cs:217
         // 8. ClaimResponse.insurer
-        public ElementDefinitionInfo Element_Insurer;
+        public ElementDefinitionInfo Element_Insurer;                                                                                       // MakerGen.cs:217
         // 9. ClaimResponse.requestor
-        public ElementDefinitionInfo Element_Requestor;
+        public ElementDefinitionInfo Element_Requestor;                                                                                     // MakerGen.cs:217
         // 10. ClaimResponse.request
-        public ElementDefinitionInfo Element_Request;
+        public ElementDefinitionInfo Element_Request;                                                                                       // MakerGen.cs:217
         // 11. ClaimResponse.outcome
-        public ElementDefinitionInfo Element_Outcome;
+        public ElementDefinitionInfo Element_Outcome;                                                                                       // MakerGen.cs:217
         // 12. ClaimResponse.disposition
-        public ElementDefinitionInfo Element_Disposition;
+        public ElementDefinitionInfo Element_Disposition;                                                                                   // MakerGen.cs:217
         // 13. ClaimResponse.preAuthRef
-        public ElementDefinitionInfo Element_PreAuthRef;
+        public ElementDefinitionInfo Element_PreAuthRef;                                                                                    // MakerGen.cs:217
         // 14. ClaimResponse.preAuthPeriod
-        public ElementDefinitionInfo Element_PreAuthPeriod;
+        public ElementDefinitionInfo Element_PreAuthPeriod;                                                                                 // MakerGen.cs:217
         // 15. ClaimResponse.payeeType
-        public ElementDefinitionInfo Element_PayeeType;
+        public ElementDefinitionInfo Element_PayeeType;                                                                                     // MakerGen.cs:217
         // 16. ClaimResponse.item
-        public ElementDefinitionInfo Element_Item;
+        public ElementDefinitionInfo Element_Item;                                                                                          // MakerGen.cs:217
         // 32. ClaimResponse.addItem
-        public ElementDefinitionInfo Element_AddItem;
+        public ElementDefinitionInfo Element_AddItem;                                                                                       // MakerGen.cs:217
         // 68. ClaimResponse.adjudication
-        public ElementDefinitionInfo Element_Adjudication;
+        public ElementDefinitionInfo Element_Adjudication;                                                                                  // MakerGen.cs:217
         // 69. ClaimResponse.total
-        public ElementDefinitionInfo Element_Total;
+        public ElementDefinitionInfo Element_Total;                                                                                         // MakerGen.cs:217
         // 72. ClaimResponse.payment
-        public ElementDefinitionInfo Element_Payment;
+        public ElementDefinitionInfo Element_Payment;                                                                                       // MakerGen.cs:217
         // 79. ClaimResponse.fundsReserve
-        public ElementDefinitionInfo Element_FundsReserve;
+        public ElementDefinitionInfo Element_FundsReserve;                                                                                  // MakerGen.cs:217
         // 80. ClaimResponse.formCode
-        public ElementDefinitionInfo Element_FormCode;
+        public ElementDefinitionInfo Element_FormCode;                                                                                      // MakerGen.cs:217
         // 81. ClaimResponse.form
-        public ElementDefinitionInfo Element_Form;
+        public ElementDefinitionInfo Element_Form;                                                                                          // MakerGen.cs:217
         // 82. ClaimResponse.processNote
-        public ElementDefinitionInfo Element_ProcessNote;
+        public ElementDefinitionInfo Element_ProcessNote;                                                                                   // MakerGen.cs:217
         // 87. ClaimResponse.communicationRequest
-        public ElementDefinitionInfo Element_CommunicationRequest;
+        public ElementDefinitionInfo Element_CommunicationRequest;                                                                          // MakerGen.cs:217
         // 88. ClaimResponse.insurance
-        public ElementDefinitionInfo Element_Insurance;
+        public ElementDefinitionInfo Element_Insurance;                                                                                     // MakerGen.cs:217
         // 94. ClaimResponse.error
-        public ElementDefinitionInfo Element_Error;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "ClaimResponse",
-                ElementId = "ClaimResponse"
-            });
-            Element_Identifier.Write(sDef);
-            Element_Status.Write(sDef);
-            Element_Type.Write(sDef);
-            Element_SubType.Write(sDef);
-            Element_Use.Write(sDef);
-            Element_Patient.Write(sDef);
-            Element_Created.Write(sDef);
-            Element_Insurer.Write(sDef);
-            Element_Requestor.Write(sDef);
-            Element_Request.Write(sDef);
-            Element_Outcome.Write(sDef);
-            Element_Disposition.Write(sDef);
-            Element_PreAuthRef.Write(sDef);
-            Element_PreAuthPeriod.Write(sDef);
-            Element_PayeeType.Write(sDef);
-            Element_Item.Write(sDef);
-            Element_AddItem.Write(sDef);
-            Element_Adjudication.Write(sDef);
-            Element_Total.Write(sDef);
-            Element_Payment.Write(sDef);
-            Element_FundsReserve.Write(sDef);
-            Element_FormCode.Write(sDef);
-            Element_Form.Write(sDef);
-            Element_ProcessNote.Write(sDef);
-            Element_CommunicationRequest.Write(sDef);
-            Element_Insurance.Write(sDef);
-            Element_Error.Write(sDef);
-        }
-        
-        public Resource_ClaimResponse()
-        {
-            {
+        public ElementDefinitionInfo Element_Error;                                                                                         // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "ClaimResponse",                                                                                                     // MakerGen.cs:393
+                ElementId = "ClaimResponse"                                                                                                 // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Type.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_SubType.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Use.Write(sDef);                                                                                                        // MakerGen.cs:221
+            Element_Patient.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Created.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Insurer.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Requestor.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_Request.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Outcome.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Disposition.Write(sDef);                                                                                                // MakerGen.cs:221
+            Element_PreAuthRef.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_PreAuthPeriod.Write(sDef);                                                                                              // MakerGen.cs:221
+            Element_PayeeType.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_Item.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_AddItem.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Adjudication.Write(sDef);                                                                                               // MakerGen.cs:221
+            Element_Total.Write(sDef);                                                                                                      // MakerGen.cs:221
+            Element_Payment.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_FundsReserve.Write(sDef);                                                                                               // MakerGen.cs:221
+            Element_FormCode.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_Form.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_ProcessNote.Write(sDef);                                                                                                // MakerGen.cs:221
+            Element_CommunicationRequest.Write(sDef);                                                                                       // MakerGen.cs:221
+            Element_Insurance.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_Error.Write(sDef);                                                                                                      // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Resource_ClaimResponse()                                                                                                     // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. ClaimResponse.identifier
-                this.Element_Identifier = new ElementDefinitionInfo
-                {
-                    Name = "Element_Identifier",
-                    Path= "ClaimResponse.identifier",
-                    Id = "ClaimResponse.identifier",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:236
+                    Path= "ClaimResponse.identifier",                                                                                       // MakerGen.cs:237
+                    Id = "ClaimResponse.identifier",                                                                                        // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. ClaimResponse.status
-                this.Element_Status = new ElementDefinitionInfo
-                {
-                    Name = "Element_Status",
-                    Path= "ClaimResponse.status",
-                    Id = "ClaimResponse.status",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Status",                                                                                                // MakerGen.cs:236
+                    Path= "ClaimResponse.status",                                                                                           // MakerGen.cs:237
+                    Id = "ClaimResponse.status",                                                                                            // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 3. ClaimResponse.type
-                this.Element_Type = new ElementDefinitionInfo
-                {
-                    Name = "Element_Type",
-                    Path= "ClaimResponse.type",
-                    Id = "ClaimResponse.type",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Type = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Type",                                                                                                  // MakerGen.cs:236
+                    Path= "ClaimResponse.type",                                                                                             // MakerGen.cs:237
+                    Id = "ClaimResponse.type",                                                                                              // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 4. ClaimResponse.subType
-                this.Element_SubType = new ElementDefinitionInfo
-                {
-                    Name = "Element_SubType",
-                    Path= "ClaimResponse.subType",
-                    Id = "ClaimResponse.subType",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_SubType = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_SubType",                                                                                               // MakerGen.cs:236
+                    Path= "ClaimResponse.subType",                                                                                          // MakerGen.cs:237
+                    Id = "ClaimResponse.subType",                                                                                           // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 5. ClaimResponse.use
-                this.Element_Use = new ElementDefinitionInfo
-                {
-                    Name = "Element_Use",
-                    Path= "ClaimResponse.use",
-                    Id = "ClaimResponse.use",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Use = new ElementDefinitionInfo                                                                                // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Use",                                                                                                   // MakerGen.cs:236
+                    Path= "ClaimResponse.use",                                                                                              // MakerGen.cs:237
+                    Id = "ClaimResponse.use",                                                                                               // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 6. ClaimResponse.patient
-                this.Element_Patient = new ElementDefinitionInfo
-                {
-                    Name = "Element_Patient",
-                    Path= "ClaimResponse.patient",
-                    Id = "ClaimResponse.patient",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Patient"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Patient = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Patient",                                                                                               // MakerGen.cs:236
+                    Path= "ClaimResponse.patient",                                                                                          // MakerGen.cs:237
+                    Id = "ClaimResponse.patient",                                                                                           // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Patient"                                                           // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 7. ClaimResponse.created
-                this.Element_Created = new ElementDefinitionInfo
-                {
-                    Name = "Element_Created",
-                    Path= "ClaimResponse.created",
-                    Id = "ClaimResponse.created",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Created = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Created",                                                                                               // MakerGen.cs:236
+                    Path= "ClaimResponse.created",                                                                                          // MakerGen.cs:237
+                    Id = "ClaimResponse.created",                                                                                           // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 8. ClaimResponse.insurer
-                this.Element_Insurer = new ElementDefinitionInfo
-                {
-                    Name = "Element_Insurer",
-                    Path= "ClaimResponse.insurer",
-                    Id = "ClaimResponse.insurer",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Organization"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Insurer = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Insurer",                                                                                               // MakerGen.cs:236
+                    Path= "ClaimResponse.insurer",                                                                                          // MakerGen.cs:237
+                    Id = "ClaimResponse.insurer",                                                                                           // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 9. ClaimResponse.requestor
-                this.Element_Requestor = new ElementDefinitionInfo
-                {
-                    Name = "Element_Requestor",
-                    Path= "ClaimResponse.requestor",
-                    Id = "ClaimResponse.requestor",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                                "http://hl7.org/fhir/StructureDefinition/Organization"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Requestor = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Requestor",                                                                                             // MakerGen.cs:236
+                    Path= "ClaimResponse.requestor",                                                                                        // MakerGen.cs:237
+                    Id = "ClaimResponse.requestor",                                                                                         // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                                 // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 10. ClaimResponse.request
-                this.Element_Request = new ElementDefinitionInfo
-                {
-                    Name = "Element_Request",
-                    Path= "ClaimResponse.request",
-                    Id = "ClaimResponse.request",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Claim"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Request = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Request",                                                                                               // MakerGen.cs:236
+                    Path= "ClaimResponse.request",                                                                                          // MakerGen.cs:237
+                    Id = "ClaimResponse.request",                                                                                           // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Claim"                                                             // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 11. ClaimResponse.outcome
-                this.Element_Outcome = new ElementDefinitionInfo
-                {
-                    Name = "Element_Outcome",
-                    Path= "ClaimResponse.outcome",
-                    Id = "ClaimResponse.outcome",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Outcome = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Outcome",                                                                                               // MakerGen.cs:236
+                    Path= "ClaimResponse.outcome",                                                                                          // MakerGen.cs:237
+                    Id = "ClaimResponse.outcome",                                                                                           // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 12. ClaimResponse.disposition
-                this.Element_Disposition = new ElementDefinitionInfo
-                {
-                    Name = "Element_Disposition",
-                    Path= "ClaimResponse.disposition",
-                    Id = "ClaimResponse.disposition",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Disposition = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Disposition",                                                                                           // MakerGen.cs:236
+                    Path= "ClaimResponse.disposition",                                                                                      // MakerGen.cs:237
+                    Id = "ClaimResponse.disposition",                                                                                       // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 13. ClaimResponse.preAuthRef
-                this.Element_PreAuthRef = new ElementDefinitionInfo
-                {
-                    Name = "Element_PreAuthRef",
-                    Path= "ClaimResponse.preAuthRef",
-                    Id = "ClaimResponse.preAuthRef",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_PreAuthRef = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_PreAuthRef",                                                                                            // MakerGen.cs:236
+                    Path= "ClaimResponse.preAuthRef",                                                                                       // MakerGen.cs:237
+                    Id = "ClaimResponse.preAuthRef",                                                                                        // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 14. ClaimResponse.preAuthPeriod
-                this.Element_PreAuthPeriod = new ElementDefinitionInfo
-                {
-                    Name = "Element_PreAuthPeriod",
-                    Path= "ClaimResponse.preAuthPeriod",
-                    Id = "ClaimResponse.preAuthPeriod",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Period
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_PreAuthPeriod = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_PreAuthPeriod",                                                                                         // MakerGen.cs:236
+                    Path= "ClaimResponse.preAuthPeriod",                                                                                    // MakerGen.cs:237
+                    Id = "ClaimResponse.preAuthPeriod",                                                                                     // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Period                                                                       // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 15. ClaimResponse.payeeType
-                this.Element_PayeeType = new ElementDefinitionInfo
-                {
-                    Name = "Element_PayeeType",
-                    Path= "ClaimResponse.payeeType",
-                    Id = "ClaimResponse.payeeType",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_PayeeType = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_PayeeType",                                                                                             // MakerGen.cs:236
+                    Path= "ClaimResponse.payeeType",                                                                                        // MakerGen.cs:237
+                    Id = "ClaimResponse.payeeType",                                                                                         // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 16. ClaimResponse.item
-                this.Element_Item = new ElementDefinitionInfo
-                {
-                    Name = "Element_Item",
-                    Path= "ClaimResponse.item",
-                    Id = "ClaimResponse.item",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Item
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Item = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Item",                                                                                                  // MakerGen.cs:236
+                    Path= "ClaimResponse.item",                                                                                             // MakerGen.cs:237
+                    Id = "ClaimResponse.item",                                                                                              // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Item                                                                                                       // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 32. ClaimResponse.addItem
-                this.Element_AddItem = new ElementDefinitionInfo
-                {
-                    Name = "Element_AddItem",
-                    Path= "ClaimResponse.addItem",
-                    Id = "ClaimResponse.addItem",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_AddItem
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_AddItem = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_AddItem",                                                                                               // MakerGen.cs:236
+                    Path= "ClaimResponse.addItem",                                                                                          // MakerGen.cs:237
+                    Id = "ClaimResponse.addItem",                                                                                           // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_AddItem                                                                                                    // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 68. ClaimResponse.adjudication
-                this.Element_Adjudication = new ElementDefinitionInfo
-                {
-                    Name = "Element_Adjudication",
-                    Path= "ClaimResponse.adjudication",
-                    Id = "ClaimResponse.adjudication",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                    }
-                };
-            }
-            {
+                this.Element_Adjudication = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Adjudication",                                                                                          // MakerGen.cs:236
+                    Path= "ClaimResponse.adjudication",                                                                                     // MakerGen.cs:237
+                    Id = "ClaimResponse.adjudication",                                                                                      // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 69. ClaimResponse.total
-                this.Element_Total = new ElementDefinitionInfo
-                {
-                    Name = "Element_Total",
-                    Path= "ClaimResponse.total",
-                    Id = "ClaimResponse.total",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Total
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Total = new ElementDefinitionInfo                                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Total",                                                                                                 // MakerGen.cs:236
+                    Path= "ClaimResponse.total",                                                                                            // MakerGen.cs:237
+                    Id = "ClaimResponse.total",                                                                                             // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Total                                                                                                      // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 72. ClaimResponse.payment
-                this.Element_Payment = new ElementDefinitionInfo
-                {
-                    Name = "Element_Payment",
-                    Path= "ClaimResponse.payment",
-                    Id = "ClaimResponse.payment",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Payment
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Payment = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Payment",                                                                                               // MakerGen.cs:236
+                    Path= "ClaimResponse.payment",                                                                                          // MakerGen.cs:237
+                    Id = "ClaimResponse.payment",                                                                                           // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Payment                                                                                                    // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 79. ClaimResponse.fundsReserve
-                this.Element_FundsReserve = new ElementDefinitionInfo
-                {
-                    Name = "Element_FundsReserve",
-                    Path= "ClaimResponse.fundsReserve",
-                    Id = "ClaimResponse.fundsReserve",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_FundsReserve = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_FundsReserve",                                                                                          // MakerGen.cs:236
+                    Path= "ClaimResponse.fundsReserve",                                                                                     // MakerGen.cs:237
+                    Id = "ClaimResponse.fundsReserve",                                                                                      // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 80. ClaimResponse.formCode
-                this.Element_FormCode = new ElementDefinitionInfo
-                {
-                    Name = "Element_FormCode",
-                    Path= "ClaimResponse.formCode",
-                    Id = "ClaimResponse.formCode",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_FormCode = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_FormCode",                                                                                              // MakerGen.cs:236
+                    Path= "ClaimResponse.formCode",                                                                                         // MakerGen.cs:237
+                    Id = "ClaimResponse.formCode",                                                                                          // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 81. ClaimResponse.form
-                this.Element_Form = new ElementDefinitionInfo
-                {
-                    Name = "Element_Form",
-                    Path= "ClaimResponse.form",
-                    Id = "ClaimResponse.form",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Attachment
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Form = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Form",                                                                                                  // MakerGen.cs:236
+                    Path= "ClaimResponse.form",                                                                                             // MakerGen.cs:237
+                    Id = "ClaimResponse.form",                                                                                              // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Attachment                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 82. ClaimResponse.processNote
-                this.Element_ProcessNote = new ElementDefinitionInfo
-                {
-                    Name = "Element_ProcessNote",
-                    Path= "ClaimResponse.processNote",
-                    Id = "ClaimResponse.processNote",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_ProcessNote
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ProcessNote = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ProcessNote",                                                                                           // MakerGen.cs:236
+                    Path= "ClaimResponse.processNote",                                                                                      // MakerGen.cs:237
+                    Id = "ClaimResponse.processNote",                                                                                       // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_ProcessNote                                                                                                // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 87. ClaimResponse.communicationRequest
-                this.Element_CommunicationRequest = new ElementDefinitionInfo
-                {
-                    Name = "Element_CommunicationRequest",
-                    Path= "ClaimResponse.communicationRequest",
-                    Id = "ClaimResponse.communicationRequest",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/CommunicationRequest"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_CommunicationRequest = new ElementDefinitionInfo                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_CommunicationRequest",                                                                                  // MakerGen.cs:236
+                    Path= "ClaimResponse.communicationRequest",                                                                             // MakerGen.cs:237
+                    Id = "ClaimResponse.communicationRequest",                                                                              // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/CommunicationRequest"                                              // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 88. ClaimResponse.insurance
-                this.Element_Insurance = new ElementDefinitionInfo
-                {
-                    Name = "Element_Insurance",
-                    Path= "ClaimResponse.insurance",
-                    Id = "ClaimResponse.insurance",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Insurance
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Insurance = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Insurance",                                                                                             // MakerGen.cs:236
+                    Path= "ClaimResponse.insurance",                                                                                        // MakerGen.cs:237
+                    Id = "ClaimResponse.insurance",                                                                                         // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Insurance                                                                                                  // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 94. ClaimResponse.error
-                this.Element_Error = new ElementDefinitionInfo
-                {
-                    Name = "Element_Error",
-                    Path= "ClaimResponse.error",
-                    Id = "ClaimResponse.error",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Error
-                        {
-                        }
-                    }
-                };
-            }
-            this.Name = "ClaimResponse";
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/ClaimResponse";
-        }
-    }
-}
+                this.Element_Error = new ElementDefinitionInfo                                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Error",                                                                                                 // MakerGen.cs:236
+                    Path= "ClaimResponse.error",                                                                                            // MakerGen.cs:237
+                    Id = "ClaimResponse.error",                                                                                             // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Error                                                                                                      // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            this.Name = "ClaimResponse";                                                                                                    // MakerGen.cs:468
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/ClaimResponse";                                                             // MakerGen.cs:469
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:449

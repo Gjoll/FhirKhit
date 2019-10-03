@@ -1,13 +1,13 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Resource
-{
-    #region Json
-    #if NEVER
+using System;                                                                                                                               // MakerGen.cs:432
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:433
+using System.IO;                                                                                                                            // MakerGen.cs:434
+using System.Linq;                                                                                                                          // MakerGen.cs:435
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:436
+                                                                                                                                            // MakerGen.cs:437
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:438
+{                                                                                                                                           // MakerGen.cs:439
+    #region Json                                                                                                                            // MakerGen.cs:440
+    #if NEVER                                                                                                                               // MakerGen.cs:441
     {
       "resourceType": "StructureDefinition",
       "id": "Binary",
@@ -101,92 +101,92 @@ namespace FhirKhit.Maker.Common.Resource
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:444
     /// <summary>
     /// Fhir resource 'Binary'
     /// </summary>
     // 0. Binary
-    public partial class Resource_Binary : FhirKhit.Maker.Common.Resource.Resource_Resource
-    {
+    public partial class Resource_Binary : FhirKhit.Maker.Common.Resource.Resource_Resource                                                 // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 1. Binary.contentType
-        public ElementDefinitionInfo Element_ContentType;
+        public ElementDefinitionInfo Element_ContentType;                                                                                   // MakerGen.cs:217
         // 2. Binary.securityContext
-        public ElementDefinitionInfo Element_SecurityContext;
+        public ElementDefinitionInfo Element_SecurityContext;                                                                               // MakerGen.cs:217
         // 3. Binary.data
-        public ElementDefinitionInfo Element_Data;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "Binary",
-                ElementId = "Binary"
-            });
-            Element_ContentType.Write(sDef);
-            Element_SecurityContext.Write(sDef);
-            Element_Data.Write(sDef);
-        }
-        
-        public Resource_Binary()
-        {
-            {
+        public ElementDefinitionInfo Element_Data;                                                                                          // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "Binary",                                                                                                            // MakerGen.cs:393
+                ElementId = "Binary"                                                                                                        // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_ContentType.Write(sDef);                                                                                                // MakerGen.cs:221
+            Element_SecurityContext.Write(sDef);                                                                                            // MakerGen.cs:221
+            Element_Data.Write(sDef);                                                                                                       // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Resource_Binary()                                                                                                            // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. Binary.contentType
-                this.Element_ContentType = new ElementDefinitionInfo
-                {
-                    Name = "Element_ContentType",
-                    Path= "Binary.contentType",
-                    Id = "Binary.contentType",
-                    Min = 1,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ContentType = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ContentType",                                                                                           // MakerGen.cs:236
+                    Path= "Binary.contentType",                                                                                             // MakerGen.cs:237
+                    Id = "Binary.contentType",                                                                                              // MakerGen.cs:238
+                    Min = 1,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. Binary.securityContext
-                this.Element_SecurityContext = new ElementDefinitionInfo
-                {
-                    Name = "Element_SecurityContext",
-                    Path= "Binary.securityContext",
-                    Id = "Binary.securityContext",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Resource"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_SecurityContext = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_SecurityContext",                                                                                       // MakerGen.cs:236
+                    Path= "Binary.securityContext",                                                                                         // MakerGen.cs:237
+                    Id = "Binary.securityContext",                                                                                          // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Resource"                                                          // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 3. Binary.data
-                this.Element_Data = new ElementDefinitionInfo
-                {
-                    Name = "Element_Data",
-                    Path= "Binary.data",
-                    Id = "Binary.data",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Base64Binary
-                        {
-                        }
-                    }
-                };
-            }
-            this.Name = "Binary";
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/Binary";
-        }
-    }
-}
+                this.Element_Data = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Data",                                                                                                  // MakerGen.cs:236
+                    Path= "Binary.data",                                                                                                    // MakerGen.cs:237
+                    Id = "Binary.data",                                                                                                     // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Base64Binary                                                          // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            this.Name = "Binary";                                                                                                           // MakerGen.cs:468
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/Binary";                                                                    // MakerGen.cs:469
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:449

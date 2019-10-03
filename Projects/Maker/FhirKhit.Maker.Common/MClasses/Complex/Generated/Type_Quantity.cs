@@ -1,12 +1,12 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Complex
-{
-    #region Json
+using System;                                                                                                                               // MakerGen.cs:490
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:491
+using System.IO;                                                                                                                            // MakerGen.cs:492
+using System.Linq;                                                                                                                          // MakerGen.cs:493
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:494
+                                                                                                                                            // MakerGen.cs:495
+namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:496
+{                                                                                                                                           // MakerGen.cs:497
+    #region Json                                                                                                                            // MakerGen.cs:498
     #if NEVER
     {
       "resourceType": "StructureDefinition",
@@ -133,126 +133,126 @@ namespace FhirKhit.Maker.Common.Complex
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:502
     /// <summary>
     /// Fhir complex 'Quantity'
     /// </summary>
     // 0. Quantity
-    public partial class Type_Quantity : FhirKhit.Maker.Common.Complex.ComplexBase
-    {
+    public partial class Type_Quantity : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 1. Quantity.value
-        public ElementDefinitionInfo Element_Value;
+        public ElementDefinitionInfo Element_Value;                                                                                         // MakerGen.cs:217
         // 2. Quantity.comparator
-        public ElementDefinitionInfo Element_Comparator;
+        public ElementDefinitionInfo Element_Comparator;                                                                                    // MakerGen.cs:217
         // 3. Quantity.unit
-        public ElementDefinitionInfo Element_Unit;
+        public ElementDefinitionInfo Element_Unit;                                                                                          // MakerGen.cs:217
         // 4. Quantity.system
-        public ElementDefinitionInfo Element_System;
+        public ElementDefinitionInfo Element_System;                                                                                        // MakerGen.cs:217
         // 5. Quantity.code
-        public ElementDefinitionInfo Element_Code;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "Quantity",
-                ElementId = "Quantity"
-            });
-            Element_Value.Write(sDef);
-            Element_Comparator.Write(sDef);
-            Element_Unit.Write(sDef);
-            Element_System.Write(sDef);
-            Element_Code.Write(sDef);
-        }
-        
-        public Type_Quantity()
-        {
-            {
+        public ElementDefinitionInfo Element_Code;                                                                                          // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "Quantity",                                                                                                          // MakerGen.cs:393
+                ElementId = "Quantity"                                                                                                      // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Value.Write(sDef);                                                                                                      // MakerGen.cs:221
+            Element_Comparator.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Unit.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_System.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Code.Write(sDef);                                                                                                       // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Type_Quantity()                                                                                                              // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. Quantity.value
-                this.Element_Value = new ElementDefinitionInfo
-                {
-                    Name = "Element_Value",
-                    Path= "Quantity.value",
-                    Id = "Quantity.value",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Value = new ElementDefinitionInfo                                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Value",                                                                                                 // MakerGen.cs:236
+                    Path= "Quantity.value",                                                                                                 // MakerGen.cs:237
+                    Id = "Quantity.value",                                                                                                  // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                               // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. Quantity.comparator
-                this.Element_Comparator = new ElementDefinitionInfo
-                {
-                    Name = "Element_Comparator",
-                    Path= "Quantity.comparator",
-                    Id = "Quantity.comparator",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Comparator = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Comparator",                                                                                            // MakerGen.cs:236
+                    Path= "Quantity.comparator",                                                                                            // MakerGen.cs:237
+                    Id = "Quantity.comparator",                                                                                             // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 3. Quantity.unit
-                this.Element_Unit = new ElementDefinitionInfo
-                {
-                    Name = "Element_Unit",
-                    Path= "Quantity.unit",
-                    Id = "Quantity.unit",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Unit = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Unit",                                                                                                  // MakerGen.cs:236
+                    Path= "Quantity.unit",                                                                                                  // MakerGen.cs:237
+                    Id = "Quantity.unit",                                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 4. Quantity.system
-                this.Element_System = new ElementDefinitionInfo
-                {
-                    Name = "Element_System",
-                    Path= "Quantity.system",
-                    Id = "Quantity.system",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_System = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_System",                                                                                                // MakerGen.cs:236
+                    Path= "Quantity.system",                                                                                                // MakerGen.cs:237
+                    Id = "Quantity.system",                                                                                                 // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                                   // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 5. Quantity.code
-                this.Element_Code = new ElementDefinitionInfo
-                {
-                    Name = "Element_Code",
-                    Path= "Quantity.code",
-                    Id = "Quantity.code",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-        }
-    }
-}
+                this.Element_Code = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Code",                                                                                                  // MakerGen.cs:236
+                    Path= "Quantity.code",                                                                                                  // MakerGen.cs:237
+                    Id = "Quantity.code",                                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:507

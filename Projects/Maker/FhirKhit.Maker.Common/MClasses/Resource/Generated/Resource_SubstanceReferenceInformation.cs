@@ -1,13 +1,13 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Resource
-{
-    #region Json
-    #if NEVER
+using System;                                                                                                                               // MakerGen.cs:432
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:433
+using System.IO;                                                                                                                            // MakerGen.cs:434
+using System.Linq;                                                                                                                          // MakerGen.cs:435
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:436
+                                                                                                                                            // MakerGen.cs:437
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:438
+{                                                                                                                                           // MakerGen.cs:439
+    #region Json                                                                                                                            // MakerGen.cs:440
+    #if NEVER                                                                                                                               // MakerGen.cs:441
     {
       "resourceType": "StructureDefinition",
       "id": "SubstanceReferenceInformation",
@@ -377,582 +377,582 @@ namespace FhirKhit.Maker.Common.Resource
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:444
     /// <summary>
     /// Fhir resource 'SubstanceReferenceInformation'
     /// </summary>
     // 0. SubstanceReferenceInformation
-    public partial class Resource_SubstanceReferenceInformation : FhirKhit.Maker.Common.Resource.Resource_DomainResource
-    {
+    public partial class Resource_SubstanceReferenceInformation : FhirKhit.Maker.Common.Resource.Resource_DomainResource                    // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 2. SubstanceReferenceInformation.gene
-        public partial class Type_Gene : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Gene : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 3. SubstanceReferenceInformation.gene.geneSequenceOrigin
-            public ElementDefinitionInfo Element_GeneSequenceOrigin;
+            public ElementDefinitionInfo Element_GeneSequenceOrigin;                                                                        // MakerGen.cs:217
             // 4. SubstanceReferenceInformation.gene.gene
-            public ElementDefinitionInfo Element_Gene;
+            public ElementDefinitionInfo Element_Gene;                                                                                      // MakerGen.cs:217
             // 5. SubstanceReferenceInformation.gene.source
-            public ElementDefinitionInfo Element_Source;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "SubstanceReferenceInformation.gene",
-                    ElementId = "SubstanceReferenceInformation.gene"
-                });
-                Element_GeneSequenceOrigin.Write(sDef);
-                Element_Gene.Write(sDef);
-                Element_Source.Write(sDef);
-            }
-            
-            public Type_Gene()
-            {
-                {
+            public ElementDefinitionInfo Element_Source;                                                                                    // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "SubstanceReferenceInformation.gene",                                                                            // MakerGen.cs:393
+                    ElementId = "SubstanceReferenceInformation.gene"                                                                        // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_GeneSequenceOrigin.Write(sDef);                                                                                     // MakerGen.cs:221
+                Element_Gene.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Source.Write(sDef);                                                                                                 // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Gene()                                                                                                              // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 3. SubstanceReferenceInformation.gene.geneSequenceOrigin
-                    this.Element_GeneSequenceOrigin = new ElementDefinitionInfo
-                    {
-                        Name = "Element_GeneSequenceOrigin",
-                        Path= "SubstanceReferenceInformation.gene.geneSequenceOrigin",
-                        Id = "SubstanceReferenceInformation.gene.geneSequenceOrigin",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_GeneSequenceOrigin = new ElementDefinitionInfo                                                             // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_GeneSequenceOrigin",                                                                                // MakerGen.cs:236
+                        Path= "SubstanceReferenceInformation.gene.geneSequenceOrigin",                                                      // MakerGen.cs:237
+                        Id = "SubstanceReferenceInformation.gene.geneSequenceOrigin",                                                       // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 4. SubstanceReferenceInformation.gene.gene
-                    this.Element_Gene = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Gene",
-                        Path= "SubstanceReferenceInformation.gene.gene",
-                        Id = "SubstanceReferenceInformation.gene.gene",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Gene = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Gene",                                                                                              // MakerGen.cs:236
+                        Path= "SubstanceReferenceInformation.gene.gene",                                                                    // MakerGen.cs:237
+                        Id = "SubstanceReferenceInformation.gene.gene",                                                                     // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 5. SubstanceReferenceInformation.gene.source
-                    this.Element_Source = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Source",
-                        Path= "SubstanceReferenceInformation.gene.source",
-                        Id = "SubstanceReferenceInformation.gene.source",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/DocumentReference"
-                                }
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Source = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Source",                                                                                            // MakerGen.cs:236
+                        Path= "SubstanceReferenceInformation.gene.source",                                                                  // MakerGen.cs:237
+                        Id = "SubstanceReferenceInformation.gene.source",                                                                   // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/DocumentReference"                                             // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 6. SubstanceReferenceInformation.geneElement
-        public partial class Type_GeneElement : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_GeneElement : FhirKhit.Maker.Common.Complex.ComplexBase                                                   // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 7. SubstanceReferenceInformation.geneElement.type
-            public ElementDefinitionInfo Element_Type;
+            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:217
             // 8. SubstanceReferenceInformation.geneElement.element
-            public ElementDefinitionInfo Element_Element;
+            public ElementDefinitionInfo Element_Element;                                                                                   // MakerGen.cs:217
             // 9. SubstanceReferenceInformation.geneElement.source
-            public ElementDefinitionInfo Element_Source;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "SubstanceReferenceInformation.geneElement",
-                    ElementId = "SubstanceReferenceInformation.geneElement"
-                });
-                Element_Type.Write(sDef);
-                Element_Element.Write(sDef);
-                Element_Source.Write(sDef);
-            }
-            
-            public Type_GeneElement()
-            {
-                {
+            public ElementDefinitionInfo Element_Source;                                                                                    // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "SubstanceReferenceInformation.geneElement",                                                                     // MakerGen.cs:393
+                    ElementId = "SubstanceReferenceInformation.geneElement"                                                                 // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Element.Write(sDef);                                                                                                // MakerGen.cs:221
+                Element_Source.Write(sDef);                                                                                                 // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_GeneElement()                                                                                                       // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 7. SubstanceReferenceInformation.geneElement.type
-                    this.Element_Type = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Type",
-                        Path= "SubstanceReferenceInformation.geneElement.type",
-                        Id = "SubstanceReferenceInformation.geneElement.type",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Type",                                                                                              // MakerGen.cs:236
+                        Path= "SubstanceReferenceInformation.geneElement.type",                                                             // MakerGen.cs:237
+                        Id = "SubstanceReferenceInformation.geneElement.type",                                                              // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 8. SubstanceReferenceInformation.geneElement.element
-                    this.Element_Element = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Element",
-                        Path= "SubstanceReferenceInformation.geneElement.element",
-                        Id = "SubstanceReferenceInformation.geneElement.element",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Identifier
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Element = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Element",                                                                                           // MakerGen.cs:236
+                        Path= "SubstanceReferenceInformation.geneElement.element",                                                          // MakerGen.cs:237
+                        Id = "SubstanceReferenceInformation.geneElement.element",                                                           // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Identifier                                                               // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 9. SubstanceReferenceInformation.geneElement.source
-                    this.Element_Source = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Source",
-                        Path= "SubstanceReferenceInformation.geneElement.source",
-                        Id = "SubstanceReferenceInformation.geneElement.source",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/DocumentReference"
-                                }
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Source = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Source",                                                                                            // MakerGen.cs:236
+                        Path= "SubstanceReferenceInformation.geneElement.source",                                                           // MakerGen.cs:237
+                        Id = "SubstanceReferenceInformation.geneElement.source",                                                            // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/DocumentReference"                                             // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 10. SubstanceReferenceInformation.classification
-        public partial class Type_Classification : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Classification : FhirKhit.Maker.Common.Complex.ComplexBase                                                // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 11. SubstanceReferenceInformation.classification.domain
-            public ElementDefinitionInfo Element_Domain;
+            public ElementDefinitionInfo Element_Domain;                                                                                    // MakerGen.cs:217
             // 12. SubstanceReferenceInformation.classification.classification
-            public ElementDefinitionInfo Element_Classification;
+            public ElementDefinitionInfo Element_Classification;                                                                            // MakerGen.cs:217
             // 13. SubstanceReferenceInformation.classification.subtype
-            public ElementDefinitionInfo Element_Subtype;
+            public ElementDefinitionInfo Element_Subtype;                                                                                   // MakerGen.cs:217
             // 14. SubstanceReferenceInformation.classification.source
-            public ElementDefinitionInfo Element_Source;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "SubstanceReferenceInformation.classification",
-                    ElementId = "SubstanceReferenceInformation.classification"
-                });
-                Element_Domain.Write(sDef);
-                Element_Classification.Write(sDef);
-                Element_Subtype.Write(sDef);
-                Element_Source.Write(sDef);
-            }
-            
-            public Type_Classification()
-            {
-                {
+            public ElementDefinitionInfo Element_Source;                                                                                    // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "SubstanceReferenceInformation.classification",                                                                  // MakerGen.cs:393
+                    ElementId = "SubstanceReferenceInformation.classification"                                                              // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Domain.Write(sDef);                                                                                                 // MakerGen.cs:221
+                Element_Classification.Write(sDef);                                                                                         // MakerGen.cs:221
+                Element_Subtype.Write(sDef);                                                                                                // MakerGen.cs:221
+                Element_Source.Write(sDef);                                                                                                 // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Classification()                                                                                                    // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 11. SubstanceReferenceInformation.classification.domain
-                    this.Element_Domain = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Domain",
-                        Path= "SubstanceReferenceInformation.classification.domain",
-                        Id = "SubstanceReferenceInformation.classification.domain",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Domain = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Domain",                                                                                            // MakerGen.cs:236
+                        Path= "SubstanceReferenceInformation.classification.domain",                                                        // MakerGen.cs:237
+                        Id = "SubstanceReferenceInformation.classification.domain",                                                         // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 12. SubstanceReferenceInformation.classification.classification
-                    this.Element_Classification = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Classification",
-                        Path= "SubstanceReferenceInformation.classification.classification",
-                        Id = "SubstanceReferenceInformation.classification.classification",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Classification = new ElementDefinitionInfo                                                                 // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Classification",                                                                                    // MakerGen.cs:236
+                        Path= "SubstanceReferenceInformation.classification.classification",                                                // MakerGen.cs:237
+                        Id = "SubstanceReferenceInformation.classification.classification",                                                 // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 13. SubstanceReferenceInformation.classification.subtype
-                    this.Element_Subtype = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Subtype",
-                        Path= "SubstanceReferenceInformation.classification.subtype",
-                        Id = "SubstanceReferenceInformation.classification.subtype",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Subtype = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Subtype",                                                                                           // MakerGen.cs:236
+                        Path= "SubstanceReferenceInformation.classification.subtype",                                                       // MakerGen.cs:237
+                        Id = "SubstanceReferenceInformation.classification.subtype",                                                        // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 14. SubstanceReferenceInformation.classification.source
-                    this.Element_Source = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Source",
-                        Path= "SubstanceReferenceInformation.classification.source",
-                        Id = "SubstanceReferenceInformation.classification.source",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/DocumentReference"
-                                }
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Source = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Source",                                                                                            // MakerGen.cs:236
+                        Path= "SubstanceReferenceInformation.classification.source",                                                        // MakerGen.cs:237
+                        Id = "SubstanceReferenceInformation.classification.source",                                                         // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/DocumentReference"                                             // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 15. SubstanceReferenceInformation.target
-        public partial class Type_Target : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Target : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 16. SubstanceReferenceInformation.target.target
-            public ElementDefinitionInfo Element_Target;
+            public ElementDefinitionInfo Element_Target;                                                                                    // MakerGen.cs:217
             // 17. SubstanceReferenceInformation.target.type
-            public ElementDefinitionInfo Element_Type;
+            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:217
             // 18. SubstanceReferenceInformation.target.interaction
-            public ElementDefinitionInfo Element_Interaction;
+            public ElementDefinitionInfo Element_Interaction;                                                                               // MakerGen.cs:217
             // 19. SubstanceReferenceInformation.target.organism
-            public ElementDefinitionInfo Element_Organism;
+            public ElementDefinitionInfo Element_Organism;                                                                                  // MakerGen.cs:217
             // 20. SubstanceReferenceInformation.target.organismType
-            public ElementDefinitionInfo Element_OrganismType;
+            public ElementDefinitionInfo Element_OrganismType;                                                                              // MakerGen.cs:217
             // 21. SubstanceReferenceInformation.target.amount[x]
-            public ElementDefinitionInfo Element_Amount;
+            public ElementDefinitionInfo Element_Amount;                                                                                    // MakerGen.cs:217
             // 22. SubstanceReferenceInformation.target.amountType
-            public ElementDefinitionInfo Element_AmountType;
+            public ElementDefinitionInfo Element_AmountType;                                                                                // MakerGen.cs:217
             // 23. SubstanceReferenceInformation.target.source
-            public ElementDefinitionInfo Element_Source;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "SubstanceReferenceInformation.target",
-                    ElementId = "SubstanceReferenceInformation.target"
-                });
-                Element_Target.Write(sDef);
-                Element_Type.Write(sDef);
-                Element_Interaction.Write(sDef);
-                Element_Organism.Write(sDef);
-                Element_OrganismType.Write(sDef);
-                Element_Amount.Write(sDef);
-                Element_AmountType.Write(sDef);
-                Element_Source.Write(sDef);
-            }
-            
-            public Type_Target()
-            {
-                {
+            public ElementDefinitionInfo Element_Source;                                                                                    // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "SubstanceReferenceInformation.target",                                                                          // MakerGen.cs:393
+                    ElementId = "SubstanceReferenceInformation.target"                                                                      // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Target.Write(sDef);                                                                                                 // MakerGen.cs:221
+                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Interaction.Write(sDef);                                                                                            // MakerGen.cs:221
+                Element_Organism.Write(sDef);                                                                                               // MakerGen.cs:221
+                Element_OrganismType.Write(sDef);                                                                                           // MakerGen.cs:221
+                Element_Amount.Write(sDef);                                                                                                 // MakerGen.cs:221
+                Element_AmountType.Write(sDef);                                                                                             // MakerGen.cs:221
+                Element_Source.Write(sDef);                                                                                                 // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Target()                                                                                                            // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 16. SubstanceReferenceInformation.target.target
-                    this.Element_Target = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Target",
-                        Path= "SubstanceReferenceInformation.target.target",
-                        Id = "SubstanceReferenceInformation.target.target",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Identifier
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Target = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Target",                                                                                            // MakerGen.cs:236
+                        Path= "SubstanceReferenceInformation.target.target",                                                                // MakerGen.cs:237
+                        Id = "SubstanceReferenceInformation.target.target",                                                                 // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Identifier                                                               // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 17. SubstanceReferenceInformation.target.type
-                    this.Element_Type = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Type",
-                        Path= "SubstanceReferenceInformation.target.type",
-                        Id = "SubstanceReferenceInformation.target.type",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Type",                                                                                              // MakerGen.cs:236
+                        Path= "SubstanceReferenceInformation.target.type",                                                                  // MakerGen.cs:237
+                        Id = "SubstanceReferenceInformation.target.type",                                                                   // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 18. SubstanceReferenceInformation.target.interaction
-                    this.Element_Interaction = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Interaction",
-                        Path= "SubstanceReferenceInformation.target.interaction",
-                        Id = "SubstanceReferenceInformation.target.interaction",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Interaction = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Interaction",                                                                                       // MakerGen.cs:236
+                        Path= "SubstanceReferenceInformation.target.interaction",                                                           // MakerGen.cs:237
+                        Id = "SubstanceReferenceInformation.target.interaction",                                                            // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 19. SubstanceReferenceInformation.target.organism
-                    this.Element_Organism = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Organism",
-                        Path= "SubstanceReferenceInformation.target.organism",
-                        Id = "SubstanceReferenceInformation.target.organism",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Organism = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Organism",                                                                                          // MakerGen.cs:236
+                        Path= "SubstanceReferenceInformation.target.organism",                                                              // MakerGen.cs:237
+                        Id = "SubstanceReferenceInformation.target.organism",                                                               // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 20. SubstanceReferenceInformation.target.organismType
-                    this.Element_OrganismType = new ElementDefinitionInfo
-                    {
-                        Name = "Element_OrganismType",
-                        Path= "SubstanceReferenceInformation.target.organismType",
-                        Id = "SubstanceReferenceInformation.target.organismType",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_OrganismType = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_OrganismType",                                                                                      // MakerGen.cs:236
+                        Path= "SubstanceReferenceInformation.target.organismType",                                                          // MakerGen.cs:237
+                        Id = "SubstanceReferenceInformation.target.organismType",                                                           // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 21. SubstanceReferenceInformation.target.amount[x]
-                    this.Element_Amount = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Amount",
-                        Path= "SubstanceReferenceInformation.target.amount[x]",
-                        Id = "SubstanceReferenceInformation.target.amount[x]",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Quantity
-                            {
-                            },
-                            new FhirKhit.Maker.Common.Complex.Type_Range
-                            {
-                            },
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Amount = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Amount",                                                                                            // MakerGen.cs:236
+                        Path= "SubstanceReferenceInformation.target.amount[x]",                                                             // MakerGen.cs:237
+                        Id = "SubstanceReferenceInformation.target.amount[x]",                                                              // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Quantity                                                                 // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            },                                                                                                              // MakerGen.cs:358
+                            new FhirKhit.Maker.Common.Complex.Type_Range                                                                    // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            },                                                                                                              // MakerGen.cs:358
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 22. SubstanceReferenceInformation.target.amountType
-                    this.Element_AmountType = new ElementDefinitionInfo
-                    {
-                        Name = "Element_AmountType",
-                        Path= "SubstanceReferenceInformation.target.amountType",
-                        Id = "SubstanceReferenceInformation.target.amountType",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_AmountType = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_AmountType",                                                                                        // MakerGen.cs:236
+                        Path= "SubstanceReferenceInformation.target.amountType",                                                            // MakerGen.cs:237
+                        Id = "SubstanceReferenceInformation.target.amountType",                                                             // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 23. SubstanceReferenceInformation.target.source
-                    this.Element_Source = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Source",
-                        Path= "SubstanceReferenceInformation.target.source",
-                        Id = "SubstanceReferenceInformation.target.source",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/DocumentReference"
-                                }
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Source = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Source",                                                                                            // MakerGen.cs:236
+                        Path= "SubstanceReferenceInformation.target.source",                                                                // MakerGen.cs:237
+                        Id = "SubstanceReferenceInformation.target.source",                                                                 // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/DocumentReference"                                             // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 1. SubstanceReferenceInformation.comment
-        public ElementDefinitionInfo Element_Comment;
+        public ElementDefinitionInfo Element_Comment;                                                                                       // MakerGen.cs:217
         // 2. SubstanceReferenceInformation.gene
-        public ElementDefinitionInfo Element_Gene;
+        public ElementDefinitionInfo Element_Gene;                                                                                          // MakerGen.cs:217
         // 6. SubstanceReferenceInformation.geneElement
-        public ElementDefinitionInfo Element_GeneElement;
+        public ElementDefinitionInfo Element_GeneElement;                                                                                   // MakerGen.cs:217
         // 10. SubstanceReferenceInformation.classification
-        public ElementDefinitionInfo Element_Classification;
+        public ElementDefinitionInfo Element_Classification;                                                                                // MakerGen.cs:217
         // 15. SubstanceReferenceInformation.target
-        public ElementDefinitionInfo Element_Target;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "SubstanceReferenceInformation",
-                ElementId = "SubstanceReferenceInformation"
-            });
-            Element_Comment.Write(sDef);
-            Element_Gene.Write(sDef);
-            Element_GeneElement.Write(sDef);
-            Element_Classification.Write(sDef);
-            Element_Target.Write(sDef);
-        }
-        
-        public Resource_SubstanceReferenceInformation()
-        {
-            {
+        public ElementDefinitionInfo Element_Target;                                                                                        // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "SubstanceReferenceInformation",                                                                                     // MakerGen.cs:393
+                ElementId = "SubstanceReferenceInformation"                                                                                 // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Comment.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Gene.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_GeneElement.Write(sDef);                                                                                                // MakerGen.cs:221
+            Element_Classification.Write(sDef);                                                                                             // MakerGen.cs:221
+            Element_Target.Write(sDef);                                                                                                     // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Resource_SubstanceReferenceInformation()                                                                                     // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. SubstanceReferenceInformation.comment
-                this.Element_Comment = new ElementDefinitionInfo
-                {
-                    Name = "Element_Comment",
-                    Path= "SubstanceReferenceInformation.comment",
-                    Id = "SubstanceReferenceInformation.comment",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Comment = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Comment",                                                                                               // MakerGen.cs:236
+                    Path= "SubstanceReferenceInformation.comment",                                                                          // MakerGen.cs:237
+                    Id = "SubstanceReferenceInformation.comment",                                                                           // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. SubstanceReferenceInformation.gene
-                this.Element_Gene = new ElementDefinitionInfo
-                {
-                    Name = "Element_Gene",
-                    Path= "SubstanceReferenceInformation.gene",
-                    Id = "SubstanceReferenceInformation.gene",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Gene
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Gene = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Gene",                                                                                                  // MakerGen.cs:236
+                    Path= "SubstanceReferenceInformation.gene",                                                                             // MakerGen.cs:237
+                    Id = "SubstanceReferenceInformation.gene",                                                                              // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Gene                                                                                                       // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 6. SubstanceReferenceInformation.geneElement
-                this.Element_GeneElement = new ElementDefinitionInfo
-                {
-                    Name = "Element_GeneElement",
-                    Path= "SubstanceReferenceInformation.geneElement",
-                    Id = "SubstanceReferenceInformation.geneElement",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_GeneElement
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_GeneElement = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_GeneElement",                                                                                           // MakerGen.cs:236
+                    Path= "SubstanceReferenceInformation.geneElement",                                                                      // MakerGen.cs:237
+                    Id = "SubstanceReferenceInformation.geneElement",                                                                       // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_GeneElement                                                                                                // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 10. SubstanceReferenceInformation.classification
-                this.Element_Classification = new ElementDefinitionInfo
-                {
-                    Name = "Element_Classification",
-                    Path= "SubstanceReferenceInformation.classification",
-                    Id = "SubstanceReferenceInformation.classification",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Classification
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Classification = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Classification",                                                                                        // MakerGen.cs:236
+                    Path= "SubstanceReferenceInformation.classification",                                                                   // MakerGen.cs:237
+                    Id = "SubstanceReferenceInformation.classification",                                                                    // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Classification                                                                                             // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 15. SubstanceReferenceInformation.target
-                this.Element_Target = new ElementDefinitionInfo
-                {
-                    Name = "Element_Target",
-                    Path= "SubstanceReferenceInformation.target",
-                    Id = "SubstanceReferenceInformation.target",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Target
-                        {
-                        }
-                    }
-                };
-            }
-            this.Name = "SubstanceReferenceInformation";
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/SubstanceReferenceInformation";
-        }
-    }
-}
+                this.Element_Target = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Target",                                                                                                // MakerGen.cs:236
+                    Path= "SubstanceReferenceInformation.target",                                                                           // MakerGen.cs:237
+                    Id = "SubstanceReferenceInformation.target",                                                                            // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Target                                                                                                     // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            this.Name = "SubstanceReferenceInformation";                                                                                    // MakerGen.cs:468
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/SubstanceReferenceInformation";                                             // MakerGen.cs:469
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:449

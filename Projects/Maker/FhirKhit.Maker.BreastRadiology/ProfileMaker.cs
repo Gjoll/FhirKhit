@@ -35,7 +35,10 @@ namespace FhirKhit.Maker.BreastRadiology
             r.Element_Specimen.Unused();
             r.Element_Conclusion.Card(1, 1);
             r.Element_ConclusionCode.Card(1, 1);
-            r.SimpleExtension();
+            r.SimpleExtension("name",
+                "shortText",
+                "definition",
+                -1);
 
             r.Write(Path.Combine(outputDir, $"StructureDefinition.BreastRadiologyReport.json"));
         }

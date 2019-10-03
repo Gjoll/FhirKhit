@@ -1,12 +1,12 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Complex
-{
-    #region Json
+using System;                                                                                                                               // MakerGen.cs:490
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:491
+using System.IO;                                                                                                                            // MakerGen.cs:492
+using System.Linq;                                                                                                                          // MakerGen.cs:493
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:494
+                                                                                                                                            // MakerGen.cs:495
+namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:496
+{                                                                                                                                           // MakerGen.cs:497
+    #region Json                                                                                                                            // MakerGen.cs:498
     #if NEVER
     {
       "resourceType": "StructureDefinition",
@@ -373,376 +373,376 @@ namespace FhirKhit.Maker.Common.Complex
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:502
     /// <summary>
     /// Fhir complex 'Dosage'
     /// </summary>
     // 0. Dosage
-    public partial class Type_Dosage : FhirKhit.Maker.Common.Complex.ComplexBase
-    {
+    public partial class Type_Dosage : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 10. Dosage.doseAndRate
-        public partial class Type_DoseAndRate : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_DoseAndRate : FhirKhit.Maker.Common.Complex.ComplexBase                                                   // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 11. Dosage.doseAndRate.type
-            public ElementDefinitionInfo Element_Type;
+            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:217
             // 12. Dosage.doseAndRate.dose[x]
-            public ElementDefinitionInfo Element_Dose;
+            public ElementDefinitionInfo Element_Dose;                                                                                      // MakerGen.cs:217
             // 13. Dosage.doseAndRate.rate[x]
-            public ElementDefinitionInfo Element_Rate;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "Dosage.doseAndRate",
-                    ElementId = "Dosage.doseAndRate"
-                });
-                Element_Type.Write(sDef);
-                Element_Dose.Write(sDef);
-                Element_Rate.Write(sDef);
-            }
-            
-            public Type_DoseAndRate()
-            {
-                {
+            public ElementDefinitionInfo Element_Rate;                                                                                      // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "Dosage.doseAndRate",                                                                                            // MakerGen.cs:393
+                    ElementId = "Dosage.doseAndRate"                                                                                        // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Dose.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Rate.Write(sDef);                                                                                                   // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_DoseAndRate()                                                                                                       // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 11. Dosage.doseAndRate.type
-                    this.Element_Type = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Type",
-                        Path= "Dosage.doseAndRate.type",
-                        Id = "Dosage.doseAndRate.type",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Type",                                                                                              // MakerGen.cs:236
+                        Path= "Dosage.doseAndRate.type",                                                                                    // MakerGen.cs:237
+                        Id = "Dosage.doseAndRate.type",                                                                                     // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 12. Dosage.doseAndRate.dose[x]
-                    this.Element_Dose = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Dose",
-                        Path= "Dosage.doseAndRate.dose[x]",
-                        Id = "Dosage.doseAndRate.dose[x]",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Range
-                            {
-                            },
-                            new FhirKhit.Maker.Common.Complex.Type_Quantity
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Dose = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Dose",                                                                                              // MakerGen.cs:236
+                        Path= "Dosage.doseAndRate.dose[x]",                                                                                 // MakerGen.cs:237
+                        Id = "Dosage.doseAndRate.dose[x]",                                                                                  // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Range                                                                    // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            },                                                                                                              // MakerGen.cs:358
+                            new FhirKhit.Maker.Common.Complex.Type_Quantity                                                                 // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 13. Dosage.doseAndRate.rate[x]
-                    this.Element_Rate = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Rate",
-                        Path= "Dosage.doseAndRate.rate[x]",
-                        Id = "Dosage.doseAndRate.rate[x]",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Ratio
-                            {
-                            },
-                            new FhirKhit.Maker.Common.Complex.Type_Range
-                            {
-                            },
-                            new FhirKhit.Maker.Common.Complex.Type_Quantity
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Rate = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Rate",                                                                                              // MakerGen.cs:236
+                        Path= "Dosage.doseAndRate.rate[x]",                                                                                 // MakerGen.cs:237
+                        Id = "Dosage.doseAndRate.rate[x]",                                                                                  // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Ratio                                                                    // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            },                                                                                                              // MakerGen.cs:358
+                            new FhirKhit.Maker.Common.Complex.Type_Range                                                                    // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            },                                                                                                              // MakerGen.cs:358
+                            new FhirKhit.Maker.Common.Complex.Type_Quantity                                                                 // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 1. Dosage.sequence
-        public ElementDefinitionInfo Element_Sequence;
+        public ElementDefinitionInfo Element_Sequence;                                                                                      // MakerGen.cs:217
         // 2. Dosage.text
-        public ElementDefinitionInfo Element_Text;
+        public ElementDefinitionInfo Element_Text;                                                                                          // MakerGen.cs:217
         // 3. Dosage.additionalInstruction
-        public ElementDefinitionInfo Element_AdditionalInstruction;
+        public ElementDefinitionInfo Element_AdditionalInstruction;                                                                         // MakerGen.cs:217
         // 4. Dosage.patientInstruction
-        public ElementDefinitionInfo Element_PatientInstruction;
+        public ElementDefinitionInfo Element_PatientInstruction;                                                                            // MakerGen.cs:217
         // 5. Dosage.timing
-        public ElementDefinitionInfo Element_Timing;
+        public ElementDefinitionInfo Element_Timing;                                                                                        // MakerGen.cs:217
         // 6. Dosage.asNeeded[x]
-        public ElementDefinitionInfo Element_AsNeeded;
+        public ElementDefinitionInfo Element_AsNeeded;                                                                                      // MakerGen.cs:217
         // 7. Dosage.site
-        public ElementDefinitionInfo Element_Site;
+        public ElementDefinitionInfo Element_Site;                                                                                          // MakerGen.cs:217
         // 8. Dosage.route
-        public ElementDefinitionInfo Element_Route;
+        public ElementDefinitionInfo Element_Route;                                                                                         // MakerGen.cs:217
         // 9. Dosage.method
-        public ElementDefinitionInfo Element_Method;
+        public ElementDefinitionInfo Element_Method;                                                                                        // MakerGen.cs:217
         // 10. Dosage.doseAndRate
-        public ElementDefinitionInfo Element_DoseAndRate;
+        public ElementDefinitionInfo Element_DoseAndRate;                                                                                   // MakerGen.cs:217
         // 14. Dosage.maxDosePerPeriod
-        public ElementDefinitionInfo Element_MaxDosePerPeriod;
+        public ElementDefinitionInfo Element_MaxDosePerPeriod;                                                                              // MakerGen.cs:217
         // 15. Dosage.maxDosePerAdministration
-        public ElementDefinitionInfo Element_MaxDosePerAdministration;
+        public ElementDefinitionInfo Element_MaxDosePerAdministration;                                                                      // MakerGen.cs:217
         // 16. Dosage.maxDosePerLifetime
-        public ElementDefinitionInfo Element_MaxDosePerLifetime;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "Dosage",
-                ElementId = "Dosage"
-            });
-            Element_Sequence.Write(sDef);
-            Element_Text.Write(sDef);
-            Element_AdditionalInstruction.Write(sDef);
-            Element_PatientInstruction.Write(sDef);
-            Element_Timing.Write(sDef);
-            Element_AsNeeded.Write(sDef);
-            Element_Site.Write(sDef);
-            Element_Route.Write(sDef);
-            Element_Method.Write(sDef);
-            Element_DoseAndRate.Write(sDef);
-            Element_MaxDosePerPeriod.Write(sDef);
-            Element_MaxDosePerAdministration.Write(sDef);
-            Element_MaxDosePerLifetime.Write(sDef);
-        }
-        
-        public Type_Dosage()
-        {
-            {
+        public ElementDefinitionInfo Element_MaxDosePerLifetime;                                                                            // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "Dosage",                                                                                                            // MakerGen.cs:393
+                ElementId = "Dosage"                                                                                                        // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Sequence.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_Text.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_AdditionalInstruction.Write(sDef);                                                                                      // MakerGen.cs:221
+            Element_PatientInstruction.Write(sDef);                                                                                         // MakerGen.cs:221
+            Element_Timing.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_AsNeeded.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_Site.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Route.Write(sDef);                                                                                                      // MakerGen.cs:221
+            Element_Method.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_DoseAndRate.Write(sDef);                                                                                                // MakerGen.cs:221
+            Element_MaxDosePerPeriod.Write(sDef);                                                                                           // MakerGen.cs:221
+            Element_MaxDosePerAdministration.Write(sDef);                                                                                   // MakerGen.cs:221
+            Element_MaxDosePerLifetime.Write(sDef);                                                                                         // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Type_Dosage()                                                                                                                // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. Dosage.sequence
-                this.Element_Sequence = new ElementDefinitionInfo
-                {
-                    Name = "Element_Sequence",
-                    Path= "Dosage.sequence",
-                    Id = "Dosage.sequence",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Integer
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Sequence = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Sequence",                                                                                              // MakerGen.cs:236
+                    Path= "Dosage.sequence",                                                                                                // MakerGen.cs:237
+                    Id = "Dosage.sequence",                                                                                                 // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                               // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. Dosage.text
-                this.Element_Text = new ElementDefinitionInfo
-                {
-                    Name = "Element_Text",
-                    Path= "Dosage.text",
-                    Id = "Dosage.text",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Text = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Text",                                                                                                  // MakerGen.cs:236
+                    Path= "Dosage.text",                                                                                                    // MakerGen.cs:237
+                    Id = "Dosage.text",                                                                                                     // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 3. Dosage.additionalInstruction
-                this.Element_AdditionalInstruction = new ElementDefinitionInfo
-                {
-                    Name = "Element_AdditionalInstruction",
-                    Path= "Dosage.additionalInstruction",
-                    Id = "Dosage.additionalInstruction",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_AdditionalInstruction = new ElementDefinitionInfo                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_AdditionalInstruction",                                                                                 // MakerGen.cs:236
+                    Path= "Dosage.additionalInstruction",                                                                                   // MakerGen.cs:237
+                    Id = "Dosage.additionalInstruction",                                                                                    // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 4. Dosage.patientInstruction
-                this.Element_PatientInstruction = new ElementDefinitionInfo
-                {
-                    Name = "Element_PatientInstruction",
-                    Path= "Dosage.patientInstruction",
-                    Id = "Dosage.patientInstruction",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_PatientInstruction = new ElementDefinitionInfo                                                                 // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_PatientInstruction",                                                                                    // MakerGen.cs:236
+                    Path= "Dosage.patientInstruction",                                                                                      // MakerGen.cs:237
+                    Id = "Dosage.patientInstruction",                                                                                       // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 5. Dosage.timing
-                this.Element_Timing = new ElementDefinitionInfo
-                {
-                    Name = "Element_Timing",
-                    Path= "Dosage.timing",
-                    Id = "Dosage.timing",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Timing
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Timing = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Timing",                                                                                                // MakerGen.cs:236
+                    Path= "Dosage.timing",                                                                                                  // MakerGen.cs:237
+                    Id = "Dosage.timing",                                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Timing                                                                       // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 6. Dosage.asNeeded[x]
-                this.Element_AsNeeded = new ElementDefinitionInfo
-                {
-                    Name = "Element_AsNeeded",
-                    Path= "Dosage.asNeeded[x]",
-                    Id = "Dosage.asNeeded[x]",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
-                        {
-                        },
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_AsNeeded = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_AsNeeded",                                                                                              // MakerGen.cs:236
+                    Path= "Dosage.asNeeded[x]",                                                                                             // MakerGen.cs:237
+                    Id = "Dosage.asNeeded[x]",                                                                                              // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        },                                                                                                                  // MakerGen.cs:305
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 7. Dosage.site
-                this.Element_Site = new ElementDefinitionInfo
-                {
-                    Name = "Element_Site",
-                    Path= "Dosage.site",
-                    Id = "Dosage.site",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Site = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Site",                                                                                                  // MakerGen.cs:236
+                    Path= "Dosage.site",                                                                                                    // MakerGen.cs:237
+                    Id = "Dosage.site",                                                                                                     // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 8. Dosage.route
-                this.Element_Route = new ElementDefinitionInfo
-                {
-                    Name = "Element_Route",
-                    Path= "Dosage.route",
-                    Id = "Dosage.route",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Route = new ElementDefinitionInfo                                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Route",                                                                                                 // MakerGen.cs:236
+                    Path= "Dosage.route",                                                                                                   // MakerGen.cs:237
+                    Id = "Dosage.route",                                                                                                    // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 9. Dosage.method
-                this.Element_Method = new ElementDefinitionInfo
-                {
-                    Name = "Element_Method",
-                    Path= "Dosage.method",
-                    Id = "Dosage.method",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Method = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Method",                                                                                                // MakerGen.cs:236
+                    Path= "Dosage.method",                                                                                                  // MakerGen.cs:237
+                    Id = "Dosage.method",                                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 10. Dosage.doseAndRate
-                this.Element_DoseAndRate = new ElementDefinitionInfo
-                {
-                    Name = "Element_DoseAndRate",
-                    Path= "Dosage.doseAndRate",
-                    Id = "Dosage.doseAndRate",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_DoseAndRate
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_DoseAndRate = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_DoseAndRate",                                                                                           // MakerGen.cs:236
+                    Path= "Dosage.doseAndRate",                                                                                             // MakerGen.cs:237
+                    Id = "Dosage.doseAndRate",                                                                                              // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_DoseAndRate                                                                                                // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 14. Dosage.maxDosePerPeriod
-                this.Element_MaxDosePerPeriod = new ElementDefinitionInfo
-                {
-                    Name = "Element_MaxDosePerPeriod",
-                    Path= "Dosage.maxDosePerPeriod",
-                    Id = "Dosage.maxDosePerPeriod",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Ratio
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_MaxDosePerPeriod = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_MaxDosePerPeriod",                                                                                      // MakerGen.cs:236
+                    Path= "Dosage.maxDosePerPeriod",                                                                                        // MakerGen.cs:237
+                    Id = "Dosage.maxDosePerPeriod",                                                                                         // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Ratio                                                                        // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 15. Dosage.maxDosePerAdministration
-                this.Element_MaxDosePerAdministration = new ElementDefinitionInfo
-                {
-                    Name = "Element_MaxDosePerAdministration",
-                    Path= "Dosage.maxDosePerAdministration",
-                    Id = "Dosage.maxDosePerAdministration",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Quantity
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_MaxDosePerAdministration = new ElementDefinitionInfo                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_MaxDosePerAdministration",                                                                              // MakerGen.cs:236
+                    Path= "Dosage.maxDosePerAdministration",                                                                                // MakerGen.cs:237
+                    Id = "Dosage.maxDosePerAdministration",                                                                                 // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Quantity                                                                     // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 16. Dosage.maxDosePerLifetime
-                this.Element_MaxDosePerLifetime = new ElementDefinitionInfo
-                {
-                    Name = "Element_MaxDosePerLifetime",
-                    Path= "Dosage.maxDosePerLifetime",
-                    Id = "Dosage.maxDosePerLifetime",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Quantity
-                        {
-                        }
-                    }
-                };
-            }
-        }
-    }
-}
+                this.Element_MaxDosePerLifetime = new ElementDefinitionInfo                                                                 // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_MaxDosePerLifetime",                                                                                    // MakerGen.cs:236
+                    Path= "Dosage.maxDosePerLifetime",                                                                                      // MakerGen.cs:237
+                    Id = "Dosage.maxDosePerLifetime",                                                                                       // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Quantity                                                                     // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:507

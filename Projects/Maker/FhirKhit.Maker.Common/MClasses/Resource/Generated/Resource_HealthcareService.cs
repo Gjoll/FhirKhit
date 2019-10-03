@@ -1,13 +1,13 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Resource
-{
-    #region Json
-    #if NEVER
+using System;                                                                                                                               // MakerGen.cs:432
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:433
+using System.IO;                                                                                                                            // MakerGen.cs:434
+using System.Linq;                                                                                                                          // MakerGen.cs:435
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:436
+                                                                                                                                            // MakerGen.cs:437
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:438
+{                                                                                                                                           // MakerGen.cs:439
+    #region Json                                                                                                                            // MakerGen.cs:440
+    #if NEVER                                                                                                                               // MakerGen.cs:441
     {
       "resourceType": "StructureDefinition",
       "id": "HealthcareService",
@@ -614,738 +614,738 @@ namespace FhirKhit.Maker.Common.Resource
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:444
     /// <summary>
     /// Fhir resource 'HealthcareService'
     /// </summary>
     // 0. HealthcareService
-    public partial class Resource_HealthcareService : FhirKhit.Maker.Common.Resource.Resource_DomainResource
-    {
+    public partial class Resource_HealthcareService : FhirKhit.Maker.Common.Resource.Resource_DomainResource                                // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 15. HealthcareService.eligibility
-        public partial class Type_Eligibility : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Eligibility : FhirKhit.Maker.Common.Complex.ComplexBase                                                   // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 16. HealthcareService.eligibility.code
-            public ElementDefinitionInfo Element_Code;
+            public ElementDefinitionInfo Element_Code;                                                                                      // MakerGen.cs:217
             // 17. HealthcareService.eligibility.comment
-            public ElementDefinitionInfo Element_Comment;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "HealthcareService.eligibility",
-                    ElementId = "HealthcareService.eligibility"
-                });
-                Element_Code.Write(sDef);
-                Element_Comment.Write(sDef);
-            }
-            
-            public Type_Eligibility()
-            {
-                {
+            public ElementDefinitionInfo Element_Comment;                                                                                   // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "HealthcareService.eligibility",                                                                                 // MakerGen.cs:393
+                    ElementId = "HealthcareService.eligibility"                                                                             // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Code.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Comment.Write(sDef);                                                                                                // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Eligibility()                                                                                                       // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 16. HealthcareService.eligibility.code
-                    this.Element_Code = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Code",
-                        Path= "HealthcareService.eligibility.code",
-                        Id = "HealthcareService.eligibility.code",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Code = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Code",                                                                                              // MakerGen.cs:236
+                        Path= "HealthcareService.eligibility.code",                                                                         // MakerGen.cs:237
+                        Id = "HealthcareService.eligibility.code",                                                                          // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 17. HealthcareService.eligibility.comment
-                    this.Element_Comment = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Comment",
-                        Path= "HealthcareService.eligibility.comment",
-                        Id = "HealthcareService.eligibility.comment",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Comment = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Comment",                                                                                           // MakerGen.cs:236
+                        Path= "HealthcareService.eligibility.comment",                                                                      // MakerGen.cs:237
+                        Id = "HealthcareService.eligibility.comment",                                                                       // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                          // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 23. HealthcareService.availableTime
-        public partial class Type_AvailableTime : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_AvailableTime : FhirKhit.Maker.Common.Complex.ComplexBase                                                 // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 24. HealthcareService.availableTime.daysOfWeek
-            public ElementDefinitionInfo Element_DaysOfWeek;
+            public ElementDefinitionInfo Element_DaysOfWeek;                                                                                // MakerGen.cs:217
             // 25. HealthcareService.availableTime.allDay
-            public ElementDefinitionInfo Element_AllDay;
+            public ElementDefinitionInfo Element_AllDay;                                                                                    // MakerGen.cs:217
             // 26. HealthcareService.availableTime.availableStartTime
-            public ElementDefinitionInfo Element_AvailableStartTime;
+            public ElementDefinitionInfo Element_AvailableStartTime;                                                                        // MakerGen.cs:217
             // 27. HealthcareService.availableTime.availableEndTime
-            public ElementDefinitionInfo Element_AvailableEndTime;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "HealthcareService.availableTime",
-                    ElementId = "HealthcareService.availableTime"
-                });
-                Element_DaysOfWeek.Write(sDef);
-                Element_AllDay.Write(sDef);
-                Element_AvailableStartTime.Write(sDef);
-                Element_AvailableEndTime.Write(sDef);
-            }
-            
-            public Type_AvailableTime()
-            {
-                {
+            public ElementDefinitionInfo Element_AvailableEndTime;                                                                          // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "HealthcareService.availableTime",                                                                               // MakerGen.cs:393
+                    ElementId = "HealthcareService.availableTime"                                                                           // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_DaysOfWeek.Write(sDef);                                                                                             // MakerGen.cs:221
+                Element_AllDay.Write(sDef);                                                                                                 // MakerGen.cs:221
+                Element_AvailableStartTime.Write(sDef);                                                                                     // MakerGen.cs:221
+                Element_AvailableEndTime.Write(sDef);                                                                                       // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_AvailableTime()                                                                                                     // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 24. HealthcareService.availableTime.daysOfWeek
-                    this.Element_DaysOfWeek = new ElementDefinitionInfo
-                    {
-                        Name = "Element_DaysOfWeek",
-                        Path= "HealthcareService.availableTime.daysOfWeek",
-                        Id = "HealthcareService.availableTime.daysOfWeek",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_DaysOfWeek = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_DaysOfWeek",                                                                                        // MakerGen.cs:236
+                        Path= "HealthcareService.availableTime.daysOfWeek",                                                                 // MakerGen.cs:237
+                        Id = "HealthcareService.availableTime.daysOfWeek",                                                                  // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 25. HealthcareService.availableTime.allDay
-                    this.Element_AllDay = new ElementDefinitionInfo
-                    {
-                        Name = "Element_AllDay",
-                        Path= "HealthcareService.availableTime.allDay",
-                        Id = "HealthcareService.availableTime.allDay",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_AllDay = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_AllDay",                                                                                            // MakerGen.cs:236
+                        Path= "HealthcareService.availableTime.allDay",                                                                     // MakerGen.cs:237
+                        Id = "HealthcareService.availableTime.allDay",                                                                      // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                           // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 26. HealthcareService.availableTime.availableStartTime
-                    this.Element_AvailableStartTime = new ElementDefinitionInfo
-                    {
-                        Name = "Element_AvailableStartTime",
-                        Path= "HealthcareService.availableTime.availableStartTime",
-                        Id = "HealthcareService.availableTime.availableStartTime",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Time
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_AvailableStartTime = new ElementDefinitionInfo                                                             // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_AvailableStartTime",                                                                                // MakerGen.cs:236
+                        Path= "HealthcareService.availableTime.availableStartTime",                                                         // MakerGen.cs:237
+                        Id = "HealthcareService.availableTime.availableStartTime",                                                          // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Time                                                              // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 27. HealthcareService.availableTime.availableEndTime
-                    this.Element_AvailableEndTime = new ElementDefinitionInfo
-                    {
-                        Name = "Element_AvailableEndTime",
-                        Path= "HealthcareService.availableTime.availableEndTime",
-                        Id = "HealthcareService.availableTime.availableEndTime",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Time
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_AvailableEndTime = new ElementDefinitionInfo                                                               // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_AvailableEndTime",                                                                                  // MakerGen.cs:236
+                        Path= "HealthcareService.availableTime.availableEndTime",                                                           // MakerGen.cs:237
+                        Id = "HealthcareService.availableTime.availableEndTime",                                                            // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Time                                                              // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 28. HealthcareService.notAvailable
-        public partial class Type_NotAvailable : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_NotAvailable : FhirKhit.Maker.Common.Complex.ComplexBase                                                  // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 29. HealthcareService.notAvailable.description
-            public ElementDefinitionInfo Element_Description;
+            public ElementDefinitionInfo Element_Description;                                                                               // MakerGen.cs:217
             // 30. HealthcareService.notAvailable.during
-            public ElementDefinitionInfo Element_During;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "HealthcareService.notAvailable",
-                    ElementId = "HealthcareService.notAvailable"
-                });
-                Element_Description.Write(sDef);
-                Element_During.Write(sDef);
-            }
-            
-            public Type_NotAvailable()
-            {
-                {
+            public ElementDefinitionInfo Element_During;                                                                                    // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "HealthcareService.notAvailable",                                                                                // MakerGen.cs:393
+                    ElementId = "HealthcareService.notAvailable"                                                                            // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Description.Write(sDef);                                                                                            // MakerGen.cs:221
+                Element_During.Write(sDef);                                                                                                 // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_NotAvailable()                                                                                                      // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 29. HealthcareService.notAvailable.description
-                    this.Element_Description = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Description",
-                        Path= "HealthcareService.notAvailable.description",
-                        Id = "HealthcareService.notAvailable.description",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Description",                                                                                       // MakerGen.cs:236
+                        Path= "HealthcareService.notAvailable.description",                                                                 // MakerGen.cs:237
+                        Id = "HealthcareService.notAvailable.description",                                                                  // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 30. HealthcareService.notAvailable.during
-                    this.Element_During = new ElementDefinitionInfo
-                    {
-                        Name = "Element_During",
-                        Path= "HealthcareService.notAvailable.during",
-                        Id = "HealthcareService.notAvailable.during",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Period
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_During = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_During",                                                                                            // MakerGen.cs:236
+                        Path= "HealthcareService.notAvailable.during",                                                                      // MakerGen.cs:237
+                        Id = "HealthcareService.notAvailable.during",                                                                       // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Period                                                                   // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 1. HealthcareService.identifier
-        public ElementDefinitionInfo Element_Identifier;
+        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:217
         // 2. HealthcareService.active
-        public ElementDefinitionInfo Element_Active;
+        public ElementDefinitionInfo Element_Active;                                                                                        // MakerGen.cs:217
         // 3. HealthcareService.providedBy
-        public ElementDefinitionInfo Element_ProvidedBy;
+        public ElementDefinitionInfo Element_ProvidedBy;                                                                                    // MakerGen.cs:217
         // 4. HealthcareService.category
-        public ElementDefinitionInfo Element_Category;
+        public ElementDefinitionInfo Element_Category;                                                                                      // MakerGen.cs:217
         // 5. HealthcareService.type
-        public ElementDefinitionInfo Element_Type;
+        public ElementDefinitionInfo Element_Type;                                                                                          // MakerGen.cs:217
         // 6. HealthcareService.specialty
-        public ElementDefinitionInfo Element_Specialty;
+        public ElementDefinitionInfo Element_Specialty;                                                                                     // MakerGen.cs:217
         // 7. HealthcareService.location
-        public ElementDefinitionInfo Element_Location;
+        public ElementDefinitionInfo Element_Location;                                                                                      // MakerGen.cs:217
         // 8. HealthcareService.name
-        public ElementDefinitionInfo Element_Name;
+        public ElementDefinitionInfo Element_Name;                                                                                          // MakerGen.cs:217
         // 9. HealthcareService.comment
-        public ElementDefinitionInfo Element_Comment;
+        public ElementDefinitionInfo Element_Comment;                                                                                       // MakerGen.cs:217
         // 10. HealthcareService.extraDetails
-        public ElementDefinitionInfo Element_ExtraDetails;
+        public ElementDefinitionInfo Element_ExtraDetails;                                                                                  // MakerGen.cs:217
         // 11. HealthcareService.photo
-        public ElementDefinitionInfo Element_Photo;
+        public ElementDefinitionInfo Element_Photo;                                                                                         // MakerGen.cs:217
         // 12. HealthcareService.telecom
-        public ElementDefinitionInfo Element_Telecom;
+        public ElementDefinitionInfo Element_Telecom;                                                                                       // MakerGen.cs:217
         // 13. HealthcareService.coverageArea
-        public ElementDefinitionInfo Element_CoverageArea;
+        public ElementDefinitionInfo Element_CoverageArea;                                                                                  // MakerGen.cs:217
         // 14. HealthcareService.serviceProvisionCode
-        public ElementDefinitionInfo Element_ServiceProvisionCode;
+        public ElementDefinitionInfo Element_ServiceProvisionCode;                                                                          // MakerGen.cs:217
         // 15. HealthcareService.eligibility
-        public ElementDefinitionInfo Element_Eligibility;
+        public ElementDefinitionInfo Element_Eligibility;                                                                                   // MakerGen.cs:217
         // 18. HealthcareService.program
-        public ElementDefinitionInfo Element_Program;
+        public ElementDefinitionInfo Element_Program;                                                                                       // MakerGen.cs:217
         // 19. HealthcareService.characteristic
-        public ElementDefinitionInfo Element_Characteristic;
+        public ElementDefinitionInfo Element_Characteristic;                                                                                // MakerGen.cs:217
         // 20. HealthcareService.communication
-        public ElementDefinitionInfo Element_Communication;
+        public ElementDefinitionInfo Element_Communication;                                                                                 // MakerGen.cs:217
         // 21. HealthcareService.referralMethod
-        public ElementDefinitionInfo Element_ReferralMethod;
+        public ElementDefinitionInfo Element_ReferralMethod;                                                                                // MakerGen.cs:217
         // 22. HealthcareService.appointmentRequired
-        public ElementDefinitionInfo Element_AppointmentRequired;
+        public ElementDefinitionInfo Element_AppointmentRequired;                                                                           // MakerGen.cs:217
         // 23. HealthcareService.availableTime
-        public ElementDefinitionInfo Element_AvailableTime;
+        public ElementDefinitionInfo Element_AvailableTime;                                                                                 // MakerGen.cs:217
         // 28. HealthcareService.notAvailable
-        public ElementDefinitionInfo Element_NotAvailable;
+        public ElementDefinitionInfo Element_NotAvailable;                                                                                  // MakerGen.cs:217
         // 31. HealthcareService.availabilityExceptions
-        public ElementDefinitionInfo Element_AvailabilityExceptions;
+        public ElementDefinitionInfo Element_AvailabilityExceptions;                                                                        // MakerGen.cs:217
         // 32. HealthcareService.endpoint
-        public ElementDefinitionInfo Element_Endpoint;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "HealthcareService",
-                ElementId = "HealthcareService"
-            });
-            Element_Identifier.Write(sDef);
-            Element_Active.Write(sDef);
-            Element_ProvidedBy.Write(sDef);
-            Element_Category.Write(sDef);
-            Element_Type.Write(sDef);
-            Element_Specialty.Write(sDef);
-            Element_Location.Write(sDef);
-            Element_Name.Write(sDef);
-            Element_Comment.Write(sDef);
-            Element_ExtraDetails.Write(sDef);
-            Element_Photo.Write(sDef);
-            Element_Telecom.Write(sDef);
-            Element_CoverageArea.Write(sDef);
-            Element_ServiceProvisionCode.Write(sDef);
-            Element_Eligibility.Write(sDef);
-            Element_Program.Write(sDef);
-            Element_Characteristic.Write(sDef);
-            Element_Communication.Write(sDef);
-            Element_ReferralMethod.Write(sDef);
-            Element_AppointmentRequired.Write(sDef);
-            Element_AvailableTime.Write(sDef);
-            Element_NotAvailable.Write(sDef);
-            Element_AvailabilityExceptions.Write(sDef);
-            Element_Endpoint.Write(sDef);
-        }
-        
-        public Resource_HealthcareService()
-        {
-            {
+        public ElementDefinitionInfo Element_Endpoint;                                                                                      // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "HealthcareService",                                                                                                 // MakerGen.cs:393
+                ElementId = "HealthcareService"                                                                                             // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Active.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_ProvidedBy.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Category.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_Type.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Specialty.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_Location.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_Name.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Comment.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_ExtraDetails.Write(sDef);                                                                                               // MakerGen.cs:221
+            Element_Photo.Write(sDef);                                                                                                      // MakerGen.cs:221
+            Element_Telecom.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_CoverageArea.Write(sDef);                                                                                               // MakerGen.cs:221
+            Element_ServiceProvisionCode.Write(sDef);                                                                                       // MakerGen.cs:221
+            Element_Eligibility.Write(sDef);                                                                                                // MakerGen.cs:221
+            Element_Program.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Characteristic.Write(sDef);                                                                                             // MakerGen.cs:221
+            Element_Communication.Write(sDef);                                                                                              // MakerGen.cs:221
+            Element_ReferralMethod.Write(sDef);                                                                                             // MakerGen.cs:221
+            Element_AppointmentRequired.Write(sDef);                                                                                        // MakerGen.cs:221
+            Element_AvailableTime.Write(sDef);                                                                                              // MakerGen.cs:221
+            Element_NotAvailable.Write(sDef);                                                                                               // MakerGen.cs:221
+            Element_AvailabilityExceptions.Write(sDef);                                                                                     // MakerGen.cs:221
+            Element_Endpoint.Write(sDef);                                                                                                   // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Resource_HealthcareService()                                                                                                 // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. HealthcareService.identifier
-                this.Element_Identifier = new ElementDefinitionInfo
-                {
-                    Name = "Element_Identifier",
-                    Path= "HealthcareService.identifier",
-                    Id = "HealthcareService.identifier",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:236
+                    Path= "HealthcareService.identifier",                                                                                   // MakerGen.cs:237
+                    Id = "HealthcareService.identifier",                                                                                    // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. HealthcareService.active
-                this.Element_Active = new ElementDefinitionInfo
-                {
-                    Name = "Element_Active",
-                    Path= "HealthcareService.active",
-                    Id = "HealthcareService.active",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Active = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Active",                                                                                                // MakerGen.cs:236
+                    Path= "HealthcareService.active",                                                                                       // MakerGen.cs:237
+                    Id = "HealthcareService.active",                                                                                        // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 3. HealthcareService.providedBy
-                this.Element_ProvidedBy = new ElementDefinitionInfo
-                {
-                    Name = "Element_ProvidedBy",
-                    Path= "HealthcareService.providedBy",
-                    Id = "HealthcareService.providedBy",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Organization"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ProvidedBy = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ProvidedBy",                                                                                            // MakerGen.cs:236
+                    Path= "HealthcareService.providedBy",                                                                                   // MakerGen.cs:237
+                    Id = "HealthcareService.providedBy",                                                                                    // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 4. HealthcareService.category
-                this.Element_Category = new ElementDefinitionInfo
-                {
-                    Name = "Element_Category",
-                    Path= "HealthcareService.category",
-                    Id = "HealthcareService.category",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Category = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Category",                                                                                              // MakerGen.cs:236
+                    Path= "HealthcareService.category",                                                                                     // MakerGen.cs:237
+                    Id = "HealthcareService.category",                                                                                      // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 5. HealthcareService.type
-                this.Element_Type = new ElementDefinitionInfo
-                {
-                    Name = "Element_Type",
-                    Path= "HealthcareService.type",
-                    Id = "HealthcareService.type",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Type = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Type",                                                                                                  // MakerGen.cs:236
+                    Path= "HealthcareService.type",                                                                                         // MakerGen.cs:237
+                    Id = "HealthcareService.type",                                                                                          // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 6. HealthcareService.specialty
-                this.Element_Specialty = new ElementDefinitionInfo
-                {
-                    Name = "Element_Specialty",
-                    Path= "HealthcareService.specialty",
-                    Id = "HealthcareService.specialty",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Specialty = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Specialty",                                                                                             // MakerGen.cs:236
+                    Path= "HealthcareService.specialty",                                                                                    // MakerGen.cs:237
+                    Id = "HealthcareService.specialty",                                                                                     // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 7. HealthcareService.location
-                this.Element_Location = new ElementDefinitionInfo
-                {
-                    Name = "Element_Location",
-                    Path= "HealthcareService.location",
-                    Id = "HealthcareService.location",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Location"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Location = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Location",                                                                                              // MakerGen.cs:236
+                    Path= "HealthcareService.location",                                                                                     // MakerGen.cs:237
+                    Id = "HealthcareService.location",                                                                                      // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Location"                                                          // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 8. HealthcareService.name
-                this.Element_Name = new ElementDefinitionInfo
-                {
-                    Name = "Element_Name",
-                    Path= "HealthcareService.name",
-                    Id = "HealthcareService.name",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Name = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Name",                                                                                                  // MakerGen.cs:236
+                    Path= "HealthcareService.name",                                                                                         // MakerGen.cs:237
+                    Id = "HealthcareService.name",                                                                                          // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 9. HealthcareService.comment
-                this.Element_Comment = new ElementDefinitionInfo
-                {
-                    Name = "Element_Comment",
-                    Path= "HealthcareService.comment",
-                    Id = "HealthcareService.comment",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Comment = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Comment",                                                                                               // MakerGen.cs:236
+                    Path= "HealthcareService.comment",                                                                                      // MakerGen.cs:237
+                    Id = "HealthcareService.comment",                                                                                       // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 10. HealthcareService.extraDetails
-                this.Element_ExtraDetails = new ElementDefinitionInfo
-                {
-                    Name = "Element_ExtraDetails",
-                    Path= "HealthcareService.extraDetails",
-                    Id = "HealthcareService.extraDetails",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ExtraDetails = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ExtraDetails",                                                                                          // MakerGen.cs:236
+                    Path= "HealthcareService.extraDetails",                                                                                 // MakerGen.cs:237
+                    Id = "HealthcareService.extraDetails",                                                                                  // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 11. HealthcareService.photo
-                this.Element_Photo = new ElementDefinitionInfo
-                {
-                    Name = "Element_Photo",
-                    Path= "HealthcareService.photo",
-                    Id = "HealthcareService.photo",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Attachment
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Photo = new ElementDefinitionInfo                                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Photo",                                                                                                 // MakerGen.cs:236
+                    Path= "HealthcareService.photo",                                                                                        // MakerGen.cs:237
+                    Id = "HealthcareService.photo",                                                                                         // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Attachment                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 12. HealthcareService.telecom
-                this.Element_Telecom = new ElementDefinitionInfo
-                {
-                    Name = "Element_Telecom",
-                    Path= "HealthcareService.telecom",
-                    Id = "HealthcareService.telecom",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_ContactPoint
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Telecom = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Telecom",                                                                                               // MakerGen.cs:236
+                    Path= "HealthcareService.telecom",                                                                                      // MakerGen.cs:237
+                    Id = "HealthcareService.telecom",                                                                                       // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_ContactPoint                                                                 // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 13. HealthcareService.coverageArea
-                this.Element_CoverageArea = new ElementDefinitionInfo
-                {
-                    Name = "Element_CoverageArea",
-                    Path= "HealthcareService.coverageArea",
-                    Id = "HealthcareService.coverageArea",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Location"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_CoverageArea = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_CoverageArea",                                                                                          // MakerGen.cs:236
+                    Path= "HealthcareService.coverageArea",                                                                                 // MakerGen.cs:237
+                    Id = "HealthcareService.coverageArea",                                                                                  // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Location"                                                          // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 14. HealthcareService.serviceProvisionCode
-                this.Element_ServiceProvisionCode = new ElementDefinitionInfo
-                {
-                    Name = "Element_ServiceProvisionCode",
-                    Path= "HealthcareService.serviceProvisionCode",
-                    Id = "HealthcareService.serviceProvisionCode",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ServiceProvisionCode = new ElementDefinitionInfo                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ServiceProvisionCode",                                                                                  // MakerGen.cs:236
+                    Path= "HealthcareService.serviceProvisionCode",                                                                         // MakerGen.cs:237
+                    Id = "HealthcareService.serviceProvisionCode",                                                                          // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 15. HealthcareService.eligibility
-                this.Element_Eligibility = new ElementDefinitionInfo
-                {
-                    Name = "Element_Eligibility",
-                    Path= "HealthcareService.eligibility",
-                    Id = "HealthcareService.eligibility",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Eligibility
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Eligibility = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Eligibility",                                                                                           // MakerGen.cs:236
+                    Path= "HealthcareService.eligibility",                                                                                  // MakerGen.cs:237
+                    Id = "HealthcareService.eligibility",                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Eligibility                                                                                                // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 18. HealthcareService.program
-                this.Element_Program = new ElementDefinitionInfo
-                {
-                    Name = "Element_Program",
-                    Path= "HealthcareService.program",
-                    Id = "HealthcareService.program",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Program = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Program",                                                                                               // MakerGen.cs:236
+                    Path= "HealthcareService.program",                                                                                      // MakerGen.cs:237
+                    Id = "HealthcareService.program",                                                                                       // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 19. HealthcareService.characteristic
-                this.Element_Characteristic = new ElementDefinitionInfo
-                {
-                    Name = "Element_Characteristic",
-                    Path= "HealthcareService.characteristic",
-                    Id = "HealthcareService.characteristic",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Characteristic = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Characteristic",                                                                                        // MakerGen.cs:236
+                    Path= "HealthcareService.characteristic",                                                                               // MakerGen.cs:237
+                    Id = "HealthcareService.characteristic",                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 20. HealthcareService.communication
-                this.Element_Communication = new ElementDefinitionInfo
-                {
-                    Name = "Element_Communication",
-                    Path= "HealthcareService.communication",
-                    Id = "HealthcareService.communication",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Communication = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Communication",                                                                                         // MakerGen.cs:236
+                    Path= "HealthcareService.communication",                                                                                // MakerGen.cs:237
+                    Id = "HealthcareService.communication",                                                                                 // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 21. HealthcareService.referralMethod
-                this.Element_ReferralMethod = new ElementDefinitionInfo
-                {
-                    Name = "Element_ReferralMethod",
-                    Path= "HealthcareService.referralMethod",
-                    Id = "HealthcareService.referralMethod",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ReferralMethod = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ReferralMethod",                                                                                        // MakerGen.cs:236
+                    Path= "HealthcareService.referralMethod",                                                                               // MakerGen.cs:237
+                    Id = "HealthcareService.referralMethod",                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 22. HealthcareService.appointmentRequired
-                this.Element_AppointmentRequired = new ElementDefinitionInfo
-                {
-                    Name = "Element_AppointmentRequired",
-                    Path= "HealthcareService.appointmentRequired",
-                    Id = "HealthcareService.appointmentRequired",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_AppointmentRequired = new ElementDefinitionInfo                                                                // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_AppointmentRequired",                                                                                   // MakerGen.cs:236
+                    Path= "HealthcareService.appointmentRequired",                                                                          // MakerGen.cs:237
+                    Id = "HealthcareService.appointmentRequired",                                                                           // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 23. HealthcareService.availableTime
-                this.Element_AvailableTime = new ElementDefinitionInfo
-                {
-                    Name = "Element_AvailableTime",
-                    Path= "HealthcareService.availableTime",
-                    Id = "HealthcareService.availableTime",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_AvailableTime
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_AvailableTime = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_AvailableTime",                                                                                         // MakerGen.cs:236
+                    Path= "HealthcareService.availableTime",                                                                                // MakerGen.cs:237
+                    Id = "HealthcareService.availableTime",                                                                                 // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_AvailableTime                                                                                              // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 28. HealthcareService.notAvailable
-                this.Element_NotAvailable = new ElementDefinitionInfo
-                {
-                    Name = "Element_NotAvailable",
-                    Path= "HealthcareService.notAvailable",
-                    Id = "HealthcareService.notAvailable",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_NotAvailable
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_NotAvailable = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_NotAvailable",                                                                                          // MakerGen.cs:236
+                    Path= "HealthcareService.notAvailable",                                                                                 // MakerGen.cs:237
+                    Id = "HealthcareService.notAvailable",                                                                                  // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_NotAvailable                                                                                               // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 31. HealthcareService.availabilityExceptions
-                this.Element_AvailabilityExceptions = new ElementDefinitionInfo
-                {
-                    Name = "Element_AvailabilityExceptions",
-                    Path= "HealthcareService.availabilityExceptions",
-                    Id = "HealthcareService.availabilityExceptions",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_AvailabilityExceptions = new ElementDefinitionInfo                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_AvailabilityExceptions",                                                                                // MakerGen.cs:236
+                    Path= "HealthcareService.availabilityExceptions",                                                                       // MakerGen.cs:237
+                    Id = "HealthcareService.availabilityExceptions",                                                                        // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 32. HealthcareService.endpoint
-                this.Element_Endpoint = new ElementDefinitionInfo
-                {
-                    Name = "Element_Endpoint",
-                    Path= "HealthcareService.endpoint",
-                    Id = "HealthcareService.endpoint",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Endpoint"
-                            }
-                        }
-                    }
-                };
-            }
-            this.Name = "HealthcareService";
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/HealthcareService";
-        }
-    }
-}
+                this.Element_Endpoint = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Endpoint",                                                                                              // MakerGen.cs:236
+                    Path= "HealthcareService.endpoint",                                                                                     // MakerGen.cs:237
+                    Id = "HealthcareService.endpoint",                                                                                      // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Endpoint"                                                          // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            this.Name = "HealthcareService";                                                                                                // MakerGen.cs:468
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/HealthcareService";                                                         // MakerGen.cs:469
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:449

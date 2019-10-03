@@ -1,13 +1,13 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Resource
-{
-    #region Json
-    #if NEVER
+using System;                                                                                                                               // MakerGen.cs:432
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:433
+using System.IO;                                                                                                                            // MakerGen.cs:434
+using System.Linq;                                                                                                                          // MakerGen.cs:435
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:436
+                                                                                                                                            // MakerGen.cs:437
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:438
+{                                                                                                                                           // MakerGen.cs:439
+    #region Json                                                                                                                            // MakerGen.cs:440
+    #if NEVER                                                                                                                               // MakerGen.cs:441
     {
       "resourceType": "StructureDefinition",
       "id": "Contract",
@@ -2326,3104 +2326,3104 @@ namespace FhirKhit.Maker.Common.Resource
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:444
     /// <summary>
     /// Fhir resource 'Contract'
     /// </summary>
     // 0. Contract
-    public partial class Resource_Contract : FhirKhit.Maker.Common.Resource.Resource_DomainResource
-    {
+    public partial class Resource_Contract : FhirKhit.Maker.Common.Resource.Resource_DomainResource                                         // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 25. Contract.contentDefinition
-        public partial class Type_ContentDefinition : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_ContentDefinition : FhirKhit.Maker.Common.Complex.ComplexBase                                             // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 26. Contract.contentDefinition.type
-            public ElementDefinitionInfo Element_Type;
+            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:217
             // 27. Contract.contentDefinition.subType
-            public ElementDefinitionInfo Element_SubType;
+            public ElementDefinitionInfo Element_SubType;                                                                                   // MakerGen.cs:217
             // 28. Contract.contentDefinition.publisher
-            public ElementDefinitionInfo Element_Publisher;
+            public ElementDefinitionInfo Element_Publisher;                                                                                 // MakerGen.cs:217
             // 29. Contract.contentDefinition.publicationDate
-            public ElementDefinitionInfo Element_PublicationDate;
+            public ElementDefinitionInfo Element_PublicationDate;                                                                           // MakerGen.cs:217
             // 30. Contract.contentDefinition.publicationStatus
-            public ElementDefinitionInfo Element_PublicationStatus;
+            public ElementDefinitionInfo Element_PublicationStatus;                                                                         // MakerGen.cs:217
             // 31. Contract.contentDefinition.copyright
-            public ElementDefinitionInfo Element_Copyright;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "Contract.contentDefinition",
-                    ElementId = "Contract.contentDefinition"
-                });
-                Element_Type.Write(sDef);
-                Element_SubType.Write(sDef);
-                Element_Publisher.Write(sDef);
-                Element_PublicationDate.Write(sDef);
-                Element_PublicationStatus.Write(sDef);
-                Element_Copyright.Write(sDef);
-            }
-            
-            public Type_ContentDefinition()
-            {
-                {
+            public ElementDefinitionInfo Element_Copyright;                                                                                 // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "Contract.contentDefinition",                                                                                    // MakerGen.cs:393
+                    ElementId = "Contract.contentDefinition"                                                                                // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_SubType.Write(sDef);                                                                                                // MakerGen.cs:221
+                Element_Publisher.Write(sDef);                                                                                              // MakerGen.cs:221
+                Element_PublicationDate.Write(sDef);                                                                                        // MakerGen.cs:221
+                Element_PublicationStatus.Write(sDef);                                                                                      // MakerGen.cs:221
+                Element_Copyright.Write(sDef);                                                                                              // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_ContentDefinition()                                                                                                 // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 26. Contract.contentDefinition.type
-                    this.Element_Type = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Type",
-                        Path= "Contract.contentDefinition.type",
-                        Id = "Contract.contentDefinition.type",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Type",                                                                                              // MakerGen.cs:236
+                        Path= "Contract.contentDefinition.type",                                                                            // MakerGen.cs:237
+                        Id = "Contract.contentDefinition.type",                                                                             // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 27. Contract.contentDefinition.subType
-                    this.Element_SubType = new ElementDefinitionInfo
-                    {
-                        Name = "Element_SubType",
-                        Path= "Contract.contentDefinition.subType",
-                        Id = "Contract.contentDefinition.subType",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_SubType = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_SubType",                                                                                           // MakerGen.cs:236
+                        Path= "Contract.contentDefinition.subType",                                                                         // MakerGen.cs:237
+                        Id = "Contract.contentDefinition.subType",                                                                          // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 28. Contract.contentDefinition.publisher
-                    this.Element_Publisher = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Publisher",
-                        Path= "Contract.contentDefinition.publisher",
-                        Id = "Contract.contentDefinition.publisher",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                                    "http://hl7.org/fhir/StructureDefinition/Organization"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Publisher = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Publisher",                                                                                         // MakerGen.cs:236
+                        Path= "Contract.contentDefinition.publisher",                                                                       // MakerGen.cs:237
+                        Id = "Contract.contentDefinition.publisher",                                                                        // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                 // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                             // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/Organization"                                                  // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 29. Contract.contentDefinition.publicationDate
-                    this.Element_PublicationDate = new ElementDefinitionInfo
-                    {
-                        Name = "Element_PublicationDate",
-                        Path= "Contract.contentDefinition.publicationDate",
-                        Id = "Contract.contentDefinition.publicationDate",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_PublicationDate = new ElementDefinitionInfo                                                                // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_PublicationDate",                                                                                   // MakerGen.cs:236
+                        Path= "Contract.contentDefinition.publicationDate",                                                                 // MakerGen.cs:237
+                        Id = "Contract.contentDefinition.publicationDate",                                                                  // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                          // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 30. Contract.contentDefinition.publicationStatus
-                    this.Element_PublicationStatus = new ElementDefinitionInfo
-                    {
-                        Name = "Element_PublicationStatus",
-                        Path= "Contract.contentDefinition.publicationStatus",
-                        Id = "Contract.contentDefinition.publicationStatus",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_PublicationStatus = new ElementDefinitionInfo                                                              // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_PublicationStatus",                                                                                 // MakerGen.cs:236
+                        Path= "Contract.contentDefinition.publicationStatus",                                                               // MakerGen.cs:237
+                        Id = "Contract.contentDefinition.publicationStatus",                                                                // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 31. Contract.contentDefinition.copyright
-                    this.Element_Copyright = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Copyright",
-                        Path= "Contract.contentDefinition.copyright",
-                        Id = "Contract.contentDefinition.copyright",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Copyright = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Copyright",                                                                                         // MakerGen.cs:236
+                        Path= "Contract.contentDefinition.copyright",                                                                       // MakerGen.cs:237
+                        Id = "Contract.contentDefinition.copyright",                                                                        // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                          // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 32. Contract.term
-        public partial class Type_Term : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Term : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 40. Contract.term.securityLabel
-            public partial class Type_SecurityLabel : FhirKhit.Maker.Common.Complex.ComplexBase
-            {
+            public partial class Type_SecurityLabel : FhirKhit.Maker.Common.Complex.ComplexBase                                             // MakerGen.cs:381
+            {                                                                                                                               // MakerGen.cs:382
                 // 41. Contract.term.securityLabel.number
-                public ElementDefinitionInfo Element_Number;
+                public ElementDefinitionInfo Element_Number;                                                                                // MakerGen.cs:217
                 // 42. Contract.term.securityLabel.classification
-                public ElementDefinitionInfo Element_Classification;
+                public ElementDefinitionInfo Element_Classification;                                                                        // MakerGen.cs:217
                 // 43. Contract.term.securityLabel.category
-                public ElementDefinitionInfo Element_Category;
+                public ElementDefinitionInfo Element_Category;                                                                              // MakerGen.cs:217
                 // 44. Contract.term.securityLabel.control
-                public ElementDefinitionInfo Element_Control;
-                
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                {
-                    base.Write(sDef);
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                    {
-                        Path = "Contract.term.securityLabel",
-                        ElementId = "Contract.term.securityLabel"
-                    });
-                    Element_Number.Write(sDef);
-                    Element_Classification.Write(sDef);
-                    Element_Category.Write(sDef);
-                    Element_Control.Write(sDef);
-                }
-                
-                public Type_SecurityLabel()
-                {
-                    {
+                public ElementDefinitionInfo Element_Control;                                                                               // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:389
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:390
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:391
+                    {                                                                                                                       // MakerGen.cs:392
+                        Path = "Contract.term.securityLabel",                                                                               // MakerGen.cs:393
+                        ElementId = "Contract.term.securityLabel"                                                                           // MakerGen.cs:394
+                    });                                                                                                                     // MakerGen.cs:395
+                    Element_Number.Write(sDef);                                                                                             // MakerGen.cs:221
+                    Element_Classification.Write(sDef);                                                                                     // MakerGen.cs:221
+                    Element_Category.Write(sDef);                                                                                           // MakerGen.cs:221
+                    Element_Control.Write(sDef);                                                                                            // MakerGen.cs:221
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                public Type_SecurityLabel()                                                                                                 // MakerGen.cs:400
+                {                                                                                                                           // MakerGen.cs:401
+                    {                                                                                                                       // MakerGen.cs:232
                         // 41. Contract.term.securityLabel.number
-                        this.Element_Number = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Number",
-                            Path= "Contract.term.securityLabel.number",
-                            Id = "Contract.term.securityLabel.number",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_UnsignedInt
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Number = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Number",                                                                                        // MakerGen.cs:236
+                            Path= "Contract.term.securityLabel.number",                                                                     // MakerGen.cs:237
+                            Id = "Contract.term.securityLabel.number",                                                                      // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_UnsignedInt                                                   // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 42. Contract.term.securityLabel.classification
-                        this.Element_Classification = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Classification",
-                            Path= "Contract.term.securityLabel.classification",
-                            Id = "Contract.term.securityLabel.classification",
-                            Min = 1,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Coding
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Classification = new ElementDefinitionInfo                                                             // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Classification",                                                                                // MakerGen.cs:236
+                            Path= "Contract.term.securityLabel.classification",                                                             // MakerGen.cs:237
+                            Id = "Contract.term.securityLabel.classification",                                                              // MakerGen.cs:238
+                            Min = 1,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Coding                                                               // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 43. Contract.term.securityLabel.category
-                        this.Element_Category = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Category",
-                            Path= "Contract.term.securityLabel.category",
-                            Id = "Contract.term.securityLabel.category",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Coding
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Category = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Category",                                                                                      // MakerGen.cs:236
+                            Path= "Contract.term.securityLabel.category",                                                                   // MakerGen.cs:237
+                            Id = "Contract.term.securityLabel.category",                                                                    // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Coding                                                               // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 44. Contract.term.securityLabel.control
-                        this.Element_Control = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Control",
-                            Path= "Contract.term.securityLabel.control",
-                            Id = "Contract.term.securityLabel.control",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Coding
-                                {
-                                }
-                            }
-                        };
-                    }
-                }
-            }
+                        this.Element_Control = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Control",                                                                                       // MakerGen.cs:236
+                            Path= "Contract.term.securityLabel.control",                                                                    // MakerGen.cs:237
+                            Id = "Contract.term.securityLabel.control",                                                                     // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Coding                                                               // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                }                                                                                                                           // MakerGen.cs:403
+            }                                                                                                                               // MakerGen.cs:405
             // 45. Contract.term.offer
-            public partial class Type_Offer : FhirKhit.Maker.Common.Complex.ComplexBase
-            {
+            public partial class Type_Offer : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:381
+            {                                                                                                                               // MakerGen.cs:382
                 // 47. Contract.term.offer.party
-                public partial class Type_Party : FhirKhit.Maker.Common.Complex.ComplexBase
-                {
+                public partial class Type_Party : FhirKhit.Maker.Common.Complex.ComplexBase                                                 // MakerGen.cs:381
+                {                                                                                                                           // MakerGen.cs:382
                     // 48. Contract.term.offer.party.reference
-                    public ElementDefinitionInfo Element_Reference;
+                    public ElementDefinitionInfo Element_Reference;                                                                         // MakerGen.cs:217
                     // 49. Contract.term.offer.party.role
-                    public ElementDefinitionInfo Element_Role;
-                    
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                    {
-                        base.Write(sDef);
-                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                        {
-                            Path = "Contract.term.offer.party",
-                            ElementId = "Contract.term.offer.party"
-                        });
-                        Element_Reference.Write(sDef);
-                        Element_Role.Write(sDef);
-                    }
-                    
-                    public Type_Party()
-                    {
-                        {
+                    public ElementDefinitionInfo Element_Role;                                                                              // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:388
+                    {                                                                                                                       // MakerGen.cs:389
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:390
+                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                  // MakerGen.cs:391
+                        {                                                                                                                   // MakerGen.cs:392
+                            Path = "Contract.term.offer.party",                                                                             // MakerGen.cs:393
+                            ElementId = "Contract.term.offer.party"                                                                         // MakerGen.cs:394
+                        });                                                                                                                 // MakerGen.cs:395
+                        Element_Reference.Write(sDef);                                                                                      // MakerGen.cs:221
+                        Element_Role.Write(sDef);                                                                                           // MakerGen.cs:221
+                    }                                                                                                                       // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                    public Type_Party()                                                                                                     // MakerGen.cs:400
+                    {                                                                                                                       // MakerGen.cs:401
+                        {                                                                                                                   // MakerGen.cs:232
                             // 48. Contract.term.offer.party.reference
-                            this.Element_Reference = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Reference",
-                                Path= "Contract.term.offer.party.reference",
-                                Id = "Contract.term.offer.party.reference",
-                                Min = 1,
-                                Max = -1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Complex.Type_Reference
-                                    {
-                                        TargetProfile = new String[]
-                                        {
-                                            "http://hl7.org/fhir/StructureDefinition/Patient",
-                                            "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
-                                            "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                                            "http://hl7.org/fhir/StructureDefinition/Device",
-                                            "http://hl7.org/fhir/StructureDefinition/Group",
-                                            "http://hl7.org/fhir/StructureDefinition/Organization"
-                                        }
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_Reference = new ElementDefinitionInfo                                                              // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Reference",                                                                                 // MakerGen.cs:236
+                                Path= "Contract.term.offer.party.reference",                                                                // MakerGen.cs:237
+                                Id = "Contract.term.offer.party.reference",                                                                 // MakerGen.cs:238
+                                Min = 1,                                                                                                    // MakerGen.cs:239
+                                Max = -1,                                                                                                   // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Complex.Type_Reference                                                        // MakerGen.cs:344
+                                    {                                                                                                       // MakerGen.cs:345
+                                        TargetProfile = new String[]                                                                        // MakerGen.cs:347
+                                        {                                                                                                   // CodeEditorExtensions.cs:28
+                                            "http://hl7.org/fhir/StructureDefinition/Patient",                                              // MakerGen.cs:347
+                                            "http://hl7.org/fhir/StructureDefinition/RelatedPerson",                                        // MakerGen.cs:347
+                                            "http://hl7.org/fhir/StructureDefinition/Practitioner",                                         // MakerGen.cs:347
+                                            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                     // MakerGen.cs:347
+                                            "http://hl7.org/fhir/StructureDefinition/Device",                                               // MakerGen.cs:347
+                                            "http://hl7.org/fhir/StructureDefinition/Group",                                                // MakerGen.cs:347
+                                            "http://hl7.org/fhir/StructureDefinition/Organization"                                          // MakerGen.cs:347
+                                        }                                                                                                   // CodeEditorExtensions.cs:34
+                                    }                                                                                                       // MakerGen.cs:348
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 49. Contract.term.offer.party.role
-                            this.Element_Role = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Role",
-                                Path= "Contract.term.offer.party.role",
-                                Id = "Contract.term.offer.party.role",
-                                Min = 1,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                    }
-                }
+                            this.Element_Role = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Role",                                                                                      // MakerGen.cs:236
+                                Path= "Contract.term.offer.party.role",                                                                     // MakerGen.cs:237
+                                Id = "Contract.term.offer.party.role",                                                                      // MakerGen.cs:238
+                                Min = 1,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                  // MakerGen.cs:316
+                                    {                                                                                                       // MakerGen.cs:317
+                                    }                                                                                                       // MakerGen.cs:320
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                    }                                                                                                                       // MakerGen.cs:403
+                }                                                                                                                           // MakerGen.cs:405
                 // 54. Contract.term.offer.answer
-                public partial class Type_Answer : FhirKhit.Maker.Common.Complex.ComplexBase
-                {
+                public partial class Type_Answer : FhirKhit.Maker.Common.Complex.ComplexBase                                                // MakerGen.cs:381
+                {                                                                                                                           // MakerGen.cs:382
                     // 55. Contract.term.offer.answer.value[x]
-                    public ElementDefinitionInfo Element_Value;
-                    
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                    {
-                        base.Write(sDef);
-                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                        {
-                            Path = "Contract.term.offer.answer",
-                            ElementId = "Contract.term.offer.answer"
-                        });
-                        Element_Value.Write(sDef);
-                    }
-                    
-                    public Type_Answer()
-                    {
-                        {
+                    public ElementDefinitionInfo Element_Value;                                                                             // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:388
+                    {                                                                                                                       // MakerGen.cs:389
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:390
+                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                  // MakerGen.cs:391
+                        {                                                                                                                   // MakerGen.cs:392
+                            Path = "Contract.term.offer.answer",                                                                            // MakerGen.cs:393
+                            ElementId = "Contract.term.offer.answer"                                                                        // MakerGen.cs:394
+                        });                                                                                                                 // MakerGen.cs:395
+                        Element_Value.Write(sDef);                                                                                          // MakerGen.cs:221
+                    }                                                                                                                       // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                    public Type_Answer()                                                                                                    // MakerGen.cs:400
+                    {                                                                                                                       // MakerGen.cs:401
+                        {                                                                                                                   // MakerGen.cs:232
                             // 55. Contract.term.offer.answer.value[x]
-                            this.Element_Value = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Value",
-                                Path= "Contract.term.offer.answer.value[x]",
-                                Id = "Contract.term.offer.answer.value[x]",
-                                Min = 1,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
-                                    {
-                                    },
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
-                                    {
-                                    },
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Integer
-                                    {
-                                    },
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Date
-                                    {
-                                    },
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
-                                    {
-                                    },
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Time
-                                    {
-                                    },
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_String
-                                    {
-                                    },
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Uri
-                                    {
-                                    },
-                                    new FhirKhit.Maker.Common.Complex.Type_Attachment
-                                    {
-                                    },
-                                    new FhirKhit.Maker.Common.Complex.Type_Coding
-                                    {
-                                    },
-                                    new FhirKhit.Maker.Common.Complex.Type_Quantity
-                                    {
-                                    },
-                                    new FhirKhit.Maker.Common.Complex.Type_Reference
-                                    {
-                                        TargetProfile = new String[]
-                                        {
-                                            "http://hl7.org/fhir/StructureDefinition/Resource"
-                                        }
-                                    }
-                                }
-                            };
-                        }
-                    }
-                }
+                            this.Element_Value = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Value",                                                                                     // MakerGen.cs:236
+                                Path= "Contract.term.offer.answer.value[x]",                                                                // MakerGen.cs:237
+                                Id = "Contract.term.offer.answer.value[x]",                                                                 // MakerGen.cs:238
+                                Min = 1,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                   // MakerGen.cs:301
+                                    {                                                                                                       // MakerGen.cs:302
+                                    },                                                                                                      // MakerGen.cs:305
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                   // MakerGen.cs:301
+                                    {                                                                                                       // MakerGen.cs:302
+                                    },                                                                                                      // MakerGen.cs:305
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                   // MakerGen.cs:301
+                                    {                                                                                                       // MakerGen.cs:302
+                                    },                                                                                                      // MakerGen.cs:305
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Date                                                      // MakerGen.cs:301
+                                    {                                                                                                       // MakerGen.cs:302
+                                    },                                                                                                      // MakerGen.cs:305
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                  // MakerGen.cs:301
+                                    {                                                                                                       // MakerGen.cs:302
+                                    },                                                                                                      // MakerGen.cs:305
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Time                                                      // MakerGen.cs:301
+                                    {                                                                                                       // MakerGen.cs:302
+                                    },                                                                                                      // MakerGen.cs:305
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:301
+                                    {                                                                                                       // MakerGen.cs:302
+                                    },                                                                                                      // MakerGen.cs:305
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                       // MakerGen.cs:301
+                                    {                                                                                                       // MakerGen.cs:302
+                                    },                                                                                                      // MakerGen.cs:305
+                                    new FhirKhit.Maker.Common.Complex.Type_Attachment                                                       // MakerGen.cs:356
+                                    {                                                                                                       // MakerGen.cs:357
+                                    },                                                                                                      // MakerGen.cs:358
+                                    new FhirKhit.Maker.Common.Complex.Type_Coding                                                           // MakerGen.cs:316
+                                    {                                                                                                       // MakerGen.cs:317
+                                    },                                                                                                      // MakerGen.cs:320
+                                    new FhirKhit.Maker.Common.Complex.Type_Quantity                                                         // MakerGen.cs:356
+                                    {                                                                                                       // MakerGen.cs:357
+                                    },                                                                                                      // MakerGen.cs:358
+                                    new FhirKhit.Maker.Common.Complex.Type_Reference                                                        // MakerGen.cs:344
+                                    {                                                                                                       // MakerGen.cs:345
+                                        TargetProfile = new String[]                                                                        // MakerGen.cs:347
+                                        {                                                                                                   // CodeEditorExtensions.cs:28
+                                            "http://hl7.org/fhir/StructureDefinition/Resource"                                              // MakerGen.cs:347
+                                        }                                                                                                   // CodeEditorExtensions.cs:34
+                                    }                                                                                                       // MakerGen.cs:348
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                    }                                                                                                                       // MakerGen.cs:403
+                }                                                                                                                           // MakerGen.cs:405
                 // 46. Contract.term.offer.identifier
-                public ElementDefinitionInfo Element_Identifier;
+                public ElementDefinitionInfo Element_Identifier;                                                                            // MakerGen.cs:217
                 // 47. Contract.term.offer.party
-                public ElementDefinitionInfo Element_Party;
+                public ElementDefinitionInfo Element_Party;                                                                                 // MakerGen.cs:217
                 // 50. Contract.term.offer.topic
-                public ElementDefinitionInfo Element_Topic;
+                public ElementDefinitionInfo Element_Topic;                                                                                 // MakerGen.cs:217
                 // 51. Contract.term.offer.type
-                public ElementDefinitionInfo Element_Type;
+                public ElementDefinitionInfo Element_Type;                                                                                  // MakerGen.cs:217
                 // 52. Contract.term.offer.decision
-                public ElementDefinitionInfo Element_Decision;
+                public ElementDefinitionInfo Element_Decision;                                                                              // MakerGen.cs:217
                 // 53. Contract.term.offer.decisionMode
-                public ElementDefinitionInfo Element_DecisionMode;
+                public ElementDefinitionInfo Element_DecisionMode;                                                                          // MakerGen.cs:217
                 // 54. Contract.term.offer.answer
-                public ElementDefinitionInfo Element_Answer;
+                public ElementDefinitionInfo Element_Answer;                                                                                // MakerGen.cs:217
                 // 56. Contract.term.offer.text
-                public ElementDefinitionInfo Element_Text;
+                public ElementDefinitionInfo Element_Text;                                                                                  // MakerGen.cs:217
                 // 57. Contract.term.offer.linkId
-                public ElementDefinitionInfo Element_LinkId;
+                public ElementDefinitionInfo Element_LinkId;                                                                                // MakerGen.cs:217
                 // 58. Contract.term.offer.securityLabelNumber
-                public ElementDefinitionInfo Element_SecurityLabelNumber;
-                
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                {
-                    base.Write(sDef);
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                    {
-                        Path = "Contract.term.offer",
-                        ElementId = "Contract.term.offer"
-                    });
-                    Element_Identifier.Write(sDef);
-                    Element_Party.Write(sDef);
-                    Element_Topic.Write(sDef);
-                    Element_Type.Write(sDef);
-                    Element_Decision.Write(sDef);
-                    Element_DecisionMode.Write(sDef);
-                    Element_Answer.Write(sDef);
-                    Element_Text.Write(sDef);
-                    Element_LinkId.Write(sDef);
-                    Element_SecurityLabelNumber.Write(sDef);
-                }
-                
-                public Type_Offer()
-                {
-                    {
+                public ElementDefinitionInfo Element_SecurityLabelNumber;                                                                   // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:389
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:390
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:391
+                    {                                                                                                                       // MakerGen.cs:392
+                        Path = "Contract.term.offer",                                                                                       // MakerGen.cs:393
+                        ElementId = "Contract.term.offer"                                                                                   // MakerGen.cs:394
+                    });                                                                                                                     // MakerGen.cs:395
+                    Element_Identifier.Write(sDef);                                                                                         // MakerGen.cs:221
+                    Element_Party.Write(sDef);                                                                                              // MakerGen.cs:221
+                    Element_Topic.Write(sDef);                                                                                              // MakerGen.cs:221
+                    Element_Type.Write(sDef);                                                                                               // MakerGen.cs:221
+                    Element_Decision.Write(sDef);                                                                                           // MakerGen.cs:221
+                    Element_DecisionMode.Write(sDef);                                                                                       // MakerGen.cs:221
+                    Element_Answer.Write(sDef);                                                                                             // MakerGen.cs:221
+                    Element_Text.Write(sDef);                                                                                               // MakerGen.cs:221
+                    Element_LinkId.Write(sDef);                                                                                             // MakerGen.cs:221
+                    Element_SecurityLabelNumber.Write(sDef);                                                                                // MakerGen.cs:221
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                public Type_Offer()                                                                                                         // MakerGen.cs:400
+                {                                                                                                                           // MakerGen.cs:401
+                    {                                                                                                                       // MakerGen.cs:232
                         // 46. Contract.term.offer.identifier
-                        this.Element_Identifier = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Identifier",
-                            Path= "Contract.term.offer.identifier",
-                            Id = "Contract.term.offer.identifier",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Identifier
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Identifier = new ElementDefinitionInfo                                                                 // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Identifier",                                                                                    // MakerGen.cs:236
+                            Path= "Contract.term.offer.identifier",                                                                         // MakerGen.cs:237
+                            Id = "Contract.term.offer.identifier",                                                                          // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Identifier                                                           // MakerGen.cs:356
+                                {                                                                                                           // MakerGen.cs:357
+                                }                                                                                                           // MakerGen.cs:358
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 47. Contract.term.offer.party
-                        this.Element_Party = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Party",
-                            Path= "Contract.term.offer.party",
-                            Id = "Contract.term.offer.party",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new Type_Party
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Party = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Party",                                                                                         // MakerGen.cs:236
+                            Path= "Contract.term.offer.party",                                                                              // MakerGen.cs:237
+                            Id = "Contract.term.offer.party",                                                                               // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new Type_Party                                                                                              // MakerGen.cs:260
+                                {                                                                                                           // MakerGen.cs:261
+                                }                                                                                                           // MakerGen.cs:262
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 50. Contract.term.offer.topic
-                        this.Element_Topic = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Topic",
-                            Path= "Contract.term.offer.topic",
-                            Id = "Contract.term.offer.topic",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Reference
-                                {
-                                    TargetProfile = new String[]
-                                    {
-                                        "http://hl7.org/fhir/StructureDefinition/Resource"
-                                    }
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Topic = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Topic",                                                                                         // MakerGen.cs:236
+                            Path= "Contract.term.offer.topic",                                                                              // MakerGen.cs:237
+                            Id = "Contract.term.offer.topic",                                                                               // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Reference                                                            // MakerGen.cs:344
+                                {                                                                                                           // MakerGen.cs:345
+                                    TargetProfile = new String[]                                                                            // MakerGen.cs:347
+                                    {                                                                                                       // CodeEditorExtensions.cs:28
+                                        "http://hl7.org/fhir/StructureDefinition/Resource"                                                  // MakerGen.cs:347
+                                    }                                                                                                       // CodeEditorExtensions.cs:34
+                                }                                                                                                           // MakerGen.cs:348
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 51. Contract.term.offer.type
-                        this.Element_Type = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Type",
-                            Path= "Contract.term.offer.type",
-                            Id = "Contract.term.offer.type",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Type = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Type",                                                                                          // MakerGen.cs:236
+                            Path= "Contract.term.offer.type",                                                                               // MakerGen.cs:237
+                            Id = "Contract.term.offer.type",                                                                                // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 52. Contract.term.offer.decision
-                        this.Element_Decision = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Decision",
-                            Path= "Contract.term.offer.decision",
-                            Id = "Contract.term.offer.decision",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Decision = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Decision",                                                                                      // MakerGen.cs:236
+                            Path= "Contract.term.offer.decision",                                                                           // MakerGen.cs:237
+                            Id = "Contract.term.offer.decision",                                                                            // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 53. Contract.term.offer.decisionMode
-                        this.Element_DecisionMode = new ElementDefinitionInfo
-                        {
-                            Name = "Element_DecisionMode",
-                            Path= "Contract.term.offer.decisionMode",
-                            Id = "Contract.term.offer.decisionMode",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_DecisionMode = new ElementDefinitionInfo                                                               // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_DecisionMode",                                                                                  // MakerGen.cs:236
+                            Path= "Contract.term.offer.decisionMode",                                                                       // MakerGen.cs:237
+                            Id = "Contract.term.offer.decisionMode",                                                                        // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 54. Contract.term.offer.answer
-                        this.Element_Answer = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Answer",
-                            Path= "Contract.term.offer.answer",
-                            Id = "Contract.term.offer.answer",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new Type_Answer
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Answer = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Answer",                                                                                        // MakerGen.cs:236
+                            Path= "Contract.term.offer.answer",                                                                             // MakerGen.cs:237
+                            Id = "Contract.term.offer.answer",                                                                              // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new Type_Answer                                                                                             // MakerGen.cs:260
+                                {                                                                                                           // MakerGen.cs:261
+                                }                                                                                                           // MakerGen.cs:262
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 56. Contract.term.offer.text
-                        this.Element_Text = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Text",
-                            Path= "Contract.term.offer.text",
-                            Id = "Contract.term.offer.text",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Text = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Text",                                                                                          // MakerGen.cs:236
+                            Path= "Contract.term.offer.text",                                                                               // MakerGen.cs:237
+                            Id = "Contract.term.offer.text",                                                                                // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 57. Contract.term.offer.linkId
-                        this.Element_LinkId = new ElementDefinitionInfo
-                        {
-                            Name = "Element_LinkId",
-                            Path= "Contract.term.offer.linkId",
-                            Id = "Contract.term.offer.linkId",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_LinkId = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_LinkId",                                                                                        // MakerGen.cs:236
+                            Path= "Contract.term.offer.linkId",                                                                             // MakerGen.cs:237
+                            Id = "Contract.term.offer.linkId",                                                                              // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 58. Contract.term.offer.securityLabelNumber
-                        this.Element_SecurityLabelNumber = new ElementDefinitionInfo
-                        {
-                            Name = "Element_SecurityLabelNumber",
-                            Path= "Contract.term.offer.securityLabelNumber",
-                            Id = "Contract.term.offer.securityLabelNumber",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_UnsignedInt
-                                {
-                                }
-                            }
-                        };
-                    }
-                }
-            }
+                        this.Element_SecurityLabelNumber = new ElementDefinitionInfo                                                        // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_SecurityLabelNumber",                                                                           // MakerGen.cs:236
+                            Path= "Contract.term.offer.securityLabelNumber",                                                                // MakerGen.cs:237
+                            Id = "Contract.term.offer.securityLabelNumber",                                                                 // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_UnsignedInt                                                   // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                }                                                                                                                           // MakerGen.cs:403
+            }                                                                                                                               // MakerGen.cs:405
             // 59. Contract.term.asset
-            public partial class Type_Asset : FhirKhit.Maker.Common.Complex.ComplexBase
-            {
+            public partial class Type_Asset : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:381
+            {                                                                                                                               // MakerGen.cs:382
                 // 65. Contract.term.asset.context
-                public partial class Type_Context : FhirKhit.Maker.Common.Complex.ComplexBase
-                {
+                public partial class Type_Context : FhirKhit.Maker.Common.Complex.ComplexBase                                               // MakerGen.cs:381
+                {                                                                                                                           // MakerGen.cs:382
                     // 66. Contract.term.asset.context.reference
-                    public ElementDefinitionInfo Element_Reference;
+                    public ElementDefinitionInfo Element_Reference;                                                                         // MakerGen.cs:217
                     // 67. Contract.term.asset.context.code
-                    public ElementDefinitionInfo Element_Code;
+                    public ElementDefinitionInfo Element_Code;                                                                              // MakerGen.cs:217
                     // 68. Contract.term.asset.context.text
-                    public ElementDefinitionInfo Element_Text;
-                    
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                    {
-                        base.Write(sDef);
-                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                        {
-                            Path = "Contract.term.asset.context",
-                            ElementId = "Contract.term.asset.context"
-                        });
-                        Element_Reference.Write(sDef);
-                        Element_Code.Write(sDef);
-                        Element_Text.Write(sDef);
-                    }
-                    
-                    public Type_Context()
-                    {
-                        {
+                    public ElementDefinitionInfo Element_Text;                                                                              // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:388
+                    {                                                                                                                       // MakerGen.cs:389
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:390
+                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                  // MakerGen.cs:391
+                        {                                                                                                                   // MakerGen.cs:392
+                            Path = "Contract.term.asset.context",                                                                           // MakerGen.cs:393
+                            ElementId = "Contract.term.asset.context"                                                                       // MakerGen.cs:394
+                        });                                                                                                                 // MakerGen.cs:395
+                        Element_Reference.Write(sDef);                                                                                      // MakerGen.cs:221
+                        Element_Code.Write(sDef);                                                                                           // MakerGen.cs:221
+                        Element_Text.Write(sDef);                                                                                           // MakerGen.cs:221
+                    }                                                                                                                       // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                    public Type_Context()                                                                                                   // MakerGen.cs:400
+                    {                                                                                                                       // MakerGen.cs:401
+                        {                                                                                                                   // MakerGen.cs:232
                             // 66. Contract.term.asset.context.reference
-                            this.Element_Reference = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Reference",
-                                Path= "Contract.term.asset.context.reference",
-                                Id = "Contract.term.asset.context.reference",
-                                Min = 0,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Complex.Type_Reference
-                                    {
-                                        TargetProfile = new String[]
-                                        {
-                                            "http://hl7.org/fhir/StructureDefinition/Resource"
-                                        }
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_Reference = new ElementDefinitionInfo                                                              // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Reference",                                                                                 // MakerGen.cs:236
+                                Path= "Contract.term.asset.context.reference",                                                              // MakerGen.cs:237
+                                Id = "Contract.term.asset.context.reference",                                                               // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Complex.Type_Reference                                                        // MakerGen.cs:344
+                                    {                                                                                                       // MakerGen.cs:345
+                                        TargetProfile = new String[]                                                                        // MakerGen.cs:347
+                                        {                                                                                                   // CodeEditorExtensions.cs:28
+                                            "http://hl7.org/fhir/StructureDefinition/Resource"                                              // MakerGen.cs:347
+                                        }                                                                                                   // CodeEditorExtensions.cs:34
+                                    }                                                                                                       // MakerGen.cs:348
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 67. Contract.term.asset.context.code
-                            this.Element_Code = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Code",
-                                Path= "Contract.term.asset.context.code",
-                                Id = "Contract.term.asset.context.code",
-                                Min = 0,
-                                Max = -1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_Code = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Code",                                                                                      // MakerGen.cs:236
+                                Path= "Contract.term.asset.context.code",                                                                   // MakerGen.cs:237
+                                Id = "Contract.term.asset.context.code",                                                                    // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = -1,                                                                                                   // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                  // MakerGen.cs:316
+                                    {                                                                                                       // MakerGen.cs:317
+                                    }                                                                                                       // MakerGen.cs:320
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 68. Contract.term.asset.context.text
-                            this.Element_Text = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Text",
-                                Path= "Contract.term.asset.context.text",
-                                Id = "Contract.term.asset.context.text",
-                                Min = 0,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_String
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                    }
-                }
+                            this.Element_Text = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Text",                                                                                      // MakerGen.cs:236
+                                Path= "Contract.term.asset.context.text",                                                                   // MakerGen.cs:237
+                                Id = "Contract.term.asset.context.text",                                                                    // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:301
+                                    {                                                                                                       // MakerGen.cs:302
+                                    }                                                                                                       // MakerGen.cs:305
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                    }                                                                                                                       // MakerGen.cs:403
+                }                                                                                                                           // MakerGen.cs:405
                 // 77. Contract.term.asset.valuedItem
-                public partial class Type_ValuedItem : FhirKhit.Maker.Common.Complex.ComplexBase
-                {
+                public partial class Type_ValuedItem : FhirKhit.Maker.Common.Complex.ComplexBase                                            // MakerGen.cs:381
+                {                                                                                                                           // MakerGen.cs:382
                     // 78. Contract.term.asset.valuedItem.entity[x]
-                    public ElementDefinitionInfo Element_Entity;
+                    public ElementDefinitionInfo Element_Entity;                                                                            // MakerGen.cs:217
                     // 79. Contract.term.asset.valuedItem.identifier
-                    public ElementDefinitionInfo Element_Identifier;
+                    public ElementDefinitionInfo Element_Identifier;                                                                        // MakerGen.cs:217
                     // 80. Contract.term.asset.valuedItem.effectiveTime
-                    public ElementDefinitionInfo Element_EffectiveTime;
+                    public ElementDefinitionInfo Element_EffectiveTime;                                                                     // MakerGen.cs:217
                     // 81. Contract.term.asset.valuedItem.quantity
-                    public ElementDefinitionInfo Element_Quantity;
+                    public ElementDefinitionInfo Element_Quantity;                                                                          // MakerGen.cs:217
                     // 82. Contract.term.asset.valuedItem.unitPrice
-                    public ElementDefinitionInfo Element_UnitPrice;
+                    public ElementDefinitionInfo Element_UnitPrice;                                                                         // MakerGen.cs:217
                     // 83. Contract.term.asset.valuedItem.factor
-                    public ElementDefinitionInfo Element_Factor;
+                    public ElementDefinitionInfo Element_Factor;                                                                            // MakerGen.cs:217
                     // 84. Contract.term.asset.valuedItem.points
-                    public ElementDefinitionInfo Element_Points;
+                    public ElementDefinitionInfo Element_Points;                                                                            // MakerGen.cs:217
                     // 85. Contract.term.asset.valuedItem.net
-                    public ElementDefinitionInfo Element_Net;
+                    public ElementDefinitionInfo Element_Net;                                                                               // MakerGen.cs:217
                     // 86. Contract.term.asset.valuedItem.payment
-                    public ElementDefinitionInfo Element_Payment;
+                    public ElementDefinitionInfo Element_Payment;                                                                           // MakerGen.cs:217
                     // 87. Contract.term.asset.valuedItem.paymentDate
-                    public ElementDefinitionInfo Element_PaymentDate;
+                    public ElementDefinitionInfo Element_PaymentDate;                                                                       // MakerGen.cs:217
                     // 88. Contract.term.asset.valuedItem.responsible
-                    public ElementDefinitionInfo Element_Responsible;
+                    public ElementDefinitionInfo Element_Responsible;                                                                       // MakerGen.cs:217
                     // 89. Contract.term.asset.valuedItem.recipient
-                    public ElementDefinitionInfo Element_Recipient;
+                    public ElementDefinitionInfo Element_Recipient;                                                                         // MakerGen.cs:217
                     // 90. Contract.term.asset.valuedItem.linkId
-                    public ElementDefinitionInfo Element_LinkId;
+                    public ElementDefinitionInfo Element_LinkId;                                                                            // MakerGen.cs:217
                     // 91. Contract.term.asset.valuedItem.securityLabelNumber
-                    public ElementDefinitionInfo Element_SecurityLabelNumber;
-                    
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                    {
-                        base.Write(sDef);
-                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                        {
-                            Path = "Contract.term.asset.valuedItem",
-                            ElementId = "Contract.term.asset.valuedItem"
-                        });
-                        Element_Entity.Write(sDef);
-                        Element_Identifier.Write(sDef);
-                        Element_EffectiveTime.Write(sDef);
-                        Element_Quantity.Write(sDef);
-                        Element_UnitPrice.Write(sDef);
-                        Element_Factor.Write(sDef);
-                        Element_Points.Write(sDef);
-                        Element_Net.Write(sDef);
-                        Element_Payment.Write(sDef);
-                        Element_PaymentDate.Write(sDef);
-                        Element_Responsible.Write(sDef);
-                        Element_Recipient.Write(sDef);
-                        Element_LinkId.Write(sDef);
-                        Element_SecurityLabelNumber.Write(sDef);
-                    }
-                    
-                    public Type_ValuedItem()
-                    {
-                        {
+                    public ElementDefinitionInfo Element_SecurityLabelNumber;                                                               // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:388
+                    {                                                                                                                       // MakerGen.cs:389
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:390
+                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                  // MakerGen.cs:391
+                        {                                                                                                                   // MakerGen.cs:392
+                            Path = "Contract.term.asset.valuedItem",                                                                        // MakerGen.cs:393
+                            ElementId = "Contract.term.asset.valuedItem"                                                                    // MakerGen.cs:394
+                        });                                                                                                                 // MakerGen.cs:395
+                        Element_Entity.Write(sDef);                                                                                         // MakerGen.cs:221
+                        Element_Identifier.Write(sDef);                                                                                     // MakerGen.cs:221
+                        Element_EffectiveTime.Write(sDef);                                                                                  // MakerGen.cs:221
+                        Element_Quantity.Write(sDef);                                                                                       // MakerGen.cs:221
+                        Element_UnitPrice.Write(sDef);                                                                                      // MakerGen.cs:221
+                        Element_Factor.Write(sDef);                                                                                         // MakerGen.cs:221
+                        Element_Points.Write(sDef);                                                                                         // MakerGen.cs:221
+                        Element_Net.Write(sDef);                                                                                            // MakerGen.cs:221
+                        Element_Payment.Write(sDef);                                                                                        // MakerGen.cs:221
+                        Element_PaymentDate.Write(sDef);                                                                                    // MakerGen.cs:221
+                        Element_Responsible.Write(sDef);                                                                                    // MakerGen.cs:221
+                        Element_Recipient.Write(sDef);                                                                                      // MakerGen.cs:221
+                        Element_LinkId.Write(sDef);                                                                                         // MakerGen.cs:221
+                        Element_SecurityLabelNumber.Write(sDef);                                                                            // MakerGen.cs:221
+                    }                                                                                                                       // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                    public Type_ValuedItem()                                                                                                // MakerGen.cs:400
+                    {                                                                                                                       // MakerGen.cs:401
+                        {                                                                                                                   // MakerGen.cs:232
                             // 78. Contract.term.asset.valuedItem.entity[x]
-                            this.Element_Entity = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Entity",
-                                Path= "Contract.term.asset.valuedItem.entity[x]",
-                                Id = "Contract.term.asset.valuedItem.entity[x]",
-                                Min = 0,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                    {
-                                    },
-                                    new FhirKhit.Maker.Common.Complex.Type_Reference
-                                    {
-                                        TargetProfile = new String[]
-                                        {
-                                            "http://hl7.org/fhir/StructureDefinition/Resource"
-                                        }
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_Entity = new ElementDefinitionInfo                                                                 // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Entity",                                                                                    // MakerGen.cs:236
+                                Path= "Contract.term.asset.valuedItem.entity[x]",                                                           // MakerGen.cs:237
+                                Id = "Contract.term.asset.valuedItem.entity[x]",                                                            // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                  // MakerGen.cs:316
+                                    {                                                                                                       // MakerGen.cs:317
+                                    },                                                                                                      // MakerGen.cs:320
+                                    new FhirKhit.Maker.Common.Complex.Type_Reference                                                        // MakerGen.cs:344
+                                    {                                                                                                       // MakerGen.cs:345
+                                        TargetProfile = new String[]                                                                        // MakerGen.cs:347
+                                        {                                                                                                   // CodeEditorExtensions.cs:28
+                                            "http://hl7.org/fhir/StructureDefinition/Resource"                                              // MakerGen.cs:347
+                                        }                                                                                                   // CodeEditorExtensions.cs:34
+                                    }                                                                                                       // MakerGen.cs:348
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 79. Contract.term.asset.valuedItem.identifier
-                            this.Element_Identifier = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Identifier",
-                                Path= "Contract.term.asset.valuedItem.identifier",
-                                Id = "Contract.term.asset.valuedItem.identifier",
-                                Min = 0,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Complex.Type_Identifier
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_Identifier = new ElementDefinitionInfo                                                             // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Identifier",                                                                                // MakerGen.cs:236
+                                Path= "Contract.term.asset.valuedItem.identifier",                                                          // MakerGen.cs:237
+                                Id = "Contract.term.asset.valuedItem.identifier",                                                           // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Complex.Type_Identifier                                                       // MakerGen.cs:356
+                                    {                                                                                                       // MakerGen.cs:357
+                                    }                                                                                                       // MakerGen.cs:358
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 80. Contract.term.asset.valuedItem.effectiveTime
-                            this.Element_EffectiveTime = new ElementDefinitionInfo
-                            {
-                                Name = "Element_EffectiveTime",
-                                Path= "Contract.term.asset.valuedItem.effectiveTime",
-                                Id = "Contract.term.asset.valuedItem.effectiveTime",
-                                Min = 0,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_EffectiveTime = new ElementDefinitionInfo                                                          // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_EffectiveTime",                                                                             // MakerGen.cs:236
+                                Path= "Contract.term.asset.valuedItem.effectiveTime",                                                       // MakerGen.cs:237
+                                Id = "Contract.term.asset.valuedItem.effectiveTime",                                                        // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                  // MakerGen.cs:301
+                                    {                                                                                                       // MakerGen.cs:302
+                                    }                                                                                                       // MakerGen.cs:305
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 81. Contract.term.asset.valuedItem.quantity
-                            this.Element_Quantity = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Quantity",
-                                Path= "Contract.term.asset.valuedItem.quantity",
-                                Id = "Contract.term.asset.valuedItem.quantity",
-                                Min = 0,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Complex.Type_Quantity
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_Quantity = new ElementDefinitionInfo                                                               // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Quantity",                                                                                  // MakerGen.cs:236
+                                Path= "Contract.term.asset.valuedItem.quantity",                                                            // MakerGen.cs:237
+                                Id = "Contract.term.asset.valuedItem.quantity",                                                             // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Complex.Type_Quantity                                                         // MakerGen.cs:356
+                                    {                                                                                                       // MakerGen.cs:357
+                                    }                                                                                                       // MakerGen.cs:358
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 82. Contract.term.asset.valuedItem.unitPrice
-                            this.Element_UnitPrice = new ElementDefinitionInfo
-                            {
-                                Name = "Element_UnitPrice",
-                                Path= "Contract.term.asset.valuedItem.unitPrice",
-                                Id = "Contract.term.asset.valuedItem.unitPrice",
-                                Min = 0,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Complex.Type_Money
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_UnitPrice = new ElementDefinitionInfo                                                              // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_UnitPrice",                                                                                 // MakerGen.cs:236
+                                Path= "Contract.term.asset.valuedItem.unitPrice",                                                           // MakerGen.cs:237
+                                Id = "Contract.term.asset.valuedItem.unitPrice",                                                            // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Complex.Type_Money                                                            // MakerGen.cs:356
+                                    {                                                                                                       // MakerGen.cs:357
+                                    }                                                                                                       // MakerGen.cs:358
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 83. Contract.term.asset.valuedItem.factor
-                            this.Element_Factor = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Factor",
-                                Path= "Contract.term.asset.valuedItem.factor",
-                                Id = "Contract.term.asset.valuedItem.factor",
-                                Min = 0,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_Factor = new ElementDefinitionInfo                                                                 // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Factor",                                                                                    // MakerGen.cs:236
+                                Path= "Contract.term.asset.valuedItem.factor",                                                              // MakerGen.cs:237
+                                Id = "Contract.term.asset.valuedItem.factor",                                                               // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                   // MakerGen.cs:301
+                                    {                                                                                                       // MakerGen.cs:302
+                                    }                                                                                                       // MakerGen.cs:305
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 84. Contract.term.asset.valuedItem.points
-                            this.Element_Points = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Points",
-                                Path= "Contract.term.asset.valuedItem.points",
-                                Id = "Contract.term.asset.valuedItem.points",
-                                Min = 0,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_Points = new ElementDefinitionInfo                                                                 // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Points",                                                                                    // MakerGen.cs:236
+                                Path= "Contract.term.asset.valuedItem.points",                                                              // MakerGen.cs:237
+                                Id = "Contract.term.asset.valuedItem.points",                                                               // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                   // MakerGen.cs:301
+                                    {                                                                                                       // MakerGen.cs:302
+                                    }                                                                                                       // MakerGen.cs:305
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 85. Contract.term.asset.valuedItem.net
-                            this.Element_Net = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Net",
-                                Path= "Contract.term.asset.valuedItem.net",
-                                Id = "Contract.term.asset.valuedItem.net",
-                                Min = 0,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Complex.Type_Money
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_Net = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Net",                                                                                       // MakerGen.cs:236
+                                Path= "Contract.term.asset.valuedItem.net",                                                                 // MakerGen.cs:237
+                                Id = "Contract.term.asset.valuedItem.net",                                                                  // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Complex.Type_Money                                                            // MakerGen.cs:356
+                                    {                                                                                                       // MakerGen.cs:357
+                                    }                                                                                                       // MakerGen.cs:358
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 86. Contract.term.asset.valuedItem.payment
-                            this.Element_Payment = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Payment",
-                                Path= "Contract.term.asset.valuedItem.payment",
-                                Id = "Contract.term.asset.valuedItem.payment",
-                                Min = 0,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_String
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_Payment = new ElementDefinitionInfo                                                                // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Payment",                                                                                   // MakerGen.cs:236
+                                Path= "Contract.term.asset.valuedItem.payment",                                                             // MakerGen.cs:237
+                                Id = "Contract.term.asset.valuedItem.payment",                                                              // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:301
+                                    {                                                                                                       // MakerGen.cs:302
+                                    }                                                                                                       // MakerGen.cs:305
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 87. Contract.term.asset.valuedItem.paymentDate
-                            this.Element_PaymentDate = new ElementDefinitionInfo
-                            {
-                                Name = "Element_PaymentDate",
-                                Path= "Contract.term.asset.valuedItem.paymentDate",
-                                Id = "Contract.term.asset.valuedItem.paymentDate",
-                                Min = 0,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_PaymentDate = new ElementDefinitionInfo                                                            // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_PaymentDate",                                                                               // MakerGen.cs:236
+                                Path= "Contract.term.asset.valuedItem.paymentDate",                                                         // MakerGen.cs:237
+                                Id = "Contract.term.asset.valuedItem.paymentDate",                                                          // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                  // MakerGen.cs:301
+                                    {                                                                                                       // MakerGen.cs:302
+                                    }                                                                                                       // MakerGen.cs:305
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 88. Contract.term.asset.valuedItem.responsible
-                            this.Element_Responsible = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Responsible",
-                                Path= "Contract.term.asset.valuedItem.responsible",
-                                Id = "Contract.term.asset.valuedItem.responsible",
-                                Min = 0,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Complex.Type_Reference
-                                    {
-                                        TargetProfile = new String[]
-                                        {
-                                            "http://hl7.org/fhir/StructureDefinition/Organization",
-                                            "http://hl7.org/fhir/StructureDefinition/Patient",
-                                            "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                                            "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
-                                        }
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_Responsible = new ElementDefinitionInfo                                                            // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Responsible",                                                                               // MakerGen.cs:236
+                                Path= "Contract.term.asset.valuedItem.responsible",                                                         // MakerGen.cs:237
+                                Id = "Contract.term.asset.valuedItem.responsible",                                                          // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Complex.Type_Reference                                                        // MakerGen.cs:344
+                                    {                                                                                                       // MakerGen.cs:345
+                                        TargetProfile = new String[]                                                                        // MakerGen.cs:347
+                                        {                                                                                                   // CodeEditorExtensions.cs:28
+                                            "http://hl7.org/fhir/StructureDefinition/Organization",                                         // MakerGen.cs:347
+                                            "http://hl7.org/fhir/StructureDefinition/Patient",                                              // MakerGen.cs:347
+                                            "http://hl7.org/fhir/StructureDefinition/Practitioner",                                         // MakerGen.cs:347
+                                            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                     // MakerGen.cs:347
+                                            "http://hl7.org/fhir/StructureDefinition/RelatedPerson"                                         // MakerGen.cs:347
+                                        }                                                                                                   // CodeEditorExtensions.cs:34
+                                    }                                                                                                       // MakerGen.cs:348
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 89. Contract.term.asset.valuedItem.recipient
-                            this.Element_Recipient = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Recipient",
-                                Path= "Contract.term.asset.valuedItem.recipient",
-                                Id = "Contract.term.asset.valuedItem.recipient",
-                                Min = 0,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Complex.Type_Reference
-                                    {
-                                        TargetProfile = new String[]
-                                        {
-                                            "http://hl7.org/fhir/StructureDefinition/Organization",
-                                            "http://hl7.org/fhir/StructureDefinition/Patient",
-                                            "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                                            "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
-                                        }
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_Recipient = new ElementDefinitionInfo                                                              // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Recipient",                                                                                 // MakerGen.cs:236
+                                Path= "Contract.term.asset.valuedItem.recipient",                                                           // MakerGen.cs:237
+                                Id = "Contract.term.asset.valuedItem.recipient",                                                            // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Complex.Type_Reference                                                        // MakerGen.cs:344
+                                    {                                                                                                       // MakerGen.cs:345
+                                        TargetProfile = new String[]                                                                        // MakerGen.cs:347
+                                        {                                                                                                   // CodeEditorExtensions.cs:28
+                                            "http://hl7.org/fhir/StructureDefinition/Organization",                                         // MakerGen.cs:347
+                                            "http://hl7.org/fhir/StructureDefinition/Patient",                                              // MakerGen.cs:347
+                                            "http://hl7.org/fhir/StructureDefinition/Practitioner",                                         // MakerGen.cs:347
+                                            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                     // MakerGen.cs:347
+                                            "http://hl7.org/fhir/StructureDefinition/RelatedPerson"                                         // MakerGen.cs:347
+                                        }                                                                                                   // CodeEditorExtensions.cs:34
+                                    }                                                                                                       // MakerGen.cs:348
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 90. Contract.term.asset.valuedItem.linkId
-                            this.Element_LinkId = new ElementDefinitionInfo
-                            {
-                                Name = "Element_LinkId",
-                                Path= "Contract.term.asset.valuedItem.linkId",
-                                Id = "Contract.term.asset.valuedItem.linkId",
-                                Min = 0,
-                                Max = -1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_String
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_LinkId = new ElementDefinitionInfo                                                                 // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_LinkId",                                                                                    // MakerGen.cs:236
+                                Path= "Contract.term.asset.valuedItem.linkId",                                                              // MakerGen.cs:237
+                                Id = "Contract.term.asset.valuedItem.linkId",                                                               // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = -1,                                                                                                   // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:301
+                                    {                                                                                                       // MakerGen.cs:302
+                                    }                                                                                                       // MakerGen.cs:305
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 91. Contract.term.asset.valuedItem.securityLabelNumber
-                            this.Element_SecurityLabelNumber = new ElementDefinitionInfo
-                            {
-                                Name = "Element_SecurityLabelNumber",
-                                Path= "Contract.term.asset.valuedItem.securityLabelNumber",
-                                Id = "Contract.term.asset.valuedItem.securityLabelNumber",
-                                Min = 0,
-                                Max = -1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_UnsignedInt
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                    }
-                }
+                            this.Element_SecurityLabelNumber = new ElementDefinitionInfo                                                    // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_SecurityLabelNumber",                                                                       // MakerGen.cs:236
+                                Path= "Contract.term.asset.valuedItem.securityLabelNumber",                                                 // MakerGen.cs:237
+                                Id = "Contract.term.asset.valuedItem.securityLabelNumber",                                                  // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = -1,                                                                                                   // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_UnsignedInt                                               // MakerGen.cs:301
+                                    {                                                                                                       // MakerGen.cs:302
+                                    }                                                                                                       // MakerGen.cs:305
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                    }                                                                                                                       // MakerGen.cs:403
+                }                                                                                                                           // MakerGen.cs:405
                 // 60. Contract.term.asset.scope
-                public ElementDefinitionInfo Element_Scope;
+                public ElementDefinitionInfo Element_Scope;                                                                                 // MakerGen.cs:217
                 // 61. Contract.term.asset.type
-                public ElementDefinitionInfo Element_Type;
+                public ElementDefinitionInfo Element_Type;                                                                                  // MakerGen.cs:217
                 // 62. Contract.term.asset.typeReference
-                public ElementDefinitionInfo Element_TypeReference;
+                public ElementDefinitionInfo Element_TypeReference;                                                                         // MakerGen.cs:217
                 // 63. Contract.term.asset.subtype
-                public ElementDefinitionInfo Element_Subtype;
+                public ElementDefinitionInfo Element_Subtype;                                                                               // MakerGen.cs:217
                 // 64. Contract.term.asset.relationship
-                public ElementDefinitionInfo Element_Relationship;
+                public ElementDefinitionInfo Element_Relationship;                                                                          // MakerGen.cs:217
                 // 65. Contract.term.asset.context
-                public ElementDefinitionInfo Element_Context;
+                public ElementDefinitionInfo Element_Context;                                                                               // MakerGen.cs:217
                 // 69. Contract.term.asset.condition
-                public ElementDefinitionInfo Element_Condition;
+                public ElementDefinitionInfo Element_Condition;                                                                             // MakerGen.cs:217
                 // 70. Contract.term.asset.periodType
-                public ElementDefinitionInfo Element_PeriodType;
+                public ElementDefinitionInfo Element_PeriodType;                                                                            // MakerGen.cs:217
                 // 71. Contract.term.asset.period
-                public ElementDefinitionInfo Element_Period;
+                public ElementDefinitionInfo Element_Period;                                                                                // MakerGen.cs:217
                 // 72. Contract.term.asset.usePeriod
-                public ElementDefinitionInfo Element_UsePeriod;
+                public ElementDefinitionInfo Element_UsePeriod;                                                                             // MakerGen.cs:217
                 // 73. Contract.term.asset.text
-                public ElementDefinitionInfo Element_Text;
+                public ElementDefinitionInfo Element_Text;                                                                                  // MakerGen.cs:217
                 // 74. Contract.term.asset.linkId
-                public ElementDefinitionInfo Element_LinkId;
+                public ElementDefinitionInfo Element_LinkId;                                                                                // MakerGen.cs:217
                 // 75. Contract.term.asset.answer
-                public ElementDefinitionInfo Element_Answer;
+                public ElementDefinitionInfo Element_Answer;                                                                                // MakerGen.cs:217
                 // 76. Contract.term.asset.securityLabelNumber
-                public ElementDefinitionInfo Element_SecurityLabelNumber;
+                public ElementDefinitionInfo Element_SecurityLabelNumber;                                                                   // MakerGen.cs:217
                 // 77. Contract.term.asset.valuedItem
-                public ElementDefinitionInfo Element_ValuedItem;
-                
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                {
-                    base.Write(sDef);
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                    {
-                        Path = "Contract.term.asset",
-                        ElementId = "Contract.term.asset"
-                    });
-                    Element_Scope.Write(sDef);
-                    Element_Type.Write(sDef);
-                    Element_TypeReference.Write(sDef);
-                    Element_Subtype.Write(sDef);
-                    Element_Relationship.Write(sDef);
-                    Element_Context.Write(sDef);
-                    Element_Condition.Write(sDef);
-                    Element_PeriodType.Write(sDef);
-                    Element_Period.Write(sDef);
-                    Element_UsePeriod.Write(sDef);
-                    Element_Text.Write(sDef);
-                    Element_LinkId.Write(sDef);
-                    Element_Answer.Write(sDef);
-                    Element_SecurityLabelNumber.Write(sDef);
-                    Element_ValuedItem.Write(sDef);
-                }
-                
-                public Type_Asset()
-                {
-                    {
+                public ElementDefinitionInfo Element_ValuedItem;                                                                            // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:389
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:390
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:391
+                    {                                                                                                                       // MakerGen.cs:392
+                        Path = "Contract.term.asset",                                                                                       // MakerGen.cs:393
+                        ElementId = "Contract.term.asset"                                                                                   // MakerGen.cs:394
+                    });                                                                                                                     // MakerGen.cs:395
+                    Element_Scope.Write(sDef);                                                                                              // MakerGen.cs:221
+                    Element_Type.Write(sDef);                                                                                               // MakerGen.cs:221
+                    Element_TypeReference.Write(sDef);                                                                                      // MakerGen.cs:221
+                    Element_Subtype.Write(sDef);                                                                                            // MakerGen.cs:221
+                    Element_Relationship.Write(sDef);                                                                                       // MakerGen.cs:221
+                    Element_Context.Write(sDef);                                                                                            // MakerGen.cs:221
+                    Element_Condition.Write(sDef);                                                                                          // MakerGen.cs:221
+                    Element_PeriodType.Write(sDef);                                                                                         // MakerGen.cs:221
+                    Element_Period.Write(sDef);                                                                                             // MakerGen.cs:221
+                    Element_UsePeriod.Write(sDef);                                                                                          // MakerGen.cs:221
+                    Element_Text.Write(sDef);                                                                                               // MakerGen.cs:221
+                    Element_LinkId.Write(sDef);                                                                                             // MakerGen.cs:221
+                    Element_Answer.Write(sDef);                                                                                             // MakerGen.cs:221
+                    Element_SecurityLabelNumber.Write(sDef);                                                                                // MakerGen.cs:221
+                    Element_ValuedItem.Write(sDef);                                                                                         // MakerGen.cs:221
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                public Type_Asset()                                                                                                         // MakerGen.cs:400
+                {                                                                                                                           // MakerGen.cs:401
+                    {                                                                                                                       // MakerGen.cs:232
                         // 60. Contract.term.asset.scope
-                        this.Element_Scope = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Scope",
-                            Path= "Contract.term.asset.scope",
-                            Id = "Contract.term.asset.scope",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Scope = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Scope",                                                                                         // MakerGen.cs:236
+                            Path= "Contract.term.asset.scope",                                                                              // MakerGen.cs:237
+                            Id = "Contract.term.asset.scope",                                                                               // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 61. Contract.term.asset.type
-                        this.Element_Type = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Type",
-                            Path= "Contract.term.asset.type",
-                            Id = "Contract.term.asset.type",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Type = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Type",                                                                                          // MakerGen.cs:236
+                            Path= "Contract.term.asset.type",                                                                               // MakerGen.cs:237
+                            Id = "Contract.term.asset.type",                                                                                // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 62. Contract.term.asset.typeReference
-                        this.Element_TypeReference = new ElementDefinitionInfo
-                        {
-                            Name = "Element_TypeReference",
-                            Path= "Contract.term.asset.typeReference",
-                            Id = "Contract.term.asset.typeReference",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Reference
-                                {
-                                    TargetProfile = new String[]
-                                    {
-                                        "http://hl7.org/fhir/StructureDefinition/Resource"
-                                    }
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_TypeReference = new ElementDefinitionInfo                                                              // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_TypeReference",                                                                                 // MakerGen.cs:236
+                            Path= "Contract.term.asset.typeReference",                                                                      // MakerGen.cs:237
+                            Id = "Contract.term.asset.typeReference",                                                                       // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Reference                                                            // MakerGen.cs:344
+                                {                                                                                                           // MakerGen.cs:345
+                                    TargetProfile = new String[]                                                                            // MakerGen.cs:347
+                                    {                                                                                                       // CodeEditorExtensions.cs:28
+                                        "http://hl7.org/fhir/StructureDefinition/Resource"                                                  // MakerGen.cs:347
+                                    }                                                                                                       // CodeEditorExtensions.cs:34
+                                }                                                                                                           // MakerGen.cs:348
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 63. Contract.term.asset.subtype
-                        this.Element_Subtype = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Subtype",
-                            Path= "Contract.term.asset.subtype",
-                            Id = "Contract.term.asset.subtype",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Subtype = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Subtype",                                                                                       // MakerGen.cs:236
+                            Path= "Contract.term.asset.subtype",                                                                            // MakerGen.cs:237
+                            Id = "Contract.term.asset.subtype",                                                                             // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 64. Contract.term.asset.relationship
-                        this.Element_Relationship = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Relationship",
-                            Path= "Contract.term.asset.relationship",
-                            Id = "Contract.term.asset.relationship",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Coding
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Relationship = new ElementDefinitionInfo                                                               // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Relationship",                                                                                  // MakerGen.cs:236
+                            Path= "Contract.term.asset.relationship",                                                                       // MakerGen.cs:237
+                            Id = "Contract.term.asset.relationship",                                                                        // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Coding                                                               // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 65. Contract.term.asset.context
-                        this.Element_Context = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Context",
-                            Path= "Contract.term.asset.context",
-                            Id = "Contract.term.asset.context",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new Type_Context
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Context = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Context",                                                                                       // MakerGen.cs:236
+                            Path= "Contract.term.asset.context",                                                                            // MakerGen.cs:237
+                            Id = "Contract.term.asset.context",                                                                             // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new Type_Context                                                                                            // MakerGen.cs:260
+                                {                                                                                                           // MakerGen.cs:261
+                                }                                                                                                           // MakerGen.cs:262
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 69. Contract.term.asset.condition
-                        this.Element_Condition = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Condition",
-                            Path= "Contract.term.asset.condition",
-                            Id = "Contract.term.asset.condition",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Condition = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Condition",                                                                                     // MakerGen.cs:236
+                            Path= "Contract.term.asset.condition",                                                                          // MakerGen.cs:237
+                            Id = "Contract.term.asset.condition",                                                                           // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 70. Contract.term.asset.periodType
-                        this.Element_PeriodType = new ElementDefinitionInfo
-                        {
-                            Name = "Element_PeriodType",
-                            Path= "Contract.term.asset.periodType",
-                            Id = "Contract.term.asset.periodType",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_PeriodType = new ElementDefinitionInfo                                                                 // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_PeriodType",                                                                                    // MakerGen.cs:236
+                            Path= "Contract.term.asset.periodType",                                                                         // MakerGen.cs:237
+                            Id = "Contract.term.asset.periodType",                                                                          // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 71. Contract.term.asset.period
-                        this.Element_Period = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Period",
-                            Path= "Contract.term.asset.period",
-                            Id = "Contract.term.asset.period",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Period
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Period = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Period",                                                                                        // MakerGen.cs:236
+                            Path= "Contract.term.asset.period",                                                                             // MakerGen.cs:237
+                            Id = "Contract.term.asset.period",                                                                              // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Period                                                               // MakerGen.cs:356
+                                {                                                                                                           // MakerGen.cs:357
+                                }                                                                                                           // MakerGen.cs:358
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 72. Contract.term.asset.usePeriod
-                        this.Element_UsePeriod = new ElementDefinitionInfo
-                        {
-                            Name = "Element_UsePeriod",
-                            Path= "Contract.term.asset.usePeriod",
-                            Id = "Contract.term.asset.usePeriod",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Period
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_UsePeriod = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_UsePeriod",                                                                                     // MakerGen.cs:236
+                            Path= "Contract.term.asset.usePeriod",                                                                          // MakerGen.cs:237
+                            Id = "Contract.term.asset.usePeriod",                                                                           // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Period                                                               // MakerGen.cs:356
+                                {                                                                                                           // MakerGen.cs:357
+                                }                                                                                                           // MakerGen.cs:358
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 73. Contract.term.asset.text
-                        this.Element_Text = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Text",
-                            Path= "Contract.term.asset.text",
-                            Id = "Contract.term.asset.text",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Text = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Text",                                                                                          // MakerGen.cs:236
+                            Path= "Contract.term.asset.text",                                                                               // MakerGen.cs:237
+                            Id = "Contract.term.asset.text",                                                                                // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 74. Contract.term.asset.linkId
-                        this.Element_LinkId = new ElementDefinitionInfo
-                        {
-                            Name = "Element_LinkId",
-                            Path= "Contract.term.asset.linkId",
-                            Id = "Contract.term.asset.linkId",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_LinkId = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_LinkId",                                                                                        // MakerGen.cs:236
+                            Path= "Contract.term.asset.linkId",                                                                             // MakerGen.cs:237
+                            Id = "Contract.term.asset.linkId",                                                                              // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 75. Contract.term.asset.answer
-                        this.Element_Answer = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Answer",
-                            Path= "Contract.term.asset.answer",
-                            Id = "Contract.term.asset.answer",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Answer = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Answer",                                                                                        // MakerGen.cs:236
+                            Path= "Contract.term.asset.answer",                                                                             // MakerGen.cs:237
+                            Id = "Contract.term.asset.answer",                                                                              // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 76. Contract.term.asset.securityLabelNumber
-                        this.Element_SecurityLabelNumber = new ElementDefinitionInfo
-                        {
-                            Name = "Element_SecurityLabelNumber",
-                            Path= "Contract.term.asset.securityLabelNumber",
-                            Id = "Contract.term.asset.securityLabelNumber",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_UnsignedInt
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_SecurityLabelNumber = new ElementDefinitionInfo                                                        // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_SecurityLabelNumber",                                                                           // MakerGen.cs:236
+                            Path= "Contract.term.asset.securityLabelNumber",                                                                // MakerGen.cs:237
+                            Id = "Contract.term.asset.securityLabelNumber",                                                                 // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_UnsignedInt                                                   // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 77. Contract.term.asset.valuedItem
-                        this.Element_ValuedItem = new ElementDefinitionInfo
-                        {
-                            Name = "Element_ValuedItem",
-                            Path= "Contract.term.asset.valuedItem",
-                            Id = "Contract.term.asset.valuedItem",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new Type_ValuedItem
-                                {
-                                }
-                            }
-                        };
-                    }
-                }
-            }
+                        this.Element_ValuedItem = new ElementDefinitionInfo                                                                 // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_ValuedItem",                                                                                    // MakerGen.cs:236
+                            Path= "Contract.term.asset.valuedItem",                                                                         // MakerGen.cs:237
+                            Id = "Contract.term.asset.valuedItem",                                                                          // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new Type_ValuedItem                                                                                         // MakerGen.cs:260
+                                {                                                                                                           // MakerGen.cs:261
+                                }                                                                                                           // MakerGen.cs:262
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                }                                                                                                                           // MakerGen.cs:403
+            }                                                                                                                               // MakerGen.cs:405
             // 92. Contract.term.action
-            public partial class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase
-            {
+            public partial class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase                                                    // MakerGen.cs:381
+            {                                                                                                                               // MakerGen.cs:382
                 // 95. Contract.term.action.subject
-                public partial class Type_Subject : FhirKhit.Maker.Common.Complex.ComplexBase
-                {
+                public partial class Type_Subject : FhirKhit.Maker.Common.Complex.ComplexBase                                               // MakerGen.cs:381
+                {                                                                                                                           // MakerGen.cs:382
                     // 96. Contract.term.action.subject.reference
-                    public ElementDefinitionInfo Element_Reference;
+                    public ElementDefinitionInfo Element_Reference;                                                                         // MakerGen.cs:217
                     // 97. Contract.term.action.subject.role
-                    public ElementDefinitionInfo Element_Role;
-                    
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                    {
-                        base.Write(sDef);
-                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                        {
-                            Path = "Contract.term.action.subject",
-                            ElementId = "Contract.term.action.subject"
-                        });
-                        Element_Reference.Write(sDef);
-                        Element_Role.Write(sDef);
-                    }
-                    
-                    public Type_Subject()
-                    {
-                        {
+                    public ElementDefinitionInfo Element_Role;                                                                              // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:388
+                    {                                                                                                                       // MakerGen.cs:389
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:390
+                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                  // MakerGen.cs:391
+                        {                                                                                                                   // MakerGen.cs:392
+                            Path = "Contract.term.action.subject",                                                                          // MakerGen.cs:393
+                            ElementId = "Contract.term.action.subject"                                                                      // MakerGen.cs:394
+                        });                                                                                                                 // MakerGen.cs:395
+                        Element_Reference.Write(sDef);                                                                                      // MakerGen.cs:221
+                        Element_Role.Write(sDef);                                                                                           // MakerGen.cs:221
+                    }                                                                                                                       // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                    public Type_Subject()                                                                                                   // MakerGen.cs:400
+                    {                                                                                                                       // MakerGen.cs:401
+                        {                                                                                                                   // MakerGen.cs:232
                             // 96. Contract.term.action.subject.reference
-                            this.Element_Reference = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Reference",
-                                Path= "Contract.term.action.subject.reference",
-                                Id = "Contract.term.action.subject.reference",
-                                Min = 1,
-                                Max = -1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Complex.Type_Reference
-                                    {
-                                        TargetProfile = new String[]
-                                        {
-                                            "http://hl7.org/fhir/StructureDefinition/Patient",
-                                            "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
-                                            "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                                            "http://hl7.org/fhir/StructureDefinition/Device",
-                                            "http://hl7.org/fhir/StructureDefinition/Group",
-                                            "http://hl7.org/fhir/StructureDefinition/Organization"
-                                        }
-                                    }
-                                }
-                            };
-                        }
-                        {
+                            this.Element_Reference = new ElementDefinitionInfo                                                              // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Reference",                                                                                 // MakerGen.cs:236
+                                Path= "Contract.term.action.subject.reference",                                                             // MakerGen.cs:237
+                                Id = "Contract.term.action.subject.reference",                                                              // MakerGen.cs:238
+                                Min = 1,                                                                                                    // MakerGen.cs:239
+                                Max = -1,                                                                                                   // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Complex.Type_Reference                                                        // MakerGen.cs:344
+                                    {                                                                                                       // MakerGen.cs:345
+                                        TargetProfile = new String[]                                                                        // MakerGen.cs:347
+                                        {                                                                                                   // CodeEditorExtensions.cs:28
+                                            "http://hl7.org/fhir/StructureDefinition/Patient",                                              // MakerGen.cs:347
+                                            "http://hl7.org/fhir/StructureDefinition/RelatedPerson",                                        // MakerGen.cs:347
+                                            "http://hl7.org/fhir/StructureDefinition/Practitioner",                                         // MakerGen.cs:347
+                                            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                     // MakerGen.cs:347
+                                            "http://hl7.org/fhir/StructureDefinition/Device",                                               // MakerGen.cs:347
+                                            "http://hl7.org/fhir/StructureDefinition/Group",                                                // MakerGen.cs:347
+                                            "http://hl7.org/fhir/StructureDefinition/Organization"                                          // MakerGen.cs:347
+                                        }                                                                                                   // CodeEditorExtensions.cs:34
+                                    }                                                                                                       // MakerGen.cs:348
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                        {                                                                                                                   // MakerGen.cs:232
                             // 97. Contract.term.action.subject.role
-                            this.Element_Role = new ElementDefinitionInfo
-                            {
-                                Name = "Element_Role",
-                                Path= "Contract.term.action.subject.role",
-                                Id = "Contract.term.action.subject.role",
-                                Min = 0,
-                                Max = 1,
-                                Types = new BaseType[]
-                                {
-                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                    {
-                                    }
-                                }
-                            };
-                        }
-                    }
-                }
+                            this.Element_Role = new ElementDefinitionInfo                                                                   // MakerGen.cs:234
+                            {                                                                                                               // MakerGen.cs:235
+                                Name = "Element_Role",                                                                                      // MakerGen.cs:236
+                                Path= "Contract.term.action.subject.role",                                                                  // MakerGen.cs:237
+                                Id = "Contract.term.action.subject.role",                                                                   // MakerGen.cs:238
+                                Min = 0,                                                                                                    // MakerGen.cs:239
+                                Max = 1,                                                                                                    // MakerGen.cs:240
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:241
+                                {                                                                                                           // MakerGen.cs:242
+                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                  // MakerGen.cs:316
+                                    {                                                                                                       // MakerGen.cs:317
+                                    }                                                                                                       // MakerGen.cs:320
+                                }                                                                                                           // MakerGen.cs:244
+                            };                                                                                                              // MakerGen.cs:245
+                        }                                                                                                                   // MakerGen.cs:246
+                    }                                                                                                                       // MakerGen.cs:403
+                }                                                                                                                           // MakerGen.cs:405
                 // 93. Contract.term.action.doNotPerform
-                public ElementDefinitionInfo Element_DoNotPerform;
+                public ElementDefinitionInfo Element_DoNotPerform;                                                                          // MakerGen.cs:217
                 // 94. Contract.term.action.type
-                public ElementDefinitionInfo Element_Type;
+                public ElementDefinitionInfo Element_Type;                                                                                  // MakerGen.cs:217
                 // 95. Contract.term.action.subject
-                public ElementDefinitionInfo Element_Subject;
+                public ElementDefinitionInfo Element_Subject;                                                                               // MakerGen.cs:217
                 // 98. Contract.term.action.intent
-                public ElementDefinitionInfo Element_Intent;
+                public ElementDefinitionInfo Element_Intent;                                                                                // MakerGen.cs:217
                 // 99. Contract.term.action.linkId
-                public ElementDefinitionInfo Element_LinkId;
+                public ElementDefinitionInfo Element_LinkId;                                                                                // MakerGen.cs:217
                 // 100. Contract.term.action.status
-                public ElementDefinitionInfo Element_Status;
+                public ElementDefinitionInfo Element_Status;                                                                                // MakerGen.cs:217
                 // 101. Contract.term.action.context
-                public ElementDefinitionInfo Element_Context;
+                public ElementDefinitionInfo Element_Context;                                                                               // MakerGen.cs:217
                 // 102. Contract.term.action.contextLinkId
-                public ElementDefinitionInfo Element_ContextLinkId;
+                public ElementDefinitionInfo Element_ContextLinkId;                                                                         // MakerGen.cs:217
                 // 103. Contract.term.action.occurrence[x]
-                public ElementDefinitionInfo Element_Occurrence;
+                public ElementDefinitionInfo Element_Occurrence;                                                                            // MakerGen.cs:217
                 // 104. Contract.term.action.requester
-                public ElementDefinitionInfo Element_Requester;
+                public ElementDefinitionInfo Element_Requester;                                                                             // MakerGen.cs:217
                 // 105. Contract.term.action.requesterLinkId
-                public ElementDefinitionInfo Element_RequesterLinkId;
+                public ElementDefinitionInfo Element_RequesterLinkId;                                                                       // MakerGen.cs:217
                 // 106. Contract.term.action.performerType
-                public ElementDefinitionInfo Element_PerformerType;
+                public ElementDefinitionInfo Element_PerformerType;                                                                         // MakerGen.cs:217
                 // 107. Contract.term.action.performerRole
-                public ElementDefinitionInfo Element_PerformerRole;
+                public ElementDefinitionInfo Element_PerformerRole;                                                                         // MakerGen.cs:217
                 // 108. Contract.term.action.performer
-                public ElementDefinitionInfo Element_Performer;
+                public ElementDefinitionInfo Element_Performer;                                                                             // MakerGen.cs:217
                 // 109. Contract.term.action.performerLinkId
-                public ElementDefinitionInfo Element_PerformerLinkId;
+                public ElementDefinitionInfo Element_PerformerLinkId;                                                                       // MakerGen.cs:217
                 // 110. Contract.term.action.reasonCode
-                public ElementDefinitionInfo Element_ReasonCode;
+                public ElementDefinitionInfo Element_ReasonCode;                                                                            // MakerGen.cs:217
                 // 111. Contract.term.action.reasonReference
-                public ElementDefinitionInfo Element_ReasonReference;
+                public ElementDefinitionInfo Element_ReasonReference;                                                                       // MakerGen.cs:217
                 // 112. Contract.term.action.reason
-                public ElementDefinitionInfo Element_Reason;
+                public ElementDefinitionInfo Element_Reason;                                                                                // MakerGen.cs:217
                 // 113. Contract.term.action.reasonLinkId
-                public ElementDefinitionInfo Element_ReasonLinkId;
+                public ElementDefinitionInfo Element_ReasonLinkId;                                                                          // MakerGen.cs:217
                 // 114. Contract.term.action.note
-                public ElementDefinitionInfo Element_Note;
+                public ElementDefinitionInfo Element_Note;                                                                                  // MakerGen.cs:217
                 // 115. Contract.term.action.securityLabelNumber
-                public ElementDefinitionInfo Element_SecurityLabelNumber;
-                
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-                {
-                    base.Write(sDef);
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                    {
-                        Path = "Contract.term.action",
-                        ElementId = "Contract.term.action"
-                    });
-                    Element_DoNotPerform.Write(sDef);
-                    Element_Type.Write(sDef);
-                    Element_Subject.Write(sDef);
-                    Element_Intent.Write(sDef);
-                    Element_LinkId.Write(sDef);
-                    Element_Status.Write(sDef);
-                    Element_Context.Write(sDef);
-                    Element_ContextLinkId.Write(sDef);
-                    Element_Occurrence.Write(sDef);
-                    Element_Requester.Write(sDef);
-                    Element_RequesterLinkId.Write(sDef);
-                    Element_PerformerType.Write(sDef);
-                    Element_PerformerRole.Write(sDef);
-                    Element_Performer.Write(sDef);
-                    Element_PerformerLinkId.Write(sDef);
-                    Element_ReasonCode.Write(sDef);
-                    Element_ReasonReference.Write(sDef);
-                    Element_Reason.Write(sDef);
-                    Element_ReasonLinkId.Write(sDef);
-                    Element_Note.Write(sDef);
-                    Element_SecurityLabelNumber.Write(sDef);
-                }
-                
-                public Type_Action()
-                {
-                    {
+                public ElementDefinitionInfo Element_SecurityLabelNumber;                                                                   // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:388
+                {                                                                                                                           // MakerGen.cs:389
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:390
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:391
+                    {                                                                                                                       // MakerGen.cs:392
+                        Path = "Contract.term.action",                                                                                      // MakerGen.cs:393
+                        ElementId = "Contract.term.action"                                                                                  // MakerGen.cs:394
+                    });                                                                                                                     // MakerGen.cs:395
+                    Element_DoNotPerform.Write(sDef);                                                                                       // MakerGen.cs:221
+                    Element_Type.Write(sDef);                                                                                               // MakerGen.cs:221
+                    Element_Subject.Write(sDef);                                                                                            // MakerGen.cs:221
+                    Element_Intent.Write(sDef);                                                                                             // MakerGen.cs:221
+                    Element_LinkId.Write(sDef);                                                                                             // MakerGen.cs:221
+                    Element_Status.Write(sDef);                                                                                             // MakerGen.cs:221
+                    Element_Context.Write(sDef);                                                                                            // MakerGen.cs:221
+                    Element_ContextLinkId.Write(sDef);                                                                                      // MakerGen.cs:221
+                    Element_Occurrence.Write(sDef);                                                                                         // MakerGen.cs:221
+                    Element_Requester.Write(sDef);                                                                                          // MakerGen.cs:221
+                    Element_RequesterLinkId.Write(sDef);                                                                                    // MakerGen.cs:221
+                    Element_PerformerType.Write(sDef);                                                                                      // MakerGen.cs:221
+                    Element_PerformerRole.Write(sDef);                                                                                      // MakerGen.cs:221
+                    Element_Performer.Write(sDef);                                                                                          // MakerGen.cs:221
+                    Element_PerformerLinkId.Write(sDef);                                                                                    // MakerGen.cs:221
+                    Element_ReasonCode.Write(sDef);                                                                                         // MakerGen.cs:221
+                    Element_ReasonReference.Write(sDef);                                                                                    // MakerGen.cs:221
+                    Element_Reason.Write(sDef);                                                                                             // MakerGen.cs:221
+                    Element_ReasonLinkId.Write(sDef);                                                                                       // MakerGen.cs:221
+                    Element_Note.Write(sDef);                                                                                               // MakerGen.cs:221
+                    Element_SecurityLabelNumber.Write(sDef);                                                                                // MakerGen.cs:221
+                }                                                                                                                           // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+                public Type_Action()                                                                                                        // MakerGen.cs:400
+                {                                                                                                                           // MakerGen.cs:401
+                    {                                                                                                                       // MakerGen.cs:232
                         // 93. Contract.term.action.doNotPerform
-                        this.Element_DoNotPerform = new ElementDefinitionInfo
-                        {
-                            Name = "Element_DoNotPerform",
-                            Path= "Contract.term.action.doNotPerform",
-                            Id = "Contract.term.action.doNotPerform",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_DoNotPerform = new ElementDefinitionInfo                                                               // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_DoNotPerform",                                                                                  // MakerGen.cs:236
+                            Path= "Contract.term.action.doNotPerform",                                                                      // MakerGen.cs:237
+                            Id = "Contract.term.action.doNotPerform",                                                                       // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                       // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 94. Contract.term.action.type
-                        this.Element_Type = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Type",
-                            Path= "Contract.term.action.type",
-                            Id = "Contract.term.action.type",
-                            Min = 1,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Type = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Type",                                                                                          // MakerGen.cs:236
+                            Path= "Contract.term.action.type",                                                                              // MakerGen.cs:237
+                            Id = "Contract.term.action.type",                                                                               // MakerGen.cs:238
+                            Min = 1,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 95. Contract.term.action.subject
-                        this.Element_Subject = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Subject",
-                            Path= "Contract.term.action.subject",
-                            Id = "Contract.term.action.subject",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new Type_Subject
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Subject = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Subject",                                                                                       // MakerGen.cs:236
+                            Path= "Contract.term.action.subject",                                                                           // MakerGen.cs:237
+                            Id = "Contract.term.action.subject",                                                                            // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new Type_Subject                                                                                            // MakerGen.cs:260
+                                {                                                                                                           // MakerGen.cs:261
+                                }                                                                                                           // MakerGen.cs:262
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 98. Contract.term.action.intent
-                        this.Element_Intent = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Intent",
-                            Path= "Contract.term.action.intent",
-                            Id = "Contract.term.action.intent",
-                            Min = 1,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Intent = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Intent",                                                                                        // MakerGen.cs:236
+                            Path= "Contract.term.action.intent",                                                                            // MakerGen.cs:237
+                            Id = "Contract.term.action.intent",                                                                             // MakerGen.cs:238
+                            Min = 1,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 99. Contract.term.action.linkId
-                        this.Element_LinkId = new ElementDefinitionInfo
-                        {
-                            Name = "Element_LinkId",
-                            Path= "Contract.term.action.linkId",
-                            Id = "Contract.term.action.linkId",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_LinkId = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_LinkId",                                                                                        // MakerGen.cs:236
+                            Path= "Contract.term.action.linkId",                                                                            // MakerGen.cs:237
+                            Id = "Contract.term.action.linkId",                                                                             // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 100. Contract.term.action.status
-                        this.Element_Status = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Status",
-                            Path= "Contract.term.action.status",
-                            Id = "Contract.term.action.status",
-                            Min = 1,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Status = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Status",                                                                                        // MakerGen.cs:236
+                            Path= "Contract.term.action.status",                                                                            // MakerGen.cs:237
+                            Id = "Contract.term.action.status",                                                                             // MakerGen.cs:238
+                            Min = 1,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 101. Contract.term.action.context
-                        this.Element_Context = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Context",
-                            Path= "Contract.term.action.context",
-                            Id = "Contract.term.action.context",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Reference
-                                {
-                                    TargetProfile = new String[]
-                                    {
-                                        "http://hl7.org/fhir/StructureDefinition/Encounter",
-                                        "http://hl7.org/fhir/StructureDefinition/EpisodeOfCare"
-                                    }
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Context = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Context",                                                                                       // MakerGen.cs:236
+                            Path= "Contract.term.action.context",                                                                           // MakerGen.cs:237
+                            Id = "Contract.term.action.context",                                                                            // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Reference                                                            // MakerGen.cs:344
+                                {                                                                                                           // MakerGen.cs:345
+                                    TargetProfile = new String[]                                                                            // MakerGen.cs:347
+                                    {                                                                                                       // CodeEditorExtensions.cs:28
+                                        "http://hl7.org/fhir/StructureDefinition/Encounter",                                                // MakerGen.cs:347
+                                        "http://hl7.org/fhir/StructureDefinition/EpisodeOfCare"                                             // MakerGen.cs:347
+                                    }                                                                                                       // CodeEditorExtensions.cs:34
+                                }                                                                                                           // MakerGen.cs:348
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 102. Contract.term.action.contextLinkId
-                        this.Element_ContextLinkId = new ElementDefinitionInfo
-                        {
-                            Name = "Element_ContextLinkId",
-                            Path= "Contract.term.action.contextLinkId",
-                            Id = "Contract.term.action.contextLinkId",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_ContextLinkId = new ElementDefinitionInfo                                                              // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_ContextLinkId",                                                                                 // MakerGen.cs:236
+                            Path= "Contract.term.action.contextLinkId",                                                                     // MakerGen.cs:237
+                            Id = "Contract.term.action.contextLinkId",                                                                      // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 103. Contract.term.action.occurrence[x]
-                        this.Element_Occurrence = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Occurrence",
-                            Path= "Contract.term.action.occurrence[x]",
-                            Id = "Contract.term.action.occurrence[x]",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
-                                {
-                                },
-                                new FhirKhit.Maker.Common.Complex.Type_Period
-                                {
-                                },
-                                new FhirKhit.Maker.Common.Complex.Type_Timing
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Occurrence = new ElementDefinitionInfo                                                                 // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Occurrence",                                                                                    // MakerGen.cs:236
+                            Path= "Contract.term.action.occurrence[x]",                                                                     // MakerGen.cs:237
+                            Id = "Contract.term.action.occurrence[x]",                                                                      // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                      // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                },                                                                                                          // MakerGen.cs:305
+                                new FhirKhit.Maker.Common.Complex.Type_Period                                                               // MakerGen.cs:356
+                                {                                                                                                           // MakerGen.cs:357
+                                },                                                                                                          // MakerGen.cs:358
+                                new FhirKhit.Maker.Common.Complex.Type_Timing                                                               // MakerGen.cs:356
+                                {                                                                                                           // MakerGen.cs:357
+                                }                                                                                                           // MakerGen.cs:358
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 104. Contract.term.action.requester
-                        this.Element_Requester = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Requester",
-                            Path= "Contract.term.action.requester",
-                            Id = "Contract.term.action.requester",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Reference
-                                {
-                                    TargetProfile = new String[]
-                                    {
-                                        "http://hl7.org/fhir/StructureDefinition/Patient",
-                                        "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
-                                        "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                        "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                                        "http://hl7.org/fhir/StructureDefinition/Device",
-                                        "http://hl7.org/fhir/StructureDefinition/Group",
-                                        "http://hl7.org/fhir/StructureDefinition/Organization"
-                                    }
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Requester = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Requester",                                                                                     // MakerGen.cs:236
+                            Path= "Contract.term.action.requester",                                                                         // MakerGen.cs:237
+                            Id = "Contract.term.action.requester",                                                                          // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Reference                                                            // MakerGen.cs:344
+                                {                                                                                                           // MakerGen.cs:345
+                                    TargetProfile = new String[]                                                                            // MakerGen.cs:347
+                                    {                                                                                                       // CodeEditorExtensions.cs:28
+                                        "http://hl7.org/fhir/StructureDefinition/Patient",                                                  // MakerGen.cs:347
+                                        "http://hl7.org/fhir/StructureDefinition/RelatedPerson",                                            // MakerGen.cs:347
+                                        "http://hl7.org/fhir/StructureDefinition/Practitioner",                                             // MakerGen.cs:347
+                                        "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                         // MakerGen.cs:347
+                                        "http://hl7.org/fhir/StructureDefinition/Device",                                                   // MakerGen.cs:347
+                                        "http://hl7.org/fhir/StructureDefinition/Group",                                                    // MakerGen.cs:347
+                                        "http://hl7.org/fhir/StructureDefinition/Organization"                                              // MakerGen.cs:347
+                                    }                                                                                                       // CodeEditorExtensions.cs:34
+                                }                                                                                                           // MakerGen.cs:348
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 105. Contract.term.action.requesterLinkId
-                        this.Element_RequesterLinkId = new ElementDefinitionInfo
-                        {
-                            Name = "Element_RequesterLinkId",
-                            Path= "Contract.term.action.requesterLinkId",
-                            Id = "Contract.term.action.requesterLinkId",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_RequesterLinkId = new ElementDefinitionInfo                                                            // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_RequesterLinkId",                                                                               // MakerGen.cs:236
+                            Path= "Contract.term.action.requesterLinkId",                                                                   // MakerGen.cs:237
+                            Id = "Contract.term.action.requesterLinkId",                                                                    // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 106. Contract.term.action.performerType
-                        this.Element_PerformerType = new ElementDefinitionInfo
-                        {
-                            Name = "Element_PerformerType",
-                            Path= "Contract.term.action.performerType",
-                            Id = "Contract.term.action.performerType",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_PerformerType = new ElementDefinitionInfo                                                              // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_PerformerType",                                                                                 // MakerGen.cs:236
+                            Path= "Contract.term.action.performerType",                                                                     // MakerGen.cs:237
+                            Id = "Contract.term.action.performerType",                                                                      // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 107. Contract.term.action.performerRole
-                        this.Element_PerformerRole = new ElementDefinitionInfo
-                        {
-                            Name = "Element_PerformerRole",
-                            Path= "Contract.term.action.performerRole",
-                            Id = "Contract.term.action.performerRole",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_PerformerRole = new ElementDefinitionInfo                                                              // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_PerformerRole",                                                                                 // MakerGen.cs:236
+                            Path= "Contract.term.action.performerRole",                                                                     // MakerGen.cs:237
+                            Id = "Contract.term.action.performerRole",                                                                      // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 108. Contract.term.action.performer
-                        this.Element_Performer = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Performer",
-                            Path= "Contract.term.action.performer",
-                            Id = "Contract.term.action.performer",
-                            Min = 0,
-                            Max = 1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Reference
-                                {
-                                    TargetProfile = new String[]
-                                    {
-                                        "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
-                                        "http://hl7.org/fhir/StructureDefinition/Patient",
-                                        "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                        "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                                        "http://hl7.org/fhir/StructureDefinition/CareTeam",
-                                        "http://hl7.org/fhir/StructureDefinition/Device",
-                                        "http://hl7.org/fhir/StructureDefinition/Substance",
-                                        "http://hl7.org/fhir/StructureDefinition/Organization",
-                                        "http://hl7.org/fhir/StructureDefinition/Location"
-                                    }
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Performer = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Performer",                                                                                     // MakerGen.cs:236
+                            Path= "Contract.term.action.performer",                                                                         // MakerGen.cs:237
+                            Id = "Contract.term.action.performer",                                                                          // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = 1,                                                                                                        // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Reference                                                            // MakerGen.cs:344
+                                {                                                                                                           // MakerGen.cs:345
+                                    TargetProfile = new String[]                                                                            // MakerGen.cs:347
+                                    {                                                                                                       // CodeEditorExtensions.cs:28
+                                        "http://hl7.org/fhir/StructureDefinition/RelatedPerson",                                            // MakerGen.cs:347
+                                        "http://hl7.org/fhir/StructureDefinition/Patient",                                                  // MakerGen.cs:347
+                                        "http://hl7.org/fhir/StructureDefinition/Practitioner",                                             // MakerGen.cs:347
+                                        "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                         // MakerGen.cs:347
+                                        "http://hl7.org/fhir/StructureDefinition/CareTeam",                                                 // MakerGen.cs:347
+                                        "http://hl7.org/fhir/StructureDefinition/Device",                                                   // MakerGen.cs:347
+                                        "http://hl7.org/fhir/StructureDefinition/Substance",                                                // MakerGen.cs:347
+                                        "http://hl7.org/fhir/StructureDefinition/Organization",                                             // MakerGen.cs:347
+                                        "http://hl7.org/fhir/StructureDefinition/Location"                                                  // MakerGen.cs:347
+                                    }                                                                                                       // CodeEditorExtensions.cs:34
+                                }                                                                                                           // MakerGen.cs:348
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 109. Contract.term.action.performerLinkId
-                        this.Element_PerformerLinkId = new ElementDefinitionInfo
-                        {
-                            Name = "Element_PerformerLinkId",
-                            Path= "Contract.term.action.performerLinkId",
-                            Id = "Contract.term.action.performerLinkId",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_PerformerLinkId = new ElementDefinitionInfo                                                            // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_PerformerLinkId",                                                                               // MakerGen.cs:236
+                            Path= "Contract.term.action.performerLinkId",                                                                   // MakerGen.cs:237
+                            Id = "Contract.term.action.performerLinkId",                                                                    // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 110. Contract.term.action.reasonCode
-                        this.Element_ReasonCode = new ElementDefinitionInfo
-                        {
-                            Name = "Element_ReasonCode",
-                            Path= "Contract.term.action.reasonCode",
-                            Id = "Contract.term.action.reasonCode",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_ReasonCode = new ElementDefinitionInfo                                                                 // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_ReasonCode",                                                                                    // MakerGen.cs:236
+                            Path= "Contract.term.action.reasonCode",                                                                        // MakerGen.cs:237
+                            Id = "Contract.term.action.reasonCode",                                                                         // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:316
+                                {                                                                                                           // MakerGen.cs:317
+                                }                                                                                                           // MakerGen.cs:320
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 111. Contract.term.action.reasonReference
-                        this.Element_ReasonReference = new ElementDefinitionInfo
-                        {
-                            Name = "Element_ReasonReference",
-                            Path= "Contract.term.action.reasonReference",
-                            Id = "Contract.term.action.reasonReference",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Reference
-                                {
-                                    TargetProfile = new String[]
-                                    {
-                                        "http://hl7.org/fhir/StructureDefinition/Condition",
-                                        "http://hl7.org/fhir/StructureDefinition/Observation",
-                                        "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
-                                        "http://hl7.org/fhir/StructureDefinition/DocumentReference",
-                                        "http://hl7.org/fhir/StructureDefinition/Questionnaire",
-                                        "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse"
-                                    }
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_ReasonReference = new ElementDefinitionInfo                                                            // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_ReasonReference",                                                                               // MakerGen.cs:236
+                            Path= "Contract.term.action.reasonReference",                                                                   // MakerGen.cs:237
+                            Id = "Contract.term.action.reasonReference",                                                                    // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Reference                                                            // MakerGen.cs:344
+                                {                                                                                                           // MakerGen.cs:345
+                                    TargetProfile = new String[]                                                                            // MakerGen.cs:347
+                                    {                                                                                                       // CodeEditorExtensions.cs:28
+                                        "http://hl7.org/fhir/StructureDefinition/Condition",                                                // MakerGen.cs:347
+                                        "http://hl7.org/fhir/StructureDefinition/Observation",                                              // MakerGen.cs:347
+                                        "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",                                         // MakerGen.cs:347
+                                        "http://hl7.org/fhir/StructureDefinition/DocumentReference",                                        // MakerGen.cs:347
+                                        "http://hl7.org/fhir/StructureDefinition/Questionnaire",                                            // MakerGen.cs:347
+                                        "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse"                                     // MakerGen.cs:347
+                                    }                                                                                                       // CodeEditorExtensions.cs:34
+                                }                                                                                                           // MakerGen.cs:348
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 112. Contract.term.action.reason
-                        this.Element_Reason = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Reason",
-                            Path= "Contract.term.action.reason",
-                            Id = "Contract.term.action.reason",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Reason = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Reason",                                                                                        // MakerGen.cs:236
+                            Path= "Contract.term.action.reason",                                                                            // MakerGen.cs:237
+                            Id = "Contract.term.action.reason",                                                                             // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 113. Contract.term.action.reasonLinkId
-                        this.Element_ReasonLinkId = new ElementDefinitionInfo
-                        {
-                            Name = "Element_ReasonLinkId",
-                            Path= "Contract.term.action.reasonLinkId",
-                            Id = "Contract.term.action.reasonLinkId",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_ReasonLinkId = new ElementDefinitionInfo                                                               // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_ReasonLinkId",                                                                                  // MakerGen.cs:236
+                            Path= "Contract.term.action.reasonLinkId",                                                                      // MakerGen.cs:237
+                            Id = "Contract.term.action.reasonLinkId",                                                                       // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 114. Contract.term.action.note
-                        this.Element_Note = new ElementDefinitionInfo
-                        {
-                            Name = "Element_Note",
-                            Path= "Contract.term.action.note",
-                            Id = "Contract.term.action.note",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Complex.Type_Annotation
-                                {
-                                }
-                            }
-                        };
-                    }
-                    {
+                        this.Element_Note = new ElementDefinitionInfo                                                                       // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_Note",                                                                                          // MakerGen.cs:236
+                            Path= "Contract.term.action.note",                                                                              // MakerGen.cs:237
+                            Id = "Contract.term.action.note",                                                                               // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Complex.Type_Annotation                                                           // MakerGen.cs:356
+                                {                                                                                                           // MakerGen.cs:357
+                                }                                                                                                           // MakerGen.cs:358
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                    {                                                                                                                       // MakerGen.cs:232
                         // 115. Contract.term.action.securityLabelNumber
-                        this.Element_SecurityLabelNumber = new ElementDefinitionInfo
-                        {
-                            Name = "Element_SecurityLabelNumber",
-                            Path= "Contract.term.action.securityLabelNumber",
-                            Id = "Contract.term.action.securityLabelNumber",
-                            Min = 0,
-                            Max = -1,
-                            Types = new BaseType[]
-                            {
-                                new FhirKhit.Maker.Common.Primitive.Primitive_UnsignedInt
-                                {
-                                }
-                            }
-                        };
-                    }
-                }
-            }
+                        this.Element_SecurityLabelNumber = new ElementDefinitionInfo                                                        // MakerGen.cs:234
+                        {                                                                                                                   // MakerGen.cs:235
+                            Name = "Element_SecurityLabelNumber",                                                                           // MakerGen.cs:236
+                            Path= "Contract.term.action.securityLabelNumber",                                                               // MakerGen.cs:237
+                            Id = "Contract.term.action.securityLabelNumber",                                                                // MakerGen.cs:238
+                            Min = 0,                                                                                                        // MakerGen.cs:239
+                            Max = -1,                                                                                                       // MakerGen.cs:240
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:242
+                                new FhirKhit.Maker.Common.Primitive.Primitive_UnsignedInt                                                   // MakerGen.cs:301
+                                {                                                                                                           // MakerGen.cs:302
+                                }                                                                                                           // MakerGen.cs:305
+                            }                                                                                                               // MakerGen.cs:244
+                        };                                                                                                                  // MakerGen.cs:245
+                    }                                                                                                                       // MakerGen.cs:246
+                }                                                                                                                           // MakerGen.cs:403
+            }                                                                                                                               // MakerGen.cs:405
             // 33. Contract.term.identifier
-            public ElementDefinitionInfo Element_Identifier;
+            public ElementDefinitionInfo Element_Identifier;                                                                                // MakerGen.cs:217
             // 34. Contract.term.issued
-            public ElementDefinitionInfo Element_Issued;
+            public ElementDefinitionInfo Element_Issued;                                                                                    // MakerGen.cs:217
             // 35. Contract.term.applies
-            public ElementDefinitionInfo Element_Applies;
+            public ElementDefinitionInfo Element_Applies;                                                                                   // MakerGen.cs:217
             // 36. Contract.term.topic[x]
-            public ElementDefinitionInfo Element_Topic;
+            public ElementDefinitionInfo Element_Topic;                                                                                     // MakerGen.cs:217
             // 37. Contract.term.type
-            public ElementDefinitionInfo Element_Type;
+            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:217
             // 38. Contract.term.subType
-            public ElementDefinitionInfo Element_SubType;
+            public ElementDefinitionInfo Element_SubType;                                                                                   // MakerGen.cs:217
             // 39. Contract.term.text
-            public ElementDefinitionInfo Element_Text;
+            public ElementDefinitionInfo Element_Text;                                                                                      // MakerGen.cs:217
             // 40. Contract.term.securityLabel
-            public ElementDefinitionInfo Element_SecurityLabel;
+            public ElementDefinitionInfo Element_SecurityLabel;                                                                             // MakerGen.cs:217
             // 45. Contract.term.offer
-            public ElementDefinitionInfo Element_Offer;
+            public ElementDefinitionInfo Element_Offer;                                                                                     // MakerGen.cs:217
             // 59. Contract.term.asset
-            public ElementDefinitionInfo Element_Asset;
+            public ElementDefinitionInfo Element_Asset;                                                                                     // MakerGen.cs:217
             // 92. Contract.term.action
-            public ElementDefinitionInfo Element_Action;
+            public ElementDefinitionInfo Element_Action;                                                                                    // MakerGen.cs:217
             // 116. Contract.term.group
-            public ElementDefinitionInfo Element_Group;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "Contract.term",
-                    ElementId = "Contract.term"
-                });
-                Element_Identifier.Write(sDef);
-                Element_Issued.Write(sDef);
-                Element_Applies.Write(sDef);
-                Element_Topic.Write(sDef);
-                Element_Type.Write(sDef);
-                Element_SubType.Write(sDef);
-                Element_Text.Write(sDef);
-                Element_SecurityLabel.Write(sDef);
-                Element_Offer.Write(sDef);
-                Element_Asset.Write(sDef);
-                Element_Action.Write(sDef);
-                Element_Group.Write(sDef);
-            }
-            
-            public Type_Term()
-            {
-                {
+            public ElementDefinitionInfo Element_Group;                                                                                     // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "Contract.term",                                                                                                 // MakerGen.cs:393
+                    ElementId = "Contract.term"                                                                                             // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Identifier.Write(sDef);                                                                                             // MakerGen.cs:221
+                Element_Issued.Write(sDef);                                                                                                 // MakerGen.cs:221
+                Element_Applies.Write(sDef);                                                                                                // MakerGen.cs:221
+                Element_Topic.Write(sDef);                                                                                                  // MakerGen.cs:221
+                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_SubType.Write(sDef);                                                                                                // MakerGen.cs:221
+                Element_Text.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_SecurityLabel.Write(sDef);                                                                                          // MakerGen.cs:221
+                Element_Offer.Write(sDef);                                                                                                  // MakerGen.cs:221
+                Element_Asset.Write(sDef);                                                                                                  // MakerGen.cs:221
+                Element_Action.Write(sDef);                                                                                                 // MakerGen.cs:221
+                Element_Group.Write(sDef);                                                                                                  // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Term()                                                                                                              // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 33. Contract.term.identifier
-                    this.Element_Identifier = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Identifier",
-                        Path= "Contract.term.identifier",
-                        Id = "Contract.term.identifier",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Identifier
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Identifier = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Identifier",                                                                                        // MakerGen.cs:236
+                        Path= "Contract.term.identifier",                                                                                   // MakerGen.cs:237
+                        Id = "Contract.term.identifier",                                                                                    // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Identifier                                                               // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 34. Contract.term.issued
-                    this.Element_Issued = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Issued",
-                        Path= "Contract.term.issued",
-                        Id = "Contract.term.issued",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Issued = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Issued",                                                                                            // MakerGen.cs:236
+                        Path= "Contract.term.issued",                                                                                       // MakerGen.cs:237
+                        Id = "Contract.term.issued",                                                                                        // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                          // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 35. Contract.term.applies
-                    this.Element_Applies = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Applies",
-                        Path= "Contract.term.applies",
-                        Id = "Contract.term.applies",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Period
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Applies = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Applies",                                                                                           // MakerGen.cs:236
+                        Path= "Contract.term.applies",                                                                                      // MakerGen.cs:237
+                        Id = "Contract.term.applies",                                                                                       // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Period                                                                   // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 36. Contract.term.topic[x]
-                    this.Element_Topic = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Topic",
-                        Path= "Contract.term.topic[x]",
-                        Id = "Contract.term.topic[x]",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            },
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Resource"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Topic = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Topic",                                                                                             // MakerGen.cs:236
+                        Path= "Contract.term.topic[x]",                                                                                     // MakerGen.cs:237
+                        Id = "Contract.term.topic[x]",                                                                                      // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            },                                                                                                              // MakerGen.cs:320
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Resource"                                                      // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 37. Contract.term.type
-                    this.Element_Type = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Type",
-                        Path= "Contract.term.type",
-                        Id = "Contract.term.type",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Type",                                                                                              // MakerGen.cs:236
+                        Path= "Contract.term.type",                                                                                         // MakerGen.cs:237
+                        Id = "Contract.term.type",                                                                                          // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 38. Contract.term.subType
-                    this.Element_SubType = new ElementDefinitionInfo
-                    {
-                        Name = "Element_SubType",
-                        Path= "Contract.term.subType",
-                        Id = "Contract.term.subType",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_SubType = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_SubType",                                                                                           // MakerGen.cs:236
+                        Path= "Contract.term.subType",                                                                                      // MakerGen.cs:237
+                        Id = "Contract.term.subType",                                                                                       // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 39. Contract.term.text
-                    this.Element_Text = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Text",
-                        Path= "Contract.term.text",
-                        Id = "Contract.term.text",
-                        Min = 0,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Text = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Text",                                                                                              // MakerGen.cs:236
+                        Path= "Contract.term.text",                                                                                         // MakerGen.cs:237
+                        Id = "Contract.term.text",                                                                                          // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:301
+                            {                                                                                                               // MakerGen.cs:302
+                            }                                                                                                               // MakerGen.cs:305
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 40. Contract.term.securityLabel
-                    this.Element_SecurityLabel = new ElementDefinitionInfo
-                    {
-                        Name = "Element_SecurityLabel",
-                        Path= "Contract.term.securityLabel",
-                        Id = "Contract.term.securityLabel",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new Type_SecurityLabel
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_SecurityLabel = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_SecurityLabel",                                                                                     // MakerGen.cs:236
+                        Path= "Contract.term.securityLabel",                                                                                // MakerGen.cs:237
+                        Id = "Contract.term.securityLabel",                                                                                 // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new Type_SecurityLabel                                                                                          // MakerGen.cs:260
+                            {                                                                                                               // MakerGen.cs:261
+                            }                                                                                                               // MakerGen.cs:262
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 45. Contract.term.offer
-                    this.Element_Offer = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Offer",
-                        Path= "Contract.term.offer",
-                        Id = "Contract.term.offer",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new Type_Offer
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Offer = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Offer",                                                                                             // MakerGen.cs:236
+                        Path= "Contract.term.offer",                                                                                        // MakerGen.cs:237
+                        Id = "Contract.term.offer",                                                                                         // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new Type_Offer                                                                                                  // MakerGen.cs:260
+                            {                                                                                                               // MakerGen.cs:261
+                            }                                                                                                               // MakerGen.cs:262
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 59. Contract.term.asset
-                    this.Element_Asset = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Asset",
-                        Path= "Contract.term.asset",
-                        Id = "Contract.term.asset",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new Type_Asset
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Asset = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Asset",                                                                                             // MakerGen.cs:236
+                        Path= "Contract.term.asset",                                                                                        // MakerGen.cs:237
+                        Id = "Contract.term.asset",                                                                                         // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new Type_Asset                                                                                                  // MakerGen.cs:260
+                            {                                                                                                               // MakerGen.cs:261
+                            }                                                                                                               // MakerGen.cs:262
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 92. Contract.term.action
-                    this.Element_Action = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Action",
-                        Path= "Contract.term.action",
-                        Id = "Contract.term.action",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new Type_Action
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Action = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Action",                                                                                            // MakerGen.cs:236
+                        Path= "Contract.term.action",                                                                                       // MakerGen.cs:237
+                        Id = "Contract.term.action",                                                                                        // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new Type_Action                                                                                                 // MakerGen.cs:260
+                            {                                                                                                               // MakerGen.cs:261
+                            }                                                                                                               // MakerGen.cs:262
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 116. Contract.term.group
-                    this.Element_Group = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Group",
-                        Path= "Contract.term.group",
-                        Id = "Contract.term.group",
-                        Min = 0,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Group = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Group",                                                                                             // MakerGen.cs:236
+                        Path= "Contract.term.group",                                                                                        // MakerGen.cs:237
+                        Id = "Contract.term.group",                                                                                         // MakerGen.cs:238
+                        Min = 0,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 119. Contract.signer
-        public partial class Type_Signer : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Signer : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 120. Contract.signer.type
-            public ElementDefinitionInfo Element_Type;
+            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:217
             // 121. Contract.signer.party
-            public ElementDefinitionInfo Element_Party;
+            public ElementDefinitionInfo Element_Party;                                                                                     // MakerGen.cs:217
             // 122. Contract.signer.signature
-            public ElementDefinitionInfo Element_Signature;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "Contract.signer",
-                    ElementId = "Contract.signer"
-                });
-                Element_Type.Write(sDef);
-                Element_Party.Write(sDef);
-                Element_Signature.Write(sDef);
-            }
-            
-            public Type_Signer()
-            {
-                {
+            public ElementDefinitionInfo Element_Signature;                                                                                 // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "Contract.signer",                                                                                               // MakerGen.cs:393
+                    ElementId = "Contract.signer"                                                                                           // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:221
+                Element_Party.Write(sDef);                                                                                                  // MakerGen.cs:221
+                Element_Signature.Write(sDef);                                                                                              // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Signer()                                                                                                            // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 120. Contract.signer.type
-                    this.Element_Type = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Type",
-                        Path= "Contract.signer.type",
-                        Id = "Contract.signer.type",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Coding
-                            {
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Type",                                                                                              // MakerGen.cs:236
+                        Path= "Contract.signer.type",                                                                                       // MakerGen.cs:237
+                        Id = "Contract.signer.type",                                                                                        // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Coding                                                                   // MakerGen.cs:316
+                            {                                                                                                               // MakerGen.cs:317
+                            }                                                                                                               // MakerGen.cs:320
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 121. Contract.signer.party
-                    this.Element_Party = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Party",
-                        Path= "Contract.signer.party",
-                        Id = "Contract.signer.party",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Organization",
-                                    "http://hl7.org/fhir/StructureDefinition/Patient",
-                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                                    "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
-                                }
-                            }
-                        }
-                    };
-                }
-                {
+                    this.Element_Party = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Party",                                                                                             // MakerGen.cs:236
+                        Path= "Contract.signer.party",                                                                                      // MakerGen.cs:237
+                        Id = "Contract.signer.party",                                                                                       // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Organization",                                                 // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/Patient",                                                      // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                 // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                             // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/RelatedPerson"                                                 // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+                {                                                                                                                           // MakerGen.cs:232
                     // 122. Contract.signer.signature
-                    this.Element_Signature = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Signature",
-                        Path= "Contract.signer.signature",
-                        Id = "Contract.signer.signature",
-                        Min = 1,
-                        Max = -1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Signature
-                            {
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Signature = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Signature",                                                                                         // MakerGen.cs:236
+                        Path= "Contract.signer.signature",                                                                                  // MakerGen.cs:237
+                        Id = "Contract.signer.signature",                                                                                   // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = -1,                                                                                                           // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Signature                                                                // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            }                                                                                                               // MakerGen.cs:358
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 123. Contract.friendly
-        public partial class Type_Friendly : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Friendly : FhirKhit.Maker.Common.Complex.ComplexBase                                                      // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 124. Contract.friendly.content[x]
-            public ElementDefinitionInfo Element_Content;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "Contract.friendly",
-                    ElementId = "Contract.friendly"
-                });
-                Element_Content.Write(sDef);
-            }
-            
-            public Type_Friendly()
-            {
-                {
+            public ElementDefinitionInfo Element_Content;                                                                                   // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "Contract.friendly",                                                                                             // MakerGen.cs:393
+                    ElementId = "Contract.friendly"                                                                                         // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Content.Write(sDef);                                                                                                // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Friendly()                                                                                                          // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 124. Contract.friendly.content[x]
-                    this.Element_Content = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Content",
-                        Path= "Contract.friendly.content[x]",
-                        Id = "Contract.friendly.content[x]",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Attachment
-                            {
-                            },
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Composition",
-                                    "http://hl7.org/fhir/StructureDefinition/DocumentReference",
-                                    "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse"
-                                }
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Content = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Content",                                                                                           // MakerGen.cs:236
+                        Path= "Contract.friendly.content[x]",                                                                               // MakerGen.cs:237
+                        Id = "Contract.friendly.content[x]",                                                                                // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Attachment                                                               // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            },                                                                                                              // MakerGen.cs:358
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Composition",                                                  // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/DocumentReference",                                            // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse"                                         // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 125. Contract.legal
-        public partial class Type_Legal : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Legal : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 126. Contract.legal.content[x]
-            public ElementDefinitionInfo Element_Content;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "Contract.legal",
-                    ElementId = "Contract.legal"
-                });
-                Element_Content.Write(sDef);
-            }
-            
-            public Type_Legal()
-            {
-                {
+            public ElementDefinitionInfo Element_Content;                                                                                   // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "Contract.legal",                                                                                                // MakerGen.cs:393
+                    ElementId = "Contract.legal"                                                                                            // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Content.Write(sDef);                                                                                                // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Legal()                                                                                                             // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 126. Contract.legal.content[x]
-                    this.Element_Content = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Content",
-                        Path= "Contract.legal.content[x]",
-                        Id = "Contract.legal.content[x]",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Attachment
-                            {
-                            },
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/Composition",
-                                    "http://hl7.org/fhir/StructureDefinition/DocumentReference",
-                                    "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse"
-                                }
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Content = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Content",                                                                                           // MakerGen.cs:236
+                        Path= "Contract.legal.content[x]",                                                                                  // MakerGen.cs:237
+                        Id = "Contract.legal.content[x]",                                                                                   // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Attachment                                                               // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            },                                                                                                              // MakerGen.cs:358
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Composition",                                                  // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/DocumentReference",                                            // MakerGen.cs:347
+                                    "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse"                                         // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 127. Contract.rule
-        public partial class Type_Rule : FhirKhit.Maker.Common.Complex.ComplexBase
-        {
+        public partial class Type_Rule : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:381
+        {                                                                                                                                   // MakerGen.cs:382
             // 128. Contract.rule.content[x]
-            public ElementDefinitionInfo Element_Content;
-            
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-            {
-                base.Write(sDef);
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-                {
-                    Path = "Contract.rule",
-                    ElementId = "Contract.rule"
-                });
-                Element_Content.Write(sDef);
-            }
-            
-            public Type_Rule()
-            {
-                {
+            public ElementDefinitionInfo Element_Content;                                                                                   // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:388
+            {                                                                                                                               // MakerGen.cs:389
+                base.Write(sDef);                                                                                                           // MakerGen.cs:390
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:391
+                {                                                                                                                           // MakerGen.cs:392
+                    Path = "Contract.rule",                                                                                                 // MakerGen.cs:393
+                    ElementId = "Contract.rule"                                                                                             // MakerGen.cs:394
+                });                                                                                                                         // MakerGen.cs:395
+                Element_Content.Write(sDef);                                                                                                // MakerGen.cs:221
+            }                                                                                                                               // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+            public Type_Rule()                                                                                                              // MakerGen.cs:400
+            {                                                                                                                               // MakerGen.cs:401
+                {                                                                                                                           // MakerGen.cs:232
                     // 128. Contract.rule.content[x]
-                    this.Element_Content = new ElementDefinitionInfo
-                    {
-                        Name = "Element_Content",
-                        Path= "Contract.rule.content[x]",
-                        Id = "Contract.rule.content[x]",
-                        Min = 1,
-                        Max = 1,
-                        Types = new BaseType[]
-                        {
-                            new FhirKhit.Maker.Common.Complex.Type_Attachment
-                            {
-                            },
-                            new FhirKhit.Maker.Common.Complex.Type_Reference
-                            {
-                                TargetProfile = new String[]
-                                {
-                                    "http://hl7.org/fhir/StructureDefinition/DocumentReference"
-                                }
-                            }
-                        }
-                    };
-                }
-            }
-        }
+                    this.Element_Content = new ElementDefinitionInfo                                                                        // MakerGen.cs:234
+                    {                                                                                                                       // MakerGen.cs:235
+                        Name = "Element_Content",                                                                                           // MakerGen.cs:236
+                        Path= "Contract.rule.content[x]",                                                                                   // MakerGen.cs:237
+                        Id = "Contract.rule.content[x]",                                                                                    // MakerGen.cs:238
+                        Min = 1,                                                                                                            // MakerGen.cs:239
+                        Max = 1,                                                                                                            // MakerGen.cs:240
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:242
+                            new FhirKhit.Maker.Common.Complex.Type_Attachment                                                               // MakerGen.cs:356
+                            {                                                                                                               // MakerGen.cs:357
+                            },                                                                                                              // MakerGen.cs:358
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:344
+                            {                                                                                                               // MakerGen.cs:345
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:347
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/DocumentReference"                                             // MakerGen.cs:347
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:348
+                        }                                                                                                                   // MakerGen.cs:244
+                    };                                                                                                                      // MakerGen.cs:245
+                }                                                                                                                           // MakerGen.cs:246
+            }                                                                                                                               // MakerGen.cs:403
+        }                                                                                                                                   // MakerGen.cs:405
         // 1. Contract.identifier
-        public ElementDefinitionInfo Element_Identifier;
+        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:217
         // 2. Contract.url
-        public ElementDefinitionInfo Element_Url;
+        public ElementDefinitionInfo Element_Url;                                                                                           // MakerGen.cs:217
         // 3. Contract.version
-        public ElementDefinitionInfo Element_Version;
+        public ElementDefinitionInfo Element_Version;                                                                                       // MakerGen.cs:217
         // 4. Contract.status
-        public ElementDefinitionInfo Element_Status;
+        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:217
         // 5. Contract.legalState
-        public ElementDefinitionInfo Element_LegalState;
+        public ElementDefinitionInfo Element_LegalState;                                                                                    // MakerGen.cs:217
         // 6. Contract.instantiatesCanonical
-        public ElementDefinitionInfo Element_InstantiatesCanonical;
+        public ElementDefinitionInfo Element_InstantiatesCanonical;                                                                         // MakerGen.cs:217
         // 7. Contract.instantiatesUri
-        public ElementDefinitionInfo Element_InstantiatesUri;
+        public ElementDefinitionInfo Element_InstantiatesUri;                                                                               // MakerGen.cs:217
         // 8. Contract.contentDerivative
-        public ElementDefinitionInfo Element_ContentDerivative;
+        public ElementDefinitionInfo Element_ContentDerivative;                                                                             // MakerGen.cs:217
         // 9. Contract.issued
-        public ElementDefinitionInfo Element_Issued;
+        public ElementDefinitionInfo Element_Issued;                                                                                        // MakerGen.cs:217
         // 10. Contract.applies
-        public ElementDefinitionInfo Element_Applies;
+        public ElementDefinitionInfo Element_Applies;                                                                                       // MakerGen.cs:217
         // 11. Contract.expirationType
-        public ElementDefinitionInfo Element_ExpirationType;
+        public ElementDefinitionInfo Element_ExpirationType;                                                                                // MakerGen.cs:217
         // 12. Contract.subject
-        public ElementDefinitionInfo Element_Subject;
+        public ElementDefinitionInfo Element_Subject;                                                                                       // MakerGen.cs:217
         // 13. Contract.authority
-        public ElementDefinitionInfo Element_Authority;
+        public ElementDefinitionInfo Element_Authority;                                                                                     // MakerGen.cs:217
         // 14. Contract.domain
-        public ElementDefinitionInfo Element_Domain;
+        public ElementDefinitionInfo Element_Domain;                                                                                        // MakerGen.cs:217
         // 15. Contract.site
-        public ElementDefinitionInfo Element_Site;
+        public ElementDefinitionInfo Element_Site;                                                                                          // MakerGen.cs:217
         // 16. Contract.name
-        public ElementDefinitionInfo Element_Name;
+        public ElementDefinitionInfo Element_Name;                                                                                          // MakerGen.cs:217
         // 17. Contract.title
-        public ElementDefinitionInfo Element_Title;
+        public ElementDefinitionInfo Element_Title;                                                                                         // MakerGen.cs:217
         // 18. Contract.subtitle
-        public ElementDefinitionInfo Element_Subtitle;
+        public ElementDefinitionInfo Element_Subtitle;                                                                                      // MakerGen.cs:217
         // 19. Contract.alias
-        public ElementDefinitionInfo Element_Alias;
+        public ElementDefinitionInfo Element_Alias;                                                                                         // MakerGen.cs:217
         // 20. Contract.author
-        public ElementDefinitionInfo Element_Author;
+        public ElementDefinitionInfo Element_Author;                                                                                        // MakerGen.cs:217
         // 21. Contract.scope
-        public ElementDefinitionInfo Element_Scope;
+        public ElementDefinitionInfo Element_Scope;                                                                                         // MakerGen.cs:217
         // 22. Contract.topic[x]
-        public ElementDefinitionInfo Element_Topic;
+        public ElementDefinitionInfo Element_Topic;                                                                                         // MakerGen.cs:217
         // 23. Contract.type
-        public ElementDefinitionInfo Element_Type;
+        public ElementDefinitionInfo Element_Type;                                                                                          // MakerGen.cs:217
         // 24. Contract.subType
-        public ElementDefinitionInfo Element_SubType;
+        public ElementDefinitionInfo Element_SubType;                                                                                       // MakerGen.cs:217
         // 25. Contract.contentDefinition
-        public ElementDefinitionInfo Element_ContentDefinition;
+        public ElementDefinitionInfo Element_ContentDefinition;                                                                             // MakerGen.cs:217
         // 32. Contract.term
-        public ElementDefinitionInfo Element_Term;
+        public ElementDefinitionInfo Element_Term;                                                                                          // MakerGen.cs:217
         // 117. Contract.supportingInfo
-        public ElementDefinitionInfo Element_SupportingInfo;
+        public ElementDefinitionInfo Element_SupportingInfo;                                                                                // MakerGen.cs:217
         // 118. Contract.relevantHistory
-        public ElementDefinitionInfo Element_RelevantHistory;
+        public ElementDefinitionInfo Element_RelevantHistory;                                                                               // MakerGen.cs:217
         // 119. Contract.signer
-        public ElementDefinitionInfo Element_Signer;
+        public ElementDefinitionInfo Element_Signer;                                                                                        // MakerGen.cs:217
         // 123. Contract.friendly
-        public ElementDefinitionInfo Element_Friendly;
+        public ElementDefinitionInfo Element_Friendly;                                                                                      // MakerGen.cs:217
         // 125. Contract.legal
-        public ElementDefinitionInfo Element_Legal;
+        public ElementDefinitionInfo Element_Legal;                                                                                         // MakerGen.cs:217
         // 127. Contract.rule
-        public ElementDefinitionInfo Element_Rule;
+        public ElementDefinitionInfo Element_Rule;                                                                                          // MakerGen.cs:217
         // 129. Contract.legallyBinding[x]
-        public ElementDefinitionInfo Element_LegallyBinding;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "Contract",
-                ElementId = "Contract"
-            });
-            Element_Identifier.Write(sDef);
-            Element_Url.Write(sDef);
-            Element_Version.Write(sDef);
-            Element_Status.Write(sDef);
-            Element_LegalState.Write(sDef);
-            Element_InstantiatesCanonical.Write(sDef);
-            Element_InstantiatesUri.Write(sDef);
-            Element_ContentDerivative.Write(sDef);
-            Element_Issued.Write(sDef);
-            Element_Applies.Write(sDef);
-            Element_ExpirationType.Write(sDef);
-            Element_Subject.Write(sDef);
-            Element_Authority.Write(sDef);
-            Element_Domain.Write(sDef);
-            Element_Site.Write(sDef);
-            Element_Name.Write(sDef);
-            Element_Title.Write(sDef);
-            Element_Subtitle.Write(sDef);
-            Element_Alias.Write(sDef);
-            Element_Author.Write(sDef);
-            Element_Scope.Write(sDef);
-            Element_Topic.Write(sDef);
-            Element_Type.Write(sDef);
-            Element_SubType.Write(sDef);
-            Element_ContentDefinition.Write(sDef);
-            Element_Term.Write(sDef);
-            Element_SupportingInfo.Write(sDef);
-            Element_RelevantHistory.Write(sDef);
-            Element_Signer.Write(sDef);
-            Element_Friendly.Write(sDef);
-            Element_Legal.Write(sDef);
-            Element_Rule.Write(sDef);
-            Element_LegallyBinding.Write(sDef);
-        }
-        
-        public Resource_Contract()
-        {
-            {
+        public ElementDefinitionInfo Element_LegallyBinding;                                                                                // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "Contract",                                                                                                          // MakerGen.cs:393
+                ElementId = "Contract"                                                                                                      // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_Url.Write(sDef);                                                                                                        // MakerGen.cs:221
+            Element_Version.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_LegalState.Write(sDef);                                                                                                 // MakerGen.cs:221
+            Element_InstantiatesCanonical.Write(sDef);                                                                                      // MakerGen.cs:221
+            Element_InstantiatesUri.Write(sDef);                                                                                            // MakerGen.cs:221
+            Element_ContentDerivative.Write(sDef);                                                                                          // MakerGen.cs:221
+            Element_Issued.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Applies.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_ExpirationType.Write(sDef);                                                                                             // MakerGen.cs:221
+            Element_Subject.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_Authority.Write(sDef);                                                                                                  // MakerGen.cs:221
+            Element_Domain.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Site.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Name.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_Title.Write(sDef);                                                                                                      // MakerGen.cs:221
+            Element_Subtitle.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_Alias.Write(sDef);                                                                                                      // MakerGen.cs:221
+            Element_Author.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Scope.Write(sDef);                                                                                                      // MakerGen.cs:221
+            Element_Topic.Write(sDef);                                                                                                      // MakerGen.cs:221
+            Element_Type.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_SubType.Write(sDef);                                                                                                    // MakerGen.cs:221
+            Element_ContentDefinition.Write(sDef);                                                                                          // MakerGen.cs:221
+            Element_Term.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_SupportingInfo.Write(sDef);                                                                                             // MakerGen.cs:221
+            Element_RelevantHistory.Write(sDef);                                                                                            // MakerGen.cs:221
+            Element_Signer.Write(sDef);                                                                                                     // MakerGen.cs:221
+            Element_Friendly.Write(sDef);                                                                                                   // MakerGen.cs:221
+            Element_Legal.Write(sDef);                                                                                                      // MakerGen.cs:221
+            Element_Rule.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_LegallyBinding.Write(sDef);                                                                                             // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Resource_Contract()                                                                                                          // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. Contract.identifier
-                this.Element_Identifier = new ElementDefinitionInfo
-                {
-                    Name = "Element_Identifier",
-                    Path= "Contract.identifier",
-                    Id = "Contract.identifier",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:236
+                    Path= "Contract.identifier",                                                                                            // MakerGen.cs:237
+                    Id = "Contract.identifier",                                                                                             // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. Contract.url
-                this.Element_Url = new ElementDefinitionInfo
-                {
-                    Name = "Element_Url",
-                    Path= "Contract.url",
-                    Id = "Contract.url",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Url = new ElementDefinitionInfo                                                                                // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Url",                                                                                                   // MakerGen.cs:236
+                    Path= "Contract.url",                                                                                                   // MakerGen.cs:237
+                    Id = "Contract.url",                                                                                                    // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                                   // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 3. Contract.version
-                this.Element_Version = new ElementDefinitionInfo
-                {
-                    Name = "Element_Version",
-                    Path= "Contract.version",
-                    Id = "Contract.version",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Version = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Version",                                                                                               // MakerGen.cs:236
+                    Path= "Contract.version",                                                                                               // MakerGen.cs:237
+                    Id = "Contract.version",                                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 4. Contract.status
-                this.Element_Status = new ElementDefinitionInfo
-                {
-                    Name = "Element_Status",
-                    Path= "Contract.status",
-                    Id = "Contract.status",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Status",                                                                                                // MakerGen.cs:236
+                    Path= "Contract.status",                                                                                                // MakerGen.cs:237
+                    Id = "Contract.status",                                                                                                 // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 5. Contract.legalState
-                this.Element_LegalState = new ElementDefinitionInfo
-                {
-                    Name = "Element_LegalState",
-                    Path= "Contract.legalState",
-                    Id = "Contract.legalState",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_LegalState = new ElementDefinitionInfo                                                                         // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_LegalState",                                                                                            // MakerGen.cs:236
+                    Path= "Contract.legalState",                                                                                            // MakerGen.cs:237
+                    Id = "Contract.legalState",                                                                                             // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 6. Contract.instantiatesCanonical
-                this.Element_InstantiatesCanonical = new ElementDefinitionInfo
-                {
-                    Name = "Element_InstantiatesCanonical",
-                    Path= "Contract.instantiatesCanonical",
-                    Id = "Contract.instantiatesCanonical",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Contract"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_InstantiatesCanonical = new ElementDefinitionInfo                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_InstantiatesCanonical",                                                                                 // MakerGen.cs:236
+                    Path= "Contract.instantiatesCanonical",                                                                                 // MakerGen.cs:237
+                    Id = "Contract.instantiatesCanonical",                                                                                  // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Contract"                                                          // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 7. Contract.instantiatesUri
-                this.Element_InstantiatesUri = new ElementDefinitionInfo
-                {
-                    Name = "Element_InstantiatesUri",
-                    Path= "Contract.instantiatesUri",
-                    Id = "Contract.instantiatesUri",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_InstantiatesUri = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_InstantiatesUri",                                                                                       // MakerGen.cs:236
+                    Path= "Contract.instantiatesUri",                                                                                       // MakerGen.cs:237
+                    Id = "Contract.instantiatesUri",                                                                                        // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                                   // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 8. Contract.contentDerivative
-                this.Element_ContentDerivative = new ElementDefinitionInfo
-                {
-                    Name = "Element_ContentDerivative",
-                    Path= "Contract.contentDerivative",
-                    Id = "Contract.contentDerivative",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ContentDerivative = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ContentDerivative",                                                                                     // MakerGen.cs:236
+                    Path= "Contract.contentDerivative",                                                                                     // MakerGen.cs:237
+                    Id = "Contract.contentDerivative",                                                                                      // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 9. Contract.issued
-                this.Element_Issued = new ElementDefinitionInfo
-                {
-                    Name = "Element_Issued",
-                    Path= "Contract.issued",
-                    Id = "Contract.issued",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Issued = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Issued",                                                                                                // MakerGen.cs:236
+                    Path= "Contract.issued",                                                                                                // MakerGen.cs:237
+                    Id = "Contract.issued",                                                                                                 // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 10. Contract.applies
-                this.Element_Applies = new ElementDefinitionInfo
-                {
-                    Name = "Element_Applies",
-                    Path= "Contract.applies",
-                    Id = "Contract.applies",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Period
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Applies = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Applies",                                                                                               // MakerGen.cs:236
+                    Path= "Contract.applies",                                                                                               // MakerGen.cs:237
+                    Id = "Contract.applies",                                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Period                                                                       // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 11. Contract.expirationType
-                this.Element_ExpirationType = new ElementDefinitionInfo
-                {
-                    Name = "Element_ExpirationType",
-                    Path= "Contract.expirationType",
-                    Id = "Contract.expirationType",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ExpirationType = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ExpirationType",                                                                                        // MakerGen.cs:236
+                    Path= "Contract.expirationType",                                                                                        // MakerGen.cs:237
+                    Id = "Contract.expirationType",                                                                                         // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 12. Contract.subject
-                this.Element_Subject = new ElementDefinitionInfo
-                {
-                    Name = "Element_Subject",
-                    Path= "Contract.subject",
-                    Id = "Contract.subject",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Resource"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Subject = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Subject",                                                                                               // MakerGen.cs:236
+                    Path= "Contract.subject",                                                                                               // MakerGen.cs:237
+                    Id = "Contract.subject",                                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Resource"                                                          // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 13. Contract.authority
-                this.Element_Authority = new ElementDefinitionInfo
-                {
-                    Name = "Element_Authority",
-                    Path= "Contract.authority",
-                    Id = "Contract.authority",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Organization"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Authority = new ElementDefinitionInfo                                                                          // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Authority",                                                                                             // MakerGen.cs:236
+                    Path= "Contract.authority",                                                                                             // MakerGen.cs:237
+                    Id = "Contract.authority",                                                                                              // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 14. Contract.domain
-                this.Element_Domain = new ElementDefinitionInfo
-                {
-                    Name = "Element_Domain",
-                    Path= "Contract.domain",
-                    Id = "Contract.domain",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Location"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Domain = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Domain",                                                                                                // MakerGen.cs:236
+                    Path= "Contract.domain",                                                                                                // MakerGen.cs:237
+                    Id = "Contract.domain",                                                                                                 // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Location"                                                          // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 15. Contract.site
-                this.Element_Site = new ElementDefinitionInfo
-                {
-                    Name = "Element_Site",
-                    Path= "Contract.site",
-                    Id = "Contract.site",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Location"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Site = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Site",                                                                                                  // MakerGen.cs:236
+                    Path= "Contract.site",                                                                                                  // MakerGen.cs:237
+                    Id = "Contract.site",                                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Location"                                                          // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 16. Contract.name
-                this.Element_Name = new ElementDefinitionInfo
-                {
-                    Name = "Element_Name",
-                    Path= "Contract.name",
-                    Id = "Contract.name",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Name = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Name",                                                                                                  // MakerGen.cs:236
+                    Path= "Contract.name",                                                                                                  // MakerGen.cs:237
+                    Id = "Contract.name",                                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 17. Contract.title
-                this.Element_Title = new ElementDefinitionInfo
-                {
-                    Name = "Element_Title",
-                    Path= "Contract.title",
-                    Id = "Contract.title",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Title = new ElementDefinitionInfo                                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Title",                                                                                                 // MakerGen.cs:236
+                    Path= "Contract.title",                                                                                                 // MakerGen.cs:237
+                    Id = "Contract.title",                                                                                                  // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 18. Contract.subtitle
-                this.Element_Subtitle = new ElementDefinitionInfo
-                {
-                    Name = "Element_Subtitle",
-                    Path= "Contract.subtitle",
-                    Id = "Contract.subtitle",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Subtitle = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Subtitle",                                                                                              // MakerGen.cs:236
+                    Path= "Contract.subtitle",                                                                                              // MakerGen.cs:237
+                    Id = "Contract.subtitle",                                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 19. Contract.alias
-                this.Element_Alias = new ElementDefinitionInfo
-                {
-                    Name = "Element_Alias",
-                    Path= "Contract.alias",
-                    Id = "Contract.alias",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Alias = new ElementDefinitionInfo                                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Alias",                                                                                                 // MakerGen.cs:236
+                    Path= "Contract.alias",                                                                                                 // MakerGen.cs:237
+                    Id = "Contract.alias",                                                                                                  // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 20. Contract.author
-                this.Element_Author = new ElementDefinitionInfo
-                {
-                    Name = "Element_Author",
-                    Path= "Contract.author",
-                    Id = "Contract.author",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Patient",
-                                "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                                "http://hl7.org/fhir/StructureDefinition/Organization"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Author = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Author",                                                                                                // MakerGen.cs:236
+                    Path= "Contract.author",                                                                                                // MakerGen.cs:237
+                    Id = "Contract.author",                                                                                                 // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Patient",                                                          // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                                 // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 21. Contract.scope
-                this.Element_Scope = new ElementDefinitionInfo
-                {
-                    Name = "Element_Scope",
-                    Path= "Contract.scope",
-                    Id = "Contract.scope",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Scope = new ElementDefinitionInfo                                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Scope",                                                                                                 // MakerGen.cs:236
+                    Path= "Contract.scope",                                                                                                 // MakerGen.cs:237
+                    Id = "Contract.scope",                                                                                                  // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 22. Contract.topic[x]
-                this.Element_Topic = new ElementDefinitionInfo
-                {
-                    Name = "Element_Topic",
-                    Path= "Contract.topic[x]",
-                    Id = "Contract.topic[x]",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        },
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Resource"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Topic = new ElementDefinitionInfo                                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Topic",                                                                                                 // MakerGen.cs:236
+                    Path= "Contract.topic[x]",                                                                                              // MakerGen.cs:237
+                    Id = "Contract.topic[x]",                                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        },                                                                                                                  // MakerGen.cs:320
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Resource"                                                          // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 23. Contract.type
-                this.Element_Type = new ElementDefinitionInfo
-                {
-                    Name = "Element_Type",
-                    Path= "Contract.type",
-                    Id = "Contract.type",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Type = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Type",                                                                                                  // MakerGen.cs:236
+                    Path= "Contract.type",                                                                                                  // MakerGen.cs:237
+                    Id = "Contract.type",                                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 24. Contract.subType
-                this.Element_SubType = new ElementDefinitionInfo
-                {
-                    Name = "Element_SubType",
-                    Path= "Contract.subType",
-                    Id = "Contract.subType",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_SubType = new ElementDefinitionInfo                                                                            // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_SubType",                                                                                               // MakerGen.cs:236
+                    Path= "Contract.subType",                                                                                               // MakerGen.cs:237
+                    Id = "Contract.subType",                                                                                                // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:316
+                        {                                                                                                                   // MakerGen.cs:317
+                        }                                                                                                                   // MakerGen.cs:320
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 25. Contract.contentDefinition
-                this.Element_ContentDefinition = new ElementDefinitionInfo
-                {
-                    Name = "Element_ContentDefinition",
-                    Path= "Contract.contentDefinition",
-                    Id = "Contract.contentDefinition",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new Type_ContentDefinition
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ContentDefinition = new ElementDefinitionInfo                                                                  // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ContentDefinition",                                                                                     // MakerGen.cs:236
+                    Path= "Contract.contentDefinition",                                                                                     // MakerGen.cs:237
+                    Id = "Contract.contentDefinition",                                                                                      // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_ContentDefinition                                                                                          // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 32. Contract.term
-                this.Element_Term = new ElementDefinitionInfo
-                {
-                    Name = "Element_Term",
-                    Path= "Contract.term",
-                    Id = "Contract.term",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Term
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Term = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Term",                                                                                                  // MakerGen.cs:236
+                    Path= "Contract.term",                                                                                                  // MakerGen.cs:237
+                    Id = "Contract.term",                                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Term                                                                                                       // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 117. Contract.supportingInfo
-                this.Element_SupportingInfo = new ElementDefinitionInfo
-                {
-                    Name = "Element_SupportingInfo",
-                    Path= "Contract.supportingInfo",
-                    Id = "Contract.supportingInfo",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Resource"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_SupportingInfo = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_SupportingInfo",                                                                                        // MakerGen.cs:236
+                    Path= "Contract.supportingInfo",                                                                                        // MakerGen.cs:237
+                    Id = "Contract.supportingInfo",                                                                                         // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Resource"                                                          // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 118. Contract.relevantHistory
-                this.Element_RelevantHistory = new ElementDefinitionInfo
-                {
-                    Name = "Element_RelevantHistory",
-                    Path= "Contract.relevantHistory",
-                    Id = "Contract.relevantHistory",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Provenance"
-                            }
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_RelevantHistory = new ElementDefinitionInfo                                                                    // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_RelevantHistory",                                                                                       // MakerGen.cs:236
+                    Path= "Contract.relevantHistory",                                                                                       // MakerGen.cs:237
+                    Id = "Contract.relevantHistory",                                                                                        // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Provenance"                                                        // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 119. Contract.signer
-                this.Element_Signer = new ElementDefinitionInfo
-                {
-                    Name = "Element_Signer",
-                    Path= "Contract.signer",
-                    Id = "Contract.signer",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Signer
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Signer = new ElementDefinitionInfo                                                                             // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Signer",                                                                                                // MakerGen.cs:236
+                    Path= "Contract.signer",                                                                                                // MakerGen.cs:237
+                    Id = "Contract.signer",                                                                                                 // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Signer                                                                                                     // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 123. Contract.friendly
-                this.Element_Friendly = new ElementDefinitionInfo
-                {
-                    Name = "Element_Friendly",
-                    Path= "Contract.friendly",
-                    Id = "Contract.friendly",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Friendly
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Friendly = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Friendly",                                                                                              // MakerGen.cs:236
+                    Path= "Contract.friendly",                                                                                              // MakerGen.cs:237
+                    Id = "Contract.friendly",                                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Friendly                                                                                                   // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 125. Contract.legal
-                this.Element_Legal = new ElementDefinitionInfo
-                {
-                    Name = "Element_Legal",
-                    Path= "Contract.legal",
-                    Id = "Contract.legal",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Legal
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Legal = new ElementDefinitionInfo                                                                              // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Legal",                                                                                                 // MakerGen.cs:236
+                    Path= "Contract.legal",                                                                                                 // MakerGen.cs:237
+                    Id = "Contract.legal",                                                                                                  // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Legal                                                                                                      // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 127. Contract.rule
-                this.Element_Rule = new ElementDefinitionInfo
-                {
-                    Name = "Element_Rule",
-                    Path= "Contract.rule",
-                    Id = "Contract.rule",
-                    Min = 0,
-                    Max = -1,
-                    Types = new BaseType[]
-                    {
-                        new Type_Rule
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Rule = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Rule",                                                                                                  // MakerGen.cs:236
+                    Path= "Contract.rule",                                                                                                  // MakerGen.cs:237
+                    Id = "Contract.rule",                                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = -1,                                                                                                               // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new Type_Rule                                                                                                       // MakerGen.cs:260
+                        {                                                                                                                   // MakerGen.cs:261
+                        }                                                                                                                   // MakerGen.cs:262
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 129. Contract.legallyBinding[x]
-                this.Element_LegallyBinding = new ElementDefinitionInfo
-                {
-                    Name = "Element_LegallyBinding",
-                    Path= "Contract.legallyBinding[x]",
-                    Id = "Contract.legallyBinding[x]",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Attachment
-                        {
-                        },
-                        new FhirKhit.Maker.Common.Complex.Type_Reference
-                        {
-                            TargetProfile = new String[]
-                            {
-                                "http://hl7.org/fhir/StructureDefinition/Composition",
-                                "http://hl7.org/fhir/StructureDefinition/DocumentReference",
-                                "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",
-                                "http://hl7.org/fhir/StructureDefinition/Contract"
-                            }
-                        }
-                    }
-                };
-            }
-            this.Name = "Contract";
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/Contract";
-        }
-    }
-}
+                this.Element_LegallyBinding = new ElementDefinitionInfo                                                                     // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_LegallyBinding",                                                                                        // MakerGen.cs:236
+                    Path= "Contract.legallyBinding[x]",                                                                                     // MakerGen.cs:237
+                    Id = "Contract.legallyBinding[x]",                                                                                      // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Attachment                                                                   // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        },                                                                                                                  // MakerGen.cs:358
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:344
+                        {                                                                                                                   // MakerGen.cs:345
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:347
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Composition",                                                      // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/DocumentReference",                                                // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",                                            // MakerGen.cs:347
+                                "http://hl7.org/fhir/StructureDefinition/Contract"                                                          // MakerGen.cs:347
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:348
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            this.Name = "Contract";                                                                                                         // MakerGen.cs:468
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/Contract";                                                                  // MakerGen.cs:469
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:449

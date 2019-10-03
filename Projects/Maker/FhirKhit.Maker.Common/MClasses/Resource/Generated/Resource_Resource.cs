@@ -1,13 +1,13 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using Hl7.Fhir.Model;
-
-namespace FhirKhit.Maker.Common.Resource
-{
-    #region Json
-    #if NEVER
+using System;                                                                                                                               // MakerGen.cs:432
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:433
+using System.IO;                                                                                                                            // MakerGen.cs:434
+using System.Linq;                                                                                                                          // MakerGen.cs:435
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:436
+                                                                                                                                            // MakerGen.cs:437
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:438
+{                                                                                                                                           // MakerGen.cs:439
+    #region Json                                                                                                                            // MakerGen.cs:440
+    #if NEVER                                                                                                                               // MakerGen.cs:441
     {
       "resourceType": "StructureDefinition",
       "id": "Resource",
@@ -114,108 +114,108 @@ namespace FhirKhit.Maker.Common.Resource
       }
     }
     #endif
-    #endregion
+    #endregion                                                                                                                              // MakerGen.cs:444
     /// <summary>
     /// Fhir resource 'Resource'
     /// </summary>
     // 0. Resource
-    public partial class Resource_Resource : FhirKhit.Maker.Common.Resource.ResourceBase
-    {
+    public partial class Resource_Resource : FhirKhit.Maker.Common.Resource.ResourceBase                                                    // MakerGen.cs:381
+    {                                                                                                                                       // MakerGen.cs:382
         // 1. Resource.id
-        public ElementDefinitionInfo Element_Id;
+        public ElementDefinitionInfo Element_Id;                                                                                            // MakerGen.cs:217
         // 2. Resource.meta
-        public ElementDefinitionInfo Element_Meta;
+        public ElementDefinitionInfo Element_Meta;                                                                                          // MakerGen.cs:217
         // 3. Resource.implicitRules
-        public ElementDefinitionInfo Element_ImplicitRules;
+        public ElementDefinitionInfo Element_ImplicitRules;                                                                                 // MakerGen.cs:217
         // 4. Resource.language
-        public ElementDefinitionInfo Element_Language;
-        
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
-        {
-            base.Write(sDef);
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
-            {
-                Path = "Resource",
-                ElementId = "Resource"
-            });
-            Element_Id.Write(sDef);
-            Element_Meta.Write(sDef);
-            Element_ImplicitRules.Write(sDef);
-            Element_Language.Write(sDef);
-        }
-        
-        public Resource_Resource()
-        {
-            {
+        public ElementDefinitionInfo Element_Language;                                                                                      // MakerGen.cs:217
+                                                                                                                                            // MakerGen.cs:387
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:388
+        {                                                                                                                                   // MakerGen.cs:389
+            base.Write(sDef);                                                                                                               // MakerGen.cs:390
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:391
+            {                                                                                                                               // MakerGen.cs:392
+                Path = "Resource",                                                                                                          // MakerGen.cs:393
+                ElementId = "Resource"                                                                                                      // MakerGen.cs:394
+            });                                                                                                                             // MakerGen.cs:395
+            Element_Id.Write(sDef);                                                                                                         // MakerGen.cs:221
+            Element_Meta.Write(sDef);                                                                                                       // MakerGen.cs:221
+            Element_ImplicitRules.Write(sDef);                                                                                              // MakerGen.cs:221
+            Element_Language.Write(sDef);                                                                                                   // MakerGen.cs:221
+        }                                                                                                                                   // MakerGen.cs:397
+                                                                                                                                            // MakerGen.cs:399
+        public Resource_Resource()                                                                                                          // MakerGen.cs:400
+        {                                                                                                                                   // MakerGen.cs:401
+            {                                                                                                                               // MakerGen.cs:232
                 // 1. Resource.id
-                this.Element_Id = new ElementDefinitionInfo
-                {
-                    Name = "Element_Id",
-                    Path= "Resource.id",
-                    Id = "Resource.id",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Id
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Id = new ElementDefinitionInfo                                                                                 // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Id",                                                                                                    // MakerGen.cs:236
+                    Path= "Resource.id",                                                                                                    // MakerGen.cs:237
+                    Id = "Resource.id",                                                                                                     // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Id                                                                    // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 2. Resource.meta
-                this.Element_Meta = new ElementDefinitionInfo
-                {
-                    Name = "Element_Meta",
-                    Path= "Resource.meta",
-                    Id = "Resource.meta",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Complex.Type_Meta
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_Meta = new ElementDefinitionInfo                                                                               // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Meta",                                                                                                  // MakerGen.cs:236
+                    Path= "Resource.meta",                                                                                                  // MakerGen.cs:237
+                    Id = "Resource.meta",                                                                                                   // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Complex.Type_Meta                                                                         // MakerGen.cs:356
+                        {                                                                                                                   // MakerGen.cs:357
+                        }                                                                                                                   // MakerGen.cs:358
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 3. Resource.implicitRules
-                this.Element_ImplicitRules = new ElementDefinitionInfo
-                {
-                    Name = "Element_ImplicitRules",
-                    Path= "Resource.implicitRules",
-                    Id = "Resource.implicitRules",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri
-                        {
-                        }
-                    }
-                };
-            }
-            {
+                this.Element_ImplicitRules = new ElementDefinitionInfo                                                                      // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_ImplicitRules",                                                                                         // MakerGen.cs:236
+                    Path= "Resource.implicitRules",                                                                                         // MakerGen.cs:237
+                    Id = "Resource.implicitRules",                                                                                          // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                                   // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            {                                                                                                                               // MakerGen.cs:232
                 // 4. Resource.language
-                this.Element_Language = new ElementDefinitionInfo
-                {
-                    Name = "Element_Language",
-                    Path= "Resource.language",
-                    Id = "Resource.language",
-                    Min = 0,
-                    Max = 1,
-                    Types = new BaseType[]
-                    {
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
-                        {
-                        }
-                    }
-                };
-            }
-            this.Name = "Resource";
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/Resource";
-        }
-    }
-}
+                this.Element_Language = new ElementDefinitionInfo                                                                           // MakerGen.cs:234
+                {                                                                                                                           // MakerGen.cs:235
+                    Name = "Element_Language",                                                                                              // MakerGen.cs:236
+                    Path= "Resource.language",                                                                                              // MakerGen.cs:237
+                    Id = "Resource.language",                                                                                               // MakerGen.cs:238
+                    Min = 0,                                                                                                                // MakerGen.cs:239
+                    Max = 1,                                                                                                                // MakerGen.cs:240
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:242
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:301
+                        {                                                                                                                   // MakerGen.cs:302
+                        }                                                                                                                   // MakerGen.cs:305
+                    }                                                                                                                       // MakerGen.cs:244
+                };                                                                                                                          // MakerGen.cs:245
+            }                                                                                                                               // MakerGen.cs:246
+            this.Name = "Resource";                                                                                                         // MakerGen.cs:468
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/Resource";                                                                  // MakerGen.cs:469
+        }                                                                                                                                   // MakerGen.cs:403
+    }                                                                                                                                       // MakerGen.cs:405
+}                                                                                                                                           // MakerGen.cs:449
