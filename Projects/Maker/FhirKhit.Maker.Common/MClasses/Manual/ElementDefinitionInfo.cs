@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hl7.Fhir.Model;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -7,7 +8,7 @@ namespace FhirKhit.Maker.Common
     public class ElementDefinitionInfo
     {
         public String Name { get; set; }
-        public String Path{ get; set; }
+        public String Path { get; set; }
         public String Id { get; set; }
 
         HashSet<BaseType> types = new HashSet<BaseType>();
@@ -16,24 +17,36 @@ namespace FhirKhit.Maker.Common
 
         public BaseType[] Types { get; set; }
 
-        Hl7.Fhir.Model.ElementDefinition constraints = null;
+        List<ElementDefinition> elements = null;
 
-        public void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+        public void Write(StructureDefinition sDef)
         {
-            if (this.constraints == null)
+            if (this.elements == null)
                 return;
-            sDef.Differential.Element.Add(this.constraints);
+            sDef.Differential.Element.AddRange(this.elements);
         }
 
-        Hl7.Fhir.Model.ElementDefinition CreateConstraint()
+        public ElementDefinition AppendElement()
         {
-            if (this.constraints == null)
-                this.constraints = new Hl7.Fhir.Model.ElementDefinition
+            if (this.elements == null)
+                this.elements = new List<ElementDefinition>();
+            ElementDefinition retVal = new ElementDefinition();
+            this.elements.Add(retVal);
+            return retVal;
+        }
+
+        public ElementDefinition CreateConstraint()
+        {
+            if (this.elements == null)
+            {
+                this.elements = new List<ElementDefinition>();
+                this.elements.Add(new ElementDefinition
                 {
                     Path = this.Path,
                     ElementId = this.Id
-                };
-            return this.constraints;
+                });
+            }
+            return this.elements[0];
         }
 
         public void AddType(BaseType type)
@@ -51,7 +64,7 @@ namespace FhirKhit.Maker.Common
         {
             if ((min == this.Min) && (max == this.Max))
                 return this;
-            Hl7.Fhir.Model.ElementDefinition c = CreateConstraint();
+            ElementDefinition c = CreateConstraint();
             c.Min = min;
             if (max == -1)
                 c.Max = "*";
@@ -61,16 +74,16 @@ namespace FhirKhit.Maker.Common
             return this;
         }
 
-        public ElementDefinitionInfo Pattern(Hl7.Fhir.Model.Element value)
+        public ElementDefinitionInfo Pattern(Element value)
         {
-            Hl7.Fhir.Model.ElementDefinition c = CreateConstraint();
+            ElementDefinition c = CreateConstraint();
             c.Pattern = value;
             return this;
         }
 
-        public ElementDefinitionInfo Fixed(Hl7.Fhir.Model.Element value)
+        public ElementDefinitionInfo Fixed(Element value)
         {
-            Hl7.Fhir.Model.ElementDefinition c = CreateConstraint();
+            ElementDefinition c = CreateConstraint();
             c.Fixed = value;
             return this;
         }
