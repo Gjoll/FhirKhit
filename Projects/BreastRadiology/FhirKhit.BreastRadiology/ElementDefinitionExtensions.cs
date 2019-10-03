@@ -7,12 +7,22 @@ namespace FhirKhit.BreastRadiology
 {
     public static class ElementDefinitionExtensions
     {
-        public static ElementDefinition Unused(this ElementDefinition e)
+        public static ElementDefinition ZeroToMany(this ElementDefinition e)
+        {
+            return e.Card(0, "*");
+        }
+
+        public static ElementDefinition OneToMany(this ElementDefinition e)
+        {
+            return e.Card(1, "*");
+        }
+
+        public static ElementDefinition Zero(this ElementDefinition e)
         {
             return e.Card(0, "0");
         }
 
-        public static ElementDefinition CardOneToOne(this ElementDefinition e)
+        public static ElementDefinition Single(this ElementDefinition e)
         {
             return e.Card(1, "1");
         }
@@ -28,6 +38,18 @@ namespace FhirKhit.BreastRadiology
         {
             e.Min = min;
             e.Max = max;
+            return e;
+        }
+
+        public static ElementDefinition Short(this ElementDefinition e, string value)
+        {
+            e.Short = value;
+            return e;
+        }
+
+        public static ElementDefinition Definition(this ElementDefinition e, string value)
+        {
+            e.Definition = new Markdown(value);
             return e;
         }
     }

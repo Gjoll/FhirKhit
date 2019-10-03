@@ -35,13 +35,13 @@ namespace FhirKhit.BreastRadiology
 
             e.Select("code").Pattern = new CodeableConcept(Loinc, "10193-1");
             e.Select("category").Pattern = new CodeableConcept(Loinc, "10193-1");
-            e.Select("specimen").Unused();
-            e.Select("conclusion").CardOneToOne();
-            e.Select("conclusionCode").CardOneToOne();
-            //r.SimpleExtension("name",
-            //    "shortText",
-            //    "definition",
-            //    -1);
+            e.Select("specimen").Zero();
+            e.Select("conclusion").Single();
+            e.Select("conclusionCode").Single();
+            e.SimpleExtension("Recommendations")
+                .Short("Recommendations for future care")
+                .Definition("Recommendations for future care")
+                .ZeroToMany();
 
             e.Write(outputDir);
         }

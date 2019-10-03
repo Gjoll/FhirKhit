@@ -1,8 +1,10 @@
-﻿using FhirKhit.Tools.R4;
+﻿using FhirKhit.Tools;
+using FhirKhit.Tools.R4;
 using Hl7.Fhir.Model;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -10,10 +12,23 @@ namespace FhirKhit.BreastRadiology
 {
     class SDefEditor
     {
-        class ElementIndex
+        public class ElementIndex
         {
             public Int32 Index;
             public ElementDefinition ElementDefinition;
+            public List<ElementDefinition> SliceElements = new List<ElementDefinition>();
+
+            public ElementDefinition AppendSlice(String sliceName)
+            {
+                ElementDefinition retVal = new ElementDefinition
+                {
+                    Path = this.ElementDefinition.Path,
+                    ElementId = $"{this.ElementDefinition.Path}:{sliceName}",
+                    SliceName = sliceName
+                };
+                this.SliceElements.Add(retVal);
+                return retVal;
+            }
         }
 
         static FhirStructureDefinitions Defs
@@ -68,14 +83,14 @@ namespace FhirKhit.BreastRadiology
         /// </summary>
         /// <param name="path"></param>
         /// <returns></returns>
-        public ElementDefinition Select(String path)
+        public ElementIndex Find(String path)
         {
             if (path.StartsWith(this.basePath) == false)
                 path = $"{basePath}{path}";
 
             {
                 if (this.elements.TryGetValue(path, out ElementIndex e) == true)
-                    return e.ElementDefinition;
+                    return e;
             }
             {
                 if (this.baseElements.TryGetValue(path, out ElementIndex e) == true)
@@ -92,10 +107,21 @@ namespace FhirKhit.BreastRadiology
                         ElementDefinition = ed
                     };
                     this.elements.Add(ed.Path, newE);
-                    return ed;
+                    return newE;
                 }
             }
             throw new Exception($"'{path}' not found");
+        }
+
+        /// <summary>
+        /// Select a element definition from the base sdef by its path name and 
+        /// copy it to the differential of the output sdef.
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        public ElementDefinition Select(String path)
+        {
+            return this.Find(path).ElementDefinition;
         }
 
         public void Write(String outputDir)
@@ -108,9 +134,10 @@ namespace FhirKhit.BreastRadiology
             foreach (ElementIndex item in eList)
             {
                 this.sDef.Differential.Element.Add(item.ElementDefinition);
+                this.sDef.Differential.Element.AddRange(item.SliceElements);
             }
 
-            String outputName = $"StructureDefinition_{this.sDef.Name}";
+            String outputName = Path.Combine(outputDir, $"StructureDefinition_{this.sDef.Name}.json");
             this.sDef.SaveJson(outputName);
         }
 
@@ -130,6 +157,56 @@ namespace FhirKhit.BreastRadiology
         {
             this.sDef.Url = value;
             return this;
+        }
+
+
+        /// <summary>
+        /// Add the indicated slice by url.
+        /// </summary>
+        ElementDefinition SliceByUrl(String path,
+            String sliceUrl,
+            String sliceName)
+        {
+            ElementIndex extension = this.Find(path);
+            ElementDefinition extSlice = extension.AppendSlice(sliceName);
+            extSlice.IsModifier = false;
+            extSlice.Type.Add(new ElementDefinition.TypeRefComponent
+            {
+                Code = "Extension",
+                Profile = new String[] { sliceUrl }
+            });
+            return extSlice;
+        }
+
+        /// <summary>
+        /// Configure the extension element to have the corret slicing discriminator. This does not
+        /// add the slice, just the discriminator.
+        /// </summary>
+        void ConfigureExtensionSlice()
+        {
+            ElementDefinition extDef = this.Select("extension");
+            // I assume that if slicing exists, it was added by the code below.
+            // If someone else adds slicing differently than below there will be a problem....
+            if (extDef.Slicing == null)
+            {
+                extDef.Slicing = new ElementDefinition.SlicingComponent
+                {
+                    Ordered = false,
+                    Rules = ElementDefinition.SlicingRules.Open
+                };
+                extDef.Slicing.Discriminator.Add(new ElementDefinition.DiscriminatorComponent
+                {
+                    Type = ElementDefinition.DiscriminatorType.Value,
+                    Path = "url"
+                });
+            }
+        }
+
+        public ElementDefinition SimpleExtension(String name)
+        {
+            String sliceUrl = $"{this.sDef.Url.BaseUriPart()}/{name}-extension";
+            ConfigureExtensionSlice();
+            return SliceByUrl("extension", sliceUrl, name);
         }
     }
 }
