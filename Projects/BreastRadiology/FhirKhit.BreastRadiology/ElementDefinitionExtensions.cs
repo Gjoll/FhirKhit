@@ -47,10 +47,39 @@ namespace FhirKhit.BreastRadiology
             return e;
         }
 
+        public static ElementDefinition Fixed(this ElementDefinition e, Element value)
+        {
+            e.Fixed= value;
+            return e;
+        }
+
+        public static ElementDefinition Pattern(this ElementDefinition e, Element value)
+        {
+            e.Pattern = value;
+            return e;
+        }
+
         public static ElementDefinition Definition(this ElementDefinition e, string value)
         {
             e.Definition = new Markdown(value);
             return e;
         }
+
+        public static ElementDefinition Type(this ElementDefinition e,
+            String code,
+            String[] profiles = null,
+            String[] targetProfiles = null)
+        {
+            ElementDefinition.TypeRefComponent t = new ElementDefinition.TypeRefComponent
+            {
+                Code = code,
+                Profile = profiles,
+                TargetProfile = targetProfiles
+            };
+            e.Type.Add(t);
+            return e;
+        }
+
+
     }
 }
