@@ -39,20 +39,8 @@
     </tr>
   </thead>
   <tbody>
-<tr>
-<td><a href="StructureDefinition-Recommendations.html">Recommendations</a></td>
-<td><a href="http://hl7.org/fhir/StructureDefinition/Extension">Extension</a></td>
-<td>{% capture md_text %}
-Breast Radiology Diagnostic Report recommendations section extension
-{% endcapture %}{{ md_text | markdownify }}</td>
-</tr>
-<tr>
-<td><a href="StructureDefinition-BreastRadiologyReport.html">BreastRadiologyReport</a></td>
-<td><a href="http://hl7.org/fhir/StructureDefinition/DiagnosticReport">DiagnosticReport</a></td>
-<td>{% capture md_text %}
-Breast Radiology Diagnostic Report.<br>This diagnostic report is the base of the Breast Radiology Report,  and contains a summary of the report findings.<br>Detailed information about the results of the exam are contained in the Breast Radiology Observation linked to by the 'result' field.
-{% endcapture %}{{ md_text | markdownify }}</td>
-</tr>
+  //+*ProfileItems
+  //-*ProfileItems
   </tbody>
 </table>
 
@@ -74,6 +62,8 @@ Breast Radiology Diagnostic Report.<br>This diagnostic report is the base of the
     </tr>
   </thead>
   <tbody>
+  //+*BasedOnItems
+  //-*BasedOnItems
   </tbody>
 </table>
 
