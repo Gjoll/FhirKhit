@@ -8,7 +8,8 @@ namespace FhirKhit.BreastRadiology
 {
     public class ProfileMaker
     {
-        const String outputDir = @"\Temp";
+        String outputDir;
+        String resourceDir => Path.Combine(this.outputDir, "resources");
 
         const String Loinc = "http://loinc.org";
         const String DiagSvcSects = "http://terminology.hl7.org/CodeSystem/v2-0074";
@@ -22,6 +23,13 @@ namespace FhirKhit.BreastRadiology
         String CreateUrl(String name)
         {
             return $"http://hl7.org/fhir/us/breast-radiology/StructureDefinition/{name}";
+        }
+
+        public ProfileMaker(String outputDir)
+        {
+            this.outputDir = outputDir;
+            String igPath = Path.Combine(outputDir, "IG.xml");
+
         }
 
         SDefEditor CreateEditor(String name, String baseUrl)
@@ -60,7 +68,7 @@ namespace FhirKhit.BreastRadiology
                 .Type("Reference", null, targets)
                 .Single()
                 ;
-            e.Write(outputDir);
+            e.Write(this.resourceDir);
             return e.SDef.Url;
         }
 
@@ -91,7 +99,7 @@ namespace FhirKhit.BreastRadiology
                 .Definition("Recommendations for future care")
                 .ZeroToMany();
 
-            e.Write(outputDir);
+            e.Write(this.resourceDir);
         }
         public void CreateProfiles()
         {
