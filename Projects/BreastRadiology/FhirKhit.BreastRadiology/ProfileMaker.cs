@@ -21,6 +21,7 @@ namespace FhirKhit.BreastRadiology
         const String Loinc = "http://loinc.org";
         const String DiagSvcSects = "http://terminology.hl7.org/CodeSystem/v2-0074";
 
+        const String ObservationUrl = "http://hl7.org/fhir/StructureDefinition/Observation";
         const String DiagnosticReportUrl = "http://hl7.org/fhir/StructureDefinition/DiagnosticReport";
         const String ExtensionUrl = "http://hl7.org/fhir/StructureDefinition/Extension";
         const String MedicationRequestUrl = "http://hl7.org/fhir/StructureDefinition/MedicationRequest";
@@ -61,6 +62,30 @@ namespace FhirKhit.BreastRadiology
             return retVal;
         }
 
+        String CreatePriorReportsExtension(String brrDiagnosticReportUrl)
+        {
+            SDefEditor e = CreateEditor("PriorReports", ExtensionUrl)
+                .Description("Breast Radiology Prior Diagnostic Report extension")
+                .Kind(StructureDefinition.StructureDefinitionKind.ComplexType)
+                ;
+
+            e.Select("extension").Zero();
+            e.Select("url")
+                .Type("uri")
+                .Fixed(new FhirUri(e.SDef.Url));
+
+            String[] targets = new string[]
+            {
+                brrDiagnosticReportUrl
+            };
+            e.Select("value[x]")
+                .Type("Reference", null, targets)
+                .Single()
+                ;
+            this.AddIGStructureDefinition(e);
+            return e.SDef.Url;
+        }
+
         String CreateRecommendationsExtension()
         {
             SDefEditor e = CreateEditor("Recommendations", ExtensionUrl)
@@ -88,8 +113,6 @@ namespace FhirKhit.BreastRadiology
 
         void CreateBreastRadiologyReport()
         {
-            String recommendationsExtensionUrl = CreateRecommendationsExtension();
-
             SDefEditor e = CreateEditor("BreastRadiologyReport", DiagnosticReportUrl)
                 .Description(
                     "Breast Radiology Diagnostic Report." +
@@ -103,6 +126,9 @@ namespace FhirKhit.BreastRadiology
                 .Kind(StructureDefinition.StructureDefinitionKind.Resource)
                 ;
 
+            String recommendationsExtensionUrl = CreateRecommendationsExtension();
+            String priorReportsExtensionUrl = CreatePriorReportsExtension(e.SDef.Url);
+
             e.Select("code").Pattern = new CodeableConcept(Loinc, "10193-1");
             e.Select("category").Pattern = new CodeableConcept(Loinc, "10193-1");
             e.Select("specimen").Zero();
@@ -112,6 +138,15 @@ namespace FhirKhit.BreastRadiology
                 .Short("Recommendations for future care")
                 .Definition("Recommendations for future care")
                 .ZeroToMany();
+            e.SimpleExtension("PriorReports", priorReportsExtensionUrl)
+                .Short("Recommendations for future care")
+                .Definition("Recommendations for future care")
+                .ZeroToMany();
+
+            e.Select("result")
+                .Single()
+                .Type("Reference", null, new String[] {ObservationUrl})
+                ;
 
             this.AddIGStructureDefinition(e);
         }

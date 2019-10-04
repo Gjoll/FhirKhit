@@ -60,6 +60,9 @@
     "StructureDefinition/Recommendations": {
       "base": "StructureDefinition-Recommendations.html"
     },
+    "StructureDefinition/PriorReports": {
+      "base": "StructureDefinition-PriorReports.html"
+    },
     "StructureDefinition/BreastRadiologyReport": {
       "base": "StructureDefinition-BreastRadiologyReport.html"
     }

@@ -186,6 +186,13 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/PriorReports"
+      },
+      "name" : "PriorReports",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "StructureDefinition/BreastRadiologyReport"
       },
       "name" : "BreastRadiologyReport",
