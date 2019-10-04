@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using FhirKhit.Tools;
+using FhirKhit.Tools.R4;
 using Hl7.Fhir.Model;
+using Hl7.Fhir.Serialization;
 
 namespace FhirKhit.BreastRadiology
 {
@@ -10,6 +13,8 @@ namespace FhirKhit.BreastRadiology
     {
         String outputDir;
         String resourceDir => Path.Combine(this.outputDir, "resources");
+        String IgPath => Path.Combine(outputDir, "IG.json");
+        String ImpGuidePath => Path.Combine(outputDir, "Resources", "ig-new.xml");
 
         const String Loinc = "http://loinc.org";
         const String DiagSvcSects = "http://terminology.hl7.org/CodeSystem/v2-0074";
@@ -20,6 +25,11 @@ namespace FhirKhit.BreastRadiology
         const String ServiceRequestUrl = "http://hl7.org/fhir/StructureDefinition/ServiceRequest";
 
         FhirDateTime date = new FhirDateTime(2019, 11, 1);
+        ImplementationGuide implementationGuide;
+        IGEditor igEditor;
+
+        List<SDefEditor> editors = new List<SDefEditor>();
+
         String CreateUrl(String name)
         {
             return $"http://hl7.org/fhir/us/breast-radiology/StructureDefinition/{name}";
@@ -28,13 +38,11 @@ namespace FhirKhit.BreastRadiology
         public ProfileMaker(String outputDir)
         {
             this.outputDir = outputDir;
-            String igPath = Path.Combine(outputDir, "IG.xml");
-
         }
 
         SDefEditor CreateEditor(String name, String baseUrl)
         {
-            return new SDefEditor(baseUrl)
+            SDefEditor retVal = new SDefEditor(baseUrl, this.resourceDir)
                 .Name(name)
                 .Url(CreateUrl(name))
                 .Status(PublicationStatus.Draft)
@@ -44,7 +52,11 @@ namespace FhirKhit.BreastRadiology
                 .Date(date)
                 .Derivation(StructureDefinition.TypeDerivationRule.Constraint)
                 .Abstract(false)
+                .Type(baseUrl.LastUriPart())
                 ;
+
+            this.editors.Add(retVal);
+            return retVal;
         }
 
         String CreateRecommendationsExtension()
@@ -68,7 +80,7 @@ namespace FhirKhit.BreastRadiology
                 .Type("Reference", null, targets)
                 .Single()
                 ;
-            e.Write(this.resourceDir);
+            this.AddIGStructureDefinition("Recommendations", false);
             return e.SDef.Url;
         }
 
@@ -99,11 +111,56 @@ namespace FhirKhit.BreastRadiology
                 .Definition("Recommendations for future care")
                 .ZeroToMany();
 
-            e.Write(this.resourceDir);
+            this.AddIGStructureDefinition("BreastRadiologyReport", false);
         }
+
+        void AddIGStructureDefinition(String name,
+            bool example)
+        {
+            this.AddIGResource($"StructureDefinition/{name}", name, false);
+            this.igEditor.AddResource($"StructureDefinition/{name}",
+                $"StructureDefinition-{name}.html");
+        }
+
+        void AddIGResource(String path,
+            String name,
+            bool example)
+        {
+            this.implementationGuide.Definition.Resource.Add(new ImplementationGuide.ResourceComponent
+            {
+                Reference = new ResourceReference(path),
+                Name = name,
+                Example = new FhirBoolean(example)
+            });
+        }
+
+        void SaveAll()
+        {
+            foreach (SDefEditor ce in this.editors)
+            {
+                StructureDefinition sDef = ce.SDef;
+                SnapshotCreator.Create(sDef);
+                ce.Write();
+            }
+
+            implementationGuide.SaveXml(this.ImpGuidePath);
+            this.igEditor.Save(this.IgPath);
+        }
+
         public void CreateProfiles()
         {
+            this.igEditor = IGEditor.Load(this.IgPath);
+            var xxx = this.igEditor.dependencyList;
+            this.igEditor.dependencyList?.Clear();
+            {
+                String xmlText = File.ReadAllText(this.ImpGuidePath);
+                FhirXmlParser parser = new FhirXmlParser();
+                this.implementationGuide = (ImplementationGuide)parser.Parse(xmlText, typeof(Resource));
+                this.implementationGuide.Definition.Resource.Clear();
+            }
+
             CreateBreastRadiologyReport();
+            SaveAll();
         }
     }
 }

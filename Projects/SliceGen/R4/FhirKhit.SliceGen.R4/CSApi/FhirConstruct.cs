@@ -6,7 +6,6 @@ using System.Text;
 using FhirKhit.Tools;
 using Hl7.Fhir.Introspection;
 using Hl7.Fhir.Model;
-using Hl7.Fhir.Support.Model;
 using System.Diagnostics;
 using Hl7.FhirPath;
                                                                                                                                             // GenerateFhirConstruct.cs:334

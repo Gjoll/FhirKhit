@@ -1,0 +1,69 @@
+{
+  "source": "ig.xml",
+  "version": "4.0.0",
+  "fixed-business-version": "0.1.0",
+  "license": "CC0-1.0",
+  "paths": {
+    "resources": [
+      "resources",
+      "examples"
+    ],
+    "pages": "pages",
+    "temp": "temp",
+    "output": "output",
+    "txCache": "txCache",
+    "qa": "qa",
+    "specification": "http://hl7.org/fhir/R4",
+    "history": "http://hl7.org/fhir/us/breast-radiology/history.html"
+  },
+  "npm-name": "hl7.fhir.us.breast-radiology",
+  "sct-edition": "http://snomed.info/sct/731000124108",
+  "gen-examples": "false",
+  "do-transforms": "false",
+  "canonicalBase": "http://hl7.org/fhir/us/breast-radiology",
+  "dependencyList": [],
+  "defaults": {
+    "StructureDefinition": {
+      "template-base": "sd.html",
+      "template-mappings": "sd-mappings.html",
+      "template-examples": "sd-examples.html",
+      "template-defns": "sd-definitions.html",
+      "template-format": "sd-format.html"
+    },
+    "CodeSystem": {
+      "template-base": "cs.html"
+    },
+    "ValueSet": {
+      "template-base": "vs.html"
+    },
+    "Any": {
+      "template-format": "format.html",
+      "template-base": "base.html"
+    },
+    "Observation": {
+      "template-base": "ex.html",
+      "template-format": "ex.html"
+    },
+    "Composition": {
+      "template-base": "ex.html",
+      "template-format": "ex.html"
+    },
+    "DiagnosticReport": {
+      "template-base": "ex.html",
+      "template-format": "ex.html"
+    }
+  },
+  "extraTemplates": [
+    "examples"
+  ],
+  "resources": {
+    "StructureDefinition/Recommendations": {
+      "base": "StructureDefinition-Recommendations.html"
+    },
+    "StructureDefinition/BreastRadiologyReport": {
+      "base": "StructureDefinition-BreastRadiologyReport.html"
+    }
+  },
+  "special-urls": [],
+  "tool": "jekyll"
+}

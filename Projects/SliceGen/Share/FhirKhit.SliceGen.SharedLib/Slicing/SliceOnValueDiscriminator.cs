@@ -26,7 +26,7 @@ namespace FhirKhit.SliceGen.SharedLib
         /// <summary>
         /// Path to the elements that are the discriminator values.
         /// </summary>
-        public String Path { get; set; }
+        public System.String Path { get; set; }
 
         /// <summary>
         /// discriminator values must match this pattern.

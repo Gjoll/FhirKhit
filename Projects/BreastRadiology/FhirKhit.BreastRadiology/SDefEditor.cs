@@ -49,12 +49,14 @@ namespace FhirKhit.BreastRadiology
         StructureDefinition baseSDef;
         StructureDefinition sDef;
         String basePath;
+        String outputDir;
 
         Dictionary<String, ElementIndex> baseElements = new Dictionary<string, ElementIndex>();
         Dictionary<String, ElementIndex> elements = new Dictionary<string, ElementIndex>();
 
-        public SDefEditor(String baseDefinition)
+        public SDefEditor(String baseDefinition, String outputDir)
         {
+            this.outputDir = outputDir;
             baseSDef = Defs.GetResource(baseDefinition);
             basePath = $"{this.baseSDef.Snapshot.Element[0].Path}.";
 
@@ -125,7 +127,7 @@ namespace FhirKhit.BreastRadiology
             return this.Find(path).ElementDefinition;
         }
 
-        public void Write(String outputDir)
+        public String Write()
         {
             List<ElementIndex> eList = this.elements.Values.ToList();
             eList.Sort((a, b) =>
@@ -138,8 +140,9 @@ namespace FhirKhit.BreastRadiology
                 this.sDef.Differential.Element.AddRange(item.SliceElements);
             }
 
-            String outputName = Path.Combine(outputDir, $"StructureDefinition_{this.sDef.Name}.json");
+            String outputName = Path.Combine(outputDir, $"StructureDefinition-{this.sDef.Name}.json");
             this.sDef.SaveJson(outputName);
+            return outputName;
         }
 
         /// <summary>
@@ -212,5 +215,6 @@ namespace FhirKhit.BreastRadiology
         public SDefEditor Derivation(StructureDefinition.TypeDerivationRule? value) { this.sDef.Derivation = value; return this; }
         public SDefEditor Abstract(bool? value) { this.sDef.Abstract = value; return this; }
         public SDefEditor Kind(StructureDefinition.StructureDefinitionKind? value) { this.sDef.Kind = value; return this; }
+        public SDefEditor Type(String value) { this.sDef.Type = value; return this; }
     }
 }

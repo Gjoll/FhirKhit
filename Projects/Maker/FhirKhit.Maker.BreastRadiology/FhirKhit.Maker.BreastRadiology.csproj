@@ -6,18 +6,33 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Hl7.Fhir.ElementModel" Version="1.3.0" />
-    <PackageReference Include="Hl7.Fhir.R4" Version="1.3.0" />
-    <PackageReference Include="Hl7.Fhir.Serialization" Version="1.3.0" />
-    <PackageReference Include="Hl7.Fhir.Specification.R4" Version="1.3.0" />
-    <PackageReference Include="Hl7.Fhir.Support" Version="1.3.0" />
-    <PackageReference Include="Hl7.FhirPath" Version="1.3.0" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\Tools\FhirKhit.Tools.r4\FhirKhit.Tools.R4.csproj" />
     <ProjectReference Include="..\..\Tools\FhirKhit.Tools\FhirKhit.Tools.csproj" />
     <ProjectReference Include="..\FhirKhit.Maker.Common\FhirKhit.Maker.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Hl7.Fhir.ElementModel">
+      <HintPath>..\..\Tools\FhirKhit.Tools.R4\Lib\Hl7.Fhir.ElementModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Hl7.Fhir.R4.Core">
+      <HintPath>..\..\Tools\FhirKhit.Tools.R4\Lib\Hl7.Fhir.R4.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Hl7.Fhir.R4.Specification">
+      <HintPath>..\..\Tools\FhirKhit.Tools.R4\Lib\Hl7.Fhir.R4.Specification.dll</HintPath>
+    </Reference>
+    <Reference Include="Hl7.Fhir.Serialization">
+      <HintPath>..\..\Tools\FhirKhit.Tools.R4\Lib\Hl7.Fhir.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="Hl7.Fhir.Support">
+      <HintPath>..\..\Tools\FhirKhit.Tools.R4\Lib\Hl7.Fhir.Support.dll</HintPath>
+    </Reference>
+    <Reference Include="Hl7.Fhir.Support.Poco">
+      <HintPath>..\..\Tools\FhirKhit.Tools.R4\Lib\Hl7.Fhir.Support.Poco.dll</HintPath>
+    </Reference>
+    <Reference Include="Hl7.FhirPath">
+      <HintPath>..\..\Tools\FhirKhit.Tools.R4\Lib\Hl7.FhirPath.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>
