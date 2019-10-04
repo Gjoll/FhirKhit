@@ -12,6 +12,10 @@ namespace FhirKhit.BreastRadiology
     public class ProfileMaker
     {
         ProfilesEditor profilesEditor;
+        ExamplesEditor examplesEditor;
+        ExtensionsEditor extensionsEditor;
+        CodeSystemsEditor codeSystemsEditor;
+        ValueSetsEditor valueSetsEditor;
 
         String outputDir;
         String resourceDir => Path.Combine(this.outputDir, "resources");
@@ -82,7 +86,7 @@ namespace FhirKhit.BreastRadiology
                 .Type("Reference", null, targets)
                 .Single()
                 ;
-            this.AddIGStructureDefinition(e);
+            this.AddIGStructureDefinition(e, true);
             return e.SDef.Url;
         }
 
@@ -107,7 +111,7 @@ namespace FhirKhit.BreastRadiology
                 .Type("Reference", null, targets)
                 .Single()
                 ;
-            this.AddIGStructureDefinition(e);
+            this.AddIGStructureDefinition(e, true);
             return e.SDef.Url;
         }
 
@@ -148,10 +152,10 @@ namespace FhirKhit.BreastRadiology
                 .Type("Reference", null, new String[] {ObservationUrl})
                 ;
 
-            this.AddIGStructureDefinition(e);
+            this.AddIGStructureDefinition(e, false);
         }
 
-        void AddIGStructureDefinition(SDefEditor e)
+        void AddIGStructureDefinition(SDefEditor e, bool extensionFlag)
         {
             StructureDefinition sDef = e.SDef;
 
@@ -160,11 +164,16 @@ namespace FhirKhit.BreastRadiology
             this.AddIGResource($"StructureDefinition/{sDef.Name}", sDef.Name, false);
             this.igEditor.AddResource($"StructureDefinition/{sDef.Name}",
                 htmlName);
-            this.profilesEditor.AddProfile(sDef.Name,
-                htmlName,
-                sDef.BaseDefinition,
-                sDef.BaseDefinition.LastUriPart(),
-                sDef.Description);
+            if (extensionFlag == false)
+                this.profilesEditor.AddProfile(sDef.Name,
+                    htmlName,
+                    sDef.BaseDefinition,
+                    sDef.BaseDefinition.LastUriPart(),
+                    sDef.Description);
+            else
+                this.extensionsEditor.AddExtension(sDef.Name,
+                    htmlName,
+                    sDef.Description);
         }
 
         void AddIGResource(String path,
@@ -190,12 +199,20 @@ namespace FhirKhit.BreastRadiology
 
             implementationGuide.SaveXml(this.ImpGuidePath);
             this.igEditor.Save(this.IgPath);
+            this.examplesEditor.Save();
             this.profilesEditor.Save();
+            this.extensionsEditor.Save();
+            this.codeSystemsEditor.Save();
+            this.valueSetsEditor.Save();
         }
 
         public void CreateProfiles()
         {
+            this.examplesEditor = new ExamplesEditor(this.outputDir);
             this.profilesEditor = new ProfilesEditor(this.outputDir);
+            this.extensionsEditor = new ExtensionsEditor(this.outputDir);
+            this.codeSystemsEditor = new CodeSystemsEditor(this.outputDir);
+            this.valueSetsEditor = new ValueSetsEditor(this.outputDir);
 
             this.igEditor = IGEditor.Load(this.IgPath);
             var xxx = this.igEditor.dependencyList;

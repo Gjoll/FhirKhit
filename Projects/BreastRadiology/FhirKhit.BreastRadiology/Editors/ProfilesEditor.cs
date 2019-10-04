@@ -12,25 +12,15 @@ namespace FhirKhit.BreastRadiology
     /// profiles.html.template is the base template which is modified
     /// and saved as profiles.html.
     /// </summary>
-    class ProfilesEditor
+    class ProfilesEditor : PageEditor
     {
-        String outputDir;
-        String page(String s) => Path.Combine(this.outputDir, "pages", s);
-
-        CodeEditor profilesEditor;
         CodeBlockNested profileItemBlock;
         CodeBlockNested basedOnItemBlock;
 
-
-        public ProfilesEditor(String outputDir)
+        public ProfilesEditor(String outputDir) : base(outputDir, "profiles.html")
         {
-            this.outputDir = outputDir;
-            this.profilesEditor = new CodeEditor();
-            this.profilesEditor.Load(page("profiles.html.template"));
-            this.profilesEditor.SavePath = page("profiles.html");
-
-            profileItemBlock = this.profilesEditor.Blocks.Find("*ProfileItems");
-            basedOnItemBlock = this.profilesEditor.Blocks.Find("*BasedOnItems");
+            profileItemBlock = this.codeEditor.Blocks.Find("*ProfileItems");
+            basedOnItemBlock = this.codeEditor.Blocks.Find("*BasedOnItems");
         }
 
         public void AddBasedOn(String profileName,
@@ -77,11 +67,6 @@ namespace FhirKhit.BreastRadiology
                 .AppendRaw("{% endcapture %}{{ md_text | markdownify }}</td>")
                 .AppendRaw("</tr>")
                 ;
-        }
-
-        public void Save()
-        {
-            this.profilesEditor.Save();
         }
     }
 }

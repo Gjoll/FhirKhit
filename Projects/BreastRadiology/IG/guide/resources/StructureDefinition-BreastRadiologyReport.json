@@ -1350,16 +1350,26 @@
           ],
           "ordered": false,
           "rules": "open"
+        },
+        "base": {
+          "path": "DiagnosticReport.extension",
+          "min": 0,
+          "max": "*"
         }
       },
       {
-        "id": "DiagnosticReport.extension:Recommendations",
+        "id": "DiagnosticReport.extension:recommendations",
         "path": "DiagnosticReport.extension",
-        "sliceName": "Recommendations",
+        "sliceName": "recommendations",
         "short": "Recommendations for future care",
         "definition": "Recommendations for future care",
         "min": 0,
         "max": "*",
+        "base": {
+          "path": "DiagnosticReport.extension",
+          "min": 0,
+          "max": "*"
+        },
         "type": [
           {
             "code": "Extension",
@@ -1371,13 +1381,18 @@
         "isModifier": false
       },
       {
-        "id": "DiagnosticReport.extension:PriorReports",
+        "id": "DiagnosticReport.extension:priorReports",
         "path": "DiagnosticReport.extension",
-        "sliceName": "PriorReports",
+        "sliceName": "priorReports",
         "short": "Recommendations for future care",
         "definition": "Recommendations for future care",
         "min": 0,
         "max": "*",
+        "base": {
+          "path": "DiagnosticReport.extension",
+          "min": 0,
+          "max": "*"
+        },
         "type": [
           {
             "code": "Extension",
@@ -1391,6 +1406,11 @@
       {
         "id": "DiagnosticReport.category",
         "path": "DiagnosticReport.category",
+        "base": {
+          "path": "DiagnosticReport.category",
+          "min": 0,
+          "max": "*"
+        },
         "patternCodeableConcept": {
           "coding": [
             {
@@ -1403,6 +1423,11 @@
       {
         "id": "DiagnosticReport.code",
         "path": "DiagnosticReport.code",
+        "base": {
+          "path": "DiagnosticReport.code",
+          "min": 1,
+          "max": "1"
+        },
         "patternCodeableConcept": {
           "coding": [
             {
@@ -1416,13 +1441,23 @@
         "id": "DiagnosticReport.specimen",
         "path": "DiagnosticReport.specimen",
         "min": 0,
-        "max": "0"
+        "max": "0",
+        "base": {
+          "path": "DiagnosticReport.specimen",
+          "min": 0,
+          "max": "*"
+        }
       },
       {
         "id": "DiagnosticReport.result",
         "path": "DiagnosticReport.result",
         "min": 1,
         "max": "1",
+        "base": {
+          "path": "DiagnosticReport.result",
+          "min": 0,
+          "max": "*"
+        },
         "type": [
           {
             "code": "Reference",
@@ -1436,13 +1471,23 @@
         "id": "DiagnosticReport.conclusion",
         "path": "DiagnosticReport.conclusion",
         "min": 1,
-        "max": "1"
+        "max": "1",
+        "base": {
+          "path": "DiagnosticReport.conclusion",
+          "min": 0,
+          "max": "1"
+        }
       },
       {
         "id": "DiagnosticReport.conclusionCode",
         "path": "DiagnosticReport.conclusionCode",
         "min": 1,
-        "max": "1"
+        "max": "1",
+        "base": {
+          "path": "DiagnosticReport.conclusionCode",
+          "min": 0,
+          "max": "*"
+        }
       }
     ]
   }

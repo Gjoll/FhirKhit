@@ -10,7 +10,7 @@
     <!-- container -->
     <ul class="breadcrumb">
       <li title="home"><a href="index.html"><b>Home</b></a></li>
-      <li><b>Examples</b></li>
+      <li><b>Extensions</b></li>
     </ul>
   </div>
   <!-- /container -->
@@ -21,24 +21,22 @@
 
 <!-- ============CONTENT CONTENT=============== -->
 
-<h2>
-    Examples defined as part of this Implementation Guide
-</h2>
+<h2>Primary extensions defined as part of this Implementation Guide</h2>
+
 <table class="codes">
   <thead>
     <tr>
       <td>
-        <b>Example</b>
+        <b>Name</b>
       </td>
       <td>
-        <b>ResourceType</b>
-      </td>
-      <td>
-        <b>Profiles</b>
+        <b>Definition</b>
       </td>
     </tr>
   </thead>
   <tbody>
+  //+*Items
+  //-*Items
   </tbody>
 </table>
 

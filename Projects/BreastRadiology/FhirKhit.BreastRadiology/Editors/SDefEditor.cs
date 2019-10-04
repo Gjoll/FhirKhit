@@ -18,13 +18,22 @@ namespace FhirKhit.BreastRadiology
             public ElementDefinition ElementDefinition;
             public List<ElementDefinition> SliceElements = new List<ElementDefinition>();
 
-            public ElementDefinition AppendSlice(String sliceName)
+            public ElementDefinition AppendSlice(String parentName,
+                String sliceName)
             {
                 ElementDefinition retVal = new ElementDefinition
                 {
                     Path = this.ElementDefinition.Path,
                     ElementId = $"{this.ElementDefinition.Path}:{sliceName}",
-                    SliceName = sliceName
+                    SliceName = sliceName,
+                    Min = 0,
+                    Max = "*",
+                    Base = new ElementDefinition.BaseComponent
+                    {
+                        Min = 0,
+                        Max = "*",
+                        Path = $"{parentName}.extension"
+                    }
                 };
                 this.SliceElements.Add(retVal);
                 return retVal;
@@ -98,12 +107,18 @@ namespace FhirKhit.BreastRadiology
             {
                 if (this.baseElements.TryGetValue(path, out ElementIndex e) == true)
                 {
+                    ElementDefinition eBase = e.ElementDefinition;
                     ElementDefinition ed = new ElementDefinition
                     {
-                        Path = e.ElementDefinition.Path,
-                        ElementId = e.ElementDefinition.ElementId
+                        Path = eBase.Path,
+                        ElementId = eBase.ElementId,
+                        Base = new ElementDefinition.BaseComponent
+                        {
+                            Path = eBase.Path,
+                            Min = eBase.Min,
+                            Max = eBase.Max
+                        }
                     };
-
                     ElementIndex newE = new ElementIndex
                     {
                         Index = e.Index,
@@ -145,15 +160,19 @@ namespace FhirKhit.BreastRadiology
             return outputName;
         }
 
+
         /// <summary>
         /// Add the indicated slice by url.
         /// </summary>
-        ElementDefinition SliceByUrl(String path,
+        ElementDefinition SliceByUrl(String baseName,
+            String path,
             String sliceUrl,
             String sliceName)
         {
+            sliceName = sliceName.UncapFirstLetter();
+
             ElementIndex extension = this.Find(path);
-            ElementDefinition extSlice = extension.AppendSlice(sliceName);
+            ElementDefinition extSlice = extension.AppendSlice(baseName, sliceName);
             extSlice.IsModifier = false;
             extSlice.Type.Add(new ElementDefinition.TypeRefComponent
             {
@@ -190,7 +209,7 @@ namespace FhirKhit.BreastRadiology
         public ElementDefinition SimpleExtension(String name, String extensionUrl)
         {
             ConfigureExtensionSlice();
-            return SliceByUrl("extension", extensionUrl, name);
+            return SliceByUrl(this.baseSDef.Name, "extension", extensionUrl, name);
         }
 
         public SDefEditor ContactUrl(String value)

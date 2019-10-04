@@ -10,7 +10,7 @@
     <!-- container -->
     <ul class="breadcrumb">
       <li title="home"><a href="index.html"><b>Home</b></a></li>
-      <li><b>Examples</b></li>
+      <li><b>Value Sets</b></li>
     </ul>
   </div>
   <!-- /container -->
@@ -21,24 +21,41 @@
 
 <!-- ============CONTENT CONTENT=============== -->
 
-<h2>
-    Examples defined as part of this Implementation Guide
-</h2>
-<table class="codes">
+<h2>Primary local value sets used in this Implementation Guide</h2>
+
+<table class="codes local">
   <thead>
     <tr>
       <td>
-        <b>Example</b>
+        <b>Name</b>
       </td>
       <td>
-        <b>ResourceType</b>
-      </td>
-      <td>
-        <b>Profiles</b>
+        <b>Definition</b>
       </td>
     </tr>
   </thead>
   <tbody>
+  //+*Items
+  //-*Items
+  </tbody>
+</table>
+
+<h2>Primary external value sets used in this Implementation Guide</h2>
+
+<table class="codes external">
+  <thead>
+    <tr>
+      <td>
+        <b>Name</b>
+      </td>
+      <td>
+        <b>Definition</b>
+      </td>
+    </tr>
+  </thead>
+  <tbody>
+  //+*ExternalItems
+  //-*ExternalItems
   </tbody>
 </table>
 
