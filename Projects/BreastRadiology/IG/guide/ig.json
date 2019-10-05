@@ -57,15 +57,6 @@
     "examples"
   ],
   "resources": {
-    "StructureDefinition/Recommendations": {
-      "base": "StructureDefinition-Recommendations.html"
-    },
-    "StructureDefinition/PriorReports": {
-      "base": "StructureDefinition-PriorReports.html"
-    },
-    "StructureDefinition/BreastRadiologyReport": {
-      "base": "StructureDefinition-BreastRadiologyReport.html"
-    },
     "CodeSystem/AbnormalityDensityCS": {
       "base": "CodeSystem-AbnormalityDensityCS.html"
     },
@@ -122,6 +113,96 @@
     },
     "CodeSystem/WallCS": {
       "base": "CodeSystem-WallCS.html"
+    },
+    "StructureDefinition/BreastRadiologyAbnormality": {
+      "base": "StructureDefinition-BreastRadiologyAbnormality.html"
+    },
+    "StructureDefinition/BreastRadiologyAbnormalityAssociatedFindings": {
+      "base": "StructureDefinition-BreastRadiologyAbnormalityAssociatedFindings.html"
+    },
+    "StructureDefinition/BreastRadiologyAbnormalityAsymmetryType": {
+      "base": "StructureDefinition-BreastRadiologyAbnormalityAsymmetryType.html"
+    },
+    "StructureDefinition/BreastRadiologyAbnormalityBiRadCode": {
+      "base": "StructureDefinition-BreastRadiologyAbnormalityBiRadCode.html"
+    },
+    "StructureDefinition/BreastRadiologyAbnormalityCalcificationType": {
+      "base": "StructureDefinition-BreastRadiologyAbnormalityCalcificationType.html"
+    },
+    "StructureDefinition/BreastRadiologyAbnormalityChange": {
+      "base": "StructureDefinition-BreastRadiologyAbnormalityChange.html"
+    },
+    "StructureDefinition/BreastRadiologyAbnormalityConsistentWith": {
+      "base": "StructureDefinition-BreastRadiologyAbnormalityConsistentWith.html"
+    },
+    "StructureDefinition/BreastRadiologyAbnormalityCystTypes": {
+      "base": "StructureDefinition-BreastRadiologyAbnormalityCystTypes.html"
+    },
+    "StructureDefinition/BreastRadiologyAbnormalityDensity": {
+      "base": "StructureDefinition-BreastRadiologyAbnormalityDensity.html"
+    },
+    "StructureDefinition/BreastRadiologyAbnormalityForeignBody": {
+      "base": "StructureDefinition-BreastRadiologyAbnormalityForeignBody.html"
+    },
+    "StructureDefinition/BreastRadiologyAbnormalityHilum": {
+      "base": "StructureDefinition-BreastRadiologyAbnormalityHilum.html"
+    },
+    "StructureDefinition/BreastRadiologyAbnormalityLymphNodeQualifiers": {
+      "base": "StructureDefinition-BreastRadiologyAbnormalityLymphNodeQualifiers.html"
+    },
+    "StructureDefinition/BreastRadiologyAbnormalityMargin": {
+      "base": "StructureDefinition-BreastRadiologyAbnormalityMargin.html"
+    },
+    "StructureDefinition/BreastRadiologyAbnormalityMassTypes": {
+      "base": "StructureDefinition-BreastRadiologyAbnormalityMassTypes.html"
+    },
+    "StructureDefinition/BreastRadiologyAbnormalityMaxLength": {
+      "base": "StructureDefinition-BreastRadiologyAbnormalityMaxLength.html"
+    },
+    "StructureDefinition/BreastRadiologyAbnormalityNodeTypes": {
+      "base": "StructureDefinition-BreastRadiologyAbnormalityNodeTypes.html"
+    },
+    "StructureDefinition/BreastRadiologyAbnormalityShape": {
+      "base": "StructureDefinition-BreastRadiologyAbnormalityShape.html"
+    },
+    "StructureDefinition/BreastRadiologyAbnormalityType": {
+      "base": "StructureDefinition-BreastRadiologyAbnormalityType.html"
+    },
+    "StructureDefinition/BreastRadiologyAbnormalityVascularity": {
+      "base": "StructureDefinition-BreastRadiologyAbnormalityVascularity.html"
+    },
+    "StructureDefinition/BreastRadiologyAbnormalityWall": {
+      "base": "StructureDefinition-BreastRadiologyAbnormalityWall.html"
+    },
+    "StructureDefinition/BreastRadiologyObservation": {
+      "base": "StructureDefinition-BreastRadiologyObservation.html"
+    },
+    "StructureDefinition/BreastRadiologyObservationFindings": {
+      "base": "StructureDefinition-BreastRadiologyObservationFindings.html"
+    },
+    "StructureDefinition/BreastRadiologyObservationFindingsLeftBreast": {
+      "base": "StructureDefinition-BreastRadiologyObservationFindingsLeftBreast.html"
+    },
+    "StructureDefinition/BreastRadiologyObservationFindingsRightBreast": {
+      "base": "StructureDefinition-BreastRadiologyObservationFindingsRightBreast.html"
+    },
+    "StructureDefinition/BreastRadiologyObservationImpressions": {
+      "base": "StructureDefinition-BreastRadiologyObservationImpressions.html"
+    },
+    "StructureDefinition/BreastRadiologyObservationPatientHistory": {
+      "base": "StructureDefinition-BreastRadiologyObservationPatientHistory.html"
+    },
+    "StructureDefinition/BreastRadiologyObservationPatientRisk": {
+      "base": "StructureDefinition-BreastRadiologyObservationPatientRisk.html"
+    },
+    "StructureDefinition/BreastRadiologyReport": {
+      "base": "StructureDefinition-BreastRadiologyReport.html"
+    },
+    "StructureDefinition/PriorReports": {
+      "base": "StructureDefinition-PriorReports-extension.html"
+    },
+    "StructureDefinition/Recommendations": {
+      "base": "StructureDefinition-Recommendations-extension.html"
     },
     "ValueSet/AbnormalityDensityVS": {
       "base": "ValueSet-AbnormalityDensityVS.html"

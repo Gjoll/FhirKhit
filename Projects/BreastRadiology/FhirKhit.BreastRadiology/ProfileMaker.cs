@@ -238,7 +238,32 @@ namespace FhirKhit.BreastRadiology
                 retVal = $"{prefix}{retVal.Substring(prefix.Length)}";
                 return retVal;
             }
-        
+
+            void Rename(String filePath, String prefix)
+            {
+                String dir = Path.GetDirectoryName(filePath);
+                String name = Path.GetFileName(filePath);
+                name = name.Replace("-brr-", "-");
+                if (name.StartsWith(prefix))
+                    return;
+
+                String newFilePath = Path.Combine(dir, $"{prefix}{name.Substring(prefix.Length)}");
+                File.Move(filePath, "xxyyz");
+                File.Move("xxyyz", newFilePath);
+            }
+
+            List<ContactDetail> Contact()
+            {
+                List<ContactDetail> retVal = new List<ContactDetail>();
+                retVal.Add(new ContactDetail());
+                retVal[0].Telecom.Add(new ContactPoint
+                {
+                    System = ContactPoint.ContactPointSystem.Url,
+                    Value = "http://www.hl7.org/Special/committees/cic"
+                });
+                return retVal;
+            }
+
             void Save(Resource r, String fileName)
             {
                 String outputPath = Path.Combine(this.resourceDir, fileName);
@@ -252,27 +277,37 @@ namespace FhirKhit.BreastRadiology
                 var resource = parser.Parse(fhirText, typeof(Resource));
                 switch (resource)
                 {
+                    case StructureDefinition structureDefinition:
+                        {
+                            String typeName = "StructureDefinition";
+                            Rename(file, typeName);
+                            String fixedName = FixName(file, typeName);
+                            String htmlPage = $"{fixedName}.html";
+                            structureDefinition.Date = this.date.Value;
+                            structureDefinition.Version = ProfileVersion;
+                            structureDefinition.Status = ProfileStatus;
+                            structureDefinition.Contact = Contact();
+                            structureDefinition.Snapshot = null;
+                            Save(structureDefinition, $"{fixedName}.json");
+                            this.AddIGResource($"{typeName}/{structureDefinition.Name}", structureDefinition.Name, false);
+                            this.igEditor.AddResource($"{typeName}/{structureDefinition.Name}",
+                                htmlPage);
+                        }
+                        break;
+
                     case CodeSystem codeSystem:
                         {
-                            String fixedName = FixName(file, "CodeSystem");
+                            String typeName = "CodeSystem";
+                            Rename(file, typeName);
+                            String fixedName = FixName(file, typeName);
                             String htmlPage = $"{fixedName}.html";
                             codeSystem.Date = this.date.Value;
-
                             codeSystem.Version = ProfileVersion;
-
                             codeSystem.Status = ProfileStatus;
-
-                            codeSystem.Contact.Clear();
-
-                            codeSystem.Contact.Add(new ContactDetail());
-                            codeSystem.Contact[0].Telecom.Add(new ContactPoint
-                            {
-                                System = ContactPoint.ContactPointSystem.Url,
-                                Value = "http://www.hl7.org/Special/committees/cic"
-                            });
+                            codeSystem.Contact = Contact();
                             Save(codeSystem, $"{fixedName}.json");
-                            this.AddIGResource($"CodeSystem/{codeSystem.Name}", codeSystem.Name, false);
-                            this.igEditor.AddResource($"CodeSystem/{codeSystem.Name}",
+                            this.AddIGResource($"{typeName}/{codeSystem.Name}", codeSystem.Name, false);
+                            this.igEditor.AddResource($"{typeName}/{codeSystem.Name}",
                                 htmlPage);
                             this.codeSystemsEditor.AddCodeSystem(codeSystem.Name,
                                 htmlPage,
@@ -282,25 +317,17 @@ namespace FhirKhit.BreastRadiology
 
                     case ValueSet valueSet:
                         {
-                            String fixedName = FixName(file, "ValueSet");
+                            String typeName = "ValueSet";
+                            Rename(file, typeName);
+                            String fixedName = FixName(file, typeName);
                             String htmlPage = $"{fixedName}.html";
                             valueSet.Date = this.date.Value;
-
                             valueSet.Version = ProfileVersion;
-
                             valueSet.Status = ProfileStatus;
-
-                            valueSet.Contact.Clear();
-
-                            valueSet.Contact.Add(new ContactDetail());
-                            valueSet.Contact[0].Telecom.Add(new ContactPoint
-                            {
-                                System = ContactPoint.ContactPointSystem.Url,
-                                Value = "http://www.hl7.org/Special/committees/cic"
-                            });
+                            valueSet.Contact = Contact();
                             Save(valueSet, $"{fixedName}.json");
-                            this.AddIGResource($"ValueSet/{valueSet.Name}", valueSet.Name, false);
-                            this.igEditor.AddResource($"ValueSet/{valueSet.Name}",
+                            this.AddIGResource($"{typeName}/{valueSet.Name}", valueSet.Name, false);
+                            this.igEditor.AddResource($"{typeName}/{valueSet.Name}",
                                 htmlPage);
                             this.valueSetsEditor.AddValueSet(valueSet.Name,
                                 htmlPage,
@@ -317,7 +344,7 @@ namespace FhirKhit.BreastRadiology
 
         public void CreateProfiles()
         {
-            CreateBreastRadiologyReport();
+            //CreateBreastRadiologyReport();
         }
     }
 }
