@@ -199,10 +199,10 @@
       "base": "StructureDefinition-BreastRadiologyReport.html"
     },
     "StructureDefinition/PriorReports": {
-      "base": "StructureDefinition-PriorReports-extension.html"
+      "base": "StructureDefinition-PriorReports.html"
     },
     "StructureDefinition/Recommendations": {
-      "base": "StructureDefinition-Recommendations-extension.html"
+      "base": "StructureDefinition-Recommendations.html"
     },
     "ValueSet/AbnormalityDensityVS": {
       "base": "ValueSet-AbnormalityDensityVS.html"

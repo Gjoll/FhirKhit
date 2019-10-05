@@ -83,6 +83,32 @@ namespace FhirKhit.Tools.R2
             return elements;
         }
 
+        public static void InsertAfter(this List<ElementDefinition> elements,
+            ElementDefinition insertAfterThis,
+            params ElementDefinition[] elementsToInsert)
+        {
+            if (elements is null)
+                throw new ArgumentNullException(nameof(elements));
+            if (insertAfterThis is null)
+                throw new ArgumentNullException(nameof(insertAfterThis));
+            if (elementsToInsert is null)
+                throw new ArgumentNullException(nameof(elementsToInsert));
+
+            Int32 i = 0;
+            while (i < elements.Count)
+            {
+                if (elements[i] == insertAfterThis)
+                {
+                    foreach (ElementDefinition e in elementsToInsert)
+                        elements.Insert(++i, e);
+                    return;
+                }
+                i += 1;
+            }
+
+            throw new Exception("Insert After element not found in element list");
+        }
+
         public static ElementDefinition FindById(this IEnumerable<ElementDefinition> elements,
             String id)
         {

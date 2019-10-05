@@ -18,10 +18,6 @@ namespace FhirKhit.BreastRadiology
                     DirHelper.FindParentDir("BreastRadiology"),
                     "IG",
                     "Resources");
-                {
-                    ProfileCleanUp pc = new ProfileCleanUp();
-                    pc.Clean(resourcesDir);
-                }
                 //ProfileMaker p = new ProfileMaker(outputDir);
                 //p.Start();
                 //p.CreateProfiles();

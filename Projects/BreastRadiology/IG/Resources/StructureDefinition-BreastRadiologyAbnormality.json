@@ -39,28 +39,6 @@
         "definition": "Breast Abnormality entry. Each instance of this will describe one observed breast abnormality.\nObservations specific to this abnormality, such as density and size, will be found in observations referenced\nby this instances hasMember field."
       },
       {
-        "id": "Observation.basedOn",
-        "path": "Observation.basedOn",
-        "min": 0,
-        "max": "0"
-      },
-      {
-        "id": "Observation.partOf",
-        "path": "Observation.partOf",
-        "short": "A larger event of which this particular Observation is a component or step. For example, an observation as part of a procedure.",
-        "definition": "A larger event of which this particular Observation is a component or step. For example, an observation as part of a procedure.",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/MedicationAdministration",
-              "http://hl7.org/fhir/StructureDefinition/MedicationStatement",
-              "http://hl7.org/fhir/StructureDefinition/Procedure"
-            ]
-          }
-        ]
-      },
-      {
         "id": "Observation.category",
         "path": "Observation.category",
         "min": 0,
@@ -98,33 +76,6 @@
         "path": "Observation.encounter"
       },
       {
-        "id": "Observation.effective[x]",
-        "path": "Observation.effective[x]",
-        "type": [
-          {
-            "code": "dateTime"
-          },
-          {
-            "code": "Period"
-          }
-        ]
-      },
-      {
-        "id": "Observation.performer",
-        "path": "Observation.performer",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Practitioner",
-              "http://hl7.org/fhir/StructureDefinition/Organization",
-              "http://hl7.org/fhir/StructureDefinition/Patient",
-              "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
-            ]
-          }
-        ]
-      },
-      {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
         "min": 0,
@@ -135,18 +86,6 @@
         "path": "Observation.interpretation",
         "min": 0,
         "max": "1"
-      },
-      {
-        "id": "Observation.note",
-        "path": "Observation.note",
-        "type": [
-          {
-            "code": "Annotation",
-            "profile": [
-              "http://hl7.org/fhir/StructureDefinition/Annotation"
-            ]
-          }
-        ]
       },
       {
         "id": "Observation.bodySite",
@@ -231,56 +170,6 @@
         "max": "0"
       },
       {
-        "id": "Observation.device",
-        "path": "Observation.device",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Device"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "Observation.referenceRange",
-        "path": "Observation.referenceRange",
-        "min": 0,
-        "max": "1"
-      },
-      {
-        "id": "Observation.referenceRange.type",
-        "path": "Observation.referenceRange.type",
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "ObservationRangeMeaning"
-            }
-          ],
-          "strength": "extensible",
-          "description": "Code for the meaning of a reference range.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-meaning"
-        }
-      },
-      {
-        "id": "Observation.referenceRange.appliesTo",
-        "path": "Observation.referenceRange.appliesTo",
-        "min": 0,
-        "max": "1",
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "ObservationRangeType"
-            }
-          ],
-          "strength": "extensible",
-          "description": "Codes identifying the population the reference range applies to.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-appliesto"
-        }
-      },
-      {
         "id": "Observation.hasMember",
         "path": "Observation.hasMember",
         "type": [
@@ -293,95 +182,10 @@
         ]
       },
       {
-        "id": "Observation.derivedFrom",
-        "path": "Observation.derivedFrom",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/DocumentReference",
-              "http://hl7.org/fhir/StructureDefinition/Media",
-              "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",
-              "http://hl7.org/fhir/StructureDefinition/Observation"
-            ]
-          }
-        ]
-      },
-      {
         "id": "Observation.component",
         "path": "Observation.component",
         "min": 0,
         "max": "0"
-      },
-      {
-        "id": "Observation.component.value[x]",
-        "path": "Observation.component.value[x]",
-        "type": [
-          {
-            "code": "Quantity"
-          },
-          {
-            "code": "CodeableConcept"
-          },
-          {
-            "code": "string"
-          },
-          {
-            "code": "Range"
-          },
-          {
-            "code": "Ratio"
-          },
-          {
-            "code": "SampledData",
-            "profile": [
-              "http://hl7.org/fhir/StructureDefinition/datatype-SampledData"
-            ]
-          },
-          {
-            "code": "time"
-          },
-          {
-            "code": "dateTime"
-          },
-          {
-            "code": "Period"
-          }
-        ]
-      },
-      {
-        "id": "Observation.component.referenceRange",
-        "path": "Observation.component.referenceRange"
-      },
-      {
-        "id": "Observation.component.referenceRange.type",
-        "path": "Observation.component.referenceRange.type",
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "ObservationRangeMeaning"
-            }
-          ],
-          "strength": "extensible",
-          "description": "Code for the meaning of a reference range.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-meaning"
-        }
-      },
-      {
-        "id": "Observation.component.referenceRange.appliesTo",
-        "path": "Observation.component.referenceRange.appliesTo",
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "ObservationRangeType"
-            }
-          ],
-          "strength": "extensible",
-          "description": "Codes identifying the population the reference range applies to.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-appliesto"
-        }
       }
     ]
   }

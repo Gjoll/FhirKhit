@@ -234,7 +234,7 @@ namespace FhirKhit.BreastRadiology
         {
             void Save(Resource r, String outputName)
             {
-                r.SaveJson(Path.Combine(this.outputDir, outputName));
+                r.SaveJson(Path.Combine(this.resourceDir, outputName));
             }
 
             String FixName(String path, String prefix)
@@ -256,6 +256,7 @@ namespace FhirKhit.BreastRadiology
                             String typeName = "StructureDefinition";
                             String fixedName = FixName(file, typeName);
                             String htmlPage = $"{fixedName}.html";
+                            SnapshotCreator.Create(structureDefinition);
                             Save(structureDefinition, $"{fixedName}.json");
                             this.AddIGResource($"{typeName}/{structureDefinition.Name}", structureDefinition.Name, false);
                             this.igEditor.AddResource($"{typeName}/{structureDefinition.Name}",

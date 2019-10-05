@@ -36,27 +36,6 @@
     }],
     "resource" : [{
       "reference" : {
-        "reference" : "StructureDefinition/Recommendations"
-      },
-      "name" : "Recommendations",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/PriorReports"
-      },
-      "name" : "PriorReports",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/BreastRadiologyReport"
-      },
-      "name" : "BreastRadiologyReport",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
         "reference" : "CodeSystem/AbnormalityDensityCS"
       },
       "name" : "AbnormalityDensityCS",
@@ -186,6 +165,216 @@
         "reference" : "CodeSystem/WallCS"
       },
       "name" : "WallCS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormality"
+      },
+      "name" : "BreastRadiologyAbnormality",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityAssociatedFindings"
+      },
+      "name" : "BreastRadiologyAbnormalityAssociatedFindings",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityAsymmetryType"
+      },
+      "name" : "BreastRadiologyAbnormalityAsymmetryType",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityBiRadCode"
+      },
+      "name" : "BreastRadiologyAbnormalityBiRadCode",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityCalcificationType"
+      },
+      "name" : "BreastRadiologyAbnormalityCalcificationType",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityChange"
+      },
+      "name" : "BreastRadiologyAbnormalityChange",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityConsistentWith"
+      },
+      "name" : "BreastRadiologyAbnormalityConsistentWith",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityCystTypes"
+      },
+      "name" : "BreastRadiologyAbnormalityCystTypes",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityDensity"
+      },
+      "name" : "BreastRadiologyAbnormalityDensity",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityForeignBody"
+      },
+      "name" : "BreastRadiologyAbnormalityForeignBody",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityHilum"
+      },
+      "name" : "BreastRadiologyAbnormalityHilum",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityLymphNodeQualifiers"
+      },
+      "name" : "BreastRadiologyAbnormalityLymphNodeQualifiers",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityMargin"
+      },
+      "name" : "BreastRadiologyAbnormalityMargin",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityMassTypes"
+      },
+      "name" : "BreastRadiologyAbnormalityMassTypes",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityMaxLength"
+      },
+      "name" : "BreastRadiologyAbnormalityMaxLength",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityNodeTypes"
+      },
+      "name" : "BreastRadiologyAbnormalityNodeTypes",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityShape"
+      },
+      "name" : "BreastRadiologyAbnormalityShape",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityType"
+      },
+      "name" : "BreastRadiologyAbnormalityType",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityVascularity"
+      },
+      "name" : "BreastRadiologyAbnormalityVascularity",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityWall"
+      },
+      "name" : "BreastRadiologyAbnormalityWall",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyObservation"
+      },
+      "name" : "BreastRadiologyObservation",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyObservationFindings"
+      },
+      "name" : "BreastRadiologyObservationFindings",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyObservationFindingsLeftBreast"
+      },
+      "name" : "BreastRadiologyObservationFindingsLeftBreast",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyObservationFindingsRightBreast"
+      },
+      "name" : "BreastRadiologyObservationFindingsRightBreast",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyObservationImpressions"
+      },
+      "name" : "BreastRadiologyObservationImpressions",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyObservationPatientHistory"
+      },
+      "name" : "BreastRadiologyObservationPatientHistory",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyObservationPatientRisk"
+      },
+      "name" : "BreastRadiologyObservationPatientRisk",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyReport"
+      },
+      "name" : "BreastRadiologyReport",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/PriorReports"
+      },
+      "name" : "PriorReports",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/Recommendations"
+      },
+      "name" : "Recommendations",
       "exampleBoolean" : false
     },
     {
