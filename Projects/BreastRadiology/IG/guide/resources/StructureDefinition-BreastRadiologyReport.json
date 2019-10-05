@@ -1,6 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyReport",
+  "version": "0.0.2",
   "name": "BreastRadiologyReport",
   "title": "BreastRadiologyReport",
   "status": "draft",

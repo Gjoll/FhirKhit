@@ -11,6 +11,8 @@ namespace FhirKhit.BreastRadiology
 {
     public class ProfileMaker
     {
+        const String ProfileVersion = "0.0.2";
+
         ProfilesEditor profilesEditor;
         ExamplesEditor examplesEditor;
         ExtensionsEditor extensionsEditor;
@@ -60,6 +62,7 @@ namespace FhirKhit.BreastRadiology
                 .Derivation(StructureDefinition.TypeDerivationRule.Constraint)
                 .Abstract(false)
                 .Type(baseUrl.LastUriPart())
+                .Version(ProfileVersion)
                 ;
 
             this.editors.Add(retVal);
@@ -71,6 +74,7 @@ namespace FhirKhit.BreastRadiology
             SDefEditor e = CreateEditor("PriorReports", ExtensionUrl)
                 .Description("Breast Radiology Prior Diagnostic Report extension")
                 .Kind(StructureDefinition.StructureDefinitionKind.ComplexType)
+                .Context()
                 ;
 
             e.Select("extension").Zero();
@@ -95,6 +99,7 @@ namespace FhirKhit.BreastRadiology
             SDefEditor e = CreateEditor("Recommendations", ExtensionUrl)
                 .Description("Breast Radiology Diagnostic Report recommendations section extension")
                 .Kind(StructureDefinition.StructureDefinitionKind.ComplexType)
+                .Context()
                 ;
 
             e.Select("extension").Zero();

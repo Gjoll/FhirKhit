@@ -234,6 +234,19 @@ namespace FhirKhit.BreastRadiology
         public SDefEditor Derivation(StructureDefinition.TypeDerivationRule? value) { this.sDef.Derivation = value; return this; }
         public SDefEditor Abstract(bool? value) { this.sDef.Abstract = value; return this; }
         public SDefEditor Kind(StructureDefinition.StructureDefinitionKind? value) { this.sDef.Kind = value; return this; }
+        public SDefEditor Version(String value) { this.sDef.Version = value; return this; }
         public SDefEditor Type(String value) { this.sDef.Type = value; return this; }
+        public SDefEditor Context(StructureDefinition.ExtensionContextType type = StructureDefinition.ExtensionContextType.Element,
+            String expression = "*")
+        {
+            this.sDef.Context.Clear();
+            this.sDef.Context.Add(new StructureDefinition.ContextComponent
+            {
+                Type = type,
+                Expression = expression
+            });
+            return this;
+        }
+
     }
 }

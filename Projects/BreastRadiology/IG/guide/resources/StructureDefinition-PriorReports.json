@@ -1,6 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/PriorReports",
+  "version": "0.0.2",
   "name": "PriorReports",
   "title": "PriorReports",
   "status": "draft",
@@ -19,6 +20,12 @@
   "description": "Breast Radiology Prior Diagnostic Report extension",
   "kind": "complex-type",
   "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "*"
+    }
+  ],
   "type": "Extension",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
   "derivation": "constraint",
