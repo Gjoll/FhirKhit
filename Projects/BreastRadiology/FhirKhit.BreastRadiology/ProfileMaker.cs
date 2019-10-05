@@ -193,7 +193,7 @@ namespace FhirKhit.BreastRadiology
             });
         }
 
-        void SaveAll()
+        public void SaveAll()
         {
             foreach (SDefEditor ce in this.editors)
             {
@@ -211,7 +211,7 @@ namespace FhirKhit.BreastRadiology
             this.valueSetsEditor.Save();
         }
 
-        public void CreateProfiles()
+        public void Start()
         {
             this.examplesEditor = new ExamplesEditor(this.outputDir);
             this.profilesEditor = new ProfilesEditor(this.outputDir);
@@ -220,7 +220,6 @@ namespace FhirKhit.BreastRadiology
             this.valueSetsEditor = new ValueSetsEditor(this.outputDir);
 
             this.igEditor = IGEditor.Load(this.IgPath);
-            var xxx = this.igEditor.dependencyList;
             this.igEditor.dependencyList?.Clear();
             {
                 String xmlText = File.ReadAllText($"{this.ImpGuidePath}.template");
@@ -228,9 +227,36 @@ namespace FhirKhit.BreastRadiology
                 this.implementationGuide = (ImplementationGuide)parser.Parse(xmlText, typeof(Resource));
                 this.implementationGuide.Definition.Resource.Clear();
             }
+        }
 
+        public void AddResources(String resourceDir)
+        {
+            foreach (String file in Directory.GetFiles(resourceDir))
+            {
+                if (file.Contains("-brr-"))
+                {
+                    String newFile = file.Replace("-brr-", "");
+                    File.Move(file, newFile);
+                }
+                String name = Path.GetFileName(file);
+                if (name.StartsWith("valueset"))
+                {
+                    String newName = file.Replace("valueset", "valueset-");
+                    String newPath = Path.Combine(Path.GetDirectoryName(file), newName);
+                    File.Move(file, newPath);
+                }
+                if (name.StartsWith("codesystem"))
+                {
+                    String newName = file.Replace("codesystem", "codesystem-");
+                    String newPath = Path.Combine(Path.GetDirectoryName(file), newName);
+                    File.Move(file, newPath);
+                }
+            }
+        }
+
+        public void CreateProfiles()
+        {
             CreateBreastRadiologyReport();
-            SaveAll();
         }
     }
 }

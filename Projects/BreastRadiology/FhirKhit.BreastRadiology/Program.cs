@@ -13,10 +13,16 @@ namespace FhirKhit.BreastRadiology
                 String outputDir = Path.Combine(
                     DirHelper.FindParentDir("BreastRadiology"),
                     "IG",
-                    "Guide"
-                    );
+                    "Guide");
+                String resourcesDir = Path.Combine(
+                    DirHelper.FindParentDir("BreastRadiology"),
+                    "IG",
+                    "Resources");
                 ProfileMaker p = new ProfileMaker(outputDir);
+                p.Start();
                 p.CreateProfiles();
+                p.AddResources(resourcesDir);
+                p.SaveAll();
                 return 0;
             }
             catch (Exception err)
