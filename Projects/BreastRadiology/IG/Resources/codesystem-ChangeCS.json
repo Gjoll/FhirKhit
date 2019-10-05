@@ -6,9 +6,11 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>ChangeCS CodeSystem</b></p>\n<p>Change value\n</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ChangeCS",
+  "version": "0.0.2",
   "name": "ChangeCS",
   "title": "ChangeCS",
   "status": "draft",
+  "date": "2019-11-01",
   "publisher": "Hl7 - Clinical Interoperability Council",
   "contact": [
     {
@@ -20,7 +22,6 @@
       ]
     }
   ],
-  "date": "2019-10-03",
   "description": "Change value",
   "caseSensitive": true,
   "content": "complete",
@@ -28,73 +29,73 @@
   "concept": [
     {
       "code": "DecreaseInCalcifications",
-      "definition": "DecreaseInCalcifications",
-      "display": "DecreaseInCalcifications"
+      "display": "DecreaseInCalcifications",
+      "definition": "DecreaseInCalcifications"
     },
     {
       "code": "DecreasedInNumber",
-      "definition": "DecreasedInNumber",
-      "display": "DecreasedInNumber"
+      "display": "DecreasedInNumber",
+      "definition": "DecreasedInNumber"
     },
     {
       "code": "DecreasedInSize",
-      "definition": "DecreasedInSize",
-      "display": "DecreasedInSize"
+      "display": "DecreasedInSize",
+      "definition": "DecreasedInSize"
     },
     {
       "code": "IncreaseInCalcifications",
-      "definition": "IncreaseInCalcifications",
-      "display": "IncreaseInCalcifications"
+      "display": "IncreaseInCalcifications",
+      "definition": "IncreaseInCalcifications"
     },
     {
       "code": "IncreasedInNumber",
-      "definition": "IncreasedInNumber",
-      "display": "IncreasedInNumber"
+      "display": "IncreasedInNumber",
+      "definition": "IncreasedInNumber"
     },
     {
       "code": "IncreasedInSize",
-      "definition": "IncreasedInSize",
-      "display": "IncreasedInSize"
+      "display": "IncreasedInSize",
+      "definition": "IncreasedInSize"
     },
     {
       "code": "LessProminent",
-      "definition": "LessProminent",
-      "display": "LessProminent"
+      "display": "LessProminent",
+      "definition": "LessProminent"
     },
     {
       "code": "MoreProminent",
-      "definition": "MoreProminent",
-      "display": "MoreProminent"
+      "display": "MoreProminent",
+      "definition": "MoreProminent"
     },
     {
       "code": "New",
-      "definition": "New",
-      "display": "New"
+      "display": "New",
+      "definition": "New"
     },
     {
       "code": "NoLongerSeen",
-      "definition": "NoLongerSeen",
-      "display": "NoLongerSeen"
+      "display": "NoLongerSeen",
+      "definition": "NoLongerSeen"
     },
     {
       "code": "NotSignificantlyChanged",
-      "definition": "NotSignificantlyChanged",
-      "display": "NotSignificantlyChanged"
+      "display": "NotSignificantlyChanged",
+      "definition": "NotSignificantlyChanged"
     },
     {
       "code": "PartiallyRemoved",
-      "definition": "PartiallyRemoved",
-      "display": "PartiallyRemoved"
+      "display": "PartiallyRemoved",
+      "definition": "PartiallyRemoved"
     },
     {
       "code": "RepresentsChange",
-      "definition": "RepresentsChange",
-      "display": "RepresentsChange"
+      "display": "RepresentsChange",
+      "definition": "RepresentsChange"
     },
     {
       "code": "Stable",
-      "definition": "Stable",
-      "display": "Stable"
+      "display": "Stable",
+      "definition": "Stable"
     }
   ]
 }

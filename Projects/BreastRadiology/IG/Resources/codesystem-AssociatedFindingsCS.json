@@ -6,9 +6,11 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>AssociatedFindingsCS CodeSystem</b></p>\n<p>Associated Findings\n</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/AssociatedFindingsCS",
+  "version": "0.0.2",
   "name": "AssociatedFindingsCS",
   "title": "AssociatedFindingsCS",
   "status": "draft",
+  "date": "2019-11-01",
   "publisher": "Hl7 - Clinical Interoperability Council",
   "contact": [
     {
@@ -20,7 +22,6 @@
       ]
     }
   ],
-  "date": "2019-10-03",
   "description": "Associated Findings",
   "caseSensitive": true,
   "content": "complete",
@@ -28,133 +29,133 @@
   "concept": [
     {
       "code": "BiopsyClips",
-      "definition": "BiopsyClips",
-      "display": "BiopsyClips"
+      "display": "BiopsyClips",
+      "definition": "BiopsyClips"
     },
     {
       "code": "SurgicalClip",
-      "definition": "SurgicalClip",
-      "display": "SurgicalClip"
+      "display": "SurgicalClip",
+      "definition": "SurgicalClip"
     },
     {
       "code": "SkinThickening",
-      "definition": "SkinThickening",
-      "display": "SkinThickening"
+      "display": "SkinThickening",
+      "definition": "SkinThickening"
     },
     {
       "code": "SkinRetraction",
-      "definition": "SkinRetraction",
-      "display": "SkinRetraction"
+      "display": "SkinRetraction",
+      "definition": "SkinRetraction"
     },
     {
       "code": "SkinLesion",
-      "definition": "SkinLesion",
-      "display": "SkinLesion"
+      "display": "SkinLesion",
+      "definition": "SkinLesion"
     },
     {
       "code": "SkinInvolvement",
-      "definition": "SkinInvolvement",
-      "display": "SkinInvolvement"
+      "display": "SkinInvolvement",
+      "definition": "SkinInvolvement"
     },
     {
       "code": "Seroma",
-      "definition": "Seroma",
-      "display": "Seroma"
+      "display": "Seroma",
+      "definition": "Seroma"
     },
     {
       "code": "PostSurgicalScar",
-      "definition": "PostSurgicalScar",
-      "display": "PostSurgicalScar"
+      "display": "PostSurgicalScar",
+      "definition": "PostSurgicalScar"
     },
     {
       "code": "PectoralisMuscleTenting",
-      "definition": "PectoralisMuscleTenting",
-      "display": "PectoralisMuscleTenting"
+      "display": "PectoralisMuscleTenting",
+      "definition": "PectoralisMuscleTenting"
     },
     {
       "code": "PectoralisMuscleInvolvement",
-      "definition": "PectoralisMuscleInvolvement",
-      "display": "PectoralisMuscleInvolvement"
+      "display": "PectoralisMuscleInvolvement",
+      "definition": "PectoralisMuscleInvolvement"
     },
     {
       "code": "PectoralisMuscleInvasion",
-      "definition": "PectoralisMuscleInvasion",
-      "display": "PectoralisMuscleInvasion"
+      "display": "PectoralisMuscleInvasion",
+      "definition": "PectoralisMuscleInvasion"
     },
     {
       "code": "NoChestWallInvasion",
-      "definition": "NoChestWallInvasion",
-      "display": "NoChestWallInvasion"
+      "display": "NoChestWallInvasion",
+      "definition": "NoChestWallInvasion"
     },
     {
       "code": "NippleRetraction",
-      "definition": "NippleRetraction",
-      "display": "NippleRetraction"
+      "display": "NippleRetraction",
+      "definition": "NippleRetraction"
     },
     {
       "code": "NippleInvasion",
-      "definition": "NippleInvasion",
-      "display": "NippleInvasion"
+      "display": "NippleInvasion",
+      "definition": "NippleInvasion"
     },
     {
       "code": "Hematoma",
-      "definition": "Hematoma",
-      "display": "Hematoma"
+      "display": "Hematoma",
+      "definition": "Hematoma"
     },
     {
       "code": "GoldSeed",
-      "definition": "GoldSeed",
-      "display": "GoldSeed"
+      "display": "GoldSeed",
+      "definition": "GoldSeed"
     },
     {
       "code": "EdemaAdjacent",
-      "definition": "EdemaAdjacent",
-      "display": "EdemaAdjacent"
+      "display": "EdemaAdjacent",
+      "definition": "EdemaAdjacent"
     },
     {
       "code": "Edema",
-      "definition": "Edema",
-      "display": "Edema"
+      "display": "Edema",
+      "definition": "Edema"
     },
     {
       "code": "CooperThickened",
-      "definition": "CooperThickened",
-      "display": "CooperThickened"
+      "display": "CooperThickened",
+      "definition": "CooperThickened"
     },
     {
       "code": "CooperDistorted",
-      "definition": "CooperDistorted",
-      "display": "CooperDistorted"
+      "display": "CooperDistorted",
+      "definition": "CooperDistorted"
     },
     {
       "code": "ChestWallInvasion",
-      "definition": "ChestWallInvasion",
-      "display": "ChestWallInvasion"
+      "display": "ChestWallInvasion",
+      "definition": "ChestWallInvasion"
     },
     {
       "code": "BrachytherapyTube",
-      "definition": "BrachytherapyTube",
-      "display": "BrachytherapyTube"
+      "display": "BrachytherapyTube",
+      "definition": "BrachytherapyTube"
     },
     {
       "code": "BiopsyClip",
-      "definition": "BiopsyClip",
-      "display": "BiopsyClip"
+      "display": "BiopsyClip",
+      "definition": "BiopsyClip"
     },
     {
       "code": "AxillaryAdenopathy",
-      "definition": "AxillaryAdenopathy",
-      "display": "AxillaryAdenopathy"
+      "display": "AxillaryAdenopathy",
+      "definition": "AxillaryAdenopathy"
     },
     {
       "code": "SurgicalClips",
-      "definition": "SurgicalClips",
-      "display": "SurgicalClips"
+      "display": "SurgicalClips",
+      "definition": "SurgicalClips"
     },
     {
       "code": "TrabecularThickening",
-      "definition": "TrabecularThickening",
-      "display": "TrabecularThickening"
+      "display": "TrabecularThickening",
+      "definition": "TrabecularThickening"
     }
   ]
 }

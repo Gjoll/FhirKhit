@@ -6,9 +6,11 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>VascularityCS CodeSystem</b></p>\n<p>Vascularity\n</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/VascularityCS",
+  "version": "0.0.2",
   "name": "VascularityCS",
   "title": "VascularityCS",
   "status": "draft",
+  "date": "2019-11-01",
   "publisher": "Hl7 - Clinical Interoperability Council",
   "contact": [
     {
@@ -20,7 +22,6 @@
       ]
     }
   ],
-  "date": "2019-10-03",
   "description": "Vascularity",
   "caseSensitive": true,
   "content": "complete",
@@ -28,43 +29,43 @@
   "concept": [
     {
       "code": "Adjacent",
-      "definition": "Adjacent",
-      "display": "Adjacent"
+      "display": "Adjacent",
+      "definition": "Adjacent"
     },
     {
       "code": "Increased",
-      "definition": "Increased",
-      "display": "Increased"
+      "display": "Increased",
+      "definition": "Increased"
     },
     {
       "code": "IncreasedInSurroundArea",
-      "definition": "IncreasedInSurroundArea",
-      "display": "IncreasedInSurroundArea"
+      "display": "IncreasedInSurroundArea",
+      "definition": "IncreasedInSurroundArea"
     },
     {
       "code": "Internal",
-      "definition": "Internal",
-      "display": "Internal"
+      "display": "Internal",
+      "definition": "Internal"
     },
     {
       "code": "NoIncrease",
-      "definition": "NoIncrease",
-      "display": "NoIncrease"
+      "display": "NoIncrease",
+      "definition": "NoIncrease"
     },
     {
       "code": "NotPresent",
-      "definition": "NotPresent",
-      "display": "NotPresent"
+      "display": "NotPresent",
+      "definition": "NotPresent"
     },
     {
       "code": "Present",
-      "definition": "Present",
-      "display": "Present"
+      "display": "Present",
+      "definition": "Present"
     },
     {
       "code": "Rim",
-      "definition": "Rim",
-      "display": "Rim"
+      "display": "Rim",
+      "definition": "Rim"
     }
   ]
 }

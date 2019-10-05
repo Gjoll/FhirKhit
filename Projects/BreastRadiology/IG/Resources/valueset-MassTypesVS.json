@@ -6,9 +6,11 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>MassTypesVS ValueSet</b></p>\n<p>Mass Types\n</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/MassTypesVS",
+  "version": "0.0.2",
   "name": "MassTypesVS",
   "title": "MassTypesVS",
   "status": "draft",
+  "date": "2019-11-01",
   "publisher": "Hl7 - Clinical Interoperability Council",
   "contact": [
     {
@@ -20,7 +22,6 @@
       ]
     }
   ],
-  "date": "2019-10-03",
   "description": "Mass Types",
   "compose": {
     "include": [

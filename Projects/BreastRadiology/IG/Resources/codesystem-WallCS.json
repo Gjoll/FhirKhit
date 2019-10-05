@@ -6,9 +6,11 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>WallCS CodeSystem</b></p>\n<p>Wall\n</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/WallCS",
+  "version": "0.0.2",
   "name": "WallCS",
   "title": "WallCS",
   "status": "draft",
+  "date": "2019-11-01",
   "publisher": "Hl7 - Clinical Interoperability Council",
   "contact": [
     {
@@ -20,7 +22,6 @@
       ]
     }
   ],
-  "date": "2019-10-03",
   "description": "Wall",
   "caseSensitive": true,
   "content": "complete",
@@ -28,23 +29,23 @@
   "concept": [
     {
       "code": "IrregularInternalWall",
-      "definition": "no definition found.",
-      "display": "no definition found."
+      "display": "no definition found.",
+      "definition": "no definition found."
     },
     {
       "code": "SeptatedInternalWall",
-      "definition": "No definition found.",
-      "display": "No definition found."
+      "display": "No definition found.",
+      "definition": "No definition found."
     },
     {
       "code": "SmoothInternalWall",
-      "definition": "No definition found.",
-      "display": "No definition found."
+      "display": "No definition found.",
+      "definition": "No definition found."
     },
     {
       "code": "ThickenedWall",
-      "definition": "If you have fibrocystic breasts, you may have more pronounced changes in response to these hormones. ... You may develop lumps in your breasts caused by cysts and swelling of your breast lobules, the milk-producing glands. You may also feel a lumpy thickening in your breast caused by an excess growth of fibrous tissue.",
-      "display": "If you have fibrocystic breasts, you may have more pronounced changes in response to these hormones. ... You may develop lumps in your breasts caused by cysts and swelling of your breast lobules, the milk-producing glands. You may also feel a lumpy thickening in your breast caused by an excess growth of fibrous tissue."
+      "display": "If you have fibrocystic breasts, you may have more pronounced changes in response to these hormones. ... You may develop lumps in your breasts caused by cysts and swelling of your breast lobules, the milk-producing glands. You may also feel a lumpy thickening in your breast caused by an excess growth of fibrous tissue.",
+      "definition": "If you have fibrocystic breasts, you may have more pronounced changes in response to these hormones. ... You may develop lumps in your breasts caused by cysts and swelling of your breast lobules, the milk-producing glands. You may also feel a lumpy thickening in your breast caused by an excess growth of fibrous tissue."
     }
   ]
 }

@@ -6,9 +6,11 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>HilumVS ValueSet</b></p>\n<p>Hilum\n</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/HilumVS",
+  "version": "0.0.2",
   "name": "HilumVS",
   "title": "HilumVS",
   "status": "draft",
+  "date": "2019-11-01",
   "publisher": "Hl7 - Clinical Interoperability Council",
   "contact": [
     {
@@ -20,7 +22,6 @@
       ]
     }
   ],
-  "date": "2019-10-03",
   "description": "Hilum",
   "compose": {
     "include": [

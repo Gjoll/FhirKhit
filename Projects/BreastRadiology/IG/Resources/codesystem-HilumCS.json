@@ -6,9 +6,11 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>HilumCS CodeSystem</b></p>\n<p>Hilum\n</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/HilumCS",
+  "version": "0.0.2",
   "name": "HilumCS",
   "title": "HilumCS",
   "status": "draft",
+  "date": "2019-11-01",
   "publisher": "Hl7 - Clinical Interoperability Council",
   "contact": [
     {
@@ -20,7 +22,6 @@
       ]
     }
   ],
-  "date": "2019-10-03",
   "description": "Hilum",
   "caseSensitive": true,
   "content": "complete",
@@ -28,13 +29,13 @@
   "concept": [
     {
       "code": "HilumFatty",
-      "definition": "A fatty hilum within a lymph node on CT is considered a benign characteristic.",
-      "display": "A fatty hilum within a lymph node on CT is considered a benign characteristic."
+      "display": "A fatty hilum within a lymph node on CT is considered a benign characteristic.",
+      "definition": "A fatty hilum within a lymph node on CT is considered a benign characteristic."
     },
     {
       "code": "HilumNotFatty",
-      "definition": "It was shown that loss of fatty hilum is not a defi- nite criterion for differentiation between malignant and benign lymph nodes [7]. Absence of hilum was found in as many as 9%% of reactive lymph nodes [6].",
-      "display": "It was shown that loss of fatty hilum is not a defi- nite criterion for differentiation between malignant and benign lymph nodes [7]. Absence of hilum was found in as many as 9%% of reactive lymph nodes [6]."
+      "display": "It was shown that loss of fatty hilum is not a defi- nite criterion for differentiation between malignant and benign lymph nodes [7]. Absence of hilum was found in as many as 9%% of reactive lymph nodes [6].",
+      "definition": "It was shown that loss of fatty hilum is not a defi- nite criterion for differentiation between malignant and benign lymph nodes [7]. Absence of hilum was found in as many as 9%% of reactive lymph nodes [6]."
     }
   ]
 }

@@ -232,48 +232,16 @@ namespace FhirKhit.BreastRadiology
 
         public void AddResources(String resourceDir)
         {
+            void Save(Resource r, String outputName)
+            {
+                r.SaveJson(Path.Combine(this.outputDir, outputName));
+            }
+
             String FixName(String path, String prefix)
             {
                 String retVal = Path.GetFileNameWithoutExtension(path);
                 retVal = $"{prefix}{retVal.Substring(prefix.Length)}";
                 return retVal;
-            }
-
-            void Rename(String filePath, String prefix)
-            {
-                String dir = Path.GetDirectoryName(filePath);
-                String name = Path.GetFileName(filePath);
-                name = name.Replace("-brr-", "-");
-                if (name.StartsWith(prefix))
-                    return;
-
-                String newFilePath = Path.Combine(dir, $"{prefix}{name.Substring(prefix.Length)}");
-                File.Move(filePath, "xxyyz");
-                File.Move("xxyyz", newFilePath);
-            }
-
-            List<ContactDetail> Contact()
-            {
-                List<ContactDetail> retVal = new List<ContactDetail>();
-                retVal.Add(new ContactDetail());
-                retVal[0].Telecom.Add(new ContactPoint
-                {
-                    System = ContactPoint.ContactPointSystem.Url,
-                    Value = "http://www.hl7.org/Special/committees/cic"
-                });
-                return retVal;
-            }
-
-            void Save(Resource r, String fileName)
-            {
-                String outputPath = Path.Combine(this.resourceDir, fileName);
-                r.SaveJson(outputPath);
-            }
-
-            void Clean(StructureDefinition sDef)
-            {
-                SDefCleaner c = new SDefCleaner(this);
-                c.CleanupDifferential(sDef);
             }
 
             foreach (String file in Directory.GetFiles(resourceDir))
@@ -286,15 +254,8 @@ namespace FhirKhit.BreastRadiology
                     case StructureDefinition structureDefinition:
                         {
                             String typeName = "StructureDefinition";
-                            Rename(file, typeName);
                             String fixedName = FixName(file, typeName);
                             String htmlPage = $"{fixedName}.html";
-                            structureDefinition.Date = this.date.Value;
-                            structureDefinition.Version = ProfileVersion;
-                            structureDefinition.Status = ProfileStatus;
-                            structureDefinition.Contact = Contact();
-                            structureDefinition.Snapshot = null;
-                            Clean(structureDefinition);
                             Save(structureDefinition, $"{fixedName}.json");
                             this.AddIGResource($"{typeName}/{structureDefinition.Name}", structureDefinition.Name, false);
                             this.igEditor.AddResource($"{typeName}/{structureDefinition.Name}",
@@ -305,13 +266,8 @@ namespace FhirKhit.BreastRadiology
                     case CodeSystem codeSystem:
                         {
                             String typeName = "CodeSystem";
-                            Rename(file, typeName);
                             String fixedName = FixName(file, typeName);
                             String htmlPage = $"{fixedName}.html";
-                            codeSystem.Date = this.date.Value;
-                            codeSystem.Version = ProfileVersion;
-                            codeSystem.Status = ProfileStatus;
-                            codeSystem.Contact = Contact();
                             Save(codeSystem, $"{fixedName}.json");
                             this.AddIGResource($"{typeName}/{codeSystem.Name}", codeSystem.Name, false);
                             this.igEditor.AddResource($"{typeName}/{codeSystem.Name}",
@@ -325,13 +281,8 @@ namespace FhirKhit.BreastRadiology
                     case ValueSet valueSet:
                         {
                             String typeName = "ValueSet";
-                            Rename(file, typeName);
                             String fixedName = FixName(file, typeName);
                             String htmlPage = $"{fixedName}.html";
-                            valueSet.Date = this.date.Value;
-                            valueSet.Version = ProfileVersion;
-                            valueSet.Status = ProfileStatus;
-                            valueSet.Contact = Contact();
                             Save(valueSet, $"{fixedName}.json");
                             this.AddIGResource($"{typeName}/{valueSet.Name}", valueSet.Name, false);
                             this.igEditor.AddResource($"{typeName}/{valueSet.Name}",

@@ -31,7 +31,7 @@ namespace FhirKhit.Tools.R2
             StructureDefinition parent,
             ElementDefinition element)
         {
-            if ((element.Min == 0) && (element.Max == "*"))
+            if ((element.Min == 0) && (element.Max == "0"))
                 element.Type.Clear();
 
             ElementDefinition parentElement = parent.Snapshot.Element.FindByPath(element.Path);

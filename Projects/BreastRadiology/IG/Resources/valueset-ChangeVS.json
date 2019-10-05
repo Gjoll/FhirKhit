@@ -6,9 +6,11 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>ChangeVS ValueSet</b></p>\n<p>Change value\n</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/ChangeVS",
+  "version": "0.0.2",
   "name": "ChangeVS",
   "title": "ChangeVS",
   "status": "draft",
+  "date": "2019-11-01",
   "publisher": "Hl7 - Clinical Interoperability Council",
   "contact": [
     {
@@ -20,7 +22,6 @@
       ]
     }
   ],
-  "date": "2019-10-03",
   "description": "Change value",
   "compose": {
     "include": [

@@ -6,9 +6,11 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>ConsistentWithVS ValueSet</b></p>\n<p>Consistent With\n</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/ConsistentWithVS",
+  "version": "0.0.2",
   "name": "ConsistentWithVS",
   "title": "ConsistentWithVS",
   "status": "draft",
+  "date": "2019-11-01",
   "publisher": "Hl7 - Clinical Interoperability Council",
   "contact": [
     {
@@ -20,7 +22,6 @@
       ]
     }
   ],
-  "date": "2019-10-03",
   "description": "Consistent With",
   "compose": {
     "include": [
