@@ -166,7 +166,7 @@ namespace FhirKhit.Maker.Common.Resource
             String definition,
             Int32 max)
         {
-            String sliceUrl = $"{this.Uri.BaseUriPart()}/{name}-extension";
+            String sliceUrl = $"{this.Uri.BaseUriPart()}/{name}";
             ConfigureExtensionSlice();
             AddExtensionSlice(sliceUrl, name, shortText, new Markdown(definition), max);
         }

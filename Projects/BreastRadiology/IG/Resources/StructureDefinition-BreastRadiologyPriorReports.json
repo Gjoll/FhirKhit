@@ -1,13 +1,13 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "PriorReports-extension",
+  "id": "BreastRadiologyPriorReports",
   "text": {
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>PriorReports Extension</b></p>\n  <p>Prior reports</p>\n</div>"
   },
-  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/PriorReports-extension",
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyPriorReports",
   "version": "0.0.2",
-  "name": "PriorReports",
+  "name": "BreastRadiologyPriorReports",
   "title": "PriorReports",
   "status": "draft",
   "date": "2019-11-01",
@@ -57,7 +57,7 @@
             "code": "uri"
           }
         ],
-        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/PriorReports-extension"
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyPriorReports"
       },
       {
         "id": "Extension.valueReference",

@@ -81,10 +81,11 @@ namespace FhirKhit.BreastRadiology
                 String system = ((FhirUri)eSystem.Fixed).Value;
                 String code = ((Code)eCode.Fixed).Value;
 
-                elements.RemoveById("Observation.category.coding");
-                elements.RemoveById(baseId);
-                elements.RemoveById($"{baseId}.system");
-                elements.RemoveById($"{baseId}.code");
+                elements.RemoveById("Observation.category.coding")
+                    .RemoveById(baseId)
+                    .RemoveById($"{baseId}.system")
+                    .RemoveById($"{baseId}.code")
+                    ;
 
                 ElementDefinition coding = new ElementDefinition
                 {
@@ -105,20 +106,23 @@ namespace FhirKhit.BreastRadiology
             void CleanObservation(StructureDefinition sDef)
             {
                 sDef.Differential.Element
-                    .RemoveById("Observation.performer")
+                    //.RemoveById("Observation.performer")
                     .RemoveById("Observation.basedOn")
-                    .RemoveById("Observation.partOf")
-                    .RemoveById("Observation.note")
-                    .RemoveById("Observation.effective[x]")
-                    .RemoveById("Observation.device")
-                    .RemoveById("Observation.referenceRange")
-                    .RemoveById("Observation.referenceRange.type")
-                    .RemoveById("Observation.referenceRange.appliesTo")
-                    .RemoveById("Observation.derivedFrom")
-                    .RemoveById("Observation.component.value[x]")
-                    .RemoveById("Observation.component.referenceRange")
-                    .RemoveById("Observation.component.referenceRange.type")
-                    .RemoveById("Observation.component.referenceRange.appliesTo")
+                    .RemoveByPath("Observation.bodySite.extension")
+                    .RemoveByPath("Observation.encounter")
+                    //.RemoveById("Observation.focus")
+                    //.RemoveById("Observation.partOf")
+                    //.RemoveById("Observation.note")
+                    //.RemoveById("Observation.effective[x]")
+                    //.RemoveById("Observation.device")
+                    //.RemoveById("Observation.referenceRange")
+                    //.RemoveById("Observation.referenceRange.type")
+                    //.RemoveById("Observation.referenceRange.appliesTo")
+                    //.RemoveById("Observation.derivedFrom")
+                    //.RemoveById("Observation.component.value[x]")
+                    //.RemoveById("Observation.component.referenceRange")
+                    //.RemoveById("Observation.component.referenceRange.type")
+                    //.RemoveById("Observation.component.referenceRange.appliesTo")
                     ;
 
                 if (
@@ -126,16 +130,20 @@ namespace FhirKhit.BreastRadiology
                     (sDef.Name != "BreastRadiologyObservation")
                     )
                 {
-                    sDef.Differential.Element
-                        .RemoveById("Observation.bodySite")
-                        .RemoveById("Observation.bodySite.extension")
-                        ;
+                    //sDef.Differential.Element
+                    //    .RemoveById("Observation.bodySite")
+                    //    .RemoveById("Observation.bodySite.extension")
+                    //    ;
                 }
                 FixImaging(sDef);
             }
 
             void Clean(StructureDefinition sDef)
             {
+                String text = sDef.Text.Div;
+                Int32 mapIndex = text.IndexOf("<p><b>Mapping Summary</b>");
+                if (mapIndex > 0)
+                    sDef.Text.Div = text.Substring(0, mapIndex) + "</div>";
                 sDef.Mapping = null;
                 SDefCleaner c = new SDefCleaner(this);
                 c.CleanupDifferential(sDef);
@@ -157,17 +165,11 @@ namespace FhirKhit.BreastRadiology
                             String fixedName = FixName(file, typeName);
                             String htmlPage = $"{fixedName}.html";
                             structureDefinition.Date = this.date.Value;
-
                             structureDefinition.Version = ProfileVersion;
-
                             structureDefinition.Status = ProfileStatus;
-
                             structureDefinition.Contact = Contact();
-
                             structureDefinition.Snapshot = null;
-
                             Clean(structureDefinition);
-
                             Save(structureDefinition, outputPath);
                         }
                         break;

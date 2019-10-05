@@ -195,14 +195,14 @@
     "StructureDefinition/BreastRadiologyObservationPatientRisk": {
       "base": "StructureDefinition-BreastRadiologyObservationPatientRisk.html"
     },
+    "StructureDefinition/BreastRadiologyPriorReports": {
+      "base": "StructureDefinition-BreastRadiologyPriorReports.html"
+    },
+    "StructureDefinition/BreastRadiologyRecommendations": {
+      "base": "StructureDefinition-BreastRadiologyRecommendations.html"
+    },
     "StructureDefinition/BreastRadiologyReport": {
       "base": "StructureDefinition-BreastRadiologyReport.html"
-    },
-    "StructureDefinition/PriorReports": {
-      "base": "StructureDefinition-PriorReports.html"
-    },
-    "StructureDefinition/Recommendations": {
-      "base": "StructureDefinition-Recommendations.html"
     },
     "ValueSet/AbnormalityDensityVS": {
       "base": "ValueSet-AbnormalityDensityVS.html"

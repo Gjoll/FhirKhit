@@ -3,7 +3,7 @@
   "id": "BreastRadiologyReport",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>BreastRadiologyReport Profile</b></p>\n  <p>Breast Radiology Diagnostic Report.\n&lt;br&gt;This diagnostic report is the base of the Breast Radiology Report, and contains a summary of the report findings.\n&lt;br&gt;Detailed information about the results of the exam are contained in the Breast Radiology Observation linked to by the &#039;result&#039; field.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>brr.BreastRadiologyReport maps to http://hl7.org/fhir/StructureDefinition/DiagnosticReport:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier\n  BasedOn maps to basedOn\n  Status maps to status\n  Category maps to category\n  ObservationSubjectOfRecord maps to subject\n  Code maps to code\n  CareContext maps to encounter\n  RelevantTime maps to effective[x]\n  StatementDateTime maps to issued\n  DiagnosticReportPerformer maps to performer\n  ResultsInterpreter maps to resultsInterpreter\n  Specimen maps to specimen\n  Observation maps to result (slice on = $this.resolve().code.coding.code; slice strategy = includes)\n  MediaIncluded.CommentOrDescription maps to media.comment\n  MediaIncluded.Media maps to media.link\n  ConclusionText maps to conclusion\n  ConclusionCode maps to conclusionCode\n  PresentedForm maps to presentedForm\n</pre></p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>BreastRadiologyReport Profile</b></p>\n  <p>Breast Radiology Diagnostic Report.\n&lt;br&gt;This diagnostic report is the base of the Breast Radiology Report, and contains a summary of the report findings.\n&lt;br&gt;Detailed information about the results of the exam are contained in the Breast Radiology Observation linked to by the &#039;result&#039; field.</p>\n  </div>"
   },
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyReport",
   "version": "0.0.2",
@@ -369,7 +369,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/Recommendations-extension"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyRecommendations"
             ]
           }
         ],
@@ -404,7 +404,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/PriorReports-extension"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyPriorReports"
             ]
           }
         ],
@@ -2365,9 +2365,7 @@
         "path": "DiagnosticReport",
         "short": "BreastRadiologyReport",
         "definition": "Breast Radiology Diagnostic Report.\n<br>This diagnostic report is the base of the Breast Radiology Report, and contains a summary of the report findings.\n<br>Detailed information about the results of the exam are contained in the Breast Radiology Observation linked to by the 'result' field.",
-        "mustSupport": false,
-        "isModifier": false,
-        "isSummary": false
+        "mustSupport": false
       },
       {
         "id": "DiagnosticReport.extension",
@@ -2389,8 +2387,6 @@
         "path": "DiagnosticReport.extension",
         "sliceName": "recommendations",
         "definition": "Recommendations for future care",
-        "min": 0,
-        "max": "*",
         "base": {
           "path": "DomainResource.extension",
           "min": 0,
@@ -2400,20 +2396,16 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/Recommendations-extension"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyRecommendations"
             ]
           }
-        ],
-        "isModifier": false,
-        "isSummary": false
+        ]
       },
       {
         "id": "DiagnosticReport.extension:priorreports",
         "path": "DiagnosticReport.extension",
         "sliceName": "priorreports",
         "definition": "Prior reports",
-        "min": 0,
-        "max": "*",
         "base": {
           "path": "DomainResource.extension",
           "min": 0,
@@ -2423,12 +2415,10 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/PriorReports-extension"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyPriorReports"
             ]
           }
-        ],
-        "isModifier": false,
-        "isSummary": false
+        ]
       },
       {
         "id": "DiagnosticReport.basedOn",
@@ -2566,15 +2556,7 @@
       },
       {
         "id": "DiagnosticReport.encounter",
-        "path": "DiagnosticReport.encounter",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Encounter"
-            ]
-          }
-        ]
+        "path": "DiagnosticReport.encounter"
       },
       {
         "id": "DiagnosticReport.issued",
@@ -2616,15 +2598,7 @@
         "id": "DiagnosticReport.specimen",
         "path": "DiagnosticReport.specimen",
         "min": 0,
-        "max": "0",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Specimen"
-            ]
-          }
-        ]
+        "max": "0"
       },
       {
         "id": "DiagnosticReport.result",
@@ -2641,15 +2615,7 @@
           "rules": "open"
         },
         "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Observation"
-            ]
-          }
-        ]
+        "max": "1"
       },
       {
         "id": "DiagnosticReport.result:BreastRadiologyObservation",
@@ -2674,15 +2640,7 @@
       },
       {
         "id": "DiagnosticReport.media.link",
-        "path": "DiagnosticReport.media.link",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Media"
-            ]
-          }
-        ]
+        "path": "DiagnosticReport.media.link"
       },
       {
         "id": "DiagnosticReport.conclusion",

@@ -358,23 +358,23 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyPriorReports"
+      },
+      "name" : "BreastRadiologyPriorReports",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyRecommendations"
+      },
+      "name" : "BreastRadiologyRecommendations",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "StructureDefinition/BreastRadiologyReport"
       },
       "name" : "BreastRadiologyReport",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/PriorReports"
-      },
-      "name" : "PriorReports",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/Recommendations"
-      },
-      "name" : "Recommendations",
       "exampleBoolean" : false
     },
     {

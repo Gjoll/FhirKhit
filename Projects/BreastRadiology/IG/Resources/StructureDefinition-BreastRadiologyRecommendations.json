@@ -1,14 +1,14 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "brr-Recommendations-extension",
+  "id": "BreastRadiologyRecommendations",
   "text": {
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Recommendations Extension</b></p>\n  <p>Recommendations for future care</p>\n</div>"
   },
-  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/brr-Recommendations-extension",
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyRecommendations",
   "version": "0.0.2",
-  "name": "Recommendations",
-  "title": "brr-Recommendations",
+  "name": "BreastRadiologyRecommendations",
+  "title": "Recommendations",
   "status": "draft",
   "date": "2019-11-01",
   "publisher": "Hl7 - Clinical Interoperability Council",
@@ -57,7 +57,7 @@
             "code": "uri"
           }
         ],
-        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/brr-Recommendations-extension"
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyRecommendations"
       },
       {
         "id": "Extension.valueReference",
