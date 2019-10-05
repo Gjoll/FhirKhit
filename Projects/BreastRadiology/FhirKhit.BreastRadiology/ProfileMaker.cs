@@ -232,57 +232,80 @@ namespace FhirKhit.BreastRadiology
 
         public void AddResources(String resourceDir)
         {
-            void Save(Resource r, String fileName, String prefix)
+            String FixName(String path, String prefix)
             {
-                fileName = prefix + fileName.Substring(prefix.Length);
+                String retVal = Path.GetFileNameWithoutExtension(path);
+                retVal = $"{prefix}{retVal.Substring(prefix.Length)}";
+                return retVal;
+            }
+        
+            void Save(Resource r, String fileName)
+            {
                 String outputPath = Path.Combine(this.resourceDir, fileName);
                 r.SaveJson(outputPath);
             }
 
             foreach (String file in Directory.GetFiles(resourceDir))
             {
-                String htmlPage = $"{Path.GetFileNameWithoutExtension(file)}.html";
                 String fhirText = File.ReadAllText(file);
                 FhirJsonParser parser = new FhirJsonParser();
                 var resource = parser.Parse(fhirText, typeof(Resource));
                 switch (resource)
                 {
                     case CodeSystem codeSystem:
-                        codeSystem.Date = this.date.Value;
-                        codeSystem.Version = ProfileVersion;
-                        codeSystem.Status = ProfileStatus;
-                        codeSystem.Contact.Clear();
-                        codeSystem.Contact.Add(new ContactDetail());
-                        codeSystem.Contact[0].Telecom.Add(new ContactPoint{
-                            System = ContactPoint.ContactPointSystem.Url,
-                            Value = "http://www.hl7.org/Special/committees/cic"
-                        });
-                        Save(codeSystem, Path.GetFileName(file), "CodeSystem");
-                        this.AddIGResource($"CodeSystem/{codeSystem.Name}", codeSystem.Name, false);
-                        this.igEditor.AddResource($"CodeSystem/{codeSystem.Name}",
-                            htmlPage);
-                        this.codeSystemsEditor.AddCodeSystem(codeSystem.Name,
-                            htmlPage,
-                            codeSystem.Description);
+                        {
+                            String fixedName = FixName(file, "CodeSystem");
+                            String htmlPage = $"{fixedName}.html";
+                            codeSystem.Date = this.date.Value;
+
+                            codeSystem.Version = ProfileVersion;
+
+                            codeSystem.Status = ProfileStatus;
+
+                            codeSystem.Contact.Clear();
+
+                            codeSystem.Contact.Add(new ContactDetail());
+                            codeSystem.Contact[0].Telecom.Add(new ContactPoint
+                            {
+                                System = ContactPoint.ContactPointSystem.Url,
+                                Value = "http://www.hl7.org/Special/committees/cic"
+                            });
+                            Save(codeSystem, $"{fixedName}.json");
+                            this.AddIGResource($"CodeSystem/{codeSystem.Name}", codeSystem.Name, false);
+                            this.igEditor.AddResource($"CodeSystem/{codeSystem.Name}",
+                                htmlPage);
+                            this.codeSystemsEditor.AddCodeSystem(codeSystem.Name,
+                                htmlPage,
+                                codeSystem.Description);
+                        }
                         break;
 
                     case ValueSet valueSet:
-                        valueSet.Date = this.date.Value;
-                        valueSet.Version = ProfileVersion;
-                        valueSet.Status = ProfileStatus;
-                        valueSet.Contact.Clear();
-                        valueSet.Contact.Add(new ContactDetail());
-                        valueSet.Contact[0].Telecom.Add(new ContactPoint{
-                            System = ContactPoint.ContactPointSystem.Url,
-                            Value = "http://www.hl7.org/Special/committees/cic"
-                        });
-                        Save(valueSet, Path.GetFileName(file), "ValueSet");
-                        this.AddIGResource($"ValueSet/{valueSet.Name}", valueSet.Name, false);
-                        this.igEditor.AddResource($"ValueSet/{valueSet.Name}",
-                            htmlPage);
-                        this.valueSetsEditor.AddValueSet(valueSet.Name,
-                            htmlPage,
-                            valueSet.Description);
+                        {
+                            String fixedName = FixName(file, "ValueSet");
+                            String htmlPage = $"{fixedName}.html";
+                            valueSet.Date = this.date.Value;
+
+                            valueSet.Version = ProfileVersion;
+
+                            valueSet.Status = ProfileStatus;
+
+                            valueSet.Contact.Clear();
+
+                            valueSet.Contact.Add(new ContactDetail());
+                            valueSet.Contact[0].Telecom.Add(new ContactPoint
+                            {
+                                System = ContactPoint.ContactPointSystem.Url,
+                                Value = "http://www.hl7.org/Special/committees/cic"
+                            });
+                            Save(valueSet, $"{fixedName}.json");
+                            this.AddIGResource($"ValueSet/{valueSet.Name}", valueSet.Name, false);
+                            this.igEditor.AddResource($"ValueSet/{valueSet.Name}",
+                                htmlPage);
+                            this.valueSetsEditor.AddValueSet(valueSet.Name,
+                                htmlPage,
+                                valueSet.Description);
+                        }
                         break;
 
                     default:
