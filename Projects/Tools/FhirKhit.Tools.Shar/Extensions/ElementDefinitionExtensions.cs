@@ -53,6 +53,50 @@ namespace FhirKhit.Tools.R2
             return null;
         }
 
+        public static List<ElementDefinition> RemoveById(this List<ElementDefinition> elements,
+            String id)
+        {
+            Int32 i = 0;
+            while (i < elements.Count)
+            {
+                ElementDefinition e = elements[i];
+                if (e.ElementId == id)
+                    elements.RemoveAt(i);
+                else
+                    i += 1;
+            }
+            return elements;
+        }
+
+        public static List<ElementDefinition> RemoveByPath(this List<ElementDefinition> elements,
+            String path)
+        {
+            Int32 i = 0;
+            while (i < elements.Count)
+            {
+                ElementDefinition e = elements[i];
+                if (e.Path == path)
+                    elements.RemoveAt(i);
+                else
+                    i += 1;
+            }
+            return elements;
+        }
+
+        public static ElementDefinition FindById(this IEnumerable<ElementDefinition> elements,
+            String id)
+        {
+            if (elements is null)
+                throw new ArgumentNullException(nameof(elements));
+
+            foreach (ElementDefinition ed in elements)
+            {
+                if (ed.ElementId == id)
+                    return ed;
+            }
+            return null;
+        }
+
         /// <summary>
         /// Return only the top level element definitions (ignore nested elements)
         /// </summary>

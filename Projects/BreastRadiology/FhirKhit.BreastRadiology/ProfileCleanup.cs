@@ -60,11 +60,65 @@ namespace FhirKhit.BreastRadiology
                 r.SaveJson(outputPath);
             }
 
+            void FixImaging(StructureDefinition sDef)
+            {
+                const string baseId = "Observation.category.coding:Fixed_imaging";
+                var elements = sDef.Differential.Element;
+                ElementDefinition eSystem = elements.FindById($"{baseId}.system");
+                ElementDefinition eCode= elements.FindById($"{baseId}.code");
+
+                if (eSystem == null)
+                    return;
+
+                ElementDefinition  e= elements.FindById("Observation.category.coding");
+                e.Slicing = null;
+                String system = ((FhirUri) eSystem.Fixed).Value;
+                String code = ((Code) eCode.Fixed).Value;
+                e.Pattern = new CodeableConcept(system, code);
+                elements.RemoveById(baseId);
+                elements.RemoveById($"{baseId}.system");
+                elements.RemoveById($"{baseId}.code");
+            }
+
+            void CleanObservation(StructureDefinition sDef)
+            {
+                sDef.Differential.Element
+                //    .RemoveById("Observation.performer")
+                //    .RemoveById("Observation.basedOn")
+                //    .RemoveById("Observation.partOf")
+                //    .RemoveById("Observation.note")
+                    .RemoveById("Observation.effective[x]")
+                //    .RemoveById("Observation.device")
+                //    .RemoveById("Observation.referenceRange")
+                //    .RemoveById("Observation.referenceRange.type")
+                //    .RemoveById("Observation.referenceRange.appliesTo")
+                //    .RemoveById("Observation.derivedFrom")
+                //    .RemoveById("Observation.component.value[x]")
+                //    .RemoveById("Observation.component.referenceRange")
+                //    .RemoveById("Observation.component.referenceRange.type")
+                //    .RemoveById("Observation.component.referenceRange.appliesTo")
+                    ;
+
+                if (
+                    (sDef.Name != "BreastRadiologyAbnormality") &&
+                    (sDef.Name != "BreastRadiologyObservation")
+                    )
+                {
+                    //sDef.Differential.Element
+                    //    .RemoveById("Observation.bodySite")
+                    //    .RemoveById("Observation.bodySite.extension")
+                    //    ;
+                }
+                FixImaging(sDef);
+            }
+
             void Clean(StructureDefinition sDef)
             {
                 sDef.Mapping = null;
                 SDefCleaner c = new SDefCleaner(this);
                 c.CleanupDifferential(sDef);
+                if (sDef.Type == "Observation")
+                    CleanObservation(sDef);
             }
 
             foreach (String file in Directory.GetFiles(resourceDir))
