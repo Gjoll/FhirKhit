@@ -135,6 +135,15 @@ namespace FhirKhit.BreastRadiology
                     //    .RemoveById("Observation.bodySite.extension")
                     //    ;
                 }
+
+                ElementDefinition s = sDef.Differential.Element.FindById("Observation.category");
+                if (
+                    (s != null) &&
+                    (s.Slicing != null)
+                    )
+                {
+                    s.Slicing.Rules = ElementDefinition.SlicingRules.OpenAtEnd;
+                }
                 FixImaging(sDef);
             }
 

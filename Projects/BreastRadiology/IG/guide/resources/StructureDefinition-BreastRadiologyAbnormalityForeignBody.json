@@ -576,7 +576,8 @@
               "type": "value",
               "path": "coding"
             }
-          ]
+          ],
+          "rules": "openAtEnd"
         },
         "short": "Classification of  type of observation",
         "definition": "A code that classifies the general type of observation being made.",
@@ -1076,7 +1077,7 @@
             "code": "uri"
           }
         ],
-        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/breastrad-BreastAbnormalityCodesCS",
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastAbnormalityCodesCS",
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -2837,7 +2838,8 @@
               "type": "value",
               "path": "coding"
             }
-          ]
+          ],
+          "rules": "openAtEnd"
         },
         "min": 0,
         "max": "1"
@@ -2899,7 +2901,7 @@
       {
         "id": "Observation.code.coding:Fixed_ForeignBody.system",
         "path": "Observation.code.coding.system",
-        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/breastrad-BreastAbnormalityCodesCS"
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastAbnormalityCodesCS"
       },
       {
         "id": "Observation.code.coding:Fixed_ForeignBody.code",

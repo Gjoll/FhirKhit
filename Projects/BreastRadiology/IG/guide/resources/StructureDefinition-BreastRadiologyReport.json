@@ -516,11 +516,11 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
-              "http://hl7.org/fhir/StructureDefinition/ReferralRequest",
-              "http://hl7.org/fhir/StructureDefinition/ProcedureRequest",
+              "http://hl7.org/fhir/StructureDefinition/CarePlan",
+              "http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation",
               "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
-              "http://hl7.org/fhir/StructureDefinition/CarePlan"
+              "http://hl7.org/fhir/StructureDefinition/NutritionOrder",
+              "http://hl7.org/fhir/StructureDefinition/ServiceRequest"
             ]
           }
         ],
@@ -605,7 +605,7 @@
           "Discipline"
         ],
         "min": 1,
-        "max": "1",
+        "max": "*",
         "base": {
           "path": "DiagnosticReport.category",
           "min": 0,
@@ -2421,26 +2421,10 @@
         ]
       },
       {
-        "id": "DiagnosticReport.basedOn",
-        "path": "DiagnosticReport.basedOn",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
-              "http://hl7.org/fhir/StructureDefinition/ReferralRequest",
-              "http://hl7.org/fhir/StructureDefinition/ProcedureRequest",
-              "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
-              "http://hl7.org/fhir/StructureDefinition/CarePlan"
-            ]
-          }
-        ]
-      },
-      {
         "id": "DiagnosticReport.category",
         "path": "DiagnosticReport.category",
         "min": 1,
-        "max": "1"
+        "max": "*"
       },
       {
         "id": "DiagnosticReport.category.coding",

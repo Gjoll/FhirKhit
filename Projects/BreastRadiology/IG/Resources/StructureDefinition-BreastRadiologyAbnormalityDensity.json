@@ -47,7 +47,8 @@
               "type": "value",
               "path": "coding"
             }
-          ]
+          ],
+          "rules": "openAtEnd"
         },
         "min": 0,
         "max": "1"
@@ -109,7 +110,7 @@
       {
         "id": "Observation.code.coding:Fixed_AbnormalityDensity.system",
         "path": "Observation.code.coding.system",
-        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/breastrad-BreastAbnormalityCodesCS"
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastAbnormalityCodesCS"
       },
       {
         "id": "Observation.code.coding:Fixed_AbnormalityDensity.code",
