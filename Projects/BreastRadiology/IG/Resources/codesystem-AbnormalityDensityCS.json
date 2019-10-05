@@ -1,11 +1,11 @@
 {
   "resourceType": "CodeSystem",
-  "id": "brr-AbnormalityDensityCS",
+  "id": "AbnormalityDensityCS",
   "text": {
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>AbnormalityDensityCS CodeSystem</b></p>\n<p>Ductal carcinoma in situ (DCIS) is the presence of abnormal cells inside a milk duct in the breast.\nDCIS is considered the earliest form of breast cancer. DCIS is noninvasive, meaning it hasn&#039;t spread out of the milk duct and has a low risk of becoming invasive.\n</p>\n</div>"
   },
-  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/brr-AbnormalityDensityCS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/AbnormalityDensityCS",
   "name": "AbnormalityDensityCS",
   "title": "AbnormalityDensityCS",
   "status": "draft",

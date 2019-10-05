@@ -1,11 +1,11 @@
 {
   "resourceType": "CodeSystem",
-  "id": "brr-ConsistentWithCS",
+  "id": "ConsistentWithCS",
   "text": {
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>ConsistentWithCS CodeSystem</b></p>\n<p>Consistent With\n</p>\n</div>"
   },
-  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/brr-ConsistentWithCS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ConsistentWithCS",
   "name": "ConsistentWithCS",
   "title": "ConsistentWithCS",
   "status": "draft",

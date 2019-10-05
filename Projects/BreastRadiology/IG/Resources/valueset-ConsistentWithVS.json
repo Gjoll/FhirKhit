@@ -1,11 +1,11 @@
 {
   "resourceType": "ValueSet",
-  "id": "brr-ConsistentWithVS",
+  "id": "ConsistentWithVS",
   "text": {
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>ConsistentWithVS ValueSet</b></p>\n<p>Consistent With\n</p>\n</div>"
   },
-  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/brr-ConsistentWithVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/ConsistentWithVS",
   "name": "ConsistentWithVS",
   "title": "ConsistentWithVS",
   "status": "draft",
@@ -25,7 +25,7 @@
   "compose": {
     "include": [
       {
-        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/brr-ConsistentWithCS",
+        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ConsistentWithCS",
         "concept": [
           {
             "code": "Abscess",

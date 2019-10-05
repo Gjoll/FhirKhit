@@ -1,11 +1,11 @@
 {
   "resourceType": "CodeSystem",
-  "id": "brr-CystTypesCS",
+  "id": "CystTypesCS",
   "text": {
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>CystTypesCS CodeSystem</b></p>\n<p>Cyst Types\n</p>\n</div>"
   },
-  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/brr-CystTypesCS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CystTypesCS",
   "name": "CystTypesCS",
   "title": "CystTypesCS",
   "status": "draft",

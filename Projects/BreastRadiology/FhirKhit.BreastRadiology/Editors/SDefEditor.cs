@@ -212,41 +212,24 @@ namespace FhirKhit.BreastRadiology
             return SliceByUrl(this.baseSDef.Name, "extension", extensionUrl, name);
         }
 
-        public SDefEditor ContactUrl(String value)
-        {
-            ContactDetail cd = new ContactDetail();
-            cd.Telecom.Add(new ContactPoint
-            {
-                System = ContactPoint.ContactPointSystem.Url,
-                Value = value
-            });
-            this.sDef.Contact.Add(cd);
-            return this;
-        }
-
-        public SDefEditor Name(String value) { this.sDef.Name = value; return this; }
-        public SDefEditor Description(String value) { this.sDef.Description = new Markdown(value); return this; }
-        public SDefEditor Url(String value) { this.sDef.Url = value; return this; }
-        public SDefEditor Publisher(String value) { this.sDef.Publisher = value; return this; }
-        public SDefEditor Title(String value) { this.sDef.Title = value; return this; }
-        public SDefEditor Status(PublicationStatus? value) { this.sDef.Status = value; return this; }
-        public SDefEditor Date(FhirDateTime value) { this.sDef.Date = value.Value; return this; }
-        public SDefEditor Derivation(StructureDefinition.TypeDerivationRule? value) { this.sDef.Derivation = value; return this; }
-        public SDefEditor Abstract(bool? value) { this.sDef.Abstract = value; return this; }
-        public SDefEditor Kind(StructureDefinition.StructureDefinitionKind? value) { this.sDef.Kind = value; return this; }
-        public SDefEditor Version(String value) { this.sDef.Version = value; return this; }
-        public SDefEditor Type(String value) { this.sDef.Type = value; return this; }
+        public SDefEditor ContactUrl(String value) {this.sDef.ContactUrl(value); return this; }
+        public SDefEditor Name(String value) { this.sDef.Name(value); return this; }
+        public SDefEditor Description(String value) { this.sDef.Description(value); return this; }
+        public SDefEditor Url(String value) { this.sDef.Url(value); return this; }
+        public SDefEditor Publisher(String value) { this.sDef.Publisher(value); return this; }
+        public SDefEditor Title(String value) { this.sDef.Title(value); return this; }
+        public SDefEditor Status(PublicationStatus? value) { this.sDef.Status(value); return this; }
+        public SDefEditor Date(FhirDateTime value) { this.sDef.Date(value); return this; }
+        public SDefEditor Derivation(StructureDefinition.TypeDerivationRule? value) { this.sDef.Derivation(value); return this; }
+        public SDefEditor Abstract(bool? value) { this.sDef.Abstract(value); return this; }
+        public SDefEditor Kind(StructureDefinition.StructureDefinitionKind? value) { this.sDef.Kind(value); return this; }
+        public SDefEditor Version(String value) { this.sDef.Version(value); return this; }
+        public SDefEditor Type(String value) { this.sDef.Type(value); return this; }
         public SDefEditor Context(StructureDefinition.ExtensionContextType type = StructureDefinition.ExtensionContextType.Element,
             String expression = "*")
         {
-            this.sDef.Context.Clear();
-            this.sDef.Context.Add(new StructureDefinition.ContextComponent
-            {
-                Type = type,
-                Expression = expression
-            });
+            this.sDef.Context(type, expression);
             return this;
         }
-
     }
 }

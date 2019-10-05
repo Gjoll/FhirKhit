@@ -54,6 +54,272 @@
       },
       "name" : "BreastRadiologyReport",
       "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/AbnormalityDensityCS"
+      },
+      "name" : "AbnormalityDensityCS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/AbnormalityTypeCS"
+      },
+      "name" : "AbnormalityTypeCS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/AssociatedFindingsCS"
+      },
+      "name" : "AssociatedFindingsCS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/AsymmetryTypesCS"
+      },
+      "name" : "AsymmetryTypesCS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/BiRadCodeCS"
+      },
+      "name" : "BiRadCodeCS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/BreastAbnormalityCodesCS"
+      },
+      "name" : "BreastAbnormalityCodesCS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/CalcificationTypeCS"
+      },
+      "name" : "CalcificationTypeCS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/ChangeCS"
+      },
+      "name" : "ChangeCS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/ConsistentWithCS"
+      },
+      "name" : "ConsistentWithCS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/CystTypesCS"
+      },
+      "name" : "CystTypesCS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/ForeignBodyCS"
+      },
+      "name" : "ForeignBodyCS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/HilumCS"
+      },
+      "name" : "HilumCS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/LymphNodeQualifiersCS"
+      },
+      "name" : "LymphNodeQualifiersCS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/MarginCS"
+      },
+      "name" : "MarginCS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/MassTypesCS"
+      },
+      "name" : "MassTypesCS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/NodeTypesCS"
+      },
+      "name" : "NodeTypesCS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/ShapeCS"
+      },
+      "name" : "ShapeCS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/VascularityCS"
+      },
+      "name" : "VascularityCS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/WallCS"
+      },
+      "name" : "WallCS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/AbnormalityDensityVS"
+      },
+      "name" : "AbnormalityDensityVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/AbnormalityTypeVS"
+      },
+      "name" : "AbnormalityTypeVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/AssociatedFindingsVS"
+      },
+      "name" : "AssociatedFindingsVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/AsymmetryTypesVS"
+      },
+      "name" : "AsymmetryTypesVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/BiRadCodeVS"
+      },
+      "name" : "BiRadCodeVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/BreastAbnormalityCodesVS"
+      },
+      "name" : "BreastAbnormalityCodesVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/CalcificationTypeVS"
+      },
+      "name" : "CalcificationTypeVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/ChangeVS"
+      },
+      "name" : "ChangeVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/ConsistentWithVS"
+      },
+      "name" : "ConsistentWithVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/CystTypesVS"
+      },
+      "name" : "CystTypesVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/ForeignBodyVS"
+      },
+      "name" : "ForeignBodyVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/HilumVS"
+      },
+      "name" : "HilumVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/LymphNodeQualifiersVS"
+      },
+      "name" : "LymphNodeQualifiersVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/MarginVS"
+      },
+      "name" : "MarginVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/MassTypesVS"
+      },
+      "name" : "MassTypesVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/NodeTypesVS"
+      },
+      "name" : "NodeTypesVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/ShapeVS"
+      },
+      "name" : "ShapeVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/VascularityVS"
+      },
+      "name" : "VascularityVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/WallVS"
+      },
+      "name" : "WallVS",
+      "exampleBoolean" : false
     }],
     "page" : {
       "nameUrl" : "index.html",

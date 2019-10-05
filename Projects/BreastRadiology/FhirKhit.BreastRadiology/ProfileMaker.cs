@@ -12,6 +12,7 @@ namespace FhirKhit.BreastRadiology
     public class ProfileMaker
     {
         const String ProfileVersion = "0.0.2";
+        const PublicationStatus ProfileStatus = PublicationStatus.Draft;
 
         ProfilesEditor profilesEditor;
         ExamplesEditor examplesEditor;
@@ -54,7 +55,7 @@ namespace FhirKhit.BreastRadiology
             SDefEditor retVal = new SDefEditor(baseUrl, this.resourceDir)
                 .Name(name)
                 .Url(CreateUrl(name))
-                .Status(PublicationStatus.Draft)
+                .Status(ProfileStatus)
                 .Title(name)
                 .Publisher("Hl7 - Clinical Interoperability Council")
                 .ContactUrl("http://www.hl7.org/Special/committees/cic")
@@ -154,7 +155,7 @@ namespace FhirKhit.BreastRadiology
 
             e.Select("result")
                 .Single()
-                .Type("Reference", null, new String[] {ObservationUrl})
+                .Type("Reference", null, new String[] { ObservationUrl })
                 ;
 
             this.AddIGStructureDefinition(e, false);
@@ -231,26 +232,63 @@ namespace FhirKhit.BreastRadiology
 
         public void AddResources(String resourceDir)
         {
+            void Save(Resource r, String fileName, String prefix)
+            {
+                fileName = prefix + fileName.Substring(prefix.Length);
+                String outputPath = Path.Combine(this.resourceDir, fileName);
+                r.SaveJson(outputPath);
+            }
+
             foreach (String file in Directory.GetFiles(resourceDir))
             {
-                if (file.Contains("-brr-"))
+                String htmlPage = $"{Path.GetFileNameWithoutExtension(file)}.html";
+                String fhirText = File.ReadAllText(file);
+                FhirJsonParser parser = new FhirJsonParser();
+                var resource = parser.Parse(fhirText, typeof(Resource));
+                switch (resource)
                 {
-                    String newFile = file.Replace("-brr-", "");
-                    File.Move(file, newFile);
+                    case CodeSystem codeSystem:
+                        codeSystem.Date = this.date.Value;
+                        codeSystem.Version = ProfileVersion;
+                        codeSystem.Status = ProfileStatus;
+                        codeSystem.Contact.Clear();
+                        codeSystem.Contact.Add(new ContactDetail());
+                        codeSystem.Contact[0].Telecom.Add(new ContactPoint{
+                            System = ContactPoint.ContactPointSystem.Url,
+                            Value = "http://www.hl7.org/Special/committees/cic"
+                        });
+                        Save(codeSystem, Path.GetFileName(file), "CodeSystem");
+                        this.AddIGResource($"CodeSystem/{codeSystem.Name}", codeSystem.Name, false);
+                        this.igEditor.AddResource($"CodeSystem/{codeSystem.Name}",
+                            htmlPage);
+                        this.codeSystemsEditor.AddCodeSystem(codeSystem.Name,
+                            htmlPage,
+                            codeSystem.Description);
+                        break;
+
+                    case ValueSet valueSet:
+                        valueSet.Date = this.date.Value;
+                        valueSet.Version = ProfileVersion;
+                        valueSet.Status = ProfileStatus;
+                        valueSet.Contact.Clear();
+                        valueSet.Contact.Add(new ContactDetail());
+                        valueSet.Contact[0].Telecom.Add(new ContactPoint{
+                            System = ContactPoint.ContactPointSystem.Url,
+                            Value = "http://www.hl7.org/Special/committees/cic"
+                        });
+                        Save(valueSet, Path.GetFileName(file), "ValueSet");
+                        this.AddIGResource($"ValueSet/{valueSet.Name}", valueSet.Name, false);
+                        this.igEditor.AddResource($"ValueSet/{valueSet.Name}",
+                            htmlPage);
+                        this.valueSetsEditor.AddValueSet(valueSet.Name,
+                            htmlPage,
+                            valueSet.Description);
+                        break;
+
+                    default:
+                        throw new NotImplementedException($"Unknown resource type '{file}'");
                 }
-                String name = Path.GetFileName(file);
-                if (name.StartsWith("valueset"))
-                {
-                    String newName = file.Replace("valueset", "valueset-");
-                    String newPath = Path.Combine(Path.GetDirectoryName(file), newName);
-                    File.Move(file, newPath);
-                }
-                if (name.StartsWith("codesystem"))
-                {
-                    String newName = file.Replace("codesystem", "codesystem-");
-                    String newPath = Path.Combine(Path.GetDirectoryName(file), newName);
-                    File.Move(file, newPath);
-                }
+
             }
         }
 

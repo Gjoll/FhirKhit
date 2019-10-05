@@ -1,11 +1,11 @@
 {
   "resourceType": "CodeSystem",
-  "id": "brr-HilumCS",
+  "id": "HilumCS",
   "text": {
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>HilumCS CodeSystem</b></p>\n<p>Hilum\n</p>\n</div>"
   },
-  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/brr-HilumCS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/HilumCS",
   "name": "HilumCS",
   "title": "HilumCS",
   "status": "draft",

@@ -1,11 +1,11 @@
 {
   "resourceType": "ValueSet",
-  "id": "brr-CystTypesVS",
+  "id": "CystTypesVS",
   "text": {
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>CystTypesVS ValueSet</b></p>\n<p>Cyst Types\n</p>\n</div>"
   },
-  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/brr-CystTypesVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/CystTypesVS",
   "name": "CystTypesVS",
   "title": "CystTypesVS",
   "status": "draft",
@@ -25,7 +25,7 @@
   "compose": {
     "include": [
       {
-        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/brr-CystTypesCS",
+        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CystTypesCS",
         "concept": [
           {
             "code": "ComplexCyst",

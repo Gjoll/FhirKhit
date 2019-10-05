@@ -1,11 +1,11 @@
 {
   "resourceType": "ValueSet",
-  "id": "brr-AbnormalityTypeVS",
+  "id": "AbnormalityTypeVS",
   "text": {
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>AbnormalityTypeVS ValueSet</b></p>\n<p>Abnormality Type value\n</p>\n</div>"
   },
-  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/brr-AbnormalityTypeVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/AbnormalityTypeVS",
   "name": "AbnormalityTypeVS",
   "title": "AbnormalityTypeVS",
   "status": "draft",
@@ -25,7 +25,7 @@
   "compose": {
     "include": [
       {
-        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/brr-AbnormalityTypeCS",
+        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/AbnormalityTypeCS",
         "concept": [
           {
             "code": "Abscess",

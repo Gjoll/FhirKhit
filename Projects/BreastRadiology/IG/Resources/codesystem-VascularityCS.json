@@ -1,11 +1,11 @@
 {
   "resourceType": "CodeSystem",
-  "id": "brr-VascularityCS",
+  "id": "VascularityCS",
   "text": {
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>VascularityCS CodeSystem</b></p>\n<p>Vascularity\n</p>\n</div>"
   },
-  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/brr-VascularityCS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/VascularityCS",
   "name": "VascularityCS",
   "title": "VascularityCS",
   "status": "draft",

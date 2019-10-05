@@ -1,11 +1,11 @@
 {
   "resourceType": "ValueSet",
-  "id": "brr-AssociatedFindingsVS",
+  "id": "AssociatedFindingsVS",
   "text": {
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>AssociatedFindingsVS ValueSet</b></p>\n<p>Associated Findings\n</p>\n</div>"
   },
-  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/brr-AssociatedFindingsVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/AssociatedFindingsVS",
   "name": "AssociatedFindingsVS",
   "title": "AssociatedFindingsVS",
   "status": "draft",
@@ -25,7 +25,7 @@
   "compose": {
     "include": [
       {
-        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/brr-AssociatedFindingsCS",
+        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/AssociatedFindingsCS",
         "concept": [
           {
             "code": "BiopsyClips",

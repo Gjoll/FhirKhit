@@ -1,11 +1,11 @@
 {
   "resourceType": "CodeSystem",
-  "id": "brr-NodeTypesCS",
+  "id": "NodeTypesCS",
   "text": {
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>NodeTypesCS CodeSystem</b></p>\n<p>Node Types\n</p>\n</div>"
   },
-  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/brr-NodeTypesCS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/NodeTypesCS",
   "name": "NodeTypesCS",
   "title": "NodeTypesCS",
   "status": "draft",

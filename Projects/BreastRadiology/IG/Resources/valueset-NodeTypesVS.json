@@ -1,11 +1,11 @@
 {
   "resourceType": "ValueSet",
-  "id": "brr-NodeTypesVS",
+  "id": "NodeTypesVS",
   "text": {
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>NodeTypesVS ValueSet</b></p>\n<p>Node Types\n</p>\n</div>"
   },
-  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/brr-NodeTypesVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/NodeTypesVS",
   "name": "NodeTypesVS",
   "title": "NodeTypesVS",
   "status": "draft",
@@ -25,7 +25,7 @@
   "compose": {
     "include": [
       {
-        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/brr-NodeTypesCS",
+        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/NodeTypesCS",
         "concept": [
           {
             "code": "AxillaryNode",

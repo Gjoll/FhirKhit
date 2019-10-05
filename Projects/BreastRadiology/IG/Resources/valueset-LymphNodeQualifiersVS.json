@@ -1,11 +1,11 @@
 {
   "resourceType": "ValueSet",
-  "id": "brr-LymphNodeQualifiersVS",
+  "id": "LymphNodeQualifiersVS",
   "text": {
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>LymphNodeQualifiersVS ValueSet</b></p>\n<p>Lymph Node Qualifiers\n</p>\n</div>"
   },
-  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/brr-LymphNodeQualifiersVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/LymphNodeQualifiersVS",
   "name": "LymphNodeQualifiersVS",
   "title": "LymphNodeQualifiersVS",
   "status": "draft",
@@ -25,7 +25,7 @@
   "compose": {
     "include": [
       {
-        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/brr-LymphNodeQualifiersCS",
+        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/LymphNodeQualifiersCS",
         "concept": [
           {
             "code": "LevelILymphNode",

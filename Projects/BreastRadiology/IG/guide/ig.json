@@ -65,6 +65,120 @@
     },
     "StructureDefinition/BreastRadiologyReport": {
       "base": "StructureDefinition-BreastRadiologyReport.html"
+    },
+    "CodeSystem/AbnormalityDensityCS": {
+      "base": "codesystem-AbnormalityDensityCS.html"
+    },
+    "CodeSystem/AbnormalityTypeCS": {
+      "base": "codesystem-AbnormalityTypeCS.html"
+    },
+    "CodeSystem/AssociatedFindingsCS": {
+      "base": "codesystem-AssociatedFindingsCS.html"
+    },
+    "CodeSystem/AsymmetryTypesCS": {
+      "base": "codesystem-AsymmetryTypesCS.html"
+    },
+    "CodeSystem/BiRadCodeCS": {
+      "base": "codesystem-BiRadCodeCS.html"
+    },
+    "CodeSystem/BreastAbnormalityCodesCS": {
+      "base": "codesystem-BreastAbnormalityCodesCS.html"
+    },
+    "CodeSystem/CalcificationTypeCS": {
+      "base": "codesystem-CalcificationTypeCS.html"
+    },
+    "CodeSystem/ChangeCS": {
+      "base": "codesystem-ChangeCS.html"
+    },
+    "CodeSystem/ConsistentWithCS": {
+      "base": "codesystem-ConsistentWithCS.html"
+    },
+    "CodeSystem/CystTypesCS": {
+      "base": "codesystem-CystTypesCS.html"
+    },
+    "CodeSystem/ForeignBodyCS": {
+      "base": "codesystem-ForeignBodyCS.html"
+    },
+    "CodeSystem/HilumCS": {
+      "base": "codesystem-HilumCS.html"
+    },
+    "CodeSystem/LymphNodeQualifiersCS": {
+      "base": "codesystem-LymphNodeQualifiersCS.html"
+    },
+    "CodeSystem/MarginCS": {
+      "base": "codesystem-MarginCS.html"
+    },
+    "CodeSystem/MassTypesCS": {
+      "base": "codesystem-MassTypesCS.html"
+    },
+    "CodeSystem/NodeTypesCS": {
+      "base": "codesystem-NodeTypesCS.html"
+    },
+    "CodeSystem/ShapeCS": {
+      "base": "codesystem-ShapeCS.html"
+    },
+    "CodeSystem/VascularityCS": {
+      "base": "codesystem-VascularityCS.html"
+    },
+    "CodeSystem/WallCS": {
+      "base": "codesystem-WallCS.html"
+    },
+    "ValueSet/AbnormalityDensityVS": {
+      "base": "valueset-AbnormalityDensityVS.html"
+    },
+    "ValueSet/AbnormalityTypeVS": {
+      "base": "valueset-AbnormalityTypeVS.html"
+    },
+    "ValueSet/AssociatedFindingsVS": {
+      "base": "valueset-AssociatedFindingsVS.html"
+    },
+    "ValueSet/AsymmetryTypesVS": {
+      "base": "valueset-AsymmetryTypesVS.html"
+    },
+    "ValueSet/BiRadCodeVS": {
+      "base": "valueset-BiRadCodeVS.html"
+    },
+    "ValueSet/BreastAbnormalityCodesVS": {
+      "base": "valueset-BreastAbnormalityCodesVS.html"
+    },
+    "ValueSet/CalcificationTypeVS": {
+      "base": "valueset-CalcificationTypeVS.html"
+    },
+    "ValueSet/ChangeVS": {
+      "base": "valueset-ChangeVS.html"
+    },
+    "ValueSet/ConsistentWithVS": {
+      "base": "valueset-ConsistentWithVS.html"
+    },
+    "ValueSet/CystTypesVS": {
+      "base": "valueset-CystTypesVS.html"
+    },
+    "ValueSet/ForeignBodyVS": {
+      "base": "valueset-ForeignBodyVS.html"
+    },
+    "ValueSet/HilumVS": {
+      "base": "valueset-HilumVS.html"
+    },
+    "ValueSet/LymphNodeQualifiersVS": {
+      "base": "valueset-LymphNodeQualifiersVS.html"
+    },
+    "ValueSet/MarginVS": {
+      "base": "valueset-MarginVS.html"
+    },
+    "ValueSet/MassTypesVS": {
+      "base": "valueset-MassTypesVS.html"
+    },
+    "ValueSet/NodeTypesVS": {
+      "base": "valueset-NodeTypesVS.html"
+    },
+    "ValueSet/ShapeVS": {
+      "base": "valueset-ShapeVS.html"
+    },
+    "ValueSet/VascularityVS": {
+      "base": "valueset-VascularityVS.html"
+    },
+    "ValueSet/WallVS": {
+      "base": "valueset-WallVS.html"
     }
   },
   "special-urls": [],

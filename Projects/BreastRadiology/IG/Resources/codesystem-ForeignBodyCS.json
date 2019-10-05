@@ -1,11 +1,11 @@
 {
   "resourceType": "CodeSystem",
-  "id": "brr-ForeignBodyCS",
+  "id": "ForeignBodyCS",
   "text": {
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>ForeignBodyCS CodeSystem</b></p>\n<p>Foreign Body\n</p>\n</div>"
   },
-  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/brr-ForeignBodyCS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ForeignBodyCS",
   "name": "ForeignBodyCS",
   "title": "ForeignBodyCS",
   "status": "draft",

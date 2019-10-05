@@ -1,11 +1,11 @@
 {
   "resourceType": "CodeSystem",
-  "id": "brr-LymphNodeQualifiersCS",
+  "id": "LymphNodeQualifiersCS",
   "text": {
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>LymphNodeQualifiersCS CodeSystem</b></p>\n<p>Lymph Node Qualifiers\n</p>\n</div>"
   },
-  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/brr-LymphNodeQualifiersCS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/LymphNodeQualifiersCS",
   "name": "LymphNodeQualifiersCS",
   "title": "LymphNodeQualifiersCS",
   "status": "draft",
