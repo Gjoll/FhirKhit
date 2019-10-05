@@ -9,7 +9,7 @@ using Hl7.Fhir.Serialization;
 
 namespace FhirKhit.BreastRadiology
 {
-    public class ProfileMaker
+    public class ProfileMaker : ConverterBase
     {
         const String ProfileVersion = "0.0.2";
         const PublicationStatus ProfileStatus = PublicationStatus.Draft;
@@ -270,6 +270,12 @@ namespace FhirKhit.BreastRadiology
                 r.SaveJson(outputPath);
             }
 
+            void Clean(StructureDefinition sDef)
+            {
+                SDefCleaner c = new SDefCleaner(this);
+                c.CleanupDifferential(sDef);
+            }
+
             foreach (String file in Directory.GetFiles(resourceDir))
             {
                 String fhirText = File.ReadAllText(file);
@@ -288,6 +294,7 @@ namespace FhirKhit.BreastRadiology
                             structureDefinition.Status = ProfileStatus;
                             structureDefinition.Contact = Contact();
                             structureDefinition.Snapshot = null;
+                            Clean(structureDefinition);
                             Save(structureDefinition, $"{fixedName}.json");
                             this.AddIGResource($"{typeName}/{structureDefinition.Name}", structureDefinition.Name, false);
                             this.igEditor.AddResource($"{typeName}/{structureDefinition.Name}",

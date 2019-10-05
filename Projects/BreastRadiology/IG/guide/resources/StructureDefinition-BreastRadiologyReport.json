@@ -141,11 +141,11 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-ServiceRequest",
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-ReferralRequest",
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-ProcedureRequest",
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-MedicationRequest",
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-CarePlan"
+              "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
+              "http://hl7.org/fhir/StructureDefinition/ReferralRequest",
+              "http://hl7.org/fhir/StructureDefinition/ProcedureRequest",
+              "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
+              "http://hl7.org/fhir/StructureDefinition/CarePlan"
             ]
           }
         ]
@@ -263,7 +263,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Patient"
+              "http://hl7.org/fhir/StructureDefinition/Patient"
             ]
           }
         ]
@@ -275,7 +275,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Encounter"
+              "http://hl7.org/fhir/StructureDefinition/Encounter"
             ]
           }
         ]
@@ -295,8 +295,8 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Practitioner",
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Organization"
+              "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "http://hl7.org/fhir/StructureDefinition/Organization"
             ]
           }
         ]
@@ -310,8 +310,8 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Practitioner",
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Organization"
+              "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "http://hl7.org/fhir/StructureDefinition/Organization"
             ]
           }
         ]
@@ -325,7 +325,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Specimen"
+              "http://hl7.org/fhir/StructureDefinition/Specimen"
             ]
           }
         ]
@@ -350,7 +350,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Observation"
+              "http://hl7.org/fhir/StructureDefinition/Observation"
             ]
           }
         ]
@@ -383,7 +383,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Media"
+              "http://hl7.org/fhir/StructureDefinition/Media"
             ]
           }
         ]

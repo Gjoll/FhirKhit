@@ -41,9 +41,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "PriorReports",
-        "definition": "Prior reports",
-        "min": 0,
-        "max": "*"
+        "definition": "Prior reports"
       },
       {
         "id": "Extension.extension",

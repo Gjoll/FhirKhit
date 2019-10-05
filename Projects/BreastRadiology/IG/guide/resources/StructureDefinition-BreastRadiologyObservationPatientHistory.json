@@ -68,9 +68,7 @@
         "id": "Observation",
         "path": "Observation",
         "short": "BreastRadiologyObservationPatientHistory",
-        "definition": "Breast Radiology Patient History Observation.\n<br>This observation is the root section of the multiple observations that comprise\na breast radiology patient history observation.",
-        "isModifier": false,
-        "isSummary": false
+        "definition": "Breast Radiology Patient History Observation.\n<br>This observation is the root section of the multiple observations that comprise\na breast radiology patient history observation."
       },
       {
         "id": "Observation.basedOn",
@@ -79,10 +77,10 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-MedicationRequest",
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-ServiceRequest",
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-ProcedureRequest",
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-ReferralRequest"
+              "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
+              "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
+              "http://hl7.org/fhir/StructureDefinition/ProcedureRequest",
+              "http://hl7.org/fhir/StructureDefinition/ReferralRequest"
             ]
           }
         ]
@@ -96,9 +94,9 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-MedicationAdministration",
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-MedicationStatement",
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Procedure"
+              "http://hl7.org/fhir/StructureDefinition/MedicationAdministration",
+              "http://hl7.org/fhir/StructureDefinition/MedicationStatement",
+              "http://hl7.org/fhir/StructureDefinition/Procedure"
             ]
           }
         ]
@@ -177,30 +175,11 @@
         "short": "The subject of an observation",
         "definition": "The subject of an observation.",
         "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Patient",
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Group",
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Device",
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Location"
-            ]
-          }
-        ]
+        "max": "1"
       },
       {
         "id": "Observation.encounter",
-        "path": "Observation.encounter",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Encounter"
-            ]
-          }
-        ]
+        "path": "Observation.encounter"
       },
       {
         "id": "Observation.effective[x]",
@@ -221,10 +200,10 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Practitioner",
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Organization",
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Patient",
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-RelatedPerson"
+              "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "http://hl7.org/fhir/StructureDefinition/Organization",
+              "http://hl7.org/fhir/StructureDefinition/Patient",
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
             ]
           }
         ]
@@ -253,7 +232,7 @@
           {
             "code": "SampledData",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-datatype-SampledData"
+              "http://hl7.org/fhir/StructureDefinition/datatype-SampledData"
             ]
           },
           {
@@ -280,7 +259,7 @@
           {
             "code": "Annotation",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Annotation"
+              "http://hl7.org/fhir/StructureDefinition/Annotation"
             ]
           }
         ]
@@ -316,7 +295,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-datatype-Laterality-extension"
+              "http://hl7.org/fhir/StructureDefinition/datatype-Laterality-extension"
             ]
           }
         ],
@@ -339,7 +318,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-datatype-AnatomicalOrientation-extension"
+              "http://hl7.org/fhir/StructureDefinition/datatype-AnatomicalOrientation-extension"
             ]
           }
         ],
@@ -358,28 +337,12 @@
           "min": 0,
           "max": "*"
         },
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-datatype-RelationToLandmark-extension"
-            ]
-          }
-        ],
         "isModifier": false,
         "isSummary": false
       },
       {
         "id": "Observation.specimen",
-        "path": "Observation.specimen",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Specimen"
-            ]
-          }
-        ]
+        "path": "Observation.specimen"
       },
       {
         "id": "Observation.device",
@@ -388,7 +351,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Device"
+              "http://hl7.org/fhir/StructureDefinition/Device"
             ]
           }
         ]
@@ -438,7 +401,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Observation"
+              "http://hl7.org/fhir/StructureDefinition/Observation"
             ]
           }
         ]
@@ -450,10 +413,10 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-DocumentReference",
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Media",
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-QuestionnaireResponse",
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Observation"
+              "http://hl7.org/fhir/StructureDefinition/DocumentReference",
+              "http://hl7.org/fhir/StructureDefinition/Media",
+              "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",
+              "http://hl7.org/fhir/StructureDefinition/Observation"
             ]
           }
         ]
@@ -484,7 +447,7 @@
           {
             "code": "SampledData",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-datatype-SampledData"
+              "http://hl7.org/fhir/StructureDefinition/datatype-SampledData"
             ]
           },
           {

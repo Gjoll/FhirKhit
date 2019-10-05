@@ -41,9 +41,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "Recommendations",
-        "definition": "Recommendations for future care",
-        "min": 0,
-        "max": "*"
+        "definition": "Recommendations for future care"
       },
       {
         "id": "Extension.extension",
@@ -69,8 +67,8 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-MedicationRequest",
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-ServiceRequest"
+              "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
+              "http://hl7.org/fhir/StructureDefinition/ServiceRequest"
             ]
           }
         ]
