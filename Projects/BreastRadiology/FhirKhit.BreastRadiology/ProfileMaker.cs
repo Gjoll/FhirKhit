@@ -92,7 +92,7 @@ namespace FhirKhit.BreastRadiology
                 .Type("Reference", null, targets)
                 .Single()
                 ;
-            this.AddIGStructureDefinition(e, true);
+            this.AddIGStructureDefinition(e.SDef, true);
             return e.SDef.Url;
         }
 
@@ -118,7 +118,7 @@ namespace FhirKhit.BreastRadiology
                 .Type("Reference", null, targets)
                 .Single()
                 ;
-            this.AddIGStructureDefinition(e, true);
+            this.AddIGStructureDefinition(e.SDef, true);
             return e.SDef.Url;
         }
 
@@ -159,13 +159,11 @@ namespace FhirKhit.BreastRadiology
                 .Type("Reference", null, new String[] { ObservationUrl })
                 ;
 
-            this.AddIGStructureDefinition(e, false);
+            this.AddIGStructureDefinition(e.SDef, false);
         }
 
-        void AddIGStructureDefinition(SDefEditor e, bool extensionFlag)
+        void AddIGStructureDefinition(StructureDefinition sDef, bool extensionFlag)
         {
-            StructureDefinition sDef = e.SDef;
-
             String htmlName = $"StructureDefinition-{sDef.Name}.html";
 
             this.AddIGResource($"StructureDefinition/{sDef.Name}", sDef.Name, false);
@@ -259,9 +257,8 @@ namespace FhirKhit.BreastRadiology
                             String htmlPage = $"{fixedName}.html";
                             SnapshotCreator.Create(structureDefinition);
                             Save(structureDefinition, $"{fixedName}.json");
-                            this.AddIGResource($"{typeName}/{structureDefinition.Name}", structureDefinition.Name, false);
-                            this.igEditor.AddResource($"{typeName}/{structureDefinition.Name}",
-                                htmlPage);
+                            bool extensionFlag = structureDefinition.BaseDefinition == "http://hl7.org/fhir/StructureDefinition/Extension";
+                            this.AddIGStructureDefinition(structureDefinition, extensionFlag);
                         }
                         break;
 
