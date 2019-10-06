@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 using FhirKhit.Tools;
 using FhirKhit.Tools.R4;
@@ -60,47 +61,49 @@ namespace FhirKhit.BreastRadiology
                 r.SaveJson(outputPath);
             }
 
-            void FixImaging(StructureDefinition sDef)
+            void FixCoding(StructureDefinition sDef)
             {
-                const string baseId = "Observation.category.coding:Fixed_imaging";
                 var elements = sDef.Differential.Element;
-                ElementDefinition eSystem = elements.FindById($"{baseId}.system");
-                ElementDefinition eCode = elements.FindById($"{baseId}.code");
+                ElementDefinition[] codeFixed = elements.FindIdStartsWith("Observation.code.coding:Fixed_").ToArray();
 
-                if (eSystem == null)
+                if (codeFixed.Length == 0)
                     return;
 
-                ElementDefinition category = elements.FindById("Observation.category");
-                category.Slicing = new ElementDefinition.SlicingComponent();
-                category.Slicing.Discriminator.Add(new ElementDefinition.DiscriminatorComponent
+                String system = ((FhirUri)codeFixed[1].Fixed).Value;
+                String code = ((Code)codeFixed[2].Fixed).Value;
+
+                elements.RemoveById("Observation.code.coding")
+                    .RemoveById(codeFixed[0].ElementId)
+                    .RemoveById(codeFixed[1].ElementId)
+                    .RemoveById(codeFixed[2].ElementId)
+                    ;
+
+                ElementDefinition codeDef = elements.FindById("Observation.code");
+                codeDef.Slicing = new ElementDefinition.SlicingComponent
+                {
+                    Rules = ElementDefinition.SlicingRules.OpenAtEnd
+                };
+                codeDef.Slicing.Discriminator.Add(new ElementDefinition.DiscriminatorComponent
                 {
                     Type = ElementDefinition.DiscriminatorType.Value,
                     Path = "coding"
                 });
 
-                String system = ((FhirUri)eSystem.Fixed).Value;
-                String code = ((Code)eCode.Fixed).Value;
-
-                elements.RemoveById("Observation.category.coding")
-                    .RemoveById(baseId)
-                    .RemoveById($"{baseId}.system")
-                    .RemoveById($"{baseId}.code")
-                    ;
-
                 ElementDefinition coding = new ElementDefinition
                 {
-                    ElementId = "Observation.category.coding",
-                    Path = "Observation.category.coding"
+                    ElementId = "Observation.code.coding",
+                    Path = "Observation.code.coding"
                 };
+                String sliceName = "ObservationCode";
                 ElementDefinition codingSlice = new ElementDefinition
                 {
-                    ElementId = "Observation.category.coding:Imaging",
-                    Path = "Observation.category.coding",
-                    SliceName = "Imaging",
+                    ElementId = $"Observation.code.coding:{sliceName}",
+                    Path = "Observation.code.coding",
+                    SliceName = sliceName,
                     Pattern = new Coding(system, code)
                 };
 
-                elements.InsertAfter(category, coding, codingSlice);
+                elements.InsertAfter(codeDef, coding, codingSlice);
             }
 
             void CleanObservation(StructureDefinition sDef)
@@ -144,7 +147,7 @@ namespace FhirKhit.BreastRadiology
                 {
                     s.Slicing.Rules = ElementDefinition.SlicingRules.OpenAtEnd;
                 }
-                FixImaging(sDef);
+                FixCoding(sDef);
             }
 
             void Clean(StructureDefinition sDef)

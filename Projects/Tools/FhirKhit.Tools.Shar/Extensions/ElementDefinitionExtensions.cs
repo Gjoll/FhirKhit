@@ -109,6 +109,19 @@ namespace FhirKhit.Tools.R2
             throw new Exception("Insert After element not found in element list");
         }
 
+        public static IEnumerable<ElementDefinition> FindIdStartsWith(this IEnumerable<ElementDefinition> elements,
+            String id)
+        {
+            if (elements is null)
+                throw new ArgumentNullException(nameof(elements));
+
+            foreach (ElementDefinition ed in elements)
+            {
+                if (ed.ElementId.StartsWith(id))
+                    yield return ed;
+            }
+        }
+
         public static ElementDefinition FindById(this IEnumerable<ElementDefinition> elements,
             String id)
         {

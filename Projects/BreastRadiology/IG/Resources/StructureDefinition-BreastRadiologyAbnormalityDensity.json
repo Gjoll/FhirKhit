@@ -68,54 +68,29 @@
       },
       {
         "id": "Observation.code",
-        "path": "Observation.code"
-      },
-      {
-        "id": "Observation.code.coding",
-        "path": "Observation.code.coding",
+        "path": "Observation.code",
         "slicing": {
-          "id": "2",
           "discriminator": [
             {
               "type": "value",
-              "path": "code"
+              "path": "coding"
             }
           ],
-          "ordered": false,
-          "rules": "open"
-        },
-        "min": 1,
-        "max": "*"
+          "rules": "openAtEnd"
+        }
       },
       {
-        "id": "Observation.code.coding:Fixed_AbnormalityDensity",
+        "id": "Observation.code.coding",
+        "path": "Observation.code.coding"
+      },
+      {
+        "id": "Observation.code.coding:ObservationCode",
         "path": "Observation.code.coding",
-        "sliceName": "Fixed_AbnormalityDensity",
-        "short": "Code defined by a terminology system",
-        "definition": "A reference to a code defined by a terminology system.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "CodeableConcept.coding",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "isSummary": true
-      },
-      {
-        "id": "Observation.code.coding:Fixed_AbnormalityDensity.system",
-        "path": "Observation.code.coding.system",
-        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastAbnormalityCodesCS"
-      },
-      {
-        "id": "Observation.code.coding:Fixed_AbnormalityDensity.code",
-        "path": "Observation.code.coding.code",
-        "fixedCode": "AbnormalityDensity"
+        "sliceName": "ObservationCode",
+        "patternCoding": {
+          "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastAbnormalityCodesCS",
+          "code": "AbnormalityDensity"
+        }
       },
       {
         "id": "Observation.subject",
