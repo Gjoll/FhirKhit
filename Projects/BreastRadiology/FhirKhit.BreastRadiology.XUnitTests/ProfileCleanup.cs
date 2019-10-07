@@ -108,46 +108,59 @@ namespace FhirKhit.BreastRadiology
 
             void CleanObservation(StructureDefinition sDef)
             {
-                sDef.Differential.Element
-                    //.RemoveById("Observation.performer")
-                    .RemoveById("Observation.basedOn")
-                    .RemoveByPath("Observation.bodySite.extension")
-                    .RemoveByPath("Observation.encounter")
-                    //.RemoveById("Observation.focus")
-                    //.RemoveById("Observation.partOf")
-                    //.RemoveById("Observation.note")
-                    //.RemoveById("Observation.effective[x]")
-                    //.RemoveById("Observation.device")
-                    //.RemoveById("Observation.referenceRange")
-                    //.RemoveById("Observation.referenceRange.type")
-                    //.RemoveById("Observation.referenceRange.appliesTo")
-                    //.RemoveById("Observation.derivedFrom")
-                    //.RemoveById("Observation.component.value[x]")
-                    //.RemoveById("Observation.component.referenceRange")
-                    //.RemoveById("Observation.component.referenceRange.type")
-                    //.RemoveById("Observation.component.referenceRange.appliesTo")
-                    ;
+                //sDef.Differential.Element
+                //    .RemoveById("Observation.performer")
+                //    .RemoveById("Observation.basedOn")
+                //    .RemoveByPath("Observation.bodySite.extension")
+                //    .RemoveByPath("Observation.encounter")
+                //    .RemoveById("Observation.focus")
+                //    .RemoveById("Observation.partOf")
+                //    .RemoveById("Observation.note")
+                //    .RemoveById("Observation.effective[x]")
+                //    .RemoveById("Observation.device")
+                //    .RemoveById("Observation.referenceRange")
+                //    .RemoveById("Observation.referenceRange.type")
+                //    .RemoveById("Observation.referenceRange.appliesTo")
+                //    .RemoveById("Observation.derivedFrom")
+                //    .RemoveById("Observation.component.value[x]")
+                //    .RemoveById("Observation.component.referenceRange")
+                //    .RemoveById("Observation.component.referenceRange.type")
+                //    .RemoveById("Observation.component.referenceRange.appliesTo")
+                //    ;
 
-                if (
-                    (sDef.Name != "BreastRadiologyAbnormality") &&
-                    (sDef.Name != "BreastRadiologyObservation")
-                    )
-                {
-                    //sDef.Differential.Element
-                    //    .RemoveById("Observation.bodySite")
-                    //    .RemoveById("Observation.bodySite.extension")
-                    //    ;
-                }
+                //if (
+                //    (sDef.Name != "BreastRadiologyAbnormality") &&
+                //    (sDef.Name != "BreastRadiologyObservation")
+                //    )
+                //{
+                //    sDef.Differential.Element
+                //        .RemoveById("Observation.bodySite")
+                //        .RemoveById("Observation.bodySite.extension")
+                //        ;
+                //}
 
-                ElementDefinition s = sDef.Differential.Element.FindById("Observation.category");
-                if (
-                    (s != null) &&
-                    (s.Slicing != null)
-                    )
-                {
-                    s.Slicing.Rules = ElementDefinition.SlicingRules.OpenAtEnd;
-                }
+                //ElementDefinition s = sDef.Differential.Element.FindById("Observation.category");
+                //if (
+                //    (s != null) &&
+                //    (s.Slicing != null)
+                //    )
+                //{
+                //    s.Slicing.Rules = ElementDefinition.SlicingRules.OpenAtEnd;
+                //}
                 FixCoding(sDef);
+            }
+
+            void CleanFixed(List<ElementDefinition> elements)
+            {
+                Int32 i = 0;
+                while (i < elements.Count)
+                {
+                    ElementDefinition e = elements[i];
+                    if (e.Fixed != null)
+                    {
+                    }
+                    i += 1;
+                }
             }
 
             void Clean(StructureDefinition sDef)
@@ -159,8 +172,9 @@ namespace FhirKhit.BreastRadiology
                 sDef.Mapping = null;
                 SDefCleaner c = new SDefCleaner(this);
                 c.CleanupDifferential(sDef);
-                if (sDef.Type == "Observation")
-                    CleanObservation(sDef);
+                //    if (sDef.Type == "Observation")
+                //        CleanObservation(sDef);
+                CleanFixed(sDef.Differential.Element);
             }
 
             foreach (String file in Directory.GetFiles(resourceDir))
