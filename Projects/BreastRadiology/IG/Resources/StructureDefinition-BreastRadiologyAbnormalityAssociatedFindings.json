@@ -3,7 +3,7 @@
   "id": "BreastRadiologyAbnormalityAssociatedFindings",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>BreastRadiologyAbnormalityAssociatedFindings Profile</b></p>\n  <p>Associated Findings.\n&lt;br&gt;This item will be a slice of Observation.Component.\n&lt;br&gt;The slice will be on  Observation.Component.Code.\n&lt;br&gt;This slice code will be modified in a future  versions to be a suitable public terminology value.</p>\n  </div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>BreastRadiologyAbnormalityAssociatedFindings Profile</b></p>\n  <p>Associated Findings.\n&lt;br&gt;</div>"
   },
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityAssociatedFindings",
   "version": "0.0.2",
@@ -22,7 +22,7 @@
       ]
     }
   ],
-  "description": "Associated Findings.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+  "description": "Associated Findings.\n<br>",
   "purpose": "Observations are a key aspect of healthcare.  This resource is used to capture those that do not require more sophisticated mechanisms.",
   "fhirVersion": "4.0.0",
   "kind": "resource",
@@ -36,7 +36,7 @@
         "id": "Observation",
         "path": "Observation",
         "short": "BreastRadiologyAbnormalityAssociatedFindings",
-        "definition": "Associated Findings.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value."
+        "definition": "Associated Findings.\n<br>"
       },
       {
         "id": "Observation.category",

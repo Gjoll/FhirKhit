@@ -33,482 +33,555 @@
     "grouping" : [{
       "name" : "Profiles in this Implementation Guide",
       "description" : "Profiles in this Implementation Guide"
+    },
+    {
+      "id" : "Base",
+      "name" : "Base Name",
+      "description" : "Base Description"
     }],
     "resource" : [{
       "reference" : {
         "reference" : "CodeSystem/AbnormalityDensityCS"
       },
       "name" : "AbnormalityDensityCS",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
     },
     {
       "reference" : {
         "reference" : "CodeSystem/AbnormalityTypeCS"
       },
       "name" : "AbnormalityTypeCS",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
     },
     {
       "reference" : {
         "reference" : "CodeSystem/AssociatedFindingsCS"
       },
       "name" : "AssociatedFindingsCS",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
     },
     {
       "reference" : {
         "reference" : "CodeSystem/AsymmetryTypesCS"
       },
       "name" : "AsymmetryTypesCS",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
     },
     {
       "reference" : {
         "reference" : "CodeSystem/BiRadCodeCS"
       },
       "name" : "BiRadCodeCS",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
     },
     {
       "reference" : {
         "reference" : "CodeSystem/BreastAbnormalityCodesCS"
       },
       "name" : "BreastAbnormalityCodesCS",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
     },
     {
       "reference" : {
         "reference" : "CodeSystem/CalcificationTypeCS"
       },
       "name" : "CalcificationTypeCS",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
     },
     {
       "reference" : {
         "reference" : "CodeSystem/ChangeCS"
       },
       "name" : "ChangeCS",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
     },
     {
       "reference" : {
         "reference" : "CodeSystem/ConsistentWithCS"
       },
       "name" : "ConsistentWithCS",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
     },
     {
       "reference" : {
         "reference" : "CodeSystem/CystTypesCS"
       },
       "name" : "CystTypesCS",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
     },
     {
       "reference" : {
         "reference" : "CodeSystem/ForeignBodyCS"
       },
       "name" : "ForeignBodyCS",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
     },
     {
       "reference" : {
         "reference" : "CodeSystem/HilumCS"
       },
       "name" : "HilumCS",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
     },
     {
       "reference" : {
         "reference" : "CodeSystem/LymphNodeQualifiersCS"
       },
       "name" : "LymphNodeQualifiersCS",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
     },
     {
       "reference" : {
         "reference" : "CodeSystem/MarginCS"
       },
       "name" : "MarginCS",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
     },
     {
       "reference" : {
         "reference" : "CodeSystem/MassTypesCS"
       },
       "name" : "MassTypesCS",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
     },
     {
       "reference" : {
         "reference" : "CodeSystem/NodeTypesCS"
       },
       "name" : "NodeTypesCS",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
     },
     {
       "reference" : {
         "reference" : "CodeSystem/ShapeCS"
       },
       "name" : "ShapeCS",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
     },
     {
       "reference" : {
         "reference" : "CodeSystem/VascularityCS"
       },
       "name" : "VascularityCS",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
     },
     {
       "reference" : {
         "reference" : "CodeSystem/WallCS"
       },
       "name" : "WallCS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/BreastRadiologyAbnormality"
-      },
-      "name" : "BreastRadiologyAbnormality",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/BreastRadiologyAbnormalityAssociatedFindings"
-      },
-      "name" : "BreastRadiologyAbnormalityAssociatedFindings",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/BreastRadiologyAbnormalityAsymmetryType"
-      },
-      "name" : "BreastRadiologyAbnormalityAsymmetryType",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/BreastRadiologyAbnormalityBiRadCode"
-      },
-      "name" : "BreastRadiologyAbnormalityBiRadCode",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/BreastRadiologyAbnormalityCalcificationType"
-      },
-      "name" : "BreastRadiologyAbnormalityCalcificationType",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/BreastRadiologyAbnormalityChange"
-      },
-      "name" : "BreastRadiologyAbnormalityChange",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/BreastRadiologyAbnormalityConsistentWith"
-      },
-      "name" : "BreastRadiologyAbnormalityConsistentWith",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/BreastRadiologyAbnormalityCystTypes"
-      },
-      "name" : "BreastRadiologyAbnormalityCystTypes",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/BreastRadiologyAbnormalityDensity"
-      },
-      "name" : "BreastRadiologyAbnormalityDensity",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/BreastRadiologyAbnormalityForeignBody"
-      },
-      "name" : "BreastRadiologyAbnormalityForeignBody",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/BreastRadiologyAbnormalityHilum"
-      },
-      "name" : "BreastRadiologyAbnormalityHilum",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/BreastRadiologyAbnormalityLymphNodeQualifiers"
-      },
-      "name" : "BreastRadiologyAbnormalityLymphNodeQualifiers",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/BreastRadiologyAbnormalityMargin"
-      },
-      "name" : "BreastRadiologyAbnormalityMargin",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/BreastRadiologyAbnormalityMassTypes"
-      },
-      "name" : "BreastRadiologyAbnormalityMassTypes",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/BreastRadiologyAbnormalityMaxLength"
-      },
-      "name" : "BreastRadiologyAbnormalityMaxLength",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/BreastRadiologyAbnormalityNodeTypes"
-      },
-      "name" : "BreastRadiologyAbnormalityNodeTypes",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/BreastRadiologyAbnormalityShape"
-      },
-      "name" : "BreastRadiologyAbnormalityShape",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/BreastRadiologyAbnormalityType"
-      },
-      "name" : "BreastRadiologyAbnormalityType",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/BreastRadiologyAbnormalityVascularity"
-      },
-      "name" : "BreastRadiologyAbnormalityVascularity",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/BreastRadiologyAbnormalityWall"
-      },
-      "name" : "BreastRadiologyAbnormalityWall",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/BreastRadiologyObservation"
-      },
-      "name" : "BreastRadiologyObservation",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/BreastRadiologyObservationFindings"
-      },
-      "name" : "BreastRadiologyObservationFindings",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/BreastRadiologyObservationFindingsLeftBreast"
-      },
-      "name" : "BreastRadiologyObservationFindingsLeftBreast",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/BreastRadiologyObservationFindingsRightBreast"
-      },
-      "name" : "BreastRadiologyObservationFindingsRightBreast",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/BreastRadiologyObservationImpressions"
-      },
-      "name" : "BreastRadiologyObservationImpressions",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/BreastRadiologyObservationPatientHistory"
-      },
-      "name" : "BreastRadiologyObservationPatientHistory",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/BreastRadiologyObservationPatientRisk"
-      },
-      "name" : "BreastRadiologyObservationPatientRisk",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/BreastRadiologyPriorReports"
-      },
-      "name" : "BreastRadiologyPriorReports",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/BreastRadiologyRecommendations"
-      },
-      "name" : "BreastRadiologyRecommendations",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
     },
     {
       "reference" : {
         "reference" : "StructureDefinition/BreastRadiologyReport"
       },
       "name" : "BreastRadiologyReport",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyPriorReports"
+      },
+      "name" : "BreastRadiologyPriorReports",
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyRecommendations"
+      },
+      "name" : "BreastRadiologyRecommendations",
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityAssociatedFindings"
+      },
+      "name" : "BreastRadiologyAbnormalityAssociatedFindings",
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyObservation"
+      },
+      "name" : "BreastRadiologyObservation",
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyObservationFindings"
+      },
+      "name" : "BreastRadiologyObservationFindings",
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyObservationFindingsLeftBreast"
+      },
+      "name" : "BreastRadiologyObservationFindingsLeftBreast",
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyObservationFindingsRightBreast"
+      },
+      "name" : "BreastRadiologyObservationFindingsRightBreast",
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyObservationImpressions"
+      },
+      "name" : "BreastRadiologyObservationImpressions",
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyObservationPatientHistory"
+      },
+      "name" : "BreastRadiologyObservationPatientHistory",
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyObservationPatientRisk"
+      },
+      "name" : "BreastRadiologyObservationPatientRisk",
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormality"
+      },
+      "name" : "BreastRadiologyAbnormality",
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityAsymmetryType"
+      },
+      "name" : "BreastRadiologyAbnormalityAsymmetryType",
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityBiRadCode"
+      },
+      "name" : "BreastRadiologyAbnormalityBiRadCode",
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityCalcificationType"
+      },
+      "name" : "BreastRadiologyAbnormalityCalcificationType",
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityChange"
+      },
+      "name" : "BreastRadiologyAbnormalityChange",
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityConsistentWith"
+      },
+      "name" : "BreastRadiologyAbnormalityConsistentWith",
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityCystTypes"
+      },
+      "name" : "BreastRadiologyAbnormalityCystTypes",
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityDensity"
+      },
+      "name" : "BreastRadiologyAbnormalityDensity",
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityForeignBody"
+      },
+      "name" : "BreastRadiologyAbnormalityForeignBody",
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityHilum"
+      },
+      "name" : "BreastRadiologyAbnormalityHilum",
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityLymphNodeQualifiers"
+      },
+      "name" : "BreastRadiologyAbnormalityLymphNodeQualifiers",
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityMargin"
+      },
+      "name" : "BreastRadiologyAbnormalityMargin",
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityMassTypes"
+      },
+      "name" : "BreastRadiologyAbnormalityMassTypes",
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityMaxLength"
+      },
+      "name" : "BreastRadiologyAbnormalityMaxLength",
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityNodeTypes"
+      },
+      "name" : "BreastRadiologyAbnormalityNodeTypes",
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityShape"
+      },
+      "name" : "BreastRadiologyAbnormalityShape",
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityType"
+      },
+      "name" : "BreastRadiologyAbnormalityType",
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityVascularity"
+      },
+      "name" : "BreastRadiologyAbnormalityVascularity",
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityWall"
+      },
+      "name" : "BreastRadiologyAbnormalityWall",
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
     },
     {
       "reference" : {
         "reference" : "ValueSet/AbnormalityDensityVS"
       },
       "name" : "AbnormalityDensityVS",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
     },
     {
       "reference" : {
         "reference" : "ValueSet/AbnormalityTypeVS"
       },
       "name" : "AbnormalityTypeVS",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
     },
     {
       "reference" : {
         "reference" : "ValueSet/AssociatedFindingsVS"
       },
       "name" : "AssociatedFindingsVS",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
     },
     {
       "reference" : {
         "reference" : "ValueSet/AsymmetryTypesVS"
       },
       "name" : "AsymmetryTypesVS",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
     },
     {
       "reference" : {
         "reference" : "ValueSet/BiRadCodeVS"
       },
       "name" : "BiRadCodeVS",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
     },
     {
       "reference" : {
         "reference" : "ValueSet/BreastAbnormalityCodesVS"
       },
       "name" : "BreastAbnormalityCodesVS",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
     },
     {
       "reference" : {
         "reference" : "ValueSet/CalcificationTypeVS"
       },
       "name" : "CalcificationTypeVS",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
     },
     {
       "reference" : {
         "reference" : "ValueSet/ChangeVS"
       },
       "name" : "ChangeVS",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
     },
     {
       "reference" : {
         "reference" : "ValueSet/ConsistentWithVS"
       },
       "name" : "ConsistentWithVS",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
     },
     {
       "reference" : {
         "reference" : "ValueSet/CystTypesVS"
       },
       "name" : "CystTypesVS",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
     },
     {
       "reference" : {
         "reference" : "ValueSet/ForeignBodyVS"
       },
       "name" : "ForeignBodyVS",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
     },
     {
       "reference" : {
         "reference" : "ValueSet/HilumVS"
       },
       "name" : "HilumVS",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
     },
     {
       "reference" : {
         "reference" : "ValueSet/LymphNodeQualifiersVS"
       },
       "name" : "LymphNodeQualifiersVS",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
     },
     {
       "reference" : {
         "reference" : "ValueSet/MarginVS"
       },
       "name" : "MarginVS",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
     },
     {
       "reference" : {
         "reference" : "ValueSet/MassTypesVS"
       },
       "name" : "MassTypesVS",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
     },
     {
       "reference" : {
         "reference" : "ValueSet/NodeTypesVS"
       },
       "name" : "NodeTypesVS",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
     },
     {
       "reference" : {
         "reference" : "ValueSet/ShapeVS"
       },
       "name" : "ShapeVS",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
     },
     {
       "reference" : {
         "reference" : "ValueSet/VascularityVS"
       },
       "name" : "VascularityVS",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
     },
     {
       "reference" : {
         "reference" : "ValueSet/WallVS"
       },
       "name" : "WallVS",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Base"
     }],
     "page" : {
       "nameUrl" : "index.html",
