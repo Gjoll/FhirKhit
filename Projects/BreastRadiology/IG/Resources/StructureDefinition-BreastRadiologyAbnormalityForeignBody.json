@@ -3,7 +3,7 @@
   "id": "BreastRadiologyAbnormalityForeignBody",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>BreastRadiologyAbnormalityForeignBody Profile</b></p>\n  <p>ForeignBody value.\n&lt;br&gt;</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>BreastRadiologyAbnormalityForeignBody Profile</b></p>\n  <p>ForeignBody value.\n</p></div>"
   },
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityForeignBody",
   "version": "0.0.2",

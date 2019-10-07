@@ -3,7 +3,7 @@
   "id": "BreastRadiologyAbnormalityType",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>BreastRadiologyAbnormalityType Profile</b></p>\n  <p>Abnormality Type value.\n&lt;br&gt;</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>BreastRadiologyAbnormalityType Profile</b></p>\n  <p>Abnormality Type value.\n</p></div>"
   },
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityType",
   "version": "0.0.2",

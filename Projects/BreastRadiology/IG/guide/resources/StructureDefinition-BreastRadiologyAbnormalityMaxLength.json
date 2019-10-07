@@ -3,7 +3,7 @@
   "id": "BreastRadiologyAbnormalityMaxLength",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>BreastRadiologyAbnormalityMaxLength Profile</b></p>\n  <p>MaxLength value.\n&lt;br&gt;This item will be a slice of Observation.Component.\n&lt;br&gt;The slice will be on  Observation.Component.Code.\n&lt;br&gt;This slice code will be modified in a future  versions to be a suitable public terminology value.</p>\n  </div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>BreastRadiologyAbnormalityMaxLength Profile</b></p>\n  <p>MaxLength value.\n</p></div>"
   },
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityMaxLength",
   "version": "0.0.2",
@@ -22,7 +22,7 @@
       ]
     }
   ],
-  "description": "MaxLength value.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+  "description": "MaxLength value.\n<br>",
   "purpose": "Observations are a key aspect of healthcare.  This resource is used to capture those that do not require more sophisticated mechanisms.",
   "fhirVersion": "4.0.0",
   "kind": "resource",
@@ -36,7 +36,7 @@
         "id": "Observation",
         "path": "Observation",
         "short": "BreastRadiologyAbnormalityMaxLength",
-        "definition": "MaxLength value.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "definition": "MaxLength value.\n<br>",
         "comment": "Used for simple observations such as device measurements, laboratory atomic results, vital signs, height, weight, smoking status, comments, etc.  Other resources are used to provide context for observations such as laboratory reports, etc.",
         "alias": [
           "Vital Signs",
@@ -2538,7 +2538,7 @@
         "id": "Observation",
         "path": "Observation",
         "short": "BreastRadiologyAbnormalityMaxLength",
-        "definition": "MaxLength value.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value."
+        "definition": "MaxLength value.\n<br>"
       },
       {
         "id": "Observation.category",

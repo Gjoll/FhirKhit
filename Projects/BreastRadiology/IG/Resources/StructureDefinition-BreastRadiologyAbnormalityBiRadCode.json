@@ -3,7 +3,7 @@
   "id": "BreastRadiologyAbnormalityBiRadCode",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>BreastRadiologyAbnormalityBiRadCode Profile</b></p>\n  <p>Bi-Rad code value.\n&lt;br&gt;</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>BreastRadiologyAbnormalityBiRadCode Profile</b></p>\n  <p>Bi-Rad code value.\n</p></div>"
   },
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityBiRadCode",
   "version": "0.0.2",

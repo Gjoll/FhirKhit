@@ -3,7 +3,7 @@
   "id": "BreastRadiologyAbnormalityConsistentWith",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>BreastRadiologyAbnormalityConsistentWith Profile</b></p>\n  <p>Consistent With.\n&lt;br&gt;\n  </div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>BreastRadiologyAbnormalityConsistentWith Profile</b></p>\n  <p>Consistent With.\n</p></div>"
   },
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityConsistentWith",
   "version": "0.0.2",

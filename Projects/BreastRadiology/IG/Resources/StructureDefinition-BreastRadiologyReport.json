@@ -53,7 +53,6 @@
                 "id": "DiagnosticReport.extension",
                 "path": "DiagnosticReport.extension",
                 "slicing": {
-                    "id": "4",
                     "discriminator": [
                         {
                             "type": "value",
@@ -84,9 +83,9 @@
                 ]
             },
             {
-                "id": "DiagnosticReport.extension:priorreports",
+                "id": "DiagnosticReport.extension:priorReports",
                 "path": "DiagnosticReport.extension",
-                "sliceName": "priorreports",
+                "sliceName": "priorReports",
                 "definition": "Prior reports",
                 "base": {
                     "path": "DomainResource.extension",
@@ -103,6 +102,25 @@
                 ]
             },
             {
+                "id": "DiagnosticReport.extension:impressions",
+                "path": "DiagnosticReport.extension",
+                "sliceName": "impressions",
+                "definition": "Clinical impressions",
+                "base": {
+                    "path": "DomainResource.extension",
+                    "min": 0,
+                    "max": "*"
+                },
+                "type": [
+                    {
+                        "code": "Extension",
+                        "profile": [
+                            "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyImpressions"
+                        ]
+                    }
+                ]
+            },
+            {
                 "id": "DiagnosticReport.category",
                 "path": "DiagnosticReport.category",
                 "min": 1,
@@ -112,7 +130,6 @@
                 "id": "DiagnosticReport.category.coding",
                 "path": "DiagnosticReport.category.coding",
                 "slicing": {
-                    "id": "1",
                     "discriminator": [
                         {
                             "type": "value",
@@ -153,7 +170,6 @@
                 "id": "DiagnosticReport.code.coding",
                 "path": "DiagnosticReport.code.coding",
                 "slicing": {
-                    "id": "2",
                     "discriminator": [
                         {
                             "type": "value",
@@ -253,26 +269,8 @@
             {
                 "id": "DiagnosticReport.result",
                 "path": "DiagnosticReport.result",
-                "slicing": {
-                    "id": "3",
-                    "discriminator": [
-                        {
-                            "type": "value",
-                            "path": "$this.resolve().code.coding.code"
-                        }
-                    ],
-                    "ordered": false,
-                    "rules": "open"
-                },
-                "min": 1,
-                "max": "1"
-            },
-            {
-                "id": "DiagnosticReport.result:BreastRadiologyObservation",
-                "path": "DiagnosticReport.result",
-                "sliceName": "BreastRadiologyObservation",
                 "short": "BreastRadiologyObservation: Breast Radiology Observation",
-                "definition": "Breast Radiology Observation.\n<br>This observation is the root section of the multiple observations that comprise a breast radiology observation.",
+                "definition": "Breast Radiology Observation.\n<br>This observation is the root of the multiple observations that comprise a breast radiology observation.",
                 "min": 1,
                 "max": "1",
                 "type": [
@@ -283,14 +281,6 @@
                         ]
                     }
                 ]
-            },
-            {
-                "id": "DiagnosticReport.media",
-                "path": "DiagnosticReport.media"
-            },
-            {
-                "id": "DiagnosticReport.media.link",
-                "path": "DiagnosticReport.media.link"
             },
             {
                 "id": "DiagnosticReport.conclusion",

@@ -1889,7 +1889,11 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Observation"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyObservationFindings",
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyObservationPatientHistory",
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyObservationPatientRisk",
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyObservationFindings",
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyObservationFindings"
             ]
           }
         ],
@@ -1960,41 +1964,6 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyObservationFindings"
-            ]
-          }
-        ],
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "Relationships established by OBX-4 usage"
-          },
-          {
-            "identity": "rim",
-            "map": "outBoundRelationship"
-          }
-        ]
-      },
-      {
-        "id": "Observation.hasMember:BreastRadiologyObservationImpressions",
-        "path": "Observation.hasMember",
-        "sliceName": "BreastRadiologyObservationImpressions",
-        "short": "BreastRadiologyObservationImpressions: Breast Radiology Impressions Section",
-        "definition": "Breast Radiology Impressions Section.\n<br>This observation is the root section of the multiple observations that comprise\na breast radiology impressions section.",
-        "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Observation.hasMember",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyObservationImpressions"
             ]
           }
         ],
@@ -2580,7 +2549,11 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Observation"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyObservationFindings",
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyObservationPatientHistory",
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyObservationPatientRisk",
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyObservationFindings",
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyObservationFindings"
             ]
           }
         ]
@@ -2615,23 +2588,6 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyObservationFindings"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "Observation.hasMember:BreastRadiologyObservationImpressions",
-        "path": "Observation.hasMember",
-        "sliceName": "BreastRadiologyObservationImpressions",
-        "short": "BreastRadiologyObservationImpressions: Breast Radiology Impressions Section",
-        "definition": "Breast Radiology Impressions Section.\n<br>This observation is the root section of the multiple observations that comprise\na breast radiology impressions section.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyObservationImpressions"
             ]
           }
         ]

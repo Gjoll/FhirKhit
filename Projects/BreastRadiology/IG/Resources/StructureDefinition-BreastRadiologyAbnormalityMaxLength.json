@@ -3,7 +3,7 @@
   "id": "BreastRadiologyAbnormalityMaxLength",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>BreastRadiologyAbnormalityMaxLength Profile</b></p>\n  <p>MaxLength value.\n&lt;br&gt;</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>BreastRadiologyAbnormalityMaxLength Profile</b></p>\n  <p>MaxLength value.\n</p></div>"
   },
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityMaxLength",
   "version": "0.0.2",

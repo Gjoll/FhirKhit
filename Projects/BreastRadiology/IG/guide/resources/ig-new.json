@@ -257,14 +257,6 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/BreastRadiologyObservationImpressions"
-      },
-      "name" : "BreastRadiologyObservationImpressions",
-      "exampleBoolean" : false,
-      "groupingId" : "Base"
-    },
-    {
-      "reference" : {
         "reference" : "StructureDefinition/BreastRadiologyObservationPatientHistory"
       },
       "name" : "BreastRadiologyObservationPatientHistory",
@@ -582,6 +574,13 @@
       "name" : "WallVS",
       "exampleBoolean" : false,
       "groupingId" : "Base"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyImpressions"
+      },
+      "name" : "BreastRadiologyImpressions",
+      "exampleBoolean" : false
     }],
     "page" : {
       "nameUrl" : "index.html",

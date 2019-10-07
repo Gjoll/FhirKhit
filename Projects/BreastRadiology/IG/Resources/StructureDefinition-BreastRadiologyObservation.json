@@ -138,7 +138,11 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Observation"
+				"http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyObservationFindings",
+				"http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyObservationPatientHistory",
+				"http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyObservationPatientRisk",
+				"http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyObservationFindings",
+				"http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyObservationFindings"
             ]
           }
         ]
@@ -173,23 +177,6 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyObservationFindings"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "Observation.hasMember:BreastRadiologyObservationImpressions",
-        "path": "Observation.hasMember",
-        "sliceName": "BreastRadiologyObservationImpressions",
-        "short": "BreastRadiologyObservationImpressions: Breast Radiology Impressions Section",
-        "definition": "Breast Radiology Impressions Section.\n<br>This observation is the root section of the multiple observations that comprise\na breast radiology impressions section.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyObservationImpressions"
             ]
           }
         ]

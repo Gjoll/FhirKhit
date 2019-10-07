@@ -309,7 +309,6 @@
         "id": "DiagnosticReport.extension",
         "path": "DiagnosticReport.extension",
         "slicing": {
-          "id": "4",
           "discriminator": [
             {
               "type": "value",
@@ -383,9 +382,9 @@
         ]
       },
       {
-        "id": "DiagnosticReport.extension:priorreports",
+        "id": "DiagnosticReport.extension:priorReports",
         "path": "DiagnosticReport.extension",
-        "sliceName": "priorreports",
+        "sliceName": "priorReports",
         "short": "Additional content defined by implementations",
         "definition": "Prior reports",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
@@ -405,6 +404,41 @@
             "code": "Extension",
             "profile": [
               "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyPriorReports"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.extension:impressions",
+        "path": "DiagnosticReport.extension",
+        "sliceName": "impressions",
+        "short": "Additional content defined by implementations",
+        "definition": "Clinical impressions",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyImpressions"
             ]
           }
         ],
@@ -718,7 +752,6 @@
         "id": "DiagnosticReport.category.coding",
         "path": "DiagnosticReport.category.coding",
         "slicing": {
-          "id": "1",
           "discriminator": [
             {
               "type": "value",
@@ -970,7 +1003,6 @@
         "id": "DiagnosticReport.code.coding",
         "path": "DiagnosticReport.code.coding",
         "slicing": {
-          "id": "2",
           "discriminator": [
             {
               "type": "value",
@@ -1419,66 +1451,8 @@
       {
         "id": "DiagnosticReport.result",
         "path": "DiagnosticReport.result",
-        "slicing": {
-          "id": "3",
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "$this.resolve().code.coding.code"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        },
-        "short": "Observations",
-        "definition": "[Observations](observation.html)  that are part of this diagnostic report.",
-        "comment": "Observations can contain observations.",
-        "requirements": "Need to support individual results, or  groups of results, where the result grouping is arbitrary, but meaningful.",
-        "alias": [
-          "Data",
-          "Atomic Value",
-          "Result",
-          "Atomic result",
-          "Data",
-          "Test",
-          "Analyte",
-          "Battery",
-          "Organizer"
-        ],
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "DiagnosticReport.result",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Observation"
-            ]
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "OBXs"
-          },
-          {
-            "identity": "rim",
-            "map": "outboundRelationship[typeCode=COMP].target"
-          }
-        ]
-      },
-      {
-        "id": "DiagnosticReport.result:BreastRadiologyObservation",
-        "path": "DiagnosticReport.result",
-        "sliceName": "BreastRadiologyObservation",
         "short": "BreastRadiologyObservation: Breast Radiology Observation",
-        "definition": "Breast Radiology Observation.\n<br>This observation is the root section of the multiple observations that comprise a breast radiology observation.",
+        "definition": "Breast Radiology Observation.\n<br>This observation is the root of the multiple observations that comprise a breast radiology observation.",
         "comment": "Observations can contain observations.",
         "requirements": "Need to support individual results, or  groups of results, where the result grouping is arbitrary, but meaningful.",
         "alias": [
@@ -1869,7 +1843,6 @@
         "id": "DiagnosticReport.extension",
         "path": "DiagnosticReport.extension",
         "slicing": {
-          "id": "4",
           "discriminator": [
             {
               "type": "value",
@@ -1900,9 +1873,9 @@
         ]
       },
       {
-        "id": "DiagnosticReport.extension:priorreports",
+        "id": "DiagnosticReport.extension:priorReports",
         "path": "DiagnosticReport.extension",
-        "sliceName": "priorreports",
+        "sliceName": "priorReports",
         "definition": "Prior reports",
         "base": {
           "path": "DomainResource.extension",
@@ -1919,6 +1892,25 @@
         ]
       },
       {
+        "id": "DiagnosticReport.extension:impressions",
+        "path": "DiagnosticReport.extension",
+        "sliceName": "impressions",
+        "definition": "Clinical impressions",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyImpressions"
+            ]
+          }
+        ]
+      },
+      {
         "id": "DiagnosticReport.category",
         "path": "DiagnosticReport.category",
         "min": 1,
@@ -1928,7 +1920,6 @@
         "id": "DiagnosticReport.category.coding",
         "path": "DiagnosticReport.category.coding",
         "slicing": {
-          "id": "1",
           "discriminator": [
             {
               "type": "value",
@@ -1969,7 +1960,6 @@
         "id": "DiagnosticReport.code.coding",
         "path": "DiagnosticReport.code.coding",
         "slicing": {
-          "id": "2",
           "discriminator": [
             {
               "type": "value",
@@ -2069,26 +2059,8 @@
       {
         "id": "DiagnosticReport.result",
         "path": "DiagnosticReport.result",
-        "slicing": {
-          "id": "3",
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "$this.resolve().code.coding.code"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        },
-        "min": 1,
-        "max": "1"
-      },
-      {
-        "id": "DiagnosticReport.result:BreastRadiologyObservation",
-        "path": "DiagnosticReport.result",
-        "sliceName": "BreastRadiologyObservation",
         "short": "BreastRadiologyObservation: Breast Radiology Observation",
-        "definition": "Breast Radiology Observation.\n<br>This observation is the root section of the multiple observations that comprise a breast radiology observation.",
+        "definition": "Breast Radiology Observation.\n<br>This observation is the root of the multiple observations that comprise a breast radiology observation.",
         "min": 1,
         "max": "1",
         "type": [
@@ -2099,14 +2071,6 @@
             ]
           }
         ]
-      },
-      {
-        "id": "DiagnosticReport.media",
-        "path": "DiagnosticReport.media"
-      },
-      {
-        "id": "DiagnosticReport.media.link",
-        "path": "DiagnosticReport.media.link"
       },
       {
         "id": "DiagnosticReport.conclusion",

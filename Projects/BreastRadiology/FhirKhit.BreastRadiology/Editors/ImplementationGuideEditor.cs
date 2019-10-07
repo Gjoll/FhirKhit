@@ -37,7 +37,7 @@ namespace FhirKhit.BreastRadiology
                     Name = name
                 };
                 modified = new Modified<ImplementationGuide.ResourceComponent>(item);
-                this.resources.Add(item.Name, new Modified<ImplementationGuide.ResourceComponent>(item));
+                this.resources.Add(item.Name, modified);
                 this.implementationGuide.Definition.Resource.Add(item);
             }
 

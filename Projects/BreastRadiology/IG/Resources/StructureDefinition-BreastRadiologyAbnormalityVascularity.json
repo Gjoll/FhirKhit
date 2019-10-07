@@ -3,7 +3,7 @@
   "id": "BreastRadiologyAbnormalityVascularity",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>BreastRadiologyAbnormalityVascularity Profile</b></p>\n  <p>Vascularity value.\n&lt;br&gt;</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>BreastRadiologyAbnormalityVascularity Profile</b></p>\n  <p>Vascularity value.\n</p></div>"
   },
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityVascularity",
   "version": "0.0.2",

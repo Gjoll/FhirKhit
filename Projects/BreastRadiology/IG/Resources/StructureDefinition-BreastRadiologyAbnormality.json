@@ -3,7 +3,7 @@
   "id": "BreastRadiologyAbnormality",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>BreastRadiologyAbnormality Profile</b></p>\n  <p>Breast Abnormality entry. Each instance of this will describe one observed breast abnormality.\nObservations specific to this abnormality, such as density and size, will be found in observations referenced\nby this instances hasMember field.</p>\n  </div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>BreastRadiologyAbnormality Profile</b></p>\n  <p>Breast Abnormality entry. Each instance of this will describe one observed breast abnormality.\nObservations specific to this abnormality, such as density and size, will be found in observations referenced by this instances hasMember field.</p>\n  </div>"
   },
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormality",
   "version": "0.0.2",

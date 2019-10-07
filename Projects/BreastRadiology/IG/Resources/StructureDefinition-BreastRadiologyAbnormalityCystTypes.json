@@ -3,7 +3,7 @@
   "id": "BreastRadiologyAbnormalityCystTypes",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>BreastRadiologyAbnormalityCystTypes Profile</b></p>\n  <p>Cyst Types.\n&lt;br&gt;</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>BreastRadiologyAbnormalityCystTypes Profile</b></p>\n  <p>Cyst Types.\n</p></div>"
   },
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityCystTypes",
   "version": "0.0.2",
