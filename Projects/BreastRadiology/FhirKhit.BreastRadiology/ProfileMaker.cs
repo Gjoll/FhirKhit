@@ -15,17 +15,6 @@ namespace FhirKhit.BreastRadiology
         const String ProfileVersion = "0.0.2";
         const PublicationStatus ProfileStatus = PublicationStatus.Draft;
 
-        ProfilesEditor profilesEditor;
-        ExamplesEditor examplesEditor;
-        ExtensionsEditor extensionsEditor;
-        CodeSystemsEditor codeSystemsEditor;
-        ValueSetsEditor valueSetsEditor;
-
-        String outputDir;
-        String resourceDir => Path.Combine(this.outputDir, "resources");
-        String IgPath => Path.Combine(outputDir, "IG.json");
-        String ImpGuidePath => Path.Combine(outputDir, "Resources", "ig.xml");
-
         const String Loinc = "http://loinc.org";
         const String DiagSvcSects = "http://terminology.hl7.org/CodeSystem/v2-0074";
 
@@ -35,11 +24,23 @@ namespace FhirKhit.BreastRadiology
         const String MedicationRequestUrl = "http://hl7.org/fhir/StructureDefinition/MedicationRequest";
         const String ServiceRequestUrl = "http://hl7.org/fhir/StructureDefinition/ServiceRequest";
 
+        String outputDir;
+        String resourceDir => Path.Combine(this.outputDir, "resources");
+        String IgPath => Path.Combine(outputDir, "IG.json");
+        String ImpGuidePath => Path.Combine(outputDir, "Resources", "ig.xml");
+
+        ProfilesEditor profilesEditor;
+        ExamplesEditor examplesEditor;
+        ExtensionsEditor extensionsEditor;
+        CodeSystemsEditor codeSystemsEditor;
+        ValueSetsEditor valueSetsEditor;
+        ImplementationGuideEditor implementationGuide;
+
         FhirDateTime date = new FhirDateTime(2019, 11, 1);
-        ImplementationGuide implementationGuide;
         IGEditor igEditor;
 
         List<SDefEditor> editors = new List<SDefEditor>();
+
 
         String CreateUrl(String name)
         {
@@ -166,7 +167,7 @@ namespace FhirKhit.BreastRadiology
         {
             String htmlName = $"StructureDefinition-{sDef.Name}.html";
 
-            this.AddIGResource($"StructureDefinition/{sDef.Name}", sDef.Name, false);
+            this.implementationGuide.AddIGResource($"StructureDefinition/{sDef.Name}", sDef.Name, false);
             this.igEditor.AddResource($"StructureDefinition/{sDef.Name}",
                 htmlName);
             if (extensionFlag == false)
@@ -181,17 +182,6 @@ namespace FhirKhit.BreastRadiology
                     sDef.Description);
         }
 
-        void AddIGResource(String path,
-            String name,
-            bool example)
-        {
-            this.implementationGuide.Definition.Resource.Add(new ImplementationGuide.ResourceComponent
-            {
-                Reference = new ResourceReference(path),
-                Name = name,
-                Example = new FhirBoolean(example)
-            });
-        }
 
         public void SaveAll()
         {
@@ -202,7 +192,7 @@ namespace FhirKhit.BreastRadiology
                 ce.Write();
             }
 
-            implementationGuide.SaveXml(this.ImpGuidePath);
+            implementationGuide.Save(this.ImpGuidePath);
             this.igEditor.Save(this.IgPath);
             this.examplesEditor.Save();
             this.profilesEditor.Save();
@@ -221,12 +211,7 @@ namespace FhirKhit.BreastRadiology
 
             this.igEditor = IGEditor.Load(this.IgPath);
             this.igEditor.dependencyList?.Clear();
-            {
-                String xmlText = File.ReadAllText($"{this.ImpGuidePath}.template");
-                FhirXmlParser parser = new FhirXmlParser();
-                this.implementationGuide = (ImplementationGuide)parser.Parse(xmlText, typeof(Resource));
-                this.implementationGuide.Definition.Resource.Clear();
-            }
+            this.implementationGuide = new ImplementationGuideEditor(this.ImpGuidePath);
         }
 
         public void AddResources(String resourceDir)
@@ -268,7 +253,7 @@ namespace FhirKhit.BreastRadiology
                             String fixedName = FixName(file, typeName);
                             String htmlPage = $"{fixedName}.html";
                             Save(codeSystem, $"{fixedName}.json");
-                            this.AddIGResource($"{typeName}/{codeSystem.Name}", codeSystem.Name, false);
+                            this.implementationGuide.AddIGResource($"{typeName}/{codeSystem.Name}", codeSystem.Name, false);
                             this.igEditor.AddResource($"{typeName}/{codeSystem.Name}",
                                 htmlPage);
                             this.codeSystemsEditor.AddCodeSystem(codeSystem.Name,
@@ -283,7 +268,7 @@ namespace FhirKhit.BreastRadiology
                             String fixedName = FixName(file, typeName);
                             String htmlPage = $"{fixedName}.html";
                             Save(valueSet, $"{fixedName}.json");
-                            this.AddIGResource($"{typeName}/{valueSet.Name}", valueSet.Name, false);
+                            this.implementationGuide.AddIGResource($"{typeName}/{valueSet.Name}", valueSet.Name, false);
                             this.igEditor.AddResource($"{typeName}/{valueSet.Name}",
                                 htmlPage);
                             this.valueSetsEditor.AddValueSet(valueSet.Name,
