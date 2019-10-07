@@ -1,0 +1,325 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "BreastRadiologyReport",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>BreastRadiologyReport Profile</b></p>\n  <p>Breast Radiology Diagnostic Report.\n&lt;br&gt;This diagnostic report is the base of the Breast Radiology Report, and contains a summary of the report findings.\n&lt;br&gt;Detailed information about the results of the exam are contained in the Breast Radiology Observation linked to by the &#039;result&#039; field.</p>\n  </div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyReport",
+  "version": "0.0.2",
+  "name": "BreastRadiologyReport",
+  "title": "BreastRadiologyReport",
+  "status": "draft",
+  "date": "2019-11-01",
+  "publisher": "Hl7 - Clinical Interoperability Council",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/cic"
+        }
+      ]
+    }
+  ],
+  "description": "Breast Radiology Diagnostic Report.\n<br>This diagnostic report is the base of the Breast Radiology Report, and contains a summary of the report findings.\n<br>Detailed information about the results of the exam are contained in the Breast Radiology Observation linked to by the 'result' field.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US",
+          "display": "United States of America"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "DiagnosticReport",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DiagnosticReport",
+        "path": "DiagnosticReport",
+        "short": "BreastRadiologyReport",
+        "definition": "Breast Radiology Diagnostic Report.\n<br>This diagnostic report is the base of the Breast Radiology Report, and contains a summary of the report findings.\n<br>Detailed information about the results of the exam are contained in the Breast Radiology Observation linked to by the 'result' field.",
+        "mustSupport": false
+      },
+      {
+        "id": "DiagnosticReport.extension",
+        "path": "DiagnosticReport.extension",
+        "slicing": {
+          "id": "4",
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "DiagnosticReport.extension:recommendations",
+        "path": "DiagnosticReport.extension",
+        "sliceName": "recommendations",
+        "definition": "Recommendations for future care",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyRecommendations"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.extension:priorreports",
+        "path": "DiagnosticReport.extension",
+        "sliceName": "priorreports",
+        "definition": "Prior reports",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyPriorReports"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.category",
+        "path": "DiagnosticReport.category",
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "DiagnosticReport.category.coding",
+        "path": "DiagnosticReport.category.coding",
+        "slicing": {
+          "id": "1",
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "code"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "DiagnosticReport.category.coding:Fixed_RAD",
+        "path": "DiagnosticReport.category.coding",
+        "sliceName": "Fixed_RAD",
+        "short": "Code defined by a terminology system",
+        "definition": "A reference to a code defined by a terminology system.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "DiagnosticReport.category.coding:Fixed_RAD.system",
+        "path": "DiagnosticReport.category.coding.system",
+        "fixedUri": "http://terminology.hl7.org/CodeSystem/v2-0074"
+      },
+      {
+        "id": "DiagnosticReport.category.coding:Fixed_RAD.code",
+        "path": "DiagnosticReport.category.coding.code",
+        "fixedCode": "RAD"
+      },
+      {
+        "id": "DiagnosticReport.code",
+        "path": "DiagnosticReport.code"
+      },
+      {
+        "id": "DiagnosticReport.code.coding",
+        "path": "DiagnosticReport.code.coding",
+        "slicing": {
+          "id": "2",
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "code"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "DiagnosticReport.code.coding:Fixed_10193-1",
+        "path": "DiagnosticReport.code.coding",
+        "sliceName": "Fixed_10193-1",
+        "short": "Code defined by a terminology system",
+        "definition": "A reference to a code defined by a terminology system.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "DiagnosticReport.code.coding:Fixed_10193-1.system",
+        "path": "DiagnosticReport.code.coding.system",
+        "fixedUri": "http://loinc.org"
+      },
+      {
+        "id": "DiagnosticReport.code.coding:Fixed_10193-1.code",
+        "path": "DiagnosticReport.code.coding.code",
+        "fixedCode": "10193-1"
+      },
+      {
+        "id": "DiagnosticReport.subject",
+        "path": "DiagnosticReport.subject",
+        "short": "The subject of an observation",
+        "definition": "The subject of an observation.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.encounter",
+        "path": "DiagnosticReport.encounter"
+      },
+      {
+        "id": "DiagnosticReport.issued",
+        "path": "DiagnosticReport.issued",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "DiagnosticReport.performer",
+        "path": "DiagnosticReport.performer",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "http://hl7.org/fhir/StructureDefinition/Organization"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.resultsInterpreter",
+        "path": "DiagnosticReport.resultsInterpreter",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "http://hl7.org/fhir/StructureDefinition/Organization"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.specimen",
+        "path": "DiagnosticReport.specimen",
+        "min": 0,
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.result",
+        "path": "DiagnosticReport.result",
+        "slicing": {
+          "id": "3",
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this.resolve().code.coding.code"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "DiagnosticReport.result:BreastRadiologyObservation",
+        "path": "DiagnosticReport.result",
+        "sliceName": "BreastRadiologyObservation",
+        "short": "BreastRadiologyObservation: Breast Radiology Observation",
+        "definition": "Breast Radiology Observation.\n<br>This observation is the root section of the multiple observations that comprise a breast radiology observation.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyObservation"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.media",
+        "path": "DiagnosticReport.media"
+      },
+      {
+        "id": "DiagnosticReport.media.link",
+        "path": "DiagnosticReport.media.link"
+      },
+      {
+        "id": "DiagnosticReport.conclusion",
+        "path": "DiagnosticReport.conclusion",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "DiagnosticReport.conclusionCode",
+        "path": "DiagnosticReport.conclusionCode",
+        "min": 1,
+        "max": "1"
+      }
+    ]
+  }
+}
