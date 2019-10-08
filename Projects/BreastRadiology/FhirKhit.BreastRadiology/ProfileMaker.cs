@@ -216,8 +216,27 @@ namespace FhirKhit.BreastRadiology
 
         public void AddResources(String resourceDir)
         {
+            StringBuilder sb = new StringBuilder();
+
             void Save(Resource r, String outputName)
             {
+                switch (r)
+                {
+                    case StructureDefinition s:
+                        sb.AppendLine($"#######");
+                        sb.AppendLine($"###FileName:'{Path.GetFileName(outputName)}'");
+                        sb.AppendLine($"###Title: (Single Line)");
+                        sb.AppendLine($"###{s.Title}'");
+                        sb.AppendLine($"###");
+                        sb.AppendLine($"###Description: (Multiple Line)");
+                        sb.AppendLine($"{s.Description}");
+                        sb.AppendLine($"###");
+                        sb.AppendLine($"###Purpose: (Multiple Line)");
+                        sb.AppendLine($"{s.Purpose}");
+                        sb.AppendLine($"###");
+                        break;
+                }
+
                 r.SaveJson(Path.Combine(this.resourceDir, outputName));
             }
 
@@ -280,8 +299,8 @@ namespace FhirKhit.BreastRadiology
                     default:
                         throw new NotImplementedException($"Unknown resource type '{file}'");
                 }
-
             }
+            File.WriteAllText(@"c:\Temp\BreastDescriptions.txt", sb.ToString());
         }
 
         public void CreateProfiles()
