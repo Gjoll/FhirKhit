@@ -5,12 +5,18 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace FhirKhit.BreastRadiology
+#if FHIR_R4
+namespace FhirKhit.Tools.R4
+#elif FHIR_R3
+namespace FhirKhit.Tools.R3
+#elif FHIR_R2
+namespace FhirKhit.Tools.R2
+#endif
 {
     /// <summary>
     /// base class for editing .html pages.
     /// </summary>
-    class PageEditor
+    public class PageEditor
     {
         String outputDir;
         String page(String s) => Path.Combine(this.outputDir, "pages", s);

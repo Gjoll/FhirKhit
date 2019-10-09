@@ -2,9 +2,15 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace FhirKhit.BreastRadiology
+#if FHIR_R4
+namespace FhirKhit.Tools.R4
+#elif FHIR_R3
+namespace FhirKhit.Tools.R3
+#elif FHIR_R2
+namespace FhirKhit.Tools.R2
+#endif
 {
-    class Modified<T>
+    public class Modified<T>
         where T : class
     {
         public bool ModifiedFlag { get; set; } = false;

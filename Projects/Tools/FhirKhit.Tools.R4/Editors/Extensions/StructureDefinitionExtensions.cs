@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace FhirKhit.BreastRadiology
+namespace FhirKhit.Tools.R4
 {
-    public static class StructureDefinitionExtensions
+    public static class StructureDefinitionExtensions2
     {
         public static StructureDefinition ContactUrl(this StructureDefinition sDef, String value)
         {

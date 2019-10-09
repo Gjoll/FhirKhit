@@ -6,13 +6,13 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace FhirKhit.BreastRadiology
+namespace FhirKhit.Tools.R4
 {
     /// <summary>
     /// Edit implementation guide.
     /// Note: This will try to maintain oprder and other info on currently existing resoruces.
     /// </summary>
-    class ImplementationGuideEditor
+    public class ImplementationGuideEditor
     {
         ImplementationGuide implementationGuide;
         Dictionary<String, Modified<ImplementationGuide.ResourceComponent>> resources = new Dictionary<String, Modified<ImplementationGuide.ResourceComponent>>();

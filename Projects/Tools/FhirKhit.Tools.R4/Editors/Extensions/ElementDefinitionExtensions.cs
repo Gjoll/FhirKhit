@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace FhirKhit.BreastRadiology
+namespace FhirKhit.Tools.R4
 {
-    public static class ElementDefinitionExtensions
+    public static class ElementDefinitionExtensions2
     {
         public static ElementDefinition ZeroToMany(this ElementDefinition e)
         {

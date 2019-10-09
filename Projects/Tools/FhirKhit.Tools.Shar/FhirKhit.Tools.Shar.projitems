@@ -19,7 +19,14 @@
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\StringExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)FhirKhitVersion.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)FhirStructureDefinitions.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)IGEditor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IG\CodeSystemsEditor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IG\ExamplesEditor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IG\ExtensionsEditor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IG\IGEditor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IG\Modified.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IG\PageEditor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IG\ProfilesEditor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IG\ValueSetsEditor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SDefCleaner.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SnapshotCreator.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Validation\FhirValidator.cs" />

@@ -8,9 +8,9 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace FhirKhit.BreastRadiology
+namespace FhirKhit.Tools.R4
 {
-    class SDefEditor
+    public class SDefEditor
     {
         public class ElementIndex
         {

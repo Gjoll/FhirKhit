@@ -5,14 +5,20 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace FhirKhit.BreastRadiology
+#if FHIR_R4
+namespace FhirKhit.Tools.R4
+#elif FHIR_R3
+namespace FhirKhit.Tools.R3
+#elif FHIR_R2
+namespace FhirKhit.Tools.R2
+#endif
 {
     /// <summary>
     /// class for editing Profiles.html.
     /// profiles.html.template is the base template which is modified
     /// and saved as profiles.html.
     /// </summary>
-    class ProfilesEditor : PageEditor
+    public class ProfilesEditor : PageEditor
     {
         CodeBlockNested profileItemBlock;
         CodeBlockNested basedOnItemBlock;
