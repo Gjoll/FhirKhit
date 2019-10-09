@@ -23,8 +23,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         const String MedicationRequestUrl = "http://hl7.org/fhir/StructureDefinition/MedicationRequest";
         const String ServiceRequestUrl = "http://hl7.org/fhir/StructureDefinition/ServiceRequest";
 
-        String outputDir;
-        String resourceDir => Path.Combine(this.outputDir, "resources");
+        String resourceDir;
         FhirDateTime date = new FhirDateTime(2019, 11, 1);
         List<SDefEditor> editors = new List<SDefEditor>();
 
@@ -33,9 +32,15 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             return $"http://hl7.org/fhir/us/breast-radiology/StructureDefinition/{name}";
         }
 
-        public ResourcesMaker(String outputDir)
+        public ResourcesMaker(String resourceDir)
         {
-            this.outputDir = outputDir;
+            this.resourceDir = resourceDir;
+        }
+
+        public void CreateResources()
+        {
+            CreateBreastRadiologyReport();
+            SaveAll();
         }
 
         SDefEditor CreateEditor(String name, String baseUrl)
@@ -153,12 +158,6 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 SnapshotCreator.Create(sDef);
                 ce.Write();
             }
-        }
-
-        public void CreateResources()
-        {
-            CreateBreastRadiologyReport();
-            SaveAll();
         }
     }
 }
