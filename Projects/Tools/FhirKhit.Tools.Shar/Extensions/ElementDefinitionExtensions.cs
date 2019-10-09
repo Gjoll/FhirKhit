@@ -56,6 +56,9 @@ namespace FhirKhit.Tools.R2
         public static List<ElementDefinition> RemoveById(this List<ElementDefinition> elements,
             String id)
         {
+            if (elements is null)
+                throw new ArgumentNullException(nameof(elements));
+
             Int32 i = 0;
             while (i < elements.Count)
             {
@@ -71,6 +74,9 @@ namespace FhirKhit.Tools.R2
         public static List<ElementDefinition> RemoveByPath(this List<ElementDefinition> elements,
             String path)
         {
+            if (elements is null)
+                throw new ArgumentNullException(nameof(elements));
+
             Int32 i = 0;
             while (i < elements.Count)
             {

@@ -39,8 +39,8 @@ namespace FhirKhit.BreastRadiology.XUnitTests
 
         public void CreateResources()
         {
-            CreateBreastRadiologyReport();
-            CreateBreastRadiologyObservation();
+            String rootObservationUrl = CreateBreastRadiologyObservation();
+            CreateBreastRadiologyReport(rootObservationUrl);
             SaveAll();
         }
 
@@ -72,14 +72,14 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             return retVal;
         }
 
-        void CreateBreastRadiologyObservation()
+        String CreateBreastRadiologyObservation()
         {
             SDefEditor e = CreateObservationEditor("BreastRadiologyObservation", ObservationUrl)
                 .Description(
                     "Breast Radiology Diagnostic Observation." +
                     "<br>" +
-                    "This observation contains a number of sections with specific observations" +
-                    "pertaining to this breast radiology diagnostic report." +
+                    "This observation is the root container of the report sections" +
+                    " that comprise this breast radiology diagnostic report." +
                     "These sections include" +
                     "** Findings" +
                     "<br>" +
@@ -88,9 +88,11 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 )
                 .SliceByCode("Observation", "Observation.code", "observationCode", Loinc, "10193-1");
                 ;
+
+            return e.SDef.Url;
         }
 
-        void CreateBreastRadiologyReport()
+        void CreateBreastRadiologyReport(String rootObservationUrl)
         {
             String CreatePriorReportsExtension(String brrDiagnosticReportUrl)
             {
@@ -105,12 +107,8 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                     .Type("uri")
                     .Fixed(new FhirUri(e2.SDef.Url));
 
-                String[] targets = new string[]
-                {
-                brrDiagnosticReportUrl
-                };
                 e2.Select("value[x]")
-                    .Type("Reference", null, targets)
+                    .TypeReference(brrDiagnosticReportUrl)
                     .Single()
                     ;
                 return e2.SDef.Url;
@@ -129,13 +127,8 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                     .Type("uri")
                     .Fixed(new FhirUri(e3.SDef.Url));
 
-                String[] targets = new string[]
-                {
-                MedicationRequestUrl,
-                ServiceRequestUrl
-                };
                 e3.Select("value[x]")
-                    .Type("Reference", null, targets)
+                    .TypeReference(MedicationRequestUrl, ServiceRequestUrl)
                     .Single()
                     ;
                 return e3.SDef.Url;
@@ -143,12 +136,13 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             SDefEditor e = CreateEditor("BreastRadiologyReport", DiagnosticReportUrl)
                 .Description(
                     "Breast Radiology Diagnostic Report." +
-                    "<br>" +
-                    "This diagnostic report is the base of the Breast Radiology Report, " +
-                    " and contains a summary of the report findings." +
-                    "<br>" +
-                    "Detailed information about the results of the exam are contained in the " +
-                    "Breast Radiology Observation linked to by the 'result' field."
+                    "<p>" +
+                    "This diagnostic report has links to the data that comprise a Breast Radiology Report, including" +
+                    "** references to prior breast radiology reports for this patient" +
+                    "** references to the observations of this report" +
+                    "** references to the recommendations of this report" +
+                    "** a summary of the report findings in a human readable format" +
+                    "</p>"
                 )
                 .Kind(StructureDefinition.StructureDefinitionKind.Resource)
                 ;
@@ -172,7 +166,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
 
             e.Select("result")
                 .Single()
-                .Type("Reference", null, new String[] { ObservationUrl })
+                .TypeReference(rootObservationUrl)
                 ;
         }
 

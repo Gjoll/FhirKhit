@@ -33,6 +33,9 @@ namespace FhirKhit.Tools.R2
             String resourceName,
             Markdown text)
         {
+            if (text is null)
+                throw new ArgumentNullException(nameof(text));
+
             itemBlock
                 .AppendRaw("<tr>")
                 .AppendRaw($"<td><a href=\"{examplePage}\">{exampleName}</a></td>")

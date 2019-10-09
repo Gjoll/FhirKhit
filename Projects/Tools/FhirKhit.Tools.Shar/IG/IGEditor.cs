@@ -21,8 +21,8 @@ namespace FhirKhit.Tools.R2
     {
         private readonly JObject ig;
 
-        private JObject resources => (JObject)this.ig["resources"];
-        public JArray dependencyList => (JArray)this.ig["dependencyList"];
+        private JObject resourcesJson => (JObject)this.ig["resources"];
+        public JArray dependencyListJson => (JArray)this.ig["dependencyList"];
 
         public static IGEditor Load(String path)
         {
@@ -33,7 +33,7 @@ namespace FhirKhit.Tools.R2
             using (JsonReader reader = new JsonTextReader(new StringReader(jsonText)))
             {
                 IGEditor retVal = new IGEditor(JObject.Load(reader));
-                retVal.resources.RemoveAll();
+                retVal.resourcesJson.RemoveAll();
                 return retVal;
             };
         }
@@ -82,7 +82,7 @@ namespace FhirKhit.Tools.R2
             JObject item = new JObject();
             item.Add("base", href);
 
-            this.resources.Add(resourcePath, item);
+            this.resourcesJson.Add(resourcePath, item);
             return this;
         }
     }

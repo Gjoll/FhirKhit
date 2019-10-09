@@ -20,13 +20,6 @@ namespace FhirKhit.Tools.R2
             this.conversionInfo = info;
         }
 
-        bool Same(ElementDefinition e1, ElementDefinition e2)
-        {
-            if (e2 == null)
-                return false;
-            return false;
-        }
-
         void CleanElement(StructureDefinition sDef,
             StructureDefinition parent,
             ElementDefinition element)

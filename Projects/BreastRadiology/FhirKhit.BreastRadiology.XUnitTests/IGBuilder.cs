@@ -80,7 +80,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             this.valueSetsEditor = new ValueSetsEditor(this.outputDir);
 
             this.igEditor = IGEditor.Load(this.IgPath);
-            this.igEditor.dependencyList?.Clear();
+            this.igEditor.dependencyListJson?.Clear();
             this.implementationGuide = new ImplementationGuideEditor(this.ImpGuidePath);
         }
 

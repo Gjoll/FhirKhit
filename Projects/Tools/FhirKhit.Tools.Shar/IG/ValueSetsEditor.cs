@@ -33,6 +33,8 @@ namespace FhirKhit.Tools.R2
             String valueSetPage,
             Markdown text)
         {
+            if (text is null)
+                throw new ArgumentNullException(nameof(text));
             this.externalItemBlock
                 .AppendRaw("<tr>")
                 .AppendRaw($"<td><a href=\"{valueSetPage}\">{valueSetName}</a></td>")
@@ -47,6 +49,8 @@ namespace FhirKhit.Tools.R2
             String valueSetPage,
             Markdown text)
         {
+            if (text is null)
+                throw new ArgumentNullException(nameof(text));
             this.itemBlock
                 .AppendRaw("<tr>")
                 .AppendRaw($"<td><a href=\"{valueSetPage}\">{valueSetName}</a></td>")

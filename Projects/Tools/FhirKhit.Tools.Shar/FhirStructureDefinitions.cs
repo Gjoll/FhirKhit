@@ -35,8 +35,13 @@ namespace FhirKhit.Tools.R2
             }
         }
 
+#pragma warning disable CA1054 // Uri parameters should not be strings
         public StructureDefinition GetResource(String uri)
+#pragma warning restore CA1054 // Uri parameters should not be strings
         {
+            if (uri is null)
+                throw new ArgumentNullException(nameof(uri));
+
             return this.source.ResolveByUri(uri) as StructureDefinition;
         }
 

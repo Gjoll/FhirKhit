@@ -32,6 +32,9 @@ namespace FhirKhit.Tools.R2
             String codeSystemPage,
             Markdown text)
         {
+            if (text is null)
+                throw new ArgumentNullException(nameof(text));
+
             this.itemBlock
                 .AppendRaw("<tr>")
                 .AppendRaw($"<td><a href=\"{codeSystemPage}\">{codeSystemName}</a></td>")

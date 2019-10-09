@@ -7,6 +7,19 @@ namespace FhirKhit.Tools
 {
     public static class StringExtensions
     {
+        public static String ToMarkup(this String[] lines)
+        {
+            if (lines is null)
+                throw new ArgumentNullException(nameof(lines));
+
+            StringBuilder sb = new StringBuilder();
+            foreach (String line in lines)
+            {
+                sb.AppendLine(line);
+            }
+            return sb.ToString();
+        }
+
         public static String RemovePrefix(this String s, string prefix)
         {
             if (s is null)
@@ -91,7 +104,7 @@ namespace FhirKhit.Tools
         /// </summary>
         /// <param name="path"></param>
         /// <returns></returns>
-        #pragma warning disable CA1055
+#pragma warning disable CA1055
         public static String BaseUriPart(this String path)
         {
             if (path is null)
@@ -108,7 +121,7 @@ namespace FhirKhit.Tools
         /// </summary>
         /// <param name="path"></param>
         /// <returns></returns>
-        #pragma warning disable CA1055
+#pragma warning disable CA1055
         public static String LastUriPart(this String path)
         {
             if (path is null)

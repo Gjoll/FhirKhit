@@ -85,6 +85,11 @@ namespace FhirKhit.Tools.R4
             return e;
         }
 
+        public static ElementDefinition TypeReference(this ElementDefinition e, params String[] targetProfiles)
+        {
+            return e.Type("Reference", null, targetProfiles);
+        }
+
         public static ElementDefinition Type(this ElementDefinition e,
             String code,
             String[] profiles = null,
