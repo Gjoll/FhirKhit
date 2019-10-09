@@ -39,18 +39,49 @@ namespace FhirKhit.BreastRadiology.XUnitTests
 
         public void CreateResources()
         {
-            String rootObservationUrl = CreateBreastRadiologyObservation();
-            CreateBreastRadiologyReport(rootObservationUrl);
+            String patientRiskUrl = CreateSectionObservation("Patient Risk",
+                new Markdown().Paragraph("Patient Risk Section"),
+                new string[] { })
+                .SDef.Url;
+
+            String patientHistoryUrl = CreateSectionObservation("Patient History Section",
+                new Markdown().Paragraph("Patient History Section"),
+                new string[] { })
+                .SDef.Url;
+
+            String findingsLeftUrl = CreateSectionObservation("Findings Left Breast",
+                new Markdown().Paragraph("Findings Left Breast Section"),
+                new string[] { })
+                .SDef.Url;
+
+            String findingsRightUrl = CreateSectionObservation("Findings Right Breast",
+                new Markdown().Paragraph("Findings Right Breast Section"),
+                new string[] { })
+                .SDef.Url;
+
+            String findingsUrl = CreateSectionObservation("Findings",
+                new Markdown().Paragraph("Findings Section"),
+                new string[] { findingsLeftUrl, findingsRightUrl })
+                .SDef.Url;
+
+            String rootUrl = CreateSectionObservation("Root",
+                new Markdown().Paragraph("Root Section"),
+                new string[] { patientHistoryUrl, findingsUrl, patientRiskUrl })
+                .FixedCodeSlice("Observation", "Observation.code", "observationCode", Loinc, "10193-1")
+                .SDef.Url;
+
+            CreateBreastRadiologyReport(rootUrl);
             SaveAll();
         }
 
-        SDefEditor CreateEditor(String name, String baseUrl)
+        SDefEditor CreateEditor(String title, String baseUrl)
         {
+            String name = title.Replace(" ", "");
             SDefEditor retVal = new SDefEditor(baseUrl, this.resourceDir)
                 .Name(name)
                 .Url(CreateUrl(name))
                 .Status(ProfileStatus)
-                .Title(name)
+                .Title(title)
                 .Publisher("Hl7 - Clinical Interoperability Council")
                 .ContactUrl("http://www.hl7.org/Special/committees/cic")
                 .Date(date)
@@ -64,49 +95,32 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             return retVal;
         }
 
-        SDefEditor CreateObservationEditor(String name, String baseUrl)
+        SDefEditor CreateObservationEditor(String title)
         {
-            SDefEditor retVal = this.CreateEditor(name, baseUrl);
+            SDefEditor retVal = this.CreateEditor(title, ObservationUrl);
             retVal.Select("Observation.subject").Single();
             retVal.Select("Observation.component").Zero();
             return retVal;
         }
 
-        String CreateSectionObservation(String sectionName,
-            Markdown description)
+        SDefEditor CreateSectionObservation(String title,
+            Markdown description,
+            String[] targets)
         {
-            SDefEditor e = CreateObservationEditor("BreastRadiologyObservation", ObservationUrl)
+            SDefEditor e = CreateObservationEditor(title)
                 .Description(description)
                 ;
 
-            return e.SDef.Url;
-        }
-
-        String CreateBreastRadiologyObservation()
-        {
-            SDefEditor e = CreateObservationEditor("BreastRadiologyObservation", ObservationUrl)
-                .Description(new Markdown()
-                    .Paragraph("Breast Radiology Diagnostic Observation.")
-                    .Paragraph("This observation is the root container of the report sections",
-                               "that comprise this breast radiology diagnostic report.",
-                               "These sections include")
-                    .List("Findings")
-                    .Paragraph("Detailed information about the results of the exam are contained in the ",
-                                "Breast Radiology Observation linked to by the 'result' field.")
-                )
-                .SliceByCode("Observation", "Observation.code", "observationCode", Loinc, "10193-1");
-                ;
-
-            return e.SDef.Url;
+            return e;
         }
 
         void CreateBreastRadiologyReport(String rootObservationUrl)
         {
             String CreatePriorReportsExtension(String brrDiagnosticReportUrl)
             {
-                SDefEditor e2 = CreateEditor("PriorReports", ExtensionUrl)
+                SDefEditor e2 = CreateEditor("Prior Reports", ExtensionUrl)
                     .Description(new Markdown()
-                        .Paragraph("Breast Radiology Prior Diagnostic Report extension")
+                        .Paragraph("Prior Diagnostic Report extension")
                         )
                     .Kind(StructureDefinition.StructureDefinitionKind.ComplexType)
                     .Context()
@@ -128,7 +142,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             {
                 SDefEditor e3 = CreateEditor("Recommendations", ExtensionUrl)
                     .Description(new Markdown()
-                        .Paragraph("Breast Radiology Diagnostic Report recommendations section extension")
+                        .Paragraph("Diagnostic Report recommendations section extension")
                     )
                     .Kind(StructureDefinition.StructureDefinitionKind.ComplexType)
                     .Context()
@@ -145,7 +159,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                     ;
                 return e3.SDef.Url;
             }
-            SDefEditor e = CreateEditor("BreastRadiologyReport", DiagnosticReportUrl)
+            SDefEditor e = CreateEditor("Breast Radiology Report", DiagnosticReportUrl)
                 .Description(new Markdown()
                     .Paragraph("Breast Radiology Diagnostic Report.")
                     .Paragraph("This diagnostic report has links to the data that comprise a Breast Radiology Report, including")

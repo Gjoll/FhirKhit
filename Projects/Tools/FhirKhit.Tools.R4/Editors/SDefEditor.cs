@@ -165,7 +165,7 @@ namespace FhirKhit.Tools.R4
         /// <summary>
         /// Add the indicated slice by url.
         /// </summary>
-        public SDefEditor SliceByCode(String baseName,
+        public SDefEditor FixedCodeSlice(String baseName,
             String path,
             String sliceName,
             String system,

@@ -6,3 +6,5 @@
 
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Design", "CA1062:Validate arguments of public methods", Justification = "<Pending>", Scope = "member", Target = "~M:FhirKhit.Tools.R3.ProfilesEditor.AddItem(FhirKhit.Tools.CodeBlockNested,System.String,System.String,System.String,System.String,Hl7.Fhir.Model.Markdown)")]
 
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Design", "CA1062:Validate arguments of public methods", Justification = "<Pending>", Scope = "member", Target = "~M:FhirKhit.Tools.R3.MarkDownExtensions.List(Hl7.Fhir.Model.Markdown,System.String[])~Hl7.Fhir.Model.Markdown")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Design", "CA1062:Validate arguments of public methods", Justification = "<Pending>", Scope = "member", Target = "~M:FhirKhit.Tools.R3.MarkDownExtensions.Paragraph(Hl7.Fhir.Model.Markdown,System.String[])~Hl7.Fhir.Model.Markdown")]
