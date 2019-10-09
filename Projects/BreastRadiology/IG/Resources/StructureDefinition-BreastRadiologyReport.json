@@ -3,7 +3,7 @@
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyReport",
   "version": "0.0.2",
   "name": "BreastRadiologyReport",
-  "title": "BreastRadiologyReport",
+  "title": "Breast Radiology Report",
   "status": "draft",
   "date": "2019-11-01",
   "publisher": "Hl7 - Clinical Interoperability Council",
@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Breast Radiology Diagnostic Report.<br>This diagnostic report is the base of the Breast Radiology Report,  and contains a summary of the report findings.<br>Detailed information about the results of the exam are contained in the Breast Radiology Observation linked to by the 'result' field.",
+  "description": "Breast Radiology Diagnostic Report.\n\n\nThis diagnostic report has links to the data that comprise a Breast Radiology Report, including\n\n\n** references to prior breast radiology reports for this patient\n** references to the observations of this report\n** references to the recommendations of this report\n** a summary of the report findings in a human readable format",
   "kind": "resource",
   "abstract": false,
   "type": "DiagnosticReport",
@@ -180,7 +180,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Observation"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/Root"
             ]
           }
         ]

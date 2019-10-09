@@ -3,7 +3,7 @@
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/PriorReports",
   "version": "0.0.2",
   "name": "PriorReports",
-  "title": "PriorReports",
+  "title": "Prior Reports",
   "status": "draft",
   "date": "2019-11-01",
   "publisher": "Hl7 - Clinical Interoperability Council",
@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Breast Radiology Prior Diagnostic Report extension",
+  "description": "Prior Diagnostic Report extension",
   "kind": "complex-type",
   "abstract": false,
   "context": [
