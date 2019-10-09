@@ -40,6 +40,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         public void CreateResources()
         {
             CreateBreastRadiologyReport();
+            CreateBreastRadiologyObservation();
             SaveAll();
         }
 
@@ -63,6 +64,31 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             return retVal;
         }
 
+        SDefEditor CreateObservationEditor(String name, String baseUrl)
+        {
+            SDefEditor retVal = this.CreateEditor(name, baseUrl);
+            retVal.Select("Observation.subject").Single();
+            retVal.Select("Observation.component").Zero();
+            return retVal;
+        }
+
+        void CreateBreastRadiologyObservation()
+        {
+            SDefEditor e = CreateObservationEditor("BreastRadiologyObservation", ObservationUrl)
+                .Description(
+                    "Breast Radiology Diagnostic Observation." +
+                    "<br>" +
+                    "This observation contains a number of sections with specific observations" +
+                    "pertaining to this breast radiology diagnostic report." +
+                    "These sections include" +
+                    "** Findings" +
+                    "<br>" +
+                    "Detailed information about the results of the exam are contained in the " +
+                    "Breast Radiology Observation linked to by the 'result' field."
+                )
+                .SliceByCode("Observation", "Observation.code", "observationCode", Loinc, "10193-1");
+                ;
+        }
 
         void CreateBreastRadiologyReport()
         {
@@ -154,8 +180,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         {
             foreach (SDefEditor ce in this.editors)
             {
-                StructureDefinition sDef = ce.SDef;
-                SnapshotCreator.Create(sDef);
+                ce.SDef.Snapshot = null;
                 ce.Write();
             }
         }

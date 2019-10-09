@@ -32,7 +32,7 @@ namespace FhirKhit.Tools.R4
                     {
                         Min = 0,
                         Max = "*",
-                        Path = $"{parentName}.extension"
+                        Path = $"{parentName}"
                     }
                 };
                 this.SliceElements.Add(retVal);
@@ -164,6 +164,53 @@ namespace FhirKhit.Tools.R4
         /// <summary>
         /// Add the indicated slice by url.
         /// </summary>
+        public SDefEditor SliceByCode(String baseName,
+            String path,
+            String sliceName,
+            String system,
+            String code)
+        {
+            sliceName = sliceName.UncapFirstLetter();
+            ElementIndex e = this.Find(path);
+            e.ElementDefinition.Slicing = new ElementDefinition.SlicingComponent
+            {
+                Rules = ElementDefinition.SlicingRules.Open
+            };
+
+            e.ElementDefinition.Slicing.Discriminator.Add(new ElementDefinition.DiscriminatorComponent
+            {
+                Type = ElementDefinition.DiscriminatorType.Value,
+                Path = "coding"
+            });
+
+            ElementDefinition coding = new ElementDefinition
+            {
+                ElementId = $"{path}.coding",
+                Path = $"{path}.coding",
+            };
+            e.SliceElements.Add(coding);
+
+            ElementDefinition slice = new ElementDefinition
+            {
+                ElementId = $"{path}.coding",
+                Path = $"{path}.coding:{sliceName}",
+                SliceName = sliceName,
+                Min = 1,
+                Max = "1",
+                Base = new ElementDefinition.BaseComponent
+                {
+                    Min = 0,
+                    Max = "*",
+                    Path = $"{baseName}"
+                }
+            };
+            e.SliceElements.Add(slice);
+            return this;
+        }
+
+        /// <summary>
+        /// Add the indicated slice by url.
+        /// </summary>
         ElementDefinition SliceByUrl(String baseName,
             String path,
             String sliceUrl,
@@ -212,7 +259,7 @@ namespace FhirKhit.Tools.R4
             return SliceByUrl(this.baseSDef.Name, "extension", extensionUrl, name);
         }
 
-        public SDefEditor ContactUrl(String value) {this.sDef.ContactUrl(value); return this; }
+        public SDefEditor ContactUrl(String value) { this.sDef.ContactUrl(value); return this; }
         public SDefEditor Name(String value) { this.sDef.Name(value); return this; }
         public SDefEditor Description(String value) { this.sDef.Description(value); return this; }
         public SDefEditor Url(String value) { this.sDef.Url(value); return this; }
