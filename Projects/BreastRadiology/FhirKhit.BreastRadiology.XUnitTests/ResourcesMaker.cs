@@ -63,57 +63,57 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             return retVal;
         }
 
-        String CreatePriorReportsExtension(String brrDiagnosticReportUrl)
-        {
-            SDefEditor e = CreateEditor("PriorReports", ExtensionUrl)
-                .Description("Breast Radiology Prior Diagnostic Report extension")
-                .Kind(StructureDefinition.StructureDefinitionKind.ComplexType)
-                .Context()
-                ;
-
-            e.Select("extension").Zero();
-            e.Select("url")
-                .Type("uri")
-                .Fixed(new FhirUri(e.SDef.Url));
-
-            String[] targets = new string[]
-            {
-                brrDiagnosticReportUrl
-            };
-            e.Select("value[x]")
-                .Type("Reference", null, targets)
-                .Single()
-                ;
-            return e.SDef.Url;
-        }
-
-        String CreateRecommendationsExtension()
-        {
-            SDefEditor e = CreateEditor("Recommendations", ExtensionUrl)
-                .Description("Breast Radiology Diagnostic Report recommendations section extension")
-                .Kind(StructureDefinition.StructureDefinitionKind.ComplexType)
-                .Context()
-                ;
-
-            e.Select("extension").Zero();
-            e.Select("url")
-                .Type("uri")
-                .Fixed(new FhirUri(e.SDef.Url));
-
-            String[] targets = new string[]
-            {
-                MedicationRequestUrl,
-                ServiceRequestUrl
-            };
-            e.Select("value[x]")
-                .Type("Reference", null, targets)
-                .Single()
-                ;
-            return e.SDef.Url;
-        }
 
         void CreateBreastRadiologyReport()
         {
+            String CreatePriorReportsExtension(String brrDiagnosticReportUrl)
+            {
+                SDefEditor e2 = CreateEditor("PriorReports", ExtensionUrl)
+                    .Description("Breast Radiology Prior Diagnostic Report extension")
+                    .Kind(StructureDefinition.StructureDefinitionKind.ComplexType)
+                    .Context()
+                    ;
+
+                e2.Select("extension").Zero();
+                e2.Select("url")
+                    .Type("uri")
+                    .Fixed(new FhirUri(e2.SDef.Url));
+
+                String[] targets = new string[]
+                {
+                brrDiagnosticReportUrl
+                };
+                e2.Select("value[x]")
+                    .Type("Reference", null, targets)
+                    .Single()
+                    ;
+                return e2.SDef.Url;
+            }
+
+            String CreateRecommendationsExtension()
+            {
+                SDefEditor e3 = CreateEditor("Recommendations", ExtensionUrl)
+                    .Description("Breast Radiology Diagnostic Report recommendations section extension")
+                    .Kind(StructureDefinition.StructureDefinitionKind.ComplexType)
+                    .Context()
+                    ;
+
+                e3.Select("extension").Zero();
+                e3.Select("url")
+                    .Type("uri")
+                    .Fixed(new FhirUri(e3.SDef.Url));
+
+                String[] targets = new string[]
+                {
+                MedicationRequestUrl,
+                ServiceRequestUrl
+                };
+                e3.Select("value[x]")
+                    .Type("Reference", null, targets)
+                    .Single()
+                    ;
+                return e3.SDef.Url;
+            }
             SDefEditor e = CreateEditor("BreastRadiologyReport", DiagnosticReportUrl)
                 .Description(
                     "Breast Radiology Diagnostic Report." +
