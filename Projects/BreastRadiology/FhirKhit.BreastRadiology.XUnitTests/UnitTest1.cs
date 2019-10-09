@@ -18,6 +18,13 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             "Resources");
 
         [TestMethod]
+        public void BuildResources()
+        {
+            ResourcesMaker pc = new ResourcesMaker(resourcesDir);
+            pc.CreateResources();
+        }
+
+        [TestMethod]
         public void Clean()
         {
             ProfileCleanUp pc = new ProfileCleanUp();
@@ -25,11 +32,10 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         }
 
         [TestMethod]
-        public void Profile()
+        public void IGBuild()
         {
-            ProfileMaker p = new ProfileMaker(outputDir);
+            IGBuilder p = new IGBuilder(outputDir);
             p.Start();
-            p.CreateProfiles();
             p.AddResources(resourcesDir);
             p.SaveAll();
         }

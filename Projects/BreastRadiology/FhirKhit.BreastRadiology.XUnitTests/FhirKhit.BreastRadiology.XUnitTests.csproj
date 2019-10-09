@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FhirKhit.BreastRadiology\FhirKhit.BreastRadiology.csproj" />
+    <ProjectReference Include="..\..\Tools\FhirKhit.Tools.r4\FhirKhit.Tools.R4.csproj" />
   </ItemGroup>
 
   <ItemGroup>

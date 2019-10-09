@@ -8,7 +8,7 @@ using FhirKhit.Tools.R4;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 
-namespace FhirKhit.BreastRadiology
+namespace FhirKhit.BreastRadiology.XUnitTests
 {
     public class ProfileCleanUp : ConverterBase
     {
@@ -61,94 +61,6 @@ namespace FhirKhit.BreastRadiology
                 r.SaveJson(outputPath);
             }
 
-            void FixCoding(StructureDefinition sDef)
-            {
-                var elements = sDef.Differential.Element;
-                ElementDefinition[] codeFixed = elements.FindIdStartsWith("Observation.code.coding:Fixed_").ToArray();
-
-                if (codeFixed.Length == 0)
-                    return;
-
-                String system = ((FhirUri)codeFixed[1].Fixed).Value;
-                String code = ((Code)codeFixed[2].Fixed).Value;
-
-                elements.RemoveById("Observation.code.coding")
-                    .RemoveById(codeFixed[0].ElementId)
-                    .RemoveById(codeFixed[1].ElementId)
-                    .RemoveById(codeFixed[2].ElementId)
-                    ;
-
-                ElementDefinition codeDef = elements.FindById("Observation.code");
-                codeDef.Slicing = new ElementDefinition.SlicingComponent
-                {
-                    Rules = ElementDefinition.SlicingRules.OpenAtEnd
-                };
-                codeDef.Slicing.Discriminator.Add(new ElementDefinition.DiscriminatorComponent
-                {
-                    Type = ElementDefinition.DiscriminatorType.Value,
-                    Path = "coding"
-                });
-
-                ElementDefinition coding = new ElementDefinition
-                {
-                    ElementId = "Observation.code.coding",
-                    Path = "Observation.code.coding"
-                };
-                String sliceName = "ObservationCode";
-                ElementDefinition codingSlice = new ElementDefinition
-                {
-                    ElementId = $"Observation.code.coding:{sliceName}",
-                    Path = "Observation.code.coding",
-                    SliceName = sliceName,
-                    Pattern = new Coding(system, code)
-                };
-
-                elements.InsertAfter(codeDef, coding, codingSlice);
-            }
-
-            void CleanObservation(StructureDefinition sDef)
-            {
-                //sDef.Differential.Element
-                //    .RemoveById("Observation.performer")
-                //    .RemoveById("Observation.basedOn")
-                //    .RemoveByPath("Observation.bodySite.extension")
-                //    .RemoveByPath("Observation.encounter")
-                //    .RemoveById("Observation.focus")
-                //    .RemoveById("Observation.partOf")
-                //    .RemoveById("Observation.note")
-                //    .RemoveById("Observation.effective[x]")
-                //    .RemoveById("Observation.device")
-                //    .RemoveById("Observation.referenceRange")
-                //    .RemoveById("Observation.referenceRange.type")
-                //    .RemoveById("Observation.referenceRange.appliesTo")
-                //    .RemoveById("Observation.derivedFrom")
-                //    .RemoveById("Observation.component.value[x]")
-                //    .RemoveById("Observation.component.referenceRange")
-                //    .RemoveById("Observation.component.referenceRange.type")
-                //    .RemoveById("Observation.component.referenceRange.appliesTo")
-                //    ;
-
-                //if (
-                //    (sDef.Name != "BreastRadiologyAbnormality") &&
-                //    (sDef.Name != "BreastRadiologyObservation")
-                //    )
-                //{
-                //    sDef.Differential.Element
-                //        .RemoveById("Observation.bodySite")
-                //        .RemoveById("Observation.bodySite.extension")
-                //        ;
-                //}
-
-                //ElementDefinition s = sDef.Differential.Element.FindById("Observation.category");
-                //if (
-                //    (s != null) &&
-                //    (s.Slicing != null)
-                //    )
-                //{
-                //    s.Slicing.Rules = ElementDefinition.SlicingRules.OpenAtEnd;
-                //}
-                FixCoding(sDef);
-            }
 
             void CleanFixed(List<ElementDefinition> elements)
             {
