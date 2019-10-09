@@ -15,6 +15,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\BaseExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\ElementDefinitionExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\ExtendableExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\MarkDownExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\StructureDefinitionExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\StringExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)FhirKhitVersion.cs" />

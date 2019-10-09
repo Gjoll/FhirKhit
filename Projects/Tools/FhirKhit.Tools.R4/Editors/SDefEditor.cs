@@ -262,7 +262,7 @@ namespace FhirKhit.Tools.R4
 
         public SDefEditor ContactUrl(String value) { this.sDef.ContactUrl(value); return this; }
         public SDefEditor Name(String value) { this.sDef.Name(value); return this; }
-        public SDefEditor Description(params String[] value) { this.sDef.Description(value.ToMarkup()); return this; }
+        public SDefEditor Description(Markdown value) { this.sDef.Description(value); return this; }
         public SDefEditor Url(String value) { this.sDef.Url(value); return this; }
         public SDefEditor Publisher(String value) { this.sDef.Publisher(value); return this; }
         public SDefEditor Title(String value) { this.sDef.Title(value); return this; }

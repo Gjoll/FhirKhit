@@ -72,19 +72,27 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             return retVal;
         }
 
+        String CreateSectionObservation(String sectionName,
+            Markdown description)
+        {
+            SDefEditor e = CreateObservationEditor("BreastRadiologyObservation", ObservationUrl)
+                .Description(description)
+                ;
+
+            return e.SDef.Url;
+        }
+
         String CreateBreastRadiologyObservation()
         {
             SDefEditor e = CreateObservationEditor("BreastRadiologyObservation", ObservationUrl)
-                .Description(
-                    "Breast Radiology Diagnostic Observation." +
-                    "<br>" +
-                    "This observation is the root container of the report sections" +
-                    " that comprise this breast radiology diagnostic report." +
-                    "These sections include" +
-                    "** Findings" +
-                    "<br>" +
-                    "Detailed information about the results of the exam are contained in the " +
-                    "Breast Radiology Observation linked to by the 'result' field."
+                .Description(new Markdown()
+                    .Paragraph("Breast Radiology Diagnostic Observation.")
+                    .Paragraph("This observation is the root container of the report sections",
+                               "that comprise this breast radiology diagnostic report.",
+                               "These sections include")
+                    .List("Findings")
+                    .Paragraph("Detailed information about the results of the exam are contained in the ",
+                                "Breast Radiology Observation linked to by the 'result' field.")
                 )
                 .SliceByCode("Observation", "Observation.code", "observationCode", Loinc, "10193-1");
                 ;
@@ -97,7 +105,9 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             String CreatePriorReportsExtension(String brrDiagnosticReportUrl)
             {
                 SDefEditor e2 = CreateEditor("PriorReports", ExtensionUrl)
-                    .Description("Breast Radiology Prior Diagnostic Report extension")
+                    .Description(new Markdown()
+                        .Paragraph("Breast Radiology Prior Diagnostic Report extension")
+                        )
                     .Kind(StructureDefinition.StructureDefinitionKind.ComplexType)
                     .Context()
                     ;
@@ -117,7 +127,9 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             String CreateRecommendationsExtension()
             {
                 SDefEditor e3 = CreateEditor("Recommendations", ExtensionUrl)
-                    .Description("Breast Radiology Diagnostic Report recommendations section extension")
+                    .Description(new Markdown()
+                        .Paragraph("Breast Radiology Diagnostic Report recommendations section extension")
+                    )
                     .Kind(StructureDefinition.StructureDefinitionKind.ComplexType)
                     .Context()
                     ;
@@ -134,15 +146,13 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 return e3.SDef.Url;
             }
             SDefEditor e = CreateEditor("BreastRadiologyReport", DiagnosticReportUrl)
-                .Description(
-                    "Breast Radiology Diagnostic Report." +
-                    "<p>" +
-                    "This diagnostic report has links to the data that comprise a Breast Radiology Report, including" +
-                    "** references to prior breast radiology reports for this patient" +
-                    "** references to the observations of this report" +
-                    "** references to the recommendations of this report" +
-                    "** a summary of the report findings in a human readable format" +
-                    "</p>"
+                .Description(new Markdown()
+                    .Paragraph("Breast Radiology Diagnostic Report.")
+                    .Paragraph("This diagnostic report has links to the data that comprise a Breast Radiology Report, including")
+                    .List("references to prior breast radiology reports for this patient",
+                          "references to the observations of this report",
+                          "references to the recommendations of this report",
+                          "a summary of the report findings in a human readable format")
                 )
                 .Kind(StructureDefinition.StructureDefinitionKind.Resource)
                 ;

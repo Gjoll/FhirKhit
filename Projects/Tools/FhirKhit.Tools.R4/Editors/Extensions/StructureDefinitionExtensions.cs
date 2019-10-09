@@ -20,7 +20,7 @@ namespace FhirKhit.Tools.R4
         }
 
         public static StructureDefinition Name(this StructureDefinition sDef, String value) { sDef.Name = value; return sDef; }
-        public static StructureDefinition Description(this StructureDefinition sDef, String value) { sDef.Description = new Markdown(value); return sDef; }
+        public static StructureDefinition Description(this StructureDefinition sDef, Markdown value) { sDef.Description = value; return sDef; }
         public static StructureDefinition Url(this StructureDefinition sDef, String value) { sDef.Url = value; return sDef; }
         public static StructureDefinition Publisher(this StructureDefinition sDef, String value) { sDef.Publisher = value; return sDef; }
         public static StructureDefinition Title(this StructureDefinition sDef, String value) { sDef.Title = value; return sDef; }
