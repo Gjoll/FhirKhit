@@ -1,9 +1,9 @@
 {
   "resourceType": "StructureDefinition",
-  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityMammography",
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityMammographyBreastDensity",
   "version": "0.0.2",
-  "name": "BreastRadiologyAbnormalityMammography",
-  "title": "Breast Radiology Abnormality (Mammography)",
+  "name": "BreastRadiologyAbnormalityMammographyBreastDensity",
+  "title": "Breast Radiology Abnormality Breast Density (Mammography)",
   "status": "draft",
   "date": "2019-11-01",
   "publisher": "Hl7-Clinical Interoperability Council",
@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Mammography Breast Abnormality Observation",
+  "description": "Mammography Breast Abnormality Breast Density Observation",
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
@@ -1113,7 +1113,7 @@
         "comment": "An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.",
         "requirements": "An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations.",
         "min": 0,
-        "max": "0",
+        "max": "1",
         "base": {
           "path": "Observation.value[x]",
           "min": 0,
@@ -1159,6 +1159,53 @@
         ],
         "isModifier": false,
         "isSummary": true,
+        "mapping": [
+          {
+            "identity": "sct-concept",
+            "map": "< 441742003 |Evaluation finding|"
+          },
+          {
+            "identity": "v2",
+            "map": "OBX.2, OBX.5, OBX.6"
+          },
+          {
+            "identity": "rim",
+            "map": "value"
+          },
+          {
+            "identity": "sct-attr",
+            "map": "363714003 |Interprets|"
+          }
+        ]
+      },
+      {
+        "id": "Observation.valueCodeableConcept",
+        "path": "Observation.valueCodeableConcept",
+        "short": "Actual result",
+        "definition": "The information determined as a result of making the observation, if the information has a simple value.",
+        "comment": "An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.",
+        "requirements": "An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "condition": [
+          "obs-7"
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastCompositionVS"
+        },
         "mapping": [
           {
             "identity": "sct-concept",
@@ -1235,7 +1282,7 @@
           "Abnormal Flag"
         ],
         "min": 0,
-        "max": "0",
+        "max": "*",
         "base": {
           "path": "Observation.interpretation",
           "min": 0,
@@ -1286,7 +1333,7 @@
         "comment": "May include general statements about the observation, or statements about significant, unexpected or unreliable results values, or information about its source when relevant to its interpretation.",
         "requirements": "Need to be able to provide free text additional information.",
         "min": 0,
-        "max": "0",
+        "max": "*",
         "base": {
           "path": "Observation.note",
           "min": 0,
@@ -1363,15 +1410,6 @@
       {
         "id": "Observation.method",
         "path": "Observation.method",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "coding"
-            }
-          ],
-          "rules": "open"
-        },
         "short": "How it was done",
         "definition": "Indicates the mechanism used to perform the observation.",
         "comment": "Only used if not implicit in code for Observation.code.",
@@ -1413,166 +1451,13 @@
         ]
       },
       {
-        "id": "Observation.method.id",
-        "path": "Observation.method.id",
-        "representation": [
-          "xmlAttr"
-        ],
-        "short": "Unique id for inter-element referencing",
-        "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Element.id",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "Observation.method.extension",
-        "path": "Observation.method.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "description": "Extensions are always sliced by (at least) url",
-          "rules": "open"
-        },
-        "short": "Additional content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Element.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "Observation.method.coding:method",
-        "path": "Observation.method.coding",
-        "sliceName": "method",
-        "short": "Code defined by a terminology system",
-        "definition": "A reference to a code defined by a terminology system.",
-        "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
-        "requirements": "Allows for alternative encodings within a code system, and translations to other code systems.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "CodeableConcept.coding",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "patternCoding": {
-          "system": "http://snomed.info/sct",
-          "code": "115341008"
-        },
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.1-8, C*E.10-22"
-          },
-          {
-            "identity": "rim",
-            "map": "union(., ./translation)"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
-          }
-        ]
-      },
-      {
-        "id": "Observation.method.text",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-            "valueBoolean": true
-          }
-        ],
-        "path": "Observation.method.text",
-        "short": "Plain text representation of the concept",
-        "definition": "A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.",
-        "comment": "Very often the text is the same as a displayName of one of the codings.",
-        "requirements": "The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "CodeableConcept.text",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.9. But note many systems use C*E.2 for this"
-          },
-          {
-            "identity": "rim",
-            "map": "./originalText[mediaType/code=\"text/plain\"]/data"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText"
-          }
-        ]
-      },
-      {
         "id": "Observation.specimen",
         "path": "Observation.specimen",
         "short": "Specimen used for this observation",
         "definition": "The specimen that was used when this observation was made.",
         "comment": "Should only be used if not implicit in code found in `Observation.code`.  Observations are not made on specimens themselves; they are made on a subject, but in many cases by the means of a specimen. Note that although specimens are often involved, they are not always tracked and reported explicitly. Also note that observation resources may be used in contexts that track the specimen explicitly (e.g. Diagnostic Report).",
         "min": 0,
-        "max": "0",
+        "max": "1",
         "base": {
           "path": "Observation.specimen",
           "min": 0,
@@ -1658,7 +1543,7 @@
         "comment": "Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g., specific to the patient's age, gender, weight and other factors), but this might not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.",
         "requirements": "Knowing what values are considered \"normal\" can help evaluate the significance of a particular result. Need to be able to provide multiple reference ranges for different contexts.",
         "min": 0,
-        "max": "0",
+        "max": "*",
         "base": {
           "path": "Observation.referenceRange",
           "min": 0,
@@ -2019,16 +1904,6 @@
       {
         "id": "Observation.hasMember",
         "path": "Observation.hasMember",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        },
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
@@ -2042,86 +1917,6 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Observation",
-              "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",
-              "http://hl7.org/fhir/StructureDefinition/MolecularSequence"
-            ]
-          }
-        ],
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "Relationships established by OBX-4 usage"
-          },
-          {
-            "identity": "rim",
-            "map": "outBoundRelationship"
-          }
-        ]
-      },
-      {
-        "id": "Observation.hasMember:breastRadiologyAbnormalityMammographyBreastDensity",
-        "path": "Observation.hasMember",
-        "sliceName": "breastRadiologyAbnormalityMammographyBreastDensity",
-        "short": "Related resource that belongs to the Observation group",
-        "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
-        "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Observation.hasMember",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityMammographyBreastDensity"
-            ],
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Observation",
-              "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",
-              "http://hl7.org/fhir/StructureDefinition/MolecularSequence"
-            ]
-          }
-        ],
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "Relationships established by OBX-4 usage"
-          },
-          {
-            "identity": "rim",
-            "map": "outBoundRelationship"
-          }
-        ]
-      },
-      {
-        "id": "Observation.hasMember:breastRadiologyMammographyMass",
-        "path": "Observation.hasMember",
-        "sliceName": "breastRadiologyMammographyMass",
-        "short": "Related resource that belongs to the Observation group",
-        "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
-        "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Observation.hasMember",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyMammographyMass"
-            ],
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/Observation",
               "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",
@@ -2703,156 +2498,22 @@
         }
       },
       {
-        "id": "Observation.value[x]",
-        "path": "Observation.value[x]",
-        "min": 0,
-        "max": "0",
+        "id": "Observation.valueCodeableConcept",
+        "path": "Observation.valueCodeableConcept",
         "base": {
           "path": "Observation.value[x]",
           "min": 0,
           "max": "1"
-        }
-      },
-      {
-        "id": "Observation.interpretation",
-        "path": "Observation.interpretation",
-        "min": 0,
-        "max": "0",
-        "base": {
-          "path": "Observation.interpretation",
-          "min": 0,
-          "max": "*"
-        }
-      },
-      {
-        "id": "Observation.note",
-        "path": "Observation.note",
-        "min": 0,
-        "max": "0",
-        "base": {
-          "path": "Observation.note",
-          "min": 0,
-          "max": "*"
-        }
-      },
-      {
-        "id": "Observation.method",
-        "path": "Observation.method",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "coding"
-            }
-          ],
-          "rules": "open"
-        },
-        "base": {
-          "path": "Observation.method",
-          "min": 0,
-          "max": "1"
-        }
-      },
-      {
-        "id": "Observation.method.coding",
-        "path": "Observation.method.coding"
-      },
-      {
-        "id": "Observation.method.coding:method",
-        "path": "Observation.method.coding",
-        "sliceName": "method",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Observation.method",
-          "min": 0,
-          "max": "1"
-        },
-        "patternCoding": {
-          "system": "http://snomed.info/sct",
-          "code": "115341008"
-        }
-      },
-      {
-        "id": "Observation.specimen",
-        "path": "Observation.specimen",
-        "min": 0,
-        "max": "0",
-        "base": {
-          "path": "Observation.specimen",
-          "min": 0,
-          "max": "1"
-        }
-      },
-      {
-        "id": "Observation.referenceRange",
-        "path": "Observation.referenceRange",
-        "min": 0,
-        "max": "0",
-        "base": {
-          "path": "Observation.referenceRange",
-          "min": 0,
-          "max": "*"
-        }
-      },
-      {
-        "id": "Observation.hasMember",
-        "path": "Observation.hasMember",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        },
-        "base": {
-          "path": "Observation.hasMember",
-          "min": 0,
-          "max": "*"
-        }
-      },
-      {
-        "id": "Observation.hasMember:breastRadiologyAbnormalityMammographyBreastDensity",
-        "path": "Observation.hasMember",
-        "sliceName": "breastRadiologyAbnormalityMammographyBreastDensity",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Observation.hasMember",
-          "min": 0,
-          "max": "*"
         },
         "type": [
           {
-            "code": "Reference",
-            "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityMammographyBreastDensity"
-            ]
+            "code": "CodeableConcept"
           }
-        ]
-      },
-      {
-        "id": "Observation.hasMember:breastRadiologyMammographyMass",
-        "path": "Observation.hasMember",
-        "sliceName": "breastRadiologyMammographyMass",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Observation.hasMember",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyMammographyMass"
-            ]
-          }
-        ]
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastCompositionVS"
+        }
       },
       {
         "id": "Observation.derivedFrom",

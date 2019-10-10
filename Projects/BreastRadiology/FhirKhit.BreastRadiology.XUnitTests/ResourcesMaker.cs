@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Text;
 using FhirKhit.Tools;
 using FhirKhit.Tools.R4;
@@ -23,9 +24,22 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         const String MedicationRequestUrl = "http://hl7.org/fhir/StructureDefinition/MedicationRequest";
         const String ServiceRequestUrl = "http://hl7.org/fhir/StructureDefinition/ServiceRequest";
 
+        const String contactUrl = "http://www.hl7.org/Special/committees/cic";
+
         String resourceDir;
         FhirDateTime date = new FhirDateTime(2019, 11, 1);
         List<SDefEditor> editors = new List<SDefEditor>();
+
+        String rootUrl;
+        String findingsUrl;
+        String findingsRightUrl;
+        String findingsLeftUrl;
+        String patientHistoryUrl;
+        String patientRiskUrl;
+        String abnormalityUltraSoundd;
+        String abnormalityMRI;
+        String abnormalityMammo;
+        String massShape;
 
         String CreateUrl(String name)
         {
@@ -37,69 +51,60 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             this.resourceDir = resourceDir;
         }
 
-        public void CreateResources()
+        void CreateSections()
         {
             //$ Fix me. Incorrect method!!!
-            String abMammo = this.CreateObservationAbnormality(
-                "BreastRadiologyAbnormalityMammography",
-                "Breast Radiology Abnormality (Mammography)",
-                new Markdown().Paragraph("Mammography Breast Abnormality Observation"),
-                "http://snomed.info/sct", 
-                "115341008")
-                .SDef.Url;
-
-            //$ Fix me. Incorrect method!!!
-            String abMRI = this.CreateObservationAbnormality(
+            this.abnormalityMRI = this.CreateAbnormality(
                 "BreastRadiologyAbnormalityMRI",
                 "Breast Radiology Abnormality (MRI)",
                 new Markdown().Paragraph("MRI Breast Abnormality Observation"),
-                "http://snomed.info/sct", 
+                "http://snomed.info/sct",
                 "115341008")
                 .SDef.Url;
 
             //$ Fix me. Incorrect method!!!
-            String abUS = this.CreateObservationAbnormality(
+            this.abnormalityUltraSoundd = this.CreateAbnormality(
                 "BreastRadiologyAbnormalityUltraSound",
                 "Breast Radiology Abnormality (UltraSound)",
                 new Markdown().Paragraph("Ultra Sound Breast Abnormality Observation"),
-                "http://snomed.info/sct", 
+                "http://snomed.info/sct",
                 "115341008")
                 .SDef.Url;
 
             ObservationTarget[] abnormalityTargets = new ObservationTarget[]
             {
-                new ObservationTarget(abMammo, 0, "*"),
-                new ObservationTarget(abMRI, 0, "*"),
-                new ObservationTarget(abUS, 0, "*")
+                new ObservationTarget(abnormalityMammo, 0, "*"),
+                new ObservationTarget(abnormalityMRI, 0, "*"),
+                new ObservationTarget(abnormalityUltraSoundd, 0, "*")
             };
 
-            String patientRiskUrl = CreateObservationSection(
+            this.patientRiskUrl = CreateObservationSection(
                 "BreastRadiologySectionPatientRisk",
                 "Breast Radiology Patient Risk Section",
                 new Markdown().Paragraph("Patient Risk Section"))
                 .SDef.Url;
 
-            String patientHistoryUrl = CreateObservationSection(
+            this.patientHistoryUrl = CreateObservationSection(
                 "BreastRadiologySectionPatientHistory",
                 "Breast Radiology Patient History Section",
                 new Markdown().Paragraph("Patient History Section"))
                 .SDef.Url;
 
-            String findingsLeftUrl = CreateObservationSection(
+            this.findingsLeftUrl = CreateObservationSection(
                 "BreastRadiologySectionFindingsLeftBreast",
                 "Breast Radiology Findings Left Breast",
                 new Markdown().Paragraph("Findings Left Breast Section"))
                 .SliceByUrl("Observation.hasMember", abnormalityTargets)
                 .SDef.Url;
 
-            String findingsRightUrl = CreateObservationSection(
+            this.findingsRightUrl = CreateObservationSection(
                 "BreastRadiologySectionFindingsRightBreast",
                 "Breast Radiology Findings Right Breast",
                 new Markdown().Paragraph("Findings Right Breast Section"))
                 .SliceByUrl("Observation.hasMember", abnormalityTargets)
                 .SDef.Url;
 
-            String findingsUrl = CreateObservationSection(
+            this.findingsUrl = CreateObservationSection(
                 "BreastRadiologySectionFindings",
                 "Breast Radiology Findings",
                 new Markdown().Paragraph("Findings Section"))
@@ -111,7 +116,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                     })
                 .SDef.Url;
 
-            String rootUrl = CreateObservationSection(
+            this.rootUrl = CreateObservationSection(
                 "BreastRadiologySectionRoot",
                 "Breast Radiology Root Section",
                 new Markdown().Paragraph("Root Section"))
@@ -123,7 +128,13 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                     })
                 .FixedCodeSlice("Observation.code", "observationCode", Loinc, "10193-1")
                 .SDef.Url;
+        }
 
+        public void CreateResources()
+        {
+            CreateCommon();
+            CreateMammo();
+            CreateSections();
             CreateBreastRadiologyReport(rootUrl);
             SaveAll();
         }
@@ -139,7 +150,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 .Status(ProfileStatus)
                 .Title(title)
                 .Publisher("Hl7-Clinical Interoperability Council")
-                .ContactUrl("http://www.hl7.org/Special/committees/cic")
+                .ContactUrl(contactUrl)
                 .Date(date)
                 .Derivation(StructureDefinition.TypeDerivationRule.Constraint)
                 .Abstract(false)
@@ -176,7 +187,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 "imaging");
         }
 
-        SDefEditor CreateObservationSection(String name, 
+        SDefEditor CreateObservationSection(String name,
             String title,
             Markdown description)
         {
@@ -195,7 +206,24 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             return e;
         }
 
-        SDefEditor CreateObservationAbnormality(String name, String title,
+        SDefEditor CreateAbnormalityCodedValue(String name,
+            String title,
+            Markdown description,
+            String binding)
+        {
+            SDefEditor retVal = this.CreateObservationEditor(name, title);
+            retVal
+                .Description(description)
+                ;
+
+            retVal.Select("Observation.value[x]")
+                .Type("CodeableConcept")
+                .Binding(binding, BindingStrength.Required)
+                ;
+            return retVal;
+        }
+
+        SDefEditor CreateAbnormality(String name, String title,
             Markdown description,
             String methodCodeSet,
             String method)
@@ -209,7 +237,8 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             e.Select("Observation.referenceRange").Zero();
             e.Select("Observation.interpretation").Zero();
             e.Select("Observation.note").Zero();
-            e.Select("Observation.bodySite").Zero();
+            // todo: Add body site info.
+            //e.Select("Observation.bodySite").Zero();
 
             e.Find("Observation.method")
              .FixedCodeSlice("method",
@@ -219,6 +248,161 @@ namespace FhirKhit.BreastRadiology.XUnitTests
              ;
 
             return e;
+        }
+
+        List<ContactDetail> Contact()
+        {
+            ContactDetail cd = new ContactDetail();
+            cd.Telecom.Add(new ContactPoint
+            {
+                System = ContactPoint.ContactPointSystem.Url,
+                Value = contactUrl
+            });
+
+            List<ContactDetail> retVal = new List<ContactDetail>();
+            retVal.Add(cd);
+            return retVal;
+        }
+
+        String CreateValueSet(String name,
+            String title,
+            Markdown description,
+            IEnumerable<String> codes)
+        {
+            CodeSystem cs = new CodeSystem
+            {
+                Id = $"{name}CS",
+                Url = $"http://hl7.org/fhir/us/breast-radiology/CodeSystem/{name}CS",
+                Version = "ProfileVersion",
+                Name = $"{name}CS",
+                Title = title,
+                Date = date.ToString(),
+                Status = ProfileStatus,
+                Publisher = "Hl7-Clinical Interoperability Council",
+                Contact = Contact(),
+                Description = description,
+                CaseSensitive = true,
+                Content = CodeSystem.CodeSystemContentMode.Complete,
+                Count = codes.Count()
+            };
+
+            ValueSet vs = new ValueSet
+            {
+                Id = $"{name}VS",
+                Url = $"http://hl7.org/fhir/us/breast-radiology/CodeSystem/{name}VS",
+                Version = "ProfileVersion",
+                Name = $"{name}VS",
+                Title = title,
+                Date = date.ToString(),
+                Status = ProfileStatus,
+                Publisher = "Hl7-Clinical Interoperability Council",
+                Contact = Contact(),
+                Description = description
+            };
+
+
+            ValueSet.ConceptSetComponent vsComp = new ValueSet.ConceptSetComponent
+            {
+                System = cs.Url
+            };
+            vs.Compose = new ValueSet.ComposeComponent();
+            vs.Compose.Include.Add(vsComp);
+
+            Int32 counter = 1;
+            foreach (String code in codes)
+            {
+                vsComp.Concept.Add(new ValueSet.ConceptReferenceComponent
+                {
+                    Code = counter.ToString(),
+                    Display = code
+                });
+
+                cs.Concept.Add(new CodeSystem.ConceptDefinitionComponent
+                {
+                    Code = counter.ToString(),
+                    Display = code,
+                });
+                counter += 1;
+            }
+
+            cs.SaveJson(Path.Combine(this.resourceDir, $"CodeSystem-{name}CS.json"));
+            vs.SaveJson(Path.Combine(this.resourceDir, $"ValueSet-{name}VS.json"));
+            return vs.Url;
+        }
+
+        void CreateCommon()
+        {
+            String binding = CreateValueSet(
+                "BreastRadiologyAbnormalityMassShape",
+                "Breast Radiology Abnormality Mass Shape",
+                new Markdown()
+                    .Paragraph("Breast Radiology Mass Shape"),
+                new String[]
+                {
+                "a. Oval",
+                "b. Round",
+                "c. Irregular"
+                });
+
+            this.massShape = this.CreateAbnormalityCodedValue(
+                "BreastRadiologyAbnormalityMassShape",
+                "Breast Radiology Abnormality Mass Shape",
+                new Markdown().Paragraph("Breast Radiology Abnormality Mass Shape Observation"),
+                binding)
+                .SDef.Url;
+        }
+
+        void CreateMammo()
+        {
+            String binding = CreateValueSet(
+                "BreastComposition",
+                "Breast Composition",
+                new Markdown()
+                    .Paragraph("Mammography Breast Composition"),
+                new String[]
+                {
+                "a. The breasts are almost entirely fatty",
+                "b. There are scattered areas of fibroglandular density",
+                "c. The breasts are heterogeneously dense, which may obscure detection of small masses",
+                "d. The breasts are extremely dense, which lowers the sensitivity of mammography"
+                });
+
+            String mammoBreastDensity = this.CreateAbnormalityCodedValue(
+                "BreastRadiologyAbnormalityMammographyBreastDensity",
+                "Breast Radiology Abnormality Breast Density (Mammography)",
+                new Markdown().Paragraph("Mammography Breast Abnormality Breast Density Observation"),
+                binding)
+                .SDef.Url;
+
+            String mammoMass = this.CreateObservationSection(
+                "BreastRadiologyMammographyMass",
+                "Breast Radiology Mammography Mass Observation",
+                new Markdown()
+                    .Paragraph("Breast Radiology Mammography Mass Observation")
+                    .Paragraph("This observation has the following three member observations")
+                    .List("Shape", "Margin", "Density")
+                )
+                .SliceByUrl("Observation.hasMember", 
+                    new ObservationTarget[]
+                    {
+                        new ObservationTarget(this.massShape, 0, "*")
+                    })
+                .SDef.Url;
+
+            //$ Fix me. Incorrect method!!!
+            this.abnormalityMammo = this.CreateAbnormality(
+                "BreastRadiologyAbnormalityMammography",
+                "Breast Radiology Abnormality (Mammography)",
+                new Markdown().Paragraph("Mammography Breast Abnormality Observation"),
+                "http://snomed.info/sct",
+                "115341008")
+                .SliceByUrl("Observation.hasMember", 
+                    new ObservationTarget[]
+                    {
+                        new ObservationTarget(mammoBreastDensity, 1, "1"),
+                        new ObservationTarget(mammoMass, 0, "*")
+                    })
+                .SDef.Url;
         }
 
         void CreateBreastRadiologyReport(String rootObservationUrl)

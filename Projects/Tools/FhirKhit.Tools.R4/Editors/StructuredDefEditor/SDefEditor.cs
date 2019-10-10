@@ -119,6 +119,12 @@ namespace FhirKhit.Tools.R4
             return outputName;
         }
 
+        /// <summary>
+        /// Set up a slice on the indicated url's
+        /// </summary>
+        /// <param name="path"></param>
+        /// <param name="targets"></param>
+        /// <returns></returns>
         public SDefEditor SliceByUrl(String path,
             IEnumerable<ObservationTarget> targets)
         {
@@ -130,6 +136,19 @@ namespace FhirKhit.Tools.R4
             IEnumerable<ObservationTarget> targets)
         {
             this.SliceByUrl(eGroup);
+            //if (restrictFlag == true)
+            //{
+            //    List<String> targetProfiles = new List<String>();
+            //    foreach (ObservationTarget target in targets)
+            //        targetProfiles.Add(target.Profile);
+            //    List<ElementDefinition.TypeRefComponent> types = new List<ElementDefinition.TypeRefComponent>();
+            //    types.Add(new ElementDefinition.TypeRefComponent
+            //    {
+            //        Code = "Reference",
+            //        TargetProfile = targetProfiles
+            //    });
+            //    e.ElementDefinition.Type = types;
+            //}
             foreach (ObservationTarget target in targets)
             {
                 String sliceName = target.Profile.LastUriPart().UncapFirstLetter();

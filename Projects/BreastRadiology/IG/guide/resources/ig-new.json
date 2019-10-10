@@ -122,6 +122,55 @@
       },
       "name" : "BreastRadiologySectionRoot",
       "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/BreastCompositionCS"
+      },
+      "name" : "BreastCompositionCS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/BreastCompositionVS"
+      },
+      "name" : "BreastCompositionVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityMammographyBreastDensity"
+      },
+      "name" : "BreastRadiologyAbnormalityMammographyBreastDensity",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/BreastRadiologyAbnormalityMassShapeCS"
+      },
+      "name" : "BreastRadiologyAbnormalityMassShapeCS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityMassShape"
+      },
+      "name" : "BreastRadiologyAbnormalityMassShape",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/BreastRadiologyAbnormalityMassShapeVS"
+      },
+      "name" : "BreastRadiologyAbnormalityMassShapeVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyMammographyMass"
+      },
+      "name" : "BreastRadiologyMammographyMass",
+      "exampleBoolean" : false
     }],
     "page" : {
       "nameUrl" : "index.html",

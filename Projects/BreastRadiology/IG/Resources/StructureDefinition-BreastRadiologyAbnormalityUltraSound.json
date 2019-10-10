@@ -191,17 +191,6 @@
         }
       },
       {
-        "id": "Observation.bodySite",
-        "path": "Observation.bodySite",
-        "min": 0,
-        "max": "0",
-        "base": {
-          "path": "Observation.bodySite",
-          "min": 0,
-          "max": "1"
-        }
-      },
-      {
         "id": "Observation.method",
         "path": "Observation.method",
         "slicing": {

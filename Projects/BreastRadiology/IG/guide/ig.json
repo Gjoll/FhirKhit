@@ -57,14 +57,29 @@
     "examples"
   ],
   "resources": {
+    "CodeSystem/BreastCompositionCS": {
+      "base": "CodeSystem-BreastCompositionCS.html"
+    },
+    "CodeSystem/BreastRadiologyAbnormalityMassShapeCS": {
+      "base": "CodeSystem-BreastRadiologyAbnormalityMassShapeCS.html"
+    },
     "StructureDefinition/BreastRadiologyAbnormalityMammography": {
       "base": "StructureDefinition-BreastRadiologyAbnormalityMammography.html"
+    },
+    "StructureDefinition/BreastRadiologyAbnormalityMammographyBreastDensity": {
+      "base": "StructureDefinition-BreastRadiologyAbnormalityMammographyBreastDensity.html"
+    },
+    "StructureDefinition/BreastRadiologyAbnormalityMassShape": {
+      "base": "StructureDefinition-BreastRadiologyAbnormalityMassShape.html"
     },
     "StructureDefinition/BreastRadiologyAbnormalityMRI": {
       "base": "StructureDefinition-BreastRadiologyAbnormalityMRI.html"
     },
     "StructureDefinition/BreastRadiologyAbnormalityUltraSound": {
       "base": "StructureDefinition-BreastRadiologyAbnormalityUltraSound.html"
+    },
+    "StructureDefinition/BreastRadiologyMammographyMass": {
+      "base": "StructureDefinition-BreastRadiologyMammographyMass.html"
     },
     "StructureDefinition/BreastRadiologyPriorReports": {
       "base": "StructureDefinition-BreastRadiologyPriorReports.html"
@@ -92,6 +107,12 @@
     },
     "StructureDefinition/BreastRadiologySectionRoot": {
       "base": "StructureDefinition-BreastRadiologySectionRoot.html"
+    },
+    "ValueSet/BreastCompositionVS": {
+      "base": "ValueSet-BreastCompositionVS.html"
+    },
+    "ValueSet/BreastRadiologyAbnormalityMassShapeVS": {
+      "base": "ValueSet-BreastRadiologyAbnormalityMassShapeVS.html"
     }
   },
   "special-urls": [],

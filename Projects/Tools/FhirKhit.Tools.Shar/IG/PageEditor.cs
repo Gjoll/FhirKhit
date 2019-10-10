@@ -21,7 +21,7 @@ namespace FhirKhit.Tools.R2
         String outputDir;
         String page(String s) => Path.Combine(this.outputDir, "pages", s);
 
-        protected CodeEditor codeEditor;
+        protected CodeEditor codeEditor {get; set; }
 
         public PageEditor(String outputDir, string baseName)
         {

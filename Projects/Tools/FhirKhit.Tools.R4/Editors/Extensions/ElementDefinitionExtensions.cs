@@ -96,6 +96,18 @@ namespace FhirKhit.Tools.R4
             return e.Type("Reference", null, targetProfiles);
         }
 
+        public static ElementDefinition Binding(this ElementDefinition e,
+            String binding,
+            BindingStrength? strength)
+        {
+            e.Binding = new ElementDefinition.ElementDefinitionBindingComponent
+            {
+                Strength = strength,
+                ValueSet = binding
+            };
+            return e;
+        }
+
         public static ElementDefinition Type(this ElementDefinition e,
             String code,
             String[] profiles = null,
