@@ -41,87 +41,86 @@
     }],
     "resource" : [{
       "reference" : {
-        "reference" : "StructureDefinition/BreastRadiologyReport"
+        "reference" : "StructureDefinition/BreastRadiology-Abnormality-Mammography"
       },
-      "name" : "BreastRadiologyReport",
-      "exampleBoolean" : false,
-      "groupingId" : "Base"
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/Findings"
-      },
-      "name" : "Findings",
+      "name" : "BreastRadiology-Abnormality-Mammography",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/FindingsLeftBreast"
+        "reference" : "StructureDefinition/BreastRadiology-Abnormality-MRI"
       },
-      "name" : "FindingsLeftBreast",
+      "name" : "BreastRadiology-Abnormality-MRI",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/FindingsRightBreast"
+        "reference" : "StructureDefinition/BreastRadiology-Abnormality-UltraSound"
       },
-      "name" : "FindingsRightBreast",
+      "name" : "BreastRadiology-Abnormality-UltraSound",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/PatientHistorySection"
+        "reference" : "StructureDefinition/BreastRadiology-PriorReports"
       },
-      "name" : "PatientHistorySection",
+      "name" : "BreastRadiology-PriorReports",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/PatientRisk"
+        "reference" : "StructureDefinition/BreastRadiology-Recommendations"
       },
-      "name" : "PatientRisk",
+      "name" : "BreastRadiology-Recommendations",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/PriorReports"
+        "reference" : "StructureDefinition/BreastRadiology-Report"
       },
-      "name" : "PriorReports",
+      "name" : "BreastRadiology-Report",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/Recommendations"
+        "reference" : "StructureDefinition/BreastRadiology-Section-Findings-LeftBreast"
       },
-      "name" : "Recommendations",
+      "name" : "BreastRadiology-Section-Findings-LeftBreast",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/Root"
+        "reference" : "StructureDefinition/BreastRadiology-Section-Findings-RightBreast"
       },
-      "name" : "Root",
+      "name" : "BreastRadiology-Section-Findings-RightBreast",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/MammographyBreastAbnormalityObservation"
+        "reference" : "StructureDefinition/BreastRadiology-Section-Findings"
       },
-      "name" : "MammographyBreastAbnormalityObservation",
+      "name" : "BreastRadiology-Section-Findings",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/MRIBreastAbnormalityObservation"
+        "reference" : "StructureDefinition/BreastRadiology-Section-PatientHistory"
       },
-      "name" : "MRIBreastAbnormalityObservation",
+      "name" : "BreastRadiology-Section-PatientHistory",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/UltraSoundBreastAbnormalityObservation"
+        "reference" : "StructureDefinition/BreastRadiology-Section-PatientRisk"
       },
-      "name" : "UltraSoundBreastAbnormalityObservation",
+      "name" : "BreastRadiology-Section-PatientRisk",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiology-Section-Root"
+      },
+      "name" : "BreastRadiology-Section-Root",
       "exampleBoolean" : false
     }],
     "page" : {
