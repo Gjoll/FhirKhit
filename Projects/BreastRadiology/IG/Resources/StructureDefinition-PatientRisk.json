@@ -18,6 +18,7 @@
     }
   ],
   "description": "Patient Risk Section",
+  "kind": "resource",
   "abstract": false,
   "type": "Observation",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",

@@ -18,6 +18,7 @@
     }
   ],
   "description": "Root Section",
+  "kind": "resource",
   "abstract": false,
   "type": "Observation",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
@@ -96,8 +97,8 @@
         "path": "Observation.code.coding"
       },
       {
-        "id": "Observation.code.coding",
-        "path": "Observation.code.coding:observationCode",
+        "id": "Observation.code.coding:observationCode",
+        "path": "Observation.code.coding",
         "sliceName": "observationCode",
         "min": 1,
         "max": "1",

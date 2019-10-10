@@ -84,7 +84,7 @@
         "min": 0,
         "max": "*",
         "base": {
-          "path": "DiagnosticReport",
+          "path": "DiagnosticReport.extension",
           "min": 0,
           "max": "*"
         },
@@ -107,7 +107,7 @@
         "min": 0,
         "max": "*",
         "base": {
-          "path": "DiagnosticReport",
+          "path": "DiagnosticReport.extension",
           "min": 0,
           "max": "*"
         },

@@ -89,6 +89,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 .Abstract(false)
                 .Type(baseUrl.LastUriPart())
                 .Version(ProfileVersion)
+                .Kind(StructureDefinition.StructureDefinitionKind.Resource)
                 ;
 
             this.editors.Add(retVal);
@@ -105,12 +106,15 @@ namespace FhirKhit.BreastRadiology.XUnitTests
 
         SDefEditor CreateSectionObservation(String title,
             Markdown description,
-            String[] targets)
+            String[] targetsObservationProfiles)
         {
             SDefEditor e = CreateObservationEditor(title)
                 .Description(description)
                 ;
-
+            if (targetsObservationProfiles != null)
+            {
+                //var hasMember = e. 
+            }
             return e;
         }
 
@@ -168,7 +172,6 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                           "references to the recommendations of this report",
                           "a summary of the report findings in a human readable format")
                 )
-                .Kind(StructureDefinition.StructureDefinitionKind.Resource)
                 ;
 
             String recommendationsExtensionUrl = CreateRecommendationsExtension();

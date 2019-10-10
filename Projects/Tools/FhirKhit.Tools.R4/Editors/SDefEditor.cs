@@ -12,30 +12,73 @@ namespace FhirKhit.Tools.R4
 {
     public class SDefEditor
     {
-        public class ElementIndex
+        /// <summary>
+        /// A group of element definitions that will be copied to the output 
+        /// StructureDefinition as a group, in the order that they are included in this
+        /// group.
+        /// </summary>
+        public class ElementDefGroup
         {
-            public Int32 Index;
-            public ElementDefinition ElementDefinition;
-            public List<ElementDefinition> SliceElements = new List<ElementDefinition>();
+            /// <summary>
+            /// Index that orders where they are places in the output structure definitions.
+            /// This keeps the order in the differentialt he same as the order in the base definition.
+            /// </summary>
+            public Int32 Index { get; set; }
 
-            public ElementDefinition AppendSlice(String parentName,
-                String sliceName)
+            /// <summary>
+            /// Base element definition. Null if none...
+            /// </summary>
+            public ElementDefinition BaseElementDefinition { get; set; }
+
+            /// <summary>
+            /// This is the element that has a one for one match to one in thebase defintion.
+            /// </summary>
+            public ElementDefinition ElementDefinition { get; set; }
+
+            /// <summary>
+            /// Elements to be added to output sdef after element definition. These typically
+            /// include slices and such. They are not found in the base definition.
+            /// </summary>
+            public List<ElementDefinition> RelatedElements { get; set; } = new List<ElementDefinition>();
+
+            public ElementDefGroup(Int32 index, ElementDefinition elementDef, ElementDefinition eBase)
+            {
+                this.Index = index;
+                this.ElementDefinition = elementDef;
+                this.BaseElementDefinition = eBase;
+                if (eBase != null)
+                {
+                    elementDef.Base = new ElementDefinition.BaseComponent
+                    {
+                        Path = eBase.Path,
+                        Min = eBase.Min,
+                        Max = eBase.Max
+                    };
+                }
+            }
+
+            public ElementDefinition AppendSlice(String sliceName,
+                Int32 min = 0,
+                String max = "*")
             {
                 ElementDefinition retVal = new ElementDefinition
                 {
                     Path = this.ElementDefinition.Path,
                     ElementId = $"{this.ElementDefinition.Path}:{sliceName}",
                     SliceName = sliceName,
-                    Min = 0,
-                    Max = "*",
-                    Base = new ElementDefinition.BaseComponent
-                    {
-                        Min = 0,
-                        Max = "*",
-                        Path = $"{parentName}"
-                    }
+                    Min = min,
+                    Max = max
                 };
-                this.SliceElements.Add(retVal);
+                if (this.BaseElementDefinition != null)
+                {
+                    retVal.Base = new ElementDefinition.BaseComponent
+                    {
+                        Min = this.BaseElementDefinition.Min,
+                        Max = this.BaseElementDefinition.Max,
+                        Path = this.BaseElementDefinition.Path
+                    };
+                }
+                this.RelatedElements.Add(retVal);
                 return retVal;
             }
         }
@@ -61,8 +104,8 @@ namespace FhirKhit.Tools.R4
         String basePath;
         String outputDir;
 
-        Dictionary<String, ElementIndex> baseElements = new Dictionary<string, ElementIndex>();
-        Dictionary<String, ElementIndex> elements = new Dictionary<string, ElementIndex>();
+        Dictionary<String, ElementDefGroup> baseElements = new Dictionary<string, ElementDefGroup>();
+        Dictionary<String, ElementDefGroup> elements = new Dictionary<string, ElementDefGroup>();
 
         public SDefEditor(String baseDefinition, String outputDir)
         {
@@ -73,11 +116,7 @@ namespace FhirKhit.Tools.R4
             for (Int32 i = 0; i < baseSDef.Snapshot.Element.Count; i++)
             {
                 ElementDefinition elementDefinition = baseSDef.Snapshot.Element[i];
-                ElementIndex e = new ElementIndex
-                {
-                    Index = i,
-                    ElementDefinition = elementDefinition
-                };
+                ElementDefGroup e = new ElementDefGroup(i, elementDefinition, null);
                 this.baseElements.Add(elementDefinition.Path, e);
             }
 
@@ -96,35 +135,25 @@ namespace FhirKhit.Tools.R4
         /// </summary>
         /// <param name="path"></param>
         /// <returns></returns>
-        public ElementIndex Find(String path)
+        public ElementDefGroup Find(String path)
         {
             if (path.StartsWith(this.basePath) == false)
                 path = $"{basePath}{path}";
 
             {
-                if (this.elements.TryGetValue(path, out ElementIndex e) == true)
+                if (this.elements.TryGetValue(path, out ElementDefGroup e) == true)
                     return e;
             }
             {
-                if (this.baseElements.TryGetValue(path, out ElementIndex e) == true)
+                if (this.baseElements.TryGetValue(path, out ElementDefGroup e) == true)
                 {
                     ElementDefinition eBase = e.ElementDefinition;
                     ElementDefinition ed = new ElementDefinition
                     {
                         Path = eBase.Path,
                         ElementId = eBase.ElementId,
-                        Base = new ElementDefinition.BaseComponent
-                        {
-                            Path = eBase.Path,
-                            Min = eBase.Min,
-                            Max = eBase.Max
-                        }
                     };
-                    ElementIndex newE = new ElementIndex
-                    {
-                        Index = e.Index,
-                        ElementDefinition = ed
-                    };
+                    ElementDefGroup newE = new ElementDefGroup(e.Index, ed, e.ElementDefinition);
                     this.elements.Add(ed.Path, newE);
                     return newE;
                 }
@@ -145,15 +174,15 @@ namespace FhirKhit.Tools.R4
 
         public String Write()
         {
-            List<ElementIndex> eList = this.elements.Values.ToList();
+            List<ElementDefGroup> eList = this.elements.Values.ToList();
             eList.Sort((a, b) =>
             {
                 return a.Index.CompareTo(b.Index);
             });
-            foreach (ElementIndex item in eList)
+            foreach (ElementDefGroup item in eList)
             {
                 this.sDef.Differential.Element.Add(item.ElementDefinition);
-                this.sDef.Differential.Element.AddRange(item.SliceElements);
+                this.sDef.Differential.Element.AddRange(item.RelatedElements);
             }
 
             String outputName = Path.Combine(outputDir, $"StructureDefinition-{this.sDef.Name}.json");
@@ -172,7 +201,7 @@ namespace FhirKhit.Tools.R4
             String code)
         {
             sliceName = sliceName.UncapFirstLetter();
-            ElementIndex e = this.Find(path);
+            ElementDefGroup e = this.Find(path);
             e.ElementDefinition.Slicing = new ElementDefinition.SlicingComponent
             {
                 Rules = ElementDefinition.SlicingRules.Open
@@ -189,12 +218,12 @@ namespace FhirKhit.Tools.R4
                 ElementId = $"{path}.coding",
                 Path = $"{path}.coding",
             };
-            e.SliceElements.Add(coding);
+            e.RelatedElements.Add(coding);
 
             ElementDefinition slice = new ElementDefinition
             {
-                ElementId = $"{path}.coding",
-                Path = $"{path}.coding:{sliceName}",
+                ElementId = $"{path}.coding:{sliceName}",
+                Path = $"{path}.coding",
                 SliceName = sliceName,
                 Min = 1,
                 Max = "1",
@@ -205,22 +234,21 @@ namespace FhirKhit.Tools.R4
                     Path = $"{baseName}"
                 }
             };
-            e.SliceElements.Add(slice);
+            e.RelatedElements.Add(slice);
             return this;
         }
 
         /// <summary>
         /// Add the indicated slice by url.
         /// </summary>
-        ElementDefinition SliceByUrl(String baseName,
-            String path,
+        ElementDefinition SliceByUrl(String path,
             String sliceUrl,
             String sliceName)
         {
             sliceName = sliceName.UncapFirstLetter();
 
-            ElementIndex extension = this.Find(path);
-            ElementDefinition extSlice = extension.AppendSlice(baseName, sliceName);
+            ElementDefGroup extension = this.Find(path);
+            ElementDefinition extSlice = extension.AppendSlice(sliceName);
             extSlice.IsModifier = false;
             extSlice.Type.Add(new ElementDefinition.TypeRefComponent
             {
@@ -257,7 +285,7 @@ namespace FhirKhit.Tools.R4
         public ElementDefinition SimpleExtension(String name, String extensionUrl)
         {
             ConfigureExtensionSlice();
-            return SliceByUrl(this.baseSDef.Name, "extension", extensionUrl, name);
+            return SliceByUrl("extension", extensionUrl, name);
         }
 
         public SDefEditor ContactUrl(String value) { this.sDef.ContactUrl(value); return this; }
