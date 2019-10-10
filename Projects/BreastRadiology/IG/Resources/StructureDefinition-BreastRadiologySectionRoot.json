@@ -1,12 +1,12 @@
 {
   "resourceType": "StructureDefinition",
-  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiology-Abnormality-UltraSound",
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologySectionRoot",
   "version": "0.0.2",
-  "name": "BreastRadiology-Abnormality-UltraSound",
-  "title": "Breast Radiology Abnormality (UltraSound)",
+  "name": "BreastRadiologySectionRoot",
+  "title": "Breast Radiology Root Section",
   "status": "draft",
   "date": "2019-11-01",
-  "publisher": "Hl7 - Clinical Interoperability Council",
+  "publisher": "Hl7-Clinical Interoperability Council",
   "contact": [
     {
       "telecom": [
@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Ultra Sound Breast Abnormality Observation",
+  "description": "Root Section",
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
@@ -136,6 +136,44 @@
         }
       },
       {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "coding"
+            }
+          ],
+          "rules": "open"
+        },
+        "base": {
+          "path": "Observation.code",
+          "min": 1,
+          "max": "1"
+        }
+      },
+      {
+        "id": "Observation.code.coding",
+        "path": "Observation.code.coding"
+      },
+      {
+        "id": "Observation.code.coding:observationCode",
+        "path": "Observation.code.coding",
+        "sliceName": "observationCode",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Observation.code",
+          "min": 1,
+          "max": "1"
+        },
+        "patternCoding": {
+          "system": "http://loinc.org",
+          "code": "10193-1"
+        }
+      },
+      {
         "id": "Observation.subject",
         "path": "Observation.subject",
         "min": 1,
@@ -204,39 +242,12 @@
       {
         "id": "Observation.method",
         "path": "Observation.method",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "coding"
-            }
-          ],
-          "rules": "open"
-        },
+        "min": 0,
+        "max": "0",
         "base": {
           "path": "Observation.method",
           "min": 0,
           "max": "1"
-        }
-      },
-      {
-        "id": "Observation.method.coding",
-        "path": "Observation.method.coding"
-      },
-      {
-        "id": "Observation.method.coding:method",
-        "path": "Observation.method.coding",
-        "sliceName": "method",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Observation.method",
-          "min": 0,
-          "max": "1"
-        },
-        "patternCoding": {
-          "system": "http://snomed.info/sct",
-          "code": "115341008"
         }
       },
       {
@@ -251,6 +262,17 @@
         }
       },
       {
+        "id": "Observation.device",
+        "path": "Observation.device",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.device",
+          "min": 0,
+          "max": "1"
+        }
+      },
+      {
         "id": "Observation.referenceRange",
         "path": "Observation.referenceRange",
         "min": 0,
@@ -260,6 +282,65 @@
           "min": 0,
           "max": "*"
         }
+      },
+      {
+        "id": "Observation.hasMember",
+        "path": "Observation.hasMember",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Observation.hasMember:breastRadiologySectionPatientHistory",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadiologySectionPatientHistory",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologySectionPatientHistory"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:breastRadiologySectionPatientRisk",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadiologySectionPatientRisk",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologySectionPatientRisk"
+            ]
+          }
+        ]
       },
       {
         "id": "Observation.derivedFrom",

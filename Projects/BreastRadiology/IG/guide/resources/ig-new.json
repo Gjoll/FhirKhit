@@ -41,86 +41,86 @@
     }],
     "resource" : [{
       "reference" : {
-        "reference" : "StructureDefinition/BreastRadiology-Abnormality-Mammography"
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityMammography"
       },
-      "name" : "BreastRadiology-Abnormality-Mammography",
+      "name" : "BreastRadiologyAbnormalityMammography",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/BreastRadiology-Abnormality-MRI"
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityMRI"
       },
-      "name" : "BreastRadiology-Abnormality-MRI",
+      "name" : "BreastRadiologyAbnormalityMRI",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/BreastRadiology-Abnormality-UltraSound"
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityUltraSound"
       },
-      "name" : "BreastRadiology-Abnormality-UltraSound",
+      "name" : "BreastRadiologyAbnormalityUltraSound",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/BreastRadiology-PriorReports"
+        "reference" : "StructureDefinition/BreastRadiologyPriorReports"
       },
-      "name" : "BreastRadiology-PriorReports",
+      "name" : "BreastRadiologyPriorReports",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/BreastRadiology-Recommendations"
+        "reference" : "StructureDefinition/BreastRadiologyRecommendations"
       },
-      "name" : "BreastRadiology-Recommendations",
+      "name" : "BreastRadiologyRecommendations",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/BreastRadiology-Report"
+        "reference" : "StructureDefinition/BreastRadiologyReport"
       },
-      "name" : "BreastRadiology-Report",
+      "name" : "BreastRadiologyReport",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/BreastRadiology-Section-Findings-LeftBreast"
+        "reference" : "StructureDefinition/BreastRadiologySectionFindings"
       },
-      "name" : "BreastRadiology-Section-Findings-LeftBreast",
+      "name" : "BreastRadiologySectionFindings",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/BreastRadiology-Section-Findings-RightBreast"
+        "reference" : "StructureDefinition/BreastRadiologySectionFindingsLeftBreast"
       },
-      "name" : "BreastRadiology-Section-Findings-RightBreast",
+      "name" : "BreastRadiologySectionFindingsLeftBreast",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/BreastRadiology-Section-Findings"
+        "reference" : "StructureDefinition/BreastRadiologySectionFindingsRightBreast"
       },
-      "name" : "BreastRadiology-Section-Findings",
+      "name" : "BreastRadiologySectionFindingsRightBreast",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/BreastRadiology-Section-PatientHistory"
+        "reference" : "StructureDefinition/BreastRadiologySectionPatientHistory"
       },
-      "name" : "BreastRadiology-Section-PatientHistory",
+      "name" : "BreastRadiologySectionPatientHistory",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/BreastRadiology-Section-PatientRisk"
+        "reference" : "StructureDefinition/BreastRadiologySectionPatientRisk"
       },
-      "name" : "BreastRadiology-Section-PatientRisk",
+      "name" : "BreastRadiologySectionPatientRisk",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/BreastRadiology-Section-Root"
+        "reference" : "StructureDefinition/BreastRadiologySectionRoot"
       },
-      "name" : "BreastRadiology-Section-Root",
+      "name" : "BreastRadiologySectionRoot",
       "exampleBoolean" : false
     }],
     "page" : {

@@ -1,12 +1,12 @@
 {
   "resourceType": "StructureDefinition",
-  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiology-Section-Root",
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologySectionRoot",
   "version": "0.0.2",
-  "name": "BreastRadiology-Section-Root",
+  "name": "BreastRadiologySectionRoot",
   "title": "Breast Radiology Root Section",
   "status": "draft",
   "date": "2019-11-01",
-  "publisher": "Hl7 - Clinical Interoperability Council",
+  "publisher": "Hl7-Clinical Interoperability Council",
   "contact": [
     {
       "telecom": [
@@ -2063,9 +2063,9 @@
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadiology-Section-PatientHistory",
+        "id": "Observation.hasMember:breastRadiologySectionPatientHistory",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadiology-Section-PatientHistory",
+        "sliceName": "breastRadiologySectionPatientHistory",
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
@@ -2080,7 +2080,7 @@
           {
             "code": "Reference",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiology-Section-PatientHistory"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologySectionPatientHistory"
             ],
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/Observation",
@@ -2103,9 +2103,9 @@
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadiology-Section-PatientRisk",
+        "id": "Observation.hasMember:breastRadiologySectionPatientRisk",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadiology-Section-PatientRisk",
+        "sliceName": "breastRadiologySectionPatientRisk",
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
@@ -2120,7 +2120,7 @@
           {
             "code": "Reference",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiology-Section-PatientRisk"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologySectionPatientRisk"
             ],
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/Observation",
@@ -2848,9 +2848,9 @@
         }
       },
       {
-        "id": "Observation.hasMember:breastRadiology-Section-PatientHistory",
+        "id": "Observation.hasMember:breastRadiologySectionPatientHistory",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadiology-Section-PatientHistory",
+        "sliceName": "breastRadiologySectionPatientHistory",
         "min": 1,
         "max": "1",
         "base": {
@@ -2862,15 +2862,15 @@
           {
             "code": "Reference",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiology-Section-PatientHistory"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologySectionPatientHistory"
             ]
           }
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadiology-Section-PatientRisk",
+        "id": "Observation.hasMember:breastRadiologySectionPatientRisk",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadiology-Section-PatientRisk",
+        "sliceName": "breastRadiologySectionPatientRisk",
         "min": 1,
         "max": "1",
         "base": {
@@ -2882,7 +2882,7 @@
           {
             "code": "Reference",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiology-Section-PatientRisk"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologySectionPatientRisk"
             ]
           }
         ]

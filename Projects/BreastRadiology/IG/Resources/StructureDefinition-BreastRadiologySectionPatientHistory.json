@@ -1,12 +1,12 @@
 {
   "resourceType": "StructureDefinition",
-  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiology-Section-PatientHistory",
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologySectionPatientHistory",
   "version": "0.0.2",
-  "name": "BreastRadiology-Section-PatientHistory",
+  "name": "BreastRadiologySectionPatientHistory",
   "title": "Breast Radiology Patient History Section",
   "status": "draft",
   "date": "2019-11-01",
-  "publisher": "Hl7 - Clinical Interoperability Council",
+  "publisher": "Hl7-Clinical Interoperability Council",
   "contact": [
     {
       "telecom": [

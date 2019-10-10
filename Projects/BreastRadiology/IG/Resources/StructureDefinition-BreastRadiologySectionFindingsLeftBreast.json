@@ -1,12 +1,12 @@
 {
   "resourceType": "StructureDefinition",
-  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiology-Section-Findings-LeftBreast",
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologySectionFindingsLeftBreast",
   "version": "0.0.2",
-  "name": "BreastRadiology-Section-Findings-LeftBreast",
+  "name": "BreastRadiologySectionFindingsLeftBreast",
   "title": "Breast Radiology Findings Left Breast",
   "status": "draft",
   "date": "2019-11-01",
-  "publisher": "Hl7 - Clinical Interoperability Council",
+  "publisher": "Hl7-Clinical Interoperability Council",
   "contact": [
     {
       "telecom": [
@@ -265,9 +265,9 @@
         }
       },
       {
-        "id": "Observation.hasMember:breastRadiology-Abnormality-Mammography",
+        "id": "Observation.hasMember:breastRadiologyAbnormalityMammography",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadiology-Abnormality-Mammography",
+        "sliceName": "breastRadiologyAbnormalityMammography",
         "min": 0,
         "max": "*",
         "base": {
@@ -279,15 +279,15 @@
           {
             "code": "Reference",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiology-Abnormality-Mammography"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityMammography"
             ]
           }
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadiology-Abnormality-MRI",
+        "id": "Observation.hasMember:breastRadiologyAbnormalityMRI",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadiology-Abnormality-MRI",
+        "sliceName": "breastRadiologyAbnormalityMRI",
         "min": 0,
         "max": "*",
         "base": {
@@ -299,15 +299,15 @@
           {
             "code": "Reference",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiology-Abnormality-MRI"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityMRI"
             ]
           }
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadiology-Abnormality-UltraSound",
+        "id": "Observation.hasMember:breastRadiologyAbnormalityUltraSound",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadiology-Abnormality-UltraSound",
+        "sliceName": "breastRadiologyAbnormalityUltraSound",
         "min": 0,
         "max": "*",
         "base": {
@@ -319,7 +319,7 @@
           {
             "code": "Reference",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiology-Abnormality-UltraSound"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityUltraSound"
             ]
           }
         ]

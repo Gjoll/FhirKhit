@@ -1,12 +1,12 @@
 {
   "resourceType": "StructureDefinition",
-  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiology-Section-Findings-RightBreast",
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologySectionFindingsRightBreast",
   "version": "0.0.2",
-  "name": "BreastRadiology-Section-Findings-RightBreast",
+  "name": "BreastRadiologySectionFindingsRightBreast",
   "title": "Breast Radiology Findings Right Breast",
   "status": "draft",
   "date": "2019-11-01",
-  "publisher": "Hl7 - Clinical Interoperability Council",
+  "publisher": "Hl7-Clinical Interoperability Council",
   "contact": [
     {
       "telecom": [
@@ -1901,9 +1901,9 @@
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadiology-Abnormality-Mammography",
+        "id": "Observation.hasMember:breastRadiologyAbnormalityMammography",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadiology-Abnormality-Mammography",
+        "sliceName": "breastRadiologyAbnormalityMammography",
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
@@ -1918,7 +1918,7 @@
           {
             "code": "Reference",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiology-Abnormality-Mammography"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityMammography"
             ],
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/Observation",
@@ -1941,9 +1941,9 @@
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadiology-Abnormality-MRI",
+        "id": "Observation.hasMember:breastRadiologyAbnormalityMRI",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadiology-Abnormality-MRI",
+        "sliceName": "breastRadiologyAbnormalityMRI",
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
@@ -1958,7 +1958,7 @@
           {
             "code": "Reference",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiology-Abnormality-MRI"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityMRI"
             ],
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/Observation",
@@ -1981,9 +1981,9 @@
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadiology-Abnormality-UltraSound",
+        "id": "Observation.hasMember:breastRadiologyAbnormalityUltraSound",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadiology-Abnormality-UltraSound",
+        "sliceName": "breastRadiologyAbnormalityUltraSound",
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
@@ -1998,7 +1998,7 @@
           {
             "code": "Reference",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiology-Abnormality-UltraSound"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityUltraSound"
             ],
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/Observation",
@@ -2688,9 +2688,9 @@
         }
       },
       {
-        "id": "Observation.hasMember:breastRadiology-Abnormality-Mammography",
+        "id": "Observation.hasMember:breastRadiologyAbnormalityMammography",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadiology-Abnormality-Mammography",
+        "sliceName": "breastRadiologyAbnormalityMammography",
         "min": 0,
         "max": "*",
         "base": {
@@ -2702,15 +2702,15 @@
           {
             "code": "Reference",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiology-Abnormality-Mammography"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityMammography"
             ]
           }
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadiology-Abnormality-MRI",
+        "id": "Observation.hasMember:breastRadiologyAbnormalityMRI",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadiology-Abnormality-MRI",
+        "sliceName": "breastRadiologyAbnormalityMRI",
         "min": 0,
         "max": "*",
         "base": {
@@ -2722,15 +2722,15 @@
           {
             "code": "Reference",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiology-Abnormality-MRI"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityMRI"
             ]
           }
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadiology-Abnormality-UltraSound",
+        "id": "Observation.hasMember:breastRadiologyAbnormalityUltraSound",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadiology-Abnormality-UltraSound",
+        "sliceName": "breastRadiologyAbnormalityUltraSound",
         "min": 0,
         "max": "*",
         "base": {
@@ -2742,7 +2742,7 @@
           {
             "code": "Reference",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiology-Abnormality-UltraSound"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityUltraSound"
             ]
           }
         ]

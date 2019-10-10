@@ -1,12 +1,12 @@
 {
   "resourceType": "StructureDefinition",
-  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiology-Section-PatientRisk",
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologySectionPatientRisk",
   "version": "0.0.2",
-  "name": "BreastRadiology-Section-PatientRisk",
+  "name": "BreastRadiologySectionPatientRisk",
   "title": "Breast Radiology Patient Risk Section",
   "status": "draft",
   "date": "2019-11-01",
-  "publisher": "Hl7 - Clinical Interoperability Council",
+  "publisher": "Hl7-Clinical Interoperability Council",
   "contact": [
     {
       "telecom": [

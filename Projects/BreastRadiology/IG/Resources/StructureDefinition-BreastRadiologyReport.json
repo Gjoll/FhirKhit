@@ -1,12 +1,12 @@
 {
   "resourceType": "StructureDefinition",
-  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiology-Report",
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyReport",
   "version": "0.0.2",
-  "name": "BreastRadiology-Report",
+  "name": "BreastRadiologyReport",
   "title": "Breast Radiology Report",
   "status": "draft",
   "date": "2019-11-01",
-  "publisher": "Hl7 - Clinical Interoperability Council",
+  "publisher": "Hl7-Clinical Interoperability Council",
   "contact": [
     {
       "telecom": [
@@ -92,7 +92,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiology-Recommendations"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyRecommendations"
             ]
           }
         ],
@@ -115,7 +115,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiology-PriorReports"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyPriorReports"
             ]
           }
         ],
@@ -202,7 +202,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiology-Section-Root"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologySectionRoot"
             ]
           }
         ]

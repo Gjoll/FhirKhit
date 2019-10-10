@@ -1,12 +1,12 @@
 {
   "resourceType": "StructureDefinition",
-  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiology-Section-Findings",
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologySectionFindingsRightBreast",
   "version": "0.0.2",
-  "name": "BreastRadiology-Section-Findings",
-  "title": "Breast Radiology Findings",
+  "name": "BreastRadiologySectionFindingsRightBreast",
+  "title": "Breast Radiology Findings Right Breast",
   "status": "draft",
   "date": "2019-11-01",
-  "publisher": "Hl7 - Clinical Interoperability Council",
+  "publisher": "Hl7-Clinical Interoperability Council",
   "contact": [
     {
       "telecom": [
@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Findings Section",
+  "description": "Findings Right Breast Section",
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
@@ -265,11 +265,11 @@
         }
       },
       {
-        "id": "Observation.hasMember:breastRadiology-Section-Findings-LeftBreast",
+        "id": "Observation.hasMember:breastRadiologyAbnormalityMammography",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadiology-Section-Findings-LeftBreast",
-        "min": 1,
-        "max": "1",
+        "sliceName": "breastRadiologyAbnormalityMammography",
+        "min": 0,
+        "max": "*",
         "base": {
           "path": "Observation.hasMember",
           "min": 0,
@@ -279,17 +279,17 @@
           {
             "code": "Reference",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiology-Section-Findings-LeftBreast"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityMammography"
             ]
           }
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadiology-Section-Findings-RightBreast",
+        "id": "Observation.hasMember:breastRadiologyAbnormalityMRI",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadiology-Section-Findings-RightBreast",
-        "min": 1,
-        "max": "1",
+        "sliceName": "breastRadiologyAbnormalityMRI",
+        "min": 0,
+        "max": "*",
         "base": {
           "path": "Observation.hasMember",
           "min": 0,
@@ -299,7 +299,27 @@
           {
             "code": "Reference",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiology-Section-Findings-RightBreast"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityMRI"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:breastRadiologyAbnormalityUltraSound",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadiologyAbnormalityUltraSound",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityUltraSound"
             ]
           }
         ]

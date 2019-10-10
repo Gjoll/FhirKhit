@@ -1,12 +1,12 @@
 {
   "resourceType": "StructureDefinition",
-  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiology-Abnormality-UltraSound",
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologySectionFindingsLeftBreast",
   "version": "0.0.2",
-  "name": "BreastRadiology-Abnormality-UltraSound",
-  "title": "Breast Radiology Abnormality (UltraSound)",
+  "name": "BreastRadiologySectionFindingsLeftBreast",
+  "title": "Breast Radiology Findings Left Breast",
   "status": "draft",
   "date": "2019-11-01",
-  "publisher": "Hl7 - Clinical Interoperability Council",
+  "publisher": "Hl7-Clinical Interoperability Council",
   "contact": [
     {
       "telecom": [
@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Ultra Sound Breast Abnormality Observation",
+  "description": "Findings Left Breast Section",
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
@@ -1363,21 +1363,12 @@
       {
         "id": "Observation.method",
         "path": "Observation.method",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "coding"
-            }
-          ],
-          "rules": "open"
-        },
         "short": "How it was done",
         "definition": "Indicates the mechanism used to perform the observation.",
         "comment": "Only used if not implicit in code for Observation.code.",
         "requirements": "In some cases, method can impact results and is thus used for determining whether results can be compared or determining significance of results.",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "base": {
           "path": "Observation.method",
           "min": 0,
@@ -1409,159 +1400,6 @@
           {
             "identity": "rim",
             "map": "methodCode"
-          }
-        ]
-      },
-      {
-        "id": "Observation.method.id",
-        "path": "Observation.method.id",
-        "representation": [
-          "xmlAttr"
-        ],
-        "short": "Unique id for inter-element referencing",
-        "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Element.id",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "Observation.method.extension",
-        "path": "Observation.method.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "description": "Extensions are always sliced by (at least) url",
-          "rules": "open"
-        },
-        "short": "Additional content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Element.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "Observation.method.coding:method",
-        "path": "Observation.method.coding",
-        "sliceName": "method",
-        "short": "Code defined by a terminology system",
-        "definition": "A reference to a code defined by a terminology system.",
-        "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
-        "requirements": "Allows for alternative encodings within a code system, and translations to other code systems.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "CodeableConcept.coding",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "patternCoding": {
-          "system": "http://snomed.info/sct",
-          "code": "115341008"
-        },
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.1-8, C*E.10-22"
-          },
-          {
-            "identity": "rim",
-            "map": "union(., ./translation)"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
-          }
-        ]
-      },
-      {
-        "id": "Observation.method.text",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-            "valueBoolean": true
-          }
-        ],
-        "path": "Observation.method.text",
-        "short": "Plain text representation of the concept",
-        "definition": "A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.",
-        "comment": "Very often the text is the same as a displayName of one of the codings.",
-        "requirements": "The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "CodeableConcept.text",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.9. But note many systems use C*E.2 for this"
-          },
-          {
-            "identity": "rim",
-            "map": "./originalText[mediaType/code=\"text/plain\"]/data"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText"
           }
         ]
       },
@@ -1614,7 +1452,7 @@
         "definition": "The device used to generate the observation data.",
         "comment": "Note that this is not meant to represent a device involved in the transmission of the result, e.g., a gateway.  Such devices may be documented using the Provenance resource where relevant.",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "base": {
           "path": "Observation.device",
           "min": 0,
@@ -2019,6 +1857,16 @@
       {
         "id": "Observation.hasMember",
         "path": "Observation.hasMember",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
@@ -2032,6 +1880,126 @@
         "type": [
           {
             "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Observation",
+              "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",
+              "http://hl7.org/fhir/StructureDefinition/MolecularSequence"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "Relationships established by OBX-4 usage"
+          },
+          {
+            "identity": "rim",
+            "map": "outBoundRelationship"
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:breastRadiologyAbnormalityMammography",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadiologyAbnormalityMammography",
+        "short": "Related resource that belongs to the Observation group",
+        "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
+        "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityMammography"
+            ],
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Observation",
+              "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",
+              "http://hl7.org/fhir/StructureDefinition/MolecularSequence"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "Relationships established by OBX-4 usage"
+          },
+          {
+            "identity": "rim",
+            "map": "outBoundRelationship"
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:breastRadiologyAbnormalityMRI",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadiologyAbnormalityMRI",
+        "short": "Related resource that belongs to the Observation group",
+        "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
+        "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityMRI"
+            ],
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Observation",
+              "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",
+              "http://hl7.org/fhir/StructureDefinition/MolecularSequence"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "Relationships established by OBX-4 usage"
+          },
+          {
+            "identity": "rim",
+            "map": "outBoundRelationship"
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:breastRadiologyAbnormalityUltraSound",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadiologyAbnormalityUltraSound",
+        "short": "Related resource that belongs to the Observation group",
+        "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
+        "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityUltraSound"
+            ],
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/Observation",
               "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",
@@ -2659,39 +2627,12 @@
       {
         "id": "Observation.method",
         "path": "Observation.method",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "coding"
-            }
-          ],
-          "rules": "open"
-        },
+        "min": 0,
+        "max": "0",
         "base": {
           "path": "Observation.method",
           "min": 0,
           "max": "1"
-        }
-      },
-      {
-        "id": "Observation.method.coding",
-        "path": "Observation.method.coding"
-      },
-      {
-        "id": "Observation.method.coding:method",
-        "path": "Observation.method.coding",
-        "sliceName": "method",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Observation.method",
-          "min": 0,
-          "max": "1"
-        },
-        "patternCoding": {
-          "system": "http://snomed.info/sct",
-          "code": "115341008"
         }
       },
       {
@@ -2706,6 +2647,17 @@
         }
       },
       {
+        "id": "Observation.device",
+        "path": "Observation.device",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.device",
+          "min": 0,
+          "max": "1"
+        }
+      },
+      {
         "id": "Observation.referenceRange",
         "path": "Observation.referenceRange",
         "min": 0,
@@ -2715,6 +2667,85 @@
           "min": 0,
           "max": "*"
         }
+      },
+      {
+        "id": "Observation.hasMember",
+        "path": "Observation.hasMember",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Observation.hasMember:breastRadiologyAbnormalityMammography",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadiologyAbnormalityMammography",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityMammography"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:breastRadiologyAbnormalityMRI",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadiologyAbnormalityMRI",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityMRI"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:breastRadiologyAbnormalityUltraSound",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadiologyAbnormalityUltraSound",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "profile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityUltraSound"
+            ]
+          }
+        ]
       },
       {
         "id": "Observation.derivedFrom",

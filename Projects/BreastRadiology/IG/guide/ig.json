@@ -57,41 +57,41 @@
     "examples"
   ],
   "resources": {
-    "StructureDefinition/BreastRadiology-Abnormality-Mammography": {
-      "base": "StructureDefinition-BreastRadiology-Abnormality-Mammography.html"
+    "StructureDefinition/BreastRadiologyAbnormalityMammography": {
+      "base": "StructureDefinition-BreastRadiologyAbnormalityMammography.html"
     },
-    "StructureDefinition/BreastRadiology-Abnormality-MRI": {
-      "base": "StructureDefinition-BreastRadiology-Abnormality-MRI.html"
+    "StructureDefinition/BreastRadiologyAbnormalityMRI": {
+      "base": "StructureDefinition-BreastRadiologyAbnormalityMRI.html"
     },
-    "StructureDefinition/BreastRadiology-Abnormality-UltraSound": {
-      "base": "StructureDefinition-BreastRadiology-Abnormality-UltraSound.html"
+    "StructureDefinition/BreastRadiologyAbnormalityUltraSound": {
+      "base": "StructureDefinition-BreastRadiologyAbnormalityUltraSound.html"
     },
-    "StructureDefinition/BreastRadiology-PriorReports": {
-      "base": "StructureDefinition-BreastRadiology-PriorReports.html"
+    "StructureDefinition/BreastRadiologyPriorReports": {
+      "base": "StructureDefinition-BreastRadiologyPriorReports.html"
     },
-    "StructureDefinition/BreastRadiology-Recommendations": {
-      "base": "StructureDefinition-BreastRadiology-Recommendations.html"
+    "StructureDefinition/BreastRadiologyRecommendations": {
+      "base": "StructureDefinition-BreastRadiologyRecommendations.html"
     },
-    "StructureDefinition/BreastRadiology-Report": {
-      "base": "StructureDefinition-BreastRadiology-Report.html"
+    "StructureDefinition/BreastRadiologyReport": {
+      "base": "StructureDefinition-BreastRadiologyReport.html"
     },
-    "StructureDefinition/BreastRadiology-Section-Findings-LeftBreast": {
-      "base": "StructureDefinition-BreastRadiology-Section-Findings-LeftBreast.html"
+    "StructureDefinition/BreastRadiologySectionFindings": {
+      "base": "StructureDefinition-BreastRadiologySectionFindings.html"
     },
-    "StructureDefinition/BreastRadiology-Section-Findings-RightBreast": {
-      "base": "StructureDefinition-BreastRadiology-Section-Findings-RightBreast.html"
+    "StructureDefinition/BreastRadiologySectionFindingsLeftBreast": {
+      "base": "StructureDefinition-BreastRadiologySectionFindingsLeftBreast.html"
     },
-    "StructureDefinition/BreastRadiology-Section-Findings": {
-      "base": "StructureDefinition-BreastRadiology-Section-Findings.html"
+    "StructureDefinition/BreastRadiologySectionFindingsRightBreast": {
+      "base": "StructureDefinition-BreastRadiologySectionFindingsRightBreast.html"
     },
-    "StructureDefinition/BreastRadiology-Section-PatientHistory": {
-      "base": "StructureDefinition-BreastRadiology-Section-PatientHistory.html"
+    "StructureDefinition/BreastRadiologySectionPatientHistory": {
+      "base": "StructureDefinition-BreastRadiologySectionPatientHistory.html"
     },
-    "StructureDefinition/BreastRadiology-Section-PatientRisk": {
-      "base": "StructureDefinition-BreastRadiology-Section-PatientRisk.html"
+    "StructureDefinition/BreastRadiologySectionPatientRisk": {
+      "base": "StructureDefinition-BreastRadiologySectionPatientRisk.html"
     },
-    "StructureDefinition/BreastRadiology-Section-Root": {
-      "base": "StructureDefinition-BreastRadiology-Section-Root.html"
+    "StructureDefinition/BreastRadiologySectionRoot": {
+      "base": "StructureDefinition-BreastRadiologySectionRoot.html"
     }
   },
   "special-urls": [],

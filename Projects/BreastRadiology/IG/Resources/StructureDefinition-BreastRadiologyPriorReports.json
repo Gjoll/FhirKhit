@@ -1,12 +1,12 @@
 {
   "resourceType": "StructureDefinition",
-  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiology-PriorReports",
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyPriorReports",
   "version": "0.0.2",
-  "name": "BreastRadiology-PriorReports",
+  "name": "BreastRadiologyPriorReports",
   "title": "Prior Reports",
   "status": "draft",
   "date": "2019-11-01",
-  "publisher": "Hl7 - Clinical Interoperability Council",
+  "publisher": "Hl7-Clinical Interoperability Council",
   "contact": [
     {
       "telecom": [
@@ -88,7 +88,7 @@
             "code": "uri"
           }
         ],
-        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiology-PriorReports"
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyPriorReports"
       },
       {
         "id": "Extension.valueReference",
@@ -104,7 +104,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiology-Report"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyReport"
             ]
           }
         ]

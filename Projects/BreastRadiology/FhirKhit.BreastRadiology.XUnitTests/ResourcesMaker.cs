@@ -41,7 +41,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         {
             //$ Fix me. Incorrect method!!!
             String abMammo = this.CreateObservationAbnormality(
-                "BreastRadiology-Abnormality-Mammography",
+                "BreastRadiologyAbnormalityMammography",
                 "Breast Radiology Abnormality (Mammography)",
                 new Markdown().Paragraph("Mammography Breast Abnormality Observation"),
                 "http://snomed.info/sct", 
@@ -50,7 +50,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
 
             //$ Fix me. Incorrect method!!!
             String abMRI = this.CreateObservationAbnormality(
-                "BreastRadiology-Abnormality-MRI",
+                "BreastRadiologyAbnormalityMRI",
                 "Breast Radiology Abnormality (MRI)",
                 new Markdown().Paragraph("MRI Breast Abnormality Observation"),
                 "http://snomed.info/sct", 
@@ -59,7 +59,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
 
             //$ Fix me. Incorrect method!!!
             String abUS = this.CreateObservationAbnormality(
-                "BreastRadiology-Abnormality-UltraSound",
+                "BreastRadiologyAbnormalityUltraSound",
                 "Breast Radiology Abnormality (UltraSound)",
                 new Markdown().Paragraph("Ultra Sound Breast Abnormality Observation"),
                 "http://snomed.info/sct", 
@@ -74,33 +74,33 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             };
 
             String patientRiskUrl = CreateObservationSection(
-                "BreastRadiology-Section-PatientRisk",
+                "BreastRadiologySectionPatientRisk",
                 "Breast Radiology Patient Risk Section",
                 new Markdown().Paragraph("Patient Risk Section"))
                 .SDef.Url;
 
             String patientHistoryUrl = CreateObservationSection(
-                "BreastRadiology-Section-PatientHistory",
+                "BreastRadiologySectionPatientHistory",
                 "Breast Radiology Patient History Section",
                 new Markdown().Paragraph("Patient History Section"))
                 .SDef.Url;
 
             String findingsLeftUrl = CreateObservationSection(
-                "BreastRadiology-Section-Findings-LeftBreast",
+                "BreastRadiologySectionFindingsLeftBreast",
                 "Breast Radiology Findings Left Breast",
                 new Markdown().Paragraph("Findings Left Breast Section"))
                 .SliceByUrl("Observation.hasMember", abnormalityTargets)
                 .SDef.Url;
 
             String findingsRightUrl = CreateObservationSection(
-                "BreastRadiology-Section-Findings-RightBreast",
+                "BreastRadiologySectionFindingsRightBreast",
                 "Breast Radiology Findings Right Breast",
                 new Markdown().Paragraph("Findings Right Breast Section"))
                 .SliceByUrl("Observation.hasMember", abnormalityTargets)
                 .SDef.Url;
 
             String findingsUrl = CreateObservationSection(
-                "BreastRadiology-Section-Findings",
+                "BreastRadiologySectionFindings",
                 "Breast Radiology Findings",
                 new Markdown().Paragraph("Findings Section"))
                 .SliceByUrl("Observation.hasMember",
@@ -112,7 +112,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 .SDef.Url;
 
             String rootUrl = CreateObservationSection(
-                "BreastRadiology-Section-Root",
+                "BreastRadiologySectionRoot",
                 "Breast Radiology Root Section",
                 new Markdown().Paragraph("Root Section"))
                 .SliceByUrl("Observation.hasMember",
@@ -138,7 +138,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 .Url(CreateUrl(name))
                 .Status(ProfileStatus)
                 .Title(title)
-                .Publisher("Hl7 - Clinical Interoperability Council")
+                .Publisher("Hl7-Clinical Interoperability Council")
                 .ContactUrl("http://www.hl7.org/Special/committees/cic")
                 .Date(date)
                 .Derivation(StructureDefinition.TypeDerivationRule.Constraint)
@@ -225,7 +225,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         {
             String CreatePriorReportsExtension(String brrDiagnosticReportUrl)
             {
-                SDefEditor e2 = CreateEditor("BreastRadiology-PriorReports", "Prior Reports", ExtensionUrl)
+                SDefEditor e2 = CreateEditor("BreastRadiologyPriorReports", "Prior Reports", ExtensionUrl)
                     .Description(new Markdown()
                         .Paragraph("Prior Diagnostic Report extension")
                         )
@@ -247,7 +247,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
 
             String CreateRecommendationsExtension()
             {
-                SDefEditor e3 = CreateEditor("BreastRadiology-Recommendations", "Recommendations", ExtensionUrl)
+                SDefEditor e3 = CreateEditor("BreastRadiologyRecommendations", "Recommendations", ExtensionUrl)
                     .Description(new Markdown()
                         .Paragraph("Diagnostic Report recommendations section extension")
                     )
@@ -266,7 +266,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                     ;
                 return e3.SDef.Url;
             }
-            SDefEditor e = CreateEditor("BreastRadiology-Report", "Breast Radiology Report", DiagnosticReportUrl)
+            SDefEditor e = CreateEditor("BreastRadiologyReport", "Breast Radiology Report", DiagnosticReportUrl)
                 .Description(new Markdown()
                     .Paragraph("Breast Radiology Diagnostic Report.")
                     .Paragraph("This diagnostic report has links to the data that comprise a Breast Radiology Report, including")
