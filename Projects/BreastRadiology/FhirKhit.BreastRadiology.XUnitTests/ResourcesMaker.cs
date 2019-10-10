@@ -40,34 +40,38 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         public void CreateResources()
         {
             String patientRiskUrl = CreateSectionObservation("Patient Risk",
-                new Markdown().Paragraph("Patient Risk Section"),
-                new string[] { })
+                new Markdown().Paragraph("Patient Risk Section"))
                 .SDef.Url;
 
             String patientHistoryUrl = CreateSectionObservation("Patient History Section",
-                new Markdown().Paragraph("Patient History Section"),
-                new string[] { })
+                new Markdown().Paragraph("Patient History Section"))
                 .SDef.Url;
 
             String findingsLeftUrl = CreateSectionObservation("Findings Left Breast",
-                new Markdown().Paragraph("Findings Left Breast Section"),
-                new string[] { })
+                new Markdown().Paragraph("Findings Left Breast Section"))
                 .SDef.Url;
 
             String findingsRightUrl = CreateSectionObservation("Findings Right Breast",
-                new Markdown().Paragraph("Findings Right Breast Section"),
-                new string[] { })
+                new Markdown().Paragraph("Findings Right Breast Section"))
                 .SDef.Url;
 
             String findingsUrl = CreateSectionObservation("Findings",
                 new Markdown().Paragraph("Findings Section"),
-                new string[] { findingsLeftUrl, findingsRightUrl })
+                new ObservationTarget[]
+                    {
+                        new ObservationTarget(findingsLeftUrl, 1, "1"),
+                        new ObservationTarget(findingsRightUrl, 1, "1")
+                    })
                 .SDef.Url;
 
             String rootUrl = CreateSectionObservation("Root",
                 new Markdown().Paragraph("Root Section"),
-                new string[] { patientHistoryUrl, findingsUrl, patientRiskUrl })
-                .FixedCodeSlice("Observation", "Observation.code", "observationCode", Loinc, "10193-1")
+                new ObservationTarget[]
+                    {
+                        new ObservationTarget(patientHistoryUrl, 1, "1"),
+                        new ObservationTarget(patientRiskUrl, 1, "1")
+                    })
+                .FixedCodeSlice("Observation.code", "observationCode", Loinc, "10193-1")
                 .SDef.Url;
 
             CreateBreastRadiologyReport(rootUrl);
@@ -101,19 +105,69 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             SDefEditor retVal = this.CreateEditor(title, ObservationUrl);
             retVal.Select("Observation.subject").Single();
             retVal.Select("Observation.component").Zero();
+            retVal.Select("Observation.basedOn").Zero();
+            retVal.Select("Observation.derivedFrom").Zero();
+            retVal.Select("Observation.partOf").Zero();
+            retVal.Select("Observation.focus").Zero();
+            CreateCategorySlice(retVal, "category");
+
             return retVal;
         }
 
+        void CreateCategorySlice(SDefEditor sDefEditor, String path)
+        {
+            var eDef = sDefEditor.Find(path);
+            eDef.ElementDefinition.Min(1);
+            sDefEditor.FixedCodeSlice(eDef, 
+                "category", 
+                "http://terminology.hl7.org/CodeSystem/observation-category", 
+                "imaging");
+        }
+        class ObservationTarget
+        {
+            public String Profile { get; }
+            public Int32 Min { get; }
+            public String Max { get; }
+
+            public ObservationTarget(String profile, Int32 min, String max)
+            {
+                this.Profile = profile;
+                this.Min = min;
+                this.Max = max;
+            }
+        }
         SDefEditor CreateSectionObservation(String title,
             Markdown description,
-            String[] targetsObservationProfiles)
+            IEnumerable<ObservationTarget> targets = null)
         {
             SDefEditor e = CreateObservationEditor(title)
                 .Description(description)
                 ;
-            if (targetsObservationProfiles != null)
+            e.Select("Observation.value[x]").Zero();
+            e.Select("Observation.specimen").Zero();
+            e.Select("Observation.device").Zero();
+            e.Select("Observation.referenceRange").Zero();
+
+            e.Select("Observation.interpretation").Zero();
+            e.Select("Observation.note").Zero();
+            e.Select("Observation.bodySite").Zero();
+            e.Select("Observation.method").Zero();
+
+            if (targets != null)
             {
-                //var hasMember = e. 
+                SDefEditor.ElementDefGroup hasMember = e.Find("Observation.hasMember");
+                e.SliceByUrl(hasMember);
+                foreach (ObservationTarget target in targets)
+                {
+                    String sliceName = target.Profile.LastUriPart().UncapFirstLetter();
+                    ElementDefinition sliceElement = hasMember.AppendSlice(sliceName, target.Min, target.Max);
+                    sliceElement.Type.Clear();
+                    sliceElement.Type.Add(new ElementDefinition.TypeRefComponent
+                    {
+                        Code = "Reference",
+                        Profile = new String[] { target.Profile }
+                    });
+                }
             }
             return e;
         }
@@ -178,7 +232,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             String priorReportsExtensionUrl = CreatePriorReportsExtension(e.SDef.Url);
 
             e.Select("code").Pattern = new CodeableConcept(Loinc, "10193-1");
-            e.Select("category").Pattern = new CodeableConcept(Loinc, "10193-1");
+            CreateCategorySlice(e, "category");
             e.Select("specimen").Zero();
             e.Select("conclusion").Single();
             e.Select("conclusionCode").Single();

@@ -1,14 +1,9 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "BreastRadiologyReport",
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>BreastRadiologyReport Profile</b></p>\n  <p>Breast Radiology Diagnostic Report.\n&lt;br&gt;This diagnostic report is the base of the Breast Radiology Report, and contains a summary of the report findings.\n&lt;br&gt;Detailed information about the results of the exam are contained in the Breast Radiology Observation linked to by the &#039;result&#039; field.</p>\n  </div>"
-  },
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyReport",
   "version": "0.0.2",
   "name": "BreastRadiologyReport",
-  "title": "BreastRadiologyReport",
+  "title": "Breast Radiology Report",
   "status": "draft",
   "date": "2019-11-01",
   "publisher": "Hl7 - Clinical Interoperability Council",
@@ -22,19 +17,7 @@
       ]
     }
   ],
-  "description": "Breast Radiology Diagnostic Report.\n<br>This diagnostic report is the base of the Breast Radiology Report, and contains a summary of the report findings.\n<br>Detailed information about the results of the exam are contained in the Breast Radiology Observation linked to by the 'result' field.",
-  "jurisdiction": [
-    {
-      "coding": [
-        {
-          "system": "urn:iso:std:iso:3166",
-          "code": "US",
-          "display": "United States of America"
-        }
-      ]
-    }
-  ],
-  "fhirVersion": "4.0.0",
+  "description": "Breast Radiology Diagnostic Report.\n\n\nThis diagnostic report has links to the data that comprise a Breast Radiology Report, including\n\n\n** references to prior breast radiology reports for this patient\n** references to the observations of this report\n** references to the recommendations of this report\n** a summary of the report findings in a human readable format",
   "kind": "resource",
   "abstract": false,
   "type": "DiagnosticReport",
@@ -45,8 +28,8 @@
       {
         "id": "DiagnosticReport",
         "path": "DiagnosticReport",
-        "short": "BreastRadiologyReport",
-        "definition": "Breast Radiology Diagnostic Report.\n<br>This diagnostic report is the base of the Breast Radiology Report, and contains a summary of the report findings.\n<br>Detailed information about the results of the exam are contained in the Breast Radiology Observation linked to by the 'result' field.",
+        "short": "A Diagnostic report - a combination of request information, atomic results, images, interpretation, as well as formatted reports",
+        "definition": "The findings and interpretation of diagnostic  tests performed on patients, groups of patients, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting and provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports.",
         "comment": "This is intended to capture a single report and is not suitable for use in displaying summary information that covers multiple reports.  For example, this resource has not been designed for laboratory cumulative reporting formats nor detailed structured reports for sequencing.",
         "alias": [
           "Report",
@@ -115,7 +98,6 @@
             "source": "DomainResource"
           }
         ],
-        "mustSupport": false,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -350,7 +332,7 @@
         "id": "DiagnosticReport.extension:recommendations",
         "path": "DiagnosticReport.extension",
         "sliceName": "recommendations",
-        "short": "Additional content defined by implementations",
+        "short": "Recommendations for future care",
         "definition": "Recommendations for future care",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
@@ -368,7 +350,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyRecommendations"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/Recommendations"
             ]
           }
         ],
@@ -385,8 +367,8 @@
         "id": "DiagnosticReport.extension:priorReports",
         "path": "DiagnosticReport.extension",
         "sliceName": "priorReports",
-        "short": "Additional content defined by implementations",
-        "definition": "Prior reports",
+        "short": "Recommendations for future care",
+        "definition": "Recommendations for future care",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
           "extensions",
@@ -403,42 +385,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyPriorReports"
-            ]
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "N/A"
-          }
-        ]
-      },
-      {
-        "id": "DiagnosticReport.extension:impressions",
-        "path": "DiagnosticReport.extension",
-        "sliceName": "impressions",
-        "short": "Additional content defined by implementations",
-        "definition": "Clinical impressions",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "DomainResource.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyImpressions"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/PriorReports"
             ]
           }
         ],
@@ -629,6 +576,15 @@
       {
         "id": "DiagnosticReport.category",
         "path": "DiagnosticReport.category",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "coding"
+            }
+          ],
+          "rules": "open"
+        },
         "short": "Service category",
         "definition": "A code that classifies the clinical discipline, department or diagnostic service that created the report (e.g. cardiology, biochemistry, hematology, MRI). This is used for searching, sorting and display purposes.",
         "comment": "Multiple categories are allowed using various categorization schemes.   The level of granularity is defined by the category concepts in the value set. More fine-grained filtering can be performed using the metadata and/or terminology hierarchy in DiagnosticReport.code.",
@@ -749,55 +705,9 @@
         ]
       },
       {
-        "id": "DiagnosticReport.category.coding",
+        "id": "DiagnosticReport.category.coding:category",
         "path": "DiagnosticReport.category.coding",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "code"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        },
-        "short": "Code defined by a terminology system",
-        "definition": "A reference to a code defined by a terminology system.",
-        "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
-        "requirements": "Allows for alternative encodings within a code system, and translations to other code systems.",
-        "min": 1,
-        "max": "*",
-        "base": {
-          "path": "CodeableConcept.coding",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.1-8, C*E.10-22"
-          },
-          {
-            "identity": "rim",
-            "map": "union(., ./translation)"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
-          }
-        ]
-      },
-      {
-        "id": "DiagnosticReport.category.coding:FixedCategory",
-        "path": "DiagnosticReport.category.coding",
-        "sliceName": "FixedCategory",
+        "sliceName": "category",
         "short": "Code defined by a terminology system",
         "definition": "A reference to a code defined by a terminology system.",
         "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
@@ -815,8 +725,8 @@
           }
         ],
         "patternCoding": {
-          "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
-          "code": "RAD"
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "imaging"
         },
         "isModifier": false,
         "isSummary": true,
@@ -897,6 +807,14 @@
             "code": "CodeableConcept"
           }
         ],
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "10193-1"
+            }
+          ]
+        },
         "isModifier": false,
         "isSummary": true,
         "binding": {
@@ -930,209 +848,10 @@
         ]
       },
       {
-        "id": "DiagnosticReport.code.id",
-        "path": "DiagnosticReport.code.id",
-        "representation": [
-          "xmlAttr"
-        ],
-        "short": "Unique id for inter-element referencing",
-        "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Element.id",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "DiagnosticReport.code.extension",
-        "path": "DiagnosticReport.code.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "description": "Extensions are always sliced by (at least) url",
-          "rules": "open"
-        },
-        "short": "Additional content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Element.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "DiagnosticReport.code.coding",
-        "path": "DiagnosticReport.code.coding",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "code"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        },
-        "short": "Code defined by a terminology system",
-        "definition": "A reference to a code defined by a terminology system.",
-        "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
-        "requirements": "Allows for alternative encodings within a code system, and translations to other code systems.",
-        "min": 1,
-        "max": "*",
-        "base": {
-          "path": "CodeableConcept.coding",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.1-8, C*E.10-22"
-          },
-          {
-            "identity": "rim",
-            "map": "union(., ./translation)"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
-          }
-        ]
-      },
-      {
-        "id": "DiagnosticReport.code.coding:FixedCode",
-        "path": "DiagnosticReport.code.coding",
-        "sliceName": "FixedCode",
-        "short": "Code defined by a terminology system",
-        "definition": "A reference to a code defined by a terminology system.",
-        "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
-        "requirements": "Allows for alternative encodings within a code system, and translations to other code systems.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "CodeableConcept.coding",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "patternCoding": {
-          "system": "http://loinc.org",
-          "code": "10193-1"
-        },
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.1-8, C*E.10-22"
-          },
-          {
-            "identity": "rim",
-            "map": "union(., ./translation)"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
-          }
-        ]
-      },
-      {
-        "id": "DiagnosticReport.code.text",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-            "valueBoolean": true
-          }
-        ],
-        "path": "DiagnosticReport.code.text",
-        "short": "Plain text representation of the concept",
-        "definition": "A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.",
-        "comment": "Very often the text is the same as a displayName of one of the codings.",
-        "requirements": "The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "CodeableConcept.text",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "C*E.9. But note many systems use C*E.2 for this"
-          },
-          {
-            "identity": "rim",
-            "map": "./originalText[mediaType/code=\"text/plain\"]/data"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText"
-          }
-        ]
-      },
-      {
         "id": "DiagnosticReport.subject",
         "path": "DiagnosticReport.subject",
-        "short": "The subject of an observation",
-        "definition": "The subject of an observation.",
+        "short": "The subject of the report - usually, but not always, the patient",
+        "definition": "The subject of the report. Usually, but not always, this is a patient. However, diagnostic services also perform analyses on specimens collected from a variety of other sources.",
         "requirements": "SHALL know the subject context.",
         "alias": [
           "Patient"
@@ -1148,7 +867,10 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Patient"
+              "http://hl7.org/fhir/StructureDefinition/Patient",
+              "http://hl7.org/fhir/StructureDefinition/Group",
+              "http://hl7.org/fhir/StructureDefinition/Device",
+              "http://hl7.org/fhir/StructureDefinition/Location"
             ]
           }
         ],
@@ -1283,7 +1005,7 @@
           "Date Issued",
           "Date Verified"
         ],
-        "min": 1,
+        "min": 0,
         "max": "1",
         "base": {
           "path": "DiagnosticReport.issued",
@@ -1329,7 +1051,7 @@
           "Director"
         ],
         "min": 0,
-        "max": "1",
+        "max": "*",
         "base": {
           "path": "DiagnosticReport.performer",
           "min": 0,
@@ -1340,7 +1062,9 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/Practitioner",
-              "http://hl7.org/fhir/StructureDefinition/Organization"
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+              "http://hl7.org/fhir/StructureDefinition/Organization",
+              "http://hl7.org/fhir/StructureDefinition/CareTeam"
             ]
           }
         ],
@@ -1377,7 +1101,7 @@
           "Reported by"
         ],
         "min": 0,
-        "max": "1",
+        "max": "*",
         "base": {
           "path": "DiagnosticReport.resultsInterpreter",
           "min": 0,
@@ -1388,7 +1112,9 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/Practitioner",
-              "http://hl7.org/fhir/StructureDefinition/Organization"
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+              "http://hl7.org/fhir/StructureDefinition/Organization",
+              "http://hl7.org/fhir/StructureDefinition/CareTeam"
             ]
           }
         ],
@@ -1451,8 +1177,8 @@
       {
         "id": "DiagnosticReport.result",
         "path": "DiagnosticReport.result",
-        "short": "BreastRadiologyObservation: Breast Radiology Observation",
-        "definition": "Breast Radiology Observation.\n<br>This observation is the root of the multiple observations that comprise a breast radiology observation.",
+        "short": "Observations",
+        "definition": "[Observations](observation.html)  that are part of this diagnostic report.",
         "comment": "Observations can contain observations.",
         "requirements": "Need to support individual results, or  groups of results, where the result grouping is arbitrary, but meaningful.",
         "alias": [
@@ -1477,7 +1203,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyObservation"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/Root"
             ]
           }
         ],
@@ -1835,9 +1561,33 @@
       {
         "id": "DiagnosticReport",
         "path": "DiagnosticReport",
-        "short": "BreastRadiologyReport",
-        "definition": "Breast Radiology Diagnostic Report.\n<br>This diagnostic report is the base of the Breast Radiology Report, and contains a summary of the report findings.\n<br>Detailed information about the results of the exam are contained in the Breast Radiology Observation linked to by the 'result' field.",
-        "mustSupport": false
+        "short": "A Diagnostic report - a combination of request information, atomic results, images, interpretation, as well as formatted reports",
+        "definition": "The findings and interpretation of diagnostic  tests performed on patients, groups of patients, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting and provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports.",
+        "comment": "This is intended to capture a single report and is not suitable for use in displaying summary information that covers multiple reports.  For example, this resource has not been designed for laboratory cumulative reporting formats nor detailed structured reports for sequencing.",
+        "alias": [
+          "Report",
+          "Test",
+          "Result",
+          "Results",
+          "Labs",
+          "Laboratory"
+        ],
+        "min": 0,
+        "max": "*",
+        "mapping": [
+          {
+            "identity": "workflow",
+            "map": "Event"
+          },
+          {
+            "identity": "v2",
+            "map": "ORU -> OBR"
+          },
+          {
+            "identity": "rim",
+            "map": "Observation[classCode=OBS, moodCode=EVN]"
+          }
+        ]
       },
       {
         "id": "DiagnosticReport.extension",
@@ -1851,15 +1601,23 @@
           ],
           "ordered": false,
           "rules": "open"
+        },
+        "base": {
+          "path": "DiagnosticReport.extension",
+          "min": 0,
+          "max": "*"
         }
       },
       {
         "id": "DiagnosticReport.extension:recommendations",
         "path": "DiagnosticReport.extension",
         "sliceName": "recommendations",
+        "short": "Recommendations for future care",
         "definition": "Recommendations for future care",
+        "min": 0,
+        "max": "*",
         "base": {
-          "path": "DomainResource.extension",
+          "path": "DiagnosticReport.extension",
           "min": 0,
           "max": "*"
         },
@@ -1867,18 +1625,22 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyRecommendations"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/Recommendations"
             ]
           }
-        ]
+        ],
+        "isModifier": false
       },
       {
         "id": "DiagnosticReport.extension:priorReports",
         "path": "DiagnosticReport.extension",
         "sliceName": "priorReports",
-        "definition": "Prior reports",
+        "short": "Recommendations for future care",
+        "definition": "Recommendations for future care",
+        "min": 0,
+        "max": "*",
         "base": {
-          "path": "DomainResource.extension",
+          "path": "DiagnosticReport.extension",
           "min": 0,
           "max": "*"
         },
@@ -1886,188 +1648,94 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyPriorReports"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/PriorReports"
             ]
           }
-        ]
-      },
-      {
-        "id": "DiagnosticReport.extension:impressions",
-        "path": "DiagnosticReport.extension",
-        "sliceName": "impressions",
-        "definition": "Clinical impressions",
-        "base": {
-          "path": "DomainResource.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyImpressions"
-            ]
-          }
-        ]
+        ],
+        "isModifier": false
       },
       {
         "id": "DiagnosticReport.category",
         "path": "DiagnosticReport.category",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "coding"
+            }
+          ],
+          "rules": "open"
+        },
         "min": 1,
-        "max": "*"
+        "base": {
+          "path": "DiagnosticReport.category",
+          "min": 0,
+          "max": "*"
+        }
       },
       {
         "id": "DiagnosticReport.category.coding",
-        "path": "DiagnosticReport.category.coding",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "code"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        },
-        "min": 1,
-        "max": "*"
+        "path": "DiagnosticReport.category.coding"
       },
       {
-        "id": "DiagnosticReport.category.coding:FixedCategory",
+        "id": "DiagnosticReport.category.coding:category",
         "path": "DiagnosticReport.category.coding",
-        "sliceName": "FixedCategory",
-        "short": "Code defined by a terminology system",
-        "definition": "A reference to a code defined by a terminology system.",
+        "sliceName": "category",
         "min": 1,
         "max": "1",
         "base": {
-          "path": "CodeableConcept.coding",
+          "path": "DiagnosticReport.category",
           "min": 0,
           "max": "*"
         },
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
         "patternCoding": {
-          "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
-          "code": "RAD"
-        },
-        "isSummary": true
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "imaging"
+        }
       },
       {
-        "id": "DiagnosticReport.code.coding",
-        "path": "DiagnosticReport.code.coding",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "code"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        },
-        "min": 1,
-        "max": "*"
-      },
-      {
-        "id": "DiagnosticReport.code.coding:FixedCode",
-        "path": "DiagnosticReport.code.coding",
-        "sliceName": "FixedCode",
-        "short": "Code defined by a terminology system",
-        "definition": "A reference to a code defined by a terminology system.",
-        "min": 1,
-        "max": "1",
+        "id": "DiagnosticReport.code",
+        "path": "DiagnosticReport.code",
         "base": {
-          "path": "CodeableConcept.coding",
-          "min": 0,
-          "max": "*"
+          "path": "DiagnosticReport.code",
+          "min": 1,
+          "max": "1"
         },
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "patternCoding": {
-          "system": "http://loinc.org",
-          "code": "10193-1"
-        },
-        "isSummary": true
-      },
-      {
-        "id": "DiagnosticReport.subject",
-        "path": "DiagnosticReport.subject",
-        "short": "The subject of an observation",
-        "definition": "The subject of an observation.",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Patient"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "DiagnosticReport.encounter",
-        "path": "DiagnosticReport.encounter"
-      },
-      {
-        "id": "DiagnosticReport.issued",
-        "path": "DiagnosticReport.issued",
-        "min": 1,
-        "max": "1"
-      },
-      {
-        "id": "DiagnosticReport.performer",
-        "path": "DiagnosticReport.performer",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Practitioner",
-              "http://hl7.org/fhir/StructureDefinition/Organization"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "DiagnosticReport.resultsInterpreter",
-        "path": "DiagnosticReport.resultsInterpreter",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Practitioner",
-              "http://hl7.org/fhir/StructureDefinition/Organization"
-            ]
-          }
-        ]
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "10193-1"
+            }
+          ]
+        }
       },
       {
         "id": "DiagnosticReport.specimen",
         "path": "DiagnosticReport.specimen",
         "min": 0,
-        "max": "0"
+        "max": "0",
+        "base": {
+          "path": "DiagnosticReport.specimen",
+          "min": 0,
+          "max": "*"
+        }
       },
       {
         "id": "DiagnosticReport.result",
         "path": "DiagnosticReport.result",
-        "short": "BreastRadiologyObservation: Breast Radiology Observation",
-        "definition": "Breast Radiology Observation.\n<br>This observation is the root of the multiple observations that comprise a breast radiology observation.",
         "min": 1,
         "max": "1",
+        "base": {
+          "path": "DiagnosticReport.result",
+          "min": 0,
+          "max": "*"
+        },
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyObservation"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/Root"
             ]
           }
         ]
@@ -2076,13 +1744,23 @@
         "id": "DiagnosticReport.conclusion",
         "path": "DiagnosticReport.conclusion",
         "min": 1,
-        "max": "1"
+        "max": "1",
+        "base": {
+          "path": "DiagnosticReport.conclusion",
+          "min": 0,
+          "max": "1"
+        }
       },
       {
         "id": "DiagnosticReport.conclusionCode",
         "path": "DiagnosticReport.conclusionCode",
         "min": 1,
-        "max": "1"
+        "max": "1",
+        "base": {
+          "path": "DiagnosticReport.conclusionCode",
+          "min": 0,
+          "max": "*"
+        }
       }
     ]
   }

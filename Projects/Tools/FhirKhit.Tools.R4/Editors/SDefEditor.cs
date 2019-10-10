@@ -190,18 +190,50 @@ namespace FhirKhit.Tools.R4
             return outputName;
         }
 
+        public void SliceByUrl(ElementDefGroup eGroup)
+        {
+            SliceByUrl(eGroup.ElementDefinition);
+        }
+
+        public void SliceByUrl(ElementDefinition eDef)
+        {
+            if (eDef.Slicing == null)
+            {
+                eDef.Slicing = new ElementDefinition.SlicingComponent
+                {
+                    Ordered = false,
+                    Rules = ElementDefinition.SlicingRules.Open
+                };
+            }
+            eDef.Slicing.Discriminator.Add(new ElementDefinition.DiscriminatorComponent
+            {
+                Type = ElementDefinition.DiscriminatorType.Value,
+                Path = "url"
+            });
+        }
+
 
         /// <summary>
         /// Add the indicated slice by url.
         /// </summary>
-        public SDefEditor FixedCodeSlice(String baseName,
-            String path,
+        public SDefEditor FixedCodeSlice(String path,
+            String sliceName,
+            String system,
+            String code)
+        {
+            ElementDefGroup e = this.Find(path);
+            return FixedCodeSlice(e, sliceName, system, code);
+        }
+
+        /// <summary>
+        /// Add the indicated slice by url.
+        /// </summary>
+        public SDefEditor FixedCodeSlice(ElementDefGroup e,
             String sliceName,
             String system,
             String code)
         {
             sliceName = sliceName.UncapFirstLetter();
-            ElementDefGroup e = this.Find(path);
             e.ElementDefinition.Slicing = new ElementDefinition.SlicingComponent
             {
                 Rules = ElementDefinition.SlicingRules.Open
@@ -215,23 +247,24 @@ namespace FhirKhit.Tools.R4
 
             ElementDefinition coding = new ElementDefinition
             {
-                ElementId = $"{path}.coding",
-                Path = $"{path}.coding",
+                ElementId = $"{e.ElementDefinition.Path}.coding",
+                Path = $"{e.ElementDefinition.Path}.coding",
             };
             e.RelatedElements.Add(coding);
 
             ElementDefinition slice = new ElementDefinition
             {
-                ElementId = $"{path}.coding:{sliceName}",
-                Path = $"{path}.coding",
+                ElementId = $"{e.ElementDefinition.Path}.coding:{sliceName}",
+                Path = $"{e.ElementDefinition.Path}.coding",
                 SliceName = sliceName,
                 Min = 1,
                 Max = "1",
+                Pattern = new Coding(system, code),
                 Base = new ElementDefinition.BaseComponent
                 {
-                    Min = 0,
-                    Max = "*",
-                    Path = $"{baseName}"
+                    Min = e.BaseElementDefinition.Min,
+                    Max = e.BaseElementDefinition.Max,
+                    Path = $"{e.BaseElementDefinition.Path}"
                 }
             };
             e.RelatedElements.Add(slice);
@@ -268,18 +301,7 @@ namespace FhirKhit.Tools.R4
             // I assume that if slicing exists, it was added by the code below.
             // If someone else adds slicing differently than below there will be a problem....
             if (extDef.Slicing == null)
-            {
-                extDef.Slicing = new ElementDefinition.SlicingComponent
-                {
-                    Ordered = false,
-                    Rules = ElementDefinition.SlicingRules.Open
-                };
-                extDef.Slicing.Discriminator.Add(new ElementDefinition.DiscriminatorComponent
-                {
-                    Type = ElementDefinition.DiscriminatorType.Value,
-                    Path = "url"
-                });
-            }
+                SliceByUrl(extDef);
         }
 
         public ElementDefinition SimpleExtension(String name, String extensionUrl)

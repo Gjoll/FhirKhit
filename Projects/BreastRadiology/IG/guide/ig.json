@@ -57,209 +57,32 @@
     "examples"
   ],
   "resources": {
-    "CodeSystem/AbnormalityDensityCS": {
-      "base": "CodeSystem-AbnormalityDensityCS.html"
-    },
-    "CodeSystem/AbnormalityTypeCS": {
-      "base": "CodeSystem-AbnormalityTypeCS.html"
-    },
-    "CodeSystem/AssociatedFindingsCS": {
-      "base": "CodeSystem-AssociatedFindingsCS.html"
-    },
-    "CodeSystem/AsymmetryTypesCS": {
-      "base": "CodeSystem-AsymmetryTypesCS.html"
-    },
-    "CodeSystem/BiRadCodeCS": {
-      "base": "CodeSystem-BiRadCodeCS.html"
-    },
-    "CodeSystem/BreastAbnormalityCodesCS": {
-      "base": "CodeSystem-BreastAbnormalityCodesCS.html"
-    },
-    "CodeSystem/CalcificationTypeCS": {
-      "base": "CodeSystem-CalcificationTypeCS.html"
-    },
-    "CodeSystem/ChangeCS": {
-      "base": "CodeSystem-ChangeCS.html"
-    },
-    "CodeSystem/ConsistentWithCS": {
-      "base": "CodeSystem-ConsistentWithCS.html"
-    },
-    "CodeSystem/CystTypesCS": {
-      "base": "CodeSystem-CystTypesCS.html"
-    },
-    "CodeSystem/ForeignBodyCS": {
-      "base": "CodeSystem-ForeignBodyCS.html"
-    },
-    "CodeSystem/HilumCS": {
-      "base": "CodeSystem-HilumCS.html"
-    },
-    "CodeSystem/LymphNodeQualifiersCS": {
-      "base": "CodeSystem-LymphNodeQualifiersCS.html"
-    },
-    "CodeSystem/MarginCS": {
-      "base": "CodeSystem-MarginCS.html"
-    },
-    "CodeSystem/MassTypesCS": {
-      "base": "CodeSystem-MassTypesCS.html"
-    },
-    "CodeSystem/NodeTypesCS": {
-      "base": "CodeSystem-NodeTypesCS.html"
-    },
-    "CodeSystem/ShapeCS": {
-      "base": "CodeSystem-ShapeCS.html"
-    },
-    "CodeSystem/VascularityCS": {
-      "base": "CodeSystem-VascularityCS.html"
-    },
-    "CodeSystem/WallCS": {
-      "base": "CodeSystem-WallCS.html"
-    },
-    "StructureDefinition/BreastRadiologyAbnormality": {
-      "base": "StructureDefinition-BreastRadiologyAbnormality.html"
-    },
-    "StructureDefinition/BreastRadiologyAbnormalityAssociatedFindings": {
-      "base": "StructureDefinition-BreastRadiologyAbnormalityAssociatedFindings.html"
-    },
-    "StructureDefinition/BreastRadiologyAbnormalityAsymmetryType": {
-      "base": "StructureDefinition-BreastRadiologyAbnormalityAsymmetryType.html"
-    },
-    "StructureDefinition/BreastRadiologyAbnormalityBiRadCode": {
-      "base": "StructureDefinition-BreastRadiologyAbnormalityBiRadCode.html"
-    },
-    "StructureDefinition/BreastRadiologyAbnormalityCalcificationType": {
-      "base": "StructureDefinition-BreastRadiologyAbnormalityCalcificationType.html"
-    },
-    "StructureDefinition/BreastRadiologyAbnormalityChange": {
-      "base": "StructureDefinition-BreastRadiologyAbnormalityChange.html"
-    },
-    "StructureDefinition/BreastRadiologyAbnormalityConsistentWith": {
-      "base": "StructureDefinition-BreastRadiologyAbnormalityConsistentWith.html"
-    },
-    "StructureDefinition/BreastRadiologyAbnormalityCystTypes": {
-      "base": "StructureDefinition-BreastRadiologyAbnormalityCystTypes.html"
-    },
-    "StructureDefinition/BreastRadiologyAbnormalityDensity": {
-      "base": "StructureDefinition-BreastRadiologyAbnormalityDensity.html"
-    },
-    "StructureDefinition/BreastRadiologyAbnormalityForeignBody": {
-      "base": "StructureDefinition-BreastRadiologyAbnormalityForeignBody.html"
-    },
-    "StructureDefinition/BreastRadiologyAbnormalityHilum": {
-      "base": "StructureDefinition-BreastRadiologyAbnormalityHilum.html"
-    },
-    "StructureDefinition/BreastRadiologyAbnormalityLymphNodeQualifiers": {
-      "base": "StructureDefinition-BreastRadiologyAbnormalityLymphNodeQualifiers.html"
-    },
-    "StructureDefinition/BreastRadiologyAbnormalityMargin": {
-      "base": "StructureDefinition-BreastRadiologyAbnormalityMargin.html"
-    },
-    "StructureDefinition/BreastRadiologyAbnormalityMassTypes": {
-      "base": "StructureDefinition-BreastRadiologyAbnormalityMassTypes.html"
-    },
-    "StructureDefinition/BreastRadiologyAbnormalityMaxLength": {
-      "base": "StructureDefinition-BreastRadiologyAbnormalityMaxLength.html"
-    },
-    "StructureDefinition/BreastRadiologyAbnormalityNodeTypes": {
-      "base": "StructureDefinition-BreastRadiologyAbnormalityNodeTypes.html"
-    },
-    "StructureDefinition/BreastRadiologyAbnormalityShape": {
-      "base": "StructureDefinition-BreastRadiologyAbnormalityShape.html"
-    },
-    "StructureDefinition/BreastRadiologyAbnormalityType": {
-      "base": "StructureDefinition-BreastRadiologyAbnormalityType.html"
-    },
-    "StructureDefinition/BreastRadiologyAbnormalityVascularity": {
-      "base": "StructureDefinition-BreastRadiologyAbnormalityVascularity.html"
-    },
-    "StructureDefinition/BreastRadiologyAbnormalityWall": {
-      "base": "StructureDefinition-BreastRadiologyAbnormalityWall.html"
-    },
-    "StructureDefinition/BreastRadiologyImpressions": {
-      "base": "StructureDefinition-BreastRadiologyImpressions.html"
-    },
-    "StructureDefinition/BreastRadiologyObservation": {
-      "base": "StructureDefinition-BreastRadiologyObservation.html"
-    },
-    "StructureDefinition/BreastRadiologyObservationFindings": {
-      "base": "StructureDefinition-BreastRadiologyObservationFindings.html"
-    },
-    "StructureDefinition/BreastRadiologyObservationFindingsLeftBreast": {
-      "base": "StructureDefinition-BreastRadiologyObservationFindingsLeftBreast.html"
-    },
-    "StructureDefinition/BreastRadiologyObservationFindingsRightBreast": {
-      "base": "StructureDefinition-BreastRadiologyObservationFindingsRightBreast.html"
-    },
-    "StructureDefinition/BreastRadiologyObservationPatientHistory": {
-      "base": "StructureDefinition-BreastRadiologyObservationPatientHistory.html"
-    },
-    "StructureDefinition/BreastRadiologyObservationPatientRisk": {
-      "base": "StructureDefinition-BreastRadiologyObservationPatientRisk.html"
-    },
-    "StructureDefinition/BreastRadiologyPriorReports": {
-      "base": "StructureDefinition-BreastRadiologyPriorReports.html"
-    },
-    "StructureDefinition/BreastRadiologyRecommendations": {
-      "base": "StructureDefinition-BreastRadiologyRecommendations.html"
-    },
     "StructureDefinition/BreastRadiologyReport": {
       "base": "StructureDefinition-BreastRadiologyReport.html"
     },
-    "ValueSet/AbnormalityDensityVS": {
-      "base": "ValueSet-AbnormalityDensityVS.html"
+    "StructureDefinition/Findings": {
+      "base": "StructureDefinition-Findings.html"
     },
-    "ValueSet/AbnormalityTypeVS": {
-      "base": "ValueSet-AbnormalityTypeVS.html"
+    "StructureDefinition/FindingsLeftBreast": {
+      "base": "StructureDefinition-FindingsLeftBreast.html"
     },
-    "ValueSet/AssociatedFindingsVS": {
-      "base": "ValueSet-AssociatedFindingsVS.html"
+    "StructureDefinition/FindingsRightBreast": {
+      "base": "StructureDefinition-FindingsRightBreast.html"
     },
-    "ValueSet/AsymmetryTypesVS": {
-      "base": "ValueSet-AsymmetryTypesVS.html"
+    "StructureDefinition/PatientHistorySection": {
+      "base": "StructureDefinition-PatientHistorySection.html"
     },
-    "ValueSet/BiRadCodeVS": {
-      "base": "ValueSet-BiRadCodeVS.html"
+    "StructureDefinition/PatientRisk": {
+      "base": "StructureDefinition-PatientRisk.html"
     },
-    "ValueSet/BreastAbnormalityCodesVS": {
-      "base": "ValueSet-BreastAbnormalityCodesVS.html"
+    "StructureDefinition/PriorReports": {
+      "base": "StructureDefinition-PriorReports.html"
     },
-    "ValueSet/CalcificationTypeVS": {
-      "base": "ValueSet-CalcificationTypeVS.html"
+    "StructureDefinition/Recommendations": {
+      "base": "StructureDefinition-Recommendations.html"
     },
-    "ValueSet/ChangeVS": {
-      "base": "ValueSet-ChangeVS.html"
-    },
-    "ValueSet/ConsistentWithVS": {
-      "base": "ValueSet-ConsistentWithVS.html"
-    },
-    "ValueSet/CystTypesVS": {
-      "base": "ValueSet-CystTypesVS.html"
-    },
-    "ValueSet/ForeignBodyVS": {
-      "base": "ValueSet-ForeignBodyVS.html"
-    },
-    "ValueSet/HilumVS": {
-      "base": "ValueSet-HilumVS.html"
-    },
-    "ValueSet/LymphNodeQualifiersVS": {
-      "base": "ValueSet-LymphNodeQualifiersVS.html"
-    },
-    "ValueSet/MarginVS": {
-      "base": "ValueSet-MarginVS.html"
-    },
-    "ValueSet/MassTypesVS": {
-      "base": "ValueSet-MassTypesVS.html"
-    },
-    "ValueSet/NodeTypesVS": {
-      "base": "ValueSet-NodeTypesVS.html"
-    },
-    "ValueSet/ShapeVS": {
-      "base": "ValueSet-ShapeVS.html"
-    },
-    "ValueSet/VascularityVS": {
-      "base": "ValueSet-VascularityVS.html"
-    },
-    "ValueSet/WallVS": {
-      "base": "ValueSet-WallVS.html"
+    "StructureDefinition/Root": {
+      "base": "StructureDefinition-Root.html"
     }
   },
   "special-urls": [],
