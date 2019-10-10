@@ -102,6 +102,27 @@
       },
       "name" : "Root",
       "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/MammographyBreastAbnormalityObservation"
+      },
+      "name" : "MammographyBreastAbnormalityObservation",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/MRIBreastAbnormalityObservation"
+      },
+      "name" : "MRIBreastAbnormalityObservation",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/UltraSoundBreastAbnormalityObservation"
+      },
+      "name" : "UltraSoundBreastAbnormalityObservation",
+      "exampleBoolean" : false
     }],
     "page" : {
       "nameUrl" : "index.html",

@@ -1,9 +1,9 @@
 {
   "resourceType": "StructureDefinition",
-  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/FindingsRightBreast",
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MRIBreastAbnormalityObservation",
   "version": "0.0.2",
-  "name": "FindingsRightBreast",
-  "title": "Findings Right Breast",
+  "name": "MRIBreastAbnormalityObservation",
+  "title": "MRI Breast Abnormality Observation",
   "status": "draft",
   "date": "2019-11-01",
   "publisher": "Hl7 - Clinical Interoperability Council",
@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Findings Right Breast Section",
+  "description": "MRI Breast Abnormality Observation",
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
@@ -204,12 +204,39 @@
       {
         "id": "Observation.method",
         "path": "Observation.method",
-        "min": 0,
-        "max": "0",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "coding"
+            }
+          ],
+          "rules": "open"
+        },
         "base": {
           "path": "Observation.method",
           "min": 0,
           "max": "1"
+        }
+      },
+      {
+        "id": "Observation.method.coding",
+        "path": "Observation.method.coding"
+      },
+      {
+        "id": "Observation.method.coding:method",
+        "path": "Observation.method.coding",
+        "sliceName": "method",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Observation.method",
+          "min": 0,
+          "max": "1"
+        },
+        "patternCoding": {
+          "system": "http://snomed.info/sct",
+          "code": "115341008"
         }
       },
       {
@@ -224,17 +251,6 @@
         }
       },
       {
-        "id": "Observation.device",
-        "path": "Observation.device",
-        "min": 0,
-        "max": "0",
-        "base": {
-          "path": "Observation.device",
-          "min": 0,
-          "max": "1"
-        }
-      },
-      {
         "id": "Observation.referenceRange",
         "path": "Observation.referenceRange",
         "min": 0,
@@ -244,85 +260,6 @@
           "min": 0,
           "max": "*"
         }
-      },
-      {
-        "id": "Observation.hasMember",
-        "path": "Observation.hasMember",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        },
-        "base": {
-          "path": "Observation.hasMember",
-          "min": 0,
-          "max": "*"
-        }
-      },
-      {
-        "id": "Observation.hasMember:mammographyBreastAbnormalityObservation",
-        "path": "Observation.hasMember",
-        "sliceName": "mammographyBreastAbnormalityObservation",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Observation.hasMember",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MammographyBreastAbnormalityObservation"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "Observation.hasMember:mRIBreastAbnormalityObservation",
-        "path": "Observation.hasMember",
-        "sliceName": "mRIBreastAbnormalityObservation",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Observation.hasMember",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MRIBreastAbnormalityObservation"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "Observation.hasMember:ultraSoundBreastAbnormalityObservation",
-        "path": "Observation.hasMember",
-        "sliceName": "ultraSoundBreastAbnormalityObservation",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Observation.hasMember",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/UltraSoundBreastAbnormalityObservation"
-            ]
-          }
-        ]
       },
       {
         "id": "Observation.derivedFrom",

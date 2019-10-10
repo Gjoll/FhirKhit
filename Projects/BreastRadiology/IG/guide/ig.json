@@ -69,6 +69,12 @@
     "StructureDefinition/FindingsRightBreast": {
       "base": "StructureDefinition-FindingsRightBreast.html"
     },
+    "StructureDefinition/MammographyBreastAbnormalityObservation": {
+      "base": "StructureDefinition-MammographyBreastAbnormalityObservation.html"
+    },
+    "StructureDefinition/MRIBreastAbnormalityObservation": {
+      "base": "StructureDefinition-MRIBreastAbnormalityObservation.html"
+    },
     "StructureDefinition/PatientHistorySection": {
       "base": "StructureDefinition-PatientHistorySection.html"
     },
@@ -83,6 +89,9 @@
     },
     "StructureDefinition/Root": {
       "base": "StructureDefinition-Root.html"
+    },
+    "StructureDefinition/UltraSoundBreastAbnormalityObservation": {
+      "base": "StructureDefinition-UltraSoundBreastAbnormalityObservation.html"
     }
   },
   "special-urls": [],

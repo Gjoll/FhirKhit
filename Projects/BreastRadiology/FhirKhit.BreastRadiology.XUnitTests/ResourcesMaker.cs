@@ -39,33 +39,65 @@ namespace FhirKhit.BreastRadiology.XUnitTests
 
         public void CreateResources()
         {
-            String patientRiskUrl = CreateSectionObservation("Patient Risk",
+            //$ Fix me. Incorrect method!!!
+            String abMammo = this.CreateObservationAbnormality("Mammography Breast Abnormality Observation",
+                new Markdown().Paragraph("Mammography Breast Abnormality Observation"),
+                "http://snomed.info/sct", 
+                "115341008")
+                .SDef.Url;
+
+            //$ Fix me. Incorrect method!!!
+            String abMRI = this.CreateObservationAbnormality("MRI Breast Abnormality Observation",
+                new Markdown().Paragraph("MRI Breast Abnormality Observation"),
+                "http://snomed.info/sct", 
+                "115341008")
+                .SDef.Url;
+
+            //$ Fix me. Incorrect method!!!
+            String abUS = this.CreateObservationAbnormality("Ultra Sound Breast Abnormality Observation",
+                new Markdown().Paragraph("Ultra Sound Breast Abnormality Observation"),
+                "http://snomed.info/sct", 
+                "115341008")
+                .SDef.Url;
+
+            ObservationTarget[] abnormalityTargets = new ObservationTarget[]
+            {
+                new ObservationTarget(abMammo, 0, "*"),
+                new ObservationTarget(abMRI, 0, "*"),
+                new ObservationTarget(abUS, 0, "*")
+            };
+
+            String patientRiskUrl = CreateObservationSection("Patient Risk",
                 new Markdown().Paragraph("Patient Risk Section"))
                 .SDef.Url;
 
-            String patientHistoryUrl = CreateSectionObservation("Patient History Section",
+            String patientHistoryUrl = CreateObservationSection("Patient History Section",
                 new Markdown().Paragraph("Patient History Section"))
                 .SDef.Url;
 
-            String findingsLeftUrl = CreateSectionObservation("Findings Left Breast",
+            String findingsLeftUrl = CreateObservationSection("Findings Left Breast",
                 new Markdown().Paragraph("Findings Left Breast Section"))
+                .SliceByUrl("Observation.hasMember", abnormalityTargets)
                 .SDef.Url;
 
-            String findingsRightUrl = CreateSectionObservation("Findings Right Breast",
+            String findingsRightUrl = CreateObservationSection("Findings Right Breast",
                 new Markdown().Paragraph("Findings Right Breast Section"))
+                .SliceByUrl("Observation.hasMember", abnormalityTargets)
                 .SDef.Url;
 
-            String findingsUrl = CreateSectionObservation("Findings",
-                new Markdown().Paragraph("Findings Section"),
-                new ObservationTarget[]
+            String findingsUrl = CreateObservationSection("Findings",
+                new Markdown().Paragraph("Findings Section"))
+                .SliceByUrl("Observation.hasMember",
+                    new ObservationTarget[]
                     {
                         new ObservationTarget(findingsLeftUrl, 1, "1"),
                         new ObservationTarget(findingsRightUrl, 1, "1")
                     })
                 .SDef.Url;
 
-            String rootUrl = CreateSectionObservation("Root",
-                new Markdown().Paragraph("Root Section"),
+            String rootUrl = CreateObservationSection("Root",
+                new Markdown().Paragraph("Root Section"))
+                .SliceByUrl("Observation.hasMember",
                 new ObservationTarget[]
                     {
                         new ObservationTarget(patientHistoryUrl, 1, "1"),
@@ -118,27 +150,14 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         {
             var eDef = sDefEditor.Find(path);
             eDef.ElementDefinition.Min(1);
-            sDefEditor.FixedCodeSlice(eDef, 
-                "category", 
-                "http://terminology.hl7.org/CodeSystem/observation-category", 
+            sDefEditor.FixedCodeSlice(eDef,
+                "category",
+                "http://terminology.hl7.org/CodeSystem/observation-category",
                 "imaging");
         }
-        class ObservationTarget
-        {
-            public String Profile { get; }
-            public Int32 Min { get; }
-            public String Max { get; }
 
-            public ObservationTarget(String profile, Int32 min, String max)
-            {
-                this.Profile = profile;
-                this.Min = min;
-                this.Max = max;
-            }
-        }
-        SDefEditor CreateSectionObservation(String title,
-            Markdown description,
-            IEnumerable<ObservationTarget> targets = null)
+        SDefEditor CreateObservationSection(String title,
+            Markdown description)
         {
             SDefEditor e = CreateObservationEditor(title)
                 .Description(description)
@@ -152,23 +171,32 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             e.Select("Observation.note").Zero();
             e.Select("Observation.bodySite").Zero();
             e.Select("Observation.method").Zero();
+            return e;
+        }
 
-            if (targets != null)
-            {
-                SDefEditor.ElementDefGroup hasMember = e.Find("Observation.hasMember");
-                e.SliceByUrl(hasMember);
-                foreach (ObservationTarget target in targets)
-                {
-                    String sliceName = target.Profile.LastUriPart().UncapFirstLetter();
-                    ElementDefinition sliceElement = hasMember.AppendSlice(sliceName, target.Min, target.Max);
-                    sliceElement.Type.Clear();
-                    sliceElement.Type.Add(new ElementDefinition.TypeRefComponent
-                    {
-                        Code = "Reference",
-                        Profile = new String[] { target.Profile }
-                    });
-                }
-            }
+        SDefEditor CreateObservationAbnormality(String title,
+            Markdown description,
+            String methodCodeSet,
+            String method)
+        {
+            SDefEditor e = CreateObservationEditor(title)
+                .Description(description)
+                ;
+
+            e.Select("Observation.value[x]").Zero();
+            e.Select("Observation.specimen").Zero();
+            e.Select("Observation.referenceRange").Zero();
+            e.Select("Observation.interpretation").Zero();
+            e.Select("Observation.note").Zero();
+            e.Select("Observation.bodySite").Zero();
+
+            e.Find("Observation.method")
+             .FixedCodeSlice("method",
+                             methodCodeSet,
+                             method)
+             .Min(1)
+             ;
+
             return e;
         }
 

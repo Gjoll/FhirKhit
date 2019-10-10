@@ -12,77 +12,6 @@ namespace FhirKhit.Tools.R4
 {
     public class SDefEditor
     {
-        /// <summary>
-        /// A group of element definitions that will be copied to the output 
-        /// StructureDefinition as a group, in the order that they are included in this
-        /// group.
-        /// </summary>
-        public class ElementDefGroup
-        {
-            /// <summary>
-            /// Index that orders where they are places in the output structure definitions.
-            /// This keeps the order in the differentialt he same as the order in the base definition.
-            /// </summary>
-            public Int32 Index { get; set; }
-
-            /// <summary>
-            /// Base element definition. Null if none...
-            /// </summary>
-            public ElementDefinition BaseElementDefinition { get; set; }
-
-            /// <summary>
-            /// This is the element that has a one for one match to one in thebase defintion.
-            /// </summary>
-            public ElementDefinition ElementDefinition { get; set; }
-
-            /// <summary>
-            /// Elements to be added to output sdef after element definition. These typically
-            /// include slices and such. They are not found in the base definition.
-            /// </summary>
-            public List<ElementDefinition> RelatedElements { get; set; } = new List<ElementDefinition>();
-
-            public ElementDefGroup(Int32 index, ElementDefinition elementDef, ElementDefinition eBase)
-            {
-                this.Index = index;
-                this.ElementDefinition = elementDef;
-                this.BaseElementDefinition = eBase;
-                if (eBase != null)
-                {
-                    elementDef.Base = new ElementDefinition.BaseComponent
-                    {
-                        Path = eBase.Path,
-                        Min = eBase.Min,
-                        Max = eBase.Max
-                    };
-                }
-            }
-
-            public ElementDefinition AppendSlice(String sliceName,
-                Int32 min = 0,
-                String max = "*")
-            {
-                ElementDefinition retVal = new ElementDefinition
-                {
-                    Path = this.ElementDefinition.Path,
-                    ElementId = $"{this.ElementDefinition.Path}:{sliceName}",
-                    SliceName = sliceName,
-                    Min = min,
-                    Max = max
-                };
-                if (this.BaseElementDefinition != null)
-                {
-                    retVal.Base = new ElementDefinition.BaseComponent
-                    {
-                        Min = this.BaseElementDefinition.Min,
-                        Max = this.BaseElementDefinition.Max,
-                        Path = this.BaseElementDefinition.Path
-                    };
-                }
-                this.RelatedElements.Add(retVal);
-                return retVal;
-            }
-        }
-
         static Type sDefType = typeof(SDefEditor);
         static FhirStructureDefinitions Defs
         {
@@ -190,6 +119,31 @@ namespace FhirKhit.Tools.R4
             return outputName;
         }
 
+        public SDefEditor SliceByUrl(String path,
+            IEnumerable<ObservationTarget> targets)
+        {
+            ElementDefGroup e = this.Find(path);
+            return this.SliceByUrl(e, targets);
+        }
+
+        public SDefEditor SliceByUrl(ElementDefGroup eGroup,
+            IEnumerable<ObservationTarget> targets)
+        {
+            this.SliceByUrl(eGroup);
+            foreach (ObservationTarget target in targets)
+            {
+                String sliceName = target.Profile.LastUriPart().UncapFirstLetter();
+                ElementDefinition sliceElement = eGroup.AppendSlice(sliceName, target.Min, target.Max);
+                sliceElement.Type.Clear();
+                sliceElement.Type.Add(new ElementDefinition.TypeRefComponent
+                {
+                    Code = "Reference",
+                    Profile = new String[] { target.Profile }
+                });
+            }
+            return this;
+        }
+
         public void SliceByUrl(ElementDefGroup eGroup)
         {
             SliceByUrl(eGroup.ElementDefinition);
@@ -233,41 +187,7 @@ namespace FhirKhit.Tools.R4
             String system,
             String code)
         {
-            sliceName = sliceName.UncapFirstLetter();
-            e.ElementDefinition.Slicing = new ElementDefinition.SlicingComponent
-            {
-                Rules = ElementDefinition.SlicingRules.Open
-            };
-
-            e.ElementDefinition.Slicing.Discriminator.Add(new ElementDefinition.DiscriminatorComponent
-            {
-                Type = ElementDefinition.DiscriminatorType.Value,
-                Path = "coding"
-            });
-
-            ElementDefinition coding = new ElementDefinition
-            {
-                ElementId = $"{e.ElementDefinition.Path}.coding",
-                Path = $"{e.ElementDefinition.Path}.coding",
-            };
-            e.RelatedElements.Add(coding);
-
-            ElementDefinition slice = new ElementDefinition
-            {
-                ElementId = $"{e.ElementDefinition.Path}.coding:{sliceName}",
-                Path = $"{e.ElementDefinition.Path}.coding",
-                SliceName = sliceName,
-                Min = 1,
-                Max = "1",
-                Pattern = new Coding(system, code),
-                Base = new ElementDefinition.BaseComponent
-                {
-                    Min = e.BaseElementDefinition.Min,
-                    Max = e.BaseElementDefinition.Max,
-                    Path = $"{e.BaseElementDefinition.Path}"
-                }
-            };
-            e.RelatedElements.Add(slice);
+            e.FixedCodeSlice(sliceName, system, code);
             return this;
         }
 
