@@ -1,9 +1,9 @@
 {
   "resourceType": "StructureDefinition",
-  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyMammographyMass",
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityMammographyMassMargin",
   "version": "0.0.2",
-  "name": "BreastRadiologyMammographyMass",
-  "title": "Breast Radiology Mammography Mass Observation",
+  "name": "BreastRadiologyAbnormalityMammographyMassMargin",
+  "title": "Breast Radiology Abnormality Mass Margin (Mammography)",
   "status": "draft",
   "date": "2019-11-01",
   "publisher": "Hl7-Clinical Interoperability Council",
@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Breast Radiology Mammography Mass Observation\n\n\nThis observation has the following three member observations\n\n\n** Shape\n** Margin\n** Density",
+  "description": "Breast Radiology Abnormality Mass Margin Observation (Mammography)",
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
@@ -158,171 +158,22 @@
         }
       },
       {
-        "id": "Observation.value[x]",
-        "path": "Observation.value[x]",
-        "min": 0,
-        "max": "0",
+        "id": "Observation.valueCodeableConcept",
+        "path": "Observation.valueCodeableConcept",
         "base": {
           "path": "Observation.value[x]",
           "min": 0,
           "max": "1"
-        }
-      },
-      {
-        "id": "Observation.interpretation",
-        "path": "Observation.interpretation",
-        "min": 0,
-        "max": "0",
-        "base": {
-          "path": "Observation.interpretation",
-          "min": 0,
-          "max": "*"
-        }
-      },
-      {
-        "id": "Observation.note",
-        "path": "Observation.note",
-        "min": 0,
-        "max": "0",
-        "base": {
-          "path": "Observation.note",
-          "min": 0,
-          "max": "*"
-        }
-      },
-      {
-        "id": "Observation.bodySite",
-        "path": "Observation.bodySite",
-        "min": 0,
-        "max": "0",
-        "base": {
-          "path": "Observation.bodySite",
-          "min": 0,
-          "max": "1"
-        }
-      },
-      {
-        "id": "Observation.method",
-        "path": "Observation.method",
-        "min": 0,
-        "max": "0",
-        "base": {
-          "path": "Observation.method",
-          "min": 0,
-          "max": "1"
-        }
-      },
-      {
-        "id": "Observation.specimen",
-        "path": "Observation.specimen",
-        "min": 0,
-        "max": "0",
-        "base": {
-          "path": "Observation.specimen",
-          "min": 0,
-          "max": "1"
-        }
-      },
-      {
-        "id": "Observation.device",
-        "path": "Observation.device",
-        "min": 0,
-        "max": "0",
-        "base": {
-          "path": "Observation.device",
-          "min": 0,
-          "max": "1"
-        }
-      },
-      {
-        "id": "Observation.referenceRange",
-        "path": "Observation.referenceRange",
-        "min": 0,
-        "max": "0",
-        "base": {
-          "path": "Observation.referenceRange",
-          "min": 0,
-          "max": "*"
-        }
-      },
-      {
-        "id": "Observation.hasMember",
-        "path": "Observation.hasMember",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        },
-        "base": {
-          "path": "Observation.hasMember",
-          "min": 0,
-          "max": "*"
-        }
-      },
-      {
-        "id": "Observation.hasMember:breastRadiologyAbnormalityMassShape",
-        "path": "Observation.hasMember",
-        "sliceName": "breastRadiologyAbnormalityMassShape",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Observation.hasMember",
-          "min": 0,
-          "max": "*"
         },
         "type": [
           {
-            "code": "Reference",
-            "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityMassShape"
-            ]
+            "code": "CodeableConcept"
           }
-        ]
-      },
-      {
-        "id": "Observation.hasMember:breastRadiologyAbnormalityMammographyMassMargin",
-        "path": "Observation.hasMember",
-        "sliceName": "breastRadiologyAbnormalityMammographyMassMargin",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Observation.hasMember",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityMammographyMassMargin"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "Observation.hasMember:breastRadiologyAbnormalityMammographyMassDensity",
-        "path": "Observation.hasMember",
-        "sliceName": "breastRadiologyAbnormalityMammographyMassDensity",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Observation.hasMember",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityMammographyMassDensity"
-            ]
-          }
-        ]
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadiologyAbnormalityMammographyMassMarginVS"
+        }
       },
       {
         "id": "Observation.derivedFrom",

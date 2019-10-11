@@ -31,9 +31,9 @@ namespace FhirKhit.Tools.R2
             this.codeEditor.SavePath = page($"{baseName}");
         }
 
-        public void Save()
+        public String Save()
         {
-            this.codeEditor.Save();
+            return this.codeEditor.Save();
         }
     }
 }

@@ -27,11 +27,11 @@ namespace FhirKhit.Tools
             if (Directory.Exists(outputDir) == true)
             {
                 foreach (String existingFile in Directory.GetFiles(outputDir, fileFilter))
-                    this.existingFiles.Add(existingFile);
+                    this.existingFiles.Add(existingFile.ToLower());
             }
         }
 
-        public void Mark(String filePath) => this.existingFiles.Remove(filePath);
+        public void Mark(String filePath) => this.existingFiles.Remove(filePath.ToLower());
 
         public void Dispose()
         {

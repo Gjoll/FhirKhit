@@ -46,13 +46,13 @@ namespace FhirKhit.Tools
         /// SaveXml code
         /// </summary>
         /// <param name="path"></param>
-        public void Save() => this.Save(this.SavePath);
+        public String Save() => this.Save(this.SavePath);
 
         /// <summary>
         /// SaveXml code
         /// </summary>
         /// <param name="path"></param>
-        public void Save(String path)
+        public String Save(String path)
         {
             this.SavePath = path;
             String newCode = this.ToString();
@@ -60,9 +60,10 @@ namespace FhirKhit.Tools
             {
                 String oldCode = File.ReadAllText(path);
                 if (string.Compare(newCode, oldCode, StringComparison.InvariantCulture) == 0)
-                    return;
+                    return this.SavePath;
             }
             File.WriteAllText(path, newCode);
+            return this.SavePath;
         }
 
         public override string ToString()

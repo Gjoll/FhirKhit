@@ -171,6 +171,48 @@
       },
       "name" : "BreastRadiologyMammographyMass",
       "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/BreastRadiologyAbnormalityMammographyMassDensityCS"
+      },
+      "name" : "BreastRadiologyAbnormalityMammographyMassDensityCS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/BreastRadiologyAbnormalityMammographyMassMarginCS"
+      },
+      "name" : "BreastRadiologyAbnormalityMammographyMassMarginCS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityMammographyMassDensity"
+      },
+      "name" : "BreastRadiologyAbnormalityMammographyMassDensity",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityMammographyMassMargin"
+      },
+      "name" : "BreastRadiologyAbnormalityMammographyMassMargin",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/BreastRadiologyAbnormalityMammographyMassDensityVS"
+      },
+      "name" : "BreastRadiologyAbnormalityMammographyMassDensityVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/BreastRadiologyAbnormalityMammographyMassMarginVS"
+      },
+      "name" : "BreastRadiologyAbnormalityMammographyMassMarginVS",
+      "exampleBoolean" : false
     }],
     "page" : {
       "nameUrl" : "index.html",

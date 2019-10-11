@@ -60,6 +60,12 @@
     "CodeSystem/BreastCompositionCS": {
       "base": "CodeSystem-BreastCompositionCS.html"
     },
+    "CodeSystem/BreastRadiologyAbnormalityMammographyMassDensityCS": {
+      "base": "CodeSystem-BreastRadiologyAbnormalityMammographyMassDensityCS.html"
+    },
+    "CodeSystem/BreastRadiologyAbnormalityMammographyMassMarginCS": {
+      "base": "CodeSystem-BreastRadiologyAbnormalityMammographyMassMarginCS.html"
+    },
     "CodeSystem/BreastRadiologyAbnormalityMassShapeCS": {
       "base": "CodeSystem-BreastRadiologyAbnormalityMassShapeCS.html"
     },
@@ -68,6 +74,12 @@
     },
     "StructureDefinition/BreastRadiologyAbnormalityMammographyBreastDensity": {
       "base": "StructureDefinition-BreastRadiologyAbnormalityMammographyBreastDensity.html"
+    },
+    "StructureDefinition/BreastRadiologyAbnormalityMammographyMassDensity": {
+      "base": "StructureDefinition-BreastRadiologyAbnormalityMammographyMassDensity.html"
+    },
+    "StructureDefinition/BreastRadiologyAbnormalityMammographyMassMargin": {
+      "base": "StructureDefinition-BreastRadiologyAbnormalityMammographyMassMargin.html"
     },
     "StructureDefinition/BreastRadiologyAbnormalityMassShape": {
       "base": "StructureDefinition-BreastRadiologyAbnormalityMassShape.html"
@@ -110,6 +122,12 @@
     },
     "ValueSet/BreastCompositionVS": {
       "base": "ValueSet-BreastCompositionVS.html"
+    },
+    "ValueSet/BreastRadiologyAbnormalityMammographyMassDensityVS": {
+      "base": "ValueSet-BreastRadiologyAbnormalityMammographyMassDensityVS.html"
+    },
+    "ValueSet/BreastRadiologyAbnormalityMammographyMassMarginVS": {
+      "base": "ValueSet-BreastRadiologyAbnormalityMammographyMassMarginVS.html"
     },
     "ValueSet/BreastRadiologyAbnormalityMassShapeVS": {
       "base": "ValueSet-BreastRadiologyAbnormalityMassShapeVS.html"

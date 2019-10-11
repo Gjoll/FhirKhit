@@ -26,6 +26,8 @@ namespace FhirKhit.BreastRadiology.XUnitTests
 
         const String contactUrl = "http://www.hl7.org/Special/committees/cic";
 
+        FileCleaner fc = new FileCleaner();
+
         String resourceDir;
         FhirDateTime date = new FhirDateTime(2019, 11, 1);
         List<SDefEditor> editors = new List<SDefEditor>();
@@ -132,11 +134,14 @@ namespace FhirKhit.BreastRadiology.XUnitTests
 
         public void CreateResources()
         {
+            fc.Add(this.resourceDir);
+
             CreateCommon();
             CreateMammo();
             CreateSections();
             CreateBreastRadiologyReport(rootUrl);
             SaveAll();
+            fc.Dispose();
         }
 
         SDefEditor CreateEditor(String name, String title, String baseUrl)
@@ -325,69 +330,130 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 counter += 1;
             }
 
-            cs.SaveJson(Path.Combine(this.resourceDir, $"CodeSystem-{name}CS.json"));
-            vs.SaveJson(Path.Combine(this.resourceDir, $"ValueSet-{name}VS.json"));
+            Save(cs, Path.Combine(this.resourceDir, $"CodeSystem-{name}CS.json"));
+            Save(vs, Path.Combine(this.resourceDir, $"ValueSet-{name}VS.json"));
             return vs.Url;
+        }
+
+        public void Save(Resource r, String path)
+        {
+            r.SaveJson(path);
+            fc.Mark(path);
         }
 
         void CreateCommon()
         {
-            String binding = CreateValueSet(
-                "BreastRadiologyAbnormalityMassShape",
-                "Breast Radiology Abnormality Mass Shape",
-                new Markdown()
-                    .Paragraph("Breast Radiology Mass Shape"),
-                new String[]
-                {
+            {
+                String binding = CreateValueSet(
+                    "BreastRadiologyAbnormalityMassShape",
+                    "Breast Radiology Abnormality Mass Shape",
+                    new Markdown()
+                        .Paragraph("Breast Radiology Mass Shape"),
+                    new String[]
+                    {
                 "a. Oval",
                 "b. Round",
                 "c. Irregular"
-                });
+                    });
 
-            this.massShape = this.CreateAbnormalityCodedValue(
-                "BreastRadiologyAbnormalityMassShape",
-                "Breast Radiology Abnormality Mass Shape",
-                new Markdown().Paragraph("Breast Radiology Abnormality Mass Shape Observation"),
-                binding)
-                .SDef.Url;
+                this.massShape = this.CreateAbnormalityCodedValue(
+                    "BreastRadiologyAbnormalityMassShape",
+                    "Breast Radiology Abnormality Mass Shape",
+                    new Markdown().Paragraph("Breast Radiology Abnormality Mass Shape Observation"),
+                    binding)
+                    .SDef.Url;
+            }
         }
 
         void CreateMammo()
         {
-            String binding = CreateValueSet(
-                "BreastComposition",
-                "Breast Composition",
-                new Markdown()
-                    .Paragraph("Mammography Breast Composition"),
-                new String[]
-                {
-                "a. The breasts are almost entirely fatty",
-                "b. There are scattered areas of fibroglandular density",
-                "c. The breasts are heterogeneously dense, which may obscure detection of small masses",
-                "d. The breasts are extremely dense, which lowers the sensitivity of mammography"
-                });
+            String massMargin;
+            String massDensity;
+            String mammoBreastDensity;
+            String mammoMass;
 
-            String mammoBreastDensity = this.CreateAbnormalityCodedValue(
-                "BreastRadiologyAbnormalityMammographyBreastDensity",
-                "Breast Radiology Abnormality Breast Density (Mammography)",
-                new Markdown().Paragraph("Mammography Breast Abnormality Breast Density Observation"),
-                binding)
-                .SDef.Url;
-
-            String mammoMass = this.CreateObservationSection(
-                "BreastRadiologyMammographyMass",
-                "Breast Radiology Mammography Mass Observation",
-                new Markdown()
-                    .Paragraph("Breast Radiology Mammography Mass Observation")
-                    .Paragraph("This observation has the following three member observations")
-                    .List("Shape", "Margin", "Density")
-                )
-                .SliceByUrl("Observation.hasMember", 
-                    new ObservationTarget[]
+            {
+                String binding = CreateValueSet(
+                    "BreastRadiologyAbnormalityMammographyMassMargin",
+                    "BreastRadiology Abnormality Mammography Mass Margin",
+                    new Markdown()
+                        .Paragraph("Breast Radiology Mass Margin (Mammography)"),
+                    new String[]
                     {
-                        new ObservationTarget(this.massShape, 0, "*")
-                    })
-                .SDef.Url;
+                            "a. Circumscribed",
+                            "b. Obscured",
+                            "c. Microlobulated",
+                            "d. Indistinct",
+                            "e. Spiculated"
+                    });
+
+                massMargin = this.CreateAbnormalityCodedValue(
+                    "BreastRadiologyAbnormalityMammographyMassMargin",
+                    "Breast Radiology Abnormality Mass Margin (Mammography)",
+                    new Markdown().Paragraph("Breast Radiology Abnormality Mass Margin Observation (Mammography)"),
+                    binding)
+                    .SDef.Url;
+            }
+
+            {
+                String binding = CreateValueSet(
+                    "BreastRadiologyAbnormalityMammographyMassDensity",
+                    "BreastRadiology Abnormality Mammography Mass Density",
+                    new Markdown()
+                        .Paragraph("Breast Radiology Mass Density (Mammography)"),
+                    new String[]
+                    {
+                        "a. High density",
+                        "b. Equal density",
+                        "c. Low density",
+                        "d. Fat-containing"
+                    });
+
+                massDensity = this.CreateAbnormalityCodedValue(
+                    "BreastRadiologyAbnormalityMammographyMassDensity",
+                    "Breast Radiology Abnormality Mass Density (Mammography)",
+                    new Markdown().Paragraph("Breast Radiology Abnormality Mass Density Observation (Mammography)"),
+                    binding)
+                    .SDef.Url;
+            }
+            {
+                String binding = CreateValueSet(
+                    "BreastComposition",
+                    "Breast Composition",
+                    new Markdown()
+                        .Paragraph("Mammography Breast Composition"),
+                    new String[]
+                    {
+                        "a. The breasts are almost entirely fatty",
+                        "b. There are scattered areas of fibroglandular density",
+                        "c. The breasts are heterogeneously dense, which may obscure detection of small masses",
+                        "d. The breasts are extremely dense, which lowers the sensitivity of mammography"
+                    });
+
+                mammoBreastDensity = this.CreateAbnormalityCodedValue(
+                    "BreastRadiologyAbnormalityMammographyBreastDensity",
+                    "Breast Radiology Abnormality Breast Density (Mammography)",
+                    new Markdown().Paragraph("Mammography Breast Abnormality Breast Density Observation"),
+                    binding)
+                    .SDef.Url;
+
+                mammoMass = this.CreateObservationSection(
+                    "BreastRadiologyMammographyMass",
+                    "Breast Radiology Mammography Mass Observation",
+                    new Markdown()
+                        .Paragraph("Breast Radiology Mammography Mass Observation")
+                        .Paragraph("This observation has the following three member observations")
+                        .List("Shape", "Margin", "Density")
+                    )
+                    .SliceByUrl("Observation.hasMember",
+                        new ObservationTarget[]
+                        {
+                            new ObservationTarget(this.massShape, 1, "1"),
+                            new ObservationTarget(massMargin, 1, "1"),
+                            new ObservationTarget(massDensity, 1, "1")
+                        })
+                    .SDef.Url;
+            }
 
             //$ Fix me. Incorrect method!!!
             this.abnormalityMammo = this.CreateAbnormality(
@@ -396,7 +462,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 new Markdown().Paragraph("Mammography Breast Abnormality Observation"),
                 "http://snomed.info/sct",
                 "115341008")
-                .SliceByUrl("Observation.hasMember", 
+                .SliceByUrl("Observation.hasMember",
                     new ObservationTarget[]
                     {
                         new ObservationTarget(mammoBreastDensity, 1, "1"),
@@ -489,7 +555,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             foreach (SDefEditor ce in this.editors)
             {
                 ce.SDef.Snapshot = null;
-                ce.Write();
+                fc.Mark(ce.Write());
             }
         }
     }

@@ -12,6 +12,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
     public class IGBuilder : ConverterBase
     {
         const PublicationStatus ProfileStatus = PublicationStatus.Draft;
+        FileCleaner fc = new FileCleaner();
 
         String outputDir;
         String resourceDir => Path.Combine(this.outputDir, "resources");
@@ -26,11 +27,11 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         ImplementationGuideEditor implementationGuide;
         IGEditor igEditor;
 
-        List<SDefEditor> editors = new List<SDefEditor>();
-
         public IGBuilder(String outputDir)
         {
             this.outputDir = outputDir;
+            fc.Add(this.resourceDir);
+            fc.Mark(Path.Combine(this.resourceDir, "IG.xml"));
         }
 
         void AddIGStructureDefinition(StructureDefinition sDef, bool extensionFlag)
@@ -55,20 +56,19 @@ namespace FhirKhit.BreastRadiology.XUnitTests
 
         public void SaveAll()
         {
-            foreach (SDefEditor ce in this.editors)
-            {
-                StructureDefinition sDef = ce.SDef;
-                SnapshotCreator.Create(sDef);
-                ce.Write();
-            }
-
             implementationGuide.Save(this.ImpGuidePath);
+            fc.Mark(this.ImpGuidePath);
+
             this.igEditor.Save(this.IgPath);
+            fc.Mark(this.IgPath);
+
             this.examplesEditor.Save();
             this.profilesEditor.Save();
             this.extensionsEditor.Save();
             this.codeSystemsEditor.Save();
             this.valueSetsEditor.Save();
+
+            fc.Dispose();
         }
 
         public void Start()
@@ -88,7 +88,9 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         {
             void Save(Resource r, String outputName)
             {
-                r.SaveJson(Path.Combine(this.resourceDir, outputName));
+                String outputPath = Path.Combine(this.resourceDir, outputName);
+                r.SaveJson(outputPath);
+                fc.Mark(outputPath);
             }
 
             String FixName(String path, String prefix)
