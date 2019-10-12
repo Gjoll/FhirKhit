@@ -33,12 +33,26 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         }
 
         [TestMethod]
+        public void ValidateGen()
+        {
+            String rDir = Path.Combine(outputDir,
+                "resources");
+            FhirValidator fv = new FhirValidator();
+            bool success = fv.ValidateDir(rDir, "*.json", "4.0.0");
+            StringBuilder sb = new StringBuilder();
+            fv.FormatMessages(sb);
+            Trace.WriteLine(sb.ToString());
+            Assert.IsTrue(success);
+            Trace.WriteLine("Validation complete");
+        }
+
+        [TestMethod]
         public void Validate()
         {
             FhirValidator fv = new FhirValidator();
-            fv.ValidateDir(resourcesDir, "*.json", "4.0.0");
+            bool success = fv.ValidateDir(resourcesDir, "*.json", "4.0.0");
             StringBuilder sb = new StringBuilder();
-            bool success = fv.FormatMessages(sb);
+            fv.FormatMessages(sb);
             Trace.WriteLine(sb.ToString());
             Assert.IsTrue(success);
             Trace.WriteLine("Validation complete");

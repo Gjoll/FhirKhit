@@ -25,7 +25,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                     .Paragraph("This observation has the following three member observations")
                     .List("Shape", "Margin", "Density")
                 )
-                .SliceByUrl("Observation.hasMember",
+                .SliceByUrl("hasMember",
                     new ObservationTarget[]
                     {
                             new ObservationTarget(massShape, 1, "1"),

@@ -21,14 +21,14 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 "BreastRadiologySectionRoot",
                 "Breast Radiology Root Section",
                 new Markdown().Paragraph("Root Section"))
-                .SliceByUrl("Observation.hasMember",
+                .SliceByUrl("hasMember",
                 new ObservationTarget[]
                     {
                         new ObservationTarget(patientHistoryUrl, 1, "1"),
-                        new ObservationTarget(findingsUrl, 1, "1"),
+                       new ObservationTarget(findingsUrl, 1, "1"),
                         new ObservationTarget(patientRiskUrl, 1, "1")
                     })
-                .FixedCodeSlice("Observation.code", "observationCode", Loinc, "10193-1")
+                .FixedCodeSlice("code", "observationCode", Loinc, "10193-1")
                 .SDef.Url;
         }
     }

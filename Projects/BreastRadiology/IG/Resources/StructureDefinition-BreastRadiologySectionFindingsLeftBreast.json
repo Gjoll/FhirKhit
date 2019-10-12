@@ -75,28 +75,6 @@
         ]
       },
       {
-        "id": "Observation.subject",
-        "path": "Observation.subject",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Observation.subject",
-          "min": 0,
-          "max": "1"
-        }
-      },
-      {
-        "id": "Observation.component",
-        "path": "Observation.component",
-        "min": 0,
-        "max": "0",
-        "base": {
-          "path": "Observation.component",
-          "min": 0,
-          "max": "*"
-        }
-      },
-      {
         "id": "Observation.basedOn",
         "path": "Observation.basedOn",
         "min": 0,
@@ -108,34 +86,12 @@
         }
       },
       {
-        "id": "Observation.derivedFrom",
-        "path": "Observation.derivedFrom",
-        "min": 0,
-        "max": "0",
-        "base": {
-          "path": "Observation.derivedFrom",
-          "min": 0,
-          "max": "*"
-        }
-      },
-      {
         "id": "Observation.partOf",
         "path": "Observation.partOf",
         "min": 0,
         "max": "0",
         "base": {
           "path": "Observation.partOf",
-          "min": 0,
-          "max": "*"
-        }
-      },
-      {
-        "id": "Observation.focus",
-        "path": "Observation.focus",
-        "min": 0,
-        "max": "0",
-        "base": {
-          "path": "Observation.focus",
           "min": 0,
           "max": "*"
         }
@@ -153,6 +109,7 @@
           "rules": "open"
         },
         "min": 1,
+        "max": "*",
         "base": {
           "path": "Observation.category",
           "min": 0,
@@ -180,6 +137,28 @@
         }
       },
       {
+        "id": "Observation.subject",
+        "path": "Observation.subject",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Observation.subject",
+          "min": 0,
+          "max": "1"
+        }
+      },
+      {
+        "id": "Observation.focus",
+        "path": "Observation.focus",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.focus",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
         "min": 0,
@@ -188,39 +167,6 @@
           "path": "Observation.value[x]",
           "min": 0,
           "max": "1"
-        }
-      },
-      {
-        "id": "Observation.specimen",
-        "path": "Observation.specimen",
-        "min": 0,
-        "max": "0",
-        "base": {
-          "path": "Observation.specimen",
-          "min": 0,
-          "max": "1"
-        }
-      },
-      {
-        "id": "Observation.device",
-        "path": "Observation.device",
-        "min": 0,
-        "max": "0",
-        "base": {
-          "path": "Observation.device",
-          "min": 0,
-          "max": "1"
-        }
-      },
-      {
-        "id": "Observation.referenceRange",
-        "path": "Observation.referenceRange",
-        "min": 0,
-        "max": "0",
-        "base": {
-          "path": "Observation.referenceRange",
-          "min": 0,
-          "max": "*"
         }
       },
       {
@@ -268,6 +214,39 @@
         }
       },
       {
+        "id": "Observation.specimen",
+        "path": "Observation.specimen",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.specimen",
+          "min": 0,
+          "max": "1"
+        }
+      },
+      {
+        "id": "Observation.device",
+        "path": "Observation.device",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.device",
+          "min": 0,
+          "max": "1"
+        }
+      },
+      {
+        "id": "Observation.referenceRange",
+        "path": "Observation.referenceRange",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.referenceRange",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
         "id": "Observation.hasMember",
         "path": "Observation.hasMember",
         "slicing": {
@@ -280,6 +259,8 @@
           "ordered": true,
           "rules": "openAtEnd"
         },
+        "min": 0,
+        "max": "*",
         "base": {
           "path": "Observation.hasMember",
           "min": 0,
@@ -345,6 +326,28 @@
             ]
           }
         ]
+      },
+      {
+        "id": "Observation.derivedFrom",
+        "path": "Observation.derivedFrom",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.derivedFrom",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Observation.component",
+        "path": "Observation.component",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.component",
+          "min": 0,
+          "max": "*"
+        }
       }
     ]
   }

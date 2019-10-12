@@ -25,12 +25,6 @@ namespace FhirKhit.Tools.R4
             return e;
         }
 
-        public static ElementDefinition Min(this ElementDefinition e, Int32 min)
-        {
-            e.Min = min;
-            return e;
-        }
-
         public static ElementDefinition ZeroToMany(this ElementDefinition e)
         {
             return e.Card(0, "*");

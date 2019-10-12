@@ -20,7 +20,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 "BreastRadiologySectionFindings",
                 "Breast Radiology Findings",
                 new Markdown().Paragraph("Findings Section"))
-                .SliceByUrl("Observation.hasMember",
+                .SliceByUrl("hasMember",
                     new ObservationTarget[]
                     {
                         new ObservationTarget(findingsLeftUrl, 1, "1"),

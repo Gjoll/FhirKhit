@@ -24,7 +24,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                     .Paragraph("This observation has the following two member observations")
                     .List("Calcification Type", "Calcification Distribution")
                 )
-                .SliceByUrl("Observation.hasMember",
+                .SliceByUrl("hasMember",
                     new ObservationTarget[]
                     {
                             new ObservationTarget(calcType, 1, "1"),

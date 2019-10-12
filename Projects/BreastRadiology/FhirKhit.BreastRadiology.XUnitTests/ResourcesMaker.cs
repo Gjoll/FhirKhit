@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -13,6 +14,9 @@ namespace FhirKhit.BreastRadiology.XUnitTests
 {
     public partial class ResourcesMaker : ConverterBase
     {
+        const bool CreateSnapshot = false;
+        const bool Validate = false;
+
         const String ProfileVersion = "0.0.2";
         const PublicationStatus ProfileStatus = PublicationStatus.Draft;
 
@@ -70,12 +74,12 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         SDefEditor CreateObservationEditor(String name, String title)
         {
             SDefEditor retVal = this.CreateEditor(name, title, ObservationUrl);
-            retVal.Select("Observation.subject").Single();
-            retVal.Select("Observation.component").Zero();
-            retVal.Select("Observation.basedOn").Zero();
-            retVal.Select("Observation.derivedFrom").Zero();
-            retVal.Select("Observation.partOf").Zero();
-            retVal.Select("Observation.focus").Zero();
+            retVal.Select("subject").Single();
+            retVal.Select("component").Zero();
+            retVal.Select("basedOn").Zero();
+            retVal.Select("derivedFrom").Zero();
+            retVal.Select("partOf").Zero();
+            retVal.Select("focus").Zero();
             CreateCategorySlice(retVal, "category");
 
             return retVal;
@@ -83,8 +87,8 @@ namespace FhirKhit.BreastRadiology.XUnitTests
 
         void CreateCategorySlice(SDefEditor sDefEditor, String path)
         {
-            var eDef = sDefEditor.Find(path);
-            eDef.ElementDefinition.Min(1);
+            ElementDefGroup eDef = sDefEditor.Find(path);
+            eDef.ElementDefinition.Card(1, eDef.BaseElementDefinition.Max);
             sDefEditor.FixedCodeSlice(eDef,
                 "category",
                 "http://terminology.hl7.org/CodeSystem/observation-category",
@@ -98,15 +102,15 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             SDefEditor e = CreateObservationEditor(name, title)
                 .Description(description)
                 ;
-            e.Select("Observation.value[x]").Zero();
-            e.Select("Observation.specimen").Zero();
-            e.Select("Observation.device").Zero();
-            e.Select("Observation.referenceRange").Zero();
+            e.Select("value[x]").Zero();
+            e.Select("specimen").Zero();
+            e.Select("device").Zero();
+            e.Select("referenceRange").Zero();
 
-            e.Select("Observation.interpretation").Zero();
-            e.Select("Observation.note").Zero();
-            e.Select("Observation.bodySite").Zero();
-            e.Select("Observation.method").Zero();
+            e.Select("interpretation").Zero();
+            e.Select("note").Zero();
+            e.Select("bodySite").Zero();
+            e.Select("method").Zero();
             return e;
         }
 
@@ -119,7 +123,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 .Description(description)
                 ;
 
-            retVal.Select("Observation.value[x]")
+            retVal.Select("value[x]")
                 .Type("boolean")
                 ;
             return retVal;
@@ -135,7 +139,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 .Description(description)
                 ;
 
-            retVal.Select("Observation.value[x]")
+            retVal.Select("value[x]")
                 .Type("CodeableConcept")
                 .Binding(binding, BindingStrength.Required)
                 ;
@@ -151,19 +155,19 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 .Description(description)
                 ;
 
-            e.Select("Observation.value[x]").Zero();
-            e.Select("Observation.specimen").Zero();
-            e.Select("Observation.referenceRange").Zero();
-            e.Select("Observation.interpretation").Zero();
-            e.Select("Observation.note").Zero();
+            e.Select("value[x]").Zero();
+            e.Select("specimen").Zero();
+            e.Select("referenceRange").Zero();
+            e.Select("interpretation").Zero();
+            e.Select("note").Zero();
             // todo: Add body site info.
-            //e.Select("Observation.bodySite").Zero();
+            //e.Select("bodySite").Zero();
 
-            e.Find("Observation.method")
+            e.Find("method")
              .FixedCodeSlice("method",
                              methodCodeSet,
                              method)
-             .Min(1)
+             .Card(1, "*")
              ;
 
             return e;
@@ -249,8 +253,24 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             return vs.Url;
         }
 
+        void ValidateResource(Resource r)
+        {
+#pragma warning disable CS0162 // Unreachable code detected
+            if (Validate == false)
+                return;
+            var results = r.Validate(new ValidationContext(r));
+            if (results.Any() == false)
+                return;
+            foreach (var result in results)
+            {
+
+            }
+#pragma warning restore CS0162 // Unreachable code detected
+        }
+
         public void Save(Resource r, String path)
         {
+            this.ValidateResource(r);
             r.SaveJson(path);
             fc.Mark(path);
         }
@@ -315,7 +335,13 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         {
             foreach (SDefEditor ce in this.editors)
             {
-                ce.SDef.Snapshot = null;
+#pragma warning disable CS0162 // Unreachable code detected
+                if (CreateSnapshot)
+                    SnapshotCreator.Create(ce.SDef);
+                else
+                    ce.SDef.Snapshot = null;
+#pragma warning restore CS0162 // Unreachable code detected
+                this.ValidateResource(ce.SDef);
                 fc.Mark(ce.Write());
             }
         }

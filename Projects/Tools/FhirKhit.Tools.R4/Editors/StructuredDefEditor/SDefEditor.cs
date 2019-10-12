@@ -46,7 +46,7 @@ namespace FhirKhit.Tools.R4
             for (Int32 i = 0; i < baseSDef.Snapshot.Element.Count; i++)
             {
                 ElementDefinition elementDefinition = baseSDef.Snapshot.Element[i];
-                ElementDefGroup e = new ElementDefGroup(elementDefinition, null);
+                ElementDefGroup e = new ElementDefGroup(i, elementDefinition, null);
                 this.baseElements.Add(elementDefinition.Path, e);
             }
 
@@ -62,18 +62,7 @@ namespace FhirKhit.Tools.R4
         public ElementDefGroup InsertAfter(ElementDefGroup at,
             ElementDefinition e)
         {
-            ElementDefGroup retVal = new ElementDefGroup(e, null);
-            Int32 index = 0;
-            foreach (ElementDefGroup g in this.elementOrder)
-            {
-                index += 1;
-                if (g == at)
-                {
-                    this.elementOrder.Insert(index, retVal);
-                    return retVal;
-                }
-            }
-            throw new Exception($"ElementDefGroup 'at' not found");
+            return AddElementDefinition(at.Index, e, null);
         }
 
         /// <summary>
@@ -99,14 +88,33 @@ namespace FhirKhit.Tools.R4
                     {
                         Path = eBase.Path,
                         ElementId = eBase.ElementId,
+                        Min = eBase.Min,
+                        Max = eBase.Max
                     };
-                    ElementDefGroup newE = new ElementDefGroup(ed, e.ElementDefinition);
-                    this.elements.Add(ed.Path, newE);
-                    this.elementOrder.Add(newE);
-                    return newE;
+                    return AddElementDefinition(e.Index, ed, e.ElementDefinition);
                 }
             }
             throw new Exception($"'{path}' not found");
+        }
+
+        /// <summary>
+        /// Insert element ordered by the index. If other items are already
+        /// inserted witht his index, the new element will be inserted after them.
+        /// </summary>
+        /// <param name="index"></param>
+        /// <param name="elementDefinition"></param>
+        /// <param name="baseDefinition"></param>
+        ElementDefGroup AddElementDefinition(Int32 index,
+            ElementDefinition elementDefinition,
+            ElementDefinition baseDefinition)
+        {
+            ElementDefGroup newE = new ElementDefGroup(index, elementDefinition, baseDefinition);
+            this.elements.Add(elementDefinition.Path, newE);
+            Int32 i = this.elementOrder.Count;
+            while ((i > 0) && (this.elementOrder[i-1].Index > index))
+                i -= 1;
+            this.elementOrder.Insert(i, newE);
+            return newE;
         }
 
         /// <summary>
@@ -304,7 +312,7 @@ namespace FhirKhit.Tools.R4
         {
             if (this.sDef.Type != "Observation")
                 throw new Exception("BreastBodyLocation can only be applied to Observations");
-            this.Select("Observation.bodySite")
+            this.Select("bodySite")
                 .Single()
                 ;
             return this;

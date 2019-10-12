@@ -19,7 +19,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 "BreastRadiologySectionFindingsRightBreast",
                 "Breast Radiology Findings Right Breast",
                 new Markdown().Paragraph("Findings Right Breast Section"))
-                .SliceByUrl("Observation.hasMember", abnormalityTargets)
+                .SliceByUrl("hasMember", abnormalityTargets)
                 .SDef.Url;
 
         }

@@ -26,7 +26,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 new Markdown().Paragraph("Mammography Breast Abnormality Observation"),
                 "http://snomed.info/sct",
                 "115341008")
-                .SliceByUrl("Observation.hasMember",
+                .SliceByUrl("hasMember",
                     new ObservationTarget[]
                     {
                         new ObservationTarget(mammoBreastDensity, 1, "1"),

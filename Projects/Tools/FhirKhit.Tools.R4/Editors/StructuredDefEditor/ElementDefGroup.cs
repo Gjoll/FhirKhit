@@ -1,6 +1,7 @@
 ﻿using Hl7.Fhir.Model;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 
 namespace FhirKhit.Tools.R4
@@ -12,6 +13,12 @@ namespace FhirKhit.Tools.R4
     /// </summary>
     public class ElementDefGroup
     {
+        /// <summary>
+        /// Ordering index. This keeps elements being inserted into the
+        /// differential in the same order as they were found int the snapshot.
+        /// </summary>
+        public Int32 Index { get; }
+
         /// <summary>
         /// Base element definition. Null if none...
         /// </summary>
@@ -28,8 +35,9 @@ namespace FhirKhit.Tools.R4
         /// </summary>
         public List<ElementDefinition> RelatedElements { get; set; } = new List<ElementDefinition>();
 
-        public ElementDefGroup(ElementDefinition elementDef, ElementDefinition eBase)
+        public ElementDefGroup(Int32 index, ElementDefinition elementDef, ElementDefinition eBase)
         {
+            this.Index = index;
             this.ElementDefinition = elementDef;
             this.BaseElementDefinition = eBase;
             if (eBase != null)
@@ -59,9 +67,9 @@ namespace FhirKhit.Tools.R4
             {
                 retVal.Base = new ElementDefinition.BaseComponent
                 {
+                    Path = this.BaseElementDefinition.Path,
                     Min = this.BaseElementDefinition.Min,
-                    Max = this.BaseElementDefinition.Max,
-                    Path = this.BaseElementDefinition.Path
+                    Max = this.BaseElementDefinition.Max
                 };
             }
             this.RelatedElements.Add(retVal);
@@ -104,9 +112,9 @@ namespace FhirKhit.Tools.R4
                 Pattern = new Coding(system, code),
                 Base = new ElementDefinition.BaseComponent
                 {
+                    Path = $"{this.BaseElementDefinition.Path}",
                     Min = this.BaseElementDefinition.Min,
-                    Max = this.BaseElementDefinition.Max,
-                    Path = $"{this.BaseElementDefinition.Path}"
+                    Max = this.BaseElementDefinition.Max
                 }
             };
             this.RelatedElements.Add(slice);
