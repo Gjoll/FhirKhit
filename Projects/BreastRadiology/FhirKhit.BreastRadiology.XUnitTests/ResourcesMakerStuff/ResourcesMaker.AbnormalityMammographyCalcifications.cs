@@ -13,24 +13,22 @@ namespace FhirKhit.BreastRadiology.XUnitTests
 {
     public partial class ResourcesMaker : ConverterBase
     {
-        String AbnormalityMammographyMass(String massShape,
-            String massMargin,
-            String massDensity)
+        String AbnormalityMammographyCalcifications(String calcType,
+            String calcDistribution)
         {
             return this.CreateObservationSection(
-                "BreastRadiologyMammographyMass",
-                "Breast Radiology Mammography Mass Observation",
+                "BreastRadiologyMammographyCalcifications",
+                "Breast Radiology Mammography Calcifications Observation",
                 new Markdown()
-                    .Paragraph("Breast Radiology Mammography Mass Observation")
-                    .Paragraph("This observation has the following three member observations")
-                    .List("Shape", "Margin", "Density")
+                    .Paragraph("Breast Radiology Mammography Calcifications Observation")
+                    .Paragraph("This observation has the following two member observations")
+                    .List("Calcification Type", "Calcification Distribution")
                 )
                 .SliceByUrl("Observation.hasMember",
                     new ObservationTarget[]
                     {
-                            new ObservationTarget(massShape, 1, "1"),
-                            new ObservationTarget(massMargin, 1, "1"),
-                            new ObservationTarget(massDensity, 1, "1")
+                            new ObservationTarget(calcType, 1, "1"),
+                            new ObservationTarget(calcDistribution, 1, "1")
                     })
                 .ApplyBreastBodyLocation()
                 .SDef.Url;

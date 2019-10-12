@@ -13,7 +13,11 @@ namespace FhirKhit.BreastRadiology.XUnitTests
 {
     public partial class ResourcesMaker : ConverterBase
     {
-        String AbnormalityMammography(String mammoBreastDensity, String mammoMass)
+        String AbnormalityMammography(String mammoBreastDensity, 
+            String mammoMass,
+            String calc, 
+            String archDist,
+            String assymetries)
         {
             //$ todo. Incorrect method!!!
             return this.CreateAbnormality(
@@ -26,7 +30,10 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                     new ObservationTarget[]
                     {
                         new ObservationTarget(mammoBreastDensity, 1, "1"),
-                        new ObservationTarget(mammoMass, 0, "*")
+                        new ObservationTarget(mammoMass, 0, "*"),
+                        //new ObservationTarget(calc, 0, "*")
+                        //new ObservationTarget(archDist, 0, "1"),
+                        //new ObservationTarget(assymetries, 0, "*")
                     })
                 .SDef.Url;
         }

@@ -15,7 +15,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
     {
         String BreastRadiologyPriorReports(String brrDiagnosticReportUrl)
         {
-            SDefEditor e2 = CreateEditor("BreastRadiologyPriorReports", "Prior Reports", ExtensionUrl)
+            SDefEditor e = CreateEditor("BreastRadiologyPriorReports", "Prior Reports", ExtensionUrl)
                 .Description(new Markdown()
                     .Paragraph("Prior Diagnostic Report extension")
                     )
@@ -23,16 +23,16 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 .Context()
                 ;
 
-            e2.Select("extension").Zero();
-            e2.Select("url")
+            e.Select("extension").Zero();
+            e.Select("url")
                 .Type("uri")
-                .Fixed(new FhirUri(e2.SDef.Url));
+                .Fixed(new FhirUri(e.SDef.Url));
 
-            e2.Select("value[x]")
+            e.Select("value[x]")
                 .TypeReference(brrDiagnosticReportUrl)
                 .Single()
                 ;
-            return e2.SDef.Url;
+            return e.SDef.Url;
         }
     }
 }

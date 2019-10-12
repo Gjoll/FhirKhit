@@ -26,19 +26,19 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 )
                 ;
 
-            String recommendationsExtensionUrl = BreastRadiologyRecommendations();
-            String priorReportsExtensionUrl = BreastRadiologyPriorReports(e.SDef.Url);
+            String recommendationsUrl = BreastRadiologyRecommendations();
+            String priorReportsUrl = BreastRadiologyPriorReports(e.SDef.Url);
 
             e.Select("code").Pattern = new CodeableConcept(Loinc, "10193-1");
             CreateCategorySlice(e, "category");
             e.Select("specimen").Zero();
             e.Select("conclusion").Single();
             e.Select("conclusionCode").Single();
-            e.SimpleExtension("Recommendations", recommendationsExtensionUrl)
+            e.SimpleExtension("Recommendations", recommendationsUrl)
                 .Short("Recommendations for future care")
                 .Definition("Recommendations for future care")
                 .ZeroToMany();
-            e.SimpleExtension("PriorReports", priorReportsExtensionUrl)
+            e.SimpleExtension("PriorReports", priorReportsUrl)
                 .Short("Recommendations for future care")
                 .Definition("Recommendations for future care")
                 .ZeroToMany();

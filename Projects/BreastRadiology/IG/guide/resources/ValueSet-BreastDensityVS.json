@@ -1,10 +1,10 @@
 {
   "resourceType": "ValueSet",
-  "id": "BreastCompositionVS",
-  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastCompositionVS",
+  "id": "BreastDensityVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastDensityVS",
   "version": "ProfileVersion",
-  "name": "BreastCompositionVS",
-  "title": "Breast Composition",
+  "name": "BreastDensityVS",
+  "title": "Breast Density",
   "status": "draft",
   "date": "2019-11-01",
   "publisher": "Hl7-Clinical Interoperability Council",
@@ -22,7 +22,7 @@
   "compose": {
     "include": [
       {
-        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastCompositionCS",
+        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastDensityCS",
         "concept": [
           {
             "code": "1",

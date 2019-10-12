@@ -20,6 +20,11 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             "IG",
             "Resources");
 
+        String manualDir = Path.Combine(
+            DirHelper.FindParentDir("BreastRadiology"),
+            "IG",
+            "ManualResources");
+
         [TestMethod]
         public void BuildResources()
         {
@@ -39,12 +44,12 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             Trace.WriteLine("Validation complete");
         }
 
-        [TestMethod]
-        public void Clean()
-        {
-            ProfileCleanUp pc = new ProfileCleanUp();
-            pc.Clean(resourcesDir);
-        }
+        //[TestMethod]
+        //public void Clean()
+        //{
+        //    ProfileCleanUp pc = new ProfileCleanUp();
+        //    pc.Clean(resourcesDir);
+        //}
 
         [TestMethod]
         public void FullBuild()
@@ -59,6 +64,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             IGBuilder p = new IGBuilder(outputDir);
             p.Start();
             p.AddResources(resourcesDir);
+            p.AddResources(manualDir);
             p.SaveAll();
         }
     }

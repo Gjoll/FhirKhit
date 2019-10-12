@@ -16,8 +16,8 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         String AbnormalityMammographyBreastDensity()
         {
             String binding = CreateValueSet(
-                "BreastComposition",
-                "Breast Composition",
+                "BreastDensity",
+                "Breast Density",
                 new Markdown()
                     .Paragraph("Mammography Breast Composition"),
                 new String[]

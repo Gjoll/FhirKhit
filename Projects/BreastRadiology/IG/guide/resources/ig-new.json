@@ -125,20 +125,6 @@
     },
     {
       "reference" : {
-        "reference" : "CodeSystem/BreastCompositionCS"
-      },
-      "name" : "BreastCompositionCS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "ValueSet/BreastCompositionVS"
-      },
-      "name" : "BreastCompositionVS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
         "reference" : "StructureDefinition/BreastRadiologyAbnormalityMammographyBreastDensity"
       },
       "name" : "BreastRadiologyAbnormalityMammographyBreastDensity",
@@ -212,6 +198,20 @@
         "reference" : "ValueSet/BreastRadiologyAbnormalityMammographyMassMarginVS"
       },
       "name" : "BreastRadiologyAbnormalityMammographyMassMarginVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/BreastDensityCS"
+      },
+      "name" : "BreastDensityCS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/BreastDensityVS"
+      },
+      "name" : "BreastDensityVS",
       "exampleBoolean" : false
     }],
     "page" : {

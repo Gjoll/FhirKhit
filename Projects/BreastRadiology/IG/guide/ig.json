@@ -57,8 +57,8 @@
     "examples"
   ],
   "resources": {
-    "CodeSystem/BreastCompositionCS": {
-      "base": "CodeSystem-BreastCompositionCS.html"
+    "CodeSystem/BreastDensityCS": {
+      "base": "CodeSystem-BreastDensityCS.html"
     },
     "CodeSystem/BreastRadiologyAbnormalityMammographyMassDensityCS": {
       "base": "CodeSystem-BreastRadiologyAbnormalityMammographyMassDensityCS.html"
@@ -120,8 +120,8 @@
     "StructureDefinition/BreastRadiologySectionRoot": {
       "base": "StructureDefinition-BreastRadiologySectionRoot.html"
     },
-    "ValueSet/BreastCompositionVS": {
-      "base": "ValueSet-BreastCompositionVS.html"
+    "ValueSet/BreastDensityVS": {
+      "base": "ValueSet-BreastDensityVS.html"
     },
     "ValueSet/BreastRadiologyAbnormalityMammographyMassDensityVS": {
       "base": "ValueSet-BreastRadiologyAbnormalityMammographyMassDensityVS.html"

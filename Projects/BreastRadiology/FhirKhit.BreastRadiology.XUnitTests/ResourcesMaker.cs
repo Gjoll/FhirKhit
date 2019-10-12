@@ -31,6 +31,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         String resourceDir;
         FhirDateTime date = new FhirDateTime(2019, 11, 1);
         List<SDefEditor> editors = new List<SDefEditor>();
+        //String breastBodyLocation;
 
         String CreateUrl(String name)
         {
@@ -107,6 +108,21 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             e.Select("Observation.bodySite").Zero();
             e.Select("Observation.method").Zero();
             return e;
+        }
+
+        SDefEditor CreateAbnormalityBooleanValue(String name,
+            String title,
+            Markdown description)
+        {
+            SDefEditor retVal = this.CreateObservationEditor(name, title);
+            retVal
+                .Description(description)
+                ;
+
+            retVal.Select("Observation.value[x]")
+                .Type("boolean")
+                ;
+            return retVal;
         }
 
         SDefEditor CreateAbnormalityCodedValue(String name,
@@ -246,16 +262,24 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             fc.Add(this.resourceDir);
 
             String abnMassShape = AbnormalityMassShape();
+            //this.breastBodyLocation = this.BreastBodyLocation();
 
             //
             // Mammo
             //
-            String abnMammoMassMargin = AbnormalityMammographyMassMargin();
-            String abnMammoMassDensity = AbnormalityMammographyMassDensity();
-            String abnMammoBreastDensity = AbnormalityMammographyBreastDensity();
-            String abnMammoMass = AbnormalityMammographyMass(abnMassShape, abnMammoMassMargin, abnMammoMassDensity);
-            String abnMammo = AbnormalityMammography(abnMammoBreastDensity, abnMammoMass);
-
+            String abnMammo;
+            {
+                String massMargin = AbnormalityMammographyMassMargin();
+                String massDensity = AbnormalityMammographyMassDensity();
+                String breastDensity = AbnormalityMammographyBreastDensity();
+                String mass = AbnormalityMammographyMass(abnMassShape, massMargin, massDensity);
+                //String calcType = AbnormalityMammographyCalcificationType();
+                //String calcDist = AbnormalityMammographyCalcificationDistribution();
+                //String calc = AbnormalityMammographyCalcifications(calcType, calcDist);
+                //String archDist = AbnormalityMammographyArchitecturalDistortion();
+                //String assymetries = AbnormalityMammographyAssymetries();
+                abnMammo = AbnormalityMammography(breastDensity, mass, /*calc*/ null, /*archDist*/ null, /*assymetries*/ null);
+            }
             //
             // MRI
             //

@@ -13,12 +13,6 @@ namespace FhirKhit.Tools.R4
     public class ElementDefGroup
     {
         /// <summary>
-        /// Index that orders where they are places in the output structure definitions.
-        /// This keeps the order in the differentialt he same as the order in the base definition.
-        /// </summary>
-        public Int32 Index { get; set; }
-
-        /// <summary>
         /// Base element definition. Null if none...
         /// </summary>
         public ElementDefinition BaseElementDefinition { get; set; }
@@ -34,9 +28,8 @@ namespace FhirKhit.Tools.R4
         /// </summary>
         public List<ElementDefinition> RelatedElements { get; set; } = new List<ElementDefinition>();
 
-        public ElementDefGroup(Int32 index, ElementDefinition elementDef, ElementDefinition eBase)
+        public ElementDefGroup(ElementDefinition elementDef, ElementDefinition eBase)
         {
-            this.Index = index;
             this.ElementDefinition = elementDef;
             this.BaseElementDefinition = eBase;
             if (eBase != null)

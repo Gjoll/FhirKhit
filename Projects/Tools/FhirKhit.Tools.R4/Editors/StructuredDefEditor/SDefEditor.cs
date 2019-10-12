@@ -35,6 +35,7 @@ namespace FhirKhit.Tools.R4
 
         Dictionary<String, ElementDefGroup> baseElements = new Dictionary<string, ElementDefGroup>();
         Dictionary<String, ElementDefGroup> elements = new Dictionary<string, ElementDefGroup>();
+        List<ElementDefGroup> elementOrder = new List<ElementDefGroup>();
 
         public SDefEditor(String baseDefinition, String outputDir)
         {
@@ -45,7 +46,7 @@ namespace FhirKhit.Tools.R4
             for (Int32 i = 0; i < baseSDef.Snapshot.Element.Count; i++)
             {
                 ElementDefinition elementDefinition = baseSDef.Snapshot.Element[i];
-                ElementDefGroup e = new ElementDefGroup(i, elementDefinition, null);
+                ElementDefGroup e = new ElementDefGroup(elementDefinition, null);
                 this.baseElements.Add(elementDefinition.Path, e);
             }
 
@@ -56,6 +57,23 @@ namespace FhirKhit.Tools.R4
             };
 
             sDef.Differential.Element.Add(baseSDef.Differential.Element[0]);
+        }
+
+        public ElementDefGroup InsertAfter(ElementDefGroup at,
+            ElementDefinition e)
+        {
+            ElementDefGroup retVal = new ElementDefGroup(e, null);
+            Int32 index = 0;
+            foreach (ElementDefGroup g in this.elementOrder)
+            {
+                index += 1;
+                if (g == at)
+                {
+                    this.elementOrder.Insert(index, retVal);
+                    return retVal;
+                }
+            }
+            throw new Exception($"ElementDefGroup 'at' not found");
         }
 
         /// <summary>
@@ -82,8 +100,9 @@ namespace FhirKhit.Tools.R4
                         Path = eBase.Path,
                         ElementId = eBase.ElementId,
                     };
-                    ElementDefGroup newE = new ElementDefGroup(e.Index, ed, e.ElementDefinition);
+                    ElementDefGroup newE = new ElementDefGroup(ed, e.ElementDefinition);
                     this.elements.Add(ed.Path, newE);
+                    this.elementOrder.Add(newE);
                     return newE;
                 }
             }
@@ -101,14 +120,25 @@ namespace FhirKhit.Tools.R4
             return this.Find(path).ElementDefinition;
         }
 
+        public ElementDefinition Clone(String path)
+        {
+            if (path.StartsWith(this.basePath) == false)
+                path = $"{basePath}{path}";
+
+            if (this.baseElements.TryGetValue(path, out ElementDefGroup e) == false)
+                throw new Exception($"{path} not found");
+            ElementDefinition eBase = e.ElementDefinition;
+            ElementDefinition ed = new ElementDefinition
+            {
+                Path = eBase.Path,
+                ElementId = eBase.ElementId,
+            };
+            return ed;
+        }
+
         public String Write()
         {
-            List<ElementDefGroup> eList = this.elements.Values.ToList();
-            eList.Sort((a, b) =>
-            {
-                return a.Index.CompareTo(b.Index);
-            });
-            foreach (ElementDefGroup item in eList)
+            foreach (ElementDefGroup item in elementOrder)
             {
                 this.sDef.Differential.Element.Add(item.ElementDefinition);
                 this.sDef.Differential.Element.AddRange(item.RelatedElements);
@@ -157,25 +187,25 @@ namespace FhirKhit.Tools.R4
                 sliceElement.Type.Add(new ElementDefinition.TypeRefComponent
                 {
                     Code = "Reference",
-                    Profile = new String[] { target.Profile }
+                    TargetProfile = new String[] { target.Profile }
                 });
             }
             return this;
         }
 
-        public void SliceByUrl(ElementDefGroup eGroup)
+        public SDefEditor SliceByUrl(ElementDefGroup eGroup)
         {
-            SliceByUrl(eGroup.ElementDefinition);
+            return SliceByUrl(eGroup.ElementDefinition);
         }
 
-        public void SliceByUrl(ElementDefinition eDef)
+        public SDefEditor SliceByUrl(ElementDefinition eDef)
         {
             if (eDef.Slicing == null)
             {
                 eDef.Slicing = new ElementDefinition.SlicingComponent
                 {
-                    Ordered = false,
-                    Rules = ElementDefinition.SlicingRules.Open
+                    Ordered = true,
+                    Rules = ElementDefinition.SlicingRules.OpenAtEnd
                 };
             }
             eDef.Slicing.Discriminator.Add(new ElementDefinition.DiscriminatorComponent
@@ -183,6 +213,7 @@ namespace FhirKhit.Tools.R4
                 Type = ElementDefinition.DiscriminatorType.Value,
                 Path = "url"
             });
+            return this;
         }
 
 
@@ -266,6 +297,16 @@ namespace FhirKhit.Tools.R4
             String expression = "*")
         {
             this.sDef.Context(type, expression);
+            return this;
+        }
+
+        public SDefEditor ApplyBreastBodyLocation()
+        {
+            if (this.sDef.Type != "Observation")
+                throw new Exception("BreastBodyLocation can only be applied to Observations");
+            this.Select("Observation.bodySite")
+                .Single()
+                ;
             return this;
         }
     }

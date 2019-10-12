@@ -75,6 +75,28 @@
         ]
       },
       {
+        "id": "Observation.subject",
+        "path": "Observation.subject",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Observation.subject",
+          "min": 0,
+          "max": "1"
+        }
+      },
+      {
+        "id": "Observation.component",
+        "path": "Observation.component",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.component",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
         "id": "Observation.basedOn",
         "path": "Observation.basedOn",
         "min": 0,
@@ -86,12 +108,34 @@
         }
       },
       {
+        "id": "Observation.derivedFrom",
+        "path": "Observation.derivedFrom",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.derivedFrom",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
         "id": "Observation.partOf",
         "path": "Observation.partOf",
         "min": 0,
         "max": "0",
         "base": {
           "path": "Observation.partOf",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Observation.focus",
+        "path": "Observation.focus",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.focus",
           "min": 0,
           "max": "*"
         }
@@ -136,28 +180,6 @@
         }
       },
       {
-        "id": "Observation.subject",
-        "path": "Observation.subject",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Observation.subject",
-          "min": 0,
-          "max": "1"
-        }
-      },
-      {
-        "id": "Observation.focus",
-        "path": "Observation.focus",
-        "min": 0,
-        "max": "0",
-        "base": {
-          "path": "Observation.focus",
-          "min": 0,
-          "max": "*"
-        }
-      },
-      {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
         "min": 0,
@@ -166,6 +188,39 @@
           "path": "Observation.value[x]",
           "min": 0,
           "max": "1"
+        }
+      },
+      {
+        "id": "Observation.specimen",
+        "path": "Observation.specimen",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.specimen",
+          "min": 0,
+          "max": "1"
+        }
+      },
+      {
+        "id": "Observation.device",
+        "path": "Observation.device",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.device",
+          "min": 0,
+          "max": "1"
+        }
+      },
+      {
+        "id": "Observation.referenceRange",
+        "path": "Observation.referenceRange",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.referenceRange",
+          "min": 0,
+          "max": "*"
         }
       },
       {
@@ -213,39 +268,6 @@
         }
       },
       {
-        "id": "Observation.specimen",
-        "path": "Observation.specimen",
-        "min": 0,
-        "max": "0",
-        "base": {
-          "path": "Observation.specimen",
-          "min": 0,
-          "max": "1"
-        }
-      },
-      {
-        "id": "Observation.device",
-        "path": "Observation.device",
-        "min": 0,
-        "max": "0",
-        "base": {
-          "path": "Observation.device",
-          "min": 0,
-          "max": "1"
-        }
-      },
-      {
-        "id": "Observation.referenceRange",
-        "path": "Observation.referenceRange",
-        "min": 0,
-        "max": "0",
-        "base": {
-          "path": "Observation.referenceRange",
-          "min": 0,
-          "max": "*"
-        }
-      },
-      {
         "id": "Observation.hasMember",
         "path": "Observation.hasMember",
         "slicing": {
@@ -255,8 +277,8 @@
               "path": "url"
             }
           ],
-          "ordered": false,
-          "rules": "open"
+          "ordered": true,
+          "rules": "openAtEnd"
         },
         "base": {
           "path": "Observation.hasMember",
@@ -278,7 +300,7 @@
         "type": [
           {
             "code": "Reference",
-            "profile": [
+            "targetProfile": [
               "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologySectionFindingsLeftBreast"
             ]
           }
@@ -298,33 +320,11 @@
         "type": [
           {
             "code": "Reference",
-            "profile": [
+            "targetProfile": [
               "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologySectionFindingsRightBreast"
             ]
           }
         ]
-      },
-      {
-        "id": "Observation.derivedFrom",
-        "path": "Observation.derivedFrom",
-        "min": 0,
-        "max": "0",
-        "base": {
-          "path": "Observation.derivedFrom",
-          "min": 0,
-          "max": "*"
-        }
-      },
-      {
-        "id": "Observation.component",
-        "path": "Observation.component",
-        "min": 0,
-        "max": "0",
-        "base": {
-          "path": "Observation.component",
-          "min": 0,
-          "max": "*"
-        }
       }
     ]
   }

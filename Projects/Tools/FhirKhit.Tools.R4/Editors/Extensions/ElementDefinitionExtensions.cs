@@ -7,6 +7,24 @@ namespace FhirKhit.Tools.R4
 {
     public static class ElementDefinitionExtensions2
     {
+        public static ElementDefinition Path(this ElementDefinition e, String value)
+        {
+            e.Path = value;
+            return e;
+        }
+
+        public static ElementDefinition ElementId(this ElementDefinition e, String value)
+        {
+            e.ElementId = value;
+            return e;
+        }
+
+        public static ElementDefinition SliceName(this ElementDefinition e, String value)
+        {
+            e.SliceName = value;
+            return e;
+        }
+
         public static ElementDefinition Min(this ElementDefinition e, Int32 min)
         {
             e.Min = min;
