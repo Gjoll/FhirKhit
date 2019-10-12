@@ -196,7 +196,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             {
                 Id = $"{name}CS",
                 Url = $"http://hl7.org/fhir/us/breast-radiology/CodeSystem/{name}CS",
-                Version = "ProfileVersion",
+                Version = ProfileVersion,
                 Name = $"{name}CS",
                 Title = title,
                 Date = date.ToString(),
@@ -213,7 +213,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             {
                 Id = $"{name}VS",
                 Url = $"http://hl7.org/fhir/us/breast-radiology/CodeSystem/{name}VS",
-                Version = "ProfileVersion",
+                Version = ProfileVersion,
                 Name = $"{name}VS",
                 Title = title,
                 Date = date.ToString(),

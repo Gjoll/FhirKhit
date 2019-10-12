@@ -2,7 +2,7 @@
   "resourceType": "ValueSet",
   "id": "BreastLocationDepthVS",
   "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastLocationDepthVS",
-  "version": "ProfileVersion",
+  "version": "0.0.2",
   "name": "BreastLocationDepthVS",
   "title": "Breast Location Depth",
   "status": "draft",

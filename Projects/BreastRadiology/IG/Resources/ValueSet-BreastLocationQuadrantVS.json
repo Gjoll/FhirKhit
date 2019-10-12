@@ -2,7 +2,7 @@
   "resourceType": "ValueSet",
   "id": "BreastLocationQuadrantVS",
   "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastLocationQuadrantVS",
-  "version": "ProfileVersion",
+  "version": "0.0.2",
   "name": "BreastLocationQuadrantVS",
   "title": "Breast Location Quadrant",
   "status": "draft",

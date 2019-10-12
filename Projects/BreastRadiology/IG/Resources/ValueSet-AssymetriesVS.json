@@ -2,7 +2,7 @@
   "resourceType": "ValueSet",
   "id": "AssymetriesVS",
   "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/AssymetriesVS",
-  "version": "ProfileVersion",
+  "version": "0.0.2",
   "name": "AssymetriesVS",
   "title": "Assymetries",
   "status": "draft",

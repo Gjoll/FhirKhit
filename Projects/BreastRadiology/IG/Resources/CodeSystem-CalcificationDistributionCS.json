@@ -2,7 +2,7 @@
   "resourceType": "CodeSystem",
   "id": "CalcificationDistributionCS",
   "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CalcificationDistributionCS",
-  "version": "ProfileVersion",
+  "version": "0.0.2",
   "name": "CalcificationDistributionCS",
   "title": "Calcification Distribution",
   "status": "draft",

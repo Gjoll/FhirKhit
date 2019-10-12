@@ -2,7 +2,7 @@
   "resourceType": "CodeSystem",
   "id": "BreastRadiologyAbnormalityMammographyMassDensityCS",
   "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadiologyAbnormalityMammographyMassDensityCS",
-  "version": "ProfileVersion",
+  "version": "0.0.2",
   "name": "BreastRadiologyAbnormalityMammographyMassDensityCS",
   "title": "BreastRadiology Abnormality Mammography Mass Density",
   "status": "draft",

@@ -2,7 +2,7 @@
   "resourceType": "CodeSystem",
   "id": "CalcificationTypeCS",
   "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CalcificationTypeCS",
-  "version": "ProfileVersion",
+  "version": "0.0.2",
   "name": "CalcificationTypeCS",
   "title": "Calcification Type",
   "status": "draft",

@@ -2,7 +2,7 @@
   "resourceType": "CodeSystem",
   "id": "BreastRadiologyAbnormalityMammographyMassMarginCS",
   "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadiologyAbnormalityMammographyMassMarginCS",
-  "version": "ProfileVersion",
+  "version": "0.0.2",
   "name": "BreastRadiologyAbnormalityMammographyMassMarginCS",
   "title": "BreastRadiology Abnormality Mammography Mass Margin",
   "status": "draft",

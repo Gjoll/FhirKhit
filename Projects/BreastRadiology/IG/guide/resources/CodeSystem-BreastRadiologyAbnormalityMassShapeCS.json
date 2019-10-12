@@ -2,7 +2,7 @@
   "resourceType": "CodeSystem",
   "id": "BreastRadiologyAbnormalityMassShapeCS",
   "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadiologyAbnormalityMassShapeCS",
-  "version": "ProfileVersion",
+  "version": "0.0.2",
   "name": "BreastRadiologyAbnormalityMassShapeCS",
   "title": "Breast Radiology Abnormality Mass Shape",
   "status": "draft",

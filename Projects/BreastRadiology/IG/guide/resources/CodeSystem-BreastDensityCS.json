@@ -2,7 +2,7 @@
   "resourceType": "CodeSystem",
   "id": "BreastDensityCS",
   "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastDensityCS",
-  "version": "ProfileVersion",
+  "version": "0.0.2",
   "name": "BreastDensityCS",
   "title": "Breast Density",
   "status": "draft",

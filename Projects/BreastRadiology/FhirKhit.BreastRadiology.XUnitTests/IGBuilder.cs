@@ -14,6 +14,10 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         const PublicationStatus ProfileStatus = PublicationStatus.Draft;
         FileCleaner fc = new FileCleaner();
 
+        const String ProfileVersion = "0.0.2";
+        const String contactUrl = "http://www.hl7.org/Special/committees/cic";
+        FhirDateTime date = new FhirDateTime(2019, 11, 1);
+
         String outputDir;
         String resourceDir => Path.Combine(this.outputDir, "resources");
         String IgPath => Path.Combine(outputDir, "IG.json");
@@ -84,6 +88,20 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             this.implementationGuide = new ImplementationGuideEditor(this.ImpGuidePath);
         }
 
+        List<ContactDetail> Contact()
+        {
+            ContactDetail cd = new ContactDetail();
+            cd.Telecom.Add(new ContactPoint
+            {
+                System = ContactPoint.ContactPointSystem.Url,
+                Value = contactUrl
+            });
+
+            List<ContactDetail> retVal = new List<ContactDetail>();
+            retVal.Add(cd);
+            return retVal;
+        }
+
         public void AddResources(String resourceDir)
         {
             void Save(Resource r, String outputName)
@@ -112,6 +130,14 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                             String typeName = "StructureDefinition";
                             String fixedName = FixName(file, typeName);
                             String htmlPage = $"{fixedName}.html";
+
+                            // Override these values ..
+                            structureDefinition.Version = ProfileVersion;
+                            structureDefinition.Date = date.ToString();
+                            structureDefinition.Status = ProfileStatus;
+                            structureDefinition.Publisher = "Hl7-Clinical Interoperability Council";
+                            structureDefinition.Contact = Contact();
+
                             SnapshotCreator.Create(structureDefinition);
                             Save(structureDefinition, $"{fixedName}.json");
                             bool extensionFlag = structureDefinition.BaseDefinition == "http://hl7.org/fhir/StructureDefinition/Extension";
@@ -124,6 +150,14 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                             String typeName = "CodeSystem";
                             String fixedName = FixName(file, typeName);
                             String htmlPage = $"{fixedName}.html";
+
+                            // Override these values ..
+                            codeSystem.Version = ProfileVersion;
+                            codeSystem.Date = date.ToString();
+                            codeSystem.Status = ProfileStatus;
+                            codeSystem.Publisher = "Hl7-Clinical Interoperability Council";
+                            codeSystem.Contact = Contact();
+
                             Save(codeSystem, $"{fixedName}.json");
                             this.implementationGuide.AddIGResource($"{typeName}/{codeSystem.Name}", codeSystem.Name, false);
                             this.igEditor.AddResource($"{typeName}/{codeSystem.Name}",
@@ -139,6 +173,14 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                             String typeName = "ValueSet";
                             String fixedName = FixName(file, typeName);
                             String htmlPage = $"{fixedName}.html";
+
+                            // Override these values ..
+                            valueSet.Version = ProfileVersion;
+                            valueSet.Date = date.ToString();
+                            valueSet.Status = ProfileStatus;
+                            valueSet.Publisher = "Hl7-Clinical Interoperability Council";
+                            valueSet.Contact = Contact();
+
                             Save(valueSet, $"{fixedName}.json");
                             this.implementationGuide.AddIGResource($"{typeName}/{valueSet.Name}", valueSet.Name, false);
                             this.igEditor.AddResource($"{typeName}/{valueSet.Name}",

@@ -339,6 +339,13 @@
       },
       "name" : "BreastLocationQuadrantVS",
       "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/UnitsOfLengthVS"
+      },
+      "name" : "UnitsOfLengthVS",
+      "exampleBoolean" : false
     }],
     "page" : {
       "nameUrl" : "index.html",

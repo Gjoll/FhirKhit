@@ -2,7 +2,7 @@
   "resourceType": "CodeSystem",
   "id": "AssymetriesCS",
   "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/AssymetriesCS",
-  "version": "ProfileVersion",
+  "version": "0.0.2",
   "name": "AssymetriesCS",
   "title": "Assymetries",
   "status": "draft",

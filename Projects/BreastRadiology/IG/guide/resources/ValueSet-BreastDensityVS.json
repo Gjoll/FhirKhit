@@ -2,7 +2,7 @@
   "resourceType": "ValueSet",
   "id": "BreastDensityVS",
   "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastDensityVS",
-  "version": "ProfileVersion",
+  "version": "0.0.2",
   "name": "BreastDensityVS",
   "title": "Breast Density",
   "status": "draft",

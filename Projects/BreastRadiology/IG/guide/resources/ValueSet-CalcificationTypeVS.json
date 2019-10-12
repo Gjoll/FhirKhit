@@ -2,7 +2,7 @@
   "resourceType": "ValueSet",
   "id": "CalcificationTypeVS",
   "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CalcificationTypeVS",
-  "version": "ProfileVersion",
+  "version": "0.0.2",
   "name": "CalcificationTypeVS",
   "title": "Calcification Type",
   "status": "draft",
