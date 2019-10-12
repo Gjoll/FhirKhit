@@ -315,7 +315,10 @@ namespace FhirKhit.Tools.R4
             this.Select("bodySite")
                 .Single()
                 ;
-            this.ApplyExtension("breastBodyLocation", breastBodyLocationUrl);
+
+            this.ApplyExtension("breastBodyLocation", breastBodyLocationUrl)
+                .Single()
+                ;
             return this;
         }
     }
