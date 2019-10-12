@@ -213,6 +213,83 @@
       },
       "name" : "BreastDensityVS",
       "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/AssymetriesCS"
+      },
+      "name" : "AssymetriesCS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/CalcificationDistributionCS"
+      },
+      "name" : "CalcificationDistributionCS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/CalcificationTypeCS"
+      },
+      "name" : "CalcificationTypeCS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityMammographyArchitecturalDistortion"
+      },
+      "name" : "BreastRadiologyAbnormalityMammographyArchitecturalDistortion",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityMammographyAssymetries"
+      },
+      "name" : "BreastRadiologyAbnormalityMammographyAssymetries",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityMammographyCalcificationDistribution"
+      },
+      "name" : "BreastRadiologyAbnormalityMammographyCalcificationDistribution",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityMammographyCalcificationType"
+      },
+      "name" : "BreastRadiologyAbnormalityMammographyCalcificationType",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyMammographyCalcifications"
+      },
+      "name" : "BreastRadiologyMammographyCalcifications",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/AssymetriesVS"
+      },
+      "name" : "AssymetriesVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/CalcificationDistributionVS"
+      },
+      "name" : "CalcificationDistributionVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/CalcificationTypeVS"
+      },
+      "name" : "CalcificationTypeVS",
+      "exampleBoolean" : false
     }],
     "page" : {
       "nameUrl" : "index.html",

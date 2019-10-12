@@ -1,9 +1,9 @@
 {
   "resourceType": "StructureDefinition",
-  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityMammography",
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyMammographyCalcifications",
   "version": "0.0.2",
-  "name": "BreastRadiologyAbnormalityMammography",
-  "title": "Breast Radiology Abnormality (Mammography)",
+  "name": "BreastRadiologyMammographyCalcifications",
+  "title": "Breast Radiology Mammography Calcifications Observation",
   "status": "draft",
   "date": "2019-11-01",
   "publisher": "Hl7-Clinical Interoperability Council",
@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Mammography Breast Abnormality Observation",
+  "description": "Breast Radiology Mammography Calcifications Observation\n\n\nThis observation has the following two member observations\n\n\n** Calcification Type\n** Calcification Distribution",
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
@@ -192,43 +192,25 @@
         }
       },
       {
-        "id": "Observation.method",
-        "path": "Observation.method",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "coding"
-            }
-          ],
-          "rules": "open"
-        },
-        "min": 0,
+        "id": "Observation.bodySite",
+        "path": "Observation.bodySite",
+        "min": 1,
         "max": "1",
         "base": {
-          "path": "Observation.method",
+          "path": "Observation.bodySite",
           "min": 0,
           "max": "1"
         }
       },
       {
-        "id": "Observation.method.coding",
-        "path": "Observation.method.coding"
-      },
-      {
-        "id": "Observation.method.coding:method",
-        "path": "Observation.method.coding",
-        "sliceName": "method",
-        "min": 1,
-        "max": "*",
+        "id": "Observation.method",
+        "path": "Observation.method",
+        "min": 0,
+        "max": "0",
         "base": {
           "path": "Observation.method",
           "min": 0,
           "max": "1"
-        },
-        "patternCoding": {
-          "system": "http://snomed.info/sct",
-          "code": "115341008"
         }
       },
       {
@@ -238,6 +220,17 @@
         "max": "0",
         "base": {
           "path": "Observation.specimen",
+          "min": 0,
+          "max": "1"
+        }
+      },
+      {
+        "id": "Observation.device",
+        "path": "Observation.device",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.device",
           "min": 0,
           "max": "1"
         }
@@ -275,9 +268,9 @@
         }
       },
       {
-        "id": "Observation.hasMember:breastRadiologyAbnormalityMammographyBreastDensity",
+        "id": "Observation.hasMember:breastRadiologyAbnormalityMammographyCalcificationType",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadiologyAbnormalityMammographyBreastDensity",
+        "sliceName": "breastRadiologyAbnormalityMammographyCalcificationType",
         "min": 1,
         "max": "1",
         "base": {
@@ -289,56 +282,16 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityMammographyBreastDensity"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityMammographyCalcificationType"
             ]
           }
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadiologyMammographyMass",
+        "id": "Observation.hasMember:breastRadiologyAbnormalityMammographyCalcificationDistribution",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadiologyMammographyMass",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Observation.hasMember",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyMammographyMass"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "Observation.hasMember:breastRadiologyMammographyCalcifications",
-        "path": "Observation.hasMember",
-        "sliceName": "breastRadiologyMammographyCalcifications",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Observation.hasMember",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyMammographyCalcifications"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "Observation.hasMember:breastRadiologyAbnormalityMammographyArchitecturalDistortion",
-        "path": "Observation.hasMember",
-        "sliceName": "breastRadiologyAbnormalityMammographyArchitecturalDistortion",
-        "min": 0,
+        "sliceName": "breastRadiologyAbnormalityMammographyCalcificationDistribution",
+        "min": 1,
         "max": "1",
         "base": {
           "path": "Observation.hasMember",
@@ -349,27 +302,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityMammographyArchitecturalDistortion"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "Observation.hasMember:breastRadiologyAbnormalityMammographyAssymetries",
-        "path": "Observation.hasMember",
-        "sliceName": "breastRadiologyAbnormalityMammographyAssymetries",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Observation.hasMember",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityMammographyAssymetries"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyAbnormalityMammographyCalcificationDistribution"
             ]
           }
         ]

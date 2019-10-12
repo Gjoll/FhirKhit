@@ -57,6 +57,9 @@
     "examples"
   ],
   "resources": {
+    "CodeSystem/AssymetriesCS": {
+      "base": "CodeSystem-AssymetriesCS.html"
+    },
     "CodeSystem/BreastDensityCS": {
       "base": "CodeSystem-BreastDensityCS.html"
     },
@@ -69,11 +72,29 @@
     "CodeSystem/BreastRadiologyAbnormalityMassShapeCS": {
       "base": "CodeSystem-BreastRadiologyAbnormalityMassShapeCS.html"
     },
+    "CodeSystem/CalcificationDistributionCS": {
+      "base": "CodeSystem-CalcificationDistributionCS.html"
+    },
+    "CodeSystem/CalcificationTypeCS": {
+      "base": "CodeSystem-CalcificationTypeCS.html"
+    },
     "StructureDefinition/BreastRadiologyAbnormalityMammography": {
       "base": "StructureDefinition-BreastRadiologyAbnormalityMammography.html"
     },
+    "StructureDefinition/BreastRadiologyAbnormalityMammographyArchitecturalDistortion": {
+      "base": "StructureDefinition-BreastRadiologyAbnormalityMammographyArchitecturalDistortion.html"
+    },
+    "StructureDefinition/BreastRadiologyAbnormalityMammographyAssymetries": {
+      "base": "StructureDefinition-BreastRadiologyAbnormalityMammographyAssymetries.html"
+    },
     "StructureDefinition/BreastRadiologyAbnormalityMammographyBreastDensity": {
       "base": "StructureDefinition-BreastRadiologyAbnormalityMammographyBreastDensity.html"
+    },
+    "StructureDefinition/BreastRadiologyAbnormalityMammographyCalcificationDistribution": {
+      "base": "StructureDefinition-BreastRadiologyAbnormalityMammographyCalcificationDistribution.html"
+    },
+    "StructureDefinition/BreastRadiologyAbnormalityMammographyCalcificationType": {
+      "base": "StructureDefinition-BreastRadiologyAbnormalityMammographyCalcificationType.html"
     },
     "StructureDefinition/BreastRadiologyAbnormalityMammographyMassDensity": {
       "base": "StructureDefinition-BreastRadiologyAbnormalityMammographyMassDensity.html"
@@ -89,6 +110,9 @@
     },
     "StructureDefinition/BreastRadiologyAbnormalityUltraSound": {
       "base": "StructureDefinition-BreastRadiologyAbnormalityUltraSound.html"
+    },
+    "StructureDefinition/BreastRadiologyMammographyCalcifications": {
+      "base": "StructureDefinition-BreastRadiologyMammographyCalcifications.html"
     },
     "StructureDefinition/BreastRadiologyMammographyMass": {
       "base": "StructureDefinition-BreastRadiologyMammographyMass.html"
@@ -120,6 +144,9 @@
     "StructureDefinition/BreastRadiologySectionRoot": {
       "base": "StructureDefinition-BreastRadiologySectionRoot.html"
     },
+    "ValueSet/AssymetriesVS": {
+      "base": "ValueSet-AssymetriesVS.html"
+    },
     "ValueSet/BreastDensityVS": {
       "base": "ValueSet-BreastDensityVS.html"
     },
@@ -131,6 +158,12 @@
     },
     "ValueSet/BreastRadiologyAbnormalityMassShapeVS": {
       "base": "ValueSet-BreastRadiologyAbnormalityMassShapeVS.html"
+    },
+    "ValueSet/CalcificationDistributionVS": {
+      "base": "ValueSet-CalcificationDistributionVS.html"
+    },
+    "ValueSet/CalcificationTypeVS": {
+      "base": "ValueSet-CalcificationTypeVS.html"
     }
   },
   "special-urls": [],

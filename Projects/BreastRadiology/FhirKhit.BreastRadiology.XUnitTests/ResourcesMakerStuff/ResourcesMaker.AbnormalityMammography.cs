@@ -31,9 +31,9 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                     {
                         new ObservationTarget(mammoBreastDensity, 1, "1"),
                         new ObservationTarget(mammoMass, 0, "*"),
-                        //new ObservationTarget(calc, 0, "*")
-                        //new ObservationTarget(archDist, 0, "1"),
-                        //new ObservationTarget(assymetries, 0, "*")
+                        new ObservationTarget(calc, 0, "*"),
+                        new ObservationTarget(archDist, 0, "1"),
+                        new ObservationTarget(assymetries, 0, "*")
                     })
                 .SDef.Url;
         }

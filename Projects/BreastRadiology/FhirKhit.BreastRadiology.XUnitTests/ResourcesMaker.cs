@@ -293,13 +293,15 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 String massDensity = AbnormalityMammographyMassDensity();
                 String breastDensity = AbnormalityMammographyBreastDensity();
                 String mass = AbnormalityMammographyMass(abnMassShape, massMargin, massDensity);
-                //String calcType = AbnormalityMammographyCalcificationType();
-                //String calcDist = AbnormalityMammographyCalcificationDistribution();
-                //String calc = AbnormalityMammographyCalcifications(calcType, calcDist);
-                //String archDist = AbnormalityMammographyArchitecturalDistortion();
-                //String assymetries = AbnormalityMammographyAssymetries();
-                abnMammo = AbnormalityMammography(breastDensity, mass, /*calc*/ null, /*archDist*/ null, /*assymetries*/ null);
+                String calcType = AbnormalityMammographyCalcificationType();
+                String calcDist = AbnormalityMammographyCalcificationDistribution();
+                String calc = AbnormalityMammographyCalcifications(calcType, calcDist);
+                String archDist = AbnormalityMammographyArchitecturalDistortion();
+                String assymetries = AbnormalityMammographyAssymetries();
+
+                abnMammo = AbnormalityMammography(breastDensity, mass, calc, archDist, assymetries);
             }
+
             //
             // MRI
             //
