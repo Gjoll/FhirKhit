@@ -34,11 +34,11 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             e.Select("specimen").Zero();
             e.Select("conclusion").Single();
             e.Select("conclusionCode").Single();
-            e.SimpleExtension("Recommendations", recommendationsUrl)
+            e.ApplyExtension("Recommendations", recommendationsUrl)
                 .Short("Recommendations for future care")
                 .Definition("Recommendations for future care")
                 .ZeroToMany();
-            e.SimpleExtension("PriorReports", priorReportsUrl)
+            e.ApplyExtension("PriorReports", priorReportsUrl)
                 .Short("Recommendations for future care")
                 .Definition("Recommendations for future care")
                 .ZeroToMany();

@@ -47,7 +47,7 @@ namespace FhirKhit.Tools.R4
             {
                 ElementDefinition elementDefinition = baseSDef.Snapshot.Element[i];
                 ElementDefGroup e = new ElementDefGroup(i, elementDefinition, null);
-                this.baseElements.Add(elementDefinition.Path, e);
+                this.baseElements.Add(elementDefinition.ElementId, e);
             }
 
             sDef = new StructureDefinition
@@ -109,7 +109,7 @@ namespace FhirKhit.Tools.R4
             ElementDefinition baseDefinition)
         {
             ElementDefGroup newE = new ElementDefGroup(index, elementDefinition, baseDefinition);
-            this.elements.Add(elementDefinition.Path, newE);
+            this.elements.Add(elementDefinition.ElementId, newE);
             Int32 i = this.elementOrder.Count;
             while ((i > 0) && (this.elementOrder[i-1].Index > index))
                 i -= 1;
@@ -282,7 +282,7 @@ namespace FhirKhit.Tools.R4
                 SliceByUrl(extDef);
         }
 
-        public ElementDefinition SimpleExtension(String name, String extensionUrl)
+        public ElementDefinition ApplyExtension(String name, String extensionUrl)
         {
             ConfigureExtensionSlice();
             return SliceByUrl("extension", extensionUrl, name);
@@ -308,13 +308,14 @@ namespace FhirKhit.Tools.R4
             return this;
         }
 
-        public SDefEditor ApplyBreastBodyLocation()
+        public SDefEditor ApplyBreastBodyLocation(String breastBodyLocationUrl)
         {
             if (this.sDef.Type != "Observation")
                 throw new Exception("BreastBodyLocation can only be applied to Observations");
             this.Select("bodySite")
                 .Single()
                 ;
+            this.ApplyExtension("breastBodyLocation", breastBodyLocationUrl);
             return this;
         }
     }

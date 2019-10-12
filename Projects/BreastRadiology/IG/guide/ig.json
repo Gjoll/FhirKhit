@@ -63,6 +63,15 @@
     "CodeSystem/BreastDensityCS": {
       "base": "CodeSystem-BreastDensityCS.html"
     },
+    "CodeSystem/BreastLocationClockCS": {
+      "base": "CodeSystem-BreastLocationClockCS.html"
+    },
+    "CodeSystem/BreastLocationDepthCS": {
+      "base": "CodeSystem-BreastLocationDepthCS.html"
+    },
+    "CodeSystem/BreastLocationQuadrantCS": {
+      "base": "CodeSystem-BreastLocationQuadrantCS.html"
+    },
     "CodeSystem/BreastRadiologyAbnormalityMammographyMassDensityCS": {
       "base": "CodeSystem-BreastRadiologyAbnormalityMammographyMassDensityCS.html"
     },
@@ -77,6 +86,9 @@
     },
     "CodeSystem/CalcificationTypeCS": {
       "base": "CodeSystem-CalcificationTypeCS.html"
+    },
+    "StructureDefinition/BreastBodyLocation": {
+      "base": "StructureDefinition-BreastBodyLocation.html"
     },
     "StructureDefinition/BreastRadiologyAbnormalityMammography": {
       "base": "StructureDefinition-BreastRadiologyAbnormalityMammography.html"
@@ -149,6 +161,15 @@
     },
     "ValueSet/BreastDensityVS": {
       "base": "ValueSet-BreastDensityVS.html"
+    },
+    "ValueSet/BreastLocationClockVS": {
+      "base": "ValueSet-BreastLocationClockVS.html"
+    },
+    "ValueSet/BreastLocationDepthVS": {
+      "base": "ValueSet-BreastLocationDepthVS.html"
+    },
+    "ValueSet/BreastLocationQuadrantVS": {
+      "base": "ValueSet-BreastLocationQuadrantVS.html"
     },
     "ValueSet/BreastRadiologyAbnormalityMammographyMassDensityVS": {
       "base": "ValueSet-BreastRadiologyAbnormalityMammographyMassDensityVS.html"

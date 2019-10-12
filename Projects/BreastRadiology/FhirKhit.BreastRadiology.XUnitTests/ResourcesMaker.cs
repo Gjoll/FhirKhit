@@ -35,7 +35,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         String resourceDir;
         FhirDateTime date = new FhirDateTime(2019, 11, 1);
         List<SDefEditor> editors = new List<SDefEditor>();
-        //String breastBodyLocation;
+        String breastBodyLocation;
 
         String CreateUrl(String name)
         {
@@ -282,7 +282,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             fc.Add(this.resourceDir);
 
             String abnMassShape = AbnormalityMassShape();
-            //this.breastBodyLocation = this.BreastBodyLocation();
+            this.breastBodyLocation = this.BreastBodyLocation();
 
             //
             // Mammo

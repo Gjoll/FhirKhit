@@ -290,6 +290,55 @@
       },
       "name" : "CalcificationTypeVS",
       "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/BreastLocationClockCS"
+      },
+      "name" : "BreastLocationClockCS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/BreastLocationDepthCS"
+      },
+      "name" : "BreastLocationDepthCS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/BreastLocationQuadrantCS"
+      },
+      "name" : "BreastLocationQuadrantCS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastBodyLocation"
+      },
+      "name" : "BreastBodyLocation",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/BreastLocationClockVS"
+      },
+      "name" : "BreastLocationClockVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/BreastLocationDepthVS"
+      },
+      "name" : "BreastLocationDepthVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/BreastLocationQuadrantVS"
+      },
+      "name" : "BreastLocationQuadrantVS",
+      "exampleBoolean" : false
     }],
     "page" : {
       "nameUrl" : "index.html",

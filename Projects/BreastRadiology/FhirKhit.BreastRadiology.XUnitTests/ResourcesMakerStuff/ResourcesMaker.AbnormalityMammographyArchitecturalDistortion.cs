@@ -20,7 +20,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 "Breast Radiology Abnormality Architectural Distortion (Mammography)",
                 new Markdown().Paragraph("Mammography Breast Abnormality Architectural Distortion Observation")
                 )
-                .ApplyBreastBodyLocation()
+                .ApplyBreastBodyLocation(this.breastBodyLocation)
                 .SDef.Url;
         }
     }
