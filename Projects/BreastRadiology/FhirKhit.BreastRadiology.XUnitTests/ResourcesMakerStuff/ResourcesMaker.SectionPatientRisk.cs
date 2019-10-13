@@ -15,7 +15,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
     {
         String SectionPatientRisk()
         {
-            return CreateObservationSection(
+            return this.CreateObservationSection(
                 "BreastRadSectionPatientRisk",
                 "Breast Radiology Patient Risk Section",
                 new Markdown().Paragraph("Patient Risk Section"))

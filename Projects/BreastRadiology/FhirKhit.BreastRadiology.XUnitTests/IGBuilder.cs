@@ -20,8 +20,8 @@ namespace FhirKhit.BreastRadiology.XUnitTests
 
         String outputDir;
         String resourceDir => Path.Combine(this.outputDir, "resources");
-        String IgPath => Path.Combine(outputDir, "IG.json");
-        String ImpGuidePath => Path.Combine(outputDir, "Resources", "ig.xml");
+        String IgPath => Path.Combine(this.outputDir, "IG.json");
+        String ImpGuidePath => Path.Combine(this.outputDir, "Resources", "ig.xml");
 
         ProfilesEditor profilesEditor;
         ExamplesEditor examplesEditor;
@@ -34,8 +34,8 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         public IGBuilder(String outputDir)
         {
             this.outputDir = outputDir;
-            fc.Add(this.resourceDir);
-            fc.Mark(Path.Combine(this.resourceDir, "IG.xml"));
+            this.fc.Add(this.resourceDir);
+            this.fc.Mark(Path.Combine(this.resourceDir, "IG.xml"));
         }
 
         void AddIGStructureDefinition(StructureDefinition sDef, bool extensionFlag)
@@ -60,11 +60,11 @@ namespace FhirKhit.BreastRadiology.XUnitTests
 
         public void SaveAll()
         {
-            implementationGuide.Save(this.ImpGuidePath);
-            fc.Mark(this.ImpGuidePath);
+            this.implementationGuide.Save(this.ImpGuidePath);
+            this.fc.Mark(this.ImpGuidePath);
 
             this.igEditor.Save(this.IgPath);
-            fc.Mark(this.IgPath);
+            this.fc.Mark(this.IgPath);
 
             this.examplesEditor.Save();
             this.profilesEditor.Save();
@@ -72,7 +72,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             this.codeSystemsEditor.Save();
             this.valueSetsEditor.Save();
 
-            fc.Dispose();
+            this.fc.Dispose();
         }
 
         public void Start()
@@ -108,7 +108,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             {
                 String outputPath = Path.Combine(this.resourceDir, outputName);
                 r.SaveJson(outputPath);
-                fc.Mark(outputPath);
+                this.fc.Mark(outputPath);
             }
 
             String FixName(String path, String prefix)
@@ -133,10 +133,10 @@ namespace FhirKhit.BreastRadiology.XUnitTests
 
                             // Override these values ..
                             structureDefinition.Version = ProfileVersion;
-                            structureDefinition.Date = date.ToString();
+                            structureDefinition.Date = this.date.ToString();
                             structureDefinition.Status = ProfileStatus;
                             structureDefinition.Publisher = "Hl7-Clinical Interoperability Council";
-                            structureDefinition.Contact = Contact();
+                            structureDefinition.Contact = this.Contact();
 
                             SnapshotCreator.Create(structureDefinition);
                             Save(structureDefinition, $"{fixedName}.json");
@@ -153,10 +153,10 @@ namespace FhirKhit.BreastRadiology.XUnitTests
 
                             // Override these values ..
                             codeSystem.Version = ProfileVersion;
-                            codeSystem.Date = date.ToString();
+                            codeSystem.Date = this.date.ToString();
                             codeSystem.Status = ProfileStatus;
                             codeSystem.Publisher = "Hl7-Clinical Interoperability Council";
-                            codeSystem.Contact = Contact();
+                            codeSystem.Contact = this.Contact();
 
                             Save(codeSystem, $"{fixedName}.json");
                             this.implementationGuide.AddIGResource($"{typeName}/{codeSystem.Name}", codeSystem.Name, false);
@@ -176,10 +176,10 @@ namespace FhirKhit.BreastRadiology.XUnitTests
 
                             // Override these values ..
                             valueSet.Version = ProfileVersion;
-                            valueSet.Date = date.ToString();
+                            valueSet.Date = this.date.ToString();
                             valueSet.Status = ProfileStatus;
                             valueSet.Publisher = "Hl7-Clinical Interoperability Council";
-                            valueSet.Contact = Contact();
+                            valueSet.Contact = this.Contact();
 
                             Save(valueSet, $"{fixedName}.json");
                             this.implementationGuide.AddIGResource($"{typeName}/{valueSet.Name}", valueSet.Name, false);

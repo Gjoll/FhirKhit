@@ -72,11 +72,20 @@
     "CodeSystem/BreastRadAbnormalityMammoArchitecturalDistortionFindingsCS": {
       "base": "CodeSystem-BreastRadAbnormalityMammoArchitecturalDistortionFindingsCS.html"
     },
+    "CodeSystem/BreastRadAbnormalityMammoIntramammaryLymphNodeFindingsCS": {
+      "base": "CodeSystem-BreastRadAbnormalityMammoIntramammaryLymphNodeFindingsCS.html"
+    },
     "CodeSystem/BreastRadAbnormalityMammoMassDensityCS": {
       "base": "CodeSystem-BreastRadAbnormalityMammoMassDensityCS.html"
     },
     "CodeSystem/BreastRadAbnormalityMammoMassMarginCS": {
       "base": "CodeSystem-BreastRadAbnormalityMammoMassMarginCS.html"
+    },
+    "CodeSystem/BreastRadAbnormalityMammoSkinLesionFindingsCS": {
+      "base": "CodeSystem-BreastRadAbnormalityMammoSkinLesionFindingsCS.html"
+    },
+    "CodeSystem/BreastRadAbnormalityMammoSolitaryDilatedDuctFindingsCS": {
+      "base": "CodeSystem-BreastRadAbnormalityMammoSolitaryDilatedDuctFindingsCS.html"
     },
     "CodeSystem/BreastRadAbnormalityMassShapeCS": {
       "base": "CodeSystem-BreastRadAbnormalityMassShapeCS.html"
@@ -111,11 +120,20 @@
     "StructureDefinition/BreastRadAbnormalityMammoCalcificationType": {
       "base": "StructureDefinition-BreastRadAbnormalityMammoCalcificationType.html"
     },
+    "StructureDefinition/BreastRadAbnormalityMammoIntramammaryLymphNode": {
+      "base": "StructureDefinition-BreastRadAbnormalityMammoIntramammaryLymphNode.html"
+    },
     "StructureDefinition/BreastRadAbnormalityMammoMassDensity": {
       "base": "StructureDefinition-BreastRadAbnormalityMammoMassDensity.html"
     },
     "StructureDefinition/BreastRadAbnormalityMammoMassMargin": {
       "base": "StructureDefinition-BreastRadAbnormalityMammoMassMargin.html"
+    },
+    "StructureDefinition/BreastRadAbnormalityMammoSkinLesion": {
+      "base": "StructureDefinition-BreastRadAbnormalityMammoSkinLesion.html"
+    },
+    "StructureDefinition/BreastRadAbnormalityMammoSolitaryDilatedDuct": {
+      "base": "StructureDefinition-BreastRadAbnormalityMammoSolitaryDilatedDuct.html"
     },
     "StructureDefinition/BreastRadAbnormalityMassShape": {
       "base": "StructureDefinition-BreastRadAbnormalityMassShape.html"
@@ -174,11 +192,20 @@
     "ValueSet/BreastRadAbnormalityMammoArchitecturalDistortionFindingsVS": {
       "base": "ValueSet-BreastRadAbnormalityMammoArchitecturalDistortionFindingsVS.html"
     },
+    "ValueSet/BreastRadAbnormalityMammoIntramammaryLymphNodeFindingsVS": {
+      "base": "ValueSet-BreastRadAbnormalityMammoIntramammaryLymphNodeFindingsVS.html"
+    },
     "ValueSet/BreastRadAbnormalityMammoMassDensityVS": {
       "base": "ValueSet-BreastRadAbnormalityMammoMassDensityVS.html"
     },
     "ValueSet/BreastRadAbnormalityMammoMassMarginVS": {
       "base": "ValueSet-BreastRadAbnormalityMammoMassMarginVS.html"
+    },
+    "ValueSet/BreastRadAbnormalityMammoSkinLesionFindingsVS": {
+      "base": "ValueSet-BreastRadAbnormalityMammoSkinLesionFindingsVS.html"
+    },
+    "ValueSet/BreastRadAbnormalityMammoSolitaryDilatedDuctFindingsVS": {
+      "base": "ValueSet-BreastRadAbnormalityMammoSolitaryDilatedDuctFindingsVS.html"
     },
     "ValueSet/BreastRadAbnormalityMassShapeVS": {
       "base": "ValueSet-BreastRadAbnormalityMassShapeVS.html"

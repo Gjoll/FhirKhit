@@ -15,7 +15,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
     {
         String BreastRadiologyPriorReports(String brrDiagnosticReportUrl)
         {
-            SDefEditor e = CreateEditor("BreastRadPriorReports", "Prior Reports", ExtensionUrl)
+            SDefEditor e = this.CreateEditor("BreastRadPriorReports", "Prior Reports", ExtensionUrl)
                 .Description(new Markdown()
                     .Paragraph("Prior Diagnostic Report extension")
                     )

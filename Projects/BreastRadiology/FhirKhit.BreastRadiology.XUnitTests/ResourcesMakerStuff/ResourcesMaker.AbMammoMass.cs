@@ -32,7 +32,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                             new ObservationTarget(massMargin, 1, "1"),
                             new ObservationTarget(massDensity, 1, "1")
                     })
-                .ApplyBreastBodyLocation(this.breastBodyLocation)
+                .ApplyBreastBodyLocation(this.breastBodyLocation, false)
                 .SDef.Url;
         }
     }

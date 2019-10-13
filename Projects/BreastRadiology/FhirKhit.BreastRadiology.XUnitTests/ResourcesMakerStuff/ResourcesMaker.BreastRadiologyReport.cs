@@ -15,7 +15,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
     {
         void BreastRadiologyReport(String rootObservationUrl)
         {
-            SDefEditor e = CreateEditor("BreastRadReport", "Breast Radiology Report", DiagnosticReportUrl)
+            SDefEditor e = this.CreateEditor("BreastRadReport", "Breast Radiology Report", DiagnosticReportUrl)
                 .Description(new Markdown()
                     .Paragraph("Breast Radiology Diagnostic Report.")
                     .Paragraph("This diagnostic report has links to the data that comprise a Breast Radiology Report, including")
@@ -26,11 +26,11 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 )
                 ;
 
-            String recommendationsUrl = BreastRadiologyRecommendations();
-            String priorReportsUrl = BreastRadiologyPriorReports(e.SDef.Url);
+            String recommendationsUrl = this.BreastRadiologyRecommendations();
+            String priorReportsUrl = this.BreastRadiologyPriorReports(e.SDef.Url);
 
             e.Select("code").Pattern = new CodeableConcept(Loinc, "10193-1");
-            CreateCategorySlice(e, "category");
+            this.CreateCategorySlice(e, "category");
             e.Select("specimen").Zero();
             e.Select("conclusion").Single();
             e.Select("conclusionCode").Single();

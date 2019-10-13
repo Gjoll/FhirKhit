@@ -360,6 +360,69 @@
       },
       "name" : "BreastRadBreastDensityVS",
       "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/BreastRadAbnormalityMammoIntramammaryLymphNodeFindingsCS"
+      },
+      "name" : "BreastRadAbnormalityMammoIntramammaryLymphNodeFindingsCS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/BreastRadAbnormalityMammoSkinLesionFindingsCS"
+      },
+      "name" : "BreastRadAbnormalityMammoSkinLesionFindingsCS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/BreastRadAbnormalityMammoSolitaryDilatedDuctFindingsCS"
+      },
+      "name" : "BreastRadAbnormalityMammoSolitaryDilatedDuctFindingsCS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadAbnormalityMammoIntramammaryLymphNode"
+      },
+      "name" : "BreastRadAbnormalityMammoIntramammaryLymphNode",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadAbnormalityMammoSkinLesion"
+      },
+      "name" : "BreastRadAbnormalityMammoSkinLesion",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadAbnormalityMammoSolitaryDilatedDuct"
+      },
+      "name" : "BreastRadAbnormalityMammoSolitaryDilatedDuct",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/BreastRadAbnormalityMammoIntramammaryLymphNodeFindingsVS"
+      },
+      "name" : "BreastRadAbnormalityMammoIntramammaryLymphNodeFindingsVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/BreastRadAbnormalityMammoSkinLesionFindingsVS"
+      },
+      "name" : "BreastRadAbnormalityMammoSkinLesionFindingsVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/BreastRadAbnormalityMammoSolitaryDilatedDuctFindingsVS"
+      },
+      "name" : "BreastRadAbnormalityMammoSolitaryDilatedDuctFindingsVS",
+      "exampleBoolean" : false
     }],
     "page" : {
       "nameUrl" : "index.html",

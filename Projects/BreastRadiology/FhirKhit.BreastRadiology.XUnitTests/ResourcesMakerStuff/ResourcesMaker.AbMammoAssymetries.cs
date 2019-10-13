@@ -15,7 +15,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
     {
         String AbMammoAssymetries()
         {
-            String binding = CreateValueSet(
+            String binding = this.CreateValueSet(
                 "Assymetries",
                 "Assymetries",
                 new Markdown()
@@ -34,7 +34,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                     "Breast Radiology Abnormality Assymetries (Mammography)",
                     new Markdown().Paragraph("Mammography Breast Abnormality Assymetries Observation"),
                     binding)
-                .ApplyBreastBodyLocation(this.breastBodyLocation)
+                .ApplyBreastBodyLocation(this.breastBodyLocation, false)
                 .SDef.Url;
         }
     }

@@ -355,8 +355,8 @@
           "extensions",
           "user content"
         ],
-        "min": 1,
-        "max": "1",
+        "min": 0,
+        "max": "*",
         "base": {
           "path": "DomainResource.extension",
           "min": 0,
@@ -1408,8 +1408,8 @@
         "short": "Observed body part",
         "definition": "Indicates the site on the subject's body where the observation was made (i.e. the target site).",
         "comment": "Only used if not implicit in code found in Observation.code.  In many systems, this may be represented as a related observation instead of an inline component.   \n\nIf the use case requires BodySite to be handled as a separate resource (e.g. to identify and track separately) then use the standard extension[ bodySite](extension-bodysite.html).",
-        "min": 1,
-        "max": "1",
+        "min": 0,
+        "max": "*",
         "base": {
           "path": "Observation.bodySite",
           "min": 0,
@@ -2484,8 +2484,8 @@
         "id": "Observation.extension:breastBodyLocation",
         "path": "Observation.extension",
         "sliceName": "breastBodyLocation",
-        "min": 1,
-        "max": "1",
+        "min": 0,
+        "max": "*",
         "base": {
           "path": "Observation.extension",
           "min": 0,
@@ -2608,8 +2608,8 @@
       {
         "id": "Observation.bodySite",
         "path": "Observation.bodySite",
-        "min": 1,
-        "max": "1",
+        "min": 0,
+        "max": "*",
         "base": {
           "path": "Observation.bodySite",
           "min": 0,

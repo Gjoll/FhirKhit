@@ -16,7 +16,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         String SectionFindings(String findingsLeftUrl,
             String findingsRightUrl)
         {
-            return CreateObservationSection(
+            return this.CreateObservationSection(
                 "BreastRadSectionFindings",
                 "Breast Radiology Findings",
                 new Markdown().Paragraph("Findings Section"))

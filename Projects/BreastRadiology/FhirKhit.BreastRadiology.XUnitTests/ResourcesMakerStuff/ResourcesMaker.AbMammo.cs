@@ -17,7 +17,10 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             String mammoMass,
             String calc, 
             String archDist,
-            String assymetries)
+            String assymetries,
+            String intramammaryLymphNode,
+            String skinLesions,
+            String solitaryDilatedDuct)
         {
             //$ todo. Incorrect method!!!
             return this.CreateAbnormality(
@@ -33,7 +36,10 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                         new ObservationTarget(mammoMass, 0, "*"),
                         new ObservationTarget(calc, 0, "*"),
                         new ObservationTarget(archDist, 0, "1"),
-                        new ObservationTarget(assymetries, 0, "*")
+                        new ObservationTarget(assymetries, 0, "*"),
+                        new ObservationTarget(intramammaryLymphNode, 1, "1"),
+                        new ObservationTarget(skinLesions, 0, "*"),
+                        new ObservationTarget(solitaryDilatedDuct, 1, "1")
                     })
                 .SDef.Url;
         }

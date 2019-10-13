@@ -308,16 +308,18 @@ namespace FhirKhit.Tools.R4
             return this;
         }
 
-        public SDefEditor ApplyBreastBodyLocation(String breastBodyLocationUrl)
+        public SDefEditor ApplyBreastBodyLocation(String breastBodyLocationUrl, bool optionalFlag)
         {
             if (this.sDef.Type != "Observation")
                 throw new Exception("BreastBodyLocation can only be applied to Observations");
+            Int32 min = optionalFlag ? 0 : 1;
+            String max = "*";
             this.Select("bodySite")
-                .Single()
+                .Card(min, max)
                 ;
 
             this.ApplyExtension("breastBodyLocation", breastBodyLocationUrl)
-                .Single()
+                .Card(min, max)
                 ;
             return this;
         }

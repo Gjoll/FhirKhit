@@ -12,6 +12,13 @@ using Hl7.Fhir.Serialization;
 
 namespace FhirKhit.BreastRadiology.XUnitTests
 {
+    /*
+     $ todo. Add negation items (mass, calc, etc).
+     $ todo. Add condition that if item is not present, then body site is empty.
+     $ todo. Add condition that if body site is empty, then breast body site extension is
+             also empty and vice versa.
+     */
+
     public partial class ResourcesMaker : ConverterBase
     {
         const bool CreateSnapshot = false;
@@ -54,12 +61,12 @@ namespace FhirKhit.BreastRadiology.XUnitTests
 
             SDefEditor retVal = new SDefEditor(baseUrl, this.resourceDir)
                 .Name(name)
-                .Url(CreateUrl(name))
+                .Url(this.CreateUrl(name))
                 .Status(ProfileStatus)
                 .Title(title)
                 .Publisher("Hl7-Clinical Interoperability Council")
                 .ContactUrl(contactUrl)
-                .Date(date)
+                .Date(this.date)
                 .Derivation(StructureDefinition.TypeDerivationRule.Constraint)
                 .Abstract(false)
                 .Type(baseUrl.LastUriPart())
@@ -80,7 +87,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             retVal.Select("derivedFrom").Zero();
             retVal.Select("partOf").Zero();
             retVal.Select("focus").Zero();
-            CreateCategorySlice(retVal, "category");
+            this.CreateCategorySlice(retVal, "category");
 
             return retVal;
         }
@@ -99,7 +106,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             String title,
             Markdown description)
         {
-            SDefEditor e = CreateObservationEditor(name, title)
+            SDefEditor e = this.CreateObservationEditor(name, title)
                 .Description(description)
                 ;
             e.Select("value[x]").Zero();
@@ -151,7 +158,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             String methodCodeSet,
             String method)
         {
-            SDefEditor e = CreateObservationEditor(name, title)
+            SDefEditor e = this.CreateObservationEditor(name, title)
                 .Description(description)
                 ;
 
@@ -199,10 +206,10 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 Version = ProfileVersion,
                 Name = $"{name}CS",
                 Title = title,
-                Date = date.ToString(),
+                Date = this.date.ToString(),
                 Status = ProfileStatus,
                 Publisher = "Hl7-Clinical Interoperability Council",
-                Contact = Contact(),
+                Contact = this.Contact(),
                 Description = description,
                 CaseSensitive = true,
                 Content = CodeSystem.CodeSystemContentMode.Complete,
@@ -216,10 +223,10 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 Version = ProfileVersion,
                 Name = $"{name}VS",
                 Title = title,
-                Date = date.ToString(),
+                Date = this.date.ToString(),
                 Status = ProfileStatus,
                 Publisher = "Hl7-Clinical Interoperability Council",
-                Contact = Contact(),
+                Contact = this.Contact(),
                 Description = description
             };
 
@@ -248,8 +255,8 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 counter += 1;
             }
 
-            Save(cs, Path.Combine(this.resourceDir, $"CodeSystem-{name}CS.json"));
-            Save(vs, Path.Combine(this.resourceDir, $"ValueSet-{name}VS.json"));
+            this.Save(cs, Path.Combine(this.resourceDir, $"CodeSystem-{name}CS.json"));
+            this.Save(vs, Path.Combine(this.resourceDir, $"ValueSet-{name}VS.json"));
             return vs.Url;
         }
 
@@ -272,16 +279,16 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         {
             this.ValidateResource(r);
             r.SaveJson(path);
-            fc.Mark(path);
+            this.fc.Mark(path);
         }
 
 
 
         public void CreateResources()
         {
-            fc.Add(this.resourceDir);
+            this.fc.Add(this.resourceDir);
 
-            String abnMassShape = AbMassShape();
+            String abnMassShape = this.AbMassShape();
             this.breastBodyLocation = this.BreastBodyLocation();
 
             //
@@ -289,29 +296,34 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             //
             String abnMammo;
             {
-                String massMargin = AbMammoMassMargin();
-                String massDensity = AbMammoMassDensity();
-                String breastDensity = AbMammoBreastDensity();
-                String mass = AbMammoMass(abnMassShape, massMargin, massDensity);
-                String calcType = AbMammoCalcificationsType();
-                String calcDist = AbMammoCalcificationDistribution();
-                String calc = AbMammoCalcifications(calcType, calcDist);
-                String archDist = AbMammoArchitecturalDistortion();
-                String assymetries = AbMammoAssymetries();
+                String massMargin = this.AbMammoMassMargin();
+                String massDensity = this.AbMammoMassDensity();
+                String breastDensity = this.AbMammoBreastDensity();
+                String mass = this.AbMammoMass(abnMassShape, massMargin, massDensity);
+                String calcType = this.AbMammoCalcificationsType();
+                String calcDist = this.AbMammoCalcificationDistribution();
+                String calc = this.AbMammoCalcifications(calcType, calcDist);
+                String archDist = this.AbMammoArchitecturalDistortion();
+                String assymetries = this.AbMammoAssymetries();
 
-                abnMammo = AbMammo(breastDensity, mass, calc, archDist, assymetries);
+                String intraMammaryLymphNode = this.AbMammoIntramammaryLymphNode();
+                String skinLesion = this.AbMammoSkinLesion();
+                String solitaryDilatedDuct = this.AbMammoSolitaryDilatedDuct();
+
+                abnMammo = AbMammo(breastDensity, mass, calc, archDist, assymetries,
+                                   intraMammaryLymphNode, skinLesion, solitaryDilatedDuct);
             }
 
             //
             // MRI
             //
-            String abnMRI = AbnormalityMRI();
+            String abnMRI = this.AbnormalityMRI();
 
 
             //
             // Ultra Sound
             //
-            String abnUltraSound = AbUltraSound();
+            String abnUltraSound = this.AbUltraSound();
 
 
             ObservationTarget[] abnormalityTargets = new ObservationTarget[]
@@ -321,16 +333,16 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 new ObservationTarget(abnUltraSound, 0, "*")
             };
 
-            String patientRiskUrl = SectionPatientRisk();
-            String patientHistoryUrl = SectionPatientHistory();
-            String findingsLeftUrl = SectionFindingsLeftBreast(abnormalityTargets);
-            String findingsRightUrl = SectionFindingsRightBreast(abnormalityTargets);
-            String findingsUrl = SectionFindings(findingsLeftUrl, findingsRightUrl);
-            String rootUrl = SectionRoot(patientHistoryUrl, findingsUrl, patientRiskUrl);
-            BreastRadiologyReport(rootUrl);
+            String patientRiskUrl = this.SectionPatientRisk();
+            String patientHistoryUrl = this.SectionPatientHistory();
+            String findingsLeftUrl = this.SectionFindingsLeftBreast(abnormalityTargets);
+            String findingsRightUrl = this.SectionFindingsRightBreast(abnormalityTargets);
+            String findingsUrl = this.SectionFindings(findingsLeftUrl, findingsRightUrl);
+            String rootUrl = this.SectionRoot(patientHistoryUrl, findingsUrl, patientRiskUrl);
+            this.BreastRadiologyReport(rootUrl);
 
-            SaveAll();
-            fc.Dispose();
+            this.SaveAll();
+            this.fc.Dispose();
         }
 
         void SaveAll()
@@ -344,7 +356,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                     ce.SDef.Snapshot = null;
 #pragma warning restore CS0162 // Unreachable code detected
                 this.ValidateResource(ce.SDef);
-                fc.Mark(ce.Write());
+                this.fc.Mark(ce.Write());
             }
         }
     }

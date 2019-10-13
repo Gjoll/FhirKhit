@@ -15,7 +15,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
     {
         String AbMammoMassDensity()
         {
-            String binding = CreateValueSet(
+            String binding = this.CreateValueSet(
                 "BreastRadAbnormalityMammoMassDensity",
                 "Breast Radiology Abnormality Mammography Mass Density",
                 new Markdown()

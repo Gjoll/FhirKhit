@@ -15,7 +15,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
     {
         String BreastBodyLocation()
         {
-            SDefEditor e = CreateEditor("BreastBodyLocation", "Breast Body Location", ExtensionUrl)
+            SDefEditor e = this.CreateEditor("BreastBodyLocation", "Breast Body Location", ExtensionUrl)
                 .Description(new Markdown()
                     .Paragraph("Breast Body Location extension")
                     )
@@ -55,7 +55,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             }
 
             {
-                String binding = CreateValueSet(
+                String binding = this.CreateValueSet(
                     "BreastLocationQuadrant",
                     "Breast Location Quadrant",
                     new Markdown()
@@ -88,7 +88,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             }
 
             {
-                String binding = CreateValueSet(
+                String binding = this.CreateValueSet(
                     "BreastLocationClock",
                     "Breast Location Clock",
                     new Markdown()
@@ -126,7 +126,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             }
 
             {
-                String binding = CreateValueSet(
+                String binding = this.CreateValueSet(
                     "BreastLocationDepth",
                     "Breast Location Depth",
                     new Markdown()

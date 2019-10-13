@@ -15,7 +15,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
     {
         String AbMammoArchitecturalDistortion()
         {
-            String binding = CreateValueSet(
+            String binding = this.CreateValueSet(
                 "BreastRadAbnormalityMammoArchitecturalDistortionFindings",
                 "Breast Radiology Abnormality Architectural Distortion Findings (Mammo)",
                 new Markdown()
@@ -32,7 +32,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                     "Breast Radiology Abnormality Architectural Distortion (Mammography)",
                     new Markdown().Paragraph("Mammography Breast Abnormality Architectural Distortion Observation"),
                     binding)
-                .ApplyBreastBodyLocation(this.breastBodyLocation)
+                .ApplyBreastBodyLocation(this.breastBodyLocation, true)
                 .SDef.Url;
         }
     }

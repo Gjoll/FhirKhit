@@ -15,7 +15,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
     {
         String AbMammoMassMargin()
         {
-                String binding = CreateValueSet(
+                String binding = this.CreateValueSet(
                     "BreastRadAbnormalityMammoMassMargin",
                     "Breast Radiology Abnormality Mammography Mass Margin",
                     new Markdown()

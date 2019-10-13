@@ -28,14 +28,14 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         [TestMethod]
         public void BuildResources()
         {
-            ResourcesMaker pc = new ResourcesMaker(resourcesDir);
+            ResourcesMaker pc = new ResourcesMaker(this.resourcesDir);
             pc.CreateResources();
         }
 
         [TestMethod]
         public void ValidateGen()
         {
-            String rDir = Path.Combine(outputDir,
+            String rDir = Path.Combine(this.outputDir,
                 "resources");
             FhirValidator fv = new FhirValidator();
             bool success = fv.ValidateDir(rDir, "*.json", "4.0.0");
@@ -50,7 +50,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         public void Validate()
         {
             FhirValidator fv = new FhirValidator();
-            bool success = fv.ValidateDir(resourcesDir, "*.json", "4.0.0");
+            bool success = fv.ValidateDir(this.resourcesDir, "*.json", "4.0.0");
             StringBuilder sb = new StringBuilder();
             fv.FormatMessages(sb);
             Trace.WriteLine(sb.ToString());
@@ -68,17 +68,17 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         [TestMethod]
         public void FullBuild()
         {
-            BuildResources();
-            IGBuild();
+            this.BuildResources();
+            this.IGBuild();
         }
 
         [TestMethod]
         public void IGBuild()
         {
-            IGBuilder p = new IGBuilder(outputDir);
+            IGBuilder p = new IGBuilder(this.outputDir);
             p.Start();
-            p.AddResources(resourcesDir);
-            p.AddResources(manualDir);
+            p.AddResources(this.resourcesDir);
+            p.AddResources(this.manualDir);
             p.SaveAll();
         }
     }

@@ -15,7 +15,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
     {
         String AbMammoCalcificationDistribution()
         {
-            String binding = CreateValueSet(
+            String binding = this.CreateValueSet(
                 "CalcificationDistribution",
                 "Calcification Distribution",
                 new Markdown()
