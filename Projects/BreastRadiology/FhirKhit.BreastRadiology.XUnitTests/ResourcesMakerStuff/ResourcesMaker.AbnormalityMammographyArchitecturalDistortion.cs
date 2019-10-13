@@ -15,11 +15,23 @@ namespace FhirKhit.BreastRadiology.XUnitTests
     {
         String AbnormalityMammographyArchitecturalDistortion()
         {
-            return this.CreateAbnormalityBooleanValue(
-                "BreastRadiologyAbnormalityMammographyArchitecturalDistortion",
-                "Breast Radiology Abnormality Architectural Distortion (Mammography)",
-                new Markdown().Paragraph("Mammography Breast Abnormality Architectural Distortion Observation")
-                )
+            String binding = CreateValueSet(
+                "BreastRadiologyAbnormalityMammographyArchitecturalDistortionFindings",
+                "Breast Radiology Abnormality Architectural Distortion Findings (Mammo)",
+                new Markdown()
+                    .Paragraph("Breast Radiology Abnormality Architectural Distortion Findings"),
+                new String[]
+                {
+                "a. Present",
+                "b. NotPresent",
+                "c. NotChecked"
+                });
+
+            return this.CreateAbnormalityCodedValue(
+                    "BreastRadiologyAbnormalityMammographyArchitecturalDistortion",
+                    "Breast Radiology Abnormality Architectural Distortion (Mammography)",
+                    new Markdown().Paragraph("Mammography Breast Abnormality Architectural Distortion Observation"),
+                    binding)
                 .ApplyBreastBodyLocation(this.breastBodyLocation)
                 .SDef.Url;
         }

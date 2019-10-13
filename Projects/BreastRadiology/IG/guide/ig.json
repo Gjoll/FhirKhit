@@ -72,6 +72,9 @@
     "CodeSystem/BreastLocationQuadrantCS": {
       "base": "CodeSystem-BreastLocationQuadrantCS.html"
     },
+    "CodeSystem/BreastRadiologyAbnormalityMammographyArchitecturalDistortionFindingsCS": {
+      "base": "CodeSystem-BreastRadiologyAbnormalityMammographyArchitecturalDistortionFindingsCS.html"
+    },
     "CodeSystem/BreastRadiologyAbnormalityMammographyMassDensityCS": {
       "base": "CodeSystem-BreastRadiologyAbnormalityMammographyMassDensityCS.html"
     },
@@ -170,6 +173,9 @@
     },
     "ValueSet/BreastLocationQuadrantVS": {
       "base": "ValueSet-BreastLocationQuadrantVS.html"
+    },
+    "ValueSet/BreastRadiologyAbnormalityMammographyArchitecturalDistortionFindingsVS": {
+      "base": "ValueSet-BreastRadiologyAbnormalityMammographyArchitecturalDistortionFindingsVS.html"
     },
     "ValueSet/BreastRadiologyAbnormalityMammographyMassDensityVS": {
       "base": "ValueSet-BreastRadiologyAbnormalityMammographyMassDensityVS.html"

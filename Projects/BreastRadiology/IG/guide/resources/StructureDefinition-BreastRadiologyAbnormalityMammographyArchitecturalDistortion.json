@@ -1224,8 +1224,8 @@
         ]
       },
       {
-        "id": "Observation.valueboolean",
-        "path": "Observation.valueboolean",
+        "id": "Observation.valueCodeableConcept",
+        "path": "Observation.valueCodeableConcept",
         "short": "Actual result",
         "definition": "The information determined as a result of making the observation, if the information has a simple value.",
         "comment": "An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.",
@@ -1239,7 +1239,7 @@
         },
         "type": [
           {
-            "code": "boolean"
+            "code": "CodeableConcept"
           }
         ],
         "condition": [
@@ -1247,6 +1247,10 @@
         ],
         "isModifier": false,
         "isSummary": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadiologyAbnormalityMammographyArchitecturalDistortionFindingsVS"
+        },
         "mapping": [
           {
             "identity": "sct-concept",
@@ -2582,8 +2586,8 @@
         }
       },
       {
-        "id": "Observation.valueboolean",
-        "path": "Observation.valueboolean",
+        "id": "Observation.valueCodeableConcept",
+        "path": "Observation.valueCodeableConcept",
         "min": 0,
         "max": "1",
         "base": {
@@ -2593,9 +2597,13 @@
         },
         "type": [
           {
-            "code": "boolean"
+            "code": "CodeableConcept"
           }
-        ]
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadiologyAbnormalityMammographyArchitecturalDistortionFindingsVS"
+        }
       },
       {
         "id": "Observation.bodySite",

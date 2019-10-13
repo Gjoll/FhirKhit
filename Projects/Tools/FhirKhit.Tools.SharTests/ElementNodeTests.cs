@@ -114,7 +114,7 @@ namespace FhirKhit.SliceGen.XUnitTestsA
                     Path = "Observation.code.coding.system",
                     Min = 0,
                     Max = "1",
-                    Fixed = new FhirUri("http://hl7.org/fhir/us/breast-radiology/CodeSystem/breastrad-BreastAbnormalityCodesCS")
+                    Fixed = new FhirUri("http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastAbnormalityCodesCS")
                 };
                 e.Type.Add(new ElementDefinition.TypeRefComponent { Code = "code" });
                 s.Differential.Element.Add(e);

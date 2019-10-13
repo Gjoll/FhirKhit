@@ -114,20 +114,20 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             return e;
         }
 
-        SDefEditor CreateAbnormalityBooleanValue(String name,
-            String title,
-            Markdown description)
-        {
-            SDefEditor retVal = this.CreateObservationEditor(name, title);
-            retVal
-                .Description(description)
-                ;
+        //SDefEditor CreateAbnormalityBooleanValue(String name,
+        //    String title,
+        //    Markdown description)
+        //{
+        //    SDefEditor retVal = this.CreateObservationEditor(name, title);
+        //    retVal
+        //        .Description(description)
+        //        ;
 
-            retVal.Select("value[x]")
-                .Type("boolean")
-                ;
-            return retVal;
-        }
+        //    retVal.Select("value[x]")
+        //        .Type("boolean")
+        //        ;
+        //    return retVal;
+        //}
 
         SDefEditor CreateAbnormalityCodedValue(String name,
             String title,
