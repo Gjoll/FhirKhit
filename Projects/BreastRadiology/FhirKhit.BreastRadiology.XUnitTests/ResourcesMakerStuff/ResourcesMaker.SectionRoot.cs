@@ -18,7 +18,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             String patientRiskUrl)
         {
             return CreateObservationSection(
-                "BreastRadiologySectionRoot",
+                "BreastRadSectionRoot",
                 "Breast Radiology Root Section",
                 new Markdown().Paragraph("Root Section"))
                 .SliceByUrl("hasMember",

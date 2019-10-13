@@ -281,7 +281,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         {
             fc.Add(this.resourceDir);
 
-            String abnMassShape = AbnormalityMassShape();
+            String abnMassShape = AbMassShape();
             this.breastBodyLocation = this.BreastBodyLocation();
 
             //
@@ -289,17 +289,17 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             //
             String abnMammo;
             {
-                String massMargin = AbnormalityMammographyMassMargin();
-                String massDensity = AbnormalityMammographyMassDensity();
-                String breastDensity = AbnormalityMammographyBreastDensity();
-                String mass = AbnormalityMammographyMass(abnMassShape, massMargin, massDensity);
-                String calcType = AbnormalityMammographyCalcificationType();
-                String calcDist = AbnormalityMammographyCalcificationDistribution();
-                String calc = AbnormalityMammographyCalcifications(calcType, calcDist);
-                String archDist = AbnormalityMammographyArchitecturalDistortion();
-                String assymetries = AbnormalityMammographyAssymetries();
+                String massMargin = AbMammoMassMargin();
+                String massDensity = AbMammoMassDensity();
+                String breastDensity = AbMammoBreastDensity();
+                String mass = AbMammoMass(abnMassShape, massMargin, massDensity);
+                String calcType = AbMammoCalcificationsType();
+                String calcDist = AbMammoCalcificationDistribution();
+                String calc = AbMammoCalcifications(calcType, calcDist);
+                String archDist = AbMammoArchitecturalDistortion();
+                String assymetries = AbMammoAssymetries();
 
-                abnMammo = AbnormalityMammography(breastDensity, mass, calc, archDist, assymetries);
+                abnMammo = AbMammo(breastDensity, mass, calc, archDist, assymetries);
             }
 
             //
@@ -311,7 +311,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             //
             // Ultra Sound
             //
-            String abnUltraSound = AbnormalityUltraSound();
+            String abnUltraSound = AbUltraSound();
 
 
             ObservationTarget[] abnormalityTargets = new ObservationTarget[]

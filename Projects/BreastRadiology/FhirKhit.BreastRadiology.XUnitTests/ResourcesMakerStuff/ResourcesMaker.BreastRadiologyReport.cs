@@ -15,7 +15,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
     {
         void BreastRadiologyReport(String rootObservationUrl)
         {
-            SDefEditor e = CreateEditor("BreastRadiologyReport", "Breast Radiology Report", DiagnosticReportUrl)
+            SDefEditor e = CreateEditor("BreastRadReport", "Breast Radiology Report", DiagnosticReportUrl)
                 .Description(new Markdown()
                     .Paragraph("Breast Radiology Diagnostic Report.")
                     .Paragraph("This diagnostic report has links to the data that comprise a Breast Radiology Report, including")

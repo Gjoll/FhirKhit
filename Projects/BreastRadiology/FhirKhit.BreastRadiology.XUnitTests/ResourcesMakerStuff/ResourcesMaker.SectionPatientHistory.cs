@@ -16,7 +16,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         String SectionPatientHistory()
         {
             return CreateObservationSection(
-                "BreastRadiologySectionPatientHistory",
+                "BreastRadSectionPatientHistory",
                 "Breast Radiology Patient History Section",
                 new Markdown().Paragraph("Patient History Section"))
                 .SDef.Url;

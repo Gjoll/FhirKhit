@@ -16,7 +16,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         String SectionFindingsRightBreast(ObservationTarget[] abnormalityTargets)
         {
             return CreateObservationSection(
-                "BreastRadiologySectionFindingsRightBreast",
+                "BreastRadSectionFindingsRightBreast",
                 "Breast Radiology Findings Right Breast",
                 new Markdown().Paragraph("Findings Right Breast Section"))
                 .SliceByUrl("hasMember", abnormalityTargets)

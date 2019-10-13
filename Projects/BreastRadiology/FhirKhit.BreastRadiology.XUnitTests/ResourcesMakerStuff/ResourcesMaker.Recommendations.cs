@@ -15,7 +15,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
     {
         String BreastRadiologyRecommendations()
         {
-            SDefEditor e = CreateEditor("BreastRadiologyRecommendations", "Recommendations", ExtensionUrl)
+            SDefEditor e = CreateEditor("BreastRadRecommendations", "Recommendations", ExtensionUrl)
                 .Description(new Markdown()
                     .Paragraph("Diagnostic Report recommendations section extension")
                 )
