@@ -31,6 +31,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BreastRadiology", "BreastRa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FhirKhit.BreastRadiology.XUnitTests", "Projects\BreastRadiology\FhirKhit.BreastRadiology.XUnitTests\FhirKhit.BreastRadiology.XUnitTests.csproj", "{8B2531DC-098D-477D-ACCB-7CA8E44DAC4A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FriendlyFhir", "FriendlyFhir", "{ACE085D6-957D-4440-A5B2-8604DEC727E7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FriendlyFhir.XHelpers", "Projects\FriendlyFhir\FriendlyFhir.XHelpers\FriendlyFhir.XHelpers.csproj", "{9412AE2C-9843-4765-8C6E-A6DFD241FFE8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FriendlyFhir.Maker", "Projects\FriendlyFhir\FriendlyFhir.Maker\FriendlyFhir.Maker.csproj", "{B079CB3A-AC60-4A57-86F4-2F361019E730}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Projects\FhirKhit.GlobalSuppressions\FhirKhit.GlobalSuppressions.projitems*{721f484a-1c1a-4a95-aa2c-ff38e18c9d77}*SharedItemsImports = 13
@@ -116,6 +122,22 @@ Global
 		{8B2531DC-098D-477D-ACCB-7CA8E44DAC4A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8B2531DC-098D-477D-ACCB-7CA8E44DAC4A}.Release|x64.ActiveCfg = Release|Any CPU
 		{8B2531DC-098D-477D-ACCB-7CA8E44DAC4A}.Release|x64.Build.0 = Release|Any CPU
+		{9412AE2C-9843-4765-8C6E-A6DFD241FFE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9412AE2C-9843-4765-8C6E-A6DFD241FFE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9412AE2C-9843-4765-8C6E-A6DFD241FFE8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9412AE2C-9843-4765-8C6E-A6DFD241FFE8}.Debug|x64.Build.0 = Debug|Any CPU
+		{9412AE2C-9843-4765-8C6E-A6DFD241FFE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9412AE2C-9843-4765-8C6E-A6DFD241FFE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9412AE2C-9843-4765-8C6E-A6DFD241FFE8}.Release|x64.ActiveCfg = Release|Any CPU
+		{9412AE2C-9843-4765-8C6E-A6DFD241FFE8}.Release|x64.Build.0 = Release|Any CPU
+		{B079CB3A-AC60-4A57-86F4-2F361019E730}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B079CB3A-AC60-4A57-86F4-2F361019E730}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B079CB3A-AC60-4A57-86F4-2F361019E730}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B079CB3A-AC60-4A57-86F4-2F361019E730}.Debug|x64.Build.0 = Debug|Any CPU
+		{B079CB3A-AC60-4A57-86F4-2F361019E730}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B079CB3A-AC60-4A57-86F4-2F361019E730}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B079CB3A-AC60-4A57-86F4-2F361019E730}.Release|x64.ActiveCfg = Release|Any CPU
+		{B079CB3A-AC60-4A57-86F4-2F361019E730}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -132,6 +154,8 @@ Global
 		{BF3E3A97-3B43-44AA-838C-24E5E32BE8C5} = {C9277C85-BD7D-4D69-8CEE-A81A646E97AF}
 		{A0663C6D-3386-4C88-A186-B288530EB107} = {C9277C85-BD7D-4D69-8CEE-A81A646E97AF}
 		{8B2531DC-098D-477D-ACCB-7CA8E44DAC4A} = {5FC18CA0-0C9C-46E8-842C-195480DD8F0A}
+		{9412AE2C-9843-4765-8C6E-A6DFD241FFE8} = {ACE085D6-957D-4440-A5B2-8604DEC727E7}
+		{B079CB3A-AC60-4A57-86F4-2F361019E730} = {ACE085D6-957D-4440-A5B2-8604DEC727E7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {90499BD7-964F-4CE5-A761-BDF9EC6DCE28}

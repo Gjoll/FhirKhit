@@ -372,9 +372,7 @@ namespace FhirKhit.Tools.R2
         {
             if (sDef is null)
                 throw new ArgumentNullException(nameof(sDef));
-
             String resourceName = sDef.Snapshot.Element[0].Path;
-
             Loader loader = new Loader();
             return loader.Create(sDef.Snapshot.Element);
         }

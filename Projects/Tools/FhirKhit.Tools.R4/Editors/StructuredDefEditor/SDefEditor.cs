@@ -13,19 +13,6 @@ namespace FhirKhit.Tools.R4
     public class SDefEditor
     {
         static Type sDefType = typeof(SDefEditor);
-        static FhirStructureDefinitions Defs
-        {
-            get
-            {
-                lock (sDefType)
-                {
-                    if (defs == null)
-                        defs = new FhirStructureDefinitions();
-                    return defs;
-                }
-            }
-        }
-        static FhirStructureDefinitions defs;
 
         public StructureDefinition SDef => this.sDef;
         StructureDefinition baseSDef;
@@ -40,7 +27,7 @@ namespace FhirKhit.Tools.R4
         public SDefEditor(String baseDefinition, String outputDir)
         {
             this.outputDir = outputDir;
-            baseSDef = Defs.GetResource(baseDefinition);
+            baseSDef = FhirStructureDefinitions.Self.GetResource(baseDefinition);
             basePath = $"{this.baseSDef.Snapshot.Element[0].Path}.";
 
             for (Int32 i = 0; i < baseSDef.Snapshot.Element.Count; i++)
