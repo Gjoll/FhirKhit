@@ -18,7 +18,6 @@ namespace FriendlyFhir
     {
 
         HashSet<String> sliceFields = new HashSet<string>();
-        List<String> abbreviatedResourcesToProcess = new List<string>();
         List<String> resourcesToProcess = new List<string>();
         HashSet<String> processedResources = new HashSet<string>();
         HashSet<String> resourcesToIgnore = new HashSet<string>();
@@ -83,19 +82,6 @@ namespace FriendlyFhir
             if (path.StartsWith("http:") == false)
                 path = $"http://hl7.org/fhir/StructureDefinition/{path}";
             this.resourcesToProcess.Add(path);
-        }
-
-        /// <summary>
-        /// Add path filter. if pathsToProcess has any members, then
-        /// only resource paths that start with this will be processed.
-        /// </summary>
-        public void AddAbbreviatedResource(String path)
-        {
-            if (processedResources.Contains(path) == true)
-                return;
-            if (path.StartsWith("http:") == false)
-                path = $"http://hl7.org/fhir/StructureDefinition/{path}";
-            this.abbreviatedResourcesToProcess.Add(path);
         }
 
         public String GeneratedPath => Path.Combine(this.OutputDir, "Generated");
@@ -249,44 +235,6 @@ namespace FriendlyFhir
         /// <summary>
         /// Process one fhir element
         /// </summary>
-        void ProcessFhirElementAbbreviated(SDefInfo sDefInfo)
-        {
-            const string fcn = "ProcessFhirElementAbbreviated";
-
-            StructureDefinition sDef = sDefInfo.SDef;
-            {
-                CodeEditor entryEditor = this.CreateEntryEditor(sDef.Id);
-                CodeBlockNested entryBlock = entryEditor.Blocks.AppendBlock();
-                String typeName;
-                switch (sDefInfo.TFlag)
-                {
-                    case SDefInfo.TypeFlag.Entry:
-                        typeName = "Entry";
-                        break;
-                    case SDefInfo.TypeFlag.Group:
-                        typeName = "Group";
-                        break;
-                    default:
-                        throw new ConvertErrorException(this.GetType().Name, fcn, $"Invalid TFlag value");
-                }
-                entryBlock
-                    .BlankLine()
-                    .AppendCode($"{typeName}: {sDef.Id}")
-                    ;
-            }
-            {
-                CodeEditor mapEditor = this.CreateMapEditor(sDef.Id);
-                CodeBlockNested mapBlock = mapEditor.Blocks.AppendBlock();
-                mapBlock
-                    .BlankLine()
-                    .AppendCode($"{sDef.Id} maps to {sDef.Id}:")
-                    ;
-            }
-        }
-
-        /// <summary>
-        /// Process one fhir element
-        /// </summary>
         void ProcessFhirElement(SDefInfo sDefInfo)
         {
             const string fcn = "ProcessFhirElement";
@@ -340,43 +288,27 @@ namespace FriendlyFhir
             //    return;
             //}
             SDefInfo sDefInfo = new SDefInfo(sDef);
-
-            switch (sDef.Url)
-            {
-                case "http://hl7.org/fhir/StructureDefinition/Element":
-                    sDefInfo.TFlag = SDefInfo.TypeFlag.Group;
-                    break;
-
-                case "http://hl7.org/fhir/StructureDefinition/Resource":
-                    sDefInfo.TFlag = SDefInfo.TypeFlag.Entry;
-                    break;
-
-                default:
-                    sDefInfo.TFlag = SDefInfo.TypeFlag.Unknown;
-                    break;
-            }
-
             this.items.Add(sDef.Url, sDefInfo);
         }
 
         void LoadFhirElement(StructureDefinition sDef)
         {
-                switch (sDef.Kind)
-                {
-                    case StructureDefinition.StructureDefinitionKind.ComplexType:
-                    case StructureDefinition.StructureDefinitionKind.PrimitiveType:
-                    case StructureDefinition.StructureDefinitionKind.Resource:
-                        LoadFhirElementResource(sDef);
-                        break;
+            switch (sDef.Kind)
+            {
+                case StructureDefinition.StructureDefinitionKind.ComplexType:
+                case StructureDefinition.StructureDefinitionKind.PrimitiveType:
+                case StructureDefinition.StructureDefinitionKind.Resource:
+                    LoadFhirElementResource(sDef);
+                    break;
 #if FHIR_R2
                     case StructureDefinition.StructureDefinitionKind.Datatype:
 #endif
-                    case StructureDefinition.StructureDefinitionKind.Logical:
-                        break;
+                case StructureDefinition.StructureDefinitionKind.Logical:
+                    break;
 
-                    default:
-                        throw new NotImplementedException($"{sDef.Name} hs Unknown kind '{sDef.Kind}");
-                }
+                default:
+                    throw new NotImplementedException($"{sDef.Name} hs Unknown kind '{sDef.Kind}");
+            }
         }
 
         void LoadFhirElements()
@@ -390,7 +322,7 @@ namespace FriendlyFhir
                 {
                     LoadFhirElement(sDef);
                 }
-                catch(Exception err)
+                catch (Exception err)
                 {
                     this.ConversionWarn(this.GetType().Name, fcn, $"{sDef.Name} load failed. {err.Message}");
                 }
@@ -405,26 +337,7 @@ namespace FriendlyFhir
             if (this.items.TryGetValue(path, out SDefInfo sDef) == false)
                 throw new ConvertErrorException(this.GetType().Name, fcn, $"Internal error. Item {path} not in dictionary");
 
-            // If TFlag s unknown, use parents TFlag value.
-            if (sDef.TFlag == SDefInfo.TypeFlag.Unknown)
-            {
-                SDefInfo parentInfo = this.GetTypedSDef(sDef.SDef.BaseDefinition);
-                sDef.TFlag = parentInfo.TFlag;
-            }
-
             return sDef;
-        }
-
-        void ProcessAbbreviatedResource(String key)
-        {
-            if (processedResources.Contains(key) == true)
-                return;
-            if (this.IgnoreResource(key) == true)
-                return;
-
-            processedResources.Add(key);
-            SDefInfo sDef = this.GetTypedSDef(key);
-            this.ProcessFhirElementAbbreviated(sDef);
         }
 
         void ProcessRequestedFhirElements()
@@ -439,16 +352,6 @@ namespace FriendlyFhir
                     SDefInfo sDef = this.GetTypedSDef(key);
                     this.ProcessFhirElement(sDef);
                 }
-            }
-
-            // Output those resources that we just create an entry for (no properties).
-            // These will define entries that we can reference, w/o the overhead of defining
-            // the properties and such.
-            index = 0;
-            while (index < this.abbreviatedResourcesToProcess.Count)
-            {
-                String key = this.abbreviatedResourcesToProcess.ElementAt(index++);
-                ProcessAbbreviatedResource(key);
             }
         }
 
@@ -468,36 +371,6 @@ namespace FriendlyFhir
             }
 
             return this.Errors.Any() ? -1 : 0;
-        }
-
-        void CheckNameCollisions()
-        {
-            foreach (String key in propertyNames.Keys)
-            {
-                propertyNames.TryGetValue(key, out List<TypePathTuple> collisions);
-                if (collisions.Count != 1)
-                {
-                    StringBuilder sb = new StringBuilder();
-                    sb.AppendLine("-");
-                    sb.AppendLine($"Name collision: {key}");
-                    foreach (TypePathTuple collision in collisions)
-                    {
-                        foreach (ElementDefinition.TypeRefComponent type in collision.types)
-                        {
-                            sb.AppendLine($"    Type: '{type.Code}'");
-                            foreach (String profile in type.Profile)
-                                sb.AppendLine($"        Profile={profile}");
-                            foreach (String profile in type.TargetProfile)
-                                sb.AppendLine($"        TargetProfile={profile}");
-                        }
-                        sb.AppendLine($"");
-                        foreach (String path in collision.paths)
-                            sb.AppendLine($"    Path: '{path}'");
-                        sb.AppendLine($"-");
-                    }
-                    this.ConversionError(this.GetType().Name, "", sb.ToString());
-                }
-            }
         }
 
         public Int32 GenerateBaseClasses()
@@ -520,11 +393,6 @@ namespace FriendlyFhir
                         this.resourcesToProcess.Add(path);
                 }
 
-                // Add each fhir property name as a unique name so no
-                // properties are named the same.
-                foreach (SDefInfo sDefInfo in this.items.Values)
-                    this.UniquePropertyName(sDefInfo.SDef.Snapshot.Element[0], out bool dummy);
-
                 this.ProcessRequestedFhirElements();
 
                 this.ConversionInfo(this.GetType().Name, fcn, "Saving CIMPL classes");
@@ -532,7 +400,6 @@ namespace FriendlyFhir
                     ce.Save();
                 this.editorDict.Clear();
                 this.ConversionInfo(this.GetType().Name, fcn, "Completed generation of CIMPL classes");
-                CheckNameCollisions();
             }
             catch (ConvertErrorException err)
             {
@@ -548,42 +415,6 @@ namespace FriendlyFhir
 
         public void Dispose()
         {
-        }
-
-        Dictionary<String, List<TypePathTuple>> propertyNames = new Dictionary<String, List<TypePathTuple>>();
-
-        String UniquePropertyName(String pName, ElementDefinition ed, out bool createFlag)
-        {
-            if (this.propertyNames.TryGetValue(pName, out List<TypePathTuple> nameTypes) == false)
-            {
-                createFlag = true;
-                List<TypePathTuple> tupleList = new List<TypePathTuple>();
-                tupleList.Add(new TypePathTuple(ed));
-                this.propertyNames.Add(pName, tupleList);
-                return pName;
-            }
-
-            foreach (TypePathTuple tuple in nameTypes)
-            {
-                // if old element and this one have same type, then use same definition.
-                if (ed.Type.IsExactly(tuple.types))
-                {
-                    createFlag = false;
-                    tuple.paths.Add(ed.Path);
-                    return pName;
-                }
-            }
-
-            nameTypes.Add(new TypePathTuple(ed));
-            createFlag = true;
-            return pName;
-        }
-
-        public String UniquePropertyName(ElementDefinition ed, out bool createFlag)
-        {
-            String pName = this.GetFieldMap(ed.Path);
-            String retVal = UniquePropertyName(pName, ed, out createFlag);
-            return retVal;
         }
     }
 }

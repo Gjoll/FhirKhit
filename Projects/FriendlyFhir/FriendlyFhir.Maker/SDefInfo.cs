@@ -8,14 +8,6 @@ namespace FriendlyFhir
 {
     public class SDefInfo
     {
-        public enum TypeFlag
-        {
-            Unknown,
-            Group,
-            Entry
-        }
-        public TypeFlag TFlag = TypeFlag.Unknown;
-
         public StructureDefinition SDef { get; }
         public ElementDefinitionNode ElementDefinitionNode { get; }
 

@@ -60,22 +60,9 @@ namespace FriendlyFhir
             this.elements = this.sDef.Differential.Element.ToArray();
             this.elementIndex = 1;
 
-            String typeName;
-            switch (this.sDefInfo.TFlag)
-            {
-                case SDefInfo.TypeFlag.Entry:
-                    typeName = "Entry";
-                    break;
-                case SDefInfo.TypeFlag.Group:
-                    typeName = "Group";
-                    break;
-                default:
-                    throw new ConvertErrorException(this.GetType().Name, fcn, $"Invalid TFlag value");
-            }
-
             String parent = this.sDef.BaseDefinition?.LastUriPart();
             String description = this.gen.ToDescription(this.sDef.Description);
-            this.ProcessEntry(this.sDef.Id, null, typeName, parent, description, this.sDef.Url);
+            this.ProcessEntry(this.sDef.Id, null, parent, description, this.sDef.Url);
         }
 
         /// <summary>
@@ -84,7 +71,6 @@ namespace FriendlyFhir
         /// </summary>
         void ProcessEntry(String path,
             String suffix,
-            String typeName,
             String parent,
             String description,
             String comment)
@@ -101,7 +87,7 @@ namespace FriendlyFhir
                         this.mapEditor = this.gen.CreateMapEditor(path);
                         ElementDefinition sole = this.elements[0];
                         this.elements = new ElementDefinition[] { sole };
-                        this.ProcessSubEntry(0, path, path, suffix, typeName, parent, description, comment);
+                        this.ProcessSubEntry(0, path, path, suffix, parent, description, comment);
                         if (this.elementIndex != this.elements.Length)
                             throw new ConvertErrorException(this.GetType().Name, fcn, $"Internal error. ElementIndex not correct");
                     }
@@ -138,7 +124,7 @@ namespace FriendlyFhir
 
                         CodeBlockNested mapBlock = mapEditor.Blocks.AppendBlock();
                         String entryName = path.LastPathPart().ToMachineName();
-                        this.ProcessSubEntry(0, path, path, suffix, typeName, parent, description, comment);
+                        this.ProcessSubEntry(0, path, path, suffix, parent, description, comment);
                         if (this.elementIndex != this.elements.Length)
                             throw new ConvertErrorException(this.GetType().Name, fcn, $"Internal error. ElementIndex not correct");
                     }
@@ -154,7 +140,6 @@ namespace FriendlyFhir
             String elementPath,
             String entryPath,
             String suffix,
-            String typeName,
             String parent,
             String description,
             String comment)
@@ -172,7 +157,7 @@ namespace FriendlyFhir
             classBlock
                 .BlankLine()
                 .AppendComment(comment)
-                .AppendCode($"{typeName}: {entryName}")
+                .AppendCode($"xxyyz: {entryName}")
                 ;
 
             if (indent == 0)
@@ -218,7 +203,6 @@ namespace FriendlyFhir
             return entryName;
         }
 
-
         bool HasChildren(ElementDefinition ed)
         {
             if (this.elementIndex >= this.elements.Length)
@@ -248,183 +232,183 @@ namespace FriendlyFhir
         {
             const string fcn = "ProcessProperty";
 
-            ElementDefinition ed = this.elements[this.elementIndex++];
+            //ElementDefinition ed = this.elements[this.elementIndex++];
 
-            // Note: Currently we do not handle extensions.
-            if (ed.Path.LastPathPart() == "extension")
-                return;
-            if (ed.Path.LastPathPart() == "modifierExtension")
-                return;
+            //// Note: Currently we do not handle extensions.
+            //if (ed.Path.LastPathPart() == "extension")
+            //    return;
+            //if (ed.Path.LastPathPart() == "modifierExtension")
+            //    return;
 
-            if (String.IsNullOrEmpty(ed.SliceName) == false)
-            {
-                this.gen.ConversionWarn(this.GetType().Name, fcn, "Ignoring slice");
-            }
-            if (ed.Slicing != null)
-            {
-                this.gen.ConversionWarn(this.GetType().Name, fcn, "Ignoring slicing");
-            }
+            //if (String.IsNullOrEmpty(ed.SliceName) == false)
+            //{
+            //    this.gen.ConversionWarn(this.GetType().Name, fcn, "Ignoring slice");
+            //}
+            //if (ed.Slicing != null)
+            //{
+            //    this.gen.ConversionWarn(this.GetType().Name, fcn, "Ignoring slicing");
+            //}
 
-            //if (ed.Fixed != null)
-            //    throw new ConvertErrorException(this.GetType().Name, fcn, $"Unexpected Fixed in element {ed.Path}.");
-            //if (ed.Pattern != null)
-            //    throw new ConvertErrorException(this.GetType().Name, fcn, $"Unexpected Pattern in element {ed.Path}.");
+            ////if (ed.Fixed != null)
+            ////    throw new ConvertErrorException(this.GetType().Name, fcn, $"Unexpected Fixed in element {ed.Path}.");
+            ////if (ed.Pattern != null)
+            ////    throw new ConvertErrorException(this.GetType().Name, fcn, $"Unexpected Pattern in element {ed.Path}.");
 
-            String propertyName = this.gen.UniquePropertyName(ed, out bool createFlag);
+            //String propertyName = this.gen.UniquePropertyName(ed, out bool createFlag);
 
-            String fullPropertyName;
-            String propertyPath = $"{entryPath}.{propertyName}";
+            //String fullPropertyName;
+            //String propertyPath = $"{entryPath}.{propertyName}";
 
-            if (this.ContainsType(ed, BackboneElementStr))
-            {
-                if (ed.Type.Count != 1)
-                    throw new ConvertErrorException(this.GetType().Name, fcn, $"Backbone element {ed.Path} has multiple types.");
-                if (this.HasChildren(ed) == false)
-                    throw new ConvertErrorException(this.GetType().Name, fcn, $"Backbone element {ed.Path} has no children.");
+            //if (this.ContainsType(ed, BackboneElementStr))
+            //{
+            //    if (ed.Type.Count != 1)
+            //        throw new ConvertErrorException(this.GetType().Name, fcn, $"Backbone element {ed.Path} has multiple types.");
+            //    if (this.HasChildren(ed) == false)
+            //        throw new ConvertErrorException(this.GetType().Name, fcn, $"Backbone element {ed.Path} has no children.");
 
-                fullPropertyName = this.ProcessSubEntry(indent + 1, ed.Path, propertyPath, "Group", "Group", BackboneElementStr, $"Group definition of {ed.Path}", null);
-            }
-            else if (this.ContainsType(ed, ElementStr))
-            {
-                if (ed.Type.Count != 1)
-                    throw new ConvertErrorException(this.GetType().Name, fcn, $"Element {ed.Path} has multiple types.");
-                if (this.HasChildren(ed) == false)
-                    throw new ConvertErrorException(this.GetType().Name, fcn, $"Element {ed.Path} has no children.");
+            //    fullPropertyName = this.ProcessSubEntry(indent + 1, ed.Path, propertyPath, "Group", "Group", BackboneElementStr, $"Group definition of {ed.Path}", null);
+            //}
+            //else if (this.ContainsType(ed, ElementStr))
+            //{
+            //    if (ed.Type.Count != 1)
+            //        throw new ConvertErrorException(this.GetType().Name, fcn, $"Element {ed.Path} has multiple types.");
+            //    if (this.HasChildren(ed) == false)
+            //        throw new ConvertErrorException(this.GetType().Name, fcn, $"Element {ed.Path} has no children.");
 
-                fullPropertyName = this.ProcessSubEntry(indent + 1, ed.Path, propertyPath, "Group", "Group", ElementStr, $"Group definition of {ed.Path}", null);
-            }
-            else
-            {
-                fullPropertyName = propertyName;
-                if (createFlag)
-                {
-                    if (this.gen.IsSliceField(ed.Path))
-                    {
-                        propertiesBlock
-                            .BlankLine()
-                            .AppendLine($"// Entry definition of {ed.Path}")
-                            .AppendCode($"Group: {propertyName}Slices")
-                            .AppendCode($"Property: {propertyName}Slice 0..*")
-                            .BlankLine()
-                            .AppendCode($"Group: {propertyName}Slice")
-                            .AppendCode($"Property: {propertyName} 1..1")
-                            .BlankLine()
-                            .AppendCode($"Element: {propertyName}")
-                            ;
-                    }
-                    else
-                    {
-                        propertiesBlock
-                            .BlankLine()
-                            .AppendLine($"// Entry definition of {ed.Path}")
-                            .AppendCode($"Element: {propertyName}")
-                            ;
-                    }
+            //    fullPropertyName = this.ProcessSubEntry(indent + 1, ed.Path, propertyPath, "Group", "Group", ElementStr, $"Group definition of {ed.Path}", null);
+            //}
+            //else
+            //{
+            //    fullPropertyName = propertyName;
+            //    if (createFlag)
+            //    {
+            //        if (this.gen.IsSliceField(ed.Path))
+            //        {
+            //            propertiesBlock
+            //                .BlankLine()
+            //                .AppendLine($"// Entry definition of {ed.Path}")
+            //                .AppendCode($"Group: {propertyName}Slices")
+            //                .AppendCode($"Property: {propertyName}Slice 0..*")
+            //                .BlankLine()
+            //                .AppendCode($"Group: {propertyName}Slice")
+            //                .AppendCode($"Property: {propertyName} 1..1")
+            //                .BlankLine()
+            //                .AppendCode($"Element: {propertyName}")
+            //                ;
+            //        }
+            //        else
+            //        {
+            //            propertiesBlock
+            //                .BlankLine()
+            //                .AppendLine($"// Entry definition of {ed.Path}")
+            //                .AppendCode($"Element: {propertyName}")
+            //                ;
+            //        }
 
-                    HashSet<String> outputTypes = new HashSet<string>();
-                    bool firstFlag = true;
-                    void OutputType(String pType)
-                    {
-                        if (outputTypes.Contains(pType))
-                            return;
-                        outputTypes.Add(pType);
-                        if (firstFlag)
-                            propertiesBlock.AppendCode($"Value: {pType}");
-                        else
-                            propertiesBlock.AppendCode($"    or {pType}");
-                        firstFlag = false;
-                    }
-                    {
-                        String basePropertyPath = propertyPath.SkipFirstPathPart();
-                        String baseEdPath = ed.Path.SkipFirstPathPart();
-                        if (this.gen.IsSliceField(ed.Path))
-                            mapBlock.AppendCode($"    {basePropertyPath}Slices.{basePropertyPath}Slice.{basePropertyPath} maps to {baseEdPath}");
-                        else
-                            mapBlock.AppendCode($"    {basePropertyPath} maps to {baseEdPath}");
-                    }
-                    foreach (ElementDefinition.TypeRefComponent type in ed.Type)
-                    {
-                        switch (type.Code)
-                        {
-                            case null:
-                                break;
+            //        HashSet<String> outputTypes = new HashSet<string>();
+            //        bool firstFlag = true;
+            //        void OutputType(String pType)
+            //        {
+            //            if (outputTypes.Contains(pType))
+            //                return;
+            //            outputTypes.Add(pType);
+            //            if (firstFlag)
+            //                propertiesBlock.AppendCode($"Value: {pType}");
+            //            else
+            //                propertiesBlock.AppendCode($"    or {pType}");
+            //            firstFlag = false;
+            //        }
+            //        {
+            //            String basePropertyPath = propertyPath.SkipFirstPathPart();
+            //            String baseEdPath = ed.Path.SkipFirstPathPart();
+            //            if (this.gen.IsSliceField(ed.Path))
+            //                mapBlock.AppendCode($"    {basePropertyPath}Slices.{basePropertyPath}Slice.{basePropertyPath} maps to {baseEdPath}");
+            //            else
+            //                mapBlock.AppendCode($"    {basePropertyPath} maps to {baseEdPath}");
+            //        }
+            //        foreach (ElementDefinition.TypeRefComponent type in ed.Type)
+            //        {
+            //            switch (type.Code)
+            //            {
+            //                case null:
+            //                    break;
 
-                            case "boolean":
-                            case "integer":
-                            case "decimal":
-                            case "uri":
-                            case "string":
-                            case "base64Binary":
-                            case "instant":
-                            case "date":
-                            case "dateTime":
-                            case "time":
-                            case "oid":
-                            case "id":
-                            case "markdown":
-                            case "unsignedInt":
-                            case "positiveInt":
-                            case "xhtml":
-                                OutputType($"{type.Code}");
-                                break;
+            //                case "boolean":
+            //                case "integer":
+            //                case "decimal":
+            //                case "uri":
+            //                case "string":
+            //                case "base64Binary":
+            //                case "instant":
+            //                case "date":
+            //                case "dateTime":
+            //                case "time":
+            //                case "oid":
+            //                case "id":
+            //                case "markdown":
+            //                case "unsignedInt":
+            //                case "positiveInt":
+            //                case "xhtml":
+            //                    OutputType($"{type.Code}");
+            //                    break;
 
-                            case "CodeableConcept":
-                            case "Coding":
-                            case "code":
-                                OutputType($"concept");
-                                break;
+            //                case "CodeableConcept":
+            //                case "Coding":
+            //                case "code":
+            //                    OutputType($"concept");
+            //                    break;
 
-                            case "uuid":
-                            case "url":
-                            case "canonical":
-                                OutputType($"uri");
-                                break;
+            //                case "uuid":
+            //                case "url":
+            //                case "canonical":
+            //                    OutputType($"uri");
+            //                    break;
 
-                            case "Reference":
-                                if (type.Profile.Any())
-                                    throw new ConvertErrorException(this.GetType().Name, fcn, $"Unexpected profile in type {ed.Path}:{type.Code}.");
-                                if (type.TargetProfile.Count() == 0)
-                                {
-                                    this.gen.AddAbbreviatedResource(ResourceStr);
-                                    OutputType($"Resource");
-                                }
-                                else
-                                {
-                                    foreach (string target in type.TargetProfile)
-                                    {
-                                        this.gen.AddAbbreviatedResource(target);
-                                        String targetEntryName = target.LastUriPart().ToMachineName();
-                                        OutputType($"{targetEntryName}");
-                                    }
-                                }
-                                break;
+            //                case "Reference":
+            //                    if (type.Profile.Any())
+            //                        throw new ConvertErrorException(this.GetType().Name, fcn, $"Unexpected profile in type {ed.Path}:{type.Code}.");
+            //                    if (type.TargetProfile.Count() == 0)
+            //                    {
+            //                        this.gen.AddAbbreviatedResource(ResourceStr);
+            //                        OutputType($"Resource");
+            //                    }
+            //                    else
+            //                    {
+            //                        foreach (string target in type.TargetProfile)
+            //                        {
+            //                            this.gen.AddAbbreviatedResource(target);
+            //                            String targetEntryName = target.LastUriPart().ToMachineName();
+            //                            OutputType($"{targetEntryName}");
+            //                        }
+            //                    }
+            //                    break;
 
-                            default:
+            //                default:
 
-                                if (type.Profile.Count() == 0)
-                                {
-                                    this.gen.AddAbbreviatedResource(type.Code);
-                                    OutputType($"{type.Code.ToMachineName()}");
-                                }
-                                else
-                                {
-                                    foreach (string profile in type.Profile)
-                                    {
-                                        this.gen.AddAbbreviatedResource(profile);
-                                        String profileName = profile.LastUriPart().ToMachineName();
-                                        OutputType($"{profileName}");
-                                    }
-                                }
-                                break;
-                        }
-                    }
-                }
-            }
+            //                    if (type.Profile.Count() == 0)
+            //                    {
+            //                        this.gen.AddAbbreviatedResource(type.Code);
+            //                        OutputType($"{type.Code.ToMachineName()}");
+            //                    }
+            //                    else
+            //                    {
+            //                        foreach (string profile in type.Profile)
+            //                        {
+            //                            this.gen.AddAbbreviatedResource(profile);
+            //                            String profileName = profile.LastUriPart().ToMachineName();
+            //                            OutputType($"{profileName}");
+            //                        }
+            //                    }
+            //                    break;
+            //            }
+            //        }
+            //    }
+            //}
 
-            if (this.gen.IsSliceField(ed.Path))
-                classBlock.AppendCode($"Property: {fullPropertyName}Slices 0..1");
-            else
-                classBlock.AppendCode($"Property: {fullPropertyName} {ed.Min}..{ed.Max}");
+            //if (this.gen.IsSliceField(ed.Path))
+            //    classBlock.AppendCode($"Property: {fullPropertyName}Slices 0..1");
+            //else
+            //    classBlock.AppendCode($"Property: {fullPropertyName} {ed.Min}..{ed.Max}");
         }
     }
 }
