@@ -15,7 +15,7 @@ namespace FriendlyFhir.Maker
 
                 String outputDir = Path.Combine(DirHelper.FindParentDir("FriendlyFhir"), "FriendlyFhir.Maker.Generated");
 
-                using (FriendlyFhirGenerator maker = new FriendlyFhirGenerator(outputDir))
+                using (MakerGen maker = new MakerGen(outputDir))
                 {
                     maker.StatusErrors += Dfg_StatusErrors;
                     maker.StatusInfo += Dfg_StatusInfo;

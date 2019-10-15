@@ -6,13 +6,8 @@ namespace FriendlyFhir.XHelpers
     public class Helpers
     {
         [Fact]
-        public void GenerateResourceClasses()
+        public void Test()
         {
-            FriendlyFhirGenerator g = new FriendlyFhirGenerator(@"c:\Temp\FriendlyFhire");
-            g.StatusErrors += this.G_StatusErrors;
-            g.StatusWarnings += this.G_StatusWarnings;
-            g.StatusInfo += this.G_StatusInfo;
-            g.GenerateBaseClasses();
         }
 
         private bool Message(ConsoleColor color, string className, string method, string msg)
