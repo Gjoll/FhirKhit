@@ -6,8 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Tools\FhirKhit.Tools.r4\FhirKhit.Tools.R4.csproj" />
-    <ProjectReference Include="..\..\Tools\FhirKhit.Tools\FhirKhit.Tools.csproj" />
+    <PackageReference Include="FhirKhit.Tools.R4" Version="1.10.0" />
   </ItemGroup>
 
   <ItemGroup>
