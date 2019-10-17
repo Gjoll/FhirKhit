@@ -57,6 +57,8 @@ namespace FhirKhit.Tools.R2
         /// </summary>
         public void StoreFhirElements()
         {
+            const String fcn = "StoreFhirElements";
+
             // const String fcn = "StoreFhirElements";
             foreach (String f in Directory.GetFiles(this.bundleDir))
                 File.Delete(f);
@@ -64,7 +66,21 @@ namespace FhirKhit.Tools.R2
             foreach (String d in Directory.GetDirectories(this.bundleDir))
                 Directory.Delete(d, true);
 
-            String resourceDir = Path.Combine(this.bundleDir, "Resources");
+            {
+                String rDir = Path.Combine(this.bundleDir, "StructDefs");
+                if (Directory.Exists(rDir))
+                    Directory.Delete(rDir, true);
+            }
+            String primitiveDir = Path.Combine(this.bundleDir, "StructDefs", "Primitive");
+            Directory.CreateDirectory(primitiveDir);
+
+            String logicalDir = Path.Combine(this.bundleDir, "StructDefs", "Logical");
+            Directory.CreateDirectory(logicalDir);
+
+            String complexDir = Path.Combine(this.bundleDir, "StructDefs", "Complex");
+            Directory.CreateDirectory(complexDir);
+
+            String resourceDir = Path.Combine(this.bundleDir, "StructDefs", "Resources");
             Directory.CreateDirectory(resourceDir);
 
             Bundle b = new Bundle();
@@ -77,13 +93,34 @@ namespace FhirKhit.Tools.R2
                     if (sDef.Snapshot.Element[0].Path.Split('.').Length == 1)
                     {
                         b.AddResourceEntry(sDef, sDef.Url);
-                        sDef.SaveJson(Path.Combine(resourceDir, $"{sDef.Name}.json"));
+
+                        switch (sDef.Kind)
+                        {
+#if FHIR_R4 || FHIR_R3
+                            case StructureDefinition.StructureDefinitionKind.PrimitiveType:
+                                sDef.SaveJson(Path.Combine(primitiveDir, $"{sDef.Name}.json"));
+                                break;
+
+                            case StructureDefinition.StructureDefinitionKind.ComplexType:
+                                sDef.SaveJson(Path.Combine(complexDir, $"{sDef.Name}.json"));
+                                break;
+#endif
+                            case StructureDefinition.StructureDefinitionKind.Logical:
+                                sDef.SaveJson(Path.Combine(logicalDir, $"{sDef.Name}.json"));
+                                break;
+
+                            case StructureDefinition.StructureDefinitionKind.Resource:
+                                sDef.SaveJson(Path.Combine(resourceDir, $"{sDef.Name}.json"));
+                                break;
+
+                            default:
+                                throw new ConvertErrorException(this.GetType().Name, fcn, $"Invalid kind {sDef.Kind}. Item {sDef.Name}");
+                        }
                     }
                 }
+                b.SaveJson(this.bundlePath);
             }
-            b.SaveJson(this.bundlePath);
         }
-
 
         private FhirStructureDefinitions(String bundleDir)
         {
