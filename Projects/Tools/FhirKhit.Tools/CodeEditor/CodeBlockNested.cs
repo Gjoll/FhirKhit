@@ -9,6 +9,8 @@ namespace FhirKhit.Tools
 {
     public class CodeBlockNested : CodeBlock
     {
+        const String IndentOneLevel = "    ";
+
         public const Int32 CommentCol = 140;
         public IEnumerable<CodeBlockNested> AllNamedBlocks => this.NamedBlocks.Values;
 
@@ -99,9 +101,19 @@ namespace FhirKhit.Tools
         {
         }
 
+        public CodeBlockNested IndentMarkerLines(Int32 indent)
+        {
+            StringBuilder sb = new StringBuilder();
+            while (indent-- > 0)
+                sb.Append(IndentOneLevel);
+            this.StartLine = $"{sb.ToString()}{this.StartLine.Trim()}";
+            this.EndLine = $"{sb.ToString()}{this.EndLine.Trim()}";
+            return this;
+        }
+
         public CodeBlockNested Indent()
         {
-            this.indentMargin = this.indentMargin + "    ";
+            this.indentMargin = this.indentMargin + IndentOneLevel;
             return this;
         }
 
@@ -278,6 +290,8 @@ namespace FhirKhit.Tools
                 EndLine = $"{this.MarginString}//- {blockName}"
             };
             this.Children.Add(block);
+            if (String.IsNullOrEmpty(blockName) == false)
+                this.NamedBlocks.Add(blockName, block);
             return block;
         }
 
@@ -445,9 +459,10 @@ namespace FhirKhit.Tools
         }
 
 
-        public CodeBlockNested DefineBlock(out CodeBlockNested block)
+        public CodeBlockNested DefineBlock(out CodeBlockNested block,
+            String blockName = "")
         {
-            block = this.AppendBlock();
+            block = this.AppendBlock(blockName);
             return this;
         }
 
