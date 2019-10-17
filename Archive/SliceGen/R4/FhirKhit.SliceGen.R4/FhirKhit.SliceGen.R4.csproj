@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;FHIR_R4</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis" Version="3.3.1-beta3-final" />
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.5-beta1.final">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3-beta1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Tools\FhirKhit.Tools.r4\FhirKhit.Tools.R4.csproj" />
+    <ProjectReference Include="..\..\..\Tools\FhirKhit.Tools\FhirKhit.Tools.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Hl7.Fhir.ElementModel">
+      <HintPath>..\..\..\Tools\FhirKhit.Tools.R4\Lib\Hl7.Fhir.ElementModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Hl7.Fhir.R4.Core">
+      <HintPath>..\..\..\Tools\FhirKhit.Tools.R4\Lib\Hl7.Fhir.R4.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Hl7.Fhir.R4.Specification">
+      <HintPath>..\..\..\Tools\FhirKhit.Tools.R4\Lib\Hl7.Fhir.R4.Specification.dll</HintPath>
+    </Reference>
+    <Reference Include="Hl7.Fhir.Serialization">
+      <HintPath>..\..\..\Tools\FhirKhit.Tools.R4\Lib\Hl7.Fhir.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="Hl7.Fhir.Support">
+      <HintPath>..\..\..\Tools\FhirKhit.Tools.R4\Lib\Hl7.Fhir.Support.dll</HintPath>
+    </Reference>
+    <Reference Include="Hl7.Fhir.Support.Poco">
+      <HintPath>..\..\..\Tools\FhirKhit.Tools.R4\Lib\Hl7.Fhir.Support.Poco.dll</HintPath>
+    </Reference>
+    <Reference Include="Hl7.FhirPath">
+      <HintPath>..\..\..\Tools\FhirKhit.Tools.R4\Lib\Hl7.FhirPath.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <Import Project="..\..\Share\FhirKhit.SliceGen.SharedLib\FhirKhit.SliceGen.SharedLib.projitems" Label="Shared" />
+
+  <Import Project="..\..\..\FhirKhit.GlobalSuppressions\FhirKhit.GlobalSuppressions.projitems" Label="Share" />
+
+</Project>

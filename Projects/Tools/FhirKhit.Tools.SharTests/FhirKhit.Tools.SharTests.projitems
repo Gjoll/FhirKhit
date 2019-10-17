@@ -8,4 +8,8 @@
   <PropertyGroup Label="Configuration">
     <Import_RootNamespace>FhirKhit.Tools.SharTests</Import_RootNamespace>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)ElementNodeTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Generate_ElementNode_FindChild.cs" />
+  </ItemGroup>
 </Project>

@@ -53,6 +53,95 @@ namespace FhirKhit.Tools.R2
             return null;
         }
 
+        public static List<ElementDefinition> RemoveById(this List<ElementDefinition> elements,
+            String id)
+        {
+            if (elements is null)
+                throw new ArgumentNullException(nameof(elements));
+
+            Int32 i = 0;
+            while (i < elements.Count)
+            {
+                ElementDefinition e = elements[i];
+                if (e.ElementId == id)
+                    elements.RemoveAt(i);
+                else
+                    i += 1;
+            }
+            return elements;
+        }
+
+        public static List<ElementDefinition> RemoveByPath(this List<ElementDefinition> elements,
+            String path)
+        {
+            if (elements is null)
+                throw new ArgumentNullException(nameof(elements));
+
+            Int32 i = 0;
+            while (i < elements.Count)
+            {
+                ElementDefinition e = elements[i];
+                if (e.Path == path)
+                    elements.RemoveAt(i);
+                else
+                    i += 1;
+            }
+            return elements;
+        }
+
+        public static void InsertAfter(this List<ElementDefinition> elements,
+            ElementDefinition insertAfterThis,
+            params ElementDefinition[] elementsToInsert)
+        {
+            if (elements is null)
+                throw new ArgumentNullException(nameof(elements));
+            if (insertAfterThis is null)
+                throw new ArgumentNullException(nameof(insertAfterThis));
+            if (elementsToInsert is null)
+                throw new ArgumentNullException(nameof(elementsToInsert));
+
+            Int32 i = 0;
+            while (i < elements.Count)
+            {
+                if (elements[i] == insertAfterThis)
+                {
+                    foreach (ElementDefinition e in elementsToInsert)
+                        elements.Insert(++i, e);
+                    return;
+                }
+                i += 1;
+            }
+
+            throw new Exception("Insert After element not found in element list");
+        }
+
+        public static IEnumerable<ElementDefinition> FindIdStartsWith(this IEnumerable<ElementDefinition> elements,
+            String id)
+        {
+            if (elements is null)
+                throw new ArgumentNullException(nameof(elements));
+
+            foreach (ElementDefinition ed in elements)
+            {
+                if (ed.ElementId.StartsWith(id))
+                    yield return ed;
+            }
+        }
+
+        public static ElementDefinition FindById(this IEnumerable<ElementDefinition> elements,
+            String id)
+        {
+            if (elements is null)
+                throw new ArgumentNullException(nameof(elements));
+
+            foreach (ElementDefinition ed in elements)
+            {
+                if (ed.ElementId == id)
+                    return ed;
+            }
+            return null;
+        }
+
         /// <summary>
         /// Return only the top level element definitions (ignore nested elements)
         /// </summary>

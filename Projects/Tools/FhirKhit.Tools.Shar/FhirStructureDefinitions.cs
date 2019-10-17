@@ -16,9 +16,15 @@ namespace FhirKhit.Tools.R2
 {
     public class FhirStructureDefinitions
     {
-        String bundlePath;
+        public static FhirStructureDefinitions Self { get; set; }
+
+        public static void Create(String bundleDir) => Self = new FhirStructureDefinitions(bundleDir);
+
         Bundle fhirSDefsBundle;
         ZipSource source;
+
+        String bundleDir;
+        String bundlePath => Path.Combine(bundleDir, "StructureDefinitions.json");
 
         public Bundle FhirSDefs
         {
@@ -35,6 +41,16 @@ namespace FhirKhit.Tools.R2
             }
         }
 
+#pragma warning disable CA1054 // Uri parameters should not be strings
+        public StructureDefinition GetResource(String uri)
+#pragma warning restore CA1054 // Uri parameters should not be strings
+        {
+            if (uri is null)
+                throw new ArgumentNullException(nameof(uri));
+
+            return this.source.ResolveByUri(uri) as StructureDefinition;
+        }
+
         /// <summary>
         /// To save time, store all structure definitions in a fhir bundle file. This need only be run when we get a new 
         /// FHIR version.
@@ -42,6 +58,14 @@ namespace FhirKhit.Tools.R2
         public void StoreFhirElements()
         {
             // const String fcn = "StoreFhirElements";
+            foreach (String f in Directory.GetFiles(this.bundleDir))
+                File.Delete(f);
+
+            foreach (String d in Directory.GetDirectories(this.bundleDir))
+                Directory.Delete(d, true);
+
+            String resourceDir = Path.Combine(this.bundleDir, "Resources");
+            Directory.CreateDirectory(resourceDir);
 
             Bundle b = new Bundle();
             foreach (string uri in this.source.ListResourceUris())
@@ -51,21 +75,27 @@ namespace FhirKhit.Tools.R2
                 {
                     // This is to get rid of the http://....//de-... entries.
                     if (sDef.Snapshot.Element[0].Path.Split('.').Length == 1)
+                    {
                         b.AddResourceEntry(sDef, sDef.Url);
+                        sDef.SaveJson(Path.Combine(resourceDir, $"{sDef.Name}.json"));
+                    }
                 }
             }
             b.SaveJson(this.bundlePath);
         }
 
-        public FhirStructureDefinitions()
-        {
-            String specPath = Path.GetFullPath("specification.zip");
-            String bundlePath = Path.GetFullPath("StructureDefinitions.json");
 
-            this.bundlePath = bundlePath;
+        private FhirStructureDefinitions(String bundleDir)
+        {
+            this.bundleDir = bundleDir;
+            if (Directory.Exists(bundleDir) == false)
+                Directory.CreateDirectory(bundleDir);
+
+            String specPath = Path.GetFullPath("specification.zip");
             if (File.Exists(specPath) == false)
                 throw new Exception($"Missing {specPath}");
             this.source = new ZipSource(specPath);
+            FhirStructureDefinitions.Self = this;
         }
     }
 }

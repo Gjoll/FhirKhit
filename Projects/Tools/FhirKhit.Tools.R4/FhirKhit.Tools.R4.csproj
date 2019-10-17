@@ -4,9 +4,9 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <LangVersion>7.1</LangVersion>
     <Platforms>AnyCPU;x64</Platforms>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.9.0</Version>
-    <AssemblyVersion>1.9.0.0</AssemblyVersion>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Version>1.11.0</Version>
+    <AssemblyVersion>1.11.0.0</AssemblyVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -24,12 +24,6 @@
     </PackageReference>
     <PackageReference Include="Antlr4.Runtime" Version="4.6.6" />
     <PackageReference Include="CommonMark.NET" Version="0.15.1" />
-    <PackageReference Include="Hl7.Fhir.ElementModel" Version="1.3.0" />
-    <PackageReference Include="Hl7.Fhir.R4" Version="1.3.0" />
-    <PackageReference Include="Hl7.Fhir.Serialization" Version="1.3.0" />
-    <PackageReference Include="Hl7.Fhir.Specification.R4" Version="1.3.0" />
-    <PackageReference Include="Hl7.Fhir.Support" Version="1.3.0" />
-    <PackageReference Include="Hl7.FhirPath" Version="1.3.0" />
     <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.5-beta1.final">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -43,6 +37,93 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="Hl7.Fhir.ElementModel">
+      <HintPath>Lib\Hl7.Fhir.ElementModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Hl7.Fhir.R4.Core">
+      <HintPath>Lib\Hl7.Fhir.R4.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Hl7.Fhir.R4.Specification">
+      <HintPath>Lib\Hl7.Fhir.R4.Specification.dll</HintPath>
+    </Reference>
+    <Reference Include="Hl7.Fhir.Serialization">
+      <HintPath>Lib\Hl7.Fhir.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="Hl7.Fhir.Support">
+      <HintPath>Lib\Hl7.Fhir.Support.dll</HintPath>
+    </Reference>
+    <Reference Include="Hl7.Fhir.Support.Poco">
+      <HintPath>Lib\Hl7.Fhir.Support.Poco.dll</HintPath>
+    </Reference>
+    <Reference Include="Hl7.FhirPath">
+      <HintPath>Lib\Hl7.FhirPath.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Lib\Hl7.Fhir.ElementModel.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Lib\Hl7.Fhir.ElementModel.pdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Lib\Hl7.Fhir.ElementModel.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Lib\Hl7.Fhir.R4.Core.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Lib\Hl7.Fhir.R4.Core.pdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Lib\Hl7.Fhir.R4.Core.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Lib\Hl7.Fhir.R4.Specification.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Lib\Hl7.Fhir.R4.Specification.pdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Lib\Hl7.Fhir.R4.Specification.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Lib\Hl7.Fhir.Serialization.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Lib\Hl7.Fhir.Serialization.pdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Lib\Hl7.Fhir.Serialization.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Lib\Hl7.Fhir.Support.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Lib\Hl7.Fhir.Support.pdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Lib\Hl7.Fhir.Support.Poco.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Lib\Hl7.Fhir.Support.Poco.pdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Lib\Hl7.Fhir.Support.Poco.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Lib\Hl7.Fhir.Support.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Lib\Hl7.FhirPath.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Lib\Hl7.FhirPath.pdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Lib\Hl7.FhirPath.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="specification.zip">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

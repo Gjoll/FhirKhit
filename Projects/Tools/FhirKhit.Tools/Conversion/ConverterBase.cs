@@ -5,7 +5,7 @@ using System.Text;
 
 namespace FhirKhit.Tools
 {
-    public abstract class ConverterBase : IConverter
+    public abstract class ConverterBase : IConverter, IConversionInfo
     {
         public delegate bool StatusDelegate(String className, String method, String msg);
 

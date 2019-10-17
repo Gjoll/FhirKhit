@@ -7,6 +7,19 @@ namespace FhirKhit.Tools
 {
     public static class StringExtensions
     {
+        public static String ToMarkup(this String[] lines)
+        {
+            if (lines is null)
+                throw new ArgumentNullException(nameof(lines));
+
+            StringBuilder sb = new StringBuilder();
+            foreach (String line in lines)
+            {
+                sb.AppendLine(line);
+            }
+            return sb.ToString();
+        }
+
         public static String RemovePrefix(this String s, string prefix)
         {
             if (s is null)
@@ -87,10 +100,28 @@ namespace FhirKhit.Tools
         }
 
         /// <summary>
+        /// Return the base uri part (uri - last element)
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
+#pragma warning disable CA1055
+        public static String BaseUriPart(this String path)
+        {
+            if (path is null)
+                throw new ArgumentNullException(nameof(path));
+
+            Int32 index = path.LastIndexOf('/');
+            if (index < 0)
+                return path;
+            return path.Substring(0, index - 1);
+        }
+
+        /// <summary>
         /// Return the last part of an uri path (i.e. a.bb.ccc == 'ccc')
         /// </summary>
         /// <param name="path"></param>
         /// <returns></returns>
+#pragma warning disable CA1055
         public static String LastUriPart(this String path)
         {
             if (path is null)
@@ -99,7 +130,7 @@ namespace FhirKhit.Tools
             Int32 index = path.LastIndexOf('/');
             if (index < 0)
                 return path;
-            return path.Substring(index+1);
+            return path.Substring(index + 1);
         }
 
         /// <summary>
