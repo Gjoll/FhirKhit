@@ -118,8 +118,8 @@ namespace FhirKhit.Tools.R2
                         }
                     }
                 }
-                b.SaveJson(this.bundlePath);
             }
+            b.SaveJson(this.bundlePath);
         }
 
         private FhirStructureDefinitions(String bundleDir)
