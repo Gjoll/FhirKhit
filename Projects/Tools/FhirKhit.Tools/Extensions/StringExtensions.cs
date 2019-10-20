@@ -242,6 +242,52 @@ namespace FhirKhit.Tools
             return sb.ToString();
         }
 
+
+        public static String[] ToArgs(this String value)
+        {
+            if (value is null)
+                throw new ArgumentNullException(nameof(value));
+
+            List<String> args = new List<string>();
+
+            bool parenFlag = false;
+            StringBuilder sb = new StringBuilder();
+            foreach (Char c in value)
+            {
+                switch (c)
+                {
+                    case '\t':
+                    case '\r':
+                    case '\n':
+                    case ' ':
+                        if (parenFlag == false)
+                        {
+                            if (sb.Length > 0)
+                                args.Add(sb.ToString());
+                            sb.Clear();
+                        }
+                        else
+                        {
+                            sb.Append(c);
+                        }
+                        break;
+
+                    case '"':
+                        sb.Append(c);
+                        parenFlag = !parenFlag;
+                        break;
+
+                    default:
+                        sb.Append(c);
+                        break;
+                }
+            }
+
+            if (sb.Length > 0)
+                args.Add(sb.ToString());
+            return args.ToArray();
+        }
+
         public static String ValueOrDef(this String value, String defaultValue)
         {
             if (value != null)

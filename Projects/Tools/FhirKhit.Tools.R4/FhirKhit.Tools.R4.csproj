@@ -5,8 +5,8 @@
     <LangVersion>7.1</LangVersion>
     <Platforms>AnyCPU;x64</Platforms>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Version>1.24.0</Version>
-    <AssemblyVersion>1.24.0.0</AssemblyVersion>
+    <Version>1.27.0</Version>
+    <AssemblyVersion>1.27.0.0</AssemblyVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
