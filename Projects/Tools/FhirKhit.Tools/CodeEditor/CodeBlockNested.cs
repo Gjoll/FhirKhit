@@ -20,7 +20,11 @@ namespace FhirKhit.Tools
         /// <summary>
         /// Clear all content.
         /// </summary>
-        public override void Clear() => this.Children.Clear();
+        public override void Clear()
+        {
+            this.NamedBlocks.Clear();
+            this.Children.Clear();
+        }
 
         /// <summary>
         /// Purge all children that are not in list.
