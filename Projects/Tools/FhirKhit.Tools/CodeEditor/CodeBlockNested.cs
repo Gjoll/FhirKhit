@@ -289,9 +289,14 @@ namespace FhirKhit.Tools
                 StartLine = $"{this.MarginString}//+ {blockName}",
                 EndLine = $"{this.MarginString}//- {blockName}"
             };
+            return AppendBlock(block);
+        }
+
+        public CodeBlockNested AppendBlock(CodeBlockNested block)
+        {
             this.Children.Add(block);
-            if (String.IsNullOrEmpty(blockName) == false)
-                this.NamedBlocks.Add(blockName, block);
+            if (String.IsNullOrEmpty(block.Name) == false)
+                this.NamedBlocks.Add(block.Name, block);
             return block;
         }
 
@@ -458,6 +463,22 @@ namespace FhirKhit.Tools
             return this;
         }
 
+        public CodeBlockNested InsertBlock(CodeBlockNested block,
+            String blockName = "")
+        {
+            if (String.IsNullOrEmpty(blockName))
+            {
+                block.StartLine = "";
+                block.EndLine = "";
+            }
+            else
+            {
+                block.StartLine = $"{this.MarginString}//+ {blockName}";
+                block.EndLine = $"{this.MarginString}//- {blockName}";
+            }
+            this.AppendBlock(block);
+            return this;
+        }
 
         public CodeBlockNested DefineBlock(out CodeBlockNested block,
             String blockName = "")
