@@ -12,6 +12,8 @@ namespace FhirKhit.Tools
         const String IndentOneLevel = "    ";
 
         public const Int32 CommentCol = 140;
+        public delegate void CodeCallback(CodeBlockNested code);
+
         public IEnumerable<CodeBlockNested> AllNamedBlocks => this.NamedBlocks.Values;
 
         readonly Dictionary<String, CodeBlockNested> NamedBlocks = new Dictionary<String, CodeBlockNested>();
@@ -495,6 +497,38 @@ namespace FhirKhit.Tools
             [CallerLineNumber] Int32 lineNumber = 0)
         {
             this.AppendCode(string.Empty, filePath, lineNumber);
+            return this;
+        }
+
+        public CodeBlockNested If(bool value,
+            CodeCallback ifCode,
+            [CallerFilePath] String filePath = "",
+            [CallerLineNumber] Int32 lineNumber = 0)
+        {
+            if (value)
+            {
+                this.AppendCode($"//If: {filePath} {lineNumber}");
+                ifCode(this);
+            }
+            return this;
+        }
+
+        public CodeBlockNested IfElse(bool value,
+            CodeCallback ifCode,
+            CodeCallback elseCode,
+            [CallerFilePath] String filePath = "",
+            [CallerLineNumber] Int32 lineNumber = 0)
+        {
+            if (value)
+            {
+                this.AppendCode($"//If: {filePath} {lineNumber}");
+                ifCode(this);
+            }
+            else
+            {
+                this.AppendCode($"//Else: {filePath} {lineNumber}");
+                elseCode(this);
+            }
             return this;
         }
 
