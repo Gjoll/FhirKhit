@@ -507,7 +507,8 @@ namespace FhirKhit.Tools
         {
             if (value)
             {
-                this.AppendCode($"//If: {filePath} {lineNumber}");
+                if (CodeEditor.DebugFlag)
+                    this.AppendCode($"//If: {filePath} {lineNumber}");
                 ifCode(this);
             }
             return this;
@@ -521,12 +522,14 @@ namespace FhirKhit.Tools
         {
             if (value)
             {
-                this.AppendCode($"//If: {filePath} {lineNumber}");
+                if (CodeEditor.DebugFlag)
+                    this.AppendCode($"//If: {filePath} {lineNumber}");
                 ifCode(this);
             }
             else
             {
-                this.AppendCode($"//Else: {filePath} {lineNumber}");
+                if (CodeEditor.DebugFlag)
+                    this.AppendCode($"//Else: {filePath} {lineNumber}");
                 elseCode(this);
             }
             return this;
