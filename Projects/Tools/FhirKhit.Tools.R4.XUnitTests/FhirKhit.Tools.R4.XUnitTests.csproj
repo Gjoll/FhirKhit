@@ -17,11 +17,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.5-beta1.final">
+    <PackageReference Include="Hl7.Fhir.R4" Version="1.4.0" />
+    <PackageReference Include="Hl7.Fhir.Specification.R4" Version="1.4.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.7">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.3.0-preview-20190828-03" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.3.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3-beta1" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
@@ -39,30 +41,6 @@
   <ItemGroup>
     <ProjectReference Include="..\FhirKhit.Tools.r4\FhirKhit.Tools.R4.csproj" />
     <ProjectReference Include="..\FhirKhit.Tools\FhirKhit.Tools.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="Hl7.Fhir.ElementModel">
-      <HintPath>..\FhirKhit.Tools.R4\Lib\Hl7.Fhir.ElementModel.dll</HintPath>
-    </Reference>
-    <Reference Include="Hl7.Fhir.R4.Core">
-      <HintPath>..\FhirKhit.Tools.R4\Lib\Hl7.Fhir.R4.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Hl7.Fhir.R4.Specification">
-      <HintPath>..\FhirKhit.Tools.R4\Lib\Hl7.Fhir.R4.Specification.dll</HintPath>
-    </Reference>
-    <Reference Include="Hl7.Fhir.Serialization">
-      <HintPath>..\FhirKhit.Tools.R4\Lib\Hl7.Fhir.Serialization.dll</HintPath>
-    </Reference>
-    <Reference Include="Hl7.Fhir.Support">
-      <HintPath>..\FhirKhit.Tools.R4\Lib\Hl7.Fhir.Support.dll</HintPath>
-    </Reference>
-    <Reference Include="Hl7.Fhir.Support.Poco">
-      <HintPath>..\FhirKhit.Tools.R4\Lib\Hl7.Fhir.Support.Poco.dll</HintPath>
-    </Reference>
-    <Reference Include="Hl7.FhirPath">
-      <HintPath>..\FhirKhit.Tools.R4\Lib\Hl7.FhirPath.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
 </Project>
