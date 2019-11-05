@@ -27,10 +27,6 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.Tools.SharTests", 
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.GlobalSuppressions", "Projects\FhirKhit.GlobalSuppressions\FhirKhit.GlobalSuppressions.shproj", "{721F484A-1C1A-4A95-AA2C-FF38E18C9D77}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BreastRadiology", "BreastRadiology", "{5FC18CA0-0C9C-46E8-842C-195480DD8F0A}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FhirKhit.BreastRadiology.XUnitTests", "Projects\BreastRadiology\FhirKhit.BreastRadiology.XUnitTests\FhirKhit.BreastRadiology.XUnitTests.csproj", "{8B2531DC-098D-477D-ACCB-7CA8E44DAC4A}"
-EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Projects\FhirKhit.GlobalSuppressions\FhirKhit.GlobalSuppressions.projitems*{721f484a-1c1a-4a95-aa2c-ff38e18c9d77}*SharedItemsImports = 13
@@ -108,14 +104,6 @@ Global
 		{1844E064-0460-4076-82B8-D2FD74AEDB8D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1844E064-0460-4076-82B8-D2FD74AEDB8D}.Release|x64.ActiveCfg = Release|Any CPU
 		{1844E064-0460-4076-82B8-D2FD74AEDB8D}.Release|x64.Build.0 = Release|Any CPU
-		{8B2531DC-098D-477D-ACCB-7CA8E44DAC4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8B2531DC-098D-477D-ACCB-7CA8E44DAC4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8B2531DC-098D-477D-ACCB-7CA8E44DAC4A}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{8B2531DC-098D-477D-ACCB-7CA8E44DAC4A}.Debug|x64.Build.0 = Debug|Any CPU
-		{8B2531DC-098D-477D-ACCB-7CA8E44DAC4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8B2531DC-098D-477D-ACCB-7CA8E44DAC4A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8B2531DC-098D-477D-ACCB-7CA8E44DAC4A}.Release|x64.ActiveCfg = Release|Any CPU
-		{8B2531DC-098D-477D-ACCB-7CA8E44DAC4A}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -131,7 +119,6 @@ Global
 		{1844E064-0460-4076-82B8-D2FD74AEDB8D} = {C9277C85-BD7D-4D69-8CEE-A81A646E97AF}
 		{BF3E3A97-3B43-44AA-838C-24E5E32BE8C5} = {C9277C85-BD7D-4D69-8CEE-A81A646E97AF}
 		{A0663C6D-3386-4C88-A186-B288530EB107} = {C9277C85-BD7D-4D69-8CEE-A81A646E97AF}
-		{8B2531DC-098D-477D-ACCB-7CA8E44DAC4A} = {5FC18CA0-0C9C-46E8-842C-195480DD8F0A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {90499BD7-964F-4CE5-A761-BDF9EC6DCE28}

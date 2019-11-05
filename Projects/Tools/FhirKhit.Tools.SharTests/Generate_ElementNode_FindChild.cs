@@ -6,6 +6,7 @@ using Hl7.Fhir.Introspection;
 using Hl7.Fhir.Model;
 using Xunit;
 using System.IO;
+using System.Diagnostics;
 
 #if FHIR_R2
 using FhirKhit.Tools.R2;
@@ -100,7 +101,20 @@ namespace FhirKhit.Tools.R4.XUnitTests
                 .CloseBrace()
                 ;
         }
-        
+
+        [Fact(DisplayName = "CodeGen.Validate")]
+        void Validate()
+        {
+            String savePath = $"\\Temp\\test.json";
+            FhirValidator fv = new FhirValidator();
+            fv.Validate("4.0.0", savePath);
+            StringBuilder sb = new StringBuilder();
+            bool success = fv.FormatMessages(sb);
+            Trace.WriteLine(sb.ToString());
+            Assert.True(success);
+            Trace.WriteLine("Validation complete");
+        }
+
         /// <summary>
         /// Create the AddChildXXX methods of ElementDefinitionNode.
         /// </summary>

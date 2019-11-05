@@ -5,8 +5,8 @@
     <LangVersion>7.1</LangVersion>
     <Platforms>AnyCPU;x64</Platforms>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.30.0</Version>
-    <AssemblyVersion>1.30.0.0</AssemblyVersion>
+    <Version>1.31.0</Version>
+    <AssemblyVersion>1.31.0.0</AssemblyVersion>
     <Authors>Kurt W. Allen</Authors>
     <Company>Eir Solutions, LLC.</Company>
     <PackageProjectUrl>https://github.com/Gjoll/FhirKhit</PackageProjectUrl>
