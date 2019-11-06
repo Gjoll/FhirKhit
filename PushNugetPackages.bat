@@ -1,20 +1,18 @@
-@rem enter this directory
-cd /d %~dp0
-set NUGET=ExternalProjects\nuget.exe
+call :push CompiledNugetPackages\FhirKhit.Tools.*.nupkg
+exit
 
-%NUGET% push Projects\Tools\FhirKhit.Tools\bin\Debug\*.nupkg 5b9d07da-eec7-47a2-9703-aa6acc56d058 -Source https://www.myget.org/F/applicadia/api/v2/package
-
-%NUGET% push Projects\Tools\FhirKhit.Tools.R2\bin\Debug\*.nupkg 5b9d07da-eec7-47a2-9703-aa6acc56d058 -Source https://www.myget.org/F/applicadia/api/v2/package
-
-
-%NUGET% push Projects\Tools\FhirKhit.Tools.R3\bin\Debug\*.nupkg 5b9d07da-eec7-47a2-9703-aa6acc56d058 -Source https://www.myget.org/F/applicadia/api/v2/package
-
-
-%NUGET% push Projects\Tools\FhirKhit.Tools.R4\bin\Debug\*.nupkg 5b9d07da-eec7-47a2-9703-aa6acc56d058 -Source https://www.myget.org/F/applicadia/api/v2/package
-
-del Projects\Tools\FhirKhit.Tools\bin\Debug\*.nupkg
-del Projects\Tools\FhirKhit.Tools.R2\bin\Debug\*.nupkg
-del Projects\Tools\FhirKhit.Tools.R3\bin\Debug\*.nupkg
-del Projects\Tools\FhirKhit.Tools.R4\bin\Debug\*.nupkg
-
-prompt
+:push
+	dir %1
+	ExternalProjects\nuget.exe push %1 -ApiKey oy2aradlztknz2nmzk7a6v4z76cn6teu7pkc73ol6ep2ju -Source https://api.nuget.org/v3/index.json -SkipDuplicate
+	IF %errorlevel% NEQ 0 GOTO :error
+	remdel CompiledNugetPackages\*.nupkg
+	exit
+	
+:error
+	echo "*"
+	echo "* nuget push failed "
+	echo "*"
+	pause
+	exit /b
+	
+	
