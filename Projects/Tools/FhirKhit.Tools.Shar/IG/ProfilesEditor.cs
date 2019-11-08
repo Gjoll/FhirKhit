@@ -36,11 +36,18 @@ namespace FhirKhit.Tools.R2
             Markdown text)
         {
             AddItem(this.basedOnItemBlock,
-                profileName,
-                profilePage,
-                parentPage,
-                parentName,
+                new Tuple<String, String>[]
+                {
+                    new Tuple<String, String>(profileName, profilePage),
+                    new Tuple<String, String>(parentName, parentPage)
+                },
                 text);
+        }
+
+        public void AddFragment(IEnumerable<Tuple<String, String>> references,
+            Markdown text)
+        {
+            AddItem(this.profileItemBlock, references, text);
         }
 
         public void AddProfile(String profileName,
@@ -50,32 +57,35 @@ namespace FhirKhit.Tools.R2
             Markdown text)
         {
             AddItem(this.profileItemBlock,
-                profileName,
-                profilePage,
-                parentPage,
-                parentName,
+                new Tuple<String, String>[]
+                {
+                    new Tuple<String, String>(profileName, profilePage),
+                    new Tuple<String, String>(parentName, parentPage)
+                },
                 text);
         }
 
         public void AddItem(CodeBlockNested block,
-            String profileName,
-            String profilePage,
-            String parentPage,
-            String parentName,
+            IEnumerable<Tuple<String, String>> references,
             Markdown text)
         {
             if (text is null)
                 throw new ArgumentNullException(nameof(text));
 
+            block.AppendRaw("<tr>");
+
+            foreach (Tuple<String, String> reference in references)
+            {
+                String referenceName = reference.Item1;
+                String referencePage = reference.Item2;
+                block.AppendRaw($"<td><a href=\"{referencePage}\">{referenceName}</a></td>");
+            }
             block
-                .AppendRaw("<tr>")
-                .AppendRaw($"<td><a href=\"{profilePage}\">{profileName}</a></td>")
-                .AppendRaw($"<td><a href=\"{parentPage}\">{parentName}</a></td>")
-                .AppendRaw("<td>{% capture md_text %}")
-                .AppendRaw(text.Value)
-                .AppendRaw("{% endcapture %}{{ md_text | markdownify }}</td>")
-                .AppendRaw("</tr>")
-                ;
+            .AppendRaw("<td>{% capture md_text %}")
+            .AppendRaw(text.Value)
+            .AppendRaw("{% endcapture %}{{ md_text | markdownify }}</td>")
+            .AppendRaw("</tr>")
+            ;
         }
     }
 }

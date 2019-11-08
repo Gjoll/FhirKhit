@@ -17,6 +17,10 @@ namespace FhirKhit.Tools.R2
     {
         public static ZipSource Source
         {
+            set
+            {
+                ZipFhirSource.source = value;
+            }
             get
             {
                 if (ZipFhirSource.source == null)

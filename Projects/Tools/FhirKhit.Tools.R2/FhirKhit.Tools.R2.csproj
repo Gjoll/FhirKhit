@@ -5,8 +5,7 @@
     <LangVersion>7.1</LangVersion>
     <Platforms>AnyCPU;x64</Platforms>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>2.0.0</Version>
-    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <Version>2.6.0</Version>
     <Authors>Kurt W. Allen</Authors>
     <Company>Eir Solutions, LLC.</Company>
     <PackageProjectUrl>https://github.com/Gjoll/FhirKhit</PackageProjectUrl>
@@ -54,7 +53,7 @@
     <CreateItem Include="$(OutputPath)\..\FhirKhit.Tools.*nupkg">
       <Output TaskParameter="Include" ItemName="FilesToCopy" />
     </CreateItem>
-    <Copy SourceFiles="@(FilesToCopy)" DestinationFolder="$(SolutionDir)CompiledNugetPackages" />
+    <Move SourceFiles="@(FilesToCopy)" DestinationFolder="$(SolutionDir)CompiledNugetPackages" />
   </Target>
 
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">

@@ -20,8 +20,7 @@ namespace FhirKhit.Tools.R2
             this.conversionInfo = info;
         }
 
-        void CleanElement(StructureDefinition sDef,
-            StructureDefinition parent,
+        void CleanElement(StructureDefinition parent,
             ElementDefinition element)
         {
             if ((element.Min == 0) && (element.Max == "0"))
@@ -55,7 +54,7 @@ namespace FhirKhit.Tools.R2
         {
             foreach (ElementDefinition element in sDef.Differential.Element)
             {
-                CleanElement(sDef, parent, element);
+                CleanElement(parent, element);
             }
         }
 
