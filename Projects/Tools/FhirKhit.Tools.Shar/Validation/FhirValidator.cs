@@ -25,6 +25,20 @@ namespace FhirKhit.Tools.R2
         public bool FailOnWarnings { get; set; } = true;
         public bool CheckIfResourceFlag { get; set; } = false;
 
+        public String validationPath { get; set; }
+
+        public FhirValidator(String validationPath = null)
+        {
+            if (validationPath == null)
+            {
+                String localDir = Assembly.GetEntryAssembly().Location;
+                localDir = Path.GetDirectoryName(localDir);
+                localDir = Path.GetFullPath(localDir);
+                validationPath = Path.Combine(localDir, "validation.xml");
+            }
+            this.validationPath = validationPath;
+        }
+
         public bool ValidateDir(String baseDir, String fileFilter, String version)
         {
             bool retVal = true;
@@ -72,9 +86,7 @@ namespace FhirKhit.Tools.R2
             String executingDir = Assembly.GetExecutingAssembly().Location;
             executingDir = Path.GetDirectoryName(executingDir);
             executingDir = Path.GetFullPath(executingDir);
-            String validationPath = Path.Combine(executingDir, "validation.xml");
-
-            String jarPath = Path.Combine(executingDir, "Validation", "org.hl7.fhir.validation.jar");
+            String jarPath = Path.Combine(executingDir, "org.hl7.fhir.validation.jar");
             StringBuilder args = new StringBuilder();
             args.Append($"-jar  \"{jarPath}\" ");
             foreach (String resourcePath in resourcePaths)

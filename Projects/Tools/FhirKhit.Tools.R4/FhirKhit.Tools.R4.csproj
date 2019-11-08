@@ -5,7 +5,7 @@
     <LangVersion>7.1</LangVersion>
     <Platforms>AnyCPU;x64</Platforms>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>2.6.0</Version>
+    <Version>2.8.0</Version>
     <Authors>Kurt W. Allen</Authors>
     <Company>Eir Solutions, LLC.</Company>
     <PackageProjectUrl>https://github.com/Gjoll/FhirKhit</PackageProjectUrl>
@@ -24,18 +24,23 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="specification.zip" />
+    <None Include="specification.zip" Pack="true" PackagePath="lib\$(TargetFramework)">
+    </None>
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="specification.zip" Pack="true" PackagePath="lib\$(TargetFramework)">
+    <None Include="$(OutputPath)\Validation\org.hl7.fhir.validation.jar" Pack="true" PackagePath="lib\$(TargetFramework)">
     </None>
   </ItemGroup>
   
   <ItemGroup>
     <PackageReference Include="CommonMark.NET" Version="0.15.1" />
+    <PackageReference Include="Hl7.Fhir.ElementModel" Version="1.4.0" />
     <PackageReference Include="Hl7.Fhir.R4" Version="1.4.0" />
     <PackageReference Include="Hl7.Fhir.Specification.R4" Version="1.4.0" />
+    <PackageReference Include="Hl7.Fhir.Support" Version="1.4.0" />
+    <PackageReference Include="Hl7.Fhir.Support.Poco" Version="1.4.0" />
+    <PackageReference Include="Hl7.FhirPath" Version="1.4.0" />
     <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.7">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
