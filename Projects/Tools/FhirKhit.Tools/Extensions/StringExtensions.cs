@@ -145,6 +145,19 @@ namespace FhirKhit.Tools
         }
 
         /// <summary>
+        /// Return the first part of a path (i.e. a.bb.ccc == 'a')
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        public static String FirstPathPart(this String path)
+        {
+            if (path is null)
+                throw new ArgumentNullException(nameof(path));
+            String[] parts = path.Split('.');
+            return parts.First();
+        }
+
+        /// <summary>
         /// Return the last part of a path (i.e. a.bb.ccc == 'ccc')
         /// </summary>
         /// <param name="path"></param>

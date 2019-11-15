@@ -13,6 +13,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)ElementDefinitionNodes\ElementNodeExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ElementDictionary.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\BaseExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\DomainResourceExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\ElementDefinitionExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\ExtendableExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\MarkDownExtensions.cs" />
