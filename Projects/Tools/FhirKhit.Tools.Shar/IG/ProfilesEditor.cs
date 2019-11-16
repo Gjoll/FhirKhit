@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Linq;
+
 
 #if FHIR_R4
 namespace FhirKhit.Tools.R4
@@ -69,9 +71,11 @@ namespace FhirKhit.Tools.R2
             IEnumerable<Tuple<String, String>> references,
             Markdown text)
         {
-            if (text is null)
-                throw new ArgumentNullException(nameof(text));
+            if ((text is null) && (references.Any() == false))
+                return ;
 
+            if (text == null)
+            text = "";
             block.AppendRaw("<tr>");
 
             foreach (Tuple<String, String> reference in references)
