@@ -75,7 +75,7 @@ namespace FhirKhit.Tools.R2
                 return ;
 
             if (text == null)
-            text = "";
+            text = new Markdown("");
             block.AppendRaw("<tr>");
 
             foreach (Tuple<String, String> reference in references)

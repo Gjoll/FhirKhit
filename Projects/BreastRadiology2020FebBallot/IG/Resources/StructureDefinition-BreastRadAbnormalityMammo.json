@@ -1,0 +1,311 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadAbnormalityMammo",
+  "version": "0.0.2",
+  "name": "BreastRadAbnormalityMammo",
+  "title": "Breast Radiology Abnormality (Mammography)",
+  "status": "draft",
+  "date": "2019-11-01",
+  "publisher": "Hl7-Clinical Interoperability Council",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/cic"
+        }
+      ]
+    }
+  ],
+  "description": "Mammography Breast Abnormality Observation",
+  "fhirVersion": "4.0.0",
+  "kind": "logical",
+  "abstract": true,
+  "type": "Resource",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Resource",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation",
+        "path": "Observation"
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.value[x]",
+          "min": 0,
+          "max": "1"
+        }
+      },
+      {
+        "id": "Observation.interpretation",
+        "path": "Observation.interpretation",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.interpretation",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Observation.note",
+        "path": "Observation.note",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.note",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Observation.method",
+        "path": "Observation.method",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "coding"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.method",
+          "min": 0,
+          "max": "1"
+        }
+      },
+      {
+        "id": "Observation.method.coding",
+        "path": "Observation.method.coding"
+      },
+      {
+        "id": "Observation.method.coding:method",
+        "path": "Observation.method.coding",
+        "sliceName": "method",
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "Observation.method",
+          "min": 0,
+          "max": "1"
+        },
+        "patternCoding": {
+          "system": "http://snomed.info/sct",
+          "code": "115341008"
+        }
+      },
+      {
+        "id": "Observation.specimen",
+        "path": "Observation.specimen",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.specimen",
+          "min": 0,
+          "max": "1"
+        }
+      },
+      {
+        "id": "Observation.referenceRange",
+        "path": "Observation.referenceRange",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.referenceRange",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Observation.hasMember",
+        "path": "Observation.hasMember",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": true,
+          "rules": "openAtEnd"
+        },
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Observation.hasMember:breastRadAbnormalityMammoBreastDensity",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadAbnormalityMammoBreastDensity",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadAbnormalityMammoBreastDensity"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:breastRadMammoMass",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadMammoMass",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoMass"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:breastRadMammoCalcifications",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadMammoCalcifications",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoCalcifications"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:breastRadAbnormalityMammoArchitecturalDistortion",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadAbnormalityMammoArchitecturalDistortion",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadAbnormalityMammoArchitecturalDistortion"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:breastRadAbnormalityMammoAssymetries",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadAbnormalityMammoAssymetries",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadAbnormalityMammoAssymetries"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:breastRadAbnormalityMammoIntramammaryLymphNode",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadAbnormalityMammoIntramammaryLymphNode",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadAbnormalityMammoIntramammaryLymphNode"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:breastRadAbnormalityMammoSkinLesion",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadAbnormalityMammoSkinLesion",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadAbnormalityMammoSkinLesion"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:breastRadAbnormalityMammoSolitaryDilatedDuct",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadAbnormalityMammoSolitaryDilatedDuct",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadAbnormalityMammoSolitaryDilatedDuct"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
