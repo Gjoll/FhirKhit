@@ -43,10 +43,6 @@ namespace PreFhir
                     case "":
                         break;
 
-                    case "-c":
-                        this.preFhir.CacheDir = this.GetArg(arg, args, ref i);
-                        break;
-
                     case "-d":
                         this.preFhir.DebugFlag = true;
                         break;
@@ -74,7 +70,7 @@ namespace PreFhir
                 if (String.IsNullOrEmpty(this.output) == true)
                     throw new Exception($"Output not set");
 
-                this.preFhir = new PreFhirGenerator();
+                this.preFhir = new PreFhirGenerator(".");
                 this.ParseArgs(args);
                 String optionsFile = Path.Combine(DirHelper.FindParentDir("PreFhir"), "Options.txt");
                 if (File.Exists(optionsFile))

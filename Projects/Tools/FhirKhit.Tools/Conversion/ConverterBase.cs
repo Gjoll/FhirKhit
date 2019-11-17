@@ -54,7 +54,7 @@ namespace FhirKhit.Tools
                 return;
             Log.Error($"{className}.{method}", msg);
             this.errors.Add(msg);
-            if (StatusWarnings != null)
+            if (StatusErrors != null)
                 StatusErrors(className, method, msg);
         }
 

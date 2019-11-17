@@ -16,7 +16,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         const String baseDir = "BreastRadiology2020FebBallot";
 
         String cacheDir = Path.Combine(
-            DirHelper.FindParentDir(baseDir),
+            DirHelper.FindParentDir("FhirKhit"),
             "Cache");
 
         String outputDir = Path.Combine(
@@ -39,24 +39,24 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             "IG",
             "ManualResources");
 
-        private void Message(ConsoleColor color, string className, string method, string msg)
+        private void Message(String import , string className, string method, string msg)
         {
-            Trace.WriteLine($"{className}.{method}: {msg}");
+            Trace.WriteLine($"[{import}] {className}.{method}: {msg}");
         }
 
-        private bool Dfg_StatusWarnings(string className, string method, string msg)
+        private bool StatusWarnings(string className, string method, string msg)
         {
-            this.Message(ConsoleColor.Yellow, className, method, msg);
+            this.Message("Warn", className, method, msg);
             return true;
         }
-        private bool Dfg_StatusInfo(string className, string method, string msg)
+        private bool StatusInfo(string className, string method, string msg)
         {
-            this.Message(ConsoleColor.White, className, method, msg);
+            this.Message("Info", className, method, msg);
             return true;
         }
-        private bool Dfg_StatusErrors(string className, string method, string msg)
+        private bool StatusErrors(string className, string method, string msg)
         {
-            this.Message(ConsoleColor.Red, className, method, msg);
+            this.Message("Error", className, method, msg);
             return true;
         }
 
@@ -66,9 +66,9 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             foreach (String file in Directory.GetFiles(this.fragmentDir, "*.json"))
                 File.Delete(file);
             ResourcesMaker pc = new ResourcesMaker(this.fragmentDir, this.cacheDir);
-            pc.StatusErrors += this.Dfg_StatusErrors;
-            pc.StatusInfo += this.Dfg_StatusInfo;
-            pc.StatusWarnings += this.Dfg_StatusWarnings;
+            pc.StatusErrors += this.StatusErrors;
+            pc.StatusInfo += this.StatusInfo;
+            pc.StatusWarnings += this.StatusWarnings;
             pc.CreateResources();
         }
 
@@ -83,13 +83,10 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                     File.Delete(file);
             }
 
-            PreFhirGenerator preFhir = new PreFhirGenerator
-            {
-                CacheDir = Path.Combine(DirHelper.FindParentDir("FhirKhit"), "Cache")
-            };
-            preFhir.StatusErrors += this.Dfg_StatusErrors;
-            preFhir.StatusInfo += this.Dfg_StatusInfo;
-            preFhir.StatusWarnings += this.Dfg_StatusWarnings;
+            PreFhirGenerator preFhir = new PreFhirGenerator(Path.Combine(DirHelper.FindParentDir("FhirKhit"), "Cache"));
+            preFhir.StatusErrors += this.StatusErrors;
+            preFhir.StatusInfo += this.StatusInfo;
+            preFhir.StatusWarnings += this.StatusWarnings;
             preFhir.AddDir(this.fragmentDir, "*.json");
             preFhir.Process();
             preFhir.SaveResources(this.resourcesDir);
@@ -101,9 +98,9 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             String rDir = Path.Combine(this.outputDir,
                 "resources");
             FhirValidator fv = new FhirValidator();
-            fv.StatusErrors += this.Dfg_StatusErrors;
-            fv.StatusInfo += this.Dfg_StatusInfo;
-            fv.StatusWarnings += this.Dfg_StatusWarnings;
+            fv.StatusErrors += this.StatusErrors;
+            fv.StatusInfo += this.StatusInfo;
+            fv.StatusWarnings += this.StatusWarnings;
 
             bool success = fv.ValidateDir(rDir, "*.json", "4.0.0");
             StringBuilder sb = new StringBuilder();
@@ -145,9 +142,9 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         public void C_IGBuild()
         {
             IGBuilder p = new IGBuilder(this.outputDir);
-            p.StatusErrors += this.Dfg_StatusErrors;
-            p.StatusInfo += this.Dfg_StatusInfo;
-            p.StatusWarnings += this.Dfg_StatusWarnings;
+            p.StatusErrors += this.StatusErrors;
+            p.StatusInfo += this.StatusInfo;
+            p.StatusWarnings += this.StatusWarnings;
             p.Start();
             p.AddResources(this.resourcesDir);
             p.AddResources(this.manualDir);

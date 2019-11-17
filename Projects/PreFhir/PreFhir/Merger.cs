@@ -270,10 +270,18 @@ namespace PreFhir
                     // If base is not a fragment, we can not add new elements...
                     if (baseItem.FragmentFlag == false)
                     {
-                        this.preFhir.ConversionInfo(this.GetType().Name,
-                            fcn,
-                            $"Node '{mergeNode.Path}' does not exist in base. Can not add element to non-fragment");
-                        return false;
+                        // see if element definition is something like {CodeableConcept}.coding.
+                        ElementDefinition baseElement = baseItem.SBaseDef.Snapshot.Element.FindByPath(baseSlice.ElementDefinition.Path);
+                        if (
+                            (baseElement == null) ||
+                            (this.IsElementPart(baseElement, mergeNode.Name) == false)
+                            )
+                        {
+                            this.preFhir.ConversionError(this.GetType().Name,
+                                fcn,
+                                $"Node '{mergeNode.Path}' does not exist in base. Can not add element to non-fragment");
+                            return false;
+                        }
                     }
 
                     if (this.preFhir.DebugFlag)
@@ -499,6 +507,33 @@ namespace PreFhir
             }
 
             return true;
+        }
+
+        /// <summary>
+        /// Add data type items(like.coding)
+        /// </summary>
+        public bool IsElementPart(ElementDefinition element,
+            String partName)
+        {
+            foreach (ElementDefinition.TypeRefComponent type in element.Type)
+            {
+                switch (type.Code)
+                {
+                    default:
+                        String url = $"http://hl7.org/fhir/StructureDefinition/{type.Code}";
+                        StructureDefinition typeDef = FhirStructureDefinitions.Self.GetResource(url);
+                        if (typeDef == null)
+                            throw new Exception($"'Fhir type {type.Code}' not found");
+                        foreach (ElementDefinition e in typeDef.Differential.Element.Skip(1))
+                        {
+                            String pathName = e.Path.LastPathPart();
+                            if (pathName == partName)
+                                return true;
+                        }
+                        break;
+                }
+            }
+            return false;
         }
     }
 }

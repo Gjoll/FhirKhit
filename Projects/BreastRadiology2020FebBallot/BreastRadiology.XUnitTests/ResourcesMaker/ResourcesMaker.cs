@@ -58,7 +58,8 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             String cacheDir)
         {
             this.resourceDir = resourceDir;
-            FhirStructureDefinitions.Create(cacheDir);
+            if (FhirStructureDefinitions.Self != null)
+                FhirStructureDefinitions.Create(cacheDir);
         }
 
         SDefEditor CreateEditor(String name,
@@ -90,8 +91,8 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             String title,
             String workingBaseUrl)
         {
-            SDefEditor retVal = this.CreateEditor(name, 
-                title, 
+            SDefEditor retVal = this.CreateEditor(name,
+                title,
                 "Resource",
                 ResourceUrl,
                 workingBaseUrl);
@@ -104,10 +105,10 @@ namespace FhirKhit.BreastRadiology.XUnitTests
 
         SDefEditor CreateObservationEditor(String name, String title)
         {
-            SDefEditor retVal = this.CreateEditor(name, 
-                title, 
-                "Observation", 
-                ObservationUrl, 
+            SDefEditor retVal = this.CreateEditor(name,
+                title,
+                "Observation",
+                ObservationUrl,
                 ObservationUrl);
             retVal.SDef.AddFragRef(this.abnormalityObservationFragmentUrl);
             return retVal;
@@ -287,7 +288,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             this.fc.Add(this.resourceDir);
 
             this.headerFragUrl = this.HeaderFragment();
-            this.abnormalityObservationFragmentUrl =  this.AbnormalityObservationFragment();
+            this.abnormalityObservationFragmentUrl = this.AbnormalityObservationFragment();
             //$this.abnormalityFragmentUrl = this.FragmentAbnormality();
 
             String abnMassShape = this.AbMassShape();

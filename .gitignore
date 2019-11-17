@@ -29,6 +29,7 @@
 *.opensdf
 *.unsuccessfulbuild
 ipch/
+[Cc]ache/
 [Ll]ogs/
 [Oo]bj/
 [Bb]in

@@ -109,39 +109,6 @@ namespace PreFhir
             this.Nodes.SortList(comparison);
         }
 
-        /// <summary>
-        /// Add data type items (like .coding)
-        /// </summary>
-        //public bool TryGetNodePart(String partName, out ElementTreeNode partNode)
-        //{
-        //    foreach (ElementDefinition.TypeRefComponent type in this.Types)
-        //    {
-        //        switch (type.Code)
-        //        {
-        //            default:
-        //                String url = $"http://hl7.org/fhir/StructureDefinition/{type.Code}";
-        //                StructureDefinition typeDef = FhirStructureDefinitions.Self.GetResource(url);
-        //                if (typeDef == null)
-        //                    throw new Exception($"'Fhir type {type.Code}' not found");
-        //                foreach (ElementDefinition e in typeDef.Differential.Element.Skip(1))
-        //                {
-        //                    String pathName = e.Path.LastPathPart();
-        //                    if (pathName == partName)
-        //                    {
-        //                        String path = $"{this.parent.Path}.{pathName}";
-        //                        ElementTreeNode n = new ElementTreeNode(path, pathName, e);
-        //                        partNode = n;
-        //                        return true;
-        //                    }
-        //                }
-        //                break;
-        //        }
-        //    }
-
-        //    partNode = null;
-        //    return false;
-        //}
-
         public void CopyTo(List<ElementDefinition> elementDefinitions)
         {
             if (this.ElementDefinition != null)

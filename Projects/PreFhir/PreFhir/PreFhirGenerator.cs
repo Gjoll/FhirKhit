@@ -31,14 +31,13 @@ namespace PreFhir
         public bool DebugFlag { get; set; } = true;
         Dictionary<String, ProcessItem> processed = new Dictionary<string, ProcessItem>();
         Dictionary<String, ProcessItem> unProcessed = new Dictionary<string, ProcessItem>();
-        public String CacheDir;
 
         public const String FragmentUrl = "http://www.fragment.com/fragment";
 
-        static bool initFlag = false;
-
-        public PreFhirGenerator()
+        public PreFhirGenerator(String cacheDir)
         {
+            if (FhirStructureDefinitions.Self == null)
+                FhirStructureDefinitions.Create(Path.Combine(cacheDir, "DefinitionCache"));
         }
 
         DomainResource Load(String path)
@@ -108,7 +107,9 @@ namespace PreFhir
         {
             if (frag != null)
             {
-                ProcessItem pi = new ProcessItem(this, frag);
+                ProcessItem pi = new ProcessItem();
+                if (pi.Load(this, frag) == false)
+                    return;
                 this.unProcessed.Add(url, pi);
             }
         }
@@ -116,14 +117,6 @@ namespace PreFhir
         public bool Process()
         {
             const String fcn = "Process";
-
-            if (initFlag == false)
-            {
-                if (this.CacheDir == null)
-                    throw new Exception($"Cache dir must be set");
-                FhirStructureDefinitions.Create(Path.Combine(CacheDir, "DefinitionCache"));
-                initFlag = true;
-            }
 
             bool retVal = true;
             // Process each unprocessed item, until none are left or we cant process any more...

@@ -21,7 +21,8 @@ namespace PreFhir.XUnitTests
         public ElementTreeNodeTests()
         {
             String cacheDir = Path.Combine(DirHelper.FindParentDir("PreFhir"), "Cache");
-            FhirStructureDefinitions.Create(Path.Combine(cacheDir, "DefinitionCache"));
+            if (FhirStructureDefinitions.Self != null)
+                FhirStructureDefinitions.Create(Path.Combine(cacheDir, "DefinitionCache"));
         }
 
         StructureDefinition CreateBaseObservation()
