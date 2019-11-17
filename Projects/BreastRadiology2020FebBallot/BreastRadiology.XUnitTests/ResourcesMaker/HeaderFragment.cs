@@ -15,7 +15,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
     {
         String HeaderFragment()
         {
-            SDefEditor sDef = this.CreateFragment("HeaderFragment", "Resource", ResourceUrl);
+            SDefEditor sDef = this.CreateFragment("Header", "Resource", ResourceUrl);
             ContactDetail cd = new ContactDetail();
             cd.Telecom.Add(new ContactPoint
             {

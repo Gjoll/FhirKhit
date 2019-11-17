@@ -16,7 +16,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         /// <returns></returns>
         String AbnormalityObservationFragment()
         {
-            SDefEditor sDef = this.CreateFragment("AbnormalityObservationFragment",
+            SDefEditor sDef = this.CreateFragment("AbnormalityObservation",
                 "Abnormality Observation Fragment",
                 ObservationUrl);
             sDef.Select("subject").Single();

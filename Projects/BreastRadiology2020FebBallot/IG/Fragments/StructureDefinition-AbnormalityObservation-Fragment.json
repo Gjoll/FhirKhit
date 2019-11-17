@@ -3,11 +3,11 @@
   "extension": [
     {
       "url": "http://www.fragment.com/fragment",
-      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/Header-Fragment"
     }
   ],
-  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityObservationFragment",
-  "name": "AbnormalityObservationFragment",
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityObservation-Fragment",
+  "name": "AbnormalityObservation-Fragment",
   "title": "Abnormality Observation Fragment",
   "fhirVersion": "4.0.0",
   "kind": "logical",

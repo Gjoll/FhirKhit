@@ -1,8 +1,8 @@
 {
   "resourceType": "StructureDefinition",
-  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment",
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/Header-Fragment",
   "version": "0.0.2",
-  "name": "HeaderFragment",
+  "name": "Header-Fragment",
   "title": "Resource",
   "status": "draft",
   "date": "2019-11-01",

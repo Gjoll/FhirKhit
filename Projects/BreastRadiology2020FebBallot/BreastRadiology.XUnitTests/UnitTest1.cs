@@ -39,7 +39,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             "IG",
             "ManualResources");
 
-        private void Message(String import , string className, string method, string msg)
+        private void Message(String import, string className, string method, string msg)
         {
             Trace.WriteLine($"[{import}] {className}.{method}: {msg}");
         }
@@ -63,8 +63,12 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         [TestMethod]
         public void A_BuildFragments()
         {
-            foreach (String file in Directory.GetFiles(this.fragmentDir, "*.json"))
-                File.Delete(file);
+            if (Directory.Exists(this.fragmentDir))
+            {
+                foreach (String file in Directory.GetFiles(this.fragmentDir, "*.json"))
+                    File.Delete(file);
+            }
+
             ResourcesMaker pc = new ResourcesMaker(this.fragmentDir, this.cacheDir);
             pc.StatusErrors += this.StatusErrors;
             pc.StatusInfo += this.StatusInfo;

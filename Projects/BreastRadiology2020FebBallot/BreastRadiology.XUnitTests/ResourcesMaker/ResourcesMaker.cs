@@ -22,7 +22,6 @@ namespace FhirKhit.BreastRadiology.XUnitTests
 
     public partial class ResourcesMaker : ConverterBase
     {
-        const bool CreateSnapshot = false;
         const bool Validate = false;
 
         const String ProfileVersion = "0.0.2";
@@ -58,7 +57,10 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             String cacheDir)
         {
             this.resourceDir = resourceDir;
-            if (FhirStructureDefinitions.Self != null)
+            if (Directory.Exists(this.resourceDir) == false)
+                Directory.CreateDirectory(this.resourceDir);
+
+            if (FhirStructureDefinitions.Self == null)
                 FhirStructureDefinitions.Create(cacheDir);
         }
 
@@ -91,6 +93,8 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             String title,
             String workingBaseUrl)
         {
+            name += "-Fragment";
+
             SDefEditor retVal = this.CreateEditor(name,
                 title,
                 "Resource",
@@ -352,13 +356,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         {
             foreach (SDefEditor ce in this.editors)
             {
-#pragma warning disable CS0162 // Unreachable code detected
-                if (CreateSnapshot)
-                    SnapshotCreator.Create(ce.SDef);
-                else
-                    ce.SDef.Snapshot = null;
-#pragma warning restore CS0162 // Unreachable code detected
-                this.ValidateResource(ce.SDef);
+                ce.SDef.Snapshot = null;
                 this.fc.Mark(ce.Write());
             }
         }
