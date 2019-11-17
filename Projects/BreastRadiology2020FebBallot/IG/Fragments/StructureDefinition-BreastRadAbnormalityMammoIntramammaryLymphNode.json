@@ -1,0 +1,100 @@
+{
+  "resourceType": "StructureDefinition",
+  "extension": [
+    {
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityObservationFragment"
+    }
+  ],
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadAbnormalityMammoIntramammaryLymphNode",
+  "name": "BreastRadAbnormalityMammoIntramammaryLymphNode",
+  "title": "Breast Radiology Abnormality Intramammary LymphNode (Mammography)",
+  "description": "Mammography Breast Intramammary LymphNode Distortion Observation",
+  "fhirVersion": "4.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation",
+        "path": "Observation"
+      },
+      {
+        "id": "Observation.extension",
+        "path": "Observation.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": true,
+          "rules": "openAtEnd"
+        },
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Observation.extension:breastBodyLocation",
+        "path": "Observation.extension",
+        "sliceName": "breastBodyLocation",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocation"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Observation.valueCodeableConcept",
+        "path": "Observation.valueCodeableConcept",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadAbnormalityMammoIntramammaryLymphNodeFindingsVS"
+        }
+      },
+      {
+        "id": "Observation.bodySite",
+        "path": "Observation.bodySite",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.bodySite",
+          "min": 0,
+          "max": "1"
+        }
+      }
+    ]
+  }
+}

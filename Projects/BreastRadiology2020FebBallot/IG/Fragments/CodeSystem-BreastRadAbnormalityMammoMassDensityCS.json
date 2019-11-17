@@ -1,0 +1,35 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "BreastRadAbnormalityMammoMassDensityCS",
+  "extension": [
+    {
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
+    }
+  ],
+  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadAbnormalityMammoMassDensityCS",
+  "name": "BreastRadAbnormalityMammoMassDensityCS",
+  "title": "Breast Radiology Abnormality Mammography Mass Density",
+  "description": "Breast Radiology Mass Density (Mammography)",
+  "caseSensitive": true,
+  "content": "complete",
+  "count": 4,
+  "concept": [
+    {
+      "code": "1",
+      "display": "a. High density"
+    },
+    {
+      "code": "2",
+      "display": "b. Equal density"
+    },
+    {
+      "code": "3",
+      "display": "c. Low density"
+    },
+    {
+      "code": "4",
+      "display": "d. Fat-containing"
+    }
+  ]
+}

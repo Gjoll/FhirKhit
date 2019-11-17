@@ -1,0 +1,236 @@
+{
+  "resourceType": "StructureDefinition",
+  "extension": [
+    {
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityObservationFragment"
+    }
+  ],
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadSectionRoot",
+  "name": "BreastRadSectionRoot",
+  "title": "Breast Radiology Root Section",
+  "description": "Root Section",
+  "fhirVersion": "4.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation",
+        "path": "Observation"
+      },
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "coding"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Observation.code",
+          "min": 1,
+          "max": "1"
+        }
+      },
+      {
+        "id": "Observation.code.coding",
+        "path": "Observation.code.coding"
+      },
+      {
+        "id": "Observation.code.coding:observationCode",
+        "path": "Observation.code.coding",
+        "sliceName": "observationCode",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Observation.code",
+          "min": 1,
+          "max": "1"
+        },
+        "patternCoding": {
+          "system": "http://loinc.org",
+          "code": "10193-1"
+        }
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.value[x]",
+          "min": 0,
+          "max": "1"
+        }
+      },
+      {
+        "id": "Observation.interpretation",
+        "path": "Observation.interpretation",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.interpretation",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Observation.note",
+        "path": "Observation.note",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.note",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Observation.bodySite",
+        "path": "Observation.bodySite",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.bodySite",
+          "min": 0,
+          "max": "1"
+        }
+      },
+      {
+        "id": "Observation.method",
+        "path": "Observation.method",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.method",
+          "min": 0,
+          "max": "1"
+        }
+      },
+      {
+        "id": "Observation.specimen",
+        "path": "Observation.specimen",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.specimen",
+          "min": 0,
+          "max": "1"
+        }
+      },
+      {
+        "id": "Observation.device",
+        "path": "Observation.device",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.device",
+          "min": 0,
+          "max": "1"
+        }
+      },
+      {
+        "id": "Observation.referenceRange",
+        "path": "Observation.referenceRange",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.referenceRange",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Observation.hasMember",
+        "path": "Observation.hasMember",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": true,
+          "rules": "openAtEnd"
+        },
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Observation.hasMember:breastRadSectionPatientHistory",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadSectionPatientHistory",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadSectionPatientHistory"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:breastRadSectionFindings",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadSectionFindings",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadSectionFindings"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:breastRadSectionPatientRisk",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadSectionPatientRisk",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadSectionPatientRisk"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

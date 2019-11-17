@@ -1,0 +1,31 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "BreastRadAbnormalityMammoArchitecturalDistortionFindingsCS",
+  "extension": [
+    {
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
+    }
+  ],
+  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadAbnormalityMammoArchitecturalDistortionFindingsCS",
+  "name": "BreastRadAbnormalityMammoArchitecturalDistortionFindingsCS",
+  "title": "Breast Radiology Abnormality Architectural Distortion Findings (Mammo)",
+  "description": "Breast Radiology Abnormality Architectural Distortion Findings",
+  "caseSensitive": true,
+  "content": "complete",
+  "count": 3,
+  "concept": [
+    {
+      "code": "1",
+      "display": "a. Present"
+    },
+    {
+      "code": "2",
+      "display": "b. NotPresent"
+    },
+    {
+      "code": "3",
+      "display": "c. NotChecked"
+    }
+  ]
+}

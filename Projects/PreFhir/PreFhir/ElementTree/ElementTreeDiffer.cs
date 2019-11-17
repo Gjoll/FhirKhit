@@ -104,32 +104,32 @@ namespace PreFhir
                         modifiedElement.Max = null;
                     }
                     modifiedElement.RepresentationElement = Compare.ClearIfSame(originalElement.RepresentationElement, modifiedElement.RepresentationElement);
-                    modifiedElement.SliceIsConstraining= Compare.ClearIfSame(originalElement.SliceIsConstraining, modifiedElement.SliceIsConstraining);
-                    modifiedElement.Label= Compare.ClearIfSame(originalElement.Label, modifiedElement.Label);
+                    modifiedElement.SliceIsConstraining = Compare.ClearIfSame(originalElement.SliceIsConstraining, modifiedElement.SliceIsConstraining);
+                    modifiedElement.Label = Compare.ClearIfSame(originalElement.Label, modifiedElement.Label);
                     modifiedElement.Code = Compare.ClearIfSame(originalElement.Code, modifiedElement.Code);
                     modifiedElement.Slicing = Compare.ClearIfSame(originalElement.Slicing, modifiedElement.Slicing);
-                    modifiedElement.Short= Compare.ClearIfSame(originalElement.Short, modifiedElement.Short);
-                    modifiedElement.Definition= Compare.ClearIfSame(originalElement.Definition, modifiedElement.Definition);
+                    modifiedElement.Short = Compare.ClearIfSame(originalElement.Short, modifiedElement.Short);
+                    modifiedElement.Definition = Compare.ClearIfSame(originalElement.Definition, modifiedElement.Definition);
                     modifiedElement.Comment = Compare.ClearIfSame(originalElement.Comment, modifiedElement.Comment);
-                    modifiedElement.Requirements= Compare.ClearIfSame(originalElement.Requirements, modifiedElement.Requirements);
+                    modifiedElement.Requirements = Compare.ClearIfSame(originalElement.Requirements, modifiedElement.Requirements);
                     modifiedElement.AliasElement = Compare.ClearIfSame(originalElement.AliasElement, modifiedElement.AliasElement);
                     modifiedElement.ContentReference = Compare.ClearIfSame(originalElement.ContentReference, modifiedElement.ContentReference);
                     modifiedElement.Type = Compare.ClearIfSame(originalElement.Type, modifiedElement.Type);
                     modifiedElement.DefaultValue = Compare.ClearIfSame(originalElement.DefaultValue, modifiedElement.DefaultValue);
-                    modifiedElement.MeaningWhenMissing= Compare.ClearIfSame(originalElement.MeaningWhenMissing, modifiedElement.MeaningWhenMissing);
+                    modifiedElement.MeaningWhenMissing = Compare.ClearIfSame(originalElement.MeaningWhenMissing, modifiedElement.MeaningWhenMissing);
                     modifiedElement.OrderMeaning = Compare.ClearIfSame(originalElement.OrderMeaning, modifiedElement.OrderMeaning);
-                    modifiedElement.Fixed= Compare.ClearIfSame(originalElement.Fixed, modifiedElement.Fixed);
+                    modifiedElement.Fixed = Compare.ClearIfSame(originalElement.Fixed, modifiedElement.Fixed);
                     modifiedElement.Pattern = Compare.ClearIfSame(originalElement.Pattern, modifiedElement.Pattern);
                     modifiedElement.Example = Compare.ClearIfSame(originalElement.Example, modifiedElement.Example);
                     modifiedElement.MinValue = Compare.ClearIfSame(originalElement.MinValue, modifiedElement.MinValue);
-                    modifiedElement.MaxValue= Compare.ClearIfSame(originalElement.MaxValue, modifiedElement.MaxValue);
-                    modifiedElement.MaxLengthElement= Compare.ClearIfSame(originalElement.MaxLengthElement, modifiedElement.MaxLengthElement);
-                    modifiedElement.ConditionElement= Compare.ClearIfSame(originalElement.ConditionElement, modifiedElement.ConditionElement);
-                    modifiedElement.ConditionElement= Compare.ClearIfSame(originalElement.ConditionElement, modifiedElement.ConditionElement);
-                    modifiedElement.MustSupportElement= Compare.ClearIfSame(originalElement.MustSupportElement, modifiedElement.MustSupportElement);
+                    modifiedElement.MaxValue = Compare.ClearIfSame(originalElement.MaxValue, modifiedElement.MaxValue);
+                    modifiedElement.MaxLengthElement = Compare.ClearIfSame(originalElement.MaxLengthElement, modifiedElement.MaxLengthElement);
+                    modifiedElement.ConditionElement = Compare.ClearIfSame(originalElement.ConditionElement, modifiedElement.ConditionElement);
+                    modifiedElement.ConditionElement = Compare.ClearIfSame(originalElement.ConditionElement, modifiedElement.ConditionElement);
+                    modifiedElement.MustSupportElement = Compare.ClearIfSame(originalElement.MustSupportElement, modifiedElement.MustSupportElement);
                     modifiedElement.IsModifierElement = Compare.ClearIfSame(originalElement.IsModifierElement, modifiedElement.IsModifierElement);
                     modifiedElement.IsModifierReasonElement = Compare.ClearIfSame(originalElement.IsModifierReasonElement, modifiedElement.IsModifierReasonElement);
-                    modifiedElement.IsSummaryElement= Compare.ClearIfSame(originalElement.IsSummaryElement, modifiedElement.IsSummaryElement);
+                    modifiedElement.IsSummaryElement = Compare.ClearIfSame(originalElement.IsSummaryElement, modifiedElement.IsSummaryElement);
                     modifiedElement.Binding = Compare.ClearIfSame(originalElement.Binding, modifiedElement.Binding);
                     modifiedElement.Mapping = Compare.ClearIfSame(originalElement.Mapping, modifiedElement.Mapping);
                 }
@@ -137,16 +137,11 @@ namespace PreFhir
 
             foreach (ElementTreeNode modifiedNode in modifiedSlice.Nodes)
             {
-                // If node was not found in original, then it was added, which is illegal.
-                // clear it .
-                if (originalSlice.Nodes.TryGetItem(modifiedNode.Name, out ElementTreeNode originalNode) == false)
-                {
-                    this.Error(this.GetType().Name,
-                        fcn,
-                        $"Removing ElementDefinition {modifiedNode.Path}. Element not found in original");
-                    modifiedNode.Clear();
-                }
-                else
+                /*
+                 * See if node existed in original.
+                 * If node not found in original, then add it completely.
+                 */
+                if (originalSlice.Nodes.TryGetItem(modifiedNode.Name, out ElementTreeNode originalNode) == true)
                 {
                     if (originalNode.SameAs(modifiedNode) == true)
                     {

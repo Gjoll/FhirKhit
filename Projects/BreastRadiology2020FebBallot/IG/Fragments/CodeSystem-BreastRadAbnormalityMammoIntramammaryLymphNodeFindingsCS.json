@@ -1,0 +1,31 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "BreastRadAbnormalityMammoIntramammaryLymphNodeFindingsCS",
+  "extension": [
+    {
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
+    }
+  ],
+  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadAbnormalityMammoIntramammaryLymphNodeFindingsCS",
+  "name": "BreastRadAbnormalityMammoIntramammaryLymphNodeFindingsCS",
+  "title": "Breast Radiology Abnormality Intramammary LymphNode Findings (Mammo)",
+  "description": "Breast Radiology Abnormality Intramammary LymphNode Findings",
+  "caseSensitive": true,
+  "content": "complete",
+  "count": 3,
+  "concept": [
+    {
+      "code": "1",
+      "display": "a. Present"
+    },
+    {
+      "code": "2",
+      "display": "b. NotPresent"
+    },
+    {
+      "code": "3",
+      "display": "c. NotChecked"
+    }
+  ]
+}
