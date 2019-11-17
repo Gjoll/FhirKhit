@@ -35,11 +35,18 @@ namespace FhirKhit.Tools
 
         public void Dispose()
         {
+            DeleteUnMarkedFiles();
+        }
+
+        public void DeleteUnMarkedFiles()
+        {
             foreach (String existingFile in this.existingFiles)
             {
                 this.TryDeleteFile(existingFile);
             }
+            this.existingFiles.Clear();
         }
+
 
         void TryDeleteFile(String fileName)
         {

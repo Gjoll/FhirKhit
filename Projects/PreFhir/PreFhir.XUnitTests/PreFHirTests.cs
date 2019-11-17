@@ -144,7 +144,7 @@ namespace PreFhir.XUnitTests
                 pBase.AddFragRef(frag);
                 p.AddFragment(pBase);
                 p.AddFragment(frag);
-                p.Process();
+                Debug.Assert(p.Process() == true);
                 StringBuilder sb = new StringBuilder();
                 p.FormatMessages(sb);
                 Trace.WriteLine(sb.ToString());
@@ -180,7 +180,7 @@ namespace PreFhir.XUnitTests
                 pBase.AddFragRef(frag);
                 p.AddFragment(pBase);
                 p.AddFragment(frag);
-                p.Process();
+                Debug.Assert(p.Process() == true);
                 StringBuilder sb = new StringBuilder();
                 p.FormatMessages(sb);
                 Trace.WriteLine(sb.ToString());
@@ -205,7 +205,6 @@ namespace PreFhir.XUnitTests
                 StructureDefinition pBase = this.CreateBaseProfile();
                 StructureDefinition frag = this.CreateFragment("Fragment", "http://www.test.com/frag1");
 
-                String pathRoot = frag.Differential.Element[0].Path;
                 // use snapshot min and max in base check.
                 pBase.AddSnapElement(new ElementDefinition
                 {
@@ -224,7 +223,7 @@ namespace PreFhir.XUnitTests
                 pBase.AddFragRef(frag);
                 p.AddFragment(pBase);
                 p.AddFragment(frag);
-                p.Process();
+                Debug.Assert(p.Process() == true);
                 StringBuilder sb = new StringBuilder();
                 p.FormatMessages(sb);
                 Trace.WriteLine(sb.ToString());
@@ -269,7 +268,7 @@ namespace PreFhir.XUnitTests
                 pBase.AddFragRef(frag);
                 p.AddFragment(pBase);
                 p.AddFragment(frag);
-                p.Process();
+                Debug.Assert(p.Process() == true);
                 StringBuilder sb = new StringBuilder();
                 p.FormatMessages(sb);
                 Trace.WriteLine(sb.ToString());
@@ -317,7 +316,7 @@ namespace PreFhir.XUnitTests
                 pBase.AddFragRef(frag);
                 p.AddFragment(pBase);
                 p.AddFragment(frag);
-                p.Process();
+                Debug.Assert(p.Process() == true);
                 StringBuilder sb = new StringBuilder();
                 p.FormatMessages(sb);
                 Trace.WriteLine(sb.ToString());
@@ -365,7 +364,7 @@ namespace PreFhir.XUnitTests
                 pBase.AddFragRef(frag);
                 p.AddFragment(pBase);
                 p.AddFragment(frag);
-                p.Process();
+                Debug.Assert(p.Process() == true);
                 StringBuilder sb = new StringBuilder();
                 p.FormatMessages(sb);
                 Trace.WriteLine(sb.ToString());
@@ -412,7 +411,7 @@ namespace PreFhir.XUnitTests
                 pBase.AddFragRef(frag);
                 p.AddFragment(pBase);
                 p.AddFragment(frag);
-                p.Process();
+                Debug.Assert(p.Process() == false);
                 StringBuilder sb = new StringBuilder();
                 p.FormatMessages(sb);
                 Trace.WriteLine(sb.ToString());
@@ -456,7 +455,7 @@ namespace PreFhir.XUnitTests
                 pBase.AddFragRef(frag);
                 p.AddFragment(pBase);
                 p.AddFragment(frag);
-                p.Process();
+                Debug.Assert(p.Process() == false);
                 StringBuilder sb = new StringBuilder();
                 p.FormatMessages(sb);
                 Trace.WriteLine(sb.ToString());
@@ -497,7 +496,7 @@ namespace PreFhir.XUnitTests
                 pBase.AddFragRef(frag);
                 p.AddFragment(pBase);
                 p.AddFragment(frag);
-                p.Process();
+                Debug.Assert(p.Process() == true);
                 StringBuilder sb = new StringBuilder();
                 p.FormatMessages(sb);
                 Trace.WriteLine(sb.ToString());
@@ -647,7 +646,7 @@ namespace PreFhir.XUnitTests
                 p.AddFragment(frag1);
                 p.AddFragment(frag2);
                 p.AddFragment(frag3);
-                p.Process();
+                Debug.Assert(p.Process() == true);
                 StringBuilder sb = new StringBuilder();
                 p.FormatMessages(sb);
                 Trace.WriteLine(sb.ToString());
@@ -665,6 +664,336 @@ namespace PreFhir.XUnitTests
                 Assert.True(pBase.Differential.Element[3].Path == "Observation.value[x]");
                 Assert.True(pBase.Differential.Element[3].Type.Count == 1);
                 Assert.True(pBase.Differential.Element[3].Type[0].Code == "string");
+            }
+            catch
+            {
+                Assert.False(true);
+            }
+        }
+
+        [Fact(DisplayName = "Merge.MergeSliceIsConstraining")]
+        public void MergeSlicingIsConstraining()
+        {
+            try
+            {
+                // should work.
+                PreFhirGenerator p = this.CreatePreFhir();
+                StructureDefinition pBase = this.CreateBaseProfile();
+                StructureDefinition frag = this.CreateFragment("Fragment", "http://www.test.com/frag1");
+
+                // use snapshot min and max in base check.
+                pBase.AddSnapElement(new ElementDefinition
+                {
+                    Path = "Observation.category",
+                    ElementId = "Observation.category"
+                });
+
+                String fragRoot = frag.Differential.Element[0].Path;
+                {
+                    ElementDefinition e = new ElementDefinition
+                    {
+                        Path = $"{fragRoot}.category",
+                        ElementId = $"{fragRoot}.category",
+                        SliceIsConstraining = true
+                    };
+                    frag.AddDiffElement(e);
+                }
+
+                pBase.AddFragRef(frag);
+                p.AddFragment(pBase);
+                p.AddFragment(frag);
+                Debug.Assert(p.Process() == true);
+                StringBuilder sb = new StringBuilder();
+                p.FormatMessages(sb);
+                Trace.WriteLine(sb.ToString());
+                Assert.True(p.HasErrors == false);
+                Assert.True(pBase.Differential.Element.Count == 2);
+                {
+                    ElementDefinition category = pBase.Differential.Element[1];
+                    Assert.True(category.Path == "Observation.category");
+                    Assert.True(category.SliceIsConstraining == true);
+                }
+            }
+            catch
+            {
+                Assert.False(true);
+            }
+        }
+
+        [Fact(DisplayName = "Merge.MergeLabel")]
+        public void MergeLabel()
+        {
+            try
+            {
+                // should work.
+                PreFhirGenerator p = this.CreatePreFhir();
+                StructureDefinition pBase = this.CreateBaseProfile();
+                StructureDefinition frag = this.CreateFragment("Fragment", "http://www.test.com/frag1");
+
+                // use snapshot min and max in base check.
+                pBase.AddSnapElement(new ElementDefinition
+                {
+                    Path = "Observation.category",
+                    ElementId = "Observation.category"
+                });
+
+                String fragRoot = frag.Differential.Element[0].Path;
+                {
+                    ElementDefinition e = new ElementDefinition
+                    {
+                        Path = $"{fragRoot}.category",
+                        ElementId = $"{fragRoot}.category",
+                        Label = "xxyyz"
+                    };
+                    frag.AddDiffElement(e);
+                }
+
+                pBase.AddFragRef(frag);
+                p.AddFragment(pBase);
+                p.AddFragment(frag);
+                Debug.Assert(p.Process() == true);
+                StringBuilder sb = new StringBuilder();
+                p.FormatMessages(sb);
+                Trace.WriteLine(sb.ToString());
+                Assert.True(p.HasErrors == false);
+                Assert.True(pBase.Differential.Element.Count == 2);
+                {
+                    ElementDefinition category = pBase.Differential.Element[1];
+                    Assert.True(category.Path == "Observation.category");
+                    Assert.True(category.Label == "xxyyz");
+                }
+            }
+            catch
+            {
+                Assert.False(true);
+            }
+        }
+        
+        [Fact(DisplayName = "Merge.MergeLabelErr")]
+        public void MergeLabelErr()
+        {
+            try
+            {
+                // should work.
+                PreFhirGenerator p = this.CreatePreFhir();
+                StructureDefinition pBase = this.CreateBaseProfile();
+                StructureDefinition frag = this.CreateFragment("Fragment", "http://www.test.com/frag1");
+
+                // use snapshot min and max in base check.
+                pBase.AddSnapElement(new ElementDefinition
+                {
+                    Path = "Observation.category",
+                    ElementId = "Observation.category",
+                    Label = "1234"
+                });
+
+                String fragRoot = frag.Differential.Element[0].Path;
+                {
+                    ElementDefinition e = new ElementDefinition
+                    {
+                        Path = $"{fragRoot}.category",
+                        ElementId = $"{fragRoot}.category",
+                        Label = "xxyyz"
+                    };
+                    frag.AddDiffElement(e);
+                }
+
+                pBase.AddFragRef(frag);
+                p.AddFragment(pBase);
+                p.AddFragment(frag);
+                Debug.Assert(p.Process() == false);
+            }
+            catch
+            {
+                Assert.False(true);
+            }
+        }
+
+        [Fact(DisplayName = "Merge.MergeCode")]
+        public void MergeCode()
+        {
+            try
+            {
+                // should work.
+                PreFhirGenerator p = this.CreatePreFhir();
+                StructureDefinition pBase = this.CreateBaseProfile();
+                StructureDefinition frag = this.CreateFragment("Fragment", "http://www.test.com/frag1");
+
+                // use snapshot min and max in base check.
+                {
+                    ElementDefinition e = new ElementDefinition
+                    {
+                        Path = "Observation.category",
+                        ElementId = "Observation.category"
+                    };
+                    e.Code.Add(new Coding("s-base", "c-base"));
+                    pBase.AddSnapElement(e);
+                }
+
+
+                String fragRoot = frag.Differential.Element[0].Path;
+                {
+                    ElementDefinition e = new ElementDefinition
+                    {
+                        Path = $"{fragRoot}.category",
+                        ElementId = $"{fragRoot}.category",
+                    };
+                    e.Code.Add(new Coding("s-frag", "c-frag"));
+                    frag.AddDiffElement(e);
+                }
+
+                pBase.AddFragRef(frag);
+                p.AddFragment(pBase);
+                p.AddFragment(frag);
+                Debug.Assert(p.Process() == true);
+                StringBuilder sb = new StringBuilder();
+                p.FormatMessages(sb);
+                Trace.WriteLine(sb.ToString());
+                Assert.True(p.HasErrors == false);
+                Assert.True(pBase.Differential.Element.Count == 2);
+                {
+                    ElementDefinition category = pBase.Differential.Element[1];
+                    Assert.True(category.Path == "Observation.category");
+                    Assert.True(category.Code.Count == 2);
+                    Assert.True(category.Code[0].System == "s-base");
+                    Assert.True(category.Code[1].System == "s-frag");
+                }
+            }
+            catch
+            {
+                Assert.False(true);
+            }
+        }
+
+        [Fact(DisplayName = "Merge.MergeSliceName")]
+        public void MergeSlicingName()
+        {
+            try
+            {
+                // should work.
+                PreFhirGenerator p = this.CreatePreFhir();
+                StructureDefinition pBase = this.CreateBaseProfile();
+                StructureDefinition frag = this.CreateFragment("Fragment", "http://www.test.com/frag1");
+
+                // use snapshot min and max in base check.
+                pBase.AddSnapElement(new ElementDefinition
+                {
+                    Path = "Observation.category",
+                    ElementId = "Observation.category"
+                });
+
+                String fragRoot = frag.Differential.Element[0].Path;
+                {
+                    ElementDefinition e = new ElementDefinition
+                    {
+                        Path = $"{fragRoot}.category",
+                        ElementId = $"{fragRoot}.category",
+                        Slicing = new ElementDefinition.SlicingComponent
+                        {
+                            Description = "Slicing description",
+                            Ordered = true,
+                            Rules = ElementDefinition.SlicingRules.OpenAtEnd
+                        }
+                    };
+                    e.Slicing.Discriminator.Add(new ElementDefinition.DiscriminatorComponent
+                    {
+                        Type = ElementDefinition.DiscriminatorType.Value,
+                        Path = "coding"
+                    });
+                    frag.AddDiffElement(e);
+                }
+                {
+                    ElementDefinition e = new ElementDefinition
+                    {
+                        Path = $"{fragRoot}.category",
+                        ElementId = $"{fragRoot}.category",
+                        SliceName = "xxyyz"
+                    };
+                    frag.AddDiffElement(e);
+                }
+
+                pBase.AddFragRef(frag);
+                p.AddFragment(pBase);
+                p.AddFragment(frag);
+                Debug.Assert(p.Process() == true);
+                StringBuilder sb = new StringBuilder();
+                p.FormatMessages(sb);
+                Trace.WriteLine(sb.ToString());
+                Assert.True(p.HasErrors == false);
+                Assert.True(pBase.Differential.Element.Count == 3);
+                {
+                    ElementDefinition category = pBase.Differential.Element[2];
+                    Assert.True(category.Path == "Observation.category");
+                    Assert.True(category.SliceName == "xxyyz");
+                }
+            }
+            catch
+            {
+                Assert.False(true);
+            }
+        }
+
+        /// <summary>
+        /// Merge existing ElementDefinition.Slicing elements
+        /// </summary>
+        [Fact(DisplayName = "Merge.MergeSlicing")]
+        public void MergeSlicing()
+        {
+            try
+            {
+                // should work.
+                PreFhirGenerator p = this.CreatePreFhir();
+                StructureDefinition pBase = this.CreateBaseProfile();
+                StructureDefinition frag = this.CreateFragment("Fragment", "http://www.test.com/frag1");
+
+                // use snapshot min and max in base check.
+                pBase.AddSnapElement(new ElementDefinition
+                {
+                    Path = "Observation.category",
+                    ElementId = "Observation.category"
+                });
+
+                String fragRoot = frag.Differential.Element[0].Path;
+                {
+                    ElementDefinition e = new ElementDefinition
+                    {
+                        Path = $"{fragRoot}.category",
+                        ElementId = $"{fragRoot}.category",
+                        Slicing = new ElementDefinition.SlicingComponent
+                        {
+                            Description = "Slicing description",
+                            Ordered = true,
+                            Rules = ElementDefinition.SlicingRules.OpenAtEnd
+                        }
+                    };
+                    e.Slicing.Discriminator.Add(new ElementDefinition.DiscriminatorComponent
+                    {
+                        Type = ElementDefinition.DiscriminatorType.Value,
+                        Path = "coding"
+                    });
+                    frag.AddDiffElement(e);
+                }
+
+                pBase.AddFragRef(frag);
+                p.AddFragment(pBase);
+                p.AddFragment(frag);
+                Debug.Assert(p.Process() == true);
+                StringBuilder sb = new StringBuilder();
+                p.FormatMessages(sb);
+                Trace.WriteLine(sb.ToString());
+                Assert.True(p.HasErrors == false);
+                Assert.True(pBase.Differential.Element.Count == 2);
+                {
+                    ElementDefinition category = pBase.Differential.Element[1];
+                    Assert.True(category.Path == "Observation.category");
+                    Assert.True(category.Slicing != null);
+                    Assert.True(category.Slicing.Discriminator.Count == 1);
+                    Assert.True(category.Slicing.Discriminator[0].Type == ElementDefinition.DiscriminatorType.Value);
+                    Assert.True(category.Slicing.Discriminator[0].Path == "coding");
+                    Assert.True(category.Slicing.Description == "Slicing description");
+                    Assert.True(category.Slicing.Ordered == true);
+                    Assert.True(category.Slicing.Rules == ElementDefinition.SlicingRules.OpenAtEnd);
+                }
             }
             catch
             {

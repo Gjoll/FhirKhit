@@ -1,9 +1,9 @@
 {
   "resourceType": "StructureDefinition",
-  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment",
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityObservation-Fragment",
   "version": "0.0.2",
-  "name": "HeaderFragment",
-  "title": "Resource",
+  "name": "AbnormalityObservation-Fragment",
+  "title": "Abnormality Observation Fragment",
   "status": "draft",
   "date": "2019-11-01",
   "publisher": "Hl7-Clinical Interoperability Council",
@@ -148,6 +148,92 @@
           "description": "A human language.",
           "valueSet": "http://hl7.org/fhir/ValueSet/languages"
         }
+      },
+      {
+        "id": "Resource.basedOn",
+        "path": "Resource.basedOn",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Resource.basedOn",
+          "min": 0,
+          "max": "0"
+        }
+      },
+      {
+        "id": "Resource.partOf",
+        "path": "Resource.partOf",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Resource.partOf",
+          "min": 0,
+          "max": "0"
+        }
+      },
+      {
+        "id": "Resource.category",
+        "path": "Resource.category",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "coding"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "Resource.category",
+          "min": 1,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Resource.subject",
+        "path": "Resource.subject",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Resource.subject",
+          "min": 1,
+          "max": "1"
+        }
+      },
+      {
+        "id": "Resource.focus",
+        "path": "Resource.focus",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Resource.focus",
+          "min": 0,
+          "max": "0"
+        }
+      },
+      {
+        "id": "Resource.derivedFrom",
+        "path": "Resource.derivedFrom",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Resource.derivedFrom",
+          "min": 0,
+          "max": "0"
+        }
+      },
+      {
+        "id": "Resource.component",
+        "path": "Resource.component",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Resource.component",
+          "min": 0,
+          "max": "0"
+        }
       }
     ]
   },
@@ -156,6 +242,112 @@
       {
         "id": "Resource",
         "path": "Resource"
+      },
+      {
+        "id": "Resource.basedOn",
+        "path": "Resource.basedOn",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.basedOn",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Resource.partOf",
+        "path": "Resource.partOf",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.partOf",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Resource.category",
+        "path": "Resource.category",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "coding"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "Observation.category",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Resource.category.coding",
+        "path": "Resource.category.coding"
+      },
+      {
+        "id": "Resource.category.coding:category",
+        "path": "Resource.category.coding",
+        "sliceName": "category",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Observation.category",
+          "min": 0,
+          "max": "*"
+        },
+        "patternCoding": {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "imaging"
+        }
+      },
+      {
+        "id": "Resource.subject",
+        "path": "Resource.subject",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Observation.subject",
+          "min": 0,
+          "max": "1"
+        }
+      },
+      {
+        "id": "Resource.focus",
+        "path": "Resource.focus",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.focus",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Resource.derivedFrom",
+        "path": "Resource.derivedFrom",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.derivedFrom",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Resource.component",
+        "path": "Resource.component",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.component",
+          "min": 0,
+          "max": "*"
+        }
       }
     ]
   }

@@ -99,8 +99,8 @@
     "CodeSystem/CalcificationTypeCS": {
       "base": "CodeSystem-CalcificationTypeCS.html"
     },
-    "StructureDefinition/AbnormalityObservationFragment": {
-      "base": "StructureDefinition-AbnormalityObservationFragment.html"
+    "StructureDefinition/AbnormalityObservation-Fragment": {
+      "base": "StructureDefinition-AbnormalityObservation-Fragment.html"
     },
     "StructureDefinition/BreastBodyLocation": {
       "base": "StructureDefinition-BreastBodyLocation.html"
@@ -180,8 +180,8 @@
     "StructureDefinition/BreastRadSectionRoot": {
       "base": "StructureDefinition-BreastRadSectionRoot.html"
     },
-    "StructureDefinition/HeaderFragment": {
-      "base": "StructureDefinition-HeaderFragment.html"
+    "StructureDefinition/Header-Fragment": {
+      "base": "StructureDefinition-Header-Fragment.html"
     },
     "ValueSet/AssymetriesVS": {
       "base": "ValueSet-AssymetriesVS.html"

@@ -166,10 +166,13 @@ namespace FhirKhit.Tools
             Int32 i = 1;
             foreach (String msg in msgs)
             {
-                String[] lines = msg.ToLines();
-                sb.AppendLine($"{i:D02}. {lines[0]}");
-                foreach (String line in lines.Skip(1))
-                    sb.AppendLine($"  {line}");
+                if (msg != null)
+                {
+                    String[] lines = msg.ToLines();
+                    sb.AppendLine($"{i:D02}. {lines[0]}");
+                    foreach (String line in lines.Skip(1))
+                        sb.AppendLine($"  {line}");
+                }
                 i += 1;
             }
         }

@@ -3,6 +3,7 @@ using FhirKhit.Tools.R4;
 using Hl7.Fhir.Model;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
@@ -327,67 +328,47 @@ namespace PreFhir
                 this.preFhir.ConversionInfo(this.GetType().Name,
                     fcn,
                     $"Merging '{mergeElement.Path}'");
-            //ElementDefinition baseDiffElement = baseNode.DiffElement(mergeElement.Path);
-            //ElementDefinition baseSnapElement = baseNode.SnapElement(mergeElement.Path);
-            //if (baseDiffElement == null)
-            //{
-            //    if (baseSnapElement == null)
-            //    {
-            //        // If base is a fragment, we can add new elements with no worries...
-            //        if (baseNode.IsFragment == true)
-            //        {
-            //            baseDiffElement = new ElementDefinition();
-            //            mergeElement.CopyTo(baseDiffElement);
-            //            baseNode.AddDiffElement(baseDiffElement.Path, baseDiffElement);
-            //            return true;
-            //        }
-
-            //        // we may be dealing with something like category.coding, where 
-            //        // category is defined, and coding is an element of category.
-            //        Int32 lastPeriodIndex = mergeElement.Path.LastIndexOf('.');
-            //        if (lastPeriodIndex > 0)
-            //        {
-            //            String partialPath = mergeElement.Path.Substring(0, lastPeriodIndex);
-            //            ElementDefinition baseSnapParentElement = baseNode.SnapElement(partialPath);
-            //            if (baseSnapParentElement != null)
-            //            {
-            //                switch (mergeElement.Path.LastPathPart())
-            //                {
-            //                    case "coding":
-            //                        baseDiffElement = new ElementDefinition();
-            //                        mergeElement.CopyTo(baseDiffElement);
-            //                        baseNode.AddDiffElement(partialPath, baseDiffElement);
-            //                        return true;
-            //                }
-            //            }
-            //        }
-            //    }
-
-            //    if (baseSnapElement == null)
-            //    {
-            //        this.preFhir.ConversionError(this.GetType().Name,
-            //            fcn,
-            //            $"Error constaining {mergeElement.Path}. Matching element not found in base profile");
-            //        return false;
-            //    }
-
-            //    baseDiffElement = baseSnapElement;
-            //    baseNode.AddDiffElement(baseDiffElement.Path, baseDiffElement);
-            //}
 
             bool retVal = true;
-            if (!ConstrainCardinality(baseElement, mergeElement))
-                retVal = false;
-            if (!ConstrainType(baseElement, mergeElement))
-                retVal = false;
+            this.ConstrainCardinality(baseElement, mergeElement, ref retVal);
+            this.ConstrainType(baseElement, mergeElement, ref retVal);
+            baseElement.SliceNameElement = this.ConstrainSingleElement(baseElement.Path, "SliceName", baseElement.SliceNameElement, mergeElement.SliceNameElement, ref retVal);
+            this.ConstrainCode(baseElement, mergeElement, ref retVal);
+            baseElement.SliceIsConstrainingElement = this.ConstrainSingleElement(baseElement.Path, "SliceIsConstraining", baseElement.SliceIsConstrainingElement, mergeElement.SliceIsConstrainingElement, ref retVal);
+            baseElement.LabelElement = this.ConstrainSingleElement(baseElement.Path, "Label", baseElement.LabelElement, mergeElement.LabelElement, ref retVal);
+            ConstrainSlicing(baseElement, mergeElement, ref retVal);
+
+            baseElement.ShortElement = this.ConstrainSingleElement(baseElement.Path, "Short", baseElement.ShortElement, mergeElement.ShortElement, ref retVal);
+            baseElement.Definition = this.ConstrainSingleElement(baseElement.Path, "Definition", baseElement.Definition, mergeElement.Definition, ref retVal);
+            baseElement.Comment = this.ConstrainSingleElement(baseElement.Path, "Comment", baseElement.Comment, mergeElement.Comment, ref retVal);
+            baseElement.Requirements = this.ConstrainSingleElement(baseElement.Path, "Requirements", baseElement.Requirements, mergeElement.Requirements, ref retVal);
+            // TODO: Alias
+            //       ContentReference
+            //        Example
+            //        condition
+            //        constraint
+            //        XXYYmustSupport
+            //        isModifier
+            //        isModifierReason
+            //        isSummary
+            //        mapping
+
+            baseElement.DefaultValue = this.ConstrainSingleElement(baseElement.Path, "DefaultValue", baseElement.DefaultValue, mergeElement.DefaultValue, ref retVal);
+            baseElement.Fixed = this.ConstrainSingleElement(baseElement.Path, "Fixed", baseElement.Fixed, mergeElement.Fixed, ref retVal);
+            baseElement.Pattern = this.ConstrainSingleElement(baseElement.Path, "Pattern", baseElement.Pattern, mergeElement.Pattern, ref retVal);
+            baseElement.Pattern = this.ConstrainSingleElement(baseElement.Path, "Pattern", baseElement.Pattern, mergeElement.Pattern, ref retVal);
+            baseElement.MinValue = this.ConstrainSingleElement(baseElement.Path, "MinValue", baseElement.MinValue, mergeElement.MinValue, ref retVal);
+            baseElement.MaxValue = this.ConstrainSingleElement(baseElement.Path, "MaxValue", baseElement.MaxValue, mergeElement.MaxValue, ref retVal);
+            baseElement.Binding = this.ConstrainSingleElement(baseElement.Path, "Binding", baseElement.Binding, mergeElement.Binding, ref retVal);
             return retVal;
         }
 
         /// <summary>
         /// Constrain element types. Error if constrain types are not a subset of base types.
         /// </summary>
-        bool ConstrainType(ElementDefinition baseElement,
-                    ElementDefinition mergeElement)
+        void ConstrainType(ElementDefinition baseElement,
+                    ElementDefinition mergeElement,
+                    ref bool success)
         {
             const String fcn = "MergeType";
 
@@ -404,7 +385,8 @@ namespace PreFhir
                     this.preFhir.ConversionError(this.GetType().Name,
                         fcn,
                         $"Error constaining type. Element [{mergeElement.Path}] does not contain type '{typeRef.Code}' not found in base");
-                    return false;
+                    success = false;
+                    return;
                 }
                 baseTypes.Remove(typeRef.Code);
 
@@ -414,7 +396,8 @@ namespace PreFhir
                     this.preFhir.ConversionError(this.GetType().Name,
                         fcn,
                         $"Merge typeRef.Profile unimplemented");
-                    retVal = false;
+                    success = false;
+                    return;
                 }
 
                 // TODO: Put in code to constrain typeRef.targetProfile.
@@ -423,7 +406,8 @@ namespace PreFhir
                     this.preFhir.ConversionError(this.GetType().Name,
                         fcn,
                         $"Merge typeRef.targetProfile unimplemented");
-                    retVal = false;
+                    success = false;
+                    return;
                 }
 
                 // TODO: Put in code to constrain typeRef.aggregation.
@@ -432,7 +416,8 @@ namespace PreFhir
                     this.preFhir.ConversionError(this.GetType().Name,
                         fcn,
                         $"Merge typeRef.aggregation unimplemented");
-                    retVal = false;
+                    success = false;
+                    return;
                 }
 
                 // TODO: Put in code to constrain typeRef.versioning.
@@ -441,24 +426,98 @@ namespace PreFhir
                     this.preFhir.ConversionError(this.GetType().Name,
                         fcn,
                         $"Merge typeRef.versioning unimplemented");
-                    retVal = false;
+                    success = false;
+                    return;
                 }
             }
 
             // Remove all types in base that are not also in merged (constrain them out...)
             foreach (ElementDefinition.TypeRefComponent typeRef in baseTypes.Values)
                 baseElement.Type.Remove(typeRef);
+        }
 
-            return retVal;
+        /// <summary>
+        /// This is for elements that have only one value, and can only be set if
+        /// they are not already set.
+        /// </summary>
+        /// <param name="baseElement"></param>
+        /// <param name="mergeElement"></param>
+        /// <returns></returns>
+        T ConstrainSingleElement<T>(String path,
+            String valueName,
+            T baseElement,
+            T mergeElement,
+            ref bool success)
+            where T : Element
+        {
+            const String fcn = "ConstrainElement";
+
+            // if nothing to set.
+            if (mergeElement == null)
+                return baseElement;
+
+            // If base is null, then just set it.
+            if (baseElement == null)
+                return (T)mergeElement.DeepCopy();
+
+            // both base and merge have values. If the values are identical, then no worries.
+            if (baseElement.IsExactly(mergeElement))
+                return baseElement;
+
+            // otherwise, the values are different and we hav a problem.
+            this.preFhir.ConversionError(this.GetType().Name,
+                fcn,
+                $"Error constaining {path}:{valueName}. Merge Element and Base Element both contain distinct values that can not be reconciled. ");
+            success = false;
+            return baseElement;
+        }
+
+        void ConstrainCode(ElementDefinition baseElement,
+            ElementDefinition mergeElement,
+            ref bool success)
+        {
+            const String fcn = "ConstrainCode";
+
+            if (mergeElement.Code.Count == 0)
+                return;
+
+            // TODO: we need to check each value in merge and add it only if there is not an identical
+            // value already in base.
+            baseElement.Code.AddRange(mergeElement.Code);
+            return;
         }
 
         /// <summary>
         /// Constrain element cardinalities. Error if merge cardinalities are not a subset of base
         /// </summary>
-        bool ConstrainCardinality(ElementDefinition baseElement,
-            ElementDefinition mergeElement)
+        void ConstrainSlicing(ElementDefinition baseElement,
+            ElementDefinition mergeElement,
+            ref bool success)
         {
-            const String fcn = "MergeCardinality";
+            const String fcn = "ConstrainSlicing";
+
+            if (mergeElement.Slicing == null)
+                return;
+
+            if (baseElement.Slicing != null)
+            {
+                this.preFhir.ConversionError(this.GetType().Name,
+                    fcn,
+                    $"Error constaining {mergeElement.Path}. Not Supported (yet). Merge Element and Base Element both define a slicing component. ");
+                success = false;
+                return;
+            }
+            baseElement.Slicing = (ElementDefinition.SlicingComponent)mergeElement.Slicing.DeepCopy();
+        }
+
+        /// <summary>
+        /// Constrain element cardinalities. Error if merge cardinalities are not a subset of base
+        /// </summary>
+        void ConstrainCardinality(ElementDefinition baseElement,
+            ElementDefinition mergeElement,
+            ref bool success)
+        {
+            const String fcn = "ConstrainCardinality";
 
             Int32 MaxCmp(String a, String b)
             {
@@ -486,7 +545,8 @@ namespace PreFhir
                     this.preFhir.ConversionError(this.GetType().Name,
                         fcn,
                         $"Error constraining [{mergeElement.Path}].Min. Fragment min {mergeElement.Min} < base min {baseElement.Min}");
-                    return false;
+                    success = false;
+                    return;
                 }
                 baseElement.Min = mergeElement.Min.Value;
             }
@@ -501,12 +561,11 @@ namespace PreFhir
                     this.preFhir.ConversionError(this.GetType().Name,
                          fcn,
                          $"Error constraining [{mergeElement.Path}].Max. Fragment max {mergeElement.Max} < base max {baseElement.Max}");
-                    return false;
+                    success = false;
+                    return;
                 }
                 baseElement.Max = mergeElement.Max;
             }
-
-            return true;
         }
 
         /// <summary>

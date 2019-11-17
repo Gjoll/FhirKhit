@@ -34,10 +34,21 @@ namespace PreFhir
 
         public const String FragmentUrl = "http://www.fragment.com/fragment";
 
+        /// <summary>
+        /// Is not null, save merged files here (done before differential from base computed).
+        /// </summary>
+        public String MergedDir {get; set; } = null;
+
+        FileCleaner fc = new FileCleaner();
+
         public PreFhirGenerator(String cacheDir)
         {
+            const String fcn = "PreFhirGenerator";
             if (FhirStructureDefinitions.Self == null)
+            {
+                this.ConversionInfo(this.GetType().Name, fcn, $"Init'g 'FhirStructureDefinitions'");
                 FhirStructureDefinitions.Create(Path.Combine(cacheDir, "DefinitionCache"));
+            }
         }
 
         DomainResource Load(String path)
@@ -140,7 +151,13 @@ namespace PreFhir
                 if (Process(processable) == false)
                     retVal = false;
                 else
+                {
                     this.processed.Add(processable.Resource.GetUrl(), processable);
+
+                    // save intermediate merged file?
+                    if (String.IsNullOrEmpty(MergedDir) == false)
+                        SaveResource(MergedDir, processable);
+                }
             }
             if (retVal == true)
                 FixDifferentials();
@@ -149,6 +166,12 @@ namespace PreFhir
 
         void FixDifferentials()
         {
+            const String fcn = "FixDifferentials";
+
+            this.ConversionInfo(this.GetType().Name,
+                fcn,
+                $"Fixing differentials");
+
             foreach (ProcessItem processedItem in this.processed.Values)
             {
                 switch (processedItem.Resource)
@@ -159,14 +182,20 @@ namespace PreFhir
                         // Compute differences from base.
                         if (processedItem.FragmentFlag == false)
                         {
+                            this.ConversionInfo(this.GetType().Name,
+                                fcn,
+                                $"Computing differential for {processedItem.Resource.GetName()}");
                             ElementTreeDiffer differ = new ElementTreeDiffer(this);
                             if (differ.Process(processedItem.TreeNodeOriginal, processedItem.TreeNode) == false)
                                 return;
                         }
+
+                        this.ConversionInfo(this.GetType().Name,
+                            fcn,
+                            $"Saving differential for {processedItem.Resource.GetName()}");
                         List<ElementDefinition> elementDefinitions = new List<ElementDefinition>();
                         processedItem.TreeNode.CopyTo(elementDefinitions);
                         sDef.Differential.Element = elementDefinitions;
-                        SnapshotCreator.Create(sDef);
                         break;
                 }
             }
@@ -176,10 +205,13 @@ namespace PreFhir
         /// Save all processed resources to the indicated dir.
         /// </summary>
         /// <param name="outputDir"></param>
-        public void SaveResources(String outputDir)
+        public void SaveResources(String outputDir, bool cleanFlag)
         {
+            if (cleanFlag == true)
+                fc.Add(outputDir, "*.json");
             foreach (ProcessItem processedItem in this.processed.Values)
                 SaveResource(outputDir, processedItem);
+            fc.Dispose();
         }
 
         /// <summary>
@@ -190,23 +222,27 @@ namespace PreFhir
             ProcessItem processedItem)
         {
             processedItem.Resource.RemoveExtension(FragmentUrl);
+            String outputName;
+
             switch (processedItem.Resource)
             {
                 case StructureDefinition sDef:
-                    processedItem.Resource.SaveJson(Path.Combine(outputDir, $"StructureDefinition-{sDef.Name}.json"));
+                    outputName = Path.Combine(outputDir, $"StructureDefinition-{sDef.Name}.json");
                     break;
 
                 case CodeSystem codeSys:
-                    processedItem.Resource.SaveJson(Path.Combine(outputDir, $"CodeSystem-{codeSys.Name}.json"));
+                    outputName = Path.Combine(outputDir, $"CodeSystem-{codeSys.Name}.json");
                     break;
 
                 case ValueSet valueSet:
-                    processedItem.Resource.SaveJson(Path.Combine(outputDir, $"ValueSet-{valueSet.Name}.json"));
+                    outputName = Path.Combine(outputDir, $"ValueSet-{valueSet.Name}.json");
                     break;
 
                 default:
                     throw new NotImplementedException($"Unimplemented type {processedItem.GetType().Name}");
             }
+            processedItem.Resource.SaveJson(outputName);
+            this.fc.Mark(outputName);
         }
 
         ProcessItem FindProcessable()

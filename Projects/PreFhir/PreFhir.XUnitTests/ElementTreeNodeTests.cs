@@ -18,12 +18,6 @@ namespace PreFhir.XUnitTests
     public class ElementTreeNodeTests
     {
         Info info = new Info();
-        public ElementTreeNodeTests()
-        {
-            String cacheDir = Path.Combine(DirHelper.FindParentDir("PreFhir"), "Cache");
-            if (FhirStructureDefinitions.Self == null)
-                FhirStructureDefinitions.Create(Path.Combine(cacheDir, "DefinitionCache"));
-        }
 
         StructureDefinition CreateBaseObservation()
         {

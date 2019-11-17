@@ -34,6 +34,11 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             "IG",
             "Resources");
 
+        String mergedDir = Path.Combine(
+            DirHelper.FindParentDir(baseDir),
+            "IG",
+            "Merged");
+
         String manualDir = Path.Combine(
             DirHelper.FindParentDir(baseDir),
             "IG",
@@ -81,19 +86,18 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         {
             if (Directory.Exists(this.resourcesDir) == false)
                 Directory.CreateDirectory(this.resourcesDir);
-            else
-            {
-                foreach (String file in Directory.GetFiles(this.resourcesDir, "*.json"))
-                    File.Delete(file);
-            }
+
+            if (Directory.Exists(this.mergedDir) == false)
+                Directory.CreateDirectory(this.mergedDir);
 
             PreFhirGenerator preFhir = new PreFhirGenerator(Path.Combine(DirHelper.FindParentDir("FhirKhit"), "Cache"));
             preFhir.StatusErrors += this.StatusErrors;
             preFhir.StatusInfo += this.StatusInfo;
             preFhir.StatusWarnings += this.StatusWarnings;
             preFhir.AddDir(this.fragmentDir, "*.json");
+            preFhir.MergedDir = this.mergedDir;
             preFhir.Process();
-            preFhir.SaveResources(this.resourcesDir);
+            preFhir.SaveResources(this.resourcesDir, true);
         }
 
         [TestMethod]

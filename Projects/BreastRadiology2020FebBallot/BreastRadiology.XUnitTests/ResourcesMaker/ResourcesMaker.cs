@@ -56,12 +56,17 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         public ResourcesMaker(String resourceDir,
             String cacheDir)
         {
+            const String fcn = "ResourcesMaker";
+
             this.resourceDir = resourceDir;
             if (Directory.Exists(this.resourceDir) == false)
                 Directory.CreateDirectory(this.resourceDir);
 
             if (FhirStructureDefinitions.Self == null)
+            {
+                this.ConversionInfo(this.GetType().Name, fcn, $"Init'g 'FhirStructureDefinitions'");
                 FhirStructureDefinitions.Create(cacheDir);
+            }
         }
 
         SDefEditor CreateEditor(String name,
