@@ -32,7 +32,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                     "Breast Radiology Abnormality Skin Lesion (Mammography)",
                     new Markdown().Paragraph("Mammography Breast Abnormality Skin Lesion Observation"),
                     binding)
-                .ApplyBreastBodyLocation(this.breastBodyLocation, true)
+                .AddFragRef(this.breastBodyLocationOptionalFragmentUrl)
                 .SDef.Url;
         }
     }

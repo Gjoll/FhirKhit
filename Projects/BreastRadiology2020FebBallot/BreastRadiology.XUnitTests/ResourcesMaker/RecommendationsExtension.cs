@@ -14,7 +14,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
 {
     public partial class ResourcesMaker : ConverterBase
     {
-        String BreastRadiologyRecommendations()
+        String BreastRadiologyRecommendationsExtension()
         {
             SDefEditor e = this.CreateEditor("BreastRadRecommendations", 
                 "Recommendations", 
@@ -27,7 +27,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 .Kind(StructureDefinition.StructureDefinitionKind.ComplexType)
                 .Context()
                 ;
-            e.SDef.AddFragRef(this.headerFragUrl);
+            e.AddFragRef(this.headerFragUrl);
 
             e.Select("extension").Zero();
             e.Select("url")

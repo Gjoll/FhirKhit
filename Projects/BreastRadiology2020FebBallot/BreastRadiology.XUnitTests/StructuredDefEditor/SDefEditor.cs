@@ -1,6 +1,7 @@
 ﻿using FhirKhit.Tools;
 using FhirKhit.Tools.R4;
 using Hl7.Fhir.Model;
+using PreFhir;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -28,8 +29,8 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         /// Create structure definition editor
         /// </summary>
         /// <param name="basePath">differential element 0 pathname</param>
-        /// <param name="workingBaseDefinition">This is not the actual resource base definition, but rahter the
-        /// definition that we will copy selected elemtns from. May or may not be same as actual Resource.baseDefinition</param>
+        /// <param name="workingBaseDefinition">This is not the actual resource base definition, but rather the
+        /// definition that we will copy selected elements from. May or may not be same as actual Resource.baseDefinition</param>
         /// <param name="outputDir"></param>
         public SDefEditor(String basePath,
             String baseDefinition,
@@ -202,19 +203,19 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             return this;
         }
 
-        public SDefEditor ApplyBreastBodyLocation(String breastBodyLocationUrl, bool optionalFlag)
+        public SDefEditor AddFragRef(StructureDefinition fragRef)
         {
-            if (this.sDef.Type != "Observation")
-                throw new Exception("BreastBodyLocation can only be applied to Observations");
-            Int32 min = optionalFlag ? 0 : 1;
-            String max = "*";
-            this.Select("bodySite")
-                .Card(min, max)
-                ;
+            this.AddFragRef(fragRef.Url);
+            return this;
+        }
 
-            this.ApplyExtension("breastBodyLocation", breastBodyLocationUrl)
-                .Card(min, max)
-                ;
+        public SDefEditor AddFragRef(String fragRef)
+        {
+            this.SDef.Extension.Add(new Extension
+            {
+                Url = PreFhirGenerator.FragmentUrl,
+                Value = new FhirUrl(fragRef)
+            });
             return this;
         }
     }

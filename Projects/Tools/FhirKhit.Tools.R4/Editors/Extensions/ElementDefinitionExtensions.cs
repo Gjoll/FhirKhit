@@ -25,6 +25,11 @@ namespace FhirKhit.Tools.R4
             return e;
         }
 
+        public static ElementDefinition ZeroToOne(this ElementDefinition e)
+        {
+            return e.Card(0, "1");
+        }
+
         public static ElementDefinition ZeroToMany(this ElementDefinition e)
         {
             return e.Card(0, "*");

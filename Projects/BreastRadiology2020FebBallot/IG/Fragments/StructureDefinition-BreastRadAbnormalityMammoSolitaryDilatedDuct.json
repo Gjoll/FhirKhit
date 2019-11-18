@@ -4,6 +4,10 @@
     {
       "url": "http://www.fragment.com/fragment",
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityObservation-Fragment"
+    },
+    {
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationOptional-Fragment"
     }
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadAbnormalityMammoSolitaryDilatedDuct",
@@ -23,48 +27,6 @@
         "path": "Observation"
       },
       {
-        "id": "Observation.extension",
-        "path": "Observation.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": true,
-          "rules": "openAtEnd"
-        },
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Observation.extension",
-          "min": 0,
-          "max": "*"
-        }
-      },
-      {
-        "id": "Observation.extension:breastBodyLocation",
-        "path": "Observation.extension",
-        "sliceName": "breastBodyLocation",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Observation.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocation"
-            ]
-          }
-        ],
-        "isModifier": false
-      },
-      {
         "id": "Observation.valueCodeableConcept",
         "path": "Observation.valueCodeableConcept",
         "min": 0,
@@ -82,17 +44,6 @@
         "binding": {
           "strength": "required",
           "valueSet": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadAbnormalityMammoSolitaryDilatedDuctFindingsVS"
-        }
-      },
-      {
-        "id": "Observation.bodySite",
-        "path": "Observation.bodySite",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Observation.bodySite",
-          "min": 0,
-          "max": "1"
         }
       }
     ]

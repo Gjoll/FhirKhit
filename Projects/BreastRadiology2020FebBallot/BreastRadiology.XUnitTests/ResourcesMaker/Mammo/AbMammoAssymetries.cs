@@ -34,7 +34,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                     "Breast Radiology Abnormality Assymetries (Mammography)",
                     new Markdown().Paragraph("Mammography Breast Abnormality Assymetries Observation"),
                     binding)
-                .ApplyBreastBodyLocation(this.breastBodyLocation, false)
+                .AddFragRef(this.breastBodyLocationRequiredFragmentUrl)
                 .SDef.Url;
         }
     }

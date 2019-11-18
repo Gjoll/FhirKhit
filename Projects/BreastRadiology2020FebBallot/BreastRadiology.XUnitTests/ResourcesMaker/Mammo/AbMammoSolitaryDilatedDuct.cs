@@ -32,7 +32,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                     "Breast Radiology Abnormality Solitary Dilated Duct (Mammography)",
                     new Markdown().Paragraph("Mammography Breast Abnormality Solitary Dilated Duct Observation"),
                     binding)
-                .ApplyBreastBodyLocation(this.breastBodyLocation, true)
+                .AddFragRef(this.breastBodyLocationOptionalFragmentUrl)
                 .SDef.Url;
         }
     }

@@ -43,9 +43,11 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         String resourceDir;
         FhirDateTime date = new FhirDateTime(2019, 11, 1);
         List<SDefEditor> editors = new List<SDefEditor>();
-        String breastBodyLocation;
+        String breastBodyLocationExtensionUrl;
+        String breastBodyLocationOptionalFragmentUrl;
+        String breastBodyLocationRequiredFragmentUrl;
+
         String headerFragUrl;
-        string abnormalityFragmentUrl;
         string abnormalityObservationFragmentUrl;
 
         String CreateUrl(String name)
@@ -119,7 +121,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 "Observation",
                 ObservationUrl,
                 ObservationUrl);
-            retVal.SDef.AddFragRef(this.abnormalityObservationFragmentUrl);
+            retVal.AddFragRef(this.abnormalityObservationFragmentUrl);
             return retVal;
         }
 
@@ -298,10 +300,11 @@ namespace FhirKhit.BreastRadiology.XUnitTests
 
             this.headerFragUrl = this.HeaderFragment();
             this.abnormalityObservationFragmentUrl = this.AbnormalityObservationFragment();
-            //$this.abnormalityFragmentUrl = this.FragmentAbnormality();
 
             String abnMassShape = this.AbMassShape();
-            this.breastBodyLocation = this.BreastBodyLocation();
+            this.breastBodyLocationExtensionUrl = this.BreastBodyLocationExtension();
+            this.breastBodyLocationOptionalFragmentUrl = BreastBodyLocationOptionalFragment();
+            this.breastBodyLocationRequiredFragmentUrl = BreastBodyLocationRequiredFragment();
 
             //
             // Mammo

@@ -32,7 +32,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                     "Breast Radiology Abnormality Intramammary LymphNode (Mammography)",
                     new Markdown().Paragraph("Mammography Breast Intramammary LymphNode Distortion Observation"),
                     binding)
-                .ApplyBreastBodyLocation(this.breastBodyLocation, true)
+                    .AddFragRef(this.breastBodyLocationOptionalFragmentUrl)
                 .SDef.Url;
         }
     }

@@ -14,7 +14,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
 {
     public partial class ResourcesMaker : ConverterBase
     {
-        String BreastBodyLocation()
+        String BreastBodyLocationExtension()
         {
             SDefEditor e = this.CreateEditor("BreastBodyLocation", 
                 "Breast Body Location", 
@@ -28,7 +28,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 .Context()
                 ;
 
-            e.SDef.AddFragRef(this.headerFragUrl);
+            e.AddFragRef(this.headerFragUrl);
 
             e.Select("url")
                 .Type("uri")

@@ -24,7 +24,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                     .Paragraph("This observation has the following two member observations")
                     .List("Calcification Type", "Calcification Distribution")
                 )
-                .ApplyBreastBodyLocation(this.breastBodyLocation, false)
+                .AddFragRef(this.breastBodyLocationRequiredFragmentUrl)
                 ;
 
                 s.Find("hasMember")

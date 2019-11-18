@@ -4,6 +4,10 @@
     {
       "url": "http://www.fragment.com/fragment",
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityObservation-Fragment"
+    },
+    {
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationRequired-Fragment"
     }
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoCalcifications",
@@ -21,48 +25,6 @@
       {
         "id": "Observation",
         "path": "Observation"
-      },
-      {
-        "id": "Observation.extension",
-        "path": "Observation.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": true,
-          "rules": "openAtEnd"
-        },
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Observation.extension",
-          "min": 0,
-          "max": "*"
-        }
-      },
-      {
-        "id": "Observation.extension:breastBodyLocation",
-        "path": "Observation.extension",
-        "sliceName": "breastBodyLocation",
-        "min": 1,
-        "max": "*",
-        "base": {
-          "path": "Observation.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocation"
-            ]
-          }
-        ],
-        "isModifier": false
       },
       {
         "id": "Observation.value[x]",
@@ -100,8 +62,8 @@
       {
         "id": "Observation.bodySite",
         "path": "Observation.bodySite",
-        "min": 1,
-        "max": "*",
+        "min": 0,
+        "max": "0",
         "base": {
           "path": "Observation.bodySite",
           "min": 0,

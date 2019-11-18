@@ -87,6 +87,7 @@ namespace PreFhir
 
         public bool MergeBase()
         {
+            const String fcn = "MergeBase";
             bool retVal = true;
             FHIRVersion? fhirVersion = this.mergeResource.GetFhirVersion();
             String version = this.mergeResource.GetVersion();
@@ -98,112 +99,194 @@ namespace PreFhir
             switch (baseResource)
             {
                 case StructureDefinition sDef:
-                    if (fhirVersion != null)
+                    if (fhirVersion.IsEmpty() == false)
                     {
-                        if ((sDef.FhirVersion != null) && (sDef.FhirVersion != fhirVersion))
-                            throw new NotImplementedException($"Can not overwrite existing FhirVersion value in {sDef.Name} with value in {this.mergeResource.GetName()}");
+                        if ((sDef.FhirVersion.IsEmpty() == false) && (sDef.FhirVersion != fhirVersion))
+                        {
+                            this.preFhir.ConversionError(this.GetType().Name,
+                                fcn,
+                                $"Can not overwrite existing FhirVersion value in {sDef.Name} with value in {this.mergeResource.GetName()}");
+                            return false;
+                        }
                         sDef.FhirVersion = fhirVersion;
                     }
-                    if (version != null)
+                    if (version.IsEmpty() == false)
                     {
-                        if ((sDef.Version != null) && (sDef.Version != version))
-                            throw new NotImplementedException($"Can not overwrite existing Version value in {sDef.Name} with value in {this.mergeResource.GetName()}");
+                        if ((sDef.Version.IsEmpty() == false) && (sDef.Version != version))
+                        {
+                            this.preFhir.ConversionError(this.GetType().Name,
+                                fcn,
+                                $"Can not overwrite existing Version value in {sDef.Name} with value in {this.mergeResource.GetName()}");
+                            return false;
+                        }
                         sDef.Version = version;
                     }
-                    if (date != null)
+                    if (date.IsEmpty() == false)
                     {
-                        if ((sDef.Date != null) && (sDef.Date != date))
-                            throw new NotImplementedException($"Can not overwrite existing Date value in {sDef.Name} with value in {this.mergeResource.GetName()}");
+                        if ((sDef.Date.IsEmpty() == false) && (sDef.Date != date))
+                        {
+                            this.preFhir.ConversionError(this.GetType().Name,
+                                fcn,
+                                $"Can not overwrite existing Date value in {sDef.Name} with value in {this.mergeResource.GetName()}");
+                            return false;
+                        }
                         sDef.Date = date;
                     }
-                    if (status != null)
+                    if (status.IsEmpty() == false)
                     {
-                        if ((sDef.Status != null) && (sDef.Status != status))
-                            throw new NotImplementedException($"Can not overwrite existing Status value in {sDef.Name} with value in {this.mergeResource.GetName()}");
+                        if ((sDef.Status.IsEmpty() == false) && (sDef.Status != status))
+                        {
+                            this.preFhir.ConversionError(this.GetType().Name,
+                                fcn,
+                                $"Can not overwrite existing Status value in {sDef.Name} with value in {this.mergeResource.GetName()}");
+                            return false;
+                        }
                         sDef.Status = status;
                     }
-                    if (publisher != null)
+                    if (publisher.IsEmpty() == false)
                     {
-                        if ((sDef.Publisher != null) && (sDef.Status != status))
-                            throw new NotImplementedException($"Can not overwrite existing Publisher value in {sDef.Name} with value in {this.mergeResource.GetName()}");
+                        if ((sDef.Publisher.IsEmpty() == false) && (sDef.Status != status))
+                        {
+                            this.preFhir.ConversionError(this.GetType().Name,
+                                fcn,
+                                $"Can not overwrite existing Publisher value in {sDef.Name} with value in {this.mergeResource.GetName()}");
+                            return false;
+                        }
                         sDef.Publisher = publisher;
                     }
-                    if (contactDetail != null)
+                    if (contactDetail.IsEmpty() == false)
                     {
-                        if ((sDef.Contact != null) && (!sDef.Contact.Matches(contactDetail)))
-                            throw new NotImplementedException($"Can not overwrite existing Contact value in {sDef.Name} with value in {this.mergeResource.GetName()}");
+                        if ((sDef.Contact.IsEmpty() == false) && (sDef.Contact.Matches(contactDetail) == false))
+                        {
+                            this.preFhir.ConversionError(this.GetType().Name,
+                                fcn,
+                                $"Can not overwrite existing Contact value in {sDef.Name} with value in {this.mergeResource.GetName()}");
+                            return false;
+                        }
                         sDef.Contact = contactDetail;
                     }
                     break;
 
                 case CodeSystem codeSys:
-                    if (version != null)
+                    if (version.IsEmpty() == false)
                     {
-                        if ((codeSys.Version != null) && (codeSys.Version != version))
-                            throw new NotImplementedException($"Can not overwrite existing Version value in {codeSys.Name} with value in {this.mergeResource.GetName()}");
+                        if ((codeSys.Version.IsEmpty() == false) && (codeSys.Version != version))
+                        {
+                            this.preFhir.ConversionError(this.GetType().Name,
+                                fcn,
+                                $"Can not overwrite existing Version value in {codeSys.Name} with value in {this.mergeResource.GetName()}");
+                            return false;
+                        }
                         codeSys.Version = version;
                     }
-                    if (date != null)
+                    if (date.IsEmpty() == false)
                     {
-                        if ((codeSys.Date != null) && (codeSys.Date != date))
-                            throw new NotImplementedException($"Can not overwrite existing Date value in {codeSys.Name} with value in {this.mergeResource.GetName()}");
+                        if ((codeSys.Date.IsEmpty() == false) && (codeSys.Date != date))
+                        {
+                            this.preFhir.ConversionError(this.GetType().Name,
+                                fcn,
+                                $"Can not overwrite existing Date value in {codeSys.Name} with value in {this.mergeResource.GetName()}");
+                            return false;
+                        }
                         codeSys.Date = date;
                     }
-                    if (status != null)
+                    if (status.IsEmpty() == false)
                     {
-                        if ((codeSys.Status != null) && (codeSys.Status != status))
-                            throw new NotImplementedException($"Can not overwrite existing Status value in {codeSys.Name} with value in {this.mergeResource.GetName()}");
+                        if ((codeSys.Status.IsEmpty() == false) && (codeSys.Status != status))
+                        {
+                            this.preFhir.ConversionError(this.GetType().Name,
+                                fcn,
+                                $"Can not overwrite existing Status value in {codeSys.Name} with value in {this.mergeResource.GetName()}");
+                            return false;
+                        }
                         codeSys.Status = status;
                     }
-                    if (publisher != null)
+                    if (publisher.IsEmpty() == false)
                     {
-                        if ((codeSys.Publisher != null) && (codeSys.Status != status))
-                            throw new NotImplementedException($"Can not overwrite existing Publisher value in {codeSys.Name} with value in {this.mergeResource.GetName()}");
+                        if ((codeSys.Publisher.IsEmpty() == false) && (codeSys.Status != status))
+                        {
+                            this.preFhir.ConversionError(this.GetType().Name,
+                                fcn,
+                                $"Can not overwrite existing Publisher value in {codeSys.Name} with value in {this.mergeResource.GetName()}");
+                            return false;
+                        }
                         codeSys.Publisher = publisher;
                     }
-                    if (contactDetail != null)
+                    if (contactDetail.IsEmpty() == false)
                     {
-                        if ((codeSys.Contact != null) && (!codeSys.Contact.Matches(contactDetail)))
-                            throw new NotImplementedException($"Can not overwrite existing Contact value in {codeSys.Name} with value in {this.mergeResource.GetName()}");
-                        codeSys.Contact = contactDetail;
+                        if ((codeSys.Contact.IsEmpty() == false) && (!codeSys.Contact.Matches(contactDetail)))
+                        {
+                            this.preFhir.ConversionError(this.GetType().Name,
+                                fcn,
+                                $"Can not overwrite existing Contact value in {codeSys.Name} with value in {this.mergeResource.GetName()}");
+                            return false;
+                        }
                     }
                     break;
 
                 case ValueSet valueSet:
-                    if (version != null)
+                    if (version.IsEmpty() == false)
                     {
-                        if ((valueSet.Version != null) && (valueSet.Version != version))
-                            throw new NotImplementedException($"Can not overwrite existing Version value in {valueSet.Name} with value in {this.mergeResource.GetName()}");
+                        if ((valueSet.Version.IsEmpty() == false) && (valueSet.Version != version))
+                        {
+                            this.preFhir.ConversionError(this.GetType().Name,
+                                fcn,
+                                $"Can not overwrite existing Version value in {valueSet.Name} with value in {this.mergeResource.GetName()}");
+                            return false;
+                        }
                         valueSet.Version = version;
                     }
-                    if (date != null)
+                    if (date.IsEmpty() == false)
                     {
-                        if ((valueSet.Date != null) && (valueSet.Date != date))
-                            throw new NotImplementedException($"Can not overwrite existing Date value in {valueSet.Name} with value in {this.mergeResource.GetName()}");
+                        if ((valueSet.Date.IsEmpty() == false) && (valueSet.Date != date))
+                        {
+                            this.preFhir.ConversionError(this.GetType().Name,
+                                fcn,
+                                $"Can not overwrite existing Date value in {valueSet.Name} with value in {this.mergeResource.GetName()}");
+                            return false;
+                        }
                         valueSet.Date = date;
                     }
-                    if (status != null)
+                    if (status.IsEmpty() == false)
                     {
-                        if ((valueSet.Status != null) && (valueSet.Status != status))
-                            throw new NotImplementedException($"Can not overwrite existing Status value in {valueSet.Name} with value in {this.mergeResource.GetName()}");
+                        if ((valueSet.Status.IsEmpty() == false) && (valueSet.Status != status))
+                        {
+                            this.preFhir.ConversionError(this.GetType().Name,
+                                fcn,
+                                $"Can not overwrite existing Status value in {valueSet.Name} with value in {this.mergeResource.GetName()}");
+                            return false;
+                        }
                         valueSet.Status = status;
                     }
-                    if (publisher != null)
+                    if (publisher.IsEmpty() == false)
                     {
-                        if ((valueSet.Publisher != null) && (valueSet.Status != status))
-                            throw new NotImplementedException($"Can not overwrite existing Publisher value in {valueSet.Name} with value in {this.mergeResource.GetName()}");
+                        if ((valueSet.Publisher.IsEmpty() == false) && (valueSet.Status != status))
+                        {
+                            this.preFhir.ConversionError(this.GetType().Name,
+                                fcn,
+                                $"Can not overwrite existing Publisher value in {valueSet.Name} with value in {this.mergeResource.GetName()}");
+                            return false;
+                        }
                         valueSet.Publisher = publisher;
                     }
-                    if (contactDetail != null)
+                    if (contactDetail.IsEmpty() == false)
                     {
-                        if ((valueSet.Contact != null) && (!valueSet.Contact.Matches(contactDetail)))
-                            throw new NotImplementedException($"Can not overwrite existing Contact value in {valueSet.Name} with value in {this.mergeResource.GetName()}");
+                        if ((valueSet.Contact.IsEmpty() == false) && (!valueSet.Contact.Matches(contactDetail)))
+                        {
+                            this.preFhir.ConversionError(this.GetType().Name,
+                                fcn,
+                                $"Can not overwrite existing Contact value in {valueSet.Name} with value in {this.mergeResource.GetName()}");
+                            return false;
+                        }
                         valueSet.Contact = contactDetail;
                     }
                     break;
 
                 default:
-                    throw new NotImplementedException($"Can not get value on unimplemented type {baseResource.GetType().Name}");
+                    this.preFhir.ConversionError(this.GetType().Name,
+                        fcn,
+                        $"Can not get value on unimplemented type {baseResource.GetType().Name}");
+                    return false;
             }
 
             return retVal;

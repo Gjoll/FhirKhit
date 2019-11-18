@@ -26,7 +26,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             sDef.Select("partOf").Zero();
             sDef.Select("focus").Zero();
             this.CreateCategorySlice(sDef, "category");
-            sDef.SDef.AddFragRef(this.headerFragUrl);
+            sDef.AddFragRef(this.headerFragUrl);
             return sDef.SDef.Url;
         }
     }

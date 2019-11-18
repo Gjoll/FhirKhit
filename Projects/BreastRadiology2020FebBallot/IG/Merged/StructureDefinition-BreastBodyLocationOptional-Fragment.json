@@ -1,0 +1,73 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationOptional-Fragment",
+  "name": "BreastBodyLocationOptional-Fragment",
+  "title": "Breast Body Location (Optional) Fragment",
+  "fhirVersion": "4.0.0",
+  "kind": "logical",
+  "abstract": true,
+  "type": "Resource",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Resource",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "Resource",
+        "path": "Resource"
+      },
+      {
+        "id": "Resource.extension",
+        "path": "Resource.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": true,
+          "rules": "openAtEnd"
+        },
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Resource.extension:breastBodyLocation",
+        "path": "Resource.extension",
+        "sliceName": "breastBodyLocation",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocation"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "Resource.bodySite",
+        "path": "Resource.bodySite",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.bodySite",
+          "min": 0,
+          "max": "1"
+        }
+      }
+    ]
+  }
+}
