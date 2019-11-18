@@ -99,11 +99,20 @@
     "CodeSystem/CalcificationTypeCS": {
       "base": "CodeSystem-CalcificationTypeCS.html"
     },
+    "StructureDefinition/AbnormalityCodedValueObservation-Fragment": {
+      "base": "StructureDefinition-AbnormalityCodedValueObservation-Fragment.html"
+    },
     "StructureDefinition/AbnormalityObservation-Fragment": {
       "base": "StructureDefinition-AbnormalityObservation-Fragment.html"
     },
     "StructureDefinition/BreastBodyLocation": {
       "base": "StructureDefinition-BreastBodyLocation.html"
+    },
+    "StructureDefinition/BreastBodyLocationOptional-Fragment": {
+      "base": "StructureDefinition-BreastBodyLocationOptional-Fragment.html"
+    },
+    "StructureDefinition/BreastBodyLocationRequired-Fragment": {
+      "base": "StructureDefinition-BreastBodyLocationRequired-Fragment.html"
     },
     "StructureDefinition/BreastRadAbnormalityMammo": {
       "base": "StructureDefinition-BreastRadAbnormalityMammo.html"

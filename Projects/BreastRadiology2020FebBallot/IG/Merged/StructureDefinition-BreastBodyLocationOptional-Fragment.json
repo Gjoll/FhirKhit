@@ -41,7 +41,7 @@
         "path": "Resource.extension",
         "sliceName": "breastBodyLocation",
         "min": 0,
-        "max": "*",
+        "max": "1",
         "base": {
           "path": "Observation.extension",
           "min": 0,
@@ -61,7 +61,7 @@
         "id": "Resource.bodySite",
         "path": "Resource.bodySite",
         "min": 0,
-        "max": "*",
+        "max": "1",
         "base": {
           "path": "Observation.bodySite",
           "min": 0,

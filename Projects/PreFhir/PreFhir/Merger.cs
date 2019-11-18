@@ -38,7 +38,6 @@ namespace PreFhir
                     this.preFhir.ConversionInfo(this.GetType().Name,
                         fcn,
                         $"Merging Fragment '{mergeResource.GetName()}' into {baseResource.GetName()}");
-
                 if (!MergeBase())
                     return false;
 
@@ -221,6 +220,7 @@ namespace PreFhir
                                 $"Can not overwrite existing Contact value in {codeSys.Name} with value in {this.mergeResource.GetName()}");
                             return false;
                         }
+                        codeSys.Contact = contactDetail;
                     }
                     break;
 

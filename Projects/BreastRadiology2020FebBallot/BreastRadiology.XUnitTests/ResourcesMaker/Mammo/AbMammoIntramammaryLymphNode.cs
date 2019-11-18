@@ -27,13 +27,17 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 "c. NotChecked"
                 });
 
-            return this.CreateAbnormalityCodedValue(
-                    "BreastRadAbnormalityMammoIntramammaryLymphNode",
-                    "Breast Radiology Abnormality Intramammary LymphNode (Mammography)",
-                    new Markdown().Paragraph("Mammography Breast Intramammary LymphNode Distortion Observation"),
-                    binding)
-                    .AddFragRef(this.breastBodyLocationOptionalFragmentUrl)
-                .SDef.Url;
+            SDefEditor e = this.CreateObservationEditor("BreastRadAbnormalityMammoIntramammaryLymphNode",
+                    "Breast Radiology Abnormality Intramammary LymphNode (Mammography)")
+                    .Description(new Markdown().Paragraph("Mammography Breast Intramammary LymphNode Distortion Observation"))
+                    .AddFragRef(this.abnormalityCodedValueObservationFragmentUrl)
+                    ;
+
+            e.Select("value[x]")
+                .Type("CodeableConcept")
+                .Binding(binding, BindingStrength.Required)
+                ;
+            return e.SDef.Url;
         }
     }
 }

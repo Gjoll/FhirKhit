@@ -211,6 +211,8 @@ namespace FhirKhit.BreastRadiology.XUnitTests
 
         public SDefEditor AddFragRef(String fragRef)
         {
+            if (String.IsNullOrWhiteSpace(fragRef))
+                throw new Exception($"Fragment Url must not be empty");
             this.SDef.Extension.Add(new Extension
             {
                 Url = PreFhirGenerator.FragmentUrl,

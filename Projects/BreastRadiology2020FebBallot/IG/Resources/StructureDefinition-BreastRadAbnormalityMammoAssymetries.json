@@ -324,53 +324,11 @@
           "extensions",
           "user content"
         ],
-        "min": 0,
-        "max": "*",
         "base": {
-          "path": "DomainResource.extension",
+          "path": "Observation.extension",
           "min": 0,
           "max": "*"
         },
-        "type": [
-          {
-            "code": "Extension"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "N/A"
-          }
-        ]
-      },
-      {
-        "id": "Observation.extension:breastBodyLocation",
-        "path": "Observation.extension",
-        "sliceName": "breastBodyLocation",
-        "short": "Additional content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
-        "min": 1,
-        "max": "*",
-        "base": {
-          "path": "DomainResource.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocation"
-            ]
-          }
-        ],
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -963,8 +921,6 @@
         "definition": "The information determined as a result of making the observation, if the information has a simple value.",
         "comment": "An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.",
         "requirements": "An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations.",
-        "min": 0,
-        "max": "1",
         "base": {
           "path": "Observation.value[x]",
           "min": 0,
@@ -972,37 +928,7 @@
         },
         "type": [
           {
-            "code": "Quantity"
-          },
-          {
             "code": "CodeableConcept"
-          },
-          {
-            "code": "string"
-          },
-          {
-            "code": "boolean"
-          },
-          {
-            "code": "integer"
-          },
-          {
-            "code": "Range"
-          },
-          {
-            "code": "Ratio"
-          },
-          {
-            "code": "SampledData"
-          },
-          {
-            "code": "time"
-          },
-          {
-            "code": "dateTime"
-          },
-          {
-            "code": "Period"
           }
         ],
         "condition": [
@@ -1216,17 +1142,12 @@
         "definition": "Indicates the site on the subject's body where the observation was made (i.e. the target site).",
         "comment": "Only used if not implicit in code found in Observation.code.  In many systems, this may be represented as a related observation instead of an inline component.   \n\nIf the use case requires BodySite to be handled as a separate resource (e.g. to identify and track separately) then use the standard extension[ bodySite](extension-bodysite.html).",
         "min": 1,
-        "max": "*",
+        "max": "1",
         "base": {
           "path": "Observation.bodySite",
           "min": 0,
           "max": "1"
         },
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
         "isModifier": false,
         "isSummary": false,
         "binding": {
@@ -2204,6 +2125,61 @@
         "path": "Observation"
       },
       {
+        "id": "Observation.extension",
+        "path": "Observation.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": true,
+          "rules": "openAtEnd"
+        },
+        "short": "Additional content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "base": {
+          "path": "Observation.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Observation.extension:breastBodyLocation",
+        "path": "Observation.extension",
+        "sliceName": "breastBodyLocation",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Observation.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocation"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
         "id": "Observation.basedOn",
         "path": "Observation.basedOn",
         "short": "Fulfills plan, proposal or order",
@@ -2412,6 +2388,100 @@
           {
             "identity": "w5",
             "map": "FiveWs.subject"
+          }
+        ]
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ]
+        },
+        "short": "Actual result",
+        "definition": "The information determined as a result of making the observation, if the information has a simple value.",
+        "comment": "An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.",
+        "requirements": "An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations.",
+        "base": {
+          "path": "Observation.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "condition": [
+          "obs-7"
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "sct-concept",
+            "map": "< 441742003 |Evaluation finding|"
+          },
+          {
+            "identity": "v2",
+            "map": "OBX.2, OBX.5, OBX.6"
+          },
+          {
+            "identity": "rim",
+            "map": "value"
+          },
+          {
+            "identity": "sct-attr",
+            "map": "363714003 |Interprets|"
+          }
+        ]
+      },
+      {
+        "id": "Observation.bodySite",
+        "path": "Observation.bodySite",
+        "short": "Observed body part",
+        "definition": "Indicates the site on the subject's body where the observation was made (i.e. the target site).",
+        "comment": "Only used if not implicit in code found in Observation.code.  In many systems, this may be represented as a related observation instead of an inline component.   \n\nIf the use case requires BodySite to be handled as a separate resource (e.g. to identify and track separately) then use the standard extension[ bodySite](extension-bodysite.html).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Observation.bodySite",
+          "min": 0,
+          "max": "1"
+        },
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "BodySite"
+            }
+          ],
+          "strength": "example",
+          "description": "Codes describing anatomical locations. May include laterality.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/body-site"
+        },
+        "mapping": [
+          {
+            "identity": "sct-concept",
+            "map": "< 123037004 |Body structure|"
+          },
+          {
+            "identity": "v2",
+            "map": "OBX-20"
+          },
+          {
+            "identity": "rim",
+            "map": "targetSiteCode"
+          },
+          {
+            "identity": "sct-attr",
+            "map": "718497002 |Inherent location|"
           }
         ]
       },

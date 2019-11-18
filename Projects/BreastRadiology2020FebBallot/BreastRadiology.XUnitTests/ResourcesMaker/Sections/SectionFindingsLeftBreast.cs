@@ -15,15 +15,16 @@ namespace FhirKhit.BreastRadiology.XUnitTests
     {
         String SectionFindingsLeftBreast(ObservationTarget[] abnormalityTargets)
         {
-            SDefEditor s = this.CreateObservationSection(
+            SDefEditor e = this.CreateObservationSection(
                 "BreastRadSectionFindingsLeftBreast",
                 "Breast Radiology Findings Left Breast",
                 new Markdown().Paragraph("Findings Left Breast Section"))
                 ;
-            s.Find("hasMember")
+            e.Select("bodySite").Zero();
+            e.Find("hasMember")
                 .SliceByUrl(abnormalityTargets)
                 ;
-            return s.SDef.Url;
+            return e.SDef.Url;
         }
     }
 }

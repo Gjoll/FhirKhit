@@ -27,13 +27,17 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 "c. NotChecked"
                 });
 
-            return this.CreateAbnormalityCodedValue(
-                    "BreastRadAbnormalityMammoArchitecturalDistortion",
-                    "Breast Radiology Abnormality Architectural Distortion (Mammography)",
-                    new Markdown().Paragraph("Mammography Breast Abnormality Architectural Distortion Observation"),
-                    binding)
-                    .AddFragRef(this.breastBodyLocationOptionalFragmentUrl)
-                .SDef.Url;
+            SDefEditor e = this.CreateObservationEditor("BreastRadAbnormalityMammoArchitecturalDistortion",
+                    "Breast Radiology Abnormality Architectural Distortion (Mammography)")
+                    .Description(new Markdown().Paragraph("Mammography Breast Abnormality Architectural Distortion Observation"))
+                    .AddFragRef(this.abnormalityCodedValueObservationFragmentUrl)
+                    ;
+
+            e.Select("value[x]")
+                .Type("CodeableConcept")
+                .Binding(binding, BindingStrength.Required)
+                ;
+            return e.SDef.Url;
         }
     }
 }

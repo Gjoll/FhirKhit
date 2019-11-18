@@ -15,7 +15,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
     {
         String HeaderFragment()
         {
-            SDefEditor sDef = this.CreateFragment("Header", "Resource", ResourceUrl);
+            SDefEditor e = this.CreateFragment("Header", "Resource", ResourceUrl);
             ContactDetail cd = new ContactDetail();
             cd.Telecom.Add(new ContactPoint
             {
@@ -23,13 +23,13 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 Value = contactUrl
             });
 
-            sDef.SDef.Contact.Add(cd);
-            sDef.SDef.FhirVersion = FHIRVersion.N4_0_0;
-            sDef.SDef.Date = this.date.ToString();
-            sDef.SDef.Status = ProfileStatus;
-            sDef.SDef.Publisher = "Hl7-Clinical Interoperability Council";
-            sDef.SDef.Version = ProfileVersion;
-            return sDef.SDef.Url;
+            e.SDef.Contact.Add(cd);
+            e.SDef.FhirVersion = FHIRVersion.N4_0_0;
+            e.SDef.Date = this.date.ToString();
+            e.SDef.Status = ProfileStatus;
+            e.SDef.Publisher = "Hl7-Clinical Interoperability Council";
+            e.SDef.Version = ProfileVersion;
+            return e.SDef.Url;
         }
     }
 }

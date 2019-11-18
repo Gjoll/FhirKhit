@@ -27,12 +27,16 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 "c. Irregular"
                 });
 
-            return this.CreateAbnormalityCodedValue(
-                "BreastRadAbnormalityMassShape",
-                "Breast Radiology Abnormality Mass Shape",
-                new Markdown().Paragraph("Breast Radiology Abnormality Mass Shape Observation"),
-                binding)
-                .SDef.Url;
+            SDefEditor e = this.CreateObservationEditor("BreastRadAbnormalityMassShape",
+                "Breast Radiology Abnormality Mass Shape")
+                .Description(new Markdown().Paragraph("Breast Radiology Abnormality Mass Shape Observation"))
+                    ;
+
+            e.Select("value[x]")
+                .Type("CodeableConcept")
+                .Binding(binding, BindingStrength.Required)
+                ;
+            return e.SDef.Url;
         }
     }
 }

@@ -16,18 +16,18 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         /// <returns></returns>
         String AbnormalityObservationFragment()
         {
-            SDefEditor sDef = this.CreateFragment("AbnormalityObservation",
+            SDefEditor e = this.CreateFragment("AbnormalityObservation",
                 "Abnormality Observation Fragment",
                 ObservationUrl);
-            sDef.Select("subject").Single();
-            sDef.Select("component").Zero();
-            sDef.Select("basedOn").Zero();
-            sDef.Select("derivedFrom").Zero();
-            sDef.Select("partOf").Zero();
-            sDef.Select("focus").Zero();
-            this.CreateCategorySlice(sDef, "category");
-            sDef.AddFragRef(this.headerFragUrl);
-            return sDef.SDef.Url;
+            e.Select("subject").Single();
+            e.Select("component").Zero();
+            e.Select("basedOn").Zero();
+            e.Select("derivedFrom").Zero();
+            e.Select("partOf").Zero();
+            e.Select("focus").Zero();
+            this.CreateCategorySlice(e, "category");
+            e.AddFragRef(this.headerFragUrl);
+            return e.SDef.Url;
         }
     }
 }

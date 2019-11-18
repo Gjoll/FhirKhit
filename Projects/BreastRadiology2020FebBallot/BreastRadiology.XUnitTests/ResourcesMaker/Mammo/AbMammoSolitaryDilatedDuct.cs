@@ -27,13 +27,16 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 "c. NotChecked"
                 });
 
-            return this.CreateAbnormalityCodedValue(
-                    "BreastRadAbnormalityMammoSolitaryDilatedDuct",
-                    "Breast Radiology Abnormality Solitary Dilated Duct (Mammography)",
-                    new Markdown().Paragraph("Mammography Breast Abnormality Solitary Dilated Duct Observation"),
-                    binding)
-                .AddFragRef(this.breastBodyLocationOptionalFragmentUrl)
-                .SDef.Url;
-        }
+            SDefEditor e = this.CreateObservationEditor("BreastRadAbnormalityMammoSolitaryDilatedDuct",
+                    "Breast Radiology Abnormality Solitary Dilated Duct (Mammography)")
+                    .Description(new Markdown().Paragraph("Mammography Breast Abnormality Solitary Dilated Duct Observation"))
+                    .AddFragRef(this.abnormalityCodedValueObservationFragmentUrl)
+                    ;
+
+            e.Select("value[x]")
+                .Type("CodeableConcept")
+                .Binding(binding, BindingStrength.Required)
+                ;
+                return e.SDef.Url;        }
     }
 }

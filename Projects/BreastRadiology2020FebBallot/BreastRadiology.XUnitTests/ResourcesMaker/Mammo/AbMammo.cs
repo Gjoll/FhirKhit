@@ -23,7 +23,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             String solitaryDilatedDuct)
         {
             //$ todo. Incorrect method!!!
-            SDefEditor s = this.CreateAbnormality(
+            SDefEditor e = this.CreateAbnormality(
                 "BreastRadAbnormalityMammo",
                 "Breast Radiology Abnormality (Mammography)",
                 new Markdown().Paragraph("Mammography Breast Abnormality Observation"),
@@ -31,7 +31,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 "115341008")
                 ;
 
-            s.Find("hasMember")
+            e.Find("hasMember")
                 .SliceByUrl(new ObservationTarget[]
                 {
                         new ObservationTarget(mammoBreastDensity, 1, "1"),
@@ -44,13 +44,13 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                         new ObservationTarget(solitaryDilatedDuct, 1, "1")
                 });
 
-            s.SDef.Abstract = true;
-            s.SDef.Type = "Resource";
-            s.SDef.Derivation = StructureDefinition.TypeDerivationRule.Specialization;
-            s.SDef.BaseDefinition = "http://hl7.org/fhir/StructureDefinition/Resource";
-            s.SDef.Kind = StructureDefinition.StructureDefinitionKind.Logical;
+            e.SDef.Abstract = true;
+            e.SDef.Type = "Resource";
+            e.SDef.Derivation = StructureDefinition.TypeDerivationRule.Specialization;
+            e.SDef.BaseDefinition = "http://hl7.org/fhir/StructureDefinition/Resource";
+            e.SDef.Kind = StructureDefinition.StructureDefinitionKind.Logical;
 
-            return s.SDef.Url;
+            return e.SDef.Url;
         }
     }
 }

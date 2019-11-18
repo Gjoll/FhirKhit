@@ -30,6 +30,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                             new ObservationTarget(patientRiskUrl, 1, "1")
                         });
                 e.Find("code").FixedCodeSlice("observationCode", Loinc, "10193-1");
+                e.Select("bodySite").Zero();
                 return e.SDef.Url;
         }
     }

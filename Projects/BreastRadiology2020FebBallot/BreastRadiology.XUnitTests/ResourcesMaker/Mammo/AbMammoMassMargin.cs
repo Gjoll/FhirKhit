@@ -29,12 +29,17 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                             "e. Spiculated"
                     });
 
-                return this.CreateAbnormalityCodedValue(
-                    "BreastRadAbnormalityMammoMassMargin",
-                    "Breast Radiology Abnormality Mass Margin (Mammography)",
-                    new Markdown().Paragraph("Breast Radiology Abnormality Mass Margin Observation (Mammography)"),
-                    binding)
-                    .SDef.Url;
+                SDefEditor e = this.CreateObservationEditor("BreastRadAbnormalityMammoMassMargin",
+                    "Breast Radiology Abnormality Mass Margin (Mammography)")
+                    .Description(new Markdown().Paragraph("Breast Radiology Abnormality Mass Margin Observation (Mammography)"))
+                    .AddFragRef(this.abnormalityCodedValueObservationFragmentUrl)
+                    ;
+
+            e.Select("value[x]")
+                .Type("CodeableConcept")
+                .Binding(binding, BindingStrength.Required)
+                ;
+                return e.SDef.Url;
         }
     }
 }

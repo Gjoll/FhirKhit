@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "extension": [
+    {
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/Header-Fragment"
+    },
+    {
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationRequired-Fragment"
+    }
+  ],
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityCodedValueObservation-Fragment",
+  "name": "AbnormalityCodedValueObservation-Fragment",
+  "title": "Abnormality CodedValue Observation Fragment",
+  "fhirVersion": "4.0.0",
+  "kind": "logical",
+  "abstract": true,
+  "type": "Resource",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Resource",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "Resource",
+        "path": "Resource"
+      },
+      {
+        "id": "Resource.valueCodeableConcept",
+        "path": "Resource.valueCodeableConcept",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      }
+    ]
+  }
+}

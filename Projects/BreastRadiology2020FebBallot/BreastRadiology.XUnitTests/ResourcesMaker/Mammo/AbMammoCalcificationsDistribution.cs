@@ -38,12 +38,17 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                         "d. Fine linear or fine-linear branching (Suspicious morphology)"
                 });
 
-            return this.CreateAbnormalityCodedValue(
-                "BreastRadAbnormalityMammoCalcificationDistribution",
-                "Breast Radiology Abnormality Calcification Distribution (Mammography)",
-                new Markdown().Paragraph("Mammography Breast Abnormality Calcification Distribution Observation"),
-                binding)
-                .SDef.Url;
+            SDefEditor e =  this.CreateObservationEditor("BreastRadAbnormalityMammoCalcificationDistribution",
+                                       "Breast Radiology Abnormality Calcification Distribution (Mammography)")
+                .Description(new Markdown().Paragraph("Mammography Breast Abnormality Calcification Distribution Observation"))
+                .AddFragRef(this.abnormalityCodedValueObservationFragmentUrl)
+                ;
+
+            e.Select("value[x]")
+                .Type("CodeableConcept")
+                .Binding(binding, BindingStrength.Required)
+                ;
+                return e.SDef.Url;
         }
     }
 }

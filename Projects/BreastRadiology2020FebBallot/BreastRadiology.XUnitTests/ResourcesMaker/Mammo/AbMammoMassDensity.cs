@@ -28,12 +28,17 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                         "d. Fat-containing"
                 });
 
-            return this.CreateAbnormalityCodedValue(
-                "BreastRadAbnormalityMammoMassDensity",
-                "Breast Radiology Abnormality Mass Density (Mammography)",
-                new Markdown().Paragraph("Breast Radiology Abnormality Mass Density Observation (Mammography)"),
-                binding)
-                .SDef.Url;
+            SDefEditor e = this.CreateObservationEditor("BreastRadAbnormalityMammoMassDensity",
+                            "Breast Radiology Abnormality Mass Density (Mammography)")
+                    .Description(new Markdown().Paragraph("Breast Radiology Abnormality Mass Density Observation (Mammography)"))
+                    .AddFragRef(this.abnormalityCodedValueObservationFragmentUrl)
+                    ;
+
+            e.Select("value[x]")
+                .Type("CodeableConcept")
+                .Binding(binding, BindingStrength.Required)
+                ;
+            return e.SDef.Url;
         }
     }
 }

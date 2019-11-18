@@ -14,18 +14,18 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         /// <returns></returns>
         String BreastBodyLocationOptionalFragment()
         {
-            SDefEditor sDef = this.CreateFragment("BreastBodyLocationOptional",
+            SDefEditor e = this.CreateFragment("BreastBodyLocationOptional",
                 "Breast Body Location (Optional) Fragment",
                 ObservationUrl);
-            sDef
+            e
                 .Select("bodySite")
                 .ZeroToOne();
-            sDef
+            e
                 .ApplyExtension("breastBodyLocation", this.breastBodyLocationExtensionUrl)
                 .ZeroToOne()
                 ;
 
-            return sDef.SDef.Url;
+            return e.SDef.Url;
         }
     }
 }

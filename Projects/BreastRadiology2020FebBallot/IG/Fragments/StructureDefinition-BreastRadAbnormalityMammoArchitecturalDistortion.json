@@ -7,7 +7,7 @@
     },
     {
       "url": "http://www.fragment.com/fragment",
-      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationOptional-Fragment"
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityCodedValueObservation-Fragment"
     }
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadAbnormalityMammoArchitecturalDistortion",

@@ -29,12 +29,16 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                         "d. The breasts are extremely dense, which lowers the sensitivity of mammography"
                 });
 
-            return this.CreateAbnormalityCodedValue(
-                "BreastRadAbnormalityMammoBreastDensity",
-                "Breast Radiology Abnormality Breast Density (Mammography)",
-                new Markdown().Paragraph("Mammography Breast Abnormality Breast Density Observation"),
-                binding)
-                .SDef.Url;
-        }
+            SDefEditor e = this.CreateObservationEditor("BreastRadAbnormalityMammoBreastDensity",
+                            "Breast Radiology Abnormality Breast Density (Mammography)")
+                    .Description(new Markdown().Paragraph("Mammography Breast Abnormality Breast Density Observation"))
+                    .AddFragRef(this.abnormalityCodedValueObservationFragmentUrl)
+                    ;
+
+            e.Select("value[x]")
+                .Type("CodeableConcept")
+                .Binding(binding, BindingStrength.Required)
+                ;
+                return e.SDef.Url;        }
     }
 }

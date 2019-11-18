@@ -15,11 +15,13 @@ namespace FhirKhit.BreastRadiology.XUnitTests
     {
         String SectionPatientHistory()
         {
-            return this.CreateObservationSection(
+            SDefEditor e = this.CreateObservationSection(
                 "BreastRadSectionPatientHistory",
                 "Breast Radiology Patient History Section",
                 new Markdown().Paragraph("Patient History Section"))
-                .SDef.Url;
+                ;
+            e.Select("bodySite").Zero();
+            return e.SDef.Url;
         }
     }
 }

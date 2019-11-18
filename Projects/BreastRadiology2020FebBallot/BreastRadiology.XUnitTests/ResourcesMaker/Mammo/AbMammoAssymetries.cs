@@ -29,13 +29,17 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                     "e. Segmental"
                 });
 
-            return this.CreateAbnormalityCodedValue(
-                    "BreastRadAbnormalityMammoAssymetries",
-                    "Breast Radiology Abnormality Assymetries (Mammography)",
-                    new Markdown().Paragraph("Mammography Breast Abnormality Assymetries Observation"),
-                    binding)
-                .AddFragRef(this.breastBodyLocationRequiredFragmentUrl)
-                .SDef.Url;
+            SDefEditor e = this.CreateObservationEditor("BreastRadAbnormalityMammoAssymetries",
+                                                        "Breast Radiology Abnormality Assymetries (Mammography)")
+                    .Description(new Markdown().Paragraph("Mammography Breast Abnormality Assymetries Observation"))
+                    .AddFragRef(this.abnormalityCodedValueObservationFragmentUrl)
+                    ;
+
+            e.Select("value[x]")
+                .Type("CodeableConcept")
+                .Binding(binding, BindingStrength.Required)
+                ;
+                return e.SDef.Url;
         }
     }
 }

@@ -16,7 +16,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         String AbMammoCalcifications(String calcType,
             String calcDistribution)
         {
-            SDefEditor s = this.CreateObservationSection(
+            SDefEditor e = this.CreateObservationSection(
                 "BreastRadMammoCalcifications",
                 "Breast Radiology Mammography Calcifications Observation",
                 new Markdown()
@@ -27,14 +27,14 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 .AddFragRef(this.breastBodyLocationRequiredFragmentUrl)
                 ;
 
-                s.Find("hasMember")
+                e.Find("hasMember")
                     .SliceByUrl(new ObservationTarget[]
                     {
                             new ObservationTarget(calcType, 1, "1"),
                             new ObservationTarget(calcDistribution, 1, "1")
                     })
                     ;
-                return s.SDef.Url;
+                return e.SDef.Url;
         }
     }
 }

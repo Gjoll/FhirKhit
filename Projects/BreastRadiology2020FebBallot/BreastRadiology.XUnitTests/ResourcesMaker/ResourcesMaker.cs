@@ -49,6 +49,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
 
         String headerFragUrl;
         string abnormalityObservationFragmentUrl;
+        string abnormalityCodedValueObservationFragmentUrl;
 
         String CreateUrl(String name)
         {
@@ -148,7 +149,6 @@ namespace FhirKhit.BreastRadiology.XUnitTests
 
             e.Select("interpretation").Zero();
             e.Select("note").Zero();
-            e.Select("bodySite").Zero();
             e.Select("method").Zero();
             return e;
         }
@@ -167,23 +167,6 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         //        ;
         //    return retVal;
         //}
-
-        SDefEditor CreateAbnormalityCodedValue(String name,
-            String title,
-            Markdown description,
-            String binding)
-        {
-            SDefEditor retVal = this.CreateObservationEditor(name, title);
-            retVal
-                .Description(description)
-                ;
-
-            retVal.Select("value[x]")
-                .Type("CodeableConcept")
-                .Binding(binding, BindingStrength.Required)
-                ;
-            return retVal;
-        }
 
         SDefEditor CreateAbnormality(String name, String title,
             Markdown description,
@@ -299,12 +282,14 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             this.fc.Add(this.resourceDir);
 
             this.headerFragUrl = this.HeaderFragment();
-            this.abnormalityObservationFragmentUrl = this.AbnormalityObservationFragment();
 
-            String abnMassShape = this.AbMassShape();
             this.breastBodyLocationExtensionUrl = this.BreastBodyLocationExtension();
             this.breastBodyLocationOptionalFragmentUrl = BreastBodyLocationOptionalFragment();
             this.breastBodyLocationRequiredFragmentUrl = BreastBodyLocationRequiredFragment();
+
+            this.abnormalityObservationFragmentUrl = this.AbnormalityObservationFragment();
+            this.abnormalityCodedValueObservationFragmentUrl = this.AbnormalityObservationCodedValueFragment();
+            String abnMassShape = this.AbMassShape();
 
             //
             // Mammo

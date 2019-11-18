@@ -27,13 +27,17 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 "c. NotChecked"
                 });
 
-            return this.CreateAbnormalityCodedValue(
-                    "BreastRadAbnormalityMammoSkinLesion",
-                    "Breast Radiology Abnormality Skin Lesion (Mammography)",
-                    new Markdown().Paragraph("Mammography Breast Abnormality Skin Lesion Observation"),
-                    binding)
-                .AddFragRef(this.breastBodyLocationOptionalFragmentUrl)
-                .SDef.Url;
+            SDefEditor e = this.CreateObservationEditor("BreastRadAbnormalityMammoSkinLesion",
+                    "Breast Radiology Abnormality Skin Lesion (Mammography)")
+                    .Description(new Markdown().Paragraph("Mammography Breast Abnormality Skin Lesion Observation"))
+                    .AddFragRef(this.abnormalityCodedValueObservationFragmentUrl)
+                    ;
+
+            e.Select("value[x]")
+                .Type("CodeableConcept")
+                .Binding(binding, BindingStrength.Required)
+                ;
+            return e.SDef.Url;
         }
     }
 }

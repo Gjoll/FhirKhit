@@ -8,6 +8,16 @@
   "status": "draft",
   "date": "2019-11-01",
   "publisher": "Hl7-Clinical Interoperability Council",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/cic"
+        }
+      ]
+    }
+  ],
   "description": "Breast Radiology Mass Margin (Mammography)",
   "caseSensitive": true,
   "content": "complete",
