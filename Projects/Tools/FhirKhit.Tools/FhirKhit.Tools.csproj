@@ -28,6 +28,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="org.hl7.fhir.validator.jar" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="org.hl7.fhir.validator.jar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="CommonMark.NET" Version="0.15.1" />
     <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.7">
       <PrivateAssets>all</PrivateAssets>

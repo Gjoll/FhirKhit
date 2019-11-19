@@ -22,8 +22,6 @@ namespace FhirKhit.BreastRadiology.XUnitTests
 
     public partial class ResourcesMaker : ConverterBase
     {
-        const bool Validate = false;
-
         const String ProfileVersion = "0.0.2";
         const PublicationStatus ProfileStatus = PublicationStatus.Draft;
 
@@ -253,24 +251,8 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             return vs.Url;
         }
 
-        void ValidateResource(Resource r)
-        {
-#pragma warning disable CS0162 // Unreachable code detected
-            if (Validate == false)
-                return;
-            var results = r.Validate(new ValidationContext(r));
-            if (results.Any() == false)
-                return;
-            foreach (var result in results)
-            {
-
-            }
-#pragma warning restore CS0162 // Unreachable code detected
-        }
-
         public void Save(Resource r, String path)
         {
-            this.ValidateResource(r);
             r.SaveJson(path);
             this.fc.Mark(path);
         }
