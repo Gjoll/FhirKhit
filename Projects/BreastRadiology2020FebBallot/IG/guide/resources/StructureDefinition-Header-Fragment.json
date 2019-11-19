@@ -24,11 +24,11 @@
     }
   ],
   "fhirVersion": "4.0.0",
-  "kind": "logical",
+  "kind": "resource",
   "abstract": true,
-  "type": "Resource",
+  "type": "org/fhir/StructureDefinition/Resource",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Resource",
-  "derivation": "specialization",
+  "derivation": "constraint",
   "snapshot": {
     "element": [
       {

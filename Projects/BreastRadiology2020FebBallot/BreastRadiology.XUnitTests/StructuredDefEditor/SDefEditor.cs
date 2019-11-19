@@ -34,13 +34,12 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         /// <param name="outputDir"></param>
         public SDefEditor(String basePath,
             String baseDefinition,
-            String workingBaseDefinition,
             String outputDir)
         {
             this.outputDir = outputDir;
-            baseSDef = FhirStructureDefinitions.Self.GetResource(workingBaseDefinition);
+            baseSDef = FhirStructureDefinitions.Self.GetResource(baseDefinition);
             if (baseSDef == null)
-                throw new Exception($"'Working base definition resource {workingBaseDefinition}' not found");
+                throw new Exception($"'Base definition resource {baseDefinition}' not found");
 
             this.basePath = basePath;
 

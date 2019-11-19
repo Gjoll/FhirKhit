@@ -73,19 +73,18 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         SDefEditor CreateEditor(String name,
             String title,
             String basePath,
-            String baseDefinition,
-            String workingBaseUrl)
+            String baseDefinition)
         {
             if (name.Contains(" "))
                 throw new Exception("Structure Def name can not contains spaces");
 
-            SDefEditor retVal = new SDefEditor(basePath, baseDefinition, workingBaseUrl, this.resourceDir)
+            SDefEditor retVal = new SDefEditor(basePath, baseDefinition, this.resourceDir)
                 .Name(name)
                 .Url(this.CreateUrl(name))
                 .Title(title)
                 .Derivation(StructureDefinition.TypeDerivationRule.Constraint)
                 .Abstract(false)
-                .Type(workingBaseUrl.LastUriPart())
+                .Type(baseDefinition.LastUriPart())
                 .Kind(StructureDefinition.StructureDefinitionKind.Resource)
                 ;
 
@@ -97,20 +96,17 @@ namespace FhirKhit.BreastRadiology.XUnitTests
 
         SDefEditor CreateFragment(String name,
             String title,
-            String workingBaseUrl)
+            String baseDefinition)
         {
             name += "-Fragment";
 
             SDefEditor retVal = this.CreateEditor(name,
                 title,
                 "Resource",
-                ResourceUrl,
-                workingBaseUrl);
+                baseDefinition);
             retVal.SetIsFrag();
             retVal.SDef.Abstract = true;
-            retVal.SDef.Type = "Resource";
-            retVal.SDef.Derivation = StructureDefinition.TypeDerivationRule.Specialization;
-            retVal.SDef.Kind = StructureDefinition.StructureDefinitionKind.Logical;
+            retVal.SDef.Type = baseDefinition.LastPathPart();
             return retVal;
         }
 
@@ -119,7 +115,6 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             SDefEditor retVal = this.CreateEditor(name,
                 title,
                 "Observation",
-                ObservationUrl,
                 ObservationUrl);
             retVal.AddFragRef(this.abnormalityObservationFragmentUrl);
             return retVal;
