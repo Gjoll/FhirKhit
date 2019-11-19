@@ -33,6 +33,7 @@ namespace PreFhir
         Dictionary<String, ProcessItem> unProcessed = new Dictionary<string, ProcessItem>();
 
         public const String FragmentUrl = "http://www.fragment.com/fragment";
+        public const String IsFragmentUrl = "http://www.fragment.com/isFragment";
 
         /// <summary>
         /// Is not null, save merged files here (done before differential from base computed).

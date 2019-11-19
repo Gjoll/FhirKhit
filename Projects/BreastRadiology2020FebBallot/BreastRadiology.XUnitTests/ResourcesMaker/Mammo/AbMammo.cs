@@ -44,12 +44,6 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                         new ObservationTarget(solitaryDilatedDuct, 1, "1")
                 });
 
-            e.SDef.Abstract = true;
-            e.SDef.Type = "Resource";
-            e.SDef.Derivation = StructureDefinition.TypeDerivationRule.Specialization;
-            e.SDef.BaseDefinition = "http://hl7.org/fhir/StructureDefinition/Resource";
-            e.SDef.Kind = StructureDefinition.StructureDefinitionKind.Logical;
-
             return e.SDef.Url;
         }
     }

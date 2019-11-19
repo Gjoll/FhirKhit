@@ -2377,7 +2377,9 @@
     "element": [
       {
         "id": "Observation",
-        "path": "Observation"
+        "path": "Observation",
+        "min": 0,
+        "max": "*"
       },
       {
         "id": "Observation.code",

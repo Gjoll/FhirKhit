@@ -20,7 +20,9 @@
     "element": [
       {
         "id": "DiagnosticReport",
-        "path": "DiagnosticReport"
+        "path": "DiagnosticReport",
+        "min": 0,
+        "max": "*"
       },
       {
         "id": "DiagnosticReport.extension",

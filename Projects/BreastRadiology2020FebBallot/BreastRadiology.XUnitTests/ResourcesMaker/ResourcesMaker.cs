@@ -106,6 +106,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 "Resource",
                 ResourceUrl,
                 workingBaseUrl);
+            retVal.SetIsFrag();
             retVal.SDef.Abstract = true;
             retVal.SDef.Type = "Resource";
             retVal.SDef.Derivation = StructureDefinition.TypeDerivationRule.Specialization;

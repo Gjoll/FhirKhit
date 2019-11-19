@@ -3,6 +3,7 @@ using FhirKhit.Tools.R4;
 using Hl7.Fhir.Model;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 
 namespace PreFhir
@@ -10,8 +11,11 @@ namespace PreFhir
     /// <summary>
     /// Contains info on one resource to process.
     /// </summary>
+    [DebuggerDisplay("{Title}")]
     class ProcessItem
     {
+        public String Title => Resource.GetUrl().LastUriPart();
+
         public bool FragmentFlag { get; private set; }
 
         public DomainResource Resource { get; set; }

@@ -2,6 +2,10 @@
   "resourceType": "StructureDefinition",
   "extension": [
     {
+      "url": "http://www.fragment.com/isFragment",
+      "valueBoolean": true
+    },
+    {
       "url": "http://www.fragment.com/fragment",
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/Header-Fragment"
     }
@@ -19,7 +23,9 @@
     "element": [
       {
         "id": "Resource",
-        "path": "Resource"
+        "path": "Resource",
+        "min": 0,
+        "max": "*"
       },
       {
         "id": "Resource.basedOn",

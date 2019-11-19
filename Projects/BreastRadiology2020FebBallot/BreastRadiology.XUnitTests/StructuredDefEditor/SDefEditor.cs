@@ -59,7 +59,9 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             sDef.Differential.Element.Add(new ElementDefinition
             {
                 Path = basePath,
-                ElementId = basePath
+                ElementId = basePath,
+                Min = 0,
+                Max = "*"
             });
         }
 
@@ -206,6 +208,16 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         public SDefEditor AddFragRef(StructureDefinition fragRef)
         {
             this.AddFragRef(fragRef.Url);
+            return this;
+        }
+
+        public SDefEditor SetIsFrag()
+        {
+            this.SDef.Extension.Add(new Extension
+            {
+                Url = PreFhirGenerator.IsFragmentUrl,
+                Value = new FhirBoolean(true)
+            });
             return this;
         }
 

@@ -1,5 +1,11 @@
 {
   "resourceType": "StructureDefinition",
+  "extension": [
+    {
+      "url": "http://www.fragment.com/isFragment",
+      "valueBoolean": true
+    }
+  ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationRequired-Fragment",
   "name": "BreastBodyLocationRequired-Fragment",
   "title": "Breast Body Location (Required) Fragment",
@@ -13,7 +19,9 @@
     "element": [
       {
         "id": "Resource",
-        "path": "Resource"
+        "path": "Resource",
+        "min": 0,
+        "max": "*"
       },
       {
         "id": "Resource.extension",

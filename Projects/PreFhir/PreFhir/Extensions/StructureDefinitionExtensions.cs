@@ -40,15 +40,13 @@ namespace PreFhir
 
         public static bool IsFragment(this StructureDefinition sDef)
         {
-            if (sDef.Abstract == false)
+            Extension e = sDef.GetExtension(PreFhirGenerator.IsFragmentUrl);
+            if (e == null)
                 return false;
-            if (sDef.BaseDefinition != "http://hl7.org/fhir/StructureDefinition/Resource")
+            FhirBoolean b = (FhirBoolean)e.Value;
+            if (b.Value.HasValue == false)
                 return false;
-            if (sDef.Type != "Resource")
-                return false;
-            if (sDef.Kind != StructureDefinition.StructureDefinitionKind.Logical)
-                return false;
-            return true;
+            return b.Value.Value;
         }
     }
 }

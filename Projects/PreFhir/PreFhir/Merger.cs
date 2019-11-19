@@ -9,6 +9,7 @@ using System.Text;
 
 namespace PreFhir
 {
+    [DebuggerDisplay("{baseItem.Title} <= {mergeItem.Title}")]
     class Merger
     {
         ProcessItem baseItem;
