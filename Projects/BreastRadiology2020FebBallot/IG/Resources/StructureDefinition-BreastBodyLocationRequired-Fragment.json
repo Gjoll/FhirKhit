@@ -18,14 +18,14 @@
   "differential": {
     "element": [
       {
-        "id": "Resource",
-        "path": "Resource",
+        "id": "Observation",
+        "path": "Observation",
         "min": 0,
         "max": "*"
       },
       {
-        "id": "Resource.extension",
-        "path": "Resource.extension",
+        "id": "Observation.extension",
+        "path": "Observation.extension",
         "slicing": {
           "discriminator": [
             {
@@ -45,8 +45,8 @@
         }
       },
       {
-        "id": "Resource.extension:breastBodyLocation",
-        "path": "Resource.extension",
+        "id": "Observation.extension:breastBodyLocation",
+        "path": "Observation.extension",
         "sliceName": "breastBodyLocation",
         "min": 1,
         "max": "1",
@@ -66,8 +66,8 @@
         "isModifier": false
       },
       {
-        "id": "Resource.bodySite",
-        "path": "Resource.bodySite",
+        "id": "Observation.bodySite",
+        "path": "Observation.bodySite",
         "min": 1,
         "max": "1",
         "base": {

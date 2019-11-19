@@ -32,14 +32,14 @@
   "differential": {
     "element": [
       {
-        "id": "Resource",
-        "path": "Resource",
+        "id": "Observation",
+        "path": "Observation",
         "min": 0,
         "max": "*"
       },
       {
-        "id": "Resource.valueCodeableConcept",
-        "path": "Resource.valueCodeableConcept",
+        "id": "Observation.valueCodeableConcept",
+        "path": "Observation.valueCodeableConcept",
         "min": 0,
         "max": "1",
         "base": {

@@ -72,7 +72,7 @@ namespace PreFhir
         void ProcessSlice(ElementTreeSlice originalSlice,
             ElementTreeSlice modifiedSlice)
         {
-            const String fcn = "ProcessSlice";
+            //const String fcn = "ProcessSlice";
 
             if ((originalSlice.ElementDefinition != null) && (modifiedSlice.ElementDefinition != null))
             {

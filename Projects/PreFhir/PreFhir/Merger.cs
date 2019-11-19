@@ -460,7 +460,6 @@ namespace PreFhir
             foreach (ElementDefinition.TypeRefComponent typeRef in baseElement.Type)
                 baseTypes.Add(typeRef.Code, typeRef);
 
-            bool retVal = true;
             foreach (ElementDefinition.TypeRefComponent typeRef in mergeElement.Type)
             {
                 if (baseTypes.TryGetValue(typeRef.Code, out ElementDefinition.TypeRefComponent baseTypeRef) == false)
@@ -560,7 +559,7 @@ namespace PreFhir
             ElementDefinition mergeElement,
             ref bool success)
         {
-            const String fcn = "ConstrainCode";
+            //const String fcn = "ConstrainCode";
 
             if (mergeElement.Code.Count == 0)
                 return;

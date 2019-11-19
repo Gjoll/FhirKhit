@@ -61,6 +61,8 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         }
         private bool StatusErrors(string className, string method, string msg)
         {
+            if (msg.Contains("does not resolve"))
+                return true;
             this.Message("Error", className, method, msg);
             return true;
         }
@@ -84,6 +86,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         [TestMethod]
         public void B_BuildResources()
         {
+            DateTime start = DateTime.Now;
             if (Directory.Exists(this.resourcesDir) == false)
                 Directory.CreateDirectory(this.resourcesDir);
 
@@ -98,6 +101,8 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             preFhir.MergedDir = this.mergedDir;
             preFhir.Process();
             preFhir.SaveResources(this.resourcesDir, true);
+            TimeSpan executionTime = DateTime.Now - start;
+            Trace.WriteLine($"***** PreFhir execution Time {executionTime.ToString()}");
         }
 
         [TestMethod]
@@ -107,13 +112,13 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 "resources");
             FhirValidator fv = new FhirValidator();
             fv.StatusErrors += this.StatusErrors;
-            fv.StatusInfo += this.StatusInfo;
-            fv.StatusWarnings += this.StatusWarnings;
+            //fv.StatusInfo += this.StatusInfo;
+            //fv.StatusWarnings += this.StatusWarnings;
 
             bool success = fv.ValidateDir(rDir, "*.json", "4.0.0");
             StringBuilder sb = new StringBuilder();
-            fv.FormatMessages(sb);
-            Trace.WriteLine(sb.ToString());
+            //fv.FormatMessages(sb);
+            //Trace.WriteLine(sb.ToString());
             Assert.IsTrue(success);
             Assert.IsTrue(fv.HasErrors == false);
             Trace.WriteLine("Validation complete");

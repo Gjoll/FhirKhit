@@ -18,7 +18,6 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         {
             SDefEditor e = this.CreateEditor("BreastBodyLocation", 
                 "Breast Body Location", 
-                "Extension", 
                 ExtensionUrl)
                 .Description(new Markdown()
                     .Paragraph("Breast Body Location extension")

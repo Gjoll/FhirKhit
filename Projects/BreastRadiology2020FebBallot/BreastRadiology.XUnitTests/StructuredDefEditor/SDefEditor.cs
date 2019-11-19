@@ -28,12 +28,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         /// <summary>
         /// Create structure definition editor
         /// </summary>
-        /// <param name="basePath">differential element 0 pathname</param>
-        /// <param name="workingBaseDefinition">This is not the actual resource base definition, but rather the
-        /// definition that we will copy selected elements from. May or may not be same as actual Resource.baseDefinition</param>
-        /// <param name="outputDir"></param>
-        public SDefEditor(String basePath,
-            String baseDefinition,
+        public SDefEditor(String baseDefinition,
             String outputDir)
         {
             this.outputDir = outputDir;
@@ -41,7 +36,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             if (baseSDef == null)
                 throw new Exception($"'Base definition resource {baseDefinition}' not found");
 
-            this.basePath = basePath;
+            this.basePath = baseDefinition.LastUriPart();
 
             for (Int32 i = 0; i < baseSDef.Snapshot.Element.Count; i++)
             {

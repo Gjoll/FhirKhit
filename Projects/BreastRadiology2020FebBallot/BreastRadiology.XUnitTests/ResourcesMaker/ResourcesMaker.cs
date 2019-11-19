@@ -72,13 +72,12 @@ namespace FhirKhit.BreastRadiology.XUnitTests
 
         SDefEditor CreateEditor(String name,
             String title,
-            String basePath,
             String baseDefinition)
         {
             if (name.Contains(" "))
                 throw new Exception("Structure Def name can not contains spaces");
 
-            SDefEditor retVal = new SDefEditor(basePath, baseDefinition, this.resourceDir)
+            SDefEditor retVal = new SDefEditor(baseDefinition, this.resourceDir)
                 .Name(name)
                 .Url(this.CreateUrl(name))
                 .Title(title)
@@ -102,7 +101,6 @@ namespace FhirKhit.BreastRadiology.XUnitTests
 
             SDefEditor retVal = this.CreateEditor(name,
                 title,
-                "Resource",
                 baseDefinition);
             retVal.SetIsFrag();
             retVal.SDef.Abstract = true;
@@ -114,7 +112,6 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         {
             SDefEditor retVal = this.CreateEditor(name,
                 title,
-                "Observation",
                 ObservationUrl);
             retVal.AddFragRef(this.abnormalityObservationFragmentUrl);
             return retVal;

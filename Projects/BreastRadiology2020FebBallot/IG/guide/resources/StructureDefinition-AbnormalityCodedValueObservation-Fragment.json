@@ -952,6 +952,14 @@
       {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ]
+        },
         "short": "Actual result",
         "definition": "The information determined as a result of making the observation, if the information has a simple value.",
         "comment": "An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.",
@@ -996,6 +1004,50 @@
           },
           {
             "code": "Period"
+          }
+        ],
+        "condition": [
+          "obs-7"
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "sct-concept",
+            "map": "< 441742003 |Evaluation finding|"
+          },
+          {
+            "identity": "v2",
+            "map": "OBX.2, OBX.5, OBX.6"
+          },
+          {
+            "identity": "rim",
+            "map": "value"
+          },
+          {
+            "identity": "sct-attr",
+            "map": "363714003 |Interprets|"
+          }
+        ]
+      },
+      {
+        "id": "Observation.value[x]:valueCodeableConcept",
+        "path": "Observation.value[x]",
+        "sliceName": "valueCodeableConcept",
+        "short": "Actual result",
+        "definition": "The information determined as a result of making the observation, if the information has a simple value.",
+        "comment": "An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.",
+        "requirements": "An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
           }
         ],
         "condition": [
@@ -1160,7 +1212,7 @@
         "short": "Observed body part",
         "definition": "Indicates the site on the subject's body where the observation was made (i.e. the target site).",
         "comment": "Only used if not implicit in code found in Observation.code.  In many systems, this may be represented as a related observation instead of an inline component.   \n\nIf the use case requires BodySite to be handled as a separate resource (e.g. to identify and track separately) then use the standard extension[ bodySite](extension-bodysite.html).",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "base": {
           "path": "Observation.bodySite",
@@ -2159,45 +2211,8 @@
         ]
       },
       {
-        "id": "Observation.Resource",
-        "path": "Observation.Resource",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Resource",
-          "min": 0,
-          "max": "*"
-        }
-      }
-    ]
-  },
-  "differential": {
-    "element": [
-      {
-        "id": "Resource",
-        "path": "Resource",
-        "min": 0,
-        "max": "*"
-      },
-      {
-        "id": "Resource.valueCodeableConcept",
-        "path": "Resource.valueCodeableConcept",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Observation.value[x]",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ]
-      },
-      {
-        "id": "Resource.extension",
-        "path": "Resource.extension",
+        "id": "Observation.extension",
+        "path": "Observation.extension",
         "slicing": {
           "discriminator": [
             {
@@ -2217,8 +2232,118 @@
         }
       },
       {
-        "id": "Resource.extension:breastBodyLocation",
-        "path": "Resource.extension",
+        "id": "Observation.extension:breastBodyLocation",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Observation.extension",
+        "sliceName": "breastBodyLocation",
+        "short": "Optional Extensions Element",
+        "definition": "Optional Extension Element - found in all resources.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Observation.extension",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocation"
+            ]
+          }
+        ],
+        "condition": [
+          "ele-1"
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"
+          }
+        ],
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "Observation",
+        "path": "Observation",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Observation.valueCodeableConcept",
+        "path": "Observation.valueCodeableConcept",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Observation.extension",
+        "path": "Observation.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": true,
+          "rules": "openAtEnd"
+        },
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Observation.extension:breastBodyLocation",
+        "path": "Observation.extension",
         "sliceName": "breastBodyLocation",
         "min": 1,
         "max": "1",
@@ -2238,8 +2363,8 @@
         "isModifier": false
       },
       {
-        "id": "Resource.bodySite",
-        "path": "Resource.bodySite",
+        "id": "Observation.bodySite",
+        "path": "Observation.bodySite",
         "min": 1,
         "max": "1",
         "base": {
