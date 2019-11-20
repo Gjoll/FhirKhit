@@ -144,14 +144,24 @@ namespace PreFhir
                 {
                     if (headSlice.Nodes.TryGetItem(parts[0], out ElementTreeNode childNode) == false)
                     {
-                        childNode = headSlice.CreateNode(newPath, parts[0], loadItem);
-                        headSlice.AddAliases(childNode, loadItem);
+                        if (String.IsNullOrEmpty(loadItem.SliceName))
+                        {
+                            childNode = headSlice.CreateNode(newPath, parts[0], loadItem);
+                            headSlice.AddAliases(childNode, loadItem);
+                        }
+                        else
+                        {
+                            childNode = headSlice.CreateNode(newPath, parts[0], null);
+                            headSlice.AddAliases(childNode, loadItem);
+                        }
                     }
+
                     ElementTreeSlice childSlice;
                     if (String.IsNullOrEmpty(loadItem.SliceName))
                         childSlice = childNode.DefaultSlice;
                     else
                         childSlice = childNode.CreateSlice(loadItem.SliceName, loadItem);
+
                     itemIndex += 1;
                     Load(newPath, childSlice, loadItems, ref itemIndex);
                 }

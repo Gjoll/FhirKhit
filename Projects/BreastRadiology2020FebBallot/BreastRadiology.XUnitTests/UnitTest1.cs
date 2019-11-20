@@ -140,7 +140,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 preFhir.StatusInfo += this.StatusInfo;
                 preFhir.StatusWarnings += this.StatusWarnings;
                 preFhir.MergedDir = this.mergedDir;
-                preFhir.ProcessOne(this.fragmentDir, "BreastRadSectionFindingsLeftBreast", true);
+                preFhir.ProcessOne(this.fragmentDir, "AbnormalityObservation-Fragment", true);
             }
             catch (Exception err)
             {
