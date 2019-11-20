@@ -7,6 +7,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Text;
 using PreFhir;
+using Hl7.Fhir.Serialization;
+using Hl7.Fhir.Model;
+using System.Collections.Generic;
 
 namespace FhirKhit.BreastRadiology.XUnitTests
 {
@@ -84,7 +87,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 pc.StatusWarnings += this.StatusWarnings;
                 pc.CreateResources();
             }
-            catch(Exception err)
+            catch (Exception err)
             {
                 Trace.WriteLine(err.Message);
                 Assert.IsTrue(false);
@@ -114,10 +117,59 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 TimeSpan executionTime = DateTime.Now - start;
                 Trace.WriteLine($"***** PreFhir execution Time {executionTime.ToString()}");
             }
-            catch(Exception err)
+            catch (Exception err)
             {
                 Trace.WriteLine(err.Message);
                 Assert.IsTrue(false);
+            }
+        }
+
+        [TestMethod]
+        public void TestBuildResource()
+        {
+            try
+            {
+                if (Directory.Exists(this.resourcesDir) == false)
+                    Directory.CreateDirectory(this.resourcesDir);
+
+                if (Directory.Exists(this.mergedDir) == false)
+                    Directory.CreateDirectory(this.mergedDir);
+
+                PreFhirGenerator preFhir = new PreFhirGenerator(Path.Combine(DirHelper.FindParentDir("FhirKhit"), "Cache"));
+                preFhir.StatusErrors += this.StatusErrors;
+                preFhir.StatusInfo += this.StatusInfo;
+                preFhir.StatusWarnings += this.StatusWarnings;
+                preFhir.MergedDir = this.mergedDir;
+                preFhir.ProcessOne(this.fragmentDir, "BreastRadSectionFindingsLeftBreast", true);
+            }
+            catch (Exception err)
+            {
+                Trace.WriteLine(err.Message);
+                Assert.IsTrue(false);
+            }
+        }
+
+        [TestMethod]
+        public void CheckIdUnique()
+        {
+            String path = Path.Combine(this.outputDir,
+                "resources",
+                "StructureDefinition-BreastRadSectionFindingsLeftBreast.json");
+
+            FhirJsonParser parser = new FhirJsonParser();
+            StructureDefinition sd = parser.Parse<StructureDefinition>(File.ReadAllText(path));
+            HashSet<String> ids = new HashSet<string>();
+
+            String idBase = sd.Differential.Element[0].Path;
+            foreach (ElementDefinition e in sd.Differential.Element)
+            {
+                if (ids.Contains(e.ElementId) == true)
+                    Trace.WriteLine($"duplicate {e.ElementId}");
+                if (e.ElementId.StartsWith(idBase) == false)
+                    Trace.WriteLine($"Bad id base {e.ElementId}");
+                if (e.Path.StartsWith(idBase) == false)
+                    Trace.WriteLine($"Bad path base {e.ElementId}");
+                ids.Add(e.ElementId);
             }
         }
 
@@ -181,7 +233,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 p.AddResources(this.manualDir);
                 p.SaveAll();
             }
-            catch(Exception err)
+            catch (Exception err)
             {
                 Trace.WriteLine(err.Message);
                 Assert.IsTrue(false);

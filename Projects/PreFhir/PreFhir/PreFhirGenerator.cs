@@ -124,6 +124,86 @@ namespace PreFhir
             }
         }
 
+        String FragPath(String fragmentDir, String name)
+        {
+            String fragmentFile = $"StructureDefinition-{name}";
+            String fragmentPath = Path.Combine(fragmentDir, $"{fragmentFile}.json");
+            return fragmentPath;
+        }
+
+        /// <summary>
+        /// Process single file, and all its fragment dependencies.
+        /// This is mostly for test use, as you can run just a single file that has troubles in it
+        /// rather than all the files in a directory.
+        /// All fragments must be in same dir as file, and they must be named
+        /// 'StructureDefinition-{last part of fragment uri}'
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        public bool ProcessOne(String fragmentDir, String name, bool breakFlag)
+        {
+            const String fcn = "ProcessOne";
+
+            String fragmentPath = FragPath(fragmentDir, name);
+
+            if (File.Exists(fragmentPath) == false)
+            {
+                this.ConversionError(this.GetType().Name,
+                    fcn,
+                    $"Missing fragment file {fragmentPath}");
+                return false;
+            }
+
+            FhirJsonParser parser = new FhirJsonParser();
+            StructureDefinition sd = parser.Parse<StructureDefinition>(File.ReadAllText(fragmentPath));
+
+            // add and process all referenced fragment files.
+            {
+                AddReferences(new HashSet<String>(), fragmentDir, sd);
+                if (this.HasErrors == true)
+                    return false;
+                Process();
+                if (this.HasErrors == true)
+                    return false;
+            }
+
+            // all referenced fragments have been executed.
+            // process test resource.
+            ProcessItem pi = new ProcessItem(this, sd);
+            if (breakFlag)
+                Debugger.Break();
+            this.Process(pi);
+
+            return this.HasErrors;
+        }
+
+        void AddReferences(HashSet<String> referencedFrags,
+            String fragmentDir,
+            StructureDefinition sd)
+        {
+            const String fcn = "ProcessOne";
+
+            FhirJsonParser parser = new FhirJsonParser();
+
+            foreach (String fragmentUrl in sd.ReferencedFragments())
+            {
+                String fragmentPath = FragPath(fragmentDir, fragmentUrl.LastUriPart());
+                if (File.Exists(fragmentPath) == false)
+                {
+                    this.ConversionError(this.GetType().Name,
+                        fcn,
+                        $"Missing fragment file {fragmentPath}");
+                }
+                if (referencedFrags.Contains(fragmentPath) == false)
+                {
+                    referencedFrags.Add(fragmentPath);
+                    StructureDefinition frag = parser.Parse<StructureDefinition>(File.ReadAllText(fragmentPath));
+                    this.AddFragment(frag);
+                    AddReferences(referencedFrags, fragmentDir, frag);
+                }
+            }
+        }
+
         public bool Process()
         {
             const String fcn = "Process";

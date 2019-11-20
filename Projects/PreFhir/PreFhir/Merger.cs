@@ -506,7 +506,7 @@ namespace PreFhir
             ElementDefinition.TypeRefComponent typeRef,
             ref bool success)
         {
-            const String fcn = "MergeProfiles";
+            //const String fcn = "MergeProfiles";
 
             List<String> baseProfiles = baseTypeRef.Profile.ToList();
             foreach (string profile in typeRef.Profile)
@@ -521,7 +521,7 @@ namespace PreFhir
             ElementDefinition.TypeRefComponent typeRef,
             ref bool success)
         {
-            const String fcn = "MergeTargetProfiles";
+            //const String fcn = "MergeTargetProfiles";
 
             List<String> baseTargets = baseTypeRef.TargetProfile.ToList();
             foreach (string targetProfile in typeRef.TargetProfile)
