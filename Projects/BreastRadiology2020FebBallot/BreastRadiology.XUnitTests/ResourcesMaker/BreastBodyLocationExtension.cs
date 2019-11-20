@@ -50,8 +50,8 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                     ;
                 ElementDefGroup lateralityGroup = e.InsertAfter(eGroup, laterality);
                 ElementDefinition lateralityValue = e.Clone("value[x]")
-                    .Path($"{topExtension.Path}.valueCodeableConcept")
-                    .ElementId($"{topExtension.Path}:laterality.valueCodeableConcept")
+                    .Path($"{topExtension.Path}.value[x]")
+                    .ElementId($"{topExtension.Path}:laterality.value[x]")
                     .Type("CodeableConcept")
                     .Binding("http://hl7.org/fhir/ValueSet/bodysite-laterality", BindingStrength.Required)
                     .Single()
@@ -83,8 +83,8 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                     ;
                 ElementDefGroup quadrantGroup = e.InsertAfter(eGroup, quadrant);
                 ElementDefinition quadrantValue = e.Clone("value[x]")
-                    .Path($"{topExtension.Path}.valueCodeableConcept")
-                    .ElementId($"{topExtension.Path}:quadrant.valueCodeableConcept")
+                    .Path($"{topExtension.Path}.value[x]")
+                    .ElementId($"{topExtension.Path}:quadrant.value[x]")
                     .Type("CodeableConcept")
                     .Binding(binding, BindingStrength.Required)
                     .Single()
@@ -121,8 +121,8 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                     ;
                 ElementDefGroup clockGroup = e.InsertAfter(eGroup, clock);
                 ElementDefinition clockValue = e.Clone("value[x]")
-                    .Path($"{topExtension.Path}.valueCodeableConcept")
-                    .ElementId($"{topExtension.Path}:clock.valueCodeableConcept")
+                    .Path($"{topExtension.Path}.value[x]")
+                    .ElementId($"{topExtension.Path}:clock.value[x]")
                     .Type("CodeableConcept")
                     .Binding(binding, BindingStrength.Required)
                     .Single()
@@ -150,8 +150,8 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                     ;
                 ElementDefGroup depthGroup = e.InsertAfter(eGroup, depth);
                 ElementDefinition depthValue = e.Clone("value[x]")
-                    .Path($"{topExtension.Path}.valueCodeableConcept")
-                    .ElementId($"{topExtension.Path}:depth.valueCodeableConcept")
+                    .Path($"{topExtension.Path}.value[x]")
+                    .ElementId($"{topExtension.Path}:depth.value[x]")
                     .Type("CodeableConcept")
                     .Binding(binding, BindingStrength.Required)
                     .Single()
@@ -167,16 +167,16 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                     ;
                 ElementDefGroup distanceFromNippleGroup = e.InsertAfter(eGroup, distanceFromNipple);
                 ElementDefinition distanceFromNippleValue = e.Clone("value[x]")
-                    .Path($"{topExtension.Path}.valueQuantity")
-                    .ElementId($"{topExtension.Path}:distanceFromNipple.valueQuantity")
+                    .Path($"{topExtension.Path}.value[x]")
+                    .ElementId($"{topExtension.Path}:distanceFromNipple.value[x]")
                     .Type("Quantity")
                     .Single()
                     ;
                 distanceFromNippleGroup.RelatedElements.Add(distanceFromNippleValue);
 
                 ElementDefinition quantitySystem = new ElementDefinition()
-                    .Path($"{topExtension.Path}.valueQuantity.system")
-                    .ElementId($"{topExtension.Path}:distanceFromNipple.valueQuantity.system")
+                    .Path($"{topExtension.Path}.value[x].system")
+                    .ElementId($"{topExtension.Path}:distanceFromNipple.value[x].system")
                     .Type("uri")
                     .Single()
                     .Fixed(new FhirUri("http://unitsofmeasure.org"))
@@ -184,8 +184,8 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 distanceFromNippleGroup.RelatedElements.Add(quantitySystem);
 
                 ElementDefinition quantityCode = new ElementDefinition()
-                    .Path($"{topExtension.Path}.valueQuantity.code")
-                    .ElementId($"{topExtension.Path}:distanceFromNipple.valueQuantity.code")
+                    .Path($"{topExtension.Path}.value[x].code")
+                    .ElementId($"{topExtension.Path}:distanceFromNipple.value[x].code")
                     .Type("uri")
                     .Single()
                     .Binding("http://hl7.org/fhir/us/breast-radiology/ValueSet/UnitsOfLengthVS",

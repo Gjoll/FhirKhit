@@ -104,7 +104,6 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 baseDefinition);
             retVal.SetIsFrag();
             retVal.SDef.Abstract = true;
-            retVal.SDef.Type = baseDefinition.LastPathPart();
             return retVal;
         }
 
@@ -324,7 +323,6 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         {
             foreach (SDefEditor ce in this.editors)
             {
-                ce.SDef.Snapshot = null;
                 this.fc.Mark(ce.Write());
             }
         }

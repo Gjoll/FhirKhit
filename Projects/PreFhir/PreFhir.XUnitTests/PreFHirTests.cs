@@ -59,7 +59,7 @@ namespace PreFhir.XUnitTests
             StructureDefinition frag = new StructureDefinition
             {
                 Abstract = true,
-                Kind = StructureDefinition.StructureDefinitionKind.Logical,
+                Kind = StructureDefinition.StructureDefinitionKind.Resource,
                 FhirVersion = FhirVersion,
                 Name = name,
                 Description = new Markdown("Fragment"),
@@ -73,10 +73,17 @@ namespace PreFhir.XUnitTests
                 BaseDefinition = "http://hl7.org/fhir/StructureDefinition/Resource",
                 Type = "Resource"
             };
+            frag.Extension.Add(new Extension
+            {
+                Url = PreFhirGenerator.IsFragmentUrl,
+                Value = new FhirBoolean(true)
+            });
             frag.AddDiffElement(new ElementDefinition
             {
                 Path = name,
-                ElementId = name
+                ElementId = name,
+                Min = 0,
+                Max = "*"
             });
             return frag;
         }
@@ -97,7 +104,9 @@ namespace PreFhir.XUnitTests
             pBase.AddSnapElement(new ElementDefinition
             {
                 Path = "Observation",
-                ElementId = "Observation"
+                ElementId = "Observation",
+                Min = 0,
+                Max = "*"
             });
             return pBase;
         }
@@ -144,7 +153,7 @@ namespace PreFhir.XUnitTests
                 pBase.AddFragRef(frag);
                 p.AddFragment(pBase);
                 p.AddFragment(frag);
-                Debug.Assert(p.Process() == true);
+                Assert.True(p.Process() == true);
                 StringBuilder sb = new StringBuilder();
                 p.FormatMessages(sb);
                 Trace.WriteLine(sb.ToString());
@@ -180,7 +189,7 @@ namespace PreFhir.XUnitTests
                 pBase.AddFragRef(frag);
                 p.AddFragment(pBase);
                 p.AddFragment(frag);
-                Debug.Assert(p.Process() == true);
+                Assert.True(p.Process() == true);
                 StringBuilder sb = new StringBuilder();
                 p.FormatMessages(sb);
                 Trace.WriteLine(sb.ToString());
@@ -223,7 +232,7 @@ namespace PreFhir.XUnitTests
                 pBase.AddFragRef(frag);
                 p.AddFragment(pBase);
                 p.AddFragment(frag);
-                Debug.Assert(p.Process() == true);
+                Assert.True(p.Process() == true);
                 StringBuilder sb = new StringBuilder();
                 p.FormatMessages(sb);
                 Trace.WriteLine(sb.ToString());
@@ -268,7 +277,7 @@ namespace PreFhir.XUnitTests
                 pBase.AddFragRef(frag);
                 p.AddFragment(pBase);
                 p.AddFragment(frag);
-                Debug.Assert(p.Process() == true);
+                Assert.True(p.Process() == true);
                 StringBuilder sb = new StringBuilder();
                 p.FormatMessages(sb);
                 Trace.WriteLine(sb.ToString());
@@ -316,7 +325,7 @@ namespace PreFhir.XUnitTests
                 pBase.AddFragRef(frag);
                 p.AddFragment(pBase);
                 p.AddFragment(frag);
-                Debug.Assert(p.Process() == true);
+                Assert.True(p.Process() == true);
                 StringBuilder sb = new StringBuilder();
                 p.FormatMessages(sb);
                 Trace.WriteLine(sb.ToString());
@@ -364,7 +373,7 @@ namespace PreFhir.XUnitTests
                 pBase.AddFragRef(frag);
                 p.AddFragment(pBase);
                 p.AddFragment(frag);
-                Debug.Assert(p.Process() == true);
+                Assert.True(p.Process() == true);
                 StringBuilder sb = new StringBuilder();
                 p.FormatMessages(sb);
                 Trace.WriteLine(sb.ToString());
@@ -411,7 +420,7 @@ namespace PreFhir.XUnitTests
                 pBase.AddFragRef(frag);
                 p.AddFragment(pBase);
                 p.AddFragment(frag);
-                Debug.Assert(p.Process() == false);
+                Assert.True(p.Process() == false);
                 StringBuilder sb = new StringBuilder();
                 p.FormatMessages(sb);
                 Trace.WriteLine(sb.ToString());
@@ -455,7 +464,7 @@ namespace PreFhir.XUnitTests
                 pBase.AddFragRef(frag);
                 p.AddFragment(pBase);
                 p.AddFragment(frag);
-                Debug.Assert(p.Process() == false);
+                Assert.True(p.Process() == false);
                 StringBuilder sb = new StringBuilder();
                 p.FormatMessages(sb);
                 Trace.WriteLine(sb.ToString());
@@ -496,7 +505,7 @@ namespace PreFhir.XUnitTests
                 pBase.AddFragRef(frag);
                 p.AddFragment(pBase);
                 p.AddFragment(frag);
-                Debug.Assert(p.Process() == true);
+                Assert.True(p.Process() == true);
                 StringBuilder sb = new StringBuilder();
                 p.FormatMessages(sb);
                 Trace.WriteLine(sb.ToString());
@@ -548,7 +557,7 @@ namespace PreFhir.XUnitTests
                 pBase.AddFragRef(frag);
                 p.AddFragment(pBase);
                 p.AddFragment(frag);
-                Debug.Assert(p.Process() == false);
+                Assert.True(p.Process() == false);
             }
             catch
             {
@@ -646,7 +655,7 @@ namespace PreFhir.XUnitTests
                 p.AddFragment(frag1);
                 p.AddFragment(frag2);
                 p.AddFragment(frag3);
-                Debug.Assert(p.Process() == true);
+                Assert.True(p.Process() == true);
                 StringBuilder sb = new StringBuilder();
                 p.FormatMessages(sb);
                 Trace.WriteLine(sb.ToString());
@@ -702,7 +711,7 @@ namespace PreFhir.XUnitTests
                 pBase.AddFragRef(frag);
                 p.AddFragment(pBase);
                 p.AddFragment(frag);
-                Debug.Assert(p.Process() == true);
+                Assert.True(p.Process() == true);
                 StringBuilder sb = new StringBuilder();
                 p.FormatMessages(sb);
                 Trace.WriteLine(sb.ToString());
@@ -751,7 +760,7 @@ namespace PreFhir.XUnitTests
                 pBase.AddFragRef(frag);
                 p.AddFragment(pBase);
                 p.AddFragment(frag);
-                Debug.Assert(p.Process() == true);
+                Assert.True(p.Process() == true);
                 StringBuilder sb = new StringBuilder();
                 p.FormatMessages(sb);
                 Trace.WriteLine(sb.ToString());
@@ -801,7 +810,7 @@ namespace PreFhir.XUnitTests
                 pBase.AddFragRef(frag);
                 p.AddFragment(pBase);
                 p.AddFragment(frag);
-                Debug.Assert(p.Process() == false);
+                Assert.True(p.Process() == false);
             }
             catch
             {
@@ -845,7 +854,7 @@ namespace PreFhir.XUnitTests
                 pBase.AddFragRef(frag);
                 p.AddFragment(pBase);
                 p.AddFragment(frag);
-                Debug.Assert(p.Process() == true);
+                Assert.True(p.Process() == true);
                 StringBuilder sb = new StringBuilder();
                 p.FormatMessages(sb);
                 Trace.WriteLine(sb.ToString());
@@ -915,7 +924,7 @@ namespace PreFhir.XUnitTests
                 pBase.AddFragRef(frag);
                 p.AddFragment(pBase);
                 p.AddFragment(frag);
-                Debug.Assert(p.Process() == true);
+                Assert.True(p.Process() == true);
                 StringBuilder sb = new StringBuilder();
                 p.FormatMessages(sb);
                 Trace.WriteLine(sb.ToString());
@@ -977,7 +986,7 @@ namespace PreFhir.XUnitTests
                 pBase.AddFragRef(frag);
                 p.AddFragment(pBase);
                 p.AddFragment(frag);
-                Debug.Assert(p.Process() == true);
+                Assert.True(p.Process() == true);
                 StringBuilder sb = new StringBuilder();
                 p.FormatMessages(sb);
                 Trace.WriteLine(sb.ToString());

@@ -38,7 +38,7 @@ namespace PreFhir
         /// <summary>
         /// Is not null, save merged files here (done before differential from base computed).
         /// </summary>
-        public String MergedDir {get; set; } = null;
+        public String MergedDir { get; set; } = null;
 
         FileCleaner fc = new FileCleaner();
 
@@ -119,9 +119,7 @@ namespace PreFhir
         {
             if (frag != null)
             {
-                ProcessItem pi = new ProcessItem();
-                if (pi.Load(this, frag) == false)
-                    return;
+                ProcessItem pi = new ProcessItem(this, frag);
                 this.unProcessed.Add(url, pi);
             }
         }
@@ -160,46 +158,7 @@ namespace PreFhir
                         SaveResource(MergedDir, processable);
                 }
             }
-            if (retVal == true)
-                FixDifferentials();
             return retVal;
-        }
-
-        void FixDifferentials()
-        {
-            const String fcn = "FixDifferentials";
-
-            this.ConversionInfo(this.GetType().Name,
-                fcn,
-                $"Fixing differentials");
-
-            foreach (ProcessItem processedItem in this.processed.Values)
-            {
-                switch (processedItem.Resource)
-                {
-                    case StructureDefinition sDef:
-                        // Fragments just have all their elements in the differential.
-                        // Profiles have differences from base in differential.
-                        // Compute differences from base.
-                        if (processedItem.FragmentFlag == false)
-                        {
-                            this.ConversionInfo(this.GetType().Name,
-                                fcn,
-                                $"Computing differential for {processedItem.Resource.GetName()}");
-                            ElementTreeDiffer differ = new ElementTreeDiffer(this);
-                            if (differ.Process(processedItem.TreeNodeOriginal, processedItem.TreeNode) == false)
-                                return;
-                        }
-
-                        this.ConversionInfo(this.GetType().Name,
-                            fcn,
-                            $"Saving differential for {processedItem.Resource.GetName()}");
-                        List<ElementDefinition> elementDefinitions = new List<ElementDefinition>();
-                        processedItem.TreeNode.CopyTo(elementDefinitions);
-                        sDef.Differential.Element = elementDefinitions;
-                        break;
-                }
-            }
         }
 
         /// <summary>
@@ -313,10 +272,12 @@ namespace PreFhir
         {
             const String fcn = "Process";
 
-            String type = processItem.FragmentFlag ? "fragment" : "resource";
+            //Debug.Assert(processItem.Resource.GetUrl() != "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityObservation-Fragment");
+
             this.ConversionInfo(this.GetType().Name,
                 fcn,
-                $"Processing {type} {processItem.Resource.GetName()}");
+                $"Processing {processItem.Resource.GetName()}");
+            bool mergedFlag = false;
             foreach (String fragmentUrl in processItem.Resource.ReferencedFragments())
             {
                 if (this.processed.TryGetValue(fragmentUrl, out ProcessItem fragment) == false)
@@ -325,13 +286,37 @@ namespace PreFhir
                     fcn,
                     $"Merging fragment {fragment.SDef.Name} into {processItem.Resource.GetName()}");
                 Merger m = new Merger(this, processItem, fragment);
-                if (m.Merge() == false)
+                if (m.Merge(out bool mergedElements) == false)
                 {
                     this.ConversionError(this.GetType().Name, fcn, $"Merge of fragment {fragment.Resource.GetName()} into {processItem.Resource.GetName()} failed ");
                     return false;
                 }
+                if (mergedElements == true)
+                    mergedFlag = true;
             }
+            if (mergedFlag == true)
+                this.FixDifferential(processItem);
             return true;
+        }
+
+        void FixDifferential(ProcessItem processedItem)
+        {
+            const String fcn = "FixDifferentials";
+            StructureDefinition sDef = (StructureDefinition)processedItem.Resource;
+
+            this.ConversionInfo(this.GetType().Name,
+                fcn,
+                $"Computing differential for {processedItem.Resource.GetName()}");
+
+            ElementTreeDiffer differ = new ElementTreeDiffer(this);
+            ElementTreeNode differentialNode = processedItem.SnapNode.Clone();
+            if (differ.Process(processedItem.SnapNodeOriginal, differentialNode) == false)
+                return;
+
+            processedItem.DiffNode = differentialNode;
+            List<ElementDefinition> elementDefinitions = new List<ElementDefinition>();
+            differentialNode.CopyTo(elementDefinitions);
+            sDef.Differential.Element = elementDefinitions;
         }
     }
 }

@@ -12,7 +12,7 @@
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": true,
-  "type": "org/fhir/StructureDefinition/Observation",
+  "type": "Observation",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
   "derivation": "constraint",
   "differential": {

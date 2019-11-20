@@ -34,58 +34,76 @@ namespace PreFhir
 
         /// <summary>
         /// If Resource is a structure def, then this is created from the
-        /// Snapshot (if not a fragment) or the Differential (if a fragment).
+        /// Differential
         /// </summary>
-        public ElementTreeNode TreeNode { get; set; }
+        public ElementTreeNode DiffNode { get; set; }
+
+        /// <summary>
+        /// If Resource is a structure def, then this is created from the
+        /// Snapshot.
+        /// </summary>
+        public ElementTreeNode SnapNode { get; set; }
 
         /// <summary>
         /// Unmodified version of TreeNode.
         /// </summary>
-        public ElementTreeNode TreeNodeOriginal { get; set; }
+        public ElementTreeNode SnapNodeOriginal { get; private set; }
 
-        public ProcessItem()
+        IConversionInfo info;
+
+        public ProcessItem(IConversionInfo info, DomainResource resource)
         {
+            this.info = info;
+            this.Resource = resource;
         }
 
-        public bool Load(IConversionInfo info, DomainResource resource)
+        public bool LoadMerge()
         {
-            const string fcn = "Load";
+            if (this.DiffNode != null)
+                return true;
 
-            this.Resource = resource;
+            this.FragmentFlag = this.SDef.IsFragment();
+            ElementTreeLoader l = new ElementTreeLoader(this.info);
+            this.DiffNode = l.Create(this.SDef.Differential.Element);
+            return true;
+        }
+
+        public bool LoadBase()
+        {
+            const String fcn = "LoadBase";
+
+            if (this.SnapNode != null)
+                return true;
+
+            this.FragmentFlag = this.SDef.IsFragment();
             StructureDefinition sDef = this.SDef;
-            if (sDef != null)
+            if (sDef == null)
+                throw new Exception("Internal error. ProcessItem is not a structured definition.");
+            if (sDef.Snapshot == null)
+                SnapshotCreator.Create(sDef);
+            List<ElementDefinition> elements = sDef.Snapshot.Element;
+            this.BasePath = elements[0].Path;
+            ElementTreeLoader l = new ElementTreeLoader(this.info);
+            this.SnapNode = l.Create(elements);
+            if (String.IsNullOrEmpty(sDef.BaseDefinition) == true)
             {
-                this.FragmentFlag = sDef.IsFragment();
-                List<ElementDefinition> elements;
-                if (this.FragmentFlag)
-                    elements = sDef.Differential.Element;
-                else
-                {
-                    if (sDef.Snapshot == null)
-                        SnapshotCreator.Create(sDef);
-                    elements = sDef.Snapshot.Element;
-                }
-
-                this.BasePath = elements[0].Path;
-                ElementTreeLoader l = new ElementTreeLoader(info);
-                this.TreeNode = l.Create(elements);
-                this.TreeNodeOriginal = this.TreeNode.Clone();
-                if (String.IsNullOrEmpty(sDef.BaseDefinition) == true)
-                {
-                    info.ConversionError(this.GetType().Name,
-                        fcn,
-                        $"Error loading StructureDef '{sDef.Name}'. Empty BaseDefinition ");
-                    return false;
-                }
-                this.SBaseDef = FhirStructureDefinitions.Self.GetResource(sDef.BaseDefinition);
-                if (this.SBaseDef == null)
-                {
-                    info.ConversionError(this.GetType().Name,
-                        fcn,
-                        $"Error loading StructureDef '{sDef.Name}'. BaseDefinition {sDef.BaseDefinition} not found ");
-                    return false;
-                }
+                info.ConversionError(this.GetType().Name,
+                    fcn,
+                    $"Error loading StructureDef '{sDef.Name}'. Empty BaseDefinition ");
+                return false;
             }
+            this.SBaseDef = FhirStructureDefinitions.Self.GetResource(sDef.BaseDefinition);
+            if (this.SBaseDef == null)
+            {
+                info.ConversionError(this.GetType().Name,
+                    fcn,
+                    $"Error loading StructureDef '{sDef.Name}'. BaseDefinition {sDef.BaseDefinition} not found ");
+                return false;
+            }
+
+            if (this.SBaseDef.Snapshot == null)
+                SnapshotCreator.Create(this.SBaseDef);
+            this.SnapNodeOriginal = l.Create(this.SBaseDef.Snapshot.Element);
             return true;
         }
     }

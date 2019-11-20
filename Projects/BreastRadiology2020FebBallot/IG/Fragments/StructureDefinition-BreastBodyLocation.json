@@ -61,8 +61,8 @@
         "sliceName": "laterality"
       },
       {
-        "id": "Extension.extension.extension:laterality.valueCodeableConcept",
-        "path": "Extension.extension.extension.valueCodeableConcept",
+        "id": "Extension.extension.extension:laterality.value[x]",
+        "path": "Extension.extension.extension.value[x]",
         "min": 1,
         "max": "1",
         "type": [
@@ -81,8 +81,8 @@
         "sliceName": "quadrant"
       },
       {
-        "id": "Extension.extension.extension:quadrant.valueCodeableConcept",
-        "path": "Extension.extension.extension.valueCodeableConcept",
+        "id": "Extension.extension.extension:quadrant.value[x]",
+        "path": "Extension.extension.extension.value[x]",
         "min": 1,
         "max": "1",
         "type": [
@@ -101,8 +101,8 @@
         "sliceName": "clock"
       },
       {
-        "id": "Extension.extension.extension:clock.valueCodeableConcept",
-        "path": "Extension.extension.extension.valueCodeableConcept",
+        "id": "Extension.extension.extension:clock.value[x]",
+        "path": "Extension.extension.extension.value[x]",
         "min": 1,
         "max": "1",
         "type": [
@@ -121,8 +121,8 @@
         "sliceName": "depth"
       },
       {
-        "id": "Extension.extension.extension:depth.valueCodeableConcept",
-        "path": "Extension.extension.extension.valueCodeableConcept",
+        "id": "Extension.extension.extension:depth.value[x]",
+        "path": "Extension.extension.extension.value[x]",
         "min": 1,
         "max": "1",
         "type": [
@@ -141,8 +141,8 @@
         "sliceName": "distanceFromNipple"
       },
       {
-        "id": "Extension.extension.extension:distanceFromNipple.valueQuantity",
-        "path": "Extension.extension.extension.valueQuantity",
+        "id": "Extension.extension.extension:distanceFromNipple.value[x]",
+        "path": "Extension.extension.extension.value[x]",
         "min": 1,
         "max": "1",
         "type": [
@@ -152,8 +152,8 @@
         ]
       },
       {
-        "id": "Extension.extension.extension:distanceFromNipple.valueQuantity.system",
-        "path": "Extension.extension.extension.valueQuantity.system",
+        "id": "Extension.extension.extension:distanceFromNipple.value[x].system",
+        "path": "Extension.extension.extension.value[x].system",
         "min": 1,
         "max": "1",
         "type": [
@@ -164,8 +164,8 @@
         "fixedUri": "http://unitsofmeasure.org"
       },
       {
-        "id": "Extension.extension.extension:distanceFromNipple.valueQuantity.code",
-        "path": "Extension.extension.extension.valueQuantity.code",
+        "id": "Extension.extension.extension:distanceFromNipple.value[x].code",
+        "path": "Extension.extension.extension.value[x].code",
         "min": 1,
         "max": "1",
         "type": [

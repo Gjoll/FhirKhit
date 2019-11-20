@@ -70,39 +70,55 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         [TestMethod]
         public void A_BuildFragments()
         {
-            if (Directory.Exists(this.fragmentDir))
+            try
             {
-                foreach (String file in Directory.GetFiles(this.fragmentDir, "*.json"))
-                    File.Delete(file);
-            }
+                if (Directory.Exists(this.fragmentDir))
+                {
+                    foreach (String file in Directory.GetFiles(this.fragmentDir, "*.json"))
+                        File.Delete(file);
+                }
 
-            ResourcesMaker pc = new ResourcesMaker(this.fragmentDir, this.cacheDir);
-            pc.StatusErrors += this.StatusErrors;
-            pc.StatusInfo += this.StatusInfo;
-            pc.StatusWarnings += this.StatusWarnings;
-            pc.CreateResources();
+                ResourcesMaker pc = new ResourcesMaker(this.fragmentDir, this.cacheDir);
+                pc.StatusErrors += this.StatusErrors;
+                pc.StatusInfo += this.StatusInfo;
+                pc.StatusWarnings += this.StatusWarnings;
+                pc.CreateResources();
+            }
+            catch(Exception err)
+            {
+                Trace.WriteLine(err.Message);
+                Assert.IsTrue(false);
+            }
         }
 
         [TestMethod]
         public void B_BuildResources()
         {
-            DateTime start = DateTime.Now;
-            if (Directory.Exists(this.resourcesDir) == false)
-                Directory.CreateDirectory(this.resourcesDir);
+            try
+            {
+                DateTime start = DateTime.Now;
+                if (Directory.Exists(this.resourcesDir) == false)
+                    Directory.CreateDirectory(this.resourcesDir);
 
-            if (Directory.Exists(this.mergedDir) == false)
-                Directory.CreateDirectory(this.mergedDir);
+                if (Directory.Exists(this.mergedDir) == false)
+                    Directory.CreateDirectory(this.mergedDir);
 
-            PreFhirGenerator preFhir = new PreFhirGenerator(Path.Combine(DirHelper.FindParentDir("FhirKhit"), "Cache"));
-            preFhir.StatusErrors += this.StatusErrors;
-            preFhir.StatusInfo += this.StatusInfo;
-            preFhir.StatusWarnings += this.StatusWarnings;
-            preFhir.AddDir(this.fragmentDir, "*.json");
-            preFhir.MergedDir = this.mergedDir;
-            preFhir.Process();
-            preFhir.SaveResources(this.resourcesDir, true);
-            TimeSpan executionTime = DateTime.Now - start;
-            Trace.WriteLine($"***** PreFhir execution Time {executionTime.ToString()}");
+                PreFhirGenerator preFhir = new PreFhirGenerator(Path.Combine(DirHelper.FindParentDir("FhirKhit"), "Cache"));
+                preFhir.StatusErrors += this.StatusErrors;
+                preFhir.StatusInfo += this.StatusInfo;
+                preFhir.StatusWarnings += this.StatusWarnings;
+                preFhir.AddDir(this.fragmentDir, "*.json");
+                preFhir.MergedDir = this.mergedDir;
+                preFhir.Process();
+                preFhir.SaveResources(this.resourcesDir, true);
+                TimeSpan executionTime = DateTime.Now - start;
+                Trace.WriteLine($"***** PreFhir execution Time {executionTime.ToString()}");
+            }
+            catch(Exception err)
+            {
+                Trace.WriteLine(err.Message);
+                Assert.IsTrue(false);
+            }
         }
 
         [TestMethod]
@@ -154,14 +170,22 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         [TestMethod]
         public void C_IGBuild()
         {
-            IGBuilder p = new IGBuilder(this.outputDir);
-            p.StatusErrors += this.StatusErrors;
-            p.StatusInfo += this.StatusInfo;
-            p.StatusWarnings += this.StatusWarnings;
-            p.Start();
-            p.AddResources(this.resourcesDir);
-            p.AddResources(this.manualDir);
-            p.SaveAll();
+            try
+            {
+                IGBuilder p = new IGBuilder(this.outputDir);
+                p.StatusErrors += this.StatusErrors;
+                p.StatusInfo += this.StatusInfo;
+                p.StatusWarnings += this.StatusWarnings;
+                p.Start();
+                p.AddResources(this.resourcesDir);
+                p.AddResources(this.manualDir);
+                p.SaveAll();
+            }
+            catch(Exception err)
+            {
+                Trace.WriteLine(err.Message);
+                Assert.IsTrue(false);
+            }
         }
     }
 }

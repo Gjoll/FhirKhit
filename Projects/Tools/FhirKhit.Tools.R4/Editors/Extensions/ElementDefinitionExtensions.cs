@@ -91,20 +91,22 @@ namespace FhirKhit.Tools.R4
         public static ElementDefinition Type(this ElementDefinition e,
             ElementDefinition.TypeRefComponent[] types)
         {
-            String RenTyp(String s, String code)
-            {
-                s = s.Substring(0, s.Length - 3);
-                s += code;
-                return s;
-            }
+            // Rename Value[x] to ValueCodeableConcept if type is set to one type of codeable concept.
+            // Currently commentes out cause it does not appear to be necessary and it screws up the firely code.
+            //String RenTyp(String s, String code)
+            //{
+            //    s = s.Substring(0, s.Length - 3);
+            //    s += code;
+            //    return s;
+            //}
 
             e.Type.Clear();
             e.Type.AddRange(types);
-            if ((types.Length == 1) && (e.Path.EndsWith("[x]") == true))
-            {
-                e.Path = RenTyp(e.Path, types[0].Code);
-                e.ElementId = RenTyp(e.ElementId, types[0].Code);
-            }
+            //if ((types.Length == 1) && (e.Path.EndsWith("[x]") == true))
+            //{
+            //    e.Path = RenTyp(e.Path, types[0].Code);
+            //    e.ElementId = RenTyp(e.ElementId, types[0].Code);
+            //}
             return e;
         }
 

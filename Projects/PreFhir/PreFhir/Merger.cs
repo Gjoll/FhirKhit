@@ -29,10 +29,11 @@ namespace PreFhir
             this.mergeItem = mergeItem;
         }
 
-        public bool Merge()
+        public bool Merge(out bool elementsMerged)
         {
             const String fcn = "Merge";
 
+            elementsMerged = false;
             try
             {
                 if (this.preFhir.DebugFlag)
@@ -45,6 +46,10 @@ namespace PreFhir
                 switch (this.mergeResource)
                 {
                     case StructureDefinition mergeSDef:
+                        if (this.mergeItem.SDef.Differential.Element.Count() == 0)
+                            return true;
+
+                        this.mergeItem.LoadMerge();
                         if (this.mergeItem.FragmentFlag == false)
                         {
                             this.preFhir.ConversionError(this.GetType().Name,
@@ -57,7 +62,7 @@ namespace PreFhir
                         if (baseSDef == null)
                         {
                             // Trying to merge a structured definition resource into a resource that is not
-                            // a structured definition. Cane merge element definitions in this case.
+                            // a structured definition. Can't merge element definitions in this case.
 
                             // Dont declare an error if there are no ElementDefinition's defined in the merge resource.
                             if (mergeSDef.Differential.Element.Count <= 1)
@@ -70,8 +75,10 @@ namespace PreFhir
                             return false;
                         }
 
+                        this.baseItem.LoadBase();
                         if (!MergeElementDefinitions())
                             return false;
+                        elementsMerged = true;
                         break;
                 }
                 return true;
@@ -80,7 +87,7 @@ namespace PreFhir
             {
                 this.preFhir.ConversionError(this.GetType().Name,
                     fcn,
-                    $"Exception processing fragment. {err.Message}");
+                    $"Exception Merging {this.mergeItem.Title} -> {this.baseItem.Title}.\n\t{err.Message}");
                 return false;
             }
         }
@@ -296,11 +303,7 @@ namespace PreFhir
         bool MergeElementDefinitions()
         {
             //const String fcn = "MergeElementDefinitions";
-
-            ElementTreeLoader l = new ElementTreeLoader(this.preFhir);
-            if (!MergeElementTreeSlice(baseItem.TreeNode.DefaultSlice, this.mergeItem.TreeNode.DefaultSlice))
-                return false;
-            return true;
+            return MergeElementTreeSlice(baseItem.SnapNode.DefaultSlice, this.mergeItem.DiffNode.DefaultSlice);
         }
 
         bool MergeElementTreeNode(ElementTreeNode baseNode,
@@ -352,21 +355,17 @@ namespace PreFhir
                 ElementTreeNode baseNode = null;
                 if (!baseSlice.Nodes.TryGetItem(mergeNode.Name, out baseNode))
                 {
-                    // If base is not a fragment, we can not add new elements...
-                    if (baseItem.FragmentFlag == false)
+                    // see if element definition is something like {CodeableConcept}.coding.
+                    ElementDefinition baseElement = baseItem.SBaseDef.Snapshot.Element.FindByPath(baseSlice.ElementDefinition.Path);
+                    if (
+                        (baseElement == null) ||
+                        (this.IsElementPart(baseElement, mergeNode.Name) == false)
+                        )
                     {
-                        // see if element definition is something like {CodeableConcept}.coding.
-                        ElementDefinition baseElement = baseItem.SBaseDef.Snapshot.Element.FindByPath(baseSlice.ElementDefinition.Path);
-                        if (
-                            (baseElement == null) ||
-                            (this.IsElementPart(baseElement, mergeNode.Name) == false)
-                            )
-                        {
-                            this.preFhir.ConversionError(this.GetType().Name,
-                                fcn,
-                                $"Node '{mergeNode.Path}' does not exist in base. Can not add element to non-fragment");
-                            return false;
-                        }
+                        this.preFhir.ConversionError(this.GetType().Name,
+                            fcn,
+                            $"Node '{mergeNode.Path}' does not exist in base. Can not add element to non-fragment");
+                        return false;
                     }
 
                     if (this.preFhir.DebugFlag)
@@ -473,25 +472,8 @@ namespace PreFhir
                 }
                 baseTypes.Remove(typeRef.Code);
 
-                // TODO: Put in code to constrain typeRef.profile.
-                if (typeRef.Profile.Count() > 0)
-                {
-                    this.preFhir.ConversionError(this.GetType().Name,
-                        fcn,
-                        $"Merge typeRef.Profile unimplemented");
-                    success = false;
-                    return;
-                }
-
-                // TODO: Put in code to constrain typeRef.targetProfile.
-                if (typeRef.TargetProfile.Count() > 0)
-                {
-                    this.preFhir.ConversionError(this.GetType().Name,
-                        fcn,
-                        $"Merge typeRef.targetProfile unimplemented");
-                    success = false;
-                    return;
-                }
+                MergeProfiles(baseTypeRef, typeRef, ref success);
+                MergeTargetProfiles(baseTypeRef, typeRef, ref success);
 
                 // TODO: Put in code to constrain typeRef.aggregation.
                 if (typeRef.Aggregation.Count() > 0)
@@ -517,6 +499,37 @@ namespace PreFhir
             // Remove all types in base that are not also in merged (constrain them out...)
             foreach (ElementDefinition.TypeRefComponent typeRef in baseTypes.Values)
                 baseElement.Type.Remove(typeRef);
+        }
+
+
+        void MergeProfiles(ElementDefinition.TypeRefComponent baseTypeRef,
+            ElementDefinition.TypeRefComponent typeRef,
+            ref bool success)
+        {
+            const String fcn = "MergeProfiles";
+
+            List<String> baseProfiles = baseTypeRef.Profile.ToList();
+            foreach (string profile in typeRef.Profile)
+            {
+                if (baseProfiles.Contains(profile) == false)
+                    baseProfiles.Add(profile);
+            }
+            baseTypeRef.Profile = baseProfiles;
+        }
+
+        void MergeTargetProfiles(ElementDefinition.TypeRefComponent baseTypeRef,
+            ElementDefinition.TypeRefComponent typeRef,
+            ref bool success)
+        {
+            const String fcn = "MergeTargetProfiles";
+
+            List<String> baseTargets = baseTypeRef.TargetProfile.ToList();
+            foreach (string targetProfile in typeRef.TargetProfile)
+            {
+                if (baseTargets.Contains(targetProfile) == false)
+                    baseTargets.Add(targetProfile);
+            }
+            baseTypeRef.TargetProfile = baseTargets;
         }
 
         /// <summary>
@@ -657,23 +670,34 @@ namespace PreFhir
         public bool IsElementPart(ElementDefinition element,
             String partName)
         {
-            foreach (ElementDefinition.TypeRefComponent type in element.Type)
+            switch (partName)
             {
-                switch (type.Code)
-                {
-                    default:
-                        String url = $"http://hl7.org/fhir/StructureDefinition/{type.Code}";
-                        StructureDefinition typeDef = FhirStructureDefinitions.Self.GetResource(url);
-                        if (typeDef == null)
-                            throw new Exception($"'Fhir type {type.Code}' not found");
-                        foreach (ElementDefinition e in typeDef.Differential.Element.Skip(1))
+                case "id":
+                    return true;
+
+                case "extension":
+                    return true;
+
+                default:
+                    foreach (ElementDefinition.TypeRefComponent type in element.Type)
+                    {
+                        switch (type.Code)
                         {
-                            String pathName = e.Path.LastPathPart();
-                            if (pathName == partName)
-                                return true;
+                            default:
+                                String url = $"http://hl7.org/fhir/StructureDefinition/{type.Code}";
+                                StructureDefinition typeDef = FhirStructureDefinitions.Self.GetResource(url);
+                                if (typeDef == null)
+                                    throw new Exception($"'Fhir type {type.Code}' not found");
+                                foreach (ElementDefinition e in typeDef.Differential.Element.Skip(1))
+                                {
+                                    String pathName = e.Path.LastPathPart();
+                                    if (pathName == partName)
+                                        return true;
+                                }
+                                break;
                         }
-                        break;
-                }
+                    }
+                    break;
             }
             return false;
         }

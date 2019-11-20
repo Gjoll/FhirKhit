@@ -25,8 +25,8 @@
         "max": "*"
       },
       {
-        "id": "Observation.valueCodeableConcept",
-        "path": "Observation.valueCodeableConcept",
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
         "min": 0,
         "max": "1",
         "base": {
