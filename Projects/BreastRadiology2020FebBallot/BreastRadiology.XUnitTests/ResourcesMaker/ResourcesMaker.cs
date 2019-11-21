@@ -47,10 +47,12 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         String breastBodyLocationOptionalFragmentUrl;
         String breastBodyLocationRequiredFragmentUrl;
         String categoryFragmentUrl;
+        String observationSectionFragment;
 
         String headerFragUrl;
         string abnormalityObservationFragmentUrl;
         string abnormalityCodedValueObservationFragmentUrl;
+        String observationSectionFragmentUrl;
 
         String CreateUrl(String name)
         {
@@ -118,39 +120,6 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             retVal.AddFragRef(this.abnormalityObservationFragmentUrl);
             return retVal;
         }
-
-        SDefEditor CreateObservationSection(String name,
-            String title,
-            Markdown description)
-        {
-            SDefEditor e = this.CreateObservationEditor(name, title)
-                .Description(description)
-                ;
-            e.Select("value[x]").Zero();
-            e.Select("specimen").Zero();
-            e.Select("device").Zero();
-            e.Select("referenceRange").Zero();
-
-            e.Select("interpretation").Zero();
-            e.Select("note").Zero();
-            e.Select("method").Zero();
-            return e;
-        }
-
-        //SDefEditor CreateAbnormalityBooleanValue(String name,
-        //    String title,
-        //    Markdown description)
-        //{
-        //    SDefEditor retVal = this.CreateObservationEditor(name, title);
-        //    retVal
-        //        .Description(description)
-        //        ;
-
-        //    retVal.Select("value[x]")
-        //        .Type("boolean")
-        //        ;
-        //    return retVal;
-        //}
 
         SDefEditor CreateAbnormality(String name, String title,
             Markdown description,
@@ -252,13 +221,17 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             this.headerFragUrl = this.HeaderFragment();
 
             this.categoryFragmentUrl = this.CategoryFragment();
+            this.observationSectionFragment = this.ObservationSectionFragment();
+
 
             this.breastBodyLocationExtensionUrl = this.BreastBodyLocationExtension();
-            this.breastBodyLocationOptionalFragmentUrl = BreastBodyLocationOptionalFragment();
-            this.breastBodyLocationRequiredFragmentUrl = BreastBodyLocationRequiredFragment();
+            this.breastBodyLocationOptionalFragmentUrl = this.BreastBodyLocationOptionalFragment();
+            this.breastBodyLocationRequiredFragmentUrl = this.BreastBodyLocationRequiredFragment();
 
             this.abnormalityObservationFragmentUrl = this.AbnormalityObservationFragment();
             this.abnormalityCodedValueObservationFragmentUrl = this.AbnormalityObservationCodedValueFragment();
+            this.observationSectionFragmentUrl = ObservationSectionFragment();
+
             String abnMassShape = this.AbMassShape();
 
             //
@@ -280,7 +253,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 String skinLesion = this.AbMammoSkinLesion();
                 String solitaryDilatedDuct = this.AbMammoSolitaryDilatedDuct();
 
-                abnMammo = AbMammo(breastDensity, mass, calc, archDist, assymetries,
+                abnMammo = this.AbMammo(breastDensity, mass, calc, archDist, assymetries,
                                    intraMammaryLymphNode, skinLesion, solitaryDilatedDuct);
             }
 

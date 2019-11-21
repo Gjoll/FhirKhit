@@ -17,10 +17,10 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             String findingsUrl,
             String patientRiskUrl)
         {
-            SDefEditor e = this.CreateObservationSection(
-                "BreastRadSectionRoot",
-                "Breast Radiology Root Section",
-                new Markdown().Paragraph("Root Section"))
+            SDefEditor e = this.CreateObservationEditor("BreastRadSectionRoot",
+                                                        "Breast Radiology Root Section")
+                .Description(new Markdown().Paragraph("Root Section"))
+                .AddFragRef(this.observationSectionFragmentUrl)
                 ;
                 e.Find("hasMember")
                     .SliceByUrl(new ObservationTarget[]

@@ -17,15 +17,15 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             String massMargin,
             String massDensity)
         {
-            SDefEditor e = this.CreateObservationSection(
-                "BreastRadMammoMass",
-                "Breast Radiology Mammography Mass Observation",
-                new Markdown()
+            SDefEditor e = this.CreateObservationEditor("BreastRadMammoMass",
+                                                        "Breast Radiology Mammography Mass Observation")
+                .Description(new Markdown()
                     .Paragraph("Breast Radiology Mammography Mass Observation")
                     .Paragraph("This observation has the following three member observations")
                     .List("Shape", "Margin", "Density")
                 )
                 .AddFragRef(this.breastBodyLocationRequiredFragmentUrl)
+                .AddFragRef(this.observationSectionFragmentUrl)
                 ;
 
             e.Find("hasMember")

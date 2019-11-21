@@ -32,25 +32,25 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             String outputDir)
         {
             this.outputDir = outputDir;
-            baseSDef = FhirStructureDefinitions.Self.GetResource(baseDefinition);
-            if (baseSDef == null)
+            this.baseSDef = FhirStructureDefinitions.Self.GetResource(baseDefinition);
+            if (this.baseSDef == null)
                 throw new Exception($"'Base definition resource {baseDefinition}' not found");
 
             this.basePath = baseDefinition.LastUriPart();
 
-            for (Int32 i = 0; i < baseSDef.Snapshot.Element.Count; i++)
+            for (Int32 i = 0; i < this.baseSDef.Snapshot.Element.Count; i++)
             {
-                ElementDefinition elementDefinition = baseSDef.Snapshot.Element[i];
+                ElementDefinition elementDefinition = this.baseSDef.Snapshot.Element[i];
                 ElementDefGroup e = new ElementDefGroup(i, elementDefinition, null);
                 this.baseElements.Add(elementDefinition.ElementId.SkipFirstPathPart(), e);
             }
 
-            sDef = new StructureDefinition
+            this.sDef = new StructureDefinition
             {
                 BaseDefinition = baseDefinition,
                 Differential = new StructureDefinition.DifferentialComponent()
             };
-            sDef.Differential.Element.Add(new ElementDefinition
+            this.sDef.Differential.Element.Add(new ElementDefinition
             {
                 Path = basePath,
                 ElementId = basePath,
@@ -62,7 +62,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         public ElementDefGroup InsertAfter(ElementDefGroup at,
             ElementDefinition e)
         {
-            return AddElementDefinition(at.Index, e, null);
+            return this.AddElementDefinition(at.Index, e, null);
         }
 
         /// <summary>
@@ -90,7 +90,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                         Min = eBase.Min,
                         Max = eBase.Max
                     };
-                    return AddElementDefinition(e.Index, ed, e.ElementDefinition);
+                    return this.AddElementDefinition(e.Index, ed, e.ElementDefinition);
                 }
             }
             throw new Exception($"'{path}' not found");
@@ -142,7 +142,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
 
         public String Write()
         {
-            foreach (ElementDefGroup item in elementOrder)
+            foreach (ElementDefGroup item in this.elementOrder)
             {
                 this.sDef.Differential.Element.Add(item.ElementDefinition);
                 this.sDef.Differential.Element.AddRange(item.RelatedElements);
@@ -155,7 +155,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 e.ElementId= e.ElementId.ReplacePathBase(this.basePath);
             }
 
-            String outputName = Path.Combine(outputDir, $"StructureDefinition-{this.sDef.Name}.json");
+            String outputName = Path.Combine(this.outputDir, $"StructureDefinition-{this.sDef.Name}.json");
             this.sDef.SaveJson(outputName);
             return outputName;
         }
@@ -175,7 +175,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
 
         public ElementDefinition ApplyExtension(String name, String extensionUrl)
         {
-            ConfigureExtensionSlice();
+            this.ConfigureExtensionSlice();
             return this.Find("extension").SliceByUrl(extensionUrl, name);
         }
 

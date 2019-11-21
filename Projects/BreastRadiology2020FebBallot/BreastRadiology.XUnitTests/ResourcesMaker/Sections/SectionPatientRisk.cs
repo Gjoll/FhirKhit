@@ -15,10 +15,10 @@ namespace FhirKhit.BreastRadiology.XUnitTests
     {
         String SectionPatientRisk()
         {
-            SDefEditor e = this.CreateObservationSection(
-                "BreastRadSectionPatientRisk",
-                "Breast Radiology Patient Risk Section",
-                new Markdown().Paragraph("Patient Risk Section"))
+            SDefEditor e = this.CreateObservationEditor("BreastRadSectionPatientRisk",
+                                                        "Breast Radiology Patient Risk Section")
+                .Description(new Markdown().Paragraph("Patient Risk Section"))
+                .AddFragRef(this.observationSectionFragmentUrl)
                 ;
             e.Select("bodySite").Zero();
             return e.SDef.Url;

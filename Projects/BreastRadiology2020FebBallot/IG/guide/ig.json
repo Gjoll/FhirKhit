@@ -195,6 +195,9 @@
     "StructureDefinition/Header-Fragment": {
       "base": "StructureDefinition-Header-Fragment.html"
     },
+    "StructureDefinition/ObservationSection-Fragment": {
+      "base": "StructureDefinition-ObservationSection-Fragment.html"
+    },
     "ValueSet/AssymetriesVS": {
       "base": "ValueSet-AssymetriesVS.html"
     },
