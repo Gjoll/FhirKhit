@@ -149,29 +149,29 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             }
         }
 
-        [TestMethod]
-        public void CheckIdUnique()
-        {
-            String path = Path.Combine(this.outputDir,
-                "resources",
-                "StructureDefinition-BreastRadSectionFindingsLeftBreast.json");
+        //[TestMethod]
+        //public void CheckIdUnique()
+        //{
+        //    String path = Path.Combine(this.outputDir,
+        //        "resources",
+        //        "StructureDefinition-BreastRadSectionFindingsLeftBreast.json");
 
-            FhirJsonParser parser = new FhirJsonParser();
-            StructureDefinition sd = parser.Parse<StructureDefinition>(File.ReadAllText(path));
-            HashSet<String> ids = new HashSet<string>();
+        //    FhirJsonParser parser = new FhirJsonParser();
+        //    StructureDefinition sd = parser.Parse<StructureDefinition>(File.ReadAllText(path));
+        //    HashSet<String> ids = new HashSet<string>();
 
-            String idBase = sd.Differential.Element[0].Path;
-            foreach (ElementDefinition e in sd.Differential.Element)
-            {
-                if (ids.Contains(e.ElementId) == true)
-                    Trace.WriteLine($"duplicate {e.ElementId}");
-                if (e.ElementId.StartsWith(idBase) == false)
-                    Trace.WriteLine($"Bad id base {e.ElementId}");
-                if (e.Path.StartsWith(idBase) == false)
-                    Trace.WriteLine($"Bad path base {e.ElementId}");
-                ids.Add(e.ElementId);
-            }
-        }
+        //    String idBase = sd.Differential.Element[0].Path;
+        //    foreach (ElementDefinition e in sd.Differential.Element)
+        //    {
+        //        if (ids.Contains(e.ElementId) == true)
+        //            Trace.WriteLine($"duplicate {e.ElementId}");
+        //        if (e.ElementId.StartsWith(idBase) == false)
+        //            Trace.WriteLine($"Bad id base {e.ElementId}");
+        //        if (e.Path.StartsWith(idBase) == false)
+        //            Trace.WriteLine($"Bad path base {e.ElementId}");
+        //        ids.Add(e.ElementId);
+        //    }
+        //}
 
         [TestMethod]
         public void ValidateOutputResources()

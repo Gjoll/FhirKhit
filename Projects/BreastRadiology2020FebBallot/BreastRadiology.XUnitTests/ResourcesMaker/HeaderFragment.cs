@@ -24,7 +24,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             });
 
             e.SDef.Contact.Add(cd);
-            e.SDef.FhirVersion = FHIRVersion.N4_0_0;
+            e.SDef.FhirVersionElement = new Code<FHIRVersion>("4.0.1");
             e.SDef.Date = this.date.ToString();
             e.SDef.Status = ProfileStatus;
             e.SDef.Publisher = "Hl7-Clinical Interoperability Council";

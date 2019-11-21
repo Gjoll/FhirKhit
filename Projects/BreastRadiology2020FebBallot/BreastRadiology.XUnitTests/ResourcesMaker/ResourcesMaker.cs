@@ -22,6 +22,8 @@ namespace FhirKhit.BreastRadiology.XUnitTests
 
     public partial class ResourcesMaker : ConverterBase
     {
+        const FHIRVersion FVersion = FHIRVersion.N4_0_1;
+
         const String ProfileVersion = "0.0.2";
         const PublicationStatus ProfileStatus = PublicationStatus.Draft;
 
@@ -87,7 +89,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 .Kind(StructureDefinition.StructureDefinitionKind.Resource)
                 ;
 
-            retVal.SDef.FhirVersion = FHIRVersion.N4_0_0;
+            retVal.SDef.FhirVersion = FHIRVersion.N4_0_1;
 
             this.editors.Add(retVal);
             return retVal;
