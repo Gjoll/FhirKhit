@@ -229,14 +229,6 @@ namespace PreFhir
 
                 if (Process(processable) == false)
                     retVal = false;
-                else
-                {
-                    this.processed.Add(processable.Resource.GetUrl(), processable);
-
-                    // save intermediate merged file?
-                    if (String.IsNullOrEmpty(MergedDir) == false)
-                        SaveResource(MergedDir, processable);
-                }
             }
             return retVal;
         }
@@ -376,6 +368,13 @@ namespace PreFhir
             }
             if (mergedFlag == true)
                 this.FixDifferential(processItem);
+
+            this.processed.Add(processItem.Resource.GetUrl(), processItem);
+
+            // save intermediate merged file?
+            if (String.IsNullOrEmpty(this.MergedDir) == false)
+                SaveResource(MergedDir, processItem);
+
             return true;
         }
 
@@ -392,11 +391,18 @@ namespace PreFhir
             ElementTreeNode differentialNode = processedItem.SnapNode.Clone();
             if (differ.Process(processedItem.SnapNodeOriginal, differentialNode) == false)
                 return;
+            {
+                processedItem.DiffNode = differentialNode;
+                List<ElementDefinition> elementDefinitions = new List<ElementDefinition>();
+                differentialNode.CopyTo(elementDefinitions);
+                sDef.Differential.Element = elementDefinitions;
+            }
 
-            processedItem.DiffNode = differentialNode;
-            List<ElementDefinition> elementDefinitions = new List<ElementDefinition>();
-            differentialNode.CopyTo(elementDefinitions);
-            sDef.Differential.Element = elementDefinitions;
+            {
+                List<ElementDefinition> elementDefinitions = new List<ElementDefinition>();
+                processedItem.SnapNode.CopyTo(elementDefinitions);
+                sDef.Snapshot.Element = elementDefinitions;
+            }
         }
     }
 }

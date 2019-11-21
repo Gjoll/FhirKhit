@@ -30,11 +30,11 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 ;
 
             e.AddFragRef(this.headerFragUrl);
+            e.AddFragRef(this.categoryFragmentUrl);
             String recommendationsUrl = this.BreastRadiologyRecommendationsExtension();
             String priorReportsUrl = this.BreastRadiologyPriorReportsExtension(e.SDef.Url);
 
             e.Select("code").Pattern = new CodeableConcept(Loinc, "10193-1");
-            this.CreateCategorySlice(e, "category");
             e.Select("specimen").Zero();
             e.Select("conclusion").Single();
             e.Select("conclusionCode").Single();

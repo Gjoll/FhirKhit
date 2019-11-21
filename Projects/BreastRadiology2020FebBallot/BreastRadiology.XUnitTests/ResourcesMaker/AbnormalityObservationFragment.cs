@@ -19,14 +19,14 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             SDefEditor e = this.CreateFragment("AbnormalityObservation",
                 "Abnormality Observation Fragment",
                 ObservationUrl);
+            e.AddFragRef(this.headerFragUrl);
+            e.AddFragRef(this.categoryFragmentUrl);
             e.Select("subject").Single();
             e.Select("component").Zero();
             e.Select("basedOn").Zero();
             e.Select("derivedFrom").Zero();
             e.Select("partOf").Zero();
             e.Select("focus").Zero();
-            this.CreateCategorySlice(e, "category");
-            e.AddFragRef(this.headerFragUrl);
             return e.SDef.Url;
         }
     }

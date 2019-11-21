@@ -189,6 +189,9 @@
     "StructureDefinition/BreastRadSectionRoot": {
       "base": "StructureDefinition-BreastRadSectionRoot.html"
     },
+    "StructureDefinition/CategoryFragment-Fragment": {
+      "base": "StructureDefinition-CategoryFragment-Fragment.html"
+    },
     "StructureDefinition/Header-Fragment": {
       "base": "StructureDefinition-Header-Fragment.html"
     },

@@ -141,6 +141,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 preFhir.StatusWarnings += this.StatusWarnings;
                 preFhir.MergedDir = this.mergedDir;
                 preFhir.ProcessOne(this.fragmentDir, "AbnormalityObservation-Fragment", true);
+                preFhir.SaveResources(this.resourcesDir, true);
             }
             catch (Exception err)
             {

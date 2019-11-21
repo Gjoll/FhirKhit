@@ -46,6 +46,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         String breastBodyLocationExtensionUrl;
         String breastBodyLocationOptionalFragmentUrl;
         String breastBodyLocationRequiredFragmentUrl;
+        String categoryFragmentUrl;
 
         String headerFragUrl;
         string abnormalityObservationFragmentUrl;
@@ -116,15 +117,6 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 ObservationUrl);
             retVal.AddFragRef(this.abnormalityObservationFragmentUrl);
             return retVal;
-        }
-
-        void CreateCategorySlice(SDefEditor sDefEditor, String path)
-        {
-            ElementDefGroup eDef = sDefEditor.Find(path);
-            eDef.ElementDefinition.Card(1, eDef.BaseElementDefinition.Max);
-            eDef.FixedCodeSlice("category",
-                "http://terminology.hl7.org/CodeSystem/observation-category",
-                "imaging");
         }
 
         SDefEditor CreateObservationSection(String name,
@@ -258,6 +250,8 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             this.fc.Add(this.resourceDir);
 
             this.headerFragUrl = this.HeaderFragment();
+
+            this.categoryFragmentUrl = this.CategoryFragment();
 
             this.breastBodyLocationExtensionUrl = this.BreastBodyLocationExtension();
             this.breastBodyLocationOptionalFragmentUrl = BreastBodyLocationOptionalFragment();
