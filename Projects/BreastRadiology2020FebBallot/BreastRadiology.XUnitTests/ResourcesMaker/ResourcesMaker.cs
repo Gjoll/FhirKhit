@@ -122,33 +122,6 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             return retVal;
         }
 
-        //SDefEditor CreateAbnormality(String name, String title,
-        //    Markdown description,
-        //    String methodCodeSet,
-        //    String method)
-        //{
-        //    SDefEditor e = this.CreateObservationEditor(name, title)
-        //        .Description(description)
-        //        ;
-
-        //    e.Select("value[x]").Zero();
-        //    e.Select("specimen").Zero();
-        //    e.Select("referenceRange").Zero();
-        //    e.Select("interpretation").Zero();
-        //    e.Select("note").Zero();
-        //    // todo: Add body site info.
-        //    //e.Select("bodySite").Zero();
-
-        //    e.Find("method")
-        //     .FixedCodeSlice("method",
-        //                     methodCodeSet,
-        //                     method)
-        //     .Card(1, "*")
-        //     ;
-
-        //    return e;
-        //}
-
         String CreateValueSet(String name,
             String title,
             Markdown description,
@@ -212,8 +185,6 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             r.SaveJson(path);
             this.fc.Mark(path);
         }
-
-
 
         public void CreateResources()
         {
