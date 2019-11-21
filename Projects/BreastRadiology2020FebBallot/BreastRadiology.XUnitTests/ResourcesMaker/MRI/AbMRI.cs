@@ -16,13 +16,17 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         String AbnormalityMRI()
         {
             //$ Fix me. Incorrect method!!!
-            return this.CreateAbnormality(
-                "BreastRadAbnormalityMRI",
-                "Breast Radiology Abnormality (MRI)",
-                new Markdown().Paragraph("MRI Breast Abnormality Observation"),
-                "http://snomed.info/sct",
-                "115341008")
-                .SDef.Url;
+            SDefEditor e = this.CreateObservationEditor("BreastRadAbnormalityMRI",
+                                                "Breast Radiology Abnormality (MRI)")
+                .Description(new Markdown().Paragraph("MRI Breast Abnormality Observation"))
+                .AddFragRef(this.abnormalityFragmentUrl)
+            ;
+            e.Find("method")
+                 .FixedCodeSlice("method", "http://snomed.info/sct", "115341008")
+                 .Card(1, "*")
+                 ;
+
+            return e.SDef.Url;
         }
     }
 }

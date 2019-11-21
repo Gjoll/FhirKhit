@@ -16,13 +16,16 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         String AbUltraSound()
         {
             //$ Fix me. Incorrect method!!!
-            return this.CreateAbnormality(
-                "BreastRadAbnormalityUltraSound",
-                "Breast Radiology Abnormality (UltraSound)",
-                new Markdown().Paragraph("UltraSound Breast Abnormality Observation"),
-                "http://snomed.info/sct",
-                "115341008")
-                .SDef.Url;
+            SDefEditor e =  this.CreateObservationEditor("BreastRadAbnormalityUltraSound",
+                                                         "Breast Radiology Abnormality (UltraSound)")
+                .Description(new Markdown().Paragraph("UltraSound Breast Abnormality Observation"))
+                .AddFragRef(this.abnormalityFragmentUrl)
+                ;
+            e.Find("method")
+             .FixedCodeSlice("method", "http://snomed.info/sct", "115341008")
+             .Card(1, "*")
+             ;
+            return e.SDef.Url;
         }
     }
 }

@@ -99,6 +99,9 @@
     "CodeSystem/CalcificationTypeCS": {
       "base": "CodeSystem-CalcificationTypeCS.html"
     },
+    "StructureDefinition/Abnormality-Fragment": {
+      "base": "StructureDefinition-Abnormality-Fragment.html"
+    },
     "StructureDefinition/AbnormalityCodedValueObservation-Fragment": {
       "base": "StructureDefinition-AbnormalityCodedValueObservation-Fragment.html"
     },

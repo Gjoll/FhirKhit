@@ -23,14 +23,15 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             String solitaryDilatedDuct)
         {
             //$ todo. Incorrect method!!!
-            SDefEditor e = this.CreateAbnormality(
-                "BreastRadAbnormalityMammo",
-                "Breast Radiology Abnormality (Mammography)",
-                new Markdown().Paragraph("Mammography Breast Abnormality Observation"),
-                "http://snomed.info/sct",
-                "115341008")
+            SDefEditor e = this.CreateObservationEditor("BreastRadAbnormalityMammo",
+                                                        "Breast Radiology Abnormality (Mammography)")
+                .Description(new Markdown().Paragraph("Mammography Breast Abnormality Observation"))
+                .AddFragRef(this.abnormalityFragmentUrl)
                 ;
-
+            e.Find("method")
+             .FixedCodeSlice("method", "http://snomed.info/sct", "115341008")
+             .Card(1, "*")
+             ;
             e.Find("hasMember")
                 .SliceByUrl(new ObservationTarget[]
                 {
@@ -43,7 +44,6 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                         new ObservationTarget(skinLesions, 0, "*"),
                         new ObservationTarget(solitaryDilatedDuct, 1, "1")
                 });
-
             return e.SDef.Url;
         }
     }

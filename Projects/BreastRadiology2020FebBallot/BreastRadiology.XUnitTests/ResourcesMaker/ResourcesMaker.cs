@@ -53,6 +53,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         string abnormalityObservationFragmentUrl;
         string abnormalityCodedValueObservationFragmentUrl;
         String observationSectionFragmentUrl;
+        String abnormalityFragmentUrl;
 
         String CreateUrl(String name)
         {
@@ -121,32 +122,32 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             return retVal;
         }
 
-        SDefEditor CreateAbnormality(String name, String title,
-            Markdown description,
-            String methodCodeSet,
-            String method)
-        {
-            SDefEditor e = this.CreateObservationEditor(name, title)
-                .Description(description)
-                ;
+        //SDefEditor CreateAbnormality(String name, String title,
+        //    Markdown description,
+        //    String methodCodeSet,
+        //    String method)
+        //{
+        //    SDefEditor e = this.CreateObservationEditor(name, title)
+        //        .Description(description)
+        //        ;
 
-            e.Select("value[x]").Zero();
-            e.Select("specimen").Zero();
-            e.Select("referenceRange").Zero();
-            e.Select("interpretation").Zero();
-            e.Select("note").Zero();
-            // todo: Add body site info.
-            //e.Select("bodySite").Zero();
+        //    e.Select("value[x]").Zero();
+        //    e.Select("specimen").Zero();
+        //    e.Select("referenceRange").Zero();
+        //    e.Select("interpretation").Zero();
+        //    e.Select("note").Zero();
+        //    // todo: Add body site info.
+        //    //e.Select("bodySite").Zero();
 
-            e.Find("method")
-             .FixedCodeSlice("method",
-                             methodCodeSet,
-                             method)
-             .Card(1, "*")
-             ;
+        //    e.Find("method")
+        //     .FixedCodeSlice("method",
+        //                     methodCodeSet,
+        //                     method)
+        //     .Card(1, "*")
+        //     ;
 
-            return e;
-        }
+        //    return e;
+        //}
 
         String CreateValueSet(String name,
             String title,
@@ -222,12 +223,14 @@ namespace FhirKhit.BreastRadiology.XUnitTests
 
             this.categoryFragmentUrl = this.CategoryFragment();
             this.observationSectionFragment = this.ObservationSectionFragment();
+            this.abnormalityFragmentUrl = this.AbnormalityFragment();
 
 
             this.breastBodyLocationExtensionUrl = this.BreastBodyLocationExtension();
             this.breastBodyLocationOptionalFragmentUrl = this.BreastBodyLocationOptionalFragment();
             this.breastBodyLocationRequiredFragmentUrl = this.BreastBodyLocationRequiredFragment();
 
+            this.abnormalityFragmentUrl = this.AbnormalityFragment();
             this.abnormalityObservationFragmentUrl = this.AbnormalityObservationFragment();
             this.abnormalityCodedValueObservationFragmentUrl = this.AbnormalityObservationCodedValueFragment();
             this.observationSectionFragmentUrl = ObservationSectionFragment();
