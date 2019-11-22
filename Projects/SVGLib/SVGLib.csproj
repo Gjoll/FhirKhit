@@ -110,6 +110,7 @@
     <Compile Include="SvgGroup.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="SvgHyperLink.cs" />
     <Compile Include="SvgImage.cs">
       <SubType>Code</SubType>
     </Compile>

@@ -38,7 +38,8 @@ namespace SVGLib
 			typeLine,
 			typePath,
 			typePolygon,
-			typeImage
+			typeImage,
+			typeHyperLink
 		};
 
 		// ---------- PUBLIC PROPERTIES

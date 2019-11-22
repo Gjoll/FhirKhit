@@ -25,11 +25,11 @@ namespace BreastRadiology.XUnitTests
     {
         SvgDoc doc;
 
-        public float BorderWidth {get; set; } = 0.125f;
-        public float LineHeight {get; set; } = 1.25f;
-        public float BorderMargin {get; set; } = 2.0f;
-        public float RectRx {get; set; } = 1f;
-        public float RectRy {get; set; } = 2f;
+        public float BorderWidth { get; set; } = 0.125f;
+        public float LineHeight { get; set; } = 1.25f;
+        public float BorderMargin { get; set; } = 2.0f;
+        public float RectRx { get; set; } = 1f;
+        public float RectRy { get; set; } = 2f;
 
         float screenX = 10;
         float screenY = 10;
@@ -64,7 +64,17 @@ namespace BreastRadiology.XUnitTests
 
             foreach (SEText line in node.Lines)
             {
-                SvgText t = this.doc.AddText(g);
+                SvgText t;
+                if (line.HRef != null)
+                {
+                    SvgHyperLink l = this.doc.AddHyperLink(g);
+                    l.HRef = line.HRef.ToString();
+                    t = this.doc.AddText(l);
+                }
+                else
+                {
+                    t = this.doc.AddText(g);
+                }
                 t.X = ToEm(textX);
                 t.Y = ToEm(textY);
                 t.Value = line.Text;

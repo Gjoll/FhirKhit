@@ -1282,7 +1282,7 @@ namespace SVGLib
 			info = new _AttrInfo();
 			info._type = _SvgAttribute.attrXLink_HRef;
 			info._group = _SvgAttributeGroup.groupXLink;
-			info._name = "xlink:href";
+			info._name = "href";
 			
 			m_mapAttrInfo.Add(info._type, info);
 			// ---
