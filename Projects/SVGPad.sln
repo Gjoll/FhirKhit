@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29512.175
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SVGLib", "SVGLib\SVGLib.csproj", "{43B7A044-2909-48C9-AD09-707709CDFE46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SVGPad", "SVGPad\SVGPad.csproj", "{AEA9409E-743B-4688-A05E-D0E1FEE8DFD9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{43B7A044-2909-48C9-AD09-707709CDFE46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43B7A044-2909-48C9-AD09-707709CDFE46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43B7A044-2909-48C9-AD09-707709CDFE46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43B7A044-2909-48C9-AD09-707709CDFE46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEA9409E-743B-4688-A05E-D0E1FEE8DFD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEA9409E-743B-4688-A05E-D0E1FEE8DFD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEA9409E-743B-4688-A05E-D0E1FEE8DFD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEA9409E-743B-4688-A05E-D0E1FEE8DFD9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A4ECB47B-840C-4DA6-B602-FA26729EA02F}
+	EndGlobalSection
+EndGlobal

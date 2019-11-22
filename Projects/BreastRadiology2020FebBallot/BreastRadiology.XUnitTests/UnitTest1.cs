@@ -10,6 +10,7 @@ using PreFhir;
 using Hl7.Fhir.Serialization;
 using Hl7.Fhir.Model;
 using System.Collections.Generic;
+using BreastRadiology.XUnitTests;
 
 namespace FhirKhit.BreastRadiology.XUnitTests
 {
@@ -218,6 +219,34 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             this.A_BuildFragments();
             this.B_BuildResources();
             this.C_IGBuild();
+        }
+
+        [TestMethod]
+        public void SVG()
+        {
+            SvgEditor e = new SvgEditor();
+
+            SENode node = new SENode
+            {
+                WidthEm = 8
+            };
+            node.Lines.Add(new SEText
+            {
+                Text = "line 1",
+                HRef = new Uri("http://tutorials.jenkov.com/svg/svg-coordinate-system.html#svg-coordinate-system")
+            });
+            node.Lines.Add(new SEText
+            {
+                Text = "line 2",
+                HRef = new Uri("http://tutorials.jenkov.com/svg/svg-coordinate-system.html#svg-coordinate-system")
+            });
+            node.Lines.Add(new SEText
+            {
+                Text = "line 3",
+                HRef = new Uri("http://tutorials.jenkov.com/svg/svg-coordinate-system.html#svg-coordinate-system")
+            });
+            e.Render(node);
+            e.Save(@"c:\Temp\Shapes.svg");
         }
 
         [TestMethod]

@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SVGLib", "SVGLib\SVGLib.csproj", "{43B7A044-2909-48C9-AD09-707709CDFE46}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SVGPad", "SVGPad\SVGPad.csproj", "{AEA9409E-743B-4688-A05E-D0E1FEE8DFD9}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{43B7A044-2909-48C9-AD09-707709CDFE46}.Debug.ActiveCfg = Debug|.NET
+		{43B7A044-2909-48C9-AD09-707709CDFE46}.Debug.Build.0 = Debug|.NET
+		{43B7A044-2909-48C9-AD09-707709CDFE46}.Release.ActiveCfg = Release|.NET
+		{43B7A044-2909-48C9-AD09-707709CDFE46}.Release.Build.0 = Release|.NET
+		{AEA9409E-743B-4688-A05E-D0E1FEE8DFD9}.Debug.ActiveCfg = Debug|.NET
+		{AEA9409E-743B-4688-A05E-D0E1FEE8DFD9}.Debug.Build.0 = Debug|.NET
+		{AEA9409E-743B-4688-A05E-D0E1FEE8DFD9}.Release.ActiveCfg = Release|.NET
+		{AEA9409E-743B-4688-A05E-D0E1FEE8DFD9}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

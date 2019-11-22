@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\PreFhir\PreFhir\PreFhir.csproj" />
+    <ProjectReference Include="..\..\SVGLib\SVGLib.csproj" />
     <ProjectReference Include="..\..\Tools\FhirKhit.Tools.r4\FhirKhit.Tools.R4.csproj" />
     <ProjectReference Include="..\..\Tools\FhirKhit.Tools\FhirKhit.Tools.csproj" />
   </ItemGroup>
