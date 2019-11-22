@@ -24,59 +24,41 @@ namespace SVGLib
 		[Category("(Specific)")]
 		[Description("The x-axis coordinate of the center of the circle.")]
 		public string CX
-		{
-			get	
-			{
-				return GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_CX);	
-			}
+        {
+            get => GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_CX);
 
-			set	
-			{
-				SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_CX, value);
-			}
-		}
+            set => SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_CX, value);
+        }
 
-		/// <summary>
-		/// The y-axis coordinate of the center of the circle.
-		/// </summary>
-		[Category("(Specific)")]
+        /// <summary>
+        /// The y-axis coordinate of the center of the circle.
+        /// </summary>
+        [Category("(Specific)")]
 		[Description("The y-axis coordinate of the center of the circle.")]
 		public string CY
-		{
-			get	
-			{
-				return GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_CY);	
-			}
+        {
+            get => GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_CY);
 
-			set	
-			{
-				SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_CY, value);
-			}
-		}
+            set => SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_CY, value);
+        }
 
-		/// <summary>
-		/// The radius of the circle.
-		/// </summary>
-		[Category("(Specific)")]
+        /// <summary>
+        /// The radius of the circle.
+        /// </summary>
+        [Category("(Specific)")]
 		[Description("The radius of the circle.")]
 		public string R
-		{
-			get	
-			{
-				return GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_R);	
-			}
+        {
+            get => GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_R);
 
-			set	
-			{
-				SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_R, value);
-			}
-		}
+            set => SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_R, value);
+        }
 
-		/// <summary>
-		/// It constructs a circle element with no attribute.
-		/// </summary>
-		/// <param name="doc">SVG document.</param>
-		public SvgCircle(SvgDoc doc):base(doc)
+        /// <summary>
+        /// It constructs a circle element with no attribute.
+        /// </summary>
+        /// <param name="doc">SVG document.</param>
+        public SvgCircle(SvgDoc doc):base(doc)
 		{
 			Init();
 		}

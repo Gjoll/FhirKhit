@@ -39,7 +39,9 @@ namespace SVGLib
 			typePath,
 			typePolygon,
 			typeImage,
-			typeHyperLink
+			typeHyperLink,
+			typeDefs,
+			typeMarker
 		};
 
 		// ---------- PUBLIC PROPERTIES
@@ -51,23 +53,17 @@ namespace SVGLib
 		[Category("(Core)")]
 		[Description("Standard XML attribute for assigning a unique name to an element.")]
 		public string Id
-		{
-			get	
-			{
-				return GetAttributeStringValue(SvgAttribute._SvgAttribute.attrCore_Id);	
-			}
+        {
+            get => GetAttributeStringValue(SvgAttribute._SvgAttribute.attrCore_Id);
 
-			set	
-			{
-				SetAttributeValue(SvgAttribute._SvgAttribute.attrCore_Id, value);
-			}
-		}
+            set => SetAttributeValue(SvgAttribute._SvgAttribute.attrCore_Id, value);
+        }
 
-		// ---------- PUBLIC PROPERTIES END
+        // ---------- PUBLIC PROPERTIES END
 
-		// ---------- PRIVATE PROPERTIES
+        // ---------- PRIVATE PROPERTIES
 
-		private class CEleComparer : IComparer  
+        private class CEleComparer : IComparer  
 		{
 			int IComparer.Compare( Object x, Object y )  
 			{

@@ -25,41 +25,29 @@ namespace SVGLib
 		[Category("(Specific)")]
 		[Description("The definition of the outline of a shape.")]
 		public string PathData
-		{
-			get	
-			{
-				return GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_PathData);	
-			}
+        {
+            get => GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_PathData);
 
-			set	
-			{
-				SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_PathData, value);
-			}
-		}
+            set => SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_PathData, value);
+        }
 
-		/// <summary>
-		/// The author's computation of the total length of the path, in user units.
-		/// </summary>
-		[Category("(Specific)")]
+        /// <summary>
+        /// The author's computation of the total length of the path, in user units.
+        /// </summary>
+        [Category("(Specific)")]
 		[Description("The author's computation of the total length of the path, in user units.")]
 		public string PathLength
-		{
-			get	
-			{
-				return GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_PathLength);	
-			}
+        {
+            get => GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_PathLength);
 
-			set	
-			{
-				SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_PathLength, value);
-			}
-		}
+            set => SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_PathLength, value);
+        }
 
-		/// <summary>
-		/// It constructs a path element with no attribute.
-		/// </summary>
-		/// <param name="doc">SVG document.</param>
-		public SvgPath(SvgDoc doc):base(doc)
+        /// <summary>
+        /// It constructs a path element with no attribute.
+        /// </summary>
+        /// <param name="doc">SVG document.</param>
+        public SvgPath(SvgDoc doc):base(doc)
 		{
 			Init();
 		}

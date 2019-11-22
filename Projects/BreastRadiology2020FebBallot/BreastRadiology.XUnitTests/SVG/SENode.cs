@@ -7,13 +7,13 @@ namespace BreastRadiology.XUnitTests
 {
     public class SENode
     {
-        public float WidthEm;
+        public float Width;
         public List<SEText> TextLines = new List<SEText>();
         public Color FillColor { get; set; } = Color.LightBlue;
 
         public SENode(float widthEm, Color fillColor)
         {
-            this.WidthEm = widthEm;
+            this.Width = widthEm;
             this.FillColor = fillColor;
         }
 

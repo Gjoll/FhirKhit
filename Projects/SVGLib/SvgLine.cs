@@ -16,15 +16,9 @@ namespace SVGLib
 		[Description("The x-axis coordinate of the start point of the line.")]
 		public string X1
 		{
-			get	
-			{
-				return GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_X1);	
-			}
+			get => GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_X1);
 
-			set	
-			{
-				SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_X1, value);
-			}
+			set => SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_X1, value);
 		}
 
 		/// <summary>
@@ -34,15 +28,9 @@ namespace SVGLib
 		[Description("The y-axis coordinate of the start point of the line.")]
 		public string Y1
 		{
-			get	
-			{
-				return GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_Y1);	
-			}
+			get => GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_Y1);
 
-			set	
-			{
-				SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_Y1, value);
-			}
+			set => SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_Y1, value);
 		}
 
 		/// <summary>
@@ -52,15 +40,9 @@ namespace SVGLib
 		[Description("The x-axis coordinate of the end point of the line.")]
 		public string X2
 		{
-			get	
-			{
-				return GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_X2);	
-			}
+			get => GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_X2);
 
-			set	
-			{
-				SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_X2, value);
-			}
+			set => SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_X2, value);
 		}
 
 		/// <summary>
@@ -70,15 +52,9 @@ namespace SVGLib
 		[Description("The y-axis coordinate of the end point of the line.")]
 		public string Y2
 		{
-			get	
-			{
-				return GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_Y2);	
-			}
+			get => GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_Y2);
 
-			set	
-			{
-				SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_Y2, value);
-			}
+			set => SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_Y2, value);
 		}
 
 		/// <summary>

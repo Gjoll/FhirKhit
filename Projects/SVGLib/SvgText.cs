@@ -26,15 +26,9 @@ namespace SVGLib
 		[Description("Specifies a base URI other than the base URI of the document or external entity.")]
 		public string XmlBase
 		{
-			get	
-			{
-				return GetAttributeStringValue(SvgAttribute._SvgAttribute.attrCore_XmlBase);	
-			}
+			get => GetAttributeStringValue(SvgAttribute._SvgAttribute.attrCore_XmlBase);
 
-			set	
-			{
-				SetAttributeValue(SvgAttribute._SvgAttribute.attrCore_XmlBase, value);
-			}
+			set => SetAttributeValue(SvgAttribute._SvgAttribute.attrCore_XmlBase, value);
 		}
 
 		/// <summary>
@@ -44,15 +38,9 @@ namespace SVGLib
 		[Description("Standard XML attribute to specify the language (e.g., English) used in the contents and attribute values of particular elements.")]
 		public string XmlLang
 		{
-			get	
-			{
-				return GetAttributeStringValue(SvgAttribute._SvgAttribute.attrCore_XmlLang);	
-			}
+			get => GetAttributeStringValue(SvgAttribute._SvgAttribute.attrCore_XmlLang);
 
-			set	
-			{
-				SetAttributeValue(SvgAttribute._SvgAttribute.attrCore_XmlLang, value);
-			}
+			set => SetAttributeValue(SvgAttribute._SvgAttribute.attrCore_XmlLang, value);
 		}
 
 		/// <summary>
@@ -62,15 +50,9 @@ namespace SVGLib
 		[Description("Standard XML attribute to specify whether white space is preserved in character data. The only possible values are default and preserve.")]
 		public string XmlSpace
 		{
-			get	
-			{
-				return GetAttributeStringValue(SvgAttribute._SvgAttribute.attrCore_XmlSpace);	
-			}
+			get => GetAttributeStringValue(SvgAttribute._SvgAttribute.attrCore_XmlSpace);
 
-			set	
-			{
-				SetAttributeValue(SvgAttribute._SvgAttribute.attrCore_XmlSpace, value);
-			}
+			set => SetAttributeValue(SvgAttribute._SvgAttribute.attrCore_XmlSpace, value);
 		}
 
 		/// <summary>
@@ -80,15 +62,9 @@ namespace SVGLib
 		[Description("This attribute assigns a (CSS) class name or set of class names to an element.")]
 		public string Class
 		{
-			get	
-			{
-				return GetAttributeStringValue(SvgAttribute._SvgAttribute.attrStyle_Class);	
-			}
+			get => GetAttributeStringValue(SvgAttribute._SvgAttribute.attrStyle_Class);
 
-			set	
-			{
-				SetAttributeValue(SvgAttribute._SvgAttribute.attrStyle_Class, value);
-			}
+			set => SetAttributeValue(SvgAttribute._SvgAttribute.attrStyle_Class, value);
 		}
 
 		/// <summary>
@@ -98,15 +74,9 @@ namespace SVGLib
 		[Description("This attribute specifies style information for the current element. The style attribute specifies style information for a single element.")]
 		public string Style
 		{
-			get	
-			{
-				return GetAttributeStringValue(SvgAttribute._SvgAttribute.attrStyle_Style);	
-			}
+			get => GetAttributeStringValue(SvgAttribute._SvgAttribute.attrStyle_Style);
 
-			set	
-			{
-				SetAttributeValue(SvgAttribute._SvgAttribute.attrStyle_Style, value);
-			}
+			set => SetAttributeValue(SvgAttribute._SvgAttribute.attrStyle_Style, value);
 		}
 
 		/// <summary>
@@ -116,15 +86,9 @@ namespace SVGLib
 		[Description("The value of the element.")]
 		public string Value
 		{
-			get	
-			{
-				return m_sElementValue;	
-			}
+			get => m_sElementValue;
 
-			set	
-			{
-				m_sElementValue =  value;
-			}
+			set => m_sElementValue = value;
 		}
 
 		/// <summary>
@@ -134,15 +98,9 @@ namespace SVGLib
 		[Description("The x-axis coordinate of the side of the element which has the smaller x-axis coordinate value in the current user coordinate system. If the attribute is not specified, the effect is as if a value of 0 were specified.")]
 		public string X
 		{
-			get	
-			{
-				return GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_X);	
-			}
+			get => GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_X);
 
-			set	
-			{
-				SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_X, value);
-			}
+			set => SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_X, value);
 		}
 
 		/// <summary>
@@ -152,15 +110,9 @@ namespace SVGLib
 		[Description("The y-axis coordinate of the side of the element which has the smaller y-axis coordinate value in the current user coordinate system. If the attribute is not specified, the effect is as if a value of 0 were specified.")]
 		public string Y
 		{
-			get	
-			{
-				return GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_Y);	
-			}
+			get => GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_Y);
 
-			set	
-			{
-				SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_Y, value);
-			}
+			set => SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_Y, value);
 		}
 
 		/// <summary>
@@ -170,15 +122,9 @@ namespace SVGLib
 		[Description("Shifts in the current text position along the x-axis for the characters within this element or any of its descendants.")]
 		public string DX
 		{
-			get	
-			{
-				return GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_DX);	
-			}
+			get => GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_DX);
 
-			set	
-			{
-				SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_DX, value);
-			}
+			set => SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_DX, value);
 		}
 
 		/// <summary>
@@ -188,15 +134,9 @@ namespace SVGLib
 		[Description("Shifts in the current text position along the y-axis for the characters within this element or any of its descendants.")]
 		public string DY
 		{
-			get	
-			{
-				return GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_DY);	
-			}
+			get => GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_DY);
 
-			set	
-			{
-				SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_DY, value);
-			}
+			set => SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_DY, value);
 		}
 
 		/// <summary>
@@ -206,15 +146,9 @@ namespace SVGLib
 		[Description("The supplemental rotation about the current text position that will be applied to all of the glyphs corresponding to each character within this element.")]
 		public string Rotate
 		{
-			get	
-			{
-				return GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_Rotate);	
-			}
+			get => GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_Rotate);
 
-			set	
-			{
-				SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_Rotate, value);
-			}
+			set => SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_Rotate, value);
 		}
 
 		/// <summary>
@@ -224,15 +158,9 @@ namespace SVGLib
 		[Description("The author's computation of the total sum of all of the advance values that correspond to character data within this element, including the advance value on the glyph (horizontal or vertical), the effect of properties 'kerning', 'letter-spacing' and 'word-spacing' and adjustments due to attributes dx and dy on 'tspan' elements. This value is used to calibrate the user agent's own calculations with that of the author.")]
 		public string TextLength
 		{
-			get	
-			{
-				return GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_TextLength);	
-			}
+			get => GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_TextLength);
 
-			set	
-			{
-				SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_TextLength, value);
-			}
+			set => SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_TextLength, value);
 		}
 
 		/// <summary>
@@ -242,15 +170,9 @@ namespace SVGLib
 		[Description("Indicates the type of adjustments which the user agent shall make to make the rendered length of the text match the value specified on the textLength attribute.")]
 		public SvgAttribute._SvgLengthAdjust LengthAdjust
 		{
-			get	
-			{
-				return (SvgAttribute._SvgLengthAdjust) GetAttributeIntValue(SvgAttribute._SvgAttribute.attrSpecific_LengthAdjust);	
-			}
+			get => (SvgAttribute._SvgLengthAdjust)GetAttributeIntValue(SvgAttribute._SvgAttribute.attrSpecific_LengthAdjust);
 
-			set	
-			{
-				SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_LengthAdjust, (int) value);
-			}
+			set => SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_LengthAdjust, (int)value);
 		}
 
 		/// <summary>
@@ -260,15 +182,9 @@ namespace SVGLib
 		[Description("Indicates which font family is to be used to render the text, specified as a prioritized list of font family names and/or generic family names.")]
 		public string FontFamily
 		{
-			get	
-			{
-				return GetAttributeStringValue(SvgAttribute._SvgAttribute.attrFont_Family);
-			}
+			get => GetAttributeStringValue(SvgAttribute._SvgAttribute.attrFont_Family);
 
-			set	
-			{
-				SetAttributeValue(SvgAttribute._SvgAttribute.attrFont_Family, value);
-			}
+			set => SetAttributeValue(SvgAttribute._SvgAttribute.attrFont_Family, value);
 		}
 
 		/// <summary>
@@ -278,15 +194,9 @@ namespace SVGLib
 		[Description("This property refers to the size of the font from baseline to baseline when multiple lines of text are set solid in a multiline layout environment.")]
 		public string FontSize
 		{
-			get	
-			{
-				return GetAttributeStringValue(SvgAttribute._SvgAttribute.attrFont_Size);
-			}
+			get => GetAttributeStringValue(SvgAttribute._SvgAttribute.attrFont_Size);
 
-			set	
-			{
-				SetAttributeValue(SvgAttribute._SvgAttribute.attrFont_Size, value);
-			}
+			set => SetAttributeValue(SvgAttribute._SvgAttribute.attrFont_Size, value);
 		}
 
 		/// <summary>
@@ -296,15 +206,9 @@ namespace SVGLib
 		[Description("This property allows authors to specify an aspect value for an element that will preserve the x-height of the first choice font in a substitute font.")]
 		public string SizeAdjust
 		{
-			get	
-			{
-				return GetAttributeStringValue(SvgAttribute._SvgAttribute.attrFont_SizeAdjust);
-			}
+			get => GetAttributeStringValue(SvgAttribute._SvgAttribute.attrFont_SizeAdjust);
 
-			set	
-			{
-				SetAttributeValue(SvgAttribute._SvgAttribute.attrFont_SizeAdjust, value);
-			}
+			set => SetAttributeValue(SvgAttribute._SvgAttribute.attrFont_SizeAdjust, value);
 		}
 
 		/// <summary>
@@ -314,15 +218,9 @@ namespace SVGLib
 		[Description("This property indicates the desired amount of condensing or expansion in the glyphs used to render the text.")]
 		public SvgAttribute._SvgFontStretch Stretch
 		{
-			get	
-			{
-				return (SvgAttribute._SvgFontStretch) GetAttributeIntValue(SvgAttribute._SvgAttribute.attrFont_Stretch);
-			}
+			get => (SvgAttribute._SvgFontStretch)GetAttributeIntValue(SvgAttribute._SvgAttribute.attrFont_Stretch);
 
-			set	
-			{
-				SetAttributeValue(SvgAttribute._SvgAttribute.attrFont_Stretch, (int) value);
-			}
+			set => SetAttributeValue(SvgAttribute._SvgAttribute.attrFont_Stretch, (int)value);
 		}
 
 		/// <summary>

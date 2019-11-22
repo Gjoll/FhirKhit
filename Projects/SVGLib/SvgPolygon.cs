@@ -25,23 +25,16 @@ namespace SVGLib
 		[Category("(Specific)")]
 		[Description("The points that make up the polygon. All coordinate values are in the user coordinate system.")]
 		public string Points
-		{
-			get	
-			{
-				return GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_Points);	
-			}
+        {
+            get => GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_Points);
+            set => SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_Points, value);
+        }
 
-			set	
-			{
-				SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_Points, value);
-			}
-		}
-
-		/// <summary>
-		/// It constructs a polygon element with no attribute.
-		/// </summary>
-		/// <param name="doc">SVG document.</param>
-		public SvgPolygon(SvgDoc doc):base(doc)
+        /// <summary>
+        /// It constructs a polygon element with no attribute.
+        /// </summary>
+        /// <param name="doc">SVG document.</param>
+        public SvgPolygon(SvgDoc doc):base(doc)
 		{
 			Init();
 		}

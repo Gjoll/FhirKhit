@@ -24,77 +24,53 @@ namespace SVGLib
 		[Category("(Specific)")]
 		[Description("The x-axis coordinate of the center of the ellipse.")]
 		public string CX
-		{
-			get	
-			{
-				return GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_CX);	
-			}
+        {
+            get => GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_CX);
 
-			set	
-			{
-				SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_CX, value);
-			}
-		}
+            set => SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_CX, value);
+        }
 
-		/// <summary>
-		/// The y-axis coordinate of the center of the ellipse.
-		/// </summary>
-		[Category("(Specific)")]
+        /// <summary>
+        /// The y-axis coordinate of the center of the ellipse.
+        /// </summary>
+        [Category("(Specific)")]
 		[Description("The y-axis coordinate of the center of the ellipse.")]
 		public string CY
-		{
-			get	
-			{
-				return GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_CY);	
-			}
+        {
+            get => GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_CY);
 
-			set	
-			{
-				SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_CY, value);
-			}
-		}
+            set => SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_CY, value);
+        }
 
-		/// <summary>
-		/// The x-axis radius of the ellipse.
-		/// </summary>
-		[Category("(Specific)")]
+        /// <summary>
+        /// The x-axis radius of the ellipse.
+        /// </summary>
+        [Category("(Specific)")]
 		[Description("The x-axis radius of the ellipse.")]
 		public string RX
-		{
-			get	
-			{
-				return GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_RX);	
-			}
+        {
+            get => GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_RX);
 
-			set	
-			{
-				SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_RX, value);
-			}
-		}
+            set => SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_RX, value);
+        }
 
-		/// <summary>
-		/// The y-axis radius of the ellipse.
-		/// </summary>
-		[Category("(Specific)")]
+        /// <summary>
+        /// The y-axis radius of the ellipse.
+        /// </summary>
+        [Category("(Specific)")]
 		[Description("The y-axis radius of the ellipse.")]
 		public string RY
-		{
-			get	
-			{
-				return GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_RY);	
-			}
+        {
+            get => GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_RY);
 
-			set	
-			{
-				SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_RY, value);
-			}
-		}
+            set => SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_RY, value);
+        }
 
-		/// <summary>
-		/// It constructs an ellipse element with no attribute.
-		/// </summary>
-		/// <param name="doc">SVG document.</param>
-		public SvgEllipse(SvgDoc doc):base(doc)
+        /// <summary>
+        /// It constructs an ellipse element with no attribute.
+        /// </summary>
+        /// <param name="doc">SVG document.</param>
+        public SvgEllipse(SvgDoc doc):base(doc)
 		{
 			Init();
 		}

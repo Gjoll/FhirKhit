@@ -95,6 +95,7 @@
     <Compile Include="SvgCircle.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="SvgMarker.cs" />
     <Compile Include="SvgDesc.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -110,6 +111,7 @@
     <Compile Include="SvgGroup.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="SvgDefs.cs" />
     <Compile Include="SvgHyperLink.cs" />
     <Compile Include="SvgImage.cs">
       <SubType>Code</SubType>

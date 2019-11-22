@@ -26,23 +26,17 @@ namespace SVGLib
 		[Category("(Specific)")]
 		[Description("The value of the element.")]
 		public string Value
-		{
-			get	
-			{
-				return m_sElementValue;	
-			}
+        {
+            get => m_sElementValue;
 
-			set	
-			{
-				m_sElementValue =  value;
-			}
-		}
+            set => m_sElementValue = value;
+        }
 
-		/// <summary>
-		/// It constructs a desc element with no attribute.
-		/// </summary>
-		/// <param name="doc">SVG document.</param>
-		public SvgDesc(SvgDoc doc):base(doc)
+        /// <summary>
+        /// It constructs a desc element with no attribute.
+        /// </summary>
+        /// <param name="doc">SVG document.</param>
+        public SvgDesc(SvgDoc doc):base(doc)
 		{
 			Init();
 		}

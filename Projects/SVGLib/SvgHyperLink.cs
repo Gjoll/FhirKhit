@@ -15,15 +15,9 @@ namespace SVGLib
 		[Description("HRef")]
 		public string HRef
 		{
-			get	
-			{
-				return GetAttributeStringValue(SvgAttribute._SvgAttribute.attrXLink_HRef);	
-			}
+			get => GetAttributeStringValue(SvgAttribute._SvgAttribute.attrXLink_HRef);
 
-			set	
-			{
-				SetAttributeValue(SvgAttribute._SvgAttribute.attrXLink_HRef, value);
-			}
+			set => SetAttributeValue(SvgAttribute._SvgAttribute.attrXLink_HRef, value);
 		}
 
 		/// <summary>

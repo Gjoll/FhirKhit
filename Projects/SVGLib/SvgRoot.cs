@@ -24,73 +24,49 @@ namespace SVGLib
 		[Category("Svg")]
 		[Description("Standard XML namespace.")]
 		public string XmlNs
-		{
-			get	
-			{
-				return GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSvg_XmlNs);	
-			}
+        {
+            get => GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSvg_XmlNs);
 
-			set	
-			{
-				SetAttributeValue(SvgAttribute._SvgAttribute.attrSvg_XmlNs, value);
-			}
-		}
+            set => SetAttributeValue(SvgAttribute._SvgAttribute.attrSvg_XmlNs, value);
+        }
 
-		/// <summary>
-		/// Standard XML version.
-		/// </summary>
-		[Category("Svg")]
+        /// <summary>
+        /// Standard XML version.
+        /// </summary>
+        [Category("Svg")]
 		[Description("Standard XML version.")]
 		public string Version
-		{
-			get	
-			{
-				return GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSvg_Version);	
-			}
+        {
+            get => GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSvg_Version);
 
-			set	
-			{
-				SetAttributeValue(SvgAttribute._SvgAttribute.attrSvg_Version, value);
-			}
-		}
+            set => SetAttributeValue(SvgAttribute._SvgAttribute.attrSvg_Version, value);
+        }
 
-		/// <summary>
-		/// The width of the svg area.
-		/// </summary>
-		[Category("(Specific)")]
+        /// <summary>
+        /// The width of the svg area.
+        /// </summary>
+        [Category("(Specific)")]
 		[Description("The width of the svg area.")]
 		public string Width
-		{
-			get	
-			{
-				return GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_Width);	
-			}
+        {
+            get => GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_Width);
 
-			set	
-			{
-				SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_Width, value);
-			}
-		}
+            set => SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_Width, value);
+        }
 
-		/// <summary>
-		/// The height of the svg area.
-		/// </summary>
-		[Category("(Specific)")]
+        /// <summary>
+        /// The height of the svg area.
+        /// </summary>
+        [Category("(Specific)")]
 		[Description("The height of the svg area.")]
 		public string Height
-		{
-			get	
-			{
-				return GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_Height);	
-			}
+        {
+            get => GetAttributeStringValue(SvgAttribute._SvgAttribute.attrSpecific_Height);
 
-			set	
-			{
-				SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_Height, value);
-			}
-		}
+            set => SetAttributeValue(SvgAttribute._SvgAttribute.attrSpecific_Height, value);
+        }
 
-		internal SvgRoot(SvgDoc doc):base(doc)
+        internal SvgRoot(SvgDoc doc):base(doc)
 		{
 			m_sElementName = "svg";
 			m_ElementType = _SvgElementType.typeSvg;
