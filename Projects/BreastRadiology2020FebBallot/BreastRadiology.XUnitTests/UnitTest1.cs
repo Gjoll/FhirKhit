@@ -11,6 +11,7 @@ using Hl7.Fhir.Serialization;
 using Hl7.Fhir.Model;
 using System.Collections.Generic;
 using BreastRadiology.XUnitTests;
+using System.Drawing;
 
 namespace FhirKhit.BreastRadiology.XUnitTests
 {
@@ -224,28 +225,54 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         [TestMethod]
         public void SVG()
         {
+            float nodeWidth = 8;
+
             SvgEditor e = new SvgEditor();
 
-            SENode node = new SENode
+            SENodeGroup group1 = new SENodeGroup();
             {
-                WidthEm = 8
-            };
-            node.Lines.Add(new SEText
+                SENode node = new SENode(nodeWidth, Color.LightBlue)
+                    .AddTextLine("Node1.1 1", new Uri("http://www.google.com"))
+                    .AddTextLine("Node1.1 2")
+                    .AddTextLine("Node1.1 3")
+                    ;
+                group1.Nodes.Add(node);
+            }
+
             {
-                Text = "line 1",
-                HRef = new Uri("http://tutorials.jenkov.com/svg/svg-coordinate-system.html#svg-coordinate-system")
-            });
-            node.Lines.Add(new SEText
+                SENode node = new SENode(nodeWidth, Color.Coral)
+                    .AddTextLine("Node1.2 1")
+                    ;
+                group1.Nodes.Add(node);
+            }
+
             {
-                Text = "line 2",
-                HRef = new Uri("http://tutorials.jenkov.com/svg/svg-coordinate-system.html#svg-coordinate-system")
-            });
-            node.Lines.Add(new SEText
-            {
-                Text = "line 3",
-                HRef = new Uri("http://tutorials.jenkov.com/svg/svg-coordinate-system.html#svg-coordinate-system")
-            });
-            e.Render(node);
+                SENodeGroup group2 = new SENodeGroup();
+                {
+                    SENode node = new SENode(nodeWidth, Color.LightBlue)
+                        .AddTextLine("Node2.1 1", new Uri("http://www.google.com"))
+                        .AddTextLine("Node2.1 2")
+                        .AddTextLine("Node2.1 3")
+                        ;
+                    group2.Nodes.Add(node);
+                }
+                {
+                    SENode node = new SENode(nodeWidth, Color.Coral)
+                        .AddTextLine("Node2.2 1")
+                        ;
+                    group2.Nodes.Add(node);
+                }
+
+                {
+                    SENode node = new SENode(nodeWidth, Color.Coral)
+                        .AddTextLine("Node2.3 1")
+                        ;
+                    group2.Nodes.Add(node);
+                }
+                group1.Children.Add(group2);
+            }
+
+            e.Render(group1);
             e.Save(@"c:\Temp\Shapes.svg");
         }
 
