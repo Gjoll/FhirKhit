@@ -223,13 +223,100 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         }
 
         [TestMethod]
+        public void Svg_BuildOverviewGraphic()
+        {
+            float nodeWidth = 8;
+
+            SvgEditor e = new SvgEditor();
+
+            SENodeGroup rootGroup = new SENodeGroup("root");
+            {
+                SENode node = new SENode(nodeWidth, Color.LightGreen)
+                    .AddTextLine("Breast")
+                    .AddTextLine("Radiology")
+                    .AddTextLine("Report")
+                    ;
+                rootGroup.Nodes.Add(node);
+            }
+
+            {
+                float sectionNodeWidth = 12;
+                {
+                    SENodeGroup sectionFindingsGroup = rootGroup.AppendChild("findings");
+                    SENode findingsNode = new SENode(sectionNodeWidth, Color.LightBlue)
+                        .AddTextLine("Findings")
+                        .AddTextLine("Section")
+                        ;
+                    sectionFindingsGroup.Nodes.Add(findingsNode);
+                    {
+                        SENodeGroup sectionFindingsRightGroup = sectionFindingsGroup.AppendChild("findings right");
+                        {
+                            SENode node = new SENode(sectionNodeWidth, Color.LightBlue)
+                                .AddTextLine("Findings")
+                                .AddTextLine("Right Breast")
+                                .AddTextLine("Section")
+                                ;
+                            sectionFindingsRightGroup.Nodes.Add(node);
+                        }
+                        {
+                            SENodeGroup sectionFindingsLeftGroup = sectionFindingsGroup.AppendChild("findings left");
+                            {
+                                SENode node = new SENode(sectionNodeWidth, Color.LightBlue)
+                                    .AddTextLine("Findings")
+                                    .AddTextLine("Left Breast")
+                                    .AddTextLine("Section")
+                                    ;
+                                sectionFindingsRightGroup.Nodes.Add(node);
+                            }
+                        }
+                    }
+                }
+                {
+                    SENodeGroup sectionImpressionsGroup = rootGroup.AppendChild("impressions");
+                    SENode node = new SENode(sectionNodeWidth, Color.Coral)
+                        .AddTextLine("Impressions")
+                        .AddTextLine("Section")
+                        ;
+                    sectionImpressionsGroup.Nodes.Add(node);
+                }
+
+                {
+                    SENodeGroup sectionRecommendationsGroup = rootGroup.AppendChild("recommendations");
+                    SENode node = new SENode(sectionNodeWidth, Color.Coral)
+                        .AddTextLine("Recommendations")
+                        .AddTextLine("Section")
+                        ;
+                    sectionRecommendationsGroup.Nodes.Add(node);
+                }
+
+                {
+                    SENodeGroup sectionRiskGroup = rootGroup.AppendChild("risk");
+                    SENode node = new SENode(sectionNodeWidth, Color.Coral)
+                        .AddTextLine("Patient Risk Section")
+                        ;
+                    sectionRiskGroup.Nodes.Add(node);
+                }
+                {
+                    SENodeGroup sectionPriorGroup = rootGroup.AppendChild("prior");
+                    SENode node = new SENode(sectionNodeWidth, Color.Coral)
+                        .AddTextLine("Prior Studies")
+                        ;
+                    sectionPriorGroup.Nodes.Add(node);
+                }
+            }
+
+            e.Render(rootGroup);
+            e.Save(@"c:\Temp\Overview.svg");
+        }
+
+        [TestMethod]
         public void SVG()
         {
             float nodeWidth = 8;
 
             SvgEditor e = new SvgEditor();
 
-            SENodeGroup group1 = new SENodeGroup();
+            SENodeGroup group1 = new SENodeGroup("test");
             {
                 SENode node = new SENode(nodeWidth, Color.LightBlue)
                     .AddTextLine("Node1.1 1", new Uri("http://www.google.com"))
@@ -247,7 +334,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             }
 
             {
-                SENodeGroup group2 = new SENodeGroup();
+                SENodeGroup group2 = new SENodeGroup("test2");
                 {
                     SENode node = new SENode(nodeWidth, Color.LightBlue)
                         .AddTextLine("Node2.1 1", new Uri("http://www.google.com"))

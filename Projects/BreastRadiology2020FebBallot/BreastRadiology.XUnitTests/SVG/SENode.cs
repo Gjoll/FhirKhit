@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Text;
 
 namespace BreastRadiology.XUnitTests
 {
+    [DebuggerDisplay("{AllText()}]")]
     public class SENode
     {
         public float Width;
@@ -19,6 +21,14 @@ namespace BreastRadiology.XUnitTests
 
         public SENode()
         {
+        }
+
+        public String AllText()
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (SEText t in this.TextLines)
+                sb.Append($"{t.Text} ");
+            return sb.ToString();
         }
 
         public SENode AddTextLine(SEText text)
