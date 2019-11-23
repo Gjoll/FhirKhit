@@ -91,7 +91,13 @@ namespace BreastRadiology.XUnitTests
             this.root.Height = $"{ToPx(this.maxHeight + this.NodeGapY)}";
         }
 
-        void CreateArrow(SvgGroup g, float xStart, float yStart, float xEnd, float yEnd)
+        void CreateArrow(SvgGroup g,
+            bool startMarker,
+            bool endMarker,
+            float xStart,
+            float yStart,
+            float xEnd,
+            float yEnd)
         {
             SvgLine stub = this.doc.AddLine(g);
             stub.Stroke = Color.Black;
@@ -100,8 +106,10 @@ namespace BreastRadiology.XUnitTests
             stub.Y1 = this.ToPx(yStart);
             stub.Y2 = this.ToPx(yEnd);
             stub.StrokeWidth = ToPx(BorderWidth);
-            stub.MarkerStart = $"url(#{ArrowStart})";
-            stub.MarkerEnd = $"url(#{ArrowEnd})";
+            if (startMarker)
+                stub.MarkerStart = $"url(#{ArrowStart})";
+            if (endMarker)
+                stub.MarkerEnd = $"url(#{ArrowEnd})";
         }
 
         void CreateLine(SvgGroup g, float x1, float y1, float x2, float y2)
@@ -162,7 +170,7 @@ namespace BreastRadiology.XUnitTests
             if (group.Children.Count > 0)
             {
                 foreach (PointF stubStart in startConnectors)
-                    CreateArrow(g, stubStart.X, stubStart.Y, screenX + col1Width + NodeGapX, stubStart.Y);
+                    CreateArrow(g, true, false, stubStart.X, stubStart.Y, screenX + col1Width + NodeGapX, stubStart.Y);
             }
             float col2ScreenX = screenX + col1Width + 2 * NodeGapX;
             float col2ScreenY = screenY;
@@ -181,7 +189,7 @@ namespace BreastRadiology.XUnitTests
 
                 foreach (PointF stubEnd in col2EndConnectors)
                 {
-                    CreateArrow(g, screenX + col1Width + NodeGapX, stubEnd.Y, stubEnd.X, stubEnd.Y);
+                    CreateArrow(g, false, true, screenX + col1Width + NodeGapX, stubEnd.Y, stubEnd.X, stubEnd.Y);
                     if (topConnectorY > stubEnd.Y)
                         topConnectorY = stubEnd.Y;
                     if (bottomConnectorY < stubEnd.Y)
@@ -224,7 +232,18 @@ namespace BreastRadiology.XUnitTests
 
             SvgGroup g = this.doc.AddGroup(parentGroup);
 
-            SvgRect square = this.doc.AddRect(g);
+            SvgRect square;
+
+            if (node.HRef != null)
+            {
+                SvgHyperLink l = this.doc.AddHyperLink(g);
+                l.HRef = node.HRef.ToString();
+                square = this.doc.AddRect(l);
+            }
+            else
+            {
+                square = this.doc.AddRect(g);
+            }
             square.Stroke = Color.Black;
             square.StrokeWidth = ToPx(BorderWidth);
             square.RX = ToPx(this.RectRx);

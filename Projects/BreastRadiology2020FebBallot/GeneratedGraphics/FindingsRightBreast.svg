@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="450" height="326.25">
+<defs>
+<marker id="arrowStart" markerWidth="3.75" markerHeight="3.75" markerUnits="px" refX="1.875" refY="1.875">
+<circle fill="Black" stroke-width="0" cx="1.875" cy="1.875" r="1.875" />
+</marker>
+<marker id="arrowEnd" markerWidth="7.5" markerHeight="7.5" markerUnits="px" refX="7.5" refY="3.75">
+<polygon fill="Black" stroke-width="0" points="0 0 7.5 3.75 0 7.5" />
+</marker>
+</defs>
+<g>
+<g>
+<a href="Overview.svg">
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="30" y="30" width="120" height="86.25" rx="15" ry="30" />
+</a>
+<text x="60" y="60">Findings</text>
+<text x="60" y="78.75">Right Breast</text>
+<text x="60" y="97.5">Section</text>
+</g>
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="150" y1="73.125" x2="180" y2="73.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="180" y1="73.125" x2="210" y2="73.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="180" y1="166.875" x2="210" y2="166.875" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="180" y1="260.625" x2="210" y2="260.625" />
+<line stroke="Black" stroke-width="1.875" x1="180" y1="73.125" x2="180" y2="260.625" />
+</g>
+<g>
+<g>
+<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="210" y="30" width="180" height="86.25" rx="15" ry="30" />
+<text x="240" y="60">Mammography</text>
+<text x="240" y="78.75">Abnormality</text>
+<text x="240" y="97.5">Observation</text>
+</g>
+<g>
+<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="210" y="123.75" width="180" height="86.25" rx="15" ry="30" />
+<text x="240" y="153.75">MRI</text>
+<text x="240" y="172.5">Abnormality</text>
+<text x="240" y="191.25">Observation</text>
+</g>
+<g>
+<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="210" y="217.5" width="180" height="86.25" rx="15" ry="30" />
+<text x="240" y="247.5">UltraSound</text>
+<text x="240" y="266.25">Abnormality</text>
+<text x="240" y="285">Observation</text>
+</g>
+</g>
+</svg>
