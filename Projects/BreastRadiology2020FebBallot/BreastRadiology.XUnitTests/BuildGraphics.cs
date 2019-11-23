@@ -140,12 +140,42 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         public void BuildFindings(String name,
             String outputName)
         {
-            float nodeWidth = 8;
+            SENodeGroup rootGroup;
+
+            SENodeGroup AbnormalityType(String name)
+            {
+                float width = 12;
+                SENodeGroup findingsGroup = new SENodeGroup(name);
+                rootGroup.Children.Add(findingsGroup);
+
+                SENode findingsNode = new SENode(width, Color.LightBlue)
+                    .AddTextLine(name)
+                    .AddTextLine("Abnormality")
+                    .AddTextLine("Observation")
+                    ;
+
+                findingsGroup.Nodes.Add(findingsNode);
+
+                SENodeGroup g = new SENodeGroup(name);
+                findingsGroup.Children.Add(g);
+
+                return g;
+            }
+
+            void AddTarget(SENodeGroup g, String name)
+            {
+                SENode targetNode = new SENode(14, Color.LightBlue)
+                    .AddTextLine(name)
+                    ;
+
+                g.Nodes.Add(targetNode);
+            }
 
             SvgEditor e = new SvgEditor();
 
-            SENodeGroup rootGroup = new SENodeGroup("root");
+            rootGroup = new SENodeGroup("root");
             {
+                float nodeWidth = 8;
                 SENode node = new SENode(nodeWidth, Color.LightGreen, Overview)
                     .AddTextLine("Findings")
                     .AddTextLine($"{name} Breast")
@@ -154,33 +184,23 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 rootGroup.Nodes.Add(node);
             }
 
-            float abnormalityWidth = 12;
-            SENodeGroup findingsGroup = rootGroup.AppendChild("findings");
             {
-                SENode findingsNode = new SENode(abnormalityWidth, Color.LightBlue)
-                    .AddTextLine("Mammography")
-                    .AddTextLine("Abnormality")
-                    .AddTextLine("Observation")
-                    ;
-                findingsGroup.Nodes.Add(findingsNode);
+                SENodeGroup g = AbnormalityType("Mammography");
+                AddTarget(g, "Mammo Breast Density");
+                AddTarget(g, "Mammo Mass");
+                AddTarget(g, "Mammo Calcification");
+                AddTarget(g, "Mammo Arch. Distortion");
+                AddTarget(g, "Intra. Lymph Node");
+                AddTarget(g, "Skin Lesion");
+                AddTarget(g, "Solitary Dilated Duct");
             }
 
             {
-                SENode findingsNode = new SENode(abnormalityWidth, Color.LightBlue)
-                    .AddTextLine("MRI")
-                    .AddTextLine("Abnormality")
-                    .AddTextLine("Observation")
-                    ;
-                findingsGroup.Nodes.Add(findingsNode);
+                SENodeGroup g = AbnormalityType("MRI");
             }
 
             {
-                SENode findingsNode = new SENode(abnormalityWidth, Color.LightBlue)
-                    .AddTextLine("UltraSound")
-                    .AddTextLine("Abnormality")
-                    .AddTextLine("Observation")
-                    ;
-                findingsGroup.Nodes.Add(findingsNode);
+                SENodeGroup g = AbnormalityType("UltraSound");
             }
 
             e.Render(rootGroup);
