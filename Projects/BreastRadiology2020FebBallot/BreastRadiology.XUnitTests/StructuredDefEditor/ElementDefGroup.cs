@@ -140,7 +140,7 @@ namespace BreastRadiology.XUnitTests
             });
             return extSlice;
         }
-        public void SliceByUrl(IEnumerable<ObservationTarget> targets)
+        public void SliceByUrl(IEnumerable<ProfileTarget> targets)
         {
             this.ElementDefinition.ConfigureSliceByUrlDiscriminator();
             //if (restrictFlag == true)
@@ -156,7 +156,7 @@ namespace BreastRadiology.XUnitTests
             //    });
             //    e.ElementDefinition.Type = types;
             //}
-            foreach (ObservationTarget target in targets)
+            foreach (ProfileTarget target in targets)
             {
                 String sliceName = target.Profile.LastUriPart().UncapFirstLetter();
                 ElementDefinition sliceElement = this.AppendSlice(sliceName, target.Min, target.Max);

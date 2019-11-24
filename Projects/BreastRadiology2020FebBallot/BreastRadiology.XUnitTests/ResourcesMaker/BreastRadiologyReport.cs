@@ -14,7 +14,9 @@ namespace BreastRadiology.XUnitTests
 {
     public partial class ResourcesMaker : ConverterBase
     {
-        void BreastRadiologyReport(String rootObservationUrl)
+        String BreastRadiologyReport(String patientHistoryUrl,
+            String findingsUrl,
+            String patientRiskUrl)
         {
             SDefEditor e = this.CreateEditor("BreastRadReport",
                 "Breast Radiology Report",
@@ -47,10 +49,15 @@ namespace BreastRadiology.XUnitTests
                 .Definition("Recommendations for future care")
                 .ZeroToMany();
 
-            e.Select("result")
-                .Single()
-                .TypeReference(rootObservationUrl)
-                ;
+            ProfileTarget[] targets = new ProfileTarget[]
+            {
+                    new ProfileTarget(patientHistoryUrl, 1, "1"),
+                    new ProfileTarget(findingsUrl, 1, "1"),
+                    new ProfileTarget(patientRiskUrl, 1, "1")
+            };
+            e.Find("result").SliceByUrl(targets);
+            e.MapNode.AddProfileTargets(targets);
+            return e.SDef.Url;
         }
     }
 }

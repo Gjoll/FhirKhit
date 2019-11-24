@@ -24,13 +24,13 @@ namespace BreastRadiology.XUnitTests
 
             e.Select("bodySite").Zero();
             {
-                ObservationTarget[] targets = new ObservationTarget[]
+                ProfileTarget[] targets = new ProfileTarget[]
                 {
-                    new ObservationTarget(findingsLeftUrl, 1, "1"),
-                    new ObservationTarget(findingsRightUrl, 1, "1")
+                    new ProfileTarget(findingsLeftUrl, 1, "1"),
+                    new ProfileTarget(findingsRightUrl, 1, "1")
                 };
                 e.Find("hasMember").SliceByUrl(targets);
-                e.MapNode.AddObservationTargets(targets);
+                e.MapNode.AddProfileTargets(targets);
             }
 
             return e.SDef.Url;

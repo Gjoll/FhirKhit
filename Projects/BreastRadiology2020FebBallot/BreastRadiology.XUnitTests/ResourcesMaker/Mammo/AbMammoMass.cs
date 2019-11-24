@@ -28,14 +28,14 @@ namespace BreastRadiology.XUnitTests
                 .AddFragRef(this.observationSectionFragmentUrl)
                 ;
             {
-                ObservationTarget[] targets = new ObservationTarget[]
+                ProfileTarget[] targets = new ProfileTarget[]
                 {
-                    new ObservationTarget(massShape, 1, "1"),
-                    new ObservationTarget(massMargin, 1, "1"),
-                    new ObservationTarget(massDensity, 1, "1")
+                    new ProfileTarget(massShape, 1, "1"),
+                    new ProfileTarget(massMargin, 1, "1"),
+                    new ProfileTarget(massDensity, 1, "1")
                 };
                 e.Find("hasMember").SliceByUrl(targets);
-                e.MapNode.AddObservationTargets(targets);
+                e.MapNode.AddProfileTargets(targets);
             }
             return e.SDef.Url;
         }

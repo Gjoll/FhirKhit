@@ -37,6 +37,8 @@ namespace BreastRadiology.XUnitTests
 
         public SENode AddTextLine(SEText text)
         {
+            if (this.Width < text.Text.Length)
+                this.Width = text.Text.Length;
             this.TextLines.Add(text);
             return this;
         }

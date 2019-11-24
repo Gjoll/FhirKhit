@@ -29,13 +29,13 @@ namespace BreastRadiology.XUnitTests
                 ;
 
             {
-                ObservationTarget[] targets = new ObservationTarget[]
+                ProfileTarget[] targets = new ProfileTarget[]
                 {
-                            new ObservationTarget(calcType, 1, "1"),
-                            new ObservationTarget(calcDistribution, 1, "1")
+                            new ProfileTarget(calcType, 1, "1"),
+                            new ProfileTarget(calcDistribution, 1, "1")
                 };
                 e.Find("hasMember").SliceByUrl(targets);
-                e.MapNode.AddObservationTargets(targets);
+                e.MapNode.AddProfileTargets(targets);
             }
             return e.SDef.Url;
         }

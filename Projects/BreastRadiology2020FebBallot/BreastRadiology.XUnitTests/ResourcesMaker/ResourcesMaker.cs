@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -42,19 +43,19 @@ namespace BreastRadiology.XUnitTests
 
         String resourceDir;
         FhirDateTime date = new FhirDateTime(2019, 11, 1);
-        List<SDefEditor> editors = new List<SDefEditor>();
+        Dictionary<String, SDefEditor> editors = new Dictionary<String, SDefEditor>();
 
         String breastBodyLocationExtensionUrl;
         String breastBodyLocationOptionalFragmentUrl;
         String breastBodyLocationRequiredFragmentUrl;
         String categoryFragmentUrl;
-        String observationSectionFragment;
 
         String headerFragUrl;
         string abnormalityObservationFragmentUrl;
         string abnormalityCodedValueObservationFragmentUrl;
         String observationSectionFragmentUrl;
         String abnormalityFragmentUrl;
+        String breastRadiologyReportUrl;
 
         String CreateUrl(String name)
         {
@@ -94,7 +95,7 @@ namespace BreastRadiology.XUnitTests
 
             retVal.SDef.FhirVersion = FHIRVersion.N4_0_0;
 
-            this.editors.Add(retVal);
+            this.editors.Add(retVal.SDef.Url, retVal);
             return retVal;
         }
 
@@ -192,7 +193,7 @@ namespace BreastRadiology.XUnitTests
             this.headerFragUrl = this.HeaderFragment();
 
             this.categoryFragmentUrl = this.CategoryFragment();
-            this.observationSectionFragment = this.ObservationSectionFragment();
+            this.observationSectionFragmentUrl = this.ObservationSectionFragment();
             this.abnormalityFragmentUrl = this.AbnormalityFragment();
 
 
@@ -200,10 +201,8 @@ namespace BreastRadiology.XUnitTests
             this.breastBodyLocationOptionalFragmentUrl = this.BreastBodyLocationOptionalFragment();
             this.breastBodyLocationRequiredFragmentUrl = this.BreastBodyLocationRequiredFragment();
 
-            this.abnormalityFragmentUrl = this.AbnormalityFragment();
             this.abnormalityObservationFragmentUrl = this.AbnormalityObservationFragment();
             this.abnormalityCodedValueObservationFragmentUrl = this.AbnormalityObservationCodedValueFragment();
-            this.observationSectionFragmentUrl = ObservationSectionFragment();
 
             String abnMassShape = this.AbMassShape();
 
@@ -235,18 +234,16 @@ namespace BreastRadiology.XUnitTests
             //
             String abnMRI = this.AbnormalityMRI();
 
-
             //
             // Ultra Sound
             //
             String abnUltraSound = this.AbUltraSound();
 
-
-            ObservationTarget[] abnormalityTargets = new ObservationTarget[]
+            ProfileTarget[] abnormalityTargets = new ProfileTarget[]
             {
-                new ObservationTarget(abnMammo, 0, "*"),
-                new ObservationTarget(abnMRI, 0, "*"),
-                new ObservationTarget(abnUltraSound, 0, "*")
+                new ProfileTarget(abnMammo, 0, "*"),
+                new ProfileTarget(abnMRI, 0, "*"),
+                new ProfileTarget(abnUltraSound, 0, "*")
             };
 
             String patientRiskUrl = this.SectionPatientRisk();
@@ -254,16 +251,63 @@ namespace BreastRadiology.XUnitTests
             String findingsLeftUrl = this.SectionFindingsLeftBreast(abnormalityTargets);
             String findingsRightUrl = this.SectionFindingsRightBreast(abnormalityTargets);
             String findingsUrl = this.SectionFindings(findingsLeftUrl, findingsRightUrl);
-            String rootUrl = this.SectionRoot(patientHistoryUrl, findingsUrl, patientRiskUrl);
-            this.BreastRadiologyReport(rootUrl);
+            this.breastRadiologyReportUrl = this.BreastRadiologyReport(patientHistoryUrl, findingsUrl, patientRiskUrl);
 
             this.SaveAll();
             this.fc.Dispose();
         }
 
+        public void CreateMaps(String outputDir)
+        {
+            String Name(String url)
+            {
+                if (this.editors.TryGetValue(url, out SDefEditor e) == false)
+                    throw new Exception("Internal error. Editor not found");
+                return e.SDef.Name;
+            }
+
+            IEnumerable<MapLink> TargetLinks(MapNode n)
+            {
+                foreach (MapLink link in n.Links)
+                {
+                    switch (link.LinkType)
+                    {
+                        case "target":
+                            yield return link;
+                            break;
+                    }
+                }
+            }
+
+            void AddChildren(String url,
+                SENodeGroup groupParent)
+            {
+                MapNode mapNode = ResourceMap.Self.GetMapNode(url);
+
+                SENodeGroup groupChild = groupParent.AppendChild("");
+                SENode nodeChild = new SENode(0, Color.LightGreen)
+                    .AddTextLine(Name(url))
+                    ;
+                groupChild.Nodes.Add(nodeChild);
+
+                MapLink[] links = TargetLinks(mapNode).ToArray();
+                if (links.Length == 0)
+                    return;
+
+                foreach (MapLink link in links)
+                    AddChildren(link.ResourceUrl, groupChild);
+            }
+
+            SvgEditor e = new SvgEditor();
+            SENodeGroup rootGroup = new SENodeGroup("root");
+            AddChildren(this.breastRadiologyReportUrl, rootGroup);
+            e.Render(rootGroup);
+            e.Save(Path.Combine(outputDir, "BreastRadOverview.svg"));
+        }
+
         void SaveAll()
         {
-            foreach (SDefEditor ce in this.editors)
+            foreach (SDefEditor ce in this.editors.Values)
             {
                 this.fc.Mark(ce.Write());
             }

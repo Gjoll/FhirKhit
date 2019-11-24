@@ -34,19 +34,19 @@ namespace BreastRadiology.XUnitTests
              ;
 
             {
-                ObservationTarget[] targets = new ObservationTarget[]
+                ProfileTarget[] targets = new ProfileTarget[]
                 {
-                    new ObservationTarget(mammoBreastDensity, 1, "1"),
-                    new ObservationTarget(mammoMass, 0, "*"),
-                    new ObservationTarget(calc, 0, "*"),
-                    new ObservationTarget(archDist, 0, "1"),
-                    new ObservationTarget(assymetries, 0, "*"),
-                    new ObservationTarget(intramammaryLymphNode, 1, "1"),
-                    new ObservationTarget(skinLesions, 0, "*"),
-                    new ObservationTarget(solitaryDilatedDuct, 1, "1")
+                    new ProfileTarget(mammoBreastDensity, 1, "1"),
+                    new ProfileTarget(mammoMass, 0, "*"),
+                    new ProfileTarget(calc, 0, "*"),
+                    new ProfileTarget(archDist, 0, "1"),
+                    new ProfileTarget(assymetries, 0, "*"),
+                    new ProfileTarget(intramammaryLymphNode, 1, "1"),
+                    new ProfileTarget(skinLesions, 0, "*"),
+                    new ProfileTarget(solitaryDilatedDuct, 1, "1")
                 };
                 e.Find("hasMember").SliceByUrl(targets);
-                e.MapNode.AddObservationTargets(targets);
+                e.MapNode.AddProfileTargets(targets);
             }
             return e.SDef.Url;
         }

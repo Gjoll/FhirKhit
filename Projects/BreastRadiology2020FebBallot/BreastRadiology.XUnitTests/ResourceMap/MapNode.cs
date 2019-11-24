@@ -28,9 +28,9 @@ namespace BreastRadiology.XUnitTests
             this.AddLinks("fragment", url);
         }
 
-        public void AddObservationTargets(params ObservationTarget[] targets)
+        public void AddProfileTargets(params ProfileTarget[] targets)
         {
-            foreach (ObservationTarget target in targets)
+            foreach (ProfileTarget target in targets)
                 this.AddLinks("target", target.Profile);
         }
 

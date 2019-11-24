@@ -24,6 +24,11 @@ namespace BreastRadiology.XUnitTests
             DirHelper.FindParentDir("FhirKhit"),
             "Cache");
 
+        String graphicsDir = Path.Combine(
+            DirHelper.FindParentDir(baseDir),
+            "IG",
+            "Graphics");
+
         String outputDir = Path.Combine(
             DirHelper.FindParentDir(baseDir),
             "IG",
@@ -88,6 +93,7 @@ namespace BreastRadiology.XUnitTests
                 pc.StatusInfo += this.StatusInfo;
                 pc.StatusWarnings += this.StatusWarnings;
                 pc.CreateResources();
+                pc.CreateMaps(graphicsDir);
             }
             catch (Exception err)
             {

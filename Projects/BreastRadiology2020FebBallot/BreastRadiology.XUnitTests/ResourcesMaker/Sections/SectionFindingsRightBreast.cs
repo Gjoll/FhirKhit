@@ -13,7 +13,7 @@ namespace BreastRadiology.XUnitTests
 {
     public partial class ResourcesMaker : ConverterBase
     {
-        String SectionFindingsRightBreast(ObservationTarget[] abnormalityTargets)
+        String SectionFindingsRightBreast(ProfileTarget[] abnormalityTargets)
         {
             SDefEditor e = this.CreateObservationEditor("BreastRadSectionFindingsRightBreast",
                                                         "Breast Radiology Findings Right Breast")
@@ -22,7 +22,7 @@ namespace BreastRadiology.XUnitTests
                 ;
             e.Select("bodySite").Zero();
             e.Find("hasMember").SliceByUrl(abnormalityTargets);
-            e.MapNode.AddObservationTargets(abnormalityTargets);
+            e.MapNode.AddProfileTargets(abnormalityTargets);
             return e.SDef.Url;
         }
     }

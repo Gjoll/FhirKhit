@@ -1,0 +1,315 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="3105" height="1732.5">
+<defs>
+<marker id="arrowStart" markerWidth="3.75" markerHeight="3.75" markerUnits="px" refX="1.875" refY="1.875">
+<circle fill="Black" stroke-width="0" cx="1.875" cy="1.875" r="1.875" />
+</marker>
+<marker id="arrowEnd" markerWidth="7.5" markerHeight="7.5" markerUnits="px" refX="7.5" refY="3.75">
+<polygon fill="Black" stroke-width="0" points="0 0 7.5 3.75 0 7.5" />
+</marker>
+</defs>
+<g>
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="60" y1="54.375" x2="90" y2="54.375" />
+<line stroke="Black" stroke-width="1.875" x1="60" y1="54.375" x2="60" y2="54.375" />
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="90" y="30" width="225" height="48.75" rx="15" ry="30" />
+<text x="120" y="60">BreastRadReport</text>
+</g>
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="315" y1="54.375" x2="345" y2="54.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="345" y1="54.375" x2="375" y2="54.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="345" y1="110.625" x2="375" y2="110.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="345" y1="166.875" x2="375" y2="166.875" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="345" y1="223.125" x2="375" y2="223.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="345" y1="1685.625" x2="375" y2="1685.625" />
+<line stroke="Black" stroke-width="1.875" x1="345" y1="54.375" x2="345" y2="1685.625" />
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="375" y="30" width="360" height="48.75" rx="15" ry="30" />
+<text x="405" y="60">BreastRadRecommendations</text>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="375" y="86.25" width="315" height="48.75" rx="15" ry="30" />
+<text x="405" y="116.25">BreastRadPriorReports</text>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="375" y="142.5" width="450" height="48.75" rx="15" ry="30" />
+<text x="405" y="172.5">BreastRadSectionPatientHistory</text>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="375" y="198.75" width="360" height="48.75" rx="15" ry="30" />
+<text x="405" y="228.75">BreastRadSectionFindings</text>
+</g>
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="735" y1="223.125" x2="765" y2="223.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="765" y1="223.125" x2="795" y2="223.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="765" y1="954.375" x2="795" y2="954.375" />
+<line stroke="Black" stroke-width="1.875" x1="765" y1="223.125" x2="765" y2="954.375" />
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="795" y="198.75" width="510" height="48.75" rx="15" ry="30" />
+<text x="825" y="228.75">BreastRadSectionFindingsLeftBreast</text>
+</g>
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="1305" y1="223.125" x2="1335" y2="223.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1335" y1="223.125" x2="1365" y2="223.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1335" y1="841.875" x2="1365" y2="841.875" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1335" y1="898.125" x2="1365" y2="898.125" />
+<line stroke="Black" stroke-width="1.875" x1="1335" y1="223.125" x2="1335" y2="898.125" />
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1365" y="198.75" width="375" height="48.75" rx="15" ry="30" />
+<text x="1395" y="228.75">BreastRadAbnormalityMammo</text>
+</g>
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="1740" y1="223.125" x2="1770" y2="223.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1770" y1="223.125" x2="1800" y2="223.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1770" y1="279.375" x2="1800" y2="279.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1770" y1="448.125" x2="1800" y2="448.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1770" y1="560.625" x2="1800" y2="560.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1770" y1="616.875" x2="1800" y2="616.875" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1770" y1="673.125" x2="1800" y2="673.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1770" y1="729.375" x2="1800" y2="729.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1770" y1="785.625" x2="1800" y2="785.625" />
+<line stroke="Black" stroke-width="1.875" x1="1770" y1="223.125" x2="1770" y2="785.625" />
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1800" y="198.75" width="570" height="48.75" rx="15" ry="30" />
+<text x="1830" y="228.75">BreastRadAbnormalityMammoBreastDensity</text>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1800" y="255" width="270" height="48.75" rx="15" ry="30" />
+<text x="1830" y="285">BreastRadMammoMass</text>
+</g>
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="2070" y1="279.375" x2="2100" y2="279.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="2100" y1="279.375" x2="2130" y2="279.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="2100" y1="335.625" x2="2130" y2="335.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="2100" y1="391.875" x2="2130" y2="391.875" />
+<line stroke="Black" stroke-width="1.875" x1="2100" y1="279.375" x2="2100" y2="391.875" />
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="2130" y="255" width="435" height="48.75" rx="15" ry="30" />
+<text x="2160" y="285">BreastRadAbnormalityMassShape</text>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="2130" y="311.25" width="525" height="48.75" rx="15" ry="30" />
+<text x="2160" y="341.25">BreastRadAbnormalityMammoMassMargin</text>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="2130" y="367.5" width="540" height="48.75" rx="15" ry="30" />
+<text x="2160" y="397.5">BreastRadAbnormalityMammoMassDensity</text>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1800" y="423.75" width="420" height="48.75" rx="15" ry="30" />
+<text x="1830" y="453.75">BreastRadMammoCalcifications</text>
+</g>
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="2220" y1="448.125" x2="2250" y2="448.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="2250" y1="448.125" x2="2280" y2="448.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="2250" y1="504.375" x2="2280" y2="504.375" />
+<line stroke="Black" stroke-width="1.875" x1="2250" y1="448.125" x2="2250" y2="504.375" />
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="2280" y="423.75" width="630" height="48.75" rx="15" ry="30" />
+<text x="2310" y="453.75">BreastRadAbnormalityMammoCalcificationType</text>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="2280" y="480" width="750" height="48.75" rx="15" ry="30" />
+<text x="2310" y="510">BreastRadAbnormalityMammoCalcificationDistribution</text>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1800" y="536.25" width="720" height="48.75" rx="15" ry="30" />
+<text x="1830" y="566.25">BreastRadAbnormalityMammoArchitecturalDistortion</text>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1800" y="592.5" width="540" height="48.75" rx="15" ry="30" />
+<text x="1830" y="622.5">BreastRadAbnormalityMammoAssymetries</text>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1800" y="648.75" width="690" height="48.75" rx="15" ry="30" />
+<text x="1830" y="678.75">BreastRadAbnormalityMammoIntramammaryLymphNode</text>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1800" y="705" width="525" height="48.75" rx="15" ry="30" />
+<text x="1830" y="735">BreastRadAbnormalityMammoSkinLesion</text>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1800" y="761.25" width="660" height="48.75" rx="15" ry="30" />
+<text x="1830" y="791.25">BreastRadAbnormalityMammoSolitaryDilatedDuct</text>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1365" y="817.5" width="345" height="48.75" rx="15" ry="30" />
+<text x="1395" y="847.5">BreastRadAbnormalityMRI</text>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1365" y="873.75" width="450" height="48.75" rx="15" ry="30" />
+<text x="1395" y="903.75">BreastRadAbnormalityUltraSound</text>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="795" y="930" width="525" height="48.75" rx="15" ry="30" />
+<text x="825" y="960">BreastRadSectionFindingsRightBreast</text>
+</g>
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="1320" y1="954.375" x2="1350" y2="954.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1350" y1="954.375" x2="1380" y2="954.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1350" y1="1573.125" x2="1380" y2="1573.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1350" y1="1629.375" x2="1380" y2="1629.375" />
+<line stroke="Black" stroke-width="1.875" x1="1350" y1="954.375" x2="1350" y2="1629.375" />
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1380" y="930" width="375" height="48.75" rx="15" ry="30" />
+<text x="1410" y="960">BreastRadAbnormalityMammo</text>
+</g>
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="1755" y1="954.375" x2="1785" y2="954.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1785" y1="954.375" x2="1815" y2="954.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1785" y1="1010.625" x2="1815" y2="1010.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1785" y1="1179.375" x2="1815" y2="1179.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1785" y1="1291.875" x2="1815" y2="1291.875" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1785" y1="1348.125" x2="1815" y2="1348.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1785" y1="1404.375" x2="1815" y2="1404.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1785" y1="1460.625" x2="1815" y2="1460.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1785" y1="1516.875" x2="1815" y2="1516.875" />
+<line stroke="Black" stroke-width="1.875" x1="1785" y1="954.375" x2="1785" y2="1516.875" />
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1815" y="930" width="570" height="48.75" rx="15" ry="30" />
+<text x="1845" y="960">BreastRadAbnormalityMammoBreastDensity</text>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1815" y="986.25" width="270" height="48.75" rx="15" ry="30" />
+<text x="1845" y="1016.25">BreastRadMammoMass</text>
+</g>
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="2085" y1="1010.625" x2="2115" y2="1010.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="2115" y1="1010.625" x2="2145" y2="1010.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="2115" y1="1066.875" x2="2145" y2="1066.875" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="2115" y1="1123.125" x2="2145" y2="1123.125" />
+<line stroke="Black" stroke-width="1.875" x1="2115" y1="1010.625" x2="2115" y2="1123.125" />
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="2145" y="986.25" width="435" height="48.75" rx="15" ry="30" />
+<text x="2175" y="1016.25">BreastRadAbnormalityMassShape</text>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="2145" y="1042.5" width="525" height="48.75" rx="15" ry="30" />
+<text x="2175" y="1072.5">BreastRadAbnormalityMammoMassMargin</text>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="2145" y="1098.75" width="540" height="48.75" rx="15" ry="30" />
+<text x="2175" y="1128.75">BreastRadAbnormalityMammoMassDensity</text>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1815" y="1155" width="420" height="48.75" rx="15" ry="30" />
+<text x="1845" y="1185">BreastRadMammoCalcifications</text>
+</g>
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="2235" y1="1179.375" x2="2265" y2="1179.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="2265" y1="1179.375" x2="2295" y2="1179.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="2265" y1="1235.625" x2="2295" y2="1235.625" />
+<line stroke="Black" stroke-width="1.875" x1="2265" y1="1179.375" x2="2265" y2="1235.625" />
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="2295" y="1155" width="630" height="48.75" rx="15" ry="30" />
+<text x="2325" y="1185">BreastRadAbnormalityMammoCalcificationType</text>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="2295" y="1211.25" width="750" height="48.75" rx="15" ry="30" />
+<text x="2325" y="1241.25">BreastRadAbnormalityMammoCalcificationDistribution</text>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1815" y="1267.5" width="720" height="48.75" rx="15" ry="30" />
+<text x="1845" y="1297.5">BreastRadAbnormalityMammoArchitecturalDistortion</text>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1815" y="1323.75" width="540" height="48.75" rx="15" ry="30" />
+<text x="1845" y="1353.75">BreastRadAbnormalityMammoAssymetries</text>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1815" y="1380" width="690" height="48.75" rx="15" ry="30" />
+<text x="1845" y="1410">BreastRadAbnormalityMammoIntramammaryLymphNode</text>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1815" y="1436.25" width="525" height="48.75" rx="15" ry="30" />
+<text x="1845" y="1466.25">BreastRadAbnormalityMammoSkinLesion</text>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1815" y="1492.5" width="660" height="48.75" rx="15" ry="30" />
+<text x="1845" y="1522.5">BreastRadAbnormalityMammoSolitaryDilatedDuct</text>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1380" y="1548.75" width="345" height="48.75" rx="15" ry="30" />
+<text x="1410" y="1578.75">BreastRadAbnormalityMRI</text>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1380" y="1605" width="450" height="48.75" rx="15" ry="30" />
+<text x="1410" y="1635">BreastRadAbnormalityUltraSound</text>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="375" y="1661.25" width="405" height="48.75" rx="15" ry="30" />
+<text x="405" y="1691.25">BreastRadSectionPatientRisk</text>
+</g>
+</g>
+</svg>
