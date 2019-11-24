@@ -259,13 +259,6 @@ namespace BreastRadiology.XUnitTests
 
         public void CreateMaps(String outputDir)
         {
-            String Name(String url)
-            {
-                if (this.editors.TryGetValue(url, out SDefEditor e) == false)
-                    throw new Exception("Internal error. Editor not found");
-                return e.SDef.Name;
-            }
-
             IEnumerable<MapLink> TargetLinks(MapNode n)
             {
                 foreach (MapLink link in n.Links)
@@ -285,9 +278,20 @@ namespace BreastRadiology.XUnitTests
                 MapNode mapNode = ResourceMap.Self.GetMapNode(url);
 
                 SENodeGroup groupChild = groupParent.AppendChild("");
-                SENode nodeChild = new SENode(0, Color.LightGreen)
-                    .AddTextLine(Name(url))
-                    ;
+                SENode nodeChild = new SENode(0, Color.LightGreen);
+
+                if (this.editors.TryGetValue(url, out SDefEditor e) == false)
+                    throw new Exception("Internal error. Editor not found");
+                List<String> titleParts = e.SDef.Title.Split(" ").ToList();
+                if ((titleParts.Count > 0) && (titleParts[0] == "Breast"))
+                    titleParts.RemoveAt(0);
+                if ((titleParts.Count > 0) && (titleParts[0] == "Radiology"))
+                    titleParts.RemoveAt(0);
+                foreach (String titlePart in titleParts)
+                {
+                    String s = titlePart.Trim();
+                    nodeChild.AddTextLine(s);
+                }
                 groupChild.Nodes.Add(nodeChild);
 
                 MapLink[] links = TargetLinks(mapNode).ToArray();
