@@ -9,12 +9,13 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace FhirKhit.BreastRadiology.XUnitTests
+namespace BreastRadiology.XUnitTests
 {
-    public class SDefEditor
+    class SDefEditor
     {
         static Type sDefType = typeof(SDefEditor);
 
+        public MapNode MapNode {get; }
         public StructureDefinition SDef => this.sDef;
         StructureDefinition baseSDef;
         StructureDefinition sDef;
@@ -28,7 +29,9 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         /// <summary>
         /// Create structure definition editor
         /// </summary>
-        public SDefEditor(String baseDefinition,
+        public SDefEditor(String name,
+            String url,
+            String baseDefinition,
             String outputDir)
         {
             this.outputDir = outputDir;
@@ -47,9 +50,14 @@ namespace FhirKhit.BreastRadiology.XUnitTests
 
             this.sDef = new StructureDefinition
             {
+                Name = name, 
+                Url = url,
                 BaseDefinition = baseDefinition,
                 Differential = new StructureDefinition.DifferentialComponent()
             };
+
+            this.MapNode = ResourceMap.Self.GetMapNode(url);
+
             this.sDef.Differential.Element.Add(new ElementDefinition
             {
                 Path = basePath,
@@ -57,6 +65,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 Min = 0,
                 Max = "*"
             });
+            //mapNode = ResourceMap.Self.GetMapNode(retVal.SDef.Url);
         }
 
         public ElementDefGroup InsertAfter(ElementDefGroup at,
@@ -175,14 +184,13 @@ namespace FhirKhit.BreastRadiology.XUnitTests
 
         public ElementDefinition ApplyExtension(String name, String extensionUrl)
         {
+            this.MapNode.AddLinks("target", extensionUrl);
             this.ConfigureExtensionSlice();
             return this.Find("extension").SliceByUrl(extensionUrl, name);
         }
 
         public SDefEditor ContactUrl(String value) { this.sDef.ContactUrl(value); return this; }
-        public SDefEditor Name(String value) { this.sDef.Name(value); return this; }
         public SDefEditor Description(Markdown value) { this.sDef.Description(value); return this; }
-        public SDefEditor Url(String value) { this.sDef.Url(value); return this; }
         public SDefEditor Publisher(String value) { this.sDef.Publisher(value); return this; }
         public SDefEditor Title(String value) { this.sDef.Title(value); return this; }
         public SDefEditor Status(PublicationStatus? value) { this.sDef.Status(value); return this; }
@@ -224,6 +232,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 Url = PreFhirGenerator.FragmentUrl,
                 Value = new FhirUrl(fragRef)
             });
+            this.MapNode.AddFragmentLink(fragRef);
             return this;
         }
     }

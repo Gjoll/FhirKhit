@@ -11,7 +11,7 @@ using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 using PreFhir;
 
-namespace FhirKhit.BreastRadiology.XUnitTests
+namespace BreastRadiology.XUnitTests
 {
     /*
      $ todo. Add negation items (mass, calc, etc).
@@ -43,6 +43,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
         String resourceDir;
         FhirDateTime date = new FhirDateTime(2019, 11, 1);
         List<SDefEditor> editors = new List<SDefEditor>();
+
         String breastBodyLocationExtensionUrl;
         String breastBodyLocationOptionalFragmentUrl;
         String breastBodyLocationRequiredFragmentUrl;
@@ -83,9 +84,7 @@ namespace FhirKhit.BreastRadiology.XUnitTests
             if (name.Contains(" "))
                 throw new Exception("Structure Def name can not contains spaces");
 
-            SDefEditor retVal = new SDefEditor(baseDefinition, this.resourceDir)
-                .Name(name)
-                .Url(this.CreateUrl(name))
+            SDefEditor retVal = new SDefEditor(name, this.CreateUrl(name), baseDefinition, this.resourceDir)
                 .Title(title)
                 .Derivation(StructureDefinition.TypeDerivationRule.Constraint)
                 .Abstract(false)

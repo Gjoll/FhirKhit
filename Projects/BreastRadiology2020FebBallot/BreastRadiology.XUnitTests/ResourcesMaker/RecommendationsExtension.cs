@@ -10,7 +10,7 @@ using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 using PreFhir;
 
-namespace FhirKhit.BreastRadiology.XUnitTests
+namespace BreastRadiology.XUnitTests
 {
     public partial class ResourcesMaker : ConverterBase
     {

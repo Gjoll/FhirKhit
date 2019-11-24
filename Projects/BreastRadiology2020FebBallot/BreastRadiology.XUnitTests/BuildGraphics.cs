@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using BreastRadiology.XUnitTests;
 using System.Drawing;
 
-namespace FhirKhit.BreastRadiology.XUnitTests
+namespace BreastRadiology.XUnitTests
 {
     [TestClass]
     public class BuildGraphics

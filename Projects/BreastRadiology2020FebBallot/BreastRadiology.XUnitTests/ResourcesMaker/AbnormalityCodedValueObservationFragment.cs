@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace FhirKhit.BreastRadiology.XUnitTests
+namespace BreastRadiology.XUnitTests
 {
     public partial class ResourcesMaker
     {

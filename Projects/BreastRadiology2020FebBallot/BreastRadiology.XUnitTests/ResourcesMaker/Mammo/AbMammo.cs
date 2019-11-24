@@ -9,7 +9,7 @@ using FhirKhit.Tools.R4;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 
-namespace FhirKhit.BreastRadiology.XUnitTests
+namespace BreastRadiology.XUnitTests
 {
     public partial class ResourcesMaker : ConverterBase
     {
@@ -32,18 +32,22 @@ namespace FhirKhit.BreastRadiology.XUnitTests
              .FixedCodeSlice("method", "http://snomed.info/sct", "115341008")
              .Card(1, "*")
              ;
-            e.Find("hasMember")
-                .SliceByUrl(new ObservationTarget[]
+
+            {
+                ObservationTarget[] targets = new ObservationTarget[]
                 {
-                        new ObservationTarget(mammoBreastDensity, 1, "1"),
-                        new ObservationTarget(mammoMass, 0, "*"),
-                        new ObservationTarget(calc, 0, "*"),
-                        new ObservationTarget(archDist, 0, "1"),
-                        new ObservationTarget(assymetries, 0, "*"),
-                        new ObservationTarget(intramammaryLymphNode, 1, "1"),
-                        new ObservationTarget(skinLesions, 0, "*"),
-                        new ObservationTarget(solitaryDilatedDuct, 1, "1")
-                });
+                    new ObservationTarget(mammoBreastDensity, 1, "1"),
+                    new ObservationTarget(mammoMass, 0, "*"),
+                    new ObservationTarget(calc, 0, "*"),
+                    new ObservationTarget(archDist, 0, "1"),
+                    new ObservationTarget(assymetries, 0, "*"),
+                    new ObservationTarget(intramammaryLymphNode, 1, "1"),
+                    new ObservationTarget(skinLesions, 0, "*"),
+                    new ObservationTarget(solitaryDilatedDuct, 1, "1")
+                };
+                e.Find("hasMember").SliceByUrl(targets);
+                e.MapNode.AddObservationTargets(targets);
+            }
             return e.SDef.Url;
         }
     }

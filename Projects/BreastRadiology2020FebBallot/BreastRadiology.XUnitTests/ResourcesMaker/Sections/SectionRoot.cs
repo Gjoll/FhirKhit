@@ -9,11 +9,11 @@ using FhirKhit.Tools.R4;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 
-namespace FhirKhit.BreastRadiology.XUnitTests
+namespace BreastRadiology.XUnitTests
 {
     public partial class ResourcesMaker : ConverterBase
     {
-        String SectionRoot(String patientHistoryUrl, 
+        String SectionRoot(String patientHistoryUrl,
             String findingsUrl,
             String patientRiskUrl)
         {
@@ -22,16 +22,19 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 .Description(new Markdown().Paragraph("Root Section"))
                 .AddFragRef(this.observationSectionFragmentUrl)
                 ;
-                e.Find("hasMember")
-                    .SliceByUrl(new ObservationTarget[]
-                        {
-                            new ObservationTarget(patientHistoryUrl, 1, "1"),
-                           new ObservationTarget(findingsUrl, 1, "1"),
-                            new ObservationTarget(patientRiskUrl, 1, "1")
-                        });
-                e.Find("code").FixedCodeSlice("observationCode", Loinc, "10193-1");
-                e.Select("bodySite").Zero();
-                return e.SDef.Url;
+            {
+                ObservationTarget[] targets = new ObservationTarget[]
+                {
+                    new ObservationTarget(patientHistoryUrl, 1, "1"),
+                    new ObservationTarget(findingsUrl, 1, "1"),
+                    new ObservationTarget(patientRiskUrl, 1, "1")
+                };
+                e.Find("hasMember").SliceByUrl(targets);
+                e.MapNode.AddObservationTargets(targets);
+            }
+            e.Find("code").FixedCodeSlice("observationCode", Loinc, "10193-1");
+            e.Select("bodySite").Zero();
+            return e.SDef.Url;
         }
     }
 }

@@ -9,14 +9,14 @@ using FhirKhit.Tools.R4;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 
-namespace FhirKhit.BreastRadiology.XUnitTests
+namespace BreastRadiology.XUnitTests
 {
     public partial class ResourcesMaker : ConverterBase
     {
         String AbMammoCalcifications(String calcType,
             String calcDistribution)
         {
-            SDefEditor e = this.CreateObservationEditor("BreastRadMammoCalcifications", 
+            SDefEditor e = this.CreateObservationEditor("BreastRadMammoCalcifications",
                                                         "Breast Radiology Mammography Calcifications Observation")
                 .Description(
                     new Markdown()
@@ -28,14 +28,16 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                 .AddFragRef(this.observationSectionFragmentUrl)
                 ;
 
-                e.Find("hasMember")
-                    .SliceByUrl(new ObservationTarget[]
-                    {
+            {
+                ObservationTarget[] targets = new ObservationTarget[]
+                {
                             new ObservationTarget(calcType, 1, "1"),
                             new ObservationTarget(calcDistribution, 1, "1")
-                    })
-                    ;
-                return e.SDef.Url;
+                };
+                e.Find("hasMember").SliceByUrl(targets);
+                e.MapNode.AddObservationTargets(targets);
+            }
+            return e.SDef.Url;
         }
     }
 }

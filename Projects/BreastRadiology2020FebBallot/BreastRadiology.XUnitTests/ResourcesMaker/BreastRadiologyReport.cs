@@ -10,7 +10,7 @@ using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 using PreFhir;
 
-namespace FhirKhit.BreastRadiology.XUnitTests
+namespace BreastRadiology.XUnitTests
 {
     public partial class ResourcesMaker : ConverterBase
     {
@@ -27,10 +27,10 @@ namespace FhirKhit.BreastRadiology.XUnitTests
                           "references to the recommendations of this report",
                           "a summary of the report findings in a human readable format")
                 )
+                .AddFragRef(this.headerFragUrl)
+                .AddFragRef(this.categoryFragmentUrl)
                 ;
 
-            e.AddFragRef(this.headerFragUrl);
-            e.AddFragRef(this.categoryFragmentUrl);
             String recommendationsUrl = this.BreastRadiologyRecommendationsExtension();
             String priorReportsUrl = this.BreastRadiologyPriorReportsExtension(e.SDef.Url);
 
