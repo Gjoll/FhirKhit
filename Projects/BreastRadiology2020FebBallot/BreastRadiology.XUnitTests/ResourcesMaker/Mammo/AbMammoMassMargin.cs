@@ -30,7 +30,8 @@ namespace BreastRadiology.XUnitTests
                     });
 
                 SDefEditor e = this.CreateObservationEditor("BreastRadAbnormalityMammoMassMargin",
-                    "Breast Radiology Abnormality Mass Margin (Mammography)")
+                    "Breast Radiology Abnormality Mass Margin (Mammography)",
+                    new string[] {"Mass","Margin"})
                     .Description(new Markdown().Paragraph("Breast Radiology Abnormality Mass Margin Observation (Mammography)"))
                     .AddFragRef(this.abnormalityCodedValueObservationFragmentUrl)
                     ;

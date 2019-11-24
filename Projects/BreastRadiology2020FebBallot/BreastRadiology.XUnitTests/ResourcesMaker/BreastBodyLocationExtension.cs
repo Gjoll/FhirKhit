@@ -17,7 +17,8 @@ namespace BreastRadiology.XUnitTests
         String BreastBodyLocationExtension()
         {
             SDefEditor e = this.CreateEditor("BreastBodyLocation", 
-                "Breast Body Location", 
+                "Breast Body Location",
+                new string[] {"Breast","Body","Location"}, 
                 ExtensionUrl)
                 .Description(new Markdown()
                     .Paragraph("Breast Body Location extension")

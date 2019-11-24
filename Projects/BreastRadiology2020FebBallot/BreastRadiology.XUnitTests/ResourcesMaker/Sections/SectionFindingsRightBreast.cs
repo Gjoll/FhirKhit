@@ -16,7 +16,8 @@ namespace BreastRadiology.XUnitTests
         String SectionFindingsRightBreast(ProfileTarget[] abnormalityTargets)
         {
             SDefEditor e = this.CreateObservationEditor("BreastRadSectionFindingsRightBreast",
-                                                        "Breast Radiology Findings Right Breast")
+                    "Breast Radiology Findings Right Breast",
+                    new string[] {"Findings","Right", "Breast"})
                 .Description(new Markdown().Paragraph("Findings Right Breast Section"))
                 .AddFragRef(this.observationSectionFragmentUrl)
                 ;

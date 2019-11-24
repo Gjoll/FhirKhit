@@ -28,10 +28,11 @@ namespace BreastRadiology.XUnitTests
                 });
 
             SDefEditor e = this.CreateObservationEditor("BreastRadAbnormalityMammoArchitecturalDistortion",
-                    "Breast Radiology Abnormality Architectural Distortion (Mammography)")
-                    .Description(new Markdown().Paragraph("Mammography Breast Abnormality Architectural Distortion Observation"))
-                    .AddFragRef(this.abnormalityCodedValueObservationFragmentUrl)
-                    ;
+                        "Breast Radiology Abnormality Architectural Distortion (Mammography)",
+                    new string[] {"Arch.","Distortion"})
+                .Description(new Markdown().Paragraph("Mammography Breast Abnormality Architectural Distortion Observation"))
+                .AddFragRef(this.abnormalityCodedValueObservationFragmentUrl)
+                ;
 
             e.Select("value[x]")
                 .Type("CodeableConcept")

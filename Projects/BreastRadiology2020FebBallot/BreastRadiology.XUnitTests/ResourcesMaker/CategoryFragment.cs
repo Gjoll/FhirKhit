@@ -16,8 +16,9 @@ namespace BreastRadiology.XUnitTests
         String CategoryFragment()
         {
             SDefEditor e = this.CreateFragment("CategoryFragment",
-                                                    "Category Fragment",
-                                                     ObservationUrl)
+                    "Category Fragment",
+                    new string[] {"Category","Fragment"},
+                    ObservationUrl)
                 ;
             ElementDefGroup eDef = e.Find("category");
             eDef.ElementDefinition.Card(1, eDef.BaseElementDefinition.Max);

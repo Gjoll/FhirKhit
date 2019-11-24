@@ -18,7 +18,8 @@ namespace BreastRadiology.XUnitTests
             String massDensity)
         {
             SDefEditor e = this.CreateObservationEditor("BreastRadMammoMass",
-                                                        "Breast Radiology Mammography Mass Observation")
+                    "Breast Radiology Mammography Mass Observation",
+                    new string[] {"Mass"})
                 .Description(new Markdown()
                     .Paragraph("Breast Radiology Mammography Mass Observation")
                     .Paragraph("This observation has the following three member observations")

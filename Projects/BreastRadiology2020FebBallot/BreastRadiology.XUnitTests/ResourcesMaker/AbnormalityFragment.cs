@@ -14,8 +14,9 @@ namespace BreastRadiology.XUnitTests
         String AbnormalityFragment()
         {
             SDefEditor e = this.CreateFragment("Abnormality",
-                                                    "Abnormality Fragment",
-                                                     ObservationUrl)
+                    "Abnormality Fragment",
+                    new string[] {"Abnormality", "Fragment"},
+                    ObservationUrl)
                 ;
 
             e.Select("value[x]").Zero();

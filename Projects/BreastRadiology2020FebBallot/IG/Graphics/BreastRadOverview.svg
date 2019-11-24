@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1380" height="3101.25">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1380" height="2276.25">
 <defs>
 <marker id="arrowStart" markerWidth="3.75" markerHeight="3.75" markerUnits="px" refX="1.875" refY="1.875">
 <circle fill="Black" stroke-width="0" cx="1.875" cy="1.875" r="1.875" />
@@ -10,393 +10,341 @@
 </marker>
 </defs>
 <g>
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="60" y1="54.375" x2="90" y2="54.375" />
-<line stroke="Black" stroke-width="1.875" x1="60" y1="54.375" x2="60" y2="54.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="60" y1="73.125" x2="90" y2="73.125" />
+<line stroke="Black" stroke-width="1.875" x1="60" y1="73.125" x2="60" y2="73.125" />
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="90" y="30" width="90" height="48.75" rx="15" ry="30" />
-<text x="120" y="60">Report</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="90" y="30" width="135" height="86.25" rx="15" ry="30" />
+<text x="120" y="60">Breast</text>
+<text x="120" y="78.75">Radiology</text>
+<text x="120" y="97.5">Report</text>
 </g>
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="180" y1="54.375" x2="210" y2="54.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="210" y1="54.375" x2="240" y2="54.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="210" y1="120" x2="240" y2="120" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="210" y1="204.375" x2="240" y2="204.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="210" y1="279.375" x2="240" y2="279.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="210" y1="3035.625" x2="240" y2="3035.625" />
-<line stroke="Black" stroke-width="1.875" x1="210" y1="54.375" x2="210" y2="3035.625" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="225" y1="73.125" x2="255" y2="73.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="255" y1="54.375" x2="285" y2="54.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="255" y1="120" x2="285" y2="120" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="255" y1="195" x2="285" y2="195" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="255" y1="260.625" x2="285" y2="260.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="255" y1="2220" x2="285" y2="2220" />
+<line stroke="Black" stroke-width="1.875" x1="255" y1="54.375" x2="255" y2="2220" />
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="240" y="30" width="225" height="48.75" rx="15" ry="30" />
-<text x="270" y="60">Recommendations</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="285" y="30" width="225" height="48.75" rx="15" ry="30" />
+<text x="315" y="60">Recommendations</text>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="240" y="86.25" width="105" height="67.5" rx="15" ry="30" />
-<text x="270" y="116.25">Prior</text>
-<text x="270" y="135">Reports</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="285" y="86.25" width="105" height="67.5" rx="15" ry="30" />
+<text x="315" y="116.25">Prior</text>
+<text x="315" y="135">Reports</text>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="240" y="161.25" width="105" height="86.25" rx="15" ry="30" />
-<text x="270" y="191.25">Patient</text>
-<text x="270" y="210">History</text>
-<text x="270" y="228.75">Section</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="285" y="161.25" width="105" height="67.5" rx="15" ry="30" />
+<text x="315" y="191.25">Patient</text>
+<text x="315" y="210">History</text>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="240" y="255" width="120" height="48.75" rx="15" ry="30" />
-<text x="270" y="285">Findings</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="285" y="236.25" width="120" height="48.75" rx="15" ry="30" />
+<text x="315" y="266.25">Findings</text>
 </g>
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="360" y1="279.375" x2="390" y2="279.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="390" y1="298.125" x2="420" y2="298.125" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="390" y1="1666.875" x2="420" y2="1666.875" />
-<line stroke="Black" stroke-width="1.875" x1="390" y1="279.375" x2="390" y2="1666.875" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="405" y1="260.625" x2="435" y2="260.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="435" y1="279.375" x2="465" y2="279.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="435" y1="1254.375" x2="465" y2="1254.375" />
+<line stroke="Black" stroke-width="1.875" x1="435" y1="260.625" x2="435" y2="1254.375" />
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="420" y="255" width="120" height="86.25" rx="15" ry="30" />
-<text x="450" y="285">Findings</text>
-<text x="450" y="303.75">Left</text>
-<text x="450" y="322.5">Breast</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="465" y="236.25" width="120" height="86.25" rx="15" ry="30" />
+<text x="495" y="266.25">Findings</text>
+<text x="495" y="285">Left</text>
+<text x="495" y="303.75">Breast</text>
 </g>
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="540" y1="298.125" x2="570" y2="298.125" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="570" y1="288.75" x2="600" y2="288.75" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="570" y1="1507.5" x2="600" y2="1507.5" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="570" y1="1582.5" x2="600" y2="1582.5" />
-<line stroke="Black" stroke-width="1.875" x1="570" y1="288.75" x2="570" y2="1582.5" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="585" y1="279.375" x2="615" y2="279.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="615" y1="260.625" x2="645" y2="260.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="615" y1="1095" x2="645" y2="1095" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="615" y1="1170" x2="645" y2="1170" />
+<line stroke="Black" stroke-width="1.875" x1="615" y1="260.625" x2="615" y2="1170" />
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="600" y="255" width="195" height="67.5" rx="15" ry="30" />
-<text x="630" y="285">Abnormality</text>
-<text x="630" y="303.75">(Mammography)</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="645" y="236.25" width="165" height="48.75" rx="15" ry="30" />
+<text x="675" y="266.25">Abnormality</text>
 </g>
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="795" y1="288.75" x2="825" y2="288.75" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="825" y1="307.5" x2="855" y2="307.5" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="825" y1="410.625" x2="855" y2="410.625" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="825" y1="729.375" x2="855" y2="729.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="825" y1="963.75" x2="855" y2="963.75" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="825" y1="1066.875" x2="855" y2="1066.875" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="825" y1="1170" x2="855" y2="1170" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="825" y1="1282.5" x2="855" y2="1282.5" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="825" y1="1404.375" x2="855" y2="1404.375" />
-<line stroke="Black" stroke-width="1.875" x1="825" y1="288.75" x2="825" y2="1404.375" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="810" y1="260.625" x2="840" y2="260.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="840" y1="270" x2="870" y2="270" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="840" y1="335.625" x2="870" y2="335.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="840" y1="560.625" x2="870" y2="560.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="840" y1="720" x2="870" y2="720" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="840" y1="785.625" x2="870" y2="785.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="840" y1="860.625" x2="870" y2="860.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="840" y1="945" x2="870" y2="945" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="840" y1="1020" x2="870" y2="1020" />
+<line stroke="Black" stroke-width="1.875" x1="840" y1="260.625" x2="840" y2="1020" />
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="855" y="255" width="195" height="105" rx="15" ry="30" />
-<text x="885" y="285">Abnormality</text>
-<text x="885" y="303.75">Breast</text>
-<text x="885" y="322.5">Density</text>
-<text x="885" y="341.25">(Mammography)</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="870" y="236.25" width="105" height="67.5" rx="15" ry="30" />
+<text x="900" y="266.25">Breast</text>
+<text x="900" y="285">Density</text>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="855" y="367.5" width="165" height="86.25" rx="15" ry="30" />
-<text x="885" y="397.5">Mammography</text>
-<text x="885" y="416.25">Mass</text>
-<text x="885" y="435">Observation</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="870" y="311.25" width="60" height="48.75" rx="15" ry="30" />
+<text x="900" y="341.25">Mass</text>
 </g>
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="1020" y1="410.625" x2="1050" y2="410.625" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1050" y1="410.625" x2="1080" y2="410.625" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1050" y1="513.75" x2="1080" y2="513.75" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1050" y1="626.25" x2="1080" y2="626.25" />
-<line stroke="Black" stroke-width="1.875" x1="1050" y1="410.625" x2="1050" y2="626.25" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="930" y1="335.625" x2="960" y2="335.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="960" y1="345" x2="990" y2="345" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="960" y1="420" x2="990" y2="420" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="960" y1="495" x2="990" y2="495" />
+<line stroke="Black" stroke-width="1.875" x1="960" y1="335.625" x2="960" y2="495" />
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1080" y="367.5" width="165" height="86.25" rx="15" ry="30" />
-<text x="1110" y="397.5">Abnormality</text>
-<text x="1110" y="416.25">Mass</text>
-<text x="1110" y="435">Shape</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="990" y="311.25" width="75" height="67.5" rx="15" ry="30" />
+<text x="1020" y="341.25">Mass</text>
+<text x="1020" y="360">Shape</text>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1080" y="461.25" width="195" height="105" rx="15" ry="30" />
-<text x="1110" y="491.25">Abnormality</text>
-<text x="1110" y="510">Mass</text>
-<text x="1110" y="528.75">Margin</text>
-<text x="1110" y="547.5">(Mammography)</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="990" y="386.25" width="90" height="67.5" rx="15" ry="30" />
+<text x="1020" y="416.25">Mass</text>
+<text x="1020" y="435">Margin</text>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1080" y="573.75" width="195" height="105" rx="15" ry="30" />
-<text x="1110" y="603.75">Abnormality</text>
-<text x="1110" y="622.5">Mass</text>
-<text x="1110" y="641.25">Density</text>
-<text x="1110" y="660">(Mammography)</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="990" y="461.25" width="105" height="67.5" rx="15" ry="30" />
+<text x="1020" y="491.25">Mass</text>
+<text x="1020" y="510">Density</text>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="855" y="686.25" width="210" height="86.25" rx="15" ry="30" />
-<text x="885" y="716.25">Mammography</text>
-<text x="885" y="735">Calcifications</text>
-<text x="885" y="753.75">Observation</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="870" y="536.25" width="210" height="48.75" rx="15" ry="30" />
+<text x="900" y="566.25">Calcifications</text>
 </g>
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="1065" y1="729.375" x2="1095" y2="729.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1095" y1="738.75" x2="1125" y2="738.75" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1095" y1="851.25" x2="1125" y2="851.25" />
-<line stroke="Black" stroke-width="1.875" x1="1095" y1="729.375" x2="1095" y2="851.25" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="1080" y1="560.625" x2="1110" y2="560.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1110" y1="570" x2="1140" y2="570" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1110" y1="645" x2="1140" y2="645" />
+<line stroke="Black" stroke-width="1.875" x1="1110" y1="560.625" x2="1110" y2="645" />
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1125" y="686.25" width="195" height="105" rx="15" ry="30" />
-<text x="1155" y="716.25">Abnormality</text>
-<text x="1155" y="735">Calcification</text>
-<text x="1155" y="753.75">Type</text>
-<text x="1155" y="772.5">(Mammography)</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1140" y="536.25" width="60" height="67.5" rx="15" ry="30" />
+<text x="1170" y="566.25">Calc</text>
+<text x="1170" y="585">Type</text>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1125" y="798.75" width="195" height="105" rx="15" ry="30" />
-<text x="1155" y="828.75">Abnormality</text>
-<text x="1155" y="847.5">Calcification</text>
-<text x="1155" y="866.25">Distribution</text>
-<text x="1155" y="885">(Mammography)</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1140" y="611.25" width="180" height="67.5" rx="15" ry="30" />
+<text x="1170" y="641.25">Calc</text>
+<text x="1170" y="660">Distribution</text>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="855" y="911.25" width="195" height="105" rx="15" ry="30" />
-<text x="885" y="941.25">Abnormality</text>
-<text x="885" y="960">Architectural</text>
-<text x="885" y="978.75">Distortion</text>
-<text x="885" y="997.5">(Mammography)</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="870" y="686.25" width="150" height="67.5" rx="15" ry="30" />
+<text x="900" y="716.25">Arch.</text>
+<text x="900" y="735">Distortion</text>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="855" y="1023.75" width="195" height="86.25" rx="15" ry="30" />
-<text x="885" y="1053.75">Abnormality</text>
-<text x="885" y="1072.5">Assymetries</text>
-<text x="885" y="1091.25">(Mammography)</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="870" y="761.25" width="165" height="48.75" rx="15" ry="30" />
+<text x="900" y="791.25">Assymetries</text>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="855" y="1117.5" width="195" height="105" rx="15" ry="30" />
-<text x="885" y="1147.5">Abnormality</text>
-<text x="885" y="1166.25">Intramammary</text>
-<text x="885" y="1185">LymphNode</text>
-<text x="885" y="1203.75">(Mammography)</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="870" y="817.5" width="180" height="86.25" rx="15" ry="30" />
+<text x="900" y="847.5">Intramammory</text>
+<text x="900" y="866.25">Lymph</text>
+<text x="900" y="885">Node</text>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="855" y="1230" width="195" height="105" rx="15" ry="30" />
-<text x="885" y="1260">Abnormality</text>
-<text x="885" y="1278.75">Skin</text>
-<text x="885" y="1297.5">Lesion</text>
-<text x="885" y="1316.25">(Mammography)</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="870" y="911.25" width="90" height="67.5" rx="15" ry="30" />
+<text x="900" y="941.25">Skin</text>
+<text x="900" y="960">Lesion</text>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="855" y="1342.5" width="195" height="123.75" rx="15" ry="30" />
-<text x="885" y="1372.5">Abnormality</text>
-<text x="885" y="1391.25">Solitary</text>
-<text x="885" y="1410">Dilated</text>
-<text x="885" y="1428.75">Duct</text>
-<text x="885" y="1447.5">(Mammography)</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="870" y="986.25" width="120" height="67.5" rx="15" ry="30" />
+<text x="900" y="1016.25">Dialated</text>
+<text x="900" y="1035">Duct</text>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="600" y="1473.75" width="165" height="67.5" rx="15" ry="30" />
-<text x="630" y="1503.75">Abnormality</text>
-<text x="630" y="1522.5">(MRI)</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="645" y="1061.25" width="165" height="67.5" rx="15" ry="30" />
+<text x="675" y="1091.25">MRI</text>
+<text x="675" y="1110">Abnormality</text>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="600" y="1548.75" width="180" height="67.5" rx="15" ry="30" />
-<text x="630" y="1578.75">Abnormality</text>
-<text x="630" y="1597.5">(UltraSound)</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="645" y="1136.25" width="165" height="67.5" rx="15" ry="30" />
+<text x="675" y="1166.25">Abnormality</text>
+<text x="675" y="1185">UltraSound</text>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="420" y="1623.75" width="120" height="86.25" rx="15" ry="30" />
-<text x="450" y="1653.75">Findings</text>
-<text x="450" y="1672.5">Right</text>
-<text x="450" y="1691.25">Breast</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="465" y="1211.25" width="120" height="86.25" rx="15" ry="30" />
+<text x="495" y="1241.25">Findings</text>
+<text x="495" y="1260">Right</text>
+<text x="495" y="1278.75">Breast</text>
 </g>
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="540" y1="1666.875" x2="570" y2="1666.875" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="570" y1="1657.5" x2="600" y2="1657.5" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="570" y1="2876.25" x2="600" y2="2876.25" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="570" y1="2951.25" x2="600" y2="2951.25" />
-<line stroke="Black" stroke-width="1.875" x1="570" y1="1657.5" x2="570" y2="2951.25" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="585" y1="1254.375" x2="615" y2="1254.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="615" y1="1235.625" x2="645" y2="1235.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="615" y1="2070" x2="645" y2="2070" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="615" y1="2145" x2="645" y2="2145" />
+<line stroke="Black" stroke-width="1.875" x1="615" y1="1235.625" x2="615" y2="2145" />
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="600" y="1623.75" width="195" height="67.5" rx="15" ry="30" />
-<text x="630" y="1653.75">Abnormality</text>
-<text x="630" y="1672.5">(Mammography)</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="645" y="1211.25" width="165" height="48.75" rx="15" ry="30" />
+<text x="675" y="1241.25">Abnormality</text>
 </g>
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="795" y1="1657.5" x2="825" y2="1657.5" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="825" y1="1676.25" x2="855" y2="1676.25" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="825" y1="1779.375" x2="855" y2="1779.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="825" y1="2098.125" x2="855" y2="2098.125" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="825" y1="2332.5" x2="855" y2="2332.5" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="825" y1="2435.625" x2="855" y2="2435.625" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="825" y1="2538.75" x2="855" y2="2538.75" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="825" y1="2651.25" x2="855" y2="2651.25" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="825" y1="2773.125" x2="855" y2="2773.125" />
-<line stroke="Black" stroke-width="1.875" x1="825" y1="1657.5" x2="825" y2="2773.125" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="810" y1="1235.625" x2="840" y2="1235.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="840" y1="1245" x2="870" y2="1245" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="840" y1="1310.625" x2="870" y2="1310.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="840" y1="1535.625" x2="870" y2="1535.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="840" y1="1695" x2="870" y2="1695" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="840" y1="1760.625" x2="870" y2="1760.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="840" y1="1835.625" x2="870" y2="1835.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="840" y1="1920" x2="870" y2="1920" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="840" y1="1995" x2="870" y2="1995" />
+<line stroke="Black" stroke-width="1.875" x1="840" y1="1235.625" x2="840" y2="1995" />
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="855" y="1623.75" width="195" height="105" rx="15" ry="30" />
-<text x="885" y="1653.75">Abnormality</text>
-<text x="885" y="1672.5">Breast</text>
-<text x="885" y="1691.25">Density</text>
-<text x="885" y="1710">(Mammography)</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="870" y="1211.25" width="105" height="67.5" rx="15" ry="30" />
+<text x="900" y="1241.25">Breast</text>
+<text x="900" y="1260">Density</text>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="855" y="1736.25" width="165" height="86.25" rx="15" ry="30" />
-<text x="885" y="1766.25">Mammography</text>
-<text x="885" y="1785">Mass</text>
-<text x="885" y="1803.75">Observation</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="870" y="1286.25" width="60" height="48.75" rx="15" ry="30" />
+<text x="900" y="1316.25">Mass</text>
 </g>
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="1020" y1="1779.375" x2="1050" y2="1779.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1050" y1="1779.375" x2="1080" y2="1779.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1050" y1="1882.5" x2="1080" y2="1882.5" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1050" y1="1995" x2="1080" y2="1995" />
-<line stroke="Black" stroke-width="1.875" x1="1050" y1="1779.375" x2="1050" y2="1995" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="930" y1="1310.625" x2="960" y2="1310.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="960" y1="1320" x2="990" y2="1320" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="960" y1="1395" x2="990" y2="1395" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="960" y1="1470" x2="990" y2="1470" />
+<line stroke="Black" stroke-width="1.875" x1="960" y1="1310.625" x2="960" y2="1470" />
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1080" y="1736.25" width="165" height="86.25" rx="15" ry="30" />
-<text x="1110" y="1766.25">Abnormality</text>
-<text x="1110" y="1785">Mass</text>
-<text x="1110" y="1803.75">Shape</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="990" y="1286.25" width="75" height="67.5" rx="15" ry="30" />
+<text x="1020" y="1316.25">Mass</text>
+<text x="1020" y="1335">Shape</text>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1080" y="1830" width="195" height="105" rx="15" ry="30" />
-<text x="1110" y="1860">Abnormality</text>
-<text x="1110" y="1878.75">Mass</text>
-<text x="1110" y="1897.5">Margin</text>
-<text x="1110" y="1916.25">(Mammography)</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="990" y="1361.25" width="90" height="67.5" rx="15" ry="30" />
+<text x="1020" y="1391.25">Mass</text>
+<text x="1020" y="1410">Margin</text>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1080" y="1942.5" width="195" height="105" rx="15" ry="30" />
-<text x="1110" y="1972.5">Abnormality</text>
-<text x="1110" y="1991.25">Mass</text>
-<text x="1110" y="2010">Density</text>
-<text x="1110" y="2028.75">(Mammography)</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="990" y="1436.25" width="105" height="67.5" rx="15" ry="30" />
+<text x="1020" y="1466.25">Mass</text>
+<text x="1020" y="1485">Density</text>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="855" y="2055" width="210" height="86.25" rx="15" ry="30" />
-<text x="885" y="2085">Mammography</text>
-<text x="885" y="2103.75">Calcifications</text>
-<text x="885" y="2122.5">Observation</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="870" y="1511.25" width="210" height="48.75" rx="15" ry="30" />
+<text x="900" y="1541.25">Calcifications</text>
 </g>
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="1065" y1="2098.125" x2="1095" y2="2098.125" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1095" y1="2107.5" x2="1125" y2="2107.5" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1095" y1="2220" x2="1125" y2="2220" />
-<line stroke="Black" stroke-width="1.875" x1="1095" y1="2098.125" x2="1095" y2="2220" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="1080" y1="1535.625" x2="1110" y2="1535.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1110" y1="1545" x2="1140" y2="1545" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1110" y1="1620" x2="1140" y2="1620" />
+<line stroke="Black" stroke-width="1.875" x1="1110" y1="1535.625" x2="1110" y2="1620" />
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1125" y="2055" width="195" height="105" rx="15" ry="30" />
-<text x="1155" y="2085">Abnormality</text>
-<text x="1155" y="2103.75">Calcification</text>
-<text x="1155" y="2122.5">Type</text>
-<text x="1155" y="2141.25">(Mammography)</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1140" y="1511.25" width="60" height="67.5" rx="15" ry="30" />
+<text x="1170" y="1541.25">Calc</text>
+<text x="1170" y="1560">Type</text>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1125" y="2167.5" width="195" height="105" rx="15" ry="30" />
-<text x="1155" y="2197.5">Abnormality</text>
-<text x="1155" y="2216.25">Calcification</text>
-<text x="1155" y="2235">Distribution</text>
-<text x="1155" y="2253.75">(Mammography)</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1140" y="1586.25" width="180" height="67.5" rx="15" ry="30" />
+<text x="1170" y="1616.25">Calc</text>
+<text x="1170" y="1635">Distribution</text>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="855" y="2280" width="195" height="105" rx="15" ry="30" />
-<text x="885" y="2310">Abnormality</text>
-<text x="885" y="2328.75">Architectural</text>
-<text x="885" y="2347.5">Distortion</text>
-<text x="885" y="2366.25">(Mammography)</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="870" y="1661.25" width="150" height="67.5" rx="15" ry="30" />
+<text x="900" y="1691.25">Arch.</text>
+<text x="900" y="1710">Distortion</text>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="855" y="2392.5" width="195" height="86.25" rx="15" ry="30" />
-<text x="885" y="2422.5">Abnormality</text>
-<text x="885" y="2441.25">Assymetries</text>
-<text x="885" y="2460">(Mammography)</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="870" y="1736.25" width="165" height="48.75" rx="15" ry="30" />
+<text x="900" y="1766.25">Assymetries</text>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="855" y="2486.25" width="195" height="105" rx="15" ry="30" />
-<text x="885" y="2516.25">Abnormality</text>
-<text x="885" y="2535">Intramammary</text>
-<text x="885" y="2553.75">LymphNode</text>
-<text x="885" y="2572.5">(Mammography)</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="870" y="1792.5" width="180" height="86.25" rx="15" ry="30" />
+<text x="900" y="1822.5">Intramammory</text>
+<text x="900" y="1841.25">Lymph</text>
+<text x="900" y="1860">Node</text>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="855" y="2598.75" width="195" height="105" rx="15" ry="30" />
-<text x="885" y="2628.75">Abnormality</text>
-<text x="885" y="2647.5">Skin</text>
-<text x="885" y="2666.25">Lesion</text>
-<text x="885" y="2685">(Mammography)</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="870" y="1886.25" width="90" height="67.5" rx="15" ry="30" />
+<text x="900" y="1916.25">Skin</text>
+<text x="900" y="1935">Lesion</text>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="855" y="2711.25" width="195" height="123.75" rx="15" ry="30" />
-<text x="885" y="2741.25">Abnormality</text>
-<text x="885" y="2760">Solitary</text>
-<text x="885" y="2778.75">Dilated</text>
-<text x="885" y="2797.5">Duct</text>
-<text x="885" y="2816.25">(Mammography)</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="870" y="1961.25" width="120" height="67.5" rx="15" ry="30" />
+<text x="900" y="1991.25">Dialated</text>
+<text x="900" y="2010">Duct</text>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="600" y="2842.5" width="165" height="67.5" rx="15" ry="30" />
-<text x="630" y="2872.5">Abnormality</text>
-<text x="630" y="2891.25">(MRI)</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="645" y="2036.25" width="165" height="67.5" rx="15" ry="30" />
+<text x="675" y="2066.25">MRI</text>
+<text x="675" y="2085">Abnormality</text>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="600" y="2917.5" width="180" height="67.5" rx="15" ry="30" />
-<text x="630" y="2947.5">Abnormality</text>
-<text x="630" y="2966.25">(UltraSound)</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="645" y="2111.25" width="165" height="67.5" rx="15" ry="30" />
+<text x="675" y="2141.25">Abnormality</text>
+<text x="675" y="2160">UltraSound</text>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="240" y="2992.5" width="105" height="86.25" rx="15" ry="30" />
-<text x="270" y="3022.5">Patient</text>
-<text x="270" y="3041.25">Risk</text>
-<text x="270" y="3060">Section</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="285" y="2186.25" width="105" height="67.5" rx="15" ry="30" />
+<text x="315" y="2216.25">Patient</text>
+<text x="315" y="2235">Risk</text>
 </g>
 </g>
 </svg>

@@ -80,12 +80,13 @@ namespace BreastRadiology.XUnitTests
 
         SDefEditor CreateEditor(String name,
             String title,
+            String[] mapName,
             String baseDefinition)
         {
             if (name.Contains(" "))
                 throw new Exception("Structure Def name can not contains spaces");
 
-            SDefEditor retVal = new SDefEditor(name, this.CreateUrl(name), baseDefinition, this.resourceDir)
+            SDefEditor retVal = new SDefEditor(name, this.CreateUrl(name), baseDefinition, mapName, this.resourceDir)
                 .Title(title)
                 .Derivation(StructureDefinition.TypeDerivationRule.Constraint)
                 .Abstract(false)
@@ -101,22 +102,27 @@ namespace BreastRadiology.XUnitTests
 
         SDefEditor CreateFragment(String name,
             String title,
+            String[] mapName,
             String baseDefinition)
         {
             name += "-Fragment";
 
             SDefEditor retVal = this.CreateEditor(name,
                 title,
+                mapName,
                 baseDefinition);
             retVal.SetIsFrag();
             retVal.SDef.Abstract = true;
             return retVal;
         }
 
-        SDefEditor CreateObservationEditor(String name, String title)
+        SDefEditor CreateObservationEditor(String name, 
+            String title, 
+            String[] mapName)
         {
             SDefEditor retVal = this.CreateEditor(name,
                 title,
+                mapName,
                 ObservationUrl);
             retVal.AddFragRef(this.abnormalityObservationFragmentUrl);
             return retVal;
@@ -282,12 +288,7 @@ namespace BreastRadiology.XUnitTests
 
                 if (this.editors.TryGetValue(url, out SDefEditor e) == false)
                     throw new Exception("Internal error. Editor not found");
-                List<String> titleParts = e.SDef.Title.Split(" ").ToList();
-                if ((titleParts.Count > 0) && (titleParts[0] == "Breast"))
-                    titleParts.RemoveAt(0);
-                if ((titleParts.Count > 0) && (titleParts[0] == "Radiology"))
-                    titleParts.RemoveAt(0);
-                foreach (String titlePart in titleParts)
+                foreach (String titlePart in e.MapName)
                 {
                     String s = titlePart.Trim();
                     nodeChild.AddTextLine(s);

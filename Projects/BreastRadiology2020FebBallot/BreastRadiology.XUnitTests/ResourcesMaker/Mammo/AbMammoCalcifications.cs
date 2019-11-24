@@ -17,7 +17,8 @@ namespace BreastRadiology.XUnitTests
             String calcDistribution)
         {
             SDefEditor e = this.CreateObservationEditor("BreastRadMammoCalcifications",
-                                                        "Breast Radiology Mammography Calcifications Observation")
+                    "Breast Radiology Mammography Calcifications Observation",
+                    new string[] {"Calcifications"})
                 .Description(
                     new Markdown()
                         .Paragraph("Breast Radiology Mammography Calcifications Observation")

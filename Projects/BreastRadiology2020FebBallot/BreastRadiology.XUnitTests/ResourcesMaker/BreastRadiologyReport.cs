@@ -20,6 +20,7 @@ namespace BreastRadiology.XUnitTests
         {
             SDefEditor e = this.CreateEditor("BreastRadReport",
                 "Breast Radiology Report",
+                new string[] {"Breast","Radiology","Report"},
                 DiagnosticReportUrl)
                 .Description(new Markdown()
                     .Paragraph("Breast Radiology Diagnostic Report.")

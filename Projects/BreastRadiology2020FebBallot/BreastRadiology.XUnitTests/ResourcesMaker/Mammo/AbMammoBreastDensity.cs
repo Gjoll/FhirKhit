@@ -30,7 +30,8 @@ namespace BreastRadiology.XUnitTests
                 });
 
             SDefEditor e = this.CreateObservationEditor("BreastRadAbnormalityMammoBreastDensity",
-                            "Breast Radiology Abnormality Breast Density (Mammography)")
+                        "Breast Radiology Abnormality Breast Density (Mammography)",
+                        new string[] {"Breast","Density"})
                     .Description(new Markdown().Paragraph("Mammography Breast Abnormality Breast Density Observation"))
                     .AddFragRef(this.abnormalityCodedValueObservationFragmentUrl)
                     ;

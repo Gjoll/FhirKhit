@@ -14,7 +14,8 @@ namespace BreastRadiology.XUnitTests
         String ObservationSectionFragment()
         {
             SDefEditor e = this.CreateFragment("ObservationSection",
-                "ObservationSection Fragment",
+                "Observation Section Fragment",
+                    new string[] {"Observation","Section", "Fragment"},
                 ObservationUrl);
             e.Select("value[x]").Zero();
             e.Select("specimen").Zero();

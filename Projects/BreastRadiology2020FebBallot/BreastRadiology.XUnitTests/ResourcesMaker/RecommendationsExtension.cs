@@ -17,7 +17,8 @@ namespace BreastRadiology.XUnitTests
         String BreastRadiologyRecommendationsExtension()
         {
             SDefEditor e = this.CreateEditor("BreastRadRecommendations", 
-                "Recommendations", 
+                "Recommendations",
+                new string[] {"Recommendations"}, 
                 ExtensionUrl)
                 .Description(new Markdown()
                     .Paragraph("Diagnostic Report recommendations section extension")

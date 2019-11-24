@@ -16,6 +16,7 @@ namespace BreastRadiology.XUnitTests
         {
             SDefEditor e = this.CreateFragment("BreastBodyLocationOptional",
                                 "Breast Body Location (Optional) Fragment",
+                    new string[] {"Breast","Body", "Location", "Fragment", "(Optional)"},
                                 ObservationUrl)
                 .AddFragRef(this.headerFragUrl)
                 ;

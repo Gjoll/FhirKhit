@@ -28,7 +28,8 @@ namespace BreastRadiology.XUnitTests
                 });
 
             SDefEditor e = this.CreateObservationEditor("BreastRadAbnormalityMammoSkinLesion",
-                    "Breast Radiology Abnormality Skin Lesion (Mammography)")
+                    "Breast Radiology Abnormality Skin Lesion (Mammography)",
+                    new string[] {"Skin","Lesion"})
                     .Description(new Markdown().Paragraph("Mammography Breast Abnormality Skin Lesion Observation"))
                     .AddFragRef(this.abnormalityCodedValueObservationFragmentUrl)
                     ;

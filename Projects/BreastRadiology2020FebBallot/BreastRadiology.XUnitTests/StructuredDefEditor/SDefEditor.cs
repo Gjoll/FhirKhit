@@ -16,6 +16,8 @@ namespace BreastRadiology.XUnitTests
         static Type sDefType = typeof(SDefEditor);
 
         public MapNode MapNode {get; }
+        public String[] MapName {get; set; }
+
         public StructureDefinition SDef => this.sDef;
         StructureDefinition baseSDef;
         StructureDefinition sDef;
@@ -32,6 +34,7 @@ namespace BreastRadiology.XUnitTests
         public SDefEditor(String name,
             String url,
             String baseDefinition,
+            String[] mapName,
             String outputDir)
         {
             this.outputDir = outputDir;
@@ -39,6 +42,7 @@ namespace BreastRadiology.XUnitTests
             if (this.baseSDef == null)
                 throw new Exception($"'Base definition resource {baseDefinition}' not found");
 
+            this.MapName = mapName;
             this.basePath = baseDefinition.LastUriPart();
 
             for (Int32 i = 0; i < this.baseSDef.Snapshot.Element.Count; i++)

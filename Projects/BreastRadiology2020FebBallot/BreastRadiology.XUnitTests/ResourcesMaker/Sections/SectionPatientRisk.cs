@@ -16,7 +16,8 @@ namespace BreastRadiology.XUnitTests
         String SectionPatientRisk()
         {
             SDefEditor e = this.CreateObservationEditor("BreastRadSectionPatientRisk",
-                                                        "Breast Radiology Patient Risk Section")
+                    "Breast Radiology Patient Risk Section",
+                    new string[] {"Patient","Risk"})
                 .Description(new Markdown().Paragraph("Patient Risk Section"))
                 .AddFragRef(this.observationSectionFragmentUrl)
                 ;

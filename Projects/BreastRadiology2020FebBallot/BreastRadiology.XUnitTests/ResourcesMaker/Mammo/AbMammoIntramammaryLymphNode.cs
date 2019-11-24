@@ -28,7 +28,8 @@ namespace BreastRadiology.XUnitTests
                 });
 
             SDefEditor e = this.CreateObservationEditor("BreastRadAbnormalityMammoIntramammaryLymphNode",
-                    "Breast Radiology Abnormality Intramammary LymphNode (Mammography)")
+                    "Breast Radiology Abnormality Intramammary LymphNode (Mammography)",
+                    new string[] {"Intramammory","Lymph", "Node"})
                     .Description(new Markdown().Paragraph("Mammography Breast Intramammary LymphNode Distortion Observation"))
                     .AddFragRef(this.abnormalityCodedValueObservationFragmentUrl)
                     ;

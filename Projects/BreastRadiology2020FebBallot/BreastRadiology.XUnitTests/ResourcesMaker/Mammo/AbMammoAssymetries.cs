@@ -30,7 +30,8 @@ namespace BreastRadiology.XUnitTests
                 });
 
             SDefEditor e = this.CreateObservationEditor("BreastRadAbnormalityMammoAssymetries",
-                                                        "Breast Radiology Abnormality Assymetries (Mammography)")
+                        "Breast Radiology Abnormality Assymetries (Mammography)",
+                        new string[] {"Assymetries"})
                     .Description(new Markdown().Paragraph("Mammography Breast Abnormality Assymetries Observation"))
                     .AddFragRef(this.abnormalityCodedValueObservationFragmentUrl)
                     ;

@@ -28,7 +28,8 @@ namespace BreastRadiology.XUnitTests
                 });
 
             SDefEditor e = this.CreateObservationEditor("BreastRadAbnormalityMammoSolitaryDilatedDuct",
-                    "Breast Radiology Abnormality Solitary Dilated Duct (Mammography)")
+                    "Breast Radiology Abnormality Solitary Dilated Duct (Mammography)",
+                    new string[] {"Dialated","Duct"})
                     .Description(new Markdown().Paragraph("Mammography Breast Abnormality Solitary Dilated Duct Observation"))
                     .AddFragRef(this.abnormalityCodedValueObservationFragmentUrl)
                     ;
