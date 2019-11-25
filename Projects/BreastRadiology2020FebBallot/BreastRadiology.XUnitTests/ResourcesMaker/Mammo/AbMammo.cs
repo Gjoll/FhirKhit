@@ -25,7 +25,7 @@ namespace BreastRadiology.XUnitTests
             //$ todo. Incorrect method!!!
             SDefEditor e = this.CreateObservationEditor("BreastRadAbnormalityMammo",
                     "Breast Radiology Abnormality (Mammography)",
-                    new string[] {"Abnormality"})
+                    new string[] {"Mammo", "Abnormality"})
                 .Description(new Markdown().Paragraph("Mammography Breast Abnormality Observation"))
                 .AddFragRef(this.abnormalityFragmentUrl)
                 ;

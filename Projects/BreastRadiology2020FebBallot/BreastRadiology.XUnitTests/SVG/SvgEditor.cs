@@ -18,11 +18,11 @@ namespace BreastRadiology.XUnitTests
 
         public float BorderWidth { get; set; } = 0.125f;
         public float LineHeight { get; set; } = 1.25f;
-        public float BorderMargin { get; set; } = 2.0f;
+        public float BorderMargin { get; set; } = 0.5f;
         public float NodeGapX { get; set; } = 2.0f;
         public float NodeGapY { get; set; } = 0.5f;
-        public float RectRx { get; set; } = 1f;
-        public float RectRy { get; set; } = 2f;
+        public float RectRx { get; set; } = 0.25f;
+        public float RectRy { get; set; } = 0.25f;
 
         String ToPx(float value) => $"{15 * value}";
 
@@ -227,8 +227,10 @@ namespace BreastRadiology.XUnitTests
             out float width,
             out float height)
         {
-            height = node.TextLines.Count * LineHeight + BorderMargin;
-            width = node.Width;
+            const float CharMod = 0.5f;
+
+            height = node.TextLines.Count * LineHeight + 2 * BorderMargin;
+            width = node.Width * CharMod + 2 * BorderMargin;
 
             SvgGroup g = this.doc.AddGroup(parentGroup);
 
@@ -250,12 +252,12 @@ namespace BreastRadiology.XUnitTests
             square.RY = ToPx(this.RectRy);
             square.X = ToPx(screenX);
             square.Y = ToPx(screenY);
-            square.Width = ToPx(node.Width);
+            square.Width = ToPx(width);
             square.Height = ToPx(height);
             square.Fill = node.FillColor;
 
-            float textX = screenX + 2;
-            float textY = screenY + 2;
+            float textX = screenX + BorderMargin;
+            float textY = screenY + BorderMargin + 1;
 
             foreach (SEText line in node.TextLines)
             {

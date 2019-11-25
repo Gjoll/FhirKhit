@@ -29,7 +29,7 @@ namespace BreastRadiology.XUnitTests
 
             SDefEditor e = this.CreateObservationEditor("BreastRadAbnormalityMassShape",
                 "Breast Radiology Abnormality Mass Shape",
-                new string[] {"Mass","Shape"})
+                new string[] {"Shape"})
                 .Description(new Markdown().Paragraph("Breast Radiology Abnormality Mass Shape Observation"))
                     ;
 

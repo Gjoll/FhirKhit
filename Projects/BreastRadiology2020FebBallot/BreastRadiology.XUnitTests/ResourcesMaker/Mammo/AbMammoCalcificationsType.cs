@@ -40,7 +40,7 @@ namespace BreastRadiology.XUnitTests
 
             SDefEditor e = this.CreateObservationEditor("BreastRadAbnormalityMammoCalcificationType",
                         "Breast Radiology Abnormality Calcification Type (Mammography)",
-                    new string[] {"Calc","Type"})
+                    new string[] {"Type"})
                     .Description(new Markdown().Paragraph("Mammography Breast Abnormality Calcification Type Observation"))
                     .AddFragRef(this.abnormalityCodedValueObservationFragmentUrl)
                     ;

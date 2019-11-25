@@ -116,8 +116,8 @@ namespace BreastRadiology.XUnitTests
             return retVal;
         }
 
-        SDefEditor CreateObservationEditor(String name, 
-            String title, 
+        SDefEditor CreateObservationEditor(String name,
+            String title,
             String[] mapName)
         {
             SDefEditor retVal = this.CreateEditor(name,
@@ -277,35 +277,71 @@ namespace BreastRadiology.XUnitTests
                     }
                 }
             }
-
-            void AddChildren(String url,
-                SENodeGroup groupParent)
+            SENode CreateNode(String url)
             {
-                MapNode mapNode = ResourceMap.Self.GetMapNode(url);
-
-                SENodeGroup groupChild = groupParent.AppendChild("");
-                SENode nodeChild = new SENode(0, Color.LightGreen);
+                SENode node = new SENode(0, Color.LightGreen);
 
                 if (this.editors.TryGetValue(url, out SDefEditor e) == false)
                     throw new Exception("Internal error. Editor not found");
                 foreach (String titlePart in e.MapName)
                 {
                     String s = titlePart.Trim();
-                    nodeChild.AddTextLine(s);
+                    node.AddTextLine(s);
                 }
-                groupChild.Nodes.Add(nodeChild);
+                return node;
+            }
+            bool DifferentChildren(MapLink[] links1, MapLink[] links2)
+            {
+                if (links1.Length != links2.Length)
+                    return true;
+                for (Int32 i = 0; i < links1.Length; i++)
+                {
+                    MapLink link1 = links1[i];
+                    MapLink link2 = links2[i];
+                    if (link1.LinkType != link2.LinkType)
+                        return true;
+                    if (link1.ResourceUrl != link2.ResourceUrl)
+                        return true;
+                }
+                return false;
+            }
 
-                MapLink[] links = TargetLinks(mapNode).ToArray();
-                if (links.Length == 0)
-                    return;
+            /*
+             * Add children. If two adjacent children have same children, then dont create each in a seperate
+             * group. Have the two nodes point to the same group of children.
+             */
+            void AddChildren(MapNode mapNode,
+                MapLink[] links,
+                SENodeGroup group)
+            {
+                MapLink[] previousChildLinks = null;
+                if (links.Length > 0)
+                {
+                    SENodeGroup groupChild = null;
+                    foreach (MapLink link in links)
+                    {
+                        MapNode childMapNode = ResourceMap.Self.GetMapNode(link.ResourceUrl);
+                        MapLink[] childMapLinks = TargetLinks(childMapNode).ToArray();
 
-                foreach (MapLink link in links)
-                    AddChildren(link.ResourceUrl, groupChild);
+                        if ((previousChildLinks == null) || (DifferentChildren(previousChildLinks, childMapLinks)))
+                        {
+                            groupChild = group.AppendChild("");
+                            AddChildren(childMapNode, childMapLinks, groupChild);
+                        }
+                        SENode node = CreateNode(link.ResourceUrl);
+                        groupChild.Nodes.Add(node);
+                        previousChildLinks = childMapLinks;
+                    }
+                }
             }
 
             SvgEditor e = new SvgEditor();
             SENodeGroup rootGroup = new SENodeGroup("root");
-            AddChildren(this.breastRadiologyReportUrl, rootGroup);
+            SENode rootNode = CreateNode(this.breastRadiologyReportUrl);
+            rootGroup.Nodes.Add(rootNode);
+            MapNode mapNode = ResourceMap.Self.GetMapNode(this.breastRadiologyReportUrl);
+            MapLink[] links = TargetLinks(mapNode).ToArray();
+            AddChildren(mapNode, links, rootGroup);
             e.Render(rootGroup);
             e.Save(Path.Combine(outputDir, "BreastRadOverview.svg"));
         }

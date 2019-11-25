@@ -14,11 +14,11 @@ namespace BreastRadiology.XUnitTests
         public Color FillColor { get; set; } = Color.LightBlue;
         public String HRef {get; set; }
 
-        public SENode(float widthEm,
+        public SENode(float width,
             Color fillColor,
             String hRef = null)
         {
-            this.Width = widthEm;
+            this.Width = width;
             this.FillColor = fillColor;
             this.HRef = hRef;
         }
