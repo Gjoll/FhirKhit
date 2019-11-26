@@ -15,11 +15,35 @@ namespace FhirKhit.Tools.R2
 {
     public static class MarkDownExtensions
     {
+        public static Markdown BiradHeader(this Markdown md)
+        {
+            md.Value += "### BI-RADS® ATLAS — MAMMOGRAPHY";
+            md.Value += "### FIFTH EDITION — 2013";
+            return md;
+        }
+
+        public static Markdown BiradFooter(this Markdown md)
+        {
+            md.Value += "### END BI-RADS® ATLAS — MAMMOGRAPHY TEXT";
+            return md;
+        }
+
         public static Markdown Paragraph(this Markdown md, params string[] lines)
         {
             foreach (String line in lines)
                 md.Value += $"{line}\n";
             md.Value += $"\n\n";
+            return md;
+        }
+
+        /// <summary>
+        /// Preformatted markdown
+        /// </summary>
+        /// <returns></returns>
+        public static Markdown MarkedDown(this Markdown md, params string[] lines)
+        {
+            foreach (String line in lines)
+                md.Value += $"{line}\n";
             return md;
         }
 

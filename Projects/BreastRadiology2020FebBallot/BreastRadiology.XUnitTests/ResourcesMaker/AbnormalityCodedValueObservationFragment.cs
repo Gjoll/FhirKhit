@@ -18,6 +18,7 @@ namespace BreastRadiology.XUnitTests
                     "Abnormality CodedValue Observation Fragment",
                     new string[] {"Abnormality","CodedValue", "Fragment"},
                     ObservationUrl)
+                .Description(new Hl7.Fhir.Model.Markdown("Fragment that defines values for coded abnormality observations."))
                 .AddFragRef(this.headerFragUrl)
                 .AddFragRef(this.breastBodyLocationRequiredFragmentUrl)
                 ;

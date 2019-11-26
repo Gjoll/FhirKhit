@@ -22,25 +22,27 @@ namespace BreastRadiology.XUnitTests
                     .Paragraph("Mammography Calcification Type"),
                 new String[]
                 {
-                        "a. Skin (Typically benign)",
-                        "b. Vascular (Typically benign)",
-                        "c. Coarse or 'popcorn-like' (Typically benign)",
-                        "d. Large rod-like (Typically benign)",
-                        "e. Round (Typically benign)",
-                        "f. Rim (Typically benign)",
-                        "g. Dystrophic (Typically benign)",
-                        "h. Milk of calcium (Typically benign)",
-                        "i. Suture (Typically benign)",
+                    // typically benign
+                    "a. Skin (Typically benign)",
+                    "b. Vascular (Typically benign)",
+                    "c. Coarse or 'popcorn-like' (Typically benign)",
+                    "d. Large rod-like (Typically benign)",
+                    "e. Round (Typically benign)",
+                    "f. Rim (Typically benign)",
+                    "g. Dystrophic (Typically benign)",
+                    "h. Milk of calcium (Typically benign)",
+                    "i. Suture (Typically benign)",
 
-                        "a. Amorphous (Suspicious morphology)",
-                        "b. Course heterogeneous (Suspicious morphology)",
-                        "c. Fine pleomorphic (Suspicious morphology)",
-                        "d. Fine linear or fine-linear branching (Suspicious morphology)"
+                    // suspicious morphology 
+                    "a. Amorphous (Suspicious morphology)",
+                    "b. Course heterogeneous (Suspicious morphology)",
+                    "c. Fine pleomorphic (Suspicious morphology)",
+                    "d. Fine linear or fine-linear branching (Suspicious morphology)"
                 });
 
             SDefEditor e = this.CreateObservationEditor("BreastRadAbnormalityMammoCalcificationType",
                         "Breast Radiology Abnormality Calcification Type (Mammography)",
-                    new string[] {"Type"})
+                    new string[] { "Type" })
                     .Description(new Markdown().Paragraph("Mammography Breast Abnormality Calcification Type Observation"))
                     .AddFragRef(this.abnormalityCodedValueObservationFragmentUrl)
                     ;
@@ -49,6 +51,7 @@ namespace BreastRadiology.XUnitTests
                 .Type("CodeableConcept")
                 .Binding(binding, BindingStrength.Required)
                 ;
-                return e.SDef.Url;        }
+            return e.SDef.Url;
+        }
     }
 }

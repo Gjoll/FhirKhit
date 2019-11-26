@@ -1,4 +1,5 @@
 ﻿using FhirKhit.Tools.R4;
+using Hl7.Fhir.Model;
 using PreFhir;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,7 @@ namespace BreastRadiology.XUnitTests
                     "Breast Body Location (Required) Fragment",
                     new string[] {"Breast","Body", "Location", "Fragment", "(Required)"},
                     ObservationUrl)
+                .Description(new Markdown("Fragment definition for an optional Breast Body Location"))
                 .AddFragRef(this.headerFragUrl);
                 ;
             e

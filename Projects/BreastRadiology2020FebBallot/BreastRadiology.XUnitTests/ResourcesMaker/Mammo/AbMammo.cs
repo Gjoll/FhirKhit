@@ -26,7 +26,16 @@ namespace BreastRadiology.XUnitTests
             SDefEditor e = this.CreateObservationEditor("BreastRadAbnormalityMammo",
                     "Breast Radiology Abnormality (Mammography)",
                     new string[] {"Mammo", "Abnormality"})
-                .Description(new Markdown().Paragraph("Mammography Breast Abnormality Observation"))
+                .Description(new Markdown()
+                            .Paragraph("Mammography Breast Abnormality Observation")
+                            .BiradHeader()
+                            .MarkedDown("A \"MASS\" is three dimensional and occupies space. It is seen on two different mammographic pro-")
+                            .MarkedDown("jections. It has completely or partially convex-outward borders and (when radiodense) appears")
+                            .MarkedDown("denser in the center than at the periphery. If a potential mass is seen only on a single projection, it")
+                            .MarkedDown("should be called an \"ASYMMETRY\" until its 3-dimensionality is confirmed (See Section D on Asym-")
+                            .MarkedDown("metries and also the Guidance chapter). (Insert links/page #s)")
+                            .BiradFooter()
+                            )
                 .AddFragRef(this.abnormalityFragmentUrl)
                 ;
             e.Find("method")

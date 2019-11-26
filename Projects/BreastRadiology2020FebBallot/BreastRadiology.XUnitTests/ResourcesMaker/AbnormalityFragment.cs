@@ -17,6 +17,7 @@ namespace BreastRadiology.XUnitTests
                     "Abnormality Fragment",
                     new string[] {"Abnormality", "Fragment"},
                     ObservationUrl)
+                .Description(new Hl7.Fhir.Model.Markdown("Fragment that defines values for abnormality sections (Mammo, MRI, ETc)."))
                 ;
 
             e.Select("value[x]").Zero();

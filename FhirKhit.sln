@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SVGLib", "Projects\SVGLib\S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SVGPad", "Projects\SVGPad\SVGPad.csproj", "{AEA9409E-743B-4688-A05E-D0E1FEE8DFD9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Paragrapher", "Projects\BreastRadiology2020FebBallot\Paragrapher\Paragrapher.csproj", "{EB549B93-581C-4759-A08D-39BF80C72481}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Projects\FhirKhit.GlobalSuppressions\FhirKhit.GlobalSuppressions.projitems*{721f484a-1c1a-4a95-aa2c-ff38e18c9d77}*SharedItemsImports = 13
@@ -158,6 +160,14 @@ Global
 		{AEA9409E-743B-4688-A05E-D0E1FEE8DFD9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AEA9409E-743B-4688-A05E-D0E1FEE8DFD9}.Release|x64.ActiveCfg = Release|Any CPU
 		{AEA9409E-743B-4688-A05E-D0E1FEE8DFD9}.Release|x64.Build.0 = Release|Any CPU
+		{EB549B93-581C-4759-A08D-39BF80C72481}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB549B93-581C-4759-A08D-39BF80C72481}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB549B93-581C-4759-A08D-39BF80C72481}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EB549B93-581C-4759-A08D-39BF80C72481}.Debug|x64.Build.0 = Debug|Any CPU
+		{EB549B93-581C-4759-A08D-39BF80C72481}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB549B93-581C-4759-A08D-39BF80C72481}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB549B93-581C-4759-A08D-39BF80C72481}.Release|x64.ActiveCfg = Release|Any CPU
+		{EB549B93-581C-4759-A08D-39BF80C72481}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

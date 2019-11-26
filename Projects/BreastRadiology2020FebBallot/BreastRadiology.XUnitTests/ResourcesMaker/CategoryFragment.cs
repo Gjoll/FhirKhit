@@ -1,4 +1,5 @@
 ﻿using FhirKhit.Tools.R4;
+using Hl7.Fhir.Model;
 using PreFhir;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,7 @@ namespace BreastRadiology.XUnitTests
                     "Category Fragment",
                     new string[] {"Category","Fragment"},
                     ObservationUrl)
+                .Description(new Markdown("Fragment definition that slices category and adds the observation code value"))
                 ;
             ElementDefGroup eDef = e.Find("category");
             eDef.ElementDefinition.Card(1, eDef.BaseElementDefinition.Max);

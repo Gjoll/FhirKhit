@@ -18,10 +18,12 @@ namespace BreastRadiology.XUnitTests
         {
             SDefEditor e = this.CreateFragment("AbnormalityObservation",
                 "Abnormality Observation Fragment",
-                    new string[] {"Abnormality","Observation", "Fragment"},
-                ObservationUrl);
-            e.AddFragRef(this.headerFragUrl);
-            e.AddFragRef(this.categoryFragmentUrl);
+                    new string[] { "Abnormality", "Observation", "Fragment" },
+                ObservationUrl)
+                .Description(new Hl7.Fhir.Model.Markdown("Fragment that defines values for abnormality observations values."))
+                .AddFragRef(this.headerFragUrl)
+                .AddFragRef(this.categoryFragmentUrl)
+            ;
             e.Select("subject").Single();
             e.Select("component").Zero();
             e.Select("basedOn").Zero();

@@ -20,12 +20,12 @@ namespace BreastRadiology.XUnitTests
                 "Breast Radiology Abnormality Mass Shape",
                 new Markdown()
                     .Paragraph("Breast Radiology Mass Shape"),
-                new String[]
-                {
-                "a. Oval",
-                "b. Round",
-                "c. Irregular"
-                });
+                        new ConceptDef[]
+                        {
+                            new ConceptDef("Oval", "Elliptical/Egg-shaped Mass", "A mass that is elliptical or egg-shaped (may include 2 or 3 undulations)."),
+                            new ConceptDef("Round", "Round Mass", "A mass that is spherical, ball-shaped, circular, or globular in shape."),
+                            new ConceptDef("Irregular", "Irregular Mass", "The shape of the mass is neither round nor oval. For mammography, use of this descriptor usually implies a suspicious finding.")
+                        });
 
             SDefEditor e = this.CreateObservationEditor("BreastRadAbnormalityMassShape",
                 "Breast Radiology Abnormality Mass Shape",

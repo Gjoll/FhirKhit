@@ -186,6 +186,77 @@ namespace BreastRadiology.XUnitTests
             return vs.Url;
         }
 
+        class ConceptDef
+        {
+            public String Code;
+            public String Display;
+            public String Definition;
+
+            public ConceptDef(String code, String display, String definition)
+            {
+                Code = code;
+                Display = display;
+                Definition = definition;
+            }
+        }
+
+        String CreateValueSet(String name,
+            String title,
+            Markdown description,
+            IEnumerable<ConceptDef> codes)
+        {
+            CodeSystem cs = new CodeSystem
+            {
+                Id = $"{name}CS",
+                Url = $"http://hl7.org/fhir/us/breast-radiology/CodeSystem/{name}CS",
+                Name = $"{name}CS",
+                Title = title,
+                Description = description,
+                CaseSensitive = true,
+                Content = CodeSystem.CodeSystemContentMode.Complete,
+                Count = codes.Count()
+            };
+            cs.AddFragRef(this.headerFragUrl);
+
+            ValueSet vs = new ValueSet
+            {
+                Id = $"{name}VS",
+                Url = $"http://hl7.org/fhir/us/breast-radiology/CodeSystem/{name}VS",
+                Name = $"{name}VS",
+                Title = title,
+                Description = description
+            };
+            vs.AddFragRef(this.headerFragUrl);
+
+
+            ValueSet.ConceptSetComponent vsComp = new ValueSet.ConceptSetComponent
+            {
+                System = cs.Url
+            };
+            vs.Compose = new ValueSet.ComposeComponent();
+            vs.Compose.Include.Add(vsComp);
+
+            foreach (ConceptDef code in codes)
+            {
+                vsComp.Concept.Add(new ValueSet.ConceptReferenceComponent
+                {
+                    Code = code.Code,
+                    Display = code.Display
+                });
+
+                cs.Concept.Add(new CodeSystem.ConceptDefinitionComponent
+                {
+                    Code = code.Code,
+                    Display = code.Display,
+                    Definition = code.Definition
+                });
+            }
+
+            this.Save(cs, Path.Combine(this.resourceDir, $"CodeSystem-{name}CS.json"));
+            this.Save(vs, Path.Combine(this.resourceDir, $"ValueSet-{name}VS.json"));
+            return vs.Url;
+        }
+
         public void Save(Resource r, String path)
         {
             r.SaveJson(path);
