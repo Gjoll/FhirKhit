@@ -25,16 +25,16 @@
         "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadAbnormalityMassShapeCS",
         "concept": [
           {
-            "code": "1",
-            "display": "a. Oval"
+            "code": "Oval",
+            "display": "Elliptical/Egg-shaped Mass"
           },
           {
-            "code": "2",
-            "display": "b. Round"
+            "code": "Round",
+            "display": "Round Mass"
           },
           {
-            "code": "3",
-            "display": "c. Irregular"
+            "code": "Irregular",
+            "display": "Irregular Mass"
           }
         ]
       }

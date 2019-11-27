@@ -1,0 +1,42 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "BreastRadExistanceCS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadExistanceCS",
+  "version": "0.0.2",
+  "name": "BreastRadExistanceCS",
+  "title": "Breast Radiology Existance Value",
+  "status": "draft",
+  "date": "2019-11-01",
+  "publisher": "Hl7-Clinical Interoperability Council",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/cic"
+        }
+      ]
+    }
+  ],
+  "description": "Breast Radiology codes to define existance of a value",
+  "caseSensitive": true,
+  "content": "complete",
+  "count": 3,
+  "concept": [
+    {
+      "code": "Present",
+      "display": "Value is present",
+      "definition": "Value was observed and is present."
+    },
+    {
+      "code": "NotPresent",
+      "display": "Value was found to be not present",
+      "definition": "An observation for the value was made and found to not be present."
+    },
+    {
+      "code": "NotChecked",
+      "display": "No attempt was made tt observe value",
+      "definition": "An observation for the value was not made. Its existance is indeterminate."
+    }
+  ]
+}

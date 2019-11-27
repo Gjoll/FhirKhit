@@ -1,15 +1,23 @@
 {
   "resourceType": "CodeSystem",
-  "id": "AssymetriesCS",
-  "extension": [
+  "id": "BreastRadAssymetriesCS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadAssymetriesCS",
+  "version": "0.0.2",
+  "name": "BreastRadAssymetriesCS",
+  "title": "Breast Radiology Assymetries",
+  "status": "draft",
+  "date": "2019-11-01",
+  "publisher": "Hl7-Clinical Interoperability Council",
+  "contact": [
     {
-      "url": "http://www.fragment.com/fragment",
-      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/Header-Fragment"
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/cic"
+        }
+      ]
     }
   ],
-  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/AssymetriesCS",
-  "name": "AssymetriesCS",
-  "title": "Assymetries",
   "description": "Breast Radiology Mammography Assymetries",
   "caseSensitive": true,
   "content": "complete",

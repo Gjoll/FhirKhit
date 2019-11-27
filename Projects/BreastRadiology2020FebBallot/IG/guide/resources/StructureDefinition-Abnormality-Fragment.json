@@ -9,6 +9,7 @@
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/Abnormality-Fragment",
   "name": "Abnormality-Fragment",
   "title": "Abnormality Fragment",
+  "description": "Fragment that defines values for abnormality sections (Mammo, MRI, ETc).",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": true,

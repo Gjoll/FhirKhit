@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Mammography Breast Abnormality Architectural Distortion Observation",
+  "description": "Mammography Breast Abnormality Architectural Distortion Observation\n\n\n### BI-RADS® ATLAS — MAMMOGRAPHY### FIFTH EDITION — 2013The parenchyma is distorted with no definite mass visible. For mammography, this includes thin\nstraight lines or spiculations radiating from a point, and focal retraction, distortion or straightening\nat the anterior or posterior edge of the parenchyma. Architectural distortion may also be associ-\nated with a mass, asymmetry, or calcifications. In the absence of appropriate history of trauma or\nsurgery, architectural distortion is suspicious for malignancy or radial scar, and tissue diagnosis is\nappropriate.\n### END BI-RADS® ATLAS — MAMMOGRAPHY TEXT",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -1177,7 +1177,7 @@
         "isSummary": true,
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadAbnormalityMammoArchitecturalDistortionFindingsVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadExistanceVS"
         },
         "mapping": [
           {
@@ -2697,7 +2697,7 @@
         "isSummary": true,
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadAbnormalityMammoArchitecturalDistortionFindingsVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadExistanceVS"
         },
         "mapping": [
           {

@@ -25,7 +25,8 @@ namespace BreastRadiology.XUnitTests
                 "a. Present",
                 "b. NotPresent",
                 "c. NotChecked"
-                });
+                })
+                .Url;
 
             SDefEditor e = this.CreateObservationEditor("BreastRadAbnormalityMammoSkinLesion",
                     "Breast Radiology Abnormality Skin Lesion (Mammography)",

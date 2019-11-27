@@ -27,7 +27,8 @@ namespace BreastRadiology.XUnitTests
                         "b. There are scattered areas of fibroglandular density",
                         "c. The breasts are heterogeneously dense, which may obscure detection of small masses",
                         "d. The breasts are extremely dense, which lowers the sensitivity of mammography"
-                });
+                })
+                .Url;
 
             SDefEditor e = this.CreateObservationEditor("BreastRadAbnormalityMammoBreastDensity",
                         "Breast Radiology Abnormality Breast Density (Mammography)",

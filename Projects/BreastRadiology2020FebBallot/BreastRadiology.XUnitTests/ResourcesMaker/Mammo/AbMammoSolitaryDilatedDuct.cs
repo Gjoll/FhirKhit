@@ -25,7 +25,8 @@ namespace BreastRadiology.XUnitTests
                 "a. Present",
                 "b. NotPresent",
                 "c. NotChecked"
-                });
+                })
+                .Url;
 
             SDefEditor e = this.CreateObservationEditor("BreastRadAbnormalityMammoSolitaryDilatedDuct",
                     "Breast Radiology Abnormality Solitary Dilated Duct (Mammography)",

@@ -22,7 +22,6 @@ namespace BreastRadiology.XUnitTests
             String skinLesions,
             String solitaryDilatedDuct)
         {
-            //$ todo. Incorrect method!!!
             SDefEditor e = this.CreateObservationEditor("BreastRadAbnormalityMammo",
                     "Breast Radiology Abnormality (Mammography)",
                     new string[] {"Mammo", "Abnormality"})
@@ -38,10 +37,11 @@ namespace BreastRadiology.XUnitTests
                             )
                 .AddFragRef(this.abnormalityFragmentUrl)
                 ;
-            e.Find("method")
-             .FixedCodeSlice("method", "http://snomed.info/sct", "115341008")
-             .Card(1, "*")
-             ;
+            ////$ todo. Incorrect method!!!
+            //e.Find("method")
+            // .FixedCodeSlice("method", "http://snomed.info/sct", "115341008")
+            // .Card(1, "*")
+            // ;
 
             {
                 ProfileTarget[] targets = new ProfileTarget[]

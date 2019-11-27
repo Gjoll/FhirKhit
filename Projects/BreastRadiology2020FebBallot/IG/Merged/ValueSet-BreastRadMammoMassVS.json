@@ -1,0 +1,43 @@
+{
+  "resourceType": "ValueSet",
+  "id": "BreastRadMammoMassVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadMammoMassVS",
+  "version": "0.0.2",
+  "name": "BreastRadMammoMassVS",
+  "title": "Breast Radiology Mammography Abnormality Findings",
+  "status": "draft",
+  "date": "2019-11-01",
+  "publisher": "Hl7-Clinical Interoperability Council",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/cic"
+        }
+      ]
+    }
+  ],
+  "description": "Code to define mammography mass finding",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadMammoMassCS",
+        "concept": [
+          {
+            "code": "1",
+            "display": "Present"
+          },
+          {
+            "code": "2",
+            "display": "NotPresent"
+          },
+          {
+            "code": "3",
+            "display": "NotChecked"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -43,35 +43,42 @@
 <td><a href="StructureDefinition-Abnormality-Fragment.html">Abnormality-Fragment</a></td>
 <td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
 <td>{% capture md_text %}
-
+Fragment that defines values for abnormality sections (Mammo, MRI, ETc).
 {% endcapture %}{{ md_text | markdownify }}</td>
 </tr>
 <tr>
 <td><a href="StructureDefinition-AbnormalityCodedValueObservation-Fragment.html">AbnormalityCodedValueObservation-Fragment</a></td>
 <td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
 <td>{% capture md_text %}
-
+Fragment that defines values for coded abnormality observations.
 {% endcapture %}{{ md_text | markdownify }}</td>
 </tr>
 <tr>
 <td><a href="StructureDefinition-AbnormalityObservation-Fragment.html">AbnormalityObservation-Fragment</a></td>
 <td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
 <td>{% capture md_text %}
-
+Fragment that defines values for abnormality observations values.
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-AbnormalityObservationNoHasMembersFragment-Fragment.html">AbnormalityObservationNoHasMembersFragment-Fragment</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Fragment that defines restricts abnormality observations to have no hasMember references.
 {% endcapture %}{{ md_text | markdownify }}</td>
 </tr>
 <tr>
 <td><a href="StructureDefinition-BreastBodyLocationOptional-Fragment.html">BreastBodyLocationOptional-Fragment</a></td>
 <td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
 <td>{% capture md_text %}
-
+Fragment definition for a Required Breast Body Location
 {% endcapture %}{{ md_text | markdownify }}</td>
 </tr>
 <tr>
 <td><a href="StructureDefinition-BreastBodyLocationRequired-Fragment.html">BreastBodyLocationRequired-Fragment</a></td>
 <td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
 <td>{% capture md_text %}
-
+Fragment definition for an optional Breast Body Location
 {% endcapture %}{{ md_text | markdownify }}</td>
 </tr>
 <tr>
@@ -79,6 +86,14 @@
 <td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
 <td>{% capture md_text %}
 Mammography Breast Abnormality Observation
+
+
+### BI-RADS® ATLAS — MAMMOGRAPHY### FIFTH EDITION — 2013A "MASS" is three dimensional and occupies space. It is seen on two different mammographic pro-
+jections. It has completely or partially convex-outward borders and (when radiodense) appears
+denser in the center than at the periphery. If a potential mass is seen only on a single projection, it
+should be called an "ASYMMETRY" until its 3-dimensionality is confirmed (See Section D on Asym-
+metries and also the Guidance chapter). (Insert links/page #s)
+### END BI-RADS® ATLAS — MAMMOGRAPHY TEXT
 {% endcapture %}{{ md_text | markdownify }}</td>
 </tr>
 <tr>
@@ -86,6 +101,15 @@ Mammography Breast Abnormality Observation
 <td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
 <td>{% capture md_text %}
 Mammography Breast Abnormality Architectural Distortion Observation
+
+
+### BI-RADS® ATLAS — MAMMOGRAPHY### FIFTH EDITION — 2013The parenchyma is distorted with no definite mass visible. For mammography, this includes thin
+straight lines or spiculations radiating from a point, and focal retraction, distortion or straightening
+at the anterior or posterior edge of the parenchyma. Architectural distortion may also be associ-
+ated with a mass, asymmetry, or calcifications. In the absence of appropriate history of trauma or
+surgery, architectural distortion is suspicious for malignancy or radial scar, and tissue diagnosis is
+appropriate.
+### END BI-RADS® ATLAS — MAMMOGRAPHY TEXT
 {% endcapture %}{{ md_text | markdownify }}</td>
 </tr>
 <tr>
@@ -152,13 +176,6 @@ Mammography Breast Abnormality Solitary Dilated Duct Observation
 {% endcapture %}{{ md_text | markdownify }}</td>
 </tr>
 <tr>
-<td><a href="StructureDefinition-BreastRadAbnormalityMassShape.html">BreastRadAbnormalityMassShape</a></td>
-<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
-<td>{% capture md_text %}
-Breast Radiology Abnormality Mass Shape Observation
-{% endcapture %}{{ md_text | markdownify }}</td>
-</tr>
-<tr>
 <td><a href="StructureDefinition-BreastRadAbnormalityMRI.html">BreastRadAbnormalityMRI</a></td>
 <td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
 <td>{% capture md_text %}
@@ -184,21 +201,6 @@ This observation has the following two member observations
 
 ** Calcification Type
 ** Calcification Distribution
-{% endcapture %}{{ md_text | markdownify }}</td>
-</tr>
-<tr>
-<td><a href="StructureDefinition-BreastRadMammoMass.html">BreastRadMammoMass</a></td>
-<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
-<td>{% capture md_text %}
-Breast Radiology Mammography Mass Observation
-
-
-This observation has the following three member observations
-
-
-** Shape
-** Margin
-** Density
 {% endcapture %}{{ md_text | markdownify }}</td>
 </tr>
 <tr>
@@ -253,17 +255,10 @@ Patient Risk Section
 {% endcapture %}{{ md_text | markdownify }}</td>
 </tr>
 <tr>
-<td><a href="StructureDefinition-BreastRadSectionRoot.html">BreastRadSectionRoot</a></td>
-<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
-<td>{% capture md_text %}
-Root Section
-{% endcapture %}{{ md_text | markdownify }}</td>
-</tr>
-<tr>
 <td><a href="StructureDefinition-CategoryFragment-Fragment.html">CategoryFragment-Fragment</a></td>
 <td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
 <td>{% capture md_text %}
-
+Fragment definition that slices category and adds the observation code value
 {% endcapture %}{{ md_text | markdownify }}</td>
 </tr>
 <tr>
@@ -271,6 +266,13 @@ Root Section
 <td><a href="http://hl7.org/fhir/StructureDefinition/Resource">Resource</a></td>
 <td>{% capture md_text %}
 
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-ObservationExistanceFragment-Fragment.html">ObservationExistanceFragment-Fragment</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Fragment that defines binds the observations value to the existance value set.
 {% endcapture %}{{ md_text | markdownify }}</td>
 </tr>
 <tr>

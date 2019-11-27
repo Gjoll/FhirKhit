@@ -23,6 +23,7 @@
       ]
     }
   ],
+  "description": "Fragment definition for an optional Breast Body Location",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": true,

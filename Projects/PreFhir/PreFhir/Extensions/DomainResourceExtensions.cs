@@ -138,18 +138,21 @@ namespace PreFhir
             }
         }
 
-        public static void AddFragRef(this DomainResource domainResource, StructureDefinition fragRef)
+        public static T AddFragRef<T>(this T domainResource, StructureDefinition fragRef)
+            where T : DomainResource
         {
-            domainResource.AddFragRef(fragRef.Url);
+            return domainResource.AddFragRef(fragRef.Url);
         }
 
-        public static void AddFragRef(this DomainResource domainResource, String fragRef)
+        public static T AddFragRef<T>(this T domainResource, String fragRef)
+            where T : DomainResource
         {
             domainResource.Extension.Add(new Extension
             {
                 Url = PreFhirGenerator.FragmentUrl,
                 Value = new FhirUrl(fragRef)
             });
+            return domainResource;
         }
     }
 }

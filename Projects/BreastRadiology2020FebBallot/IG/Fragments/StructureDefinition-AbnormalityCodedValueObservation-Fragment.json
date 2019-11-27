@@ -17,6 +17,7 @@
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityCodedValueObservation-Fragment",
   "name": "AbnormalityCodedValueObservation-Fragment",
   "title": "Abnormality CodedValue Observation Fragment",
+  "description": "Fragment that defines values for coded abnormality observations.",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": true,

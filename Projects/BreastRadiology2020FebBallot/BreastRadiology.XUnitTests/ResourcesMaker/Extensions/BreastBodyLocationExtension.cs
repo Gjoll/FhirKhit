@@ -73,7 +73,8 @@ namespace BreastRadiology.XUnitTests
                     "e. Central",
                     "f. RetroaReolar",
                     "g. AxillaryTail"
-                    });
+                    })
+                    .Url;
 
                 ElementDefinition quadrant = e.Clone("extension");
                 quadrant
@@ -111,7 +112,8 @@ namespace BreastRadiology.XUnitTests
                     "9-OClock",
                     "10-OClock",
                     "11-OClock"
-                    });
+                    })
+                    .Url;
 
                 ElementDefinition clock = e.Clone("extension");
                 clock
@@ -140,7 +142,8 @@ namespace BreastRadiology.XUnitTests
                     "a. Anterion",
                     "b. Middle",
                     "c. Posterior"
-                    });
+                    })
+                    .Url;
 
                 ElementDefinition depth = e.Clone("extension");
                 depth

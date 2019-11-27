@@ -45,6 +45,21 @@ namespace PreFhir
 
                 switch (this.mergeResource)
                 {
+                    case ValueSet mergeVs:
+                        {
+                            ValueSet baseVs = baseResource as ValueSet;
+                            if (baseVs == null)
+                            {
+                                this.preFhir.ConversionError(this.GetType().Name,
+                                    fcn,
+                                    $"Can not merge ValueSet '{mergeVs.GetName()}' into StructureDef {baseResource.GetName()}");
+                                return false;
+                            }
+                            bool success = true;
+                            MergeValueSet(baseVs, mergeVs, ref success);
+                            return success;
+                        }
+
                     case StructureDefinition mergeSDef:
                         if (this.mergeItem.SDef.Differential.Element.Count() == 0)
                             return true;
@@ -91,6 +106,16 @@ namespace PreFhir
                 return false;
             }
         }
+
+        void MergeValueSet(ValueSet baseVs, ValueSet mergeVs, ref bool success)
+        {
+            baseVs.Compose = MergeComposeComponent(baseVs.Compose, mergeVs.Compose, ref success);
+            if (baseVs.Expansion != null)
+                throw new NotImplementedException("ValueSet expansion not implemented");
+            if (mergeVs.Expansion != null)
+                throw new NotImplementedException("ValueSet expansion not implemented");
+        }
+
 
         public bool MergeBase()
         {
@@ -532,6 +557,32 @@ namespace PreFhir
             baseTypeRef.TargetProfile = baseTargets;
         }
 
+        List<T> MergeElements<T>(List<T> baseValues,
+            List<T> mergeValues,
+            ref bool success)
+            where T : Element
+        {
+            List<T> retVal = new List<T>();
+            retVal.AddRange(baseValues);
+            foreach (T mergeValue in mergeValues)
+            {
+                bool found = false;
+                foreach (T baseValue in baseValues)
+                {
+                    if (baseValue.IsExactly(mergeValue))
+                    {
+                        found = true;
+                        break;
+                    }
+                }
+
+                if (found == false)
+                    retVal.Add((T)mergeValue.DeepCopy());
+            }
+
+            return retVal;
+        }
+
         /// <summary>
         /// This is for elements that have only one value, and can only be set if
         /// they are not already set.
@@ -548,17 +599,8 @@ namespace PreFhir
         {
             const String fcn = "ConstrainElement";
 
-            // if nothing to set.
-            if (mergeElement == null)
-                return baseElement;
-
-            // If base is null, then just set it.
-            if (baseElement == null)
-                return (T)mergeElement.DeepCopy();
-
-            // both base and merge have values. If the values are identical, then no worries.
-            if (baseElement.IsExactly(mergeElement))
-                return baseElement;
+            if (TryConstrainSingleElement(baseElement, mergeElement, out T value) == true)
+                return value;
 
             // otherwise, the values are different and we hav a problem.
             this.preFhir.ConversionError(this.GetType().Name,
@@ -566,6 +608,78 @@ namespace PreFhir
                 $"Error constaining {path}:{valueName}. Merge Element and Base Element both contain distinct values that can not be reconciled. ");
             success = false;
             return baseElement;
+        }
+
+        ValueSet.ComposeComponent MergeComposeComponent(ValueSet.ComposeComponent composeComponent,
+            ValueSet.ComposeComponent mergeComponent,
+            ref bool success)
+        {
+            {
+                if (TryConstrainSingleElement(composeComponent.LockedDateElement, mergeComponent.LockedDateElement, out Date value) == false)
+                {
+                    success = false;
+                    return composeComponent;
+                }
+                composeComponent.LockedDateElement = value;
+            }
+            {
+                if (TryConstrainSingleElement(composeComponent.InactiveElement, mergeComponent.InactiveElement, out FhirBoolean value) == false)
+                {
+                    success = false;
+                    return composeComponent;
+                }
+                composeComponent.InactiveElement = value;
+            }
+            {
+                if (TryConstrainSingleElement(composeComponent.InactiveElement, mergeComponent.InactiveElement, out FhirBoolean value) == false)
+                {
+                    success = false;
+                    return composeComponent;
+                }
+                composeComponent.InactiveElement = value;
+            }
+            composeComponent.Include = MergeElements(composeComponent.Include, mergeComponent.Include, ref success);
+            composeComponent.Exclude = MergeElements(composeComponent.Exclude, mergeComponent.Exclude, ref success);
+            return composeComponent;
+        }
+
+        /// <summary>
+        /// This is for elements that have only one value, and can only be set if
+        /// they are not already set.
+        /// </summary>
+        /// <param name="baseElement"></param>
+        /// <param name="mergeElement"></param>
+        /// <returns></returns>
+        bool TryConstrainSingleElement<T>(T baseElement,
+            T mergeElement,
+            out T value)
+            where T : Element
+        {
+            //const String fcn = "SimpleConstraint";
+
+            // if nothing to set.
+            if (mergeElement == null)
+            {
+                value = baseElement;
+                return true;
+            }
+
+            // If base is null, then just set it.
+            if (baseElement == null)
+            {
+                value = (T)mergeElement.DeepCopy();
+                return true;
+            }
+
+            // both base and merge have values. If the values are identical, then no worries.
+            if (baseElement.IsExactly(mergeElement))
+            {
+                value = baseElement;
+                return true;
+            }
+
+            value = null;
+            return false;
         }
 
         void ConstrainCode(ElementDefinition baseElement,

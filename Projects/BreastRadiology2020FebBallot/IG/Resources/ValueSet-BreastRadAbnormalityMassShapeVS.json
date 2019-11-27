@@ -25,16 +25,33 @@
         "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadAbnormalityMassShapeCS",
         "concept": [
           {
-            "code": "1",
-            "display": "a. Oval"
+            "code": "Oval",
+            "display": "Elliptical/Egg-shaped Mass"
           },
           {
-            "code": "2",
-            "display": "b. Round"
+            "code": "Round",
+            "display": "Round Mass"
           },
           {
-            "code": "3",
-            "display": "c. Irregular"
+            "code": "Irregular",
+            "display": "Irregular Mass"
+          }
+        ]
+      },
+      {
+        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadExistanceCS",
+        "concept": [
+          {
+            "code": "Present",
+            "display": "Value is present"
+          },
+          {
+            "code": "NotPresent",
+            "display": "Value was found to be not present"
+          },
+          {
+            "code": "NotChecked",
+            "display": "No attempt was made tt observe value"
           }
         ]
       }

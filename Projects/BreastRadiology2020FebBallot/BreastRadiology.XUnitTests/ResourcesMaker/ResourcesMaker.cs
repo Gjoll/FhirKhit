@@ -40,6 +40,7 @@ namespace BreastRadiology.XUnitTests
         const String contactUrl = "http://www.hl7.org/Special/committees/cic";
 
         FileCleaner fc = new FileCleaner();
+        Dictionary<String, Resource> resources = new Dictionary<string, Resource>();
 
         String resourceDir;
         FhirDateTime date = new FhirDateTime(2019, 11, 1);
@@ -51,7 +52,10 @@ namespace BreastRadiology.XUnitTests
         String categoryFragmentUrl;
 
         String headerFragUrl;
+        String existanceValueSetUrl;
+        String observationExistanceFragmentUrl;
         string abnormalityObservationFragmentUrl;
+        String abnormalityObservationNoHasMembersFragmentUrl;
         string abnormalityCodedValueObservationFragmentUrl;
         String observationSectionFragmentUrl;
         String abnormalityFragmentUrl;
@@ -128,7 +132,7 @@ namespace BreastRadiology.XUnitTests
             return retVal;
         }
 
-        String CreateValueSet(String name,
+        ValueSet CreateValueSet(String name,
             String title,
             Markdown description,
             IEnumerable<String> codes)
@@ -181,9 +185,9 @@ namespace BreastRadiology.XUnitTests
                 counter += 1;
             }
 
-            this.Save(cs, Path.Combine(this.resourceDir, $"CodeSystem-{name}CS.json"));
-            this.Save(vs, Path.Combine(this.resourceDir, $"ValueSet-{name}VS.json"));
-            return vs.Url;
+            resources.Add(Path.Combine(this.resourceDir, $"CodeSystem-{name}CS.json"), cs);
+            resources.Add(Path.Combine(this.resourceDir, $"ValueSet-{name}VS.json"), vs);
+            return vs;
         }
 
         class ConceptDef
@@ -200,7 +204,7 @@ namespace BreastRadiology.XUnitTests
             }
         }
 
-        String CreateValueSet(String name,
+        ValueSet CreateValueSet(String name,
             String title,
             Markdown description,
             IEnumerable<ConceptDef> codes)
@@ -252,15 +256,10 @@ namespace BreastRadiology.XUnitTests
                 });
             }
 
-            this.Save(cs, Path.Combine(this.resourceDir, $"CodeSystem-{name}CS.json"));
-            this.Save(vs, Path.Combine(this.resourceDir, $"ValueSet-{name}VS.json"));
-            return vs.Url;
-        }
+            resources.Add(Path.Combine(this.resourceDir, $"CodeSystem-{name}CS.json"), cs);
+            resources.Add(Path.Combine(this.resourceDir, $"ValueSet-{name}VS.json"), vs);
 
-        public void Save(Resource r, String path)
-        {
-            r.SaveJson(path);
-            this.fc.Mark(path);
+            return vs;
         }
 
         public void CreateResources()
@@ -273,12 +272,15 @@ namespace BreastRadiology.XUnitTests
             this.observationSectionFragmentUrl = this.ObservationSectionFragment();
             this.abnormalityFragmentUrl = this.AbnormalityFragment();
 
+            this.existanceValueSetUrl= this.ExistanceValueSet();
+            this.observationExistanceFragmentUrl = this.ObservationExistanceFragment();
 
             this.breastBodyLocationExtensionUrl = this.BreastBodyLocationExtension();
             this.breastBodyLocationOptionalFragmentUrl = this.BreastBodyLocationOptionalFragment();
             this.breastBodyLocationRequiredFragmentUrl = this.BreastBodyLocationRequiredFragment();
 
             this.abnormalityObservationFragmentUrl = this.AbnormalityObservationFragment();
+            this.abnormalityObservationNoHasMembersFragmentUrl = this.AbnormalityObservationNoHasMembersFragment();
             this.abnormalityCodedValueObservationFragmentUrl = this.AbnormalityObservationCodedValueFragment();
 
             String abnMassShape = this.AbMassShape();
@@ -419,6 +421,12 @@ namespace BreastRadiology.XUnitTests
 
         void SaveAll()
         {
+            foreach (KeyValuePair<string, Resource> resourceItem in this.resources)
+            {
+                resourceItem.Value.SaveJson(resourceItem.Key);
+                this.fc.Mark(resourceItem.Key);
+            }
+
             foreach (SDefEditor ce in this.editors.Values)
             {
                 this.fc.Mark(ce.Write());

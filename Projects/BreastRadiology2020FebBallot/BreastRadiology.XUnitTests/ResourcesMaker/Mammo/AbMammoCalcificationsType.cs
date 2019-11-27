@@ -38,7 +38,8 @@ namespace BreastRadiology.XUnitTests
                     "b. Course heterogeneous (Suspicious morphology)",
                     "c. Fine pleomorphic (Suspicious morphology)",
                     "d. Fine linear or fine-linear branching (Suspicious morphology)"
-                });
+                })
+                .Url;
 
             SDefEditor e = this.CreateObservationEditor("BreastRadAbnormalityMammoCalcificationType",
                         "Breast Radiology Abnormality Calcification Type (Mammography)",

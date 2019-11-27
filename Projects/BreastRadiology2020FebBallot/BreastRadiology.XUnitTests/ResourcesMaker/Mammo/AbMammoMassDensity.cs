@@ -26,7 +26,8 @@ namespace BreastRadiology.XUnitTests
                         "b. Equal density",
                         "c. Low density",
                         "d. Fat-containing"
-                });
+                })
+                .Url;
 
             SDefEditor e = this.CreateObservationEditor("BreastRadAbnormalityMammoMassDensity",
                         "Breast Radiology Abnormality Mass Density (Mammography)",

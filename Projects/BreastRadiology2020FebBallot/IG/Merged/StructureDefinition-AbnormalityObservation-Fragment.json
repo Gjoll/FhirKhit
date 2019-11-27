@@ -23,6 +23,7 @@
       ]
     }
   ],
+  "description": "Fragment that defines values for abnormality observations values.",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": true,

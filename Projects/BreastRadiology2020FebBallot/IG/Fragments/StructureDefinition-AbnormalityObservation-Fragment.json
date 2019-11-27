@@ -17,6 +17,7 @@
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityObservation-Fragment",
   "name": "AbnormalityObservation-Fragment",
   "title": "Abnormality Observation Fragment",
+  "description": "Fragment that defines values for abnormality observations values.",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": true,

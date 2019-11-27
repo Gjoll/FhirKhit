@@ -15,32 +15,33 @@ namespace BreastRadiology.XUnitTests
     {
         String AbMammoMassMargin()
         {
-                String binding = this.CreateValueSet(
-                    "BreastRadAbnormalityMammoMassMargin",
-                    "Breast Radiology Abnormality Mammography Mass Margin",
-                    new Markdown()
-                        .Paragraph("Breast Radiology Mass Margin (Mammography)"),
-                    new String[]
-                    {
+            String binding = this.CreateValueSet(
+                "BreastRadAbnormalityMammoMassMargin",
+                "Breast Radiology Abnormality Mammography Mass Margin",
+                new Markdown()
+                    .Paragraph("Breast Radiology Mass Margin (Mammography)"),
+                new String[]
+                {
                             "a. Circumscribed",
                             "b. Obscured",
                             "c. Microlobulated",
                             "d. Indistinct",
                             "e. Spiculated"
-                    });
+                })
+                .Url;
 
-                SDefEditor e = this.CreateObservationEditor("BreastRadAbnormalityMammoMassMargin",
-                    "Breast Radiology Abnormality Mass Margin (Mammography)",
-                    new string[] {"Margin"})
-                    .Description(new Markdown().Paragraph("Breast Radiology Abnormality Mass Margin Observation (Mammography)"))
-                    .AddFragRef(this.abnormalityCodedValueObservationFragmentUrl)
-                    ;
+            SDefEditor e = this.CreateObservationEditor("BreastRadAbnormalityMammoMassMargin",
+                "Breast Radiology Abnormality Mass Margin (Mammography)",
+                new string[] { "Margin" })
+                .Description(new Markdown().Paragraph("Breast Radiology Abnormality Mass Margin Observation (Mammography)"))
+                .AddFragRef(this.abnormalityCodedValueObservationFragmentUrl)
+                ;
 
             e.Select("value[x]")
                 .Type("CodeableConcept")
                 .Binding(binding, BindingStrength.Required)
                 ;
-                return e.SDef.Url;
+            return e.SDef.Url;
         }
     }
 }

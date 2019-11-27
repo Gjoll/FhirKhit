@@ -19,21 +19,24 @@ namespace BreastRadiology.XUnitTests
         {
             SDefEditor e = this.CreateObservationEditor("BreastRadMammoMass",
                     "Breast Radiology Mammography Mass Observation",
-                    new string[] {"Mass"})
+                    new string[] { "Mass" })
                 .Description(new Markdown()
                     .Paragraph("Breast Radiology Mammography Mass Observation")
                     .Paragraph("This observation has the following three member observations")
                     .List("Shape", "Margin", "Density")
+                    .Paragraph("If the CodedValue value is set to present, then references to the above member observations should be ",
+                                "present and non-null, otherwise references should be empty")
                 )
                 .AddFragRef(this.breastBodyLocationRequiredFragmentUrl)
                 .AddFragRef(this.observationSectionFragmentUrl)
+                .AddFragRef(this.observationExistanceFragmentUrl)
                 ;
             {
                 ProfileTarget[] targets = new ProfileTarget[]
                 {
-                    new ProfileTarget(massShape, 1, "1"),
-                    new ProfileTarget(massMargin, 1, "1"),
-                    new ProfileTarget(massDensity, 1, "1")
+                    new ProfileTarget(massShape, 0, "1"),
+                    new ProfileTarget(massMargin, 0, "1"),
+                    new ProfileTarget(massDensity, 0, "1")
                 };
                 e.Find("hasMember").SliceByUrl(targets);
                 e.MapNode.AddProfileTargets(targets);

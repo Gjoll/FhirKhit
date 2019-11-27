@@ -8,6 +8,7 @@ using FhirKhit.Tools;
 using FhirKhit.Tools.R4;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
+using PreFhir;
 
 namespace BreastRadiology.XUnitTests
 {
@@ -16,8 +17,8 @@ namespace BreastRadiology.XUnitTests
         String AbMammoAssymetries()
         {
             String binding = this.CreateValueSet(
-                "Assymetries",
-                "Assymetries",
+                "BreastRadAssymetries",
+                "Breast Radiology Assymetries",
                 new Markdown()
                     .Paragraph("Breast Radiology Mammography Assymetries"),
                 new String[]
@@ -27,7 +28,9 @@ namespace BreastRadiology.XUnitTests
                     "c. Grouped",
                     "d. Linear",
                     "e. Segmental"
-                });
+                })
+                .AddFragRef(this.existanceValueSetUrl)
+                .Url;
 
             SDefEditor e = this.CreateObservationEditor("BreastRadAbnormalityMammoAssymetries",
                         "Breast Radiology Abnormality Assymetries (Mammography)",

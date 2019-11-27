@@ -148,7 +148,7 @@ namespace BreastRadiology.XUnitTests
                 preFhir.StatusInfo += this.StatusInfo;
                 preFhir.StatusWarnings += this.StatusWarnings;
                 preFhir.MergedDir = this.mergedDir;
-                preFhir.ProcessOne(this.fragmentDir, "AbnormalityObservation-Fragment", true);
+                preFhir.ProcessOne(this.fragmentDir, "StructureDefinition-BreastRadMammoMass", true);
                 preFhir.SaveResources(this.resourcesDir, true);
             }
             catch (Exception err)

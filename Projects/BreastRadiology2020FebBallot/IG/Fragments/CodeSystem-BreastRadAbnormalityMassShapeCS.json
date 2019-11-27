@@ -16,16 +16,19 @@
   "count": 3,
   "concept": [
     {
-      "code": "1",
-      "display": "a. Oval"
+      "code": "Oval",
+      "display": "Elliptical/Egg-shaped Mass",
+      "definition": "A mass that is elliptical or egg-shaped (may include 2 or 3 undulations)."
     },
     {
-      "code": "2",
-      "display": "b. Round"
+      "code": "Round",
+      "display": "Round Mass",
+      "definition": "A mass that is spherical, ball-shaped, circular, or globular in shape."
     },
     {
-      "code": "3",
-      "display": "c. Irregular"
+      "code": "Irregular",
+      "display": "Irregular Mass",
+      "definition": "The shape of the mass is neither round nor oval. For mammography, use of this descriptor usually implies a suspicious finding."
     }
   ]
 }

@@ -356,7 +356,7 @@ namespace PreFhir
                     throw new Exception("Processed fragment {fragmentUrl} not found in processed dictionary");
                 this.ConversionInfo(this.GetType().Name,
                     fcn,
-                    $"Merging fragment {fragment.SDef.Name} into {processItem.Resource.GetName()}");
+                    $"Merging fragment {fragment.Resource.GetName()} into {processItem.Resource.GetName()}");
                 Merger m = new Merger(this, processItem, fragment);
                 if (m.Merge(out bool mergedElements) == false)
                 {

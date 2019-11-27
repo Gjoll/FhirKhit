@@ -15,29 +15,25 @@ namespace BreastRadiology.XUnitTests
     {
         String AbMammoArchitecturalDistortion()
         {
-            String binding = this.CreateValueSet(
-                "BreastRadAbnormalityMammoArchitecturalDistortionFindings",
-                "Breast Radiology Abnormality Architectural Distortion Findings (Mammo)",
-                new Markdown()
-                    .Paragraph("Breast Radiology Abnormality Architectural Distortion Findings"),
-                new String[]
-                {
-                "a. Present",
-                "b. NotPresent",
-                "c. NotChecked"
-                });
-
             SDefEditor e = this.CreateObservationEditor("BreastRadAbnormalityMammoArchitecturalDistortion",
                         "Breast Radiology Abnormality Architectural Distortion (Mammography)",
                     new string[] {"Arch.","Distortion"})
-                .Description(new Markdown().Paragraph("Mammography Breast Abnormality Architectural Distortion Observation"))
+                .Description(
+                    new Markdown()
+                        .Paragraph("Mammography Breast Abnormality Architectural Distortion Observation")
+                        .BiradHeader()
+                        .MarkedDown("The parenchyma is distorted with no definite mass visible. For mammography, this includes thin")
+                        .MarkedDown("straight lines or spiculations radiating from a point, and focal retraction, distortion or straightening")
+                        .MarkedDown("at the anterior or posterior edge of the parenchyma. Architectural distortion may also be associ-")
+                        .MarkedDown("ated with a mass, asymmetry, or calcifications. In the absence of appropriate history of trauma or")
+                        .MarkedDown("surgery, architectural distortion is suspicious for malignancy or radial scar, and tissue diagnosis is")
+                        .MarkedDown("appropriate.")
+                        .BiradFooter()
+                    )
                 .AddFragRef(this.abnormalityCodedValueObservationFragmentUrl)
+                .AddFragRef(this.observationExistanceFragmentUrl)
                 ;
 
-            e.Select("value[x]")
-                .Type("CodeableConcept")
-                .Binding(binding, BindingStrength.Required)
-                ;
             return e.SDef.Url;
         }
     }
