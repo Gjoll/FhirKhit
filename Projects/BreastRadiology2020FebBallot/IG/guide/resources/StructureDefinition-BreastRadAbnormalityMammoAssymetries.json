@@ -1177,7 +1177,7 @@
         "isSummary": true,
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/AssymetriesVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadAssymetriesVS"
         },
         "mapping": [
           {
@@ -2697,7 +2697,7 @@
         "isSummary": true,
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/AssymetriesVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadAssymetriesVS"
         },
         "mapping": [
           {

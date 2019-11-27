@@ -109,8 +109,6 @@ namespace BreastRadiology.XUnitTests
             String[] mapName,
             String baseDefinition)
         {
-            name += "-Fragment";
-
             SDefEditor retVal = this.CreateEditor(name,
                 title,
                 mapName,

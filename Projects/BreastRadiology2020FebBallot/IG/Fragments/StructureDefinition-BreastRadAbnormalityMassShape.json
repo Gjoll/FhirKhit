@@ -3,11 +3,11 @@
   "extension": [
     {
       "url": "http://www.fragment.com/fragment",
-      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityObservation-Fragment"
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityObservationFragment"
     },
     {
       "url": "http://www.fragment.com/fragment",
-      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityObservationNoHasMembersFragment-Fragment"
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityObservationNoHasMembersFragment"
     }
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadAbnormalityMassShape",

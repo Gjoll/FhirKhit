@@ -100,6 +100,8 @@ namespace BreastRadiology.XUnitTests
 
         public void AddResources(String resourceDir)
         {
+            const String IsFragmentExtensionUrl = "http://www.fragment.com/isFragment";
+
             void Save(Resource r, String outputName)
             {
                 String outputPath = Path.Combine(this.resourceDir, outputName);
@@ -128,8 +130,12 @@ namespace BreastRadiology.XUnitTests
                             String htmlPage = $"{fixedName}.html";
 
                             SnapshotCreator.Create(structureDefinition);
+                            Extension isFragmentExtension = structureDefinition.GetExtension(IsFragmentExtensionUrl);
+                            if (isFragmentExtension != null)
+                                structureDefinition.RemoveExtension(IsFragmentExtensionUrl);
                             Save(structureDefinition, $"{fixedName}.json");
-                            this.AddIGStructureDefinition(structureDefinition);
+                            //if (isFragmentExtension == null)
+                                this.AddIGStructureDefinition(structureDefinition);
                         }
                         break;
 

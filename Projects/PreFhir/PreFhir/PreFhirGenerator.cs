@@ -212,8 +212,15 @@ namespace PreFhir
             // Process each unprocessed item, until none are left or we cant process any more...
             while (this.unProcessed.Values.Count > 0)
             {
-                ProcessItem processable = this.FindProcessable();
-                if (processable == null)
+                bool processed = false;
+                foreach (ProcessItem processable in this.FindProcessable())
+                {
+                    processed = true;
+                    if (Process(processable) == false)
+                        retVal = false;
+                }
+
+                if (processed == false)
                 {
                     this.ConversionError(this.GetType().Name,
                         fcn,
@@ -226,9 +233,6 @@ namespace PreFhir
                         return false;
                     }
                 }
-
-                if (Process(processable) == false)
-                    retVal = false;
             }
             return retVal;
         }
@@ -277,7 +281,7 @@ namespace PreFhir
             this.fc.Mark(outputName);
         }
 
-        ProcessItem FindProcessable()
+        IEnumerable<ProcessItem> FindProcessable()
         {
             // keep list of ones we are checking to stop infinite circular references.
             HashSet<String> checking = new HashSet<string>();
@@ -333,11 +337,10 @@ namespace PreFhir
                     if (Processable(item.Resource))
                     {
                         this.unProcessed.Remove(item.Resource.GetUrl());
-                        return item;
+                        yield return item;
                     }
                 }
             }
-            return null;
         }
 
         bool Process(ProcessItem processItem)

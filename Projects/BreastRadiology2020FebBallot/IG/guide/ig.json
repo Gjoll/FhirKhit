@@ -57,9 +57,6 @@
     "examples"
   ],
   "resources": {
-    "CodeSystem/AssymetriesCS": {
-      "base": "CodeSystem-AssymetriesCS.html"
-    },
     "CodeSystem/BreastLocationClockCS": {
       "base": "CodeSystem-BreastLocationClockCS.html"
     },
@@ -87,6 +84,9 @@
     "CodeSystem/BreastRadAbnormalityMassShapeCS": {
       "base": "CodeSystem-BreastRadAbnormalityMassShapeCS.html"
     },
+    "CodeSystem/BreastRadAssymetriesCS": {
+      "base": "CodeSystem-BreastRadAssymetriesCS.html"
+    },
     "CodeSystem/BreastRadBreastDensityCS": {
       "base": "CodeSystem-BreastRadBreastDensityCS.html"
     },
@@ -99,26 +99,26 @@
     "CodeSystem/CalcificationTypeCS": {
       "base": "CodeSystem-CalcificationTypeCS.html"
     },
-    "StructureDefinition/Abnormality-Fragment": {
-      "base": "StructureDefinition-Abnormality-Fragment.html"
+    "StructureDefinition/AbnormalityCodedValueObservationFragment": {
+      "base": "StructureDefinition-AbnormalityCodedValueObservationFragment.html"
     },
-    "StructureDefinition/AbnormalityCodedValueObservation-Fragment": {
-      "base": "StructureDefinition-AbnormalityCodedValueObservation-Fragment.html"
+    "StructureDefinition/AbnormalityFragment": {
+      "base": "StructureDefinition-AbnormalityFragment.html"
     },
-    "StructureDefinition/AbnormalityObservation-Fragment": {
-      "base": "StructureDefinition-AbnormalityObservation-Fragment.html"
+    "StructureDefinition/AbnormalityObservationFragment": {
+      "base": "StructureDefinition-AbnormalityObservationFragment.html"
     },
-    "StructureDefinition/AbnormalityObservationNoHasMembersFragment-Fragment": {
-      "base": "StructureDefinition-AbnormalityObservationNoHasMembersFragment-Fragment.html"
+    "StructureDefinition/AbnormalityObservationNoHasMembersFragment": {
+      "base": "StructureDefinition-AbnormalityObservationNoHasMembersFragment.html"
     },
     "StructureDefinition/BreastBodyLocation": {
       "base": "StructureDefinition-BreastBodyLocation.html"
     },
-    "StructureDefinition/BreastBodyLocationOptional-Fragment": {
-      "base": "StructureDefinition-BreastBodyLocationOptional-Fragment.html"
+    "StructureDefinition/BreastBodyLocationOptionalFragment": {
+      "base": "StructureDefinition-BreastBodyLocationOptionalFragment.html"
     },
-    "StructureDefinition/BreastBodyLocationRequired-Fragment": {
-      "base": "StructureDefinition-BreastBodyLocationRequired-Fragment.html"
+    "StructureDefinition/BreastBodyLocationRequiredFragment": {
+      "base": "StructureDefinition-BreastBodyLocationRequiredFragment.html"
     },
     "StructureDefinition/BreastRadAbnormalityMammo": {
       "base": "StructureDefinition-BreastRadAbnormalityMammo.html"
@@ -186,20 +186,17 @@
     "StructureDefinition/BreastRadSectionPatientRisk": {
       "base": "StructureDefinition-BreastRadSectionPatientRisk.html"
     },
-    "StructureDefinition/CategoryFragment-Fragment": {
-      "base": "StructureDefinition-CategoryFragment-Fragment.html"
+    "StructureDefinition/CategoryFragment": {
+      "base": "StructureDefinition-CategoryFragment.html"
     },
-    "StructureDefinition/Header-Fragment": {
-      "base": "StructureDefinition-Header-Fragment.html"
+    "StructureDefinition/HeaderFragment": {
+      "base": "StructureDefinition-HeaderFragment.html"
     },
-    "StructureDefinition/ObservationExistanceFragment-Fragment": {
-      "base": "StructureDefinition-ObservationExistanceFragment-Fragment.html"
+    "StructureDefinition/ObservationExistanceFragment": {
+      "base": "StructureDefinition-ObservationExistanceFragment.html"
     },
-    "StructureDefinition/ObservationSection-Fragment": {
-      "base": "StructureDefinition-ObservationSection-Fragment.html"
-    },
-    "ValueSet/AssymetriesVS": {
-      "base": "ValueSet-AssymetriesVS.html"
+    "StructureDefinition/ObservationSectionFragment": {
+      "base": "StructureDefinition-ObservationSectionFragment.html"
     },
     "ValueSet/BreastLocationClockVS": {
       "base": "ValueSet-BreastLocationClockVS.html"
@@ -227,6 +224,9 @@
     },
     "ValueSet/BreastRadAbnormalityMassShapeVS": {
       "base": "ValueSet-BreastRadAbnormalityMassShapeVS.html"
+    },
+    "ValueSet/BreastRadAssymetriesVS": {
+      "base": "ValueSet-BreastRadAssymetriesVS.html"
     },
     "ValueSet/BreastRadBreastDensityVS": {
       "base": "ValueSet-BreastRadBreastDensityVS.html"

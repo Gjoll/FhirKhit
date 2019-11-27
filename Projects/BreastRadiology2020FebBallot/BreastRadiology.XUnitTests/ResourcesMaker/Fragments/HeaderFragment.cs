@@ -15,7 +15,7 @@ namespace BreastRadiology.XUnitTests
     {
         String HeaderFragment()
         {
-            SDefEditor e = this.CreateFragment("Header",
+            SDefEditor e = this.CreateFragment("HeaderFragment",
                 "Resource",
                 new string[] {"Common"},
                 ResourceUrl);

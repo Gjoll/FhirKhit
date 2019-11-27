@@ -14,7 +14,7 @@ namespace BreastRadiology.XUnitTests
         /// <returns></returns>
         String AbnormalityObservationCodedValueFragment()
         {
-            SDefEditor e = this.CreateFragment("AbnormalityCodedValueObservation",
+            SDefEditor e = this.CreateFragment("AbnormalityCodedValueObservationFragment",
                     "Abnormality CodedValue Observation Fragment",
                     new string[] {"Abnormality","CodedValue", "Fragment"},
                     ObservationUrl)
