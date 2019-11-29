@@ -14,7 +14,7 @@ namespace BreastRadiology.XUnitTests
 {
     public partial class ResourcesMaker
     {
-        String FindingMassShape
+        String MassShape
         {
             get
             {
@@ -53,9 +53,7 @@ namespace BreastRadiology.XUnitTests
                     new string[] { "Shape" })
                 .Description(new Markdown()
                     .Paragraph("Breast Radiology Abnormality Mass Shape Observation")
-                    .Paragraph("If this observation is present, and dataAbsentReason is empty, then an mass shape was observed.")
-                    .Paragraph("If this observation is present, and dataAbsentReason is not empty, then an mass shape " +
-                                "was not observed and dataAbsentReason contains the reason why.")
+                    .MissingObservation("a mass shape")
                     )
                 .AddFragRef(this.ObservationNoHasMembersFragment)
                 ;

@@ -69,23 +69,23 @@
     "CodeSystem/BreastRadAbnormalityMassShapeCS": {
       "base": "CodeSystem-BreastRadAbnormalityMassShapeCS.html"
     },
-    "CodeSystem/BreastRadAsymmetriesCS": {
-      "base": "CodeSystem-BreastRadAsymmetriesCS.html"
+    "CodeSystem/BreastRadMammoBreastDensityCS": {
+      "base": "CodeSystem-BreastRadMammoBreastDensityCS.html"
     },
-    "CodeSystem/BreastRadBreastDensityCS": {
-      "base": "CodeSystem-BreastRadBreastDensityCS.html"
+    "CodeSystem/BreastRadMammoMassDensityCS": {
+      "base": "CodeSystem-BreastRadMammoMassDensityCS.html"
     },
-    "CodeSystem/BreastRadFindingMammoMassDensityCS": {
-      "base": "CodeSystem-BreastRadFindingMammoMassDensityCS.html"
+    "CodeSystem/BreastRadMammoMassMarginCS": {
+      "base": "CodeSystem-BreastRadMammoMassMarginCS.html"
     },
-    "CodeSystem/BreastRadFindingMammoMassMarginCS": {
-      "base": "CodeSystem-BreastRadFindingMammoMassMarginCS.html"
+    "CodeSystem/BreastRadMemmoAsymmetriesCS": {
+      "base": "CodeSystem-BreastRadMemmoAsymmetriesCS.html"
     },
-    "CodeSystem/CalcificationDistributionCS": {
-      "base": "CodeSystem-CalcificationDistributionCS.html"
+    "CodeSystem/MammoCalcificationDistributionCS": {
+      "base": "CodeSystem-MammoCalcificationDistributionCS.html"
     },
-    "CodeSystem/CalcificationTypeCS": {
-      "base": "CodeSystem-CalcificationTypeCS.html"
+    "CodeSystem/MammoCalcificationTypeCS": {
+      "base": "CodeSystem-MammoCalcificationTypeCS.html"
     },
     "StructureDefinition/BreastBodyLocation": {
       "base": "StructureDefinition-BreastBodyLocation.html"
@@ -99,41 +99,44 @@
     "StructureDefinition/BreastRadAbnormalityUltraSound": {
       "base": "StructureDefinition-BreastRadAbnormalityUltraSound.html"
     },
-    "StructureDefinition/BreastRadFindingMammo": {
-      "base": "StructureDefinition-BreastRadFindingMammo.html"
+    "StructureDefinition/BreastRadMammoArchitecturalDistortion": {
+      "base": "StructureDefinition-BreastRadMammoArchitecturalDistortion.html"
     },
-    "StructureDefinition/BreastRadFindingMammoArchitecturalDistortion": {
-      "base": "StructureDefinition-BreastRadFindingMammoArchitecturalDistortion.html"
+    "StructureDefinition/BreastRadMammoAssociatedFeatures": {
+      "base": "StructureDefinition-BreastRadMammoAssociatedFeatures.html"
     },
-    "StructureDefinition/BreastRadFindingMammoAsymmetries": {
-      "base": "StructureDefinition-BreastRadFindingMammoAsymmetries.html"
+    "StructureDefinition/BreastRadMammoAsymmetries": {
+      "base": "StructureDefinition-BreastRadMammoAsymmetries.html"
     },
-    "StructureDefinition/BreastRadFindingMammoBreastDensity": {
-      "base": "StructureDefinition-BreastRadFindingMammoBreastDensity.html"
+    "StructureDefinition/BreastRadMammoBreastDensity": {
+      "base": "StructureDefinition-BreastRadMammoBreastDensity.html"
     },
-    "StructureDefinition/BreastRadFindingMammoCalcification": {
-      "base": "StructureDefinition-BreastRadFindingMammoCalcification.html"
+    "StructureDefinition/BreastRadMammoCalcification": {
+      "base": "StructureDefinition-BreastRadMammoCalcification.html"
     },
-    "StructureDefinition/BreastRadFindingMammoCalcificationDistribution": {
-      "base": "StructureDefinition-BreastRadFindingMammoCalcificationDistribution.html"
+    "StructureDefinition/BreastRadMammoCalcificationDistribution": {
+      "base": "StructureDefinition-BreastRadMammoCalcificationDistribution.html"
     },
-    "StructureDefinition/BreastRadFindingMammoCalcificationType": {
-      "base": "StructureDefinition-BreastRadFindingMammoCalcificationType.html"
+    "StructureDefinition/BreastRadMammoCalcificationType": {
+      "base": "StructureDefinition-BreastRadMammoCalcificationType.html"
     },
-    "StructureDefinition/BreastRadFindingMammoMass": {
-      "base": "StructureDefinition-BreastRadFindingMammoMass.html"
+    "StructureDefinition/BreastRadMammoFinding": {
+      "base": "StructureDefinition-BreastRadMammoFinding.html"
     },
-    "StructureDefinition/BreastRadFindingMammoMassDensity": {
-      "base": "StructureDefinition-BreastRadFindingMammoMassDensity.html"
+    "StructureDefinition/BreastRadMammoMass": {
+      "base": "StructureDefinition-BreastRadMammoMass.html"
     },
-    "StructureDefinition/BreastRadFindingMammoMassMargin": {
-      "base": "StructureDefinition-BreastRadFindingMammoMassMargin.html"
+    "StructureDefinition/BreastRadMammoMassDensity": {
+      "base": "StructureDefinition-BreastRadMammoMassDensity.html"
     },
-    "StructureDefinition/BreastRadFindingMammoSkinLesion": {
-      "base": "StructureDefinition-BreastRadFindingMammoSkinLesion.html"
+    "StructureDefinition/BreastRadMammoMassMargin": {
+      "base": "StructureDefinition-BreastRadMammoMassMargin.html"
     },
-    "StructureDefinition/BreastRadFindingMammoSolitaryDilatedDuct": {
-      "base": "StructureDefinition-BreastRadFindingMammoSolitaryDilatedDuct.html"
+    "StructureDefinition/BreastRadMammoSkinLesion": {
+      "base": "StructureDefinition-BreastRadMammoSkinLesion.html"
+    },
+    "StructureDefinition/BreastRadMammoSolitaryDilatedDuct": {
+      "base": "StructureDefinition-BreastRadMammoSolitaryDilatedDuct.html"
     },
     "StructureDefinition/BreastRadPriorReports": {
       "base": "StructureDefinition-BreastRadPriorReports.html"
@@ -192,23 +195,23 @@
     "ValueSet/BreastRadAbnormalityMassShapeVS": {
       "base": "ValueSet-BreastRadAbnormalityMassShapeVS.html"
     },
-    "ValueSet/BreastRadAsymmetriesVS": {
-      "base": "ValueSet-BreastRadAsymmetriesVS.html"
+    "ValueSet/BreastRadMammoBreastDensityVS": {
+      "base": "ValueSet-BreastRadMammoBreastDensityVS.html"
     },
-    "ValueSet/BreastRadBreastDensityVS": {
-      "base": "ValueSet-BreastRadBreastDensityVS.html"
+    "ValueSet/BreastRadMammoMassDensityVS": {
+      "base": "ValueSet-BreastRadMammoMassDensityVS.html"
     },
-    "ValueSet/BreastRadFindingMammoMassDensityVS": {
-      "base": "ValueSet-BreastRadFindingMammoMassDensityVS.html"
+    "ValueSet/BreastRadMammoMassMarginVS": {
+      "base": "ValueSet-BreastRadMammoMassMarginVS.html"
     },
-    "ValueSet/BreastRadFindingMammoMassMarginVS": {
-      "base": "ValueSet-BreastRadFindingMammoMassMarginVS.html"
+    "ValueSet/BreastRadMemmoAsymmetriesVS": {
+      "base": "ValueSet-BreastRadMemmoAsymmetriesVS.html"
     },
-    "ValueSet/CalcificationDistributionVS": {
-      "base": "ValueSet-CalcificationDistributionVS.html"
+    "ValueSet/MammoCalcificationDistributionVS": {
+      "base": "ValueSet-MammoCalcificationDistributionVS.html"
     },
-    "ValueSet/CalcificationTypeVS": {
-      "base": "ValueSet-CalcificationTypeVS.html"
+    "ValueSet/MammoCalcificationTypeVS": {
+      "base": "ValueSet-MammoCalcificationTypeVS.html"
     },
     "ValueSet/UnitsOfLengthVS": {
       "base": "ValueSet-UnitsOfLengthVS.html"

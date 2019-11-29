@@ -61,9 +61,9 @@
         }
       },
       {
-        "id": "Observation.hasMember:breastRadFindingMammo",
+        "id": "Observation.hasMember:breastRadMammoFinding",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadFindingMammo",
+        "sliceName": "breastRadMammoFinding",
         "min": 0,
         "max": "*",
         "base": {
@@ -75,7 +75,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadFindingMammo"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoFinding"
             ]
           }
         ]

@@ -28,6 +28,19 @@ namespace FhirKhit.Tools.R2
             return md;
         }
 
+        // TODO: Should it be a AbMammoIntramammaryLymphNode be required with dataAbsent Reason set to a value if
+        // this was looked for and not seen?
+        // See other 'If this observation is present, and dataAbsentReason is empty's
+        public static Markdown MissingObservation(this Markdown md, String articleAndName, String term = ".")
+        {
+            md
+                .Paragraph("If this observation is present, and dataAbsentReason is empty, then {articleAndName} was observed.")
+                .Paragraph("If this observation is present, and dataAbsentReason is not empty, then {articleAndName} " +
+                        "was not observed and dataAbsentReason contains the reason why{term}")
+            ;
+            return md;
+        }
+
         public static Markdown Paragraph(this Markdown md, params string[] lines)
         {
             foreach (String line in lines)
