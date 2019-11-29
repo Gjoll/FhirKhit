@@ -10,62 +10,35 @@
   "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CalcificationDistributionCS",
   "name": "CalcificationDistributionCS",
   "title": "Calcification Distribution",
-  "description": "Mammography Calcification Distribution",
+  "description": "Mammography Calcification Distribution\n\n\n### BI-RADS® ATLAS — MAMMOGRAPHY### FIFTH EDITION — 2013These descriptors are used to indicate the arrangement of calcifications in the breast. Multiple\nsimilar groups may be described in the report when there is more than one group of calcifications\nthat are similar in morphology and distribution. In evaluating the likelihood of malignancy for calcifications, \ndistribution is at least as important as morphology.\n### END BI-RADS® ATLAS — MAMMOGRAPHY TEXT",
   "caseSensitive": true,
   "content": "complete",
-  "count": 13,
+  "count": 5,
   "concept": [
     {
-      "code": "1",
-      "display": "a. Skin (Typically benign)"
+      "code": "Diffuse",
+      "display": "Diffuse Calcification Distribution",
+      "definition": "(historically, “scattered”)These are calcifications that are distributed randomly throughout the breast. Punctate and amorphous calcifications in this distribution are almost always benign, especially if bilateral."
     },
     {
-      "code": "2",
-      "display": "b. Vascular (Typically benign)"
+      "code": "Regional",
+      "display": "Regional  Calcification Distribution",
+      "definition": "This descriptor is used for numerous calcifications that occupy a large portion of breast tissue (more than 2 cm in greatest dimension), not conforming to a duct distribution. Since this distribution may involve most of a quadrant or even more than a single quadrant, malignancy is less likely. However, overall evaluation of regional calcifications must include particle shape (morphology) as well as distribution."
     },
     {
-      "code": "3",
-      "display": "c. Coarse or 'popcorn-like' (Typically benign)"
+      "code": "Grouped",
+      "display": "Grouped  Calcification Distribution",
+      "definition": "(historically, “clustered”)This term should be used when relatively few calcifications occupy a small portion of breast tissue. The lower limit for use of this descriptor is usually when 5 calcifications are grouped within 1 cm of each other or when a definable pattern is identified. The upper limit for use of this descriptor is when larger numbers of calcifications are grouped within 2 cm of each other."
     },
     {
-      "code": "4",
-      "display": "d. Large rod-like (Typically benign)"
+      "code": "Linear",
+      "display": "Linear  Calcification Distribution",
+      "definition": "These are calcifications arrayed in a line. This distribution may elevate suspicion for malignancy, as it suggests deposits in a duct. Note that both vascular and large rod-like calcifications also are usually linear in distribution, but that these typically benign calcifications have a characteristically benign morphology."
     },
     {
-      "code": "5",
-      "display": "e. Round (Typically benign)"
-    },
-    {
-      "code": "6",
-      "display": "f. Rim (Typically benign)"
-    },
-    {
-      "code": "7",
-      "display": "g. Dystrophic (Typically benign)"
-    },
-    {
-      "code": "8",
-      "display": "h. Milk of calcium (Typically benign)"
-    },
-    {
-      "code": "9",
-      "display": "i. Suture (Typically benign)"
-    },
-    {
-      "code": "10",
-      "display": "a. Amorphous (Suspicious morphology)"
-    },
-    {
-      "code": "11",
-      "display": "b. Course heterogeneous (Suspicious morphology)"
-    },
-    {
-      "code": "12",
-      "display": "c. Fine pleomorphic (Suspicious morphology)"
-    },
-    {
-      "code": "13",
-      "display": "d. Fine linear or fine-linear branching (Suspicious morphology)"
+      "code": "Segmental",
+      "display": "Segmental Calcification Distribution",
+      "definition": "Calcifications in a segmental distribution are of concern because they suggest deposits in a duct or ducts and their branches, raising the possibility of extensive or multifocal breast cancer in a lobe or segment of the breast. Although benign causes of segmental calcifications exist (e.g. large rod-like), the smooth, rod-like morphology and large size of benign calcifications distinguish them from finer, more pleomorphic or heterogeneous malignant calcifications. A segmental distribution may elevate the degree of suspicion for calcifications such as punctate or amorphous forms."
     }
   ]
 }

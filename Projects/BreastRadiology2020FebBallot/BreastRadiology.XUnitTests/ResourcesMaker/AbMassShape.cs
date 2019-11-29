@@ -33,7 +33,6 @@ namespace BreastRadiology.XUnitTests
                             "Irregular Mass", 
                             "The shape of the mass is neither round nor oval. For mammography, use of this descriptor usually implies a suspicious finding.")
                     })
-                .AddFragRef(this.notObservedUrl)
                 ;
 
             String binding = vs.Url;
@@ -41,7 +40,12 @@ namespace BreastRadiology.XUnitTests
             SDefEditor e = this.CreateObservationEditor("BreastRadAbnormalityMassShape",
                     "Breast Radiology Abnormality Mass Shape",
                     new string[] { "Shape" })
-                .Description(new Markdown().Paragraph("Breast Radiology Abnormality Mass Shape Observation"))
+                .Description(new Markdown()
+                    .Paragraph("Breast Radiology Abnormality Mass Shape Observation")
+                    .Paragraph("If this observation is present, and dataAbsentReason is empty, then an mass shape was observed.")
+                    .Paragraph("If this observation is present, and dataAbsentReason is not empty, then an mass shape " +
+                                "was not observed and dataAbsentReason contains the reason why.")
+                    )
                 .AddFragRef(this.abnormalityObservationNoHasMembersFragmentUrl)
                 ;
 

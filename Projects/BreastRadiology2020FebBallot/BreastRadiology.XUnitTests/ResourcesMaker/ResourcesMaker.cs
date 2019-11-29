@@ -52,14 +52,11 @@ namespace BreastRadiology.XUnitTests
         String categoryFragmentUrl;
 
         String headerFragUrl;
-        String existanceValueSetUrl;
-        String notObservedUrl;
-        String observationExistanceFragmentUrl;
         string abnormalityObservationFragmentUrl;
         String abnormalityObservationNoHasMembersFragmentUrl;
-        string abnormalityCodedValueObservationFragmentUrl;
+        string findingCodedValueObservationFragmentUrl;
         String observationSectionFragmentUrl;
-        String abnormalityFragmentUrl;
+        String findingFragmentUrl;
         String breastRadiologyReportUrl;
 
         String CreateUrl(String name)
@@ -278,10 +275,7 @@ namespace BreastRadiology.XUnitTests
 
             this.categoryFragmentUrl = this.CategoryFragment();
             this.observationSectionFragmentUrl = this.ObservationSectionFragment();
-            this.abnormalityFragmentUrl = this.AbnormalityFragment();
-
-            this.ExistanceValueSet(out this.existanceValueSetUrl, out this.notObservedUrl);
-            this.observationExistanceFragmentUrl = this.ObservationExistanceFragment();
+            this.findingFragmentUrl = this.AbnormalityFragment();
 
             this.breastBodyLocationExtensionUrl = this.BreastBodyLocationExtension();
             this.breastBodyLocationOptionalFragmentUrl = this.BreastBodyLocationOptionalFragment();
@@ -289,7 +283,7 @@ namespace BreastRadiology.XUnitTests
 
             this.abnormalityObservationFragmentUrl = this.AbnormalityObservationFragment();
             this.abnormalityObservationNoHasMembersFragmentUrl = this.AbnormalityObservationNoHasMembersFragment();
-            this.abnormalityCodedValueObservationFragmentUrl = this.AbnormalityObservationCodedValueFragment();
+            this.findingCodedValueObservationFragmentUrl = this.AbnormalityObservationCodedValueFragment();
 
             String abnMassShape = this.AbMassShape();
 
@@ -298,21 +292,21 @@ namespace BreastRadiology.XUnitTests
             //
             String abnMammo;
             {
-                String massMargin = this.AbMammoMassMargin();
-                String massDensity = this.AbMammoMassDensity();
-                String breastDensity = this.AbMammoBreastDensity();
-                String mass = this.AbMammoMass(abnMassShape, massMargin, massDensity);
-                String calcType = this.AbMammoCalcificationsType();
-                String calcDist = this.AbMammoCalcificationDistribution();
-                String calc = this.AbMammoCalcifications(calcType, calcDist);
-                String archDist = this.AbMammoArchitecturalDistortion();
-                String asymetries = this.AbMammoAsymetries();
+                String massMargin = this.FindingMammoMassMargin();
+                String massDensity = this.FindingMammoMassDensity();
+                String breastDensity = this.FindingMammoBreastDensity();
+                String mass = this.FindingMammoMass(abnMassShape, massMargin, massDensity);
+                String calcType = this.FindingMammoCalcificationsType();
+                String calcDist = this.FindingMammoCalcificationDistribution();
+                String calc = this.FindingMammoCalcifications(calcType, calcDist);
+                String archDist = this.FindingMammoArchitecturalDistortion();
+                String asymetries = this.FindingMammoAsymmetries();
 
-                String intraMammaryLymphNode = this.AbMammoIntramammaryLymphNode();
-                String skinLesion = this.AbMammoSkinLesion();
-                String solitaryDilatedDuct = this.AbMammoSolitaryDilatedDuct();
+                String intraMammaryLymphNode = this.FindingMammoIntramammaryLymphNode();
+                String skinLesion = this.FindingMammoSkinLesion();
+                String solitaryDilatedDuct = this.FindingMammoSolitaryDilatedDuct();
 
-                abnMammo = this.AbMammo(breastDensity, mass, calc, archDist, asymetries,
+                abnMammo = this.FindingMammo(breastDensity, mass, calc, archDist, asymetries,
                                    intraMammaryLymphNode, skinLesion, solitaryDilatedDuct);
             }
 

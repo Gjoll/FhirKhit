@@ -17,7 +17,7 @@
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoCalcifications",
   "name": "BreastRadMammoCalcifications",
   "title": "Breast Radiology Mammography Calcifications Observation",
-  "description": "Breast Radiology Mammography Calcifications Observation\n\n\nThis observation has the following two member observations\n\n\n** Calcification Type\n** Calcification Distribution",
+  "description": "Breast Radiology Mammography Calcifications Observation\n\n\nIf this observation is present, and dataAbsentReason is empty, then a calcification was observed and Type and Distribution observations should be referenced by this observation.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a calcification  was not observed and dataAbsentReason contains the reason why and no Type or Distribution observations should be referenced by this observation\n\n\n### BI-RADS® ATLAS — MAMMOGRAPHY### FIFTH EDITION — 2013Calcifications that are assessed as benign at mammography are typically larger, coarser, round with\nsmooth margins, and more easily seen than malignant calcifications. Calcifications associated with\nmalignancy (and many benign calcifications as well) are usually very small and often require the use\nof magnification to be seen well. When a specific typically benign etiology cannot be assigned, a\ndescription of calcifications should include their morphology and distribution. Calcifications that are\nobviously benign need not be reported, especially if the interpreting physician is concerned that\nthe referring clinician or patient might infer anything other than absolute confidence in benignity\nwere such calcifications described in the report. However, typically benign calcifications should be\nreported if the interpreting physician is concerned that other observers might misinterpret them as\nanything but benign were such calcifications not described in the report.\n### END BI-RADS® ATLAS — MAMMOGRAPHY TEXTThis observation has the following two member observations\n\n\n** Calcification Type\n** Calcification Distribution",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -57,7 +57,7 @@
         "id": "Observation.hasMember:breastRadAbnormalityMammoCalcificationType",
         "path": "Observation.hasMember",
         "sliceName": "breastRadAbnormalityMammoCalcificationType",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "base": {
           "path": "Observation.hasMember",
@@ -77,7 +77,7 @@
         "id": "Observation.hasMember:breastRadAbnormalityMammoCalcificationDistribution",
         "path": "Observation.hasMember",
         "sliceName": "breastRadAbnormalityMammoCalcificationDistribution",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "base": {
           "path": "Observation.hasMember",

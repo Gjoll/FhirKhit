@@ -17,56 +17,60 @@
         "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CalcificationTypeCS",
         "concept": [
           {
-            "code": "1",
-            "display": "a. Skin (Typically benign)"
+            "code": "Skin",
+            "display": "Skin Calcification (Typically Benign)"
           },
           {
-            "code": "2",
-            "display": "b. Vascular (Typically benign)"
+            "code": "Vascular",
+            "display": "Vascular Calcification (Typically Benign)"
           },
           {
-            "code": "3",
-            "display": "c. Coarse or 'popcorn-like' (Typically benign)"
+            "code": "Coarse",
+            "display": "Coarse or \"Popcorn-like\" Calcification (Typically Benign)"
           },
           {
-            "code": "4",
-            "display": "d. Large rod-like (Typically benign)"
+            "code": "",
+            "display": "Calcification (Typically Benign)"
           },
           {
-            "code": "5",
-            "display": "e. Round (Typically benign)"
+            "code": "LargeRodLike",
+            "display": "Large Rod-Like Calcification (Typically Benign)"
           },
           {
-            "code": "6",
-            "display": "f. Rim (Typically benign)"
+            "code": "Round",
+            "display": "Round (Typically Benign)"
           },
           {
-            "code": "7",
-            "display": "g. Dystrophic (Typically benign)"
+            "code": "Rim",
+            "display": "Rim  Calcification (Typically Benign)"
           },
           {
-            "code": "8",
-            "display": "h. Milk of calcium (Typically benign)"
+            "code": "Dystrophic",
+            "display": "Dystrophic Calcification (Typically Benign)"
           },
           {
-            "code": "9",
-            "display": "i. Suture (Typically benign)"
+            "code": "MilkOfCalcium",
+            "display": "Milk of Calcium Calcification (Typically Benign)"
           },
           {
-            "code": "10",
-            "display": "a. Amorphous (Suspicious morphology)"
+            "code": "Suture",
+            "display": "Suture Calcification (Typically Benign)"
           },
           {
-            "code": "11",
-            "display": "b. Course heterogeneous (Suspicious morphology)"
+            "code": "Amorphous",
+            "display": "Amorphous Calcification (Suspicious Morphology)"
           },
           {
-            "code": "12",
-            "display": "c. Fine pleomorphic (Suspicious morphology)"
+            "code": "CoarseHeterogeneous",
+            "display": "Coarse Heterogeneous Calcification (Suspicious Morphology)"
           },
           {
-            "code": "13",
-            "display": "d. Fine linear or fine-linear branching (Suspicious morphology)"
+            "code": "Fine Pleomorphic",
+            "display": "Fine Pleomorphic Calcification (Suspicious Morphology)"
+          },
+          {
+            "code": "FineLinear",
+            "display": "Fine Linear or Fine-Linear Branching Calcification (Suspicious Morphology)"
           }
         ]
       }

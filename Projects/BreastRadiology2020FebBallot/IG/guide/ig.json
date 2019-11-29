@@ -66,32 +66,20 @@
     "CodeSystem/BreastLocationQuadrantCS": {
       "base": "CodeSystem-BreastLocationQuadrantCS.html"
     },
-    "CodeSystem/BreastRadAbnormalityMammoIntramammaryLymphNodeFindingsCS": {
-      "base": "CodeSystem-BreastRadAbnormalityMammoIntramammaryLymphNodeFindingsCS.html"
-    },
     "CodeSystem/BreastRadAbnormalityMammoMassDensityCS": {
       "base": "CodeSystem-BreastRadAbnormalityMammoMassDensityCS.html"
     },
     "CodeSystem/BreastRadAbnormalityMammoMassMarginCS": {
       "base": "CodeSystem-BreastRadAbnormalityMammoMassMarginCS.html"
     },
-    "CodeSystem/BreastRadAbnormalityMammoSkinLesionFindingsCS": {
-      "base": "CodeSystem-BreastRadAbnormalityMammoSkinLesionFindingsCS.html"
-    },
-    "CodeSystem/BreastRadAbnormalityMammoSolitaryDilatedDuctFindingsCS": {
-      "base": "CodeSystem-BreastRadAbnormalityMammoSolitaryDilatedDuctFindingsCS.html"
-    },
     "CodeSystem/BreastRadAbnormalityMassShapeCS": {
       "base": "CodeSystem-BreastRadAbnormalityMassShapeCS.html"
     },
-    "CodeSystem/BreastRadAsymetriesCS": {
-      "base": "CodeSystem-BreastRadAsymetriesCS.html"
+    "CodeSystem/BreastRadAsymmetriesCS": {
+      "base": "CodeSystem-BreastRadAsymmetriesCS.html"
     },
     "CodeSystem/BreastRadBreastDensityCS": {
       "base": "CodeSystem-BreastRadBreastDensityCS.html"
-    },
-    "CodeSystem/BreastRadExistanceCS": {
-      "base": "CodeSystem-BreastRadExistanceCS.html"
     },
     "CodeSystem/CalcificationDistributionCS": {
       "base": "CodeSystem-CalcificationDistributionCS.html"
@@ -126,8 +114,8 @@
     "StructureDefinition/BreastRadAbnormalityMammoArchitecturalDistortion": {
       "base": "StructureDefinition-BreastRadAbnormalityMammoArchitecturalDistortion.html"
     },
-    "StructureDefinition/BreastRadAbnormalityMammoAsymetries": {
-      "base": "StructureDefinition-BreastRadAbnormalityMammoAsymetries.html"
+    "StructureDefinition/BreastRadAbnormalityMammoAsymmetries": {
+      "base": "StructureDefinition-BreastRadAbnormalityMammoAsymmetries.html"
     },
     "StructureDefinition/BreastRadAbnormalityMammoBreastDensity": {
       "base": "StructureDefinition-BreastRadAbnormalityMammoBreastDensity.html"
@@ -137,9 +125,6 @@
     },
     "StructureDefinition/BreastRadAbnormalityMammoCalcificationType": {
       "base": "StructureDefinition-BreastRadAbnormalityMammoCalcificationType.html"
-    },
-    "StructureDefinition/BreastRadAbnormalityMammoIntramammaryLymphNode": {
-      "base": "StructureDefinition-BreastRadAbnormalityMammoIntramammaryLymphNode.html"
     },
     "StructureDefinition/BreastRadAbnormalityMammoMassDensity": {
       "base": "StructureDefinition-BreastRadAbnormalityMammoMassDensity.html"
@@ -161,6 +146,9 @@
     },
     "StructureDefinition/BreastRadMammoCalcifications": {
       "base": "StructureDefinition-BreastRadMammoCalcifications.html"
+    },
+    "StructureDefinition/BreastRadMammoMass": {
+      "base": "StructureDefinition-BreastRadMammoMass.html"
     },
     "StructureDefinition/BreastRadPriorReports": {
       "base": "StructureDefinition-BreastRadPriorReports.html"
@@ -192,9 +180,6 @@
     "StructureDefinition/HeaderFragment": {
       "base": "StructureDefinition-HeaderFragment.html"
     },
-    "StructureDefinition/ObservationExistanceFragment": {
-      "base": "StructureDefinition-ObservationExistanceFragment.html"
-    },
     "StructureDefinition/ObservationSectionFragment": {
       "base": "StructureDefinition-ObservationSectionFragment.html"
     },
@@ -207,41 +192,26 @@
     "ValueSet/BreastLocationQuadrantVS": {
       "base": "ValueSet-BreastLocationQuadrantVS.html"
     },
-    "ValueSet/BreastRadAbnormalityMammoIntramammaryLymphNodeFindingsVS": {
-      "base": "ValueSet-BreastRadAbnormalityMammoIntramammaryLymphNodeFindingsVS.html"
-    },
     "ValueSet/BreastRadAbnormalityMammoMassDensityVS": {
       "base": "ValueSet-BreastRadAbnormalityMammoMassDensityVS.html"
     },
     "ValueSet/BreastRadAbnormalityMammoMassMarginVS": {
       "base": "ValueSet-BreastRadAbnormalityMammoMassMarginVS.html"
     },
-    "ValueSet/BreastRadAbnormalityMammoSkinLesionFindingsVS": {
-      "base": "ValueSet-BreastRadAbnormalityMammoSkinLesionFindingsVS.html"
-    },
-    "ValueSet/BreastRadAbnormalityMammoSolitaryDilatedDuctFindingsVS": {
-      "base": "ValueSet-BreastRadAbnormalityMammoSolitaryDilatedDuctFindingsVS.html"
-    },
     "ValueSet/BreastRadAbnormalityMassShapeVS": {
       "base": "ValueSet-BreastRadAbnormalityMassShapeVS.html"
     },
-    "ValueSet/BreastRadAsymetriesVS": {
-      "base": "ValueSet-BreastRadAsymetriesVS.html"
+    "ValueSet/BreastRadAsymmetriesVS": {
+      "base": "ValueSet-BreastRadAsymmetriesVS.html"
     },
     "ValueSet/BreastRadBreastDensityVS": {
       "base": "ValueSet-BreastRadBreastDensityVS.html"
-    },
-    "ValueSet/BreastRadExistanceVS": {
-      "base": "ValueSet-BreastRadExistanceVS.html"
     },
     "ValueSet/CalcificationDistributionVS": {
       "base": "ValueSet-CalcificationDistributionVS.html"
     },
     "ValueSet/CalcificationTypeVS": {
       "base": "ValueSet-CalcificationTypeVS.html"
-    },
-    "ValueSet/NotObservedVS": {
-      "base": "ValueSet-NotObservedVS.html"
     },
     "ValueSet/UnitsOfLengthVS": {
       "base": "ValueSet-UnitsOfLengthVS.html"

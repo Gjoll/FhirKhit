@@ -5,10 +5,6 @@
     {
       "url": "http://www.fragment.com/fragment",
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
-    },
-    {
-      "url": "http://www.fragment.com/fragment",
-      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/NotObservedVS"
     }
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadAbnormalityMammoMassMarginVS",

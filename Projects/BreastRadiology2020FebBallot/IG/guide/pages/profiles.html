@@ -103,6 +103,12 @@ metries and also the Guidance chapter). (Insert links/page #s)
 Mammography Breast Abnormality Architectural Distortion Observation
 
 
+If this observation is present, and dataAbsentReason is empty, then an architectural distortion was observed.
+
+
+If this observation is present, and dataAbsentReason is not empty, then an architectural distortion was not observed and dataAbsentReason contains the reason why.
+
+
 ### BI-RADS® ATLAS — MAMMOGRAPHY### FIFTH EDITION — 2013The parenchyma is distorted with no definite mass visible. For mammography, this includes thin
 straight lines or spiculations radiating from a point, and focal retraction, distortion or straightening
 at the anterior or posterior edge of the parenchyma. Architectural distortion may also be associ-
@@ -113,10 +119,16 @@ appropriate.
 {% endcapture %}{{ md_text | markdownify }}</td>
 </tr>
 <tr>
-<td><a href="StructureDefinition-BreastRadAbnormalityMammoAsymetries.html">BreastRadAbnormalityMammoAsymetries</a></td>
+<td><a href="StructureDefinition-BreastRadAbnormalityMammoAsymmetries.html">BreastRadAbnormalityMammoAsymmetries</a></td>
 <td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
 <td>{% capture md_text %}
-Mammography Breast Abnormality Asymetries Observation
+Mammography Breast Abnormality Asymmetries Observation
+
+
+If this observation is present, and dataAbsentReason is empty, then an asymmetry was observed.
+
+
+If this observation is present, and dataAbsentReason is not empty, then an asymmetry was not observed and dataAbsentReason contains the reason why.
 
 
 ### BI-RADS® ATLAS — MAMMOGRAPHY### FIFTH EDITION — 2013The several types of asymmetry involve a spectrum of mammographic findings that represent
@@ -150,17 +162,16 @@ Mammography Breast Abnormality Calcification Type Observation
 {% endcapture %}{{ md_text | markdownify }}</td>
 </tr>
 <tr>
-<td><a href="StructureDefinition-BreastRadAbnormalityMammoIntramammaryLymphNode.html">BreastRadAbnormalityMammoIntramammaryLymphNode</a></td>
-<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
-<td>{% capture md_text %}
-Mammography Breast Intramammary LymphNode Distortion Observation
-{% endcapture %}{{ md_text | markdownify }}</td>
-</tr>
-<tr>
 <td><a href="StructureDefinition-BreastRadAbnormalityMammoMassDensity.html">BreastRadAbnormalityMammoMassDensity</a></td>
 <td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
 <td>{% capture md_text %}
 Breast Radiology Abnormality Mass Density Observation (Mammography)
+
+
+If this observation is present, and dataAbsentReason is empty, then an mass density was observed.
+
+
+If this observation is present, and dataAbsentReason is not empty, then an mass density was not observed and dataAbsentReason contains the reason why.
 
 
 ### BI-RADS® ATLAS — MAMMOGRAPHY### FIFTH EDITION — 2013Radiographic density is considered an important feature in the evaluation of noncalcified breast masses, yet
@@ -182,6 +193,12 @@ benign or malignant nature of noncalcified breast masses.
 Breast Radiology Abnormality Mass Margin Observation (Mammography)
 
 
+If this observation is present, and dataAbsentReason is empty, then an mass margin was observed.
+
+
+If this observation is present, and dataAbsentReason is not empty, then an mass margin was not observed and dataAbsentReason contains the reason why.
+
+
 ### BI-RADS® ATLAS — MAMMOGRAPHY### FIFTH EDITION — 2013The margin is the edge or border of the lesion. The descriptors of margin, like the descriptors of shape, are important predictors of whether a mass is benign or malignant. 
 ### END BI-RADS® ATLAS — MAMMOGRAPHY TEXT
 {% endcapture %}{{ md_text | markdownify }}</td>
@@ -191,6 +208,20 @@ Breast Radiology Abnormality Mass Margin Observation (Mammography)
 <td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
 <td>{% capture md_text %}
 Mammography Breast Abnormality Skin Lesion Observation
+
+
+If this observation is present, and dataAbsentReason is empty, then a skin lesion was observed.
+
+
+If this observation is present, and dataAbsentReason is not empty, then a skin lesion  was not observed and dataAbsentReason contains the reason why.
+
+
+### BI-RADS® ATLAS — MAMMOGRAPHY### FIFTH EDITION — 2013This finding may be described in the mammography report or annotated on the mammographic
+image when it projects over the breast (especially on 2 different projections), and may be mistaken
+for an intramammary lesion. A raised skin lesion sufficiently large to be seen at mammography
+should be marked by the technologist with a radiopaque device designated for use as a marker for
+a skin lesion.
+### END BI-RADS® ATLAS — MAMMOGRAPHY TEXT
 {% endcapture %}{{ md_text | markdownify }}</td>
 </tr>
 <tr>
@@ -198,6 +229,18 @@ Mammography Breast Abnormality Skin Lesion Observation
 <td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
 <td>{% capture md_text %}
 Mammography Breast Abnormality Solitary Dilated Duct Observation
+
+
+If this observation is present, and dataAbsentReason is empty, then a solitary dilated duct was observed.
+
+
+If this observation is present, and dataAbsentReason is not empty, then a solitary dilated duct was not observed and dataAbsentReason contains the reason why.
+
+
+### BI-RADS® ATLAS — MAMMOGRAPHY### FIFTH EDITION — 2013This is a unilateral tubular or branching structure that likely represents a dilated or otherwise en-
+larged duct. It is a rare finding. Even if unassociated with other suspicious clinical or mammographic
+findings, it has been reported to be associated with noncalcified DCIS.
+### END BI-RADS® ATLAS — MAMMOGRAPHY TEXT
 {% endcapture %}{{ md_text | markdownify }}</td>
 </tr>
 <tr>
@@ -221,11 +264,54 @@ UltraSound Breast Abnormality Observation
 Breast Radiology Mammography Calcifications Observation
 
 
-This observation has the following two member observations
+If this observation is present, and dataAbsentReason is empty, then a calcification was observed and Type and Distribution observations should be referenced by this observation.
+
+
+If this observation is present, and dataAbsentReason is not empty, then a calcification  was not observed and dataAbsentReason contains the reason why and no Type or Distribution observations should be referenced by this observation
+
+
+### BI-RADS® ATLAS — MAMMOGRAPHY### FIFTH EDITION — 2013Calcifications that are assessed as benign at mammography are typically larger, coarser, round with
+smooth margins, and more easily seen than malignant calcifications. Calcifications associated with
+malignancy (and many benign calcifications as well) are usually very small and often require the use
+of magnification to be seen well. When a specific typically benign etiology cannot be assigned, a
+description of calcifications should include their morphology and distribution. Calcifications that are
+obviously benign need not be reported, especially if the interpreting physician is concerned that
+the referring clinician or patient might infer anything other than absolute confidence in benignity
+were such calcifications described in the report. However, typically benign calcifications should be
+reported if the interpreting physician is concerned that other observers might misinterpret them as
+anything but benign were such calcifications not described in the report.
+### END BI-RADS® ATLAS — MAMMOGRAPHY TEXTThis observation has the following two member observations
 
 
 ** Calcification Type
 ** Calcification Distribution
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadMammoMass.html">BreastRadMammoMass</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Breast Radiology Mammography Mass Observation
+
+
+If this observation is present, and dataAbsentReason is empty, then a mass was observed and Shape, Margin, and Density observations should be referenced by this observation.
+
+
+If this observation is present, and dataAbsentReason is not empty, then a calcification  was not observed and dataAbsentReason contains the reason why and no Shape, Margin, or Density observations should be referenced by this observation
+
+
+### BI-RADS® ATLAS — MAMMOGRAPHY### FIFTH EDITION — 2013"MASS" is three dimensional and occupies space. It is seen on two different mammographic pro-
+jections. It has completely or partially convex-outward borders and (when radiodense) appears
+denser in the center than at the periphery. If a potential mass is seen only on a single projection, it
+should be called an "ASYMMETRY" until its 3-dimensionality is confirmed
+### END BI-RADS® ATLAS — MAMMOGRAPHY TEXTThis observation has the following three member observations
+
+
+** Shape
+** Margin
+** Density
+If the CodedValue value is set to present, then references to the above member observations should be 
+present and non-null, otherwise references should be empty
 {% endcapture %}{{ md_text | markdownify }}</td>
 </tr>
 <tr>
@@ -291,13 +377,6 @@ Fragment definition that slices category and adds the observation code value
 <td><a href="http://hl7.org/fhir/StructureDefinition/Resource">Resource</a></td>
 <td>{% capture md_text %}
 
-{% endcapture %}{{ md_text | markdownify }}</td>
-</tr>
-<tr>
-<td><a href="StructureDefinition-ObservationExistanceFragment.html">ObservationExistanceFragment</a></td>
-<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
-<td>{% capture md_text %}
-Fragment that defines binds the observations value to the existance value set.
 {% endcapture %}{{ md_text | markdownify }}</td>
 </tr>
 <tr>

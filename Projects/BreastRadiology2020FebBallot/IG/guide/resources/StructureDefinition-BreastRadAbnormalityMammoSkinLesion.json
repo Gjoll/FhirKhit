@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Mammography Breast Abnormality Skin Lesion Observation",
+  "description": "Mammography Breast Abnormality Skin Lesion Observation\n\n\nIf this observation is present, and dataAbsentReason is empty, then a skin lesion was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a skin lesion  was not observed and dataAbsentReason contains the reason why.\n\n\n### BI-RADS® ATLAS — MAMMOGRAPHY### FIFTH EDITION — 2013This finding may be described in the mammography report or annotated on the mammographic\nimage when it projects over the breast (especially on 2 different projections), and may be mistaken\nfor an intramammary lesion. A raised skin lesion sufficiently large to be seen at mammography\nshould be marked by the technologist with a radiopaque device designated for use as a marker for\na skin lesion.\n### END BI-RADS® ATLAS — MAMMOGRAPHY TEXT",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -1159,7 +1159,7 @@
         "comment": "An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.",
         "requirements": "An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations.",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "base": {
           "path": "Observation.value[x]",
           "min": 0,
@@ -1167,7 +1167,37 @@
         },
         "type": [
           {
+            "code": "Quantity"
+          },
+          {
             "code": "CodeableConcept"
+          },
+          {
+            "code": "string"
+          },
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "integer"
+          },
+          {
+            "code": "Range"
+          },
+          {
+            "code": "Ratio"
+          },
+          {
+            "code": "SampledData"
+          },
+          {
+            "code": "time"
+          },
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "Period"
           }
         ],
         "condition": [
@@ -1175,10 +1205,6 @@
         ],
         "isModifier": false,
         "isSummary": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadAbnormalityMammoSkinLesionFindingsVS"
-        },
         "mapping": [
           {
             "identity": "sct-concept",
@@ -2680,6 +2706,8 @@
         "definition": "The information determined as a result of making the observation, if the information has a simple value.",
         "comment": "An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.",
         "requirements": "An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations.",
+        "min": 0,
+        "max": "0",
         "base": {
           "path": "Observation.value[x]",
           "min": 0,
@@ -2687,7 +2715,37 @@
         },
         "type": [
           {
+            "code": "Quantity"
+          },
+          {
             "code": "CodeableConcept"
+          },
+          {
+            "code": "string"
+          },
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "integer"
+          },
+          {
+            "code": "Range"
+          },
+          {
+            "code": "Ratio"
+          },
+          {
+            "code": "SampledData"
+          },
+          {
+            "code": "time"
+          },
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "Period"
           }
         ],
         "condition": [
@@ -2695,10 +2753,6 @@
         ],
         "isModifier": false,
         "isSummary": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadAbnormalityMammoSkinLesionFindingsVS"
-        },
         "mapping": [
           {
             "identity": "sct-concept",

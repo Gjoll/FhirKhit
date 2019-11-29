@@ -7,13 +7,13 @@
     },
     {
       "url": "http://www.fragment.com/fragment",
-      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityCodedValueObservationFragment"
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationRequiredFragment"
     }
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadAbnormalityMammoSolitaryDilatedDuct",
   "name": "BreastRadAbnormalityMammoSolitaryDilatedDuct",
   "title": "Breast Radiology Abnormality Solitary Dilated Duct (Mammography)",
-  "description": "Mammography Breast Abnormality Solitary Dilated Duct Observation",
+  "description": "Mammography Breast Abnormality Solitary Dilated Duct Observation\n\n\nIf this observation is present, and dataAbsentReason is empty, then a solitary dilated duct was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a solitary dilated duct was not observed and dataAbsentReason contains the reason why.\n\n\n### BI-RADS® ATLAS — MAMMOGRAPHY### FIFTH EDITION — 2013This is a unilateral tubular or branching structure that likely represents a dilated or otherwise en-\nlarged duct. It is a rare finding. Even if unassociated with other suspicious clinical or mammographic\nfindings, it has been reported to be associated with noncalcified DCIS.\n### END BI-RADS® ATLAS — MAMMOGRAPHY TEXT",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -32,20 +32,11 @@
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "base": {
           "path": "Observation.value[x]",
           "min": 0,
           "max": "1"
-        },
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadAbnormalityMammoSolitaryDilatedDuctFindingsVS"
         }
       }
     ]

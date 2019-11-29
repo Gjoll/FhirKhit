@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Breast Radiology Abnormality Mass Margin Observation (Mammography)\n\n\n### BI-RADS® ATLAS — MAMMOGRAPHY### FIFTH EDITION — 2013The margin is the edge or border of the lesion. The descriptors of margin, like the descriptors of shape, are important predictors of whether a mass is benign or malignant. \n### END BI-RADS® ATLAS — MAMMOGRAPHY TEXT",
+  "description": "Breast Radiology Abnormality Mass Margin Observation (Mammography)\n\n\nIf this observation is present, and dataAbsentReason is empty, then an mass margin was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then an mass margin was not observed and dataAbsentReason contains the reason why.\n\n\n### BI-RADS® ATLAS — MAMMOGRAPHY### FIFTH EDITION — 2013The margin is the edge or border of the lesion. The descriptors of margin, like the descriptors of shape, are important predictors of whether a mass is benign or malignant. \n### END BI-RADS® ATLAS — MAMMOGRAPHY TEXT",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,

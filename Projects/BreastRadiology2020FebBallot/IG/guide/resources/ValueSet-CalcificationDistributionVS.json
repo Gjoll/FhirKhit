@@ -18,63 +18,31 @@
       ]
     }
   ],
-  "description": "Mammography Calcification Distribution",
+  "description": "Mammography Calcification Distribution\n\n\n### BI-RADS® ATLAS — MAMMOGRAPHY### FIFTH EDITION — 2013These descriptors are used to indicate the arrangement of calcifications in the breast. Multiple\nsimilar groups may be described in the report when there is more than one group of calcifications\nthat are similar in morphology and distribution. In evaluating the likelihood of malignancy for calcifications, \ndistribution is at least as important as morphology.\n### END BI-RADS® ATLAS — MAMMOGRAPHY TEXT",
   "compose": {
     "include": [
       {
         "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CalcificationDistributionCS",
         "concept": [
           {
-            "code": "1",
-            "display": "a. Skin (Typically benign)"
+            "code": "Diffuse",
+            "display": "Diffuse Calcification Distribution"
           },
           {
-            "code": "2",
-            "display": "b. Vascular (Typically benign)"
+            "code": "Regional",
+            "display": "Regional  Calcification Distribution"
           },
           {
-            "code": "3",
-            "display": "c. Coarse or 'popcorn-like' (Typically benign)"
+            "code": "Grouped",
+            "display": "Grouped  Calcification Distribution"
           },
           {
-            "code": "4",
-            "display": "d. Large rod-like (Typically benign)"
+            "code": "Linear",
+            "display": "Linear  Calcification Distribution"
           },
           {
-            "code": "5",
-            "display": "e. Round (Typically benign)"
-          },
-          {
-            "code": "6",
-            "display": "f. Rim (Typically benign)"
-          },
-          {
-            "code": "7",
-            "display": "g. Dystrophic (Typically benign)"
-          },
-          {
-            "code": "8",
-            "display": "h. Milk of calcium (Typically benign)"
-          },
-          {
-            "code": "9",
-            "display": "i. Suture (Typically benign)"
-          },
-          {
-            "code": "10",
-            "display": "a. Amorphous (Suspicious morphology)"
-          },
-          {
-            "code": "11",
-            "display": "b. Course heterogeneous (Suspicious morphology)"
-          },
-          {
-            "code": "12",
-            "display": "c. Fine pleomorphic (Suspicious morphology)"
-          },
-          {
-            "code": "13",
-            "display": "d. Fine linear or fine-linear branching (Suspicious morphology)"
+            "code": "Segmental",
+            "display": "Segmental Calcification Distribution"
           }
         ]
       }

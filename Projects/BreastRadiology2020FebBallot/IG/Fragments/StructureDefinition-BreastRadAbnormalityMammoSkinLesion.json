@@ -7,13 +7,13 @@
     },
     {
       "url": "http://www.fragment.com/fragment",
-      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityCodedValueObservationFragment"
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationRequiredFragment"
     }
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadAbnormalityMammoSkinLesion",
   "name": "BreastRadAbnormalityMammoSkinLesion",
   "title": "Breast Radiology Abnormality Skin Lesion (Mammography)",
-  "description": "Mammography Breast Abnormality Skin Lesion Observation",
+  "description": "Mammography Breast Abnormality Skin Lesion Observation\n\n\nIf this observation is present, and dataAbsentReason is empty, then a skin lesion was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a skin lesion  was not observed and dataAbsentReason contains the reason why.\n\n\n### BI-RADS® ATLAS — MAMMOGRAPHY### FIFTH EDITION — 2013This finding may be described in the mammography report or annotated on the mammographic\nimage when it projects over the breast (especially on 2 different projections), and may be mistaken\nfor an intramammary lesion. A raised skin lesion sufficiently large to be seen at mammography\nshould be marked by the technologist with a radiopaque device designated for use as a marker for\na skin lesion.\n### END BI-RADS® ATLAS — MAMMOGRAPHY TEXT",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -32,20 +32,11 @@
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "base": {
           "path": "Observation.value[x]",
           "min": 0,
           "max": "1"
-        },
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadAbnormalityMammoSkinLesionFindingsVS"
         }
       }
     ]

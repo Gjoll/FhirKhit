@@ -1,0 +1,47 @@
+{
+  "resourceType": "ValueSet",
+  "id": "BreastRadAsymmetriesVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadAsymmetriesVS",
+  "version": "0.0.2",
+  "name": "BreastRadAsymmetriesVS",
+  "title": "Breast Radiology Asymmetries",
+  "status": "draft",
+  "date": "2019-11-01",
+  "publisher": "Hl7-Clinical Interoperability Council",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/cic"
+        }
+      ]
+    }
+  ],
+  "description": "Breast Radiology Mammography Asymmetries",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadAsymmetriesCS",
+        "concept": [
+          {
+            "code": "Asymmetry",
+            "display": "Asymmetry"
+          },
+          {
+            "code": "Asymmetry",
+            "display": "Global Asymmetry"
+          },
+          {
+            "code": "FocalAsymmetry",
+            "display": "Focal Asymmetry"
+          },
+          {
+            "code": "DevelopingAsymmetry",
+            "display": "Developing Asymmetry"
+          }
+        ]
+      }
+    ]
+  }
+}
