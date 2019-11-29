@@ -22,6 +22,12 @@ namespace BreastRadiology.XUnitTests
                     new string[] { "Mass" })
                 .Description(new Markdown()
                     .Paragraph("Breast Radiology Mammography Mass Observation")
+                    .BiradHeader()
+                    .MarkedDown("\"MASS\" is three dimensional and occupies space. It is seen on two different mammographic pro-")
+                    .MarkedDown("jections. It has completely or partially convex-outward borders and (when radiodense) appears")
+                    .MarkedDown("denser in the center than at the periphery. If a potential mass is seen only on a single projection, it")
+                    .MarkedDown("should be called an \"ASYMMETRY\" until its 3-dimensionality is confirmed")
+                    .BiradFooter()
                     .Paragraph("This observation has the following three member observations")
                     .List("Shape", "Margin", "Density")
                     .Paragraph("If the CodedValue value is set to present, then references to the above member observations should be ",

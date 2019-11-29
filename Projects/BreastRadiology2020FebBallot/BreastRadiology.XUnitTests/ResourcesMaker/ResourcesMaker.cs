@@ -53,6 +53,7 @@ namespace BreastRadiology.XUnitTests
 
         String headerFragUrl;
         String existanceValueSetUrl;
+        String notObservedUrl;
         String observationExistanceFragmentUrl;
         string abnormalityObservationFragmentUrl;
         String abnormalityObservationNoHasMembersFragmentUrl;
@@ -207,7 +208,16 @@ namespace BreastRadiology.XUnitTests
             Markdown description,
             IEnumerable<ConceptDef> codes)
         {
-            CodeSystem cs = new CodeSystem
+            return CreateValueSet(name, title, description, codes, out CodeSystem cs);
+        }
+
+        ValueSet CreateValueSet(String name,
+            String title,
+            Markdown description,
+            IEnumerable<ConceptDef> codes,
+            out CodeSystem cs)
+        {
+            cs = new CodeSystem
             {
                 Id = $"{name}CS",
                 Url = $"http://hl7.org/fhir/us/breast-radiology/CodeSystem/{name}CS",
@@ -270,7 +280,7 @@ namespace BreastRadiology.XUnitTests
             this.observationSectionFragmentUrl = this.ObservationSectionFragment();
             this.abnormalityFragmentUrl = this.AbnormalityFragment();
 
-            this.existanceValueSetUrl= this.ExistanceValueSet();
+            this.ExistanceValueSet(out this.existanceValueSetUrl, out this.notObservedUrl);
             this.observationExistanceFragmentUrl = this.ObservationExistanceFragment();
 
             this.breastBodyLocationExtensionUrl = this.BreastBodyLocationExtension();
@@ -296,13 +306,13 @@ namespace BreastRadiology.XUnitTests
                 String calcDist = this.AbMammoCalcificationDistribution();
                 String calc = this.AbMammoCalcifications(calcType, calcDist);
                 String archDist = this.AbMammoArchitecturalDistortion();
-                String assymetries = this.AbMammoAssymetries();
+                String asymetries = this.AbMammoAsymetries();
 
                 String intraMammaryLymphNode = this.AbMammoIntramammaryLymphNode();
                 String skinLesion = this.AbMammoSkinLesion();
                 String solitaryDilatedDuct = this.AbMammoSolitaryDilatedDuct();
 
-                abnMammo = this.AbMammo(breastDensity, mass, calc, archDist, assymetries,
+                abnMammo = this.AbMammo(breastDensity, mass, calc, archDist, asymetries,
                                    intraMammaryLymphNode, skinLesion, solitaryDilatedDuct);
             }
 

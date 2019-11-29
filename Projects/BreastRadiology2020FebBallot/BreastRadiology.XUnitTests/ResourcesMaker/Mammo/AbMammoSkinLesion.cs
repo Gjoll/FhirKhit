@@ -15,30 +15,22 @@ namespace BreastRadiology.XUnitTests
     {
         String AbMammoSkinLesion()
         {
-            String binding = this.CreateValueSet(
-                "BreastRadAbnormalityMammoSkinLesionFindings",
-                "Breast Radiology Abnormality Skin Lesion Findings (Mammo)",
-                new Markdown()
-                    .Paragraph("Breast Radiology Abnormality Skin Lesion Findings"),
-                new String[]
-                {
-                "a. Present",
-                "b. NotPresent",
-                "c. NotChecked"
-                })
-                .Url;
-
             SDefEditor e = this.CreateObservationEditor("BreastRadAbnormalityMammoSkinLesion",
                     "Breast Radiology Abnormality Skin Lesion (Mammography)",
-                    new string[] {"Skin","Lesion"})
-                    .Description(new Markdown().Paragraph("Mammography Breast Abnormality Skin Lesion Observation"))
-                    .AddFragRef(this.abnormalityCodedValueObservationFragmentUrl)
+                    new string[] { "Skin", "Lesion" })
+                    .Description(new Markdown()
+                        .Paragraph("Mammography Breast Abnormality Skin Lesion Observation")
+                        .BiradHeader()
+                        .MarkedDown("This finding may be described in the mammography report or annotated on the mammographic")
+                        .MarkedDown("image when it projects over the breast (especially on 2 different projections), and may be mistaken")
+                        .MarkedDown("for an intramammary lesion. A raised skin lesion sufficiently large to be seen at mammography")
+                        .MarkedDown("should be marked by the technologist with a radiopaque device designated for use as a marker for")
+                        .MarkedDown("a skin lesion.")
+                        .BiradFooter()
+                    )
+                .AddFragRef(this.breastBodyLocationRequiredFragmentUrl)
+                .AddFragRef(this.observationExistanceFragmentUrl)
                     ;
-
-            e.Select("value[x]")
-                .Type("CodeableConcept")
-                .Binding(binding, BindingStrength.Required)
-                ;
             return e.SDef.Url;
         }
     }

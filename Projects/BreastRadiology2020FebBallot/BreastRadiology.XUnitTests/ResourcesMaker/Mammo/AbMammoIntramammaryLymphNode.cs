@@ -15,30 +15,23 @@ namespace BreastRadiology.XUnitTests
     {
         String AbMammoIntramammaryLymphNode()
         {
-            String binding = this.CreateValueSet(
-                "BreastRadAbnormalityMammoIntramammaryLymphNodeFindings",
-                "Breast Radiology Abnormality Intramammary LymphNode Findings (Mammo)",
-                new Markdown()
-                    .Paragraph("Breast Radiology Abnormality Intramammary LymphNode Findings"),
-                new String[]
-                {
-                "a. Present",
-                "b. NotPresent",
-                "c. NotChecked"
-                })
-                .Url;
-
             SDefEditor e = this.CreateObservationEditor("BreastRadAbnormalityMammoIntramammaryLymphNode",
                     "Breast Radiology Abnormality Intramammary LymphNode (Mammography)",
                     new string[] {"Intramammory","Lymph", "Node"})
-                    .Description(new Markdown().Paragraph("Mammography Breast Intramammary LymphNode Distortion Observation"))
+                    .Description(new Markdown()
+                        .Paragraph("Mammography Breast Intramammary LymphNode Distortion Observation")
+                        .BiradHeader()
+                        .MarkedDown("These are circumscribed masses that are reniform and have hilar fat. They are generally 1 cm or smaller")
+                        .MarkedDown("in size. They may be larger than 1 cm and characterized as normal when fat replacement is pro-")
+                        .MarkedDown("nounced. They frequently occur in the lateral and usually upper portions of the breast closer to the")
+                        .MarkedDown("axilla, although they may occur anywhere in the breast. They usually are seen adjacent to a vein,")
+                        .MarkedDown("because the lymphatic drainage of the breast parallels the venous drainage.")
+                        .BiradFooter())
+                    .AddFragRef(this.breastBodyLocationRequiredFragmentUrl)
                     .AddFragRef(this.abnormalityCodedValueObservationFragmentUrl)
+                    .AddFragRef(this.observationExistanceFragmentUrl)
                     ;
 
-            e.Select("value[x]")
-                .Type("CodeableConcept")
-                .Binding(binding, BindingStrength.Required)
-                ;
             return e.SDef.Url;
         }
     }

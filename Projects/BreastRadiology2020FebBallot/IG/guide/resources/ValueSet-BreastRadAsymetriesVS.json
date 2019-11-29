@@ -1,10 +1,10 @@
 {
   "resourceType": "ValueSet",
-  "id": "BreastRadAbnormalityMassShapeVS",
-  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadAbnormalityMassShapeVS",
+  "id": "BreastRadAsymetriesVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadAsymetriesVS",
   "version": "0.0.2",
-  "name": "BreastRadAbnormalityMassShapeVS",
-  "title": "Breast Radiology Abnormality Mass Shape",
+  "name": "BreastRadAsymetriesVS",
+  "title": "Breast Radiology Asymetries",
   "status": "draft",
   "date": "2019-11-01",
   "publisher": "Hl7-Clinical Interoperability Council",
@@ -18,23 +18,27 @@
       ]
     }
   ],
-  "description": "Breast Radiology Mass Shape",
+  "description": "Breast Radiology Mammography Asymetries",
   "compose": {
     "include": [
       {
-        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadAbnormalityMassShapeCS",
+        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadAsymetriesCS",
         "concept": [
           {
-            "code": "Oval",
-            "display": "Elliptical/Egg-shaped Mass"
+            "code": "Asymmetry",
+            "display": "Asymmetry"
           },
           {
-            "code": "Round",
-            "display": "Round Mass"
+            "code": "Asymmetry",
+            "display": "Global Asymmetry"
           },
           {
-            "code": "Irregular",
-            "display": "Irregular Mass"
+            "code": "FocalAsymmetry",
+            "display": "Focal Asymmetry"
+          },
+          {
+            "code": "DevelopingAsymmetry",
+            "display": "Developing Asymmetry"
           }
         ]
       },

@@ -25,24 +25,37 @@
         "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadAbnormalityMammoMassMarginCS",
         "concept": [
           {
-            "code": "1",
-            "display": "a. Circumscribed"
+            "code": "Circumscribed",
+            "display": "Circumscribed Margin"
           },
           {
-            "code": "2",
-            "display": "b. Obscured"
+            "code": "Obscured",
+            "display": "Obscured Margin"
           },
           {
-            "code": "3",
-            "display": "c. Microlobulated"
+            "code": "Microlobulated",
+            "display": "Microlobulated Margin"
           },
           {
-            "code": "4",
-            "display": "d. Indistinct"
+            "code": "Indistinct",
+            "display": "Indistinct Margin"
           },
           {
-            "code": "5",
-            "display": "e. Spiculated"
+            "code": "Spiculated",
+            "display": "Spiculated Margin"
+          }
+        ]
+      },
+      {
+        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadExistanceCS",
+        "concept": [
+          {
+            "code": "NotPresent",
+            "display": "Value was found to be not present"
+          },
+          {
+            "code": "NotChecked",
+            "display": "No attempt was made tt observe value"
           }
         ]
       }

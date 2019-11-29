@@ -1,10 +1,10 @@
 {
   "resourceType": "ValueSet",
-  "id": "BreastRadAssymetriesVS",
-  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadAssymetriesVS",
+  "id": "BreastRadAsymetriesVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadAsymetriesVS",
   "version": "0.0.2",
-  "name": "BreastRadAssymetriesVS",
-  "title": "Breast Radiology Assymetries",
+  "name": "BreastRadAsymetriesVS",
+  "title": "Breast Radiology Asymetries",
   "status": "draft",
   "date": "2019-11-01",
   "publisher": "Hl7-Clinical Interoperability Council",
@@ -18,41 +18,33 @@
       ]
     }
   ],
-  "description": "Breast Radiology Mammography Assymetries",
+  "description": "Breast Radiology Mammography Asymetries",
   "compose": {
     "include": [
       {
-        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadAssymetriesCS",
+        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadAsymetriesCS",
         "concept": [
           {
-            "code": "1",
-            "display": "a. Diffuse"
+            "code": "Asymmetry",
+            "display": "Asymmetry"
           },
           {
-            "code": "2",
-            "display": "b. Regional"
+            "code": "Asymmetry",
+            "display": "Global Asymmetry"
           },
           {
-            "code": "3",
-            "display": "c. Grouped"
+            "code": "FocalAsymmetry",
+            "display": "Focal Asymmetry"
           },
           {
-            "code": "4",
-            "display": "d. Linear"
-          },
-          {
-            "code": "5",
-            "display": "e. Segmental"
+            "code": "DevelopingAsymmetry",
+            "display": "Developing Asymmetry"
           }
         ]
       },
       {
         "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadExistanceCS",
         "concept": [
-          {
-            "code": "Present",
-            "display": "Value is present"
-          },
           {
             "code": "NotPresent",
             "display": "Value was found to be not present"

@@ -10,10 +10,10 @@
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityCodedValueObservationFragment"
     }
   ],
-  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadAbnormalityMammoAssymetries",
-  "name": "BreastRadAbnormalityMammoAssymetries",
-  "title": "Breast Radiology Abnormality Assymetries (Mammography)",
-  "description": "Mammography Breast Abnormality Assymetries Observation",
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadAbnormalityMammoAsymetries",
+  "name": "BreastRadAbnormalityMammoAsymetries",
+  "title": "Breast Radiology Abnormality Asymetries (Mammography)",
+  "description": "Mammography Breast Abnormality Asymetries Observation\n\n\n### BI-RADS® ATLAS — MAMMOGRAPHY### FIFTH EDITION — 2013The several types of asymmetry involve a spectrum of mammographic findings that represent\nunilateral deposits of fibroglandular tissue not conforming to the definition of a radiodense mass.\nThe asymmetry, unlike a mass, is visible on only 1 mammographic projection. The other 3 types of\nasymmetry, although visible on more than 1 projection, have concave-outward borders and usu-\nally are seen to be interspersed with fat, whereas a radiodense mass displays completely or partially\nconvex-outward borders and appears to be denser in the center than at the periphery.\n### END BI-RADS® ATLAS — MAMMOGRAPHY TEXT",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -45,7 +45,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadAssymetriesVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadAsymetriesVS"
         }
       }
     ]

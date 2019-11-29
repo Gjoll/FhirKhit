@@ -25,20 +25,33 @@
         "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadAbnormalityMammoMassDensityCS",
         "concept": [
           {
-            "code": "1",
-            "display": "a. High density"
+            "code": "HighDensity",
+            "display": "High Density"
           },
           {
-            "code": "2",
-            "display": "b. Equal density"
+            "code": "EqualDensity",
+            "display": "Equal Density"
           },
           {
-            "code": "3",
-            "display": "c. Low density"
+            "code": "LowDensity",
+            "display": "Low Density"
           },
           {
-            "code": "4",
-            "display": "d. Fat-containing"
+            "code": "FatContaining",
+            "display": "Fat Containing"
+          }
+        ]
+      },
+      {
+        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadExistanceCS",
+        "concept": [
+          {
+            "code": "NotPresent",
+            "display": "Value was found to be not present"
+          },
+          {
+            "code": "NotChecked",
+            "display": "No attempt was made tt observe value"
           }
         ]
       }

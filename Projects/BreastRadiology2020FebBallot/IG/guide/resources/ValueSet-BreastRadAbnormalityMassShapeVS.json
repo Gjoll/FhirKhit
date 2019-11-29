@@ -42,10 +42,6 @@
         "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadExistanceCS",
         "concept": [
           {
-            "code": "Present",
-            "display": "Value is present"
-          },
-          {
             "code": "NotPresent",
             "display": "Value was found to be not present"
           },

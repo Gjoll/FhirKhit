@@ -130,9 +130,9 @@
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadAbnormalityMammoAssymetries",
+        "id": "Observation.hasMember:breastRadAbnormalityMammoAsymetries",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadAbnormalityMammoAssymetries",
+        "sliceName": "breastRadAbnormalityMammoAsymetries",
         "min": 0,
         "max": "*",
         "base": {
@@ -144,7 +144,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadAbnormalityMammoAssymetries"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadAbnormalityMammoAsymetries"
             ]
           }
         ]

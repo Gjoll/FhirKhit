@@ -23,11 +23,17 @@ namespace BreastRadiology.XUnitTests
                         .Paragraph("Breast Radiology Mass Shape"),
                     new ConceptDef[]
                     {
-                        new ConceptDef("Oval", "Elliptical/Egg-shaped Mass", "A mass that is elliptical or egg-shaped (may include 2 or 3 undulations)."),
-                        new ConceptDef("Round", "Round Mass", "A mass that is spherical, ball-shaped, circular, or globular in shape."),
-                        new ConceptDef("Irregular", "Irregular Mass", "The shape of the mass is neither round nor oval. For mammography, use of this descriptor usually implies a suspicious finding.")
+                        new ConceptDef("Oval", 
+                            "Elliptical/Egg-shaped Mass", 
+                            "A mass that is elliptical or egg-shaped (may include 2 or 3 undulations)."),
+                        new ConceptDef("Round", 
+                            "Round Mass", 
+                            "A mass that is spherical, ball-shaped, circular, or globular in shape."),
+                        new ConceptDef("Irregular", 
+                            "Irregular Mass", 
+                            "The shape of the mass is neither round nor oval. For mammography, use of this descriptor usually implies a suspicious finding.")
                     })
-                .AddFragRef(this.existanceValueSetUrl)
+                .AddFragRef(this.notObservedUrl)
                 ;
 
             String binding = vs.Url;

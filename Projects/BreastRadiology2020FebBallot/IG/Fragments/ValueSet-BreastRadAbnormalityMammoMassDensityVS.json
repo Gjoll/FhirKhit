@@ -5,6 +5,10 @@
     {
       "url": "http://www.fragment.com/fragment",
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
+    },
+    {
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/NotObservedVS"
     }
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadAbnormalityMammoMassDensityVS",
@@ -17,20 +21,20 @@
         "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadAbnormalityMammoMassDensityCS",
         "concept": [
           {
-            "code": "1",
-            "display": "a. High density"
+            "code": "HighDensity",
+            "display": "High Density"
           },
           {
-            "code": "2",
-            "display": "b. Equal density"
+            "code": "EqualDensity",
+            "display": "Equal Density"
           },
           {
-            "code": "3",
-            "display": "c. Low density"
+            "code": "LowDensity",
+            "display": "Low Density"
           },
           {
-            "code": "4",
-            "display": "d. Fat-containing"
+            "code": "FatContaining",
+            "display": "Fat Containing"
           }
         ]
       }

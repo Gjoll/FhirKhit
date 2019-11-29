@@ -140,8 +140,8 @@
 <text x="615" y="438.75">Distortion</text>
 </g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="607.5" y="457.5" width="97.5" height="33.75" rx="3.75" ry="3.75" />
-<text x="615" y="480">Assymetries</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="607.5" y="457.5" width="90" height="33.75" rx="3.75" ry="3.75" />
+<text x="615" y="480">Asymetries</text>
 </g>
 <g>
 <rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="607.5" y="498.75" width="105" height="71.25" rx="3.75" ry="3.75" />

@@ -17,7 +17,7 @@ namespace BreastRadiology.XUnitTests
             String mammoMass,
             String calc,
             String archDist,
-            String assymetries,
+            String asymetries,
             String intramammaryLymphNode,
             String skinLesions,
             String solitaryDilatedDuct)
@@ -50,7 +50,7 @@ namespace BreastRadiology.XUnitTests
                     new ProfileTarget(mammoMass, 0, "*"),
                     new ProfileTarget(calc, 0, "*"),
                     new ProfileTarget(archDist, 0, "1"),
-                    new ProfileTarget(assymetries, 0, "*"),
+                    new ProfileTarget(asymetries, 0, "*"),
                     new ProfileTarget(intramammaryLymphNode, 1, "1"),
                     new ProfileTarget(skinLesions, 0, "*"),
                     new ProfileTarget(solitaryDilatedDuct, 1, "1")

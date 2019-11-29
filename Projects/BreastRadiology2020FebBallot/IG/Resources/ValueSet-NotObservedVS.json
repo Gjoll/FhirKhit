@@ -1,10 +1,10 @@
 {
   "resourceType": "ValueSet",
-  "id": "BreastRadAbnormalityMassShapeVS",
-  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadAbnormalityMassShapeVS",
+  "id": "NotObservedVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/NotObservedVS",
   "version": "0.0.2",
-  "name": "BreastRadAbnormalityMassShapeVS",
-  "title": "Breast Radiology Abnormality Mass Shape",
+  "name": "NotObservedVS",
+  "title": "NotObservedVS",
   "status": "draft",
   "date": "2019-11-01",
   "publisher": "Hl7-Clinical Interoperability Council",
@@ -18,26 +18,9 @@
       ]
     }
   ],
-  "description": "Breast Radiology Mass Shape",
+  "description": "Reasons why an observation found no results",
   "compose": {
     "include": [
-      {
-        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadAbnormalityMassShapeCS",
-        "concept": [
-          {
-            "code": "Oval",
-            "display": "Elliptical/Egg-shaped Mass"
-          },
-          {
-            "code": "Round",
-            "display": "Round Mass"
-          },
-          {
-            "code": "Irregular",
-            "display": "Irregular Mass"
-          }
-        ]
-      },
       {
         "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadExistanceCS",
         "concept": [
