@@ -13,13 +13,24 @@ namespace BreastRadiology.XUnitTests
 {
     public partial class ResourcesMaker : ConverterBase
     {
-        String SectionPatientHistory()
+        String SectionPatientHistory
+        {
+            get
+            {
+                if (sectionPatientHistory == null)
+                    sectionPatientHistory = CreateSectionPatientHistory();
+                return sectionPatientHistory;
+            }
+        }
+        String sectionPatientHistory = null;
+
+        String CreateSectionPatientHistory()
         {
             SDefEditor e = this.CreateObservationEditor("BreastRadSectionPatientHistory",
                     "Breast Radiology Patient History Section",
                     new string[] {"Patient History"})
                 .Description(new Markdown().Paragraph("Patient History Section"))
-                .AddFragRef(this.observationSectionFragmentUrl)
+                .AddFragRef(this.ObservationSectionFragment)
                 ;
             e.Select("bodySite").Zero();
             return e.SDef.Url;

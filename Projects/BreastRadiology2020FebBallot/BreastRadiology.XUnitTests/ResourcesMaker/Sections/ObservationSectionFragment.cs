@@ -8,10 +8,21 @@ namespace BreastRadiology.XUnitTests
 {
     public partial class ResourcesMaker
     {
+        String ObservationSectionFragment
+        {
+            get
+            {
+                if (observationSectionFragment == null)
+                    observationSectionFragment = CreateObservationSectionFragment();
+                return observationSectionFragment;
+            }
+        }
+        String observationSectionFragment = null;
+
         /// <summary>
         /// Create ObservationSectionFragment.
         /// </summary>
-        String ObservationSectionFragment()
+        String CreateObservationSectionFragment()
         {
             SDefEditor e = this.CreateFragment("ObservationSectionFragment",
                 "Observation Section Fragment",

@@ -14,7 +14,18 @@ namespace BreastRadiology.XUnitTests
 {
     public partial class ResourcesMaker : ConverterBase
     {
-        String FindingMammoMassMargin()
+        String FindingMammoMassMargin
+        {
+            get
+            {
+                if (findingMammoMassMargin == null)
+                    findingMammoMassMargin = CreateFindingMammoMassMargin();
+                return findingMammoMassMargin;
+            }
+        }
+        String findingMammoMassMargin = null;
+
+        String CreateFindingMammoMassMargin()
         {
             String binding = this.CreateValueSet(
                 "BreastRadFindingMammoMassMargin",
@@ -64,7 +75,7 @@ namespace BreastRadiology.XUnitTests
                     .MarkedDown("The margin is the edge or border of the lesion. The descriptors of margin, like the descriptors of shape, are important predictors of whether a mass is benign or malignant. ")
                     .BiradFooter()
                     )
-                .AddFragRef(this.findingCodedValueObservationFragmentUrl)
+                .AddFragRef(this.ObservationCodedValueFragment)
                 ;
 
             e.Select("value[x]")

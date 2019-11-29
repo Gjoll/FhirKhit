@@ -13,13 +13,25 @@ namespace BreastRadiology.XUnitTests
 {
     public partial class ResourcesMaker : ConverterBase
     {
-        String SectionPatientRisk()
+        String SectionPatientRisk
+        {
+            get
+            {
+                if (sectionPatientRisk == null)
+                    sectionPatientRisk = CreateSectionPatientRisk();
+                return sectionPatientRisk;
+            }
+        }
+        String sectionPatientRisk = null;
+
+
+        String CreateSectionPatientRisk()
         {
             SDefEditor e = this.CreateObservationEditor("BreastRadSectionPatientRisk",
                     "Breast Radiology Patient Risk Section",
                     new string[] {"Patient","Risk"})
                 .Description(new Markdown().Paragraph("Patient Risk Section"))
-                .AddFragRef(this.observationSectionFragmentUrl)
+                .AddFragRef(this.ObservationSectionFragment)
                 ;
             e.Select("bodySite").Zero();
             return e.SDef.Url;

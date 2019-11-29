@@ -13,14 +13,18 @@ namespace BreastRadiology.XUnitTests
 {
     public partial class ResourcesMaker : ConverterBase
     {
-        String FindingMammo(String mammoBreastDensity,
-            String mammoMass,
-            String calc,
-            String archDist,
-            String asymetries,
-            String intramammaryLymphNode,
-            String skinLesions,
-            String solitaryDilatedDuct)
+        String FindingMammo
+        {
+            get
+            {
+                if (findingMammo == null)
+                    findingMammo = CreateFindingMammo();
+                return findingMammo;
+            }
+        }
+        String findingMammo = null;
+
+        String CreateFindingMammo()
         {
             SDefEditor e = this.CreateObservationEditor("BreastRadFindingMammo",
                     "Breast Radiology Finding Mammography",
@@ -35,7 +39,7 @@ namespace BreastRadiology.XUnitTests
                             .MarkedDown("metries and also the Guidance chapter). (Insert links/page #s)")
                             .BiradFooter()
                             )
-                .AddFragRef(this.findingFragmentUrl)
+                .AddFragRef(this.FindingSectionFragment)
                 ;
             ////$ todo. Incorrect method!!!
             //e.Find("method")
@@ -46,14 +50,14 @@ namespace BreastRadiology.XUnitTests
             {
                 ProfileTarget[] targets = new ProfileTarget[]
                 {
-                    new ProfileTarget(mammoBreastDensity, 1, "1"),
-                    new ProfileTarget(mammoMass, 0, "*"),
-                    new ProfileTarget(calc, 0, "*"),
-                    new ProfileTarget(archDist, 0, "1"),
-                    new ProfileTarget(asymetries, 0, "*"),
-                    new ProfileTarget(intramammaryLymphNode, 1, "1"),
-                    new ProfileTarget(skinLesions, 0, "*"),
-                    new ProfileTarget(solitaryDilatedDuct, 1, "1")
+                    new ProfileTarget(this.FindingMammoBreastDensity, 1, "1"),
+                    new ProfileTarget(this.FindingMammoMass, 0, "*"),
+                    new ProfileTarget(this.FindingMammoCalcification, 0, "*"),
+                    new ProfileTarget(this.FindingMammoArchitecturalDistortion, 0, "1"),
+                    new ProfileTarget(this.FindingMammoAsymmetries, 0, "*"),
+                    new ProfileTarget(this.FindingMammoIntramammaryLymphNode, 1, "1"),
+                    new ProfileTarget(this.FindingMammoSkinLesion, 0, "*"),
+                    new ProfileTarget(this.FindingMammoSolitaryDilatedDuct, 1, "1")
                 };
                 e.Find("hasMember").SliceByUrl(targets);
                 e.MapNode.AddProfileTargets(targets);

@@ -13,22 +13,24 @@ namespace BreastRadiology.XUnitTests
 {
     public partial class ResourcesMaker : ConverterBase
     {
-        String FindingMammoBreastDensity()
+        String FindingMammoBreastDensity
+        {
+            get
+            {
+                if (findingMammoBreastDensity == null)
+                    findingMammoBreastDensity = CreateFindingMammoBreastDensity();
+                return findingMammoBreastDensity;
+            }
+        }
+        String findingMammoBreastDensity = null;
+
+        String CreateFindingMammoBreastDensity()
         {
             String binding = this.CreateValueSet(
                 "BreastRadBreastDensity",
                 "Breast Radiology Breast Density",
                 new Markdown()
-                    .Paragraph("Breast Radiology Mammography Breast Composition")
-                ,
-                //new String[]
-                //{
-                //        "Not Checked",
-                //        "a. The breasts are almost entirely fatty",
-                //        "b. There are scattered areas of fibroglandular density",
-                //        "c. The breasts are heterogeneously dense, which may obscure detection of small masses",
-                //        "d. The breasts are extremely dense, which lowers the sensitivity of mammography"
-                //})
+                    .Paragraph("Breast Radiology Mammography Breast Composition"),
                     new ConceptDef[]
                     {
                         new ConceptDef("Fatty",
@@ -92,7 +94,7 @@ namespace BreastRadiology.XUnitTests
                         .MarkedDown("individual woman. ")
                         .BiradFooter()
                     )
-                    .AddFragRef(this.findingCodedValueObservationFragmentUrl)
+                    .AddFragRef(this.ObservationCodedValueFragment)
                     ;
 
             e.Select("value[x]")

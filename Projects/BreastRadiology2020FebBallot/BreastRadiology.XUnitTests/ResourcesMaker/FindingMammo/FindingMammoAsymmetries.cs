@@ -14,7 +14,18 @@ namespace BreastRadiology.XUnitTests
 {
     public partial class ResourcesMaker : ConverterBase
     {
-        String FindingMammoAsymmetries()
+        String FindingMammoAsymmetries
+        {
+            get
+            {
+                if (findingMammoAsymmetries == null)
+                    findingMammoAsymmetries = CreateFindingMammoAsymmetries();
+                return findingMammoAsymmetries;
+            }
+        }
+        String findingMammoAsymmetries = null;
+
+        String CreateFindingMammoAsymmetries()
         {
             String binding = this.CreateValueSet(
                     "BreastRadAsymmetries",
@@ -77,7 +88,7 @@ namespace BreastRadiology.XUnitTests
                         .MarkedDown("convex-outward borders and appears to be denser in the center than at the periphery.")
                         .BiradFooter()
                         )
-                    .AddFragRef(this.findingCodedValueObservationFragmentUrl)
+                    .AddFragRef(this.ObservationCodedValueFragment)
                     ;
 
             e.Select("value[x]")

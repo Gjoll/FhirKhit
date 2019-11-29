@@ -1,0 +1,214 @@
+{
+  "resourceType": "StructureDefinition",
+  "extension": [
+    {
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/FindingObservationFragment"
+    },
+    {
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/FindingSectionFragment"
+    }
+  ],
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadFindingMammo",
+  "name": "BreastRadFindingMammo",
+  "title": "Breast Radiology Finding Mammography",
+  "description": "Mammography Breast Finding Mammography Observation\n\n\n### BI-RADS® ATLAS — MAMMOGRAPHY### FIFTH EDITION — 2013A \"MASS\" is three dimensional and occupies space. It is seen on two different mammographic pro-\njections. It has completely or partially convex-outward borders and (when radiodense) appears\ndenser in the center than at the periphery. If a potential mass is seen only on a single projection, it\nshould be called an \"ASYMMETRY\" until its 3-dimensionality is confirmed (See Section D on Asym-\nmetries and also the Guidance chapter). (Insert links/page #s)\n### END BI-RADS® ATLAS — MAMMOGRAPHY TEXT",
+  "fhirVersion": "4.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation",
+        "path": "Observation",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Observation.hasMember",
+        "path": "Observation.hasMember",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": true,
+          "rules": "openAtEnd"
+        },
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Observation.hasMember:breastRadFindingMammoBreastDensity",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadFindingMammoBreastDensity",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadFindingMammoBreastDensity"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:breastRadFindingMammoMass",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadFindingMammoMass",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadFindingMammoMass"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:breastRadFindingMammoCalcification",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadFindingMammoCalcification",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadFindingMammoCalcification"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:breastRadFindingMammoArchitecturalDistortion",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadFindingMammoArchitecturalDistortion",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadFindingMammoArchitecturalDistortion"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:breastRadFindingMammoAsymmetries",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadFindingMammoAsymmetries",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadFindingMammoAsymmetries"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:breastRadFindingMammoIntramammaryLymphNode",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadFindingMammoIntramammaryLymphNode",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadFindingMammoIntramammaryLymphNode"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:breastRadFindingMammoSkinLesion",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadFindingMammoSkinLesion",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadFindingMammoSkinLesion"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:breastRadFindingMammoSolitaryDilatedDuct",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadFindingMammoSolitaryDilatedDuct",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadFindingMammoSolitaryDilatedDuct"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

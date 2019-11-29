@@ -14,9 +14,19 @@ namespace BreastRadiology.XUnitTests
 {
     public partial class ResourcesMaker : ConverterBase
     {
-        String BreastRadiologyReport(String patientHistoryUrl,
-            String findingsUrl,
-            String patientRiskUrl)
+        String BreastRadiologyReport
+        {
+            get
+            {
+                if (breastRadiologyReport == null)
+                    breastRadiologyReport = CreateBreastRadiologyReport();
+                return breastRadiologyReport;
+            }
+        }
+        String breastRadiologyReport = null;
+
+
+        String CreateBreastRadiologyReport()
         {
             SDefEditor e = this.CreateEditor("BreastRadReport",
                 "Breast Radiology Report",
@@ -30,8 +40,8 @@ namespace BreastRadiology.XUnitTests
                           "references to the recommendations of this report",
                           "a summary of the report findings in a human readable format")
                 )
-                .AddFragRef(this.headerFragUrl)
-                .AddFragRef(this.categoryFragmentUrl)
+                .AddFragRef(this.HeaderFragment)
+                .AddFragRef(this.CategoryFragment)
                 ;
 
             String recommendationsUrl = this.BreastRadiologyRecommendationsExtension();
@@ -52,9 +62,9 @@ namespace BreastRadiology.XUnitTests
 
             ProfileTarget[] targets = new ProfileTarget[]
             {
-                    new ProfileTarget(patientHistoryUrl, 1, "1"),
-                    new ProfileTarget(findingsUrl, 1, "1"),
-                    new ProfileTarget(patientRiskUrl, 1, "1")
+                    new ProfileTarget(this.SectionPatientHistory, 1, "1"),
+                    new ProfileTarget(this.SectionFindings, 1, "1"),
+                    new ProfileTarget(this.SectionPatientRisk, 1, "1")
             };
             e.Find("result").SliceByUrl(targets);
             e.MapNode.AddProfileTargets(targets);

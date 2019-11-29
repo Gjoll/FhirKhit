@@ -14,7 +14,18 @@ namespace BreastRadiology.XUnitTests
 {
     public partial class ResourcesMaker : ConverterBase
     {
-        String FindingMammoMassDensity()
+        String FindingMammoMassDensity
+        {
+            get
+            {
+                if (findingMammoMassDensity == null)
+                    findingMammoMassDensity = CreateFindingMammoMassDensity();
+                return findingMammoMassDensity;
+            }
+        }
+        String findingMammoMassDensity = null;
+
+        String CreateFindingMammoMassDensity()
         {
             String binding = this.CreateValueSet(
                 "BreastRadFindingMammoMassDensity",
@@ -66,7 +77,7 @@ namespace BreastRadiology.XUnitTests
                         .MarkedDown("benign or malignant nature of noncalcified breast masses.")
                         .BiradFooter()
                         )
-                    .AddFragRef(this.findingCodedValueObservationFragmentUrl)
+                    .AddFragRef(this.ObservationCodedValueFragment)
                     ;
 
             e.Select("value[x]")

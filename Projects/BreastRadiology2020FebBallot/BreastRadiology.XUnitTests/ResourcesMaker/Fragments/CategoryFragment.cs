@@ -9,12 +9,23 @@ namespace BreastRadiology.XUnitTests
 {
     public partial class ResourcesMaker
     {
+        String CategoryFragment
+        {
+            get
+            {
+                if (findingCategoryFragment == null)
+                    findingCategoryFragment = CreateCategoryFragment();
+                return findingCategoryFragment;
+            }
+        }
+        String findingCategoryFragment = null;
+
         /// <summary>
         /// Create Category fragment.
         /// This fragment creates a slice that is bound to the 'imaging' category.
         /// </summary>
         /// <returns></returns>
-        String CategoryFragment()
+        String CreateCategoryFragment()
         {
             SDefEditor e = this.CreateFragment("CategoryFragment",
                     "Category Fragment",

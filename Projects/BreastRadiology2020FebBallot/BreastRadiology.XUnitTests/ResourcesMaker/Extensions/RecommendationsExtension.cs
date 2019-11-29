@@ -26,7 +26,7 @@ namespace BreastRadiology.XUnitTests
                 .Kind(StructureDefinition.StructureDefinitionKind.ComplexType)
                 .Context()
                 ;
-            e.AddFragRef(this.headerFragUrl);
+            e.AddFragRef(this.HeaderFragment);
 
             e.Select("extension").Zero();
             e.Select("url")

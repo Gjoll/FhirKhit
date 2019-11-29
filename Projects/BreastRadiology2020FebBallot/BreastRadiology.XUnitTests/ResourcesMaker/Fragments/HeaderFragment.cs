@@ -13,7 +13,17 @@ namespace BreastRadiology.XUnitTests
 {
     public partial class ResourcesMaker : ConverterBase
     {
-        String HeaderFragment()
+        String HeaderFragment
+        {
+            get
+            {
+                if (findingHeaderFragment == null)
+                    findingHeaderFragment = CreateHeaderFragment();
+                return findingHeaderFragment;
+            }
+        }
+        String findingHeaderFragment = null;
+        String CreateHeaderFragment()
         {
             SDefEditor e = this.CreateFragment("HeaderFragment",
                 "Resource",

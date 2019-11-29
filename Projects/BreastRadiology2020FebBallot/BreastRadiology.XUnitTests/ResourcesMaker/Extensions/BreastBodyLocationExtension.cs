@@ -12,20 +12,33 @@ using PreFhir;
 
 namespace BreastRadiology.XUnitTests
 {
+
     public partial class ResourcesMaker : ConverterBase
     {
-        String BreastBodyLocationExtension()
+        String BreastBodyLocationExtension
         {
-            SDefEditor e = this.CreateEditor("BreastBodyLocation", 
+            get
+            {
+                if (breastBodyLocationExtension == null)
+                    breastBodyLocationExtension = CreateBreastBodyLocationExtension();
+                return breastBodyLocationExtension;
+            }
+        }
+        String breastBodyLocationExtension = null;
+
+
+        String CreateBreastBodyLocationExtension()
+        {
+            SDefEditor e = this.CreateEditor("BreastBodyLocation",
                 "Breast Body Location",
-                new string[] {"Breast","Body","Location"}, 
+                new string[] { "Breast", "Body", "Location" },
                 ExtensionUrl)
                 .Description(new Markdown("Breast Body Location extension"))
                 .Kind(StructureDefinition.StructureDefinitionKind.ComplexType)
                 .Context()
                 ;
 
-            e.AddFragRef(this.headerFragUrl);
+            e.AddFragRef(this.HeaderFragment);
 
             e.Select("url")
                 .Type("uri")

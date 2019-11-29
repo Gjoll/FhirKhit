@@ -3,7 +3,7 @@
   "extension": [
     {
       "url": "http://www.fragment.com/fragment",
-      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityObservationFragment"
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/FindingObservationFragment"
     },
     {
       "url": "http://www.fragment.com/fragment",
@@ -61,9 +61,9 @@
         }
       },
       {
-        "id": "Observation.hasMember:breastRadAbnormalityMammo",
+        "id": "Observation.hasMember:breastRadFindingMammo",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadAbnormalityMammo",
+        "sliceName": "breastRadFindingMammo",
         "min": 0,
         "max": "*",
         "base": {
@@ -75,7 +75,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadAbnormalityMammo"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadFindingMammo"
             ]
           }
         ]

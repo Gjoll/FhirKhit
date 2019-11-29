@@ -9,25 +9,36 @@ namespace BreastRadiology.XUnitTests
 {
     public partial class ResourcesMaker
     {
+        String BreastBodyLocationOptionalFragment
+        {
+            get
+            {
+                if (breastBodyLocationOptionalFragment == null)
+                    breastBodyLocationOptionalFragment = CreateBreastBodyLocationOptionalFragment();
+                return breastBodyLocationOptionalFragment;
+            }
+        }
+        String breastBodyLocationOptionalFragment = null;
+
         /// <summary>
         /// Create BreastBodyLocationFragment.
         /// </summary>
         /// <returns></returns>
-        String BreastBodyLocationOptionalFragment()
+        String CreateBreastBodyLocationOptionalFragment()
         {
             SDefEditor e = this.CreateFragment("BreastBodyLocationOptionalFragment",
                                 "Breast Body Location (Optional) Fragment",
                                 new string[] {"Breast","Body", "Location", "Fragment", "(Optional)"},
                                 ObservationUrl)
                 .Description(new Markdown("Fragment definition for a Required Breast Body Location"))
-                .AddFragRef(this.headerFragUrl)
+                .AddFragRef(this.HeaderFragment)
                 ;
             e
                 .Select("bodySite")
                 .ZeroToOne()
                 ;
             e
-                .ApplyExtension("breastBodyLocation", this.breastBodyLocationExtensionUrl)
+                .ApplyExtension("breastBodyLocation", this.BreastBodyLocationExtension)
                 .ZeroToOne()
                 ;
 

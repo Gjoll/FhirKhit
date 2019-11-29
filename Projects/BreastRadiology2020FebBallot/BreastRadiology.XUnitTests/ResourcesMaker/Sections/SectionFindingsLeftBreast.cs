@@ -13,17 +13,28 @@ namespace BreastRadiology.XUnitTests
 {
     public partial class ResourcesMaker : ConverterBase
     {
-        String SectionFindingsLeftBreast(ProfileTarget[] abnormalityTargets)
+        String SectionFindingsLeftBreast
+        {
+            get
+            {
+                if (sectionFindingsLeftBreast == null)
+                    sectionFindingsLeftBreast = CreateSectionFindingsLeftBreast();
+                return sectionFindingsLeftBreast;
+            }
+        }
+        String sectionFindingsLeftBreast = null;
+
+        String CreateSectionFindingsLeftBreast()
         {
             SDefEditor e = this.CreateObservationEditor("BreastRadSectionFindingsLeftBreast",
                     "Breast Radiology Findings Left Breast",
                     new string[] {"Left Breast"})
                 .Description(new Markdown().Paragraph("Findings Left Breast Section"))
-                .AddFragRef(this.observationSectionFragmentUrl)
+                .AddFragRef(this.ObservationSectionFragment)
                 ;
             e.Select("bodySite").Zero();
-            e.Find("hasMember").SliceByUrl(abnormalityTargets);
-            e.MapNode.AddProfileTargets(abnormalityTargets);
+            e.Find("hasMember").SliceByUrl(this.FindingBreastTargets);
+            e.MapNode.AddProfileTargets(this.FindingBreastTargets);
             return e.SDef.Url;
         }
     }

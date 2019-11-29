@@ -13,7 +13,18 @@ namespace BreastRadiology.XUnitTests
 {
     public partial class ResourcesMaker : ConverterBase
     {
-        String FindingMammoSolitaryDilatedDuct()
+        String FindingMammoSolitaryDilatedDuct
+        {
+            get
+            {
+                if (findingMammoSolitaryDilatedDuct == null)
+                    findingMammoSolitaryDilatedDuct = CreateFindingMammoSolitaryDilatedDuct();
+                return findingMammoSolitaryDilatedDuct;
+            }
+        }
+        String findingMammoSolitaryDilatedDuct = null;
+
+        String CreateFindingMammoSolitaryDilatedDuct()
         {
             SDefEditor e = this.CreateObservationEditor("BreastRadFindingMammoSolitaryDilatedDuct",
                     "Breast Radiology Finding Solitary Dilated Duct (Mammography)",
@@ -29,7 +40,7 @@ namespace BreastRadiology.XUnitTests
                         .MarkedDown("findings, it has been reported to be associated with noncalcified DCIS.")
                         .BiradFooter()
                     )
-                    .AddFragRef(this.breastBodyLocationRequiredFragmentUrl)
+                    .AddFragRef(this.BreastBodyLocationRequiredFragment)
                     ;
 
             e.Select("value[x]").Zero();

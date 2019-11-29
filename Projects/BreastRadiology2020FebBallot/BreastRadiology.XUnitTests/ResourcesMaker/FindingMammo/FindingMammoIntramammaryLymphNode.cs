@@ -13,10 +13,21 @@ namespace BreastRadiology.XUnitTests
 {
     public partial class ResourcesMaker : ConverterBase
     {
+        String FindingMammoIntramammaryLymphNode
+        {
+            get
+            {
+                if (findingMammoIntramammaryLymphNode == null)
+                    findingMammoIntramammaryLymphNode = CreateFindingMammoIntramammaryLymphNode();
+                return findingMammoIntramammaryLymphNode;
+            }
+        }
+        String findingMammoIntramammaryLymphNode = null;
+
         // TODO: Should it be a AbMammoIntramammaryLymphNode be required with dataAbsent Reason set to a value if
         // this was looked for and not seen?
         // See other 'If this observation is present, and dataAbsentReason is empty's
-        String FindingMammoIntramammaryLymphNode()
+        String CreateFindingMammoIntramammaryLymphNode()
         {
             SDefEditor e = this.CreateObservationEditor("BreastRadFindingMammoIntramammaryLymphNode",
                     "Breast Radiology Finding Intramammary LymphNode (Mammography)",
@@ -33,8 +44,8 @@ namespace BreastRadiology.XUnitTests
                         .MarkedDown("axilla, although they may occur anywhere in the breast. They usually are seen adjacent to a vein,")
                         .MarkedDown("because the lymphatic drainage of the breast parallels the venous drainage.")
                         .BiradFooter())
-                    .AddFragRef(this.breastBodyLocationRequiredFragmentUrl)
-                    .AddFragRef(this.findingCodedValueObservationFragmentUrl)
+                    .AddFragRef(this.BreastBodyLocationRequiredFragment)
+                    .AddFragRef(this.ObservationCodedValueFragment)
                     ;
 
             e.Select("value[x]").Zero();

@@ -13,7 +13,7 @@
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationRequiredFragment",
   "name": "BreastBodyLocationRequiredFragment",
   "title": "Breast Body Location (Required) Fragment",
-  "description": "Fragment definition for an optional Breast Body Location",
+  "description": "Fragment definition for an required Breast Body Location",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": true,

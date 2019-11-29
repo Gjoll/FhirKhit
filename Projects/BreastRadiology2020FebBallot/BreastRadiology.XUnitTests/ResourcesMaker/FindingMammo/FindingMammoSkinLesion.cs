@@ -13,7 +13,18 @@ namespace BreastRadiology.XUnitTests
 {
     public partial class ResourcesMaker : ConverterBase
     {
-        String FindingMammoSkinLesion()
+        String FindingMammoSkinLesion
+        {
+            get
+            {
+                if (findingMammoSkinLesion == null)
+                    findingMammoSkinLesion = CreateFindingMammoSkinLesion();
+                return findingMammoSkinLesion;
+            }
+        }
+        String findingMammoSkinLesion = null;
+
+        String CreateFindingMammoSkinLesion()
         {
             SDefEditor e = this.CreateObservationEditor("BreastRadFindingMammoSkinLesion",
                     "Breast Radiology Finding Skin Lesion (Mammography)",
@@ -31,7 +42,7 @@ namespace BreastRadiology.XUnitTests
                         .MarkedDown("a skin lesion.")
                         .BiradFooter()
                     )
-                .AddFragRef(this.breastBodyLocationRequiredFragmentUrl)
+                .AddFragRef(this.BreastBodyLocationRequiredFragment)
                 ;
             e.Select("value[x]").Zero();
             return e.SDef.Url;

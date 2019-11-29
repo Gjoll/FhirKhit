@@ -46,19 +46,6 @@ namespace BreastRadiology.XUnitTests
         FhirDateTime date = new FhirDateTime(2019, 11, 1);
         Dictionary<String, SDefEditor> editors = new Dictionary<String, SDefEditor>();
 
-        String breastBodyLocationExtensionUrl;
-        String breastBodyLocationOptionalFragmentUrl;
-        String breastBodyLocationRequiredFragmentUrl;
-        String categoryFragmentUrl;
-
-        String headerFragUrl;
-        string abnormalityObservationFragmentUrl;
-        String abnormalityObservationNoHasMembersFragmentUrl;
-        string findingCodedValueObservationFragmentUrl;
-        String observationSectionFragmentUrl;
-        String findingFragmentUrl;
-        String breastRadiologyReportUrl;
-
         String CreateUrl(String name)
         {
             return $"http://hl7.org/fhir/us/breast-radiology/StructureDefinition/{name}";
@@ -124,7 +111,7 @@ namespace BreastRadiology.XUnitTests
                 title,
                 mapName,
                 ObservationUrl);
-            retVal.AddFragRef(this.abnormalityObservationFragmentUrl);
+            retVal.AddFragRef(this.FindingObservationFragment);
             return retVal;
         }
 
@@ -144,7 +131,7 @@ namespace BreastRadiology.XUnitTests
                 Content = CodeSystem.CodeSystemContentMode.Complete,
                 Count = codes.Count()
             };
-            cs.AddFragRef(this.headerFragUrl);
+            cs.AddFragRef(this.HeaderFragment);
 
             ValueSet vs = new ValueSet
             {
@@ -154,7 +141,7 @@ namespace BreastRadiology.XUnitTests
                 Title = title,
                 Description = description
             };
-            vs.AddFragRef(this.headerFragUrl);
+            vs.AddFragRef(this.HeaderFragment);
 
 
             ValueSet.ConceptSetComponent vsComp = new ValueSet.ConceptSetComponent
@@ -225,7 +212,7 @@ namespace BreastRadiology.XUnitTests
                 Content = CodeSystem.CodeSystemContentMode.Complete,
                 Count = codes.Count()
             };
-            cs.AddFragRef(this.headerFragUrl);
+            cs.AddFragRef(this.HeaderFragment);
 
             ValueSet vs = new ValueSet
             {
@@ -235,7 +222,7 @@ namespace BreastRadiology.XUnitTests
                 Title = title,
                 Description = description
             };
-            vs.AddFragRef(this.headerFragUrl);
+            vs.AddFragRef(this.HeaderFragment);
 
 
             ValueSet.ConceptSetComponent vsComp = new ValueSet.ConceptSetComponent
@@ -271,68 +258,7 @@ namespace BreastRadiology.XUnitTests
         {
             this.fc.Add(this.resourceDir);
 
-            this.headerFragUrl = this.HeaderFragment();
-
-            this.categoryFragmentUrl = this.CategoryFragment();
-            this.observationSectionFragmentUrl = this.ObservationSectionFragment();
-            this.findingFragmentUrl = this.AbnormalityFragment();
-
-            this.breastBodyLocationExtensionUrl = this.BreastBodyLocationExtension();
-            this.breastBodyLocationOptionalFragmentUrl = this.BreastBodyLocationOptionalFragment();
-            this.breastBodyLocationRequiredFragmentUrl = this.BreastBodyLocationRequiredFragment();
-
-            this.abnormalityObservationFragmentUrl = this.AbnormalityObservationFragment();
-            this.abnormalityObservationNoHasMembersFragmentUrl = this.AbnormalityObservationNoHasMembersFragment();
-            this.findingCodedValueObservationFragmentUrl = this.AbnormalityObservationCodedValueFragment();
-
-            String abnMassShape = this.AbMassShape();
-
-            //
-            // Mammo
-            //
-            String abnMammo;
-            {
-                String massMargin = this.FindingMammoMassMargin();
-                String massDensity = this.FindingMammoMassDensity();
-                String breastDensity = this.FindingMammoBreastDensity();
-                String mass = this.FindingMammoMass(abnMassShape, massMargin, massDensity);
-                String calcType = this.FindingMammoCalcificationsType();
-                String calcDist = this.FindingMammoCalcificationDistribution();
-                String calc = this.FindingMammoCalcifications(calcType, calcDist);
-                String archDist = this.FindingMammoArchitecturalDistortion();
-                String asymetries = this.FindingMammoAsymmetries();
-
-                String intraMammaryLymphNode = this.FindingMammoIntramammaryLymphNode();
-                String skinLesion = this.FindingMammoSkinLesion();
-                String solitaryDilatedDuct = this.FindingMammoSolitaryDilatedDuct();
-
-                abnMammo = this.FindingMammo(breastDensity, mass, calc, archDist, asymetries,
-                                   intraMammaryLymphNode, skinLesion, solitaryDilatedDuct);
-            }
-
-            //
-            // MRI
-            //
-            String abnMRI = this.AbnormalityMRI();
-
-            //
-            // Ultra Sound
-            //
-            String abnUltraSound = this.AbUltraSound();
-
-            ProfileTarget[] abnormalityTargets = new ProfileTarget[]
-            {
-                new ProfileTarget(abnMammo, 0, "*"),
-                new ProfileTarget(abnMRI, 0, "*"),
-                new ProfileTarget(abnUltraSound, 0, "*")
-            };
-
-            String patientRiskUrl = this.SectionPatientRisk();
-            String patientHistoryUrl = this.SectionPatientHistory();
-            String findingsLeftUrl = this.SectionFindingsLeftBreast(abnormalityTargets);
-            String findingsRightUrl = this.SectionFindingsRightBreast(abnormalityTargets);
-            String findingsUrl = this.SectionFindings(findingsLeftUrl, findingsRightUrl);
-            this.breastRadiologyReportUrl = this.BreastRadiologyReport(patientHistoryUrl, findingsUrl, patientRiskUrl);
+            String report = this.BreastRadiologyReport;
 
             this.SaveAll();
             this.fc.Dispose();
@@ -412,9 +338,9 @@ namespace BreastRadiology.XUnitTests
 
             SvgEditor e = new SvgEditor();
             SENodeGroup rootGroup = new SENodeGroup("root");
-            SENode rootNode = CreateNode(this.breastRadiologyReportUrl);
+            SENode rootNode = CreateNode(this.BreastRadiologyReport);
             rootGroup.Nodes.Add(rootNode);
-            MapNode mapNode = ResourceMap.Self.GetMapNode(this.breastRadiologyReportUrl);
+            MapNode mapNode = ResourceMap.Self.GetMapNode(this.BreastRadiologyReport);
             MapLink[] links = TargetLinks(mapNode).ToArray();
             AddChildren(mapNode, links, rootGroup);
             e.Render(rootGroup);

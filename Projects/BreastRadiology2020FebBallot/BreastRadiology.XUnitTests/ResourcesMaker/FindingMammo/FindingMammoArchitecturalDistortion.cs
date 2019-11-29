@@ -13,7 +13,18 @@ namespace BreastRadiology.XUnitTests
 {
     public partial class ResourcesMaker : ConverterBase
     {
-        String FindingMammoArchitecturalDistortion()
+        String FindingMammoArchitecturalDistortion
+        {
+            get
+            {
+                if (findingMammoArchitecturalDistortion == null)
+                    findingMammoArchitecturalDistortion = CreateFindingMammoArchitecturalDistortion();
+                return findingMammoArchitecturalDistortion;
+            }
+        }
+        String findingMammoArchitecturalDistortion = null;
+
+        String CreateFindingMammoArchitecturalDistortion()
         {
             SDefEditor e = this.CreateObservationEditor("BreastRadFindingMammoArchitecturalDistortion",
                         "Breast Radiology Finding Architectural Distortion (Mammography)",

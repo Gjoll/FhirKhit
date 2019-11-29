@@ -13,9 +13,18 @@ namespace BreastRadiology.XUnitTests
 {
     public partial class ResourcesMaker : ConverterBase
     {
-        String FindingMammoMass(String massShape,
-            String massMargin,
-            String massDensity)
+        String FindingMammoMass
+        {
+            get
+            {
+                if (findingMammoMass == null)
+                    findingMammoMass = CreateFindingMammoMass();
+                return findingMammoMass;
+            }
+        }
+        String findingMammoMass = null;
+
+        String CreateFindingMammoMass()
         {
             SDefEditor e = this.CreateObservationEditor("BreastRadFindingMammoMass",
                     "Breast Radiology Finding Mammography Mass Observation",
@@ -38,15 +47,15 @@ namespace BreastRadiology.XUnitTests
                     .Paragraph("If the CodedValue value is set to present, then references to the above member observations should be ",
                                 "present and non-null, otherwise references should be empty")
                 )
-                .AddFragRef(this.breastBodyLocationRequiredFragmentUrl)
-                .AddFragRef(this.observationSectionFragmentUrl)
+                .AddFragRef(this.BreastBodyLocationRequiredFragment)
+                .AddFragRef(this.ObservationSectionFragment)
                 ;
             {
                 ProfileTarget[] targets = new ProfileTarget[]
                 {
-                    new ProfileTarget(massShape, 0, "1"),
-                    new ProfileTarget(massMargin, 0, "1"),
-                    new ProfileTarget(massDensity, 0, "1")
+                    new ProfileTarget(this.FindingMassShape, 0, "1"),
+                    new ProfileTarget(this.FindingMammoMassMargin, 0, "1"),
+                    new ProfileTarget(this.FindingMammoMassDensity, 0, "1")
                 };
                 e.Find("hasMember").SliceByUrl(targets);
                 e.MapNode.AddProfileTargets(targets);
