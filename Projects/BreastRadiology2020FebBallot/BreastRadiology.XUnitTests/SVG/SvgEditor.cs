@@ -239,7 +239,13 @@ namespace BreastRadiology.XUnitTests
             if (node.HRef != null)
             {
                 SvgHyperLink l = this.doc.AddHyperLink(g);
+                l.Target = "_blank";
                 l.HRef = node.HRef.ToString();
+                if (node.Title != null)
+                {
+                    SvgTitle title = this.doc.AddTitle(l);
+                    title.Value = node.Title;
+                }
                 square = this.doc.AddRect(l);
             }
             else
@@ -265,7 +271,13 @@ namespace BreastRadiology.XUnitTests
                 if (line.HRef != null)
                 {
                     SvgHyperLink l = this.doc.AddHyperLink(g);
-                    l.HRef = line.HRef.ToString();
+                    l.HRef = line.HRef;
+                    l.Target = "_blank";
+                    if (line.Title != null)
+                    {
+                        SvgTitle title = this.doc.AddTitle(l);
+                        title.Value = line.Title;
+                    }
                     t = this.doc.AddText(l);
                 }
                 else

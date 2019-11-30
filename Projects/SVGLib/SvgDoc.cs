@@ -605,6 +605,18 @@ namespace SVGLib
         }
 
         /// <summary>
+        /// It creates a new SVG Title element.
+        /// </summary>
+        /// <param name="parent">Parent element. If null the element is added under the root.</param>
+        /// <returns>New element created.</returns>
+        public SvgTitle AddTitle(SvgElement parent)
+        {
+            SvgTitle title = new SvgTitle(this);
+            AddElement(parent, title);
+            return title;
+        }
+
+        /// <summary>
         /// It creates a new SVG HyperLinkelement.
         /// </summary>
         /// <param name="parent">Parent element. If null the element is added under the root.</param>

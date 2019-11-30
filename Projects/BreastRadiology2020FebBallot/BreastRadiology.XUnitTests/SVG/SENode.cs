@@ -13,14 +13,17 @@ namespace BreastRadiology.XUnitTests
         public List<SEText> TextLines = new List<SEText>();
         public Color FillColor { get; set; } = Color.LightBlue;
         public String HRef {get; set; }
+        public String Title {get; set; }
 
         public SENode(float width,
             Color fillColor,
-            String hRef = null)
+            String hRef = null,
+            String title = null)
         {
             this.Width = width;
             this.FillColor = fillColor;
             this.HRef = hRef;
+            this.Title = title;
         }
 
         public SENode()
@@ -43,9 +46,9 @@ namespace BreastRadiology.XUnitTests
             return this;
         }
 
-        public SENode AddTextLine(String text, String hRef = null)
+        public SENode AddTextLine(String text, String hRef = null, String title = null)
         {
-            return this.AddTextLine(new SEText(text, hRef));
+            return this.AddTextLine(new SEText(text, hRef, title));
         }
     }
 }

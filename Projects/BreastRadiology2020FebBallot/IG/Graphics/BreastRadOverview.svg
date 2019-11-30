@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1072.5" height="1623.75">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1065" height="1455">
 <defs>
 <marker id="arrowStart" markerWidth="3.75" markerHeight="3.75" markerUnits="px" refX="1.875" refY="1.875">
 <circle fill="Black" stroke-width="0" cx="1.875" cy="1.875" r="1.875" />
@@ -12,36 +12,57 @@
 <g>
 <g>
 <rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="7.5" y="7.5" width="82.5" height="71.25" rx="3.75" ry="3.75" />
+<a href="../Guide/Output/StructureDefinition-BreastRadReport.html" target="_blank">
+<title>Click -> 'BreastRadReport'</title>
 <text x="15" y="30">Breast</text>
+</a>
+<a href="../Guide/Output/StructureDefinition-BreastRadReport.html" target="_blank">
+<title>Click -> 'BreastRadReport'</title>
 <text x="15" y="48.75">Radiology</text>
+</a>
+<a href="../Guide/Output/StructureDefinition-BreastRadReport.html" target="_blank">
+<title>Click -> 'BreastRadReport'</title>
 <text x="15" y="67.5">Report</text>
+</a>
 </g>
 <line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="90" y1="43.125" x2="120" y2="43.125" />
 <line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="120" y1="24.375" x2="150" y2="24.375" />
 <line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="120" y1="65.625" x2="150" y2="65.625" />
 <line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="120" y1="106.875" x2="150" y2="106.875" />
 <line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="120" y1="148.125" x2="150" y2="148.125" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="120" y1="1575" x2="150" y2="1575" />
-<line stroke="Black" stroke-width="1.875" x1="120" y1="24.375" x2="120" y2="1575" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="120" y1="1406.25" x2="150" y2="1406.25" />
+<line stroke="Black" stroke-width="1.875" x1="120" y1="24.375" x2="120" y2="1406.25" />
 </g>
 <g>
 <g>
 <rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="150" y="7.5" width="127.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="../Guide/Output/StructureDefinition-BreastRadRecommendations.html" target="_blank">
+<title>Click -> 'BreastRadRecommendations'</title>
 <text x="157.5" y="30">Recommendations</text>
+</a>
 </g>
 <g>
 <rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="150" y="48.75" width="112.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="../Guide/Output/StructureDefinition-BreastRadPriorReports.html" target="_blank">
+<title>Click -> 'BreastRadPriorReports'</title>
 <text x="157.5" y="71.25">Prior Reports</text>
+</a>
 </g>
 <g>
 <rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="150" y="90" width="127.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="../Guide/Output/StructureDefinition-BreastRadSectionPatientHistory.html" target="_blank">
+<title>Click -> 'BreastRadSectionPatientHistory'</title>
 <text x="157.5" y="112.5">Patient History</text>
+</a>
 </g>
 </g>
 <g>
 <g>
 <rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="150" y="131.25" width="75" height="33.75" rx="3.75" ry="3.75" />
+<a href="../Guide/Output/StructureDefinition-BreastRadSectionFindings.html" target="_blank">
+<title>Click -> 'BreastRadSectionFindings'</title>
 <text x="157.5" y="153.75">Findings</text>
+</a>
 </g>
 <line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="225" y1="148.125" x2="255" y2="148.125" />
 <line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="255" y1="148.125" x2="285" y2="148.125" />
@@ -51,242 +72,385 @@
 <g>
 <g>
 <rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="285" y="131.25" width="97.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="../Guide/Output/StructureDefinition-BreastRadSectionFindingsLeftBreast.html" target="_blank">
+<title>Click -> 'BreastRadSectionFindingsLeftBreast'</title>
 <text x="292.5" y="153.75">Left Breast</text>
+</a>
 </g>
 <g>
 <rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="285" y="172.5" width="105" height="33.75" rx="3.75" ry="3.75" />
+<a href="../Guide/Output/StructureDefinition-BreastRadSectionFindingsRightBreast.html" target="_blank">
+<title>Click -> 'BreastRadSectionFindingsRightBreast'</title>
 <text x="292.5" y="195">Right Breast</text>
+</a>
 </g>
 <line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="382.5" y1="148.125" x2="420" y2="148.125" />
 <line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="390" y1="189.375" x2="420" y2="189.375" />
 <line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="420" y1="157.5" x2="450" y2="157.5" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="420" y1="1473.75" x2="450" y2="1473.75" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="420" y1="1524.375" x2="450" y2="1524.375" />
-<line stroke="Black" stroke-width="1.875" x1="420" y1="148.125" x2="420" y2="1524.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="420" y1="1305" x2="450" y2="1305" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="420" y1="1355.625" x2="450" y2="1355.625" />
+<line stroke="Black" stroke-width="1.875" x1="420" y1="148.125" x2="420" y2="1355.625" />
 </g>
 <g>
 <g>
 <rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="450" y="131.25" width="67.5" height="52.5" rx="3.75" ry="3.75" />
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoFinding.html" target="_blank">
+<title>Click -> 'BreastRadMammoFinding'</title>
 <text x="457.5" y="153.75">Mammo</text>
+</a>
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoFinding.html" target="_blank">
+<title>Click -> 'BreastRadMammoFinding'</title>
 <text x="457.5" y="172.5">Finding</text>
+</a>
 </g>
 <line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="517.5" y1="157.5" x2="547.5" y2="157.5" />
 <line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="547.5" y1="157.5" x2="577.5" y2="157.5" />
 <line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="547.5" y1="208.125" x2="577.5" y2="208.125" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="547.5" y1="429.375" x2="577.5" y2="429.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="547.5" y1="637.5" x2="577.5" y2="637.5" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="547.5" y1="688.125" x2="577.5" y2="688.125" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="547.5" y1="785.625" x2="577.5" y2="785.625" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="547.5" y1="855" x2="577.5" y2="855" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="547.5" y1="915" x2="577.5" y2="915" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="547.5" y1="984.375" x2="577.5" y2="984.375" />
-<line stroke="Black" stroke-width="1.875" x1="547.5" y1="157.5" x2="547.5" y2="984.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="547.5" y1="391.875" x2="577.5" y2="391.875" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="547.5" y1="543.75" x2="577.5" y2="543.75" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="547.5" y1="594.375" x2="577.5" y2="594.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="547.5" y1="673.125" x2="577.5" y2="673.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="547.5" y1="742.5" x2="577.5" y2="742.5" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="547.5" y1="802.5" x2="577.5" y2="802.5" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="547.5" y1="862.5" x2="577.5" y2="862.5" />
+<line stroke="Black" stroke-width="1.875" x1="547.5" y1="157.5" x2="547.5" y2="862.5" />
 </g>
 <g>
 <g>
 <rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="577.5" y="131.25" width="67.5" height="52.5" rx="3.75" ry="3.75" />
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoBreastDensity.html" target="_blank">
+<title>Click -> 'BreastRadMammoBreastDensity'</title>
 <text x="585" y="153.75">Breast</text>
+</a>
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoBreastDensity.html" target="_blank">
+<title>Click -> 'BreastRadMammoBreastDensity'</title>
 <text x="585" y="172.5">Density</text>
+</a>
 </g>
 </g>
 <g>
 <g>
 <rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="577.5" y="191.25" width="45" height="33.75" rx="3.75" ry="3.75" />
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoMass.html" target="_blank">
+<title>Click -> 'BreastRadMammoMass'</title>
 <text x="585" y="213.75">Mass</text>
+</a>
 </g>
 <line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="622.5" y1="208.125" x2="652.5" y2="208.125" />
 <line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="652.5" y1="208.125" x2="682.5" y2="208.125" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="652.5" y1="258.75" x2="682.5" y2="258.75" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="652.5" y1="309.375" x2="682.5" y2="309.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="652.5" y1="369.375" x2="682.5" y2="369.375" />
-<line stroke="Black" stroke-width="1.875" x1="652.5" y1="208.125" x2="652.5" y2="369.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="652.5" y1="249.375" x2="682.5" y2="249.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="652.5" y1="290.625" x2="682.5" y2="290.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="652.5" y1="341.25" x2="682.5" y2="341.25" />
+<line stroke="Black" stroke-width="1.875" x1="652.5" y1="208.125" x2="652.5" y2="341.25" />
 </g>
 <g>
 <g>
 <rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="682.5" y="191.25" width="52.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="../Guide/Output/StructureDefinition-BreastRadMassShape.html" target="_blank">
+<title>Click -> 'BreastRadMassShape'</title>
 <text x="690" y="213.75">Shape</text>
+</a>
 </g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="682.5" y="232.5" width="60" height="52.5" rx="3.75" ry="3.75" />
-<text x="690" y="255">Mass</text>
-<text x="690" y="273.75">Margin</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="682.5" y="232.5" width="60" height="33.75" rx="3.75" ry="3.75" />
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoMassMargin.html" target="_blank">
+<title>Click -> 'BreastRadMammoMassMargin'</title>
+<text x="690" y="255">Margin</text>
+</a>
 </g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="682.5" y="292.5" width="67.5" height="33.75" rx="3.75" ry="3.75" />
-<text x="690" y="315">Density</text>
-</g>
-</g>
-<g>
-<g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="682.5" y="333.75" width="90" height="71.25" rx="3.75" ry="3.75" />
-<text x="690" y="356.25">Mammo</text>
-<text x="690" y="375">Associated</text>
-<text x="690" y="393.75">Features</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="682.5" y="273.75" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoMassDensity.html" target="_blank">
+<title>Click -> 'BreastRadMammoMassDensity'</title>
+<text x="690" y="296.25">Density</text>
+</a>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="577.5" y="412.5" width="112.5" height="33.75" rx="3.75" ry="3.75" />
-<text x="585" y="435">Calcification</text>
-</g>
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="690" y1="429.375" x2="720" y2="429.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="720" y1="438.75" x2="750" y2="438.75" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="720" y1="498.75" x2="750" y2="498.75" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="720" y1="568.125" x2="750" y2="568.125" />
-<line stroke="Black" stroke-width="1.875" x1="720" y1="429.375" x2="720" y2="568.125" />
-</g>
-<g>
-<g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="750" y="412.5" width="112.5" height="52.5" rx="3.75" ry="3.75" />
-<text x="757.5" y="435">Calcification</text>
-<text x="757.5" y="453.75">Type</text>
-</g>
-<g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="750" y="472.5" width="112.5" height="52.5" rx="3.75" ry="3.75" />
-<text x="757.5" y="495">Calcification</text>
-<text x="757.5" y="513.75">Distribution</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="682.5" y="315" width="90" height="52.5" rx="3.75" ry="3.75" />
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
+<title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
+<text x="690" y="337.5">Associated</text>
+</a>
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
+<title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
+<text x="690" y="356.25">Features</text>
+</a>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="750" y="532.5" width="90" height="71.25" rx="3.75" ry="3.75" />
-<text x="757.5" y="555">Mammo</text>
-<text x="757.5" y="573.75">Associated</text>
-<text x="757.5" y="592.5">Features</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="577.5" y="375" width="112.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoCalcification.html" target="_blank">
+<title>Click -> 'BreastRadMammoCalcification'</title>
+<text x="585" y="397.5">Calcification</text>
+</a>
+</g>
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="690" y1="391.875" x2="720" y2="391.875" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="720" y1="391.875" x2="750" y2="391.875" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="720" y1="433.125" x2="750" y2="433.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="720" y1="483.75" x2="750" y2="483.75" />
+<line stroke="Black" stroke-width="1.875" x1="720" y1="391.875" x2="720" y2="483.75" />
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="750" y="375" width="45" height="33.75" rx="3.75" ry="3.75" />
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoCalcificationType.html" target="_blank">
+<title>Click -> 'BreastRadMammoCalcificationType'</title>
+<text x="757.5" y="397.5">Type</text>
+</a>
+</g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="750" y="416.25" width="105" height="33.75" rx="3.75" ry="3.75" />
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoCalcificationDistribution.html" target="_blank">
+<title>Click -> 'BreastRadMammoCalcificationDistribution'</title>
+<text x="757.5" y="438.75">Distribution</text>
+</a>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="577.5" y="611.25" width="90" height="52.5" rx="3.75" ry="3.75" />
-<text x="585" y="633.75">Arch.</text>
-<text x="585" y="652.5">Distortion</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="750" y="457.5" width="90" height="52.5" rx="3.75" ry="3.75" />
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
+<title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
+<text x="757.5" y="480">Associated</text>
+</a>
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
+<title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
+<text x="757.5" y="498.75">Features</text>
+</a>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="577.5" y="671.25" width="97.5" height="33.75" rx="3.75" ry="3.75" />
-<text x="585" y="693.75">Asymmetries</text>
-</g>
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="675" y1="688.125" x2="705" y2="688.125" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="705" y1="706.875" x2="735" y2="706.875" />
-<line stroke="Black" stroke-width="1.875" x1="705" y1="688.125" x2="705" y2="706.875" />
-</g>
-<g>
-<g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="735" y="671.25" width="90" height="71.25" rx="3.75" ry="3.75" />
-<text x="742.5" y="693.75">Mammo</text>
-<text x="742.5" y="712.5">Associated</text>
-<text x="742.5" y="731.25">Features</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="577.5" y="517.5" width="90" height="52.5" rx="3.75" ry="3.75" />
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoArchitecturalDistortion.html" target="_blank">
+<title>Click -> 'BreastRadMammoArchitecturalDistortion'</title>
+<text x="585" y="540">Arch.</text>
+</a>
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoArchitecturalDistortion.html" target="_blank">
+<title>Click -> 'BreastRadMammoArchitecturalDistortion'</title>
+<text x="585" y="558.75">Distortion</text>
+</a>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="577.5" y="750" width="105" height="71.25" rx="3.75" ry="3.75" />
-<text x="585" y="772.5">Intramammory</text>
-<text x="585" y="791.25">Lymph</text>
-<text x="585" y="810">Node</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="577.5" y="577.5" width="97.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoAsymmetries.html" target="_blank">
+<title>Click -> 'BreastRadMammoAsymmetries'</title>
+<text x="585" y="600">Asymmetries</text>
+</a>
 </g>
-<g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="577.5" y="828.75" width="60" height="52.5" rx="3.75" ry="3.75" />
-<text x="585" y="851.25">Skin</text>
-<text x="585" y="870">Lesion</text>
-</g>
-<g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="577.5" y="888.75" width="75" height="52.5" rx="3.75" ry="3.75" />
-<text x="585" y="911.25">Dialated</text>
-<text x="585" y="930">Duct</text>
-</g>
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="675" y1="594.375" x2="705" y2="594.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="705" y1="603.75" x2="735" y2="603.75" />
+<line stroke="Black" stroke-width="1.875" x1="705" y1="594.375" x2="705" y2="603.75" />
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="577.5" y="948.75" width="90" height="71.25" rx="3.75" ry="3.75" />
-<text x="585" y="971.25">Mammo</text>
-<text x="585" y="990">Associated</text>
-<text x="585" y="1008.75">Features</text>
-</g>
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="667.5" y1="984.375" x2="697.5" y2="984.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="697.5" y1="975" x2="727.5" y2="975" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="697.5" y1="1035" x2="727.5" y2="1035" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="697.5" y1="1095" x2="727.5" y2="1095" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="697.5" y1="1155" x2="727.5" y2="1155" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="697.5" y1="1215" x2="727.5" y2="1215" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="697.5" y1="1265.625" x2="727.5" y2="1265.625" />
-<line stroke="Black" stroke-width="1.875" x1="697.5" y1="975" x2="697.5" y2="1265.625" />
-</g>
-<g>
-<g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="727.5" y="948.75" width="90" height="52.5" rx="3.75" ry="3.75" />
-<text x="735" y="971.25">Skin</text>
-<text x="735" y="990">Retraction</text>
-</g>
-<g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="727.5" y="1008.75" width="90" height="52.5" rx="3.75" ry="3.75" />
-<text x="735" y="1031.25">Nipple</text>
-<text x="735" y="1050">Retraction</text>
-</g>
-<g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="727.5" y="1068.75" width="90" height="52.5" rx="3.75" ry="3.75" />
-<text x="735" y="1091.25">Skin</text>
-<text x="735" y="1110">Thickening</text>
-</g>
-<g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="727.5" y="1128.75" width="90" height="52.5" rx="3.75" ry="3.75" />
-<text x="735" y="1151.25">Axillary</text>
-<text x="735" y="1170">Adenopathy</text>
-</g>
-<g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="727.5" y="1188.75" width="90" height="52.5" rx="3.75" ry="3.75" />
-<text x="735" y="1211.25">Arch.</text>
-<text x="735" y="1230">Distortion</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="735" y="577.5" width="90" height="52.5" rx="3.75" ry="3.75" />
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
+<title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
+<text x="742.5" y="600">Associated</text>
+</a>
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
+<title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
+<text x="742.5" y="618.75">Features</text>
+</a>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="727.5" y="1248.75" width="112.5" height="33.75" rx="3.75" ry="3.75" />
-<text x="735" y="1271.25">Calcification</text>
-</g>
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="840" y1="1265.625" x2="870" y2="1265.625" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="870" y1="1275" x2="900" y2="1275" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="870" y1="1335" x2="900" y2="1335" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="870" y1="1404.375" x2="900" y2="1404.375" />
-<line stroke="Black" stroke-width="1.875" x1="870" y1="1265.625" x2="870" y2="1404.375" />
-</g>
-<g>
-<g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="900" y="1248.75" width="112.5" height="52.5" rx="3.75" ry="3.75" />
-<text x="907.5" y="1271.25">Calcification</text>
-<text x="907.5" y="1290">Type</text>
-</g>
-<g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="900" y="1308.75" width="112.5" height="52.5" rx="3.75" ry="3.75" />
-<text x="907.5" y="1331.25">Calcification</text>
-<text x="907.5" y="1350">Distribution</text>
-</g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="577.5" y="637.5" width="105" height="71.25" rx="3.75" ry="3.75" />
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoIntramammaryLymphNode.html" target="_blank">
+<title>Click -> 'BreastRadMammoIntramammaryLymphNode'</title>
+<text x="585" y="660">Intramammory</text>
+</a>
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoIntramammaryLymphNode.html" target="_blank">
+<title>Click -> 'BreastRadMammoIntramammaryLymphNode'</title>
+<text x="585" y="678.75">Lymph</text>
+</a>
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoIntramammaryLymphNode.html" target="_blank">
+<title>Click -> 'BreastRadMammoIntramammaryLymphNode'</title>
+<text x="585" y="697.5">Node</text>
+</a>
 </g>
 <g>
-<g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="900" y="1368.75" width="90" height="71.25" rx="3.75" ry="3.75" />
-<text x="907.5" y="1391.25">Mammo</text>
-<text x="907.5" y="1410">Associated</text>
-<text x="907.5" y="1428.75">Features</text>
-</g>
-</g>
-<g>
-<g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="450" y="1447.5" width="67.5" height="52.5" rx="3.75" ry="3.75" />
-<text x="457.5" y="1470">MRI</text>
-<text x="457.5" y="1488.75">Finding</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="577.5" y="716.25" width="60" height="52.5" rx="3.75" ry="3.75" />
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoSkinLesion.html" target="_blank">
+<title>Click -> 'BreastRadMammoSkinLesion'</title>
+<text x="585" y="738.75">Skin</text>
+</a>
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoSkinLesion.html" target="_blank">
+<title>Click -> 'BreastRadMammoSkinLesion'</title>
+<text x="585" y="757.5">Lesion</text>
+</a>
 </g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="450" y="1507.5" width="90" height="33.75" rx="3.75" ry="3.75" />
-<text x="457.5" y="1530">UltraSound</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="577.5" y="776.25" width="75" height="52.5" rx="3.75" ry="3.75" />
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoSolitaryDilatedDuct.html" target="_blank">
+<title>Click -> 'BreastRadMammoSolitaryDilatedDuct'</title>
+<text x="585" y="798.75">Dialated</text>
+</a>
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoSolitaryDilatedDuct.html" target="_blank">
+<title>Click -> 'BreastRadMammoSolitaryDilatedDuct'</title>
+<text x="585" y="817.5">Duct</text>
+</a>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="150" y="1548.75" width="67.5" height="52.5" rx="3.75" ry="3.75" />
-<text x="157.5" y="1571.25">Patient</text>
-<text x="157.5" y="1590">Risk</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="577.5" y="836.25" width="90" height="52.5" rx="3.75" ry="3.75" />
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
+<title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
+<text x="585" y="858.75">Associated</text>
+</a>
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
+<title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
+<text x="585" y="877.5">Features</text>
+</a>
+</g>
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="667.5" y1="862.5" x2="697.5" y2="862.5" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="697.5" y1="862.5" x2="727.5" y2="862.5" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="697.5" y1="922.5" x2="727.5" y2="922.5" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="697.5" y1="982.5" x2="727.5" y2="982.5" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="697.5" y1="1042.5" x2="727.5" y2="1042.5" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="697.5" y1="1102.5" x2="727.5" y2="1102.5" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="697.5" y1="1153.125" x2="727.5" y2="1153.125" />
+<line stroke="Black" stroke-width="1.875" x1="697.5" y1="862.5" x2="697.5" y2="1153.125" />
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="727.5" y="836.25" width="90" height="52.5" rx="3.75" ry="3.75" />
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoSkinRetraction.html" target="_blank">
+<title>Click -> 'BreastRadMammoSkinRetraction'</title>
+<text x="735" y="858.75">Skin</text>
+</a>
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoSkinRetraction.html" target="_blank">
+<title>Click -> 'BreastRadMammoSkinRetraction'</title>
+<text x="735" y="877.5">Retraction</text>
+</a>
+</g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="727.5" y="896.25" width="90" height="52.5" rx="3.75" ry="3.75" />
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoNippleRetraction.html" target="_blank">
+<title>Click -> 'BreastRadMammoNippleRetraction'</title>
+<text x="735" y="918.75">Nipple</text>
+</a>
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoNippleRetraction.html" target="_blank">
+<title>Click -> 'BreastRadMammoNippleRetraction'</title>
+<text x="735" y="937.5">Retraction</text>
+</a>
+</g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="727.5" y="956.25" width="90" height="52.5" rx="3.75" ry="3.75" />
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoSkinThickening.html" target="_blank">
+<title>Click -> 'BreastRadMammoSkinThickening'</title>
+<text x="735" y="978.75">Skin</text>
+</a>
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoSkinThickening.html" target="_blank">
+<title>Click -> 'BreastRadMammoSkinThickening'</title>
+<text x="735" y="997.5">Thickening</text>
+</a>
+</g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="727.5" y="1016.25" width="90" height="52.5" rx="3.75" ry="3.75" />
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoAxillaryAdenopathy.html" target="_blank">
+<title>Click -> 'BreastRadMammoAxillaryAdenopathy'</title>
+<text x="735" y="1038.75">Axillary</text>
+</a>
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoAxillaryAdenopathy.html" target="_blank">
+<title>Click -> 'BreastRadMammoAxillaryAdenopathy'</title>
+<text x="735" y="1057.5">Adenopathy</text>
+</a>
+</g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="727.5" y="1076.25" width="90" height="52.5" rx="3.75" ry="3.75" />
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoArchitecturalDistortion.html" target="_blank">
+<title>Click -> 'BreastRadMammoArchitecturalDistortion'</title>
+<text x="735" y="1098.75">Arch.</text>
+</a>
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoArchitecturalDistortion.html" target="_blank">
+<title>Click -> 'BreastRadMammoArchitecturalDistortion'</title>
+<text x="735" y="1117.5">Distortion</text>
+</a>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="727.5" y="1136.25" width="112.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoCalcification.html" target="_blank">
+<title>Click -> 'BreastRadMammoCalcification'</title>
+<text x="735" y="1158.75">Calcification</text>
+</a>
+</g>
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="840" y1="1153.125" x2="870" y2="1153.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="870" y1="1153.125" x2="900" y2="1153.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="870" y1="1194.375" x2="900" y2="1194.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="870" y1="1245" x2="900" y2="1245" />
+<line stroke="Black" stroke-width="1.875" x1="870" y1="1153.125" x2="870" y2="1245" />
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="900" y="1136.25" width="45" height="33.75" rx="3.75" ry="3.75" />
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoCalcificationType.html" target="_blank">
+<title>Click -> 'BreastRadMammoCalcificationType'</title>
+<text x="907.5" y="1158.75">Type</text>
+</a>
+</g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="900" y="1177.5" width="105" height="33.75" rx="3.75" ry="3.75" />
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoCalcificationDistribution.html" target="_blank">
+<title>Click -> 'BreastRadMammoCalcificationDistribution'</title>
+<text x="907.5" y="1200">Distribution</text>
+</a>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="900" y="1218.75" width="90" height="52.5" rx="3.75" ry="3.75" />
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
+<title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
+<text x="907.5" y="1241.25">Associated</text>
+</a>
+<a href="../Guide/Output/StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
+<title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
+<text x="907.5" y="1260">Features</text>
+</a>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="450" y="1278.75" width="67.5" height="52.5" rx="3.75" ry="3.75" />
+<a href="../Guide/Output/StructureDefinition-BreastRadMRIFinding.html" target="_blank">
+<title>Click -> 'BreastRadMRIFinding'</title>
+<text x="457.5" y="1301.25">MRI</text>
+</a>
+<a href="../Guide/Output/StructureDefinition-BreastRadMRIFinding.html" target="_blank">
+<title>Click -> 'BreastRadMRIFinding'</title>
+<text x="457.5" y="1320">Finding</text>
+</a>
+</g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="450" y="1338.75" width="90" height="33.75" rx="3.75" ry="3.75" />
+<a href="../Guide/Output/StructureDefinition-BreastRadUltraSoundFinding.html" target="_blank">
+<title>Click -> 'BreastRadUltraSoundFinding'</title>
+<text x="457.5" y="1361.25">UltraSound</text>
+</a>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="150" y="1380" width="67.5" height="52.5" rx="3.75" ry="3.75" />
+<a href="../Guide/Output/StructureDefinition-BreastRadSectionPatientRisk.html" target="_blank">
+<title>Click -> 'BreastRadSectionPatientRisk'</title>
+<text x="157.5" y="1402.5">Patient</text>
+</a>
+<a href="../Guide/Output/StructureDefinition-BreastRadSectionPatientRisk.html" target="_blank">
+<title>Click -> 'BreastRadSectionPatientRisk'</title>
+<text x="157.5" y="1421.25">Risk</text>
+</a>
 </g>
 </g>
 </svg>

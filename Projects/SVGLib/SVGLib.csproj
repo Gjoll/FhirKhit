@@ -131,6 +131,7 @@
     <Compile Include="SvgRoot.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="SvgTitle.cs" />
     <Compile Include="SvgText.cs">
       <SubType>Code</SubType>
     </Compile>

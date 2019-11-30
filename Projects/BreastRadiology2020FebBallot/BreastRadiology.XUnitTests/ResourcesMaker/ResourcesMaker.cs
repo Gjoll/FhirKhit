@@ -299,8 +299,10 @@ namespace BreastRadiology.XUnitTests
                     throw new Exception("Internal error. Editor not found");
                 foreach (String titlePart in e.MapName)
                 {
+                    String hRef = $"../Guide/Output/StructureDefinition-{url.LastUriPart()}.html";
+                    String title = $"Click -> '{url.LastUriPart()}'";
                     String s = titlePart.Trim();
-                    node.AddTextLine(s);
+                    node.AddTextLine(s, hRef, title);
                 }
                 return node;
             }

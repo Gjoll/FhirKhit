@@ -9,6 +9,17 @@ namespace SVGLib
 	public class SvgHyperLink: SvgElement
 	{
 		/// <summary>
+		/// Target of link.
+		/// </summary>
+		[Category("(Specific)")]
+		[Description("Target")]
+		public string Target
+		{
+			get => GetAttributeStringValue(SvgAttribute._SvgAttribute.attrTarget);
+			set => SetAttributeValue(SvgAttribute._SvgAttribute.attrTarget, value);
+		}
+
+		/// <summary>
 		/// X-axis coordinate of the side of the element which has the smaller x-axis coordinate value in the current user coordinate system. If the attribute is not specified, the effect is as if a value of 0 were specified.
 		/// </summary>
 		[Category("(Specific)")]
@@ -16,7 +27,6 @@ namespace SVGLib
 		public string HRef
 		{
 			get => GetAttributeStringValue(SvgAttribute._SvgAttribute.attrXLink_HRef);
-
 			set => SetAttributeValue(SvgAttribute._SvgAttribute.attrXLink_HRef, value);
 		}
 
@@ -35,6 +45,7 @@ namespace SVGLib
 			m_ElementType = _SvgElementType.typeHyperLink;
 
 			AddAttr(SvgAttribute._SvgAttribute.attrXLink_HRef, "");
+			AddAttr(SvgAttribute._SvgAttribute.attrTarget, "");
 		}
 	}
 }

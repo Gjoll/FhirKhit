@@ -8,11 +8,13 @@ namespace BreastRadiology.XUnitTests
     {
         public String Text {get; set; }
         public String HRef {get; set; }
+        public String Title {get; set; }
 
-        public SEText(String text, String hRef = null)
+        public SEText(String text, String hRef = null, String title = null)
         {
             this.Text = text;
             this.HRef = hRef;
+            this.Title = title;
         }
 
         public SEText()

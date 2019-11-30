@@ -84,11 +84,11 @@ namespace SVGLib
             attrFont_Weight,
             attrXLink_Type,
             attrXLink_Role,
-            attrXLink_Title,
+            attrTitle,
             attrXLink_Show,
             attrXLink_Actuate,
             attrXLink_HRef,
-            attrXLink_Target,
+            attrTarget,
             attrMarkerWidth,
             attrMarkerHeight,
             attrRefX,
@@ -1317,7 +1317,7 @@ namespace SVGLib
 
             // ---
             info = new _AttrInfo();
-            info._type = _SvgAttribute.attrXLink_Target;
+            info._type = _SvgAttribute.attrTarget;
             info._group = _SvgAttributeGroup.groupXLink;
             info._name = "target";
 
@@ -1326,9 +1326,9 @@ namespace SVGLib
 
             // ---
             info = new _AttrInfo();
-            info._type = _SvgAttribute.attrXLink_Title;
+            info._type = _SvgAttribute.attrTitle;
             info._group = _SvgAttributeGroup.groupXLink;
-            info._name = "xlink:title";
+            info._name = "title";
 
             m_mapAttrInfo.Add(info._type, info);
             // ---
