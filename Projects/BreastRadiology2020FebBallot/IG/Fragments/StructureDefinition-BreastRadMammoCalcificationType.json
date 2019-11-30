@@ -13,6 +13,7 @@
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoCalcificationType",
   "name": "BreastRadMammoCalcificationType",
   "title": "Breast Radiology Mammography Calcification Type",
+  "status": "draft",
   "description": "Breast Radiology Mammography Calcification Type Observation",
   "fhirVersion": "4.0.0",
   "kind": "resource",

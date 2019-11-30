@@ -40,27 +40,6 @@
   </thead>
   <tbody>
 <tr>
-<td><a href="StructureDefinition-BreastBodyLocationRequiredFragment.html">BreastBodyLocationRequiredFragment</a></td>
-<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
-<td>{% capture md_text %}
-Fragment definition for an required Breast Body Location
-{% endcapture %}{{ md_text | markdownify }}</td>
-</tr>
-<tr>
-<td><a href="StructureDefinition-BreastRadAbnormalityMRI.html">BreastRadAbnormalityMRI</a></td>
-<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
-<td>{% capture md_text %}
-MRI Breast Abnormality Observation
-{% endcapture %}{{ md_text | markdownify }}</td>
-</tr>
-<tr>
-<td><a href="StructureDefinition-BreastRadAbnormalityUltraSound.html">BreastRadAbnormalityUltraSound</a></td>
-<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
-<td>{% capture md_text %}
-UltraSound Breast Abnormality Observation
-{% endcapture %}{{ md_text | markdownify }}</td>
-</tr>
-<tr>
 <td><a href="StructureDefinition-BreastRadMammoArchitecturalDistortion.html">BreastRadMammoArchitecturalDistortion</a></td>
 <td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
 <td>{% capture md_text %}
@@ -204,7 +183,7 @@ Breast Radiology Mammography Calcification Type Observation
 <td><a href="StructureDefinition-BreastRadMammoFinding.html">BreastRadMammoFinding</a></td>
 <td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
 <td>{% capture md_text %}
-Breast Radiology Mammography Finding Observation
+Breast Radiology Mammography Finding
 
 
 ### BI-RADS® ATLAS — MAMMOGRAPHY### FIFTH EDITION — 2013A "MASS" is three dimensional and occupies space. It is seen on two different mammographic pro-
@@ -371,6 +350,13 @@ findings, it has been reported to be associated with noncalcified DCIS.
 {% endcapture %}{{ md_text | markdownify }}</td>
 </tr>
 <tr>
+<td><a href="StructureDefinition-BreastRadMRIFinding.html">BreastRadMRIFinding</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Breast Radiology MRI Finding
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
 <td><a href="StructureDefinition-BreastRadReport.html">BreastRadReport</a></td>
 <td><a href="http://hl7.org/fhir/StructureDefinition/DiagnosticReport">DiagnosticReport</a></td>
 <td>{% capture md_text %}
@@ -422,52 +408,10 @@ Patient Risk Section
 {% endcapture %}{{ md_text | markdownify }}</td>
 </tr>
 <tr>
-<td><a href="StructureDefinition-CategoryFragment.html">CategoryFragment</a></td>
+<td><a href="StructureDefinition-BreastRadUltraSoundFinding.html">BreastRadUltraSoundFinding</a></td>
 <td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
 <td>{% capture md_text %}
-Fragment definition that slices category and adds the observation code value
-{% endcapture %}{{ md_text | markdownify }}</td>
-</tr>
-<tr>
-<td><a href="StructureDefinition-CodedValueObservationFragment.html">CodedValueObservationFragment</a></td>
-<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
-<td>{% capture md_text %}
-Fragment that defines values for coded observations.
-{% endcapture %}{{ md_text | markdownify }}</td>
-</tr>
-<tr>
-<td><a href="StructureDefinition-FindingObservationFragment.html">FindingObservationFragment</a></td>
-<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
-<td>{% capture md_text %}
-Fragment that defines values for finding observations values.
-{% endcapture %}{{ md_text | markdownify }}</td>
-</tr>
-<tr>
-<td><a href="StructureDefinition-FindingSectionFragment.html">FindingSectionFragment</a></td>
-<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
-<td>{% capture md_text %}
-Fragment that defines values for finding sections (Mammo, MRI, ETc).
-{% endcapture %}{{ md_text | markdownify }}</td>
-</tr>
-<tr>
-<td><a href="StructureDefinition-HeaderFragment.html">HeaderFragment</a></td>
-<td><a href="http://hl7.org/fhir/StructureDefinition/Resource">Resource</a></td>
-<td>{% capture md_text %}
-
-{% endcapture %}{{ md_text | markdownify }}</td>
-</tr>
-<tr>
-<td><a href="StructureDefinition-ObservationNoHasMembersFragment.html">ObservationNoHasMembersFragment</a></td>
-<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
-<td>{% capture md_text %}
-Fragment that defines restricts observations to have no hasMember references.
-{% endcapture %}{{ md_text | markdownify }}</td>
-</tr>
-<tr>
-<td><a href="StructureDefinition-ObservationSectionFragment.html">ObservationSectionFragment</a></td>
-<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
-<td>{% capture md_text %}
-
+Breast Radiology Ultra Sound Finding
 {% endcapture %}{{ md_text | markdownify }}</td>
 </tr>
   </tbody>

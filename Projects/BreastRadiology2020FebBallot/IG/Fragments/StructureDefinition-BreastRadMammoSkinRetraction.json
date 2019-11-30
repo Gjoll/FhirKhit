@@ -13,6 +13,7 @@
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoSkinRetraction",
   "name": "BreastRadMammoSkinRetraction",
   "title": "Breast Radiology Skin Retraction Observation",
+  "status": "draft",
   "description": "Skin Retraction Observation\n\n\n### BI-RADS® ATLAS — MAMMOGRAPHY### FIFTH EDITION — 2013The skin is pulled in abnormally\n### END BI-RADS® ATLAS — MAMMOGRAPHY TEXTIf this observation is present, and dataAbsentReason is empty, then {articleAndName} was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then {articleAndName} was not observed and dataAbsentReason contains the reason why{term}",
   "fhirVersion": "4.0.0",
   "kind": "resource",

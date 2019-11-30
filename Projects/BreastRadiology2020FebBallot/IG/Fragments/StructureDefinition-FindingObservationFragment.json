@@ -17,6 +17,7 @@
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/FindingObservationFragment",
   "name": "FindingObservationFragment",
   "title": "Finding Observation Fragment",
+  "status": "draft",
   "description": "Fragment that defines values for finding observations values.",
   "fhirVersion": "4.0.0",
   "kind": "resource",

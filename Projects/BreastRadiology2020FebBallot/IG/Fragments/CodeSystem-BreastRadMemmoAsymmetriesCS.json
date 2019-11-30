@@ -21,7 +21,7 @@
       "definition": "This is an area of fibroglandular-density tissue that is visible on only one mammographic projection. Most such findings represent summation artifact, a superimposition of normal breast structures, whereas those confirmed to be real lesions (by subsequent demonstration on at least one more projection) may represent one of the other types of asymmetry or a mass."
     },
     {
-      "code": "Asymmetry",
+      "code": "GlobalAsymmetry",
       "display": "Global Asymmetry",
       "definition": "Global asymmetry is judged relative to the corresponding area in the contralateral breast and represents a large amount of fibroglandular-density tissue over a substantial portion of the breast (at least one quadrant). There is no mass, distorted architecture or associated suspicious calcifications. Global asymmetry usually represents a normal variant."
     },

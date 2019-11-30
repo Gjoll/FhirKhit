@@ -3,6 +3,7 @@
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservationSectionFragment",
   "name": "ObservationSectionFragment",
   "title": "Observation Section Fragment",
+  "status": "draft",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": true,

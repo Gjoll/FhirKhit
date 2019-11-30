@@ -57,11 +57,6 @@ namespace BreastRadiology.XUnitTests
                             "Coarse or \"Popcorn-like\" Calcification (Typically Benign)",
                             "These are the classic large (> 2 to 3 mm in greatest diameter) calcifications produced by an involuting fibroadenoma."
                             ),
-                        new ConceptDef("",
-                            "Calcification (Typically Benign)",
-                            "These are the classic large (> 2 to 3 mm in greatest diameter) calcifications produced by an " +
-                            "involuting fibroadenoma."
-                            ),
                         new ConceptDef("LargeRodLike",
                             "Large Rod-Like Calcification (Typically Benign)",
                             "These benign calcifications associated with ductal ectasia may form solid or discontinuous " +

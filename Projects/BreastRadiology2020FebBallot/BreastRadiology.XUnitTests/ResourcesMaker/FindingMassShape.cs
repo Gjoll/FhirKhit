@@ -28,8 +28,8 @@ namespace BreastRadiology.XUnitTests
         void CreateFindingMassShape()
         {
             ValueSet vs = this.CreateValueSet(
-                    "BreastRadAbnormalityMassShape",
-                    "Breast Radiology Abnormality Mass Shape",
+                    "BreastRadMassShape",
+                    "Breast Radiology Mass Shape",
                     new Markdown()
                         .Paragraph("Breast Radiology Mass Shape"),
                     new ConceptDef[]
@@ -48,12 +48,12 @@ namespace BreastRadiology.XUnitTests
 
             String binding = vs.Url;
 
-            SDefEditor e = this.CreateObservationEditor("BreastRadAbnormalityMassShape",
-                    "Breast Radiology Abnormality Mass Shape",
+            SDefEditor e = this.CreateObservationEditor("BreastRadMassShape",
+                    "Breast Radiology Mass Shape",
                     new string[] { "Shape" },
                     out findingMassShape)
                 .Description(new Markdown()
-                    .Paragraph("Breast Radiology Abnormality Mass Shape Observation")
+                    .Paragraph("Breast Radiology Mass Shape Observation")
                     .MissingObservation("a mass shape")
                     )
                 .AddFragRef(this.ObservationNoHasMembersFragment)

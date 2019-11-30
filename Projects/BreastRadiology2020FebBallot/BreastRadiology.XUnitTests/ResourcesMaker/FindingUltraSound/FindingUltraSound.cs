@@ -27,17 +27,17 @@ namespace BreastRadiology.XUnitTests
         void CreateFindingUltraSound()
         {
             //$ Fix me. Incorrect method!!!
-            SDefEditor e =  this.CreateObservationEditor("BreastRadAbnormalityUltraSound",
-                    "Breast Radiology Abnormality (UltraSound)",
-                    new string[] {"UltraSound", "Abnormality"},
+            SDefEditor e =  this.CreateObservationEditor("BreastRadUltraSoundFinding",
+                    "Breast Radiology UltraSound Finding",
+                    new string[] {"UltraSound"},
                     out findingUltraSound)
-                .Description(new Markdown().Paragraph("UltraSound Breast Abnormality Observation"))
+                .Description(new Markdown().Paragraph("Breast Radiology Ultra Sound Finding"))
                 .AddFragRef(this.FindingSectionFragment)
                 ;
-            e.Find("method")
-             .FixedCodeSlice("method", "http://snomed.info/sct", "115341008")
-             .Card(1, "*")
-             ;
+            //$e.Find("method")
+            //$ .FixedCodeSlice("method", "http://snomed.info/sct", "115341008")
+            //$ .Card(1, "*")
+            //$ ;
         }
     }
 }

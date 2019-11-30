@@ -9,6 +9,7 @@
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocation",
   "name": "BreastBodyLocation",
   "title": "Breast Body Location",
+  "status": "draft",
   "description": "Breast Body Location extension",
   "fhirVersion": "4.0.0",
   "kind": "complex-type",

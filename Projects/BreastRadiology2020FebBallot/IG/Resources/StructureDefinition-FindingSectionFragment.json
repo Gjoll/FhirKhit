@@ -9,6 +9,7 @@
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/FindingSectionFragment",
   "name": "FindingSectionFragment",
   "title": "Finding Section Fragment",
+  "status": "draft",
   "description": "Fragment that defines values for finding sections (Mammo, MRI, ETc).",
   "fhirVersion": "4.0.0",
   "kind": "resource",

@@ -3,6 +3,7 @@
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CategoryFragment",
   "name": "CategoryFragment",
   "title": "Category Fragment",
+  "status": "draft",
   "description": "Fragment definition that slices category and adds the observation code value",
   "fhirVersion": "4.0.0",
   "kind": "resource",

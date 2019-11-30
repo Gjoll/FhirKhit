@@ -9,6 +9,7 @@
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadRecommendations",
   "name": "BreastRadRecommendations",
   "title": "Recommendations",
+  "status": "draft",
   "description": "Diagnostic Report recommendations section extension",
   "fhirVersion": "4.0.0",
   "kind": "complex-type",

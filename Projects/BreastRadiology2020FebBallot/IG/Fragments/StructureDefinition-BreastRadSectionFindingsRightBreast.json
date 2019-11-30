@@ -13,6 +13,7 @@
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadSectionFindingsRightBreast",
   "name": "BreastRadSectionFindingsRightBreast",
   "title": "Breast Radiology Findings Right Breast",
+  "status": "draft",
   "description": "Findings Right Breast Section",
   "fhirVersion": "4.0.0",
   "kind": "resource",
@@ -81,9 +82,9 @@
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadAbnormalityMRI",
+        "id": "Observation.hasMember:breastRadMRIFinding",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadAbnormalityMRI",
+        "sliceName": "breastRadMRIFinding",
         "min": 0,
         "max": "*",
         "base": {
@@ -95,15 +96,15 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadAbnormalityMRI"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMRIFinding"
             ]
           }
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadAbnormalityUltraSound",
+        "id": "Observation.hasMember:breastRadUltraSoundFinding",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadAbnormalityUltraSound",
+        "sliceName": "breastRadUltraSoundFinding",
         "min": 0,
         "max": "*",
         "base": {
@@ -115,7 +116,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadAbnormalityUltraSound"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadUltraSoundFinding"
             ]
           }
         ]

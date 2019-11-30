@@ -82,6 +82,7 @@ namespace BreastRadiology.XUnitTests
                 .Abstract(false)
                 .Type(baseDefinition.LastUriPart())
                 .Kind(StructureDefinition.StructureDefinitionKind.Resource)
+                .Status(PublicationStatus.Draft)
                 ;
 
             retVal.SDef.FhirVersion = FHIRVersion.N4_0_0;
@@ -187,6 +188,12 @@ namespace BreastRadiology.XUnitTests
 
             public ConceptDef(String code, String display, String definition)
             {
+                if (String.IsNullOrWhiteSpace(code) == true)
+                    throw new Exception("Empty code");
+                if (String.IsNullOrWhiteSpace(display) == true)
+                    throw new Exception("Empty Display");
+                if (String.IsNullOrWhiteSpace(definition) == true)
+                    throw new Exception("Empty definition");
                 Code = code;
                 Display = display;
                 Definition = definition;

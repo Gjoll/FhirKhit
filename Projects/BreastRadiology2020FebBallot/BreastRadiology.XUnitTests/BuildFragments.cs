@@ -94,6 +94,13 @@ namespace BreastRadiology.XUnitTests
                 pc.StatusWarnings += this.StatusWarnings;
                 pc.CreateResources();
                 pc.CreateMaps(graphicsDir);
+                if (pc.HasErrors)
+                {
+                    StringBuilder sb = new StringBuilder();
+                    pc.FormatErrorMessages(sb);
+                    Trace.WriteLine(sb.ToString());
+                    Debug.Assert(false);
+                }
             }
             catch (Exception err)
             {
@@ -122,6 +129,15 @@ namespace BreastRadiology.XUnitTests
                 preFhir.MergedDir = this.mergedDir;
                 preFhir.Process();
                 preFhir.SaveResources(this.resourcesDir, true);
+
+                if (preFhir.HasErrors)
+                {
+                    StringBuilder sb = new StringBuilder();
+                    preFhir.FormatErrorMessages(sb);
+                    Trace.WriteLine(sb.ToString());
+                    Debug.Assert(false);
+                }
+
                 TimeSpan executionTime = DateTime.Now - start;
                 Trace.WriteLine($"***** PreFhir execution Time {executionTime.ToString()}");
             }
@@ -189,8 +205,8 @@ namespace BreastRadiology.XUnitTests
                 "resources");
             FhirValidator fv = new FhirValidator();
             fv.StatusErrors += this.StatusErrors;
-            //fv.StatusInfo += this.StatusInfo;
-            //fv.StatusWarnings += this.StatusWarnings;
+            fv.StatusInfo += this.StatusInfo;
+            fv.StatusWarnings += this.StatusWarnings;
 
             bool success = fv.ValidateDir(rDir, "*.json", "4.0.0");
             StringBuilder sb = new StringBuilder();
@@ -241,6 +257,15 @@ namespace BreastRadiology.XUnitTests
                 p.AddResources(this.resourcesDir);
                 p.AddResources(this.manualDir);
                 p.SaveAll();
+
+                if (p.HasErrors)
+                {
+                    StringBuilder sb = new StringBuilder();
+                    p.FormatErrorMessages(sb);
+                    Trace.WriteLine(sb.ToString());
+                    Debug.Assert(false);
+                }
+
             }
             catch (Exception err)
             {

@@ -13,6 +13,7 @@
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadReport",
   "name": "BreastRadReport",
   "title": "Breast Radiology Report",
+  "status": "draft",
   "description": "Breast Radiology Diagnostic Report.\n\n\nThis diagnostic report has links to the data that comprise a Breast Radiology Report, including\n\n\n** references to prior breast radiology reports for this patient\n** references to the observations of this report\n** references to the recommendations of this report\n** a summary of the report findings in a human readable format",
   "fhirVersion": "4.0.0",
   "kind": "resource",

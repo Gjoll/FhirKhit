@@ -134,7 +134,8 @@ namespace BreastRadiology.XUnitTests
                             if (isFragmentExtension != null)
                                 structureDefinition.RemoveExtension(IsFragmentExtensionUrl);
                             Save(structureDefinition, $"{fixedName}.json");
-                            //if (isFragmentExtension == null)
+                            // Dont add fragments to IG.
+                            if (isFragmentExtension == null)
                                 this.AddIGStructureDefinition(structureDefinition);
                         }
                         break;

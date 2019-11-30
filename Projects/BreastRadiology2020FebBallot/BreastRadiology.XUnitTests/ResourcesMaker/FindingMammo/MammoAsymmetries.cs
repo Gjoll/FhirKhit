@@ -40,7 +40,7 @@ namespace BreastRadiology.XUnitTests
                             "Most such findings represent summation artifact, a superimposition of normal breast structures, " +
                             "whereas those confirmed to be real lesions (by subsequent demonstration on at least one " + 
                             "more projection) may represent one of the other types of asymmetry or a mass."),
-                        new ConceptDef("Asymmetry",
+                        new ConceptDef("GlobalAsymmetry",
                             "Global Asymmetry",
                             "Global asymmetry is judged relative to the corresponding area in the contralateral breast and "+
                             "represents a large amount of fibroglandular-density tissue over a substantial portion of the "+

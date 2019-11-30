@@ -10,10 +10,11 @@
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservationNoHasMembersFragment"
     }
   ],
-  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadAbnormalityMassShape",
-  "name": "BreastRadAbnormalityMassShape",
-  "title": "Breast Radiology Abnormality Mass Shape",
-  "description": "Breast Radiology Abnormality Mass Shape Observation\n\n\nIf this observation is present, and dataAbsentReason is empty, then {articleAndName} was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then {articleAndName} was not observed and dataAbsentReason contains the reason why{term}",
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMassShape",
+  "name": "BreastRadMassShape",
+  "title": "Breast Radiology Mass Shape",
+  "status": "draft",
+  "description": "Breast Radiology Mass Shape Observation\n\n\nIf this observation is present, and dataAbsentReason is empty, then {articleAndName} was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then {articleAndName} was not observed and dataAbsentReason contains the reason why{term}",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -45,7 +46,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadAbnormalityMassShapeVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadMassShapeVS"
         }
       }
     ]

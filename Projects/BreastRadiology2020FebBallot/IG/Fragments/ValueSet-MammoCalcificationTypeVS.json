@@ -29,10 +29,6 @@
             "display": "Coarse or \"Popcorn-like\" Calcification (Typically Benign)"
           },
           {
-            "code": "",
-            "display": "Calcification (Typically Benign)"
-          },
-          {
             "code": "LargeRodLike",
             "display": "Large Rod-Like Calcification (Typically Benign)"
           },

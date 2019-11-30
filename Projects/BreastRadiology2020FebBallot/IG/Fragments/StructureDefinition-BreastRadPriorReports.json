@@ -9,6 +9,7 @@
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadPriorReports",
   "name": "BreastRadPriorReports",
   "title": "Prior Reports",
+  "status": "draft",
   "description": "Prior Diagnostic Report extension",
   "fhirVersion": "4.0.0",
   "kind": "complex-type",

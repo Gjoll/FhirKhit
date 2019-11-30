@@ -1,9 +1,9 @@
 {
   "resourceType": "StructureDefinition",
-  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadAbnormalityMRI",
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadUltraSoundFinding",
   "version": "0.0.2",
-  "name": "BreastRadAbnormalityMRI",
-  "title": "Breast Radiology Abnormality (MRI)",
+  "name": "BreastRadUltraSoundFinding",
+  "title": "Breast Radiology UltraSound Finding",
   "status": "draft",
   "date": "2019-11-01",
   "publisher": "Hl7-Clinical Interoperability Council",
@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "MRI Breast Abnormality Observation",
+  "description": "Breast Radiology Ultra Sound Finding",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,

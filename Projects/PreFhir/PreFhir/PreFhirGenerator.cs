@@ -347,8 +347,6 @@ namespace PreFhir
         {
             const String fcn = "Process";
 
-            //Debug.Assert(processItem.Resource.GetUrl() != "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityObservation-Fragment");
-
             this.ConversionInfo(this.GetType().Name,
                 fcn,
                 $"Processing {processItem.Resource.GetName()}");

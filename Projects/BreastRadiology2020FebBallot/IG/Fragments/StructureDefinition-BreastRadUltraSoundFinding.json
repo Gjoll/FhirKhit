@@ -7,14 +7,14 @@
     },
     {
       "url": "http://www.fragment.com/fragment",
-      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservationSectionFragment"
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/FindingSectionFragment"
     }
   ],
-  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadSectionPatientRisk",
-  "name": "BreastRadSectionPatientRisk",
-  "title": "Breast Radiology Patient Risk Section",
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadUltraSoundFinding",
+  "name": "BreastRadUltraSoundFinding",
+  "title": "Breast Radiology UltraSound Finding",
   "status": "draft",
-  "description": "Patient Risk Section",
+  "description": "Breast Radiology Ultra Sound Finding",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -28,17 +28,6 @@
         "path": "Observation",
         "min": 0,
         "max": "*"
-      },
-      {
-        "id": "Observation.bodySite",
-        "path": "Observation.bodySite",
-        "min": 0,
-        "max": "0",
-        "base": {
-          "path": "Observation.bodySite",
-          "min": 0,
-          "max": "1"
-        }
       }
     ]
   }

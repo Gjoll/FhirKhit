@@ -1,15 +1,23 @@
 {
   "resourceType": "CodeSystem",
-  "id": "BreastRadAbnormalityMassShapeCS",
-  "extension": [
+  "id": "BreastRadMassShapeCS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadMassShapeCS",
+  "version": "0.0.2",
+  "name": "BreastRadMassShapeCS",
+  "title": "Breast Radiology Mass Shape",
+  "status": "draft",
+  "date": "2019-11-01",
+  "publisher": "Hl7-Clinical Interoperability Council",
+  "contact": [
     {
-      "url": "http://www.fragment.com/fragment",
-      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/cic"
+        }
+      ]
     }
   ],
-  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadAbnormalityMassShapeCS",
-  "name": "BreastRadAbnormalityMassShapeCS",
-  "title": "Breast Radiology Abnormality Mass Shape",
   "description": "Breast Radiology Mass Shape",
   "caseSensitive": true,
   "content": "complete",

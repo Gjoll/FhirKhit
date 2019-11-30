@@ -17,6 +17,7 @@
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservationNoHasMembersFragment",
   "name": "ObservationNoHasMembersFragment",
   "title": "Observation with no hasMember's Fragment",
+  "status": "draft",
   "description": "Fragment that defines restricts observations to have no hasMember references.",
   "fhirVersion": "4.0.0",
   "kind": "resource",

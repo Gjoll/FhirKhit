@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
                     new string[] {"Mammo", "Finding"},
                     out mammoFinding)
                 .Description(new Markdown()
-                            .Paragraph("Breast Radiology Mammography Finding Observation")
+                            .Paragraph("Breast Radiology Mammography Finding")
                             .BiradHeader()
                             .MarkedDown("A \"MASS\" is three dimensional and occupies space. It is seen on two different mammographic pro-")
                             .MarkedDown("jections. It has completely or partially convex-outward borders and (when radiodense) appears")
