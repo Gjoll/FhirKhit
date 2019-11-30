@@ -709,15 +709,20 @@ namespace PreFhir
             if (mergeElement.Slicing == null)
                 return;
 
-            if (baseElement.Slicing != null)
+            if (baseElement.Slicing == null)
             {
-                this.preFhir.ConversionError(this.GetType().Name,
-                    fcn,
-                    $"Error constaining {mergeElement.Path}. Not Supported (yet). Merge Element and Base Element both define a slicing component. ");
-                success = false;
+                baseElement.Slicing = (ElementDefinition.SlicingComponent)mergeElement.Slicing.DeepCopy();
                 return;
             }
-            baseElement.Slicing = (ElementDefinition.SlicingComponent)mergeElement.Slicing.DeepCopy();
+
+            if (baseElement.Slicing.IsExactly(mergeElement.Slicing))
+                return;
+
+            this.preFhir.ConversionError(this.GetType().Name,
+                fcn,
+                $"Error constaining {mergeElement.Path}. Not Supported (yet). Merge Element and Base Element both define a slicing component. ");
+            success = false;
+            return;
         }
 
         /// <summary>

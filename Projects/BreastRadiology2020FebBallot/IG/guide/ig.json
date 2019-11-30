@@ -117,6 +117,9 @@
     "StructureDefinition/BreastRadMammoFinding": {
       "base": "StructureDefinition-BreastRadMammoFinding.html"
     },
+    "StructureDefinition/BreastRadMammoIntramammaryLymphNode": {
+      "base": "StructureDefinition-BreastRadMammoIntramammaryLymphNode.html"
+    },
     "StructureDefinition/BreastRadMammoMass": {
       "base": "StructureDefinition-BreastRadMammoMass.html"
     },
@@ -140,6 +143,9 @@
     },
     "StructureDefinition/BreastRadMammoSolitaryDilatedDuct": {
       "base": "StructureDefinition-BreastRadMammoSolitaryDilatedDuct.html"
+    },
+    "StructureDefinition/BreastRadMassShape": {
+      "base": "StructureDefinition-BreastRadMassShape.html"
     },
     "StructureDefinition/BreastRadMRIFinding": {
       "base": "StructureDefinition-BreastRadMRIFinding.html"

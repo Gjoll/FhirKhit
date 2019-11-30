@@ -195,6 +195,27 @@ metries and also the Guidance chapter). (Insert links/page #s)
 {% endcapture %}{{ md_text | markdownify }}</td>
 </tr>
 <tr>
+<td><a href="StructureDefinition-BreastRadMammoIntramammaryLymphNode.html">BreastRadMammoIntramammaryLymphNode</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Breast Radiology Mammography Intramammary LymphNode Observation
+
+
+If this observation is present, and dataAbsentReason is empty, then {articleAndName} was observed.
+
+
+If this observation is present, and dataAbsentReason is not empty, then {articleAndName} was not observed and dataAbsentReason contains the reason why{term}
+
+
+### BI-RADS® ATLAS — MAMMOGRAPHY### FIFTH EDITION — 2013These are circumscribed masses that are reniform and have hilar fat. They are generally 1 cm or smaller
+in size. They may be larger than 1 cm and characterized as normal when fat replacement is pro-
+nounced. They frequently occur in the lateral and usually upper portions of the breast closer to the
+axilla, although they may occur anywhere in the breast. They usually are seen adjacent to a vein,
+because the lymphatic drainage of the breast parallels the venous drainage.
+### END BI-RADS® ATLAS — MAMMOGRAPHY TEXT
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
 <td><a href="StructureDefinition-BreastRadMammoMass.html">BreastRadMammoMass</a></td>
 <td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
 <td>{% capture md_text %}
@@ -347,6 +368,19 @@ If this observation is present, and dataAbsentReason is not empty, then {article
 larged duct. It is a rare finding. Even if unassociated with other suspicious clinical or mammographic
 findings, it has been reported to be associated with noncalcified DCIS.
 ### END BI-RADS® ATLAS — MAMMOGRAPHY TEXT
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadMassShape.html">BreastRadMassShape</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Breast Radiology Mass Shape Observation
+
+
+If this observation is present, and dataAbsentReason is empty, then {articleAndName} was observed.
+
+
+If this observation is present, and dataAbsentReason is not empty, then {articleAndName} was not observed and dataAbsentReason contains the reason why{term}
 {% endcapture %}{{ md_text | markdownify }}</td>
 </tr>
 <tr>

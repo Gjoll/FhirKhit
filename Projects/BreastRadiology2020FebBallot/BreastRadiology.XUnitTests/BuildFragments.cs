@@ -71,8 +71,6 @@ namespace BreastRadiology.XUnitTests
         }
         private bool StatusErrors(string className, string method, string msg)
         {
-            if (msg.Contains("does not resolve"))
-                return true;
             this.Message("Error", className, method, msg);
             return true;
         }

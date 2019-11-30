@@ -381,6 +381,20 @@
       },
       "name" : "BreastRadUltraSoundFinding",
       "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadMammoIntramammaryLymphNode"
+      },
+      "name" : "BreastRadMammoIntramammaryLymphNode",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadMassShape"
+      },
+      "name" : "BreastRadMassShape",
+      "exampleBoolean" : false
     }],
     "page" : {
       "nameUrl" : "index.html",
