@@ -18,13 +18,13 @@ namespace BreastRadiology.XUnitTests
             get
             {
                 if (mammoCalcificationDistribution == null)
-                    mammoCalcificationDistribution = CreateMammoCalcificationDistribution();
+                    CreateMammoCalcificationDistribution();
                 return mammoCalcificationDistribution;
             }
         }
         String mammoCalcificationDistribution = null;
 
-        String CreateMammoCalcificationDistribution()
+        void CreateMammoCalcificationDistribution()
         {
             String binding = this.CreateValueSet(
                 "MammoCalcificationDistribution",
@@ -83,7 +83,8 @@ namespace BreastRadiology.XUnitTests
 
             SDefEditor e =  this.CreateObservationEditor("BreastRadMammoCalcificationDistribution",
                     "Breast Radiology Mammography Calcification Distribution Observation",
-                    new string[] {"Calcification", "Distribution"})
+                    new string[] {"Calcification", "Distribution"},
+                    out mammoCalcificationDistribution)
                 .Description(new Markdown().Paragraph("Breast Radiology Mammography Calcification Distribution Observation"))
                 .AddFragRef(this.ObservationCodedValueFragment)
                 ;
@@ -92,7 +93,6 @@ namespace BreastRadiology.XUnitTests
                 .Type("CodeableConcept")
                 .Binding(binding, BindingStrength.Required)
                 ;
-                return e.SDef.Url;
         }
     }
 }

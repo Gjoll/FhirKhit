@@ -23,28 +23,26 @@ namespace BreastRadiology.XUnitTests
             this.ResourceUrl = resourceUrl;
         }
 
-        public void AddFragmentLink(String url)
+        public void AddFragmentLink(String url, bool showChildren = true)
         {
-            this.AddLinks("fragment", url);
+            this.AddLink("fragment", url, showChildren);
         }
 
         public void AddProfileTargets(params ProfileTarget[] targets)
         {
             foreach (ProfileTarget target in targets)
-                this.AddLinks("target", target.Profile);
+                this.AddLink("target", target.Profile, target.ShowChildren);
         }
 
-        public void AddLinks(String linkType,
-            params String[] urls)
+        public void AddLink(String linkType,
+            String url,
+            bool showChildren)
         {
-            foreach (String url in urls)
-            {
-                if (String.IsNullOrEmpty(url))
-                    throw new Exception("Url can not be empty");
-                if (this.links.TryGetValue(url, out MapLink link) == true)
-                    return;
-                this.links.Add(url, new MapLink(linkType, url));
-            }
+            if (String.IsNullOrEmpty(url))
+                throw new Exception("Url can not be empty");
+            if (this.links.TryGetValue(url, out MapLink link) == true)
+                return;
+            this.links.Add(url, new MapLink(linkType, url, showChildren));
         }
     }
 }

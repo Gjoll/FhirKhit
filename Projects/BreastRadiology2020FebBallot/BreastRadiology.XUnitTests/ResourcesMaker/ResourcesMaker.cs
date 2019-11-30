@@ -70,7 +70,8 @@ namespace BreastRadiology.XUnitTests
         SDefEditor CreateEditor(String name,
             String title,
             String[] mapName,
-            String baseDefinition)
+            String baseDefinition,
+            out String url)
         {
             if (name.Contains(" "))
                 throw new Exception("Structure Def name can not contains spaces");
@@ -86,18 +87,21 @@ namespace BreastRadiology.XUnitTests
             retVal.SDef.FhirVersion = FHIRVersion.N4_0_0;
 
             this.editors.Add(retVal.SDef.Url, retVal);
+            url = retVal.SDef.Url;
             return retVal;
         }
 
         SDefEditor CreateFragment(String name,
             String title,
             String[] mapName,
-            String baseDefinition)
+            String baseDefinition,
+            out String url)
         {
             SDefEditor retVal = this.CreateEditor(name,
                 title,
                 mapName,
-                baseDefinition);
+                baseDefinition,
+                out url);
             retVal.SetIsFrag();
             retVal.SDef.Abstract = true;
             return retVal;
@@ -105,12 +109,14 @@ namespace BreastRadiology.XUnitTests
 
         SDefEditor CreateObservationEditor(String name,
             String title,
-            String[] mapName)
+            String[] mapName,
+            out String url)
         {
             SDefEditor retVal = this.CreateEditor(name,
                 title,
                 mapName,
-                ObservationUrl);
+                ObservationUrl,
+                out url);
             retVal.AddFragRef(this.FindingObservationFragment);
             return retVal;
         }
@@ -293,6 +299,10 @@ namespace BreastRadiology.XUnitTests
             }
             bool DifferentChildren(MapLink[] links1, MapLink[] links2)
             {
+                if (links1 == null)
+                    return true;
+                if (links2 == null)
+                    return true;
                 if (links1.Length != links2.Length)
                     return true;
                 for (Int32 i = 0; i < links1.Length; i++)
@@ -321,17 +331,30 @@ namespace BreastRadiology.XUnitTests
                     SENodeGroup groupChild = null;
                     foreach (MapLink link in links)
                     {
-                        MapNode childMapNode = ResourceMap.Self.GetMapNode(link.ResourceUrl);
-                        MapLink[] childMapLinks = TargetLinks(childMapNode).ToArray();
+                        MapLink[] childMapLinks = null;
 
-                        if ((previousChildLinks == null) || (DifferentChildren(previousChildLinks, childMapLinks)))
+                        MapNode childMapNode = ResourceMap.Self.GetMapNode(link.ResourceUrl);
+                        if (link.ShowChildren)
+                        {
+                            childMapLinks = TargetLinks(childMapNode).ToArray();
+                            if (DifferentChildren(previousChildLinks, childMapLinks))
+                                previousChildLinks = null;
+                        }
+                        else
+                            previousChildLinks = null;
+
+                        if (previousChildLinks == null)
                         {
                             groupChild = group.AppendChild("");
-                            AddChildren(childMapNode, childMapLinks, groupChild);
+                            if (link.ShowChildren)
+                            {
+                                AddChildren(childMapNode, childMapLinks, groupChild);
+                                previousChildLinks = childMapLinks;
+                            }
                         }
+
                         SENode node = CreateNode(link.ResourceUrl);
                         groupChild.Nodes.Add(node);
-                        previousChildLinks = childMapLinks;
                     }
                 }
             }

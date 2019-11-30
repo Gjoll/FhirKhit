@@ -19,13 +19,13 @@ namespace BreastRadiology.XUnitTests
             get
             {
                 if (mammoMassMargin == null)
-                    mammoMassMargin = CreateMammoMassMargin();
+                    CreateMammoMassMargin();
                 return mammoMassMargin;
             }
         }
         String mammoMassMargin = null;
 
-        String CreateMammoMassMargin()
+        void CreateMammoMassMargin()
         {
             String binding = this.CreateValueSet(
                 "BreastRadMammoMassMargin",
@@ -65,7 +65,8 @@ namespace BreastRadiology.XUnitTests
 
             SDefEditor e = this.CreateObservationEditor("BreastRadMammoMassMargin",
                 "Breast Radiology Mammography Mass Margin",
-                new string[] { "Mass", "Margin" })
+                new string[] { "Mass", "Margin" },
+                out mammoMassMargin)
                 .Description(new Markdown()
                     .Paragraph("Breast Radiology Mammography Mass Margin Observation")
                     .MissingObservation("a mass margin")
@@ -80,7 +81,6 @@ namespace BreastRadiology.XUnitTests
                 .Type("CodeableConcept")
                 .Binding(binding, BindingStrength.Required)
                 ;
-            return e.SDef.Url;
         }
     }
 }

@@ -13,7 +13,7 @@ namespace BreastRadiology.XUnitTests
             get
             {
                 if (observationCodedValueFragment == null)
-                    observationCodedValueFragment = CreateObservationCodedValueFragment();
+                    CreateObservationCodedValueFragment();
                 return observationCodedValueFragment;
             }
         }
@@ -23,12 +23,13 @@ namespace BreastRadiology.XUnitTests
         /// Create ObservationCodedValueFragment.
         /// </summary>
         /// <returns></returns>
-        String CreateObservationCodedValueFragment()
+        void CreateObservationCodedValueFragment()
         {
             SDefEditor e = this.CreateFragment("CodedValueObservationFragment",
                     "CodedValue Observation Fragment",
                     new string[] {"Observation","CodedValue", "Fragment"},
-                    ObservationUrl)
+                    ObservationUrl,
+                    out observationCodedValueFragment)
                 .Description(new Hl7.Fhir.Model.Markdown("Fragment that defines values for coded observations."))
                 .AddFragRef(this.HeaderFragment)
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)
@@ -37,8 +38,6 @@ namespace BreastRadiology.XUnitTests
             e.Select("value[x]")
                 .Type("CodeableConcept")
                 ;
-
-            return e.SDef.Url;
         }
     }
 }

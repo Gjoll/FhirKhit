@@ -19,13 +19,13 @@ namespace BreastRadiology.XUnitTests
             get
             {
                 if (mammoMassDensity == null)
-                    mammoMassDensity = CreateMammoMassDensity();
+                    CreateMammoMassDensity();
                 return mammoMassDensity;
             }
         }
         String mammoMassDensity = null;
 
-        String CreateMammoMassDensity()
+        void CreateMammoMassDensity()
         {
             String binding = this.CreateValueSet(
                 "BreastRadMammoMassDensity",
@@ -59,7 +59,8 @@ namespace BreastRadiology.XUnitTests
 
             SDefEditor e = this.CreateObservationEditor("BreastRadMammoMassDensity",
                         "Breast Radiology Mammography Mass Density",
-                        new string[] { "Density" })
+                        new string[] { "Density" },
+                        out mammoMassDensity)
                     .Description(new Markdown()
                         .Paragraph("Breast Radiology Mammography Mass Density Observation")
                         .MissingObservation("a mass density")
@@ -82,7 +83,6 @@ namespace BreastRadiology.XUnitTests
                 .Type("CodeableConcept")
                 .Binding(binding, BindingStrength.Required)
                 ;
-            return e.SDef.Url;
         }
     }
 }

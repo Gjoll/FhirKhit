@@ -19,19 +19,20 @@ namespace BreastRadiology.XUnitTests
             get
             {
                 if (breastRadiologyReport == null)
-                    breastRadiologyReport = CreateBreastRadiologyReport();
+                    CreateBreastRadiologyReport();
                 return breastRadiologyReport;
             }
         }
         String breastRadiologyReport = null;
 
 
-        String CreateBreastRadiologyReport()
+        void CreateBreastRadiologyReport()
         {
             SDefEditor e = this.CreateEditor("BreastRadReport",
                 "Breast Radiology Report",
                 new string[] {"Breast","Radiology","Report"},
-                DiagnosticReportUrl)
+                DiagnosticReportUrl,
+                out breastRadiologyReport)
                 .Description(new Markdown()
                     .Paragraph("Breast Radiology Diagnostic Report.")
                     .Paragraph("This diagnostic report has links to the data that comprise a Breast Radiology Report, including")
@@ -44,18 +45,15 @@ namespace BreastRadiology.XUnitTests
                 .AddFragRef(this.CategoryFragment)
                 ;
 
-            String recommendationsUrl = this.BreastRadiologyRecommendationsExtension();
-            String priorReportsUrl = this.BreastRadiologyPriorReportsExtension(e.SDef.Url);
-
             e.Select("code").Pattern = new CodeableConcept(Loinc, "10193-1");
             e.Select("specimen").Zero();
             e.Select("conclusion").Single();
             e.Select("conclusionCode").Single();
-            e.ApplyExtension("Recommendations", recommendationsUrl)
+            e.ApplyExtension("Recommendations", this.BreastRadiologyRecommendationsExtension)
                 .Short("Recommendations for future care")
                 .Definition("Recommendations for future care")
                 .ZeroToMany();
-            e.ApplyExtension("PriorReports", priorReportsUrl)
+            e.ApplyExtension("PriorReports", this.BreastRadiologyPriorReportsExtension)
                 .Short("Recommendations for future care")
                 .Definition("Recommendations for future care")
                 .ZeroToMany();
@@ -68,7 +66,6 @@ namespace BreastRadiology.XUnitTests
             };
             e.Find("result").SliceByUrl(targets);
             e.MapNode.AddProfileTargets(targets);
-            return e.SDef.Url;
         }
     }
 }

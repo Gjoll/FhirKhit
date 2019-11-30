@@ -18,17 +18,18 @@ namespace BreastRadiology.XUnitTests
             get
             {
                 if (mammoArchitecturalDistortion == null)
-                    mammoArchitecturalDistortion = CreateMammoArchitecturalDistortion();
+                    CreateMammoArchitecturalDistortion();
                 return mammoArchitecturalDistortion;
             }
         }
         String mammoArchitecturalDistortion = null;
 
-        String CreateMammoArchitecturalDistortion()
+        void CreateMammoArchitecturalDistortion()
         {
             SDefEditor e = this.CreateObservationEditor("BreastRadMammoArchitecturalDistortion",
                         "Breast Radiology Mammography Architectural Distortion Observation",
-                    new string[] {"Arch.","Distortion"})
+                    new string[] {"Arch.","Distortion"},
+                    out mammoArchitecturalDistortion)
                 .Description(
                     new Markdown()
                         .Paragraph("Breast Radiology Mammography Architectural Distortion Observation")
@@ -40,12 +41,13 @@ namespace BreastRadiology.XUnitTests
                         .MarkedDown("ated with a mass, asymmetry, or calcifications. In the absence of appropriate history of trauma or")
                         .MarkedDown("surgery, architectural distortion is suspicious for malignancy or radial scar, and tissue diagnosis is")
                         .MarkedDown("appropriate.")
+                        .MarkedDown("As an ASSOCIATED FEATURE, architectural distortion may be used in conjunction with another")
+                        .MarkedDown("finding to indicate that the parenchyma is distorted or retracted adjacent to the FINDING")
                         .BiradFooter()
                     )
                 ;
 
             e.Select("value[x]").Zero();
-            return e.SDef.Url;
         }
     }
 }

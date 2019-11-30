@@ -18,18 +18,19 @@ namespace BreastRadiology.XUnitTests
             get
             {
                 if (findingUltraSound == null)
-                    findingUltraSound = CreateFindingUltraSound();
+                     CreateFindingUltraSound();
                 return findingUltraSound;
             }
         }
         String findingUltraSound = null;
 
-        String CreateFindingUltraSound()
+        void CreateFindingUltraSound()
         {
             //$ Fix me. Incorrect method!!!
             SDefEditor e =  this.CreateObservationEditor("BreastRadAbnormalityUltraSound",
                     "Breast Radiology Abnormality (UltraSound)",
-                    new string[] {"UltraSound", "Abnormality"})
+                    new string[] {"UltraSound", "Abnormality"},
+                    out findingUltraSound)
                 .Description(new Markdown().Paragraph("UltraSound Breast Abnormality Observation"))
                 .AddFragRef(this.FindingSectionFragment)
                 ;
@@ -37,7 +38,6 @@ namespace BreastRadiology.XUnitTests
              .FixedCodeSlice("method", "http://snomed.info/sct", "115341008")
              .Card(1, "*")
              ;
-            return e.SDef.Url;
         }
     }
 }

@@ -18,17 +18,18 @@ namespace BreastRadiology.XUnitTests
             get
             {
                 if (mammoIntramammaryLymphNode == null)
-                    mammoIntramammaryLymphNode = CreateMammoIntramammaryLymphNode();
+                    CreateMammoIntramammaryLymphNode();
                 return mammoIntramammaryLymphNode;
             }
         }
         String mammoIntramammaryLymphNode = null;
 
-        String CreateMammoIntramammaryLymphNode()
+        void CreateMammoIntramammaryLymphNode()
         {
             SDefEditor e = this.CreateObservationEditor("BreastRadMammoIntramammaryLymphNode",
                     "Breast Radiology Mammography Intramammary LymphNode Observation",
-                    new string[] { "Intramammory", "Lymph", "Node" })
+                    new string[] { "Intramammory", "Lymph", "Node" },
+                    out mammoIntramammaryLymphNode)
                     .Description(new Markdown()
                         .Paragraph("Breast Radiology Mammography Intramammary LymphNode Observation")
                         .MissingObservation("an intramammary lymph node")
@@ -44,7 +45,6 @@ namespace BreastRadiology.XUnitTests
                     ;
 
             e.Select("value[x]").Zero();
-            return e.SDef.Url;
         }
     }
 }

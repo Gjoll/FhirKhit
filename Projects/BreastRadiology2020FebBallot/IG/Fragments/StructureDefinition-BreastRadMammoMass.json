@@ -123,6 +123,26 @@
             ]
           }
         ]
+      },
+      {
+        "id": "Observation.hasMember:breastRadMammoAssociatedFeatures",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadMammoAssociatedFeatures",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoAssociatedFeatures"
+            ]
+          }
+        ]
       }
     ]
   }

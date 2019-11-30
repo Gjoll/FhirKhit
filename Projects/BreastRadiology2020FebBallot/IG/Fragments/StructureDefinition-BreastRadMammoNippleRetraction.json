@@ -1,0 +1,44 @@
+{
+  "resourceType": "StructureDefinition",
+  "extension": [
+    {
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/FindingObservationFragment"
+    },
+    {
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationRequiredFragment"
+    }
+  ],
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoNippleRetraction",
+  "name": "BreastRadMammoNippleRetraction",
+  "title": "Breast Radiology Mammography Nipple Retraction Observation",
+  "description": "Breast Radiology Mammography Nipple Retraction Observation\n\n\nIf this observation is present, and dataAbsentReason is empty, then {articleAndName} was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then {articleAndName} was not observed and dataAbsentReason contains the reason why{term}\n\n\n### BI-RADS® ATLAS — MAMMOGRAPHY### FIFTH EDITION — 2013The nipple is pulled in. This should not be confused with nipple inversion, which is often bilateral \nand which in the absence of any suspicious findings and when stable for a long period of time, \nis not a sign of malignancy. However, if nipple retraction is new, suspicion for underlying malignancy is increased.\n### END BI-RADS® ATLAS — MAMMOGRAPHY TEXT",
+  "fhirVersion": "4.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation",
+        "path": "Observation",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.value[x]",
+          "min": 0,
+          "max": "1"
+        }
+      }
+    ]
+  }
+}

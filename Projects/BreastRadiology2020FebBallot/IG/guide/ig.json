@@ -108,6 +108,9 @@
     "StructureDefinition/BreastRadMammoAsymmetries": {
       "base": "StructureDefinition-BreastRadMammoAsymmetries.html"
     },
+    "StructureDefinition/BreastRadMammoAxillaryAdenopathy": {
+      "base": "StructureDefinition-BreastRadMammoAxillaryAdenopathy.html"
+    },
     "StructureDefinition/BreastRadMammoBreastDensity": {
       "base": "StructureDefinition-BreastRadMammoBreastDensity.html"
     },
@@ -132,8 +135,17 @@
     "StructureDefinition/BreastRadMammoMassMargin": {
       "base": "StructureDefinition-BreastRadMammoMassMargin.html"
     },
+    "StructureDefinition/BreastRadMammoNippleRetraction": {
+      "base": "StructureDefinition-BreastRadMammoNippleRetraction.html"
+    },
     "StructureDefinition/BreastRadMammoSkinLesion": {
       "base": "StructureDefinition-BreastRadMammoSkinLesion.html"
+    },
+    "StructureDefinition/BreastRadMammoSkinRetraction": {
+      "base": "StructureDefinition-BreastRadMammoSkinRetraction.html"
+    },
+    "StructureDefinition/BreastRadMammoSkinThickening": {
+      "base": "StructureDefinition-BreastRadMammoSkinThickening.html"
     },
     "StructureDefinition/BreastRadMammoSolitaryDilatedDuct": {
       "base": "StructureDefinition-BreastRadMammoSolitaryDilatedDuct.html"

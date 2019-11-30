@@ -18,17 +18,18 @@ namespace BreastRadiology.XUnitTests
             get
             {
                 if (mammoMass == null)
-                    mammoMass = CreateMammoMass();
+                    CreateMammoMass();
                 return mammoMass;
             }
         }
         String mammoMass = null;
 
-        String CreateMammoMass()
+        void CreateMammoMass()
         {
             SDefEditor e = this.CreateObservationEditor("BreastRadMammoMass",
                     "Breast Radiology Mammography Mass Observation",
-                    new string[] { "Mass" })
+                    new string[] { "Mass" },
+                    out mammoMass)
                 .Description(new Markdown()
                     .Paragraph("Breast Radiology Mammography Mass Observation")
                     .MissingObservation("a mass", "and no Shape, Margin, or Density observations should be referenced by this observation")
@@ -51,13 +52,13 @@ namespace BreastRadiology.XUnitTests
                 {
                     new ProfileTarget(this.MassShape, 0, "1"),
                     new ProfileTarget(this.MammoMassMargin, 0, "1"),
-                    new ProfileTarget(this.MammoMassDensity, 0, "1")
+                    new ProfileTarget(this.MammoMassDensity, 0, "1"),
+                    new ProfileTarget(this.MammoAssociatedFeatures, 0, "1", false)
                 };
                 e.Find("hasMember").SliceByUrl(targets);
                 e.MapNode.AddProfileTargets(targets);
             }
             e.Select("value[x]").Zero();
-            return e.SDef.Url;
         }
     }
 }

@@ -186,9 +186,9 @@ namespace BreastRadiology.XUnitTests
                 extDef.ConfigureSliceByUrlDiscriminator();
         }
 
-        public ElementDefinition ApplyExtension(String name, String extensionUrl)
+        public ElementDefinition ApplyExtension(String name, String extensionUrl, bool showChildren = true)
         {
-            this.MapNode.AddLinks("target", extensionUrl);
+            this.MapNode.AddLink("target", extensionUrl, showChildren);
             this.ConfigureExtensionSlice();
             return this.Find("extension").SliceByUrl(extensionUrl, name);
         }

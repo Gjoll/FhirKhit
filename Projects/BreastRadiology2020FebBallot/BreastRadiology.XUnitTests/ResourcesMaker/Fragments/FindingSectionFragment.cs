@@ -13,19 +13,20 @@ namespace BreastRadiology.XUnitTests
             get
             {
                 if (findingSectionFragment == null)
-                    findingSectionFragment  = CreateFindingSectionFragment ();
+                    CreateFindingSectionFragment ();
                 return findingSectionFragment ;
             }
         }
         String findingSectionFragment  = null;
 
 
-        String CreateFindingSectionFragment()
+        void CreateFindingSectionFragment()
         {
             SDefEditor e = this.CreateFragment("FindingSectionFragment",
                     "Finding Section Fragment",
                     new string[] {"Finding", "Section", "Fragment"},
-                    ObservationUrl)
+                    ObservationUrl,
+                    out findingSectionFragment)
                 .Description(new Hl7.Fhir.Model.Markdown("Fragment that defines values for finding sections (Mammo, MRI, ETc)."))
                 ;
 
@@ -36,8 +37,6 @@ namespace BreastRadiology.XUnitTests
             e.Select("note").Zero();
             // todo: Add body site info.
             //e.Select("bodySite").Zero();
-
-            return e.SDef.Url;
         }
     }
 }

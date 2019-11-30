@@ -18,17 +18,18 @@ namespace BreastRadiology.XUnitTests
             get
             {
                 if (mammoSkinLesion == null)
-                    mammoSkinLesion = CreateMammoSkinLesion();
+                    CreateMammoSkinLesion();
                 return mammoSkinLesion;
             }
         }
         String mammoSkinLesion = null;
 
-        String CreateMammoSkinLesion()
+        void CreateMammoSkinLesion()
         {
             SDefEditor e = this.CreateObservationEditor("BreastRadMammoSkinLesion",
                     "Breast Radiology Mammography Skin Lesion",
-                    new string[] { "Skin", "Lesion" })
+                    new string[] { "Skin", "Lesion" },
+                    out mammoSkinLesion)
                     .Description(new Markdown()
                         .Paragraph("Breast Radiology Mammography Skin Lesion Observation")
                         .MissingObservation("a skin lesion")
@@ -43,7 +44,6 @@ namespace BreastRadiology.XUnitTests
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)
                 ;
             e.Select("value[x]").Zero();
-            return e.SDef.Url;
         }
     }
 }

@@ -14,7 +14,7 @@ namespace BreastRadiology.XUnitTests
             get
             {
                 if (breastBodyLocationRequiredFragment == null)
-                    breastBodyLocationRequiredFragment = CreateBreastBodyLocationRequiredFragment();
+                    CreateBreastBodyLocationRequiredFragment();
                 return breastBodyLocationRequiredFragment;
             }
         }
@@ -25,12 +25,13 @@ namespace BreastRadiology.XUnitTests
         /// Create BreastBodyLocationFragment.
         /// </summary>
         /// <returns></returns>
-        String CreateBreastBodyLocationRequiredFragment()
+        void CreateBreastBodyLocationRequiredFragment()
         {
             SDefEditor e = this.CreateFragment("BreastBodyLocationRequiredFragment",
                     "Breast Body Location (Required) Fragment",
                     new string[] {"Breast","Body", "Location", "Fragment", "(Required)"},
-                    ObservationUrl)
+                    ObservationUrl,
+                    out breastBodyLocationRequiredFragment)
                 .Description(new Markdown("Fragment definition for an required Breast Body Location"))
                 .AddFragRef(this.HeaderFragment);
                 ;
@@ -42,8 +43,6 @@ namespace BreastRadiology.XUnitTests
                 .ApplyExtension("breastBodyLocation", this.BreastBodyLocationExtension)
                 .Single()
                 ;
-
-            return e.SDef.Url;
         }
     }
 }

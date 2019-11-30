@@ -20,19 +20,20 @@ namespace BreastRadiology.XUnitTests
             get
             {
                 if (breastBodyLocationExtension == null)
-                    breastBodyLocationExtension = CreateBreastBodyLocationExtension();
+                    CreateBreastBodyLocationExtension();
                 return breastBodyLocationExtension;
             }
         }
         String breastBodyLocationExtension = null;
 
 
-        String CreateBreastBodyLocationExtension()
+        void CreateBreastBodyLocationExtension()
         {
             SDefEditor e = this.CreateEditor("BreastBodyLocation",
                 "Breast Body Location",
                 new string[] { "Breast", "Body", "Location" },
-                ExtensionUrl)
+                ExtensionUrl,
+                out breastBodyLocationExtension)
                 .Description(new Markdown("Breast Body Location extension"))
                 .Kind(StructureDefinition.StructureDefinitionKind.ComplexType)
                 .Context()
@@ -208,8 +209,6 @@ namespace BreastRadiology.XUnitTests
                     ;
                 distanceFromNippleGroup.RelatedElements.Add(quantityCode);
             }
-
-            return e.SDef.Url;
         }
     }
 }

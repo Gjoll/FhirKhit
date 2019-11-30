@@ -16,11 +16,15 @@ namespace BreastRadiology.XUnitTests
         /// </summary>
         public String ResourceUrl;
 
+        public bool ShowChildren;
+
         public MapLink(String linkType,
-            String resourceUrl)
+            String resourceUrl,
+            bool showChildren)
         {
             this.LinkType = linkType;
             this.ResourceUrl = resourceUrl;
+            this.ShowChildren = showChildren;
         }
     }
 }

@@ -18,17 +18,18 @@ namespace BreastRadiology.XUnitTests
             get
             {
                 if (findingHeaderFragment == null)
-                    findingHeaderFragment = CreateHeaderFragment();
+                    CreateHeaderFragment();
                 return findingHeaderFragment;
             }
         }
         String findingHeaderFragment = null;
-        String CreateHeaderFragment()
+        void CreateHeaderFragment()
         {
             SDefEditor e = this.CreateFragment("HeaderFragment",
                 "Resource",
                 new string[] {"Common"},
-                ResourceUrl);
+                ResourceUrl,
+                out findingHeaderFragment);
             ContactDetail cd = new ContactDetail();
             cd.Telecom.Add(new ContactPoint
             {
@@ -41,7 +42,6 @@ namespace BreastRadiology.XUnitTests
             e.SDef.Status = ProfileStatus;
             e.SDef.Publisher = "Hl7-Clinical Interoperability Council";
             e.SDef.Version = ProfileVersion;
-            return e.SDef.Url;
         }
     }
 }

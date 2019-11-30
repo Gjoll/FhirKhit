@@ -79,6 +79,8 @@ at the anterior or posterior edge of the parenchyma. Architectural distortion ma
 ated with a mass, asymmetry, or calcifications. In the absence of appropriate history of trauma or
 surgery, architectural distortion is suspicious for malignancy or radial scar, and tissue diagnosis is
 appropriate.
+As an ASSOCIATED FEATURE, architectural distortion may be used in conjunction with another
+finding to indicate that the parenchyma is distorted or retracted adjacent to the FINDING
 ### END BI-RADS® ATLAS — MAMMOGRAPHY TEXT
 {% endcapture %}{{ md_text | markdownify }}</td>
 </tr>
@@ -111,6 +113,27 @@ The asymmetry, unlike a mass, is visible on only 1 mammographic projection. The 
 asymmetry, although visible on more than 1 projection, have concave-outward borders and usu-
 ally are seen to be interspersed with fat, whereas a radiodense mass displays completely or partially
 convex-outward borders and appears to be denser in the center than at the periphery.
+### END BI-RADS® ATLAS — MAMMOGRAPHY TEXT
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadMammoAxillaryAdenopathy.html">BreastRadMammoAxillaryAdenopathy</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Breast Radiology Mammography Axillary Adenopathy Observation
+
+
+If this observation is present, and dataAbsentReason is empty, then {articleAndName} was observed.
+
+
+If this observation is present, and dataAbsentReason is not empty, then {articleAndName} was not observed and dataAbsentReason contains the reason why{term}
+
+
+### BI-RADS® ATLAS — MAMMOGRAPHY### FIFTH EDITION — 2013Enlarged axillary lymph nodes may warrant comment, clinical correlation, and additional 
+evaluation, especially if new or considerably larger or rounder when compared to previous examination.
+A review of the patient’s medical history may elucidate the cause for axillary adenopathy, averting
+recommendation for additional evaluation. When one or more large axillary nodes are 
+substantially composed of fat, this is a normal variant.
 ### END BI-RADS® ATLAS — MAMMOGRAPHY TEXT
 {% endcapture %}{{ md_text | markdownify }}</td>
 </tr>
@@ -154,6 +177,8 @@ the referring clinician or patient might infer anything other than absolute conf
 were such calcifications described in the report. However, typically benign calcifications should be
 reported if the interpreting physician is concerned that other observers might misinterpret them as
 anything but benign were such calcifications not described in the report.
+As an ASSOCIATED FEATURE, this may be used in conjunction with one or more other FINDING(S)
+to describe calcifications within or immediately adjacent to the finding(s)
 ### END BI-RADS® ATLAS — MAMMOGRAPHY TEXTThis observation has the following two member observations
 
 
@@ -260,6 +285,25 @@ If this observation is present, and dataAbsentReason is not empty, then {article
 {% endcapture %}{{ md_text | markdownify }}</td>
 </tr>
 <tr>
+<td><a href="StructureDefinition-BreastRadMammoNippleRetraction.html">BreastRadMammoNippleRetraction</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Breast Radiology Mammography Nipple Retraction Observation
+
+
+If this observation is present, and dataAbsentReason is empty, then {articleAndName} was observed.
+
+
+If this observation is present, and dataAbsentReason is not empty, then {articleAndName} was not observed and dataAbsentReason contains the reason why{term}
+
+
+### BI-RADS® ATLAS — MAMMOGRAPHY### FIFTH EDITION — 2013The nipple is pulled in. This should not be confused with nipple inversion, which is often bilateral 
+and which in the absence of any suspicious findings and when stable for a long period of time, 
+is not a sign of malignancy. However, if nipple retraction is new, suspicion for underlying malignancy is increased.
+### END BI-RADS® ATLAS — MAMMOGRAPHY TEXT
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
 <td><a href="StructureDefinition-BreastRadMammoSkinLesion.html">BreastRadMammoSkinLesion</a></td>
 <td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
 <td>{% capture md_text %}
@@ -277,6 +321,33 @@ image when it projects over the breast (especially on 2 different projections), 
 for an intramammary lesion. A raised skin lesion sufficiently large to be seen at mammography
 should be marked by the technologist with a radiopaque device designated for use as a marker for
 a skin lesion.
+### END BI-RADS® ATLAS — MAMMOGRAPHY TEXT
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadMammoSkinRetraction.html">BreastRadMammoSkinRetraction</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Skin Retraction Observation
+
+
+### BI-RADS® ATLAS — MAMMOGRAPHY### FIFTH EDITION — 2013The skin is pulled in abnormally
+### END BI-RADS® ATLAS — MAMMOGRAPHY TEXTIf this observation is present, and dataAbsentReason is empty, then {articleAndName} was observed.
+
+
+If this observation is present, and dataAbsentReason is not empty, then {articleAndName} was not observed and dataAbsentReason contains the reason why{term}
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadMammoSkinThickening.html">BreastRadMammoSkinThickening</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Skin Thickening Observation
+
+
+### BI-RADS® ATLAS — MAMMOGRAPHY### FIFTH EDITION — 2013Skin thickening may be focal or diffuse, and is defined as being greater than 2 mm in thickness. This 
+finding is of particular concern if it represents a change from previous mammography examinations. 
+However, unilateral skin thickening is an expected finding after radiation therapy.
 ### END BI-RADS® ATLAS — MAMMOGRAPHY TEXT
 {% endcapture %}{{ md_text | markdownify }}</td>
 </tr>

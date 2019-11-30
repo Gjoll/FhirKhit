@@ -18,22 +18,22 @@ namespace BreastRadiology.XUnitTests
             get
             {
                 if (sectionPatientHistory == null)
-                    sectionPatientHistory = CreateSectionPatientHistory();
+                    CreateSectionPatientHistory();
                 return sectionPatientHistory;
             }
         }
         String sectionPatientHistory = null;
 
-        String CreateSectionPatientHistory()
+        void CreateSectionPatientHistory()
         {
             SDefEditor e = this.CreateObservationEditor("BreastRadSectionPatientHistory",
                     "Breast Radiology Patient History Section",
-                    new string[] {"Patient History"})
+                    new string[] {"Patient History"},
+                    out sectionPatientHistory)
                 .Description(new Markdown().Paragraph("Patient History Section"))
                 .AddFragRef(this.ObservationSectionFragment)
                 ;
             e.Select("bodySite").Zero();
-            return e.SDef.Url;
         }
     }
 }

@@ -18,18 +18,19 @@ namespace BreastRadiology.XUnitTests
             get
             {
                 if (findingMri== null)
-                    findingMri = CreateFindingMri();
+                    CreateFindingMri();
                 return findingMri;
             }
         }
         String findingMri = null;
 
-        String CreateFindingMri()
+        void CreateFindingMri()
         {
             //$ Fix me. Incorrect method!!!
             SDefEditor e = this.CreateObservationEditor("BreastRadAbnormalityMRI",
                     "Breast Radiology Abnormality (MRI)",
-                    new string[] {"MRI","Abnormality"})
+                    new string[] {"MRI","Abnormality"},
+                    out findingMri)
                 .Description(new Markdown().Paragraph("MRI Breast Abnormality Observation"))
                 .AddFragRef(this.FindingSectionFragment)
             ;
@@ -37,8 +38,6 @@ namespace BreastRadiology.XUnitTests
                  .FixedCodeSlice("method", "http://snomed.info/sct", "115341008")
                  .Card(1, "*")
                  ;
-
-            return e.SDef.Url;
         }
     }
 }

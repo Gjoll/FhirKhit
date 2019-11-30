@@ -19,13 +19,13 @@ namespace BreastRadiology.XUnitTests
             get
             {
                 if (mammoAsymmetries == null)
-                    mammoAsymmetries = CreateMammoAsymmetries();
+                    CreateMammoAsymmetries();
                 return mammoAsymmetries;
             }
         }
         String mammoAsymmetries = null;
 
-        String CreateMammoAsymmetries()
+        void CreateMammoAsymmetries()
         {
             String binding = this.CreateValueSet(
                     "BreastRadMemmoAsymmetries",
@@ -73,7 +73,8 @@ namespace BreastRadiology.XUnitTests
 
             SDefEditor e = this.CreateObservationEditor("BreastRadMammoAsymmetries",
                         "Breast Radiology Mammography Asymmetries Observation",
-                        new string[] {"Asymmetries"})
+                        new string[] {"Asymmetries"},
+                        out mammoAsymmetries)
                     .Description(new Markdown()
                         .Paragraph("Breast Radiology Mammography Asymmetries Observation")
                         .MissingObservation("an asymmetry")
@@ -89,11 +90,18 @@ namespace BreastRadiology.XUnitTests
                     .AddFragRef(this.ObservationCodedValueFragment)
                     ;
 
+            {
+                ProfileTarget[] targets = new ProfileTarget[]
+                {
+                    new ProfileTarget(this.MammoAssociatedFeatures, 0, "1", false)
+                };
+                e.Find("hasMember").SliceByUrl(targets);
+                e.MapNode.AddProfileTargets(targets);
+            }
             e.Select("value[x]")
                 .Type("CodeableConcept")
                 .Binding(binding, BindingStrength.Required)
                 ;
-                return e.SDef.Url;
         }
     }
 }

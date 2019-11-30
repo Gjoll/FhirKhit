@@ -13,7 +13,7 @@ namespace BreastRadiology.XUnitTests
             get
             {
                 if (observationSectionFragment == null)
-                    observationSectionFragment = CreateObservationSectionFragment();
+                    CreateObservationSectionFragment();
                 return observationSectionFragment;
             }
         }
@@ -22,12 +22,13 @@ namespace BreastRadiology.XUnitTests
         /// <summary>
         /// Create ObservationSectionFragment.
         /// </summary>
-        String CreateObservationSectionFragment()
+        void CreateObservationSectionFragment()
         {
             SDefEditor e = this.CreateFragment("ObservationSectionFragment",
                 "Observation Section Fragment",
                     new string[] {"Observation","Section", "Fragment"},
-                ObservationUrl);
+                ObservationUrl,
+                out observationSectionFragment);
             e.Select("value[x]").Zero();
             e.Select("specimen").Zero();
             e.Select("device").Zero();
@@ -36,7 +37,6 @@ namespace BreastRadiology.XUnitTests
             e.Select("interpretation").Zero();
             e.Select("note").Zero();
             e.Select("method").Zero();
-            return e.SDef.Url;
         }
     }
 }

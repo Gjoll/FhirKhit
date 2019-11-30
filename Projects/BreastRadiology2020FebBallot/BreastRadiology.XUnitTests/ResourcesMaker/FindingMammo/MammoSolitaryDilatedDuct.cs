@@ -18,17 +18,18 @@ namespace BreastRadiology.XUnitTests
             get
             {
                 if (mammoSolitaryDilatedDuct == null)
-                    mammoSolitaryDilatedDuct = CreateMammoSolitaryDilatedDuct();
+                    CreateMammoSolitaryDilatedDuct();
                 return mammoSolitaryDilatedDuct;
             }
         }
         String mammoSolitaryDilatedDuct = null;
 
-        String CreateMammoSolitaryDilatedDuct()
+        void CreateMammoSolitaryDilatedDuct()
         {
             SDefEditor e = this.CreateObservationEditor("BreastRadMammoSolitaryDilatedDuct",
                     "Breast Radiology Mammography Solitary Dilated Duct Observation",
-                    new string[] {"Dialated","Duct"})
+                    new string[] { "Dialated", "Duct" },
+                    out mammoSolitaryDilatedDuct)
                     .Description(new Markdown()
                         .Paragraph("Breat Radiology Mammography Solitary Dilated Duct Observation")
                         .MissingObservation("a solitary dilated duct")
@@ -42,6 +43,6 @@ namespace BreastRadiology.XUnitTests
                     ;
 
             e.Select("value[x]").Zero();
-            return e.SDef.Url;        }
+        }
     }
 }

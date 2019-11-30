@@ -18,25 +18,29 @@ namespace BreastRadiology.XUnitTests
             get
             {
                 if (mammoSkinRetraction == null)
-                    mammoSkinRetraction = CreateMammoSkinRetraction();
+                    CreateMammoSkinRetraction();
                 return mammoSkinRetraction;
             }
         }
         String mammoSkinRetraction = null;
 
-        String CreateMammoSkinRetraction()
+        void CreateMammoSkinRetraction()
         {
             SDefEditor e = this.CreateObservationEditor("BreastRadMammoSkinRetraction",
                     "Breast Radiology Skin Retraction Observation",
-                    new string[] {"Skin","Retraction"})
+                    new string[] { "Skin", "Retraction" },
+                    out mammoSkinRetraction)
                     .Description(new Markdown()
                         .Paragraph("Skin Retraction Observation")
+                        .BiradHeader()
+                        .MarkedDown("The skin is pulled in abnormally")
+                        .BiradFooter()
                         .MissingObservation("a skin retraction")
                     )
                     .AddFragRef(this.BreastBodyLocationRequiredFragment)
                     ;
 
             e.Select("value[x]").Zero();
-            return e.SDef.Url;        }
+        }
     }
 }

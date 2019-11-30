@@ -13,24 +13,24 @@ namespace BreastRadiology.XUnitTests
             get
             {
                 if (observationNoHasMembersFragment == null)
-                    observationNoHasMembersFragment = CreateObservationNoHasMembersFragment();
+                    CreateObservationNoHasMembersFragment();
                 return observationNoHasMembersFragment;
             }
         }
         String observationNoHasMembersFragment = null;
 
-        String CreateObservationNoHasMembersFragment()
+        void CreateObservationNoHasMembersFragment()
         {
             SDefEditor e = this.CreateFragment("ObservationNoHasMembersFragment",
                 "Observation with no hasMember's Fragment",
                     new string[] {"Observation", "No hasMember's", "Fragment" },
-                ObservationUrl)
+                ObservationUrl,
+                out observationNoHasMembersFragment)
                 .Description(new Hl7.Fhir.Model.Markdown("Fragment that defines restricts observations to have no hasMember references."))
                 .AddFragRef(this.HeaderFragment)
                 .AddFragRef(this.CategoryFragment)
             ;
             e.Select("hasMember").Single();
-            return e.SDef.Url;
         }
     }
 }

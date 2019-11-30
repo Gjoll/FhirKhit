@@ -18,17 +18,18 @@ namespace BreastRadiology.XUnitTests
             get
             {
                 if (mammoCalcification == null)
-                    mammoCalcification = CreateMammoCalcification();
+                    CreateMammoCalcification();
                 return mammoCalcification;
             }
         }
         String mammoCalcification = null;
 
-        String CreateMammoCalcification()
+        void CreateMammoCalcification()
         {
             SDefEditor e = this.CreateObservationEditor("BreastRadMammoCalcification",
                     "Breast Radiology Mammography Calcification Observation",
-                    new string[] {"Calcification"})
+                    new string[] {"Calcification"},
+                    out mammoCalcification)
                 .Description(
                     new Markdown()
                         .Paragraph("Breast Radiology Mammography Calcification Observation")
@@ -45,6 +46,8 @@ namespace BreastRadiology.XUnitTests
                         .MarkedDown("were such calcifications described in the report. However, typically benign calcifications should be")
                         .MarkedDown("reported if the interpreting physician is concerned that other observers might misinterpret them as")
                         .MarkedDown("anything but benign were such calcifications not described in the report.")
+                        .MarkedDown("As an ASSOCIATED FEATURE, this may be used in conjunction with one or more other FINDING(S)")
+                        .MarkedDown("to describe calcifications within or immediately adjacent to the finding(s)")
                         .BiradFooter()
                         .Paragraph("This observation has the following two member observations")
                         .List("Calcification Type", "Calcification Distribution")
@@ -57,12 +60,12 @@ namespace BreastRadiology.XUnitTests
                 ProfileTarget[] targets = new ProfileTarget[]
                 {
                     new ProfileTarget(MammoCalcificationType, 0, "1"),
-                    new ProfileTarget(MammoCalcificationDistribution, 0, "1")
+                    new ProfileTarget(MammoCalcificationDistribution, 0, "1"),
+                    new ProfileTarget(this.MammoAssociatedFeatures, 0, "1", false)
                 };
                 e.Find("hasMember").SliceByUrl(targets);
                 e.MapNode.AddProfileTargets(targets);
             }
-            return e.SDef.Url;
         }
     }
 }

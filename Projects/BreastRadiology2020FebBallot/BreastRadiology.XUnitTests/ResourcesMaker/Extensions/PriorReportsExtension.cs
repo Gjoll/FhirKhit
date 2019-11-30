@@ -14,12 +14,24 @@ namespace BreastRadiology.XUnitTests
 {
     public partial class ResourcesMaker : ConverterBase
     {
-        String BreastRadiologyPriorReportsExtension(String brrDiagnosticReportUrl)
+        String BreastRadiologyPriorReportsExtension
+        {
+            get
+            {
+                if (breastRadiologyPriorReportsExtension == null)
+                    CreateBreastRadiologyPriorReportsExtension();
+                return breastRadiologyPriorReportsExtension;
+            }
+        }
+        String breastRadiologyPriorReportsExtension = null;
+
+        String CreateBreastRadiologyPriorReportsExtension()
         {
             SDefEditor e = this.CreateEditor("BreastRadPriorReports", 
                 "Prior Reports",
                 new string[] {"Prior Reports"}, 
-                ExtensionUrl)
+                ExtensionUrl,
+                out breastRadiologyPriorReportsExtension)
                 .Description(new Markdown()
                     .Paragraph("Prior Diagnostic Report extension")
                     )
@@ -34,7 +46,7 @@ namespace BreastRadiology.XUnitTests
                 .Fixed(new FhirUri(e.SDef.Url));
 
             e.Select("value[x]")
-                .TypeReference(brrDiagnosticReportUrl)
+                .TypeReference(this.BreastRadiologyReport)
                 .Single()
                 ;
             return e.SDef.Url;

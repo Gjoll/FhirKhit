@@ -1,0 +1,44 @@
+{
+  "resourceType": "StructureDefinition",
+  "extension": [
+    {
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/FindingObservationFragment"
+    },
+    {
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationRequiredFragment"
+    }
+  ],
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoAxillaryAdenopathy",
+  "name": "BreastRadMammoAxillaryAdenopathy",
+  "title": "Breast Radiology Mammography Axillary Adenopathy Observation",
+  "description": "Breast Radiology Mammography Axillary Adenopathy Observation\n\n\nIf this observation is present, and dataAbsentReason is empty, then {articleAndName} was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then {articleAndName} was not observed and dataAbsentReason contains the reason why{term}\n\n\n### BI-RADS® ATLAS — MAMMOGRAPHY### FIFTH EDITION — 2013Enlarged axillary lymph nodes may warrant comment, clinical correlation, and additional \nevaluation, especially if new or considerably larger or rounder when compared to previous examination.\nA review of the patient’s medical history may elucidate the cause for axillary adenopathy, averting\nrecommendation for additional evaluation. When one or more large axillary nodes are \nsubstantially composed of fat, this is a normal variant.\n### END BI-RADS® ATLAS — MAMMOGRAPHY TEXT",
+  "fhirVersion": "4.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation",
+        "path": "Observation",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.value[x]",
+          "min": 0,
+          "max": "1"
+        }
+      }
+    ]
+  }
+}

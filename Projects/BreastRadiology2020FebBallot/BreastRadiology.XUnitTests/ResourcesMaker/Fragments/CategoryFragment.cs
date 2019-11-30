@@ -14,7 +14,7 @@ namespace BreastRadiology.XUnitTests
             get
             {
                 if (findingCategoryFragment == null)
-                    findingCategoryFragment = CreateCategoryFragment();
+                    CreateCategoryFragment();
                 return findingCategoryFragment;
             }
         }
@@ -25,12 +25,13 @@ namespace BreastRadiology.XUnitTests
         /// This fragment creates a slice that is bound to the 'imaging' category.
         /// </summary>
         /// <returns></returns>
-        String CreateCategoryFragment()
+        void CreateCategoryFragment()
         {
             SDefEditor e = this.CreateFragment("CategoryFragment",
                     "Category Fragment",
                     new string[] {"Category","Fragment"},
-                    ObservationUrl)
+                    ObservationUrl,
+                    out findingCategoryFragment)
                 .Description(new Markdown("Fragment definition that slices category and adds the observation code value"))
                 ;
             ElementDefGroup eDef = e.Find("category");
@@ -38,7 +39,6 @@ namespace BreastRadiology.XUnitTests
             eDef.FixedCodeSlice("category",
                 "http://terminology.hl7.org/CodeSystem/observation-category",
                 "imaging");
-            return e.SDef.Url;
         }
     }
 }

@@ -18,17 +18,18 @@ namespace BreastRadiology.XUnitTests
             get
             {
                 if (mammoAssociatedFeatures == null)
-                    mammoAssociatedFeatures = CreateMammoAssociatedFeatures();
+                    CreateMammoAssociatedFeatures();
                 return mammoAssociatedFeatures;
             }
         }
         String mammoAssociatedFeatures = null;
 
-        String CreateMammoAssociatedFeatures()
+        void CreateMammoAssociatedFeatures()
         {
             SDefEditor e = this.CreateObservationEditor("BreastRadMammoAssociatedFeatures",
                     "Breast Radiology Mammography Associated Features",
-                    new string[] {"Mammo", "Associated", "Features"})
+                    new string[] { "Mammo", "Associated", "Features" },
+                    out mammoAssociatedFeatures)
                 .Description(new Markdown()
                             .Paragraph("Mammography Associated Features Observation")
                             .Paragraph("Used with masses, asymmetries, or calcifications, or may stand alone as " +
@@ -37,21 +38,19 @@ namespace BreastRadiology.XUnitTests
                 .AddFragRef(this.FindingSectionFragment)
                 ;
             {
+                //todo: Cardinality of targets?
                 ProfileTarget[] targets = new ProfileTarget[]
                 {
-                //    new ProfileTarget(mammoBreastDensity, 1, "1"),
-                //    new ProfileTarget(mammoMass, 0, "*"),
-                //    new ProfileTarget(calc, 0, "*"),
-                //    new ProfileTarget(archDist, 0, "1"),
-                //    new ProfileTarget(asymetries, 0, "*"),
-                //    new ProfileTarget(intramammaryLymphNode, 1, "1"),
-                //    new ProfileTarget(skinLesions, 0, "*"),
-                //    new ProfileTarget(solitaryDilatedDuct, 1, "1")
+                    new ProfileTarget(this.MammoSkinRetraction, 0, "1"),
+                    new ProfileTarget(this.MammoNippleRetraction, 0, "1"),
+                    new ProfileTarget(this.MammoSkinThickening, 0, "*"),
+                    new ProfileTarget(this.MammoAxillaryAdenopathy, 0, "1"),
+                    new ProfileTarget(this.MammoArchitecturalDistortion, 0, "*"),
+                    new ProfileTarget(this.MammoCalcification, 0, "*")
                 };
                 e.Find("hasMember").SliceByUrl(targets);
                 e.MapNode.AddProfileTargets(targets);
             }
-            return e.SDef.Url;
         }
     }
 }

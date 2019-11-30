@@ -14,12 +14,24 @@ namespace BreastRadiology.XUnitTests
 {
     public partial class ResourcesMaker : ConverterBase
     {
-        String BreastRadiologyRecommendationsExtension()
+        String BreastRadiologyRecommendationsExtension
+        {
+            get
+            {
+                if (breastRadiologyRecommendationsExtension == null)
+                    CreateBreastRadiologyRecommendationsExtension();
+                return breastRadiologyRecommendationsExtension;
+            }
+        }
+        String breastRadiologyRecommendationsExtension = null;
+
+        String CreateBreastRadiologyRecommendationsExtension()
         {
             SDefEditor e = this.CreateEditor("BreastRadRecommendations", 
                 "Recommendations",
                 new string[] {"Recommendations"}, 
-                ExtensionUrl)
+                ExtensionUrl,
+                out breastRadiologyRecommendationsExtension)
                 .Description(new Markdown()
                     .Paragraph("Diagnostic Report recommendations section extension")
                 )

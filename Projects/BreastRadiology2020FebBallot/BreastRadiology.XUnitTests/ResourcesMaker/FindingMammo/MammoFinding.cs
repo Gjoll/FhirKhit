@@ -18,17 +18,18 @@ namespace BreastRadiology.XUnitTests
             get
             {
                 if (mammoFinding == null)
-                    mammoFinding = CreateMammoFinding();
+                    CreateMammoFinding();
                 return mammoFinding;
             }
         }
         String mammoFinding = null;
 
-        String CreateMammoFinding()
+        void CreateMammoFinding()
         {
             SDefEditor e = this.CreateObservationEditor("BreastRadMammoFinding",
                     "Breast Radiology Mammography Finding",
-                    new string[] {"Mammo", "Finding"})
+                    new string[] {"Mammo", "Finding"},
+                    out mammoFinding)
                 .Description(new Markdown()
                             .Paragraph("Breast Radiology Mammography Finding Observation")
                             .BiradHeader()
@@ -63,7 +64,6 @@ namespace BreastRadiology.XUnitTests
                 e.Find("hasMember").SliceByUrl(targets);
                 e.MapNode.AddProfileTargets(targets);
             }
-            return e.SDef.Url;
         }
     }
 }

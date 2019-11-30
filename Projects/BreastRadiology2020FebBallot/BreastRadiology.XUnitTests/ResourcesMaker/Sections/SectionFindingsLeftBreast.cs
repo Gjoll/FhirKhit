@@ -18,24 +18,24 @@ namespace BreastRadiology.XUnitTests
             get
             {
                 if (sectionFindingsLeftBreast == null)
-                    sectionFindingsLeftBreast = CreateSectionFindingsLeftBreast();
+                     CreateSectionFindingsLeftBreast();
                 return sectionFindingsLeftBreast;
             }
         }
         String sectionFindingsLeftBreast = null;
 
-        String CreateSectionFindingsLeftBreast()
+        void CreateSectionFindingsLeftBreast()
         {
             SDefEditor e = this.CreateObservationEditor("BreastRadSectionFindingsLeftBreast",
                     "Breast Radiology Findings Left Breast",
-                    new string[] {"Left Breast"})
+                    new string[] {"Left Breast"},
+                    out sectionFindingsLeftBreast)
                 .Description(new Markdown().Paragraph("Findings Left Breast Section"))
                 .AddFragRef(this.ObservationSectionFragment)
                 ;
             e.Select("bodySite").Zero();
             e.Find("hasMember").SliceByUrl(this.FindingBreastTargets);
             e.MapNode.AddProfileTargets(this.FindingBreastTargets);
-            return e.SDef.Url;
         }
     }
 }
