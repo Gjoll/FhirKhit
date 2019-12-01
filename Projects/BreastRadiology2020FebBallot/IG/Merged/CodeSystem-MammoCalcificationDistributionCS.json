@@ -26,7 +26,7 @@
     {
       "code": "Diffuse",
       "display": "Diffuse Calcification Distribution",
-      "definition": "(historically, “scattered”)These are calcifications that are distributed randomly throughout the breast. Punctate and amorphous calcifications in this distribution are almost always benign, especially if bilateral."
+      "definition": "(historically, \"scattered\")These are calcifications that are distributed randomly throughout the breast. Punctate and amorphous calcifications in this distribution are almost always benign, especially if bilateral."
     },
     {
       "code": "Regional",
@@ -36,7 +36,7 @@
     {
       "code": "Grouped",
       "display": "Grouped  Calcification Distribution",
-      "definition": "(historically, “clustered”)This term should be used when relatively few calcifications occupy a small portion of breast tissue. The lower limit for use of this descriptor is usually when 5 calcifications are grouped within 1 cm of each other or when a definable pattern is identified. The upper limit for use of this descriptor is when larger numbers of calcifications are grouped within 2 cm of each other."
+      "definition": "(historically, \"clustered\")This term should be used when relatively few calcifications occupy a small portion of breast tissue. The lower limit for use of this descriptor is usually when 5 calcifications are grouped within 1 cm of each other or when a definable pattern is identified. The upper limit for use of this descriptor is when larger numbers of calcifications are grouped within 2 cm of each other."
     },
     {
       "code": "Linear",

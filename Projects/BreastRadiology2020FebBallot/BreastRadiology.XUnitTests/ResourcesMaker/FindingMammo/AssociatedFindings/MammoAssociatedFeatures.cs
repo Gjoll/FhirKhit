@@ -39,14 +39,14 @@ namespace BreastRadiology.XUnitTests
                 ;
             {
                 //todo: Cardinality of targets?
-                ProfileTarget[] targets = new ProfileTarget[]
+                ProfileTargetSlice[] targets = new ProfileTargetSlice[]
                 {
-                    new ProfileTarget(this.MammoSkinRetraction, 0, "1"),
-                    new ProfileTarget(this.MammoNippleRetraction, 0, "1"),
-                    new ProfileTarget(this.MammoSkinThickening, 0, "*"),
-                    new ProfileTarget(this.MammoAxillaryAdenopathy, 0, "1"),
-                    new ProfileTarget(this.MammoArchitecturalDistortion, 0, "*"),
-                    new ProfileTarget(this.MammoCalcification, 0, "*")
+                    new ProfileTargetSlice(this.MammoSkinRetraction, 0, "1"),
+                    new ProfileTargetSlice(this.MammoNippleRetraction, 0, "1"),
+                    new ProfileTargetSlice(this.MammoSkinThickening, 0, "*"),
+                    new ProfileTargetSlice(this.MammoAxillaryAdenopathy, 0, "1"),
+                    new ProfileTargetSlice(this.MammoArchitecturalDistortion, 0, "*"),
+                    new ProfileTargetSlice(this.MammoCalcification, 0, "*")
                 };
                 e.Find("hasMember").SliceByUrl(targets);
                 e.MapNode.AddProfileTargets(targets);

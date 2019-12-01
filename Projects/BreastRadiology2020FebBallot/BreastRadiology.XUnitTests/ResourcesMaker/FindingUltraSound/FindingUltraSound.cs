@@ -39,17 +39,17 @@ namespace BreastRadiology.XUnitTests
             //$ .Card(1, "*")
             //$ ;
             {
-                ProfileTarget[] targets = new ProfileTarget[]
+                ProfileTargetSlice[] targets = new ProfileTargetSlice[]
                 {
-                    new ProfileTarget(this.USTissueComposition, 1, "1"),
-                    //new ProfileTarget(this.MammoMass, 0, "*"),
-                    //new ProfileTarget(this.MammoCalcification, 0, "*"),
-                    //new ProfileTarget(this.MammoArchitecturalDistortion, 0, "1"),
-                    //new ProfileTarget(this.MammoAsymmetries, 0, "*"),
-                    //new ProfileTarget(this.MammoIntramammaryLymphNode, 0, "1"),
-                    //new ProfileTarget(this.MammoSkinLesion, 0, "*"),
-                    //new ProfileTarget(this.MammoSolitaryDilatedDuct, 0, "1"),
-                    //new ProfileTarget(this.MammoAssociatedFeatures, 0, "1")
+                    new ProfileTargetSlice(this.USTissueComposition, 1, "1"),
+                    new ProfileTargetSlice(this.USMass, 0, "*"),
+                    //new ProfileTargetSlice(this.MammoCalcification, 0, "*"),
+                    //new ProfileTargetSlice(this.MammoArchitecturalDistortion, 0, "1"),
+                    //new ProfileTargetSlice(this.MammoAsymmetries, 0, "*"),
+                    //new ProfileTargetSlice(this.MammoIntramammaryLymphNode, 0, "1"),
+                    //new ProfileTargetSlice(this.MammoSkinLesion, 0, "*"),
+                    //new ProfileTargetSlice(this.MammoSolitaryDilatedDuct, 0, "1"),
+                    //new ProfileTargetSlice(this.MammoAssociatedFeatures, 0, "1")
                 };
                 e.Find("hasMember").SliceByUrl(targets);
                 e.MapNode.AddProfileTargets(targets);

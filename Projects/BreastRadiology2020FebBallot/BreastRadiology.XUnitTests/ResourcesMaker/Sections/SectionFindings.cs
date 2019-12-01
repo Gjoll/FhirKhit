@@ -36,10 +36,10 @@ namespace BreastRadiology.XUnitTests
 
             e.Select("bodySite").Zero();
             {
-                ProfileTarget[] targets = new ProfileTarget[]
+                ProfileTargetSlice[] targets = new ProfileTargetSlice[]
                 {
-                    new ProfileTarget(SectionFindingsLeftBreast, 1, "1"),
-                    new ProfileTarget(SectionFindingsRightBreast, 1, "1")
+                    new ProfileTargetSlice(SectionFindingsLeftBreast, 1, "1"),
+                    new ProfileTargetSlice(SectionFindingsRightBreast, 1, "1")
                 };
                 e.Find("hasMember").SliceByUrl(targets);
                 e.MapNode.AddProfileTargets(targets);

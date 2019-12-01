@@ -4,14 +4,14 @@ using System.Text;
 
 namespace BreastRadiology.XUnitTests
 {
-    public class ProfileTarget
+    public class ProfileTargetSlice
     {
         public String Profile { get; }
         public Int32 Min { get; }
         public String Max { get; }
 
         public bool ShowChildren { get; }
-        public ProfileTarget(String profile, Int32 min, String max, bool showChildren = true)
+        public ProfileTargetSlice(String profile, Int32 min, String max, bool showChildren = true)
         {
             this.Profile = profile;
             this.Min = min;

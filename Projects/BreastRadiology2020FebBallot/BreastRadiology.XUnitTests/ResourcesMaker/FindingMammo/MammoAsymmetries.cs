@@ -91,9 +91,9 @@ namespace BreastRadiology.XUnitTests
                     ;
 
             {
-                ProfileTarget[] targets = new ProfileTarget[]
+                ProfileTargetSlice[] targets = new ProfileTargetSlice[]
                 {
-                    new ProfileTarget(this.MammoAssociatedFeatures, 0, "1", false)
+                    new ProfileTargetSlice(this.MammoAssociatedFeatures, 0, "1", false)
                 };
                 e.Find("hasMember").SliceByUrl(targets);
                 e.MapNode.AddProfileTargets(targets);

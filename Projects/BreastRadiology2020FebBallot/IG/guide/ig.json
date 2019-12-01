@@ -81,6 +81,18 @@
     "CodeSystem/BreastRadMemmoAsymmetriesCS": {
       "base": "CodeSystem-BreastRadMemmoAsymmetriesCS.html"
     },
+    "CodeSystem/BreastRadUSMassMarginCS": {
+      "base": "CodeSystem-BreastRadUSMassMarginCS.html"
+    },
+    "CodeSystem/BreastRadUSMassMarginNotCircumscribedCS": {
+      "base": "CodeSystem-BreastRadUSMassMarginNotCircumscribedCS.html"
+    },
+    "CodeSystem/BreastRadUSMassOrientationCS": {
+      "base": "CodeSystem-BreastRadUSMassOrientationCS.html"
+    },
+    "CodeSystem/BreastRadUSTissueCompositionCS": {
+      "base": "CodeSystem-BreastRadUSTissueCompositionCS.html"
+    },
     "CodeSystem/MammoCalcificationDistributionCS": {
       "base": "CodeSystem-MammoCalcificationDistributionCS.html"
     },
@@ -180,6 +192,18 @@
     "StructureDefinition/BreastRadUltraSoundFinding": {
       "base": "StructureDefinition-BreastRadUltraSoundFinding.html"
     },
+    "StructureDefinition/BreastRadUSMass": {
+      "base": "StructureDefinition-BreastRadUSMass.html"
+    },
+    "StructureDefinition/BreastRadUSMassMargin": {
+      "base": "StructureDefinition-BreastRadUSMassMargin.html"
+    },
+    "StructureDefinition/BreastRadUSMassOrientation": {
+      "base": "StructureDefinition-BreastRadUSMassOrientation.html"
+    },
+    "StructureDefinition/BreastRadUSTissueComposition": {
+      "base": "StructureDefinition-BreastRadUSTissueComposition.html"
+    },
     "ValueSet/BreastLocationClockVS": {
       "base": "ValueSet-BreastLocationClockVS.html"
     },
@@ -203,6 +227,18 @@
     },
     "ValueSet/BreastRadMemmoAsymmetriesVS": {
       "base": "ValueSet-BreastRadMemmoAsymmetriesVS.html"
+    },
+    "ValueSet/BreastRadUSMassMarginNotCircumscribedVS": {
+      "base": "ValueSet-BreastRadUSMassMarginNotCircumscribedVS.html"
+    },
+    "ValueSet/BreastRadUSMassMarginVS": {
+      "base": "ValueSet-BreastRadUSMassMarginVS.html"
+    },
+    "ValueSet/BreastRadUSMassOrientationVS": {
+      "base": "ValueSet-BreastRadUSMassOrientationVS.html"
+    },
+    "ValueSet/BreastRadUSTissueCompositionVS": {
+      "base": "ValueSet-BreastRadUSTissueCompositionVS.html"
     },
     "ValueSet/MammoCalcificationDistributionVS": {
       "base": "ValueSet-MammoCalcificationDistributionVS.html"

@@ -1,0 +1,29 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "BreastRadUSMassOrientationCS",
+  "extension": [
+    {
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
+    }
+  ],
+  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadUSMassOrientationCS",
+  "name": "BreastRadUSMassOrientationCS",
+  "title": "Breast Radiology Ultra-Sound Mass Orientation",
+  "description": "Breast Radiology Ultra-Sound Mass Orientation",
+  "caseSensitive": true,
+  "content": "complete",
+  "count": 2,
+  "concept": [
+    {
+      "code": "Parallel",
+      "display": "Parallel",
+      "definition": "(historically, “wider-than-tall” or “horizontal”) The long axis of the mass parallels the skin line. Masses that are only slightly obiquely oriented might be considered parallel."
+    },
+    {
+      "code": "NotParallel",
+      "display": "Not Parallel",
+      "definition": "(historically, \"isodense\") The long axis of the mass does not lie parallel to the skin line. The anterior–posterior or vertical dimension is greater than the transverse or horizontal dimension. These masses can also be obliquely oriented to the skin line. Round masses are NOT PARALLEL in their orientation."
+    }
+  ]
+}

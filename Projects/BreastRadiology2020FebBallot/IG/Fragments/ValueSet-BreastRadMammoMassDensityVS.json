@@ -10,7 +10,7 @@
   "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadMammoMassDensityVS",
   "name": "BreastRadMammoMassDensityVS",
   "title": "Breast Radiology Mammography Mass Density",
-  "description": "Breast Mammography Radiology Mass Density",
+  "description": "Breast Radiology Mammography Mass Density",
   "compose": {
     "include": [
       {

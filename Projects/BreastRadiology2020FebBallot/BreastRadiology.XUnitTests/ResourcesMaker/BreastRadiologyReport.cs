@@ -58,11 +58,11 @@ namespace BreastRadiology.XUnitTests
                 .Definition("Recommendations for future care")
                 .ZeroToMany();
 
-            ProfileTarget[] targets = new ProfileTarget[]
+            ProfileTargetSlice[] targets = new ProfileTargetSlice[]
             {
-                    new ProfileTarget(this.SectionPatientHistory, 1, "1"),
-                    new ProfileTarget(this.SectionFindings, 1, "1"),
-                    new ProfileTarget(this.SectionPatientRisk, 1, "1")
+                    new ProfileTargetSlice(this.SectionPatientHistory, 1, "1"),
+                    new ProfileTargetSlice(this.SectionFindings, 1, "1"),
+                    new ProfileTargetSlice(this.SectionPatientRisk, 1, "1")
             };
             e.Find("result").SliceByUrl(targets);
             e.MapNode.AddProfileTargets(targets);

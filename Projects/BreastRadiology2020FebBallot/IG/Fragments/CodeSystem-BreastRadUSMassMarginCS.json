@@ -1,0 +1,29 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "BreastRadUSMassMarginCS",
+  "extension": [
+    {
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
+    }
+  ],
+  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadUSMassMarginCS",
+  "name": "BreastRadUSMassMarginCS",
+  "title": "Breast Radiology Ultra-Sound Mass Margin",
+  "description": "Breast Radiology Ultra-Sound Mass Margin",
+  "caseSensitive": true,
+  "content": "complete",
+  "count": 2,
+  "concept": [
+    {
+      "code": "Circumscribed",
+      "display": "Circumscribed Margin",
+      "definition": "(historically, “well-defined” or “sharply-defined”)A circumscribed margin is one that is well defined, with an abrupt transition between the lesion and the surrounding tissue. For US, to describe a mass as circumscribed, its entire margin must be sharply defined. Most circumscribed lesions have round or oval shapes."
+    },
+    {
+      "code": "NotCircumscribed",
+      "display": "Not Circumscribed",
+      "definition": "(historically, “well-defined” or “sharply-defined”)If any portion of the margin is NOT CIRCUMSCRIBED, the mass should be characterized as “not circumscribed.” A mass that is NOT CIRCUMSCRIBED may further be described as having indistinct, angular, microlobulated, spiculated, or any combination of these margin descriptors. “Irregular” is not used to group these marginal attributes because irregular describes the shape"
+    }
+  ]
+}

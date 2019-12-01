@@ -26,7 +26,7 @@ namespace BreastRadiology.XUnitTests
         public ElementDefinition BaseElementDefinition { get; set; }
 
         /// <summary>
-        /// This is the element that has a one for one match to one in thebase defintion.
+        /// This is the element that has a one for one match to one in the base definition.
         /// </summary>
         public ElementDefinition ElementDefinition { get; set; }
 
@@ -140,23 +140,26 @@ namespace BreastRadiology.XUnitTests
             });
             return extSlice;
         }
-        public void SliceByUrl(IEnumerable<ProfileTarget> targets)
+
+        public ElementDefGroup SliceByPatterns(IEnumerable<PatternSlice> patternSlices)
+        {
+            this.ElementDefinition.ConfigureSliceByPatternDiscriminator("$this");
+            foreach (PatternSlice patternSlice in patternSlices)
+            {
+                ElementDefinition sliceElement = this.AppendSlice(patternSlice.SliceName, patternSlice.Min, patternSlice.Max);
+                sliceElement.Pattern = sliceElement.Pattern;
+                sliceElement.Type.Clear();
+                sliceElement.Mapping.Clear();
+                sliceElement.Short = patternSlice.Short;
+                sliceElement.Definition = patternSlice.Definition;
+            }
+            return this;
+        }
+
+        public ElementDefGroup SliceByUrl(IEnumerable<ProfileTargetSlice> targets)
         {
             this.ElementDefinition.ConfigureSliceByUrlDiscriminator();
-            //if (restrictFlag == true)
-            //{
-            //    List<String> targetProfiles = new List<String>();
-            //    foreach (ObservationTarget target in targets)
-            //        targetProfiles.Add(target.Profile);
-            //    List<ElementDefinition.TypeRefComponent> types = new List<ElementDefinition.TypeRefComponent>();
-            //    types.Add(new ElementDefinition.TypeRefComponent
-            //    {
-            //        Code = "Reference",
-            //        TargetProfile = targetProfiles
-            //    });
-            //    e.ElementDefinition.Type = types;
-            //}
-            foreach (ProfileTarget target in targets)
+            foreach (ProfileTargetSlice target in targets)
             {
                 String sliceName = target.Profile.LastUriPart().UncapFirstLetter();
                 ElementDefinition sliceElement = this.AppendSlice(sliceName, target.Min, target.Max);
@@ -167,6 +170,7 @@ namespace BreastRadiology.XUnitTests
                     TargetProfile = new String[] { target.Profile }
                 });
             }
+            return this;
         }
     }
 }

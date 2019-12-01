@@ -18,7 +18,7 @@
       ]
     }
   ],
-  "description": "Breast Mammography Radiology Mass Density",
+  "description": "Breast Radiology Mammography Mass Density",
   "caseSensitive": true,
   "content": "complete",
   "count": 4,

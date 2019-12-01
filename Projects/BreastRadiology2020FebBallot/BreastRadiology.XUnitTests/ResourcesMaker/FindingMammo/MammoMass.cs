@@ -49,13 +49,13 @@ namespace BreastRadiology.XUnitTests
                 .AddFragRef(this.ObservationSectionFragment)
                 ;
             {
-                ProfileTarget[] targets = new ProfileTarget[]
+                ProfileTargetSlice[] targets = new ProfileTargetSlice[]
                 {
-                    new ProfileTarget(this.MassShape, 0, "1"),
-                    new ProfileTarget(this.MassSize, 0, "1"),
-                    new ProfileTarget(this.MammoMassMargin, 0, "1"),
-                    new ProfileTarget(this.MammoMassDensity, 0, "1"),
-                    new ProfileTarget(this.MammoAssociatedFeatures, 0, "1", false)
+                    new ProfileTargetSlice(this.MassShape, 0, "1"),
+                    new ProfileTargetSlice(this.MassSize, 0, "1"),
+                    new ProfileTargetSlice(this.MammoMassMargin, 0, "1"),
+                    new ProfileTargetSlice(this.MammoMassDensity, 0, "1"),
+                    new ProfileTargetSlice(this.MammoAssociatedFeatures, 0, "1", false)
                 };
                 e.Find("hasMember").SliceByUrl(targets);
                 e.MapNode.AddProfileTargets(targets);

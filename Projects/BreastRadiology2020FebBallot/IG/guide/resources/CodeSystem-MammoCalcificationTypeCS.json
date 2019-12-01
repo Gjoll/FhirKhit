@@ -46,12 +46,12 @@
     {
       "code": "Round",
       "display": "Round (Typically Benign)",
-      "definition": "When multiple, they may vary in size and therefore also in opacity. They may be considered benign when diffuse and small (< 1 mm), and are frequently formed in the acini of lobules. When smaller than 0.5 mm, the term “punctate” should be used.  An isolated group of punctate calcifications may warrant probably benign assessment and mammographic surveillance if no prior examinations are available for comparison, or image-guided biopsy if the group is new, increasing, linear or segmental in distribution, or if adjacent to a known cancer."
+      "definition": "When multiple, they may vary in size and therefore also in opacity. They may be considered benign when diffuse and small (< 1 mm), and are frequently formed in the acini of lobules. When smaller than 0.5 mm, the term \"punctate\" should be used.  An isolated group of punctate calcifications may warrant probably benign assessment and mammographic surveillance if no prior examinations are available for comparison, or image-guided biopsy if the group is new, increasing, linear or segmental in distribution, or if adjacent to a known cancer."
     },
     {
       "code": "Rim",
       "display": "Rim  Calcification (Typically Benign)",
-      "definition": "(historically, \"eggshell\", \"lucent-centered\") These are thin benign calcifications that appear as calcium deposited on the surface of a sphere. The calcific deposits are usually less than 1 mm in thickness when viewed on edge. These are benign nongrouped calcifications that range from smaller than 1 mm to larger than a centimeter or more. The calcifications are round or oval, with smooth surfaces and lucent centers. Fat necrosis and calcifications in the walls of cysts are the most common “rim” calcifications, although more extensive (and occasionally thicker-rimmed) calcification in the walls of oil cysts or simple cysts may be seen."
+      "definition": "(historically, \"eggshell\", \"lucent-centered\") These are thin benign calcifications that appear as calcium deposited on the surface of a sphere. The calcific deposits are usually less than 1 mm in thickness when viewed on edge. These are benign nongrouped calcifications that range from smaller than 1 mm to larger than a centimeter or more. The calcifications are round or oval, with smooth surfaces and lucent centers. Fat necrosis and calcifications in the walls of cysts are the most common \"rim\" calcifications, although more extensive (and occasionally thicker-rimmed) calcification in the walls of oil cysts or simple cysts may be seen."
     },
     {
       "code": "Dystrophic",
@@ -71,7 +71,7 @@
     {
       "code": "Amorphous",
       "display": "Amorphous Calcification (Suspicious Morphology)",
-      "definition": "(historically, “indistinct”) These are sufficiently small and/or hazy in appearance that a more specific particle shape cannot be determined. Amorphous calcifications in a grouped, linear, or segmental distribution are suspicious and generally warrant biopsy. Bilateral, diffuse amorphous calcifications usually may be dismissed as benign, although baseline magnification views may be helpful. The positive predictive value (PPV) of amorphous calcifications is reported to be approximately 20%. Therefore, calcifications of this morphology appropriately should be placed into BI-RADS® assessment category 4B (PPV range > 10% to ? 50%)."
+      "definition": "(historically, \"indistinct\") These are sufficiently small and/or hazy in appearance that a more specific particle shape cannot be determined. Amorphous calcifications in a grouped, linear, or segmental distribution are suspicious and generally warrant biopsy. Bilateral, diffuse amorphous calcifications usually may be dismissed as benign, although baseline magnification views may be helpful. The positive predictive value (PPV) of amorphous calcifications is reported to be approximately 20%. Therefore, calcifications of this morphology appropriately should be placed into BI-RADS® assessment category 4B (PPV range > 10% to ? 50%)."
     },
     {
       "code": "CoarseHeterogeneous",

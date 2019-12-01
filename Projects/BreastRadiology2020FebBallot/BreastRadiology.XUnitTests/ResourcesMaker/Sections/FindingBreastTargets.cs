@@ -7,7 +7,7 @@ namespace BreastRadiology.XUnitTests
 {
     public partial class ResourcesMaker : ConverterBase
     {
-        ProfileTarget[] FindingBreastTargets
+        ProfileTargetSlice[] FindingBreastTargets
         {
             get
             {
@@ -17,15 +17,15 @@ namespace BreastRadiology.XUnitTests
             }
         }
 
-        ProfileTarget[] findingBreastTargets = null;
+        ProfileTargetSlice[] findingBreastTargets = null;
 
-        ProfileTarget[] CreateFindingBreastTargets()
+        ProfileTargetSlice[] CreateFindingBreastTargets()
         {
-            ProfileTarget[] retVal = new ProfileTarget[]
+            ProfileTargetSlice[] retVal = new ProfileTargetSlice[]
             {
-                new ProfileTarget(this.FindingMammo, 0, "*"),
-                new ProfileTarget(this.FindingMri, 0, "*"),
-                new ProfileTarget(this.FindingUltraSound, 0, "*")
+                new ProfileTargetSlice(this.FindingMammo, 0, "*"),
+                new ProfileTargetSlice(this.FindingMri, 0, "*"),
+                new ProfileTargetSlice(this.FindingUltraSound, 0, "*")
             };
             return retVal;
         }

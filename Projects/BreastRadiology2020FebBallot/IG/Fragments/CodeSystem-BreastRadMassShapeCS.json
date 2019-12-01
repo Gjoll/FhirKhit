@@ -18,12 +18,12 @@
     {
       "code": "Oval",
       "display": "Elliptical/Egg-shaped Mass",
-      "definition": "A mass that is elliptical or egg-shaped (may include 2 or 3 undulations)."
+      "definition": "A mass that is elliptical or egg-shaped (may include 2 or 3 undulations, , i.e., \"gently lobulated\" or \"macrolobulated\")."
     },
     {
       "code": "Round",
       "display": "Round Mass",
-      "definition": "A mass that is spherical, ball-shaped, circular, or globular in shape."
+      "definition": "A mass that is spherical, ball-shaped, circular, or globular in shape. A round mass has an anteroposterior diameter equal to its transverse diameter and to qualify as a ROUND mass, it must be circular in perpendicular projections. Breast masses with a ROUND shape are not commonly seen with breast ultrasound."
     },
     {
       "code": "Irregular",
