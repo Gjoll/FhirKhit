@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BreastRadiology.XUnitTests
 {
-    public partial class ResourcesMaker : ConverterBase
+    partial class ResourcesMaker : ConverterBase
     {
         ProfileTargetSlice[] FindingBreastTargets
         {

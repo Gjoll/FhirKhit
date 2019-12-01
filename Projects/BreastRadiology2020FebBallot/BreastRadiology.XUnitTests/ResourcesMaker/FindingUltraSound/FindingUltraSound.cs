@@ -11,7 +11,7 @@ using Hl7.Fhir.Serialization;
 
 namespace BreastRadiology.XUnitTests
 {
-    public partial class ResourcesMaker : ConverterBase
+    partial class ResourcesMaker : ConverterBase
     {
         String FindingUltraSound
         {

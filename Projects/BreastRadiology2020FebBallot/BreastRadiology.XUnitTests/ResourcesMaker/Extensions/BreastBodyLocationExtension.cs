@@ -13,7 +13,7 @@ using PreFhir;
 namespace BreastRadiology.XUnitTests
 {
 
-    public partial class ResourcesMaker : ConverterBase
+    partial class ResourcesMaker : ConverterBase
     {
         String BreastBodyLocationExtension
         {

@@ -14,7 +14,7 @@ namespace BreastRadiology.XUnitTests
     // todo: add mass size measurements (3 dimensional) like US?
     // same for asymmetry, lesion, calcification?
 
-    public partial class ResourcesMaker : ConverterBase
+    partial class ResourcesMaker : ConverterBase
     {
         String MammoMass
         {

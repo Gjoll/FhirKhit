@@ -12,7 +12,7 @@ using PreFhir;
 
 namespace BreastRadiology.XUnitTests
 {
-    public partial class ResourcesMaker
+    partial class ResourcesMaker
     {
         String MassShape
         {

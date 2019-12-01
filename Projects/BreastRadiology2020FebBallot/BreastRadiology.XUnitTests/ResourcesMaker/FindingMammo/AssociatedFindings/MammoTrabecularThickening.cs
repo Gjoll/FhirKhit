@@ -16,7 +16,7 @@ namespace BreastRadiology.XUnitTests
     // - Add size measurement?
     // - cardinality 0..1 or 0..*?
 
-    public partial class ResourcesMaker : ConverterBase
+    partial class ResourcesMaker : ConverterBase
     {
         String MammoTrabecularThickening
         {

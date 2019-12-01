@@ -7,7 +7,7 @@ using System.Text;
 
 namespace BreastRadiology.XUnitTests
 {
-    public partial class ResourcesMaker
+    partial class ResourcesMaker
     {
         String BreastBodyLocationOptionalFragment
         {

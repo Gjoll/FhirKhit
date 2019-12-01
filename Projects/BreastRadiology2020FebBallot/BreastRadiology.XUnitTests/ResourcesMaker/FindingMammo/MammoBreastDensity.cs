@@ -12,7 +12,7 @@ using Hl7.Fhir.Serialization;
 namespace BreastRadiology.XUnitTests
 {
     // TODO: Do we need statement that breast density is required now?
-    public partial class ResourcesMaker : ConverterBase
+    partial class ResourcesMaker : ConverterBase
     {
         String MammoBreastDensity
         {

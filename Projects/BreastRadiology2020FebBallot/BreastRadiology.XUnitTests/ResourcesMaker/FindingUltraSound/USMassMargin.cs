@@ -12,7 +12,7 @@ using PreFhir;
 
 namespace BreastRadiology.XUnitTests
 {
-    public partial class ResourcesMaker : ConverterBase
+    partial class ResourcesMaker : ConverterBase
     {
         // TODO: Mass Margin and Ultra Margin treat Not Circumscribed differently. Can they be aligned?
 

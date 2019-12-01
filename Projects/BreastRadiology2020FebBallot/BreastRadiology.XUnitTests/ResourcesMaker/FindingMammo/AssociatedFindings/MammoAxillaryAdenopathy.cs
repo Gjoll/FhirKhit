@@ -16,7 +16,7 @@ namespace BreastRadiology.XUnitTests
     // Body Location?
     // Size?
 
-    public partial class ResourcesMaker : ConverterBase
+    partial class ResourcesMaker : ConverterBase
     {
         String MammoAxillaryAdenopathy
         {
