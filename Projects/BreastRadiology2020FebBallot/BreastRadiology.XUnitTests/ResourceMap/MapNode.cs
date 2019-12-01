@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FhirKhit.Tools;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,6 +7,8 @@ namespace BreastRadiology.XUnitTests
 {
     class MapNode
     {
+        public String Name => this.ResourceUrl.LastUriPart();
+
         /// <summary>
         /// Url of the resource this represents.
         /// </summary>

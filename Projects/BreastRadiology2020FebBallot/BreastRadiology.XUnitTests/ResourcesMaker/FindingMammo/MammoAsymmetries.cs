@@ -73,7 +73,7 @@ namespace BreastRadiology.XUnitTests
 
             SDefEditor e = this.CreateEditor("BreastRadMammoAsymmetries",
                         "Breast Radiology Mammography Asymmetries Observation",
-                        new string[] {"Asymmetries"},
+                        new string[] {"Mammo", "Asymmetries"},
                         ObservationUrl,
                         out mammoAsymmetries)
                     .Description(new Markdown()

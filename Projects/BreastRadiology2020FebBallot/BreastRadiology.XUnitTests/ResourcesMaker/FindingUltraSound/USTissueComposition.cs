@@ -65,7 +65,7 @@ namespace BreastRadiology.XUnitTests
 
             SDefEditor e = this.CreateEditor("BreastRadUSTissueComposition",
                         "Breast Radiology Ultra-Sound Tissue Composition Observation",
-                        new string[] {"Tissue","Composition"},
+                        new string[] {"UltraSound", "Tissue","Composition"},
                         ObservationUrl,
                         out usTissueComposition)
                     .Description(new Markdown()

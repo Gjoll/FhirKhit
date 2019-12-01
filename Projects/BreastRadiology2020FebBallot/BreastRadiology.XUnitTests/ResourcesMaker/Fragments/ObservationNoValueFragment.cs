@@ -23,7 +23,7 @@ namespace BreastRadiology.XUnitTests
         {
             SDefEditor e = this.CreateFragment("BreastRadObservationNoValueFragment",
                 "BreastRad Observation NoValue Fragment",
-                    new string[] { "BreastRad", "NoValue Observation", "Fragment" },
+                    new string[] { "NoValue", "Observation", "Fragment" },
                 ObservationUrl,
                 out observationNoValueFragment)
                 .Description(new Hl7.Fhir.Model.Markdown("Base fragment for all BreastRad observations that have no explicit value."))

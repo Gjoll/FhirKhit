@@ -11,11 +11,11 @@ namespace BreastRadiology.XUnitTests
     /// <summary>
     /// Create graphic of all resources.
     /// </summary>
-    class CreateResourceMap
+    class ResourceMapMaker
     {
         ResourcesMaker resourcesMaker;
 
-        public CreateResourceMap(ResourcesMaker resourcesMaker)
+        public ResourceMapMaker(ResourcesMaker resourcesMaker)
         {
             this.resourcesMaker = resourcesMaker;
         }

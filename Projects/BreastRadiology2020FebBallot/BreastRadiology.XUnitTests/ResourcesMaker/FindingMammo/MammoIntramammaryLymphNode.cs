@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
         {
             SDefEditor e = this.CreateEditor("BreastRadMammoIntramammaryLymphNode",
                     "Breast Radiology Mammography Intramammary LymphNode Observation",
-                    new string[] { "Intramammory", "Lymph", "Node" },
+                    new string[] { "Mammo", "Intramammory", "Lymph Node" },
                     ObservationUrl,
                     out mammoIntramammaryLymphNode)
                     .Description(new Markdown()

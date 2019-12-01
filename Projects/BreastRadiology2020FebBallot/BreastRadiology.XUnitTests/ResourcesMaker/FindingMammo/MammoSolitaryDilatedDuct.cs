@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
         {
             SDefEditor e = this.CreateEditor("BreastRadMammoSolitaryDilatedDuct",
                     "Breast Radiology Mammography Solitary Dilated Duct Observation",
-                    new string[] { "Dialated", "Duct" },
+                    new string[] { "Mammo", "Solitary", "Dialated", "Duct" },
                     ObservationUrl,
                     out mammoSolitaryDilatedDuct)
                 .Description(new Markdown()

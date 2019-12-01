@@ -187,15 +187,17 @@ namespace BreastRadiology.XUnitTests
                 col2ScreenY += col2GroupHeight;
                 col2Height += col2GroupHeight;
 
-                foreach (PointF stubEnd in col2EndConnectors)
+                if (group.Nodes.Count > 0)
                 {
-                    CreateArrow(g, false, true, screenX + col1Width + NodeGapX, stubEnd.Y, stubEnd.X, stubEnd.Y);
-                    if (topConnectorY > stubEnd.Y)
-                        topConnectorY = stubEnd.Y;
-                    if (bottomConnectorY < stubEnd.Y)
-                        bottomConnectorY = stubEnd.Y;
+                    foreach (PointF stubEnd in col2EndConnectors)
+                    {
+                        CreateArrow(g, false, true, screenX + col1Width + NodeGapX, stubEnd.Y, stubEnd.X, stubEnd.Y);
+                        if (topConnectorY > stubEnd.Y)
+                            topConnectorY = stubEnd.Y;
+                        if (bottomConnectorY < stubEnd.Y)
+                            bottomConnectorY = stubEnd.Y;
+                    }
                 }
-
                 float width = col1Width + 2 * NodeGapX + col2GroupWidth;
                 if (colWidth < width)
                     colWidth = width;
@@ -227,7 +229,7 @@ namespace BreastRadiology.XUnitTests
             out float width,
             out float height)
         {
-            const float CharMod = 0.5f;
+            const float CharMod = 0.7f;
 
             height = node.TextLines.Count * LineHeight + 2 * BorderMargin;
             width = node.Width * CharMod + 2 * BorderMargin;

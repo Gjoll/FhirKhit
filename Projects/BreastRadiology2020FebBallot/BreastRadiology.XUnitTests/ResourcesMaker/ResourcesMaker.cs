@@ -265,8 +265,11 @@ namespace BreastRadiology.XUnitTests
 
         public void CreateMaps(String outputDir)
         {
-            CreateResourceMap resourceMap = new CreateResourceMap(this);
-            resourceMap.Create(Path.Combine(outputDir, "BreastRadOverview.svg"));
+            ResourceMapMaker resourceMapMaker = new ResourceMapMaker(this);
+            resourceMapMaker.Create(Path.Combine(outputDir, "BreastRadOverview.svg"));
+
+            FragmentMapMaker fragmentMapMaker = new FragmentMapMaker(this, outputDir);
+            fragmentMapMaker.Create();
         }
 
         void SaveAll()

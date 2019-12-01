@@ -23,6 +23,8 @@ namespace BreastRadiology.XUnitTests
         {
         }
 
+        public IEnumerable<MapNode> MapNodes => this.resources.Values;
+
         public MapNode GetMapNode(String url)
         {
             if (resources.TryGetValue(url, out MapNode retVal) == false)

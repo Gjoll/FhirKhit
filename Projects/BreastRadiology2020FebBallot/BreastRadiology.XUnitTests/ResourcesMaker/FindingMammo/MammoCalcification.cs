@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
         {
             SDefEditor e = this.CreateEditor("BreastRadMammoCalcification",
                     "Breast Radiology Mammography Calcification Observation",
-                    new string[] {"Calcification"},
+                    new string[] {"Mammo", "Calcification"},
                     ObservationUrl,
                     out mammoCalcification)
                 .Description(
