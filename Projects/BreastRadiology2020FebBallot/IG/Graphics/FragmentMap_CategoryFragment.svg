@@ -9,9 +9,7 @@
 <polygon fill="Black" stroke-width="0" points="0 0 7.5 3.75 0 7.5" />
 </marker>
 </defs>
-<g>
-<line stroke="Black" stroke-width="1.875" x1="37.5" y1="∞" x2="37.5" y2="-∞" />
-</g>
+<g />
 <g>
 <g>
 <rect fill="Green" stroke="Black" stroke-width="1.875" x="67.5" y="7.5" width="120" height="71.25" rx="3.75" ry="3.75" />
@@ -22,10 +20,10 @@
 <text x="75" y="67.5">[Resource]</text>
 </a>
 </g>
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="187.5" y1="43.125" x2="217.5" y2="43.125" />
 <line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="217.5" y1="52.5" x2="247.5" y2="52.5" />
 <line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="217.5" y1="140.625" x2="247.5" y2="140.625" />
 <line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="217.5" y1="228.75" x2="247.5" y2="228.75" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="187.5" y1="43.125" x2="217.5" y2="43.125" />
 <line stroke="Black" stroke-width="1.875" x1="217.5" y1="43.125" x2="217.5" y2="228.75" />
 </g>
 <g>

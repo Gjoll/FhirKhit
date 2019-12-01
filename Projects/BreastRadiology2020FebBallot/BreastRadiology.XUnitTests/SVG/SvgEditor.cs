@@ -167,15 +167,11 @@ namespace BreastRadiology.XUnitTests
             if (this.maxHeight < col1ScreenY)
                 this.maxHeight = col1ScreenY;
 
-            if (group.Children.Count > 0)
-            {
-                foreach (PointF stubStart in startConnectors)
-                    CreateArrow(g, true, false, stubStart.X, stubStart.Y, screenX + col1Width + NodeGapX, stubStart.Y);
-            }
             float col2ScreenX = screenX + col1Width + 2 * NodeGapX;
             float col2ScreenY = screenY;
 
             float col2Height = 0;
+            bool endConnectorFlag = false;
             foreach (SENodeGroup child in group.Children)
             {
                 RenderGroup(child,
@@ -187,10 +183,11 @@ namespace BreastRadiology.XUnitTests
                 col2ScreenY += col2GroupHeight;
                 col2Height += col2GroupHeight;
 
-                if (group.Nodes.Count > 0)
+                if (startConnectors.Count > 0)
                 {
                     foreach (PointF stubEnd in col2EndConnectors)
                     {
+                        endConnectorFlag = true;
                         CreateArrow(g, false, true, screenX + col1Width + NodeGapX, stubEnd.Y, stubEnd.X, stubEnd.Y);
                         if (topConnectorY > stubEnd.Y)
                             topConnectorY = stubEnd.Y;
@@ -206,15 +203,21 @@ namespace BreastRadiology.XUnitTests
                     this.maxWidth = col2ScreenX + col2GroupWidth + NodeGapX;
             }
 
+            if (endConnectorFlag == true)
+            {
+                foreach (PointF stubStart in startConnectors)
+                    CreateArrow(g, true, false, stubStart.X, stubStart.Y, screenX + col1Width + NodeGapX, stubStart.Y);
+
+                // Make vertical line that connects all stubs.
+                if (group.Children.Count > 0)
+                {
+                    float x = screenX + col1Width + this.NodeGapX;
+                    CreateLine(g, x, topConnectorY, x, bottomConnectorY);
+                }
+            }
+
             if (this.maxHeight < col2ScreenY + NodeGapY)
                 this.maxHeight = col2ScreenY + NodeGapY;
-
-            // Make vertical line that connects all stubs.
-            if (group.Children.Count > 0)
-            {
-                float x = screenX + col1Width + this.NodeGapX;
-                CreateLine(g, x, topConnectorY, x, bottomConnectorY);
-            }
 
             if (colHeight < col1Height)
                 colHeight = col1Height;
