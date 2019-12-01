@@ -1369,7 +1369,7 @@
         "comment": "Only used if not implicit in code for Observation.code.",
         "requirements": "In some cases, method can impact results and is thus used for determining whether results can be compared or determining significance of results.",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "base": {
           "path": "Observation.method",
           "min": 0,
@@ -1453,7 +1453,7 @@
         "definition": "The device used to generate the observation data.",
         "comment": "Note that this is not meant to represent a device involved in the transmission of the result, e.g., a gateway.  Such devices may be documented using the Provenance resource where relevant.",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "base": {
           "path": "Observation.device",
           "min": 0,
@@ -2815,6 +2815,41 @@
           "min": 0,
           "max": "1"
         },
+        "type": [
+          {
+            "code": "Quantity"
+          },
+          {
+            "code": "CodeableConcept"
+          },
+          {
+            "code": "string"
+          },
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "integer"
+          },
+          {
+            "code": "Range"
+          },
+          {
+            "code": "Ratio"
+          },
+          {
+            "code": "SampledData"
+          },
+          {
+            "code": "time"
+          },
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "Period"
+          }
+        ],
         "condition": [
           "obs-7"
         ],
@@ -2856,6 +2891,11 @@
           "min": 0,
           "max": "*"
         },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
         "isModifier": false,
         "isSummary": false,
         "binding": {
@@ -2902,6 +2942,11 @@
           "min": 0,
           "max": "*"
         },
+        "type": [
+          {
+            "code": "Annotation"
+          }
+        ],
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -2912,6 +2957,49 @@
           {
             "identity": "rim",
             "map": "subjectOf.observationEvent[code=\"annotation\"].value"
+          }
+        ]
+      },
+      {
+        "id": "Observation.method",
+        "path": "Observation.method",
+        "short": "How it was done",
+        "definition": "Indicates the mechanism used to perform the observation.",
+        "comment": "Only used if not implicit in code for Observation.code.",
+        "requirements": "In some cases, method can impact results and is thus used for determining whether results can be compared or determining significance of results.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.method",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationMethod"
+            }
+          ],
+          "strength": "example",
+          "description": "Methods for simple observations.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/observation-methods"
+        },
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "OBX-17"
+          },
+          {
+            "identity": "rim",
+            "map": "methodCode"
           }
         ]
       },
@@ -2928,6 +3016,14 @@
           "min": 0,
           "max": "1"
         },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Specimen"
+            ]
+          }
+        ],
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -2950,6 +3046,49 @@
         ]
       },
       {
+        "id": "Observation.device",
+        "path": "Observation.device",
+        "short": "(Measurement) Device",
+        "definition": "The device used to generate the observation data.",
+        "comment": "Note that this is not meant to represent a device involved in the transmission of the result, e.g., a gateway.  Such devices may be documented using the Provenance resource where relevant.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.device",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Device",
+              "http://hl7.org/fhir/StructureDefinition/DeviceMetric"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "sct-concept",
+            "map": "< 49062001 |Device|"
+          },
+          {
+            "identity": "v2",
+            "map": "OBX-17 / PRT -10"
+          },
+          {
+            "identity": "rim",
+            "map": "participation[typeCode=DEV]"
+          },
+          {
+            "identity": "sct-attr",
+            "map": "424226004 |Using device|"
+          }
+        ]
+      },
+      {
         "id": "Observation.referenceRange",
         "path": "Observation.referenceRange",
         "short": "Provides guide for interpretation",
@@ -2963,6 +3102,11 @@
           "min": 0,
           "max": "*"
         },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
         "constraint": [
           {
             "key": "ele-1",

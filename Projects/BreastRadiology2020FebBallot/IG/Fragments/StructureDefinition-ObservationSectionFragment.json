@@ -4,12 +4,17 @@
     {
       "url": "http://www.fragment.com/isFragment",
       "valueBoolean": true
+    },
+    {
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationFragment"
     }
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservationSectionFragment",
   "name": "ObservationSectionFragment",
   "title": "Observation Section Fragment",
   "status": "draft",
+  "description": "Fragment that constrains Observations to be sections.",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": true,
@@ -97,6 +102,17 @@
         "max": "0",
         "base": {
           "path": "Observation.referenceRange",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Observation.component",
+        "path": "Observation.component",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.component",
           "min": 0,
           "max": "*"
         }

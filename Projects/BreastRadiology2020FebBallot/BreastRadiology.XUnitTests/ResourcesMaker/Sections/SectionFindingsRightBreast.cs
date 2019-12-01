@@ -26,12 +26,13 @@ namespace BreastRadiology.XUnitTests
 
         void CreateSectionFindingsRightBreast()
         {
-            SDefEditor e = this.CreateObservationEditor("BreastRadSectionFindingsRightBreast",
+            SDefEditor e = this.CreateEditor("BreastRadSectionFindingsRightBreast",
                     "Breast Radiology Findings Right Breast",
                     new string[] {"Right Breast"},
+                    ObservationUrl,
                     out sectionFindingsRightBreast)
                 .Description(new Markdown().Paragraph("Findings Right Breast Section"))
-                .AddFragRef(this.ObservationSectionFragment)
+                .AddFragRef(this.PureObservationSectionFragment)
                 ;
             e.Select("bodySite").Zero();
             e.Find("hasMember").SliceByUrl(this.FindingBreastTargets);

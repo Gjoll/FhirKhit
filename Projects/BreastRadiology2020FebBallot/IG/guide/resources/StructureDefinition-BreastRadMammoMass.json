@@ -2899,6 +2899,41 @@
           "min": 0,
           "max": "1"
         },
+        "type": [
+          {
+            "code": "Quantity"
+          },
+          {
+            "code": "CodeableConcept"
+          },
+          {
+            "code": "string"
+          },
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "integer"
+          },
+          {
+            "code": "Range"
+          },
+          {
+            "code": "Ratio"
+          },
+          {
+            "code": "SampledData"
+          },
+          {
+            "code": "time"
+          },
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "Period"
+          }
+        ],
         "condition": [
           "obs-7"
         ],
@@ -2940,6 +2975,11 @@
           "min": 0,
           "max": "*"
         },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
         "isModifier": false,
         "isSummary": false,
         "binding": {
@@ -2986,6 +3026,11 @@
           "min": 0,
           "max": "*"
         },
+        "type": [
+          {
+            "code": "Annotation"
+          }
+        ],
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -3063,6 +3108,11 @@
           "min": 0,
           "max": "1"
         },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
         "isModifier": false,
         "isSummary": false,
         "binding": {
@@ -3100,6 +3150,14 @@
           "min": 0,
           "max": "1"
         },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Specimen"
+            ]
+          }
+        ],
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -3134,6 +3192,15 @@
           "min": 0,
           "max": "1"
         },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Device",
+              "http://hl7.org/fhir/StructureDefinition/DeviceMetric"
+            ]
+          }
+        ],
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -3169,6 +3236,11 @@
           "min": 0,
           "max": "*"
         },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
         "constraint": [
           {
             "key": "ele-1",

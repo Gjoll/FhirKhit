@@ -158,12 +158,14 @@ namespace BreastRadiology.XUnitTests
                 )
                 .Url;
 
-            SDefEditor e = this.CreateObservationEditor("BreastRadMammoCalcificationType",
+            SDefEditor e = this.CreateEditor("BreastRadMammoCalcificationType",
                         "Breast Radiology Mammography Calcification Type",
                     new string[] { "Type" },
+                    ObservationUrl,
                     out mammoCalcificationType)
                     .Description(new Markdown().Paragraph("Breast Radiology Mammography Calcification Type Observation"))
                     .AddFragRef(this.ObservationCodedValueFragment)
+                    .AddFragRef(this.ObservationLeafFragment)
                     ;
 
             e.Select("value[x]")

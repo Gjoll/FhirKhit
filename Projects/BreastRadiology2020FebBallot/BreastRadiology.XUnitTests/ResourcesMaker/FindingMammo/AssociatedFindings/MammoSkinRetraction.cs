@@ -26,19 +26,21 @@ namespace BreastRadiology.XUnitTests
 
         void CreateMammoSkinRetraction()
         {
-            SDefEditor e = this.CreateObservationEditor("BreastRadMammoSkinRetraction",
-                    "Breast Radiology Skin Retraction Observation",
-                    new string[] { "Skin", "Retraction" },
-                    out mammoSkinRetraction)
-                    .Description(new Markdown()
-                        .Paragraph("Skin Retraction Observation")
-                        .BiradHeader()
-                        .MarkedDown("The skin is pulled in abnormally")
-                        .BiradFooter()
-                        .MissingObservation("a skin retraction")
-                    )
-                    .AddFragRef(this.BreastBodyLocationRequiredFragment)
-                    ;
+            SDefEditor e = this.CreateEditor("BreastRadMammoSkinRetraction",
+                "Breast Radiology Skin Retraction Observation",
+                new string[] { "Skin", "Retraction" },
+                ObservationUrl,
+                out mammoSkinRetraction)
+                .Description(new Markdown()
+                    .Paragraph("Skin Retraction Observation")
+                    .BiradHeader()
+                    .MarkedDown("The skin is pulled in abnormally")
+                    .BiradFooter()
+                    .MissingObservation("a skin retraction")
+                )
+                .AddFragRef(this.BreastBodyLocationRequiredFragment)
+                .AddFragRef(this.ObservationNoValueFragment)
+                ;
 
             e.Select("value[x]").Zero();
         }

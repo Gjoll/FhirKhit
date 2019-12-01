@@ -26,9 +26,10 @@ namespace BreastRadiology.XUnitTests
 
         void CreateFindingMammo()
         {
-            SDefEditor e = this.CreateObservationEditor("BreastRadMammoFinding",
+            SDefEditor e = this.CreateEditor("BreastRadMammoFinding",
                     "Breast Radiology Mammography Finding",
                     new string[] {"Mammo", "Finding"},
+                    ObservationUrl,
                     out findingMammo)
                 .Description(new Markdown()
                             .Paragraph("Breast Radiology Mammography Finding")
@@ -40,7 +41,7 @@ namespace BreastRadiology.XUnitTests
                             .MarkedDown("metries and also the Guidance chapter). (Insert links/page #s)")
                             .BiradFooter()
                             )
-                .AddFragRef(this.FindingSectionFragment)
+                .AddFragRef(this.PureObservationSectionFragment)
                 ;
             ////$ todo. Incorrect method!!!
             //e.Find("method")

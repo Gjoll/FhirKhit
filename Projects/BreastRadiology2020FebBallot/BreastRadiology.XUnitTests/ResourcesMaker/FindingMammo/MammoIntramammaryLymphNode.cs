@@ -26,9 +26,10 @@ namespace BreastRadiology.XUnitTests
 
         void CreateMammoIntramammaryLymphNode()
         {
-            SDefEditor e = this.CreateObservationEditor("BreastRadMammoIntramammaryLymphNode",
+            SDefEditor e = this.CreateEditor("BreastRadMammoIntramammaryLymphNode",
                     "Breast Radiology Mammography Intramammary LymphNode Observation",
                     new string[] { "Intramammory", "Lymph", "Node" },
+                    ObservationUrl,
                     out mammoIntramammaryLymphNode)
                     .Description(new Markdown()
                         .Paragraph("Breast Radiology Mammography Intramammary LymphNode Observation")
@@ -42,6 +43,7 @@ namespace BreastRadiology.XUnitTests
                         .BiradFooter())
                     .AddFragRef(this.BreastBodyLocationRequiredFragment)
                     .AddFragRef(this.ObservationCodedValueFragment)
+                    .AddFragRef(this.ObservationLeafFragment)
                     ;
 
             e.Select("value[x]").Zero();

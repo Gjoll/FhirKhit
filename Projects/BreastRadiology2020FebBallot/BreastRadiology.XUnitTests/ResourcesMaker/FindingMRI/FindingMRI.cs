@@ -27,12 +27,13 @@ namespace BreastRadiology.XUnitTests
         void CreateFindingMri()
         {
             //$ Fix me. Incorrect method!!!
-            SDefEditor e = this.CreateObservationEditor("BreastRadMRIFinding",
+            SDefEditor e = this.CreateEditor("BreastRadMRIFinding",
                     "Breast Radiology MRI Finding",
                     new string[] {"MRI", "Finding"},
+                    ObservationUrl,
                     out findingMri)
                 .Description(new Markdown().Paragraph("Breast Radiology MRI Finding"))
-                .AddFragRef(this.FindingSectionFragment)
+                .AddFragRef(this.PureObservationSectionFragment)
             ;
             //$e.Find("method")
             //$     .FixedCodeSlice("method", "http://snomed.info/sct", "115341008")

@@ -63,9 +63,10 @@ namespace BreastRadiology.XUnitTests
                     })
                 .Url;
 
-            SDefEditor e = this.CreateObservationEditor("BreastRadMammoMassMargin",
+            SDefEditor e = this.CreateEditor("BreastRadMammoMassMargin",
                 "Breast Radiology Mammography Mass Margin",
                 new string[] { "Margin" },
+                ObservationUrl,
                 out mammoMassMargin)
                 .Description(new Markdown()
                     .Paragraph("Breast Radiology Mammography Mass Margin Observation")
@@ -75,6 +76,7 @@ namespace BreastRadiology.XUnitTests
                     .BiradFooter()
                     )
                 .AddFragRef(this.ObservationCodedValueFragment)
+                .AddFragRef(this.ObservationLeafFragment)
                 ;
 
             e.Select("value[x]")

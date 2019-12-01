@@ -57,9 +57,10 @@ namespace BreastRadiology.XUnitTests
                     })
                 .Url;
 
-            SDefEditor e = this.CreateObservationEditor("BreastRadMammoMassDensity",
+            SDefEditor e = this.CreateEditor("BreastRadMammoMassDensity",
                         "Breast Radiology Mammography Mass Density",
                         new string[] { "Density" },
+                        ObservationUrl,
                         out mammoMassDensity)
                     .Description(new Markdown()
                         .Paragraph("Breast Radiology Mammography Mass Density Observation")
@@ -77,6 +78,7 @@ namespace BreastRadiology.XUnitTests
                         .BiradFooter()
                         )
                     .AddFragRef(this.ObservationCodedValueFragment)
+                    .AddFragRef(this.ObservationLeafFragment)
                     ;
 
             e.Select("value[x]")

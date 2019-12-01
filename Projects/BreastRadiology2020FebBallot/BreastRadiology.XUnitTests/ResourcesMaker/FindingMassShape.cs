@@ -52,15 +52,17 @@ namespace BreastRadiology.XUnitTests
 
             String binding = vs.Url;
 
-            SDefEditor e = this.CreateObservationEditor("BreastRadMassShape",
+            SDefEditor e = this.CreateEditor("BreastRadMassShape",
                     "Breast Radiology Mass Shape",
                     new string[] { "Shape" },
+                    ObservationUrl,
                     out massShape)
                 .Description(new Markdown()
                     .Paragraph("Breast Radiology Mass Shape Observation")
                     .MissingObservation("a mass shape")
                     )
-                .AddFragRef(this.ObservationNoHasMembersFragment)
+                .AddFragRef(this.ObservationCodedValueFragment)
+                .AddFragRef(this.ObservationLeafFragment)
                 ;
 
             e.Select("value[x]")

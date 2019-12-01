@@ -27,16 +27,18 @@ namespace BreastRadiology.XUnitTests
 
         void CreateMassSize()
         {
-            SDefEditor e = this.CreateObservationEditor("BreastRadMassSize",
-                        "Breast Radiology Mass Size",
-                        new string[] { "Size" },
-                        out massSize)
-                    .Description(new Markdown()
-                        .Paragraph("Breast Radiology Mass Size Observation")
-                        .MissingObservation("a mass size")
-                        )
-                    ;
-            // TODO: Should this be SimpleQuantity.
+            SDefEditor e = this.CreateEditor("BreastRadMassSize",
+                    "Breast Radiology Mass Size",
+                    new string[] { "Size" },
+                    ObservationUrl,
+                    out massSize)
+                .Description(new Markdown()
+                    .Paragraph("Breast Radiology Mass Size Observation")
+                    .MissingObservation("a mass size")
+                    )
+                .AddFragRef(this.ObservationLeafFragment)
+                ;
+        // TODO: Should this be SimpleQuantity.
             e.Select("value[x]")
                 .Type("Quantity")
                 .SetCardinality(0, "3")

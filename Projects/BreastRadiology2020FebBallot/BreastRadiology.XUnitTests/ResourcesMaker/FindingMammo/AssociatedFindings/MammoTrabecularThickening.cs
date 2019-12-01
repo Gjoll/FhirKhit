@@ -31,19 +31,21 @@ namespace BreastRadiology.XUnitTests
 
         void CreateMammoTrabecularThickening()
         {
-            SDefEditor e = this.CreateObservationEditor("BreastRadMammoTrabecularThickening",
-                    "Breast Radiology Skin Retraction Observation",
-                    new string[] {"Trabecular","Thickening"},
-                    out mammoTrabecularThickening)
-                    .Description(new Markdown()
-                        .Paragraph("Trabecular Thickening Observation")
-                        .BiradHeader()
-                        .MarkedDown("This is a thickening of the fibrous septa of the breast.")
-                        .BiradFooter()
-                        .MissingObservation("a trabecular thickening")
-                    )
-                    .AddFragRef(this.BreastBodyLocationRequiredFragment)
-                    ;
+            SDefEditor e = this.CreateEditor("BreastRadMammoTrabecularThickening",
+                "Breast Radiology Skin Retraction Observation",
+                new string[] {"Trabecular","Thickening"},
+                ObservationUrl,
+                out mammoTrabecularThickening)
+                .Description(new Markdown()
+                    .Paragraph("Trabecular Thickening Observation")
+                    .BiradHeader()
+                    .MarkedDown("This is a thickening of the fibrous septa of the breast.")
+                    .BiradFooter()
+                    .MissingObservation("a trabecular thickening")
+                )
+                .AddFragRef(this.BreastBodyLocationRequiredFragment)
+                .AddFragRef(this.ObservationNoValueFragment)
+                ;
 
             e.Select("value[x]").Zero();
         }

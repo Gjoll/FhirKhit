@@ -26,9 +26,10 @@ namespace BreastRadiology.XUnitTests
 
         void CreateMammoNippleRetraction()
         {
-            SDefEditor e = this.CreateObservationEditor("BreastRadMammoNippleRetraction",
+            SDefEditor e = this.CreateEditor("BreastRadMammoNippleRetraction",
                     "Breast Radiology Mammography Nipple Retraction Observation",
                     new string[] { "Nipple", "Retraction" },
+                    ObservationUrl,
                     out mammoNippleRetraction)
                     .Description(new Markdown()
                         .Paragraph("Breast Radiology Mammography Nipple Retraction Observation")
@@ -39,6 +40,7 @@ namespace BreastRadiology.XUnitTests
                         .MarkedDown("is not a sign of malignancy. However, if nipple retraction is new, suspicion for underlying malignancy is increased.")
                         .BiradFooter()
                     )
+                    .AddFragRef(this.ObservationNoValueFragment)
                     .AddFragRef(this.BreastBodyLocationRequiredFragment)
                     ;
 

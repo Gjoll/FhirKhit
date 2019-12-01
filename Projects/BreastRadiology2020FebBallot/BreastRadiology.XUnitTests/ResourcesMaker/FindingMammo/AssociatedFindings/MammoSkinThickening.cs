@@ -31,19 +31,21 @@ namespace BreastRadiology.XUnitTests
         // - cardinality 0..1 or 0..*?
         void CreateMammoSkinThickening()
         {
-            SDefEditor e = this.CreateObservationEditor("BreastRadMammoSkinThickening",
-                    "Breast Radiology Skin Thickening Observation",
-                    new string[] { "Skin", "Thickening" },
-                    out mammoSkinThickening)
-                    .Description(new Markdown()
-                        .Paragraph("Skin Thickening Observation")
-                        .BiradHeader()
-                        .MarkedDown("Skin thickening may be focal or diffuse, and is defined as being greater than 2 mm in thickness. This ")
-                        .MarkedDown("finding is of particular concern if it represents a change from previous mammography examinations. ").MarkedDown("However, unilateral skin thickening is an expected finding after radiation therapy.")
-                        .BiradFooter()
-                    )
-                    .AddFragRef(this.BreastBodyLocationRequiredFragment)
-                    ;
+            SDefEditor e = this.CreateEditor("BreastRadMammoSkinThickening",
+                "Breast Radiology Skin Thickening Observation",
+                new string[] { "Skin", "Thickening" },
+                ObservationUrl,
+                out mammoSkinThickening)
+                .Description(new Markdown()
+                    .Paragraph("Skin Thickening Observation")
+                    .BiradHeader()
+                    .MarkedDown("Skin thickening may be focal or diffuse, and is defined as being greater than 2 mm in thickness. This ")
+                    .MarkedDown("finding is of particular concern if it represents a change from previous mammography examinations. ").MarkedDown("However, unilateral skin thickening is an expected finding after radiation therapy.")
+                    .BiradFooter()
+                )
+                .AddFragRef(this.BreastBodyLocationRequiredFragment)
+                .AddFragRef(this.ObservationNoValueFragment)
+                ;
 
             e.Select("value[x]").Zero();
         }

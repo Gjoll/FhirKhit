@@ -49,24 +49,6 @@ namespace BreastRadiology.XUnitTests
                             "“not circumscribed.” A mass that is NOT CIRCUMSCRIBED may further be described as having " +
                             "indistinct, angular, microlobulated, spiculated, or any combination of these margin descriptors. " +
                             "“Irregular” is not used to group these marginal attributes because irregular describes the shape")
-                        //new ConceptDef("Obscured",
-                        //    "Obscured Margin",
-                        //    "A margin that is hidden by superimposed or adjacent fibroglandular tissue. This is used " +
-                        //    "primarily when some of the margin of the mass is circumscribed, but the rest (more than 25%) is hidden."),
-                        //new ConceptDef("Microlobulated",
-                        //    "Microlobulated Margin",
-                        //    "The margin is characterized by short cycle undulations. For mammography, use of this descriptor " +
-                        //    "usually implies a suspicious finding."),
-                        //new ConceptDef("Indistinct",
-                        //    "Indistinct Margin",
-                        //    "There is no clear demarcation of the entire margin, or of any portion of the margin, from the surrounding " +
-                        //    "tissue. For mammography, this descriptor should not be used when the interpreting " +
-                        //    "physician believes it is likely due to immediately adjacent breast tissue. Use of this descriptor " +
-                        //    "usually implies a suspicious finding."),
-                        //new ConceptDef("Spiculated",
-                        //    "Spiculated Margin",
-                        //    "The margin is characterized by lines radiating from the mass. Use of this descriptor usually " +
-                        //    "implies a suspicious finding.")
                     })
                 .Url;
 
@@ -99,10 +81,11 @@ namespace BreastRadiology.XUnitTests
                     })
                 .Url;
 
-            SDefEditor e = this.CreateObservationEditor("BreastRadUSMassMargin",
-                "Breast Radiology Ultra-Sound Mass Margin",
-                new string[] { "Margin" },
-                out usMassMargin)
+            SDefEditor e = this.CreateEditor("BreastRadUSMassMargin",
+                    "Breast Radiology Ultra-Sound Mass Margin",
+                    new string[] { "Margin" },
+                    ObservationUrl,
+                    out usMassMargin)
                 .Description(new Markdown()
                     .Paragraph("Breast Radiology Ultra-Sound Mass Margin Observation")
                     .MissingObservation("a mass margin")
@@ -111,6 +94,7 @@ namespace BreastRadiology.XUnitTests
                     .BiradFooter()
                     )
                 .AddFragRef(this.ObservationCodedValueFragment)
+                .AddFragRef(this.ObservationLeafFragment)
                 ;
             {
                 CodeableConcept pattern1 = new CodeableConcept();

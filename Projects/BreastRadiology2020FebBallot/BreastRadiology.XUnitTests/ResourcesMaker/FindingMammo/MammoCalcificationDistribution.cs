@@ -81,12 +81,14 @@ namespace BreastRadiology.XUnitTests
                 )
                 .Url;
 
-            SDefEditor e =  this.CreateObservationEditor("BreastRadMammoCalcificationDistribution",
+            SDefEditor e =  this.CreateEditor("BreastRadMammoCalcificationDistribution",
                     "Breast Radiology Mammography Calcification Distribution Observation",
                     new string[] {"Distribution"},
+                    ObservationUrl,
                     out mammoCalcificationDistribution)
                 .Description(new Markdown().Paragraph("Breast Radiology Mammography Calcification Distribution Observation"))
                 .AddFragRef(this.ObservationCodedValueFragment)
+                .AddFragRef(this.ObservationLeafFragment)
                 ;
 
             e.Select("value[x]")

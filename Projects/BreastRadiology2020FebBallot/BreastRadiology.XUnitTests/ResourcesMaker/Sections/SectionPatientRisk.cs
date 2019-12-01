@@ -27,12 +27,13 @@ namespace BreastRadiology.XUnitTests
 
         void CreateSectionPatientRisk()
         {
-            SDefEditor e = this.CreateObservationEditor("BreastRadSectionPatientRisk",
+            SDefEditor e = this.CreateEditor("BreastRadSectionPatientRisk",
                     "Breast Radiology Patient Risk Section",
                     new string[] {"Patient","Risk"},
+                    ObservationUrl,
                     out sectionPatientRisk)
                 .Description(new Markdown().Paragraph("Patient Risk Section"))
-                .AddFragRef(this.ObservationSectionFragment)
+                .AddFragRef(this.PureObservationSectionFragment)
                 ;
             e.Select("bodySite").Zero();
         }

@@ -48,9 +48,10 @@ namespace BreastRadiology.XUnitTests
                     })
                 .Url;
 
-            SDefEditor e = this.CreateObservationEditor("BreastRadUSMassOrientation",
+            SDefEditor e = this.CreateEditor("BreastRadUSMassOrientation",
                         "Breast Radiology Ultra-Sound Mass Orientation",
                         new string[] { "Orientation" },
+                        ObservationUrl,
                         out usMassOrientation)
                     .Description(new Markdown()
                         .Paragraph("Breast Radiology Ultra-Sound Mass Orientation Observation")
@@ -65,6 +66,7 @@ namespace BreastRadiology.XUnitTests
                         .BiradFooter()
                         )
                     .AddFragRef(this.ObservationCodedValueFragment)
+                .AddFragRef(this.ObservationLeafFragment)
                     ;
 
             e.Select("value[x]")

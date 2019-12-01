@@ -26,16 +26,17 @@ namespace BreastRadiology.XUnitTests
 
         void CreateMammoAssociatedFeatures()
         {
-            SDefEditor e = this.CreateObservationEditor("BreastRadMammoAssociatedFeatures",
+            SDefEditor e = this.CreateEditor("BreastRadMammoAssociatedFeatures",
                     "Breast Radiology Mammography Associated Features",
                     new string[] { "Associated", "Features" },
+                    ObservationUrl,
                     out mammoAssociatedFeatures)
                 .Description(new Markdown()
                             .Paragraph("Mammography Associated Features Observation")
                             .Paragraph("Used with masses, asymmetries, or calcifications, or may stand alone as " +
                             "Features when no other abnormality is present.")
                             )
-                .AddFragRef(this.FindingSectionFragment)
+                .AddFragRef(this.ObservationSectionFragment)
                 ;
             {
                 //todo: Cardinality of targets?

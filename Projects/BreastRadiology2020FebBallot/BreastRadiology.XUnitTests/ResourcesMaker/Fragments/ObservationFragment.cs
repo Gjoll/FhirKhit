@@ -8,29 +8,29 @@ namespace BreastRadiology.XUnitTests
 {
     public partial class ResourcesMaker
     {
-        String FindingObservationFragment
+        String ObservationFragment
         {
             get
             {
-                if (findingObservationFragment == null)
-                    CreateFindingObservationFragment();
-                return findingObservationFragment;
+                if (observationFragment == null)
+                    CreateObservationFragment();
+                return observationFragment;
             }
         }
-        String findingObservationFragment = null;
+        String observationFragment = null;
 
         /// <summary>
         /// Create FindingObservationFragment.
         /// </summary>
         /// <returns></returns>
-        void CreateFindingObservationFragment()
+        void CreateObservationFragment()
         {
-            SDefEditor e = this.CreateFragment("FindingObservationFragment",
-                "Finding Observation Fragment",
-                    new string[] { "Finding", "Observation", "Fragment" },
+            SDefEditor e = this.CreateFragment("BreastRadObservationFragment",
+                "BreastRad Observation Fragment",
+                    new string[] { "BreastRad", "Observation", "Fragment" },
                 ObservationUrl,
-                out findingObservationFragment)
-                .Description(new Hl7.Fhir.Model.Markdown("Fragment that defines values for finding observations values."))
+                out observationFragment)
+                .Description(new Hl7.Fhir.Model.Markdown("Base fragment for all BreastRad observations."))
                 .AddFragRef(this.HeaderFragment)
                 .AddFragRef(this.CategoryFragment)
             ;

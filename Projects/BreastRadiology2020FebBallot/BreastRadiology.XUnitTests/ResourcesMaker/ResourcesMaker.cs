@@ -108,19 +108,19 @@ namespace BreastRadiology.XUnitTests
             return retVal;
         }
 
-        SDefEditor CreateObservationEditor(String name,
-            String title,
-            String[] mapName,
-            out String url)
-        {
-            SDefEditor retVal = this.CreateEditor(name,
-                title,
-                mapName,
-                ObservationUrl,
-                out url);
-            retVal.AddFragRef(this.FindingObservationFragment);
-            return retVal;
-        }
+        //SDefEditor CreateEditor(String name,
+        //    String title,
+        //    String[] mapName,
+        //    out String url)
+        //{
+        //    SDefEditor retVal = this.CreateEditor(name,
+        //        title,
+        //        mapName,
+        //        ObservationUrl,
+        //        out url);
+        //    retVal.AddFragRef(this.FindingObservationFragment);
+        //    return retVal;
+        //}
 
         ValueSet CreateValueSet(String name,
             String title,

@@ -71,9 +71,10 @@ namespace BreastRadiology.XUnitTests
                 )
                 .Url;
 
-            SDefEditor e = this.CreateObservationEditor("BreastRadMammoAsymmetries",
+            SDefEditor e = this.CreateEditor("BreastRadMammoAsymmetries",
                         "Breast Radiology Mammography Asymmetries Observation",
                         new string[] {"Asymmetries"},
+                        ObservationUrl,
                         out mammoAsymmetries)
                     .Description(new Markdown()
                         .Paragraph("Breast Radiology Mammography Asymmetries Observation")
@@ -88,7 +89,8 @@ namespace BreastRadiology.XUnitTests
                         .BiradFooter()
                         )
                     .AddFragRef(this.ObservationCodedValueFragment)
-                    ;
+                    .AddFragRef(this.ObservationLeafFragment)
+                ;
 
             {
                 ProfileTargetSlice[] targets = new ProfileTargetSlice[]

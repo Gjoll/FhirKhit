@@ -26,9 +26,10 @@ namespace BreastRadiology.XUnitTests
 
         void CreateMammoArchitecturalDistortion()
         {
-            SDefEditor e = this.CreateObservationEditor("BreastRadMammoArchitecturalDistortion",
+            SDefEditor e = this.CreateEditor("BreastRadMammoArchitecturalDistortion",
                         "Breast Radiology Mammography Architectural Distortion Observation",
                     new string[] {"Arch.","Distortion"},
+                    ObservationUrl,
                     out mammoArchitecturalDistortion)
                 .Description(
                     new Markdown()
@@ -45,6 +46,8 @@ namespace BreastRadiology.XUnitTests
                         .MarkedDown("finding to indicate that the parenchyma is distorted or retracted adjacent to the FINDING")
                         .BiradFooter()
                     )
+                .AddFragRef(this.ObservationNoValueFragment)
+                .AddFragRef(this.ObservationLeafFragment)
                 ;
 
             e.Select("value[x]").Zero();

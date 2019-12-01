@@ -223,13 +223,6 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/BreastRadMammoCalcification"
-      },
-      "name" : "BreastRadMammoCalcification",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
         "reference" : "StructureDefinition/BreastRadMammoCalcificationDistribution"
       },
       "name" : "BreastRadMammoCalcificationDistribution",
@@ -247,13 +240,6 @@
         "reference" : "StructureDefinition/BreastRadMammoFinding"
       },
       "name" : "BreastRadMammoFinding",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/BreastRadMammoMass"
-      },
-      "name" : "BreastRadMammoMass",
       "exampleBoolean" : false
     },
     {
@@ -433,13 +419,6 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/BreastRadUSMass"
-      },
-      "name" : "BreastRadUSMass",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
         "reference" : "StructureDefinition/BreastRadUSMassOrientation"
       },
       "name" : "BreastRadUSMassOrientation",
@@ -485,6 +464,27 @@
         "reference" : "ValueSet/BreastRadUSMassMarginVS"
       },
       "name" : "BreastRadUSMassMarginVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadMammoCalcification"
+      },
+      "name" : "BreastRadMammoCalcification",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadMammoMass"
+      },
+      "name" : "BreastRadMammoMass",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadUSMass"
+      },
+      "name" : "BreastRadUSMass",
       "exampleBoolean" : false
     }],
     "page" : {

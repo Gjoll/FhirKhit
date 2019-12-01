@@ -31,9 +31,10 @@ namespace BreastRadiology.XUnitTests
 
         void CreateMammoAxillaryAdenopathy()
         {
-            SDefEditor e = this.CreateObservationEditor("BreastRadMammoAxillaryAdenopathy",
+            SDefEditor e = this.CreateEditor("BreastRadMammoAxillaryAdenopathy",
                     "Breast Radiology Mammography Axillary Adenopathy Observation",
                     new string[] { "Axillary", "Adenopathy" },
+                    ObservationUrl,
                     out mammoAxillaryAdenopathy)
                     .Description(new Markdown()
                         .Paragraph("Breast Radiology Mammography Axillary Adenopathy Observation")
@@ -46,6 +47,7 @@ namespace BreastRadiology.XUnitTests
                         .MarkedDown("substantially composed of fat, this is a normal variant.")
                         .BiradFooter()
                     )
+                    .AddFragRef(this.ObservationNoValueFragment)
                     .AddFragRef(this.BreastBodyLocationRequiredFragment)
                     ;
 
