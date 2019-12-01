@@ -46,7 +46,7 @@ namespace BreastRadiology.XUnitTests
                             "It may be helpful to distinguish breasts in which there are a few scattered areas of " +
                             "fibroglandular-density tissue from those in which there are moderate scattered areas of " +
                             "fibroglandular-density tissue. Note that there has been a subtle change in the wording " +
-                            "of this category, to conform to BI-RADS® lexicon use of the term “density” to describe " +
+                            "of this category, to conform to BI-RADS® lexicon use of the term \"density\" to describe " +
                             "the degree of x-ray attenuation of breast tissue but not to represent discrete " +
                             "mammographic findings."
                         ),

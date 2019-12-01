@@ -38,6 +38,22 @@ namespace BreastRadiology.XUnitTests
             //$ .FixedCodeSlice("method", "http://snomed.info/sct", "115341008")
             //$ .Card(1, "*")
             //$ ;
+            {
+                ProfileTarget[] targets = new ProfileTarget[]
+                {
+                    new ProfileTarget(this.USTissueComposition, 1, "1"),
+                    //new ProfileTarget(this.MammoMass, 0, "*"),
+                    //new ProfileTarget(this.MammoCalcification, 0, "*"),
+                    //new ProfileTarget(this.MammoArchitecturalDistortion, 0, "1"),
+                    //new ProfileTarget(this.MammoAsymmetries, 0, "*"),
+                    //new ProfileTarget(this.MammoIntramammaryLymphNode, 0, "1"),
+                    //new ProfileTarget(this.MammoSkinLesion, 0, "*"),
+                    //new ProfileTarget(this.MammoSolitaryDilatedDuct, 0, "1"),
+                    //new ProfileTarget(this.MammoAssociatedFeatures, 0, "1")
+                };
+                e.Find("hasMember").SliceByUrl(targets);
+                e.MapNode.AddProfileTargets(targets);
+            }
         }
     }
 }

@@ -41,7 +41,7 @@ namespace BreastRadiology.XUnitTests
                     {
                         new ConceptDef("Diffuse",
                             "Diffuse Calcification Distribution",
-                            "(historically, “scattered”)" +
+                            "(historically, \"scattered\")" +
                             "These are calcifications that are distributed randomly throughout the breast. Punctate and " +
                             "amorphous calcifications in this distribution are almost always benign, especially if bilateral."
                         ),
@@ -55,7 +55,7 @@ namespace BreastRadiology.XUnitTests
                         ),
                         new ConceptDef("Grouped ",
                             "Grouped  Calcification Distribution",
-                            "(historically, “clustered”)" +
+                            "(historically, \"clustered\")" +
                             "This term should be used when relatively few calcifications occupy a small portion of breast " +
                             "tissue. The lower limit for use of this descriptor is usually when 5 calcifications are grouped " +
                             "within 1 cm of each other or when a definable pattern is identified. The upper limit for use " +

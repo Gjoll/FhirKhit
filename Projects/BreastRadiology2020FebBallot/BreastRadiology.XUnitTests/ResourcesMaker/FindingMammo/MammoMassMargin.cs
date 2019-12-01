@@ -39,7 +39,7 @@ namespace BreastRadiology.XUnitTests
                             "(historically, \"well defined\" or \"sharply defined\") " +
                             "The margin is sharply demarcated with an abrupt transition between the lesion and the surrounding tissue. "+
                             "For mammography, if part of the margin is obscured, at least 75% of the margin must be well " +
-                            "defined for a mass to qualify as “circumscribed”. A mass for which any portion of the margin " +
+                            "defined for a mass to qualify as \"circumscribed\". A mass for which any portion of the margin " +
                             "is indistinct, microlobulated, or spiculated should be classified on the basis of the latter " +
                             "(the most suspicious component)."),
                         new ConceptDef("Obscured",

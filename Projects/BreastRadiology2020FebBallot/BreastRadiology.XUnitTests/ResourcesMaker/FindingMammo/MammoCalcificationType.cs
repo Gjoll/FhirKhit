@@ -72,7 +72,7 @@ namespace BreastRadiology.XUnitTests
                             "Round (Typically Benign)",
                             "When multiple, they may vary in size and therefore also in opacity. They may be considered "+
                             "benign when diffuse and small (< 1 mm), and are frequently formed in the acini of lobules. When "+
-                            "smaller than 0.5 mm, the term “punctate” should be used. "+
+                            "smaller than 0.5 mm, the term \"punctate\" should be used. "+
                             " " +
                             "An isolated group of punctate calcifications may warrant probably benign assessment and "+
                             "mammographic surveillance if no prior examinations are available for comparison, or "+
@@ -86,7 +86,7 @@ namespace BreastRadiology.XUnitTests
                             "sphere. The calcific deposits are usually less than 1 mm in thickness when viewed on edge. " +
                             "These are benign nongrouped calcifications that range from smaller than 1 mm to larger " +
                             "than a centimeter or more. The calcifications are round or oval, with smooth surfaces and " +
-                            "lucent centers. Fat necrosis and calcifications in the walls of cysts are the most common “rim” " +
+                            "lucent centers. Fat necrosis and calcifications in the walls of cysts are the most common \"rim\" " +
                             "calcifications, although more extensive (and occasionally thicker-rimmed) calcification in the " +
                             "walls of oil cysts or simple cysts may be seen."
                            ),
@@ -116,7 +116,7 @@ namespace BreastRadiology.XUnitTests
                             ),
                         new ConceptDef("Amorphous",
                             "Amorphous Calcification (Suspicious Morphology)",
-                            "(historically, “indistinct”) " +
+                            "(historically, \"indistinct\") " +
                             "These are sufficiently small and/or hazy in appearance that a more specific particle shape " +
                             "cannot be determined. Amorphous calcifications in a grouped, linear, or segmental distribution " +
                             "are suspicious and generally warrant biopsy. Bilateral, diffuse amorphous calcifications " +

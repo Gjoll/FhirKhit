@@ -13,23 +13,23 @@ namespace BreastRadiology.XUnitTests
 {
     public partial class ResourcesMaker : ConverterBase
     {
-        String MammoFinding
+        String FindingMammo
         {
             get
             {
-                if (mammoFinding == null)
-                    CreateMammoFinding();
-                return mammoFinding;
+                if (findingMammo == null)
+                    CreateFindingMammo();
+                return findingMammo;
             }
         }
-        String mammoFinding = null;
+        String findingMammo = null;
 
-        void CreateMammoFinding()
+        void CreateFindingMammo()
         {
             SDefEditor e = this.CreateObservationEditor("BreastRadMammoFinding",
                     "Breast Radiology Mammography Finding",
                     new string[] {"Mammo", "Finding"},
-                    out mammoFinding)
+                    out findingMammo)
                 .Description(new Markdown()
                             .Paragraph("Breast Radiology Mammography Finding")
                             .BiradHeader()

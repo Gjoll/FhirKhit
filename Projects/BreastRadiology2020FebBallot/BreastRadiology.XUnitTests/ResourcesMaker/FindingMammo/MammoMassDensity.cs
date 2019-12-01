@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
                 "BreastRadMammoMassDensity",
                 "Breast Radiology Mammography Mass Density",
                 new Markdown()
-                    .Paragraph("Breast Mammography Radiology Mass Density"),
+                    .Paragraph("Breast Radiology Mammography Mass Density"),
                     new ConceptDef[]
                     {
                         new ConceptDef("HighDensity ",

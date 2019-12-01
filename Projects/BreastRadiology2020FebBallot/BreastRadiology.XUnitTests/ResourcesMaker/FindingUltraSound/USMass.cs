@@ -16,34 +16,34 @@ namespace BreastRadiology.XUnitTests
 
     public partial class ResourcesMaker : ConverterBase
     {
-        String MammoMass
+        String USMass
         {
             get
             {
-                if (mammoMass == null)
-                    CreateMammoMass();
-                return mammoMass;
+                if (usMass == null)
+                    CreateUSMass();
+                return usMass;
             }
         }
-        String mammoMass = null;
+        String usMass = null;
 
-        void CreateMammoMass()
+        void CreateUSMass()
         {
-            SDefEditor e = this.CreateObservationEditor("BreastRadMammoMass",
+            SDefEditor e = this.CreateObservationEditor("BreastRadUSMass",
                     "Breast Radiology Mammography Mass Observation",
                     new string[] { "Mass" },
-                    out mammoMass)
+                    out usMass)
                 .Description(new Markdown()
                     .Paragraph("Breast Radiology Mammography Mass Observation")
-                    .MissingObservation("a mass", "and no Shape, Margin, or Density observations should be referenced by this observation")
+                    .MissingObservation("a mass", "and no Shape, Orientation, Margin, Echo Pattern, or Posterior Acoustic Feature observations should be referenced by this observation")
                     .BiradHeader()
-                    .MarkedDown("\"MASS\" is three dimensional and occupies space. It is seen on two different mammographic pro-")
-                    .MarkedDown("jections. It has completely or partially convex-outward borders and (when radiodense) appears")
-                    .MarkedDown("denser in the center than at the periphery. If a potential mass is seen only on a single projection, it")
-                    .MarkedDown("should be called an \"ASYMMETRY\" until its 3-dimensionality is confirmed")
+                    .MarkedDown("A mass is three dimensional and occupies space. With 2-D ultrasound, it should be seen in two")
+                    .MarkedDown("different planes, and in three planes with volumetric acquisitions. Masses can be distinguished")
+                    .MarkedDown("from normal anatomic structures, such as ribs or fat lobules, using two or more projections and")
+                    .MarkedDown("real-time scanning.")
                     .BiradFooter()
                     .Paragraph("This observation has the following three member observations")
-                    .List("Shape", "Margin", "Density")
+                    .List("Shape", "Orientation", "Margin", "Echo Pattern", "Posterior acoustic features")
                 )
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)
                 .AddFragRef(this.ObservationSectionFragment)
@@ -51,11 +51,11 @@ namespace BreastRadiology.XUnitTests
             {
                 ProfileTarget[] targets = new ProfileTarget[]
                 {
-                    new ProfileTarget(this.MassShape, 0, "1"),
                     new ProfileTarget(this.MassSize, 0, "1"),
-                    new ProfileTarget(this.MammoMassMargin, 0, "1"),
-                    new ProfileTarget(this.MammoMassDensity, 0, "1"),
-                    new ProfileTarget(this.MammoAssociatedFeatures, 0, "1", false)
+                    new ProfileTarget(this.MassShape, 0, "1"),
+                    new ProfileTarget(this.USMassOrientation, 0, "1"),
+                    //new ProfileTarget(this.MammoMassMargin, 0, "1"),
+                    //new ProfileTarget(this.MammoAssociatedFeatures, 0, "1", false)
                 };
                 e.Find("hasMember").SliceByUrl(targets);
                 e.MapNode.AddProfileTargets(targets);

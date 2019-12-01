@@ -23,7 +23,7 @@ namespace BreastRadiology.XUnitTests
         {
             ProfileTarget[] retVal = new ProfileTarget[]
             {
-                new ProfileTarget(this.MammoFinding, 0, "*"),
+                new ProfileTarget(this.FindingMammo, 0, "*"),
                 new ProfileTarget(this.FindingMri, 0, "*"),
                 new ProfileTarget(this.FindingUltraSound, 0, "*")
             };
