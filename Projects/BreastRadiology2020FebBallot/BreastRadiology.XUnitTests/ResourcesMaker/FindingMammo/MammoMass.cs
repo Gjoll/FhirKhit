@@ -11,6 +11,9 @@ using Hl7.Fhir.Serialization;
 
 namespace BreastRadiology.XUnitTests
 {
+    // todo: add mass size measurements (3 dimensional) like US?
+    // same for asymmetry, lesion, calcification?
+
     public partial class ResourcesMaker : ConverterBase
     {
         String MammoMass
@@ -51,6 +54,7 @@ namespace BreastRadiology.XUnitTests
                 ProfileTarget[] targets = new ProfileTarget[]
                 {
                     new ProfileTarget(this.MassShape, 0, "1"),
+                    new ProfileTarget(this.MassSize, 0, "1"),
                     new ProfileTarget(this.MammoMassMargin, 0, "1"),
                     new ProfileTarget(this.MammoMassDensity, 0, "1"),
                     new ProfileTarget(this.MammoAssociatedFeatures, 0, "1", false)

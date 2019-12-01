@@ -384,6 +384,19 @@ If this observation is present, and dataAbsentReason is not empty, then {article
 {% endcapture %}{{ md_text | markdownify }}</td>
 </tr>
 <tr>
+<td><a href="StructureDefinition-BreastRadMassSize.html">BreastRadMassSize</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Breast Radiology Mass Size Observation
+
+
+If this observation is present, and dataAbsentReason is empty, then {articleAndName} was observed.
+
+
+If this observation is present, and dataAbsentReason is not empty, then {articleAndName} was not observed and dataAbsentReason contains the reason why{term}
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
 <td><a href="StructureDefinition-BreastRadMRIFinding.html">BreastRadMRIFinding</a></td>
 <td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
 <td>{% capture md_text %}

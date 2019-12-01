@@ -86,6 +86,26 @@
         ]
       },
       {
+        "id": "Observation.hasMember:breastRadMassSize",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadMassSize",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMassSize"
+            ]
+          }
+        ]
+      },
+      {
         "id": "Observation.hasMember:breastRadMammoMassMargin",
         "path": "Observation.hasMember",
         "sliceName": "breastRadMammoMassMargin",

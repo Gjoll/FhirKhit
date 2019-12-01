@@ -147,6 +147,9 @@
     "StructureDefinition/BreastRadMassShape": {
       "base": "StructureDefinition-BreastRadMassShape.html"
     },
+    "StructureDefinition/BreastRadMassSize": {
+      "base": "StructureDefinition-BreastRadMassSize.html"
+    },
     "StructureDefinition/BreastRadMRIFinding": {
       "base": "StructureDefinition-BreastRadMRIFinding.html"
     },

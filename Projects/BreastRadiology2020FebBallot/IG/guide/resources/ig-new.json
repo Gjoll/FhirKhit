@@ -395,6 +395,13 @@
       },
       "name" : "BreastRadMassShape",
       "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadMassSize"
+      },
+      "name" : "BreastRadMassSize",
+      "exampleBoolean" : false
     }],
     "page" : {
       "nameUrl" : "index.html",

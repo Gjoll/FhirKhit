@@ -18,14 +18,14 @@ namespace BreastRadiology.XUnitTests
         {
             get
             {
-                if (findingMassShape == null)
-                    CreateFindingMassShape();
-                return findingMassShape;
+                if (massShape == null)
+                    CreateMassShape();
+                return massShape;
             }
         }
-        String findingMassShape = null;
+        String massShape = null;
 
-        void CreateFindingMassShape()
+        void CreateMassShape()
         {
             ValueSet vs = this.CreateValueSet(
                     "BreastRadMassShape",
@@ -51,7 +51,7 @@ namespace BreastRadiology.XUnitTests
             SDefEditor e = this.CreateObservationEditor("BreastRadMassShape",
                     "Breast Radiology Mass Shape",
                     new string[] { "Shape" },
-                    out findingMassShape)
+                    out massShape)
                 .Description(new Markdown()
                     .Paragraph("Breast Radiology Mass Shape Observation")
                     .MissingObservation("a mass shape")
