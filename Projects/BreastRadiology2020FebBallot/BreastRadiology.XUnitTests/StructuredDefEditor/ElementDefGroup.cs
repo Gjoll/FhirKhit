@@ -1,4 +1,5 @@
 ﻿using FhirKhit.Tools;
+using FhirKhit.Tools.R4;
 using Hl7.Fhir.Model;
 using System;
 using System.Collections.Generic;
@@ -141,17 +142,23 @@ namespace BreastRadiology.XUnitTests
             return extSlice;
         }
 
-        public ElementDefGroup SliceByPatterns(IEnumerable<PatternSlice> patternSlices)
+        public ElementDefGroup SliceByPatterns(String typeCode,
+            IEnumerable<PatternSlice> patternSlices)
         {
-            this.ElementDefinition.ConfigureSliceByPatternDiscriminator("$this");
+            this.ElementDefinition
+                .ConfigureSliceByPatternDiscriminator("$this")
+                .Type(typeCode)
+                ;
             foreach (PatternSlice patternSlice in patternSlices)
             {
-                ElementDefinition sliceElement = this.AppendSlice(patternSlice.SliceName, patternSlice.Min, patternSlice.Max);
-                sliceElement.Pattern = sliceElement.Pattern;
-                sliceElement.Type.Clear();
+                ElementDefinition sliceElement = this.AppendSlice(patternSlice.SliceName, patternSlice.Min, patternSlice.Max)
+                    .Type("CodeableConcept")
+                    .Pattern(patternSlice.Pattern)
+                    .Short(patternSlice.Short)
+                    .Definition(patternSlice.Definition)
+                    .Type(typeCode);
+                    ;
                 sliceElement.Mapping.Clear();
-                sliceElement.Short = patternSlice.Short;
-                sliceElement.Definition = patternSlice.Definition;
             }
             return this;
         }

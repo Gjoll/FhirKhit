@@ -137,8 +137,7 @@ namespace BreastRadiology.XUnitTests
                         "*")
                 };
                 e.Find("value[x]")
-                    .SliceByPatterns(patternSlices)
-                    .ElementDefinition.Type("CodeableConcept")
+                    .SliceByPatterns("CodeableConcept", patternSlices)
                     ;
             }
         }

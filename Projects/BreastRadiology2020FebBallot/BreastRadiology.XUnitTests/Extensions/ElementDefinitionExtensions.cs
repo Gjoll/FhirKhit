@@ -7,7 +7,7 @@ namespace BreastRadiology.XUnitTests
 {
     public static class ElementDefinitionExtensions
     {
-        public static void ConfigureSliceByPatternDiscriminator(this ElementDefinition eDef,
+        public static ElementDefinition ConfigureSliceByPatternDiscriminator(this ElementDefinition eDef,
             String path)
         {
             if (eDef.Slicing == null)
@@ -23,10 +23,11 @@ namespace BreastRadiology.XUnitTests
                 Type = ElementDefinition.DiscriminatorType.Pattern,
                 Path = path
             });
+            return eDef;
         }
 
 
-        public static void ConfigureSliceByUrlDiscriminator(this ElementDefinition eDef)
+        public static ElementDefinition ConfigureSliceByUrlDiscriminator(this ElementDefinition eDef)
         {
             if (eDef.Slicing == null)
             {
@@ -41,6 +42,7 @@ namespace BreastRadiology.XUnitTests
                 Type = ElementDefinition.DiscriminatorType.Value,
                 Path = "url"
             });
+            return eDef;
         }
     }
 }

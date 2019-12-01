@@ -29,6 +29,7 @@ namespace PreFhir
     public class PreFhirGenerator : ConverterBase
     {
         public bool DebugFlag { get; set; } = true;
+        public bool BreakFlag = false;
         Dictionary<String, ProcessItem> processed = new Dictionary<string, ProcessItem>();
         Dictionary<String, ProcessItem> unProcessed = new Dictionary<string, ProcessItem>();
 
@@ -171,7 +172,10 @@ namespace PreFhir
             // process test resource.
             ProcessItem pi = new ProcessItem(this, sd);
             if (breakFlag)
+            {
+                this.BreakFlag = true;
                 Debugger.Break();
+            }
             this.Process(pi);
 
             return this.HasErrors;

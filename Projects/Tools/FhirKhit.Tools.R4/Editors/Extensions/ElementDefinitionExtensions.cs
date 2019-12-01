@@ -82,6 +82,12 @@ namespace FhirKhit.Tools.R4
             return e;
         }
 
+        public static ElementDefinition Definition(this ElementDefinition e, Markdown value)
+        {
+            e.Definition = value;
+            return e;
+        }
+
         public static ElementDefinition Definition(this ElementDefinition e, string value)
         {
             e.Definition = new Markdown(value);

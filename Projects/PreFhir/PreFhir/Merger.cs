@@ -446,9 +446,9 @@ namespace PreFhir
             baseElement.LabelElement = this.ConstrainSingleElement(baseElement.Path, "Label", baseElement.LabelElement, mergeElement.LabelElement, ref retVal);
             ConstrainSlicing(baseElement, mergeElement, ref retVal);
 
-            baseElement.ShortElement = this.ConstrainSingleElement(baseElement.Path, "Short", baseElement.ShortElement, mergeElement.ShortElement, ref retVal);
-            baseElement.Definition = this.ConstrainSingleElement(baseElement.Path, "Definition", baseElement.Definition, mergeElement.Definition, ref retVal);
-            baseElement.Comment = this.ConstrainSingleElement(baseElement.Path, "Comment", baseElement.Comment, mergeElement.Comment, ref retVal);
+            //baseElement.ShortElement = this.ConstrainSingleElement(baseElement.Path, "Short", baseElement.ShortElement, mergeElement.ShortElement, ref retVal);
+            //baseElement.Definition = this.ConstrainSingleElement(baseElement.Path, "Definition", baseElement.Definition, mergeElement.Definition, ref retVal);
+            //baseElement.Comment = this.ConstrainSingleElement(baseElement.Path, "Comment", baseElement.Comment, mergeElement.Comment, ref retVal);
             baseElement.Requirements = this.ConstrainSingleElement(baseElement.Path, "Requirements", baseElement.Requirements, mergeElement.Requirements, ref retVal);
             // TODO: Alias
             //       ContentReference
@@ -479,6 +479,9 @@ namespace PreFhir
                     ref bool success)
         {
             const String fcn = "MergeType";
+
+            //if ((this.preFhir.BreakFlag == true) && (baseElement.Path == "Observation.value[x]"))
+            //    Debugger.Break();
 
             Dictionary<String, ElementDefinition.TypeRefComponent> baseTypes = new Dictionary<string, ElementDefinition.TypeRefComponent>();
             foreach (ElementDefinition.TypeRefComponent typeRef in baseElement.Type)

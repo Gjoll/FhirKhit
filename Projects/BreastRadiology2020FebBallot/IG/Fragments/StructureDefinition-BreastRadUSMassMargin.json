@@ -67,6 +67,18 @@
           "path": "Observation.value[x]",
           "min": 0,
           "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadUSMassMarginVS"
+            }
+          ]
         }
       },
       {
@@ -81,6 +93,18 @@
           "path": "Observation.value[x]",
           "min": 0,
           "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadUSMassMarginNotCircumscribedVS"
+            }
+          ]
         }
       }
     ]
