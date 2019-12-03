@@ -172,7 +172,27 @@ namespace BreastRadiology.XUnitTests
             public String Display;
             public String Definition;
 
-            public ConceptDef(String code, String display, String definition)
+        //    public ConceptDef(String code, String display, String definition)
+        //    {
+        //        if (String.IsNullOrWhiteSpace(code) == true)
+        //            throw new Exception("Empty code");
+        //        if (String.IsNullOrWhiteSpace(display) == true)
+        //            throw new Exception("Empty Display");
+        //        if (String.IsNullOrWhiteSpace(definition) == true)
+        //            throw new Exception("Empty definition");
+        //        Code = code;
+        //        Display = display;
+        //        Definition = definition;
+        //    }
+        //}
+
+        class BiRadConceptDef
+        {
+            public String Code;
+            public String Display;
+            public String Definition;
+
+            public BiRadConceptDef(String code, String display, String definition)
             {
                 if (String.IsNullOrWhiteSpace(code) == true)
                     throw new Exception("Empty code");
@@ -189,7 +209,7 @@ namespace BreastRadiology.XUnitTests
         ValueSet CreateValueSet(String name,
             String title,
             Markdown description,
-            IEnumerable<ConceptDef> codes)
+            IEnumerable<BiRadConceptDef> codes)
         {
             return CreateValueSet(name, title, description, codes, out CodeSystem cs);
         }
@@ -197,7 +217,7 @@ namespace BreastRadiology.XUnitTests
         ValueSet CreateValueSet(String name,
             String title,
             Markdown description,
-            IEnumerable<ConceptDef> codes,
+            IEnumerable<BiRadConceptDef> codes,
             out CodeSystem cs)
         {
             cs = new CodeSystem
@@ -231,7 +251,7 @@ namespace BreastRadiology.XUnitTests
             vs.Compose = new ValueSet.ComposeComponent();
             vs.Compose.Include.Add(vsComp);
 
-            foreach (ConceptDef code in codes)
+            foreach (BiRadConceptDef code in codes)
             {
                 vsComp.Concept.Add(new ValueSet.ConceptReferenceComponent
                 {
@@ -266,7 +286,7 @@ namespace BreastRadiology.XUnitTests
         public void CreateMaps(String outputDir)
         {
             ResourceMapMaker resourceMapMaker = new ResourceMapMaker(this);
-            resourceMapMaker.Create(Path.Combine(outputDir, "BreastRadOverview.svg"));
+            resourceMapMaker.Create(Path.Combine(outputDir, "ProfileOverview.svg"));
 
             FragmentMapMaker fragmentMapMaker = new FragmentMapMaker(this, outputDir);
             fragmentMapMaker.Create();

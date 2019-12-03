@@ -32,10 +32,10 @@ namespace BreastRadiology.XUnitTests
                 new Markdown()
                     .Paragraph("Breast Radiology Ultra-Sound Tissue Composition Observation")
                     .BiradHeader()
-                    .BiRadLine("The wide normal variability in tissue composition seen on mammograms can also be observed")
-                    .BiRadLine("on US images. Just as increasing breast density diminishes the sensitivity of mammography in the")
-                    .BiRadLine("detection of small masses, heterogeneous background echotexture of the breast may affect the")
-                    .BiRadLine("sensitivity of breast sonograms for lesion detection.")
+                    .BlockQuote("The wide normal variability in tissue composition seen on mammograms can also be observed")
+                    .BlockQuote("on US images. Just as increasing breast density diminishes the sensitivity of mammography in the")
+                    .BlockQuote("detection of small masses, heterogeneous background echotexture of the breast may affect the")
+                    .BlockQuote("sensitivity of breast sonograms for lesion detection.")
                     .BiradFooter(),
                 new ConceptDef[]
                 {

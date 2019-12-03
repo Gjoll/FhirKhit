@@ -17,14 +17,13 @@ namespace FhirKhit.Tools.R2
     {
         public static Markdown BiradHeader(this Markdown md)
         {
-            md.Value += "### BI-RADS® ATLAS — MAMMOGRAPHY";
-            md.Value += "### FIFTH EDITION — 2013";
+            md.Value += "";
             return md;
         }
 
         public static Markdown BiradFooter(this Markdown md)
         {
-            md.Value += "### END BI-RADS® ATLAS — MAMMOGRAPHY TEXT";
+            md.Value += ">> -- BI-RADS® ATLAS — MAMMOGRAPHY FIFTH EDITION — 2013\n";
             return md;
         }
 
@@ -34,9 +33,9 @@ namespace FhirKhit.Tools.R2
         public static Markdown MissingObservation(this Markdown md, String articleAndName, String term = ".")
         {
             md
-                .Paragraph("If this observation is present, and dataAbsentReason is empty, then {articleAndName} was observed.")
-                .Paragraph("If this observation is present, and dataAbsentReason is not empty, then {articleAndName} " +
-                        "was not observed and dataAbsentReason contains the reason why{term}")
+                .Paragraph($"If this observation is present, and dataAbsentReason is empty, then {articleAndName} was observed.")
+                .Paragraph($"If this observation is present, and dataAbsentReason is not empty, then {articleAndName} " +
+                           $"was not observed and dataAbsentReason contains the reason why{term}")
             ;
             return md;
         }
@@ -53,10 +52,10 @@ namespace FhirKhit.Tools.R2
         /// Preformatted markdown
         /// </summary>
         /// <returns></returns>
-        public static Markdown BiRadLine(this Markdown md, params string[] lines)
+        public static Markdown BlockQuote(this Markdown md, params string[] lines)
         {
             foreach (String line in lines)
-                md.Value += $"{line}\n";
+                md.Value += $"> {line}\n";
             return md;
         }
 

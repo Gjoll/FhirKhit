@@ -39,7 +39,7 @@ namespace BreastRadiology.XUnitTests
                 .Description(new Markdown()
                     .Paragraph("Trabecular Thickening Observation")
                     .BiradHeader()
-                    .BiRadLine("This is a thickening of the fibrous septa of the breast.")
+                    .BlockQuote("This is a thickening of the fibrous septa of the breast.")
                     .BiradFooter()
                     .MissingObservation("a trabecular thickening")
                 )

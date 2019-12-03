@@ -34,7 +34,7 @@ namespace BreastRadiology.XUnitTests
                 .Description(new Markdown()
                     .Paragraph("Skin Retraction Observation")
                     .BiradHeader()
-                    .BiRadLine("The skin is pulled in abnormally")
+                    .BlockQuote("The skin is pulled in abnormally")
                     .BiradFooter()
                     .MissingObservation("a skin retraction")
                 )
