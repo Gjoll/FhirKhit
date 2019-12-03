@@ -81,6 +81,9 @@
     "CodeSystem/BreastRadMemmoAsymmetriesCS": {
       "base": "CodeSystem-BreastRadMemmoAsymmetriesCS.html"
     },
+    "CodeSystem/BreastRadUSMassEchoPatternCS": {
+      "base": "CodeSystem-BreastRadUSMassEchoPatternCS.html"
+    },
     "CodeSystem/BreastRadUSMassMarginCS": {
       "base": "CodeSystem-BreastRadUSMassMarginCS.html"
     },
@@ -89,6 +92,9 @@
     },
     "CodeSystem/BreastRadUSMassOrientationCS": {
       "base": "CodeSystem-BreastRadUSMassOrientationCS.html"
+    },
+    "CodeSystem/BreastRadUSMassPosteriorAcousticFeaturesCS": {
+      "base": "CodeSystem-BreastRadUSMassPosteriorAcousticFeaturesCS.html"
     },
     "CodeSystem/BreastRadUSTissueCompositionCS": {
       "base": "CodeSystem-BreastRadUSTissueCompositionCS.html"
@@ -195,11 +201,17 @@
     "StructureDefinition/BreastRadUSMass": {
       "base": "StructureDefinition-BreastRadUSMass.html"
     },
+    "StructureDefinition/BreastRadUSMassEchoPattern": {
+      "base": "StructureDefinition-BreastRadUSMassEchoPattern.html"
+    },
     "StructureDefinition/BreastRadUSMassMargin": {
       "base": "StructureDefinition-BreastRadUSMassMargin.html"
     },
     "StructureDefinition/BreastRadUSMassOrientation": {
       "base": "StructureDefinition-BreastRadUSMassOrientation.html"
+    },
+    "StructureDefinition/BreastRadUSMassPosteriorAcousticFeatures": {
+      "base": "StructureDefinition-BreastRadUSMassPosteriorAcousticFeatures.html"
     },
     "StructureDefinition/BreastRadUSTissueComposition": {
       "base": "StructureDefinition-BreastRadUSTissueComposition.html"
@@ -228,6 +240,9 @@
     "ValueSet/BreastRadMemmoAsymmetriesVS": {
       "base": "ValueSet-BreastRadMemmoAsymmetriesVS.html"
     },
+    "ValueSet/BreastRadUSMassEchoPatternVS": {
+      "base": "ValueSet-BreastRadUSMassEchoPatternVS.html"
+    },
     "ValueSet/BreastRadUSMassMarginNotCircumscribedVS": {
       "base": "ValueSet-BreastRadUSMassMarginNotCircumscribedVS.html"
     },
@@ -236,6 +251,9 @@
     },
     "ValueSet/BreastRadUSMassOrientationVS": {
       "base": "ValueSet-BreastRadUSMassOrientationVS.html"
+    },
+    "ValueSet/BreastRadUSMassPosteriorAcousticFeaturesVS": {
+      "base": "ValueSet-BreastRadUSMassPosteriorAcousticFeaturesVS.html"
     },
     "ValueSet/BreastRadUSTissueCompositionVS": {
       "base": "ValueSet-BreastRadUSTissueCompositionVS.html"

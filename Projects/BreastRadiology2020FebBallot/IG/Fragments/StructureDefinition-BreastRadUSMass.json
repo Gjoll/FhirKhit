@@ -140,6 +140,46 @@
             ]
           }
         ]
+      },
+      {
+        "id": "Observation.hasMember:breastRadUSMassEchoPattern",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadUSMassEchoPattern",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadUSMassEchoPattern"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:breastRadUSMassPosteriorAcousticFeatures",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadUSMassPosteriorAcousticFeatures",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadUSMassPosteriorAcousticFeatures"
+            ]
+          }
+        ]
       }
     ]
   }

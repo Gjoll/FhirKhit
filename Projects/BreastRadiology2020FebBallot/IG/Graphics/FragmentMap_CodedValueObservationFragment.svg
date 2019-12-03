@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="589.5" height="1038.75">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="747" height="1233.75">
 <defs>
 <marker id="arrowStart" markerWidth="3.75" markerHeight="3.75" markerUnits="px" refX="1.875" refY="1.875">
 <circle fill="Black" stroke-width="0" cx="1.875" cy="1.875" r="1.875" />
@@ -91,8 +91,10 @@
 <line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="358.5" y1="776.25" x2="388.5" y2="776.25" />
 <line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="358.5" y1="873.75" x2="388.5" y2="873.75" />
 <line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="358.5" y1="971.25" x2="388.5" y2="971.25" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="358.5" y1="1068.75" x2="388.5" y2="1068.75" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="358.5" y1="1166.25" x2="388.5" y2="1166.25" />
 <line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="328.5" y1="52.5" x2="358.5" y2="52.5" />
-<line stroke="Black" stroke-width="1.875" x1="358.5" y1="52.5" x2="358.5" y2="971.25" />
+<line stroke="Black" stroke-width="1.875" x1="358.5" y1="52.5" x2="358.5" y2="1166.25" />
 </g>
 <g>
 <g>
@@ -290,6 +292,44 @@
 <a href="../Guide/Output/StructureDefinition-BreastRadUSMassMargin.html" target="_blank">
 <title>'BreastRadUSMassMargin'</title>
 <text x="396" y="1005">[Resource]</text>
+</a>
+</g>
+<g>
+<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="388.5" y="1023.75" width="141" height="90" rx="3.75" ry="3.75" />
+<a href="./FragmentMap_BreastRadUSMassEchoPattern.svg" target="_blank">
+<title>'FragmentMap_BreastRadUSMassEchoPattern.svg'</title>
+<text x="396" y="1046.25">UltraSound</text>
+</a>
+<a href="./FragmentMap_BreastRadUSMassEchoPattern.svg" target="_blank">
+<title>'FragmentMap_BreastRadUSMassEchoPattern.svg'</title>
+<text x="396" y="1065">Mass</text>
+</a>
+<a href="./FragmentMap_BreastRadUSMassEchoPattern.svg" target="_blank">
+<title>'FragmentMap_BreastRadUSMassEchoPattern.svg'</title>
+<text x="396" y="1083.75">Echo Pattern</text>
+</a>
+<a href="../Guide/Output/StructureDefinition-BreastRadUSMassEchoPattern.html" target="_blank">
+<title>'BreastRadUSMassEchoPattern'</title>
+<text x="396" y="1102.5">[Resource]</text>
+</a>
+</g>
+<g>
+<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="388.5" y="1121.25" width="298.5" height="90" rx="3.75" ry="3.75" />
+<a href="./FragmentMap_BreastRadUSMassPosteriorAcousticFeatures.svg" target="_blank">
+<title>'FragmentMap_BreastRadUSMassPosteriorAcousticFeatures.svg'</title>
+<text x="396" y="1143.75">UltraSound</text>
+</a>
+<a href="./FragmentMap_BreastRadUSMassPosteriorAcousticFeatures.svg" target="_blank">
+<title>'FragmentMap_BreastRadUSMassPosteriorAcousticFeatures.svg'</title>
+<text x="396" y="1162.5">Mass</text>
+</a>
+<a href="./FragmentMap_BreastRadUSMassPosteriorAcousticFeatures.svg" target="_blank">
+<title>'FragmentMap_BreastRadUSMassPosteriorAcousticFeatures.svg'</title>
+<text x="396" y="1181.25">Posterior Acoustic Features</text>
+</a>
+<a href="../Guide/Output/StructureDefinition-BreastRadUSMassPosteriorAcousticFeatures.html" target="_blank">
+<title>'BreastRadUSMassPosteriorAcousticFeatures'</title>
+<text x="396" y="1200">[Resource]</text>
 </a>
 </g>
 </g>

@@ -53,7 +53,7 @@ namespace FhirKhit.Tools.R2
         /// Preformatted markdown
         /// </summary>
         /// <returns></returns>
-        public static Markdown MarkedDown(this Markdown md, params string[] lines)
+        public static Markdown BiRadLine(this Markdown md, params string[] lines)
         {
             foreach (String line in lines)
                 md.Value += $"{line}\n";

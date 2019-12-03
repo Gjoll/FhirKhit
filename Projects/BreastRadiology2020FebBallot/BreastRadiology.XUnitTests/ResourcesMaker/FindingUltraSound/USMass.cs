@@ -38,10 +38,10 @@ namespace BreastRadiology.XUnitTests
                     .Paragraph("Breast Radiology Mammography Mass Observation")
                     .MissingObservation("a mass", "and no Shape, Orientation, Margin, Echo Pattern, or Posterior Acoustic Feature observations should be referenced by this observation")
                     .BiradHeader()
-                    .MarkedDown("A mass is three dimensional and occupies space. With 2-D ultrasound, it should be seen in two")
-                    .MarkedDown("different planes, and in three planes with volumetric acquisitions. Masses can be distinguished")
-                    .MarkedDown("from normal anatomic structures, such as ribs or fat lobules, using two or more projections and")
-                    .MarkedDown("real-time scanning.")
+                    .BiRadLine("A mass is three dimensional and occupies space. With 2-D ultrasound, it should be seen in two")
+                    .BiRadLine("different planes, and in three planes with volumetric acquisitions. Masses can be distinguished")
+                    .BiRadLine("from normal anatomic structures, such as ribs or fat lobules, using two or more projections and")
+                    .BiRadLine("real-time scanning.")
                     .BiradFooter()
                     .Paragraph("This observation has the following three member observations")
                     .List("Shape", "Orientation", "Margin", "Echo Pattern", "Posterior acoustic features")
@@ -56,6 +56,8 @@ namespace BreastRadiology.XUnitTests
                     new ProfileTargetSlice(this.MassShape, 0, "1"),
                     new ProfileTargetSlice(this.USMassOrientation, 0, "1"),
                     new ProfileTargetSlice(this.USMassMargin, 0, "1"),
+                    new ProfileTargetSlice(this.USMassEchoPattern, 0, "1"),
+                    new ProfileTargetSlice(this.USMassPosteriorAcousticFeatures, 0, "1"),
                     //new ProfileTargetSlice(this.MammoAssociatedFeatures, 0, "1", false)
                 };
                 e.Find("hasMember").SliceByUrl(targets);

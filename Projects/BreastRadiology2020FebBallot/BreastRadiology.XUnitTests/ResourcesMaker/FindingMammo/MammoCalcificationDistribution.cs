@@ -32,10 +32,10 @@ namespace BreastRadiology.XUnitTests
                 new Markdown()
                     .Paragraph("Mammography Calcification Distribution")
                     .BiradHeader()
-                    .MarkedDown("These descriptors are used to indicate the arrangement of calcifications in the breast. Multiple")
-                    .MarkedDown("similar groups may be described in the report when there is more than one group of calcifications")
-                    .MarkedDown("that are similar in morphology and distribution. In evaluating the likelihood of malignancy for calcifications, ")
-                    .MarkedDown("distribution is at least as important as morphology.")
+                    .BiRadLine("These descriptors are used to indicate the arrangement of calcifications in the breast. Multiple")
+                    .BiRadLine("similar groups may be described in the report when there is more than one group of calcifications")
+                    .BiRadLine("that are similar in morphology and distribution. In evaluating the likelihood of malignancy for calcifications, ")
+                    .BiRadLine("distribution is at least as important as morphology.")
                     .BiradFooter(),
                     new ConceptDef[]
                     {
