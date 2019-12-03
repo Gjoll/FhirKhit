@@ -186,32 +186,10 @@ namespace BreastRadiology.XUnitTests
             }
         }
 
-        class BiRadConceptDef
-        {
-            public String Code;
-            public String Display;
-            public String Definition;
-
-            public BiRadConceptDef(String code,
-                String display,
-                String definition)
-            {
-                if (String.IsNullOrWhiteSpace(code) == true)
-                    throw new Exception("Empty code");
-                if (String.IsNullOrWhiteSpace(display) == true)
-                    throw new Exception("Empty Display");
-                if (String.IsNullOrWhiteSpace(definition) == true)
-                    throw new Exception("Empty definition");
-                Code = code;
-                Display = display;
-                Definition = definition;
-            }
-        }
-
         ValueSet CreateValueSet(String name,
             String title,
             Markdown description,
-            IEnumerable<BiRadConceptDef> codes)
+            IEnumerable<ConceptDef> codes)
         {
             return CreateValueSet(name, title, description, codes, out CodeSystem cs);
         }
@@ -219,7 +197,7 @@ namespace BreastRadiology.XUnitTests
         ValueSet CreateValueSet(String name,
             String title,
             Markdown description,
-            IEnumerable<BiRadConceptDef> codes,
+            IEnumerable<ConceptDef> codes,
             out CodeSystem cs)
         {
             cs = new CodeSystem
@@ -253,7 +231,7 @@ namespace BreastRadiology.XUnitTests
             vs.Compose = new ValueSet.ComposeComponent();
             vs.Compose.Include.Add(vsComp);
 
-            foreach (BiRadConceptDef code in codes)
+            foreach (ConceptDef code in codes)
             {
                 vsComp.Concept.Add(new ValueSet.ConceptReferenceComponent
                 {
