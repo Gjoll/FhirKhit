@@ -147,25 +147,6 @@ namespace BreastRadiology.XUnitTests
         }
 
         [TestMethod]
-        public void FormatCode()
-        {
-            void FormatCode(String path)
-            {
-                Trace.WriteLine($"Processing {path}");
-            }
-            void FormatDir(String path)
-            {
-                foreach (String f in Directory.GetFiles("*.cs"))
-                    FormatCode(f);
-                foreach (String d in Directory.GetDirectories(path))
-                    FormatDir(d);
-            }
-
-            String baseDir = DirHelper.FindParentDir("BreastRadiology.XUnitTests");
-            FormatDir(baseDir);
-        }
-
-        [TestMethod]
         public void TestBuildResource()
         {
             try

@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
@@ -23,6 +23,7 @@ namespace BreastRadiology.XUnitTests
 
     partial class ResourcesMaker : ConverterBase
     {
+        const String BiRadCitation= "-- (BI-RADS® ATLAS — MAMMOGRAPHY FIFTH EDITION — 2013)";
         const FHIRVersion FVersion = FHIRVersion.N4_0_0;
 
         const String ProfileVersion = "0.0.2";
@@ -166,6 +167,34 @@ namespace BreastRadiology.XUnitTests
             return vs;
         }
 
+        class Definition
+        {
+            StringBuilder sb = new StringBuilder();
+            bool citeFlag = false;
+
+            public Definition CiteStart()
+            {
+                return this;
+            }
+
+            public Definition CiteEnd(String citationSource)
+            {
+                sb.AppendLine($"    -- {citationSource}");
+                return this;
+            }
+
+            public Definition Line(String line)
+            {
+                sb.AppendLine(line);
+                return this;
+            }
+
+            public String ToText()
+            {
+                return sb.ToString();
+            }
+        }
+
         class ConceptDef
         {
             public String Code;
@@ -183,6 +212,10 @@ namespace BreastRadiology.XUnitTests
                 Code = code;
                 Display = display;
                 Definition = definition;
+            }
+
+            public ConceptDef(String code, String display, Definition definition) : this(code, display, definition.ToText())
+            {
             }
         }
 

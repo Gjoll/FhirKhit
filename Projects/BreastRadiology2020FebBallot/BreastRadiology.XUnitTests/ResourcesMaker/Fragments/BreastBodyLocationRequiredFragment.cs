@@ -1,4 +1,4 @@
-﻿using FhirKhit.Tools.R4;
+using FhirKhit.Tools.R4;
 using Hl7.Fhir.Model;
 using PreFhir;
 using System;

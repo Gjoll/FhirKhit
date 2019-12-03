@@ -1,4 +1,4 @@
-﻿using FhirKhit.Tools.R4;
+using FhirKhit.Tools.R4;
 using PreFhir;
 using System;
 using System.Collections.Generic;
