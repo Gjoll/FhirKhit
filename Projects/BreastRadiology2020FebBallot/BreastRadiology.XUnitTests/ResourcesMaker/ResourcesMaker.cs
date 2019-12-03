@@ -172,19 +172,19 @@ namespace BreastRadiology.XUnitTests
             public String Display;
             public String Definition;
 
-        //    public ConceptDef(String code, String display, String definition)
-        //    {
-        //        if (String.IsNullOrWhiteSpace(code) == true)
-        //            throw new Exception("Empty code");
-        //        if (String.IsNullOrWhiteSpace(display) == true)
-        //            throw new Exception("Empty Display");
-        //        if (String.IsNullOrWhiteSpace(definition) == true)
-        //            throw new Exception("Empty definition");
-        //        Code = code;
-        //        Display = display;
-        //        Definition = definition;
-        //    }
-        //}
+            public ConceptDef(String code, String display, String definition)
+            {
+                if (String.IsNullOrWhiteSpace(code) == true)
+                    throw new Exception("Empty code");
+                if (String.IsNullOrWhiteSpace(display) == true)
+                    throw new Exception("Empty Display");
+                if (String.IsNullOrWhiteSpace(definition) == true)
+                    throw new Exception("Empty definition");
+                Code = code;
+                Display = display;
+                Definition = definition;
+            }
+        }
 
         class BiRadConceptDef
         {
@@ -192,7 +192,9 @@ namespace BreastRadiology.XUnitTests
             public String Display;
             public String Definition;
 
-            public BiRadConceptDef(String code, String display, String definition)
+            public BiRadConceptDef(String code,
+                String display,
+                String definition)
             {
                 if (String.IsNullOrWhiteSpace(code) == true)
                     throw new Exception("Empty code");
