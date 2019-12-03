@@ -23,7 +23,7 @@ namespace FhirKhit.Tools.R2
 
         public static Markdown BiradFooter(this Markdown md)
         {
-            md.Value += ">> -- BI-RADS® ATLAS — MAMMOGRAPHY FIFTH EDITION — 2013\n";
+            md.Value += ">> -- {BiRadCitatio} \n";
             return md;
         }
 

@@ -84,8 +84,7 @@ namespace BreastRadiology.XUnitTests
                                 .Line("distributed more evenly across categories than the historical distribution of 10% fatty,")
                                 .Line("40% scattered, 40% heterogeneously and 10% extremely dense. However, it has since")
                                 .Line("been demonstrated in clinical practice that there has been essentially no change")
-                                .Line("in this historical distribution across density categories, despite the 2003 guidance")
-                                .Line("provided in the BI-RADS® Atlas.")
+                                .Line("in this historical distribution across density categories.")
                             .CiteEnd(BiRadCitation)
                         ),
                     }
