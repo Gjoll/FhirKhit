@@ -41,23 +41,32 @@ namespace BreastRadiology.XUnitTests
                 {
                     new ConceptDef("Fat",
                         "Homogenous Background Echotexture - Fat",
-                        "Fat lobules and uniformly echogenic bands of supporting structures " +
-                        "(Cooper’s ligaments [arrows]) comprise the bulk of breast tissue."
+                        new Definition()
+                        .CiteStart()
+                            .Line("Fat lobules and uniformly echogenic bands of supporting structures")
+                            .Line("(Cooper’s ligaments [arrows]) comprise the bulk of breast tissue.")
+                        .CiteEnd(BiRadCitation)
                     ),
                     new ConceptDef("Fibroglandular",
                         "Homogenous Background Echotexture - Fibroglandular",
-                        "A thick zone of homogeneously echogenic fibroglandular parenchyma is present beneath the " +
-                        "thin hypoechoic layer of fat lobules. Many lesions, cancers and fibroadenomas, for example, are " +
-                        "found within the fibroglandular zone or at its junction with the layer of fat."
+                        new Definition()
+                        .CiteStart()
+                            .Line("A thick zone of homogeneously echogenic fibroglandular parenchyma is present beneath the")
+                            .Line("thin hypoechoic layer of fat lobules. Many lesions, cancers and fibroadenomas, for example, are")
+                            .Line("found within the fibroglandular zone or at its junction with the layer of fat.")
+                        .CiteEnd(BiRadCitation)
                     ),
                     new ConceptDef("Heterogeneous",
                         "Heterogeneous Background Echo Texture",
-                        "Heterogeneity can be either focal or diffuse. The breast echotexture is characterized by multiple " +
-                        "small areas of increased and decreased echogenicity. Shadowing may occur at the interfaces of fat " +
-                        "lobules and parenchyma. This pattern occurs in younger breasts and those with heterogeneously " +
-                        "dense parenchyma depicted mammographically. Whether and how this pattern affects the sensitivity " +
-                        "of sonography merits study, but technical maneuvers may help resolve interpretive dilemmas " +
-                        "that occasionally result in unnecessary biopsy."
+                        new Definition()
+                        .CiteStart()
+                            .Line("Heterogeneity can be either focal or diffuse. The breast echotexture is characterized by multiple")
+                            .Line("small areas of increased and decreased echogenicity. Shadowing may occur at the interfaces of fat")
+                            .Line("lobules and parenchyma. This pattern occurs in younger breasts and those with heterogeneously")
+                            .Line("dense parenchyma depicted mammographically. Whether and how this pattern affects the sensitivity")
+                            .Line("of sonography merits study, but technical maneuvers may help resolve interpretive dilemmas")
+                            .Line("that occasionally result in unnecessary biopsy.")
+                        .CiteEnd(BiRadCitation)
                     )
                 }
             )

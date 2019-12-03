@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Skin Retraction Observation\n\n\n### BI-RADS® ATLAS — MAMMOGRAPHY### FIFTH EDITION — 2013The skin is pulled in abnormally\n### END BI-RADS® ATLAS — MAMMOGRAPHY TEXTIf this observation is present, and dataAbsentReason is empty, then {articleAndName} was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then {articleAndName} was not observed and dataAbsentReason contains the reason why{term}",
+  "description": "Skin Retraction Observation\n\n\n> The skin is pulled in abnormally\n>> -- BI-RADS® ATLAS — MAMMOGRAPHY FIFTH EDITION — 2013\nIf this observation is present, and dataAbsentReason is empty, then a skin retraction was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a skin retraction was not observed and dataAbsentReason contains the reason why.",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,

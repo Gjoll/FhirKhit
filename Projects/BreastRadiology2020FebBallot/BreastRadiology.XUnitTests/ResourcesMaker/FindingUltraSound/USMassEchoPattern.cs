@@ -36,32 +36,56 @@ namespace BreastRadiology.XUnitTests
                     {
                         new ConceptDef("Anechoic",
                             "Anechoic",
-                            "Without internal echoes."),
+                            new Definition()
+                            .CiteStart()
+                                .Line("Without internal echoes.")
+                            .CiteEnd(BiRadCitation)
+                            ),
                         new ConceptDef("Hyperechoic",
                             "Hyperechoic",
-                            "Hyperechogenicity is defined as having increased echogenicity relative to fat or equal to fibroglandular tissue."),
+                            new Definition()
+                            .CiteStart()
+                                .Line("Hyperechogenicity is defined as having increased echogenicity relative to fat or equal to fibroglandular tissue.")
+                            .CiteEnd(BiRadCitation)
+                            ),
                         new ConceptDef("ComplexCysticAndSolid",
                             "Complex Cystic and Solid",
-                            "A complex mass contains both anechoic (cystic or fluid) and echogenic (solid) components."),
+                            new Definition()
+                            .CiteStart()
+                                .Line("A complex mass contains both anechoic (cystic or fluid) and echogenic (solid) components.")
+                            .CiteEnd(BiRadCitation)
+                            ),
                         new ConceptDef("Hypoechoic",
                             "Hypoechoic",
-                            "The term “hypoechoic” is defined relative to subcutaneous fat; hypoechoic masses, less " +
-                            "echogenic than fat, are characterized by low-level echoes throughout (for example, " +
-                            "complicated cysts and fibroadenomas)"),
+                            new Definition()
+                            .CiteStart()
+                                .Line("The term “hypoechoic” is defined relative to subcutaneous fat; hypoechoic masses, less")
+                                .Line("echogenic than fat, are characterized by low-level echoes throughout (for example,")
+                                .Line("complicated cysts and fibroadenomas)")
+                            .CiteEnd(BiRadCitation)
+                            ),
                         new ConceptDef("Isoechoic",
                             "Isoechoic",
-                            "Isoechogenicity is defined as having the same echogenicity as subcutaneous fat. Isoechoic " +
-                            "masses may be relatively inconspicuous, particularly when they are situated within an area of " +
-                            "fat lobules. This may limit the sensitivity of US, especially at screening, in which the presence " +
-                            "and location of such a mass is not known at the time of examination."),
+                            new Definition()
+                            .CiteStart()
+                                .Line("Isoechogenicity is defined as having the same echogenicity as subcutaneous fat. Isoechoic")
+                                .Line("masses may be relatively inconspicuous, particularly when they are situated within an area of")
+                                .Line("fat lobules. This may limit the sensitivity of US, especially at screening, in which the presence")
+                                .Line("and location of such a mass is not known at the time of examination.")
+                            .CiteEnd(BiRadCitation)
+                            ),
 
                         new ConceptDef("Heterogeneous",
                             "Heterogeneous",
-                            "A mixture of echogenic patterns within a solid mass. Heterogeneity has little prognostic " +
-                            "value in differentiating benign from malignant masses, but it is not uncommon to observe " +
-                            "heterogeneity in fibroadenomas as well as cancers. Clumped areas of different echogenicity " +
-                            "may elevate the suspicion for malignancy, particularly in a mass whose margins are not " +
-                            "circumscribed and whose shape is irregular.")
+                            new Definition()
+                            .CiteStart()
+                                .Line("A mixture of echogenic patterns within a solid mass. Heterogeneity has little prognostic")
+                                .Line("value in differentiating benign from malignant masses, but it is not uncommon to observe")
+                                .Line("heterogeneity in fibroadenomas as well as cancers. Clumped areas of different echogenicity")
+                                .Line("may elevate the suspicion for malignancy, particularly in a mass whose margins are not")
+                                .Line("circumscribed and whose shape is irregular.")
+                            .CiteEnd(BiRadCitation)
+                            )
                     })
                 .Url;
 

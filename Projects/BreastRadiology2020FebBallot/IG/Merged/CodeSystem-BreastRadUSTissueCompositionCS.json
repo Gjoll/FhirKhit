@@ -18,7 +18,7 @@
       ]
     }
   ],
-  "description": "Breast Radiology Ultra-Sound Tissue Composition Observation\n\n\n### BI-RADS® ATLAS — MAMMOGRAPHY### FIFTH EDITION — 2013The wide normal variability in tissue composition seen on mammograms can also be observed\non US images. Just as increasing breast density diminishes the sensitivity of mammography in the\ndetection of small masses, heterogeneous background echotexture of the breast may affect the\nsensitivity of breast sonograms for lesion detection.\n### END BI-RADS® ATLAS — MAMMOGRAPHY TEXT",
+  "description": "Breast Radiology Ultra-Sound Tissue Composition Observation\n\n\n> The wide normal variability in tissue composition seen on mammograms can also be observed\n> on US images. Just as increasing breast density diminishes the sensitivity of mammography in the\n> detection of small masses, heterogeneous background echotexture of the breast may affect the\n> sensitivity of breast sonograms for lesion detection.\n>> -- BI-RADS® ATLAS — MAMMOGRAPHY FIFTH EDITION — 2013",
   "caseSensitive": true,
   "content": "complete",
   "count": 3,
@@ -26,17 +26,17 @@
     {
       "code": "Fat",
       "display": "Homogenous Background Echotexture - Fat",
-      "definition": "Fat lobules and uniformly echogenic bands of supporting structures (Cooper’s ligaments [arrows]) comprise the bulk of breast tissue."
+      "definition": "Fat lobules and uniformly echogenic bands of supporting structures\r\n(Cooper’s ligaments [arrows]) comprise the bulk of breast tissue.\r\n    -- -- (BI-RADS® ATLAS — MAMMOGRAPHY FIFTH EDITION — 2013)"
     },
     {
       "code": "Fibroglandular",
       "display": "Homogenous Background Echotexture - Fibroglandular",
-      "definition": "A thick zone of homogeneously echogenic fibroglandular parenchyma is present beneath the thin hypoechoic layer of fat lobules. Many lesions, cancers and fibroadenomas, for example, are found within the fibroglandular zone or at its junction with the layer of fat."
+      "definition": "A thick zone of homogeneously echogenic fibroglandular parenchyma is present beneath the\r\nthin hypoechoic layer of fat lobules. Many lesions, cancers and fibroadenomas, for example, are\r\nfound within the fibroglandular zone or at its junction with the layer of fat.\r\n    -- -- (BI-RADS® ATLAS — MAMMOGRAPHY FIFTH EDITION — 2013)"
     },
     {
       "code": "Heterogeneous",
       "display": "Heterogeneous Background Echo Texture",
-      "definition": "Heterogeneity can be either focal or diffuse. The breast echotexture is characterized by multiple small areas of increased and decreased echogenicity. Shadowing may occur at the interfaces of fat lobules and parenchyma. This pattern occurs in younger breasts and those with heterogeneously dense parenchyma depicted mammographically. Whether and how this pattern affects the sensitivity of sonography merits study, but technical maneuvers may help resolve interpretive dilemmas that occasionally result in unnecessary biopsy."
+      "definition": "Heterogeneity can be either focal or diffuse. The breast echotexture is characterized by multiple\r\nsmall areas of increased and decreased echogenicity. Shadowing may occur at the interfaces of fat\r\nlobules and parenchyma. This pattern occurs in younger breasts and those with heterogeneously\r\ndense parenchyma depicted mammographically. Whether and how this pattern affects the sensitivity\r\nof sonography merits study, but technical maneuvers may help resolve interpretive dilemmas\r\nthat occasionally result in unnecessary biopsy.\r\n    -- -- (BI-RADS® ATLAS — MAMMOGRAPHY FIFTH EDITION — 2013)"
     }
   ]
 }

@@ -36,37 +36,53 @@ namespace BreastRadiology.XUnitTests
                     {
                         new ConceptDef("Asymmetry",
                             "Asymmetry",
-                            "This is an area of fibroglandular-density tissue that is visible on only one mammographic projection. " +
-                            "Most such findings represent summation artifact, a superimposition of normal breast structures, " +
-                            "whereas those confirmed to be real lesions (by subsequent demonstration on at least one " + 
-                            "more projection) may represent one of the other types of asymmetry or a mass."),
+                            new Definition()
+                            .CiteStart()
+                                .Line("This is an area of fibroglandular-density tissue that is visible on only one mammographic projection.")
+                                .Line("Most such findings represent summation artifact, a superimposition of normal breast structures,")
+                                .Line("whereas those confirmed to be real lesions (by subsequent demonstration on at least one")
+                                .Line("more projection) may represent one of the other types of asymmetry or a mass.")
+                            .CiteEnd(BiRadCitation)
+                            ),
                         new ConceptDef("GlobalAsymmetry",
                             "Global Asymmetry",
-                            "Global asymmetry is judged relative to the corresponding area in the contralateral breast and "+
-                            "represents a large amount of fibroglandular-density tissue over a substantial portion of the "+
-                            "breast (at least one quadrant). There is no mass, distorted architecture or associated suspicious "+
-                            "calcifications. Global asymmetry usually represents a normal variant."),
+                            new Definition()
+                            .CiteStart()
+                                .Line("Global asymmetry is judged relative to the corresponding area in the contralateral breast and")
+                                .Line("represents a large amount of fibroglandular-density tissue over a substantial portion of the")
+                                .Line("breast (at least one quadrant). There is no mass, distorted architecture or associated suspicious")
+                                .Line("calcifications. Global asymmetry usually represents a normal variant.")
+                            .CiteEnd(BiRadCitation)
+                            ),
                         new ConceptDef("FocalAsymmetry",
                             "Focal Asymmetry",
-                            "A focal asymmetry is judged relative to the corresponding location in the contralateral breast, " +
-                            "and represents a relatively small amount of fibroglandular-density tissue over a confined portion " +
-                            "of the breast (less than one quadrant). It is visible on and has similar shape on different mammographic " +
-                            "projections (hence a real finding rather than superimposition of normal breast structures), " +
-                            "but it lacks the convex-outward borders and the conspicuity of a mass. Rather, the borders " +
-                            "of a focal asymmetry are concave-outward, and it usually is seen to be interspersed with fat. " +
-                            "Note that occasionally what is properly described as a focal asymmetry at screening (a finding visible  " +
-                            "on standard MLO and CC views) is determined at diagnostic mammography to be 2 different " +
-                            "findings, each visible on only 1 standard view (hence, 2 asymmetries), each of which ultimately " +
-                            "is judged to represent superimposition of normal breast structures. Also, not infrequently, what " +
-                            "is properly described as a focal asymmetry at screening is determined at diagnostic evaluation " +
-                            "(mammography and/or ultrasound) to represent a mass."),
+                            new Definition()
+                            .CiteStart()
+                                .Line("A focal asymmetry is judged relative to the corresponding location in the contralateral breast,")
+                                .Line("and represents a relatively small amount of fibroglandular-density tissue over a confined portion")
+                                .Line("of the breast (less than one quadrant). It is visible on and has similar shape on different mammographic")
+                                .Line("projections (hence a real finding rather than superimposition of normal breast structures),")
+                                .Line("but it lacks the convex-outward borders and the conspicuity of a mass. Rather, the borders")
+                                .Line("of a focal asymmetry are concave-outward, and it usually is seen to be interspersed with fat.")
+                                .Line("Note that occasionally what is properly described as a focal asymmetry at screening (a finding visible ")
+                                .Line("on standard MLO and CC views) is determined at diagnostic mammography to be 2 different")
+                                .Line("findings, each visible on only 1 standard view (hence, 2 asymmetries), each of which ultimately")
+                                .Line("is judged to represent superimposition of normal breast structures. Also, not infrequently, what")
+                                .Line("is properly described as a focal asymmetry at screening is determined at diagnostic evaluation")
+                                .Line("(mammography and/or ultrasound) to represent a mass.")
+                            .CiteEnd(BiRadCitation)
+                            ),
                         new ConceptDef("DevelopingAsymmetry",
                             "Developing Asymmetry",
-                            "This is a focal asymmetry that is new, larger, or more conspicuous than on a previous examination. " +
-                            "Approximately 15% of cases of developing asymmetry are found to be malignant (either " +
-                            "invasive carcinoma, DCIS, or both), so these cases warrant further imaging evaluation and biopsy " +
-                            "unless found to be characteristically benign (e.g., simple cyst at directed ultrasound). Absence " +
-                            "of a sonographic correlate, especially for a small (< 1 cm) developing asymmetry, should not avert biopsy.")
+                            new Definition()
+                            .CiteStart()
+                                .Line("This is a focal asymmetry that is new, larger, or more conspicuous than on a previous examination.")
+                                .Line("Approximately 15% of cases of developing asymmetry are found to be malignant (either")
+                                .Line("invasive carcinoma, DCIS, or both), so these cases warrant further imaging evaluation and biopsy")
+                                .Line("unless found to be characteristically benign (e.g., simple cyst at directed ultrasound). Absence")
+                                .Line("of a sonographic correlate, especially for a small (< 1 cm) developing asymmetry, should not avert biopsy.")
+                            .CiteEnd(BiRadCitation)
+                            )
                     }
                 )
                 .Url;

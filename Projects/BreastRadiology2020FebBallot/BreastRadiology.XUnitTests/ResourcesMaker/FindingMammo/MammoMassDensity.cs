@@ -36,24 +36,40 @@ namespace BreastRadiology.XUnitTests
                     {
                         new ConceptDef("HighDensity ",
                             "High Density",
-                            "X-ray attenuation of the mass is greater than the expected attenuation of an equal volume of " +
-                            "fibroglandular breast tissue."),
+                            new Definition()
+                            .CiteStart()
+                                .Line("X-ray attenuation of the mass is greater than the expected attenuation of an equal volume of")
+                                .Line("fibroglandular breast tissue.")
+                            .CiteEnd(BiRadCitation)
+                            ),
                         new ConceptDef("EqualDensity",
                             "Equal Density",
-                            "(historically, \"isodense\") " +
-                            "X-ray attenuation of the mass is the same as the expected attenuation of an equal volume of " +
-                            "fibroglandular breast tissue."),
+                            new Definition()
+                            .CiteStart()
+                                .Line("(historically, \"isodense\")")
+                                .Line("X-ray attenuation of the mass is the same as the expected attenuation of an equal volume of")
+                                .Line("fibroglandular breast tissue.")
+                            .CiteEnd(BiRadCitation)
+                            ),
                         new ConceptDef("LowDensity",
                             "Low Density",
-                            "X-ray attenuation of the mass is less than the expected attenuation of an equal volume of " +
-                            "fibroglandular breast tissue. A low density mass may be a group of microcysts. If such a finding " +
-                            "is identified at mammography, it may very well not be malignant but appropriately may " +
-                            "be worked up."),
+                            new Definition()
+                            .CiteStart()
+                                .Line("X-ray attenuation of the mass is less than the expected attenuation of an equal volume of")
+                                .Line("fibroglandular breast tissue. A low density mass may be a group of microcysts. If such a finding")
+                                .Line("is identified at mammography, it may very well not be malignant but appropriately may")
+                                .Line("be worked up.")
+                            .CiteEnd(BiRadCitation)
+                            ),
                         new ConceptDef("FatContaining",
                             "Fat Containing",
-                            "This includes all masses containing fat, such as oil cyst, lipoma or galactocele, as well as mixed "+
-                            "density masses such as hamartoma. A fat-containing mass will almost always represent a " +
-                            "benign mass.")
+                            new Definition()
+                            .CiteStart()
+                                .Line("This includes all masses containing fat, such as oil cyst, lipoma or galactocele, as well as mixed")
+                                .Line("density masses such as hamartoma. A fat-containing mass will almost always represent a")
+                                .Line("benign mass.")
+                            .CiteEnd(BiRadCitation)
+                            )
                     })
                 .Url;
 

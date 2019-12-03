@@ -36,15 +36,23 @@ namespace BreastRadiology.XUnitTests
                     {
                         new ConceptDef("Parallel ",
                             "Parallel",
-                            "(historically, “wider-than-tall” or “horizontal”) " +
-                            "The long axis of the mass parallels the skin line. Masses that are only slightly obiquely oriented " +
-                            "might be considered parallel."),
+                            new Definition()
+                            .CiteStart()
+                                .Line("(historically, “wider-than-tall” or “horizontal”)")
+                                .Line("The long axis of the mass parallels the skin line. Masses that are only slightly obiquely oriented")
+                                .Line("might be considered parallel.")
+                            .CiteEnd(BiRadCitation)
+                            ),
                         new ConceptDef("NotParallel",
                             "Not Parallel",
-                            "(historically, \"isodense\") " +
-                            "The long axis of the mass does not lie parallel to the skin line. The anterior–posterior or vertical " +
-                            "dimension is greater than the transverse or horizontal dimension. These masses can also be " +
-                            "obliquely oriented to the skin line. Round masses are NOT PARALLEL in their orientation.")
+                            new Definition()
+                            .CiteStart()
+                                .Line("(historically, \"isodense\")")
+                                .Line("The long axis of the mass does not lie parallel to the skin line. The anterior–posterior or vertical")
+                                .Line("dimension is greater than the transverse or horizontal dimension. These masses can also be")
+                                .Line("obliquely oriented to the skin line. Round masses are NOT PARALLEL in their orientation.")
+                            .CiteEnd(BiRadCitation)
+                            )
                     })
                 .Url;
 

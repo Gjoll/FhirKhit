@@ -10,7 +10,7 @@
   "name": "BreastRadMassSize",
   "title": "Breast Radiology Mass Size",
   "status": "draft",
-  "description": "Breast Radiology Mass Size Observation\n\n\nIf this observation is present, and dataAbsentReason is empty, then {articleAndName} was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then {articleAndName} was not observed and dataAbsentReason contains the reason why{term}",
+  "description": "Breast Radiology Mass Size Observation\n\n\nIf this observation is present, and dataAbsentReason is empty, then a mass size was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a mass size was not observed and dataAbsentReason contains the reason why.",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,

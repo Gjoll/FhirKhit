@@ -36,35 +36,51 @@ namespace BreastRadiology.XUnitTests
                     {
                         new ConceptDef("NoPosteriorAcousticFeatures",
                             "No Posterior Acoustic Features",
-                            "No shadowing or enhancement is present deep to the mass; the echogenicity of the area " +
-                            "immediately behind the mass is not different from that of adjacent tissue at the same depth."),
+                            new Definition()
+                            .CiteStart()
+                                .Line("No shadowing or enhancement is present deep to the mass; the echogenicity of the area")
+                                .Line("immediately behind the mass is not different from that of adjacent tissue at the same depth.")
+                            .CiteEnd(BiRadCitation)
+                            ),
                         new ConceptDef("Enhancement",
                             "Enhancement",
-                            "Sound transmission is unimpeded in its passage through the mass. Enhancement appears as " +
-                            "a column that is more echogenic (whiter) deep to the mass. One criterion for cyst diagnosis " +
-                            "is enhancement. Homogeneous solid lesions, including high-grade carcinomas, may also show enhancement."),
+                            new Definition()
+                            .CiteStart()
+                                .Line("Sound transmission is unimpeded in its passage through the mass. Enhancement appears as")
+                                .Line("a column that is more echogenic (whiter) deep to the mass. One criterion for cyst diagnosis")
+                                .Line("is enhancement. Homogeneous solid lesions, including high-grade carcinomas, may also show enhancement.")
+                            .CiteEnd(BiRadCitation)
+                            ),
                         new ConceptDef("Shadowing",
                             "Shadowing",
-                            "Shadowing is attenuation of the acoustic transmission. Sonographically, the area posterior to " +
-                            "the mass appears darker. At the edges of curved masses, acoustic velocity changes and thin " +
-                            "shadows are seen. This refractive edge shadowing is of no significance and should be distinguished " +
-                            "from central shadowing, which is a property of the mass." +
-                            "" +
-                            "Shadowing is associated with fibrosis, with or without an underlying carcinoma. Postsurgical " +
-                            "scars, fibrous mastopathy and many cancers with or without a desmoplastic response will show " +
-                            "posterior acoustic shadowing. Macrocalcifications can also attenuate sound. Similar to a vertical " +
-                            "(taller-than-wide) orientation, shadowing is a feature more helpful when present than when " +
-                            "absent. Many cancers will exhibit enhancement or no change in posterior features, particularly " +
-                            "those that are high grade."),
+                            new Definition()
+                            .CiteStart()
+                                .Line("Shadowing is attenuation of the acoustic transmission. Sonographically, the area posterior to")
+                                .Line("the mass appears darker. At the edges of curved masses, acoustic velocity changes and thin")
+                                .Line("shadows are seen. This refractive edge shadowing is of no significance and should be distinguished")
+                                .Line("from central shadowing, which is a property of the mass.")
+                                .Line("")
+                                .Line("Shadowing is associated with fibrosis, with or without an underlying carcinoma. Postsurgical")
+                                .Line("scars, fibrous mastopathy and many cancers with or without a desmoplastic response will show")
+                                .Line("posterior acoustic shadowing. Macrocalcifications can also attenuate sound. Similar to a vertical")
+                                .Line("(taller-than-wide) orientation, shadowing is a feature more helpful when present than when")
+                                .Line("absent. Many cancers will exhibit enhancement or no change in posterior features, particularly")
+                                .Line("those that are high grade.")
+                            .CiteEnd(BiRadCitation)
+                            ),
                         new ConceptDef("CombinedPattern",
                             "Combined Pattern",
-                            "Some lesions have more than one pattern of posterior attenuation. For example, a fibroadenoma " +
-                            "containing a large calcification may demonstrate shadowing posterior to the calcified " +
-                            "area but enhancement of the tissues deep to the uncalcified portion. A combined pattern " +
-                            "of posterior features also may be seen in lesions that are evolving. One such example is a " +
-                            "post-lumpectomy seroma, which enhances posteriorly. As the fluid is resorbed and scarring " +
-                            "develops, the features of fibrosis become evident as spiculation of the margins and posterior " +
-                            "acoustic shadowing.")
+                            new Definition()
+                            .CiteStart()
+                                .Line("Some lesions have more than one pattern of posterior attenuation. For example, a fibroadenoma")
+                                .Line("containing a large calcification may demonstrate shadowing posterior to the calcified")
+                                .Line("area but enhancement of the tissues deep to the uncalcified portion. A combined pattern")
+                                .Line("of posterior features also may be seen in lesions that are evolving. One such example is a")
+                                .Line("post-lumpectomy seroma, which enhances posteriorly. As the fluid is resorbed and scarring")
+                                .Line("develops, the features of fibrosis become evident as spiculation of the margins and posterior")
+                                .Line("acoustic shadowing.")
+                            .CiteEnd(BiRadCitation)
+                            )
                     })
                 .Url;
 
