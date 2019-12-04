@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
             ;
             e.Select("value[x]").Zero();
             e.Select("interpretation").Zero();
-            e.Select("referenceRange[x]").Zero();
+            e.Select("referenceRange").Zero();
         }
     }
 }

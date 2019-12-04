@@ -10,7 +10,7 @@
   "name": "BreastRadMRIFinding",
   "title": "Breast Radiology MRI Finding",
   "status": "draft",
-  "description": "Breast Radiology MRI Finding",
+  "description": "Breast Radiology MRI Finding\n\n\nTodo: The following items need further specification.\n\n\n** Device Metrics detailing the observation devices parameters.\n** Add information about contrast enhancement/other observation specific parameters.",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,

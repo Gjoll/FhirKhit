@@ -81,6 +81,12 @@
     "CodeSystem/BreastRadMemmoAsymmetriesCS": {
       "base": "CodeSystem-BreastRadMemmoAsymmetriesCS.html"
     },
+    "CodeSystem/BreastRadObservedChangesCS": {
+      "base": "CodeSystem-BreastRadObservedChangesCS.html"
+    },
+    "CodeSystem/BreastRadObservedStateCS": {
+      "base": "CodeSystem-BreastRadObservedStateCS.html"
+    },
     "CodeSystem/BreastRadUSMassEchoPatternCS": {
       "base": "CodeSystem-BreastRadUSMassEchoPatternCS.html"
     },
@@ -171,6 +177,12 @@
     "StructureDefinition/BreastRadMRIFinding": {
       "base": "StructureDefinition-BreastRadMRIFinding.html"
     },
+    "StructureDefinition/BreastRadObservedChanges": {
+      "base": "StructureDefinition-BreastRadObservedChanges.html"
+    },
+    "StructureDefinition/BreastRadObservedState": {
+      "base": "StructureDefinition-BreastRadObservedState.html"
+    },
     "StructureDefinition/BreastRadPriorReports": {
       "base": "StructureDefinition-BreastRadPriorReports.html"
     },
@@ -239,6 +251,12 @@
     },
     "ValueSet/BreastRadMemmoAsymmetriesVS": {
       "base": "ValueSet-BreastRadMemmoAsymmetriesVS.html"
+    },
+    "ValueSet/BreastRadObservedChangesVS": {
+      "base": "ValueSet-BreastRadObservedChangesVS.html"
+    },
+    "ValueSet/BreastRadObservedStateVS": {
+      "base": "ValueSet-BreastRadObservedStateVS.html"
     },
     "ValueSet/BreastRadUSMassEchoPatternVS": {
       "base": "ValueSet-BreastRadUSMassEchoPatternVS.html"

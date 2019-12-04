@@ -187,12 +187,10 @@ Breast Radiology Mammography Calcification Type Observation
 Breast Radiology Mammography Finding
 
 
-A "MASS" is three dimensional and occupies space. It is seen on two different mammographic pro-
-jections. It has completely or partially convex-outward borders and (when radiodense) appears
-denser in the center than at the periphery. If a potential mass is seen only on a single projection, it
-should be called an "ASYMMETRY" until its 3-dimensionality is confirmed (See Section D on Asym-
-metries and also the Guidance chapter). (Insert links/page #s)
--- Bi-Rads® Atlas — Mammography Fifth Ed. 2013
+Todo: The following items need further specification.
+
+
+** Device Metrics detailing the observation devices parameters (transducer freq, etc).
 {% endcapture %}{{ md_text | markdownify }}</td>
 </tr>
 <tr>
@@ -402,6 +400,39 @@ If this observation is present, and dataAbsentReason is not empty, then a mass s
 <td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
 <td>{% capture md_text %}
 Breast Radiology MRI Finding
+
+
+Todo: The following items need further specification.
+
+
+** Device Metrics detailing the observation devices parameters.
+** Add information about contrast enhancement/other observation specific parameters.
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadObservedChanges.html">BreastRadObservedChanges</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Breast Radiology Observed Changes Observation
+
+
+If this observation is present, and dataAbsentReason is empty, then an observed change was observed.
+
+
+If this observation is present, and dataAbsentReason is not empty, then an observed change was not observed and dataAbsentReason contains the reason why.
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadObservedState.html">BreastRadObservedState</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Breast Radiology Observed State Observation
+
+
+If this observation is present, and dataAbsentReason is empty, then an observed change was observed.
+
+
+If this observation is present, and dataAbsentReason is not empty, then an observed change was not observed and dataAbsentReason contains the reason why.
 {% endcapture %}{{ md_text | markdownify }}</td>
 </tr>
 <tr>
@@ -460,6 +491,12 @@ Patient Risk Section
 <td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
 <td>{% capture md_text %}
 Breast Radiology Ultra Sound Finding
+
+
+Todo: The following items need further specification.
+
+
+** Device Metrics detailing the observation devices parameters (transducer freq, etc).
 {% endcapture %}{{ md_text | markdownify }}</td>
 </tr>
 <tr>

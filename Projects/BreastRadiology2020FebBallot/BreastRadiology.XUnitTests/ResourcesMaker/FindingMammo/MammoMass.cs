@@ -57,7 +57,8 @@ namespace BreastRadiology.XUnitTests
                     new ProfileTargetSlice(this.MammoMassMargin, 0, "1"),
                     new ProfileTargetSlice(this.MammoMassDensity, 0, "1"),
                     new ProfileTargetSlice(this.BreastRadObservedChanges, 0, "*"),
-                    new ProfileTargetSlice(this.MammoAssociatedFeatures, 0, "1", false)
+                    new ProfileTargetSlice(this.MammoAssociatedFeatures, 0, "1", false),
+                    new ProfileTargetSlice(this.BreastRadObservedState, 0, "1", false)
                 };
                 e.Find("hasMember").SliceByUrl(targets);
                 e.MapNode.AddProfileTargets(targets);

@@ -180,6 +180,46 @@
             ]
           }
         ]
+      },
+      {
+        "id": "Observation.hasMember:breastRadObservedChanges",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadObservedChanges",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservedChanges"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:breastRadObservedState",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadObservedState",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservedState"
+            ]
+          }
+        ]
       }
     ]
   }
