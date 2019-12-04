@@ -23,7 +23,7 @@ namespace BreastRadiology.XUnitTests
 
     partial class ResourcesMaker : ConverterBase
     {
-        const String BiRadCitation= "Bi-Rads® Atlas — Mammography Fifth Ed. 2013";
+        public const String BiRadCitation= "Bi-Rads® Atlas — Mammography Fifth Ed. 2013";
         const FHIRVersion FVersion = FHIRVersion.N4_0_0;
 
         const String ProfileVersion = "0.0.2";
