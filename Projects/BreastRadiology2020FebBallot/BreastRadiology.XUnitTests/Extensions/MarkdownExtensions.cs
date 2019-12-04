@@ -31,9 +31,6 @@ namespace BreastRadiology.XUnitTests
             return md;
         }
 
-        // TODO: Should it be a AbMammoIntramammaryLymphNode be required with dataAbsent Reason set to a value if
-        // this was looked for and not seen?
-        // See other 'If this observation is present, and dataAbsentReason is empty's
         public static Markdown MissingObservation(this Markdown md, String articleAndName, String term = ".")
         {
             md

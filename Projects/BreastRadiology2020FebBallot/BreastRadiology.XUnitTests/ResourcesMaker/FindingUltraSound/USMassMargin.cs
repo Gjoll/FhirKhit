@@ -14,8 +14,6 @@ namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker : ConverterBase
     {
-        // TODO: Mass Margin and Ultra Margin treat Not Circumscribed differently. Can they be aligned?
-
         String USMassMargin
         {
             get

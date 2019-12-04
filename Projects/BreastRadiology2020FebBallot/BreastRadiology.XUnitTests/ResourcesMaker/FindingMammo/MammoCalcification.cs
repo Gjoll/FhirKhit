@@ -62,6 +62,7 @@ namespace BreastRadiology.XUnitTests
                 {
                     new ProfileTargetSlice(MammoCalcificationType, 0, "1"),
                     new ProfileTargetSlice(MammoCalcificationDistribution, 0, "1"),
+                    new ProfileTargetSlice(this.BreastRadObservedChanges, 0, "*"),
                     new ProfileTargetSlice(this.MammoAssociatedFeatures, 0, "1", false)
                 };
                 e.Find("hasMember").SliceByUrl(targets);

@@ -52,12 +52,13 @@ namespace BreastRadiology.XUnitTests
             {
                 ProfileTargetSlice[] targets = new ProfileTargetSlice[]
                 {
-                    new ProfileTargetSlice(this.MassSize, 0, "1"),
-                    new ProfileTargetSlice(this.MassShape, 0, "1"),
+                    new ProfileTargetSlice(this.BreastRadMassSize, 0, "1"),
+                    new ProfileTargetSlice(this.BreastRadMassShape, 0, "1"),
                     new ProfileTargetSlice(this.USMassOrientation, 0, "1"),
                     new ProfileTargetSlice(this.USMassMargin, 0, "1"),
                     new ProfileTargetSlice(this.USMassEchoPattern, 0, "1"),
                     new ProfileTargetSlice(this.USMassPosteriorAcousticFeatures, 0, "1"),
+                    new ProfileTargetSlice(this.BreastRadObservedChanges, 0, "*"),
                     //new ProfileTargetSlice(this.MammoAssociatedFeatures, 0, "1", false)
                 };
                 e.Find("hasMember").SliceByUrl(targets);

@@ -14,18 +14,18 @@ namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker
     {
-        String MassShape
+        String BreastRadMassShape
         {
             get
             {
-                if (massShape == null)
-                    CreateMassShape();
-                return massShape;
+                if (breastRadMassShape == null)
+                    CreateBreastRadMassShape();
+                return breastRadMassShape;
             }
         }
-        String massShape = null;
+        String breastRadMassShape = null;
 
-        void CreateMassShape()
+        void CreateBreastRadMassShape()
         {
             ValueSet vs = this.CreateValueSet(
                     "BreastRadMassShape",
@@ -68,7 +68,7 @@ namespace BreastRadiology.XUnitTests
                     "Breast Radiology Mass Shape",
                     new string[] { "Shape" },
                     ObservationUrl,
-                    out massShape)
+                    out breastRadMassShape)
                 .Description(new Markdown()
                     .Paragraph("Breast Radiology Mass Shape Observation")
                     .MissingObservation("a mass shape")

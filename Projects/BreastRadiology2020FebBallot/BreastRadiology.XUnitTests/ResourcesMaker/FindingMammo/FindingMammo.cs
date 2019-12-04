@@ -33,13 +33,10 @@ namespace BreastRadiology.XUnitTests
                     out findingMammo)
                 .Description(new Markdown()
                             .Paragraph("Breast Radiology Mammography Finding")
-                            .BiradHeader()
-                            .BlockQuote("A \"MASS\" is three dimensional and occupies space. It is seen on two different mammographic pro-")
-                            .BlockQuote("jections. It has completely or partially convex-outward borders and (when radiodense) appears")
-                            .BlockQuote("denser in the center than at the periphery. If a potential mass is seen only on a single projection, it")
-                            .BlockQuote("should be called an \"ASYMMETRY\" until its 3-dimensionality is confirmed (See Section D on Asym-")
-                            .BlockQuote("metries and also the Guidance chapter). (Insert links/page #s)")
-                            .BiradFooter()
+                            .Paragraph("Todo: The following items need further specification.")
+                            .List(
+                                "Device Metrics detailing the observation devices parameters (transducer freq, etc)."
+                                )
                             )
                 .AddFragRef(this.PureObservationSectionFragment)
                 ;

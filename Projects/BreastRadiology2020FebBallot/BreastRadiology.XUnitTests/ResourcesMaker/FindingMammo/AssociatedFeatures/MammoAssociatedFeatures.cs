@@ -39,7 +39,7 @@ namespace BreastRadiology.XUnitTests
                 .AddFragRef(this.ObservationSectionFragment)
                 ;
             {
-                //todo: Cardinality of targets?
+                //todo: Cardinality of the following targets?
                 ProfileTargetSlice[] targets = new ProfileTargetSlice[]
                 {
                     new ProfileTargetSlice(this.MammoSkinRetraction, 0, "1"),
