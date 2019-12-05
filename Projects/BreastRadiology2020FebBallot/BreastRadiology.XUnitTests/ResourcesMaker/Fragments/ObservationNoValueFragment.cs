@@ -29,7 +29,7 @@ namespace BreastRadiology.XUnitTests
                 .Description(new Hl7.Fhir.Model.Markdown("Base fragment for all BreastRad observations that have no explicit value."))
                 .AddFragRef(this.ObservationFragment)
             ;
-            e.Select("value[x]").Zero();
+            e.Select("value[x]").Zero().NoTypes();
             e.Select("interpretation").Zero();
             e.Select("referenceRange").Zero();
         }

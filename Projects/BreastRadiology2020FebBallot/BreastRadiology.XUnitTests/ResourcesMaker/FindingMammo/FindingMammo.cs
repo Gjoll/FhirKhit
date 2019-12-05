@@ -38,7 +38,8 @@ namespace BreastRadiology.XUnitTests
                                 "Device Metrics detailing the observation devices parameters (transducer freq, etc)."
                                 )
                             )
-                .AddFragRef(this.PureObservationSectionFragment)
+                .AddFragRef(this.ObservationSectionFragment)
+                .AddFragRef(this.ObservationNoValueFragment)
                 ;
             ////$ todo. Incorrect method!!!
             //e.Find("method")

@@ -32,7 +32,8 @@ namespace BreastRadiology.XUnitTests
                     ObservationUrl,
                     out sectionFindings)
                 .Description(new Markdown().Paragraph("Findings Section"))
-                .AddFragRef(this.PureObservationSectionFragment)
+                .AddFragRef(this.ObservationSectionFragment)
+                .AddFragRef(this.ObservationNoValueFragment)
                 ;
 
             e.Select("bodySite").Zero();

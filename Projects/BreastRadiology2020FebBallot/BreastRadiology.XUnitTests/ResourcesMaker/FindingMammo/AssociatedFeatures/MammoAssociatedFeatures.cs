@@ -37,6 +37,7 @@ namespace BreastRadiology.XUnitTests
                             "Features when no other abnormality is present.")
                             )
                 .AddFragRef(this.ObservationSectionFragment)
+                .AddFragRef(this.ObservationNoValueFragment)
                 ;
             {
                 //todo: Cardinality of the following targets?

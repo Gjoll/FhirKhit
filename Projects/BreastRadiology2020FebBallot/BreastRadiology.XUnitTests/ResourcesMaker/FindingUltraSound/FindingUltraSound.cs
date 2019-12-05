@@ -75,7 +75,8 @@ namespace BreastRadiology.XUnitTests
                         "Device Metrics detailing the observation devices parameters (transducer freq, etc)."
                         )
                     )
-                .AddFragRef(this.PureObservationSectionFragment)
+                .AddFragRef(this.ObservationSectionFragment)
+                .AddFragRef(this.ObservationNoValueFragment)
                 ;
             //$e.Find("method")
             //$ .FixedCodeSlice("method", "http://snomed.info/sct", "115341008")

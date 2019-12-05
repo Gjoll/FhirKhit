@@ -48,6 +48,7 @@ namespace BreastRadiology.XUnitTests
                 )
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)
                 .AddFragRef(this.ObservationSectionFragment)
+                .AddFragRef(this.ObservationNoValueFragment)
                 ;
             {
                 ProfileTargetSlice[] targets = new ProfileTargetSlice[]
@@ -65,7 +66,6 @@ namespace BreastRadiology.XUnitTests
                 e.Find("hasMember").SliceByUrl(targets);
                 e.MapNode.AddProfileTargets(targets);
             }
-            e.Select("value[x]").Zero();
         }
     }
 }

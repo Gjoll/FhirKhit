@@ -133,6 +133,11 @@ namespace FhirKhit.Tools.R4
             return e;
         }
 
+        public static ElementDefinition NoTypes(this ElementDefinition e)
+        {
+            return e.Type(Array.Empty<ElementDefinition.TypeRefComponent>());
+        }
+
         public static ElementDefinition Type(this ElementDefinition e,
             String code,
             String[] profiles = null,

@@ -32,7 +32,8 @@ namespace BreastRadiology.XUnitTests
                     ObservationUrl,
                     out sectionFindingsRightBreast)
                 .Description(new Markdown().Paragraph("Findings Right Breast Section"))
-                .AddFragRef(this.PureObservationSectionFragment)
+                .AddFragRef(this.ObservationSectionFragment)
+                .AddFragRef(this.ObservationNoValueFragment)
                 ;
             e.Select("bodySite").Zero();
             e.Find("hasMember").SliceByUrl(this.FindingBreastTargets);
