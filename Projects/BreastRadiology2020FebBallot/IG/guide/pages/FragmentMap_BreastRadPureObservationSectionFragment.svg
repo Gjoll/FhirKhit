@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="631.5" height="558.75">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="631.5" height="577.5">
 <defs>
 <marker id="arrowStart" markerWidth="3.75" markerHeight="3.75" markerUnits="px" refX="1.875" refY="1.875">
 <circle fill="Black" stroke-width="0" cx="1.875" cy="1.875" r="1.875" />
@@ -49,11 +49,11 @@
 <line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="368.99997" y1="153.75" x2="398.99997" y2="153.75" />
 <line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="368.99997" y1="223.125" x2="398.99997" y2="223.125" />
 <line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="368.99997" y1="301.875" x2="398.99997" y2="301.875" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="368.99997" y1="371.25" x2="398.99997" y2="371.25" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="368.99997" y1="431.25" x2="398.99997" y2="431.25" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="368.99997" y1="500.625" x2="398.99997" y2="500.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="368.99997" y1="380.625" x2="398.99997" y2="380.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="368.99997" y1="450" x2="398.99997" y2="450" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="368.99997" y1="519.375" x2="398.99997" y2="519.375" />
 <line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="338.99997" y1="52.5" x2="368.99997" y2="52.5" />
-<line stroke="Black" stroke-width="1.875" x1="368.99997" y1="33.75" x2="368.99997" y2="500.625" />
+<line stroke="Black" stroke-width="1.875" x1="368.99997" y1="33.75" x2="368.99997" y2="519.375" />
 </g>
 <g>
 <g>
@@ -120,40 +120,44 @@
 </a>
 </g>
 <g>
-<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="398.99997" y="345" width="120" height="52.5" rx="3.75" ry="3.75" />
+<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="398.99997" y="345" width="120" height="71.25" rx="3.75" ry="3.75" />
 <a href="./FragmentMap_BreastRadUltraSoundFinding.svg" target="_blank">
 <title>'FragmentMap_BreastRadUltraSoundFinding.svg'</title>
 <text x="406.49997" y="367.5">UltraSound</text>
 </a>
+<a href="./FragmentMap_BreastRadUltraSoundFinding.svg" target="_blank">
+<title>'FragmentMap_BreastRadUltraSoundFinding.svg'</title>
+<text x="406.49997" y="386.25">Finding</text>
+</a>
 <a href="../Guide/Output/StructureDefinition-BreastRadUltraSoundFinding.html" target="_blank">
 <title>'BreastRadUltraSoundFinding'</title>
-<text x="406.49997" y="386.25">[Resource]</text>
+<text x="406.49997" y="405">[Resource]</text>
 </a>
 </g>
 <g>
-<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="398.99997" y="405" width="141" height="52.5" rx="3.75" ry="3.75" />
+<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="398.99997" y="423.75" width="141" height="52.5" rx="3.75" ry="3.75" />
 <a href="./FragmentMap_BreastRadSectionFindingsRightBreast.svg" target="_blank">
 <title>'FragmentMap_BreastRadSectionFindingsRightBreast.svg'</title>
-<text x="406.49997" y="427.5">Right Breast</text>
+<text x="406.49997" y="446.25">Right Breast</text>
 </a>
 <a href="../Guide/Output/StructureDefinition-BreastRadSectionFindingsRightBreast.html" target="_blank">
 <title>'BreastRadSectionFindingsRightBreast'</title>
-<text x="406.49997" y="446.25">[Resource]</text>
+<text x="406.49997" y="465">[Resource]</text>
 </a>
 </g>
 <g>
-<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="398.99997" y="465" width="120" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="398.99997" y="483.75" width="120" height="71.25" rx="3.75" ry="3.75" />
 <a href="./FragmentMap_BreastRadSectionPatientRisk.svg" target="_blank">
 <title>'FragmentMap_BreastRadSectionPatientRisk.svg'</title>
-<text x="406.49997" y="487.5">Patient</text>
+<text x="406.49997" y="506.25">Patient</text>
 </a>
 <a href="./FragmentMap_BreastRadSectionPatientRisk.svg" target="_blank">
 <title>'FragmentMap_BreastRadSectionPatientRisk.svg'</title>
-<text x="406.49997" y="506.25">Risk</text>
+<text x="406.49997" y="525">Risk</text>
 </a>
 <a href="../Guide/Output/StructureDefinition-BreastRadSectionPatientRisk.html" target="_blank">
 <title>'BreastRadSectionPatientRisk'</title>
-<text x="406.49997" y="525">[Resource]</text>
+<text x="406.49997" y="543.75">[Resource]</text>
 </a>
 </g>
 </g>

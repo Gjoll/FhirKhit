@@ -48,20 +48,18 @@
 <text x="15" y="183.75">[Resource]</text>
 </a>
 </g>
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="168" y1="52.5" x2="198" y2="52.5" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="168" y1="33.75" x2="198" y2="33.75" />
 <line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="138" y1="52.5" x2="168" y2="52.5" />
 <line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="138" y1="150" x2="168" y2="150" />
-<line stroke="Black" stroke-width="1.875" x1="168" y1="52.5" x2="168" y2="150" />
+<line stroke="Black" stroke-width="1.875" x1="168" y1="33.75" x2="168" y2="150" />
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="198" y="7.5" width="141" height="90" rx="3.75" ry="3.75" />
-<text x="205.5" y="30">UltraSound</text>
-<text x="205.5" y="48.75">Mass</text>
-<text x="205.5" y="67.5">Echo Pattern</text>
+<rect fill="Green" stroke="Black" stroke-width="1.875" x="198" y="7.5" width="141" height="52.5" rx="3.75" ry="3.75" />
+<text x="205.5" y="30">Echo Pattern</text>
 <a href="../Guide/Output/StructureDefinition-BreastRadUSMassEchoPattern.html" target="_blank">
 <title>'BreastRadUSMassEchoPattern'</title>
-<text x="205.5" y="86.25">[Resource]</text>
+<text x="205.5" y="48.75">[Resource]</text>
 </a>
 </g>
 </g>

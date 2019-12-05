@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="579" height="982.5">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="579" height="870">
 <defs>
 <marker id="arrowStart" markerWidth="3.75" markerHeight="3.75" markerUnits="px" refX="1.875" refY="1.875">
 <circle fill="Black" stroke-width="0" cx="1.875" cy="1.875" r="1.875" />
@@ -39,18 +39,18 @@
 </a>
 </g>
 <line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="337.5" y1="52.5" x2="367.5" y2="52.5" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="337.5" y1="140.625" x2="367.5" y2="140.625" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="337.5" y1="219.375" x2="367.5" y2="219.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="337.5" y1="298.125" x2="367.5" y2="298.125" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="337.5" y1="376.875" x2="367.5" y2="376.875" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="337.5" y1="455.625" x2="367.5" y2="455.625" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="337.5" y1="534.375" x2="367.5" y2="534.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="337.5" y1="622.5" x2="367.5" y2="622.5" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="337.5" y1="720" x2="367.5" y2="720" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="337.5" y1="826.875" x2="367.5" y2="826.875" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="337.5" y1="924.375" x2="367.5" y2="924.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="337.5" y1="131.25" x2="367.5" y2="131.25" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="337.5" y1="200.625" x2="367.5" y2="200.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="337.5" y1="279.375" x2="367.5" y2="279.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="337.5" y1="358.125" x2="367.5" y2="358.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="337.5" y1="436.875" x2="367.5" y2="436.875" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="337.5" y1="506.25" x2="367.5" y2="506.25" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="337.5" y1="575.625" x2="367.5" y2="575.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="337.5" y1="654.375" x2="367.5" y2="654.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="337.5" y1="742.5" x2="367.5" y2="742.5" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="337.5" y1="821.25" x2="367.5" y2="821.25" />
 <line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="307.5" y1="71.25" x2="337.5" y2="71.25" />
-<line stroke="Black" stroke-width="1.875" x1="337.5" y1="52.5" x2="337.5" y2="924.375" />
+<line stroke="Black" stroke-width="1.875" x1="337.5" y1="52.5" x2="337.5" y2="821.25" />
 </g>
 <g>
 <g>
@@ -73,169 +73,145 @@
 </a>
 </g>
 <g>
-<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="367.5" y="105" width="120" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="367.5" y="105" width="120" height="52.5" rx="3.75" ry="3.75" />
 <a href="./FragmentMap_BreastRadMammoMass.svg" target="_blank">
 <title>'FragmentMap_BreastRadMammoMass.svg'</title>
-<text x="375" y="127.5">Mammo</text>
-</a>
-<a href="./FragmentMap_BreastRadMammoMass.svg" target="_blank">
-<title>'FragmentMap_BreastRadMammoMass.svg'</title>
-<text x="375" y="146.25">Mass</text>
+<text x="375" y="127.5">Mass</text>
 </a>
 <a href="../Guide/Output/StructureDefinition-BreastRadMammoMass.html" target="_blank">
 <title>'BreastRadMammoMass'</title>
-<text x="375" y="165">[Resource]</text>
+<text x="375" y="146.25">[Resource]</text>
 </a>
 </g>
 <g>
-<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="367.5" y="183.75" width="120" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="367.5" y="165" width="120" height="71.25" rx="3.75" ry="3.75" />
 <a href="./FragmentMap_BreastRadMammoSkinRetraction.svg" target="_blank">
 <title>'FragmentMap_BreastRadMammoSkinRetraction.svg'</title>
-<text x="375" y="206.25">Skin</text>
+<text x="375" y="187.5">Skin</text>
 </a>
 <a href="./FragmentMap_BreastRadMammoSkinRetraction.svg" target="_blank">
 <title>'FragmentMap_BreastRadMammoSkinRetraction.svg'</title>
-<text x="375" y="225">Retraction</text>
+<text x="375" y="206.25">Retraction</text>
 </a>
 <a href="../Guide/Output/StructureDefinition-BreastRadMammoSkinRetraction.html" target="_blank">
 <title>'BreastRadMammoSkinRetraction'</title>
-<text x="375" y="243.75">[Resource]</text>
+<text x="375" y="225">[Resource]</text>
 </a>
 </g>
 <g>
-<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="367.5" y="262.5" width="120" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="367.5" y="243.75" width="120" height="71.25" rx="3.75" ry="3.75" />
 <a href="./FragmentMap_BreastRadMammoNippleRetraction.svg" target="_blank">
 <title>'FragmentMap_BreastRadMammoNippleRetraction.svg'</title>
-<text x="375" y="285">Nipple</text>
+<text x="375" y="266.25">Nipple</text>
 </a>
 <a href="./FragmentMap_BreastRadMammoNippleRetraction.svg" target="_blank">
 <title>'FragmentMap_BreastRadMammoNippleRetraction.svg'</title>
-<text x="375" y="303.75">Retraction</text>
+<text x="375" y="285">Retraction</text>
 </a>
 <a href="../Guide/Output/StructureDefinition-BreastRadMammoNippleRetraction.html" target="_blank">
 <title>'BreastRadMammoNippleRetraction'</title>
-<text x="375" y="322.5">[Resource]</text>
+<text x="375" y="303.75">[Resource]</text>
 </a>
 </g>
 <g>
-<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="367.5" y="341.25" width="120" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="367.5" y="322.5" width="120" height="71.25" rx="3.75" ry="3.75" />
 <a href="./FragmentMap_BreastRadMammoSkinThickening.svg" target="_blank">
 <title>'FragmentMap_BreastRadMammoSkinThickening.svg'</title>
-<text x="375" y="363.75">Skin</text>
+<text x="375" y="345">Skin</text>
 </a>
 <a href="./FragmentMap_BreastRadMammoSkinThickening.svg" target="_blank">
 <title>'FragmentMap_BreastRadMammoSkinThickening.svg'</title>
-<text x="375" y="382.5">Thickening</text>
+<text x="375" y="363.75">Thickening</text>
 </a>
 <a href="../Guide/Output/StructureDefinition-BreastRadMammoSkinThickening.html" target="_blank">
 <title>'BreastRadMammoSkinThickening'</title>
-<text x="375" y="401.25">[Resource]</text>
+<text x="375" y="382.5">[Resource]</text>
 </a>
 </g>
 <g>
-<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="367.5" y="420" width="120" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="367.5" y="401.25" width="120" height="71.25" rx="3.75" ry="3.75" />
 <a href="./FragmentMap_BreastRadMammoAxillaryAdenopathy.svg" target="_blank">
 <title>'FragmentMap_BreastRadMammoAxillaryAdenopathy.svg'</title>
-<text x="375" y="442.5">Axillary</text>
+<text x="375" y="423.75">Axillary</text>
 </a>
 <a href="./FragmentMap_BreastRadMammoAxillaryAdenopathy.svg" target="_blank">
 <title>'FragmentMap_BreastRadMammoAxillaryAdenopathy.svg'</title>
-<text x="375" y="461.25">Adenopathy</text>
+<text x="375" y="442.5">Adenopathy</text>
 </a>
 <a href="../Guide/Output/StructureDefinition-BreastRadMammoAxillaryAdenopathy.html" target="_blank">
 <title>'BreastRadMammoAxillaryAdenopathy'</title>
-<text x="375" y="480">[Resource]</text>
+<text x="375" y="461.25">[Resource]</text>
 </a>
 </g>
 <g>
-<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="367.5" y="498.75" width="151.49998" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="367.5" y="480" width="151.49998" height="52.5" rx="3.75" ry="3.75" />
 <a href="./FragmentMap_BreastRadMammoCalcification.svg" target="_blank">
 <title>'FragmentMap_BreastRadMammoCalcification.svg'</title>
-<text x="375" y="521.25">Mammo</text>
-</a>
-<a href="./FragmentMap_BreastRadMammoCalcification.svg" target="_blank">
-<title>'FragmentMap_BreastRadMammoCalcification.svg'</title>
-<text x="375" y="540">Calcification</text>
+<text x="375" y="502.5">Calcification</text>
 </a>
 <a href="../Guide/Output/StructureDefinition-BreastRadMammoCalcification.html" target="_blank">
 <title>'BreastRadMammoCalcification'</title>
-<text x="375" y="558.75">[Resource]</text>
+<text x="375" y="521.25">[Resource]</text>
 </a>
 </g>
 <g>
-<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="367.5" y="577.5" width="141" height="90" rx="3.75" ry="3.75" />
+<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="367.5" y="540" width="141" height="71.25" rx="3.75" ry="3.75" />
 <a href="./FragmentMap_BreastRadMammoIntramammaryLymphNode.svg" target="_blank">
 <title>'FragmentMap_BreastRadMammoIntramammaryLymphNode.svg'</title>
-<text x="375" y="600">Mammo</text>
+<text x="375" y="562.5">Intramammory</text>
 </a>
 <a href="./FragmentMap_BreastRadMammoIntramammaryLymphNode.svg" target="_blank">
 <title>'FragmentMap_BreastRadMammoIntramammaryLymphNode.svg'</title>
-<text x="375" y="618.75">Intramammory</text>
-</a>
-<a href="./FragmentMap_BreastRadMammoIntramammaryLymphNode.svg" target="_blank">
-<title>'FragmentMap_BreastRadMammoIntramammaryLymphNode.svg'</title>
-<text x="375" y="637.5">Lymph Node</text>
+<text x="375" y="581.25">Lymph Node</text>
 </a>
 <a href="../Guide/Output/StructureDefinition-BreastRadMammoIntramammaryLymphNode.html" target="_blank">
 <title>'BreastRadMammoIntramammaryLymphNode'</title>
-<text x="375" y="656.25">[Resource]</text>
+<text x="375" y="600">[Resource]</text>
 </a>
 </g>
 <g>
-<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="367.5" y="675" width="120" height="90" rx="3.75" ry="3.75" />
+<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="367.5" y="618.75" width="120" height="71.25" rx="3.75" ry="3.75" />
 <a href="./FragmentMap_BreastRadMammoSkinLesion.svg" target="_blank">
 <title>'FragmentMap_BreastRadMammoSkinLesion.svg'</title>
-<text x="375" y="697.5">Mammo</text>
+<text x="375" y="641.25">Skin</text>
 </a>
 <a href="./FragmentMap_BreastRadMammoSkinLesion.svg" target="_blank">
 <title>'FragmentMap_BreastRadMammoSkinLesion.svg'</title>
-<text x="375" y="716.25">Skin</text>
-</a>
-<a href="./FragmentMap_BreastRadMammoSkinLesion.svg" target="_blank">
-<title>'FragmentMap_BreastRadMammoSkinLesion.svg'</title>
-<text x="375" y="735">Lesion</text>
+<text x="375" y="660">Lesion</text>
 </a>
 <a href="../Guide/Output/StructureDefinition-BreastRadMammoSkinLesion.html" target="_blank">
 <title>'BreastRadMammoSkinLesion'</title>
-<text x="375" y="753.75">[Resource]</text>
+<text x="375" y="678.75">[Resource]</text>
 </a>
 </g>
 <g>
-<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="367.5" y="772.5" width="120" height="108.75" rx="3.75" ry="3.75" />
+<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="367.5" y="697.5" width="120" height="90" rx="3.75" ry="3.75" />
 <a href="./FragmentMap_BreastRadMammoSolitaryDilatedDuct.svg" target="_blank">
 <title>'FragmentMap_BreastRadMammoSolitaryDilatedDuct.svg'</title>
-<text x="375" y="795">Mammo</text>
+<text x="375" y="720">Solitary</text>
 </a>
 <a href="./FragmentMap_BreastRadMammoSolitaryDilatedDuct.svg" target="_blank">
 <title>'FragmentMap_BreastRadMammoSolitaryDilatedDuct.svg'</title>
-<text x="375" y="813.75">Solitary</text>
+<text x="375" y="738.75">Dialated</text>
 </a>
 <a href="./FragmentMap_BreastRadMammoSolitaryDilatedDuct.svg" target="_blank">
 <title>'FragmentMap_BreastRadMammoSolitaryDilatedDuct.svg'</title>
-<text x="375" y="832.5">Dialated</text>
-</a>
-<a href="./FragmentMap_BreastRadMammoSolitaryDilatedDuct.svg" target="_blank">
-<title>'FragmentMap_BreastRadMammoSolitaryDilatedDuct.svg'</title>
-<text x="375" y="851.25">Duct</text>
+<text x="375" y="757.5">Duct</text>
 </a>
 <a href="../Guide/Output/StructureDefinition-BreastRadMammoSolitaryDilatedDuct.html" target="_blank">
 <title>'BreastRadMammoSolitaryDilatedDuct'</title>
-<text x="375" y="870">[Resource]</text>
+<text x="375" y="776.25">[Resource]</text>
 </a>
 </g>
 <g>
-<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="367.5" y="888.75" width="120" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="367.5" y="795" width="120" height="52.5" rx="3.75" ry="3.75" />
 <a href="./FragmentMap_BreastRadUSMass.svg" target="_blank">
 <title>'FragmentMap_BreastRadUSMass.svg'</title>
-<text x="375" y="911.25">UltraSound</text>
-</a>
-<a href="./FragmentMap_BreastRadUSMass.svg" target="_blank">
-<title>'FragmentMap_BreastRadUSMass.svg'</title>
-<text x="375" y="930">Mass</text>
+<text x="375" y="817.5">Mass</text>
 </a>
 <a href="../Guide/Output/StructureDefinition-BreastRadUSMass.html" target="_blank">
 <title>'BreastRadUSMass'</title>
-<text x="375" y="948.75">[Resource]</text>
+<text x="375" y="836.25">[Resource]</text>
 </a>
 </g>
 </g>

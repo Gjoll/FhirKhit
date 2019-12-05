@@ -75,21 +75,20 @@
 <text x="15" y="318.75">[Resource]</text>
 </a>
 </g>
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="168" y1="52.5" x2="198" y2="52.5" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="168" y1="43.125" x2="198" y2="43.125" />
 <line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="127.5" y1="71.25" x2="168" y2="71.25" />
 <line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="138" y1="187.5" x2="168" y2="187.5" />
 <line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="138" y1="285" x2="168" y2="285" />
-<line stroke="Black" stroke-width="1.875" x1="168" y1="52.5" x2="168" y2="285" />
+<line stroke="Black" stroke-width="1.875" x1="168" y1="43.125" x2="168" y2="285" />
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="198" y="7.5" width="120" height="90" rx="3.75" ry="3.75" />
-<text x="205.5" y="30">Mammo</text>
-<text x="205.5" y="48.75">Skin</text>
-<text x="205.5" y="67.5">Lesion</text>
+<rect fill="Green" stroke="Black" stroke-width="1.875" x="198" y="7.5" width="120" height="71.25" rx="3.75" ry="3.75" />
+<text x="205.5" y="30">Skin</text>
+<text x="205.5" y="48.75">Lesion</text>
 <a href="../Guide/Output/StructureDefinition-BreastRadMammoSkinLesion.html" target="_blank">
 <title>'BreastRadMammoSkinLesion'</title>
-<text x="205.5" y="86.25">[Resource]</text>
+<text x="205.5" y="67.5">[Resource]</text>
 </a>
 </g>
 </g>

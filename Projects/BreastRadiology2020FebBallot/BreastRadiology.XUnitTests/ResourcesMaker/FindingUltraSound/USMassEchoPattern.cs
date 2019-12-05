@@ -91,7 +91,7 @@ namespace BreastRadiology.XUnitTests
 
             SDefEditor e = this.CreateEditor("BreastRadUSMassEchoPattern",
                         "Breast Radiology Ultra-Sound Mass Echo Pattern",
-                        new string[] { "UltraSound", "Mass", "Echo Pattern" },
+                        new string[] { "Echo Pattern" },
                         ObservationUrl,
                         out usMassEchoPattern)
                     .Description(new Markdown()

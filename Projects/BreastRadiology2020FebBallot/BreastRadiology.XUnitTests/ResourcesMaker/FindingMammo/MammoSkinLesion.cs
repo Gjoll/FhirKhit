@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
         {
             SDefEditor e = this.CreateEditor("BreastRadMammoSkinLesion",
                 "Breast Radiology Mammography Skin Lesion",
-                new string[] { "Mammo", "Skin", "Lesion" },
+                new string[] { "Skin", "Lesion" },
                 ObservationUrl,
                 out mammoSkinLesion)
                 .Description(new Markdown()

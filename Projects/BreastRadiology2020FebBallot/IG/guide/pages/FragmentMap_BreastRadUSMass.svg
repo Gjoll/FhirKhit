@@ -52,19 +52,18 @@
 <text x="15" y="202.5">[Resource]</text>
 </a>
 </g>
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="157.5" y1="43.125" x2="187.5" y2="43.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="157.5" y1="33.75" x2="187.5" y2="33.75" />
 <line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="127.5" y1="71.25" x2="157.5" y2="71.25" />
 <line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="127.5" y1="178.125" x2="157.5" y2="178.125" />
-<line stroke="Black" stroke-width="1.875" x1="157.5" y1="43.125" x2="157.5" y2="178.125" />
+<line stroke="Black" stroke-width="1.875" x1="157.5" y1="33.75" x2="157.5" y2="178.125" />
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="187.5" y="7.5" width="120" height="71.25" rx="3.75" ry="3.75" />
-<text x="195" y="30">UltraSound</text>
-<text x="195" y="48.75">Mass</text>
+<rect fill="Green" stroke="Black" stroke-width="1.875" x="187.5" y="7.5" width="120" height="52.5" rx="3.75" ry="3.75" />
+<text x="195" y="30">Mass</text>
 <a href="../Guide/Output/StructureDefinition-BreastRadUSMass.html" target="_blank">
 <title>'BreastRadUSMass'</title>
-<text x="195" y="67.5">[Resource]</text>
+<text x="195" y="48.75">[Resource]</text>
 </a>
 </g>
 </g>

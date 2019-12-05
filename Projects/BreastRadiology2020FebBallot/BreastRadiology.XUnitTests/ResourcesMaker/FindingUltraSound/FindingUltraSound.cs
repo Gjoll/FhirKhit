@@ -64,7 +64,7 @@ namespace BreastRadiology.XUnitTests
             //$ Fix me. Incorrect method!!!
             SDefEditor e =  this.CreateEditor("BreastRadUltraSoundFinding",
                     "Breast Radiology UltraSound Finding",
-                    new string[] {"UltraSound"},
+                    new string[] {"UltraSound", "Finding"},
                     ObservationUrl,
                     out findingUltraSound)
                 .Description(

@@ -75,7 +75,7 @@
 <text x="15" y="318.75">[Resource]</text>
 </a>
 </g>
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="168" y1="61.875" x2="198" y2="61.875" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="168" y1="52.5" x2="198" y2="52.5" />
 <line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="138" y1="52.5" x2="168" y2="52.5" />
 <line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="127.5" y1="168.75" x2="168" y2="168.75" />
 <line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="138" y1="285" x2="168" y2="285" />
@@ -83,14 +83,13 @@
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="198" y="7.5" width="120" height="108.75" rx="3.75" ry="3.75" />
-<text x="205.5" y="30">Mammo</text>
-<text x="205.5" y="48.75">Solitary</text>
-<text x="205.5" y="67.5">Dialated</text>
-<text x="205.5" y="86.25">Duct</text>
+<rect fill="Green" stroke="Black" stroke-width="1.875" x="198" y="7.5" width="120" height="90" rx="3.75" ry="3.75" />
+<text x="205.5" y="30">Solitary</text>
+<text x="205.5" y="48.75">Dialated</text>
+<text x="205.5" y="67.5">Duct</text>
 <a href="../Guide/Output/StructureDefinition-BreastRadMammoSolitaryDilatedDuct.html" target="_blank">
 <title>'BreastRadMammoSolitaryDilatedDuct'</title>
-<text x="205.5" y="105">[Resource]</text>
+<text x="205.5" y="86.25">[Resource]</text>
 </a>
 </g>
 </g>

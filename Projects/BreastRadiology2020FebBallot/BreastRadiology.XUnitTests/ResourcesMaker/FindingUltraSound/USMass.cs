@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
         {
             SDefEditor e = this.CreateEditor("BreastRadUSMass",
                     "Breast Radiology Mammography Mass Observation",
-                    new string[] { "UltraSound", "Mass" },
+                    new string[] { "Mass" },
                     ObservationUrl,
                     out usMass)
                 .Description(new Markdown()

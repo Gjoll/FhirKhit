@@ -86,7 +86,7 @@ namespace BreastRadiology.XUnitTests
 
             SDefEditor e = this.CreateEditor("BreastRadUSMassPosteriorAcousticFeatures",
                         "Breast Radiology Ultra-Sound Mass Posterior Acoustic Features",
-                        new string[] { "UltraSound", "Mass", "Posterior Acoustic Features" },
+                        new string[] { "Posterior",  "Acoustic",  "Features" },
                         ObservationUrl,
                         out usMassPosteriorAcousticFeatures)
                     .Description(new Markdown()

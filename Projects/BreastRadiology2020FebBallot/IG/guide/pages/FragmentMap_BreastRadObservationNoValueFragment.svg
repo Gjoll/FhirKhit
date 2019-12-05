@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="589.5" height="746.25">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="589.5" height="690">
 <defs>
 <marker id="arrowStart" markerWidth="3.75" markerHeight="3.75" markerUnits="px" refX="1.875" refY="1.875">
 <circle fill="Black" stroke-width="0" cx="1.875" cy="1.875" r="1.875" />
@@ -45,11 +45,11 @@
 <line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="358.5" y1="219.375" x2="388.5" y2="219.375" />
 <line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="358.5" y1="298.125" x2="388.5" y2="298.125" />
 <line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="358.5" y1="376.875" x2="388.5" y2="376.875" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="358.5" y1="465" x2="388.5" y2="465" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="358.5" y1="562.5" x2="388.5" y2="562.5" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="358.5" y1="669.375" x2="388.5" y2="669.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="358.5" y1="455.625" x2="388.5" y2="455.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="358.5" y1="534.375" x2="388.5" y2="534.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="358.5" y1="622.5" x2="388.5" y2="622.5" />
 <line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="328.5" y1="52.5" x2="358.5" y2="52.5" />
-<line stroke="Black" stroke-width="1.875" x1="358.5" y1="52.5" x2="358.5" y2="669.375" />
+<line stroke="Black" stroke-width="1.875" x1="358.5" y1="52.5" x2="358.5" y2="622.5" />
 </g>
 <g>
 <g>
@@ -132,64 +132,52 @@
 </a>
 </g>
 <g>
-<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="388.5" y="420" width="120" height="90" rx="3.75" ry="3.75" />
+<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="388.5" y="420" width="120" height="71.25" rx="3.75" ry="3.75" />
 <a href="./FragmentMap_BreastRadMammoArchitecturalDistortion.svg" target="_blank">
 <title>'FragmentMap_BreastRadMammoArchitecturalDistortion.svg'</title>
-<text x="396" y="442.5">Mammo</text>
+<text x="396" y="442.5">Arch.</text>
 </a>
 <a href="./FragmentMap_BreastRadMammoArchitecturalDistortion.svg" target="_blank">
 <title>'FragmentMap_BreastRadMammoArchitecturalDistortion.svg'</title>
-<text x="396" y="461.25">Arch.</text>
-</a>
-<a href="./FragmentMap_BreastRadMammoArchitecturalDistortion.svg" target="_blank">
-<title>'FragmentMap_BreastRadMammoArchitecturalDistortion.svg'</title>
-<text x="396" y="480">Distortion</text>
+<text x="396" y="461.25">Distortion</text>
 </a>
 <a href="../Guide/Output/StructureDefinition-BreastRadMammoArchitecturalDistortion.html" target="_blank">
 <title>'BreastRadMammoArchitecturalDistortion'</title>
-<text x="396" y="498.75">[Resource]</text>
+<text x="396" y="480">[Resource]</text>
 </a>
 </g>
 <g>
-<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="388.5" y="517.5" width="120" height="90" rx="3.75" ry="3.75" />
+<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="388.5" y="498.75" width="120" height="71.25" rx="3.75" ry="3.75" />
 <a href="./FragmentMap_BreastRadMammoSkinLesion.svg" target="_blank">
 <title>'FragmentMap_BreastRadMammoSkinLesion.svg'</title>
-<text x="396" y="540">Mammo</text>
+<text x="396" y="521.25">Skin</text>
 </a>
 <a href="./FragmentMap_BreastRadMammoSkinLesion.svg" target="_blank">
 <title>'FragmentMap_BreastRadMammoSkinLesion.svg'</title>
-<text x="396" y="558.75">Skin</text>
-</a>
-<a href="./FragmentMap_BreastRadMammoSkinLesion.svg" target="_blank">
-<title>'FragmentMap_BreastRadMammoSkinLesion.svg'</title>
-<text x="396" y="577.5">Lesion</text>
+<text x="396" y="540">Lesion</text>
 </a>
 <a href="../Guide/Output/StructureDefinition-BreastRadMammoSkinLesion.html" target="_blank">
 <title>'BreastRadMammoSkinLesion'</title>
-<text x="396" y="596.25">[Resource]</text>
+<text x="396" y="558.75">[Resource]</text>
 </a>
 </g>
 <g>
-<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="388.5" y="615" width="120" height="108.75" rx="3.75" ry="3.75" />
+<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="388.5" y="577.5" width="120" height="90" rx="3.75" ry="3.75" />
 <a href="./FragmentMap_BreastRadMammoSolitaryDilatedDuct.svg" target="_blank">
 <title>'FragmentMap_BreastRadMammoSolitaryDilatedDuct.svg'</title>
-<text x="396" y="637.5">Mammo</text>
+<text x="396" y="600">Solitary</text>
 </a>
 <a href="./FragmentMap_BreastRadMammoSolitaryDilatedDuct.svg" target="_blank">
 <title>'FragmentMap_BreastRadMammoSolitaryDilatedDuct.svg'</title>
-<text x="396" y="656.25">Solitary</text>
+<text x="396" y="618.75">Dialated</text>
 </a>
 <a href="./FragmentMap_BreastRadMammoSolitaryDilatedDuct.svg" target="_blank">
 <title>'FragmentMap_BreastRadMammoSolitaryDilatedDuct.svg'</title>
-<text x="396" y="675">Dialated</text>
-</a>
-<a href="./FragmentMap_BreastRadMammoSolitaryDilatedDuct.svg" target="_blank">
-<title>'FragmentMap_BreastRadMammoSolitaryDilatedDuct.svg'</title>
-<text x="396" y="693.75">Duct</text>
+<text x="396" y="637.5">Duct</text>
 </a>
 <a href="../Guide/Output/StructureDefinition-BreastRadMammoSolitaryDilatedDuct.html" target="_blank">
 <title>'BreastRadMammoSolitaryDilatedDuct'</title>
-<text x="396" y="712.5">[Resource]</text>
+<text x="396" y="656.25">[Resource]</text>
 </a>
 </g>
 </g>

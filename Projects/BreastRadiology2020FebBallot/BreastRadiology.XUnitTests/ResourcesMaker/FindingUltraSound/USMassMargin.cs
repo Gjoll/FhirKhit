@@ -105,7 +105,7 @@ namespace BreastRadiology.XUnitTests
 
             SDefEditor e = this.CreateEditor("BreastRadUSMassMargin",
                     "Breast Radiology Ultra-Sound Mass Margin",
-                    new string[] { "UltraSound", "Mass", "Margin" },
+                    new string[] { "Margin" },
                     ObservationUrl,
                     out usMassMargin)
                 .Description(new Markdown()

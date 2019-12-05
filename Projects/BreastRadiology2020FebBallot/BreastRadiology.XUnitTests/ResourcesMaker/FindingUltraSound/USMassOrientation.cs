@@ -58,7 +58,7 @@ namespace BreastRadiology.XUnitTests
 
             SDefEditor e = this.CreateEditor("BreastRadUSMassOrientation",
                         "Breast Radiology Ultra-Sound Mass Orientation",
-                        new string[] { "UltraSound", "Mass", "Orientation" },
+                        new string[] { "Orientation" },
                         ObservationUrl,
                         out usMassOrientation)
                     .Description(new Markdown()
