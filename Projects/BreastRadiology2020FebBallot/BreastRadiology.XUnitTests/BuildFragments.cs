@@ -263,7 +263,7 @@ namespace BreastRadiology.XUnitTests
         {
             this.A_BuildFragments();
             this.B_BuildResources();
-            this.C_IGBuild();
+            //this.C_IGBuild();
         }
 
         [TestMethod]

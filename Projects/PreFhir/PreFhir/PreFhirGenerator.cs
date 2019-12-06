@@ -267,6 +267,9 @@ namespace PreFhir
             switch (processedItem.Resource)
             {
                 case StructureDefinition sDef:
+                    // Dont save fragments....
+                    if (sDef.IsFragment())
+                        return;
                     // force recreation of snapshot. Adds missing definitions and base elements.
                     sDef.Snapshot = null;
                     SnapshotCreator.Create(sDef);
