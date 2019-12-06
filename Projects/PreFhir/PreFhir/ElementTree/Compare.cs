@@ -9,48 +9,58 @@ namespace PreFhir
     {
         public static bool? ClearIfSame(bool? itemBase, bool? itemMod)
         {
-            if ((itemBase.HasValue == false) && (itemMod.HasValue == false))
+            if ((itemBase.HasValue == false) || (itemMod.HasValue == false))
+            {
+                if ((itemBase.HasValue == false) && (itemMod.HasValue == false))
+                    return null;
+                return itemMod;
+            }
+            if (itemBase.Value == itemMod.Value)
                 return null;
-            if ((itemBase.HasValue != false) || (itemMod.HasValue != false))
-                return itemMod;
-            if (itemBase != itemMod)
-                return itemMod;
-            return null;
+            return itemMod;
         }
 
         public static String ClearIfSame(String itemBase, String itemMod)
         {
-            if ((itemBase == null) && (itemMod == null))
+            if ((itemBase == null) || (itemMod == null))
+            {
+                if ((itemBase == null) && (itemMod == null))
+                    return null;
+                return itemMod;
+            }
+
+            if (itemBase == itemMod)
                 return null;
-            if ((itemBase != null) || (itemMod != null))
-                return itemMod;
-            if (itemBase != itemMod)
-                return itemMod;
-            return null;
+            return itemMod;
         }
 
         public static T ClearIfSame<T>(T itemBase, T itemMod)
             where T : class, IDeepComparable
         {
-            if ((itemBase == null) && (itemMod == null))
+            if ((itemBase == null) || (itemMod == null))
+            {
+                if ((itemBase == null) && (itemMod == null))
+                    return null;
+                return itemMod;
+            }
+
+            if (itemBase.IsExactly(itemMod) == true)
                 return null;
-            if ((itemBase != null) || (itemMod != null))
-                return itemMod;
-            if (itemBase.IsExactly(itemMod) == false)
-                return itemMod;
-            return null;
+            return itemMod;
         }
 
         public static List<T> ClearIfSame<T>(List<T> itemBase, List<T> itemMod)
             where T : class, IDeepComparable
         {
-            if ((itemBase == null) && (itemMod == null))
-                return null;
-            if ((itemBase != null) || (itemMod != null))
+            if ((itemBase == null) || (itemMod == null))
+            {
+                if ((itemBase == null) && (itemMod == null))
+                    return new List<T>();
                 return itemMod;
-            if (itemBase.IsExactly(itemMod) == false)
-                return itemMod;
-            return null;
+            }
+            if (itemBase.IsExactly(itemMod) == true)
+                return new List<T>();
+            return itemMod;
         }
     }
 }

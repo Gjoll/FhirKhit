@@ -91,6 +91,7 @@ namespace PreFhir
                         }
 
                         this.baseItem.LoadBase();
+                        Debug.Assert(baseSDef.Name != "BreastRadObservationNoValueFragment");
                         if (!MergeElementDefinitions())
                             return false;
                         elementsMerged = true;

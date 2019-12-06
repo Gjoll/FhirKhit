@@ -1727,31 +1727,11 @@
           "ordered": true,
           "rules": "openAtEnd"
         },
-        "short": "Additional content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
         "base": {
           "path": "DiagnosticReport.extension",
           "min": 0,
           "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "N/A"
-          }
-        ]
+        }
       },
       {
         "id": "DiagnosticReport.extension:recommendations",
@@ -1835,49 +1815,13 @@
           ],
           "rules": "open"
         },
-        "short": "Service category",
-        "definition": "A code that classifies the clinical discipline, department or diagnostic service that created the report (e.g. cardiology, biochemistry, hematology, MRI). This is used for searching, sorting and display purposes.",
-        "comment": "Multiple categories are allowed using various categorization schemes.   The level of granularity is defined by the category concepts in the value set. More fine-grained filtering can be performed using the metadata and/or terminology hierarchy in DiagnosticReport.code.",
-        "alias": [
-          "Department",
-          "Sub-department",
-          "Service",
-          "Discipline"
-        ],
         "min": 1,
         "max": "*",
         "base": {
           "path": "DiagnosticReport.category",
           "min": 0,
           "max": "*"
-        },
-        "isModifier": false,
-        "isSummary": true,
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "DiagnosticServiceSection"
-            }
-          ],
-          "strength": "example",
-          "description": "Codes for diagnostic service sections.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/diagnostic-service-sections"
-        },
-        "mapping": [
-          {
-            "identity": "w5",
-            "map": "FiveWs.class"
-          },
-          {
-            "identity": "v2",
-            "map": "OBR-24"
-          },
-          {
-            "identity": "rim",
-            "map": "inboundRelationship[typeCode=COMP].source[classCode=LIST, moodCode=EVN, code < LabService].code"
-          }
-        ]
+        }
       },
       {
         "id": "DiagnosticReport.category.coding",
@@ -1902,21 +1846,11 @@
       {
         "id": "DiagnosticReport.code",
         "path": "DiagnosticReport.code",
-        "short": "Name/Code for this diagnostic report",
-        "definition": "A code or name that describes this diagnostic report.",
-        "alias": [
-          "Type"
-        ],
         "base": {
           "path": "DiagnosticReport.code",
           "min": 1,
           "max": "1"
         },
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
         "patternCodeableConcept": {
           "coding": [
             {
@@ -1924,73 +1858,18 @@
               "code": "10193-1"
             }
           ]
-        },
-        "isModifier": false,
-        "isSummary": true,
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "DiagnosticReportCodes"
-            }
-          ],
-          "strength": "preferred",
-          "description": "Codes that describe Diagnostic Reports.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/report-codes"
-        },
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Event.code"
-          },
-          {
-            "identity": "w5",
-            "map": "FiveWs.what[x]"
-          },
-          {
-            "identity": "v2",
-            "map": "OBR-4 (HL7 v2 doesn't provide an easy way to indicate both the ordered test and the performed panel)"
-          },
-          {
-            "identity": "rim",
-            "map": "code"
-          }
-        ]
+        }
       },
       {
         "id": "DiagnosticReport.specimen",
         "path": "DiagnosticReport.specimen",
-        "short": "Specimens this report is based on",
-        "definition": "Details about the specimens on which this diagnostic report is based.",
-        "comment": "If the specimen is sufficiently specified with a code in the test result name, then this additional data may be redundant. If there are multiple specimens, these may be represented per observation or group.",
-        "requirements": "Need to be able to report information about the collected specimens on which the report is based.",
         "min": 0,
         "max": "0",
         "base": {
           "path": "DiagnosticReport.specimen",
           "min": 0,
           "max": "*"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Specimen"
-            ]
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "SPM"
-          },
-          {
-            "identity": "rim",
-            "map": "participation[typeCode=SBJ]"
-          }
-        ]
+        }
       },
       {
         "id": "DiagnosticReport.result",
@@ -2005,46 +1884,11 @@
           "ordered": true,
           "rules": "openAtEnd"
         },
-        "short": "Observations",
-        "definition": "[Observations](observation.html)  that are part of this diagnostic report.",
-        "comment": "Observations can contain observations.",
-        "requirements": "Need to support individual results, or  groups of results, where the result grouping is arbitrary, but meaningful.",
-        "alias": [
-          "Data",
-          "Atomic Value",
-          "Result",
-          "Atomic result",
-          "Data",
-          "Test",
-          "Analyte",
-          "Battery",
-          "Organizer"
-        ],
         "base": {
           "path": "DiagnosticReport.result",
           "min": 0,
           "max": "*"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Observation"
-            ]
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "OBXs"
-          },
-          {
-            "identity": "rim",
-            "map": "outboundRelationship[typeCode=COMP].target"
-          }
-        ]
+        }
       },
       {
         "id": "DiagnosticReport.result:breastRadSectionPatientHistory",
@@ -2190,77 +2034,24 @@
       {
         "id": "DiagnosticReport.conclusion",
         "path": "DiagnosticReport.conclusion",
-        "short": "Clinical conclusion (interpretation) of test results",
-        "definition": "Concise and clinically contextualized summary conclusion (interpretation/impression) of the diagnostic report.",
-        "requirements": "Need to be able to provide a conclusion that is not lost among the basic result data.",
-        "alias": [
-          "Report"
-        ],
         "min": 1,
         "max": "1",
         "base": {
           "path": "DiagnosticReport.conclusion",
           "min": 0,
           "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "OBX"
-          },
-          {
-            "identity": "rim",
-            "map": "inboundRelationship[typeCode=\"SPRT\"].source[classCode=OBS, moodCode=EVN, code=LOINC:48767-8].value (type=ST)"
-          }
-        ]
+        }
       },
       {
         "id": "DiagnosticReport.conclusionCode",
         "path": "DiagnosticReport.conclusionCode",
-        "short": "Codes for the clinical conclusion of test results",
-        "definition": "One or more codes that represent the summary conclusion (interpretation/impression) of the diagnostic report.",
         "min": 1,
         "max": "1",
         "base": {
           "path": "DiagnosticReport.conclusionCode",
           "min": 0,
           "max": "*"
-        },
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "AdjunctDiagnosis"
-            }
-          ],
-          "strength": "example",
-          "description": "Diagnosis codes provided as adjuncts to the report.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/clinical-findings"
-        },
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "OBX"
-          },
-          {
-            "identity": "rim",
-            "map": "inboundRelationship[typeCode=SPRT].source[classCode=OBS, moodCode=EVN, code=LOINC:54531-9].value (type=CD)"
-          }
-        ]
+        }
       }
     ]
   }
