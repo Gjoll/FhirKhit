@@ -7,7 +7,7 @@
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
     }
   ],
-  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadUSMassMarginNotCircumscribedVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadUSMassMarginNotCircumscribedVS",
   "name": "BreastRadUSMassMarginNotCircumscribedVS",
   "title": "Breast Radiology Ultra-Sound Mass Margin Not Circumscribed values",
   "description": "Breast Radiology Ultra-Sound Mass Margin Not Circumscribed Values",

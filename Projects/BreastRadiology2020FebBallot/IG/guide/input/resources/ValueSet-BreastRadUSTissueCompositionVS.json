@@ -1,7 +1,7 @@
 {
   "resourceType": "ValueSet",
   "id": "BreastRadUSTissueCompositionVS",
-  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadUSTissueCompositionVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadUSTissueCompositionVS",
   "version": "0.0.2",
   "name": "BreastRadUSTissueCompositionVS",
   "title": "Breast Radiology Ultra-Sound Tissue Composition Observation",

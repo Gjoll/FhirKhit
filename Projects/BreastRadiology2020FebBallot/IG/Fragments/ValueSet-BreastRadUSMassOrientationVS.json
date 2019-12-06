@@ -7,7 +7,7 @@
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
     }
   ],
-  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadUSMassOrientationVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadUSMassOrientationVS",
   "name": "BreastRadUSMassOrientationVS",
   "title": "Breast Radiology Ultra-Sound Mass Orientation",
   "description": "Breast Radiology Ultra-Sound Mass Orientation",

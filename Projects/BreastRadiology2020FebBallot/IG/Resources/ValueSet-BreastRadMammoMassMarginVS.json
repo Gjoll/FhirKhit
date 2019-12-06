@@ -1,7 +1,7 @@
 {
   "resourceType": "ValueSet",
   "id": "BreastRadMammoMassMarginVS",
-  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadMammoMassMarginVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadMammoMassMarginVS",
   "version": "0.0.2",
   "name": "BreastRadMammoMassMarginVS",
   "title": "Breast Radiology Mammography Mass Margin",

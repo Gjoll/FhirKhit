@@ -1,7 +1,7 @@
 {
   "resourceType": "ValueSet",
   "id": "BreastRadUSMassEchoPatternVS",
-  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadUSMassEchoPatternVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadUSMassEchoPatternVS",
   "version": "0.0.2",
   "name": "BreastRadUSMassEchoPatternVS",
   "title": "Breast Radiology Ultra-Sound Mass Echo Pattern",

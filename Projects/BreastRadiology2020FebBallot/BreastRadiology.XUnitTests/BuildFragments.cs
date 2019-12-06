@@ -119,21 +119,32 @@ namespace BreastRadiology.XUnitTests
         [TestMethod]
         public void B_BuildResources()
         {
+            const bool saveMergedFiles = false;
+
             try
             {
                 DateTime start = DateTime.Now;
                 if (Directory.Exists(this.resourcesDir) == false)
                     Directory.CreateDirectory(this.resourcesDir);
 
-                if (Directory.Exists(this.mergedDir) == false)
-                    Directory.CreateDirectory(this.mergedDir);
+                if (saveMergedFiles)
+                {
+                    if (Directory.Exists(this.mergedDir) == false)
+                        Directory.CreateDirectory(this.mergedDir);
+                }
+                else
+                {
+                    if (Directory.Exists(this.mergedDir) == true)
+                        Directory.Delete(this.mergedDir, true);
+                }
 
                 PreFhirGenerator preFhir = new PreFhirGenerator(Path.Combine(DirHelper.FindParentDir("FhirKhit"), "Cache"));
                 preFhir.StatusErrors += this.StatusErrors;
                 preFhir.StatusInfo += this.StatusInfo;
                 preFhir.StatusWarnings += this.StatusWarnings;
                 preFhir.AddDir(this.fragmentDir, "*.json");
-                preFhir.MergedDir = this.mergedDir;
+                if (saveMergedFiles)
+                    preFhir.MergedDir = this.mergedDir;
                 preFhir.Process();
                 preFhir.SaveResources(this.resourcesDir, true);
 

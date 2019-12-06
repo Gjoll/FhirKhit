@@ -1,7 +1,7 @@
 {
   "resourceType": "ValueSet",
   "id": "BreastRadMassShapeVS",
-  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadMassShapeVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadMassShapeVS",
   "version": "0.0.2",
   "name": "BreastRadMassShapeVS",
   "title": "Breast Radiology Mass Shape",

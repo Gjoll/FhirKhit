@@ -7,7 +7,7 @@
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
     }
   ],
-  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadUSMassPosteriorAcousticFeaturesVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadUSMassPosteriorAcousticFeaturesVS",
   "name": "BreastRadUSMassPosteriorAcousticFeaturesVS",
   "title": "Breast Radiology Ultra-Sound Mass Posterior Acoustic Features",
   "description": "Breast Radiology Ultra-Sound Mass Posterior Acoustic Features",

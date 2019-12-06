@@ -7,7 +7,7 @@
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
     }
   ],
-  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadMammoBreastDensityVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadMammoBreastDensityVS",
   "name": "BreastRadMammoBreastDensityVS",
   "title": "Breast Radiology Mammography Breast Density Observation",
   "description": "Breast Radiology Mammography Breast Density/Composition Observation",

@@ -76,7 +76,7 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadUSMassMarginVS"
+              "system": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadUSMassMarginVS"
             }
           ]
         }
@@ -102,7 +102,7 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadUSMassMarginNotCircumscribedVS"
+              "system": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadUSMassMarginNotCircumscribedVS"
             }
           ]
         }

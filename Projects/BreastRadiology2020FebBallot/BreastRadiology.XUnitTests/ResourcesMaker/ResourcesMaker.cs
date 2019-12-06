@@ -23,7 +23,7 @@ namespace BreastRadiology.XUnitTests
 
     partial class ResourcesMaker : ConverterBase
     {
-        public const String BiRadCitation= "Bi-Rads® Atlas — Mammography Fifth Ed. 2013";
+        public static String BiRadCitation= "Bi-Rads® Atlas — Mammography Fifth Ed. 2013";
         const FHIRVersion FVersion = FHIRVersion.N4_0_0;
 
         const String ProfileVersion = "0.0.2";
@@ -109,64 +109,6 @@ namespace BreastRadiology.XUnitTests
             return retVal;
         }
 
-        ValueSet CreateValueSet(String name,
-            String title,
-            Markdown description,
-            IEnumerable<String> codes)
-        {
-            CodeSystem cs = new CodeSystem
-            {
-                Id = $"{name}CS",
-                Url = $"http://hl7.org/fhir/us/breast-radiology/CodeSystem/{name}CS",
-                Name = $"{name}CS",
-                Title = title,
-                Description = description,
-                CaseSensitive = true,
-                Content = CodeSystem.CodeSystemContentMode.Complete,
-                Count = codes.Count()
-            };
-            cs.AddFragRef(this.HeaderFragment);
-
-            ValueSet vs = new ValueSet
-            {
-                Id = $"{name}VS",
-                Url = $"http://hl7.org/fhir/us/breast-radiology/CodeSystem/{name}VS",
-                Name = $"{name}VS",
-                Title = title,
-                Description = description
-            };
-            vs.AddFragRef(this.HeaderFragment);
-
-
-            ValueSet.ConceptSetComponent vsComp = new ValueSet.ConceptSetComponent
-            {
-                System = cs.Url
-            };
-            vs.Compose = new ValueSet.ComposeComponent();
-            vs.Compose.Include.Add(vsComp);
-
-            Int32 counter = 1;
-            foreach (String code in codes)
-            {
-                vsComp.Concept.Add(new ValueSet.ConceptReferenceComponent
-                {
-                    Code = counter.ToString(),
-                    Display = code
-                });
-
-                cs.Concept.Add(new CodeSystem.ConceptDefinitionComponent
-                {
-                    Code = counter.ToString(),
-                    Display = code,
-                });
-                counter += 1;
-            }
-
-            resources.Add(Path.Combine(this.resourceDir, $"CodeSystem-{name}CS.json"), cs);
-            resources.Add(Path.Combine(this.resourceDir, $"ValueSet-{name}VS.json"), vs);
-            return vs;
-        }
-
         class Definition
         {
             StringBuilder sb = new StringBuilder();
@@ -249,7 +191,7 @@ namespace BreastRadiology.XUnitTests
             ValueSet vs = new ValueSet
             {
                 Id = $"{name}VS",
-                Url = $"http://hl7.org/fhir/us/breast-radiology/CodeSystem/{name}VS",
+                Url = $"http://hl7.org/fhir/us/breast-radiology/ValueSet/{name}VS",
                 Name = $"{name}VS",
                 Title = title,
                 Description = description

@@ -1,7 +1,7 @@
 {
   "resourceType": "ValueSet",
   "id": "BreastRadUSMassMarginVS",
-  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadUSMassMarginVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadUSMassMarginVS",
   "version": "0.0.2",
   "name": "BreastRadUSMassMarginVS",
   "title": "Breast Radiology Ultra-Sound Mass Margin",

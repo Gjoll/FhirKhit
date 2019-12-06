@@ -381,10 +381,9 @@ namespace PreFhir
                 if (!baseSlice.Nodes.TryGetItem(mergeNode.Name, out baseNode))
                 {
                     // see if element definition is something like {CodeableConcept}.coding.
-                    ElementDefinition baseElement = baseItem.SBaseDef.Snapshot.Element.FindByPath(baseSlice.ElementDefinition.Path);
-                    if (
-                        (baseElement == null) ||
-                        (this.IsElementPart(baseElement, mergeNode.Name) == false)
+                    if(
+                        (baseItem.SnapNodeOriginal.TryGetNode(baseSlice.ElementDefinition.Path, out ElementTreeNode originalNode) == false) ||
+                        (this.IsElementPart(originalNode.ElementDefinition, mergeNode.Name) == false)
                         )
                     {
                         this.preFhir.ConversionError(this.GetType().Name,

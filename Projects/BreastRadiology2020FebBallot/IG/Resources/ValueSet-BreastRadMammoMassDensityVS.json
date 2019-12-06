@@ -1,7 +1,7 @@
 {
   "resourceType": "ValueSet",
   "id": "BreastRadMammoMassDensityVS",
-  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadMammoMassDensityVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadMammoMassDensityVS",
   "version": "0.0.2",
   "name": "BreastRadMammoMassDensityVS",
   "title": "Breast Radiology Mammography Mass Density",

@@ -1,7 +1,7 @@
 {
   "resourceType": "ValueSet",
   "id": "MammoCalcificationTypeVS",
-  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/MammoCalcificationTypeVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/MammoCalcificationTypeVS",
   "version": "0.0.2",
   "name": "MammoCalcificationTypeVS",
   "title": "Mammography Calcification Type",

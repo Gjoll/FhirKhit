@@ -1,7 +1,7 @@
 {
   "resourceType": "ValueSet",
   "id": "BreastRadMemmoAsymmetriesVS",
-  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadMemmoAsymmetriesVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadMemmoAsymmetriesVS",
   "version": "0.0.2",
   "name": "BreastRadMemmoAsymmetriesVS",
   "title": "Breast Radiology Mammography Asymmetries Observation",

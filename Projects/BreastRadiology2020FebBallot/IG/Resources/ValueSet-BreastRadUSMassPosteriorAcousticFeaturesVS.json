@@ -1,7 +1,7 @@
 {
   "resourceType": "ValueSet",
   "id": "BreastRadUSMassPosteriorAcousticFeaturesVS",
-  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadUSMassPosteriorAcousticFeaturesVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadUSMassPosteriorAcousticFeaturesVS",
   "version": "0.0.2",
   "name": "BreastRadUSMassPosteriorAcousticFeaturesVS",
   "title": "Breast Radiology Ultra-Sound Mass Posterior Acoustic Features",

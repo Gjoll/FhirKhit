@@ -1,7 +1,7 @@
 {
   "resourceType": "ValueSet",
   "id": "BreastRadUSMassMarginNotCircumscribedVS",
-  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadUSMassMarginNotCircumscribedVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadUSMassMarginNotCircumscribedVS",
   "version": "0.0.2",
   "name": "BreastRadUSMassMarginNotCircumscribedVS",
   "title": "Breast Radiology Ultra-Sound Mass Margin Not Circumscribed values",

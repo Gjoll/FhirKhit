@@ -23,11 +23,6 @@ namespace PreFhir
         public StructureDefinition SDef => this.Resource as StructureDefinition;
 
         /// <summary>
-        /// If resoure is a structired definition, this is the base definition.
-        /// </summary>
-        public StructureDefinition SBaseDef { get; set; } = null;
-
-        /// <summary>
         /// Path value of the first element definition.
         /// </summary>
         public String BasePath { get; private set; }
@@ -68,6 +63,40 @@ namespace PreFhir
             return true;
         }
 
+        /// <summary>
+        /// Cache TreeNode's of base fhir resoruces.
+        /// This is faster than recreating them each time.
+        /// </summary>
+        static Dictionary<String, ElementTreeNode> originalNodes = new Dictionary<string, ElementTreeNode>();
+
+        ElementTreeNode GetSnapNodeOriginal(StructureDefinition sDef,
+            ElementTreeLoader l)
+        {
+            const String fcn = "LoadBase";
+
+            lock (originalNodes)
+            {
+                if (originalNodes.TryGetValue(sDef.BaseDefinition, out ElementTreeNode retVal) == true)
+                    return retVal;
+
+                StructureDefinition SBaseDef = FhirStructureDefinitions.Self.GetResource(sDef.BaseDefinition);
+                if (SBaseDef == null)
+                {
+                    info.ConversionError(this.GetType().Name,
+                        fcn,
+                        $"Error loading StructureDef '{sDef.Name}'. BaseDefinition {sDef.BaseDefinition} not found ");
+                    return null;
+                }
+
+                if (SBaseDef.Snapshot == null)
+                    SnapshotCreator.Create(SBaseDef);
+                retVal = l.Create(SBaseDef.Snapshot.Element); ;
+                originalNodes.Add(sDef.BaseDefinition, retVal);
+            return retVal;
+            }
+        }
+
+
         public bool LoadBase()
         {
             const String fcn = "LoadBase";
@@ -92,18 +121,8 @@ namespace PreFhir
                     $"Error loading StructureDef '{sDef.Name}'. Empty BaseDefinition ");
                 return false;
             }
-            this.SBaseDef = FhirStructureDefinitions.Self.GetResource(sDef.BaseDefinition);
-            if (this.SBaseDef == null)
-            {
-                info.ConversionError(this.GetType().Name,
-                    fcn,
-                    $"Error loading StructureDef '{sDef.Name}'. BaseDefinition {sDef.BaseDefinition} not found ");
-                return false;
-            }
 
-            if (this.SBaseDef.Snapshot == null)
-                SnapshotCreator.Create(this.SBaseDef);
-            this.SnapNodeOriginal = l.Create(this.SBaseDef.Snapshot.Element);
+            this.SnapNodeOriginal = GetSnapNodeOriginal(sDef, l);
             return true;
         }
     }

@@ -1,7 +1,7 @@
 {
   "resourceType": "ValueSet",
   "id": "BreastRadObservedChangesVS",
-  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadObservedChangesVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadObservedChangesVS",
   "version": "0.0.2",
   "name": "BreastRadObservedChangesVS",
   "title": "Breast Radiology Observed Changes",

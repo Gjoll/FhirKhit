@@ -1,7 +1,7 @@
 {
   "resourceType": "ValueSet",
   "id": "BreastLocationDepthVS",
-  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastLocationDepthVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastLocationDepthVS",
   "version": "0.0.2",
   "name": "BreastLocationDepthVS",
   "title": "Breast Location Depth",
@@ -25,16 +25,16 @@
         "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastLocationDepthCS",
         "concept": [
           {
-            "code": "1",
-            "display": "a. Anterion"
+            "code": "Anterior",
+            "display": "Anterior depth"
           },
           {
-            "code": "2",
-            "display": "b. Middle"
+            "code": "Middle",
+            "display": "Middle depth"
           },
           {
-            "code": "3",
-            "display": "c. Posterior"
+            "code": "Posterior",
+            "display": "Posterior depth"
           }
         ]
       }

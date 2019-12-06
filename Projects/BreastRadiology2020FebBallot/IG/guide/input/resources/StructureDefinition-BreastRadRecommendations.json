@@ -18,7 +18,7 @@
     }
   ],
   "description": "Diagnostic Report recommendations section extension",
-  "fhirVersion": "4.0.1",
+  "fhirVersion": "4.0.0",
   "kind": "complex-type",
   "abstract": false,
   "context": [
@@ -41,7 +41,7 @@
           },
           {
             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
-            "valueCode": "4.0.1"
+            "valueCode": "4.0.0"
           }
         ],
         "path": "Extension",

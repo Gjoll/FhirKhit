@@ -7,7 +7,7 @@
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
     }
   ],
-  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastLocationQuadrantVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastLocationQuadrantVS",
   "name": "BreastLocationQuadrantVS",
   "title": "Breast Location Quadrant",
   "description": "Breast Location Quadrant",
@@ -17,32 +17,48 @@
         "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastLocationQuadrantCS",
         "concept": [
           {
-            "code": "1",
-            "display": "a. UpperOuter"
+            "code": "UpperOuter",
+            "display": "Upper Outer Quadrant"
           },
           {
-            "code": "2",
-            "display": "b. UpperInner"
+            "code": "UpperInner",
+            "display": "Upper Inner Quadrant"
           },
           {
-            "code": "3",
-            "display": "c. LowerOuter"
+            "code": "LowerOuter",
+            "display": "Lower Outer Quadrant"
           },
           {
-            "code": "4",
-            "display": "d. LowerInner"
+            "code": "LowerInner",
+            "display": "Lower Inner Quadrant"
           },
           {
-            "code": "5",
-            "display": "e. Central"
+            "code": "Central",
+            "display": "Central Quadrant"
           },
           {
-            "code": "6",
-            "display": "f. RetroaReolar"
+            "code": "Upper Central",
+            "display": "Upper Central Quadrant"
           },
           {
-            "code": "7",
-            "display": "g. AxillaryTail"
+            "code": "Lower Central",
+            "display": "Lower Central Quadrant"
+          },
+          {
+            "code": "Outer Central",
+            "display": "Outer Central Quadrant"
+          },
+          {
+            "code": "Inner Central",
+            "display": "Inner Central Quadrant"
+          },
+          {
+            "code": "RetroaReolar",
+            "display": "RetroaReolar Quadrant"
+          },
+          {
+            "code": "AxillaryTail",
+            "display": "AxillaryTail Quadrant"
           }
         ]
       }

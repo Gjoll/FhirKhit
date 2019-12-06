@@ -7,7 +7,7 @@
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
     }
   ],
-  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadMassShapeVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadMassShapeVS",
   "name": "BreastRadMassShapeVS",
   "title": "Breast Radiology Mass Shape",
   "description": "Breast Radiology Mass Shape",

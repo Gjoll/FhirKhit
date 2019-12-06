@@ -46,7 +46,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadUSTissueCompositionVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadUSTissueCompositionVS"
         }
       }
     ]

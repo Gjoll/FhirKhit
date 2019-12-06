@@ -7,7 +7,7 @@
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
     }
   ],
-  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/MammoCalcificationTypeVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/MammoCalcificationTypeVS",
   "name": "MammoCalcificationTypeVS",
   "title": "Mammography Calcification Type",
   "description": "Mammography Calcification Type",

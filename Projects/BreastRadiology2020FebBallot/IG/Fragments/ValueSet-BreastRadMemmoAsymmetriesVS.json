@@ -7,7 +7,7 @@
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
     }
   ],
-  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadMemmoAsymmetriesVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadMemmoAsymmetriesVS",
   "name": "BreastRadMemmoAsymmetriesVS",
   "title": "Breast Radiology Mammography Asymmetries Observation",
   "description": "Breast Radiology Mammography Asymmetries Observation",

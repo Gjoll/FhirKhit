@@ -93,7 +93,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastLocationQuadrantVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastLocationQuadrantVS"
         }
       },
       {
@@ -113,7 +113,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastLocationClockVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastLocationClockVS"
         }
       },
       {
@@ -133,7 +133,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastLocationDepthVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastLocationDepthVS"
         }
       },
       {
