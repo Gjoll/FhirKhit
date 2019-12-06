@@ -27,9 +27,10 @@ namespace BreastRadiology.XUnitTests
         String graphicsDir = Path.Combine(
             DirHelper.FindParentDir(baseDir),
             "IG",
+            "Content",
             "Graphics");
 
-        String outputDir = Path.Combine(
+        String guideDir = Path.Combine(
             DirHelper.FindParentDir(baseDir),
             "IG",
             "Guide");
@@ -37,21 +38,25 @@ namespace BreastRadiology.XUnitTests
         String fragmentDir = Path.Combine(
             DirHelper.FindParentDir(baseDir),
             "IG",
+            "Content",
             "Fragments");
 
         String resourcesDir = Path.Combine(
             DirHelper.FindParentDir(baseDir),
             "IG",
+            "Content",
             "Resources");
 
         String mergedDir = Path.Combine(
             DirHelper.FindParentDir(baseDir),
             "IG",
+            "Content",
             "Merged");
 
         String manualDir = Path.Combine(
             DirHelper.FindParentDir(baseDir),
             "IG",
+            "Content",
             "ManualResources");
 
         private void Message(String import, string className, string method, string msg)
@@ -192,34 +197,10 @@ namespace BreastRadiology.XUnitTests
             }
         }
 
-        //[TestMethod]
-        //public void CheckIdUnique()
-        //{
-        //    String path = Path.Combine(this.outputDir,
-        //        "resources",
-        //        "StructureDefinition-BreastRadSectionFindingsLeftBreast.json");
-
-        //    FhirJsonParser parser = new FhirJsonParser();
-        //    StructureDefinition sd = parser.Parse<StructureDefinition>(File.ReadAllText(path));
-        //    HashSet<String> ids = new HashSet<string>();
-
-        //    String idBase = sd.Differential.Element[0].Path;
-        //    foreach (ElementDefinition e in sd.Differential.Element)
-        //    {
-        //        if (ids.Contains(e.ElementId) == true)
-        //            Trace.WriteLine($"duplicate {e.ElementId}");
-        //        if (e.ElementId.StartsWith(idBase) == false)
-        //            Trace.WriteLine($"Bad id base {e.ElementId}");
-        //        if (e.Path.StartsWith(idBase) == false)
-        //            Trace.WriteLine($"Bad path base {e.ElementId}");
-        //        ids.Add(e.ElementId);
-        //    }
-        //}
-
         [TestMethod]
         public void ValidateOutputResources()
         {
-            String rDir = Path.Combine(this.outputDir,
+            String rDir = Path.Combine(this.guideDir,
                 "input",
                 "resources");
             FhirValidator fv = new FhirValidator();
@@ -271,7 +252,7 @@ namespace BreastRadiology.XUnitTests
         {
             try
             {
-                IGBuilder p = new IGBuilder(Path.Combine(this.outputDir, "input"));
+                IGBuilder p = new IGBuilder(Path.Combine(this.guideDir, "input"));
                 p.StatusErrors += this.StatusErrors;
                 p.StatusInfo += this.StatusInfo;
                 p.StatusWarnings += this.StatusWarnings;

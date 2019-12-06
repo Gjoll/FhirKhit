@@ -238,12 +238,14 @@ namespace BreastRadiology.XUnitTests
             this.fc.Dispose();
         }
 
-        public void CreateMaps(String outputDir)
+        public void CreateMaps(String mapDir)
         {
+            if (Directory.Exists(mapDir) == false)
+                Directory.CreateDirectory(mapDir);
             ResourceMapMaker resourceMapMaker = new ResourceMapMaker(this);
-            resourceMapMaker.Create(Path.Combine(outputDir, "ProfileOverview.svg"));
+            resourceMapMaker.Create(Path.Combine(mapDir, "ProfileOverview.svg"));
 
-            //FragmentMapMaker fragmentMapMaker = new FragmentMapMaker(this, outputDir);
+            //FragmentMapMaker fragmentMapMaker = new FragmentMapMaker(this, mapDir);
             //fragmentMapMaker.Create();
         }
 

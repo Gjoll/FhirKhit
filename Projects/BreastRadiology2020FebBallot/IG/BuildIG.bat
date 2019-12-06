@@ -1,6 +1,5 @@
-rem copy Graphics\* guide\pages
-
-copy Resources\* guide\input\resources
+copy Content\Graphics\* guide\input\images
+copy Content\Resources\* guide\input\resources
 
 @SET JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
 pushd guide
