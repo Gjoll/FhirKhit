@@ -1,0 +1,234 @@
+{
+  "resourceType": "StructureDefinition",
+  "extension": [
+    {
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
+    },
+    {
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CategoryFragment"
+    }
+  ],
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadReport",
+  "name": "BreastRadReport",
+  "title": "Breast Radiology Report",
+  "status": "draft",
+  "description": "Breast Radiology Diagnostic Report.\n\n\nThis diagnostic report has links to the data that comprise a Breast Radiology Report, including\n\n\n** references to prior breast radiology reports for this patient\n** references to the observations of this report\n** references to the recommendations of this report\n** a summary of the report findings in a human readable format",
+  "fhirVersion": "4.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "DiagnosticReport",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DiagnosticReport",
+        "path": "DiagnosticReport",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "DiagnosticReport.extension",
+        "path": "DiagnosticReport.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": true,
+          "rules": "openAtEnd"
+        },
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DiagnosticReport.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "DiagnosticReport.extension:recommendations",
+        "path": "DiagnosticReport.extension",
+        "sliceName": "recommendations",
+        "short": "Recommendations for future care",
+        "definition": "Recommendations for future care",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DiagnosticReport.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadRecommendations"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "DiagnosticReport.extension:priorReports",
+        "path": "DiagnosticReport.extension",
+        "sliceName": "priorReports",
+        "short": "Recommendations for future care",
+        "definition": "Recommendations for future care",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DiagnosticReport.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadPriorReports"
+            ]
+          }
+        ],
+        "isModifier": false
+      },
+      {
+        "id": "DiagnosticReport.code",
+        "path": "DiagnosticReport.code",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "DiagnosticReport.code",
+          "min": 1,
+          "max": "1"
+        },
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "10193-1"
+            }
+          ]
+        }
+      },
+      {
+        "id": "DiagnosticReport.specimen",
+        "path": "DiagnosticReport.specimen",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "DiagnosticReport.specimen",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "DiagnosticReport.result",
+        "path": "DiagnosticReport.result",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": true,
+          "rules": "openAtEnd"
+        },
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DiagnosticReport.result",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "DiagnosticReport.result:breastRadSectionPatientHistory",
+        "path": "DiagnosticReport.result",
+        "sliceName": "breastRadSectionPatientHistory",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "DiagnosticReport.result",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadSectionPatientHistory"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.result:breastRadSectionFindings",
+        "path": "DiagnosticReport.result",
+        "sliceName": "breastRadSectionFindings",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "DiagnosticReport.result",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadSectionFindings"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.result:breastRadSectionPatientRisk",
+        "path": "DiagnosticReport.result",
+        "sliceName": "breastRadSectionPatientRisk",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "DiagnosticReport.result",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadSectionPatientRisk"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.conclusion",
+        "path": "DiagnosticReport.conclusion",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "DiagnosticReport.conclusion",
+          "min": 0,
+          "max": "1"
+        }
+      },
+      {
+        "id": "DiagnosticReport.conclusionCode",
+        "path": "DiagnosticReport.conclusionCode",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "DiagnosticReport.conclusionCode",
+          "min": 0,
+          "max": "*"
+        }
+      }
+    ]
+  }
+}

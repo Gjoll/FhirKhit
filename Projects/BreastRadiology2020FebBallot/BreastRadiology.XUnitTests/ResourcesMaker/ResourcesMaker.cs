@@ -170,7 +170,7 @@ namespace BreastRadiology.XUnitTests
         class Definition
         {
             StringBuilder sb = new StringBuilder();
-            bool citeFlag = false;
+            //bool citeFlag = false;
 
             public Definition CiteStart()
             {
@@ -242,7 +242,7 @@ namespace BreastRadiology.XUnitTests
                 Description = description,
                 CaseSensitive = true,
                 Content = CodeSystem.CodeSystemContentMode.Complete,
-                Count = codes.Count()
+                Count = codes.Count(),
             };
             cs.AddFragRef(this.HeaderFragment);
 
@@ -301,8 +301,8 @@ namespace BreastRadiology.XUnitTests
             ResourceMapMaker resourceMapMaker = new ResourceMapMaker(this);
             resourceMapMaker.Create(Path.Combine(outputDir, "ProfileOverview.svg"));
 
-            FragmentMapMaker fragmentMapMaker = new FragmentMapMaker(this, outputDir);
-            fragmentMapMaker.Create();
+            //FragmentMapMaker fragmentMapMaker = new FragmentMapMaker(this, outputDir);
+            //fragmentMapMaker.Create();
         }
 
         void SaveAll()
