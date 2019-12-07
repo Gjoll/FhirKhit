@@ -15,16 +15,16 @@ namespace BreastRadiology.XUnitTests
 
         String outputDir;
         String resourceDir => Path.Combine(this.outputDir, "resources");
-        String IgPath => Path.Combine(this.outputDir, "IG.json");
-        String ImpGuidePath => Path.Combine(this.outputDir, "Resources", "ig.xml");
+        //String IgPath => Path.Combine(this.outputDir, "IG.json");
+        String ImpGuidePath => Path.Combine(this.outputDir, "IGBreastRad.xml");
 
-        ProfilesEditor profilesEditor;
-        ExamplesEditor examplesEditor;
-        ExtensionsEditor extensionsEditor;
-        CodeSystemsEditor codeSystemsEditor;
-        ValueSetsEditor valueSetsEditor;
+        //ProfilesEditor profilesEditor;
+        //ExamplesEditor examplesEditor;
+        //ExtensionsEditor extensionsEditor;
+        //CodeSystemsEditor codeSystemsEditor;
+        //ValueSetsEditor valueSetsEditor;
         ImplementationGuideEditor implementationGuide;
-        IGEditor igEditor;
+        //IGEditor igEditor;
 
         public IGBuilder(String outputDir)
         {
@@ -38,31 +38,31 @@ namespace BreastRadiology.XUnitTests
             String htmlName = $"StructureDefinition-{sDef.Name}.html";
 
             this.implementationGuide.AddIGResource($"StructureDefinition/{sDef.Name}", sDef.Name, false);
-            this.igEditor.AddResource($"StructureDefinition/{sDef.Name}",
-                htmlName);
+            //this.igEditor.AddResource($"StructureDefinition/{sDef.Name}",
+            //    htmlName);
             switch (sDef.BaseDefinition)
             {
                 case "":
                 case null:
                     {
-                    List < Tuple<String, String>> references = new List<Tuple<String, string>>();
-                        references.Add(new Tuple<String, String>(sDef.Name, htmlName));
-                    this.profilesEditor.AddFragment(references, sDef.Description);
+                    //List < Tuple<String, String>> references = new List<Tuple<String, string>>();
+                    //    references.Add(new Tuple<String, String>(sDef.Name, htmlName));
+                    //this.profilesEditor.AddFragment(references, sDef.Description);
                     }
                     break;
 
                 case "http://hl7.org/fhir/StructureDefinition/Extension":
-                    this.extensionsEditor.AddExtension(sDef.Name,
-                        htmlName,
-                        sDef.Description);
+                    //this.extensionsEditor.AddExtension(sDef.Name,
+                    //    htmlName,
+                    //    sDef.Description);
                     break;
 
                 default:
-                    this.profilesEditor.AddProfile(sDef.Name,
-                        htmlName,
-                        sDef.BaseDefinition,
-                        sDef.BaseDefinition.LastUriPart(),
-                        sDef.Description);
+                    //this.profilesEditor.AddProfile(sDef.Name,
+                    //    htmlName,
+                    //    sDef.BaseDefinition,
+                    //    sDef.BaseDefinition.LastUriPart(),
+                    //    sDef.Description);
                     break;
             }
         }
@@ -73,28 +73,28 @@ namespace BreastRadiology.XUnitTests
             this.implementationGuide.Save(this.ImpGuidePath);
             this.fc.Mark(this.ImpGuidePath);
 
-            this.igEditor.Save(this.IgPath);
-            this.fc.Mark(this.IgPath);
+            //this.igEditor.Save(this.IgPath);
+            //this.fc.Mark(this.IgPath);
 
-            this.examplesEditor.Save();
-            this.profilesEditor.Save();
-            this.extensionsEditor.Save();
-            this.codeSystemsEditor.Save();
-            this.valueSetsEditor.Save();
+            //this.examplesEditor.Save();
+            //this.profilesEditor.Save();
+            //this.extensionsEditor.Save();
+            //this.codeSystemsEditor.Save();
+            //this.valueSetsEditor.Save();
 
             this.fc.Dispose();
         }
 
         public void Start()
         {
-            this.examplesEditor = new ExamplesEditor(this.outputDir);
-            this.profilesEditor = new ProfilesEditor(this.outputDir);
-            this.extensionsEditor = new ExtensionsEditor(this.outputDir);
-            this.codeSystemsEditor = new CodeSystemsEditor(this.outputDir);
-            this.valueSetsEditor = new ValueSetsEditor(this.outputDir);
+            //this.examplesEditor = new ExamplesEditor(this.outputDir);
+            //this.profilesEditor = new ProfilesEditor(this.outputDir);
+            //this.extensionsEditor = new ExtensionsEditor(this.outputDir);
+            //this.codeSystemsEditor = new CodeSystemsEditor(this.outputDir);
+            //this.valueSetsEditor = new ValueSetsEditor(this.outputDir);
 
-            this.igEditor = IGEditor.Load(this.IgPath);
-            this.igEditor.dependencyListJson?.Clear();
+            //this.igEditor = IGEditor.Load(this.IgPath);
+            //this.igEditor.dependencyListJson?.Clear();
             this.implementationGuide = new ImplementationGuideEditor(this.ImpGuidePath);
         }
 
@@ -148,11 +148,11 @@ namespace BreastRadiology.XUnitTests
 
                             Save(codeSystem, $"{fixedName}.json");
                             this.implementationGuide.AddIGResource($"{typeName}/{codeSystem.Name}", codeSystem.Name, false);
-                            this.igEditor.AddResource($"{typeName}/{codeSystem.Name}",
-                                htmlPage);
-                            this.codeSystemsEditor.AddCodeSystem(codeSystem.Name,
-                                htmlPage,
-                                codeSystem.Description);
+                            //this.igEditor.AddResource($"{typeName}/{codeSystem.Name}",
+                            //    htmlPage);
+                            //this.codeSystemsEditor.AddCodeSystem(codeSystem.Name,
+                            //    htmlPage,
+                            //    codeSystem.Description);
                         }
                         break;
 
@@ -164,11 +164,11 @@ namespace BreastRadiology.XUnitTests
 
                             Save(valueSet, $"{fixedName}.json");
                             this.implementationGuide.AddIGResource($"{typeName}/{valueSet.Name}", valueSet.Name, false);
-                            this.igEditor.AddResource($"{typeName}/{valueSet.Name}",
-                                htmlPage);
-                            this.valueSetsEditor.AddValueSet(valueSet.Name,
-                                htmlPage,
-                                valueSet.Description);
+                            //this.igEditor.AddResource($"{typeName}/{valueSet.Name}",
+                            //    htmlPage);
+                            //this.valueSetsEditor.AddValueSet(valueSet.Name,
+                            //    htmlPage,
+                            //    valueSet.Description);
                         }
                         break;
 

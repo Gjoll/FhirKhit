@@ -29,7 +29,7 @@ namespace BreastRadiology.XUnitTests
         {
             String binding = this.CreateValueSet(
                 "BreastRadUSMassOrientation",
-                "Breast Radiology Ultra-Sound Mass Orientation",
+                "US Mass Orientation",
                 new Markdown()
                     .Paragraph("Breast Radiology Ultra-Sound Mass Orientation"),
                     new ConceptDef[]
@@ -57,7 +57,7 @@ namespace BreastRadiology.XUnitTests
                 .Url;
 
             SDefEditor e = this.CreateEditor("BreastRadUSMassOrientation",
-                        "Breast Radiology Ultra-Sound Mass Orientation",
+                        "US Mass Orientation",
                         new string[] { "Orientation" },
                         ObservationUrl,
                         out usMassOrientation)

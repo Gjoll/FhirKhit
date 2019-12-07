@@ -27,7 +27,7 @@ namespace BreastRadiology.XUnitTests
         void CreateMammoAssociatedFeatures()
         {
             SDefEditor e = this.CreateEditor("BreastRadMammoAssociatedFeatures",
-                    "Breast Radiology Mammography Associated Features",
+                    "Mammo Associated Features",
                     new string[] { "Associated", "Features" },
                     ObservationUrl,
                     out mammoAssociatedFeatures)

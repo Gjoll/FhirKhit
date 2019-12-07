@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
         void CreateSectionPatientRisk()
         {
             SDefEditor e = this.CreateEditor("BreastRadSectionPatientRisk",
-                    "Breast Radiology Patient Risk Section",
+                    "Patient Risk Section",
                     new string[] {"Patient","Risk"},
                     ObservationUrl,
                     out sectionPatientRisk)

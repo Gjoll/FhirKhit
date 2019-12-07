@@ -29,7 +29,7 @@ namespace BreastRadiology.XUnitTests
         {
             String binding = this.CreateValueSet(
                 "BreastRadUSMassEchoPattern",
-                "Breast Radiology Ultra-Sound Mass Echo Pattern",
+                "US Mass Echo Pattern",
                 new Markdown()
                     .Paragraph("Breast Radiology Ultra-Sound Mass Echo Pattern"),
                     new ConceptDef[]
@@ -90,7 +90,7 @@ namespace BreastRadiology.XUnitTests
                 .Url;
 
             SDefEditor e = this.CreateEditor("BreastRadUSMassEchoPattern",
-                        "Breast Radiology Ultra-Sound Mass Echo Pattern",
+                        "US Mass Echo Pattern",
                         new string[] { "Echo Pattern" },
                         ObservationUrl,
                         out usMassEchoPattern)

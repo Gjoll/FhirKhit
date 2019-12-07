@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
         {
             String binding = this.CreateValueSet(
                 "MammoCalcificationDistribution",
-                "Mammography Calcification Distribution",
+                "Mammo Calcification Distribution",
                 new Markdown()
                     .Paragraph("Mammography Calcification Distribution")
                     .BiradHeader()
@@ -97,7 +97,7 @@ namespace BreastRadiology.XUnitTests
                 .Url;
 
             SDefEditor e =  this.CreateEditor("BreastRadMammoCalcificationDistribution",
-                    "Breast Radiology Mammography Calcification Distribution Observation",
+                    "Mammo Calcification Distribution",
                     new string[] {"Distribution"},
                     ObservationUrl,
                     out mammoCalcificationDistribution)

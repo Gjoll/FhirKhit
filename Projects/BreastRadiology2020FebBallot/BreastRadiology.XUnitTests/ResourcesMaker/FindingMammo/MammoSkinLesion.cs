@@ -27,7 +27,7 @@ namespace BreastRadiology.XUnitTests
         void CreateMammoSkinLesion()
         {
             SDefEditor e = this.CreateEditor("BreastRadMammoSkinLesion",
-                "Breast Radiology Mammography Skin Lesion",
+                "Mammo Skin Lesion",
                 new string[] { "Skin", "Lesion" },
                 ObservationUrl,
                 out mammoSkinLesion)

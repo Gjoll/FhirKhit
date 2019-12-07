@@ -32,7 +32,7 @@ namespace BreastRadiology.XUnitTests
         void CreateMammoAxillaryAdenopathy()
         {
             SDefEditor e = this.CreateEditor("BreastRadMammoAxillaryAdenopathy",
-                    "Breast Radiology Mammography Axillary Adenopathy Observation",
+                    "Mammo Axillary Adenopathy",
                     new string[] { "Axillary", "Adenopathy" },
                     ObservationUrl,
                     out mammoAxillaryAdenopathy)

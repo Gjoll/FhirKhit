@@ -30,7 +30,7 @@ namespace BreastRadiology.XUnitTests
             // todo: Do we want benign appearing & probably benign? Define difference.
             ValueSet vs = this.CreateValueSet(
                     "BreastRadObservedState",
-                    "Breast Radiology Observed State",
+                    "Observed State",
                     new Markdown()
                         .Paragraph("Breast Radiology Observed State"),
                     new ConceptDef[]
@@ -66,7 +66,7 @@ namespace BreastRadiology.XUnitTests
             String binding = vs.Url;
 
             SDefEditor e = this.CreateEditor("BreastRadObservedState",
-                    "Breast Radiology Observed State",
+                    "Observed State",
                     new string[] { "State" },
                     ObservationUrl,
                     out breastRadObservedState)

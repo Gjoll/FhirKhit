@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
         {
             String binding = this.CreateValueSet(
                 "MammoCalcificationType",
-                "Mammography Calcification Type",
+                "Mammo Calcification Type",
                 new Markdown()
                     .Paragraph("Mammography Calcification Type"),
                     new ConceptDef[]
@@ -198,7 +198,7 @@ namespace BreastRadiology.XUnitTests
                 .Url;
 
             SDefEditor e = this.CreateEditor("BreastRadMammoCalcificationType",
-                        "Breast Radiology Mammography Calcification Type",
+                        "Mammo Calcification Type",
                     new string[] { "Type" },
                     ObservationUrl,
                     out mammoCalcificationType)

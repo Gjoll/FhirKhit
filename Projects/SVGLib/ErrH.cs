@@ -32,9 +32,9 @@ namespace SVGLib
 			Error
 		}
 
-		private static _LogMode m_logmodeError = _LogMode.MessageBox;
-		private static _LogMode m_logmodeWarning = _LogMode.Trace;
-		private static _LogMode m_logmodeInfo = _LogMode.Trace;
+		//private static _LogMode m_logmodeError = _LogMode.MessageBox;
+		//private static _LogMode m_logmodeWarning = _LogMode.Trace;
+		//private static _LogMode m_logmodeInfo = _LogMode.Trace;
  
 		
 		private string m_sClass;

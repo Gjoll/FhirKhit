@@ -29,7 +29,7 @@ namespace BreastRadiology.XUnitTests
         {
             String binding = this.CreateValueSet(
                 "BreastRadMammoMassDensity",
-                "Breast Radiology Mammography Mass Density",
+                "Mammo Mass Density",
                 new Markdown()
                     .Paragraph("Breast Radiology Mammography Mass Density"),
                     new ConceptDef[]
@@ -74,7 +74,7 @@ namespace BreastRadiology.XUnitTests
                 .Url;
 
             SDefEditor e = this.CreateEditor("BreastRadMammoMassDensity",
-                        "Breast Radiology Mammography Mass Density",
+                        "Mammo Mass Density",
                         new string[] { "Density" },
                         ObservationUrl,
                         out mammoMassDensity)

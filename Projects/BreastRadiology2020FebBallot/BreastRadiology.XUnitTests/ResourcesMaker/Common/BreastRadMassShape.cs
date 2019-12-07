@@ -29,7 +29,7 @@ namespace BreastRadiology.XUnitTests
         {
             ValueSet vs = this.CreateValueSet(
                     "BreastRadMassShape",
-                    "Breast Radiology Mass Shape",
+                    "Mass Shape",
                     new Markdown()
                         .Paragraph("Breast Radiology Mass Shape"),
                     new ConceptDef[]
@@ -65,7 +65,7 @@ namespace BreastRadiology.XUnitTests
             String binding = vs.Url;
 
             SDefEditor e = this.CreateEditor("BreastRadMassShape",
-                    "Breast Radiology Mass Shape",
+                    "Mass Shape",
                     new string[] { "Shape" },
                     ObservationUrl,
                     out breastRadMassShape)

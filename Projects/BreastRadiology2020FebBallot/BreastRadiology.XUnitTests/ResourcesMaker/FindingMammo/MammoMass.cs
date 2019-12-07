@@ -30,7 +30,7 @@ namespace BreastRadiology.XUnitTests
         void CreateMammoMass()
         {
             SDefEditor e = this.CreateEditor("BreastRadMammoMass",
-                    "Breast Radiology Mammography Mass Observation",
+                    "Mammo Mass",
                     new string[] { "Mass" },
                     ObservationUrl,
                     out mammoMass)

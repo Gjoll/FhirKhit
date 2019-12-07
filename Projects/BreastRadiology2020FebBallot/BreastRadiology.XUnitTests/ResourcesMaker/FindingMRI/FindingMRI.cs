@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
         {
             //$ Fix me. Incorrect method!!!
             SDefEditor e = this.CreateEditor("BreastRadMRIFinding",
-                    "Breast Radiology MRI Finding",
+                    "MRI Finding",
                     new string[] {"MRI", "Finding"},
                     ObservationUrl,
                     out findingMri)

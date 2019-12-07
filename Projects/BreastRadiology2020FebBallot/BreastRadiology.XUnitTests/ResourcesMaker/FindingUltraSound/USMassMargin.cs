@@ -29,7 +29,7 @@ namespace BreastRadiology.XUnitTests
         {
             String binding = this.CreateValueSet(
                 "BreastRadUSMassMargin",
-                "Breast Radiology Ultra-Sound Mass Margin",
+                "US Mass Margin",
                 new Markdown()
                     .Paragraph("Breast Radiology Ultra-Sound Mass Margin"),
                     new ConceptDef[]
@@ -60,7 +60,7 @@ namespace BreastRadiology.XUnitTests
 
             String binding2 = this.CreateValueSet(
                 "BreastRadUSMassMarginNotCircumscribed",
-                "Breast Radiology Ultra-Sound Mass Margin Not Circumscribed values",
+                "US Mass Margin Not Circumscribed values",
                 new Markdown()
                     .Paragraph("Breast Radiology Ultra-Sound Mass Margin Not Circumscribed Values"),
                     new ConceptDef[]
@@ -104,7 +104,7 @@ namespace BreastRadiology.XUnitTests
                 .Url;
 
             SDefEditor e = this.CreateEditor("BreastRadUSMassMargin",
-                    "Breast Radiology Ultra-Sound Mass Margin",
+                    "US Mass Margin",
                     new string[] { "Margin" },
                     ObservationUrl,
                     out usMassMargin)

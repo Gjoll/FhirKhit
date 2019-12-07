@@ -27,7 +27,7 @@ namespace BreastRadiology.XUnitTests
         void CreateMammoIntramammaryLymphNode()
         {
             SDefEditor e = this.CreateEditor("BreastRadMammoIntramammaryLymphNode",
-                    "Breast Radiology Mammography Intramammary LymphNode Observation",
+                    "Mammo Intramammary LymphNode",
                     new string[] { "Intramammory", "Lymph Node" },
                     ObservationUrl,
                     out mammoIntramammaryLymphNode)

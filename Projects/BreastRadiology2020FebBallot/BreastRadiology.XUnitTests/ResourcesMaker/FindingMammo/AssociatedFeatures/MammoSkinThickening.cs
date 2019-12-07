@@ -32,7 +32,7 @@ namespace BreastRadiology.XUnitTests
         void CreateMammoSkinThickening()
         {
             SDefEditor e = this.CreateEditor("BreastRadMammoSkinThickening",
-                "Breast Radiology Skin Thickening Observation",
+                "Skin Thickening",
                 new string[] { "Skin", "Thickening" },
                 ObservationUrl,
                 out mammoSkinThickening)

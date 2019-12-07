@@ -27,7 +27,7 @@ namespace BreastRadiology.XUnitTests
         void CreateMammoSkinRetraction()
         {
             SDefEditor e = this.CreateEditor("BreastRadMammoSkinRetraction",
-                "Breast Radiology Skin Retraction Observation",
+                "Skin Retraction",
                 new string[] { "Skin", "Retraction" },
                 ObservationUrl,
                 out mammoSkinRetraction)

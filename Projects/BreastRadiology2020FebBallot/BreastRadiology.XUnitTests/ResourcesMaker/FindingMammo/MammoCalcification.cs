@@ -27,7 +27,7 @@ namespace BreastRadiology.XUnitTests
         void CreateMammoCalcification()
         {
             SDefEditor e = this.CreateEditor("BreastRadMammoCalcification",
-                    "Breast Radiology Mammography Calcification Observation",
+                    "Mammo Calcification",
                     new string[] {"Calcification"},
                     ObservationUrl,
                     out mammoCalcification)
