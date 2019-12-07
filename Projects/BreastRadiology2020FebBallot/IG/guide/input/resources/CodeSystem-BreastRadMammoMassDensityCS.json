@@ -4,7 +4,7 @@
   "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadMammoMassDensityCS",
   "version": "0.0.2",
   "name": "BreastRadMammoMassDensityCS",
-  "title": "Breast Radiology Mammography Mass Density",
+  "title": "Mammo Mass Density",
   "status": "draft",
   "date": "2019-11-01",
   "publisher": "Hl7-Clinical Interoperability Council",

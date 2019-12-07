@@ -27,7 +27,7 @@ namespace BreastRadiology.XUnitTests
         void CreateSectionFindingsLeftBreast()
         {
             SDefEditor e = this.CreateEditor("BreastRadSectionFindingsLeftBreast",
-                    "Breast Radiology Findings Left Breast",
+                    "Findings Left Breast",
                     new string[] {"Left Breast"},
                     ObservationUrl,
                     out sectionFindingsLeftBreast)

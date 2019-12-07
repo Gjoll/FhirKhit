@@ -9,7 +9,7 @@
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadMemmoAsymmetriesVS",
   "name": "BreastRadMemmoAsymmetriesVS",
-  "title": "Breast Radiology Mammography Asymmetries Observation",
+  "title": "Mammo Asymmetries",
   "description": "Breast Radiology Mammography Asymmetries Observation",
   "compose": {
     "include": [

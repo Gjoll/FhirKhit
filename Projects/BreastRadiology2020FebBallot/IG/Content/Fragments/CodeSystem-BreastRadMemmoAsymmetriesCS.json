@@ -9,7 +9,7 @@
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadMemmoAsymmetriesCS",
   "name": "BreastRadMemmoAsymmetriesCS",
-  "title": "Breast Radiology Mammography Asymmetries Observation",
+  "title": "Mammo Asymmetries",
   "description": "Breast Radiology Mammography Asymmetries Observation",
   "caseSensitive": true,
   "content": "complete",

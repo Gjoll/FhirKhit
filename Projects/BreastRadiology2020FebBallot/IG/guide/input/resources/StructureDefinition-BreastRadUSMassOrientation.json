@@ -3,7 +3,7 @@
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadUSMassOrientation",
   "version": "0.0.2",
   "name": "BreastRadUSMassOrientation",
-  "title": "Breast Radiology Ultra-Sound Mass Orientation",
+  "title": "US Mass Orientation",
   "status": "draft",
   "date": "2019-11-01",
   "publisher": "Hl7-Clinical Interoperability Council",

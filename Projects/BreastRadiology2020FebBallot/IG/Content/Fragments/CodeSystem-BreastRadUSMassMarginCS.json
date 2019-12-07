@@ -9,7 +9,7 @@
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadUSMassMarginCS",
   "name": "BreastRadUSMassMarginCS",
-  "title": "Breast Radiology Ultra-Sound Mass Margin",
+  "title": "US Mass Margin",
   "description": "Breast Radiology Ultra-Sound Mass Margin",
   "caseSensitive": true,
   "content": "complete",

@@ -29,7 +29,7 @@ namespace BreastRadiology.XUnitTests
         {
             String binding = this.CreateValueSet(
                 "BreastRadUSMassPosteriorAcousticFeatures",
-                "Breast Radiology Ultra-Sound Mass Posterior Acoustic Features",
+                "US Mass Posterior Acoustic Features",
                 new Markdown()
                     .Paragraph("Breast Radiology Ultra-Sound Mass Posterior Acoustic Features"),
                     new ConceptDef[]
@@ -85,7 +85,7 @@ namespace BreastRadiology.XUnitTests
                 .Url;
 
             SDefEditor e = this.CreateEditor("BreastRadUSMassPosteriorAcousticFeatures",
-                        "Breast Radiology Ultra-Sound Mass Posterior Acoustic Features",
+                        "US Mass Posterior Acoustic Features",
                         new string[] { "Posterior",  "Acoustic",  "Features" },
                         ObservationUrl,
                         out usMassPosteriorAcousticFeatures)

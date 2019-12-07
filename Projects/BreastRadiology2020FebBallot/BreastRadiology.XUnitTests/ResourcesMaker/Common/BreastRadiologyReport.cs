@@ -29,7 +29,7 @@ namespace BreastRadiology.XUnitTests
         void CreateBreastRadiologyReport()
         {
             SDefEditor e = this.CreateEditor("BreastRadReport",
-                "Breast Radiology Report",
+                "Report",
                 new string[] {"Breast","Radiology","Report"},
                 DiagnosticReportUrl,
                 out breastRadiologyReport)

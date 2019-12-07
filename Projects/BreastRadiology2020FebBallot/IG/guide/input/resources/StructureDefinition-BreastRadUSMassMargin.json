@@ -3,7 +3,7 @@
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadUSMassMargin",
   "version": "0.0.2",
   "name": "BreastRadUSMassMargin",
-  "title": "Breast Radiology Ultra-Sound Mass Margin",
+  "title": "US Mass Margin",
   "status": "draft",
   "date": "2019-11-01",
   "publisher": "Hl7-Clinical Interoperability Council",

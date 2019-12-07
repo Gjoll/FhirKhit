@@ -29,7 +29,7 @@ namespace BreastRadiology.XUnitTests
         {
             String binding = this.CreateValueSet(
                     "BreastRadMemmoAsymmetries",
-                    "Breast Radiology Mammography Asymmetries Observation",
+                    "Mammo Asymmetries",
                     new Markdown()
                         .Paragraph("Breast Radiology Mammography Asymmetries Observation"),
                    new ConceptDef[]
@@ -88,7 +88,7 @@ namespace BreastRadiology.XUnitTests
                 .Url;
 
             SDefEditor e = this.CreateEditor("BreastRadMammoAsymmetries",
-                        "Breast Radiology Mammography Asymmetries Observation",
+                        "Mammo Asymmetries",
                         new string[] {"Asymmetries"},
                         ObservationUrl,
                         out mammoAsymmetries)

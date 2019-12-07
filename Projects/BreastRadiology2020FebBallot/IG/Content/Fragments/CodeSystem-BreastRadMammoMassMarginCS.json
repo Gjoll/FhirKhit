@@ -9,7 +9,7 @@
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadMammoMassMarginCS",
   "name": "BreastRadMammoMassMarginCS",
-  "title": "Breast Radiology Mammography Mass Margin",
+  "title": "Mammo Mass Margin",
   "description": "Breast Radiology Mammography Mass Margin",
   "caseSensitive": true,
   "content": "complete",

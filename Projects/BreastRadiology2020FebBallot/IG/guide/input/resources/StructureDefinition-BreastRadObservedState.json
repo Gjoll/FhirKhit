@@ -3,7 +3,7 @@
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservedState",
   "version": "0.0.2",
   "name": "BreastRadObservedState",
-  "title": "Breast Radiology Observed State",
+  "title": "Observed State",
   "status": "draft",
   "date": "2019-11-01",
   "publisher": "Hl7-Clinical Interoperability Council",

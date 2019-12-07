@@ -12,7 +12,7 @@
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoFinding",
   "name": "BreastRadMammoFinding",
-  "title": "Breast Radiology Mammography Finding",
+  "title": "Mammo Finding",
   "status": "draft",
   "description": "Breast Radiology Mammography Finding\n\n\nTodo: The following items need further specification.\n\n\n** Device Metrics detailing the observation devices parameters (transducer freq, etc).",
   "fhirVersion": "4.0.0",

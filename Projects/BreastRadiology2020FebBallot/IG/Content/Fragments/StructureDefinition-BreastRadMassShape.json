@@ -12,7 +12,7 @@
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMassShape",
   "name": "BreastRadMassShape",
-  "title": "Breast Radiology Mass Shape",
+  "title": "Mass Shape",
   "status": "draft",
   "description": "Breast Radiology Mass Shape Observation\n\n\nIf this observation is present, and dataAbsentReason is empty, then a mass shape was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a mass shape was not observed and dataAbsentReason contains the reason why.",
   "fhirVersion": "4.0.0",

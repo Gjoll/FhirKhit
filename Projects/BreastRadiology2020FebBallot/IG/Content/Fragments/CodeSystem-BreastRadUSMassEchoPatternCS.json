@@ -9,7 +9,7 @@
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadUSMassEchoPatternCS",
   "name": "BreastRadUSMassEchoPatternCS",
-  "title": "Breast Radiology Ultra-Sound Mass Echo Pattern",
+  "title": "US Mass Echo Pattern",
   "description": "Breast Radiology Ultra-Sound Mass Echo Pattern",
   "caseSensitive": true,
   "content": "complete",

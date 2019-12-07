@@ -3,7 +3,7 @@
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadUSMassEchoPattern",
   "version": "0.0.2",
   "name": "BreastRadUSMassEchoPattern",
-  "title": "Breast Radiology Ultra-Sound Mass Echo Pattern",
+  "title": "US Mass Echo Pattern",
   "status": "draft",
   "date": "2019-11-01",
   "publisher": "Hl7-Clinical Interoperability Council",

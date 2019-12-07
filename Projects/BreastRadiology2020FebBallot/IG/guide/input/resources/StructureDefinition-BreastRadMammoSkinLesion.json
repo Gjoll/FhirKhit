@@ -3,7 +3,7 @@
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoSkinLesion",
   "version": "0.0.2",
   "name": "BreastRadMammoSkinLesion",
-  "title": "Breast Radiology Mammography Skin Lesion",
+  "title": "Mammo Skin Lesion",
   "status": "draft",
   "date": "2019-11-01",
   "publisher": "Hl7-Clinical Interoperability Council",

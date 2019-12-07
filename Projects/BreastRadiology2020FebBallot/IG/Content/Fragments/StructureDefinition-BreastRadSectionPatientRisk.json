@@ -12,7 +12,7 @@
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadSectionPatientRisk",
   "name": "BreastRadSectionPatientRisk",
-  "title": "Breast Radiology Patient Risk Section",
+  "title": "Patient Risk Section",
   "status": "draft",
   "description": "Patient Risk Section",
   "fhirVersion": "4.0.0",

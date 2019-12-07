@@ -9,7 +9,7 @@
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadObservedStateVS",
   "name": "BreastRadObservedStateVS",
-  "title": "Breast Radiology Observed State",
+  "title": "Observed State",
   "description": "Breast Radiology Observed State",
   "compose": {
     "include": [

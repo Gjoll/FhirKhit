@@ -12,7 +12,7 @@
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadSectionFindingsLeftBreast",
   "name": "BreastRadSectionFindingsLeftBreast",
-  "title": "Breast Radiology Findings Left Breast",
+  "title": "Findings Left Breast",
   "status": "draft",
   "description": "Findings Left Breast Section",
   "fhirVersion": "4.0.0",

@@ -3,7 +3,7 @@
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoCalcification",
   "version": "0.0.2",
   "name": "BreastRadMammoCalcification",
-  "title": "Breast Radiology Mammography Calcification Observation",
+  "title": "Mammo Calcification",
   "status": "draft",
   "date": "2019-11-01",
   "publisher": "Hl7-Clinical Interoperability Council",

@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
         void CreateBreastRadMassSize()
         {
             SDefEditor e = this.CreateEditor("BreastRadMassSize",
-                    "Breast Radiology Mass Size",
+                    "Mass Size",
                     new string[] { "Size" },
                     ObservationUrl,
                     out breastRadMassSize)

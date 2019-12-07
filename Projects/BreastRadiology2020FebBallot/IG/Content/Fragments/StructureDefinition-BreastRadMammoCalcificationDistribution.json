@@ -12,7 +12,7 @@
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoCalcificationDistribution",
   "name": "BreastRadMammoCalcificationDistribution",
-  "title": "Breast Radiology Mammography Calcification Distribution Observation",
+  "title": "Mammo Calcification Distribution",
   "status": "draft",
   "description": "Breast Radiology Mammography Calcification Distribution Observation",
   "fhirVersion": "4.0.0",

@@ -12,7 +12,7 @@
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservedChanges",
   "name": "BreastRadObservedChanges",
-  "title": "Breast Radiology Observed Changes",
+  "title": "Observed Changes",
   "status": "draft",
   "description": "Breast Radiology Observed Changes Observation\n\n\nIf this observation is present, and dataAbsentReason is empty, then an observed change was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then an observed change was not observed and dataAbsentReason contains the reason why.",
   "fhirVersion": "4.0.0",

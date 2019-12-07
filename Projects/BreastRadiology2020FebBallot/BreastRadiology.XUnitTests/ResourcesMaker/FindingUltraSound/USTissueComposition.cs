@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
         {
             String binding = this.CreateValueSet(
                 "BreastRadUSTissueComposition",
-                "Breast Radiology Ultra-Sound Tissue Composition Observation",
+                "US Tissue Composition",
                 new Markdown()
                     .Paragraph("Breast Radiology Ultra-Sound Tissue Composition Observation")
                     .BiradHeader()
@@ -73,7 +73,7 @@ namespace BreastRadiology.XUnitTests
             .Url;
 
             SDefEditor e = this.CreateEditor("BreastRadUSTissueComposition",
-                        "Breast Radiology Ultra-Sound Tissue Composition Observation",
+                        "US Tissue Composition",
                         new string[] {"Tissue","Composition"},
                         ObservationUrl,
                         out usTissueComposition)

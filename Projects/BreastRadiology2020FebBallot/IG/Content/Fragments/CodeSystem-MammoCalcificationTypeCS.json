@@ -9,7 +9,7 @@
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/MammoCalcificationTypeCS",
   "name": "MammoCalcificationTypeCS",
-  "title": "Mammography Calcification Type",
+  "title": "Mammo Calcification Type",
   "description": "Mammography Calcification Type",
   "caseSensitive": true,
   "content": "complete",

@@ -9,7 +9,7 @@
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadMassShapeCS",
   "name": "BreastRadMassShapeCS",
-  "title": "Breast Radiology Mass Shape",
+  "title": "Mass Shape",
   "description": "Breast Radiology Mass Shape",
   "caseSensitive": true,
   "content": "complete",

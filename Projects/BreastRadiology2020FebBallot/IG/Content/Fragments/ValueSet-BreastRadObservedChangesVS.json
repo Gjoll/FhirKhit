@@ -9,7 +9,7 @@
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadObservedChangesVS",
   "name": "BreastRadObservedChangesVS",
-  "title": "Breast Radiology Observed Changes",
+  "title": "Observed Changes",
   "description": "Breast Radiology Observed Changes",
   "compose": {
     "include": [

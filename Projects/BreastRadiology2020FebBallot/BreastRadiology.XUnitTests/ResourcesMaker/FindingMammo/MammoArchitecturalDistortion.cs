@@ -27,7 +27,7 @@ namespace BreastRadiology.XUnitTests
         void CreateMammoArchitecturalDistortion()
         {
             SDefEditor e = this.CreateEditor("BreastRadMammoArchitecturalDistortion",
-                        "Breast Radiology Mammography Architectural Distortion Observation",
+                        "Mammo Architectural Distortion",
                     new string[] {"Arch.","Distortion"},
                     ObservationUrl,
                     out mammoArchitecturalDistortion)

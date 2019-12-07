@@ -3,7 +3,7 @@
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadUltraSoundFinding",
   "version": "0.0.2",
   "name": "BreastRadUltraSoundFinding",
-  "title": "Breast Radiology UltraSound Finding",
+  "title": "UltraSound Finding",
   "status": "draft",
   "date": "2019-11-01",
   "publisher": "Hl7-Clinical Interoperability Council",

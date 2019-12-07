@@ -9,7 +9,7 @@
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadMammoBreastDensityCS",
   "name": "BreastRadMammoBreastDensityCS",
-  "title": "Breast Radiology Mammography Breast Density Observation",
+  "title": "Mammo Breast Density",
   "description": "Breast Radiology Mammography Breast Density/Composition Observation",
   "caseSensitive": true,
   "content": "complete",

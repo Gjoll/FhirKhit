@@ -9,7 +9,7 @@
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadObservedChangesCS",
   "name": "BreastRadObservedChangesCS",
-  "title": "Breast Radiology Observed Changes",
+  "title": "Observed Changes",
   "description": "Breast Radiology Observed Changes",
   "caseSensitive": true,
   "content": "complete",

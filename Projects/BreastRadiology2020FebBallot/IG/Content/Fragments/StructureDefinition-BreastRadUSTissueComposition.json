@@ -12,7 +12,7 @@
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadUSTissueComposition",
   "name": "BreastRadUSTissueComposition",
-  "title": "Breast Radiology Ultra-Sound Tissue Composition Observation",
+  "title": "US Tissue Composition",
   "status": "draft",
   "description": "Breast Radiology Ultra-Sound Tissue Composition Observation",
   "fhirVersion": "4.0.0",

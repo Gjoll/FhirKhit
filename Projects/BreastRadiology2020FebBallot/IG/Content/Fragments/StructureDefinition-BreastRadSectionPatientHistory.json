@@ -12,7 +12,7 @@
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadSectionPatientHistory",
   "name": "BreastRadSectionPatientHistory",
-  "title": "Breast Radiology Patient History Section",
+  "title": "Patient History Section",
   "status": "draft",
   "description": "Patient History Section",
   "fhirVersion": "4.0.0",

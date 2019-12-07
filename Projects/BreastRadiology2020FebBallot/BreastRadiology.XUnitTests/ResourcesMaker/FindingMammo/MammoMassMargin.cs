@@ -29,7 +29,7 @@ namespace BreastRadiology.XUnitTests
         {
             String binding = this.CreateValueSet(
                 "BreastRadMammoMassMargin",
-                "Breast Radiology Mammography Mass Margin",
+                "Mammo Mass Margin",
                 new Markdown()
                     .Paragraph("Breast Radiology Mammography Mass Margin"),
                     new ConceptDef[]
@@ -84,7 +84,7 @@ namespace BreastRadiology.XUnitTests
                 .Url;
 
             SDefEditor e = this.CreateEditor("BreastRadMammoMassMargin",
-                "Breast Radiology Mammography Mass Margin",
+                "Mammo Mass Margin",
                 new string[] { "Margin" },
                 ObservationUrl,
                 out mammoMassMargin)

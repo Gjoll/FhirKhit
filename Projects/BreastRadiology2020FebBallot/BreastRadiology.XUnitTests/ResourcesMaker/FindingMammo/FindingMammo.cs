@@ -27,7 +27,7 @@ namespace BreastRadiology.XUnitTests
         void CreateFindingMammo()
         {
             SDefEditor e = this.CreateEditor("BreastRadMammoFinding",
-                    "Breast Radiology Mammography Finding",
+                    "Mammo Finding",
                     new string[] {"Mammo", "Finding"},
                     ObservationUrl,
                     out findingMammo)

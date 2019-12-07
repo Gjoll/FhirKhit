@@ -9,7 +9,7 @@
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadMassShapeVS",
   "name": "BreastRadMassShapeVS",
-  "title": "Breast Radiology Mass Shape",
+  "title": "Mass Shape",
   "description": "Breast Radiology Mass Shape",
   "compose": {
     "include": [
