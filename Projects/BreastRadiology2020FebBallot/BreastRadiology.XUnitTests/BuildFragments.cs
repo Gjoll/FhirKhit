@@ -47,6 +47,12 @@ namespace BreastRadiology.XUnitTests
             "Content",
             "Resources");
 
+        String pageDir = Path.Combine(
+            DirHelper.FindParentDir(baseDir),
+            "IG",
+            "Content",
+            "Page");
+
         String mergedDir = Path.Combine(
             DirHelper.FindParentDir(baseDir),
             "IG",
@@ -105,7 +111,8 @@ namespace BreastRadiology.XUnitTests
                 pc.StatusInfo += this.StatusInfo;
                 pc.StatusWarnings += this.StatusWarnings;
                 pc.CreateResources();
-                pc.CreateMaps(graphicsDir);
+                pc.CreateFocusMaps(this.graphicsDir, this.pageDir);
+                pc.CreateResourceMap(graphicsDir);
                 if (pc.HasErrors)
                 {
                     StringBuilder sb = new StringBuilder();
@@ -244,7 +251,7 @@ namespace BreastRadiology.XUnitTests
         {
             this.A_BuildFragments();
             this.B_BuildResources();
-            //this.C_IGBuild();
+            this.C_IGBuild();
         }
 
         [TestMethod]
@@ -252,23 +259,22 @@ namespace BreastRadiology.XUnitTests
         {
             try
             {
-                IGBuilder p = new IGBuilder(Path.Combine(this.guideDir, "input"));
-                p.StatusErrors += this.StatusErrors;
-                p.StatusInfo += this.StatusInfo;
-                p.StatusWarnings += this.StatusWarnings;
-                p.Start();
-                p.AddResources(this.resourcesDir);
-                p.AddResources(this.manualDir);
-                p.SaveAll();
+                //IGBuilder p = new IGBuilder(Path.Combine(this.guideDir, "input"));
+                //p.StatusErrors += this.StatusErrors;
+                //p.StatusInfo += this.StatusInfo;
+                //p.StatusWarnings += this.StatusWarnings;
+                //p.Start();
+                //p.AddResources(this.resourcesDir);
+                //p.AddResources(this.manualDir);
+                //p.SaveAll();
 
-                if (p.HasErrors)
-                {
-                    StringBuilder sb = new StringBuilder();
-                    p.FormatErrorMessages(sb);
-                    Trace.WriteLine(sb.ToString());
-                    Debug.Assert(false);
-                }
-
+                //if (p.HasErrors)
+                //{
+                //    StringBuilder sb = new StringBuilder();
+                //    p.FormatErrorMessages(sb);
+                //    Trace.WriteLine(sb.ToString());
+                //    Debug.Assert(false);
+                //}
             }
             catch (Exception err)
             {

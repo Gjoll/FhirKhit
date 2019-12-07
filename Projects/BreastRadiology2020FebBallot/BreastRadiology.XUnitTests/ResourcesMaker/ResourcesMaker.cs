@@ -238,7 +238,19 @@ namespace BreastRadiology.XUnitTests
             this.fc.Dispose();
         }
 
-        public void CreateMaps(String mapDir)
+        public void CreateFocusMaps(String graphicsDir,
+            String contentDir)
+        {
+            if (Directory.Exists(graphicsDir) == false)
+                Directory.CreateDirectory(graphicsDir);
+            if (Directory.Exists(contentDir) == false)
+                Directory.CreateDirectory(contentDir);
+
+            FocusMapMaker focusMapMaker = new FocusMapMaker(this, graphicsDir, contentDir);
+            focusMapMaker.Create();
+        }
+
+        public void CreateResourceMap(String mapDir)
         {
             if (Directory.Exists(mapDir) == false)
                 Directory.CreateDirectory(mapDir);

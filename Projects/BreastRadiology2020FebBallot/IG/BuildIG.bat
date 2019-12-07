@@ -1,4 +1,5 @@
 copy Content\Graphics\* guide\input\images
+copy Content\Page\* guide\input\pagecontent
 copy Content\Resources\* guide\input\resources
 
 @SET JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8

@@ -297,6 +297,11 @@ namespace BreastRadiology.XUnitTests
             }
         }
 
+        public String GetXml()
+        {
+            return this.doc.GetXML();
+        }
+
         public void Save(String path)
         {
             this.doc.SaveToFile(path);
