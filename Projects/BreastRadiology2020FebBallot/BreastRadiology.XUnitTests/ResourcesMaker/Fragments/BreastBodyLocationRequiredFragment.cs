@@ -32,7 +32,10 @@ namespace BreastRadiology.XUnitTests
                     new string[] {"Breast","Body", "Location", "Fragment", "(Required)"},
                     ObservationUrl,
                     out breastBodyLocationRequiredFragment)
-                .Description(new Markdown("Fragment definition for an required Breast Body Location"))
+                .Description(new Markdown()
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .Paragraph("Fragment definition for an required Breast Body Location")
+                    )
                 .AddFragRef(this.HeaderFragment);
                 ;
             e
@@ -40,9 +43,10 @@ namespace BreastRadiology.XUnitTests
                 .Single()
                 ;
             e
-                .ApplyExtension("breastBodyLocation", this.BreastBodyLocationExtension)
+                .ApplyExtension("breastBodyLocation", this.BreastBodyLocationExtension, true, false)
                 .Single()
                 ;
+            e.IntroDoc.Fragment($"Resource fragment used by various observations to include an required breast body location.");
         }
     }
 }

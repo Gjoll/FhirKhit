@@ -12,6 +12,8 @@ using Hl7.Fhir.Serialization;
 namespace BreastRadiology.XUnitTests
 {
     // TODO: Do we need statement that breast density is required now?
+    // todo: can this and US tissue composition be the same?
+
     partial class ResourcesMaker : ConverterBase
     {
         String MammoBreastDensity
@@ -91,32 +93,33 @@ namespace BreastRadiology.XUnitTests
                 );
 
             SDefEditor e = this.CreateEditor("BreastRadMammoBreastDensity",
-                        "Mammo Breast Density",
-                        new string[] {"Breast","Density"},
-                        ObservationUrl,
-                        out mammoBreastDensity)
-                    .Description(new Markdown()
-                        .Paragraph("Breast Radiology Mammography Breast Density Observation")
-                        .BiradHeader()
-                        .BlockQuote("The following four categories of breast composition are defined by the visually estimated content of fibroglandular-density tissue within the breasts. Please note that the ")
-                        .BlockQuote("categories are listed as a, b, c, and d so as not to be confused with the numbered BI-RADS® assessment categories. If the breasts are not of apparently equal density, the ")
-                        .BlockQuote("denser breast should be used to categorize breast density. The sensitivity of mammography for noncalcified lesions decreases as the BI-RADS® breast density category ")
-                        .BlockQuote("increases. The denser the breast, the larger the lesion(s) that may be obscured. There is considerable intra- and inter-observer variation in visually estimating breast density ")
-                        .BlockQuote("between any two adjacent density categories. Furthermore, there is only a minimal and insignificant difference in the sensitivity of mammography between the densest breast ")
-                        .BlockQuote("in a lower-density category and the least dense breast in the next-higher-density category. These factors limit the clinical relevance of breast density categorization for the ")
-                        .BlockQuote("individual woman. ")
-                        .BiradFooter()
-                    )
-                    .AddFragRef(this.ObservationCodedValueFragment)
-                    .AddFragRef(this.ObservationLeafFragment)
-                    ;
+                    "Mammo Breast Density",
+                    new string[] { "Breast", "Density" },
+                    ObservationUrl,
+                    out mammoBreastDensity)
+                .Description(new Markdown()
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .Paragraph("Breast Radiology Mammography Breast Density Observation")
+                    .BiradHeader()
+                    .BlockQuote("The following four categories of breast composition are defined by the visually estimated content of fibroglandular-density tissue within the breasts. Please note that the ")
+                    .BlockQuote("categories are listed as a, b, c, and d so as not to be confused with the numbered BI-RADS® assessment categories. If the breasts are not of apparently equal density, the ")
+                    .BlockQuote("denser breast should be used to categorize breast density. The sensitivity of mammography for noncalcified lesions decreases as the BI-RADS® breast density category ")
+                    .BlockQuote("increases. The denser the breast, the larger the lesion(s) that may be obscured. There is considerable intra- and inter-observer variation in visually estimating breast density ")
+                    .BlockQuote("between any two adjacent density categories. Furthermore, there is only a minimal and insignificant difference in the sensitivity of mammography between the densest breast ")
+                    .BlockQuote("in a lower-density category and the least dense breast in the next-higher-density category. These factors limit the clinical relevance of breast density categorization for the ")
+                    .BlockQuote("individual woman. ")
+                    .BiradFooter()
+                )
+                .AddFragRef(this.ObservationCodedValueFragment)
+                .AddFragRef(this.ObservationLeafFragment)
+                ;
 
             e.Select("value[x]")
                 .Type("CodeableConcept")
                 .Binding(binding.Url, BindingStrength.Required)
                 ;
 
-            e.IntroDoc.CodedObservation(e, "a mammography breast density", binding);
-            }
+            e.IntroDoc.CodedObservationLeafNode(e, "a mammography breast density", binding);
+        }
     }
 }

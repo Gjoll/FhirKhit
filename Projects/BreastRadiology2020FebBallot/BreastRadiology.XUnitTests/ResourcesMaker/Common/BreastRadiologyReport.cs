@@ -34,6 +34,7 @@ namespace BreastRadiology.XUnitTests
                 DiagnosticReportUrl,
                 out breastRadiologyReport)
                 .Description(new Markdown()
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
                     .Paragraph("Breast Radiology Diagnostic Report.")
                     .Paragraph("This diagnostic report has links to the data that comprise a Breast Radiology Report, including")
                     .List("references to prior breast radiology reports for this patient",
@@ -66,6 +67,12 @@ namespace BreastRadiology.XUnitTests
             };
             e.Find("result").SliceByUrl(targets);
             e.MapNode.AddProfileTargets(targets);
+
+            e.IntroDoc
+                .Paragraph(
+                    $"This resource is the base of the Breast Radiology Report.",
+                    $"Detailed information about the report is contained in sub sections referenced by this resource."
+                    );
         }
     }
 }

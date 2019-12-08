@@ -84,27 +84,28 @@ namespace BreastRadiology.XUnitTests
                     });
 
             SDefEditor e = this.CreateEditor("BreastRadUSMassPosteriorAcousticFeatures",
-                        "US Mass Posterior Acoustic Features",
-                        new string[] { "Posterior",  "Acoustic",  "Features" },
-                        ObservationUrl,
-                        out usMassPosteriorAcousticFeatures)
-                    .Description(new Markdown()
-                        .Paragraph("Breast Radiology Ultra-Sound Mass Posterior Acoustic Features Observation")
-                        .BiradHeader()
-                        .BlockQuote("Posterior acoustic features represent the attenuation characteristics of a mass with respect to its")
-                        .BlockQuote("acoustic transmission. Attenuation (shadowing) and enhancement are additional attributes of")
-                        .BlockQuote("masses, mostly of secondary rather than primary predictive value..")
-                        .BiradFooter()
-                        )
-                    .AddFragRef(this.ObservationCodedValueFragment)
-                    .AddFragRef(this.ObservationLeafFragment)
-                    ;
+                    "US Mass Posterior Acoustic Features",
+                    new string[] { "Posterior",  "Acoustic",  "Features" },
+                    ObservationUrl,
+                    out usMassPosteriorAcousticFeatures)
+                .Description(new Markdown()
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .Paragraph("Breast Radiology Ultra-Sound Mass Posterior Acoustic Features Observation")
+                    .BiradHeader()
+                    .BlockQuote("Posterior acoustic features represent the attenuation characteristics of a mass with respect to its")
+                    .BlockQuote("acoustic transmission. Attenuation (shadowing) and enhancement are additional attributes of")
+                    .BlockQuote("masses, mostly of secondary rather than primary predictive value..")
+                    .BiradFooter()
+                    )
+                .AddFragRef(this.ObservationCodedValueFragment)
+                .AddFragRef(this.ObservationLeafFragment)
+                ;
 
             e.Select("value[x]")
                 .Type("CodeableConcept")
                 .Binding(binding.Url, BindingStrength.Required)
                 ;
-            e.IntroDoc.CodedObservation(e, "an ultra-sound mass posterior acoustic feature", binding);
+            e.IntroDoc.CodedObservationLeafNode(e, "an ultra-sound mass posterior acoustic feature", binding);
         }
     }
 }

@@ -13,6 +13,8 @@ namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker : ConverterBase
     {
+        // todo: can this and mammo breast density be the same?
+
         String USTissueComposition
         {
             get
@@ -72,22 +74,23 @@ namespace BreastRadiology.XUnitTests
             );
 
             SDefEditor e = this.CreateEditor("BreastRadUSTissueComposition",
-                        "US Tissue Composition",
-                        new string[] {"Tissue","Composition"},
-                        ObservationUrl,
-                        out usTissueComposition)
-                    .Description(new Markdown()
-                        .Paragraph("Breast Radiology Ultra-Sound Tissue Composition Observation")
+                    "US Tissue Composition",
+                    new string[] {"Tissue","Composition"},
+                    ObservationUrl,
+                    out usTissueComposition)
+                .Description(new Markdown()
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .Paragraph("Breast Radiology Ultra-Sound Tissue Composition Observation")
                     )
-                    .AddFragRef(this.ObservationCodedValueFragment)
-                    .AddFragRef(this.ObservationLeafFragment)
-                    ;
+                .AddFragRef(this.ObservationCodedValueFragment)
+                .AddFragRef(this.ObservationLeafFragment)
+                ;
 
             e.Select("value[x]")
                 .Type("CodeableConcept")
                 .Binding(binding.Url, BindingStrength.Required)
                 ;
-            e.IntroDoc.CodedObservation(e, "an ultra-sound tissue composition", binding);
+            e.IntroDoc.CodedObservationLeafNode(e, "an ultra-sound tissue composition", binding);
             }
     }
 }

@@ -27,12 +27,13 @@ namespace BreastRadiology.XUnitTests
 
         String CreateBreastRadiologyRecommendationsExtension()
         {
-            SDefEditor e = this.CreateEditor("BreastRadRecommendations", 
-                "Recommendations",
-                new string[] {"Recommendations"}, 
+            SDefEditor e = this.CreateEditor("BreastRadRecommendationsExtension", 
+                "Recommendations Extension",
+                new string[] {"Recommendations", "Extension"}, 
                 ExtensionUrl,
                 out breastRadiologyRecommendationsExtension)
                 .Description(new Markdown()
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
                     .Paragraph("Diagnostic Report recommendations section extension")
                 )
                 .Kind(StructureDefinition.StructureDefinitionKind.ComplexType)
@@ -49,6 +50,8 @@ namespace BreastRadiology.XUnitTests
                 .TypeReference(MedicationRequestUrl, ServiceRequestUrl)
                 .Single()
                 ;
+
+            e.IntroDoc.Extension("Recommendations", "include references to recommendations");
             return e.SDef.Url;
         }
     }

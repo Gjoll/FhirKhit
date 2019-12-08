@@ -31,11 +31,16 @@ namespace BreastRadiology.XUnitTests
                     new string[] {"Patient History"},
                     ObservationUrl,
                     out sectionPatientHistory)
-                .Description(new Markdown().Paragraph("Patient History Section"))
+                .Description(new Markdown()
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .Paragraph("Patient History Section")
+                    )
                 .AddFragRef(this.ObservationSectionFragment)
                 .AddFragRef(this.ObservationNoValueFragment)
                 ;
             e.Select("bodySite").Zero();
+
+            e.IntroDoc.ObservationSection($"Patient History");
         }
     }
 }

@@ -27,7 +27,10 @@ namespace BreastRadiology.XUnitTests
                     new string[] {"Section", "Fragment"},
                     ObservationUrl,
                     out observationSectionFragment)
-                .Description(new Hl7.Fhir.Model.Markdown("Fragment that constrains Observations to be sections."))
+                .Description(new Hl7.Fhir.Model.Markdown()
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .Paragraph("Fragment that constrains Observations to be sections.")
+                    )
                 .AddFragRef(this.ObservationFragment)
                 ;
 
@@ -39,6 +42,8 @@ namespace BreastRadiology.XUnitTests
             e.Select("note").Zero();
             e.Select("method").Zero();
             e.Select("component").Zero();
+
+            e.IntroDoc.Fragment($"Resource fragment used by observations that are used as report sections.");
         }
     }
 }

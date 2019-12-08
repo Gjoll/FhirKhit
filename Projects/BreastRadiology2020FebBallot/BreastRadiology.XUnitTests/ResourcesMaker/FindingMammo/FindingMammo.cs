@@ -32,12 +32,13 @@ namespace BreastRadiology.XUnitTests
                     ObservationUrl,
                     out findingMammo)
                 .Description(new Markdown()
-                            .Paragraph("Breast Radiology Mammography Finding")
-                            .Paragraph("Todo: The following items need further specification.")
-                            .List(
-                                "Device Metrics detailing the observation devices parameters (transducer freq, etc)."
-                                )
-                            )
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .Paragraph("Breast Radiology Mammography Finding")
+                    .Paragraph("Todo: The following items need further specification.")
+                    .List(
+                        "Device Metrics detailing the observation devices parameters (transducer freq, etc)."
+                        )
+                    )
                 .AddFragRef(this.ObservationSectionFragment)
                 .AddFragRef(this.ObservationNoValueFragment)
                 ;
@@ -63,6 +64,8 @@ namespace BreastRadiology.XUnitTests
                 e.Find("hasMember").SliceByUrl(targets);
                 e.MapNode.AddProfileTargets(targets);
             }
+
+            e.IntroDoc.ObservationSection("MRI Abnormality");
         }
     }
 }

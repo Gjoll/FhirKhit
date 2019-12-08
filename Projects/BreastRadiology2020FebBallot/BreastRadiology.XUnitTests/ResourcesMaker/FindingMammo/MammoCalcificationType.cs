@@ -197,20 +197,23 @@ namespace BreastRadiology.XUnitTests
                 );
 
             SDefEditor e = this.CreateEditor("BreastRadMammoCalcificationType",
-                        "Mammo Calcification Type",
-                    new string[] { "Type" },
-                    ObservationUrl,
-                    out mammoCalcificationType)
-                    .Description(new Markdown().Paragraph("Breast Radiology Mammography Calcification Type Observation"))
-                    .AddFragRef(this.ObservationCodedValueFragment)
-                    .AddFragRef(this.ObservationLeafFragment)
-                    ;
+                "Mammo Calcification Type",
+                new string[] { "Type" },
+                ObservationUrl,
+                out mammoCalcificationType)
+                .Description(new Markdown()
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .Paragraph("Breast Radiology Mammography Calcification Type Observation")
+                    )
+                .AddFragRef(this.ObservationCodedValueFragment)
+                .AddFragRef(this.ObservationLeafFragment)
+                ;
 
             e.Select("value[x]")
                 .Type("CodeableConcept")
                 .Binding(binding.Url, BindingStrength.Required)
                 ;
-            e.IntroDoc.CodedObservation(e, "a mammography calcification type", binding);
+            e.IntroDoc.CodedObservationLeafNode(e, "a mammography calcification type", binding);
         }
     }
 }

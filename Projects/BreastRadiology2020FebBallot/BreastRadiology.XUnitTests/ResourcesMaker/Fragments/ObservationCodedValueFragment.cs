@@ -30,16 +30,20 @@ namespace BreastRadiology.XUnitTests
                     new string[] {"Observation","CodedValue", "Fragment"},
                     ObservationUrl,
                     out observationCodedValueFragment)
-                .Description(new Hl7.Fhir.Model.Markdown("Fragment that defines values for coded observations."))
+                .Description(new Hl7.Fhir.Model.Markdown()
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .Paragraph("Fragment that defines values for coded observations.")
+                )
                 .AddFragRef(this.HeaderFragment)
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)
-                .AddExtensionLink(this.BreastBodyLocationExtension)
                 .AddFragRef(this.ObservationFragment)
                 ;
 
             e.Select("value[x]")
                 .Type("CodeableConcept")
                 ;
+
+            e.IntroDoc.Fragment($"Resource fragment used to by all observations whose value are a CodeableConcept.");
         }
     }
 }

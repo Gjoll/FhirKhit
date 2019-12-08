@@ -23,6 +23,12 @@ namespace BreastRadiology.XUnitTests
                 ;
         }
 
+        public IntroDoc AddSvgImage(SDefEditor e)
+        {
+            AddSvgImage(FocusMapMaker.FocusMapName(e.MapNode));
+            return this;
+        }
+
         public IntroDoc AddSvgImage(String svgFileName)
         {
             sb
@@ -32,6 +38,49 @@ namespace BreastRadiology.XUnitTests
                 ;
 
             return this;
+        }
+
+        public IntroDoc ObservationSection(String name)
+        {
+                this.Paragraph(
+                    $"This resource is an '{name}' section.",
+                    $"Information about the finding is contained in this observation and observations",
+                    $"referenced by this resource's hasMember field."
+                    );
+            return this;
+        }
+
+        public IntroDoc ObservationLeafNode(String leafNode)
+        {
+                this.Paragraph(
+                    $"This resource is an leaf-node observation of a {leafNode}.",
+                    $"It is referenced by an parent Observation section that references other information about this specific abnormality"
+                    );
+            return this;
+        }
+
+        public void Fragment(String purpose)
+        {
+            this.Paragraph($"{purpose}.");
+        }
+
+        public void Extension(String name, String purpose)
+        {
+            this.Paragraph($"{name} Extension Resource used to {purpose}.");
+        }
+
+        public void CodedObservationLeafNode(SDefEditor e,
+            String leafNode,
+            ValueSet binding)
+        {
+            this
+                .Paragraph(
+                    $"This resource is an leaf-node observation of a {leafNode}.",
+                    $"It is referenced by an parent Observation section that references other information about this specific abnormality",
+                    $"Observation.value[x] is a single codeableConcept, and is bound to one of the following values"
+                )
+                .List(binding)
+                ;
         }
 
         public IntroDoc Paragraph(params String[] lines)
@@ -63,20 +112,6 @@ namespace BreastRadiology.XUnitTests
             }
             sb.AppendLine("    </ul>");
             return this;
-        }
-
-        public void CodedObservation(SDefEditor e,
-            String observable,
-            ValueSet binding)
-        {
-            this
-                .AddSvgImage(FocusMapMaker.FocusMapName(e.MapNode))
-                .Paragraph(
-                    $"This resource is a simple observation of {observable}.",
-                    $"value[x] is a single codeableConcept, and is bound to one of the following values"
-                )
-                .List(binding)
-                ;
         }
 
         public String Render()

@@ -35,6 +35,8 @@ namespace BreastRadiology.XUnitTests
                     ObservationUrl,
                     out usMass)
                 .Description(new Markdown()
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
                     .Paragraph("Breast Radiology Mammography Mass Observation")
                     .MissingObservation("a mass", "and no Shape, Orientation, Margin, Echo Pattern, or Posterior Acoustic Feature observations should be referenced by this observation")
                     .BiradHeader()
@@ -54,7 +56,8 @@ namespace BreastRadiology.XUnitTests
             {
                 ProfileTargetSlice[] targets = new ProfileTargetSlice[]
                 {
-                    new ProfileTargetSlice(this.BreastRadMassSize, 0, "1"),
+                    new ProfileTargetSlice(this.BreastRadSize, 0, "1"),
+                    new ProfileTargetSlice(this.BreastRadCount, 0, "1"),
                     new ProfileTargetSlice(this.BreastRadMassShape, 0, "1"),
                     new ProfileTargetSlice(this.USMassOrientation, 0, "1"),
                     new ProfileTargetSlice(this.USMassMargin, 0, "1"),
@@ -67,6 +70,8 @@ namespace BreastRadiology.XUnitTests
                 e.Find("hasMember").SliceByUrl(targets);
                 e.MapNode.AddProfileTargets(targets);
             }
+
+            e.IntroDoc.ObservationSection($"Ultra-Sound Mass");
         }
     }
 }

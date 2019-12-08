@@ -53,7 +53,7 @@ namespace BreastRadiology.XUnitTests
             get
             {
                 if (findingUltraSound == null)
-                     CreateFindingUltraSound();
+                    CreateFindingUltraSound();
                 return findingUltraSound;
             }
         }
@@ -62,13 +62,13 @@ namespace BreastRadiology.XUnitTests
         void CreateFindingUltraSound()
         {
             //$ Fix me. Incorrect method!!!
-            SDefEditor e =  this.CreateEditor("BreastRadUltraSoundFinding",
+            SDefEditor e = this.CreateEditor("BreastRadUltraSoundFinding",
                     "UltraSound Finding",
-                    new string[] {"UltraSound", "Finding"},
+                    new string[] { "UltraSound", "Finding" },
                     ObservationUrl,
                     out findingUltraSound)
-                .Description(
-                    new Markdown()
+                .Description(new Markdown()
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
                     .Paragraph("Breast Radiology Ultra Sound Finding")
                     .Paragraph("Todo: The following items need further specification.")
                     .List(
@@ -98,6 +98,7 @@ namespace BreastRadiology.XUnitTests
                 e.Find("hasMember").SliceByUrl(targets);
                 e.MapNode.AddProfileTargets(targets);
             }
+            e.IntroDoc.ObservationSection("Ultra-Sound Abnormality");
         }
     }
 }

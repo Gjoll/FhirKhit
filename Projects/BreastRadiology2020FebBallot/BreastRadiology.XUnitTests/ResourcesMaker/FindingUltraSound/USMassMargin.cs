@@ -108,6 +108,7 @@ namespace BreastRadiology.XUnitTests
                     ObservationUrl,
                     out usMassMargin)
                 .Description(new Markdown()
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
                     .Paragraph("Breast Radiology Ultra-Sound Mass Margin Observation")
                     .MissingObservation("a mass margin")
                     .BiradHeader()
@@ -144,6 +145,7 @@ namespace BreastRadiology.XUnitTests
                 e.Find("value[x]")
                     .SliceByPatterns("CodeableConcept", patternSlices)
                     ;
+            e.IntroDoc.CodedObservationLeafNode(e, "a mass margin", binding);
             }
         }
     }

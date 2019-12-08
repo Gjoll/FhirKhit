@@ -35,6 +35,7 @@ namespace BreastRadiology.XUnitTests
                     ObservationUrl,
                     out mammoMass)
                 .Description(new Markdown()
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
                     .Paragraph("Breast Radiology Mammography Mass Observation")
                     .MissingObservation("a mass", "and no Shape, Margin, or Density observations should be referenced by this observation")
                     .BiradHeader()
@@ -54,8 +55,9 @@ namespace BreastRadiology.XUnitTests
             {
                 ProfileTargetSlice[] targets = new ProfileTargetSlice[]
                 {
+                    new ProfileTargetSlice(this.BreastRadSize, 0, "1"),
+                    new ProfileTargetSlice(this.BreastRadCount, 0, "1"),
                     new ProfileTargetSlice(this.BreastRadMassShape, 0, "1"),
-                    new ProfileTargetSlice(this.BreastRadMassSize, 0, "1"),
                     new ProfileTargetSlice(this.MammoMassMargin, 0, "1"),
                     new ProfileTargetSlice(this.MammoMassDensity, 0, "1"),
                     new ProfileTargetSlice(this.BreastRadObservedChanges, 0, "*"),
@@ -65,6 +67,8 @@ namespace BreastRadiology.XUnitTests
                 e.Find("hasMember").SliceByUrl(targets);
                 e.MapNode.AddProfileTargets(targets);
             }
+
+            e.IntroDoc.ObservationSection("Mammography Mass");
         }
     }
 }

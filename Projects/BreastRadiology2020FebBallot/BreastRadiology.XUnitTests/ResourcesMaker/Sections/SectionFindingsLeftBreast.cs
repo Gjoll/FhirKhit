@@ -31,13 +31,18 @@ namespace BreastRadiology.XUnitTests
                     new string[] {"Left Breast"},
                     ObservationUrl,
                     out sectionFindingsLeftBreast)
-                .Description(new Markdown().Paragraph("Findings Left Breast Section"))
+                .Description(new Markdown()
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .Paragraph("Findings Left Breast Section")
+                    )
                 .AddFragRef(this.ObservationSectionFragment)
                 .AddFragRef(this.ObservationNoValueFragment)
                 ;
             e.Select("bodySite").Zero();
             e.Find("hasMember").SliceByUrl(this.FindingBreastTargets);
             e.MapNode.AddProfileTargets(this.FindingBreastTargets);
+
+            e.IntroDoc.ObservationSection($"Abnormality Left Breast Finding");
         }
     }
 }

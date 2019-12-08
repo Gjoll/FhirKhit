@@ -26,12 +26,17 @@ namespace BreastRadiology.XUnitTests
                     new string[] {"Observation", "Leaf", "Fragment" },
                 ObservationUrl,
                 out observationLeafFragment)
-                .Description(new Hl7.Fhir.Model.Markdown("Fragment that defines restricts observations leaf nodes (no hasMembers references)."))
+                .Description(new Hl7.Fhir.Model.Markdown()
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .Paragraph("Fragment that constrains observations leaf nodes (no hasMembers references).")
+                    )
                 .AddFragRef(this.HeaderFragment)
                 .AddFragRef(this.CategoryFragment)
                 .AddFragRef(this.ObservationFragment)
             ;
             e.Select("hasMember").Zero();
+
+            e.IntroDoc.Fragment($"Resource fragment used by resources that are leaf node observations.");
         }
     }
 }

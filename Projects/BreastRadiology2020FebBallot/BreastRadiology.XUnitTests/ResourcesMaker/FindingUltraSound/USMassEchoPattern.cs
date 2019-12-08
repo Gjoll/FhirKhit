@@ -89,30 +89,31 @@ namespace BreastRadiology.XUnitTests
                     });
 
             SDefEditor e = this.CreateEditor("BreastRadUSMassEchoPattern",
-                        "US Mass Echo Pattern",
-                        new string[] { "Echo Pattern" },
-                        ObservationUrl,
-                        out usMassEchoPattern)
-                    .Description(new Markdown()
-                        .Paragraph("Breast Radiology Ultra-Sound Mass Echo Pattern Observation")
-                        .BiradHeader()
-                        .BlockQuote("The echogenicity of most benign and malignant masses is hypoechoic compared with ")
-                        .BlockQuote("mammary fat. While many completely echogenic masses are benign, prospective assessment as")
-                        .BlockQuote("benign has greater dependency on marginal circumscription. Although the echo pattern")
-                        .BlockQuote("contributes with other feature categories to the assessment of a breast lesion, echogenicity")
-                        .BlockQuote("alone has little specificity.")
-                        .BiradFooter()
-                        )
-                    .AddFragRef(this.ObservationCodedValueFragment)
+                    "US Mass Echo Pattern",
+                    new string[] { "Echo Pattern" },
+                    ObservationUrl,
+                    out usMassEchoPattern)
+                .Description(new Markdown()
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .Paragraph("Breast Radiology Ultra-Sound Mass Echo Pattern Observation")
+                    .BiradHeader()
+                    .BlockQuote("The echogenicity of most benign and malignant masses is hypoechoic compared with ")
+                    .BlockQuote("mammary fat. While many completely echogenic masses are benign, prospective assessment as")
+                    .BlockQuote("benign has greater dependency on marginal circumscription. Although the echo pattern")
+                    .BlockQuote("contributes with other feature categories to the assessment of a breast lesion, echogenicity")
+                    .BlockQuote("alone has little specificity.")
+                    .BiradFooter()
+                    )
+                .AddFragRef(this.ObservationCodedValueFragment)
                 .AddFragRef(this.ObservationLeafFragment)
-                    ;
+                ;
 
             e.Select("value[x]")
                 .Type("CodeableConcept")
                 .Binding(binding.Url, BindingStrength.Required)
                 ;
 
-            e.IntroDoc.CodedObservation(e, "an ultra-sound mass echo pattern", binding);
+            e.IntroDoc.CodedObservationLeafNode(e, "an ultra-sound mass echo pattern", binding);
         }
     }
 }

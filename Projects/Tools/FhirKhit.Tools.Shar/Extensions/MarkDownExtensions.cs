@@ -13,8 +13,22 @@ namespace FhirKhit.Tools.R3
 namespace FhirKhit.Tools.R2
 #endif
 {
+    public enum ReviewStatus
+    {
+        NotReviewed,
+        Preliminary,
+        Completed
+    };
+
     public static class MarkDownExtensions
     {
+        public static Markdown ReviewedStatus(this Markdown md, ReviewStatus reviewStatus)
+        {
+            md.Value += $"---\n";
+            md.Value += $"** ReviewStatus: {reviewStatus} **\n";
+            md.Value += $"---\n";
+            return md;
+        }
 
         public static Markdown Paragraph(this Markdown md, params string[] lines)
         {

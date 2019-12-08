@@ -37,6 +37,7 @@ namespace BreastRadiology.XUnitTests
                 ObservationUrl,
                 out mammoSkinThickening)
                 .Description(new Markdown()
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
                     .Paragraph("Skin Thickening Observation")
                     .BiradHeader()
                     .BlockQuote("Skin thickening may be focal or diffuse, and is defined as being greater than 2 mm in thickness. This ")
@@ -47,6 +48,8 @@ namespace BreastRadiology.XUnitTests
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)
                 .AddExtensionLink(this.BreastBodyLocationExtension)
                 ;
+
+            e.IntroDoc.ObservationLeafNode("Skin Thickening");
         }
     }
 }

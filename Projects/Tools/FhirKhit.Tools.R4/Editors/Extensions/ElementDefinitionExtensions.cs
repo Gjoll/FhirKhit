@@ -152,6 +152,20 @@ namespace FhirKhit.Tools.R4
             return e.Type(new ElementDefinition.TypeRefComponent[] { t });
         }
 
+        public static ElementDefinition Types(this ElementDefinition e,
+            params String[] codes)
+        {
+            List<ElementDefinition.TypeRefComponent> types = new List<ElementDefinition.TypeRefComponent>();
+            foreach (String code in codes)
+            {
+                ElementDefinition.TypeRefComponent t = new ElementDefinition.TypeRefComponent
+                {
+                    Code = code
+                };
+                types.Add(t);
+            }
+            return e.Type(types.ToArray());
+        }
 
     }
 }

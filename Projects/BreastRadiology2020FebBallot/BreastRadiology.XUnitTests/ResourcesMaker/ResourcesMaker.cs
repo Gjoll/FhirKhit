@@ -23,7 +23,7 @@ namespace BreastRadiology.XUnitTests
 
     partial class ResourcesMaker : ConverterBase
     {
-        public static String BiRadCitation= "Bi-Rads® Atlas — Mammography Fifth Ed. 2013";
+        public static String BiRadCitation = "Bi-Rads® Atlas — Mammography Fifth Ed. 2013";
         const FHIRVersion FVersion = FHIRVersion.N4_0_0;
 
         const String ProfileVersion = "0.0.2";
@@ -268,6 +268,8 @@ namespace BreastRadiology.XUnitTests
 
         void SaveAll()
         {
+            const String fcn = "SaveAll";
+
             foreach (KeyValuePair<string, Resource> resourceItem in this.resources)
             {
                 resourceItem.Value.SaveJson(resourceItem.Key);
@@ -276,9 +278,15 @@ namespace BreastRadiology.XUnitTests
 
             foreach (SDefEditor ce in this.editors.Values)
             {
-                ce.Write(out String fragmentName, out String introName);
-                this.fc.Mark(fragmentName);
-                if (introName != null)
+                if (ce.WriteFragment(out String fragmentName))
+                    this.fc.Mark(fragmentName);
+                if (ce.WriteIntro(out String introName) == false)
+                {
+                    this.ConversionError(this.GetType().Name,
+                        fcn,
+                        $"{ce.SDef.Name} has no intro section");
+                }
+                else
                     this.fc.Mark(introName);
             }
         }

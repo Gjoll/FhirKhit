@@ -20,7 +20,10 @@ namespace BreastRadiology.XUnitTests
             get
             {
                 if (this.introDoc == null)
+                {
                     this.introDoc = new IntroDoc();
+                    this.introDoc.AddSvgImage(this);
+                }
                 return this.introDoc;
             }
         }
@@ -167,8 +170,7 @@ namespace BreastRadiology.XUnitTests
             return ed;
         }
 
-        public void Write(out String fragmentName,
-            out String introName)
+        public bool WriteFragment(out String fragmentName)
         {
             foreach (ElementDefGroup item in this.elementOrder)
             {
@@ -185,13 +187,18 @@ namespace BreastRadiology.XUnitTests
 
             fragmentName = Path.Combine(this.fragmentDir, $"StructureDefinition-{this.sDef.Name}.json");
             this.sDef.SaveJson(fragmentName);
+            return true;
+        }
+
+        public bool WriteIntro(out String introName)
+        {
             introName = null;
-            if (this.introDoc != null)
-            {
-                introName = Path.Combine(this.pageDir, $"StructureDefinition-{this.sDef.Name}-intro.xml");
-                String introHtml = introDoc.Render();
-                File.WriteAllText(introName, introHtml);
-            }
+            if (this.introDoc == null)
+                return false;
+            introName = Path.Combine(this.pageDir, $"StructureDefinition-{this.sDef.Name}-intro.xml");
+            String introHtml = introDoc.Render();
+            File.WriteAllText(introName, introHtml);
+            return true;
         }
 
         /// <summary>
@@ -207,7 +214,7 @@ namespace BreastRadiology.XUnitTests
                 extDef.ConfigureSliceByUrlDiscriminator();
         }
 
-        public ElementDefinition ApplyExtension(String name, String extensionUrl, bool showChildren = true)
+        public ElementDefinition ApplyExtension(String name, String extensionUrl, bool showChildren = true, bool addLink = true)
         {
             this.MapNode.AddLink("target", extensionUrl, showChildren);
             this.ConfigureExtensionSlice();

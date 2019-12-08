@@ -32,6 +32,7 @@ namespace BreastRadiology.XUnitTests
                 ObservationUrl,
                 out mammoSkinLesion)
                 .Description(new Markdown()
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
                     .Paragraph("Breast Radiology Mammography Skin Lesion Observation")
                     .MissingObservation("a skin lesion")
                     .BiradHeader()
@@ -45,8 +46,22 @@ namespace BreastRadiology.XUnitTests
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)
                 .AddExtensionLink(this.BreastBodyLocationExtension)
                 .AddFragRef(this.ObservationNoValueFragment)
-                .AddFragRef(this.ObservationLeafFragment)
+                .AddFragRef(this.ObservationSectionFragment)
                 ;
+
+            {
+                ProfileTargetSlice[] targets = new ProfileTargetSlice[]
+                {
+                    new ProfileTargetSlice(this.BreastRadSize, 0, "1"),
+                    new ProfileTargetSlice(this.BreastRadCount, 0, "1"),
+                    new ProfileTargetSlice(this.BreastRadObservedChanges, 0, "*"),
+                    new ProfileTargetSlice(this.BreastRadObservedState, 0, "1", false)
+                };
+                e.Find("hasMember").SliceByUrl(targets);
+                e.MapNode.AddProfileTargets(targets);
+            }
+
+            e.IntroDoc.ObservationLeafNode($"Skin Lesion");
         }
     }
 }

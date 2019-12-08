@@ -32,18 +32,20 @@ namespace BreastRadiology.XUnitTests
                     new string[] {"MRI", "Finding"},
                     ObservationUrl,
                     out findingMri)
-                .Description(
-                    new Markdown()
-                        .Paragraph("Breast Radiology MRI Finding")
-                        .Paragraph("Todo: The following items need further specification.")
-                        .List(
-                            "Device Metrics detailing the observation devices parameters.",
-                            "Add information about contrast enhancement/other observation specific parameters."
-                            )
+                .Description(new Markdown()
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .Paragraph("Breast Radiology MRI Finding")
+                    .Paragraph("Todo: The following items need further specification.")
+                    .List(
+                        "Device Metrics detailing the observation devices parameters.",
+                        "Add information about contrast enhancement/other observation specific parameters."
                         )
+                    )
                 .AddFragRef(this.ObservationSectionFragment)
                 .AddFragRef(this.ObservationNoValueFragment)
             ;
+
+            e.IntroDoc.ObservationSection("MRI Abnormality");
             //$e.Find("method")
             //$     .FixedCodeSlice("method", "http://snomed.info/sct", "115341008")
             //$     .Card(1, "*")

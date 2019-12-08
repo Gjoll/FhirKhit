@@ -87,29 +87,34 @@ namespace BreastRadiology.XUnitTests
                 );
 
             SDefEditor e = this.CreateEditor("BreastRadMammoAsymmetries",
-                        "Mammo Asymmetries",
-                        new string[] {"Asymmetries"},
-                        ObservationUrl,
-                        out mammoAsymmetries)
-                    .Description(new Markdown()
-                        .Paragraph("Breast Radiology Mammography Asymmetries Observation")
-                        .MissingObservation("an asymmetry")
-                        .BiradHeader()
-                        .BlockQuote("The several types of asymmetry involve a spectrum of mammographic findings that represent")
-                        .BlockQuote("unilateral deposits of fibroglandular tissue not conforming to the definition of a radiodense mass.")
-                        .BlockQuote("The asymmetry, unlike a mass, is visible on only 1 mammographic projection. The other 3 types of")
-                        .BlockQuote("asymmetry, although visible on more than 1 projection, have concave-outward borders and usu-")
-                        .BlockQuote("ally are seen to be interspersed with fat, whereas a radiodense mass displays completely or partially")
-                        .BlockQuote("convex-outward borders and appears to be denser in the center than at the periphery.")
-                        .BiradFooter()
-                        )
-                    .AddFragRef(this.ObservationCodedValueFragment)
-                    .AddFragRef(this.ObservationLeafFragment)
-                ;
+                    "Mammo Asymmetries",
+                    new string[] {"Asymmetries"},
+                    ObservationUrl,
+                    out mammoAsymmetries)
+                .Description(new Markdown()
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .Paragraph("Breast Radiology Mammography Asymmetries Observation")
+                    .MissingObservation("an asymmetry")
+                    .BiradHeader()
+                    .BlockQuote("The several types of asymmetry involve a spectrum of mammographic findings that represent")
+                    .BlockQuote("unilateral deposits of fibroglandular tissue not conforming to the definition of a radiodense mass.")
+                    .BlockQuote("The asymmetry, unlike a mass, is visible on only 1 mammographic projection. The other 3 types of")
+                    .BlockQuote("asymmetry, although visible on more than 1 projection, have concave-outward borders and usu-")
+                    .BlockQuote("ally are seen to be interspersed with fat, whereas a radiodense mass displays completely or partially")
+                    .BlockQuote("convex-outward borders and appears to be denser in the center than at the periphery.")
+                    .BiradFooter()
+                    )
+                .AddFragRef(this.BreastBodyLocationRequiredFragment)
+                .AddExtensionLink(this.BreastBodyLocationExtension)
+                .AddFragRef(this.ObservationCodedValueFragment)
+                .AddFragRef(this.ObservationSectionFragment)
+            ;
 
             {
                 ProfileTargetSlice[] targets = new ProfileTargetSlice[]
                 {
+                    new ProfileTargetSlice(this.BreastRadSize, 0, "1"),
+                    new ProfileTargetSlice(this.BreastRadCount, 0, "1"),
                     new ProfileTargetSlice(this.BreastRadObservedChanges, 0, "*"),
                     new ProfileTargetSlice(this.MammoAssociatedFeatures, 0, "1", false)
                 };
@@ -121,7 +126,7 @@ namespace BreastRadiology.XUnitTests
                 .Binding(binding.Url, BindingStrength.Required)
                 ;
 
-            e.IntroDoc.CodedObservation(e, "a mammography asymmetry", binding);
+            e.IntroDoc.CodedObservationLeafNode(e, "a mammography asymmetry", binding);
         }
     }
 }

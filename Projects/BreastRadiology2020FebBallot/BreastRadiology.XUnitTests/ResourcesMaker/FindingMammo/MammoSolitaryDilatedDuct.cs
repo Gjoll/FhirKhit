@@ -13,6 +13,7 @@ namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker : ConverterBase
     {
+        // todo: should this be a leaf node (how about shape, density, location, etc).
         String MammoSolitaryDilatedDuct
         {
             get
@@ -32,6 +33,7 @@ namespace BreastRadiology.XUnitTests
                     ObservationUrl,
                     out mammoSolitaryDilatedDuct)
                 .Description(new Markdown()
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
                     .Paragraph("Breat Radiology Mammography Solitary Dilated Duct Observation")
                     .MissingObservation("a solitary dilated duct")
                     .BiradHeader()
@@ -45,6 +47,8 @@ namespace BreastRadiology.XUnitTests
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)
                 .AddExtensionLink(this.BreastBodyLocationExtension)
                 ;
+
+            e.IntroDoc.ObservationLeafNode($"Solitary Dilated Duct");
         }
     }
 }

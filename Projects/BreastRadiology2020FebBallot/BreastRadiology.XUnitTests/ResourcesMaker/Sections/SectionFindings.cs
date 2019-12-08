@@ -31,7 +31,10 @@ namespace BreastRadiology.XUnitTests
                     new string[] {"Findings"},
                     ObservationUrl,
                     out sectionFindings)
-                .Description(new Markdown().Paragraph("Findings Section"))
+                .Description(new Markdown().Paragraph()
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .Paragraph("Findings Section")
+                    )
                 .AddFragRef(this.ObservationSectionFragment)
                 .AddFragRef(this.ObservationNoValueFragment)
                 ;
@@ -46,6 +49,8 @@ namespace BreastRadiology.XUnitTests
                 e.Find("hasMember").SliceByUrl(targets);
                 e.MapNode.AddProfileTargets(targets);
             }
+
+            e.IntroDoc.ObservationSection($"Abnormality Finding");
         }
     }
 }

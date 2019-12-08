@@ -27,12 +27,13 @@ namespace BreastRadiology.XUnitTests
 
         String CreateBreastRadiologyPriorReportsExtension()
         {
-            SDefEditor e = this.CreateEditor("BreastRadPriorReports", 
-                "Prior Reports",
-                new string[] {"Prior Reports"}, 
+            SDefEditor e = this.CreateEditor("BreastRadPriorReportsExtension", 
+                "Prior Reports Extension",
+                new string[] {"Prior Reports", "Extension"}, 
                 ExtensionUrl,
                 out breastRadiologyPriorReportsExtension)
                 .Description(new Markdown()
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
                     .Paragraph("Prior Diagnostic Report extension")
                     )
                 .Kind(StructureDefinition.StructureDefinitionKind.ComplexType)
@@ -49,6 +50,8 @@ namespace BreastRadiology.XUnitTests
                 .TypeReference(this.BreastRadiologyReport)
                 .Single()
                 ;
+
+            e.IntroDoc.Extension("Prior Reports", "include references to prior reports");
             return e.SDef.Url;
         }
     }

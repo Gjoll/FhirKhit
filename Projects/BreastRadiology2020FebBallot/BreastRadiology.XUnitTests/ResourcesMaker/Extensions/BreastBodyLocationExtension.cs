@@ -32,7 +32,7 @@ namespace BreastRadiology.XUnitTests
             SDefEditor e;
             ElementDefGroup eGroup;
             ElementDefinition topExtension;
-            
+
             void SliceAndBind(String sliceName,
                 String bindName)
             {
@@ -65,7 +65,10 @@ namespace BreastRadiology.XUnitTests
                 new string[] { "Breast", "Body", "Location" },
                 ExtensionUrl,
                 out breastBodyLocationExtension)
-                .Description(new Markdown("Breast Body Location extension"))
+                .Description(new Markdown()
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .Paragraph("Breast Body Location extension")
+                    )
                 .Kind(StructureDefinition.StructureDefinitionKind.ComplexType)
                 .Context()
                 ;
@@ -360,6 +363,8 @@ namespace BreastRadiology.XUnitTests
                             BindingStrength.Required)
                     ;
                 distanceFromNippleGroup.RelatedElements.Add(quantityCode);
+
+                e.IntroDoc.Extension("Breast Body Location", "define a location in the breast");
             }
         }
     }

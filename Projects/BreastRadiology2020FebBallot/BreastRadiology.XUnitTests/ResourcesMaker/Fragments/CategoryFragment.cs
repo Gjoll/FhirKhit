@@ -32,13 +32,18 @@ namespace BreastRadiology.XUnitTests
                     new string[] {"Category","Fragment"},
                     ObservationUrl,
                     out findingCategoryFragment)
-                .Description(new Markdown("Fragment definition that slices category and adds the observation code value"))
+                .Description(new Markdown()
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .Paragraph("Fragment definition that slices category and adds the observation code value")
+                    )
                 ;
             ElementDefGroup eDef = e.Find("category");
             eDef.ElementDefinition.Card(1, eDef.BaseElementDefinition.Max);
             eDef.FixedCodeSlice("category",
                 "http://terminology.hl7.org/CodeSystem/observation-category",
                 "imaging");
+
+            e.IntroDoc.Fragment($"Resource fragment used to by observations to fix the Observation.category field to the 'imaging' fixed value.");
         }
     }
 }

@@ -108,6 +108,7 @@ namespace BreastRadiology.XUnitTests
                     ObservationUrl,
                     out breastRadObservedChanges)
                 .Description(new Markdown()
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
                     .Paragraph("Breast Radiology Observed Changes Observation")
                     .MissingObservation("an observed change")
                     )
@@ -119,7 +120,7 @@ namespace BreastRadiology.XUnitTests
                 .Type("CodeableConcept")
                 .Binding(binding.Url, BindingStrength.Required)
                 ;
-            e.IntroDoc.CodedObservation(e, "an abnormality observed change", binding);
+            e.IntroDoc.CodedObservationLeafNode(e, "an abnormality observed change", binding);
         }
     }
 }
