@@ -54,6 +54,7 @@ namespace BreastRadiology.XUnitTests
                         .List("Calcification Type", "Calcification Distribution")
                     )
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)
+                .AddExtensionLink(this.BreastBodyLocationExtension)
                 .AddFragRef(this.ObservationSectionFragment)
                 .AddFragRef(this.ObservationNoValueFragment)
                 ;

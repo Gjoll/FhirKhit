@@ -106,12 +106,12 @@ namespace BreastRadiology.XUnitTests
                         File.Delete(file);
                 }
 
-                ResourcesMaker pc = new ResourcesMaker(this.fragmentDir, this.cacheDir);
+                ResourcesMaker pc = new ResourcesMaker(this.fragmentDir, this.pageDir, this.cacheDir);
                 pc.StatusErrors += this.StatusErrors;
                 pc.StatusInfo += this.StatusInfo;
                 pc.StatusWarnings += this.StatusWarnings;
                 pc.CreateResources();
-                pc.CreateFocusMaps(this.graphicsDir, this.pageDir);
+                pc.CreateFocusMaps(this.graphicsDir);
                 pc.CreateResourceMap(graphicsDir);
                 if (pc.HasErrors)
                 {

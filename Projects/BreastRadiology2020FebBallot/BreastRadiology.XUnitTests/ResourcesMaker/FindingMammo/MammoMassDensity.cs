@@ -27,7 +27,7 @@ namespace BreastRadiology.XUnitTests
 
         void CreateMammoMassDensity()
         {
-            String binding = this.CreateValueSet(
+            ValueSet binding = this.CreateValueSet(
                 "BreastRadMammoMassDensity",
                 "Mammo Mass Density",
                 new Markdown()
@@ -70,8 +70,7 @@ namespace BreastRadiology.XUnitTests
                                 .Line("benign mass.")
                             .CiteEnd(BiRadCitation)
                             )
-                    })
-                .Url;
+                    });
 
             SDefEditor e = this.CreateEditor("BreastRadMammoMassDensity",
                         "Mammo Mass Density",
@@ -99,8 +98,9 @@ namespace BreastRadiology.XUnitTests
 
             e.Select("value[x]")
                 .Type("CodeableConcept")
-                .Binding(binding, BindingStrength.Required)
+                .Binding(binding.Url, BindingStrength.Required)
                 ;
+            e.IntroDoc.CodedObservation(e, "a mammography mass density", binding);
         }
     }
 }

@@ -27,7 +27,7 @@ namespace BreastRadiology.XUnitTests
 
         void CreateUSMassPosteriorAcousticFeatures()
         {
-            String binding = this.CreateValueSet(
+            ValueSet binding = this.CreateValueSet(
                 "BreastRadUSMassPosteriorAcousticFeatures",
                 "US Mass Posterior Acoustic Features",
                 new Markdown()
@@ -81,8 +81,7 @@ namespace BreastRadiology.XUnitTests
                                 .Line("acoustic shadowing.")
                             .CiteEnd(BiRadCitation)
                             )
-                    })
-                .Url;
+                    });
 
             SDefEditor e = this.CreateEditor("BreastRadUSMassPosteriorAcousticFeatures",
                         "US Mass Posterior Acoustic Features",
@@ -103,8 +102,9 @@ namespace BreastRadiology.XUnitTests
 
             e.Select("value[x]")
                 .Type("CodeableConcept")
-                .Binding(binding, BindingStrength.Required)
+                .Binding(binding.Url, BindingStrength.Required)
                 ;
+            e.IntroDoc.CodedObservation(e, "an ultra-sound mass posterior acoustic feature", binding);
         }
     }
 }

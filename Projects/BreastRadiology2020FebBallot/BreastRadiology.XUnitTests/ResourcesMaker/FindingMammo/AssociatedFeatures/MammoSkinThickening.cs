@@ -43,8 +43,9 @@ namespace BreastRadiology.XUnitTests
                     .BlockQuote("finding is of particular concern if it represents a change from previous mammography examinations. ").BlockQuote("However, unilateral skin thickening is an expected finding after radiation therapy.")
                     .BiradFooter()
                 )
-                .AddFragRef(this.BreastBodyLocationRequiredFragment)
                 .AddFragRef(this.ObservationNoValueFragment)
+                .AddFragRef(this.BreastBodyLocationRequiredFragment)
+                .AddExtensionLink(this.BreastBodyLocationExtension)
                 ;
         }
     }

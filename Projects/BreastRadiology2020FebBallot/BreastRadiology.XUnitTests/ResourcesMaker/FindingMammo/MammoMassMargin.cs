@@ -27,7 +27,7 @@ namespace BreastRadiology.XUnitTests
 
         void CreateMammoMassMargin()
         {
-            String binding = this.CreateValueSet(
+            ValueSet binding = this.CreateValueSet(
                 "BreastRadMammoMassMargin",
                 "Mammo Mass Margin",
                 new Markdown()
@@ -80,8 +80,7 @@ namespace BreastRadiology.XUnitTests
                                 .Line("implies a suspicious finding.")
                             .CiteEnd(BiRadCitation)
                             )
-                    })
-                .Url;
+                    });
 
             SDefEditor e = this.CreateEditor("BreastRadMammoMassMargin",
                 "Mammo Mass Margin",
@@ -101,8 +100,9 @@ namespace BreastRadiology.XUnitTests
 
             e.Select("value[x]")
                 .Type("CodeableConcept")
-                .Binding(binding, BindingStrength.Required)
+                .Binding(binding.Url, BindingStrength.Required)
                 ;
+            e.IntroDoc.CodedObservation(e, "a mammography mass margin", binding);
         }
     }
 }

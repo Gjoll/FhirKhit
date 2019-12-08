@@ -26,7 +26,7 @@ namespace BreastRadiology.XUnitTests
 
         void CreateMammoCalcificationDistribution()
         {
-            String binding = this.CreateValueSet(
+            ValueSet binding = this.CreateValueSet(
                 "MammoCalcificationDistribution",
                 "Mammo Calcification Distribution",
                 new Markdown()
@@ -93,8 +93,7 @@ namespace BreastRadiology.XUnitTests
                             .CiteEnd(BiRadCitation)
                         )
                     }
-                )
-                .Url;
+                );
 
             SDefEditor e =  this.CreateEditor("BreastRadMammoCalcificationDistribution",
                     "Mammo Calcification Distribution",
@@ -108,8 +107,9 @@ namespace BreastRadiology.XUnitTests
 
             e.Select("value[x]")
                 .Type("CodeableConcept")
-                .Binding(binding, BindingStrength.Required)
+                .Binding(binding.Url, BindingStrength.Required)
                 ;
+            e.IntroDoc.CodedObservation(e, "a mammography calcification distribution", binding);
         }
     }
 }

@@ -42,6 +42,7 @@ namespace BreastRadiology.XUnitTests
                     )
                     .AddFragRef(this.ObservationNoValueFragment)
                     .AddFragRef(this.BreastBodyLocationRequiredFragment)
+                    .AddExtensionLink(this.BreastBodyLocationExtension)
                     ;
         }
     }

@@ -27,7 +27,7 @@ namespace BreastRadiology.XUnitTests
 
         void CreateUSMassEchoPattern()
         {
-            String binding = this.CreateValueSet(
+            ValueSet binding = this.CreateValueSet(
                 "BreastRadUSMassEchoPattern",
                 "US Mass Echo Pattern",
                 new Markdown()
@@ -86,8 +86,7 @@ namespace BreastRadiology.XUnitTests
                                 .Line("circumscribed and whose shape is irregular.")
                             .CiteEnd(BiRadCitation)
                             )
-                    })
-                .Url;
+                    });
 
             SDefEditor e = this.CreateEditor("BreastRadUSMassEchoPattern",
                         "US Mass Echo Pattern",
@@ -110,8 +109,10 @@ namespace BreastRadiology.XUnitTests
 
             e.Select("value[x]")
                 .Type("CodeableConcept")
-                .Binding(binding, BindingStrength.Required)
+                .Binding(binding.Url, BindingStrength.Required)
                 ;
+
+            e.IntroDoc.CodedObservation(e, "an ultra-sound mass echo pattern", binding);
         }
     }
 }

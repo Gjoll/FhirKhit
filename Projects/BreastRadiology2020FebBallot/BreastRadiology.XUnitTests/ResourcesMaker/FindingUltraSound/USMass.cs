@@ -47,6 +47,7 @@ namespace BreastRadiology.XUnitTests
                     .List("Shape", "Orientation", "Margin", "Echo Pattern", "Posterior acoustic features")
                 )
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)
+                .AddExtensionLink(this.BreastBodyLocationExtension)
                 .AddFragRef(this.ObservationSectionFragment)
                 .AddFragRef(this.ObservationNoValueFragment)
                 ;

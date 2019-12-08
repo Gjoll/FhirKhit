@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
         void CreateBreastRadObservedState()
         {
             // todo: Do we want benign appearing & probably benign? Define difference.
-            ValueSet vs = this.CreateValueSet(
+            ValueSet binding = this.CreateValueSet(
                     "BreastRadObservedState",
                     "Observed State",
                     new Markdown()
@@ -63,8 +63,6 @@ namespace BreastRadiology.XUnitTests
                     })
                 ;
 
-            String binding = vs.Url;
-
             SDefEditor e = this.CreateEditor("BreastRadObservedState",
                     "Observed State",
                     new string[] { "State" },
@@ -80,8 +78,10 @@ namespace BreastRadiology.XUnitTests
 
             e.Select("value[x]")
                 .Type("CodeableConcept")
-                .Binding(binding, BindingStrength.Required)
+                .Binding(binding.Url, BindingStrength.Required)
                 ;
+
+            e.IntroDoc.CodedObservation(e, "an abnormality observed state", binding);
         }
     }
 }

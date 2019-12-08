@@ -35,7 +35,7 @@ namespace BreastRadiology.XUnitTests
             this.contentDir = contentDir;
         }
 
-        String FocusMapName(MapNode mapNode) => $"Focus-{mapNode.Name}.svg";
+        public static String FocusMapName(MapNode mapNode) => $"Focus-{mapNode.Name}.svg";
         String IntroName(MapNode mapNode) => $"StructureDefinition-{mapNode.Name}-intro.xml";
 
         IEnumerable<MapLink> FocusLinks(MapNode n)
@@ -45,6 +45,7 @@ namespace BreastRadiology.XUnitTests
                 switch (link.LinkType)
                 {
                     case "target":
+                    case "extension":
                         yield return link;
                         break;
                 }
@@ -122,20 +123,20 @@ namespace BreastRadiology.XUnitTests
             e.Save(Path.Combine(graphicsDir, FocusMapName(fragmentNode.Focus)));
         }
 
-        void CreateIntroFile(FocusNode fragmentNode)
-        {
-            String svgFileName = FocusMapName(fragmentNode.Focus);
-            StringBuilder sb = new StringBuilder();
-            sb.AppendLine("<div xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://hl7.org/fhir ../../src-generated/schemas/fhir-single.xsd\">");
-            sb.AppendLine("<p>");
-            sb.AppendLine($"	<object data=\"{svgFileName}\" type=\"image/svg+xml\">");
-            sb.AppendLine($"		<img src=\"{svgFileName}\" alt=\"{svgFileName}\" />");
-            sb.AppendLine("	</object>");
-            sb.AppendLine("</p>");
-            sb.AppendLine("</div>");
-            File.WriteAllText(Path.Combine(this.contentDir, IntroName(fragmentNode.Focus)),
-                sb.ToString());
-        }
+        //void CreateIntroFile(FocusNode fragmentNode)
+        //{
+        //    String svgFileName = FocusMapName(fragmentNode.Focus);
+        //    StringBuilder sb = new StringBuilder();
+        //    sb.AppendLine("<div xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://hl7.org/fhir ../../src-generated/schemas/fhir-single.xsd\">");
+        //    sb.AppendLine("<p>");
+        //    sb.AppendLine($"	<object data=\"{svgFileName}\" type=\"image/svg+xml\">");
+        //    sb.AppendLine($"		<img src=\"{svgFileName}\" alt=\"{svgFileName}\" />");
+        //    sb.AppendLine("	</object>");
+        //    sb.AppendLine("</p>");
+        //    sb.AppendLine("</div>");
+        //    File.WriteAllText(Path.Combine(this.contentDir, IntroName(fragmentNode.Focus)),
+        //        sb.ToString());
+        //}
 
         void GraphNodes()
         {
@@ -144,7 +145,7 @@ namespace BreastRadiology.XUnitTests
                 if (fragmentNode.Focus.Name.Contains("Fragment") == false)
                 {
                     GraphNode(fragmentNode);
-                    CreateIntroFile(fragmentNode);
+                    //CreateIntroFile(fragmentNode);
                 }
             }
         }

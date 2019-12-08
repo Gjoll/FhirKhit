@@ -26,7 +26,7 @@ namespace BreastRadiology.XUnitTests
 
         void CreateMammoCalcificationType()
         {
-            String binding = this.CreateValueSet(
+            ValueSet binding = this.CreateValueSet(
                 "MammoCalcificationType",
                 "Mammo Calcification Type",
                 new Markdown()
@@ -194,8 +194,7 @@ namespace BreastRadiology.XUnitTests
                             .CiteEnd(BiRadCitation)
                             )
                     }
-                )
-                .Url;
+                );
 
             SDefEditor e = this.CreateEditor("BreastRadMammoCalcificationType",
                         "Mammo Calcification Type",
@@ -209,8 +208,9 @@ namespace BreastRadiology.XUnitTests
 
             e.Select("value[x]")
                 .Type("CodeableConcept")
-                .Binding(binding, BindingStrength.Required)
+                .Binding(binding.Url, BindingStrength.Required)
                 ;
+            e.IntroDoc.CodedObservation(e, "a mammography calcification type", binding);
         }
     }
 }

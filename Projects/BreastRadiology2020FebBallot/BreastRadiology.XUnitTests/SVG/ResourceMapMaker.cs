@@ -27,6 +27,7 @@ namespace BreastRadiology.XUnitTests
                 switch (link.LinkType)
                 {
                     case "target":
+                    case "extension":
                         yield return link;
                         break;
                 }

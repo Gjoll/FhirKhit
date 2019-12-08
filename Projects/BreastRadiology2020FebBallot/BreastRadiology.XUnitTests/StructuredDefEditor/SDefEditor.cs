@@ -15,14 +15,26 @@ namespace BreastRadiology.XUnitTests
     {
         static Type sDefType = typeof(SDefEditor);
 
-        public MapNode MapNode {get; }
-        public String[] MapName {get; set; }
+        public IntroDoc IntroDoc
+        {
+            get
+            {
+                if (this.introDoc == null)
+                    this.introDoc = new IntroDoc();
+                return this.introDoc;
+            }
+        }
+        public IntroDoc introDoc;
+
+        public MapNode MapNode { get; }
+        public String[] MapName { get; set; }
 
         public StructureDefinition SDef => this.sDef;
         StructureDefinition baseSDef;
         StructureDefinition sDef;
         String basePath;
-        String outputDir;
+        String fragmentDir;
+        String pageDir;
 
         Dictionary<String, ElementDefGroup> baseElements = new Dictionary<string, ElementDefGroup>();
         Dictionary<String, ElementDefGroup> elements = new Dictionary<string, ElementDefGroup>();
@@ -35,9 +47,11 @@ namespace BreastRadiology.XUnitTests
             String url,
             String baseDefinition,
             String[] mapName,
-            String outputDir)
+            String fragmentDir,
+            String pageDir)
         {
-            this.outputDir = outputDir;
+            this.fragmentDir = fragmentDir;
+            this.pageDir = pageDir;
             this.baseSDef = FhirStructureDefinitions.Self.GetResource(baseDefinition);
             if (this.baseSDef == null)
                 throw new Exception($"'Base definition resource {baseDefinition}' not found");
@@ -54,7 +68,7 @@ namespace BreastRadiology.XUnitTests
 
             this.sDef = new StructureDefinition
             {
-                Name = name, 
+                Name = name,
                 Url = url,
                 BaseDefinition = baseDefinition,
                 Differential = new StructureDefinition.DifferentialComponent()
@@ -123,7 +137,7 @@ namespace BreastRadiology.XUnitTests
             ElementDefGroup newE = new ElementDefGroup(index, elementDefinition, baseDefinition);
             this.elements.Add(elementDefinition.ElementId.SkipFirstPathPart(), newE);
             Int32 i = this.elementOrder.Count;
-            while ((i > 0) && (this.elementOrder[i-1].Index > index))
+            while ((i > 0) && (this.elementOrder[i - 1].Index > index))
                 i -= 1;
             this.elementOrder.Insert(i, newE);
             return newE;
@@ -153,7 +167,8 @@ namespace BreastRadiology.XUnitTests
             return ed;
         }
 
-        public String Write()
+        public void Write(out String fragmentName,
+            out String introName)
         {
             foreach (ElementDefGroup item in this.elementOrder)
             {
@@ -165,12 +180,18 @@ namespace BreastRadiology.XUnitTests
             foreach (ElementDefinition e in this.sDef.Differential.Element)
             {
                 e.Path = e.Path.ReplacePathBase(this.basePath);
-                e.ElementId= e.ElementId.ReplacePathBase(this.basePath);
+                e.ElementId = e.ElementId.ReplacePathBase(this.basePath);
             }
 
-            String outputName = Path.Combine(this.outputDir, $"StructureDefinition-{this.sDef.Name}.json");
-            this.sDef.SaveJson(outputName);
-            return outputName;
+            fragmentName = Path.Combine(this.fragmentDir, $"StructureDefinition-{this.sDef.Name}.json");
+            this.sDef.SaveJson(fragmentName);
+            introName = null;
+            if (this.introDoc != null)
+            {
+                introName = Path.Combine(this.pageDir, $"StructureDefinition-{this.sDef.Name}-intro.xml");
+                String introHtml = introDoc.Render();
+                File.WriteAllText(introName, introHtml);
+            }
         }
 
         /// <summary>
@@ -224,6 +245,12 @@ namespace BreastRadiology.XUnitTests
                 Url = PreFhirGenerator.IsFragmentUrl,
                 Value = new FhirBoolean(true)
             });
+            return this;
+        }
+
+        public SDefEditor AddExtensionLink(String url, bool showChildren = true)
+        {
+            this.MapNode.AddExtensionLink(url, showChildren);
             return this;
         }
 

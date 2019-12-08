@@ -42,6 +42,7 @@ namespace BreastRadiology.XUnitTests
                         .BlockQuote("because the lymphatic drainage of the breast parallels the venous drainage.")
                         .BiradFooter())
                     .AddFragRef(this.BreastBodyLocationRequiredFragment)
+                    .AddExtensionLink(this.BreastBodyLocationExtension)
                     .AddFragRef(this.ObservationCodedValueFragment)
                     .AddFragRef(this.ObservationLeafFragment)
                     ;

@@ -27,7 +27,7 @@ namespace BreastRadiology.XUnitTests
 
         void CreateUSMassOrientation()
         {
-            String binding = this.CreateValueSet(
+            ValueSet binding = this.CreateValueSet(
                 "BreastRadUSMassOrientation",
                 "US Mass Orientation",
                 new Markdown()
@@ -53,8 +53,7 @@ namespace BreastRadiology.XUnitTests
                                 .Line("obliquely oriented to the skin line. Round masses are NOT PARALLEL in their orientation.")
                             .CiteEnd(BiRadCitation)
                             )
-                    })
-                .Url;
+                    });
 
             SDefEditor e = this.CreateEditor("BreastRadUSMassOrientation",
                         "US Mass Orientation",
@@ -79,8 +78,9 @@ namespace BreastRadiology.XUnitTests
 
             e.Select("value[x]")
                 .Type("CodeableConcept")
-                .Binding(binding, BindingStrength.Required)
+                .Binding(binding.Url, BindingStrength.Required)
                 ;
+            e.IntroDoc.CodedObservation(e, "an ultra-sound mass orientation", binding);
         }
     }
 }

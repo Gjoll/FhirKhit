@@ -26,7 +26,7 @@ namespace BreastRadiology.XUnitTests
 
         void CreateUSTissueComposition()
         {
-            String binding = this.CreateValueSet(
+            ValueSet binding = this.CreateValueSet(
                 "BreastRadUSTissueComposition",
                 "US Tissue Composition",
                 new Markdown()
@@ -69,8 +69,7 @@ namespace BreastRadiology.XUnitTests
                         .CiteEnd(BiRadCitation)
                     )
                 }
-            )
-            .Url;
+            );
 
             SDefEditor e = this.CreateEditor("BreastRadUSTissueComposition",
                         "US Tissue Composition",
@@ -86,8 +85,9 @@ namespace BreastRadiology.XUnitTests
 
             e.Select("value[x]")
                 .Type("CodeableConcept")
-                .Binding(binding, BindingStrength.Required)
+                .Binding(binding.Url, BindingStrength.Required)
                 ;
+            e.IntroDoc.CodedObservation(e, "an ultra-sound tissue composition", binding);
             }
     }
 }

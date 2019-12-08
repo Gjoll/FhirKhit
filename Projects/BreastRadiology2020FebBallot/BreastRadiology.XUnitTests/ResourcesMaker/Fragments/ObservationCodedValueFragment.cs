@@ -33,6 +33,7 @@ namespace BreastRadiology.XUnitTests
                 .Description(new Hl7.Fhir.Model.Markdown("Fragment that defines values for coded observations."))
                 .AddFragRef(this.HeaderFragment)
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)
+                .AddExtensionLink(this.BreastBodyLocationExtension)
                 .AddFragRef(this.ObservationFragment)
                 ;
 

@@ -89,7 +89,7 @@ namespace BreastRadiology.XUnitTests
             SliceAndBind("laterality", "http://hl7.org/fhir/ValueSet/bodysite-laterality");
 
             {
-                String binding = this.CreateValueSet(
+                ValueSet binding = this.CreateValueSet(
                     "BreastLocationQuadrant",
                     "Breast Location Quadrant",
                     new Markdown()
@@ -161,14 +161,13 @@ namespace BreastRadiology.XUnitTests
                             new Definition()
                                 .Line("Upper outer quadrant location adjacent to the axilla but within the breast mound")
                             )
-                    })
-                    .Url;
+                    });
 
-                SliceAndBind("quadrant", binding);
+                SliceAndBind("quadrant", binding.Url);
             }
 
             {
-                String binding = this.CreateValueSet(
+                ValueSet binding = this.CreateValueSet(
                     "BreastLocationClock",
                     "Breast Location Clock",
                     new Markdown()
@@ -295,14 +294,13 @@ namespace BreastRadiology.XUnitTests
                             new Definition()
                                 .Line("11:30-OClock")
                             )
-                    })
-                    .Url;
+                    });
 
-                SliceAndBind("clockDirection", binding);
+                SliceAndBind("clockDirection", binding.Url);
             }
 
             {
-                String binding = this.CreateValueSet(
+                ValueSet binding = this.CreateValueSet(
                     "BreastLocationDepth",
                     "Breast Location Depth",
                     new Markdown()
@@ -324,10 +322,9 @@ namespace BreastRadiology.XUnitTests
                             new Definition()
                                 .Line("Posterior depth")
                             )
-                    })
-                    .Url;
+                    });
 
-                SliceAndBind("depth", binding);
+                SliceAndBind("depth", binding.Url);
             }
 
             {

@@ -27,7 +27,7 @@ namespace BreastRadiology.XUnitTests
 
         void CreateBreastRadObservedChanges()
         {
-            ValueSet vs = this.CreateValueSet(
+            ValueSet binding = this.CreateValueSet(
                     "BreastRadObservedChanges",
                     "Observed Changes",
                     new Markdown()
@@ -62,12 +62,12 @@ namespace BreastRadiology.XUnitTests
                         new ConceptDef("IncreaseInSize",
                             "Increase In Size",
                             new Definition()
-                                .Line("Item has increased in siz")
+                                .Line("Item has increased in size")
                             ),
                         new ConceptDef("DecreaseInSize",
                             "Decrease In Size",
                             new Definition()
-                                .Line("Item has decreased in siz")
+                                .Line("Item has decreased in size")
                             ),
                         new ConceptDef("MoreDefined",
                             "More Defined",
@@ -79,15 +79,15 @@ namespace BreastRadiology.XUnitTests
                             new Definition()
                                 .Line("Item is less defined")
                             ),
-                        new ConceptDef("MorePriminent",
-                            "More Priminent",
+                        new ConceptDef("MoreProminent",
+                            "More Prominent",
                             new Definition()
-                                .Line("Item is more Priminent")
+                                .Line("Item is more Prominent")
                             ),
-                        new ConceptDef("LessPriminent",
-                            "Less Priminent",
+                        new ConceptDef("LessProminent",
+                            "Less Prominent",
                             new Definition()
-                                .Line("Item is less Priminent")
+                                .Line("Item is less Prominent")
                             ),
                         new ConceptDef("IncrInNumber",
                             "Increased In Number",
@@ -101,8 +101,6 @@ namespace BreastRadiology.XUnitTests
                             ),
                     })
                 ;
-
-            String binding = vs.Url;
 
             SDefEditor e = this.CreateEditor("BreastRadObservedChanges",
                     "Observed Changes",
@@ -119,8 +117,9 @@ namespace BreastRadiology.XUnitTests
 
             e.Select("value[x]")
                 .Type("CodeableConcept")
-                .Binding(binding, BindingStrength.Required)
+                .Binding(binding.Url, BindingStrength.Required)
                 ;
+            e.IntroDoc.CodedObservation(e, "an abnormality observed change", binding);
         }
     }
 }

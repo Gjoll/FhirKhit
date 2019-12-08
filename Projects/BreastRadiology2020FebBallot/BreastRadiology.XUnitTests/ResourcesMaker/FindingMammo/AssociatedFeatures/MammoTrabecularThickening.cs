@@ -44,6 +44,7 @@ namespace BreastRadiology.XUnitTests
                     .MissingObservation("a trabecular thickening")
                 )
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)
+                .AddExtensionLink(this.BreastBodyLocationExtension)
                 .AddFragRef(this.ObservationNoValueFragment)
                 ;
         }

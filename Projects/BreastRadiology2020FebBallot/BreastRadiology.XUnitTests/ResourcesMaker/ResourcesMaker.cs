@@ -44,6 +44,7 @@ namespace BreastRadiology.XUnitTests
         Dictionary<String, Resource> resources = new Dictionary<string, Resource>();
 
         String resourceDir;
+        String pageDir;
         FhirDateTime date = new FhirDateTime(2019, 11, 1);
         public Dictionary<String, SDefEditor> editors = new Dictionary<String, SDefEditor>();
 
@@ -53,13 +54,19 @@ namespace BreastRadiology.XUnitTests
         }
 
         public ResourcesMaker(String resourceDir,
+            String pageDir,
             String cacheDir)
         {
             const String fcn = "ResourcesMaker";
 
             this.resourceDir = resourceDir;
+            this.pageDir = pageDir;
+
             if (Directory.Exists(this.resourceDir) == false)
                 Directory.CreateDirectory(this.resourceDir);
+
+            if (Directory.Exists(this.pageDir) == false)
+                Directory.CreateDirectory(this.pageDir);
 
             if (FhirStructureDefinitions.Self == null)
             {
@@ -77,7 +84,7 @@ namespace BreastRadiology.XUnitTests
             if (name.Contains(" "))
                 throw new Exception("Structure Def name can not contains spaces");
 
-            SDefEditor retVal = new SDefEditor(name, this.CreateUrl(name), baseDefinition, mapName, this.resourceDir)
+            SDefEditor retVal = new SDefEditor(name, this.CreateUrl(name), baseDefinition, mapName, this.resourceDir, this.pageDir)
                 .Title(title)
                 .Derivation(StructureDefinition.TypeDerivationRule.Constraint)
                 .Abstract(false)
@@ -231,6 +238,7 @@ namespace BreastRadiology.XUnitTests
         public void CreateResources()
         {
             this.fc.Add(this.resourceDir);
+            this.fc.Add(this.pageDir);
 
             String report = this.BreastRadiologyReport;
 
@@ -238,15 +246,12 @@ namespace BreastRadiology.XUnitTests
             this.fc.Dispose();
         }
 
-        public void CreateFocusMaps(String graphicsDir,
-            String contentDir)
+        public void CreateFocusMaps(String graphicsDir)
         {
             if (Directory.Exists(graphicsDir) == false)
                 Directory.CreateDirectory(graphicsDir);
-            if (Directory.Exists(contentDir) == false)
-                Directory.CreateDirectory(contentDir);
 
-            FocusMapMaker focusMapMaker = new FocusMapMaker(this, graphicsDir, contentDir);
+            FocusMapMaker focusMapMaker = new FocusMapMaker(this, graphicsDir, this.pageDir);
             focusMapMaker.Create();
         }
 
@@ -271,7 +276,10 @@ namespace BreastRadiology.XUnitTests
 
             foreach (SDefEditor ce in this.editors.Values)
             {
-                this.fc.Mark(ce.Write());
+                ce.Write(out String fragmentName, out String introName);
+                this.fc.Mark(fragmentName);
+                if (introName != null)
+                    this.fc.Mark(introName);
             }
         }
     }

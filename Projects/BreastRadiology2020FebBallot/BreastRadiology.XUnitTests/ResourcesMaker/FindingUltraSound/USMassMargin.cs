@@ -27,7 +27,7 @@ namespace BreastRadiology.XUnitTests
 
         void CreateUSMassMargin()
         {
-            String binding = this.CreateValueSet(
+            ValueSet binding = this.CreateValueSet(
                 "BreastRadUSMassMargin",
                 "US Mass Margin",
                 new Markdown()
@@ -55,8 +55,7 @@ namespace BreastRadiology.XUnitTests
                                 .Line("“Irregular” is not used to group these marginal attributes because irregular describes the shape")
                             .CiteEnd(BiRadCitation)
                             )
-                    })
-                .Url;
+                    });
 
             String binding2 = this.CreateValueSet(
                 "BreastRadUSMassMarginNotCircumscribed",
@@ -120,7 +119,7 @@ namespace BreastRadiology.XUnitTests
                 ;
             {
                 CodeableConcept pattern1 = new CodeableConcept();
-                pattern1.Coding.Add(new Coding(binding, null));
+                pattern1.Coding.Add(new Coding(binding.Url, null));
 
                 CodeableConcept pattern2 = new CodeableConcept();
                 pattern2.Coding.Add(new Coding(binding2, null));

@@ -27,7 +27,7 @@ namespace BreastRadiology.XUnitTests
 
         void CreateBreastRadMassShape()
         {
-            ValueSet vs = this.CreateValueSet(
+            ValueSet binding = this.CreateValueSet(
                     "BreastRadMassShape",
                     "Mass Shape",
                     new Markdown()
@@ -62,8 +62,6 @@ namespace BreastRadiology.XUnitTests
                     })
                 ;
 
-            String binding = vs.Url;
-
             SDefEditor e = this.CreateEditor("BreastRadMassShape",
                     "Mass Shape",
                     new string[] { "Shape" },
@@ -79,8 +77,9 @@ namespace BreastRadiology.XUnitTests
 
             e.Select("value[x]")
                 .Type("CodeableConcept")
-                .Binding(binding, BindingStrength.Required)
+                .Binding(binding.Url, BindingStrength.Required)
                 ;
+            e.IntroDoc.CodedObservation(e, "a mammography mass shape", binding);
         }
     }
 }
