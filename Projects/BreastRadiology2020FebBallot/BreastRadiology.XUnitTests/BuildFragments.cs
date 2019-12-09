@@ -105,6 +105,8 @@ namespace BreastRadiology.XUnitTests
                     foreach (String file in Directory.GetFiles(this.fragmentDir, "*.json"))
                         File.Delete(file);
                 }
+                else
+                    Directory.CreateDirectory(this.fragmentDir);
 
                 ResourcesMaker pc = new ResourcesMaker(this.fragmentDir, this.pageDir, this.cacheDir);
                 pc.StatusErrors += this.StatusErrors;

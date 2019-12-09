@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Findings Left Breast Section",
+  "description": "---\n** ReviewStatus: NotReviewed **\n---\nFindings Left Breast Section",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,

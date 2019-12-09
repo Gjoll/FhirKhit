@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Patient History Section",
+  "description": "---\n** ReviewStatus: NotReviewed **\n---\nPatient History Section",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
