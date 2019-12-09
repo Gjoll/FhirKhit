@@ -89,7 +89,7 @@ namespace BreastRadiology.XUnitTests
                     ObservationUrl,
                     out usMassPosteriorAcousticFeatures)
                 .Description(new Markdown()
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
+
                     .Paragraph("Breast Radiology Ultra-Sound Mass Posterior Acoustic Features Observation")
                     .BiradHeader()
                     .BlockQuote("Posterior acoustic features represent the attenuation characteristics of a mass with respect to its")
@@ -105,7 +105,7 @@ namespace BreastRadiology.XUnitTests
                 .Type("CodeableConcept")
                 .Binding(binding.Url, BindingStrength.Required)
                 ;
-            e.IntroDoc.CodedObservationLeafNode(e, "an ultra-sound mass posterior acoustic feature", binding);
+            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "an ultra-sound mass posterior acoustic feature", binding);
         }
     }
 }

@@ -66,7 +66,7 @@ namespace BreastRadiology.XUnitTests
                 ExtensionUrl,
                 out breastBodyLocationExtension)
                 .Description(new Markdown()
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
+
                     .Paragraph("Breast Body Location extension")
                     )
                 .Kind(StructureDefinition.StructureDefinitionKind.ComplexType)
@@ -364,7 +364,7 @@ namespace BreastRadiology.XUnitTests
                     ;
                 distanceFromNippleGroup.RelatedElements.Add(quantityCode);
 
-                e.IntroDoc.Extension("Breast Body Location", "define a location in the breast");
+                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).Extension("Breast Body Location", "define a location in the breast");
             }
         }
     }

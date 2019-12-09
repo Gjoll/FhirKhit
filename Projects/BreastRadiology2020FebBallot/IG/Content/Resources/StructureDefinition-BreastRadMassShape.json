@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "---\n** ReviewStatus: NotReviewed **\n---\nBreast Radiology Mass Shape Observation\n\n\nIf this observation is present, and dataAbsentReason is empty, then a mass shape was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a mass shape was not observed and dataAbsentReason contains the reason why.",
+  "description": "Breast Radiology Mass Shape Observation\n\n\nIf this observation is present, and dataAbsentReason is empty, then a mass shape was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a mass shape was not observed and dataAbsentReason contains the reason why.",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,

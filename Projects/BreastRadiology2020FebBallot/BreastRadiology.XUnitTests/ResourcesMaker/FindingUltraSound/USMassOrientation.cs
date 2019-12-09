@@ -61,7 +61,7 @@ namespace BreastRadiology.XUnitTests
                     ObservationUrl,
                     out usMassOrientation)
                 .Description(new Markdown()
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
+
                     .Paragraph("Breast Radiology Ultra-Sound Mass Orientation Observation")
                     .MissingObservation("a mass orientation")
                     .BiradHeader()
@@ -81,7 +81,7 @@ namespace BreastRadiology.XUnitTests
                 .Type("CodeableConcept")
                 .Binding(binding.Url, BindingStrength.Required)
                 ;
-            e.IntroDoc.CodedObservationLeafNode(e, "an ultra-sound mass orientation", binding);
+            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "an ultra-sound mass orientation", binding);
         }
     }
 }

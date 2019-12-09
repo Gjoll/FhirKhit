@@ -33,7 +33,7 @@ namespace BreastRadiology.XUnitTests
                 ObservationUrl,
                 out mammoIntramammaryLymphNode)
                 .Description(new Markdown()
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
+
                     .Paragraph("Breast Radiology Mammography Intramammary LymphNode Observation")
                     .MissingObservation("an intramammary lymph node")
                     .BiradHeader()
@@ -49,7 +49,7 @@ namespace BreastRadiology.XUnitTests
                 .AddFragRef(this.ObservationLeafFragment)
                 ;
 
-            e.IntroDoc.ObservationLeafNode($"Intramammary Lymph Node");
+            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationLeafNode($"Intramammary Lymph Node");
         }
     }
 }

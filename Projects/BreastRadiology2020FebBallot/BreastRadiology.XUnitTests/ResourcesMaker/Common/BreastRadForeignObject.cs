@@ -125,7 +125,7 @@ namespace BreastRadiology.XUnitTests
                     ObservationUrl,
                     out breastRadForeignObject)
                 .Description(new Markdown()
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
+
                     .Paragraph("Breast Radiology Foreign Object Observation")
                     .Paragraph("These are foreign objects found during a breast radiology exam")
                     )
@@ -148,7 +148,7 @@ namespace BreastRadiology.XUnitTests
                 .Type("CodeableConcept")
                 .Binding(binding.Url, BindingStrength.Required)
                 ;
-            e.IntroDoc.CodedObservationLeafNode(e, "an ForeignObject", binding);
+            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "an ForeignObject", binding);
         }
     }
 }

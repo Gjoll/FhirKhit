@@ -14,7 +14,7 @@
   "name": "BreastBodyLocationRequiredFragment",
   "title": "Breast Body Location (Required) Fragment",
   "status": "draft",
-  "description": "---\n** ReviewStatus: NotReviewed **\n---\nFragment definition for an required Breast Body Location",
+  "description": "Fragment definition for an required Breast Body Location",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": true,

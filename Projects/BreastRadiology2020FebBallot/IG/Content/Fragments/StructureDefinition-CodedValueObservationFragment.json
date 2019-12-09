@@ -22,7 +22,7 @@
   "name": "CodedValueObservationFragment",
   "title": "CodedValue Observation Fragment",
   "status": "draft",
-  "description": "---\n** ReviewStatus: NotReviewed **\n---\nFragment that defines values for coded observations.",
+  "description": "Fragment that defines values for coded observations.",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": true,

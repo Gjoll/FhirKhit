@@ -10,7 +10,7 @@
   "name": "CategoryFragment",
   "title": "Category Fragment",
   "status": "draft",
-  "description": "---\n** ReviewStatus: NotReviewed **\n---\nFragment definition that slices category and adds the observation code value",
+  "description": "Fragment definition that slices category and adds the observation code value",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": true,

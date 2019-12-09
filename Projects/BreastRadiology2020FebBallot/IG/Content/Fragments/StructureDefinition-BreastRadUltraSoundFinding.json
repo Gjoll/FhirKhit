@@ -14,7 +14,7 @@
   "name": "BreastRadUltraSoundFinding",
   "title": "UltraSound Finding",
   "status": "draft",
-  "description": "---\n** ReviewStatus: NotReviewed **\n---\nBreast Radiology Ultra Sound Finding\n\n\nTodo: The following items need further specification.\n\n\n** Device Metrics detailing the observation devices parameters (transducer freq, etc).",
+  "description": "Breast Radiology Ultra Sound Finding\n\n\nTodo: The following items need further specification.\n\n\n** Device Metrics detailing the observation devices parameters (transducer freq, etc).",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,

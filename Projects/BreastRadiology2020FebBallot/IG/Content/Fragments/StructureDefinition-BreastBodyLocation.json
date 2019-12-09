@@ -10,7 +10,7 @@
   "name": "BreastBodyLocation",
   "title": "Breast Body Location",
   "status": "draft",
-  "description": "---\n** ReviewStatus: NotReviewed **\n---\nBreast Body Location extension",
+  "description": "Breast Body Location extension",
   "fhirVersion": "4.0.0",
   "kind": "complex-type",
   "abstract": false,

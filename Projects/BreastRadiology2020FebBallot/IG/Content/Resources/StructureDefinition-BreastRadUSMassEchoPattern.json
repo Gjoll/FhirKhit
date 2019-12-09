@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "---\n** ReviewStatus: NotReviewed **\n---\nBreast Radiology Ultra-Sound Mass Echo Pattern Observation\n\n\nThe echogenicity of most benign and malignant masses is hypoechoic compared with \nmammary fat. While many completely echogenic masses are benign, prospective assessment as\nbenign has greater dependency on marginal circumscription. Although the echo pattern\ncontributes with other feature categories to the assessment of a breast lesion, echogenicity\nalone has little specificity.\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
+  "description": "Breast Radiology Ultra-Sound Mass Echo Pattern Observation\n\n\nThe echogenicity of most benign and malignant masses is hypoechoic compared with \nmammary fat. While many completely echogenic masses are benign, prospective assessment as\nbenign has greater dependency on marginal circumscription. Although the echo pattern\ncontributes with other feature categories to the assessment of a breast lesion, echogenicity\nalone has little specificity.\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,

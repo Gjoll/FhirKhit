@@ -32,7 +32,7 @@ namespace BreastRadiology.XUnitTests
                     ObservationUrl,
                     out mammoCalcification)
                 .Description(new Markdown()
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
+
                     .Paragraph("Breast Radiology Mammography Calcification Observation")
                     .MissingObservation("a calcification",
                         " and no Type or Distribution observations should be referenced by this observation")
@@ -73,7 +73,7 @@ namespace BreastRadiology.XUnitTests
                 e.Find("hasMember").SliceByUrl(targets);
                 e.MapNode.AddProfileTargets(targets);
             }
-            e.IntroDoc.ObservationSection("Mammography Calcification");
+            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationSection("Mammography Calcification");
         }
     }
 }

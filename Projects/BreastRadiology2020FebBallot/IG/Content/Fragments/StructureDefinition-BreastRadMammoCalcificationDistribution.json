@@ -14,7 +14,7 @@
   "name": "BreastRadMammoCalcificationDistribution",
   "title": "Mammo Calcification Distribution",
   "status": "draft",
-  "description": "---\n** ReviewStatus: NotReviewed **\n---\nBreast Radiology Mammography Calcification Distribution Observation",
+  "description": "Breast Radiology Mammography Calcification Distribution Observation",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,

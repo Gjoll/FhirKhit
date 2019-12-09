@@ -27,7 +27,7 @@ namespace BreastRadiology.XUnitTests
                 ObservationUrl,
                 out observationNoValueFragment)
                 .Description(new Hl7.Fhir.Model.Markdown()
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
+
                     .Paragraph("Base fragment for all BreastRad observations that have no explicit value.")
                     )
                 .AddFragRef(this.ObservationFragment)
@@ -36,7 +36,7 @@ namespace BreastRadiology.XUnitTests
             e.Select("interpretation").Zero();
             e.Select("referenceRange").Zero();
 
-            e.IntroDoc.Fragment($"Resource fragment used by observations that constrain the value[x] element to cardinality 0..0.");
+            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).Fragment($"Resource fragment used by observations that constrain the value[x] element to cardinality 0..0.");
         }
     }
 }

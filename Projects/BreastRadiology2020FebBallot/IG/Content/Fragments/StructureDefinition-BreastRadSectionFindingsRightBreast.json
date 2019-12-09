@@ -14,7 +14,7 @@
   "name": "BreastRadSectionFindingsRightBreast",
   "title": "Findings Right Breast",
   "status": "draft",
-  "description": "---\n** ReviewStatus: NotReviewed **\n---\nFindings Right Breast Section",
+  "description": "Findings Right Breast Section",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -60,6 +60,26 @@
           "min": 0,
           "max": "*"
         }
+      },
+      {
+        "id": "Observation.hasMember:biRadsAssessmentCategory",
+        "path": "Observation.hasMember",
+        "sliceName": "biRadsAssessmentCategory",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BiRadsAssessmentCategory"
+            ]
+          }
+        ]
       },
       {
         "id": "Observation.hasMember:breastRadMammoFinding",

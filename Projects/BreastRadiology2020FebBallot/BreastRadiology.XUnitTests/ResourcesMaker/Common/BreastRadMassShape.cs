@@ -68,7 +68,7 @@ namespace BreastRadiology.XUnitTests
                     ObservationUrl,
                     out breastRadMassShape)
                 .Description(new Markdown()
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
+
                     .Paragraph("Breast Radiology Mass Shape Observation")
                     .MissingObservation("a mass shape")
                     )
@@ -80,7 +80,7 @@ namespace BreastRadiology.XUnitTests
                 .Type("CodeableConcept")
                 .Binding(binding.Url, BindingStrength.Required)
                 ;
-            e.IntroDoc.CodedObservationLeafNode(e, "a mammography mass shape", binding);
+            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "a mammography mass shape", binding);
         }
     }
 }

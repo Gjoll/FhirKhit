@@ -33,7 +33,7 @@ namespace BreastRadiology.XUnitTests
                 ExtensionUrl,
                 out breastRadiologyRecommendationsExtension)
                 .Description(new Markdown()
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
+
                     .Paragraph("Diagnostic Report recommendations section extension")
                 )
                 .Kind(StructureDefinition.StructureDefinitionKind.ComplexType)
@@ -51,7 +51,7 @@ namespace BreastRadiology.XUnitTests
                 .Single()
                 ;
 
-            e.IntroDoc.Extension("Recommendations", "include references to recommendations");
+            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).Extension("Recommendations", "include references to recommendations");
             return e.SDef.Url;
         }
     }

@@ -10,7 +10,7 @@
   "name": "BreastRadRecommendationsExtension",
   "title": "Recommendations Extension",
   "status": "draft",
-  "description": "---\n** ReviewStatus: NotReviewed **\n---\nDiagnostic Report recommendations section extension",
+  "description": "Diagnostic Report recommendations section extension",
   "fhirVersion": "4.0.0",
   "kind": "complex-type",
   "abstract": false,

@@ -23,6 +23,7 @@ namespace BreastRadiology.XUnitTests
         {
             ProfileTargetSlice[] retVal = new ProfileTargetSlice[]
             {
+                new ProfileTargetSlice(this.BiRadsAssessmentCategory, 1, "1"),
                 new ProfileTargetSlice(this.FindingMammo, 0, "*"),
                 new ProfileTargetSlice(this.FindingMri, 0, "*"),
                 new ProfileTargetSlice(this.FindingUltraSound, 0, "*")

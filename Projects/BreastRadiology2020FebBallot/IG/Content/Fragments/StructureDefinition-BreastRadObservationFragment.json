@@ -18,7 +18,7 @@
   "name": "BreastRadObservationFragment",
   "title": "BreastRad Observation Fragment",
   "status": "draft",
-  "description": "---\n** ReviewStatus: NotReviewed **\n---\nBase fragment for all BreastRad observations.",
+  "description": "Base fragment for all BreastRad observations.",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": true,

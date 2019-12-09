@@ -22,7 +22,7 @@
   "name": "ObservationLeafFragment",
   "title": "Observation Leaf Fragment",
   "status": "draft",
-  "description": "---\n** ReviewStatus: NotReviewed **\n---\nFragment that constrains observations leaf nodes (no hasMembers references).",
+  "description": "Fragment that constrains observations leaf nodes (no hasMembers references).",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": true,

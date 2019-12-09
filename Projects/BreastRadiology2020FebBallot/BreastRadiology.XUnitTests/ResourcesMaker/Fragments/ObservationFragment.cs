@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
                 ObservationUrl,
                 out observationFragment)
                 .Description(new Hl7.Fhir.Model.Markdown()
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
+
                     .Paragraph("Base fragment for all BreastRad observations.")
                     )
                 .AddFragRef(this.HeaderFragment)
@@ -44,7 +44,7 @@ namespace BreastRadiology.XUnitTests
             e.Select("partOf").Zero();
             e.Select("focus").Zero();
 
-            e.IntroDoc.Fragment($"Resource fragment used by all BreatRad observations.");
+            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).Fragment($"Resource fragment used by all BreatRad observations.");
         }
     }
 }

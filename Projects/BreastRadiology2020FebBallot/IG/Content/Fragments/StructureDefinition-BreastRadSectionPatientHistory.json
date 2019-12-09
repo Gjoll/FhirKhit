@@ -14,7 +14,7 @@
   "name": "BreastRadSectionPatientHistory",
   "title": "Patient History Section",
   "status": "draft",
-  "description": "---\n** ReviewStatus: NotReviewed **\n---\nPatient History Section",
+  "description": "Patient History Section",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,

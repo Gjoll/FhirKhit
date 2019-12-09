@@ -5,6 +5,13 @@ using System.Text;
 
 namespace BreastRadiology.XUnitTests
 {
+    public enum ReviewStatus
+    {
+        NotReviewed,
+        Preliminary,
+        Completed
+    };
+
     /// <summary>
     /// Helper class for making xxx-intro.xml files.
     /// These files provide the html verbage for the introduction of a fhir class
@@ -42,34 +49,46 @@ namespace BreastRadiology.XUnitTests
 
         public IntroDoc ObservationSection(String name)
         {
-                this.Paragraph(
-                    $"This resource is an '{name}' section.",
-                    $"Information about the finding is contained in this observation and observations",
-                    $"referenced by this resource's hasMember field."
-                    );
+            this.Paragraph(
+                $"This resource is an '{name}' section.",
+                $"Information about the finding is contained in this observation and observations",
+                $"referenced by this resource's hasMember field."
+                );
             return this;
         }
 
         public IntroDoc ObservationLeafNode(String leafNode)
         {
-                this.Paragraph(
-                    $"This resource is an leaf-node observation of a {leafNode}.",
-                    $"It is referenced by an parent Observation section that references other information about this specific abnormality"
-                    );
+            this.Paragraph(
+                $"This resource is an leaf-node observation of a {leafNode}.",
+                $"It is referenced by an parent Observation section that references other information about this specific abnormality"
+                );
             return this;
         }
 
-        public void Fragment(String purpose)
+
+        public IntroDoc ReviewedStatus(ReviewStatus reviewStatus)
+        {
+            this.Paragraph($"---",
+                           $"** ReviewStatus: {reviewStatus} **",
+                           $"---");
+            return this;
+        }
+
+
+        public IntroDoc Fragment(String purpose)
         {
             this.Paragraph($"{purpose}.");
+            return this;
         }
 
-        public void Extension(String name, String purpose)
+        public IntroDoc Extension(String name, String purpose)
         {
             this.Paragraph($"{name} Extension Resource used to {purpose}.");
+            return this;
         }
 
-        public void CodedObservationLeafNode(SDefEditor e,
+        public IntroDoc CodedObservationLeafNode(SDefEditor e,
             String leafNode,
             ValueSet binding)
         {
@@ -81,6 +100,7 @@ namespace BreastRadiology.XUnitTests
                 )
                 .List(binding)
                 ;
+            return this;
         }
 
         public IntroDoc Paragraph(params String[] lines)

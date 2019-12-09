@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
                     ObservationUrl,
                     out observationBooleanValueFragment)
                 .Description(new Hl7.Fhir.Model.Markdown()
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
+
                     .Paragraph("Fragment that defines a boolean values observation.")
                     )
                 .AddFragRef(this.HeaderFragment)
@@ -44,7 +44,7 @@ namespace BreastRadiology.XUnitTests
                 ;
 
 
-            e.IntroDoc.Fragment($"Resource fragment used to by all observations whose value are a Boolean.");
+            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).Fragment($"Resource fragment used to by all observations whose value are a Boolean.");
         }
     }
 }

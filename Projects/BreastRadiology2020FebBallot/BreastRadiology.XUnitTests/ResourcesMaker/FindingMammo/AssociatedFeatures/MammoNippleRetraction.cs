@@ -32,7 +32,7 @@ namespace BreastRadiology.XUnitTests
                 ObservationUrl,
                 out mammoNippleRetraction)
                 .Description(new Markdown()
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
+
                     .Paragraph("Breast Radiology Mammography Nipple Retraction Observation")
                     .MissingObservation("a nipple retraction")
                     .BiradHeader()
@@ -46,7 +46,7 @@ namespace BreastRadiology.XUnitTests
                 .AddExtensionLink(this.BreastBodyLocationExtension)
                 ;
 
-            e.IntroDoc.ObservationLeafNode("Nipple Retraction");
+            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationLeafNode("Nipple Retraction");
         }
     }
 }

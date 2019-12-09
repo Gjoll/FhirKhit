@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "---\n** ReviewStatus: NotReviewed **\n---\nBreast Radiology Observed State Observation\n\n\nIf this observation is present, and dataAbsentReason is empty, then an observed change was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then an observed change was not observed and dataAbsentReason contains the reason why.",
+  "description": "Breast Radiology Observed State Observation\n\n\nIf this observation is present, and dataAbsentReason is empty, then an observed change was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then an observed change was not observed and dataAbsentReason contains the reason why.",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,

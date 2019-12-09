@@ -26,7 +26,7 @@ namespace Paragrapher
             sb.AppendLine(".BiradHeader()");
             foreach (String line in lines)
             {
-                sb.AppendLine($".MarkedDown(\"{FormatLine(line)}\")");
+                sb.AppendLine($".BlockQuote(\"{FormatLine(line)}\")");
             }
             sb.AppendLine(".BiradFooter()");
             this.textBox2.Text = sb.ToString();

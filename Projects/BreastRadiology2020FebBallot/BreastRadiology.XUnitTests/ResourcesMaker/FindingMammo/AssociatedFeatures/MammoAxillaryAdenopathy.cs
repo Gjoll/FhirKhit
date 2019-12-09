@@ -37,7 +37,7 @@ namespace BreastRadiology.XUnitTests
                 ObservationUrl,
                 out mammoAxillaryAdenopathy)
                 .Description(new Markdown()
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
+
                     .Paragraph("Breast Radiology Mammography Axillary Adenopathy Observation")
                     .MissingObservation("an axillary adenopathy")
                     .BiradHeader()
@@ -52,7 +52,7 @@ namespace BreastRadiology.XUnitTests
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)
                 .AddExtensionLink(this.BreastBodyLocationExtension)
                 ;
-        e.IntroDoc.ObservationLeafNode("Mammography Axillary Adenopathy");
+        e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationLeafNode("Mammography Axillary Adenopathy");
         }
     }
 }

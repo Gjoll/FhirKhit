@@ -32,7 +32,7 @@ namespace BreastRadiology.XUnitTests
                 ObservationUrl,
                 out mammoSkinRetraction)
                 .Description(new Markdown()
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
+
                     .Paragraph("Skin Retraction Observation")
                     .BiradHeader()
                     .BlockQuote("The skin is pulled in abnormally")
@@ -44,7 +44,7 @@ namespace BreastRadiology.XUnitTests
                 .AddExtensionLink(this.BreastBodyLocationExtension)
                 ;
 
-            e.IntroDoc.ObservationLeafNode("Skin Retraction");
+            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationLeafNode("Skin Retraction");
         }
     }
 }

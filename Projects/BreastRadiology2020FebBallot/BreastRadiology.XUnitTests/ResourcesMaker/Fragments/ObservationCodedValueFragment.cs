@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
                     ObservationUrl,
                     out observationCodedValueFragment)
                 .Description(new Hl7.Fhir.Model.Markdown()
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
+
                     .Paragraph("Fragment that defines values for coded observations.")
                 )
                 .AddFragRef(this.HeaderFragment)
@@ -43,7 +43,7 @@ namespace BreastRadiology.XUnitTests
                 .Type("CodeableConcept")
                 ;
 
-            e.IntroDoc.Fragment($"Resource fragment used to by all observations whose value are a CodeableConcept.");
+            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).Fragment($"Resource fragment used to by all observations whose value are a CodeableConcept.");
         }
     }
 }

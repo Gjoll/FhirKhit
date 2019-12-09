@@ -33,7 +33,7 @@ namespace BreastRadiology.XUnitTests
                     ObservationUrl,
                     out mammoSolitaryDilatedDuct)
                 .Description(new Markdown()
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
+
                     .Paragraph("Breat Radiology Mammography Solitary Dilated Duct Observation")
                     .MissingObservation("a solitary dilated duct")
                     .BiradHeader()
@@ -48,7 +48,7 @@ namespace BreastRadiology.XUnitTests
                 .AddExtensionLink(this.BreastBodyLocationExtension)
                 ;
 
-            e.IntroDoc.ObservationLeafNode($"Solitary Dilated Duct");
+            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationLeafNode($"Solitary Dilated Duct");
         }
     }
 }

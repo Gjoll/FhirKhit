@@ -33,7 +33,7 @@ namespace BreastRadiology.XUnitTests
                     ObservationUrl,
                     out breastRadSize)
                 .Description(new Markdown()
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
+
                     .Paragraph("Breast Radiology Size Observation")
                     .MissingObservation("an objects size")
                     )
@@ -63,7 +63,7 @@ namespace BreastRadiology.XUnitTests
                 )
                 ;
 
-            e.IntroDoc.ObservationLeafNode($"Size");
+            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationLeafNode($"Size");
         }
     }
 }

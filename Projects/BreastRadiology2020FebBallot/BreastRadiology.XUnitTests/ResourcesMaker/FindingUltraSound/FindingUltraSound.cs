@@ -68,7 +68,7 @@ namespace BreastRadiology.XUnitTests
                     ObservationUrl,
                     out findingUltraSound)
                 .Description(new Markdown()
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
+
                     .Paragraph("Breast Radiology Ultra Sound Finding")
                     .Paragraph("Todo: The following items need further specification.")
                     .List(
@@ -98,7 +98,7 @@ namespace BreastRadiology.XUnitTests
                 e.Find("hasMember").SliceByUrl(targets);
                 e.MapNode.AddProfileTargets(targets);
             }
-            e.IntroDoc.ObservationSection("Ultra-Sound Abnormality");
+            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationSection("Ultra-Sound Abnormality");
         }
     }
 }

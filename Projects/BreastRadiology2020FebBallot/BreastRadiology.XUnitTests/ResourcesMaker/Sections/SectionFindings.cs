@@ -32,7 +32,7 @@ namespace BreastRadiology.XUnitTests
                     ObservationUrl,
                     out sectionFindings)
                 .Description(new Markdown().Paragraph()
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
+
                     .Paragraph("Findings Section")
                     )
                 .AddFragRef(this.ObservationSectionFragment)
@@ -43,6 +43,7 @@ namespace BreastRadiology.XUnitTests
             {
                 ProfileTargetSlice[] targets = new ProfileTargetSlice[]
                 {
+                    new ProfileTargetSlice(this.BiRadsAssessmentCategory, 1, "1"),
                     new ProfileTargetSlice(SectionFindingsLeftBreast, 1, "1"),
                     new ProfileTargetSlice(SectionFindingsRightBreast, 1, "1")
                 };
@@ -50,7 +51,7 @@ namespace BreastRadiology.XUnitTests
                 e.MapNode.AddProfileTargets(targets);
             }
 
-            e.IntroDoc.ObservationSection($"Abnormality Finding");
+            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationSection($"Abnormality Finding");
         }
     }
 }

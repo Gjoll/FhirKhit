@@ -14,7 +14,7 @@
   "name": "ObservationSectionFragment",
   "title": "Observation Section Fragment",
   "status": "draft",
-  "description": "---\n** ReviewStatus: NotReviewed **\n---\nFragment that constrains Observations to be sections.",
+  "description": "Fragment that constrains Observations to be sections.",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": true,

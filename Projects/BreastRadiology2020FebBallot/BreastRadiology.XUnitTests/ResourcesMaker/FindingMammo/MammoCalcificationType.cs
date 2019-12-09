@@ -202,7 +202,7 @@ namespace BreastRadiology.XUnitTests
                 ObservationUrl,
                 out mammoCalcificationType)
                 .Description(new Markdown()
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
+
                     .Paragraph("Breast Radiology Mammography Calcification Type Observation")
                     )
                 .AddFragRef(this.ObservationCodedValueFragment)
@@ -213,7 +213,7 @@ namespace BreastRadiology.XUnitTests
                 .Type("CodeableConcept")
                 .Binding(binding.Url, BindingStrength.Required)
                 ;
-            e.IntroDoc.CodedObservationLeafNode(e, "a mammography calcification type", binding);
+            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "a mammography calcification type", binding);
         }
     }
 }

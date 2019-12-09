@@ -33,7 +33,7 @@ namespace BreastRadiology.XUnitTests
                     ObservationUrl,
                     out findingMri)
                 .Description(new Markdown()
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
+
                     .Paragraph("Breast Radiology MRI Finding")
                     .Paragraph("Todo: The following items need further specification.")
                     .List(
@@ -45,7 +45,7 @@ namespace BreastRadiology.XUnitTests
                 .AddFragRef(this.ObservationNoValueFragment)
             ;
 
-            e.IntroDoc.ObservationSection("MRI Abnormality");
+            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationSection("MRI Abnormality");
             //$e.Find("method")
             //$     .FixedCodeSlice("method", "http://snomed.info/sct", "115341008")
             //$     .Card(1, "*")

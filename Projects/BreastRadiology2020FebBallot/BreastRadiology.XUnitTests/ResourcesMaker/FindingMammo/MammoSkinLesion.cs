@@ -32,7 +32,7 @@ namespace BreastRadiology.XUnitTests
                 ObservationUrl,
                 out mammoSkinLesion)
                 .Description(new Markdown()
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
+
                     .Paragraph("Breast Radiology Mammography Skin Lesion Observation")
                     .MissingObservation("a skin lesion")
                     .BiradHeader()
@@ -61,7 +61,7 @@ namespace BreastRadiology.XUnitTests
                 e.MapNode.AddProfileTargets(targets);
             }
 
-            e.IntroDoc.ObservationLeafNode($"Skin Lesion");
+            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationLeafNode($"Skin Lesion");
         }
     }
 }

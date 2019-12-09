@@ -37,7 +37,7 @@ namespace BreastRadiology.XUnitTests
                 ObservationUrl,
                 out mammoTrabecularThickening)
                 .Description(new Markdown()
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
+
                     .Paragraph("Trabecular Thickening Observation")
                     .BiradHeader()
                     .BlockQuote("This is a thickening of the fibrous septa of the breast.")
@@ -48,7 +48,7 @@ namespace BreastRadiology.XUnitTests
                 .AddExtensionLink(this.BreastBodyLocationExtension)
                 .AddFragRef(this.ObservationNoValueFragment)
                 ;
-            e.IntroDoc.ObservationLeafNode("Trabecular Thickening");
+            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationLeafNode("Trabecular Thickening");
         }
     }
 }

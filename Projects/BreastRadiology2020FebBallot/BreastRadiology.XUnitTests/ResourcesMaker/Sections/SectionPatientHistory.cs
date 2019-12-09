@@ -32,7 +32,7 @@ namespace BreastRadiology.XUnitTests
                     ObservationUrl,
                     out sectionPatientHistory)
                 .Description(new Markdown()
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
+
                     .Paragraph("Patient History Section")
                     )
                 .AddFragRef(this.ObservationSectionFragment)
@@ -40,7 +40,7 @@ namespace BreastRadiology.XUnitTests
                 ;
             e.Select("bodySite").Zero();
 
-            e.IntroDoc.ObservationSection($"Patient History");
+            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationSection($"Patient History");
         }
     }
 }

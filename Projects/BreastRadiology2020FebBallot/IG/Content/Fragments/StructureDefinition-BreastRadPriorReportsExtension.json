@@ -10,7 +10,7 @@
   "name": "BreastRadPriorReportsExtension",
   "title": "Prior Reports Extension",
   "status": "draft",
-  "description": "---\n** ReviewStatus: NotReviewed **\n---\nPrior Diagnostic Report extension",
+  "description": "Prior Diagnostic Report extension",
   "fhirVersion": "4.0.0",
   "kind": "complex-type",
   "abstract": false,

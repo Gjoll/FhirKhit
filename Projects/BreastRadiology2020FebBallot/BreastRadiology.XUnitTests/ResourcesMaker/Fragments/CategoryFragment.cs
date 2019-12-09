@@ -33,7 +33,7 @@ namespace BreastRadiology.XUnitTests
                     ObservationUrl,
                     out findingCategoryFragment)
                 .Description(new Markdown()
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
+
                     .Paragraph("Fragment definition that slices category and adds the observation code value")
                     )
                 ;
@@ -43,7 +43,7 @@ namespace BreastRadiology.XUnitTests
                 "http://terminology.hl7.org/CodeSystem/observation-category",
                 "imaging");
 
-            e.IntroDoc.Fragment($"Resource fragment used to by observations to fix the Observation.category field to the 'imaging' fixed value.");
+            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).Fragment($"Resource fragment used to by observations to fix the Observation.category field to the 'imaging' fixed value.");
         }
     }
 }

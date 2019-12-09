@@ -32,7 +32,7 @@ namespace BreastRadiology.XUnitTests
                     ObservationUrl,
                     out mammoArchitecturalDistortion)
                 .Description(new Markdown()
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
+
                     .Paragraph("Breast Radiology Mammography Architectural Distortion Observation")
                     .MissingObservation("an architectural distortion")
                     .BiradHeader()
@@ -48,9 +48,11 @@ namespace BreastRadiology.XUnitTests
                 )
                 .AddFragRef(this.ObservationNoValueFragment)
                 .AddFragRef(this.ObservationLeafFragment)
+                .AddFragRef(this.BreastBodyLocationRequiredFragment)
+                .AddExtensionLink(this.BreastBodyLocationExtension)
                 ;
 
-            e.IntroDoc.ObservationLeafNode($"Architectural Distortion");
+            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationLeafNode($"Architectural Distortion");
         }
     }
 }

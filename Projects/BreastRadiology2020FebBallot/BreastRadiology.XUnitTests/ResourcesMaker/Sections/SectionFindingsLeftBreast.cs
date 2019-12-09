@@ -32,7 +32,6 @@ namespace BreastRadiology.XUnitTests
                     ObservationUrl,
                     out sectionFindingsLeftBreast)
                 .Description(new Markdown()
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
                     .Paragraph("Findings Left Breast Section")
                     )
                 .AddFragRef(this.ObservationSectionFragment)
@@ -42,7 +41,7 @@ namespace BreastRadiology.XUnitTests
             e.Find("hasMember").SliceByUrl(this.FindingBreastTargets);
             e.MapNode.AddProfileTargets(this.FindingBreastTargets);
 
-            e.IntroDoc.ObservationSection($"Abnormality Left Breast Finding");
+            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationSection($"Abnormality Left Breast Finding");
         }
     }
 }

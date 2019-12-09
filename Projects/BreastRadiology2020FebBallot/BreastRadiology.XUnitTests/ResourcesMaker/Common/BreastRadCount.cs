@@ -33,7 +33,7 @@ namespace BreastRadiology.XUnitTests
                     ObservationUrl,
                     out breastRadCount)
                 .Description(new Markdown()
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
+
                     .Paragraph("Breast Radiology Count Observation")
                     .MissingObservation("an objects Count")
                     )
@@ -52,7 +52,7 @@ namespace BreastRadiology.XUnitTests
                  )
                 ;
 
-            e.IntroDoc.ObservationLeafNode($"Count");
+            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationLeafNode($"Count");
         }
     }
 }

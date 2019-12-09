@@ -101,7 +101,7 @@ namespace BreastRadiology.XUnitTests
                     ObservationUrl,
                     out mammoCalcificationDistribution)
                 .Description(new Markdown()
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
+
                     .Paragraph("Breast Radiology Mammography Calcification Distribution Observation")
                     )
                 .AddFragRef(this.ObservationCodedValueFragment)
@@ -112,7 +112,7 @@ namespace BreastRadiology.XUnitTests
                 .Type("CodeableConcept")
                 .Binding(binding.Url, BindingStrength.Required)
                 ;
-            e.IntroDoc.CodedObservationLeafNode(e, "a mammography calcification distribution", binding);
+            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "a mammography calcification distribution", binding);
         }
     }
 }

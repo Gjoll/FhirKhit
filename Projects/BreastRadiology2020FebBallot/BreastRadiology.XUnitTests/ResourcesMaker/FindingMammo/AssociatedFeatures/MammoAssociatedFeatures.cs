@@ -32,7 +32,7 @@ namespace BreastRadiology.XUnitTests
                     ObservationUrl,
                     out mammoAssociatedFeatures)
                 .Description(new Markdown()
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
+
                     .Paragraph("Mammography Associated Features Observation")
                     .Paragraph("Used with masses, asymmetries, or calcifications, or may stand alone as " +
                     "Features when no other abnormality is present.")
@@ -54,7 +54,7 @@ namespace BreastRadiology.XUnitTests
                 e.Find("hasMember").SliceByUrl(targets);
                 e.MapNode.AddProfileTargets(targets);
             }
-            e.IntroDoc.ObservationSection("Mammography Associated Features");
+            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationSection("Mammography Associated Features");
         }
     }
 }

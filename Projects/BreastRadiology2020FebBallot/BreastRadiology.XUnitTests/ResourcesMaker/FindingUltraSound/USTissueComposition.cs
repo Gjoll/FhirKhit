@@ -79,7 +79,7 @@ namespace BreastRadiology.XUnitTests
                     ObservationUrl,
                     out usTissueComposition)
                 .Description(new Markdown()
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
+
                     .Paragraph("Breast Radiology Ultra-Sound Tissue Composition Observation")
                     )
                 .AddFragRef(this.ObservationCodedValueFragment)
@@ -90,7 +90,7 @@ namespace BreastRadiology.XUnitTests
                 .Type("CodeableConcept")
                 .Binding(binding.Url, BindingStrength.Required)
                 ;
-            e.IntroDoc.CodedObservationLeafNode(e, "an ultra-sound tissue composition", binding);
+            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "an ultra-sound tissue composition", binding);
             }
     }
 }

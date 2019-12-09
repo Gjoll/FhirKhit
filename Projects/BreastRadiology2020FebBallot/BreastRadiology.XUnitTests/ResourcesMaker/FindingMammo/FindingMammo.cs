@@ -32,7 +32,7 @@ namespace BreastRadiology.XUnitTests
                     ObservationUrl,
                     out findingMammo)
                 .Description(new Markdown()
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
+
                     .Paragraph("Breast Radiology Mammography Finding")
                     .Paragraph("Todo: The following items need further specification.")
                     .List(
@@ -65,7 +65,7 @@ namespace BreastRadiology.XUnitTests
                 e.MapNode.AddProfileTargets(targets);
             }
 
-            e.IntroDoc.ObservationSection("MRI Abnormality");
+            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationSection("MRI Abnormality");
         }
     }
 }

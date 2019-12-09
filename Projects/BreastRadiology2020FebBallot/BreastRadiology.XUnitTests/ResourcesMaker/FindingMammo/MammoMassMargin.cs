@@ -88,7 +88,7 @@ namespace BreastRadiology.XUnitTests
                 ObservationUrl,
                 out mammoMassMargin)
                 .Description(new Markdown()
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
+
                     .Paragraph("Breast Radiology Mammography Mass Margin Observation")
                     .MissingObservation("a mass margin")
                     .BiradHeader()
@@ -103,7 +103,7 @@ namespace BreastRadiology.XUnitTests
                 .Type("CodeableConcept")
                 .Binding(binding.Url, BindingStrength.Required)
                 ;
-            e.IntroDoc.CodedObservationLeafNode(e, "a mammography mass margin", binding);
+            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "a mammography mass margin", binding);
         }
     }
 }

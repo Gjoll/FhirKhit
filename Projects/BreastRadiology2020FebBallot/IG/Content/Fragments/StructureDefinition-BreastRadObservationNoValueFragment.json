@@ -14,7 +14,7 @@
   "name": "BreastRadObservationNoValueFragment",
   "title": "BreastRad Observation NoValue Fragment",
   "status": "draft",
-  "description": "---\n** ReviewStatus: NotReviewed **\n---\nBase fragment for all BreastRad observations that have no explicit value.",
+  "description": "Base fragment for all BreastRad observations that have no explicit value.",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": true,

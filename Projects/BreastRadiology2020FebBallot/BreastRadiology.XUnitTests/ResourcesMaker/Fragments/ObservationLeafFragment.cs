@@ -27,7 +27,7 @@ namespace BreastRadiology.XUnitTests
                 ObservationUrl,
                 out observationLeafFragment)
                 .Description(new Hl7.Fhir.Model.Markdown()
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
+
                     .Paragraph("Fragment that constrains observations leaf nodes (no hasMembers references).")
                     )
                 .AddFragRef(this.HeaderFragment)
@@ -36,7 +36,7 @@ namespace BreastRadiology.XUnitTests
             ;
             e.Select("hasMember").Zero();
 
-            e.IntroDoc.Fragment($"Resource fragment used by resources that are leaf node observations.");
+            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).Fragment($"Resource fragment used by resources that are leaf node observations.");
         }
     }
 }

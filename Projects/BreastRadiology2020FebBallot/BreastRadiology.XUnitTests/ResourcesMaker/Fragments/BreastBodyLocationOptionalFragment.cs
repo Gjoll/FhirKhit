@@ -32,7 +32,7 @@ namespace BreastRadiology.XUnitTests
                                 ObservationUrl,
                                 out breastBodyLocationOptionalFragment)
                 .Description(new Markdown()
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
+
                     .Paragraph("Fragment definition for a Required Breast Body Location")
                     )
                 .AddFragRef(this.HeaderFragment)
@@ -46,7 +46,7 @@ namespace BreastRadiology.XUnitTests
                 .ZeroToOne()
                 ;
 
-            e.IntroDoc.Fragment($"Resource fragment used by various observations to include an optional breast body location.");
+            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).Fragment($"Resource fragment used by various observations to include an optional breast body location.");
         }
     }
 }

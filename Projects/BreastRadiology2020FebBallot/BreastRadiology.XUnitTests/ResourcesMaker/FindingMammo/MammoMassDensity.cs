@@ -78,7 +78,7 @@ namespace BreastRadiology.XUnitTests
                     ObservationUrl,
                     out mammoMassDensity)
                 .Description(new Markdown()
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
+
                     .Paragraph("Breast Radiology Mammography Mass Density Observation")
                     .MissingObservation("a mass density")
                     .BiradHeader()
@@ -101,7 +101,7 @@ namespace BreastRadiology.XUnitTests
                 .Type("CodeableConcept")
                 .Binding(binding.Url, BindingStrength.Required)
                 ;
-            e.IntroDoc.CodedObservationLeafNode(e, "a mammography mass density", binding);
+            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "a mammography mass density", binding);
         }
     }
 }

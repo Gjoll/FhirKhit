@@ -38,7 +38,7 @@ namespace BreastRadiology.XUnitTests
                 ;
             e.Select("bodySite").Zero();
 
-            e.IntroDoc.ObservationSection($"Patient Risk");
+            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationSection($"Patient Risk");
         }
     }
 }

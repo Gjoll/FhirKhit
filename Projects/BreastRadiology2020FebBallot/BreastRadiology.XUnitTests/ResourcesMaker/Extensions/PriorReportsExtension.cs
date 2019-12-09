@@ -33,7 +33,7 @@ namespace BreastRadiology.XUnitTests
                 ExtensionUrl,
                 out breastRadiologyPriorReportsExtension)
                 .Description(new Markdown()
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
+
                     .Paragraph("Prior Diagnostic Report extension")
                     )
                 .Kind(StructureDefinition.StructureDefinitionKind.ComplexType)
@@ -51,7 +51,7 @@ namespace BreastRadiology.XUnitTests
                 .Single()
                 ;
 
-            e.IntroDoc.Extension("Prior Reports", "include references to prior reports");
+            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).Extension("Prior Reports", "include references to prior reports");
             return e.SDef.Url;
         }
     }
