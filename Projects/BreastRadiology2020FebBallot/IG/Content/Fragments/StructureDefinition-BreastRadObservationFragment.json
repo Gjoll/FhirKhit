@@ -34,6 +34,17 @@
         "max": "*"
       },
       {
+        "id": "Observation.contained",
+        "path": "Observation.contained",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.contained",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
         "id": "Observation.basedOn",
         "path": "Observation.basedOn",
         "min": 0,
@@ -73,6 +84,39 @@
         "max": "0",
         "base": {
           "path": "Observation.focus",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Observation.interpretation",
+        "path": "Observation.interpretation",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.interpretation",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Observation.specimen",
+        "path": "Observation.specimen",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.specimen",
+          "min": 0,
+          "max": "1"
+        }
+      },
+      {
+        "id": "Observation.referenceRange",
+        "path": "Observation.referenceRange",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.referenceRange",
           "min": 0,
           "max": "*"
         }

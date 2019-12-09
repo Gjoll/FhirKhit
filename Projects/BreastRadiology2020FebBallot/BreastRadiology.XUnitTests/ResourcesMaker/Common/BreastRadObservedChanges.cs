@@ -112,6 +112,7 @@ namespace BreastRadiology.XUnitTests
                     .Paragraph("Breast Radiology Observed Changes Observation")
                     .MissingObservation("an observed change")
                     )
+                .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.ObservationCodedValueFragment)
                 .AddFragRef(this.ObservationLeafFragment)
                 ;

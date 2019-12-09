@@ -39,6 +39,7 @@ namespace BreastRadiology.XUnitTests
                     .BiradFooter()
                     .MissingObservation("a skin retraction")
                 )
+                .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.ObservationNoValueFragment)
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)
                 .AddExtensionLink(this.BreastBodyLocationExtension)

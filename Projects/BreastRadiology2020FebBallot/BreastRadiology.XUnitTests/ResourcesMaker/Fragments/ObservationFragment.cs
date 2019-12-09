@@ -38,11 +38,16 @@ namespace BreastRadiology.XUnitTests
                 .AddFragRef(this.CategoryFragment)
             ;
             e.Select("subject").Single();
+
             e.Select("component").Zero();
+            e.Select("interpretation").Zero();
+            e.Select("referenceRange").Zero();
             e.Select("basedOn").Zero();
             e.Select("derivedFrom").Zero();
             e.Select("partOf").Zero();
             e.Select("focus").Zero();
+            e.Select("specimen").Zero();
+            e.Select("contained").Zero();
 
             e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).Fragment($"Resource fragment used by all BreatRad observations.");
         }

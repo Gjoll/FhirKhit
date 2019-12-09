@@ -72,6 +72,7 @@ namespace BreastRadiology.XUnitTests
                     .Paragraph("Breast Radiology Mass Shape Observation")
                     .MissingObservation("a mass shape")
                     )
+                .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.ObservationCodedValueFragment)
                 .AddFragRef(this.ObservationLeafFragment)
                 ;

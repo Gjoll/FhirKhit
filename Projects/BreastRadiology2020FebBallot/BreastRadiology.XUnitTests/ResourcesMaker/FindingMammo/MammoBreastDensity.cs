@@ -110,6 +110,7 @@ namespace BreastRadiology.XUnitTests
                     .BlockQuote("individual woman. ")
                     .BiradFooter()
                 )
+                .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.ObservationCodedValueFragment)
                 .AddFragRef(this.ObservationLeafFragment)
                 ;

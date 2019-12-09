@@ -43,6 +43,7 @@ namespace BreastRadiology.XUnitTests
                     .BlockQuote("a skin lesion.")
                     .BiradFooter()
                 )
+                .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)
                 .AddExtensionLink(this.BreastBodyLocationExtension)
                 .AddFragRef(this.ObservationNoValueFragment)

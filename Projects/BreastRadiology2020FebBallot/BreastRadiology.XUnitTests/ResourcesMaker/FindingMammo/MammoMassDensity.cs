@@ -93,6 +93,7 @@ namespace BreastRadiology.XUnitTests
                     .BlockQuote("benign or malignant nature of noncalcified breast masses.")
                     .BiradFooter()
                     )
+                .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.ObservationCodedValueFragment)
                 .AddFragRef(this.ObservationLeafFragment)
                 ;

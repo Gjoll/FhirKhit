@@ -37,6 +37,7 @@ namespace BreastRadiology.XUnitTests
                     .Paragraph("Breast Radiology Size Observation")
                     .MissingObservation("an objects size")
                     )
+                .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.ObservationLeafFragment)
                 ;
         // TODO: Should this be SimpleQuantity.

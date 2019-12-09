@@ -10,11 +10,11 @@
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationFragment"
     }
   ],
-  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoValueFragment",
-  "name": "BreastRadObservationNoValueFragment",
-  "title": "BreastRad Observation NoValue Fragment",
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoDeviceFragment",
+  "name": "BreastRadObservationNoDeviceFragment",
+  "title": "BreastRad Observation NoDevice Fragment",
   "status": "draft",
-  "description": "Base fragment for all BreastRad observations that have no explicit value.",
+  "description": "Fragment for all observations that have no device.",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": true,
@@ -30,25 +30,14 @@
         "max": "*"
       },
       {
-        "id": "Observation.value[x]",
-        "path": "Observation.value[x]",
+        "id": "Observation.device",
+        "path": "Observation.device",
         "min": 0,
         "max": "0",
         "base": {
-          "path": "Observation.value[x]",
+          "path": "Observation.device",
           "min": 0,
           "max": "1"
-        }
-      },
-      {
-        "id": "Observation.interpretation",
-        "path": "Observation.interpretation",
-        "min": 0,
-        "max": "0",
-        "base": {
-          "path": "Observation.interpretation",
-          "min": 0,
-          "max": "*"
         }
       }
     ]

@@ -34,6 +34,7 @@ namespace BreastRadiology.XUnitTests
                 .Description(new Markdown()
                     .Paragraph("Findings Left Breast Section")
                     )
+                .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.ObservationSectionFragment)
                 .AddFragRef(this.ObservationNoValueFragment)
                 ;

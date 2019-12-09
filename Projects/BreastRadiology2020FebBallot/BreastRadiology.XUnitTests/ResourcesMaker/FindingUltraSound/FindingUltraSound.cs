@@ -11,6 +11,7 @@ using Hl7.Fhir.Serialization;
 
 namespace BreastRadiology.XUnitTests
 {
+    // todo: Should Observation.device be mare required?
     /*
      * How do I characterise Ultra Sound equipment.
      * todo:

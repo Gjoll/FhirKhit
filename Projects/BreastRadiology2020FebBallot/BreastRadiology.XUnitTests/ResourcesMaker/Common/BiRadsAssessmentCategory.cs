@@ -107,6 +107,7 @@ namespace BreastRadiology.XUnitTests
                     .BlockQuote("examination, but the screening mammography examination remains assessed as category 0.")
                     .BiradFooter()
                     )
+                .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.ObservationCodedValueFragment)
                 .AddFragRef(this.ObservationLeafFragment)
                 ;

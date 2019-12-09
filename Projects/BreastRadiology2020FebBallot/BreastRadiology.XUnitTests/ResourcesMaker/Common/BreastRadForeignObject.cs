@@ -129,6 +129,7 @@ namespace BreastRadiology.XUnitTests
                     .Paragraph("Breast Radiology Foreign Object Observation")
                     .Paragraph("These are foreign objects found during a breast radiology exam")
                     )
+                .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.ObservationCodedValueFragment)
                 .AddFragRef(this.ObservationSectionFragment)
                 ;

@@ -205,6 +205,7 @@ namespace BreastRadiology.XUnitTests
 
                     .Paragraph("Breast Radiology Mammography Calcification Type Observation")
                     )
+                .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.ObservationCodedValueFragment)
                 .AddFragRef(this.ObservationLeafFragment)
                 ;

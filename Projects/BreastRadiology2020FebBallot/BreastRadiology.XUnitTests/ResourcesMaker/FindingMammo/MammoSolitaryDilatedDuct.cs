@@ -42,6 +42,7 @@ namespace BreastRadiology.XUnitTests
                     .BlockQuote("findings, it has been reported to be associated with noncalcified DCIS.")
                     .BiradFooter()
                 )
+                .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.ObservationNoValueFragment)
                 .AddFragRef(this.ObservationLeafFragment)
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)

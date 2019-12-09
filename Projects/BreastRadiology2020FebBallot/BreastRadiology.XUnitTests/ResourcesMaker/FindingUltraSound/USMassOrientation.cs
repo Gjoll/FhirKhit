@@ -73,6 +73,7 @@ namespace BreastRadiology.XUnitTests
                     .BlockQuote("malignancy.")
                     .BiradFooter()
                     )
+                .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.ObservationCodedValueFragment)
                 .AddFragRef(this.ObservationLeafFragment)
                 ;

@@ -41,6 +41,7 @@ namespace BreastRadiology.XUnitTests
                     .BlockQuote("is not a sign of malignancy. However, if nipple retraction is new, suspicion for underlying malignancy is increased.")
                     .BiradFooter()
                 )
+                .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.ObservationNoValueFragment)
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)
                 .AddExtensionLink(this.BreastBodyLocationExtension)

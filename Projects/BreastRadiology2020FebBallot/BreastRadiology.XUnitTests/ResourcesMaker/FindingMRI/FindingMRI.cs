@@ -11,6 +11,7 @@ using Hl7.Fhir.Serialization;
 
 namespace BreastRadiology.XUnitTests
 {
+    // todo: Should Observation.device be mare required?
     partial class ResourcesMaker : ConverterBase
     {
         String FindingMri

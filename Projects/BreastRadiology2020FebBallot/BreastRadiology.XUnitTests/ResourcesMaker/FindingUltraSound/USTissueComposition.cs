@@ -82,6 +82,7 @@ namespace BreastRadiology.XUnitTests
 
                     .Paragraph("Breast Radiology Ultra-Sound Tissue Composition Observation")
                     )
+                .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.ObservationCodedValueFragment)
                 .AddFragRef(this.ObservationLeafFragment)
                 ;

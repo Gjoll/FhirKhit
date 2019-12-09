@@ -53,6 +53,7 @@ namespace BreastRadiology.XUnitTests
                     .Paragraph("This observation has the following two member observations")
                     .List("Calcification Type", "Calcification Distribution")
                 )
+                .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)
                 .AddExtensionLink(this.BreastBodyLocationExtension)
                 .AddFragRef(this.ObservationSectionFragment)

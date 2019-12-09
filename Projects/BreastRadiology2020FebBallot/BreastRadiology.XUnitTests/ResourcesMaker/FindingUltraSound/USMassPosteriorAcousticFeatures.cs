@@ -97,6 +97,7 @@ namespace BreastRadiology.XUnitTests
                     .BlockQuote("masses, mostly of secondary rather than primary predictive value..")
                     .BiradFooter()
                     )
+                .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.ObservationCodedValueFragment)
                 .AddFragRef(this.ObservationLeafFragment)
                 ;

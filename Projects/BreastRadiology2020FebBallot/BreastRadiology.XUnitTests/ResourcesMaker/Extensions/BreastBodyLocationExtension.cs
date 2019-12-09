@@ -81,7 +81,6 @@ namespace BreastRadiology.XUnitTests
 
             e.Select("value[x]")
                 .Zero()
-                .NoTypes()
                 ;
 
             eGroup = e.Find("extension");

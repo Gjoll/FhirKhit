@@ -104,6 +104,7 @@ namespace BreastRadiology.XUnitTests
                     .BlockQuote("alone has little specificity.")
                     .BiradFooter()
                     )
+                .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.ObservationCodedValueFragment)
                 .AddFragRef(this.ObservationLeafFragment)
                 ;

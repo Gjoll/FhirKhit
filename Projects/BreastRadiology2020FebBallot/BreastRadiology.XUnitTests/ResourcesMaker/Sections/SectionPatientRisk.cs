@@ -33,6 +33,7 @@ namespace BreastRadiology.XUnitTests
                     ObservationUrl,
                     out sectionPatientRisk)
                 .Description(new Markdown().Paragraph("Patient Risk Section"))
+                .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.ObservationSectionFragment)
                 .AddFragRef(this.ObservationNoValueFragment)
                 ;

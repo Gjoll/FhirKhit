@@ -104,6 +104,7 @@ namespace BreastRadiology.XUnitTests
                     .BlockQuote("convex-outward borders and appears to be denser in the center than at the periphery.")
                     .BiradFooter()
                     )
+                .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)
                 .AddExtensionLink(this.BreastBodyLocationExtension)
                 .AddFragRef(this.ObservationCodedValueFragment)

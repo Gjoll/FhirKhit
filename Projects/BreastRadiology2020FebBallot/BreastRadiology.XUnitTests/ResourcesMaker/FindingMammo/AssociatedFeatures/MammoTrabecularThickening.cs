@@ -44,6 +44,7 @@ namespace BreastRadiology.XUnitTests
                     .BiradFooter()
                     .MissingObservation("a trabecular thickening")
                 )
+                .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)
                 .AddExtensionLink(this.BreastBodyLocationExtension)
                 .AddFragRef(this.ObservationNoValueFragment)

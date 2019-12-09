@@ -47,6 +47,7 @@ namespace BreastRadiology.XUnitTests
                     .Paragraph("This observation has the following three member observations")
                     .List("Shape", "Margin", "Density")
                 )
+                .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)
                 .AddExtensionLink(this.BreastBodyLocationExtension)
                 .AddFragRef(this.ObservationSectionFragment)

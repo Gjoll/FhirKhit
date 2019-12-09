@@ -32,9 +32,8 @@ namespace BreastRadiology.XUnitTests
                     )
                 .AddFragRef(this.ObservationFragment)
             ;
-            e.Select("value[x]").Zero().NoTypes();
+            e.Select("value[x]").Zero();
             e.Select("interpretation").Zero();
-            e.Select("referenceRange").Zero();
 
             e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).Fragment($"Resource fragment used by observations that constrain the value[x] element to cardinality 0..0.");
         }

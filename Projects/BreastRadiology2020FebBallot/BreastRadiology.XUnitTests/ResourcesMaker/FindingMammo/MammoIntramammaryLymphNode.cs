@@ -43,6 +43,7 @@ namespace BreastRadiology.XUnitTests
                     .BlockQuote("axilla, although they may occur anywhere in the breast. They usually are seen adjacent to a vein,")
                     .BlockQuote("because the lymphatic drainage of the breast parallels the venous drainage.")
                     .BiradFooter())
+                .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)
                 .AddExtensionLink(this.BreastBodyLocationExtension)
                 .AddFragRef(this.ObservationCodedValueFragment)

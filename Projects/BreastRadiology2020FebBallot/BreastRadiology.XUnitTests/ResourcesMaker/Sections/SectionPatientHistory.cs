@@ -35,6 +35,7 @@ namespace BreastRadiology.XUnitTests
 
                     .Paragraph("Patient History Section")
                     )
+                .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.ObservationSectionFragment)
                 .AddFragRef(this.ObservationNoValueFragment)
                 ;
