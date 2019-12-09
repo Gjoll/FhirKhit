@@ -15,7 +15,9 @@ namespace BreastRadiology.XUnitTests
 
         String outputDir;
         String resourceDir => Path.Combine(this.outputDir, "resources");
-        //String IgPath => Path.Combine(this.outputDir, "IG.json");
+        String pagecontentDir => Path.Combine(this.outputDir, "pagecontent");
+        String imagesDir => Path.Combine(this.outputDir, "images");
+        //String IgPath => Path.Combine(this.outputDir, "IGBreastRad.json");
         String ImpGuidePath => Path.Combine(this.outputDir, "IGBreastRad.xml");
 
         //ProfilesEditor profilesEditor;
@@ -30,7 +32,8 @@ namespace BreastRadiology.XUnitTests
         {
             this.outputDir = outputDir;
             this.fc.Add(this.resourceDir);
-            this.fc.Mark(Path.Combine(this.resourceDir, "IG.xml"));
+            this.fc.Add(this.pagecontentDir);
+            this.fc.Add(this.imagesDir);
         }
 
         void AddIGStructureDefinition(StructureDefinition sDef)
@@ -98,7 +101,27 @@ namespace BreastRadiology.XUnitTests
             this.implementationGuide = new ImplementationGuideEditor(this.ImpGuidePath);
         }
 
-        public void AddResources(String resourceDir)
+        void CopyFiles(String inputDir, String inputMask, String outputDir)
+        {
+            foreach (String inputPath in Directory.GetFiles(inputDir, inputMask))
+            {
+                String outputPath = Path.Combine(outputDir, Path.GetFileName(inputPath));
+                File.Copy(inputPath, outputPath, true);
+                fc.Mark(outputPath);
+            }
+        }
+
+        public void AddPageContent(String inputDir)
+        {
+            CopyFiles(inputDir, "*.xml", this.pagecontentDir);
+        }
+
+        public void AddImages(String inputDir)
+        {
+            CopyFiles(inputDir, "*.svg", this.imagesDir);
+        }
+
+        public void AddResources(String inputDir)
         {
             const String IsFragmentExtensionUrl = "http://www.fragment.com/isFragment";
 
@@ -116,7 +139,7 @@ namespace BreastRadiology.XUnitTests
                 return retVal;
             }
 
-            foreach (String file in Directory.GetFiles(resourceDir))
+            foreach (String file in Directory.GetFiles(inputDir))
             {
                 String fhirText = File.ReadAllText(file);
                 FhirJsonParser parser = new FhirJsonParser();

@@ -53,17 +53,17 @@ namespace BreastRadiology.XUnitTests
             "Content",
             "Page");
 
+        String pageTemplateDir = Path.Combine(
+            DirHelper.FindParentDir(baseDir),
+            "IG",
+            "Content",
+            "PageTemplate");
+
         String mergedDir = Path.Combine(
             DirHelper.FindParentDir(baseDir),
             "IG",
             "Content",
             "Merged");
-
-        String manualDir = Path.Combine(
-            DirHelper.FindParentDir(baseDir),
-            "IG",
-            "Content",
-            "ManualResources");
 
         private void Message(String import, string className, string method, string msg)
         {
@@ -261,14 +261,16 @@ namespace BreastRadiology.XUnitTests
         {
             try
             {
-                //IGBuilder p = new IGBuilder(Path.Combine(this.guideDir, "input"));
-                //p.StatusErrors += this.StatusErrors;
-                //p.StatusInfo += this.StatusInfo;
-                //p.StatusWarnings += this.StatusWarnings;
-                //p.Start();
-                //p.AddResources(this.resourcesDir);
-                //p.AddResources(this.manualDir);
-                //p.SaveAll();
+                IGBuilder p = new IGBuilder(Path.Combine(this.guideDir, "input"));
+                p.StatusErrors += this.StatusErrors;
+                p.StatusInfo += this.StatusInfo;
+                p.StatusWarnings += this.StatusWarnings;
+                p.Start();
+                p.AddResources(this.resourcesDir);
+                p.AddPageContent(this.pageDir);
+                p.AddPageContent(this.pageTemplateDir);
+                p.AddImages(this.graphicsDir);
+                p.SaveAll();
 
                 //if (p.HasErrors)
                 //{
