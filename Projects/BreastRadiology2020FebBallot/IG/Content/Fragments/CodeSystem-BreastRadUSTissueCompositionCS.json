@@ -5,12 +5,16 @@
     {
       "url": "http://www.fragment.com/fragment",
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
+    },
+    {
+      "url": "http://www.ResourceMaker.com/Group",
+      "valueString": "USCodesCS"
     }
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadUSTissueCompositionCS",
   "name": "BreastRadUSTissueCompositionCS",
-  "title": "US Tissue Composition",
-  "description": "Breast Radiology Ultra-Sound Tissue Composition Observation\n\n\nThe wide normal variability in tissue composition seen on mammograms can also be observed\non US images. Just as increasing breast density diminishes the sensitivity of mammography in the\ndetection of small masses, heterogeneous background echotexture of the breast may affect the\nsensitivity of breast sonograms for lesion detection.\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013 \n*** TODO Items ***** can this and mammo breast density be the same?",
+  "title": "US Tissue Composition CodeSystem",
+  "description": "Ultra-sound breast tissue composition codes.",
   "caseSensitive": true,
   "content": "complete",
   "count": 3,

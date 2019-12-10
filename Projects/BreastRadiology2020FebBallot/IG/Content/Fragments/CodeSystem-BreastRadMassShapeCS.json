@@ -5,12 +5,16 @@
     {
       "url": "http://www.fragment.com/fragment",
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
+    },
+    {
+      "url": "http://www.ResourceMaker.com/Group",
+      "valueString": "CommonCodesCS"
     }
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadMassShapeCS",
   "name": "BreastRadMassShapeCS",
-  "title": "Mass Shape",
-  "description": "Breast Radiology Mass Shape",
+  "title": "Mass Shape CodeSystem",
+  "description": "Codes defining mass shape values.",
   "caseSensitive": true,
   "content": "complete",
   "count": 3,

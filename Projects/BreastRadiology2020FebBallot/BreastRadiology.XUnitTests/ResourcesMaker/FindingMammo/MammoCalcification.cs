@@ -50,7 +50,7 @@ namespace BreastRadiology.XUnitTests
                         .BlockQuote("As an ASSOCIATED FEATURE, this may be used in conjunction with one or more other FINDING(S)")
                         .BlockQuote("to describe calcifications within or immediately adjacent to the finding(s)")
                         .BiradFooter()
-                        .Paragraph("This observation has the following two member observations")
+                        .Paragraph("This observation has the following member observations:")
                         .List("Calcification Type", "Calcification Distribution")
                         .Todo(
                         )

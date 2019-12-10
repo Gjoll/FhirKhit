@@ -5,12 +5,16 @@
     {
       "url": "http://www.fragment.com/fragment",
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
+    },
+    {
+      "url": "http://www.ResourceMaker.com/Group",
+      "valueString": "CommonCodesVS"
     }
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BiRadsAssessmentCategoriesVS",
   "name": "BiRadsAssessmentCategoriesVS",
-  "title": "BiRads Assessment Categories",
-  "description": "BiRads Assessment Categories",
+  "title": "BiRads(r) Assessment Category Codes ValueSet",
+  "description": "BiRads(r) Assessment Category codes.",
   "compose": {
     "include": [
       {

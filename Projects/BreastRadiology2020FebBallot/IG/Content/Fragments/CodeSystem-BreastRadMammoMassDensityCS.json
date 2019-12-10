@@ -5,12 +5,16 @@
     {
       "url": "http://www.fragment.com/fragment",
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
+    },
+    {
+      "url": "http://www.ResourceMaker.com/Group",
+      "valueString": "MammoCodesCS"
     }
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadMammoMassDensityCS",
   "name": "BreastRadMammoMassDensityCS",
-  "title": "Mammo Mass Density",
-  "description": "Breast Radiology Mammography Mass Density",
+  "title": "Mammo Mass Density CodeSystem",
+  "description": "Mammography mass density codes.",
   "caseSensitive": true,
   "content": "complete",
   "count": 4,

@@ -30,36 +30,36 @@ namespace BreastRadiology.XUnitTests
             ValueSet binding = this.CreateValueSet(
                 "BreastRadUSMassOrientation",
                 "US Mass Orientation",
-                new Markdown()
-                    .Paragraph("Breast Radiology Ultra-Sound Mass Orientation"),
-                    new ConceptDef[]
-                    {
-                        new ConceptDef("Parallel ",
-                            "Parallel",
-                            new Definition()
-                            .CiteStart()
-                                .Line("(historically, “wider-than-tall” or “horizontal”)")
-                                .Line("The long axis of the mass parallels the skin line. Masses that are only slightly obiquely oriented")
-                                .Line("might be considered parallel.")
-                            .CiteEnd(BiRadCitation)
-                            ),
-                        new ConceptDef("NotParallel",
-                            "Not Parallel",
-                            new Definition()
-                            .CiteStart()
-                                .Line("(historically, \"isodense\")")
-                                .Line("The long axis of the mass does not lie parallel to the skin line. The anterior–posterior or vertical")
-                                .Line("dimension is greater than the transverse or horizontal dimension. These masses can also be")
-                                .Line("obliquely oriented to the skin line. Round masses are NOT PARALLEL in their orientation.")
-                            .CiteEnd(BiRadCitation)
-                            )
-                    });
+                "Ultra-sound mass orientation codes",
+                Group_USCodes,
+                new ConceptDef[]
+                {
+                    new ConceptDef("Parallel ",
+                        "Parallel",
+                        new Definition()
+                        .CiteStart()
+                            .Line("(historically, “wider-than-tall” or “horizontal”)")
+                            .Line("The long axis of the mass parallels the skin line. Masses that are only slightly obiquely oriented")
+                            .Line("might be considered parallel.")
+                        .CiteEnd(BiRadCitation)
+                        ),
+                    new ConceptDef("NotParallel",
+                        "Not Parallel",
+                        new Definition()
+                        .CiteStart()
+                            .Line("(historically, \"isodense\")")
+                            .Line("The long axis of the mass does not lie parallel to the skin line. The anterior–posterior or vertical")
+                            .Line("dimension is greater than the transverse or horizontal dimension. These masses can also be")
+                            .Line("obliquely oriented to the skin line. Round masses are NOT PARALLEL in their orientation.")
+                        .CiteEnd(BiRadCitation)
+                        )
+                });
 
             SDefEditor e = this.CreateEditor("BreastRadUSMassOrientation",
                     "US Mass Orientation",
                     new string[] { "Orientation" },
                     ObservationUrl,
-                    $"{Group_UltraSoundResources}/Mass/Orientation",
+                    $"{Group_USResources}/Mass/Orientation",
                     out usMassOrientation)
                 .Description("Breast Radiology Ultra-Sound Mass Orientation Observation",
                     new Markdown()

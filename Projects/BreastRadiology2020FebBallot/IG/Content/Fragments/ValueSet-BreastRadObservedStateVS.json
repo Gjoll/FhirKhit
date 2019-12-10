@@ -5,12 +5,16 @@
     {
       "url": "http://www.fragment.com/fragment",
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
+    },
+    {
+      "url": "http://www.ResourceMaker.com/Group",
+      "valueString": "CommonCodesVS"
     }
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadObservedStateVS",
   "name": "BreastRadObservedStateVS",
-  "title": "Observed State",
-  "description": "Breast Radiology Observed State\n\n\n*** TODO Items ***** Do we want benign appearing & probably benign? Define difference.",
+  "title": "Observed State ValueSet",
+  "description": "Codes for observed state of an abnormality.",
   "compose": {
     "include": [
       {

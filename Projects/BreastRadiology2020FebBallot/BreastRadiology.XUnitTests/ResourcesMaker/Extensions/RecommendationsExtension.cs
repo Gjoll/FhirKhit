@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
                 "Recommendations Extension",
                 new string[] {"Recommendations", "Extension"}, 
                 ExtensionUrl,
-                 "Extension/Recommendations",
+                 $"{Group_ExtensionResources}/Recommendations",
                out breastRadiologyRecommendationsExtension)
                 .Description("Diagnostic Report recommendations section extension",
                 new Markdown()

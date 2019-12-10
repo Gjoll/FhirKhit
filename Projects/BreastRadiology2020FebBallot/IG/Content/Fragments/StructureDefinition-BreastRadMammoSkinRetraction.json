@@ -22,7 +22,7 @@
   "name": "BreastRadMammoSkinRetraction",
   "title": "Mammo Skin Retraction",
   "status": "draft",
-  "description": "Skin Retraction Observation\n\n\n\nThe skin is pulled in abnormally\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013 \nIf this observation is present, and dataAbsentReason is empty, then a skin retraction was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a skin retraction was not observed and dataAbsentReason contains the reason why.",
+  "description": "Mammography Skin Retraction Observation\n\n\n\nThe skin is pulled in abnormally\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013 \nIf this observation is present, and dataAbsentReason is empty, then a skin retraction was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a skin retraction was not observed and dataAbsentReason contains the reason why.",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -34,7 +34,7 @@
       {
         "id": "Observation",
         "path": "Observation",
-        "short": "Skin Retraction Observation",
+        "short": "Mammography Skin Retraction Observation",
         "definition": "The skin is pulled in abnormally\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013 \nIf this observation is present, and dataAbsentReason is empty, then a skin retraction was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a skin retraction was not observed and dataAbsentReason contains the reason why.",
         "min": 0,
         "max": "*"

@@ -5,12 +5,16 @@
     {
       "url": "http://www.fragment.com/fragment",
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
+    },
+    {
+      "url": "http://www.ResourceMaker.com/Group",
+      "valueString": "MammoCodesVS"
     }
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadMemmoAsymmetriesVS",
   "name": "BreastRadMemmoAsymmetriesVS",
-  "title": "Mammo Asymmetries",
-  "description": "Breast Radiology Mammography Asymmetries Observation",
+  "title": "Mammo Asymmetries ValueSet",
+  "description": "Codes defining types of mammography asymmetries.",
   "compose": {
     "include": [
       {

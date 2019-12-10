@@ -23,7 +23,7 @@
       ]
     }
   ],
-  "description": "Breast Radiology Count Observation\n\nThis observations describes the number of discrete items in an observed item.\n\n\nIf this observation is present, and dataAbsentReason is empty, then an objects Count was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then an objects Count was not observed and dataAbsentReason contains the reason why.",
+  "description": "Breast Radiology Count Observation\n\nThis observations describes the number of discrete items in an observed item.\n\n\nIf this observation is present, and dataAbsentReason is empty, then an objects Count was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then an objects Count was not observed and dataAbsentReason contains the reason why.\n\n\n*** TODO Items ***** Should value[x] be SimpleQuantity.\n** is 'tot' correct ucum units for count?",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -36,7 +36,7 @@
         "id": "Observation",
         "path": "Observation",
         "short": "Breast Radiology Count Observation",
-        "definition": "This observations describes the number of discrete items in an observed item.\n\n\nIf this observation is present, and dataAbsentReason is empty, then an objects Count was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then an objects Count was not observed and dataAbsentReason contains the reason why.",
+        "definition": "This observations describes the number of discrete items in an observed item.\n\n\nIf this observation is present, and dataAbsentReason is empty, then an objects Count was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then an objects Count was not observed and dataAbsentReason contains the reason why.\n\n\n*** TODO Items ***** Should value[x] be SimpleQuantity.\n** is 'tot' correct ucum units for count?",
         "comment": "Used for simple observations such as device measurements, laboratory atomic results, vital signs, height, weight, smoking status, comments, etc.  Other resources are used to provide context for observations such as laboratory reports, etc.",
         "alias": [
           "Vital Signs",
@@ -1118,7 +1118,7 @@
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
         "short": "Actual result",
-        "definition": "Count of an object\n\n\nThis is either an integer count, or a Range (min..max) count\n\n\nA range value with no maximum specified implies count is min or more.\n\n\nA range value with no minimum specified implies count is max or less.\n\n\n*** TODO Items ***** Should this be SimpleQuantity.\n** is 'tot' correct ucum units for count?",
+        "definition": "Count of an object.\n\n\nThis is either an integer count, or a Range (min..max) count.\n\n\nA range value with no maximum specified implies count is min or more.\n\n\nA range value with no minimum specified implies count is max or less.",
         "comment": "An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.",
         "requirements": "An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations.",
         "min": 1,
@@ -2305,7 +2305,7 @@
         "id": "Observation",
         "path": "Observation",
         "short": "Breast Radiology Count Observation",
-        "definition": "This observations describes the number of discrete items in an observed item.\n\n\nIf this observation is present, and dataAbsentReason is empty, then an objects Count was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then an objects Count was not observed and dataAbsentReason contains the reason why.",
+        "definition": "This observations describes the number of discrete items in an observed item.\n\n\nIf this observation is present, and dataAbsentReason is empty, then an objects Count was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then an objects Count was not observed and dataAbsentReason contains the reason why.\n\n\n*** TODO Items ***** Should value[x] be SimpleQuantity.\n** is 'tot' correct ucum units for count?",
         "base": {
           "path": "Observation",
           "min": 0,
@@ -2482,7 +2482,7 @@
       {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
-        "definition": "Count of an object\n\n\nThis is either an integer count, or a Range (min..max) count\n\n\nA range value with no maximum specified implies count is min or more.\n\n\nA range value with no minimum specified implies count is max or less.\n\n\n*** TODO Items ***** Should this be SimpleQuantity.\n** is 'tot' correct ucum units for count?",
+        "definition": "Count of an object.\n\n\nThis is either an integer count, or a Range (min..max) count.\n\n\nA range value with no maximum specified implies count is min or more.\n\n\nA range value with no minimum specified implies count is max or less.",
         "min": 1,
         "max": "1",
         "base": {

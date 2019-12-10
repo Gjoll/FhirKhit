@@ -5,12 +5,16 @@
     {
       "url": "http://www.fragment.com/fragment",
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
+    },
+    {
+      "url": "http://www.ResourceMaker.com/Group",
+      "valueString": "MammoCodesCS"
     }
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadMammoBreastDensityCS",
   "name": "BreastRadMammoBreastDensityCS",
-  "title": "Mammo Breast Density",
-  "description": "Breast Radiology Mammography Breast Density/Composition Observation\n\n\n*** TODO Items ***** Do we need statement that breast density is required now?\n** can this and US tissue composition be the same?",
+  "title": "Mammo Breast Density CodeSystem",
+  "description": "Codes for mammography breast density values.",
   "caseSensitive": true,
   "content": "complete",
   "count": 4,

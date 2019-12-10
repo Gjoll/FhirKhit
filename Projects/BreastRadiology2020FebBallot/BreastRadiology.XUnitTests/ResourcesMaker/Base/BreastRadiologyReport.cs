@@ -32,11 +32,11 @@ namespace BreastRadiology.XUnitTests
                 "Breast Radiology Report",
                 new string[] {"Breast","Radiology","Report"},
                 DiagnosticReportUrl,
-                "Base",
+                Group_BaseResources,
                 out breastRadiologyReport)
                 .Description("Breast Radiology Diagnostic Report", 
                     new Markdown()
-                        .Paragraph("This diagnostic report has links to the data that comprise a Breast Radiology Report, including")
+                        .Paragraph("This diagnostic report has links to the data that comprise a Breast Radiology Report, including:")
                         .List("references to prior breast radiology reports for this patient",
                               "references to the observations of this report",
                               "references to the recommendations of this report",

@@ -34,7 +34,7 @@ namespace BreastRadiology.XUnitTests
                     out findingCategoryFragment)
                 .Description("Fragment definition to define Observation.category",
                     new Markdown()
-                        .Paragraph("This fragment slices Observation.category and adds the required observation code value")
+                        .Paragraph("This fragment slices Observation.category and adds the required observation code value.")
                         .Todo(
                         )
                 )

@@ -100,15 +100,32 @@ namespace BreastRadiology.XUnitTests
             const String IsFragmentExtensionUrl = "http://www.fragment.com/isFragment";
             const String GroupExtensionUrl = "http://www.ResourceMaker.com/Group";
 
-            String Group(StructureDefinition sd)
+            String Group(DomainResource resource)
             {
-                Extension groupExtension = sd.GetExtension(GroupExtensionUrl);
-                if (sd == null)
-                    throw new Exception($"StructureDefinition {sd.Url} lacks group extension");
+                Extension groupExtension = resource.GetExtension(GroupExtensionUrl);
+                if (resource == null)
+                    throw new Exception($"StructureDefinition {resource.Id} lacks group extension");
                 FhirString value = groupExtension.Value as FhirString;
                 if (value == null)
-                    throw new Exception($"StructureDefinition {sd.Url} lacks group extension value");
+                    throw new Exception($"StructureDefinition {resource.Id} lacks group extension value");
                 return value.Value;
+            }
+
+            String GetGroupPath(DomainResource resource)
+            {
+                String groupPath = Group(resource);
+                resource.RemoveExtension(GroupExtensionUrl);
+
+                String groupId = groupPath.BaseUriPart();
+                if (this.groupIds.Contains(groupId) == false)
+                {
+                    this.ConversionError(this.GetType().Name,
+                       fcn,
+                       $"Group {groupId} not defined");
+                    return null;
+                }
+
+                return groupId;
             }
 
             void Save(Resource r, String outputName)
@@ -155,14 +172,16 @@ namespace BreastRadiology.XUnitTests
 
             foreach (CodeSystem codeSystem in codeSystems)
             {
+                String groupId = GetGroupPath(codeSystem);
                 Save(codeSystem, $"CodeSystem-{codeSystem.Name}.json");
-                this.implementationGuide.AddIGResource($"CodeSystem/{codeSystem.Name}", codeSystem.Title, codeSystem.Description.ToString(), null, false);
+                this.implementationGuide.AddIGResource($"CodeSystem/{codeSystem.Name}", codeSystem.Title, codeSystem.Description.ToString(), groupId, false);
             }
 
             foreach (ValueSet valueSet in valueSets)
             {
+                String groupId = GetGroupPath(valueSet);
                 Save(valueSet, $"ValueSet-{valueSet.Name}.json");
-                this.implementationGuide.AddIGResource($"ValueSet/{valueSet.Name}", valueSet.Title, valueSet.Description.ToString(), null, false);
+                this.implementationGuide.AddIGResource($"ValueSet/{valueSet.Name}", valueSet.Title, valueSet.Description.ToString(), groupId, false);
             }
 
             foreach (StructureDefinition structureDefinition in structureDefinitions)
@@ -178,32 +197,22 @@ namespace BreastRadiology.XUnitTests
                 // Dont add fragments to IG.
                 if (isFragmentExtension == null)
                 {
-                    String groupPath = Group(structureDefinition);
-                    structureDefinition.RemoveExtension(GroupExtensionUrl);
-
+                    String groupId = GetGroupPath(structureDefinition);
                     Save(structureDefinition, $"{fixedName}.json");
-                    String groupId = groupPath.BaseUriPart();
-                    if (this.groupIds.Contains(groupId) == false)
-                    {
-                        this.ConversionError(this.GetType().Name,
-                           fcn,
-                           $"Group {groupId} not defined");
-                        return;
-                    }
                     String shortDescription = structureDefinition.Snapshot.Element[0].Short;
 
                     // if these are different, sign that snapshot/differental not in sync.
                     if (
-                        (shortDescription == structureDefinition.Differential.Element[0].Short) ||
-                        (structureDefinition.Snapshot.Element[0].Definition.ToString() == structureDefinition.Differential.Element[0].Definition.ToString())
+                        (shortDescription != structureDefinition.Differential.Element[0].Short) ||
+                        (structureDefinition.Snapshot.Element[0].Definition.ToString() != structureDefinition.Differential.Element[0].Definition.ToString())
                         )
                     {
                         throw new Exception("Invalid element[0] text");
                     }
                     this.implementationGuide.AddIGResource($"StructureDefinition/{structureDefinition.Name}",
-                        structureDefinition.Title, 
-                        shortDescription, 
-                        groupId, 
+                        structureDefinition.Title,
+                        shortDescription,
+                        groupId,
                         false);
                 }
                 else

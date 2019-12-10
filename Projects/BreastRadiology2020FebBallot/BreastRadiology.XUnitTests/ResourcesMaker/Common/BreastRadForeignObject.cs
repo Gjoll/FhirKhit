@@ -30,9 +30,8 @@ namespace BreastRadiology.XUnitTests
             ValueSet binding = this.CreateValueSet(
                     "BreastRadAbnormalities",
                     "Foreign Object",
-                    new Markdown()
-                        .Paragraph("Breast Radiology Foreign Objects")
-                        .Paragraph("These are foreign objects found during a Breast Radiology exam"),
+                    "Foreign object codes defining types of foreign objects observed during a Breast Radiology exam",
+                    Group_CommonCodes,
                     new ConceptDef[]
                     {
                         new ConceptDef("BB", 
@@ -122,7 +121,7 @@ namespace BreastRadiology.XUnitTests
                     out breastRadForeignObject)
                 .Description("Breast Radiology Foreign Object Observation",
                     new Markdown()
-                        .Paragraph("These are foreign objects found during a breast radiology exam")
+                        .Paragraph("These are foreign objects found during a breast radiology exam:")
                         .Todo(
                             "there is no way to say that the following abnormalities do not exist, only that one does exist.",
                             "fill in code descriptions",

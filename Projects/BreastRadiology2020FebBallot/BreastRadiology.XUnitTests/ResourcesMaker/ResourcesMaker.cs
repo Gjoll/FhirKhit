@@ -25,9 +25,17 @@ namespace BreastRadiology.XUnitTests
     {
         public const String Group_BaseResources = "BaseResources";
         public const String Group_CommonResources = "CommonResources";
+        public const String Group_CommonCodes = "CommonCodes";
+
         public const String Group_MammoResources = "MammoResources";
+        public const String Group_MammoCodes = "MammoCodes";
+
         public const String Group_MRIResources = "MRIResources";
-        public const String Group_UltraSoundResources = "UltraSoundResources";
+        public const String Group_MRICodes= "MRICodes";
+
+        public const String Group_USResources = "USResources";
+        public const String Group_USCodes = "USCodes";
+
         public const String Group_ExtensionResources = "ExtensionResources";
 
         public const String GroupExtensionUrl = "http://www.ResourceMaker.com/Group";
@@ -107,6 +115,8 @@ namespace BreastRadiology.XUnitTests
             this.editors.Add(retVal.SDef.Url, retVal);
             url = retVal.SDef.Url;
 
+            // store groupPath as an extension. This is an unregistered extension that will be removed before
+            // processing is complete.
             retVal.SDef.Extension.Add(new Extension
             {
                 Url = GroupExtensionUrl,
@@ -187,15 +197,17 @@ namespace BreastRadiology.XUnitTests
 
         ValueSet CreateValueSet(String name,
             String title,
-            Markdown description,
+            String description,
+            String groupPath,
             IEnumerable<ConceptDef> codes)
         {
-            return CreateValueSet(name, title, description, codes, out CodeSystem cs);
+            return CreateValueSet(name, title, description, groupPath, codes, out CodeSystem cs);
         }
 
         ValueSet CreateValueSet(String name,
             String title,
-            Markdown description,
+            String description,
+            String groupPath,
             IEnumerable<ConceptDef> codes,
             out CodeSystem cs)
         {
@@ -204,23 +216,39 @@ namespace BreastRadiology.XUnitTests
                 Id = $"{name}CS",
                 Url = $"http://hl7.org/fhir/us/breast-radiology/CodeSystem/{name}CS",
                 Name = $"{name}CS",
-                Title = title,
-                Description = description,
+                Title = $"{title} CodeSystem",
+                Description = new Markdown(description),
                 CaseSensitive = true,
                 Content = CodeSystem.CodeSystemContentMode.Complete,
                 Count = codes.Count(),
             };
             cs.AddFragRef(this.HeaderFragment);
 
+            // store groupPath as an extension. This is an unregistered extension that will be removed before
+            // processing is complete.
+            cs.Extension.Add(new Extension
+            {
+                Url = GroupExtensionUrl,
+                Value = new FhirString($"{groupPath}CS")
+            });
+
             ValueSet vs = new ValueSet
             {
                 Id = $"{name}VS",
                 Url = $"http://hl7.org/fhir/us/breast-radiology/ValueSet/{name}VS",
                 Name = $"{name}VS",
-                Title = title,
-                Description = description
+                Title = $"{title} ValueSet",
+                Description = new Markdown(description)
             };
             vs.AddFragRef(this.HeaderFragment);
+
+            // store groupPath as an extension. This is an unregistered extension that will be removed before
+            // processing is complete.
+            vs.Extension.Add(new Extension
+            {
+                Url = GroupExtensionUrl,
+                Value = new FhirString($"{groupPath}VS")
+            });
 
 
             ValueSet.ConceptSetComponent vsComp = new ValueSet.ConceptSetComponent

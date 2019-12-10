@@ -29,9 +29,9 @@ namespace BreastRadiology.XUnitTests
         {
             ValueSet binding = this.CreateValueSet(
                     "BiRadsAssessmentCategories",
-                    "BiRads Assessment Categories",
-                    new Markdown()
-                        .Paragraph("BiRads Assessment Categories"),
+                    "BiRads(r) Assessment Category Codes",
+                    "BiRads(r) Assessment Category codes.",
+                    Group_CommonCodes,
                     new ConceptDef[]
                     {
                         new ConceptDef("Category-0",
@@ -93,7 +93,7 @@ namespace BreastRadiology.XUnitTests
                     ObservationUrl,
                     $"{Group_CommonResources}/BiRads",
                     out biRadsAssessmentCategory)
-                .Description("BiRads Assessment Category",
+                .Description("BiRads Assessment Category Observation",
                     new Markdown()
                         .BiradHeader()
                         .BlockQuote("BI-RADS® assessments are divided into incomplete (category 0) and final assessment categories")

@@ -5,12 +5,16 @@
     {
       "url": "http://www.fragment.com/fragment",
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
+    },
+    {
+      "url": "http://www.ResourceMaker.com/Group",
+      "valueString": "CommonCodesCS"
     }
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadObservedChangesCS",
   "name": "BreastRadObservedChangesCS",
-  "title": "Observed Changes",
-  "description": "Breast Radiology Observed Changes",
+  "title": "Observed Changes CodeSystem",
+  "description": "Codes defining types of observed changes in an abnormality over time.",
   "caseSensitive": true,
   "content": "complete",
   "count": 13,

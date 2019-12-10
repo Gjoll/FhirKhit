@@ -27,12 +27,12 @@ namespace BreastRadiology.XUnitTests
         void CreateMammoSkinThickening()
         {
             SDefEditor e = this.CreateEditor("BreastRadMammoSkinThickening",
-                "Skin Thickening",
+                "Mammo Skin Thickening",
                 new string[] { "Skin", "Thickening" },
                 ObservationUrl,
                 $"{Group_MammoResources}/AssociatedFeature/SkinThickening",
                 out mammoSkinThickening)
-                .Description("Skin Thickening Observation",
+                .Description("Mammography Skin Thickening Observation",
                     new Markdown()
                         .BiradHeader()
                         .BlockQuote("Skin thickening may be focal or diffuse, and is defined as being greater than 2 mm in thickness. This ")

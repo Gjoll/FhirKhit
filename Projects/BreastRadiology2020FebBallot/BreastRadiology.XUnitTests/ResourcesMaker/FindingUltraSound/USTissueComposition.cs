@@ -29,14 +29,8 @@ namespace BreastRadiology.XUnitTests
             ValueSet binding = this.CreateValueSet(
                 "BreastRadUSTissueComposition",
                 "US Tissue Composition",
-                new Markdown()
-                    .Paragraph("Breast Radiology Ultra-Sound Tissue Composition Observation")
-                    .BiradHeader()
-                    .BlockQuote("The wide normal variability in tissue composition seen on mammograms can also be observed")
-                    .BlockQuote("on US images. Just as increasing breast density diminishes the sensitivity of mammography in the")
-                    .BlockQuote("detection of small masses, heterogeneous background echotexture of the breast may affect the")
-                    .BlockQuote("sensitivity of breast sonograms for lesion detection.")
-                    .BiradFooter(),
+                "Ultra-sound breast tissue composition codes.",
+                Group_USCodes,
                 new ConceptDef[]
                 {
                     new ConceptDef("Fat",
@@ -75,7 +69,7 @@ namespace BreastRadiology.XUnitTests
                     "US Tissue Composition",
                     new string[] {"Tissue","Composition"},
                     ObservationUrl,
-                    $"{Group_UltraSoundResources}/Mass/TissueComposition",
+                    $"{Group_USResources}/Mass/TissueComposition",
                     out usTissueComposition)
                 .Description("Breast Radiology Ultra-Sound Tissue Composition Observation",
                     new Markdown()

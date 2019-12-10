@@ -64,7 +64,7 @@ namespace BreastRadiology.XUnitTests
                 "Breast Body Location",
                 new string[] { "Breast", "Body", "Location" },
                 ExtensionUrl,
-                "Extension/BreastBodyLocation",
+                $"{Group_ExtensionResources}/BreastBodyLocation",
                 out breastBodyLocationExtension)
                 .Description("Breast Body Location extension",
                     new Markdown()
@@ -99,8 +99,8 @@ namespace BreastRadiology.XUnitTests
                 ValueSet binding = this.CreateValueSet(
                     "BreastLocationQuadrant",
                     "Breast Location Quadrant",
-                    new Markdown()
-                        .Paragraph("Breast Location Quadrant"),
+                    "Breast body location quadrant codes.",
+                    Group_CommonCodes,
                     new ConceptDef[]
                     {
                         new ConceptDef("UpperOuter",
@@ -177,8 +177,8 @@ namespace BreastRadiology.XUnitTests
                 ValueSet binding = this.CreateValueSet(
                     "BreastLocationClock",
                     "Breast Location Clock",
-                    new Markdown()
-                        .Paragraph("Breast Location Clock"),
+                    "Codes defining breast body location angles expressed in clock-face units.",
+                    Group_CommonCodes,
                     new ConceptDef[]
                     {
                         new ConceptDef("12-OClock",
@@ -310,8 +310,8 @@ namespace BreastRadiology.XUnitTests
                 ValueSet binding = this.CreateValueSet(
                     "BreastLocationDepth",
                     "Breast Location Depth",
-                    new Markdown()
-                        .Paragraph("Breast Location Depth"),
+                    "Breast body location depth codes.",
+                    Group_CommonCodes,
                     new ConceptDef[]
                     {
                         new ConceptDef("Anterior",

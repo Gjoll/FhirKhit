@@ -30,83 +30,83 @@ namespace BreastRadiology.XUnitTests
             ValueSet binding = this.CreateValueSet(
                 "BreastRadUSMassMargin",
                 "US Mass Margin",
-                new Markdown()
-                    .Paragraph("Breast Radiology Ultra-Sound Mass Margin"),
-                    new ConceptDef[]
-                    {
-                        new ConceptDef("Circumscribed ",
-                            "Circumscribed Margin",
-                            new Definition()
-                            .CiteStart()
-                                .Line("(historically, “well-defined” or “sharply-defined”)")
-                                .Line("A circumscribed margin is one that is well defined, with an abrupt transition between the")
-                                .Line("lesion and the surrounding tissue. For US, to describe a mass as circumscribed, its entire margin")
-                                .Line("must be sharply defined. Most circumscribed lesions have round or oval shapes.")
-                            .CiteEnd(BiRadCitation)
-                            ),
-                        new ConceptDef("NotCircumscribed ",
-                            "Not Circumscribed",
-                            new Definition()
-                            .CiteStart()
-                                .Line("(historically, “well-defined” or “sharply-defined”)")
-                                .Line("If any portion of the margin is NOT CIRCUMSCRIBED, the mass should be characterized as")
-                                .Line("“not circumscribed.” A mass that is NOT CIRCUMSCRIBED may further be described as having")
-                                .Line("indistinct, angular, microlobulated, spiculated, or any combination of these margin descriptors.")
-                                .Line("“Irregular” is not used to group these marginal attributes because irregular describes the shape")
-                            .CiteEnd(BiRadCitation)
-                            )
-                    });
+                "Ultra-sound mass margin codes.",
+                Group_USCodes,
+                new ConceptDef[]
+                {
+                    new ConceptDef("Circumscribed ",
+                        "Circumscribed Margin",
+                        new Definition()
+                        .CiteStart()
+                            .Line("(historically, “well-defined” or “sharply-defined”)")
+                            .Line("A circumscribed margin is one that is well defined, with an abrupt transition between the")
+                            .Line("lesion and the surrounding tissue. For US, to describe a mass as circumscribed, its entire margin")
+                            .Line("must be sharply defined. Most circumscribed lesions have round or oval shapes.")
+                        .CiteEnd(BiRadCitation)
+                        ),
+                    new ConceptDef("NotCircumscribed ",
+                        "Not Circumscribed",
+                        new Definition()
+                        .CiteStart()
+                            .Line("(historically, “well-defined” or “sharply-defined”)")
+                            .Line("If any portion of the margin is NOT CIRCUMSCRIBED, the mass should be characterized as")
+                            .Line("“not circumscribed.” A mass that is NOT CIRCUMSCRIBED may further be described as having")
+                            .Line("indistinct, angular, microlobulated, spiculated, or any combination of these margin descriptors.")
+                            .Line("“Irregular” is not used to group these marginal attributes because irregular describes the shape")
+                        .CiteEnd(BiRadCitation)
+                        )
+                });
 
             String binding2 = this.CreateValueSet(
                 "BreastRadUSMassMarginNotCircumscribed",
                 "US Mass Margin Not Circumscribed values",
-                new Markdown()
-                    .Paragraph("Breast Radiology Ultra-Sound Mass Margin Not Circumscribed Values"),
-                    new ConceptDef[]
-                    {
-                        new ConceptDef("Indistinct",
-                            "Not Circumscribed - Indistinct",
-                            new Definition()
-                            .CiteStart()
-                                .Line("There is no clear demarcation of the entire margin or any portion of the margin from the")
-                                .Line("surrounding tissue. The boundary is poorly defined, and the significant feature is that the")
-                                .Line("mass is NOT CIRCUMSCRIBED. This is meant to include “echogenic rim” (historically, echogenic")
-                                .Line("halo) because one may not be able to distinguish between an indistinct margin and")
-                                .Line("one that displays an echogenic rim.")
-                            .CiteEnd(BiRadCitation)
-                            ),
-                        new ConceptDef("Angular",
-                            "Not Circumscribed - Angular",
-                            new Definition()
-                            .CiteStart()
-                                .Line("Some or all of the margin has sharp corners, often forming acute angles, but the significant")
-                                .Line("feature is that the margin of the mass is NOT CIRCUMSCRIBED.")
-                            .CiteEnd(BiRadCitation)
-                            ),
-                        new ConceptDef("Microlobulated",
-                            "Not Circumscribed - Microlobulated",
-                            new Definition()
-                            .CiteStart()
-                                .Line("The margin is characterized by short-cycle undulations, but the significant feature is that")
-                                .Line("the margin of the mass is NOT CIRCUMSCRIBED.")
-                            .CiteEnd(BiRadCitation)
-                            ),
-                        new ConceptDef("Spiculated",
-                            "Not Circumscribed - Spiculated",
-                            new Definition()
-                            .CiteStart()
-                                .Line("The margin is characterized by sharp lines radiating from the mass, often a sign of malignancy,")
-                                .Line("but the significant feature is that the margin of the mass is NOT CIRCUMSCRIBED.")
-                            .CiteEnd(BiRadCitation)
-                            )
-                    })
-                .Url;
+                "Ultra-sound mass margin 'Not Circumscribed' codes.",
+                Group_USCodes,
+                new ConceptDef[]
+                {
+                    new ConceptDef("Indistinct",
+                        "Not Circumscribed - Indistinct",
+                        new Definition()
+                        .CiteStart()
+                            .Line("There is no clear demarcation of the entire margin or any portion of the margin from the")
+                            .Line("surrounding tissue. The boundary is poorly defined, and the significant feature is that the")
+                            .Line("mass is NOT CIRCUMSCRIBED. This is meant to include “echogenic rim” (historically, echogenic")
+                            .Line("halo) because one may not be able to distinguish between an indistinct margin and")
+                            .Line("one that displays an echogenic rim.")
+                        .CiteEnd(BiRadCitation)
+                        ),
+                    new ConceptDef("Angular",
+                        "Not Circumscribed - Angular",
+                        new Definition()
+                        .CiteStart()
+                            .Line("Some or all of the margin has sharp corners, often forming acute angles, but the significant")
+                            .Line("feature is that the margin of the mass is NOT CIRCUMSCRIBED.")
+                        .CiteEnd(BiRadCitation)
+                        ),
+                    new ConceptDef("Microlobulated",
+                        "Not Circumscribed - Microlobulated",
+                        new Definition()
+                        .CiteStart()
+                            .Line("The margin is characterized by short-cycle undulations, but the significant feature is that")
+                            .Line("the margin of the mass is NOT CIRCUMSCRIBED.")
+                        .CiteEnd(BiRadCitation)
+                        ),
+                    new ConceptDef("Spiculated",
+                        "Not Circumscribed - Spiculated",
+                        new Definition()
+                        .CiteStart()
+                            .Line("The margin is characterized by sharp lines radiating from the mass, often a sign of malignancy,")
+                            .Line("but the significant feature is that the margin of the mass is NOT CIRCUMSCRIBED.")
+                        .CiteEnd(BiRadCitation)
+                        )
+                })
+            .Url;
 
             SDefEditor e = this.CreateEditor("BreastRadUSMassMargin",
                     "US Mass Margin",
                     new string[] { "Margin" },
                     ObservationUrl,
-                    $"{Group_UltraSoundResources}/Mass/Margin",
+                    $"{Group_USResources}/Mass/Margin",
                     out usMassMargin)
                 .Description("Breast Radiology Ultra-Sound Mass Margin Observation",
                     new Markdown()
@@ -133,14 +133,14 @@ namespace BreastRadiology.XUnitTests
                     new PatternSlice("Margin",
                         "US Mass Margin Value",
                         new Markdown()
-                            .Paragraph("Specifies Circumscribed or Not-Circumscribed"),
+                            .Paragraph("Specifies Circumscribed or Not-Circumscribed."),
                         pattern1,
                         1,
                         "1"),
                     new PatternSlice("MarginNotCircumscribedOptions",
                         "US Mass Margin optional Not-Circumscribed specifier value",
                         new Markdown()
-                            .Paragraph("Optional Not-Circumscribed values"),
+                            .Paragraph("Optional Not-Circumscribed values."),
                         pattern2,
                         0,
                         "*")

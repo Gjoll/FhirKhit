@@ -30,7 +30,7 @@ namespace BreastRadiology.XUnitTests
                     "US Mass",
                     new string[] { "Mass" },
                     ObservationUrl,
-                    $"{Group_UltraSoundResources}/Finding/Mass",
+                    $"{Group_USResources}/Finding/Mass",
                     out usMass)
                 .Description("Breast Radiology Mammography Ultra-Sound Mass Observation",
                     new Markdown()
@@ -41,7 +41,7 @@ namespace BreastRadiology.XUnitTests
                         .BlockQuote("from normal anatomic structures, such as ribs or fat lobules, using two or more projections and")
                         .BlockQuote("real-time scanning.")
                         .BiradFooter()
-                        .Paragraph("This observation has the following three member observations")
+                        .Paragraph("This observation has the following three observations:")
                         .List("Shape", "Orientation", "Margin", "Echo Pattern", "Posterior acoustic features")
                         .Todo(
                             "add mass size measurements (3 dimensional) like US?",

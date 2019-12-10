@@ -5,12 +5,16 @@
     {
       "url": "http://www.fragment.com/fragment",
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
+    },
+    {
+      "url": "http://www.ResourceMaker.com/Group",
+      "valueString": "USCodesVS"
     }
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadUSMassMarginVS",
   "name": "BreastRadUSMassMarginVS",
-  "title": "US Mass Margin",
-  "description": "Breast Radiology Ultra-Sound Mass Margin",
+  "title": "US Mass Margin ValueSet",
+  "description": "Ultra-sound mass margin codes.",
   "compose": {
     "include": [
       {

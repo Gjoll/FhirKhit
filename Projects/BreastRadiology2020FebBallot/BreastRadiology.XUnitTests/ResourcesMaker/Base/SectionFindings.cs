@@ -35,7 +35,7 @@ namespace BreastRadiology.XUnitTests
                 .Description("Findings Section",
                     new Markdown()
                     .Paragraph("This resource is the head of the tree of observations made during a breast radiology exam.")
-                    .Paragraph("Child observations are referenced by the 'Observation.hasMember' field")
+                    .Paragraph("Child observations are referenced by the 'Observation.hasMember' field.")
                     .Todo(
                     )
                 )

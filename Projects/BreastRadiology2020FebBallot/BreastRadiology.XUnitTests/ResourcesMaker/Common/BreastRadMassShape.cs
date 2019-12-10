@@ -30,8 +30,8 @@ namespace BreastRadiology.XUnitTests
             ValueSet binding = this.CreateValueSet(
                     "BreastRadMassShape",
                     "Mass Shape",
-                    new Markdown()
-                        .Paragraph("Breast Radiology Mass Shape"),
+                    "Codes defining mass shape values.",
+                    Group_CommonCodes,
                     new ConceptDef[]
                     {
                         new ConceptDef("Oval", 
@@ -70,7 +70,6 @@ namespace BreastRadiology.XUnitTests
                     out breastRadMassShape)
                 .Description("Breast Radiology Mass Shape Observation",
                     new Markdown()
-                        .Paragraph()
                         .MissingObservation("a mass shape")
                         .Todo(
                         )

@@ -5,12 +5,16 @@
     {
       "url": "http://www.fragment.com/fragment",
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
+    },
+    {
+      "url": "http://www.ResourceMaker.com/Group",
+      "valueString": "USCodesCS"
     }
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadUSMassMarginNotCircumscribedCS",
   "name": "BreastRadUSMassMarginNotCircumscribedCS",
-  "title": "US Mass Margin Not Circumscribed values",
-  "description": "Breast Radiology Ultra-Sound Mass Margin Not Circumscribed Values",
+  "title": "US Mass Margin Not Circumscribed values CodeSystem",
+  "description": "Ultra-sound mass margin 'Not Circumscribed' codes.",
   "caseSensitive": true,
   "content": "complete",
   "count": 4,

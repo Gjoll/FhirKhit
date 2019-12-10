@@ -22,7 +22,7 @@
   "name": "BreastRadObservedState",
   "title": "Observed State",
   "status": "draft",
-  "description": "Breast Radiology Observed State Observation\n\nThis observations describes an observed change in a previously observed item.\n\n\nIf this observation is present, and dataAbsentReason is empty, then an observed change was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then an observed change was not observed and dataAbsentReason contains the reason why.",
+  "description": "Breast Radiology Observed State Observation\n\nThis observations describes an observed change in a previously observed item.\n\n\nIf this observation is present, and dataAbsentReason is empty, then an observed change was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then an observed change was not observed and dataAbsentReason contains the reason why.\n\n\n*** TODO Items ***** Do we want benign appearing & probably benign? Define difference.",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -35,7 +35,7 @@
         "id": "Observation",
         "path": "Observation",
         "short": "Breast Radiology Observed State Observation",
-        "definition": "This observations describes an observed change in a previously observed item.\n\n\nIf this observation is present, and dataAbsentReason is empty, then an observed change was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then an observed change was not observed and dataAbsentReason contains the reason why.",
+        "definition": "This observations describes an observed change in a previously observed item.\n\n\nIf this observation is present, and dataAbsentReason is empty, then an observed change was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then an observed change was not observed and dataAbsentReason contains the reason why.\n\n\n*** TODO Items ***** Do we want benign appearing & probably benign? Define difference.",
         "min": 0,
         "max": "*"
       },

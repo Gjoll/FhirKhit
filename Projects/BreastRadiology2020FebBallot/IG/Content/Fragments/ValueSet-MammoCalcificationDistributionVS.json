@@ -5,12 +5,16 @@
     {
       "url": "http://www.fragment.com/fragment",
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
+    },
+    {
+      "url": "http://www.ResourceMaker.com/Group",
+      "valueString": "MammoCodesVS"
     }
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/MammoCalcificationDistributionVS",
   "name": "MammoCalcificationDistributionVS",
-  "title": "Mammo Calcification Distribution",
-  "description": "Mammography Calcification Distribution\n\n\nThese descriptors are used to indicate the arrangement of calcifications in the breast. Multiple\nsimilar groups may be described in the report when there is more than one group of calcifications\nthat are similar in morphology and distribution. In evaluating the likelihood of malignancy for calcifications, \ndistribution is at least as important as morphology.\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
+  "title": "Mammo Calcification Distribution ValueSet",
+  "description": "Mammography calcification distribution codes.",
   "compose": {
     "include": [
       {

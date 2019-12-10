@@ -5,12 +5,16 @@
     {
       "url": "http://www.fragment.com/fragment",
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
+    },
+    {
+      "url": "http://www.ResourceMaker.com/Group",
+      "valueString": "CommonCodesVS"
     }
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastLocationQuadrantVS",
   "name": "BreastLocationQuadrantVS",
-  "title": "Breast Location Quadrant",
-  "description": "Breast Location Quadrant",
+  "title": "Breast Location Quadrant ValueSet",
+  "description": "Breast body location quadrant codes.",
   "compose": {
     "include": [
       {

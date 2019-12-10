@@ -233,12 +233,27 @@ namespace BreastRadiology.XUnitTests
                 p.StatusInfo += this.StatusInfo;
                 p.StatusWarnings += this.StatusWarnings;
                 p.Start(Path.Combine(this.contentDir, "IGBreastRad.xml"));
-                p.AddGrouping(ResourcesMaker.Group_BaseResources, "Main Resources", "This section contains the main top level resources that are used in a Breast Radiology Report.");
-                p.AddGrouping(ResourcesMaker.Group_CommonResources, "Common Resources", "This section contains resources that are commonly used throughout a Breast Radiology Report");
-                p.AddGrouping(ResourcesMaker.Group_MammoResources, "Mammography Resources", "This section contains resources used specifically in a Mammography exam");
-                p.AddGrouping(ResourcesMaker.Group_MRIResources, "MRI Resources", "This section contains resources used specifically in a MRI exam");
-                p.AddGrouping(ResourcesMaker.Group_UltraSoundResources, "UltraSound Resources", "This section contains resources used specifically in a Ultra-Sound exam");
-                p.AddGrouping(ResourcesMaker.Group_ExtensionResources, "Extension", "Extension Resource Definitions");
+
+                p.AddGrouping($"{ResourcesMaker.Group_BaseResources}", "Main Resources", "This section contains the main top level resources that are used in a Breast Radiology Report.");
+
+                p.AddGrouping($"{ResourcesMaker.Group_CommonResources}", "Common Resources", "This section contains resources that are commonly used throughout a Breast Radiology Report");
+                p.AddGrouping($"{ResourcesMaker.Group_CommonCodes}VS", "Common ValueSets ", "This section contains value sets that are commonly used throughout a Breast Radiology Report");
+                p.AddGrouping($"{ResourcesMaker.Group_CommonCodes}CS", "Common CodeSystems", "This section contains code systems that are commonly used throughout a Breast Radiology Report");
+
+                p.AddGrouping($"{ResourcesMaker.Group_MammoResources}", "Mammography Resources", "This section contains resources used specifically in a Mammography exam");
+                p.AddGrouping($"{ResourcesMaker.Group_MammoCodes}VS", "Mammography ValueSets", "This section contains value sets used specifically in a Mammography exam");
+                p.AddGrouping($"{ResourcesMaker.Group_MammoCodes}CS", "Mammography CodeSystems", "This section contains code systems used specifically in a Mammography exam");
+
+                p.AddGrouping($"{ResourcesMaker.Group_MRIResources}", "MRI Resources", "This section contains resources used specifically in a MRI exam");
+                p.AddGrouping($"{ResourcesMaker.Group_MRICodes}VS", "MRI ValueSets", "This section contains value sets used specifically in a MRI exam");
+                p.AddGrouping($"{ResourcesMaker.Group_MRICodes}CS", "MRI CodeSystems", "This section contains code systems used specifically in a MRI exam");
+
+                p.AddGrouping($"{ResourcesMaker.Group_USResources}", "UltraSound Resources", "This section contains resources used specifically in a Ultra-Sound exam");
+                p.AddGrouping($"{ResourcesMaker.Group_USCodes}VS", "UltraSound ValueSets", "This section contains value sets used specifically in a UltraSound exam");
+                p.AddGrouping($"{ResourcesMaker.Group_USCodes}CS", "UltraSound CodeSystems", "This section contains code systems used specifically in a UltraSound exam");
+
+                p.AddGrouping($"{ResourcesMaker.Group_ExtensionResources}", "Extension", "Extension Resource Definitions");
+
                 p.AddResources(this.resourcesDir);
                 p.AddPageContent(this.pageDir);
                 p.AddPageContent(this.pageTemplateDir);

@@ -28,10 +28,10 @@ namespace BreastRadiology.XUnitTests
         void CreateMammoAsymmetries()
         {
             ValueSet binding = this.CreateValueSet(
-                    "BreastRadMemmoAsymmetries",
-                    "Mammo Asymmetries",
-                    new Markdown()
-                        .Paragraph("Breast Radiology Mammography Asymmetries Observation"),
+                   "BreastRadMemmoAsymmetries",
+                   "Mammo Asymmetries",
+                   "Codes defining types of mammography asymmetries.",
+                    Group_MammoCodes,
                    new ConceptDef[]
                     {
                         new ConceptDef("Asymmetry",

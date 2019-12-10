@@ -3,6 +3,8 @@ using Hl7.Fhir.Serialization;
 using Hl7.Fhir.Specification.Source;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
 using System.Text;
 
 #if FHIR_R4

@@ -61,7 +61,7 @@ namespace BreastRadiology.XUnitTests
         {
             this.Paragraph(
                 $"This resource is an leaf-node observation of a {leafNode}.",
-                $"It is referenced by an parent Observation section that references other information about this specific abnormality"
+                $"It is referenced by an parent Observation section that references other information about this specific abnormality."
                 );
             return this;
         }

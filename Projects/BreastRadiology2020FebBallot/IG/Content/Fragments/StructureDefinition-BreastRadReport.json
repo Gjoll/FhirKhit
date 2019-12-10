@@ -3,7 +3,7 @@
   "extension": [
     {
       "url": "http://www.ResourceMaker.com/Group",
-      "valueString": "Base"
+      "valueString": "BaseResources"
     },
     {
       "url": "http://www.fragment.com/fragment",
@@ -18,7 +18,7 @@
   "name": "BreastRadReport",
   "title": "Breast Radiology Report",
   "status": "draft",
-  "description": "Breast Radiology Diagnostic Report\n\nThis diagnostic report has links to the data that comprise a Breast Radiology Report, including\n\n\n** references to prior breast radiology reports for this patient\n** references to the observations of this report\n** references to the recommendations of this report\n** a summary of the report findings in a human readable format",
+  "description": "Breast Radiology Diagnostic Report\n\nThis diagnostic report has links to the data that comprise a Breast Radiology Report, including:\n\n\n** references to prior breast radiology reports for this patient\n** references to the observations of this report\n** references to the recommendations of this report\n** a summary of the report findings in a human readable format",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -31,7 +31,7 @@
         "id": "DiagnosticReport",
         "path": "DiagnosticReport",
         "short": "Breast Radiology Diagnostic Report",
-        "definition": "This diagnostic report has links to the data that comprise a Breast Radiology Report, including\n\n\n** references to prior breast radiology reports for this patient\n** references to the observations of this report\n** references to the recommendations of this report\n** a summary of the report findings in a human readable format",
+        "definition": "This diagnostic report has links to the data that comprise a Breast Radiology Report, including:\n\n\n** references to prior breast radiology reports for this patient\n** references to the observations of this report\n** references to the recommendations of this report\n** a summary of the report findings in a human readable format",
         "min": 0,
         "max": "*"
       },

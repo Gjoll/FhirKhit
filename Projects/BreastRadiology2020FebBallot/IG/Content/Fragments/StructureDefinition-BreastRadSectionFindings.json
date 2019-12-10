@@ -22,7 +22,7 @@
   "name": "BreastRadSectionFindings",
   "title": "Findings",
   "status": "draft",
-  "description": "Findings Section\n\nThis resource is the head of the tree of observations made during a breast radiology exam.\n\n\nChild observations are referenced by the 'Observation.hasMember' field",
+  "description": "Findings Section\n\nThis resource is the head of the tree of observations made during a breast radiology exam.\n\n\nChild observations are referenced by the 'Observation.hasMember' field.",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -35,7 +35,7 @@
         "id": "Observation",
         "path": "Observation",
         "short": "Findings Section",
-        "definition": "This resource is the head of the tree of observations made during a breast radiology exam.\n\n\nChild observations are referenced by the 'Observation.hasMember' field",
+        "definition": "This resource is the head of the tree of observations made during a breast radiology exam.\n\n\nChild observations are referenced by the 'Observation.hasMember' field.",
         "min": 0,
         "max": "*"
       },

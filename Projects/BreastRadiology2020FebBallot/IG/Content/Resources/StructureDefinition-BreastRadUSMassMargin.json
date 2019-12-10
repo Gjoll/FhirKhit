@@ -3,7 +3,7 @@
   "extension": [
     {
       "url": "http://www.ResourceMaker.com/Group",
-      "valueString": "UltraSoundResources/Mass/Margin"
+      "valueString": "USResources/Mass/Margin"
     }
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadUSMassMargin",
@@ -1217,7 +1217,7 @@
         "path": "Observation.value[x]",
         "sliceName": "Margin",
         "short": "US Mass Margin Value",
-        "definition": "Specifies Circumscribed or Not-Circumscribed",
+        "definition": "Specifies Circumscribed or Not-Circumscribed.",
         "comment": "An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.",
         "requirements": "An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations.",
         "min": 1,
@@ -1268,7 +1268,7 @@
         "path": "Observation.value[x]",
         "sliceName": "MarginNotCircumscribedOptions",
         "short": "US Mass Margin optional Not-Circumscribed specifier value",
-        "definition": "Optional Not-Circumscribed values",
+        "definition": "Optional Not-Circumscribed values.",
         "comment": "An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.",
         "requirements": "An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations.",
         "min": 0,
@@ -2716,7 +2716,7 @@
         "path": "Observation.value[x]",
         "sliceName": "Margin",
         "short": "US Mass Margin Value",
-        "definition": "Specifies Circumscribed or Not-Circumscribed",
+        "definition": "Specifies Circumscribed or Not-Circumscribed.",
         "comment": "An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.",
         "requirements": "An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations.",
         "min": 1,
@@ -2767,7 +2767,7 @@
         "path": "Observation.value[x]",
         "sliceName": "MarginNotCircumscribedOptions",
         "short": "US Mass Margin optional Not-Circumscribed specifier value",
-        "definition": "Optional Not-Circumscribed values",
+        "definition": "Optional Not-Circumscribed values.",
         "comment": "An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.",
         "requirements": "An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations.",
         "min": 0,

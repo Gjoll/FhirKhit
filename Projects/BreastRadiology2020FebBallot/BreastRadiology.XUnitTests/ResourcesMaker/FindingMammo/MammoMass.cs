@@ -41,7 +41,7 @@ namespace BreastRadiology.XUnitTests
                         .BlockQuote("denser in the center than at the periphery. If a potential mass is seen only on a single projection, it")
                         .BlockQuote("should be called an \"ASYMMETRY\" until its 3-dimensionality is confirmed")
                         .BiradFooter()
-                        .Paragraph("This observation has the following three member observations")
+                        .Paragraph("This observation has the following member observations:")
                         .List("Shape", "Margin", "Density")
                         .Todo(
                             "add mass size measurements (3 dimensional) like US?",

@@ -30,8 +30,8 @@ namespace BreastRadiology.XUnitTests
             ValueSet binding = this.CreateValueSet(
                     "BreastRadObservedChanges",
                     "Observed Changes",
-                    new Markdown()
-                        .Paragraph("Breast Radiology Observed Changes"),
+                    "Codes defining types of observed changes in an abnormality over time.",
+                    Group_CommonCodes,
                     new ConceptDef[]
                     {
                         new ConceptDef("New",

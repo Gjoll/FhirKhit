@@ -3,7 +3,7 @@
   "extension": [
     {
       "url": "http://www.ResourceMaker.com/Group",
-      "valueString": "UltraSoundResources/Mass/Margin"
+      "valueString": "USResources/Mass/Margin"
     },
     {
       "url": "http://www.fragment.com/fragment",
@@ -70,7 +70,7 @@
         "path": "Observation.value[x]",
         "sliceName": "Margin",
         "short": "US Mass Margin Value",
-        "definition": "Specifies Circumscribed or Not-Circumscribed",
+        "definition": "Specifies Circumscribed or Not-Circumscribed.",
         "min": 1,
         "max": "1",
         "base": {
@@ -96,7 +96,7 @@
         "path": "Observation.value[x]",
         "sliceName": "MarginNotCircumscribedOptions",
         "short": "US Mass Margin optional Not-Circumscribed specifier value",
-        "definition": "Optional Not-Circumscribed values",
+        "definition": "Optional Not-Circumscribed values.",
         "min": 0,
         "max": "*",
         "base": {

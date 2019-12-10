@@ -35,7 +35,7 @@ namespace BreastRadiology.XUnitTests
                 .Description("Patient History Section",
                     new Markdown()
                     .Paragraph("This resource is the head of the tree of previous observations.")
-                    .Paragraph("Child observations are referenced by the 'Observation.hasMember' field")
+                    .Paragraph("Child observations are referenced by the 'Observation.hasMember' field.")
                     .Todo(
                         "What resources comprise a patient history. Currently we can only reference observations - this is probably inadequate"
                         )

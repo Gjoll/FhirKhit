@@ -32,7 +32,7 @@ namespace BreastRadiology.XUnitTests
                 ObservationUrl,
                 $"{Group_MammoResources}/AssociatedFeature/SkinRetraction",
                 out mammoSkinRetraction)
-                .Description("Skin Retraction Observation",
+                .Description("Mammography Skin Retraction Observation",
                     new Markdown()
                         .Paragraph()
                         .BiradHeader()

@@ -5,12 +5,16 @@
     {
       "url": "http://www.fragment.com/fragment",
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
+    },
+    {
+      "url": "http://www.ResourceMaker.com/Group",
+      "valueString": "MammoCodesCS"
     }
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/MammoCalcificationTypeCS",
   "name": "MammoCalcificationTypeCS",
-  "title": "Mammo Calcification Type",
-  "description": "Mammography Calcification Type",
+  "title": "Mammo Calcification Type CodeSystem",
+  "description": "Mammography calcification type codes.",
   "caseSensitive": true,
   "content": "complete",
   "count": 13,

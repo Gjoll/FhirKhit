@@ -23,7 +23,7 @@
       ]
     }
   ],
-  "description": "Patient History Section\n\nThis resource is the head of the tree of previous observations.\n\n\nChild observations are referenced by the 'Observation.hasMember' field\n\n\n*** TODO Items ***** What resources comprise a patient history. Currently we can only reference observations - this is probably inadequate",
+  "description": "Patient History Section\n\nThis resource is the head of the tree of previous observations.\n\n\nChild observations are referenced by the 'Observation.hasMember' field.\n\n\n*** TODO Items ***** What resources comprise a patient history. Currently we can only reference observations - this is probably inadequate",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -36,7 +36,7 @@
         "id": "Observation",
         "path": "Observation",
         "short": "Patient History Section",
-        "definition": "This resource is the head of the tree of previous observations.\n\n\nChild observations are referenced by the 'Observation.hasMember' field\n\n\n*** TODO Items ***** What resources comprise a patient history. Currently we can only reference observations - this is probably inadequate",
+        "definition": "This resource is the head of the tree of previous observations.\n\n\nChild observations are referenced by the 'Observation.hasMember' field.\n\n\n*** TODO Items ***** What resources comprise a patient history. Currently we can only reference observations - this is probably inadequate",
         "comment": "Used for simple observations such as device measurements, laboratory atomic results, vital signs, height, weight, smoking status, comments, etc.  Other resources are used to provide context for observations such as laboratory reports, etc.",
         "alias": [
           "Vital Signs",
@@ -2332,7 +2332,7 @@
         "id": "Observation",
         "path": "Observation",
         "short": "Patient History Section",
-        "definition": "This resource is the head of the tree of previous observations.\n\n\nChild observations are referenced by the 'Observation.hasMember' field\n\n\n*** TODO Items ***** What resources comprise a patient history. Currently we can only reference observations - this is probably inadequate",
+        "definition": "This resource is the head of the tree of previous observations.\n\n\nChild observations are referenced by the 'Observation.hasMember' field.\n\n\n*** TODO Items ***** What resources comprise a patient history. Currently we can only reference observations - this is probably inadequate",
         "base": {
           "path": "Observation",
           "min": 0,
