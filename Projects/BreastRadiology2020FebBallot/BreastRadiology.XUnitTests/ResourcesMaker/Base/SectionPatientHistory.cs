@@ -27,15 +27,19 @@ namespace BreastRadiology.XUnitTests
         void CreateSectionPatientHistory()
         {
             SDefEditor e = this.CreateEditor("BreastRadSectionPatientHistory",
-                    "Patient History Section",
+                    "Patient History",
                     new string[] {"Patient History"},
                     ObservationUrl,
-                    "Base/PatientHistory",
+                    $"{Group_BaseResources}/PatientHistory",
                     out sectionPatientHistory)
-                .Description(new Markdown()
-
-                    .Paragraph("Patient History Section")
-                    )
+                .Description("Patient History Section",
+                    new Markdown()
+                    .Paragraph("This resource is the head of the tree of previous observations.")
+                    .Paragraph("Child observations are referenced by the 'Observation.hasMember' field")
+                    .Todo(
+                        "What resources comprise a patient history. Currently we can only reference observations - this is probably inadequate"
+                        )
+                )
                 .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.ObservationSectionFragment)
                 .AddFragRef(this.ObservationNoValueFragment)

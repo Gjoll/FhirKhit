@@ -3,7 +3,7 @@
   "extension": [
     {
       "url": "http://www.ResourceMaker.com/Group",
-      "valueString": "Mammo/SolitaryDilatedDuct"
+      "valueString": "MammoResources/SolitaryDilatedDuct"
     },
     {
       "url": "http://www.fragment.com/fragment",
@@ -26,7 +26,7 @@
   "name": "BreastRadMammoSolitaryDilatedDuct",
   "title": "Mammo Solitary Dilated Duct",
   "status": "draft",
-  "description": "Breat Radiology Mammography Solitary Dilated Duct Observation\n\n\nIf this observation is present, and dataAbsentReason is empty, then a solitary dilated duct was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a solitary dilated duct was not observed and dataAbsentReason contains the reason why.\n\n\nThis is a unilateral tubular or branching structure that likely represents a dilated or otherwise en-\nlarged duct. It is a rare finding. Even if unassociated with other suspicious clinical or mammographic\nfindings, it has been reported to be associated with noncalcified DCIS.\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
+  "description": "Breat Radiology Mammography Solitary Dilated Duct Observation\n\nIf this observation is present, and dataAbsentReason is empty, then a solitary dilated duct was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a solitary dilated duct was not observed and dataAbsentReason contains the reason why.\n\n\nThis is a unilateral tubular or branching structure that likely represents a dilated or otherwise en-\nlarged duct. It is a rare finding. Even if unassociated with other suspicious clinical or mammographic\nfindings, it has been reported to be associated with noncalcified DCIS.\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013 \n*** TODO Items ***** should this be a leaf node (how about shape, density, location, etc).",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -38,6 +38,8 @@
       {
         "id": "Observation",
         "path": "Observation",
+        "short": "Breat Radiology Mammography Solitary Dilated Duct Observation",
+        "definition": "If this observation is present, and dataAbsentReason is empty, then a solitary dilated duct was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a solitary dilated duct was not observed and dataAbsentReason contains the reason why.\n\n\nThis is a unilateral tubular or branching structure that likely represents a dilated or otherwise en-\nlarged duct. It is a rare finding. Even if unassociated with other suspicious clinical or mammographic\nfindings, it has been reported to be associated with noncalcified DCIS.\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013 \n*** TODO Items ***** should this be a leaf node (how about shape, density, location, etc).",
         "min": 0,
         "max": "*"
       }

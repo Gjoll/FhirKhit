@@ -86,16 +86,17 @@ namespace BreastRadiology.XUnitTests
                 "Mammo Mass Margin",
                 new string[] { "Margin" },
                 ObservationUrl,
-                "Mammo/Mass/Margin",
+                $"{Group_MammoResources}/Mass/Margin",
                 out mammoMassMargin)
-                .Description(new Markdown()
-
-                    .Paragraph("Breast Radiology Mammography Mass Margin Observation")
-                    .MissingObservation("a mass margin")
-                    .BiradHeader()
-                    .BlockQuote("The margin is the edge or border of the lesion. The descriptors of margin, like the descriptors of shape, are important predictors of whether a mass is benign or malignant. ")
-                    .BiradFooter()
-                    )
+                .Description("Breast Radiology Mammography Mass Margin Observation",
+                    new Markdown()
+                        .MissingObservation("a mass margin")
+                        .BiradHeader()
+                        .BlockQuote("The margin is the edge or border of the lesion. The descriptors of margin, like the descriptors of shape, are important predictors of whether a mass is benign or malignant. ")
+                        .BiradFooter()
+                        .Todo(
+                        )
+                )
                 .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.ObservationCodedValueFragment)
                 .AddFragRef(this.ObservationLeafFragment)

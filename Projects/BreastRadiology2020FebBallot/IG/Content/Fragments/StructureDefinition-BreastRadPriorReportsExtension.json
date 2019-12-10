@@ -14,7 +14,7 @@
   "name": "BreastRadPriorReportsExtension",
   "title": "Prior Reports Extension",
   "status": "draft",
-  "description": "Prior Diagnostic Report extension",
+  "description": "Prior Diagnostic Report extension\n\nThis extension defines the prior reports section of a breast radiology report, linking a report to the resources that are the prior reports.",
   "fhirVersion": "4.0.0",
   "kind": "complex-type",
   "abstract": false,
@@ -32,6 +32,8 @@
       {
         "id": "Extension",
         "path": "Extension",
+        "short": "Prior Diagnostic Report extension",
+        "definition": "This extension defines the prior reports section of a breast radiology report, linking a report to the resources that are the prior reports.",
         "min": 0,
         "max": "*"
       },

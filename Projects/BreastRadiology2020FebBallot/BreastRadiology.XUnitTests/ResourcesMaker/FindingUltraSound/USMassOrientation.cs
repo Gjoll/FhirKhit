@@ -59,20 +59,21 @@ namespace BreastRadiology.XUnitTests
                     "US Mass Orientation",
                     new string[] { "Orientation" },
                     ObservationUrl,
-                    "UltraSound/Mass/Orientation",
+                    $"{Group_UltraSoundResources}/Mass/Orientation",
                     out usMassOrientation)
-                .Description(new Markdown()
-
-                    .Paragraph("Breast Radiology Ultra-Sound Mass Orientation Observation")
-                    .MissingObservation("a mass orientation")
-                    .BiradHeader()
-                    .BlockQuote("This feature of masses is unique to US imaging. Orientation is defined with reference to the skin")
-                    .BlockQuote("line. Obliquely situated masses may follow a radial pattern, and their long axes will help determine")
-                    .BlockQuote("classification as parallel or not parallel. Parallel or \"wider-than-tall\" orientation is a property of most")
-                    .BlockQuote("benign masses, notably fibroadenomas; however, many carcinomas have this orientation as well.")
-                    .BlockQuote("Orientation alone should not be used as an isolated feature in assessing a mass for its likelihood of")
-                    .BlockQuote("malignancy.")
-                    .BiradFooter()
+                .Description("Breast Radiology Ultra-Sound Mass Orientation Observation",
+                    new Markdown()
+                        .MissingObservation("a mass orientation")
+                        .BiradHeader()
+                        .BlockQuote("This feature of masses is unique to US imaging. Orientation is defined with reference to the skin")
+                        .BlockQuote("line. Obliquely situated masses may follow a radial pattern, and their long axes will help determine")
+                        .BlockQuote("classification as parallel or not parallel. Parallel or \"wider-than-tall\" orientation is a property of most")
+                        .BlockQuote("benign masses, notably fibroadenomas; however, many carcinomas have this orientation as well.")
+                        .BlockQuote("Orientation alone should not be used as an isolated feature in assessing a mass for its likelihood of")
+                        .BlockQuote("malignancy.")
+                        .BiradFooter()
+                        .Todo(
+                        )
                     )
                 .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.ObservationCodedValueFragment)

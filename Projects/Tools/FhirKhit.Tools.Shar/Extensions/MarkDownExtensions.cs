@@ -24,6 +24,16 @@ namespace FhirKhit.Tools.R2
             return md;
         }
 
+        public static Markdown Todo(this Markdown md, params string[] lines)
+        {
+            if (lines.Length > 0)
+            {
+                md.Value += $"*** TODO Items ***";
+                md.List(lines);
+            }
+            return md;
+        }
+
         public static Markdown List(this Markdown md, params string[] items)
         {
             foreach (String item in items)

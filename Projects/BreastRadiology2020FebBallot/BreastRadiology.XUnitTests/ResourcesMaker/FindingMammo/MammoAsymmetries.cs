@@ -90,21 +90,22 @@ namespace BreastRadiology.XUnitTests
                     "Mammo Asymmetries",
                     new string[] {"Asymmetries"},
                     ObservationUrl,
-                    "Mammo/Asymmetry",
+                    $"{Group_MammoResources}/Asymmetry",
                     out mammoAsymmetries)
-                .Description(new Markdown()
-
-                    .Paragraph("Breast Radiology Mammography Asymmetries Observation")
-                    .MissingObservation("an asymmetry")
-                    .BiradHeader()
-                    .BlockQuote("The several types of asymmetry involve a spectrum of mammographic findings that represent")
-                    .BlockQuote("unilateral deposits of fibroglandular tissue not conforming to the definition of a radiodense mass.")
-                    .BlockQuote("The asymmetry, unlike a mass, is visible on only 1 mammographic projection. The other 3 types of")
-                    .BlockQuote("asymmetry, although visible on more than 1 projection, have concave-outward borders and usu-")
-                    .BlockQuote("ally are seen to be interspersed with fat, whereas a radiodense mass displays completely or partially")
-                    .BlockQuote("convex-outward borders and appears to be denser in the center than at the periphery.")
-                    .BiradFooter()
-                    )
+                .Description("Breast Radiology Mammography Asymmetries Observation",
+                    new Markdown()
+                        .MissingObservation("an asymmetry")
+                        .BiradHeader()
+                        .BlockQuote("The several types of asymmetry involve a spectrum of mammographic findings that represent")
+                        .BlockQuote("unilateral deposits of fibroglandular tissue not conforming to the definition of a radiodense mass.")
+                        .BlockQuote("The asymmetry, unlike a mass, is visible on only 1 mammographic projection. The other 3 types of")
+                        .BlockQuote("asymmetry, although visible on more than 1 projection, have concave-outward borders and usu-")
+                        .BlockQuote("ally are seen to be interspersed with fat, whereas a radiodense mass displays completely or partially")
+                        .BlockQuote("convex-outward borders and appears to be denser in the center than at the periphery.")
+                        .BiradFooter()
+                        .Todo(
+                        )
+                )
                 .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)
                 .AddExtensionLink(this.BreastBodyLocationExtension)

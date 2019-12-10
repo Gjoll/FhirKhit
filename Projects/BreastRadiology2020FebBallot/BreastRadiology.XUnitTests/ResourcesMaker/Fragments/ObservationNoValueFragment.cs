@@ -1,4 +1,5 @@
 using FhirKhit.Tools.R4;
+using Hl7.Fhir.Model;
 using PreFhir;
 using System;
 using System.Collections.Generic;
@@ -26,10 +27,12 @@ namespace BreastRadiology.XUnitTests
                     new string[] { "NoValue", "Observation", "Fragment" },
                 ObservationUrl,
                 out observationNoValueFragment)
-                .Description(new Hl7.Fhir.Model.Markdown()
-
-                    .Paragraph("Base fragment for all BreastRad observations that have no explicit value.")
-                    )
+                .Description("Fragment that constrains Observations to have no explicit value.",
+                    new Markdown()
+                        .Paragraph("Base fragment for all BreastRad observations that have no explicit value.")
+                        .Todo(
+                        )
+                )
                 .AddFragRef(this.ObservationFragment)
             ;
             e.Select("value[x]").Zero();

@@ -66,9 +66,14 @@ namespace BreastRadiology.XUnitTests
                 ExtensionUrl,
                 "Extension/BreastBodyLocation",
                 out breastBodyLocationExtension)
-                .Description(new Markdown()
-                    .Paragraph("Breast Body Location extension")
-                    )
+                .Description("Breast Body Location extension",
+                    new Markdown()
+                        .Paragraph("this extension defines the fields that are used to describe the" +
+                                   "location of an observed item in a breat radiology report")
+                        .Paragraph("Breast radiology exams have specific ways of defining a location that are unique to this field.")
+                        .Todo(
+                        )
+                )
                 .Kind(StructureDefinition.StructureDefinitionKind.ComplexType)
                 .Context()
                 ;

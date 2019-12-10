@@ -106,13 +106,14 @@ namespace BreastRadiology.XUnitTests
                     "Observed Changes",
                     new string[] { "Changes" },
                     ObservationUrl,
-                    "Common/ObservedChanges",
+                    $"{Group_CommonResources}/ObservedChanges",
                     out breastRadObservedChanges)
-                .Description(new Markdown()
-
-                    .Paragraph("Breast Radiology Observed Changes Observation")
-                    .MissingObservation("an observed change")
-                    )
+                .Description("Breast Radiology Observed Changes Observation",
+                    new Markdown()
+                        .MissingObservation("an observed change")
+                        .Todo(
+                        )
+                )
                 .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.ObservationCodedValueFragment)
                 .AddFragRef(this.ObservationLeafFragment)

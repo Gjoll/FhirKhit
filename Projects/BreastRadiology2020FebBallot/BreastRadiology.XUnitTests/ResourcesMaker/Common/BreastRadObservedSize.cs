@@ -31,17 +31,20 @@ namespace BreastRadiology.XUnitTests
                     "Size",
                     new string[] { "Size" },
                     ObservationUrl,
-                    "Common/ObservedSize",
+                    $"{Group_CommonResources}/ObservedSize",
                     out breastRadObservedSize)
-                .Description(new Markdown()
-
-                    .Paragraph("Breast Radiology Size Observation")
-                    .MissingObservation("an objects size")
-                    )
+                .Description("Breast Radiology Size Observation",
+                    new Markdown()
+                        .Paragraph("This observations describes the size of an observed item.",
+                                   "The size can be one (length), two (area) or three (volume) dimensions.")
+                        .MissingObservation("an objects size")
+                        .Todo(
+                        "Should value[x] be SimpleQuantity."
+                        )
+                 )
                 .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.ObservationLeafFragment)
                 ;
-        // TODO: Should this be SimpleQuantity.
             e.Select("value[x]")
                 .Type("Quantity")
                 .SetCardinality(1, "3")

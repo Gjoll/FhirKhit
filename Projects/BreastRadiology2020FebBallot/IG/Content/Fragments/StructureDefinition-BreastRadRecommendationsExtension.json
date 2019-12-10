@@ -14,7 +14,7 @@
   "name": "BreastRadRecommendationsExtension",
   "title": "Recommendations Extension",
   "status": "draft",
-  "description": "Diagnostic Report recommendations section extension",
+  "description": "Diagnostic Report recommendations section extension\n\nThis extension defines the recommendations section of a breast radiology report, linking a report to the resources that are its recommendations.",
   "fhirVersion": "4.0.0",
   "kind": "complex-type",
   "abstract": false,
@@ -32,6 +32,8 @@
       {
         "id": "Extension",
         "path": "Extension",
+        "short": "Diagnostic Report recommendations section extension",
+        "definition": "This extension defines the recommendations section of a breast radiology report, linking a report to the resources that are its recommendations.",
         "min": 0,
         "max": "*"
       },

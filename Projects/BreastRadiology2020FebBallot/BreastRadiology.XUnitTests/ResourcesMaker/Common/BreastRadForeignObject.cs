@@ -27,7 +27,6 @@ namespace BreastRadiology.XUnitTests
 
         void CreateBreastRadForeignObject()
         {
-            // todo: fill in descriptions
             ValueSet binding = this.CreateValueSet(
                     "BreastRadAbnormalities",
                     "Foreign Object",
@@ -64,7 +63,6 @@ namespace BreastRadiology.XUnitTests
                             "Gun Shot Wound", 
                             new Definition()
                             ),
-                        // todo: How is metal and metallic objects different.
                         new ConceptDef("Metal", 
                             "Metal", 
                             new Definition()
@@ -81,7 +79,6 @@ namespace BreastRadiology.XUnitTests
                             "Nipple Jewelery", 
                             new Definition()
                             ),
-                        // todo: body jewelery?
                         new ConceptDef("NonMetallicBody", 
                             "Non Metallic Body", 
                             new Definition()
@@ -106,7 +103,6 @@ namespace BreastRadiology.XUnitTests
                             "Swab", 
                             new Definition()
                             ),
-                        //todo: are wire and wire fragment the same.
                         new ConceptDef("Wire", 
                             "Wire", 
                             new Definition()
@@ -118,18 +114,23 @@ namespace BreastRadiology.XUnitTests
                     })
                 ;
 
-            // todo: there is no way to say that the following abnormalities do not exist, only that one does exist.
             SDefEditor e = this.CreateEditor("BreastRadForeignObject",
                     "ForeignObject",
                     new string[] { "ForeignObject" },
                     ObservationUrl,
-                    "Common/Foreign",
+                    $"{Group_CommonResources}/Foreign",
                     out breastRadForeignObject)
-                .Description(new Markdown()
-
-                    .Paragraph("Breast Radiology Foreign Object Observation")
-                    .Paragraph("These are foreign objects found during a breast radiology exam")
-                    )
+                .Description("Breast Radiology Foreign Object Observation",
+                    new Markdown()
+                        .Paragraph("These are foreign objects found during a breast radiology exam")
+                        .Todo(
+                            "there is no way to say that the following abnormalities do not exist, only that one does exist.",
+                            "fill in code descriptions",
+                            "How are metal and metallic codes different",
+                            "body jewelery codes",
+                            "are wire and wire fragment codes the same."
+                        )
+                )
                 .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.ObservationCodedValueFragment)
                 .AddFragRef(this.ObservationSectionFragment)

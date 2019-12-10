@@ -3,7 +3,7 @@
   "extension": [
     {
       "url": "http://www.ResourceMaker.com/Group",
-      "valueString": "Base/Findings/LeftBreast"
+      "valueString": "BaseResources/Findings/LeftBreast"
     },
     {
       "url": "http://www.fragment.com/fragment",
@@ -22,7 +22,7 @@
   "name": "BreastRadSectionFindingsLeftBreast",
   "title": "Findings Left Breast",
   "status": "draft",
-  "description": "Findings Left Breast Section",
+  "description": "Findings Left Breast Section\n\nThis resource is the head of the tree of observations made of the left breast during a breast radiology exam.\n\n\nChild observations are referenced by the 'Observation.hasMember' field",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -34,6 +34,8 @@
       {
         "id": "Observation",
         "path": "Observation",
+        "short": "Findings Left Breast Section",
+        "definition": "This resource is the head of the tree of observations made of the left breast during a breast radiology exam.\n\n\nChild observations are referenced by the 'Observation.hasMember' field",
         "min": 0,
         "max": "*"
       },

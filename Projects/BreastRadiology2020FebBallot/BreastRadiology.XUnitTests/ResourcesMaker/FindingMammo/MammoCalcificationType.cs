@@ -200,12 +200,14 @@ namespace BreastRadiology.XUnitTests
                 "Mammo Calcification Type",
                 new string[] { "Type" },
                 ObservationUrl,
-                "Mammo/Calcification/Type",
+                $"{Group_MammoResources}/Calcification/Type",
                 out mammoCalcificationType)
-                .Description(new Markdown()
-
-                    .Paragraph("Breast Radiology Mammography Calcification Type Observation")
-                    )
+                .Description("Breast Radiology Mammography Calcification Type Observation",
+                    new Markdown()
+                        .Paragraph("This resource describes the type of calcification observed.")
+                        .Todo(
+                        )
+                 )
                 .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.ObservationCodedValueFragment)
                 .AddFragRef(this.ObservationLeafFragment)

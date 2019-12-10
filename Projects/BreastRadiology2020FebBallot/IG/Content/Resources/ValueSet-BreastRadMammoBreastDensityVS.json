@@ -18,7 +18,7 @@
       ]
     }
   ],
-  "description": "Breast Radiology Mammography Breast Density/Composition Observation",
+  "description": "Breast Radiology Mammography Breast Density/Composition Observation\n\n\n*** TODO Items ***** Do we need statement that breast density is required now?\n** can this and US tissue composition be the same?",
   "compose": {
     "include": [
       {

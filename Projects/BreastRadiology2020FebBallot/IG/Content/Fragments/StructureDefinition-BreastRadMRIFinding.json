@@ -3,7 +3,7 @@
   "extension": [
     {
       "url": "http://www.ResourceMaker.com/Group",
-      "valueString": "MRI"
+      "valueString": "MRIResources"
     },
     {
       "url": "http://www.fragment.com/fragment",
@@ -18,7 +18,7 @@
   "name": "BreastRadMRIFinding",
   "title": "MRI Finding",
   "status": "draft",
-  "description": "Breast Radiology MRI Finding\n\n\nTodo: The following items need further specification.\n\n\n** Device Metrics detailing the observation devices parameters.\n** Add information about contrast enhancement/other observation specific parameters.",
+  "description": "Breast Radiology MRI Finding\n\n*** TODO Items ***** Device Metrics detailing the observation devices parameters.\n** Add information about contrast enhancement/other observation specific parameters.",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -30,6 +30,8 @@
       {
         "id": "Observation",
         "path": "Observation",
+        "short": "Breast Radiology MRI Finding",
+        "definition": "*** TODO Items ***** Device Metrics detailing the observation devices parameters.\n** Add information about contrast enhancement/other observation specific parameters.",
         "min": 0,
         "max": "*"
       }

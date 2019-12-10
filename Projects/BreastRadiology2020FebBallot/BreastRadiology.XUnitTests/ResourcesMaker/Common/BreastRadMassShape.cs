@@ -66,13 +66,15 @@ namespace BreastRadiology.XUnitTests
                     "Mass Shape",
                     new string[] { "Shape" },
                     ObservationUrl,
-                    "Common/MassShape",
+                    $"{Group_CommonResources}/MassShape",
                     out breastRadMassShape)
-                .Description(new Markdown()
-
-                    .Paragraph("Breast Radiology Mass Shape Observation")
-                    .MissingObservation("a mass shape")
-                    )
+                .Description("Breast Radiology Mass Shape Observation",
+                    new Markdown()
+                        .Paragraph()
+                        .MissingObservation("a mass shape")
+                        .Todo(
+                        )
+                )
                 .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.ObservationCodedValueFragment)
                 .AddFragRef(this.ObservationLeafFragment)

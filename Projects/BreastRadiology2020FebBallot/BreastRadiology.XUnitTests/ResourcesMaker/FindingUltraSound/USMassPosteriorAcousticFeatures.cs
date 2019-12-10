@@ -87,16 +87,17 @@ namespace BreastRadiology.XUnitTests
                     "US Mass Posterior Acoustic Features",
                     new string[] { "Posterior",  "Acoustic",  "Features" },
                     ObservationUrl,
-                    "UltraSound/Mass/PosteriorAcousticFeatures",
+                    $"{Group_UltraSoundResources}/Mass/PosteriorAcousticFeatures",
                     out usMassPosteriorAcousticFeatures)
-                .Description(new Markdown()
-
-                    .Paragraph("Breast Radiology Ultra-Sound Mass Posterior Acoustic Features Observation")
-                    .BiradHeader()
-                    .BlockQuote("Posterior acoustic features represent the attenuation characteristics of a mass with respect to its")
-                    .BlockQuote("acoustic transmission. Attenuation (shadowing) and enhancement are additional attributes of")
-                    .BlockQuote("masses, mostly of secondary rather than primary predictive value..")
-                    .BiradFooter()
+                .Description("Breast Radiology Ultra-Sound Mass Posterior Acoustic Features Observation",
+                    new Markdown()
+                        .BiradHeader()
+                        .BlockQuote("Posterior acoustic features represent the attenuation characteristics of a mass with respect to its")
+                        .BlockQuote("acoustic transmission. Attenuation (shadowing) and enhancement are additional attributes of")
+                        .BlockQuote("masses, mostly of secondary rather than primary predictive value..")
+                        .BiradFooter()
+                        .Todo(
+                        )
                     )
                 .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.ObservationCodedValueFragment)

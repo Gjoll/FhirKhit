@@ -11,11 +11,6 @@ using Hl7.Fhir.Serialization;
 
 namespace BreastRadiology.XUnitTests
 {
-    // Todo:
-    // - Add body location?
-    // - Add size measurement?
-    // - cardinality 0..1 or 0..*?
-
     partial class ResourcesMaker : ConverterBase
     {
         String MammoTrabecularThickening
@@ -32,18 +27,22 @@ namespace BreastRadiology.XUnitTests
         void CreateMammoTrabecularThickening()
         {
             SDefEditor e = this.CreateEditor("BreastRadMammoTrabecularThickening",
-                "Skin Retraction",
+                "Mammo Trabecular Thickening",
                 new string[] {"Trabecular","Thickening"},
                 ObservationUrl,
-                "Mammo/AssociatedFeature/TrabecularThickening",
+                $"{Group_MammoResources}/AssociatedFeature/TrabecularThickening",
                 out mammoTrabecularThickening)
-                .Description(new Markdown()
-
-                    .Paragraph("Trabecular Thickening Observation")
-                    .BiradHeader()
-                    .BlockQuote("This is a thickening of the fibrous septa of the breast.")
-                    .BiradFooter()
-                    .MissingObservation("a trabecular thickening")
+                .Description("Trabecular Thickening Observation",
+                    new Markdown()
+                        .BiradHeader()
+                        .BlockQuote("This is a thickening of the fibrous septa of the breast.")
+                        .BiradFooter()
+                        .MissingObservation("a trabecular thickening")
+                        .Todo(
+                            "Add body location?",
+                            "Add size measurement?",
+                            "cardinality 0..1 or 0..*?"
+                        )
                 )
                 .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)

@@ -1,4 +1,5 @@
 using FhirKhit.Tools.R4;
+using Hl7.Fhir.Model;
 using PreFhir;
 using System;
 using System.Collections.Generic;
@@ -30,10 +31,12 @@ namespace BreastRadiology.XUnitTests
                     new string[] { "Observation", "Fragment" },
                 ObservationUrl,
                 out observationFragment)
-                .Description(new Hl7.Fhir.Model.Markdown()
-
-                    .Paragraph("Base fragment for all BreastRad observations.")
-                    )
+                .Description("Base fragment for all BreastRad observations.",
+                    new Markdown()
+                        .Paragraph("Base fragment that performs common constrains used in all breast radiology observations")
+                        .Todo(
+                        )
+                )
                 .AddFragRef(this.HeaderFragment)
                 .AddFragRef(this.CategoryFragment)
             ;

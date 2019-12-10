@@ -1,4 +1,5 @@
 using FhirKhit.Tools.R4;
+using Hl7.Fhir.Model;
 using PreFhir;
 using System;
 using System.Collections.Generic;
@@ -26,10 +27,12 @@ namespace BreastRadiology.XUnitTests
                     new string[] {"Observation", "Leaf", "Fragment" },
                 ObservationUrl,
                 out observationLeafFragment)
-                .Description(new Hl7.Fhir.Model.Markdown()
-
-                    .Paragraph("Fragment that constrains observations leaf nodes (no hasMembers references).")
-                    )
+                .Description("Fragment that contstrains all observations that are leaf nodes.",
+                    new Markdown()
+                        .Paragraph("Fragment that constrains observations leaf nodes (no hasMembers references).")
+                        .Todo(
+                        )
+                )
                 .AddFragRef(this.HeaderFragment)
                 .AddFragRef(this.CategoryFragment)
                 .AddFragRef(this.ObservationFragment)

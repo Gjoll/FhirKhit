@@ -31,18 +31,20 @@ namespace BreastRadiology.XUnitTests
                     "Count",
                     new string[] { "Count" },
                     ObservationUrl,
-                    "Common/ObservedCount",
+                    $"{Group_CommonResources}/ObservedCount",
                     out breastRadObservedCount)
-                .Description(new Markdown()
-
-                    .Paragraph("Breast Radiology Count Observation")
-                    .MissingObservation("an objects Count")
+                .Description("Breast Radiology Count Observation",
+                    new Markdown()
+                        .Paragraph("This observations describes the number of discrete items in an observed item.")
+                        .MissingObservation("an objects Count")
+                        .Todo(
+                            "Should value[x] be SimpleQuantity.",
+                            "is 'tot' correct ucum units for count?"
+                        )
                     )
                 .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.ObservationLeafFragment)
                 ;
-            // TODO: Should this be SimpleQuantity.
-            // todo: is 'tot' correct ucum units for count?
             e.Select("value[x]")
                 .Types("integer", "Range")
                 .SetCardinality(1, "1")

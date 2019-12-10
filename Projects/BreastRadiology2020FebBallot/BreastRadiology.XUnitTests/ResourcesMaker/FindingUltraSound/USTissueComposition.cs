@@ -13,9 +13,7 @@ namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker : ConverterBase
     {
-        // todo: can this and mammo breast density be the same?
-
-        String USTissueComposition
+       String USTissueComposition
         {
             get
             {
@@ -77,12 +75,20 @@ namespace BreastRadiology.XUnitTests
                     "US Tissue Composition",
                     new string[] {"Tissue","Composition"},
                     ObservationUrl,
-                    "UltraSound/Mass/TissueComposition",
+                    $"{Group_UltraSoundResources}/Mass/TissueComposition",
                     out usTissueComposition)
-                .Description(new Markdown()
-
-                    .Paragraph("Breast Radiology Ultra-Sound Tissue Composition Observation")
-                    )
+                .Description("Breast Radiology Ultra-Sound Tissue Composition Observation",
+                    new Markdown()
+                        .BiradHeader()
+                        .BlockQuote("The wide normal variability in tissue composition seen on mammograms can also be observed")
+                        .BlockQuote("on US images. Just as increasing breast density diminishes the sensitivity of mammography in the")
+                        .BlockQuote("detection of small masses, heterogeneous background echotexture of the breast may affect the")
+                        .BlockQuote("sensitivity of breast sonograms for lesion detection.")
+                        .BiradFooter()
+                        .Todo(
+                            "can this and mammo breast density be the same?"
+                        )
+                )
                 .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.ObservationCodedValueFragment)
                 .AddFragRef(this.ObservationLeafFragment)

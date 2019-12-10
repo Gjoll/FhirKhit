@@ -3,7 +3,7 @@
   "extension": [
     {
       "url": "http://www.ResourceMaker.com/Group",
-      "valueString": "Mammo"
+      "valueString": "MammoResources"
     },
     {
       "url": "http://www.fragment.com/fragment",
@@ -18,7 +18,7 @@
   "name": "BreastRadMammoFinding",
   "title": "Mammo Finding",
   "status": "draft",
-  "description": "Breast Radiology Mammography Finding\n\n\nTodo: The following items need further specification.\n\n\n** Device Metrics detailing the observation devices parameters (transducer freq, etc).",
+  "description": "Breast Radiology Mammography Finding\n\n*** TODO Items ***** Device Metrics detailing the observation devices parameters (transducer freq, etc).",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -30,6 +30,8 @@
       {
         "id": "Observation",
         "path": "Observation",
+        "short": "Breast Radiology Mammography Finding",
+        "definition": "*** TODO Items ***** Device Metrics detailing the observation devices parameters (transducer freq, etc).",
         "min": 0,
         "max": "*"
       },

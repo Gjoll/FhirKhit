@@ -100,7 +100,7 @@ namespace BreastRadiology.XUnitTests
         [TestMethod]
         public void B_BuildResources()
         {
-            const bool saveMergedFiles = false;
+            bool saveMergedFiles = false;
 
             try
             {
@@ -233,12 +233,12 @@ namespace BreastRadiology.XUnitTests
                 p.StatusInfo += this.StatusInfo;
                 p.StatusWarnings += this.StatusWarnings;
                 p.Start(Path.Combine(this.contentDir, "IGBreastRad.xml"));
-                p.AddGrouping("Base", "Base", "Base Breast Radiology Resource Definitions");
-                p.AddGrouping("Common", "Common", "Common Breast Radiology Resource Definitions");
-                p.AddGrouping("Mammo", "Mammography", "Mammography specific Breast Radiology Resource Definitions");
-                p.AddGrouping("MRI", "MRI", "MRI specific Breast Radiology Resource Definitions");
-                p.AddGrouping("UltraSound", "UltraSound", "UltraSound specific Breast Radiology Resource Definitions");
-                p.AddGrouping("Extension", "Extension", "Extension Resource Definitions");
+                p.AddGrouping(ResourcesMaker.Group_BaseResources, "Main Resources", "This section contains the main top level resources that are used in a Breast Radiology Report.");
+                p.AddGrouping(ResourcesMaker.Group_CommonResources, "Common Resources", "This section contains resources that are commonly used throughout a Breast Radiology Report");
+                p.AddGrouping(ResourcesMaker.Group_MammoResources, "Mammography Resources", "This section contains resources used specifically in a Mammography exam");
+                p.AddGrouping(ResourcesMaker.Group_MRIResources, "MRI Resources", "This section contains resources used specifically in a MRI exam");
+                p.AddGrouping(ResourcesMaker.Group_UltraSoundResources, "UltraSound Resources", "This section contains resources used specifically in a Ultra-Sound exam");
+                p.AddGrouping(ResourcesMaker.Group_ExtensionResources, "Extension", "Extension Resource Definitions");
                 p.AddResources(this.resourcesDir);
                 p.AddPageContent(this.pageDir);
                 p.AddPageContent(this.pageTemplateDir);

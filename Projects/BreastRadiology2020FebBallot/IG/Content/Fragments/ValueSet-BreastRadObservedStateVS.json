@@ -10,7 +10,7 @@
   "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadObservedStateVS",
   "name": "BreastRadObservedStateVS",
   "title": "Observed State",
-  "description": "Breast Radiology Observed State",
+  "description": "Breast Radiology Observed State\n\n\n*** TODO Items ***** Do we want benign appearing & probably benign? Define difference.",
   "compose": {
     "include": [
       {

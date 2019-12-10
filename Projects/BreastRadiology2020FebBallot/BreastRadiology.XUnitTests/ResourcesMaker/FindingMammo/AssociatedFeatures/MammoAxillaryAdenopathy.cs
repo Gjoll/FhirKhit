@@ -11,11 +11,6 @@ using Hl7.Fhir.Serialization;
 
 namespace BreastRadiology.XUnitTests
 {
-    //Todo:
-    // Cardinalioty?
-    // Body Location?
-    // Size?
-
     partial class ResourcesMaker : ConverterBase
     {
         String MammoAxillaryAdenopathy
@@ -35,19 +30,23 @@ namespace BreastRadiology.XUnitTests
                 "Mammo Axillary Adenopathy",
                 new string[] { "Axillary", "Adenopathy" },
                 ObservationUrl,
-                "Mammo/AssociatedFeature/AxillaryAdenopathy",
+                $"{Group_MammoResources}/AssociatedFeature/AxillaryAdenopathy",
                 out mammoAxillaryAdenopathy)
-                .Description(new Markdown()
-
-                    .Paragraph("Breast Radiology Mammography Axillary Adenopathy Observation")
-                    .MissingObservation("an axillary adenopathy")
-                    .BiradHeader()
-                    .BlockQuote("Enlarged axillary lymph nodes may warrant comment, clinical correlation, and additional ")
-                    .BlockQuote("evaluation, especially if new or considerably larger or rounder when compared to previous examination.")
-                    .BlockQuote("A review of the patient’s medical history may elucidate the cause for axillary adenopathy, averting")
-                    .BlockQuote("recommendation for additional evaluation. When one or more large axillary nodes are ")
-                    .BlockQuote("substantially composed of fat, this is a normal variant.")
-                    .BiradFooter()
+                .Description("Breast Radiology Mammography Axillary Adenopathy Observation",
+                    new Markdown()
+                        .MissingObservation("an axillary adenopathy")
+                        .BiradHeader()
+                        .BlockQuote("Enlarged axillary lymph nodes may warrant comment, clinical correlation, and additional ")
+                        .BlockQuote("evaluation, especially if new or considerably larger or rounder when compared to previous examination.")
+                        .BlockQuote("A review of the patient’s medical history may elucidate the cause for axillary adenopathy, averting")
+                        .BlockQuote("recommendation for additional evaluation. When one or more large axillary nodes are ")
+                        .BlockQuote("substantially composed of fat, this is a normal variant.")
+                        .BiradFooter()
+                        .Todo(
+                            "Cardinalioty?",
+                            "Body Location?",
+                            "Size?"
+                        )
                 )
                 .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.ObservationNoValueFragment)

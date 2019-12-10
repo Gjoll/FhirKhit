@@ -3,7 +3,7 @@
   "extension": [
     {
       "url": "http://www.ResourceMaker.com/Group",
-      "valueString": "UltraSound/Mass/TissueComposition"
+      "valueString": "UltraSoundResources/Mass/TissueComposition"
     },
     {
       "url": "http://www.fragment.com/fragment",
@@ -22,7 +22,7 @@
   "name": "BreastRadUSTissueComposition",
   "title": "US Tissue Composition",
   "status": "draft",
-  "description": "Breast Radiology Ultra-Sound Tissue Composition Observation",
+  "description": "Breast Radiology Ultra-Sound Tissue Composition Observation\n\nThe wide normal variability in tissue composition seen on mammograms can also be observed\non US images. Just as increasing breast density diminishes the sensitivity of mammography in the\ndetection of small masses, heterogeneous background echotexture of the breast may affect the\nsensitivity of breast sonograms for lesion detection.\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -34,6 +34,8 @@
       {
         "id": "Observation",
         "path": "Observation",
+        "short": "Breast Radiology Ultra-Sound Tissue Composition Observation",
+        "definition": "The wide normal variability in tissue composition seen on mammograms can also be observed\non US images. Just as increasing breast density diminishes the sensitivity of mammography in the\ndetection of small masses, heterogeneous background echotexture of the breast may affect the\nsensitivity of breast sonograms for lesion detection.\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
         "min": 0,
         "max": "*"
       },

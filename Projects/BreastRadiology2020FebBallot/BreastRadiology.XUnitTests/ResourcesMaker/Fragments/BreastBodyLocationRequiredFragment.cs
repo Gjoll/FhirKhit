@@ -32,10 +32,13 @@ namespace BreastRadiology.XUnitTests
                     new string[] {"Breast","Body", "Location", "Fragment", "(Required)"},
                     ObservationUrl,
                     out breastBodyLocationRequiredFragment)
-                .Description(new Markdown()
-
-                    .Paragraph("Fragment definition for an required Breast Body Location")
+                .Description("Fragment definition for a Required Breast Body Location",
+                    new Markdown()
+                    .Paragraph("This fragment adds the references for the breast body location extension.")
+                    .Paragraph("The references are required, meaning that the breast body location must exist.")
+                    .Todo(
                     )
+                 )
                 .AddFragRef(this.HeaderFragment);
                 ;
             e

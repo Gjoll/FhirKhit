@@ -221,8 +221,27 @@ namespace BreastRadiology.XUnitTests
             return this.Find("extension").SliceByUrl(extensionUrl, name);
         }
 
+        /// <summary>
+        /// Sets the .Description field, and also sets the ElementDefinition.Short and .Description fields
+        /// of the first element definition.
+        /// </summary>
+        /// <param name="descriptionHeader"></param>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public SDefEditor Description(String descriptionHeader, Markdown value)
+        {
+            {
+                Markdown description = new Markdown();
+                description.Value += $"{descriptionHeader}\n\n";
+                description.Value += value.Value;
+                this.sDef.Description(description);
+            }
+            this.sDef.Differential.Element[0].Short = descriptionHeader;
+            this.sDef.Differential.Element[0].Definition = value;
+            return this;
+        }
+
         public SDefEditor ContactUrl(String value) { this.sDef.ContactUrl(value); return this; }
-        public SDefEditor Description(Markdown value) { this.sDef.Description(value); return this; }
         public SDefEditor Publisher(String value) { this.sDef.Publisher(value); return this; }
         public SDefEditor Title(String value) { this.sDef.Title(value); return this; }
         public SDefEditor Status(PublicationStatus? value) { this.sDef.Status(value); return this; }

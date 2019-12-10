@@ -11,7 +11,6 @@ using Hl7.Fhir.Serialization;
 
 namespace BreastRadiology.XUnitTests
 {
-    // todo: Should Observation.device be mare required?
     partial class ResourcesMaker : ConverterBase
     {
         String FindingMammo
@@ -31,15 +30,13 @@ namespace BreastRadiology.XUnitTests
                     "Mammo Finding",
                     new string[] {"Mammo", "Finding"},
                     ObservationUrl,
-                    "Mammo",
+                    $"{Group_MammoResources}",
                     out findingMammo)
-                .Description(new Markdown()
-
-                    .Paragraph("Breast Radiology Mammography Finding")
-                    .Paragraph("Todo: The following items need further specification.")
-                    .List(
-                        "Device Metrics detailing the observation devices parameters (transducer freq, etc)."
-                        )
+                .Description("Breast Radiology Mammography Finding",
+                    new Markdown()
+                        .Todo(
+                            "Device Metrics detailing the observation devices parameters (transducer freq, etc)."
+                            )
                     )
                 .AddFragRef(this.ObservationSectionFragment)
                 .AddFragRef(this.ObservationNoValueFragment)

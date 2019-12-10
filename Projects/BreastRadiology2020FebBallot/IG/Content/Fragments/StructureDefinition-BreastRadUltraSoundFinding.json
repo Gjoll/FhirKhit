@@ -3,7 +3,7 @@
   "extension": [
     {
       "url": "http://www.ResourceMaker.com/Group",
-      "valueString": "UltraSound"
+      "valueString": "UltraSoundResources"
     },
     {
       "url": "http://www.fragment.com/fragment",
@@ -18,7 +18,7 @@
   "name": "BreastRadUltraSoundFinding",
   "title": "UltraSound Finding",
   "status": "draft",
-  "description": "Breast Radiology Ultra Sound Finding\n\n\nTodo: The following items need further specification.\n\n\n** Device Metrics detailing the observation devices parameters (transducer freq, etc).",
+  "description": "Breast Radiology Ultra Sound Finding\n\n*** TODO Items ***** Device Metrics detailing the observation devices parameters (transducer freq, etc).\n** BiRads US calcifications are only listed as - calc in a mass - calc outside a mass - intraductal calcification. Can we use the Mammo calcification structure instead?\n** US Special cases (page 155 E.). How to handle?\n** Associated features: MammoResources/Ultra-Sound/MRI associated fetures are similar. Can we merge?us has- Edema- Vascularity- Elasticity AssessmentMammo has- Trabecular thickening- Axillary adenopathymri has- Skin INvasion- Nipple Invasion\n** MammoResources/Ultra-Sound/MRI Mass Margin are different.Not Circumscribed differently.Can they be aligned?\n** MammoResources/Ultra-Sound/MRI Breast Density similar but not same.Can they be aligned?",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -30,6 +30,8 @@
       {
         "id": "Observation",
         "path": "Observation",
+        "short": "Breast Radiology Ultra Sound Finding",
+        "definition": "*** TODO Items ***** Device Metrics detailing the observation devices parameters (transducer freq, etc).\n** BiRads US calcifications are only listed as - calc in a mass - calc outside a mass - intraductal calcification. Can we use the Mammo calcification structure instead?\n** US Special cases (page 155 E.). How to handle?\n** Associated features: MammoResources/Ultra-Sound/MRI associated fetures are similar. Can we merge?us has- Edema- Vascularity- Elasticity AssessmentMammo has- Trabecular thickening- Axillary adenopathymri has- Skin INvasion- Nipple Invasion\n** MammoResources/Ultra-Sound/MRI Mass Margin are different.Not Circumscribed differently.Can they be aligned?\n** MammoResources/Ultra-Sound/MRI Breast Density similar but not same.Can they be aligned?",
         "min": 0,
         "max": "*"
       },

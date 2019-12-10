@@ -18,7 +18,7 @@
       ]
     }
   ],
-  "description": "Breast Radiology Observed State",
+  "description": "Breast Radiology Observed State\n\n\n*** TODO Items ***** Do we want benign appearing & probably benign? Define difference.",
   "compose": {
     "include": [
       {

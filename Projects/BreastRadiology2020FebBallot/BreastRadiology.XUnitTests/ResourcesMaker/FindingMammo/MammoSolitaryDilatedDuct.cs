@@ -13,7 +13,6 @@ namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker : ConverterBase
     {
-        // todo: should this be a leaf node (how about shape, density, location, etc).
         String MammoSolitaryDilatedDuct
         {
             get
@@ -31,17 +30,19 @@ namespace BreastRadiology.XUnitTests
                     "Mammo Solitary Dilated Duct",
                     new string[] { "Solitary", "Dialated", "Duct" },
                     ObservationUrl,
-                    "Mammo/SolitaryDilatedDuct",
+                    $"{Group_MammoResources}/SolitaryDilatedDuct",
                     out mammoSolitaryDilatedDuct)
-                .Description(new Markdown()
-
-                    .Paragraph("Breat Radiology Mammography Solitary Dilated Duct Observation")
-                    .MissingObservation("a solitary dilated duct")
-                    .BiradHeader()
-                    .BlockQuote("This is a unilateral tubular or branching structure that likely represents a dilated or otherwise en-")
-                    .BlockQuote("larged duct. It is a rare finding. Even if unassociated with other suspicious clinical or mammographic")
-                    .BlockQuote("findings, it has been reported to be associated with noncalcified DCIS.")
-                    .BiradFooter()
+                .Description("Breat Radiology Mammography Solitary Dilated Duct Observation",
+                    new Markdown()
+                        .MissingObservation("a solitary dilated duct")
+                        .BiradHeader()
+                        .BlockQuote("This is a unilateral tubular or branching structure that likely represents a dilated or otherwise en-")
+                        .BlockQuote("larged duct. It is a rare finding. Even if unassociated with other suspicious clinical or mammographic")
+                        .BlockQuote("findings, it has been reported to be associated with noncalcified DCIS.")
+                        .BiradFooter()
+                        .Todo(
+                            "should this be a leaf node (how about shape, density, location, etc)."
+                        )
                 )
                 .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.ObservationNoValueFragment)

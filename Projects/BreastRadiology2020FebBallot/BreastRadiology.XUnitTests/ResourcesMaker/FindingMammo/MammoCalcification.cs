@@ -30,29 +30,30 @@ namespace BreastRadiology.XUnitTests
                     "Mammo Calcification",
                     new string[] {"Calcification"},
                     ObservationUrl,
-                    "Mammo/Calcification",
+                    $"{Group_MammoResources}/Calcification",
                     out mammoCalcification)
-                .Description(new Markdown()
-
-                    .Paragraph("Breast Radiology Mammography Calcification Observation")
-                    .MissingObservation("a calcification",
-                        " and no Type or Distribution observations should be referenced by this observation")
-                    .BiradHeader()
-                    .BlockQuote("Calcifications that are assessed as benign at mammography are typically larger, coarser, round with")
-                    .BlockQuote("smooth margins, and more easily seen than malignant calcifications. Calcifications associated with")
-                    .BlockQuote("malignancy (and many benign calcifications as well) are usually very small and often require the use")
-                    .BlockQuote("of magnification to be seen well. When a specific typically benign etiology cannot be assigned, a")
-                    .BlockQuote("description of calcifications should include their morphology and distribution. Calcifications that are")
-                    .BlockQuote("obviously benign need not be reported, especially if the interpreting physician is concerned that")
-                    .BlockQuote("the referring clinician or patient might infer anything other than absolute confidence in benignity")
-                    .BlockQuote("were such calcifications described in the report. However, typically benign calcifications should be")
-                    .BlockQuote("reported if the interpreting physician is concerned that other observers might misinterpret them as")
-                    .BlockQuote("anything but benign were such calcifications not described in the report.")
-                    .BlockQuote("As an ASSOCIATED FEATURE, this may be used in conjunction with one or more other FINDING(S)")
-                    .BlockQuote("to describe calcifications within or immediately adjacent to the finding(s)")
-                    .BiradFooter()
-                    .Paragraph("This observation has the following two member observations")
-                    .List("Calcification Type", "Calcification Distribution")
+                .Description("Breast Radiology Mammography Calcification Observation",
+                    new Markdown()
+                        .MissingObservation("a calcification",
+                            " and no Type or Distribution observations should be referenced by this observation")
+                        .BiradHeader()
+                        .BlockQuote("Calcifications that are assessed as benign at mammography are typically larger, coarser, round with")
+                        .BlockQuote("smooth margins, and more easily seen than malignant calcifications. Calcifications associated with")
+                        .BlockQuote("malignancy (and many benign calcifications as well) are usually very small and often require the use")
+                        .BlockQuote("of magnification to be seen well. When a specific typically benign etiology cannot be assigned, a")
+                        .BlockQuote("description of calcifications should include their morphology and distribution. Calcifications that are")
+                        .BlockQuote("obviously benign need not be reported, especially if the interpreting physician is concerned that")
+                        .BlockQuote("the referring clinician or patient might infer anything other than absolute confidence in benignity")
+                        .BlockQuote("were such calcifications described in the report. However, typically benign calcifications should be")
+                        .BlockQuote("reported if the interpreting physician is concerned that other observers might misinterpret them as")
+                        .BlockQuote("anything but benign were such calcifications not described in the report.")
+                        .BlockQuote("As an ASSOCIATED FEATURE, this may be used in conjunction with one or more other FINDING(S)")
+                        .BlockQuote("to describe calcifications within or immediately adjacent to the finding(s)")
+                        .BiradFooter()
+                        .Paragraph("This observation has the following two member observations")
+                        .List("Calcification Type", "Calcification Distribution")
+                        .Todo(
+                        )
                 )
                 .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)

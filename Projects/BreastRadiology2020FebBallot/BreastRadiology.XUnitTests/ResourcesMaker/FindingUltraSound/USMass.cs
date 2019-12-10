@@ -11,9 +11,6 @@ using Hl7.Fhir.Serialization;
 
 namespace BreastRadiology.XUnitTests
 {
-    // todo: add mass size measurements (3 dimensional) like US?
-    // same for asymmetry, lesion, calcification?
-
     partial class ResourcesMaker : ConverterBase
     {
         String USMass
@@ -30,24 +27,26 @@ namespace BreastRadiology.XUnitTests
         void CreateUSMass()
         {
             SDefEditor e = this.CreateEditor("BreastRadUSMass",
-                    "Mammo Mass",
+                    "US Mass",
                     new string[] { "Mass" },
                     ObservationUrl,
-                    "UltraSound/Finding/Mass",
+                    $"{Group_UltraSoundResources}/Finding/Mass",
                     out usMass)
-                .Description(new Markdown()
-
-
-                    .Paragraph("Breast Radiology Mammography Mass Observation")
-                    .MissingObservation("a mass", "and no Shape, Orientation, Margin, Echo Pattern, or Posterior Acoustic Feature observations should be referenced by this observation")
-                    .BiradHeader()
-                    .BlockQuote("A mass is three dimensional and occupies space. With 2-D ultrasound, it should be seen in two")
-                    .BlockQuote("different planes, and in three planes with volumetric acquisitions. Masses can be distinguished")
-                    .BlockQuote("from normal anatomic structures, such as ribs or fat lobules, using two or more projections and")
-                    .BlockQuote("real-time scanning.")
-                    .BiradFooter()
-                    .Paragraph("This observation has the following three member observations")
-                    .List("Shape", "Orientation", "Margin", "Echo Pattern", "Posterior acoustic features")
+                .Description("Breast Radiology Mammography Ultra-Sound Mass Observation",
+                    new Markdown()
+                        .MissingObservation("a mass", "and no Shape, Orientation, Margin, Echo Pattern, or Posterior Acoustic Feature observations should be referenced by this observation")
+                        .BiradHeader()
+                        .BlockQuote("A mass is three dimensional and occupies space. With 2-D ultrasound, it should be seen in two")
+                        .BlockQuote("different planes, and in three planes with volumetric acquisitions. Masses can be distinguished")
+                        .BlockQuote("from normal anatomic structures, such as ribs or fat lobules, using two or more projections and")
+                        .BlockQuote("real-time scanning.")
+                        .BiradFooter()
+                        .Paragraph("This observation has the following three member observations")
+                        .List("Shape", "Orientation", "Margin", "Echo Pattern", "Posterior acoustic features")
+                        .Todo(
+                            "add mass size measurements (3 dimensional) like US?",
+                            "same for asymmetry, lesion, calcification?"
+                        )
                 )
                 .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)

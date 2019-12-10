@@ -3,7 +3,7 @@
   "extension": [
     {
       "url": "http://www.ResourceMaker.com/Group",
-      "valueString": "Base/PatientHistory"
+      "valueString": "BaseResources/PatientHistory"
     },
     {
       "url": "http://www.fragment.com/fragment",
@@ -20,9 +20,9 @@
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadSectionPatientHistory",
   "name": "BreastRadSectionPatientHistory",
-  "title": "Patient History Section",
+  "title": "Patient History",
   "status": "draft",
-  "description": "Patient History Section",
+  "description": "Patient History Section\n\nThis resource is the head of the tree of previous observations.\n\n\nChild observations are referenced by the 'Observation.hasMember' field\n\n\n*** TODO Items ***** What resources comprise a patient history. Currently we can only reference observations - this is probably inadequate",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -34,6 +34,8 @@
       {
         "id": "Observation",
         "path": "Observation",
+        "short": "Patient History Section",
+        "definition": "This resource is the head of the tree of previous observations.\n\n\nChild observations are referenced by the 'Observation.hasMember' field\n\n\n*** TODO Items ***** What resources comprise a patient history. Currently we can only reference observations - this is probably inadequate",
         "min": 0,
         "max": "*"
       },

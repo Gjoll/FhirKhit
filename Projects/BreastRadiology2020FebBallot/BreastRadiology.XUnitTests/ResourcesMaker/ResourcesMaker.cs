@@ -23,6 +23,13 @@ namespace BreastRadiology.XUnitTests
 
     partial class ResourcesMaker : ConverterBase
     {
+        public const String Group_BaseResources = "BaseResources";
+        public const String Group_CommonResources = "CommonResources";
+        public const String Group_MammoResources = "MammoResources";
+        public const String Group_MRIResources = "MRIResources";
+        public const String Group_UltraSoundResources = "UltraSoundResources";
+        public const String Group_ExtensionResources = "ExtensionResources";
+
         public const String GroupExtensionUrl = "http://www.ResourceMaker.com/Group";
         public static String BiRadCitation = "Bi-Rads® Atlas — Mammography Fifth Ed. 2013";
         const FHIRVersion FVersion = FHIRVersion.N4_0_0;

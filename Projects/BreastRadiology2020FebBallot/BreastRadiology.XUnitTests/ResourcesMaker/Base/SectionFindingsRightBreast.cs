@@ -30,12 +30,15 @@ namespace BreastRadiology.XUnitTests
                     "Findings Right Breast",
                     new string[] {"Right Breast"},
                     ObservationUrl,
-                    "Base/Findings/RightBreast",
+                    $"{Group_BaseResources}/Findings/RightBreast",
                     out sectionFindingsRightBreast)
-                .Description(new Markdown()
-
-                    .Paragraph("Findings Right Breast Section")
+                .Description("Findings Right Breast Section",
+                    new Markdown()
+                    .Paragraph("This resource is the head of the tree of observations made of the right breast during a breast radiology exam.")
+                    .Paragraph("Child observations are referenced by the 'Observation.hasMember' field")
+                    .Todo(
                     )
+                )
                 .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.ObservationSectionFragment)
                 .AddFragRef(this.ObservationNoValueFragment)

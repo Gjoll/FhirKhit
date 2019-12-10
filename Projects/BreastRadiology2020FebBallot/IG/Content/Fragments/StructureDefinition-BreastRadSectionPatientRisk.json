@@ -3,7 +3,7 @@
   "extension": [
     {
       "url": "http://www.ResourceMaker.com/Group",
-      "valueString": "Base/PatientRisk"
+      "valueString": "BaseResources/PatientRisk"
     },
     {
       "url": "http://www.fragment.com/fragment",
@@ -20,9 +20,9 @@
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadSectionPatientRisk",
   "name": "BreastRadSectionPatientRisk",
-  "title": "Patient Risk Section",
+  "title": "Patient Risk",
   "status": "draft",
-  "description": "Patient Risk Section",
+  "description": "Patient Risk Section\n\nThis observation is the section head for the patient risk observations of this exam.",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -34,6 +34,8 @@
       {
         "id": "Observation",
         "path": "Observation",
+        "short": "Patient Risk Section",
+        "definition": "This observation is the section head for the patient risk observations of this exam.",
         "min": 0,
         "max": "*"
       },

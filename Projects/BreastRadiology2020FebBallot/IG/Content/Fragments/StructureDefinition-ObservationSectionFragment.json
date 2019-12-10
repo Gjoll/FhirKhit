@@ -18,7 +18,7 @@
   "name": "ObservationSectionFragment",
   "title": "Observation Section Fragment",
   "status": "draft",
-  "description": "Fragment that constrains Observations to be sections.",
+  "description": "Fragment that constrains Observations to be sections.\n\nthis fragment constrains a generic observation to be a observation section.",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": true,
@@ -30,6 +30,8 @@
       {
         "id": "Observation",
         "path": "Observation",
+        "short": "Fragment that constrains Observations to be sections.",
+        "definition": "this fragment constrains a generic observation to be a observation section.",
         "min": 0,
         "max": "*"
       },

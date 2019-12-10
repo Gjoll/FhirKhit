@@ -3,7 +3,7 @@
   "extension": [
     {
       "url": "http://www.ResourceMaker.com/Group",
-      "valueString": "Mammo/Calcification/Distribution"
+      "valueString": "MammoResources/Calcification/Distribution"
     },
     {
       "url": "http://www.fragment.com/fragment",
@@ -22,7 +22,7 @@
   "name": "BreastRadMammoCalcificationDistribution",
   "title": "Mammo Calcification Distribution",
   "status": "draft",
-  "description": "Breast Radiology Mammography Calcification Distribution Observation",
+  "description": "Breast Radiology Mammography Calcification Distribution Observation\n\nThis resource describes the calcification distribution observed.",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -34,6 +34,8 @@
       {
         "id": "Observation",
         "path": "Observation",
+        "short": "Breast Radiology Mammography Calcification Distribution Observation",
+        "definition": "This resource describes the calcification distribution observed.",
         "min": 0,
         "max": "*"
       },

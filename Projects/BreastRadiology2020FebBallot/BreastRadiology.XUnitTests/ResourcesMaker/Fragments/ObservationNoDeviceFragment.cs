@@ -1,4 +1,5 @@
 using FhirKhit.Tools.R4;
+using Hl7.Fhir.Model;
 using PreFhir;
 using System;
 using System.Collections.Generic;
@@ -26,9 +27,12 @@ namespace BreastRadiology.XUnitTests
                     new string[] { "NoDevice", "Observation", "Fragment" },
                 ObservationUrl,
                 out observationNoDeviceFragment)
-                .Description(new Hl7.Fhir.Model.Markdown()
-                    .Paragraph("Fragment for all observations that have no device.")
-                    )
+                .Description("Fragment that constrains Observations to have not device data.",
+                    new Markdown()
+                        .Paragraph("Fragment for all observations that have no device.")
+                        .Todo(
+                        )
+                )
                 .AddFragRef(this.ObservationFragment)
             ;
             e.Select("device").Zero();

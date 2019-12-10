@@ -3,7 +3,7 @@
   "extension": [
     {
       "url": "http://www.ResourceMaker.com/Group",
-      "valueString": "UltraSound/Mass/PosteriorAcousticFeatures"
+      "valueString": "UltraSoundResources/Mass/PosteriorAcousticFeatures"
     },
     {
       "url": "http://www.fragment.com/fragment",
@@ -22,7 +22,7 @@
   "name": "BreastRadUSMassPosteriorAcousticFeatures",
   "title": "US Mass Posterior Acoustic Features",
   "status": "draft",
-  "description": "Breast Radiology Ultra-Sound Mass Posterior Acoustic Features Observation\n\n\nPosterior acoustic features represent the attenuation characteristics of a mass with respect to its\nacoustic transmission. Attenuation (shadowing) and enhancement are additional attributes of\nmasses, mostly of secondary rather than primary predictive value..\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
+  "description": "Breast Radiology Ultra-Sound Mass Posterior Acoustic Features Observation\n\nPosterior acoustic features represent the attenuation characteristics of a mass with respect to its\nacoustic transmission. Attenuation (shadowing) and enhancement are additional attributes of\nmasses, mostly of secondary rather than primary predictive value..\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -34,6 +34,8 @@
       {
         "id": "Observation",
         "path": "Observation",
+        "short": "Breast Radiology Ultra-Sound Mass Posterior Acoustic Features Observation",
+        "definition": "Posterior acoustic features represent the attenuation characteristics of a mass with respect to its\nacoustic transmission. Attenuation (shadowing) and enhancement are additional attributes of\nmasses, mostly of secondary rather than primary predictive value..\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
         "min": 0,
         "max": "*"
       },

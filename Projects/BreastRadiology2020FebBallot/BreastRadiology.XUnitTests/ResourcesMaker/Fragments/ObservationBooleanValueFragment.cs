@@ -1,4 +1,5 @@
 using FhirKhit.Tools.R4;
+using Hl7.Fhir.Model;
 using PreFhir;
 using System;
 using System.Collections.Generic;
@@ -30,9 +31,11 @@ namespace BreastRadiology.XUnitTests
                     new string[] {"Observation","BooleanValue", "Fragment"},
                     ObservationUrl,
                     out observationBooleanValueFragment)
-                .Description(new Hl7.Fhir.Model.Markdown()
-
-                    .Paragraph("Fragment that defines a boolean values observation.")
+                .Description("Fragment to define a boolean observation",
+                new Markdown()
+                    .Paragraph("Fragment that constrains an observation to contains only a boolean value.")
+                    .Todo(
+                    )
                     )
                 .AddFragRef(this.HeaderFragment)
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)

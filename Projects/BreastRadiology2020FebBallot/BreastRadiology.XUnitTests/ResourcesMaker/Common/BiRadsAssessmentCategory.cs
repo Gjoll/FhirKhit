@@ -12,7 +12,6 @@ using PreFhir;
 
 namespace BreastRadiology.XUnitTests
 {
-    // todo: Should each mass/calcification have its own optional/required BiRad observation?
     partial class ResourcesMaker
     {
         String BiRadsAssessmentCategory
@@ -28,7 +27,6 @@ namespace BreastRadiology.XUnitTests
 
         void CreateBiRadsAssessmentCategory()
         {
-            // todo: How is this different from BreastRadObservedState
             ValueSet binding = this.CreateValueSet(
                     "BiRadsAssessmentCategories",
                     "BiRads Assessment Categories",
@@ -93,21 +91,25 @@ namespace BreastRadiology.XUnitTests
                     "BiRads Assessment Category",
                     new string[] { "BiRads", "Assessment", "Category" },
                     ObservationUrl,
-                    "Common/BiRads",
+                    $"{Group_CommonResources}/BiRads",
                     out biRadsAssessmentCategory)
-                .Description(new Markdown()
-                    .Paragraph("BiRads Assessment Category")
-                    .BiradHeader()
-                    .BlockQuote("BI-RADS® assessments are divided into incomplete (category 0) and final assessment categories")
-                    .BlockQuote("(categories 1, 2, 3, 4, 5 and 6). An incomplete mammography assessment, usually rendered at batch-")
-                    .BlockQuote("read screening mammography, requires further evaluation with additional mammographic views,")
-                    .BlockQuote("ultrasound, and/or comparison mammography examination(s). If the additional evaluation involves")
-                    .BlockQuote("only comparison with previous mammography examination(s) that then leads to a final assessment,")
-                    .BlockQuote("the incomplete screening assessment is replaced by this final assessment. If the additional evalu-")
-                    .BlockQuote("ation includes a diagnostic imaging examination, a final assessment is rendered for the diagnostic")
-                    .BlockQuote("examination, but the screening mammography examination remains assessed as category 0.")
-                    .BiradFooter()
-                    )
+                .Description("BiRads Assessment Category",
+                    new Markdown()
+                        .BiradHeader()
+                        .BlockQuote("BI-RADS® assessments are divided into incomplete (category 0) and final assessment categories")
+                        .BlockQuote("(categories 1, 2, 3, 4, 5 and 6). An incomplete mammography assessment, usually rendered at batch-")
+                        .BlockQuote("read screening mammography, requires further evaluation with additional mammographic views,")
+                        .BlockQuote("ultrasound, and/or comparison mammography examination(s). If the additional evaluation involves")
+                        .BlockQuote("only comparison with previous mammography examination(s) that then leads to a final assessment,")
+                        .BlockQuote("the incomplete screening assessment is replaced by this final assessment. If the additional evalu-")
+                        .BlockQuote("ation includes a diagnostic imaging examination, a final assessment is rendered for the diagnostic")
+                        .BlockQuote("examination, but the screening mammography examination remains assessed as category 0.")
+                        .BiradFooter()
+                        .Todo(
+                            "Should each mass/calcification observation have its own optional/required BiRad observation or just the Left/Right/Combined sections?",
+                            "How is this different from BreastRadObservedState"
+                        )
+                )
                 .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.ObservationCodedValueFragment)
                 .AddFragRef(this.ObservationLeafFragment)

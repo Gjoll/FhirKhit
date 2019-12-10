@@ -1,4 +1,5 @@
 using FhirKhit.Tools.R4;
+using Hl7.Fhir.Model;
 using PreFhir;
 using System;
 using System.Collections.Generic;
@@ -27,9 +28,12 @@ namespace BreastRadiology.XUnitTests
                     new string[] {"Section", "Fragment"},
                     ObservationUrl,
                     out observationSectionFragment)
-                .Description(new Hl7.Fhir.Model.Markdown()
-                    .Paragraph("Fragment that constrains Observations to be sections.")
-                    )
+                .Description("Fragment that constrains Observations to be sections.",
+                    new Markdown()
+                        .Paragraph("this fragment constrains a generic observation to be a observation section.")
+                        .Todo(
+                        )
+                 )
                 .AddFragRef(this.ObservationFragment)
                 ;
 

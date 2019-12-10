@@ -30,20 +30,21 @@ namespace BreastRadiology.XUnitTests
                     "Mammo Associated Features",
                     new string[] { "Associated", "Features" },
                     ObservationUrl,
-                    "Mammo/AssociatedFeature",
+                    $"{Group_MammoResources}/AssociatedFeature",
                     out mammoAssociatedFeatures)
-                .Description(new Markdown()
-
-                    .Paragraph("Mammography Associated Features Observation")
-                    .Paragraph("Used with masses, asymmetries, or calcifications, or may stand alone as " +
-                    "Features when no other abnormality is present.")
-                    )
+                .Description("Mammography Associated Features Observation",
+                    new Markdown()
+                        .Paragraph("Used with masses, asymmetries, or calcifications, or may stand alone as " +
+                                    "Features when no other abnormality is present.")
+                        .Todo(
+                            "check Cardinality of the following Observation.hasMember targets?"
+                        )
+                 )
                 .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.ObservationSectionFragment)
                 .AddFragRef(this.ObservationNoValueFragment)
                 ;
             {
-                //todo: Cardinality of the following targets?
                 ProfileTargetSlice[] targets = new ProfileTargetSlice[]
                 {
                     new ProfileTargetSlice(this.MammoSkinRetraction, 0, "1"),

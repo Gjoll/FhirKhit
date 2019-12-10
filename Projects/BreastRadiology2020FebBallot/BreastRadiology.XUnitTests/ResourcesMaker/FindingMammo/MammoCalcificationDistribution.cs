@@ -99,12 +99,14 @@ namespace BreastRadiology.XUnitTests
                     "Mammo Calcification Distribution",
                     new string[] {"Distribution"},
                     ObservationUrl,
-                    "Mammo/Calcification/Distribution",
+                    $"{Group_MammoResources}/Calcification/Distribution",
                     out mammoCalcificationDistribution)
-                .Description(new Markdown()
-
-                    .Paragraph("Breast Radiology Mammography Calcification Distribution Observation")
-                    )
+                .Description("Breast Radiology Mammography Calcification Distribution Observation",
+                    new Markdown()
+                        .Paragraph("This resource describes the calcification distribution observed.")
+                        .Todo(
+                        )
+                )
                 .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.ObservationCodedValueFragment)
                 .AddFragRef(this.ObservationLeafFragment)

@@ -11,42 +11,6 @@ using Hl7.Fhir.Serialization;
 
 namespace BreastRadiology.XUnitTests
 {
-    // todo: Should Observation.device be mare required?
-    /*
-     * How do I characterise Ultra Sound equipment.
-     * todo:
-     * BiRads US calcifications are only listed as 
-     * a) calc in a mass
-     * b) calc outside a mass
-     * c) intraductal calcification.
-     * Can we use the Mammo calcification structure instead?
-     * 
-     * US Special cases (page 155 E.). 
-     * How to handle.
-     * 
-     * Associated features:
-     * Mammo/Ultra-Sound/MRI associated fetures are similar. Can we merge?
-     * us has
-     * - Edema
-     * - Vascularity
-     * - Elasticity Assessment
-     * 
-     * Mammo has
-     * - Trabecular thickening
-     * - Axillary adenopathy
-     * 
-     * mri has
-     *  - Skin INvasion
-     *  - Nipple Invasion
-     * 
-     * Mammo/Ultra-Sound/MRI Mass Margin are different.
-     * Not Circumscribed differently.
-     * Can they be aligned?
-     * 
-     * Mammo/Ultra-Sound/MRI Breast Density similar but not same.
-     * Can they be aligned?
-     * 
-     */
     partial class ResourcesMaker : ConverterBase
     {
         String FindingUltraSound
@@ -67,16 +31,37 @@ namespace BreastRadiology.XUnitTests
                     "UltraSound Finding",
                     new string[] { "UltraSound", "Finding" },
                     ObservationUrl,
-                    "UltraSound",
+                    $"{Group_UltraSoundResources}",
                     out findingUltraSound)
-                .Description(new Markdown()
-
-                    .Paragraph("Breast Radiology Ultra Sound Finding")
-                    .Paragraph("Todo: The following items need further specification.")
-                    .List(
-                        "Device Metrics detailing the observation devices parameters (transducer freq, etc)."
+                .Description("Breast Radiology Ultra Sound Finding",
+                    new Markdown()
+                        .Todo(
+                            "Device Metrics detailing the observation devices parameters (transducer freq, etc).",
+                            "BiRads US calcifications are only listed as " +
+                            "- calc in a mass " +
+                            "- calc outside a mass " +
+                            "- intraductal calcification. " +
+                            "Can we use the Mammo calcification structure instead?",
+                            "US Special cases (page 155 E.). How to handle?",
+                            "Associated features: " +
+                            $"{Group_MammoResources}/Ultra-Sound/MRI associated fetures are similar. Can we merge?" +
+                            "us has" +
+                            "- Edema" +
+                            "- Vascularity" +
+                            "- Elasticity Assessment" +
+                            "Mammo has" +
+                            "- Trabecular thickening" +
+                            "- Axillary adenopathy" +
+                            "mri has" +
+                            "- Skin INvasion" +
+                            "- Nipple Invasion",
+                            $"{Group_MammoResources}/Ultra-Sound/MRI Mass Margin are different." +
+                            "Not Circumscribed differently." +
+                            "Can they be aligned?",
+                            $"{Group_MammoResources}/Ultra-Sound/MRI Breast Density similar but not same." +
+                            "Can they be aligned?"
                         )
-                    )
+                )
                 .AddFragRef(this.ObservationSectionFragment)
                 .AddFragRef(this.ObservationNoValueFragment)
                 ;

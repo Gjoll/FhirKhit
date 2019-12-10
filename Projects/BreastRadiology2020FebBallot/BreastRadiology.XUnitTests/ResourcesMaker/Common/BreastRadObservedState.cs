@@ -27,7 +27,6 @@ namespace BreastRadiology.XUnitTests
 
         void CreateBreastRadObservedState()
         {
-            // todo: Do we want benign appearing & probably benign? Define difference.
             ValueSet binding = this.CreateValueSet(
                     "BreastRadObservedState",
                     "Observed State",
@@ -67,13 +66,16 @@ namespace BreastRadiology.XUnitTests
                     "Observed State",
                     new string[] { "State" },
                     ObservationUrl,
-                    "Common/ObservedState",
+                    $"{Group_CommonResources}/ObservedState",
                     out breastRadObservedState)
-                .Description(new Markdown()
-
-                    .Paragraph("Breast Radiology Observed State Observation")
-                    .MissingObservation("an observed change")
-                    )
+                .Description("Breast Radiology Observed State Observation",
+                    new Markdown()
+                        .Paragraph("This observations describes an observed change in a previously observed item.")
+                        .MissingObservation("an observed change")
+                        .Todo(
+                            "Do we want benign appearing & probably benign? Define difference."
+                        )
+                 )
                 .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.ObservationCodedValueFragment)
                 .AddFragRef(this.ObservationLeafFragment)

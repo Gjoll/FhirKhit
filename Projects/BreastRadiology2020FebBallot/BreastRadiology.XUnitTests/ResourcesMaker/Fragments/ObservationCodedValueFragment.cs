@@ -1,4 +1,5 @@
 using FhirKhit.Tools.R4;
+using Hl7.Fhir.Model;
 using PreFhir;
 using System;
 using System.Collections.Generic;
@@ -30,9 +31,11 @@ namespace BreastRadiology.XUnitTests
                     new string[] {"Observation","CodedValue", "Fragment"},
                     ObservationUrl,
                     out observationCodedValueFragment)
-                .Description(new Hl7.Fhir.Model.Markdown()
-
-                    .Paragraph("Fragment that defines values for coded observations.")
+                .Description("Fragment that defines values for coded observations",
+                    new Markdown()
+                        .Paragraph("This fragment constrains an observation to only contain coded values.")
+                        .Todo(
+                        )
                 )
                 .AddFragRef(this.HeaderFragment)
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)

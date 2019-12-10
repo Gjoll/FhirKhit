@@ -37,12 +37,6 @@ namespace BreastRadiology.XUnitTests
             this.fc.Add(this.imagesDir);
         }
 
-        void AddIGStructureDefinition(StructureDefinition sDef, String groupId)
-        {
-            this.implementationGuide.AddIGResource($"StructureDefinition/{sDef.Name}", sDef.Title, sDef.Description.ToString(), groupId, false);
-        }
-
-
         public void SaveAll()
         {
             this.implementationGuide.Save(this.ImpGuidePath);
@@ -196,7 +190,21 @@ namespace BreastRadiology.XUnitTests
                            $"Group {groupId} not defined");
                         return;
                     }
-                    this.AddIGStructureDefinition(structureDefinition, groupId);
+                    String shortDescription = structureDefinition.Snapshot.Element[0].Short;
+
+                    // if these are different, sign that snapshot/differental not in sync.
+                    if (
+                        (shortDescription == structureDefinition.Differential.Element[0].Short) ||
+                        (structureDefinition.Snapshot.Element[0].Definition.ToString() == structureDefinition.Differential.Element[0].Definition.ToString())
+                        )
+                    {
+                        throw new Exception("Invalid element[0] text");
+                    }
+                    this.implementationGuide.AddIGResource($"StructureDefinition/{structureDefinition.Name}",
+                        structureDefinition.Title, 
+                        shortDescription, 
+                        groupId, 
+                        false);
                 }
                 else
                 {

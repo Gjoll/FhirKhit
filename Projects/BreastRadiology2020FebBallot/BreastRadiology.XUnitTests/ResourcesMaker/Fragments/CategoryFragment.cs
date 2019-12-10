@@ -32,10 +32,12 @@ namespace BreastRadiology.XUnitTests
                     new string[] {"Category","Fragment"},
                     ObservationUrl,
                     out findingCategoryFragment)
-                .Description(new Markdown()
-
-                    .Paragraph("Fragment definition that slices category and adds the observation code value")
-                    )
+                .Description("Fragment definition to define Observation.category",
+                    new Markdown()
+                        .Paragraph("This fragment slices Observation.category and adds the required observation code value")
+                        .Todo(
+                        )
+                )
                 ;
             ElementDefGroup eDef = e.Find("category");
             eDef.ElementDefinition.Card(1, eDef.BaseElementDefinition.Max);
