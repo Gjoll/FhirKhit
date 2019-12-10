@@ -30,6 +30,7 @@ namespace BreastRadiology.XUnitTests
                     "Findings Left Breast",
                     new string[] {"Left Breast"},
                     ObservationUrl,
+                    "Base/Findings/LeftBreast",
                     out sectionFindingsLeftBreast)
                 .Description(new Markdown()
                     .Paragraph("Findings Left Breast Section")

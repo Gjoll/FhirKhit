@@ -15,47 +15,44 @@ namespace FhirKhit.Tools.R4
     public class ImplementationGuideEditor
     {
         ImplementationGuide implementationGuide;
-        Dictionary<String, Modified<ImplementationGuide.ResourceComponent>> resources = new Dictionary<String, Modified<ImplementationGuide.ResourceComponent>>();
 
         public ImplementationGuideEditor(String templatePath)
         {
             String xmlText = File.ReadAllText(templatePath);
             FhirXmlParser parser = new FhirXmlParser();
             this.implementationGuide = (ImplementationGuide)parser.Parse(xmlText, typeof(Resource));
-            foreach (ImplementationGuide.ResourceComponent item in this.implementationGuide.Definition.Resource)
-                this.resources.Add(item.Name, new Modified<ImplementationGuide.ResourceComponent>(item));
+        }
+
+        public void AddGrouping(String groupId, String name, String description)
+        {
+            ImplementationGuide.GroupingComponent item = new ImplementationGuide.GroupingComponent
+            {
+                ElementId = groupId,
+                Name = name,
+                Description = description,
+            };
+            this.implementationGuide.Definition.Grouping.Add(item);
         }
 
         public void AddIGResource(String path,
             String name,
+            String description,
+            String groupId,
             bool example)
         {
-            if (this.resources.TryGetValue(name, out Modified<ImplementationGuide.ResourceComponent> modified) == false)
+            ImplementationGuide.ResourceComponent item = new ImplementationGuide.ResourceComponent
             {
-                ImplementationGuide.ResourceComponent item = new ImplementationGuide.ResourceComponent
-                {
-                    Name = name
-                };
-                modified = new Modified<ImplementationGuide.ResourceComponent>(item);
-                this.resources.Add(item.Name, modified);
-                this.implementationGuide.Definition.Resource.Add(item);
-            }
-
-            modified.Item.Reference = new ResourceReference(path);
-            modified.Item.Name = name;
-            modified.Item.Example = new FhirBoolean(example);
-            modified.ModifiedFlag = true;
+                Name = name,
+                Reference = new ResourceReference(path),
+                Description = description,
+                Example = new FhirBoolean(example),
+                GroupingId = groupId
+            };
+            this.implementationGuide.Definition.Resource.Add(item);
         }
 
         public void Save(String path)
         {
-            // Remove those resource that have not been modified.
-            foreach (Modified<ImplementationGuide.ResourceComponent> modified in resources.Values)
-            {
-                if (modified.ModifiedFlag == false)
-                    this.implementationGuide.Definition.Resource.Remove(modified.Item);
-
-            }
             implementationGuide.SaveXml(path);
         }
     }

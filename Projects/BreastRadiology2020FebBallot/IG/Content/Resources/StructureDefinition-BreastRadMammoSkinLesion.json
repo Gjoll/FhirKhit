@@ -1,5 +1,11 @@
 {
   "resourceType": "StructureDefinition",
+  "extension": [
+    {
+      "url": "http://www.ResourceMaker.com/Group",
+      "valueString": "Mammo/SkinLesion"
+    }
+  ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoSkinLesion",
   "version": "0.0.2",
   "name": "BreastRadMammoSkinLesion",

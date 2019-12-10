@@ -92,6 +92,7 @@ namespace BreastRadiology.XUnitTests
                     "US Mass Echo Pattern",
                     new string[] { "Echo Pattern" },
                     ObservationUrl,
+                    "UltraSound/Mass/EchoPattern",
                     out usMassEchoPattern)
                 .Description(new Markdown()
 

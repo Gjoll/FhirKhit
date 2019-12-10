@@ -1,5 +1,11 @@
 {
   "resourceType": "StructureDefinition",
+  "extension": [
+    {
+      "url": "http://www.ResourceMaker.com/Group",
+      "valueString": "UltraSound/Mass/EchoPattern"
+    }
+  ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadUSMassEchoPattern",
   "version": "0.0.2",
   "name": "BreastRadUSMassEchoPattern",

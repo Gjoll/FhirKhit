@@ -66,6 +66,7 @@ namespace BreastRadiology.XUnitTests
                     "Mass Shape",
                     new string[] { "Shape" },
                     ObservationUrl,
+                    "Common/MassShape",
                     out breastRadMassShape)
                 .Description(new Markdown()
 

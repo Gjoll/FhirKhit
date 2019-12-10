@@ -86,6 +86,7 @@ namespace BreastRadiology.XUnitTests
                 "Mammo Mass Margin",
                 new string[] { "Margin" },
                 ObservationUrl,
+                "Mammo/Mass/Margin",
                 out mammoMassMargin)
                 .Description(new Markdown()
 

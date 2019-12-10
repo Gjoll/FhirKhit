@@ -1,5 +1,11 @@
 {
   "resourceType": "StructureDefinition",
+  "extension": [
+    {
+      "url": "http://www.ResourceMaker.com/Group",
+      "valueString": "Base/Findings/RightBreast"
+    }
+  ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadSectionFindingsRightBreast",
   "version": "0.0.2",
   "name": "BreastRadSectionFindingsRightBreast",

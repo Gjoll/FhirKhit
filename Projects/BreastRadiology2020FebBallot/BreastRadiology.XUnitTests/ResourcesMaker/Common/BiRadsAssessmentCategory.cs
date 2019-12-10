@@ -93,6 +93,7 @@ namespace BreastRadiology.XUnitTests
                     "BiRads Assessment Category",
                     new string[] { "BiRads", "Assessment", "Category" },
                     ObservationUrl,
+                    "Common/BiRads",
                     out biRadsAssessmentCategory)
                 .Description(new Markdown()
                     .Paragraph("BiRads Assessment Category")

@@ -31,6 +31,7 @@ namespace BreastRadiology.XUnitTests
                 "Prior Reports Extension",
                 new string[] {"Prior Reports", "Extension"}, 
                 ExtensionUrl,
+                "Extension/PriorReports",
                 out breastRadiologyPriorReportsExtension)
                 .Description(new Markdown()
 

@@ -30,6 +30,7 @@ namespace BreastRadiology.XUnitTests
                     "Mammo Calcification",
                     new string[] {"Calcification"},
                     ObservationUrl,
+                    "Mammo/Calcification",
                     out mammoCalcification)
                 .Description(new Markdown()
 
@@ -63,8 +64,8 @@ namespace BreastRadiology.XUnitTests
             {
                 ProfileTargetSlice[] targets = new ProfileTargetSlice[]
                 {
-                    new ProfileTargetSlice(this.BreastRadSize, 0, "1"),
-                    new ProfileTargetSlice(this.BreastRadCount, 0, "1"),
+                    new ProfileTargetSlice(this.BreastRadObservedSize, 0, "1"),
+                    new ProfileTargetSlice(this.BreastRadObservedCount, 0, "1"),
                     new ProfileTargetSlice(MammoCalcificationType, 0, "1"),
                     new ProfileTargetSlice(MammoCalcificationDistribution, 0, "1"),
                     new ProfileTargetSlice(this.BreastRadObservedChanges, 0, "*"),

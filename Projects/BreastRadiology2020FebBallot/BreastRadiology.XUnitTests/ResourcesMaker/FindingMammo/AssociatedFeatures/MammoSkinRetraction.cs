@@ -30,6 +30,7 @@ namespace BreastRadiology.XUnitTests
                 "Skin Retraction",
                 new string[] { "Skin", "Retraction" },
                 ObservationUrl,
+                "Mammo/AssociatedFeature/SkinRetraction",
                 out mammoSkinRetraction)
                 .Description(new Markdown()
 

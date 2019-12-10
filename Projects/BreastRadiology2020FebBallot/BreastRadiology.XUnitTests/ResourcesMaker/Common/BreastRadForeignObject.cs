@@ -123,6 +123,7 @@ namespace BreastRadiology.XUnitTests
                     "ForeignObject",
                     new string[] { "ForeignObject" },
                     ObservationUrl,
+                    "Common/Foreign",
                     out breastRadForeignObject)
                 .Description(new Markdown()
 
@@ -138,8 +139,8 @@ namespace BreastRadiology.XUnitTests
                 ProfileTargetSlice[] targets = new ProfileTargetSlice[]
                 {
                     new ProfileTargetSlice(this.BreastRadObservedChanges, 0, "*"),
-                    new ProfileTargetSlice(this.BreastRadSize, 0, "1"),
-                    new ProfileTargetSlice(this.BreastRadCount, 0, "1")
+                    new ProfileTargetSlice(this.BreastRadObservedSize, 0, "1"),
+                    new ProfileTargetSlice(this.BreastRadObservedCount, 0, "1")
                 };
                 e.Find("hasMember").SliceByUrl(targets);
                 e.MapNode.AddProfileTargets(targets);

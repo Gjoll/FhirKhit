@@ -99,6 +99,7 @@ namespace BreastRadiology.XUnitTests
                     "Mammo Calcification Distribution",
                     new string[] {"Distribution"},
                     ObservationUrl,
+                    "Mammo/Calcification/Distribution",
                     out mammoCalcificationDistribution)
                 .Description(new Markdown()
 

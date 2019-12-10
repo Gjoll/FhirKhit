@@ -87,6 +87,7 @@ namespace BreastRadiology.XUnitTests
                     "US Mass Posterior Acoustic Features",
                     new string[] { "Posterior",  "Acoustic",  "Features" },
                     ObservationUrl,
+                    "UltraSound/Mass/PosteriorAcousticFeatures",
                     out usMassPosteriorAcousticFeatures)
                 .Description(new Markdown()
 

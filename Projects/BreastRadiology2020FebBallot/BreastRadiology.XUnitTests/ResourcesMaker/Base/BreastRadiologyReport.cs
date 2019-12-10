@@ -32,6 +32,7 @@ namespace BreastRadiology.XUnitTests
                 "Report",
                 new string[] {"Breast","Radiology","Report"},
                 DiagnosticReportUrl,
+                "Base",
                 out breastRadiologyReport)
                 .Description(new Markdown()
 

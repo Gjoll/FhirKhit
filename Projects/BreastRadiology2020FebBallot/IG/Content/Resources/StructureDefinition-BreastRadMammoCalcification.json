@@ -1,5 +1,11 @@
 {
   "resourceType": "StructureDefinition",
+  "extension": [
+    {
+      "url": "http://www.ResourceMaker.com/Group",
+      "valueString": "Mammo/Calcification"
+    }
+  ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoCalcification",
   "version": "0.0.2",
   "name": "BreastRadMammoCalcification",

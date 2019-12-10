@@ -2,6 +2,10 @@
   "resourceType": "StructureDefinition",
   "extension": [
     {
+      "url": "http://www.ResourceMaker.com/Group",
+      "valueString": "Common/ObservedCount"
+    },
+    {
       "url": "http://www.fragment.com/fragment",
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoDeviceFragment"
     },

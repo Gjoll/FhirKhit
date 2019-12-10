@@ -31,6 +31,7 @@ namespace BreastRadiology.XUnitTests
                     "Mammo Finding",
                     new string[] {"Mammo", "Finding"},
                     ObservationUrl,
+                    "Mammo",
                     out findingMammo)
                 .Description(new Markdown()
 

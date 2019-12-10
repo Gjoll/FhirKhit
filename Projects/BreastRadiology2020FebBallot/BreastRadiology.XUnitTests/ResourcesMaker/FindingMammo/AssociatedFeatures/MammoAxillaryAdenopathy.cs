@@ -35,6 +35,7 @@ namespace BreastRadiology.XUnitTests
                 "Mammo Axillary Adenopathy",
                 new string[] { "Axillary", "Adenopathy" },
                 ObservationUrl,
+                "Mammo/AssociatedFeature/AxillaryAdenopathy",
                 out mammoAxillaryAdenopathy)
                 .Description(new Markdown()
 

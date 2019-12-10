@@ -90,6 +90,7 @@ namespace BreastRadiology.XUnitTests
                     "Mammo Asymmetries",
                     new string[] {"Asymmetries"},
                     ObservationUrl,
+                    "Mammo/Asymmetry",
                     out mammoAsymmetries)
                 .Description(new Markdown()
 
@@ -114,8 +115,8 @@ namespace BreastRadiology.XUnitTests
             {
                 ProfileTargetSlice[] targets = new ProfileTargetSlice[]
                 {
-                    new ProfileTargetSlice(this.BreastRadSize, 0, "1"),
-                    new ProfileTargetSlice(this.BreastRadCount, 0, "1"),
+                    new ProfileTargetSlice(this.BreastRadObservedSize, 0, "1"),
+                    new ProfileTargetSlice(this.BreastRadObservedCount, 0, "1"),
                     new ProfileTargetSlice(this.BreastRadObservedChanges, 0, "*"),
                     new ProfileTargetSlice(this.MammoAssociatedFeatures, 0, "1", false)
                 };

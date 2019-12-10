@@ -35,6 +35,7 @@ namespace BreastRadiology.XUnitTests
                 "Skin Thickening",
                 new string[] { "Skin", "Thickening" },
                 ObservationUrl,
+                "Mammo/AssociatedFeature/SkinThickening",
                 out mammoSkinThickening)
                 .Description(new Markdown()
 

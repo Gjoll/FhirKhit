@@ -24,7 +24,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)IG\CodeSystemsEditor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IG\ExamplesEditor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IG\ExtensionsEditor.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)IG\IGEditor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IG\Modified.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IG\PageEditor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IG\ProfilesEditor.cs" />

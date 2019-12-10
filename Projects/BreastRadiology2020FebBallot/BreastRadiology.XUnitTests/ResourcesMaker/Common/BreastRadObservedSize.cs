@@ -14,24 +14,25 @@ namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker : ConverterBase
     {
-        String BreastRadSize
+        String BreastRadObservedSize
         {
             get
             {
-                if (breastRadSize == null)
-                    CreateBreastRadSize();
-                return breastRadSize;
+                if (breastRadObservedSize == null)
+                    CreateBreastRadObservedSize();
+                return breastRadObservedSize;
             }
         }
-        String breastRadSize = null;
+        String breastRadObservedSize = null;
 
-        void CreateBreastRadSize()
+        void CreateBreastRadObservedSize()
         {
             SDefEditor e = this.CreateEditor("BreastRadSize",
                     "Size",
                     new string[] { "Size" },
                     ObservationUrl,
-                    out breastRadSize)
+                    "Common/ObservedSize",
+                    out breastRadObservedSize)
                 .Description(new Markdown()
 
                     .Paragraph("Breast Radiology Size Observation")

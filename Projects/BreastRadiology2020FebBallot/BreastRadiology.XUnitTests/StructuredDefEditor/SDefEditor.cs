@@ -239,12 +239,6 @@ namespace BreastRadiology.XUnitTests
             return this;
         }
 
-        public SDefEditor AddFragRef(StructureDefinition fragRef)
-        {
-            this.AddFragRef(fragRef.Url);
-            return this;
-        }
-
         public SDefEditor SetIsFrag()
         {
             this.SDef.Extension.Add(new Extension

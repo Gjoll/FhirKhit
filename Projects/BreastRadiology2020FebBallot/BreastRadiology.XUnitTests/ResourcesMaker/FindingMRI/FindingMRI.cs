@@ -32,6 +32,7 @@ namespace BreastRadiology.XUnitTests
                     "MRI Finding",
                     new string[] {"MRI", "Finding"},
                     ObservationUrl,
+                    "MRI",
                     out findingMri)
                 .Description(new Markdown()
 

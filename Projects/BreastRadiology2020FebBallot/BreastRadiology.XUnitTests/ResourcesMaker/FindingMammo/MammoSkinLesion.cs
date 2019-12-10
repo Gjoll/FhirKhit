@@ -30,6 +30,7 @@ namespace BreastRadiology.XUnitTests
                 "Mammo Skin Lesion",
                 new string[] { "Skin", "Lesion" },
                 ObservationUrl,
+                "Mammo/SkinLesion",
                 out mammoSkinLesion)
                 .Description(new Markdown()
 
@@ -53,8 +54,8 @@ namespace BreastRadiology.XUnitTests
             {
                 ProfileTargetSlice[] targets = new ProfileTargetSlice[]
                 {
-                    new ProfileTargetSlice(this.BreastRadSize, 0, "1"),
-                    new ProfileTargetSlice(this.BreastRadCount, 0, "1"),
+                    new ProfileTargetSlice(this.BreastRadObservedSize, 0, "1"),
+                    new ProfileTargetSlice(this.BreastRadObservedCount, 0, "1"),
                     new ProfileTargetSlice(this.BreastRadObservedChanges, 0, "*"),
                     new ProfileTargetSlice(this.BreastRadObservedState, 0, "1", false)
                 };

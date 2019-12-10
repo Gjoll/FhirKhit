@@ -67,6 +67,7 @@ namespace BreastRadiology.XUnitTests
                     "UltraSound Finding",
                     new string[] { "UltraSound", "Finding" },
                     ObservationUrl,
+                    "UltraSound",
                     out findingUltraSound)
                 .Description(new Markdown()
 

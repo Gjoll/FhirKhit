@@ -33,6 +33,7 @@ namespace BreastRadiology.XUnitTests
                     "Mammo Mass",
                     new string[] { "Mass" },
                     ObservationUrl,
+                    "Mammo/Mass",
                     out mammoMass)
                 .Description(new Markdown()
 
@@ -56,8 +57,8 @@ namespace BreastRadiology.XUnitTests
             {
                 ProfileTargetSlice[] targets = new ProfileTargetSlice[]
                 {
-                    new ProfileTargetSlice(this.BreastRadSize, 0, "1"),
-                    new ProfileTargetSlice(this.BreastRadCount, 0, "1"),
+                    new ProfileTargetSlice(this.BreastRadObservedSize, 0, "1"),
+                    new ProfileTargetSlice(this.BreastRadObservedCount, 0, "1"),
                     new ProfileTargetSlice(this.BreastRadMassShape, 0, "1"),
                     new ProfileTargetSlice(this.MammoMassMargin, 0, "1"),
                     new ProfileTargetSlice(this.MammoMassDensity, 0, "1"),

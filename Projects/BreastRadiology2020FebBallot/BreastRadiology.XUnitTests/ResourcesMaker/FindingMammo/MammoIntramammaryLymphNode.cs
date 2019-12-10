@@ -31,6 +31,7 @@ namespace BreastRadiology.XUnitTests
                 "Mammo Intramammary LymphNode",
                 new string[] { "Intramammory", "Lymph Node" },
                 ObservationUrl,
+                "Mammo/IntramammaryLymphNode",
                 out mammoIntramammaryLymphNode)
                 .Description(new Markdown()
 

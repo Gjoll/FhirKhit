@@ -77,6 +77,7 @@ namespace BreastRadiology.XUnitTests
                     "US Tissue Composition",
                     new string[] {"Tissue","Composition"},
                     ObservationUrl,
+                    "UltraSound/Mass/TissueComposition",
                     out usTissueComposition)
                 .Description(new Markdown()
 

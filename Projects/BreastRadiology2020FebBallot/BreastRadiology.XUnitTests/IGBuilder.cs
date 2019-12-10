@@ -18,7 +18,9 @@ namespace BreastRadiology.XUnitTests
         String pagecontentDir => Path.Combine(this.outputDir, "pagecontent");
         String imagesDir => Path.Combine(this.outputDir, "images");
         //String IgPath => Path.Combine(this.outputDir, "IGBreastRad.json");
-        String ImpGuidePath => Path.Combine(this.outputDir, "IGBreastRad.xml");
+        String ImpGuidePath => Path.Combine(this.outputDir, impGuideName);
+        String impGuideName;
+
 
         //ProfilesEditor profilesEditor;
         //ExamplesEditor examplesEditor;
@@ -26,7 +28,6 @@ namespace BreastRadiology.XUnitTests
         //CodeSystemsEditor codeSystemsEditor;
         //ValueSetsEditor valueSetsEditor;
         ImplementationGuideEditor implementationGuide;
-        //IGEditor igEditor;
 
         public IGBuilder(String outputDir)
         {
@@ -36,38 +37,9 @@ namespace BreastRadiology.XUnitTests
             this.fc.Add(this.imagesDir);
         }
 
-        void AddIGStructureDefinition(StructureDefinition sDef)
+        void AddIGStructureDefinition(StructureDefinition sDef, String groupId)
         {
-            String htmlName = $"StructureDefinition-{sDef.Name}.html";
-
-            this.implementationGuide.AddIGResource($"StructureDefinition/{sDef.Name}", sDef.Name, false);
-            //this.igEditor.AddResource($"StructureDefinition/{sDef.Name}",
-            //    htmlName);
-            switch (sDef.BaseDefinition)
-            {
-                case "":
-                case null:
-                    {
-                    //List < Tuple<String, String>> references = new List<Tuple<String, string>>();
-                    //    references.Add(new Tuple<String, String>(sDef.Name, htmlName));
-                    //this.profilesEditor.AddFragment(references, sDef.Description);
-                    }
-                    break;
-
-                case "http://hl7.org/fhir/StructureDefinition/Extension":
-                    //this.extensionsEditor.AddExtension(sDef.Name,
-                    //    htmlName,
-                    //    sDef.Description);
-                    break;
-
-                default:
-                    //this.profilesEditor.AddProfile(sDef.Name,
-                    //    htmlName,
-                    //    sDef.BaseDefinition,
-                    //    sDef.BaseDefinition.LastUriPart(),
-                    //    sDef.Description);
-                    break;
-            }
+            this.implementationGuide.AddIGResource($"StructureDefinition/{sDef.Name}", sDef.Title, sDef.Description.ToString(), groupId, false);
         }
 
 
@@ -76,7 +48,6 @@ namespace BreastRadiology.XUnitTests
             this.implementationGuide.Save(this.ImpGuidePath);
             this.fc.Mark(this.ImpGuidePath);
 
-            //this.igEditor.Save(this.IgPath);
             //this.fc.Mark(this.IgPath);
 
             //this.examplesEditor.Save();
@@ -88,7 +59,7 @@ namespace BreastRadiology.XUnitTests
             this.fc.Dispose();
         }
 
-        public void Start()
+        public void Start(String impGuidePath)
         {
             //this.examplesEditor = new ExamplesEditor(this.outputDir);
             //this.profilesEditor = new ProfilesEditor(this.outputDir);
@@ -96,9 +67,8 @@ namespace BreastRadiology.XUnitTests
             //this.codeSystemsEditor = new CodeSystemsEditor(this.outputDir);
             //this.valueSetsEditor = new ValueSetsEditor(this.outputDir);
 
-            //this.igEditor = IGEditor.Load(this.IgPath);
-            //this.igEditor.dependencyListJson?.Clear();
-            this.implementationGuide = new ImplementationGuideEditor(this.ImpGuidePath);
+            this.impGuideName = Path.GetFileName(impGuidePath);
+            this.implementationGuide = new ImplementationGuideEditor(impGuidePath);
         }
 
         void CopyFiles(String inputDir, String inputMask, String outputDir)
@@ -121,9 +91,31 @@ namespace BreastRadiology.XUnitTests
             CopyFiles(inputDir, "*.svg", this.imagesDir);
         }
 
-        public void AddResources(String inputDir)
+        HashSet<String> groupIds = new HashSet<string>();
+        public void AddGrouping(String groupId, String name, String description)
         {
+            this.implementationGuide.AddGrouping(groupId, name, description);
+            if (this.groupIds.Contains(groupId))
+                throw new Exception($"Group already added");
+            this.groupIds.Add(groupId);
+        }
+
+        public void AddResources(params String[] inputDirs)
+        {
+            const String fcn = "AddResources";
             const String IsFragmentExtensionUrl = "http://www.fragment.com/isFragment";
+            const String GroupExtensionUrl = "http://www.ResourceMaker.com/Group";
+
+            String Group(StructureDefinition sd)
+            {
+                Extension groupExtension = sd.GetExtension(GroupExtensionUrl);
+                if (sd == null)
+                    throw new Exception($"StructureDefinition {sd.Url} lacks group extension");
+                FhirString value = groupExtension.Value as FhirString;
+                if (value == null)
+                    throw new Exception($"StructureDefinition {sd.Url} lacks group extension value");
+                return value.Value;
+            }
 
             void Save(Resource r, String outputName)
             {
@@ -132,71 +124,82 @@ namespace BreastRadiology.XUnitTests
                 this.fc.Mark(outputPath);
             }
 
-            String FixName(String path, String prefix)
+            List<StructureDefinition> structureDefinitions = new List<StructureDefinition>();
+            List<ValueSet> valueSets = new List<ValueSet>();
+            List<CodeSystem> codeSystems = new List<CodeSystem>();
+
+            foreach (String inputDir in inputDirs)
             {
-                String retVal = Path.GetFileNameWithoutExtension(path);
-                retVal = $"{prefix}{retVal.Substring(prefix.Length)}";
-                return retVal;
+                foreach (String file in Directory.GetFiles(inputDir))
+                {
+                    String fhirText = File.ReadAllText(file);
+                    FhirJsonParser parser = new FhirJsonParser();
+                    var resource = parser.Parse(fhirText, typeof(Resource));
+                    switch (resource)
+                    {
+                        case StructureDefinition structureDefinition:
+                            structureDefinitions.Add(structureDefinition);
+                            break;
+
+                        case CodeSystem codeSystem:
+                            codeSystems.Add(codeSystem);
+                            break;
+
+                        case ValueSet valueSet:
+                            valueSets.Add(valueSet);
+                            break;
+
+                        default:
+                            throw new NotImplementedException($"Unknown resource type '{file}'");
+                    }
+                }
             }
 
-            foreach (String file in Directory.GetFiles(inputDir))
+            structureDefinitions.Sort((a, b) => String.Compare(Group(a), Group(b)));
+            valueSets.Sort((a, b) => String.Compare(a.Name, b.Name));
+            codeSystems.Sort((a, b) => String.Compare(a.Name, b.Name));
+
+            foreach (CodeSystem codeSystem in codeSystems)
             {
-                String fhirText = File.ReadAllText(file);
-                FhirJsonParser parser = new FhirJsonParser();
-                var resource = parser.Parse(fhirText, typeof(Resource));
-                switch (resource)
+                Save(codeSystem, $"CodeSystem-{codeSystem.Name}.json");
+                this.implementationGuide.AddIGResource($"CodeSystem/{codeSystem.Name}", codeSystem.Title, codeSystem.Description.ToString(), null, false);
+            }
+
+            foreach (ValueSet valueSet in valueSets)
+            {
+                Save(valueSet, $"ValueSet-{valueSet.Name}.json");
+                this.implementationGuide.AddIGResource($"ValueSet/{valueSet.Name}", valueSet.Title, valueSet.Description.ToString(), null, false);
+            }
+
+            foreach (StructureDefinition structureDefinition in structureDefinitions)
+            {
+                String fixedName = $"StructureDefinition-{structureDefinition.Name}";
+
+                if (structureDefinition.Snapshot == null)
+                    SnapshotCreator.Create(structureDefinition);
+                Extension isFragmentExtension = structureDefinition.GetExtension(IsFragmentExtensionUrl);
+                if (isFragmentExtension != null)
+                    structureDefinition.RemoveExtension(IsFragmentExtensionUrl);
+
+                // Dont add fragments to IG.
+                if (isFragmentExtension == null)
                 {
-                    case StructureDefinition structureDefinition:
-                        {
-                            String typeName = "StructureDefinition";
-                            String fixedName = FixName(file, typeName);
-                            String htmlPage = $"{fixedName}.html";
+                    String groupPath = Group(structureDefinition);
+                    structureDefinition.RemoveExtension(GroupExtensionUrl);
 
-                            SnapshotCreator.Create(structureDefinition);
-                            Extension isFragmentExtension = structureDefinition.GetExtension(IsFragmentExtensionUrl);
-                            if (isFragmentExtension != null)
-                                structureDefinition.RemoveExtension(IsFragmentExtensionUrl);
-                            Save(structureDefinition, $"{fixedName}.json");
-                            // Dont add fragments to IG.
-                            if (isFragmentExtension == null)
-                                this.AddIGStructureDefinition(structureDefinition);
-                        }
-                        break;
-
-                    case CodeSystem codeSystem:
-                        {
-                            String typeName = "CodeSystem";
-                            String fixedName = FixName(file, typeName);
-                            String htmlPage = $"{fixedName}.html";
-
-                            Save(codeSystem, $"{fixedName}.json");
-                            this.implementationGuide.AddIGResource($"{typeName}/{codeSystem.Name}", codeSystem.Name, false);
-                            //this.igEditor.AddResource($"{typeName}/{codeSystem.Name}",
-                            //    htmlPage);
-                            //this.codeSystemsEditor.AddCodeSystem(codeSystem.Name,
-                            //    htmlPage,
-                            //    codeSystem.Description);
-                        }
-                        break;
-
-                    case ValueSet valueSet:
-                        {
-                            String typeName = "ValueSet";
-                            String fixedName = FixName(file, typeName);
-                            String htmlPage = $"{fixedName}.html";
-
-                            Save(valueSet, $"{fixedName}.json");
-                            this.implementationGuide.AddIGResource($"{typeName}/{valueSet.Name}", valueSet.Name, false);
-                            //this.igEditor.AddResource($"{typeName}/{valueSet.Name}",
-                            //    htmlPage);
-                            //this.valueSetsEditor.AddValueSet(valueSet.Name,
-                            //    htmlPage,
-                            //    valueSet.Description);
-                        }
-                        break;
-
-                    default:
-                        throw new NotImplementedException($"Unknown resource type '{file}'");
+                    Save(structureDefinition, $"{fixedName}.json");
+                    String groupId = groupPath.BaseUriPart();
+                    if (this.groupIds.Contains(groupId) == false)
+                    {
+                        this.ConversionError(this.GetType().Name,
+                           fcn,
+                           $"Group {groupId} not defined");
+                        return;
+                    }
+                    this.AddIGStructureDefinition(structureDefinition, groupId);
+                }
+                else
+                {
                 }
             }
         }

@@ -31,6 +31,7 @@ namespace BreastRadiology.XUnitTests
                     "Mammo Solitary Dilated Duct",
                     new string[] { "Solitary", "Dialated", "Duct" },
                     ObservationUrl,
+                    "Mammo/SolitaryDilatedDuct",
                     out mammoSolitaryDilatedDuct)
                 .Description(new Markdown()
 

@@ -30,6 +30,7 @@ namespace BreastRadiology.XUnitTests
                     "Mammo Associated Features",
                     new string[] { "Associated", "Features" },
                     ObservationUrl,
+                    "Mammo/AssociatedFeature",
                     out mammoAssociatedFeatures)
                 .Description(new Markdown()
 

@@ -23,6 +23,7 @@ namespace BreastRadiology.XUnitTests
 
     partial class ResourcesMaker : ConverterBase
     {
+        public const String GroupExtensionUrl = "http://www.ResourceMaker.com/Group";
         public static String BiRadCitation = "Bi-Rads® Atlas — Mammography Fifth Ed. 2013";
         const FHIRVersion FVersion = FHIRVersion.N4_0_0;
 
@@ -79,6 +80,7 @@ namespace BreastRadiology.XUnitTests
             String title,
             String[] mapName,
             String baseDefinition,
+            String groupPath,
             out String url)
         {
             if (name.Contains(" "))
@@ -97,6 +99,13 @@ namespace BreastRadiology.XUnitTests
 
             this.editors.Add(retVal.SDef.Url, retVal);
             url = retVal.SDef.Url;
+
+            retVal.SDef.Extension.Add(new Extension
+            {
+                Url = GroupExtensionUrl,
+                Value = new FhirString(groupPath)
+            });
+
             return retVal;
         }
 
@@ -110,6 +119,7 @@ namespace BreastRadiology.XUnitTests
                 title,
                 mapName,
                 baseDefinition,
+                "Fragment/{name}",
                 out url);
             retVal.SetIsFrag();
             retVal.SDef.Abstract = true;

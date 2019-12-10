@@ -96,6 +96,7 @@ namespace BreastRadiology.XUnitTests
                     "Mammo Breast Density",
                     new string[] { "Breast", "Density" },
                     ObservationUrl,
+                    "Mammo/BreastDensity",
                     out mammoBreastDensity)
                 .Description(new Markdown()
 

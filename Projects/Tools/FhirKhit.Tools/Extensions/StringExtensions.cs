@@ -110,10 +110,10 @@ namespace FhirKhit.Tools
             if (path is null)
                 throw new ArgumentNullException(nameof(path));
 
-            Int32 index = path.LastIndexOf('/');
+            Int32 index = path.IndexOf('/');
             if (index < 0)
                 return path;
-            return path.Substring(0, index - 1);
+            return path.Substring(0, index);
         }
 
         /// <summary>

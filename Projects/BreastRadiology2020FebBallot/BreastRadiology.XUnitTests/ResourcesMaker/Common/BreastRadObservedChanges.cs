@@ -106,6 +106,7 @@ namespace BreastRadiology.XUnitTests
                     "Observed Changes",
                     new string[] { "Changes" },
                     ObservationUrl,
+                    "Common/ObservedChanges",
                     out breastRadObservedChanges)
                 .Description(new Markdown()
 

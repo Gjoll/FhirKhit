@@ -64,9 +64,9 @@ namespace BreastRadiology.XUnitTests
                 "Breast Body Location",
                 new string[] { "Breast", "Body", "Location" },
                 ExtensionUrl,
+                "Extension/BreastBodyLocation",
                 out breastBodyLocationExtension)
                 .Description(new Markdown()
-
                     .Paragraph("Breast Body Location extension")
                     )
                 .Kind(StructureDefinition.StructureDefinitionKind.ComplexType)

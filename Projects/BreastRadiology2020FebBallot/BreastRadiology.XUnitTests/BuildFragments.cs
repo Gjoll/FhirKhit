@@ -20,50 +20,17 @@ namespace BreastRadiology.XUnitTests
     {
         const String baseDir = "BreastRadiology2020FebBallot";
 
-        String cacheDir = Path.Combine(
-            DirHelper.FindParentDir("FhirKhit"),
-            "Cache");
+        String cacheDir = Path.Combine(DirHelper.FindParentDir("FhirKhit"), "Cache");
+        String contentDir = Path.Combine(DirHelper.FindParentDir(baseDir), "IG", "Content");
+        String guideDir => Path.Combine(DirHelper.FindParentDir(baseDir), "IG", "Guide");
 
-        String graphicsDir = Path.Combine(
-            DirHelper.FindParentDir(baseDir),
-            "IG",
-            "Content",
-            "Graphics");
+        String graphicsDir => Path.Combine(contentDir, "Graphics");
+        String fragmentDir => Path.Combine(contentDir, "Fragments");
+        String resourcesDir => Path.Combine(contentDir, "Resources");
+        String pageDir => Path.Combine(contentDir, "Page");
+        String pageTemplateDir => Path.Combine(contentDir, "PageTemplate");
+        String mergedDir => Path.Combine(contentDir, "Merged");
 
-        String guideDir = Path.Combine(
-            DirHelper.FindParentDir(baseDir),
-            "IG",
-            "Guide");
-
-        String fragmentDir = Path.Combine(
-            DirHelper.FindParentDir(baseDir),
-            "IG",
-            "Content",
-            "Fragments");
-
-        String resourcesDir = Path.Combine(
-            DirHelper.FindParentDir(baseDir),
-            "IG",
-            "Content",
-            "Resources");
-
-        String pageDir = Path.Combine(
-            DirHelper.FindParentDir(baseDir),
-            "IG",
-            "Content",
-            "Page");
-
-        String pageTemplateDir = Path.Combine(
-            DirHelper.FindParentDir(baseDir),
-            "IG",
-            "Content",
-            "PageTemplate");
-
-        String mergedDir = Path.Combine(
-            DirHelper.FindParentDir(baseDir),
-            "IG",
-            "Content",
-            "Merged");
 
         private void Message(String import, string className, string method, string msg)
         {
@@ -265,7 +232,13 @@ namespace BreastRadiology.XUnitTests
                 p.StatusErrors += this.StatusErrors;
                 p.StatusInfo += this.StatusInfo;
                 p.StatusWarnings += this.StatusWarnings;
-                p.Start();
+                p.Start(Path.Combine(this.contentDir, "IGBreastRad.xml"));
+                p.AddGrouping("Base", "Base", "Base Breast Radiology Resource Definitions");
+                p.AddGrouping("Common", "Common", "Common Breast Radiology Resource Definitions");
+                p.AddGrouping("Mammo", "Mammography", "Mammography specific Breast Radiology Resource Definitions");
+                p.AddGrouping("MRI", "MRI", "MRI specific Breast Radiology Resource Definitions");
+                p.AddGrouping("UltraSound", "UltraSound", "UltraSound specific Breast Radiology Resource Definitions");
+                p.AddGrouping("Extension", "Extension", "Extension Resource Definitions");
                 p.AddResources(this.resourcesDir);
                 p.AddPageContent(this.pageDir);
                 p.AddPageContent(this.pageTemplateDir);

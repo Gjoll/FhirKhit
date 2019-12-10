@@ -67,6 +67,7 @@ namespace BreastRadiology.XUnitTests
                     "Observed State",
                     new string[] { "State" },
                     ObservationUrl,
+                    "Common/ObservedState",
                     out breastRadObservedState)
                 .Description(new Markdown()
 

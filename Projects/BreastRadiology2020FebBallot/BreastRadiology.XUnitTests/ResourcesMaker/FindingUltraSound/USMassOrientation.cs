@@ -59,6 +59,7 @@ namespace BreastRadiology.XUnitTests
                     "US Mass Orientation",
                     new string[] { "Orientation" },
                     ObservationUrl,
+                    "UltraSound/Mass/Orientation",
                     out usMassOrientation)
                 .Description(new Markdown()
 
