@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
         {
             SDefEditor e = this.CreateEditor("BreastRadMammoAxillaryAdenopathy",
                 "Mammo Axillary Adenopathy",
-                new string[] { "Axillary", "Adenopathy" },
+                new string[] { "Mammo", "Axillary", "Adenopathy" },
                 ObservationUrl,
                 $"{Group_MammoResources}/AssociatedFeature/AxillaryAdenopathy",
                 out mammoAxillaryAdenopathy)
@@ -51,7 +51,7 @@ namespace BreastRadiology.XUnitTests
                 .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.ObservationNoValueFragment)
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)
-                .AddLinks(this.BreastBodyLocationMapLinks)
+                .AddExtensionLink(this.BreastBodyLocationExtension)
                 ;
         e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationLeafNode("Mammography Axillary Adenopathy");
         }

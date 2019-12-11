@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
         {
             SDefEditor e = this.CreateEditor("BreastRadMammoSkinLesion",
                 "Mammo Skin Lesion",
-                new string[] { "Skin", "Lesion" },
+                new string[] { "Mammo", "Skin", "Lesion" },
                 ObservationUrl,
                 $"{Group_MammoResources}/SkinLesion",
                 out mammoSkinLesion)
@@ -47,9 +47,9 @@ namespace BreastRadiology.XUnitTests
                 )
                 .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)
-                .AddLinks(this.BreastBodyLocationMapLinks)
                 .AddFragRef(this.ObservationNoValueFragment)
                 .AddFragRef(this.ObservationSectionFragment)
+                .AddExtensionLink(this.BreastBodyLocationExtension)
                 ;
 
             {

@@ -90,9 +90,20 @@ namespace BreastRadiology.XUnitTests
                 }
             );
 
+
+            {
+                IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));
+                valueSetIntroDoc
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .ValueSet(binding);
+                    ;
+                String outputPath = valueSetIntroDoc.Save();
+                this.fc.Mark(outputPath);
+            }
+
             SDefEditor e = this.CreateEditor("BreastRadMammoBreastDensity",
                     "Mammo Breast Density",
-                    new string[] { "Breast", "Density" },
+                    new string[] { "Mammo", "Breast", "Density" },
                     ObservationUrl,
                     $"{Group_MammoResources}/BreastDensity",
                     out mammoBreastDensity)

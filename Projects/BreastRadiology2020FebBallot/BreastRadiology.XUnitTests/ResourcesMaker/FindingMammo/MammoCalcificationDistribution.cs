@@ -90,9 +90,20 @@ namespace BreastRadiology.XUnitTests
                 }
             );
 
+
+            {
+                IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));
+                valueSetIntroDoc
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .ValueSet(binding);
+                    ;
+                String outputPath = valueSetIntroDoc.Save();
+                this.fc.Mark(outputPath);
+            }
+
             SDefEditor e =  this.CreateEditor("BreastRadMammoCalcificationDistribution",
                     "Mammo Calcification Distribution",
-                    new string[] {"Distribution"},
+                    new string[] {"Mammo", "Calcification", "Distribution"},
                     ObservationUrl,
                     $"{Group_MammoResources}/Calcification/Distribution",
                     out mammoCalcificationDistribution)

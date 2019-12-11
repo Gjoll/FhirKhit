@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
         {
             SDefEditor e = this.CreateEditor("BreastRadMammoTrabecularThickening",
                 "Mammo Trabecular Thickening",
-                new string[] {"Trabecular","Thickening"},
+                new string[] {"Mammo", "Trabecular","Thickening"},
                 ObservationUrl,
                 $"{Group_MammoResources}/AssociatedFeature/TrabecularThickening",
                 out mammoTrabecularThickening)
@@ -46,8 +46,8 @@ namespace BreastRadiology.XUnitTests
                 )
                 .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)
-                .AddLinks(this.BreastBodyLocationMapLinks)
                 .AddFragRef(this.ObservationNoValueFragment)
+                .AddExtensionLink(this.BreastBodyLocationExtension)
                 ;
             e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationLeafNode("Trabecular Thickening");
         }

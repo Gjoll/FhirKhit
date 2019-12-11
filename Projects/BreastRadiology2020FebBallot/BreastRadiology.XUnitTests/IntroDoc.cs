@@ -1,6 +1,7 @@
 ﻿using Hl7.Fhir.Model;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace BreastRadiology.XUnitTests
@@ -20,9 +21,11 @@ namespace BreastRadiology.XUnitTests
     class IntroDoc
     {
         StringBuilder sb = new StringBuilder();
+        String outputPath;
 
-        public IntroDoc()
+        public IntroDoc(String outputPath)
         {
+            this.outputPath = outputPath;
             sb
                 .AppendLine("<div xmlns=\"http://www.w3.org/1999/xhtml\"")
                 .AppendLine("    xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"")
@@ -36,7 +39,7 @@ namespace BreastRadiology.XUnitTests
             return this;
         }
 
-        public IntroDoc AddSvgImage(String svgFileName)
+        IntroDoc AddSvgImage(String svgFileName)
         {
             sb
                 .AppendLine($"    <object data=\"{svgFileName}\" type=\"image/svg+xml\">")
@@ -88,6 +91,18 @@ namespace BreastRadiology.XUnitTests
             return this;
         }
 
+        public IntroDoc ValueSet(ValueSet binding)
+        {
+            this
+                .Paragraph(
+                    $"This resource is a ValueSet."
+                )
+                .List(binding)
+                ;
+            return this;
+        }
+
+
         public IntroDoc CodedObservationLeafNode(SDefEditor e,
             String leafNode,
             ValueSet binding)
@@ -138,6 +153,13 @@ namespace BreastRadiology.XUnitTests
         {
             sb.AppendLine("</div>");
             return sb.ToString();
+        }
+
+        public String Save()
+        {
+            String introHtml = this.Render();
+            File.WriteAllText(outputPath, introHtml);
+            return this.outputPath;
         }
     }
 }

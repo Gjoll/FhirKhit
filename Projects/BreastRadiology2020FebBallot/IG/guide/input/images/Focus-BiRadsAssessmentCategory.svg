@@ -51,19 +51,19 @@
 <g>
 <g>
 <rect fill="LightSalmon" stroke="Black" stroke-width="1.875" x="388.5" y="7.5" width="120" height="90" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-BiRadsAssessmentCategoriesVS.html" target="_blank">
+<a href="./ValueSet-BiRadsAssessmentCategoriesVS.html" target="_blank">
 <title>'BiRadsAssessmentCategoriesVS'</title>
 <text x="396" y="30">BiRads</text>
 </a>
-<a href="./StructureDefinition-BiRadsAssessmentCategoriesVS.html" target="_blank">
+<a href="./ValueSet-BiRadsAssessmentCategoriesVS.html" target="_blank">
 <title>'BiRadsAssessmentCategoriesVS'</title>
 <text x="396" y="48.75">Assessment</text>
 </a>
-<a href="./StructureDefinition-BiRadsAssessmentCategoriesVS.html" target="_blank">
+<a href="./ValueSet-BiRadsAssessmentCategoriesVS.html" target="_blank">
 <title>'BiRadsAssessmentCategoriesVS'</title>
 <text x="396" y="67.5">Categories</text>
 </a>
-<a href="./StructureDefinition-BiRadsAssessmentCategoriesVS.html" target="_blank">
+<a href="./ValueSet-BiRadsAssessmentCategoriesVS.html" target="_blank">
 <title>'BiRadsAssessmentCategoriesVS'</title>
 <text x="396" y="86.25">Values</text>
 </a>

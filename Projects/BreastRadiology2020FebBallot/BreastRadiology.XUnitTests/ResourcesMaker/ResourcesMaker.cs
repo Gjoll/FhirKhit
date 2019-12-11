@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
         public const String Group_MammoCodes = "MammoCodes";
 
         public const String Group_MRIResources = "MRIResources";
-        public const String Group_MRICodes= "MRICodes";
+        public const String Group_MRICodes = "MRICodes";
 
         public const String Group_USResources = "USResources";
         public const String Group_USCodes = "USCodes";
@@ -279,7 +279,7 @@ namespace BreastRadiology.XUnitTests
             resources.Add(Path.Combine(this.resourceDir, $"CodeSystem-{name}CS.json"), cs);
             resources.Add(Path.Combine(this.resourceDir, $"ValueSet-{name}VS.json"), vs);
 
-            ResourceMap.Self.CreateMapNode(vs.Url, mapName);
+            ResourceMap.Self.CreateMapNode(vs.Url, mapName, "ValueSet");
             return vs;
         }
 
@@ -316,8 +316,6 @@ namespace BreastRadiology.XUnitTests
 
         void SaveAll()
         {
-            const String fcn = "SaveAll";
-
             foreach (KeyValuePair<string, Resource> resourceItem in this.resources)
             {
                 resourceItem.Value.SaveJson(resourceItem.Key);
@@ -328,14 +326,12 @@ namespace BreastRadiology.XUnitTests
             {
                 if (ce.WriteFragment(out String fragmentName))
                     this.fc.Mark(fragmentName);
-                if (ce.WriteIntro(out String introName) == false)
+
+                if (ce.IntroDoc != null)
                 {
-                    this.ConversionError(this.GetType().Name,
-                        fcn,
-                        $"{ce.SDef.Name} has no intro section");
+                    String path = ce.IntroDoc.Save();
+                    this.fc.Mark(path);
                 }
-                else
-                    this.fc.Mark(introName);
             }
         }
     }

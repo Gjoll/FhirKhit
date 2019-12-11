@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
         {
             SDefEditor e = this.CreateEditor("BreastRadMammoNippleRetraction",
                 "Mammo Nipple Retraction",
-                new string[] { "Nipple", "Retraction" },
+                new string[] { "Mammo", "Nipple", "Retraction" },
                 ObservationUrl,
                 $"{Group_MammoResources}/AssociatedFeature/NippleRetraction",
                 out mammoNippleRetraction)
@@ -46,7 +46,7 @@ namespace BreastRadiology.XUnitTests
                 .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.ObservationNoValueFragment)
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)
-                .AddLinks(this.BreastBodyLocationMapLinks)
+                .AddExtensionLink(this.BreastBodyLocationExtension)
                 ;
 
             e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationLeafNode("Nipple Retraction");

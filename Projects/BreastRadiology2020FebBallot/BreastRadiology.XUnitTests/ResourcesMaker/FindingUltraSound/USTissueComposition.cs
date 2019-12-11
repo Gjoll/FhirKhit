@@ -66,9 +66,20 @@ namespace BreastRadiology.XUnitTests
                 }
             );
 
+
+            {
+                IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));
+                valueSetIntroDoc
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .ValueSet(binding);
+                    ;
+                String outputPath = valueSetIntroDoc.Save();
+                this.fc.Mark(outputPath);
+            }
+
             SDefEditor e = this.CreateEditor("BreastRadUSTissueComposition",
                     "US Tissue Composition",
-                    new string[] {"Tissue","Composition"},
+                    new string[] {"US", "Tissue","Composition"},
                     ObservationUrl,
                     $"{Group_USResources}/Mass/TissueComposition",
                     out usTissueComposition)

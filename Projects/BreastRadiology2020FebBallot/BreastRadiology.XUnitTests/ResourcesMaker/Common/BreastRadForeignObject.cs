@@ -30,89 +30,99 @@ namespace BreastRadiology.XUnitTests
             ValueSet binding = this.CreateValueSet(
                     "BreastRadAbnormalities",
                     "Foreign Object",
-                    new string[] {"Foreign", "Object" , "Values"},
+                    new string[] { "Foreign", "Object", "Values" },
                     "Foreign object codes defining types of foreign objects observed during a Breast Radiology exam",
                     Group_CommonCodes,
                     new ConceptDef[]
                     {
-                        new ConceptDef("BB", 
-                            "BB", 
+                        new ConceptDef("BB",
+                            "BB",
                             new Definition()
                             ),
-                        new ConceptDef("BiopsyClip", 
-                            "Biopsy Clip", 
+                        new ConceptDef("BiopsyClip",
+                            "Biopsy Clip",
                             new Definition()
                             ),
-                        new ConceptDef("BiopsyClipTitanium", 
-                            "Biopsy Clip Titanium", 
+                        new ConceptDef("BiopsyClipTitanium",
+                            "Biopsy Clip Titanium",
                             new Definition()
                             ),
-                        new ConceptDef("CatheterSleeve", 
-                            "Catheter Sleeve", 
+                        new ConceptDef("CatheterSleeve",
+                            "Catheter Sleeve",
                             new Definition()
                             ),
-                        new ConceptDef("ChemotherapyPort", 
-                            "Chemotherapy Port", 
+                        new ConceptDef("ChemotherapyPort",
+                            "Chemotherapy Port",
                             new Definition()
                             ),
-                        new ConceptDef("Coil", 
-                            "Coil", 
+                        new ConceptDef("Coil",
+                            "Coil",
                             new Definition()
                             ),
-                        new ConceptDef("GunShotWound", 
-                            "Gun Shot Wound", 
+                        new ConceptDef("GunShotWound",
+                            "Gun Shot Wound",
                             new Definition()
                             ),
-                        new ConceptDef("Metal", 
-                            "Metal", 
+                        new ConceptDef("Metal",
+                            "Metal",
                             new Definition()
                             ),
-                        new ConceptDef("MetallicObjects", 
-                            "Metallic Objects", 
+                        new ConceptDef("MetallicObjects",
+                            "Metallic Objects",
                             new Definition()
                             ),
-                        new ConceptDef("Needle", 
-                            "Needle", 
+                        new ConceptDef("Needle",
+                            "Needle",
                             new Definition()
                             ),
-                        new ConceptDef("NippleJewelery", 
-                            "Nipple Jewelery", 
+                        new ConceptDef("NippleJewelery",
+                            "Nipple Jewelery",
                             new Definition()
                             ),
-                        new ConceptDef("NonMetallicBody", 
-                            "Non Metallic Body", 
+                        new ConceptDef("NonMetallicBody",
+                            "Non Metallic Body",
                             new Definition()
                             ),
-                        new ConceptDef("PaceMaker", 
-                            "Pace Maker", 
+                        new ConceptDef("PaceMaker",
+                            "Pace Maker",
                             new Definition()
                             ),
-                        new ConceptDef("RadioactivePellet", 
-                            "Radioactive Pellet", 
+                        new ConceptDef("RadioactivePellet",
+                            "Radioactive Pellet",
                             new Definition()
                             ),
-                        new ConceptDef("Sponge", 
-                            "Sponge", 
+                        new ConceptDef("Sponge",
+                            "Sponge",
                             new Definition()
                             ),
-                        new ConceptDef("SurgicalClip", 
-                            "Surgical Clip", 
+                        new ConceptDef("SurgicalClip",
+                            "Surgical Clip",
                             new Definition()
                             ),
-                        new ConceptDef("Swab", 
-                            "Swab", 
+                        new ConceptDef("Swab",
+                            "Swab",
                             new Definition()
                             ),
-                        new ConceptDef("Wire", 
-                            "Wire", 
+                        new ConceptDef("Wire",
+                            "Wire",
                             new Definition()
                             ),
-                        new ConceptDef("WireFragment", 
-                            "WireFragment", 
+                        new ConceptDef("WireFragment",
+                            "WireFragment",
                             new Definition()
                             )
                     })
                 ;
+
+            {
+                IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));
+                valueSetIntroDoc
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .ValueSet(binding);
+                    ;
+                String outputPath = valueSetIntroDoc.Save();
+                this.fc.Mark(outputPath);
+            }
 
             SDefEditor e = this.CreateEditor("BreastRadForeignObject",
                     "ForeignObject",

@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
         {
             SDefEditor e = this.CreateEditor("BreastRadMammoIntramammaryLymphNode",
                 "Mammo Intramammary LymphNode",
-                new string[] { "Intramammory", "Lymph Node" },
+                new string[] { "Mammo", "Intramammory", "Lymph Node" },
                 ObservationUrl,
                 $"{Group_MammoResources}/IntramammaryLymphNode",
                 out mammoIntramammaryLymphNode)
@@ -48,9 +48,9 @@ namespace BreastRadiology.XUnitTests
                 )
                 .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)
-                .AddLinks(this.BreastBodyLocationMapLinks)
                 .AddFragRef(this.ObservationCodedValueFragment)
                 .AddFragRef(this.ObservationLeafFragment)
+                .AddExtensionLink(this.BreastBodyLocationExtension)
                 ;
 
             e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationLeafNode($"Intramammary Lymph Node");

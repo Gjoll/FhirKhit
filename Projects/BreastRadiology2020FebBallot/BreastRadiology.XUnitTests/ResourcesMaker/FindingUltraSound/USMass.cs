@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
         {
             SDefEditor e = this.CreateEditor("BreastRadUSMass",
                     "US Mass",
-                    new string[] { "Mass" },
+                    new string[] { "US", "Mass" },
                     ObservationUrl,
                     $"{Group_USResources}/Finding/Mass",
                     out usMass)
@@ -50,9 +50,9 @@ namespace BreastRadiology.XUnitTests
                 )
                 .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)
-                .AddLinks(this.BreastBodyLocationMapLinks)
                 .AddFragRef(this.ObservationSectionFragment)
                 .AddFragRef(this.ObservationNoValueFragment)
+                .AddExtensionLink(this.BreastBodyLocationExtension)
                 ;
             {
                 ProfileTargetSlice[] targets = new ProfileTargetSlice[]

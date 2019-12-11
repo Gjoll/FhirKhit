@@ -14,16 +14,16 @@ namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker : ConverterBase
     {
-        List<ResourceMap.Link> BreastBodyLocationMapLinks
-        {
-            get
-            {
-                if (breastBodyLocationMapLinks == null)
-                    CreateBreastBodyLocationExtension();
-                return breastBodyLocationMapLinks;
-            }
-        }
-        List<ResourceMap.Link> breastBodyLocationMapLinks;
+        //List<ResourceMap.Link> BreastBodyLocationMapLinks
+        //{
+        //    get
+        //    {
+        //        if (breastBodyLocationMapLinks == null)
+        //            CreateBreastBodyLocationExtension();
+        //        return breastBodyLocationMapLinks;
+        //    }
+        //}
+        //List<ResourceMap.Link> breastBodyLocationMapLinks;
 
         String BreastBodyLocationExtension
         {
@@ -45,7 +45,7 @@ namespace BreastRadiology.XUnitTests
 
             void AddMapLink(ValueSet binding)
             {
-                breastBodyLocationMapLinks.Add(new ResourceMap.Link("valueSet", binding.Url, false));
+                //breastBodyLocationMapLinks.Add(new ResourceMap.Link("valueSet", binding.Url, false));
             }
 
             void SliceAndBind(String sliceName,
@@ -74,8 +74,8 @@ namespace BreastRadiology.XUnitTests
                     ;
                 extensionGroup.RelatedElements.Add(lateralityValue);
             }
-            
-            breastBodyLocationMapLinks = new List<ResourceMap.Link>();
+
+            //breastBodyLocationMapLinks = new List<ResourceMap.Link>();
 
             e = this.CreateEditor("BreastBodyLocation",
                 "Breast Body Location",
@@ -95,7 +95,7 @@ namespace BreastRadiology.XUnitTests
                 .Context()
                 ;
 
-            breastBodyLocationMapLinks.Add(new ResourceMap.Link("extension", breastBodyLocationExtension, false));
+            //breastBodyLocationMapLinks.Add(new ResourceMap.Link("extension", breastBodyLocationExtension, false));
 
             e.AddFragRef(this.HeaderFragment);
 
@@ -117,7 +117,7 @@ namespace BreastRadiology.XUnitTests
                 ValueSet binding = this.CreateValueSet(
                     "BreastLocationQuadrant",
                     "Breast Location Quadrant",
-                    new string[] {"Breast", "Location", "Quadrant", "Values"},
+                    new string[] { "Breast", "Location", "Quadrant", "Values" },
                     "Breast body location quadrant codes.",
                     Group_CommonCodes,
                     new ConceptDef[]
@@ -189,6 +189,17 @@ namespace BreastRadiology.XUnitTests
                             )
                     });
 
+
+                {
+                    IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));
+                    valueSetIntroDoc
+                        .ReviewedStatus(ReviewStatus.NotReviewed)
+                        .ValueSet(binding);
+                    ;
+                    String outputPath = valueSetIntroDoc.Save();
+                    this.fc.Mark(outputPath);
+                }
+
                 SliceAndBind("quadrant", binding.Url);
                 AddMapLink(binding);
             }
@@ -197,7 +208,7 @@ namespace BreastRadiology.XUnitTests
                 ValueSet binding = this.CreateValueSet(
                     "BreastLocationClock",
                     "Breast Location Clock",
-                    new string[] {"Breast", "Location", "Clock", "Values"},
+                    new string[] { "Breast", "Location", "Clock", "Values" },
                     "Codes defining breast body location angles expressed in clock-face units.",
                     Group_CommonCodes,
                     new ConceptDef[]
@@ -324,6 +335,17 @@ namespace BreastRadiology.XUnitTests
                             )
                     });
 
+
+                {
+                    IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));
+                    valueSetIntroDoc
+                        .ReviewedStatus(ReviewStatus.NotReviewed)
+                        .ValueSet(binding);
+                    ;
+                    String outputPath = valueSetIntroDoc.Save();
+                    this.fc.Mark(outputPath);
+                }
+
                 SliceAndBind("clockDirection", binding.Url);
                 AddMapLink(binding);
             }
@@ -332,7 +354,7 @@ namespace BreastRadiology.XUnitTests
                 ValueSet binding = this.CreateValueSet(
                     "BreastLocationDepth",
                     "Breast Location Depth",
-                    new string[] {"Breast", "Location", "Depth", "Values"},
+                    new string[] { "Breast", "Location", "Depth", "Values" },
                     "Breast body location depth codes.",
                     Group_CommonCodes,
                     new ConceptDef[]
@@ -353,6 +375,17 @@ namespace BreastRadiology.XUnitTests
                                 .Line("Posterior depth")
                             )
                     });
+
+
+                {
+                    IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));
+                    valueSetIntroDoc
+                        .ReviewedStatus(ReviewStatus.NotReviewed)
+                        .ValueSet(binding);
+                    ;
+                    String outputPath = valueSetIntroDoc.Save();
+                    this.fc.Mark(outputPath);
+                }
 
                 SliceAndBind("depth", binding.Url);
                 AddMapLink(binding);

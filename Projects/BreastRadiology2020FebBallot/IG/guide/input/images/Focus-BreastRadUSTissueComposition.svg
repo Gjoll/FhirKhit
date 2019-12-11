@@ -21,36 +21,37 @@
 <text x="15" y="48.75">Finding</text>
 </a>
 </g>
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="157.5" y1="33.75" x2="187.5" y2="33.75" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="157.5" y1="43.125" x2="187.5" y2="43.125" />
 <line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="127.5" y1="33.75" x2="157.5" y2="33.75" />
-<line stroke="Black" stroke-width="1.875" x1="157.5" y1="33.75" x2="157.5" y2="33.75" />
+<line stroke="Black" stroke-width="1.875" x1="157.5" y1="33.75" x2="157.5" y2="43.125" />
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="187.5" y="7.5" width="130.5" height="52.5" rx="3.75" ry="3.75" />
-<text x="195" y="30">Tissue</text>
-<text x="195" y="48.75">Composition</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="187.5" y="7.5" width="130.5" height="71.25" rx="3.75" ry="3.75" />
+<text x="195" y="30">US</text>
+<text x="195" y="48.75">Tissue</text>
+<text x="195" y="67.5">Composition</text>
 </g>
 <line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="348" y1="52.5" x2="378" y2="52.5" />
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="318" y1="33.75" x2="348" y2="33.75" />
-<line stroke="Black" stroke-width="1.875" x1="348" y1="33.75" x2="348" y2="52.5" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="318" y1="43.125" x2="348" y2="43.125" />
+<line stroke="Black" stroke-width="1.875" x1="348" y1="43.125" x2="348" y2="52.5" />
 </g>
 <g>
 <g>
 <rect fill="LightSalmon" stroke="Black" stroke-width="1.875" x="378" y="7.5" width="130.5" height="90" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-BreastRadUSTissueCompositionVS.html" target="_blank">
+<a href="./ValueSet-BreastRadUSTissueCompositionVS.html" target="_blank">
 <title>'BreastRadUSTissueCompositionVS'</title>
 <text x="385.5" y="30">US</text>
 </a>
-<a href="./StructureDefinition-BreastRadUSTissueCompositionVS.html" target="_blank">
+<a href="./ValueSet-BreastRadUSTissueCompositionVS.html" target="_blank">
 <title>'BreastRadUSTissueCompositionVS'</title>
 <text x="385.5" y="48.75">Tissue</text>
 </a>
-<a href="./StructureDefinition-BreastRadUSTissueCompositionVS.html" target="_blank">
+<a href="./ValueSet-BreastRadUSTissueCompositionVS.html" target="_blank">
 <title>'BreastRadUSTissueCompositionVS'</title>
 <text x="385.5" y="67.5">Composition</text>
 </a>
-<a href="./StructureDefinition-BreastRadUSTissueCompositionVS.html" target="_blank">
+<a href="./ValueSet-BreastRadUSTissueCompositionVS.html" target="_blank">
 <title>'BreastRadUSTissueCompositionVS'</title>
 <text x="385.5" y="86.25">Values</text>
 </a>

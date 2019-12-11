@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
             String url = mapNode.ResourceUrl;
             foreach (String titlePart in mapNode.MapName)
             {
-                String hRef = $"./StructureDefinition-{url.LastUriPart()}.html";
+                String hRef = $"./{mapNode.StructureName}-{url.LastUriPart()}.html";
                 String title = $"Click -> '{url.LastUriPart()}'";
                 String s = titlePart.Trim();
                 node.AddTextLine(s, hRef, title);

@@ -83,9 +83,20 @@ namespace BreastRadiology.XUnitTests
                         )
                 });
 
+
+            {
+                IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));
+                valueSetIntroDoc
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .ValueSet(binding);
+                    ;
+                String outputPath = valueSetIntroDoc.Save();
+                this.fc.Mark(outputPath);
+            }
+
             SDefEditor e = this.CreateEditor("BreastRadMammoMassMargin",
                 "Mammo Mass Margin",
-                new string[] { "Margin" },
+                new string[] {"Mammo", "Mass", "Margin" },
                 ObservationUrl,
                 $"{Group_MammoResources}/Mass/Margin",
                 out mammoMassMargin)

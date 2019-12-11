@@ -30,7 +30,7 @@ namespace BreastRadiology.XUnitTests
             ValueSet binding = this.CreateValueSet(
                 "BreastRadUSMassMargin",
                 "US Mass Margin",
-                new string[] {"US", "Mass", "Margin", "Values"},
+                new string[] { "US", "Mass", "Margin", "Values" },
                 "Ultra-sound mass margin codes.",
                 Group_USCodes,
                 new ConceptDef[]
@@ -58,10 +58,21 @@ namespace BreastRadiology.XUnitTests
                         )
                 });
 
-            String binding2 = this.CreateValueSet(
+
+            {
+                IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));
+                valueSetIntroDoc
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .ValueSet(binding);
+                ;
+                String outputPath = valueSetIntroDoc.Save();
+                this.fc.Mark(outputPath);
+            }
+
+            ValueSet binding2 = this.CreateValueSet(
                 "BreastRadUSMassMarginNotCircumscribed",
                 "US Mass Margin Not Circumscribed values",
-                new string[] {"US", "Mass", "Margin", "Not-Circumscribed", "Values"},
+                new string[] { "US", "Mass", "Margin", "Not-Circumscribed", "Values" },
                 "Ultra-sound mass margin 'Not Circumscribed' codes.",
                 Group_USCodes,
                 new ConceptDef[]
@@ -101,12 +112,21 @@ namespace BreastRadiology.XUnitTests
                             .Line("but the significant feature is that the margin of the mass is NOT CIRCUMSCRIBED.")
                         .CiteEnd(BiRadCitation)
                         )
-                })
-            .Url;
+                });
+
+            {
+                IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding2.Name}-intro.xml"));
+                valueSetIntroDoc
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .ValueSet(binding2);
+                ;
+                String outputPath = valueSetIntroDoc.Save();
+                this.fc.Mark(outputPath);
+            }
 
             SDefEditor e = this.CreateEditor("BreastRadUSMassMargin",
                     "US Mass Margin",
-                    new string[] { "Margin" },
+                    new string[] { "US", "Mass", "Margin" },
                     ObservationUrl,
                     $"{Group_USResources}/Mass/Margin",
                     out usMassMargin)
@@ -128,7 +148,7 @@ namespace BreastRadiology.XUnitTests
                 pattern1.Coding.Add(new Coding(binding.Url, null));
 
                 CodeableConcept pattern2 = new CodeableConcept();
-                pattern2.Coding.Add(new Coding(binding2, null));
+                pattern2.Coding.Add(new Coding(binding2.Url, null));
 
                 PatternSlice[] patternSlices = new PatternSlice[]
                 {
@@ -150,7 +170,7 @@ namespace BreastRadiology.XUnitTests
                 e.Find("value[x]")
                     .SliceByPatterns("CodeableConcept", patternSlices)
                     ;
-            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "a mass margin", binding);
+                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "a mass margin", binding);
             }
         }
     }

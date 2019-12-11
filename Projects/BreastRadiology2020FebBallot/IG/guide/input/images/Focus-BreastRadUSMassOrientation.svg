@@ -11,41 +11,47 @@
 </defs>
 <g>
 <g>
-<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="7.5" y="7.5" width="57" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="7.5" y="7.5" width="57" height="52.5" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadUSMass.html" target="_blank">
 <title>'BreastRadUSMass'</title>
-<text x="15" y="30">Mass</text>
+<text x="15" y="30">US</text>
+</a>
+<a href="./StructureDefinition-BreastRadUSMass.html" target="_blank">
+<title>'BreastRadUSMass'</title>
+<text x="15" y="48.75">Mass</text>
 </a>
 </g>
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="94.5" y1="24.375" x2="124.5" y2="24.375" />
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="64.5" y1="24.375" x2="94.5" y2="24.375" />
-<line stroke="Black" stroke-width="1.875" x1="94.5" y1="24.375" x2="94.5" y2="24.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="94.5" y1="43.125" x2="124.5" y2="43.125" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="64.5" y1="33.75" x2="94.5" y2="33.75" />
+<line stroke="Black" stroke-width="1.875" x1="94.5" y1="33.75" x2="94.5" y2="43.125" />
 </g>
 <g>
 <g>
-<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="124.5" y="7.5" width="130.5" height="33.75" rx="3.75" ry="3.75" />
-<text x="132" y="30">Orientation</text>
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="124.5" y="7.5" width="130.5" height="71.25" rx="3.75" ry="3.75" />
+<text x="132" y="30">US</text>
+<text x="132" y="48.75">Mass</text>
+<text x="132" y="67.5">Orientation</text>
 </g>
 <line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="285" y1="52.5" x2="315" y2="52.5" />
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="255" y1="24.375" x2="285" y2="24.375" />
-<line stroke="Black" stroke-width="1.875" x1="285" y1="24.375" x2="285" y2="52.5" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="255" y1="43.125" x2="285" y2="43.125" />
+<line stroke="Black" stroke-width="1.875" x1="285" y1="43.125" x2="285" y2="52.5" />
 </g>
 <g>
 <g>
 <rect fill="LightSalmon" stroke="Black" stroke-width="1.875" x="315" y="7.5" width="130.5" height="90" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-BreastRadUSMassOrientationVS.html" target="_blank">
+<a href="./ValueSet-BreastRadUSMassOrientationVS.html" target="_blank">
 <title>'BreastRadUSMassOrientationVS'</title>
 <text x="322.5" y="30">US</text>
 </a>
-<a href="./StructureDefinition-BreastRadUSMassOrientationVS.html" target="_blank">
+<a href="./ValueSet-BreastRadUSMassOrientationVS.html" target="_blank">
 <title>'BreastRadUSMassOrientationVS'</title>
 <text x="322.5" y="48.75">Mass</text>
 </a>
-<a href="./StructureDefinition-BreastRadUSMassOrientationVS.html" target="_blank">
+<a href="./ValueSet-BreastRadUSMassOrientationVS.html" target="_blank">
 <title>'BreastRadUSMassOrientationVS'</title>
 <text x="322.5" y="67.5">Orientation</text>
 </a>
-<a href="./StructureDefinition-BreastRadUSMassOrientationVS.html" target="_blank">
+<a href="./ValueSet-BreastRadUSMassOrientationVS.html" target="_blank">
 <title>'BreastRadUSMassOrientationVS'</title>
 <text x="322.5" y="86.25">Values</text>
 </a>

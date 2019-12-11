@@ -15,19 +15,7 @@ namespace BreastRadiology.XUnitTests
     {
         static Type sDefType = typeof(SDefEditor);
 
-        public IntroDoc IntroDoc
-        {
-            get
-            {
-                if (this.introDoc == null)
-                {
-                    this.introDoc = new IntroDoc();
-                    this.introDoc.AddSvgImage(this);
-                }
-                return this.introDoc;
-            }
-        }
-        public IntroDoc introDoc;
+        public IntroDoc IntroDoc {get; }
 
         public ResourceMap.Node Node { get; }
 
@@ -74,7 +62,7 @@ namespace BreastRadiology.XUnitTests
                 BaseDefinition = baseDefinition,
                 Differential = new StructureDefinition.DifferentialComponent()
             };
-            this.Node = ResourceMap.Self.CreateMapNode(url, mapName);
+            this.Node = ResourceMap.Self.CreateMapNode(url, mapName, "StructureDefinition");
             this.sDef.Differential.Element.Add(new ElementDefinition
             {
                 Path = basePath,
@@ -82,6 +70,9 @@ namespace BreastRadiology.XUnitTests
                 Min = 0,
                 Max = "*"
             });
+
+            this.IntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"StructureDefinition-{name}-intro.xml"));
+            this.IntroDoc.AddSvgImage(this);
         }
 
         public ElementDefGroup InsertAfter(ElementDefGroup at,
@@ -182,17 +173,6 @@ namespace BreastRadiology.XUnitTests
 
             fragmentName = Path.Combine(this.fragmentDir, $"StructureDefinition-{this.sDef.Name}.json");
             this.sDef.SaveJson(fragmentName);
-            return true;
-        }
-
-        public bool WriteIntro(out String introName)
-        {
-            introName = null;
-            if (this.introDoc == null)
-                return false;
-            introName = Path.Combine(this.pageDir, $"StructureDefinition-{this.sDef.Name}-intro.xml");
-            String introHtml = introDoc.Render();
-            File.WriteAllText(introName, introHtml);
             return true;
         }
 

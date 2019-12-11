@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
         {
             SDefEditor e = this.CreateEditor("BreastRadMammoCalcification",
                     "Mammo Calcification",
-                    new string[] {"Calcification"},
+                    new string[] {"Mammo", "Calcification"},
                     ObservationUrl,
                     $"{Group_MammoResources}/Calcification",
                     out mammoCalcification)
@@ -57,9 +57,9 @@ namespace BreastRadiology.XUnitTests
                 )
                 .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)
-                .AddLinks(this.BreastBodyLocationMapLinks)
                 .AddFragRef(this.ObservationSectionFragment)
                 .AddFragRef(this.ObservationNoValueFragment)
+                .AddExtensionLink(this.BreastBodyLocationExtension)
                 ;
 
             {

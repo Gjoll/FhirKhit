@@ -87,9 +87,20 @@ namespace BreastRadiology.XUnitTests
                     }
                 );
 
+
+            {
+                IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));
+                valueSetIntroDoc
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .ValueSet(binding);
+                    ;
+                String outputPath = valueSetIntroDoc.Save();
+                this.fc.Mark(outputPath);
+            }
+
             SDefEditor e = this.CreateEditor("BreastRadMammoAsymmetries",
                     "Mammo Asymmetries",
-                    new string[] {"Asymmetries"},
+                    new string[] {"Mammo", "Asymmetries"},
                     ObservationUrl,
                     $"{Group_MammoResources}/Asymmetry",
                     out mammoAsymmetries)
@@ -109,9 +120,9 @@ namespace BreastRadiology.XUnitTests
                 )
                 .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)
-                .AddLinks(this.BreastBodyLocationMapLinks)
                 .AddFragRef(this.ObservationCodedValueFragment)
                 .AddFragRef(this.ObservationSectionFragment)
+                .AddExtensionLink(this.BreastBodyLocationExtension)
             ;
 
             {

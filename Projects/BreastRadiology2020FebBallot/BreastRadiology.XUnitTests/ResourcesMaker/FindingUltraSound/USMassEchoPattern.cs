@@ -89,9 +89,20 @@ namespace BreastRadiology.XUnitTests
                         )
                 });
 
+
+            {
+                IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));
+                valueSetIntroDoc
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .ValueSet(binding);
+                    ;
+                String outputPath = valueSetIntroDoc.Save();
+                this.fc.Mark(outputPath);
+            }
+
             SDefEditor e = this.CreateEditor("BreastRadUSMassEchoPattern",
                     "US Mass Echo Pattern",
-                    new string[] { "Echo Pattern" },
+                    new string[] { "US", "Mass", "Echo Pattern" },
                     ObservationUrl,
                     $"{Group_USResources}/Mass/EchoPattern",
                     out usMassEchoPattern)

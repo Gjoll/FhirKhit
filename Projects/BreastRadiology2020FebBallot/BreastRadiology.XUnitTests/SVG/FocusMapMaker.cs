@@ -36,7 +36,8 @@ namespace BreastRadiology.XUnitTests
         }
 
         public static String FocusMapName(ResourceMap.Node mapNode) => $"Focus-{mapNode.Name}.svg";
-        String IntroName(ResourceMap.Node mapNode) => $"StructureDefinition-{mapNode.Name}-intro.xml";
+        public static String FocusMapName(String name) => $"Focus-{name}.svg";
+        String IntroName(ResourceMap.Node mapNode) => $"{mapNode.StructureName}-{mapNode.Name}-intro.xml";
 
         void LinkNodes()
         {
@@ -67,7 +68,7 @@ namespace BreastRadiology.XUnitTests
                 String title = null;
                 if (linkFlag)
                 {
-                    hRef = $"./StructureDefinition-{mapNode.Name}.html";
+                    hRef = $"./{mapNode.StructureName}-{mapNode.Name}.html";
                     title = $"'{mapNode.Name}'";
                 }
                 String s = titlePart.Trim();

@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
         {
             SDefEditor e = this.CreateEditor("BreastRadMammoArchitecturalDistortion",
                         "Mammo Architectural Distortion",
-                    new string[] {"Arch.","Distortion"},
+                    new string[] {"Mammo", "Arch.","Distortion"},
                     ObservationUrl,
                     $"{Group_MammoResources}/ArchitecturalDistortion",
                     out mammoArchitecturalDistortion)
@@ -52,7 +52,7 @@ namespace BreastRadiology.XUnitTests
                 .AddFragRef(this.ObservationNoValueFragment)
                 .AddFragRef(this.ObservationLeafFragment)
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)
-                .AddLinks(this.BreastBodyLocationMapLinks)
+                .AddExtensionLink(this.BreastBodyLocationExtension)
                 ;
 
             e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationLeafNode($"Architectural Distortion");

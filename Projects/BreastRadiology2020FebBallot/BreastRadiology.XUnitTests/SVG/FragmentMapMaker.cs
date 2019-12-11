@@ -84,7 +84,7 @@ namespace BreastRadiology.XUnitTests
             }
 
             {
-                String hRef = $"../Guide/Output/StructureDefinition-{mapNode.Name}.html";
+                String hRef = $"../Guide/Output/{mapNode.StructureName}-{mapNode.Name}.html";
                 String title = $"'{mapNode.Name}'";
                 node.AddTextLine("[Resource]", hRef, title);
             }

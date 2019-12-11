@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
         {
             SDefEditor e = this.CreateEditor("BreastRadMammoSolitaryDilatedDuct",
                     "Mammo Solitary Dilated Duct",
-                    new string[] { "Solitary", "Dialated", "Duct" },
+                    new string[] { "Mammo", "Solitary", "Dialated", "Duct" },
                     ObservationUrl,
                     $"{Group_MammoResources}/SolitaryDilatedDuct",
                     out mammoSolitaryDilatedDuct)
@@ -48,7 +48,7 @@ namespace BreastRadiology.XUnitTests
                 .AddFragRef(this.ObservationNoValueFragment)
                 .AddFragRef(this.ObservationLeafFragment)
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)
-                .AddLinks(this.BreastBodyLocationMapLinks)
+                .AddExtensionLink(this.BreastBodyLocationExtension)
                 ;
 
             e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationLeafNode($"Solitary Dilated Duct");
