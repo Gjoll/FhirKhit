@@ -93,12 +93,13 @@ namespace BreastRadiology.XUnitTests
 
         public IntroDoc ValueSet(ValueSet binding)
         {
-            this
-                .Paragraph(
-                    $"This resource is a ValueSet."
-                )
-                .List(binding)
-                ;
+            AddSvgImage(FocusMapMaker.FocusMapName(binding.Name));
+            //this
+            //    .Paragraph(
+            //        $"This resource is a ValueSet."
+            //    )
+            //    .List(binding)
+            //    ;
             return this;
         }
 
