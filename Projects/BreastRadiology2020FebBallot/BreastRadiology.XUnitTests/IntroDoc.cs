@@ -32,7 +32,7 @@ namespace BreastRadiology.XUnitTests
 
         public IntroDoc AddSvgImage(SDefEditor e)
         {
-            AddSvgImage(FocusMapMaker.FocusMapName(e.MapNode));
+            AddSvgImage(FocusMapMaker.FocusMapName(e.Node));
             return this;
         }
 

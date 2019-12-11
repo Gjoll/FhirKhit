@@ -30,6 +30,7 @@ namespace BreastRadiology.XUnitTests
             ValueSet binding = this.CreateValueSet(
                     "BiRadsAssessmentCategories",
                     "BiRads(r) Assessment Category Codes",
+                    new string[] {"BiRads", "Assessment", "Categories", "Values"},
                     "BiRads(r) Assessment Category codes.",
                     Group_CommonCodes,
                     new ConceptDef[]
@@ -119,7 +120,7 @@ namespace BreastRadiology.XUnitTests
                 .Type("CodeableConcept")
                 .Binding(binding.Url, BindingStrength.Required)
                 ;
-
+            e.AddValueSetLink(binding);
             e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "a BiRad Assessment Category", binding);
         }
     }

@@ -30,6 +30,7 @@ namespace BreastRadiology.XUnitTests
             ValueSet binding = this.CreateValueSet(
                 "BreastRadMammoMassMargin",
                 "Mammo Mass Margin",
+                new string[] {"Mammo", "Mass", "Margin", "Values"},
                 "Mammography mass margin codes.",
                 Group_MammoCodes,
                 new ConceptDef[]
@@ -106,6 +107,7 @@ namespace BreastRadiology.XUnitTests
                 .Type("CodeableConcept")
                 .Binding(binding.Url, BindingStrength.Required)
                 ;
+            e.AddValueSetLink(binding);
             e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "a mammography mass margin", binding);
         }
     }

@@ -29,6 +29,7 @@ namespace BreastRadiology.XUnitTests
             ValueSet binding = this.CreateValueSet(
                 "BreastRadUSTissueComposition",
                 "US Tissue Composition",
+                new string[] {"US", "Tissue", "Composition", "Values"},
                 "Ultra-sound breast tissue composition codes.",
                 Group_USCodes,
                 new ConceptDef[]
@@ -92,6 +93,7 @@ namespace BreastRadiology.XUnitTests
                 .Type("CodeableConcept")
                 .Binding(binding.Url, BindingStrength.Required)
                 ;
+            e.AddValueSetLink(binding);
             e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "an ultra-sound tissue composition", binding);
             }
     }

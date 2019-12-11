@@ -30,6 +30,7 @@ namespace BreastRadiology.XUnitTests
             ValueSet binding = this.CreateValueSet(
                     "BreastRadMassShape",
                     "Mass Shape",
+                    new string[] {"Mass", "Shape", "Values"},
                     "Codes defining mass shape values.",
                     Group_CommonCodes,
                     new ConceptDef[]
@@ -83,6 +84,7 @@ namespace BreastRadiology.XUnitTests
                 .Type("CodeableConcept")
                 .Binding(binding.Url, BindingStrength.Required)
                 ;
+            e.AddValueSetLink(binding);
             e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "a mammography mass shape", binding);
         }
     }

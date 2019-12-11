@@ -15,9 +15,9 @@ namespace BreastRadiology.XUnitTests
     {
         class FragmentNode
         {
-            public MapNode Focus;
-            public List<MapNode> Parents = new List<MapNode>();
-            public List<MapNode> Children = new List<MapNode>();
+            public ResourceMap.Node Focus;
+            public List<ResourceMap.Node> Parents = new List<ResourceMap.Node>();
+            public List<ResourceMap.Node> Children = new List<ResourceMap.Node>();
         }
 
         Dictionary<String, FragmentNode> fragmentNodes = new Dictionary<string, FragmentNode>();
@@ -32,11 +32,11 @@ namespace BreastRadiology.XUnitTests
             this.outputDir = outputDir;
         }
 
-        String FragmentMapName(MapNode mapNode) => $"FragmentMap_{mapNode.Name}.svg";
+        String FragmentMapName(ResourceMap.Node mapNode) => $"FragmentMap_{mapNode.Name}.svg";
 
-        IEnumerable<MapLink> FragmentLinks(MapNode n)
+        IEnumerable<ResourceMap.Link> FragmentLinks(ResourceMap.Node n)
         {
-            foreach (MapLink link in n.Links)
+            foreach (ResourceMap.Link link in n.Links)
             {
                 switch (link.LinkType)
                 {
@@ -49,14 +49,14 @@ namespace BreastRadiology.XUnitTests
 
         void LinkNodes()
         {
-            foreach (MapNode focusMapNode in ResourceMap.Self.MapNodes)
+            foreach (ResourceMap.Node focusMapNode in ResourceMap.Self.MapNodes)
             {
                 if (this.fragmentNodes.TryGetValue(focusMapNode.Name, out FragmentNode fragmentFocusNode) == false)
                     throw new Exception($"Internal error. Cant find Focus FragmentNode '{focusMapNode.Name}' ");
 
-                foreach (MapLink link in FragmentLinks(focusMapNode))
+                foreach (ResourceMap.Link link in FragmentLinks(focusMapNode))
                 {
-                    MapNode referencedMapNode = ResourceMap.Self.GetMapNode(link.ResourceUrl);
+                    ResourceMap.Node referencedMapNode = ResourceMap.Self.GetNode(link.ResourceUrl);
                     fragmentFocusNode.Parents.Add(referencedMapNode);
 
                     if (this.fragmentNodes.TryGetValue(referencedMapNode.Name, out FragmentNode fragmentParentNode) == false)
@@ -66,13 +66,10 @@ namespace BreastRadiology.XUnitTests
             }
         }
 
-        SENode CreateNode(MapNode mapNode, Color color, bool linkFlag)
+        SENode CreateNode(ResourceMap.Node mapNode, Color color, bool linkFlag)
         {
             SENode node = new SENode(0, color);
-
-            if (this.resourcesMaker.editors.TryGetValue(mapNode.ResourceUrl, out SDefEditor e) == false)
-                throw new Exception("Internal error. Editor not found");
-            foreach (String titlePart in e.MapName)
+            foreach (String titlePart in mapNode.MapName)
             {
                 String hRef = null;
                 String title = null;
@@ -87,8 +84,8 @@ namespace BreastRadiology.XUnitTests
             }
 
             {
-                String hRef = $"../Guide/Output/StructureDefinition-{mapNode.ResourceUrl.LastUriPart()}.html";
-                String title = $"'{mapNode.ResourceUrl.LastUriPart()}'";
+                String hRef = $"../Guide/Output/StructureDefinition-{mapNode.Name}.html";
+                String title = $"'{mapNode.Name}'";
                 node.AddTextLine("[Resource]", hRef, title);
             }
             return node;
@@ -108,13 +105,13 @@ namespace BreastRadiology.XUnitTests
                 focusGroup.Nodes.Add(node);
             }
 
-            foreach (MapNode childNode in fragmentNode.Children)
+            foreach (ResourceMap.Node childNode in fragmentNode.Children)
             {
                 SENode node = CreateNode(childNode, Color.LightBlue, true);
                 childrenGroup.Nodes.Add(node);
             }
 
-            foreach (MapNode parentNode in fragmentNode.Parents)
+            foreach (ResourceMap.Node parentNode in fragmentNode.Parents)
             {
                 SENode node = CreateNode(parentNode, Color.LightCyan, true);
                 parentsGroup.Nodes.Add(node);
@@ -132,7 +129,7 @@ namespace BreastRadiology.XUnitTests
 
         void CreateNodes()
         {
-            foreach (MapNode mapNode in ResourceMap.Self.MapNodes)
+            foreach (ResourceMap.Node mapNode in ResourceMap.Self.MapNodes)
             {
                 FragmentNode fNode = new FragmentNode
                 {

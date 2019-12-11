@@ -29,6 +29,7 @@ namespace BreastRadiology.XUnitTests
             ValueSet binding = this.CreateValueSet(
                 "BreastRadMammoBreastDensity",
                 "Mammo Breast Density",
+                new string[] {"Mammo", "Breast", "Density", "Values"},
                 "Codes for mammography breast density values.",
                 Group_MammoCodes,
                 new ConceptDef[]
@@ -120,7 +121,7 @@ namespace BreastRadiology.XUnitTests
                 .Type("CodeableConcept")
                 .Binding(binding.Url, BindingStrength.Required)
                 ;
-
+            e.AddValueSetLink(binding);
             e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "a mammography breast density", binding);
         }
     }

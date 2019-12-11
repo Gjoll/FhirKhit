@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BreastRadiology.XUnitTests
 {
-    class ResourceMap
+    partial class ResourceMap
     {
         public static ResourceMap Self
         {
@@ -17,21 +17,32 @@ namespace BreastRadiology.XUnitTests
         }
         static ResourceMap _self;
 
-        Dictionary<String, MapNode> resources = new Dictionary<string, MapNode>();
+        Dictionary<String, ResourceMap.Node> resources = new Dictionary<string, ResourceMap.Node>();
 
         private ResourceMap()
         {
         }
 
-        public IEnumerable<MapNode> MapNodes => this.resources.Values;
+        public IEnumerable<ResourceMap.Node> MapNodes => this.resources.Values;
 
-        public MapNode GetMapNode(String url)
+        public bool TryGetNode(String url, out ResourceMap.Node node)
         {
-            if (resources.TryGetValue(url, out MapNode retVal) == false)
-            {
-                retVal = new MapNode(url);
-                resources.Add(url, retVal);
-            }
+            return resources.TryGetValue(url, out node);
+        }
+
+        public ResourceMap.Node GetNode(String url)
+        {
+            if (resources.TryGetValue(url, out ResourceMap.Node node) == false)
+                throw new Exception($"Map node {url} not found");
+            return node;
+        }
+
+        public ResourceMap.Node CreateMapNode(String url, String[] mapName)
+        {
+            if (resources.TryGetValue(url, out ResourceMap.Node retVal) == true)
+                throw new Exception($"Map node {url} already exists");
+            retVal = new Node(url);
+            retVal.MapName = mapName;
             return retVal;
         }
     }

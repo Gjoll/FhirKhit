@@ -12,9 +12,19 @@ using PreFhir;
 
 namespace BreastRadiology.XUnitTests
 {
-
     partial class ResourcesMaker : ConverterBase
     {
+        List<ResourceMap.Link> BreastBodyLocationMapLinks
+        {
+            get
+            {
+                if (breastBodyLocationMapLinks == null)
+                    CreateBreastBodyLocationExtension();
+                return breastBodyLocationMapLinks;
+            }
+        }
+        List<ResourceMap.Link> breastBodyLocationMapLinks;
+
         String BreastBodyLocationExtension
         {
             get
@@ -32,6 +42,11 @@ namespace BreastRadiology.XUnitTests
             SDefEditor e;
             ElementDefGroup eGroup;
             ElementDefinition topExtension;
+
+            void AddMapLink(ValueSet binding)
+            {
+                breastBodyLocationMapLinks.Add(new ResourceMap.Link("valueSet", binding.Url, false));
+            }
 
             void SliceAndBind(String sliceName,
                 String bindName)
@@ -59,6 +74,8 @@ namespace BreastRadiology.XUnitTests
                     ;
                 extensionGroup.RelatedElements.Add(lateralityValue);
             }
+            
+            breastBodyLocationMapLinks = new List<ResourceMap.Link>();
 
             e = this.CreateEditor("BreastBodyLocation",
                 "Breast Body Location",
@@ -78,6 +95,8 @@ namespace BreastRadiology.XUnitTests
                 .Context()
                 ;
 
+            breastBodyLocationMapLinks.Add(new ResourceMap.Link("extension", breastBodyLocationExtension, false));
+
             e.AddFragRef(this.HeaderFragment);
 
             e.Select("url")
@@ -92,13 +111,13 @@ namespace BreastRadiology.XUnitTests
             topExtension = eGroup.ElementDefinition;
             topExtension.ConfigureSliceByUrlDiscriminator();
 
-
             SliceAndBind("laterality", "http://hl7.org/fhir/ValueSet/bodysite-laterality");
 
             {
                 ValueSet binding = this.CreateValueSet(
                     "BreastLocationQuadrant",
                     "Breast Location Quadrant",
+                    new string[] {"Breast", "Location", "Quadrant", "Values"},
                     "Breast body location quadrant codes.",
                     Group_CommonCodes,
                     new ConceptDef[]
@@ -171,12 +190,14 @@ namespace BreastRadiology.XUnitTests
                     });
 
                 SliceAndBind("quadrant", binding.Url);
+                AddMapLink(binding);
             }
 
             {
                 ValueSet binding = this.CreateValueSet(
                     "BreastLocationClock",
                     "Breast Location Clock",
+                    new string[] {"Breast", "Location", "Clock", "Values"},
                     "Codes defining breast body location angles expressed in clock-face units.",
                     Group_CommonCodes,
                     new ConceptDef[]
@@ -304,12 +325,14 @@ namespace BreastRadiology.XUnitTests
                     });
 
                 SliceAndBind("clockDirection", binding.Url);
+                AddMapLink(binding);
             }
 
             {
                 ValueSet binding = this.CreateValueSet(
                     "BreastLocationDepth",
                     "Breast Location Depth",
+                    new string[] {"Breast", "Location", "Depth", "Values"},
                     "Breast body location depth codes.",
                     Group_CommonCodes,
                     new ConceptDef[]
@@ -332,6 +355,7 @@ namespace BreastRadiology.XUnitTests
                     });
 
                 SliceAndBind("depth", binding.Url);
+                AddMapLink(binding);
             }
 
             {

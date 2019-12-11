@@ -29,6 +29,7 @@ namespace BreastRadiology.XUnitTests
             ValueSet binding = this.CreateValueSet(
                 "MammoCalcificationDistribution",
                 "Mammo Calcification Distribution",
+                new string[] {"Mammo", "Calcification", "Distribution", "Values"},
                 "Mammography calcification distribution codes.",
                 Group_MammoCodes,
                 new ConceptDef[]
@@ -116,6 +117,7 @@ namespace BreastRadiology.XUnitTests
                 .Type("CodeableConcept")
                 .Binding(binding.Url, BindingStrength.Required)
                 ;
+            e.AddValueSetLink(binding);
             e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "a mammography calcification distribution", binding);
         }
     }

@@ -197,15 +197,17 @@ namespace BreastRadiology.XUnitTests
 
         ValueSet CreateValueSet(String name,
             String title,
+            String[] mapName,
             String description,
             String groupPath,
             IEnumerable<ConceptDef> codes)
         {
-            return CreateValueSet(name, title, description, groupPath, codes, out CodeSystem cs);
+            return CreateValueSet(name, title, mapName, description, groupPath, codes, out CodeSystem cs);
         }
 
         ValueSet CreateValueSet(String name,
             String title,
+            String[] mapName,
             String description,
             String groupPath,
             IEnumerable<ConceptDef> codes,
@@ -277,6 +279,7 @@ namespace BreastRadiology.XUnitTests
             resources.Add(Path.Combine(this.resourceDir, $"CodeSystem-{name}CS.json"), cs);
             resources.Add(Path.Combine(this.resourceDir, $"ValueSet-{name}VS.json"), vs);
 
+            ResourceMap.Self.CreateMapNode(vs.Url, mapName);
             return vs;
         }
 

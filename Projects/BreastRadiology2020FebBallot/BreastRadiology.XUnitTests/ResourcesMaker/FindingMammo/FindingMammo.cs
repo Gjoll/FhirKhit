@@ -61,7 +61,7 @@ namespace BreastRadiology.XUnitTests
                     new ProfileTargetSlice(this.MammoAssociatedFeatures, 0, "1")
                 };
                 e.Find("hasMember").SliceByUrl(targets);
-                e.MapNode.AddProfileTargets(targets);
+                e.Node.AddProfileTargets(targets);
             }
 
             e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationSection("MRI Abnormality");

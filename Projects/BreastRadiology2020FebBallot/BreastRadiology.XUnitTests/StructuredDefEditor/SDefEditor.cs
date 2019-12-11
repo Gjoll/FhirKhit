@@ -29,8 +29,7 @@ namespace BreastRadiology.XUnitTests
         }
         public IntroDoc introDoc;
 
-        public MapNode MapNode { get; }
-        public String[] MapName { get; set; }
+        public ResourceMap.Node Node { get; }
 
         public StructureDefinition SDef => this.sDef;
         StructureDefinition baseSDef;
@@ -59,7 +58,6 @@ namespace BreastRadiology.XUnitTests
             if (this.baseSDef == null)
                 throw new Exception($"'Base definition resource {baseDefinition}' not found");
 
-            this.MapName = mapName;
             this.basePath = baseDefinition.LastUriPart();
 
             for (Int32 i = 0; i < this.baseSDef.Snapshot.Element.Count; i++)
@@ -76,9 +74,7 @@ namespace BreastRadiology.XUnitTests
                 BaseDefinition = baseDefinition,
                 Differential = new StructureDefinition.DifferentialComponent()
             };
-
-            this.MapNode = ResourceMap.Self.GetMapNode(url);
-
+            this.Node = ResourceMap.Self.CreateMapNode(url, mapName);
             this.sDef.Differential.Element.Add(new ElementDefinition
             {
                 Path = basePath,
@@ -86,7 +82,6 @@ namespace BreastRadiology.XUnitTests
                 Min = 0,
                 Max = "*"
             });
-            //mapNode = ResourceMap.Self.GetMapNode(retVal.SDef.Url);
         }
 
         public ElementDefGroup InsertAfter(ElementDefGroup at,
@@ -216,7 +211,7 @@ namespace BreastRadiology.XUnitTests
 
         public ElementDefinition ApplyExtension(String name, String extensionUrl, bool showChildren = true, bool addLink = true)
         {
-            this.MapNode.AddLink("target", extensionUrl, showChildren);
+            this.Node.AddLink("target", extensionUrl, showChildren);
             this.ConfigureExtensionSlice();
             return this.Find("extension").SliceByUrl(extensionUrl, name);
         }
@@ -268,9 +263,28 @@ namespace BreastRadiology.XUnitTests
             return this;
         }
 
+        public SDefEditor AddValueSetLink(ValueSet vs, bool showChildren = true)
+        {
+            this.AddValueSetLink(vs.Url, showChildren);
+            return this;
+        }
+
+        public SDefEditor AddValueSetLink(String url, bool showChildren = true)
+        {
+            this.Node.AddValueSetLink(url, showChildren);
+            return this;
+        }
+
         public SDefEditor AddExtensionLink(String url, bool showChildren = true)
         {
-            this.MapNode.AddExtensionLink(url, showChildren);
+            this.Node.AddExtensionLink(url, showChildren);
+            return this;
+        }
+
+        public SDefEditor AddLinks(IEnumerable<ResourceMap.Link> links)
+        {
+            foreach (ResourceMap.Link link in links)
+                this.Node.AddLink(link);
             return this;
         }
 
@@ -283,7 +297,7 @@ namespace BreastRadiology.XUnitTests
                 Url = PreFhirGenerator.FragmentUrl,
                 Value = new FhirUrl(fragRef)
             });
-            this.MapNode.AddFragmentLink(fragRef);
+            this.Node.AddFragmentLink(fragRef);
             return this;
         }
     }

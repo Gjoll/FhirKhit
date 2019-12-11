@@ -53,7 +53,7 @@ namespace BreastRadiology.XUnitTests
                     new ProfileTargetSlice(SectionFindingsRightBreast, 1, "1")
                 };
                 e.Find("hasMember").SliceByUrl(targets);
-                e.MapNode.AddProfileTargets(targets);
+                e.Node.AddProfileTargets(targets);
             }
 
             e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationSection($"Abnormality Finding");

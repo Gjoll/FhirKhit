@@ -30,6 +30,7 @@ namespace BreastRadiology.XUnitTests
             ValueSet binding = this.CreateValueSet(
                 "BreastRadUSMassPosteriorAcousticFeatures",
                 "US Mass Posterior Acoustic Features",
+                new string[] {"US", "Mass", "Posterior", "Acoustic", "Feature", "Values"},
                 "Ultra-sound mass Posterior acoustic features codes.",
                 Group_USCodes,
                 new ConceptDef[]
@@ -108,6 +109,7 @@ namespace BreastRadiology.XUnitTests
                 .Type("CodeableConcept")
                 .Binding(binding.Url, BindingStrength.Required)
                 ;
+            e.AddValueSetLink(binding);
             e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "an ultra-sound mass posterior acoustic feature", binding);
         }
     }

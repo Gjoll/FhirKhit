@@ -55,7 +55,7 @@ namespace BreastRadiology.XUnitTests
                     new ProfileTargetSlice(this.MammoCalcification, 0, "*")
                 };
                 e.Find("hasMember").SliceByUrl(targets);
-                e.MapNode.AddProfileTargets(targets);
+                e.Node.AddProfileTargets(targets);
             }
             e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationSection("Mammography Associated Features");
         }

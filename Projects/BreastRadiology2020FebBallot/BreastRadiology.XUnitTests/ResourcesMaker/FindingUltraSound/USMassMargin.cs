@@ -30,6 +30,7 @@ namespace BreastRadiology.XUnitTests
             ValueSet binding = this.CreateValueSet(
                 "BreastRadUSMassMargin",
                 "US Mass Margin",
+                new string[] {"US", "Mass", "Margin", "Values"},
                 "Ultra-sound mass margin codes.",
                 Group_USCodes,
                 new ConceptDef[]
@@ -60,6 +61,7 @@ namespace BreastRadiology.XUnitTests
             String binding2 = this.CreateValueSet(
                 "BreastRadUSMassMarginNotCircumscribed",
                 "US Mass Margin Not Circumscribed values",
+                new string[] {"US", "Mass", "Margin", "Not-Circumscribed", "Values"},
                 "Ultra-sound mass margin 'Not Circumscribed' codes.",
                 Group_USCodes,
                 new ConceptDef[]

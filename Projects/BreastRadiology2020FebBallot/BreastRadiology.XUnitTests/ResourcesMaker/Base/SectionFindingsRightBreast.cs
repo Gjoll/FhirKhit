@@ -45,7 +45,7 @@ namespace BreastRadiology.XUnitTests
                 ;
             e.Select("bodySite").Zero();
             e.Find("hasMember").SliceByUrl(this.FindingBreastTargets);
-            e.MapNode.AddProfileTargets(this.FindingBreastTargets);
+            e.Node.AddProfileTargets(this.FindingBreastTargets);
 
             e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationSection($"Abnormality Right Breast Finding");
         }

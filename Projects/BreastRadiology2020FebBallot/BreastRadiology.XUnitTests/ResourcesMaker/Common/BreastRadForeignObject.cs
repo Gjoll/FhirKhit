@@ -30,6 +30,7 @@ namespace BreastRadiology.XUnitTests
             ValueSet binding = this.CreateValueSet(
                     "BreastRadAbnormalities",
                     "Foreign Object",
+                    new string[] {"Foreign", "Object" , "Values"},
                     "Foreign object codes defining types of foreign objects observed during a Breast Radiology exam",
                     Group_CommonCodes,
                     new ConceptDef[]
@@ -143,13 +144,14 @@ namespace BreastRadiology.XUnitTests
                     new ProfileTargetSlice(this.BreastRadObservedCount, 0, "1")
                 };
                 e.Find("hasMember").SliceByUrl(targets);
-                e.MapNode.AddProfileTargets(targets);
+                e.Node.AddProfileTargets(targets);
             }
 
             e.Select("value[x]")
                 .Type("CodeableConcept")
                 .Binding(binding.Url, BindingStrength.Required)
                 ;
+            e.AddValueSetLink(binding);
             e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "an ForeignObject", binding);
         }
     }

@@ -57,7 +57,7 @@ namespace BreastRadiology.XUnitTests
                 )
                 .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)
-                .AddExtensionLink(this.BreastBodyLocationExtension)
+                .AddLinks(this.BreastBodyLocationMapLinks)
                 .AddFragRef(this.ObservationSectionFragment)
                 .AddFragRef(this.ObservationNoValueFragment)
                 ;
@@ -74,7 +74,7 @@ namespace BreastRadiology.XUnitTests
                     new ProfileTargetSlice(this.BreastRadObservedState, 0, "1", false)
                 };
                 e.Find("hasMember").SliceByUrl(targets);
-                e.MapNode.AddProfileTargets(targets);
+                e.Node.AddProfileTargets(targets);
             }
             e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationSection("Mammography Calcification");
         }

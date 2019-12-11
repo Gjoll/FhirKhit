@@ -30,6 +30,7 @@ namespace BreastRadiology.XUnitTests
             ValueSet binding = this.CreateValueSet(
                 "BreastRadUSMassEchoPattern",
                 "US Mass Echo Pattern",
+                new string[] {"US", "Mass", "Echo", "Pattern", "Values"},
                 "Ultra-sound mass echo pattern codes.",
                 Group_USCodes,
                 new ConceptDef[]
@@ -115,7 +116,7 @@ namespace BreastRadiology.XUnitTests
                 .Type("CodeableConcept")
                 .Binding(binding.Url, BindingStrength.Required)
                 ;
-
+            e.AddValueSetLink(binding);
             e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "an ultra-sound mass echo pattern", binding);
         }
     }

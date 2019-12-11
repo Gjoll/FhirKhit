@@ -28,39 +28,40 @@ namespace BreastRadiology.XUnitTests
         void CreateBreastRadObservedState()
         {
             ValueSet binding = this.CreateValueSet(
-                    "BreastRadObservedState",
-                    "Observed State",
-                    "Codes for observed state of an abnormality.",
-                    Group_CommonCodes,
-                    new ConceptDef[]
-                    {
-                        new ConceptDef("Benign",
-                            "Benign",
-                            new Definition()
-                                .Line("Item is considered benign")
-                            ),
-                        new ConceptDef("BenignAppearing",
-                            "Benign Appearing",
-                            new Definition()
-                                .Line("Item appears to be benign")
-                            ),
-                        new ConceptDef("ProbablyBenign",
-                            "Probably Benign",
-                            new Definition()
-                                .Line("Item is considered to be probably benign")
-                            ),
-                        new ConceptDef("NotSeen",
-                            "Not Seen",
-                            new Definition()
-                                .Line("Item was not observed.")
-                            ),
-                        new ConceptDef("Biopsed",
-                            "Biopsed",
-                            new Definition()
-                                .Line("Item was Biopsed")
-                            )
-                    })
-                ;
+                "BreastRadObservedState",
+                "Observed State",
+                new string[] {"Observed", "State", "Values"},
+                "Codes for observed state of an abnormality.",
+                Group_CommonCodes,
+                new ConceptDef[]
+                {
+                    new ConceptDef("Benign",
+                        "Benign",
+                        new Definition()
+                            .Line("Item is considered benign")
+                        ),
+                    new ConceptDef("BenignAppearing",
+                        "Benign Appearing",
+                        new Definition()
+                            .Line("Item appears to be benign")
+                        ),
+                    new ConceptDef("ProbablyBenign",
+                        "Probably Benign",
+                        new Definition()
+                            .Line("Item is considered to be probably benign")
+                        ),
+                    new ConceptDef("NotSeen",
+                        "Not Seen",
+                        new Definition()
+                            .Line("Item was not observed.")
+                        ),
+                    new ConceptDef("Biopsed",
+                        "Biopsed",
+                        new Definition()
+                            .Line("Item was Biopsed")
+                        )
+                })
+            ;
 
             SDefEditor e = this.CreateEditor("BreastRadObservedState",
                     "Observed State",
@@ -85,7 +86,7 @@ namespace BreastRadiology.XUnitTests
                 .Type("CodeableConcept")
                 .Binding(binding.Url, BindingStrength.Required)
                 ;
-
+            e.AddValueSetLink(binding);
             e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "an abnormality observed state", binding);
         }
     }

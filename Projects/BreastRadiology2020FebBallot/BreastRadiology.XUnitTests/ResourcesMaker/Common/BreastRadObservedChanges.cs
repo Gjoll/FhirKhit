@@ -28,79 +28,80 @@ namespace BreastRadiology.XUnitTests
         void CreateBreastRadObservedChanges()
         {
             ValueSet binding = this.CreateValueSet(
-                    "BreastRadObservedChanges",
-                    "Observed Changes",
-                    "Codes defining types of observed changes in an abnormality over time.",
-                    Group_CommonCodes,
-                    new ConceptDef[]
-                    {
-                        new ConceptDef("New",
-                            "New Observation",
-                            new Definition()
-                                .Line("This is the first time item has been observed")
-                            ),
-                        new ConceptDef("Stable",
-                            "Stable",
-                            new Definition()
-                                .Line("Observation of item is stable")
-                            ),
-                        new ConceptDef("NotSigChanged",
-                            "Not Significantly Changed",
-                            new Definition()
-                                .Line("Item observation has not significantly changed")
-                            ),
-                        new ConceptDef("NoLongerSeen",
-                            "No Longer Seen",
-                            new Definition()
-                                .Line("Item is no longer visible")
-                            ),
-                        new ConceptDef("IncidentalFind",
-                            "Incidental Find",
-                            new Definition()
-                                .Line("Item observation is an incidental find")
-                            ),
-                        new ConceptDef("IncreaseInSize",
-                            "Increase In Size",
-                            new Definition()
-                                .Line("Item has increased in size")
-                            ),
-                        new ConceptDef("DecreaseInSize",
-                            "Decrease In Size",
-                            new Definition()
-                                .Line("Item has decreased in size")
-                            ),
-                        new ConceptDef("MoreDefined",
-                            "More Defined",
-                            new Definition()
-                                .Line("Item is more defined")
-                            ),
-                        new ConceptDef("LessDefined",
-                            "Less Defined",
-                            new Definition()
-                                .Line("Item is less defined")
-                            ),
-                        new ConceptDef("MoreProminent",
-                            "More Prominent",
-                            new Definition()
-                                .Line("Item is more Prominent")
-                            ),
-                        new ConceptDef("LessProminent",
-                            "Less Prominent",
-                            new Definition()
-                                .Line("Item is less Prominent")
-                            ),
-                        new ConceptDef("IncrInNumber",
-                            "Increased In Number",
-                            new Definition()
-                                .Line("Item(s) have increased in number")
-                            ),
-                        new ConceptDef("DecrInNumber",
-                            "Decreased In Number",
-                            new Definition()
-                                .Line("Item(s) have decreased in number")
-                            ),
-                    })
-                ;
+                "BreastRadObservedChanges",
+                "Observed Changes",
+                new string[] {"Observed", "Change", "Values"},
+                "Codes defining types of observed changes in an abnormality over time.",
+                Group_CommonCodes,
+                new ConceptDef[]
+                {
+                    new ConceptDef("New",
+                        "New Observation",
+                        new Definition()
+                            .Line("This is the first time item has been observed")
+                        ),
+                    new ConceptDef("Stable",
+                        "Stable",
+                        new Definition()
+                            .Line("Observation of item is stable")
+                        ),
+                    new ConceptDef("NotSigChanged",
+                        "Not Significantly Changed",
+                        new Definition()
+                            .Line("Item observation has not significantly changed")
+                        ),
+                    new ConceptDef("NoLongerSeen",
+                        "No Longer Seen",
+                        new Definition()
+                            .Line("Item is no longer visible")
+                        ),
+                    new ConceptDef("IncidentalFind",
+                        "Incidental Find",
+                        new Definition()
+                            .Line("Item observation is an incidental find")
+                        ),
+                    new ConceptDef("IncreaseInSize",
+                        "Increase In Size",
+                        new Definition()
+                            .Line("Item has increased in size")
+                        ),
+                    new ConceptDef("DecreaseInSize",
+                        "Decrease In Size",
+                        new Definition()
+                            .Line("Item has decreased in size")
+                        ),
+                    new ConceptDef("MoreDefined",
+                        "More Defined",
+                        new Definition()
+                            .Line("Item is more defined")
+                        ),
+                    new ConceptDef("LessDefined",
+                        "Less Defined",
+                        new Definition()
+                            .Line("Item is less defined")
+                        ),
+                    new ConceptDef("MoreProminent",
+                        "More Prominent",
+                        new Definition()
+                            .Line("Item is more Prominent")
+                        ),
+                    new ConceptDef("LessProminent",
+                        "Less Prominent",
+                        new Definition()
+                            .Line("Item is less Prominent")
+                        ),
+                    new ConceptDef("IncrInNumber",
+                        "Increased In Number",
+                        new Definition()
+                            .Line("Item(s) have increased in number")
+                        ),
+                    new ConceptDef("DecrInNumber",
+                        "Decreased In Number",
+                        new Definition()
+                            .Line("Item(s) have decreased in number")
+                        ),
+                })
+            ;
 
             SDefEditor e = this.CreateEditor("BreastRadObservedChanges",
                     "Observed Changes",
@@ -123,6 +124,7 @@ namespace BreastRadiology.XUnitTests
                 .Type("CodeableConcept")
                 .Binding(binding.Url, BindingStrength.Required)
                 ;
+            e.AddValueSetLink(binding);
             e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "an abnormality observed change", binding);
         }
     }

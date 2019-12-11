@@ -30,6 +30,7 @@ namespace BreastRadiology.XUnitTests
             ValueSet binding = this.CreateValueSet(
                    "BreastRadMemmoAsymmetries",
                    "Mammo Asymmetries",
+                    new string[] {"Mammo", "Asymmetry" , "Values"},
                    "Codes defining types of mammography asymmetries.",
                     Group_MammoCodes,
                    new ConceptDef[]
@@ -108,7 +109,7 @@ namespace BreastRadiology.XUnitTests
                 )
                 .AddFragRef(this.ObservationNoDeviceFragment)
                 .AddFragRef(this.BreastBodyLocationRequiredFragment)
-                .AddExtensionLink(this.BreastBodyLocationExtension)
+                .AddLinks(this.BreastBodyLocationMapLinks)
                 .AddFragRef(this.ObservationCodedValueFragment)
                 .AddFragRef(this.ObservationSectionFragment)
             ;
@@ -122,13 +123,13 @@ namespace BreastRadiology.XUnitTests
                     new ProfileTargetSlice(this.MammoAssociatedFeatures, 0, "1", false)
                 };
                 e.Find("hasMember").SliceByUrl(targets);
-                e.MapNode.AddProfileTargets(targets);
+                e.Node.AddProfileTargets(targets);
             }
             e.Select("value[x]")
                 .Type("CodeableConcept")
                 .Binding(binding.Url, BindingStrength.Required)
                 ;
-
+            e.AddValueSetLink(binding);
             e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "a mammography asymmetry", binding);
         }
     }
