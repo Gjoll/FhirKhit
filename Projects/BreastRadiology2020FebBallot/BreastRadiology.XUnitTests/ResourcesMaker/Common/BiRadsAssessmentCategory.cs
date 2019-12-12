@@ -30,7 +30,7 @@ namespace BreastRadiology.XUnitTests
             ValueSet binding = this.CreateValueSet(
                     "BiRadsAssessmentCategories",
                     "BiRads(r) Assessment Category Codes",
-                    new string[] {"BiRads", "Assessment", "Categories", "Values"},
+                    new string[] {"BiRads", "Assessment", "Category", "Values"},
                     "BiRads(r) Assessment Category codes.",
                     Group_CommonCodes,
                     new ConceptDef[]

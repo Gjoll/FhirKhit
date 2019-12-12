@@ -34,7 +34,7 @@
 <rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="187.5" y="7.5" width="120" height="90" rx="3.75" ry="3.75" />
 <text x="195" y="30">BiRads</text>
 <text x="195" y="48.75">Assessment</text>
-<text x="195" y="67.5">Categories</text>
+<text x="195" y="67.5">Category</text>
 <text x="195" y="86.25">Values</text>
 </g>
 </g>

@@ -11,9 +11,9 @@ namespace BreastRadiology.XUnitTests
     {
         public float Width;
         public List<SEText> TextLines = new List<SEText>();
-        public Color FillColor { get; set; } = Color.LightBlue;
-        public String HRef {get; set; }
-        public String Title {get; set; }
+        public Color FillColor { get; }
+        public String HRef {get; }
+        public String Title {get; }
 
         public SENode(float width,
             Color fillColor,

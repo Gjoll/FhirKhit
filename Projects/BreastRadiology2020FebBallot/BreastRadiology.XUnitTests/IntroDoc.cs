@@ -72,9 +72,7 @@ namespace BreastRadiology.XUnitTests
 
         public IntroDoc ReviewedStatus(ReviewStatus reviewStatus)
         {
-            this.Paragraph($"---",
-                           $"** ReviewStatus: {reviewStatus} **",
-                           $"---");
+            this.sb.AppendLine($"<p>ReviewStatus: {reviewStatus}</p>");
             return this;
         }
 

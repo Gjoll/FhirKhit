@@ -35,7 +35,7 @@
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="176.99998" y="7.5" width="172.5" height="52.5" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="176.99998" y="7.5" width="172.5" height="52.5" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadRecommendationsExtension.html" target="_blank">
 <title>Click -> 'BreastRadRecommendationsExtension'</title>
 <text x="184.49998" y="30">Recommendations</text>
@@ -46,7 +46,7 @@
 </a>
 </g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="176.99998" y="67.5" width="151.49998" height="52.5" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="176.99998" y="67.5" width="151.49998" height="52.5" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadPriorReportsExtension.html" target="_blank">
 <title>Click -> 'BreastRadPriorReportsExtension'</title>
 <text x="184.49998" y="90">Prior Reports</text>
@@ -57,7 +57,7 @@
 </a>
 </g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="176.99998" y="127.5" width="172.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="176.99998" y="127.5" width="172.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadSectionPatientHistory.html" target="_blank">
 <title>Click -> 'BreastRadSectionPatientHistory'</title>
 <text x="184.49998" y="150">Patient History</text>
@@ -66,7 +66,7 @@
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="176.99998" y="168.75" width="99" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="176.99998" y="168.75" width="99" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadSectionFindings.html" target="_blank">
 <title>Click -> 'BreastRadSectionFindings'</title>
 <text x="184.49998" y="191.25">Findings</text>
@@ -80,7 +80,7 @@
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="336" y="168.75" width="120" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="336" y="168.75" width="120" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BiRadsAssessmentCategory.html" target="_blank">
 <title>Click -> 'BiRadsAssessmentCategory'</title>
 <text x="343.5" y="191.25">BiRads</text>
@@ -97,14 +97,14 @@
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="336" y="247.5" width="130.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="336" y="247.5" width="130.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadSectionFindingsLeftBreast.html" target="_blank">
 <title>Click -> 'BreastRadSectionFindingsLeftBreast'</title>
 <text x="343.5" y="270">Left Breast</text>
 </a>
 </g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="336" y="288.75" width="141" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="336" y="288.75" width="141" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadSectionFindingsRightBreast.html" target="_blank">
 <title>Click -> 'BreastRadSectionFindingsRightBreast'</title>
 <text x="343.5" y="311.25">Right Breast</text>
@@ -120,7 +120,7 @@
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="537" y="247.5" width="120" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="537" y="247.5" width="120" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BiRadsAssessmentCategory.html" target="_blank">
 <title>Click -> 'BiRadsAssessmentCategory'</title>
 <text x="544.5" y="270">BiRads</text>
@@ -137,7 +137,7 @@
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="537" y="326.25" width="88.5" height="52.5" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="537" y="326.25" width="88.5" height="52.5" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMammoFinding.html" target="_blank">
 <title>Click -> 'BreastRadMammoFinding'</title>
 <text x="544.5" y="348.75">Mammo</text>
@@ -161,7 +161,7 @@
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="685.5" y="326.25" width="88.5" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="685.5" y="326.25" width="88.5" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMammoBreastDensity.html" target="_blank">
 <title>Click -> 'BreastRadMammoBreastDensity'</title>
 <text x="693" y="348.75">Mammo</text>
@@ -178,7 +178,7 @@
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="685.5" y="405" width="67.5" height="52.5" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="685.5" y="405" width="67.5" height="52.5" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMammoMass.html" target="_blank">
 <title>Click -> 'BreastRadMammoMass'</title>
 <text x="693" y="427.5">Mammo</text>
@@ -201,21 +201,21 @@
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="813" y="405" width="57" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="813" y="405" width="57" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadSize.html" target="_blank">
 <title>Click -> 'BreastRadSize'</title>
 <text x="820.5" y="427.5">Size</text>
 </a>
 </g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="813" y="446.25" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="813" y="446.25" width="67.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadCount.html" target="_blank">
 <title>Click -> 'BreastRadCount'</title>
 <text x="820.5" y="468.75">Count</text>
 </a>
 </g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="813" y="487.5" width="67.5" height="52.5" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="813" y="487.5" width="67.5" height="52.5" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMassShape.html" target="_blank">
 <title>Click -> 'BreastRadMassShape'</title>
 <text x="820.5" y="510">Mass</text>
@@ -226,7 +226,7 @@
 </a>
 </g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="813" y="547.5" width="78" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="813" y="547.5" width="78" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMammoMassMargin.html" target="_blank">
 <title>Click -> 'BreastRadMammoMassMargin'</title>
 <text x="820.5" y="570">Mammo</text>
@@ -241,7 +241,7 @@
 </a>
 </g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="813" y="626.25" width="88.5" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="813" y="626.25" width="88.5" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMammoMassDensity.html" target="_blank">
 <title>Click -> 'BreastRadMammoMassDensity'</title>
 <text x="820.5" y="648.75">Mammo</text>
@@ -256,7 +256,7 @@
 </a>
 </g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="813" y="705" width="88.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="813" y="705" width="88.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadObservedChanges.html" target="_blank">
 <title>Click -> 'BreastRadObservedChanges'</title>
 <text x="820.5" y="727.5">Changes</text>
@@ -265,7 +265,7 @@
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="813" y="746.25" width="120" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="813" y="746.25" width="120" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
 <title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
 <text x="820.5" y="768.75">Mammo</text>
@@ -282,7 +282,7 @@
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="813" y="825" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="813" y="825" width="67.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadObservedState.html" target="_blank">
 <title>Click -> 'BreastRadObservedState'</title>
 <text x="820.5" y="847.5">State</text>
@@ -291,7 +291,7 @@
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="685.5" y="866.25" width="151.49998" height="52.5" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="685.5" y="866.25" width="151.49998" height="52.5" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMammoCalcification.html" target="_blank">
 <title>Click -> 'BreastRadMammoCalcification'</title>
 <text x="693" y="888.75">Mammo</text>
@@ -313,21 +313,21 @@
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="897" y="866.25" width="57" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="897" y="866.25" width="57" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadSize.html" target="_blank">
 <title>Click -> 'BreastRadSize'</title>
 <text x="904.5" y="888.75">Size</text>
 </a>
 </g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="897" y="907.5" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="897" y="907.5" width="67.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadCount.html" target="_blank">
 <title>Click -> 'BreastRadCount'</title>
 <text x="904.5" y="930">Count</text>
 </a>
 </g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="897" y="948.75" width="151.49998" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="897" y="948.75" width="151.49998" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMammoCalcificationType.html" target="_blank">
 <title>Click -> 'BreastRadMammoCalcificationType'</title>
 <text x="904.5" y="971.25">Mammo</text>
@@ -342,7 +342,7 @@
 </a>
 </g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="897" y="1027.5" width="151.49998" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="897" y="1027.5" width="151.49998" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMammoCalcificationDistribution.html" target="_blank">
 <title>Click -> 'BreastRadMammoCalcificationDistribution'</title>
 <text x="904.5" y="1050">Mammo</text>
@@ -357,7 +357,7 @@
 </a>
 </g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="897" y="1106.25" width="88.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="897" y="1106.25" width="88.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadObservedChanges.html" target="_blank">
 <title>Click -> 'BreastRadObservedChanges'</title>
 <text x="904.5" y="1128.75">Changes</text>
@@ -366,7 +366,7 @@
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="897" y="1147.5" width="120" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="897" y="1147.5" width="120" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
 <title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
 <text x="904.5" y="1170">Mammo</text>
@@ -383,7 +383,7 @@
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="897" y="1226.25" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="897" y="1226.25" width="67.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadObservedState.html" target="_blank">
 <title>Click -> 'BreastRadObservedState'</title>
 <text x="904.5" y="1248.75">State</text>
@@ -392,7 +392,7 @@
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="685.5" y="1267.5" width="120" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="685.5" y="1267.5" width="120" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMammoArchitecturalDistortion.html" target="_blank">
 <title>Click -> 'BreastRadMammoArchitecturalDistortion'</title>
 <text x="693" y="1290">Mammo</text>
@@ -409,7 +409,7 @@
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="685.5" y="1346.25" width="130.5" height="52.5" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="685.5" y="1346.25" width="130.5" height="52.5" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMammoAsymmetries.html" target="_blank">
 <title>Click -> 'BreastRadMammoAsymmetries'</title>
 <text x="693" y="1368.75">Mammo</text>
@@ -428,21 +428,21 @@
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="876" y="1346.25" width="57" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="876" y="1346.25" width="57" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadSize.html" target="_blank">
 <title>Click -> 'BreastRadSize'</title>
 <text x="883.5" y="1368.75">Size</text>
 </a>
 </g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="876" y="1387.5" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="876" y="1387.5" width="67.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadCount.html" target="_blank">
 <title>Click -> 'BreastRadCount'</title>
 <text x="883.5" y="1410">Count</text>
 </a>
 </g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="876" y="1428.75" width="88.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="876" y="1428.75" width="88.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadObservedChanges.html" target="_blank">
 <title>Click -> 'BreastRadObservedChanges'</title>
 <text x="883.5" y="1451.25">Changes</text>
@@ -451,7 +451,7 @@
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="876" y="1470" width="120" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="876" y="1470" width="120" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
 <title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
 <text x="883.5" y="1492.5">Mammo</text>
@@ -468,7 +468,7 @@
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="685.5" y="1548.75" width="141" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="685.5" y="1548.75" width="141" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMammoIntramammaryLymphNode.html" target="_blank">
 <title>Click -> 'BreastRadMammoIntramammaryLymphNode'</title>
 <text x="693" y="1571.25">Mammo</text>
@@ -485,7 +485,7 @@
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="685.5" y="1627.5" width="78" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="685.5" y="1627.5" width="78" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMammoSkinLesion.html" target="_blank">
 <title>Click -> 'BreastRadMammoSkinLesion'</title>
 <text x="693" y="1650">Mammo</text>
@@ -508,21 +508,21 @@
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="823.5" y="1627.5" width="57" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="823.5" y="1627.5" width="57" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadSize.html" target="_blank">
 <title>Click -> 'BreastRadSize'</title>
 <text x="831" y="1650">Size</text>
 </a>
 </g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="823.5" y="1668.75" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="823.5" y="1668.75" width="67.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadCount.html" target="_blank">
 <title>Click -> 'BreastRadCount'</title>
 <text x="831" y="1691.25">Count</text>
 </a>
 </g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="823.5" y="1710" width="88.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="823.5" y="1710" width="88.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadObservedChanges.html" target="_blank">
 <title>Click -> 'BreastRadObservedChanges'</title>
 <text x="831" y="1732.5">Changes</text>
@@ -531,7 +531,7 @@
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="823.5" y="1751.25" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="823.5" y="1751.25" width="67.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadObservedState.html" target="_blank">
 <title>Click -> 'BreastRadObservedState'</title>
 <text x="831" y="1773.75">State</text>
@@ -540,7 +540,7 @@
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="685.5" y="1792.5" width="99" height="90" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="685.5" y="1792.5" width="99" height="90" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMammoSolitaryDilatedDuct.html" target="_blank">
 <title>Click -> 'BreastRadMammoSolitaryDilatedDuct'</title>
 <text x="693" y="1815">Mammo</text>
@@ -561,7 +561,7 @@
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="685.5" y="1890" width="120" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="685.5" y="1890" width="120" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
 <title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
 <text x="693" y="1912.5">Mammo</text>
@@ -586,7 +586,7 @@
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="865.5" y="1890" width="120" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="865.5" y="1890" width="120" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMammoSkinRetraction.html" target="_blank">
 <title>Click -> 'BreastRadMammoSkinRetraction'</title>
 <text x="873" y="1912.5">Mammo</text>
@@ -601,7 +601,7 @@
 </a>
 </g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="865.5" y="1968.75" width="120" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="865.5" y="1968.75" width="120" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMammoNippleRetraction.html" target="_blank">
 <title>Click -> 'BreastRadMammoNippleRetraction'</title>
 <text x="873" y="1991.25">Mammo</text>
@@ -616,7 +616,7 @@
 </a>
 </g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="865.5" y="2047.5" width="120" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="865.5" y="2047.5" width="120" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMammoSkinThickening.html" target="_blank">
 <title>Click -> 'BreastRadMammoSkinThickening'</title>
 <text x="873" y="2070">Mammo</text>
@@ -631,7 +631,7 @@
 </a>
 </g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="865.5" y="2126.25" width="120" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="865.5" y="2126.25" width="120" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMammoAxillaryAdenopathy.html" target="_blank">
 <title>Click -> 'BreastRadMammoAxillaryAdenopathy'</title>
 <text x="873" y="2148.75">Mammo</text>
@@ -646,7 +646,7 @@
 </a>
 </g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="865.5" y="2205" width="120" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="865.5" y="2205" width="120" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMammoArchitecturalDistortion.html" target="_blank">
 <title>Click -> 'BreastRadMammoArchitecturalDistortion'</title>
 <text x="873" y="2227.5">Mammo</text>
@@ -663,7 +663,7 @@
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="865.5" y="2283.75" width="151.49998" height="52.5" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="865.5" y="2283.75" width="151.49998" height="52.5" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMammoCalcification.html" target="_blank">
 <title>Click -> 'BreastRadMammoCalcification'</title>
 <text x="873" y="2306.25">Mammo</text>
@@ -685,21 +685,21 @@
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="1077" y="2283.75" width="57" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1077" y="2283.75" width="57" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadSize.html" target="_blank">
 <title>Click -> 'BreastRadSize'</title>
 <text x="1084.5" y="2306.25">Size</text>
 </a>
 </g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="1077" y="2325" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1077" y="2325" width="67.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadCount.html" target="_blank">
 <title>Click -> 'BreastRadCount'</title>
 <text x="1084.5" y="2347.5">Count</text>
 </a>
 </g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="1077" y="2366.25" width="151.49998" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1077" y="2366.25" width="151.49998" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMammoCalcificationType.html" target="_blank">
 <title>Click -> 'BreastRadMammoCalcificationType'</title>
 <text x="1084.5" y="2388.75">Mammo</text>
@@ -714,7 +714,7 @@
 </a>
 </g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="1077" y="2445" width="151.49998" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1077" y="2445" width="151.49998" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMammoCalcificationDistribution.html" target="_blank">
 <title>Click -> 'BreastRadMammoCalcificationDistribution'</title>
 <text x="1084.5" y="2467.5">Mammo</text>
@@ -729,7 +729,7 @@
 </a>
 </g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="1077" y="2523.75" width="88.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1077" y="2523.75" width="88.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadObservedChanges.html" target="_blank">
 <title>Click -> 'BreastRadObservedChanges'</title>
 <text x="1084.5" y="2546.25">Changes</text>
@@ -738,7 +738,7 @@
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="1077" y="2565" width="120" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1077" y="2565" width="120" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
 <title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
 <text x="1084.5" y="2587.5">Mammo</text>
@@ -755,7 +755,7 @@
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="1077" y="2643.75" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="1077" y="2643.75" width="67.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadObservedState.html" target="_blank">
 <title>Click -> 'BreastRadObservedState'</title>
 <text x="1084.5" y="2666.25">State</text>
@@ -764,7 +764,7 @@
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="537" y="2685" width="88.5" height="52.5" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="537" y="2685" width="88.5" height="52.5" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMRIFinding.html" target="_blank">
 <title>Click -> 'BreastRadMRIFinding'</title>
 <text x="544.5" y="2707.5">MRI</text>
@@ -777,7 +777,7 @@
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="537" y="2745" width="120" height="52.5" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="537" y="2745" width="120" height="52.5" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadUltraSoundFinding.html" target="_blank">
 <title>Click -> 'BreastRadUltraSoundFinding'</title>
 <text x="544.5" y="2767.5">UltraSound</text>
@@ -794,7 +794,7 @@
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="717" y="2745" width="130.5" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="717" y="2745" width="130.5" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadUSTissueComposition.html" target="_blank">
 <title>Click -> 'BreastRadUSTissueComposition'</title>
 <text x="724.5" y="2767.5">US</text>
@@ -811,7 +811,7 @@
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="717" y="2823.75" width="57" height="52.5" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="717" y="2823.75" width="57" height="52.5" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadUSMass.html" target="_blank">
 <title>Click -> 'BreastRadUSMass'</title>
 <text x="724.5" y="2846.25">US</text>
@@ -835,21 +835,21 @@
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="834" y="2823.75" width="57" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="834" y="2823.75" width="57" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadSize.html" target="_blank">
 <title>Click -> 'BreastRadSize'</title>
 <text x="841.5" y="2846.25">Size</text>
 </a>
 </g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="834" y="2865" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="834" y="2865" width="67.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadCount.html" target="_blank">
 <title>Click -> 'BreastRadCount'</title>
 <text x="841.5" y="2887.5">Count</text>
 </a>
 </g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="834" y="2906.25" width="67.5" height="52.5" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="834" y="2906.25" width="67.5" height="52.5" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMassShape.html" target="_blank">
 <title>Click -> 'BreastRadMassShape'</title>
 <text x="841.5" y="2928.75">Mass</text>
@@ -860,7 +860,7 @@
 </a>
 </g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="834" y="2966.25" width="130.5" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="834" y="2966.25" width="130.5" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadUSMassOrientation.html" target="_blank">
 <title>Click -> 'BreastRadUSMassOrientation'</title>
 <text x="841.5" y="2988.75">US</text>
@@ -875,7 +875,7 @@
 </a>
 </g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="834" y="3045" width="78" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="834" y="3045" width="78" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadUSMassMargin.html" target="_blank">
 <title>Click -> 'BreastRadUSMassMargin'</title>
 <text x="841.5" y="3067.5">US</text>
@@ -890,7 +890,7 @@
 </a>
 </g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="834" y="3123.75" width="141" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="834" y="3123.75" width="141" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadUSMassEchoPattern.html" target="_blank">
 <title>Click -> 'BreastRadUSMassEchoPattern'</title>
 <text x="841.5" y="3146.25">US</text>
@@ -905,7 +905,7 @@
 </a>
 </g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="834" y="3202.5" width="109.49999" height="108.75" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="834" y="3202.5" width="109.49999" height="108.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadUSMassPosteriorAcousticFeatures.html" target="_blank">
 <title>Click -> 'BreastRadUSMassPosteriorAcousticFeatures'</title>
 <text x="841.5" y="3225">US</text>
@@ -928,7 +928,7 @@
 </a>
 </g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="834" y="3318.75" width="88.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="834" y="3318.75" width="88.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadObservedChanges.html" target="_blank">
 <title>Click -> 'BreastRadObservedChanges'</title>
 <text x="841.5" y="3341.25">Changes</text>
@@ -937,7 +937,7 @@
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="834" y="3360" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="834" y="3360" width="67.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadObservedState.html" target="_blank">
 <title>Click -> 'BreastRadObservedState'</title>
 <text x="841.5" y="3382.5">State</text>
@@ -946,7 +946,7 @@
 </g>
 <g>
 <g>
-<rect fill="Green" stroke="Black" stroke-width="1.875" x="176.99998" y="3401.25" width="88.5" height="52.5" rx="3.75" ry="3.75" />
+<rect fill="LightGreen" stroke="Black" stroke-width="1.875" x="176.99998" y="3401.25" width="88.5" height="52.5" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadSectionPatientRisk.html" target="_blank">
 <title>Click -> 'BreastRadSectionPatientRisk'</title>
 <text x="184.49998" y="3423.75">Patient</text>

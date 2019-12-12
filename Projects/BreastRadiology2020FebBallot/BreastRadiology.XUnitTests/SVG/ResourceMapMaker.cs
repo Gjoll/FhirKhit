@@ -103,7 +103,7 @@ namespace BreastRadiology.XUnitTests
                     {
                         if (ResourceMap.Self.TryGetNode(link.ResourceUrl, out ResourceMap.Node linkTargetNode) == false)
                             throw new Exception("ResourceMap.Node '{link.ResourceUrl}' not found");
-                        SENode node = CreateNode(linkTargetNode, Color.Green);
+                        SENode node = CreateNode(linkTargetNode, Color.LightGreen);
                         groupChild.Nodes.Add(node);
                     }
                 }
