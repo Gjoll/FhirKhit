@@ -3,11 +3,15 @@ using FhirKhit.Tools.R4;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Text;
 using System.Threading;
+using BoolTask = System.Threading.Tasks.Task<System.Boolean>;
+using VTask = System.Threading.Tasks.Task;
+
 
 namespace PreFhir
 {
@@ -31,8 +35,8 @@ namespace PreFhir
     {
         public bool DebugFlag { get; set; } = true;
         public bool BreakFlag = false;
-        Dictionary<String, ProcessItem> processed = new Dictionary<string, ProcessItem>();
-        Dictionary<String, ProcessItem> unProcessed = new Dictionary<string, ProcessItem>();
+        ConcurrentDictionary<String, ProcessItem> processed = new ConcurrentDictionary<string, ProcessItem>();
+        ConcurrentDictionary<String, ProcessItem> unProcessed = new ConcurrentDictionary<string, ProcessItem>();
 
         public const String FragmentUrl = "http://www.fragment.com/fragment";
         public const String IsFragmentUrl = "http://www.fragment.com/isFragment";
@@ -122,7 +126,8 @@ namespace PreFhir
             if (frag != null)
             {
                 ProcessItem pi = new ProcessItem(this, frag);
-                this.unProcessed.Add(url, pi);
+                if (this.unProcessed.TryAdd(url, pi) == false)
+                    throw new Exception($"Error adding item to unProcessed list"); ;
             }
         }
 
@@ -218,24 +223,36 @@ namespace PreFhir
             while (this.unProcessed.Values.Count > 0)
             {
                 bool processed = false;
+                List<BoolTask> tasks = new List<BoolTask>();
                 foreach (ProcessItem processable in this.FindProcessable())
                 {
-                    processed = true;
-                    if (Process(processable) == false)
-                        retVal = false;
+                    BoolTask b = Process(processable);
+                    tasks.Add(b);
                 }
 
-                if (processed == false)
+                if (tasks.Count > 0)
                 {
-                    this.ConversionError(this.GetType().Name,
-                        fcn,
-                        $"Unprocessable fragments. Possible circular reference in fragments");
-                    foreach (var fragment in this.unProcessed.Values)
+                    BoolTask.WaitAll(tasks.ToArray());
+                    foreach (BoolTask b in tasks)
+                    {
+                        if (b.Result == false)
+                            retVal = false;
+                    }
+                }
+                else
+                {
+                    if (processed == false)
                     {
                         this.ConversionError(this.GetType().Name,
                             fcn,
-                            $"Unprocessed fragment: {fragment.Resource.GetName()}");
-                        return false;
+                            $"Unprocessable fragments. Possible circular reference in fragments");
+                        foreach (var fragment in this.unProcessed.Values)
+                        {
+                            this.ConversionError(this.GetType().Name,
+                                fcn,
+                                $"Unprocessed fragment: {fragment.Resource.GetName()}");
+                            return false;
+                        }
                     }
                 }
             }
@@ -267,156 +284,166 @@ namespace PreFhir
         /// Save resource to the indicated dir.
         /// </summary>
         /// <param name="outputDir"></param>
-        async System.Threading.Tasks.Task SaveResourceAsync(String outputDir,
+        async VTask SaveResourceAsync(String outputDir,
             ProcessItem processedItem)
         {
-            processedItem.Resource.RemoveExtension(FragmentUrl);
-            String outputName;
+            await VTask.Run(async () =>
+          {
+              processedItem.Resource.RemoveExtension(FragmentUrl);
+              String outputName;
 
-            switch (processedItem.Resource)
+              switch (processedItem.Resource)
+              {
+                  case StructureDefinition sDef:
+                      // Dont save fragments....
+                      if (sDef.IsFragment())
+                          return;
+                      // recreate snapshot if missing
+                      if (sDef.Snapshot == null)
+                          SnapshotCreator.Create(sDef);
+                      outputName = Path.Combine(outputDir, $"StructureDefinition-{sDef.Name}.json");
+                      break;
+
+                  case CodeSystem codeSys:
+                      outputName = Path.Combine(outputDir, $"CodeSystem-{codeSys.Name}.json");
+                      break;
+
+                  case ValueSet valueSet:
+                      outputName = Path.Combine(outputDir, $"ValueSet-{valueSet.Name}.json");
+                      break;
+
+                  default:
+                      throw new NotImplementedException($"Unimplemented type {processedItem.GetType().Name}");
+              }
+              await processedItem.Resource.SaveJsonAsync(outputName);
+              this.fc.Mark(outputName);
+          });
+        }
+
+    IEnumerable<ProcessItem> FindProcessable()
+    {
+        // keep list of ones we are checking to stop infinite circular references.
+        HashSet<String> checking = new HashSet<string>();
+
+        bool IsParentProcessed(StructureDefinition structureDefinition)
+        {
+            // processable if base definition is DomainResource or has already been processed.
+            String baseDef = structureDefinition.BaseDefinition;
+            if (checking.Contains(baseDef))
+                return false;
+
+            switch (baseDef)
             {
-                case StructureDefinition sDef:
-                    // Dont save fragments....
-                    if (sDef.IsFragment())
-                        return;
-                    // recreate snapshot if missing
-                    if (sDef.Snapshot == null)
-                        SnapshotCreator.Create(sDef);
-                    outputName = Path.Combine(outputDir, $"StructureDefinition-{sDef.Name}.json");
-                    break;
-
-                case CodeSystem codeSys:
-                    outputName = Path.Combine(outputDir, $"CodeSystem-{codeSys.Name}.json");
-                    break;
-
-                case ValueSet valueSet:
-                    outputName = Path.Combine(outputDir, $"ValueSet-{valueSet.Name}.json");
-                    break;
+                case null:
+                case "":
+                case "http://hl7.org/fhir/StructureDefinition/DomainResource":
+                    return true;
 
                 default:
-                    throw new NotImplementedException($"Unimplemented type {processedItem.GetType().Name}");
-            }
-            await processedItem.Resource.SaveJsonAsync(outputName);
-            this.fc.Mark(outputName);
-        }
-
-        IEnumerable<ProcessItem> FindProcessable()
-        {
-            // keep list of ones we are checking to stop infinite circular references.
-            HashSet<String> checking = new HashSet<string>();
-
-            bool IsParentProcessed(StructureDefinition structureDefinition)
-            {
-                // processable if base definition is DomainResource or has already been processed.
-                String baseDef = structureDefinition.BaseDefinition;
-                if (checking.Contains(baseDef))
-                    return false;
-
-                switch (baseDef)
-                {
-                    case null:
-                    case "":
-                    case "http://hl7.org/fhir/StructureDefinition/DomainResource":
+                    if (this.processed.ContainsKey(baseDef) == true)
                         return true;
-
-                    default:
-                        if (this.processed.ContainsKey(baseDef) == true)
-                            return true;
-                        if (FhirStructureDefinitions.Self.GetResource(baseDef) != null)
-                            return true;
-                        return false;
-                }
-            }
-
-            bool Processable(DomainResource domainResource)
-            {
-                switch (domainResource)
-                {
-                    case StructureDefinition structureDefinition:
-                        // processable if base definition is DmainResource or has already been processed.
-                        if (IsParentProcessed(structureDefinition) == false)
-                            return false;
-                        break;
-                }
-
-                // Can only process this fragment if all referenced fragments have been processed.
-                foreach (String referencedFragment in domainResource.ReferencedFragments())
-                {
-                    if (this.processed.ContainsKey(referencedFragment) == false)
-                        return false;
-                }
-                return true;
-            }
-
-            foreach (ProcessItem item in this.unProcessed.Values)
-            {
-                if (checking.Contains(item.Resource.GetUrl()) == false)
-                {
-                    checking.Add(item.Resource.GetUrl());
-                    if (Processable(item.Resource))
-                    {
-                        this.unProcessed.Remove(item.Resource.GetUrl());
-                        yield return item;
-                    }
-                }
+                    if (FhirStructureDefinitions.Self.GetResource(baseDef) != null)
+                        return true;
+                    return false;
             }
         }
 
-        bool Process(ProcessItem processItem)
+        bool Processable(DomainResource domainResource)
         {
-            const String fcn = "Process";
-
-            this.ConversionInfo(this.GetType().Name,
-                fcn,
-                $"Processing {processItem.Resource.GetName()}");
-            bool mergedFlag = false;
-            foreach (String fragmentUrl in processItem.Resource.ReferencedFragments())
+            switch (domainResource)
             {
-                if (this.processed.TryGetValue(fragmentUrl, out ProcessItem fragment) == false)
-                    throw new Exception("Processed fragment {fragmentUrl} not found in processed dictionary");
-                this.ConversionInfo(this.GetType().Name,
-                    fcn,
-                    $"Merging fragment {fragment.Resource.GetName()} into {processItem.Resource.GetName()}");
-                Merger m = new Merger(this, processItem, fragment);
-                if (m.Merge(out bool mergedElements) == false)
-                {
-                    this.ConversionError(this.GetType().Name, fcn, $"Merge of fragment {fragment.Resource.GetName()} into {processItem.Resource.GetName()} failed ");
-                    return false;
-                }
-                if (mergedElements == true)
-                    mergedFlag = true;
+                case StructureDefinition structureDefinition:
+                    // processable if base definition is DmainResource or has already been processed.
+                    if (IsParentProcessed(structureDefinition) == false)
+                        return false;
+                    break;
             }
-            if (mergedFlag == true)
-                this.FixDifferential(processItem);
 
-            this.processed.Add(processItem.Resource.GetUrl(), processItem);
-
-            // save intermediate merged file?
-            if (String.IsNullOrEmpty(this.MergedDir) == false)
-                SaveResourceAsync(MergedDir, processItem).Wait();
-
+            // Can only process this fragment if all referenced fragments have been processed.
+            foreach (String referencedFragment in domainResource.ReferencedFragments())
+            {
+                if (this.processed.ContainsKey(referencedFragment) == false)
+                    return false;
+            }
             return true;
         }
 
-        void FixDifferential(ProcessItem processedItem)
+        foreach (ProcessItem item in this.unProcessed.Values)
         {
-            const String fcn = "FixDifferentials";
-            StructureDefinition sDef = (StructureDefinition)processedItem.Resource;
-
-            this.ConversionInfo(this.GetType().Name,
-                fcn,
-                $"Computing differential for {processedItem.Resource.GetName()}");
-
-            ElementTreeDiffer differ = new ElementTreeDiffer(this);
-            ElementTreeNode differentialNode = processedItem.SnapNode.Clone();
-            if (differ.Process(processedItem.SnapNodeOriginal, differentialNode) == false)
-                return;
+            if (checking.Contains(item.Resource.GetUrl()) == false)
             {
-                processedItem.DiffNode = differentialNode;
-                List<ElementDefinition> elementDefinitions = new List<ElementDefinition>();
-                differentialNode.CopyTo(elementDefinitions);
-                sDef.Differential.Element = elementDefinitions;
+                checking.Add(item.Resource.GetUrl());
+                if (Processable(item.Resource))
+                {
+                    yield return item;
+                }
             }
         }
     }
+
+    BoolTask Process(ProcessItem processItem)
+    {
+        const String fcn = "Process";
+
+        return BoolTask.Run(() =>
+       {
+           Trace.WriteLine($"++++++++ Starting {processItem.Title}");
+           this.ConversionInfo(this.GetType().Name,
+                fcn,
+                $"Processing {processItem.Resource.GetName()}");
+           bool mergedFlag = false;
+           foreach (String fragmentUrl in processItem.Resource.ReferencedFragments())
+           {
+               if (this.processed.TryGetValue(fragmentUrl, out ProcessItem fragment) == false)
+                   throw new Exception("Processed fragment {fragmentUrl} not found in processed dictionary");
+               this.ConversionInfo(this.GetType().Name,
+                    fcn,
+                    $"Merging fragment {fragment.Resource.GetName()} into {processItem.Resource.GetName()}");
+               Merger m = new Merger(this, processItem, fragment);
+               if (m.Merge(out bool mergedElements) == false)
+               {
+                   this.ConversionError(this.GetType().Name, fcn, $"Merge of fragment {fragment.Resource.GetName()} into {processItem.Resource.GetName()} failed ");
+                   return false;
+               }
+               if (mergedElements == true)
+                   mergedFlag = true;
+           }
+           if (mergedFlag == true)
+               this.FixDifferential(processItem);
+
+           // save intermediate merged file?
+           if (String.IsNullOrEmpty(this.MergedDir) == false)
+               SaveResourceAsync(MergedDir, processItem).Wait();
+
+           if (this.processed.TryAdd(processItem.Resource.GetUrl(), processItem) == false)
+               throw new Exception($"Error adding item to Processed list"); ;
+
+           if (this.unProcessed.TryRemove(processItem.Resource.GetUrl(), out var value) == false)
+               throw new Exception($"Error removing item from unprocessed list"); ;
+           Trace.WriteLine($"-------- Completed{processItem.Title}");
+           return true;
+       });
+    }
+
+    void FixDifferential(ProcessItem processedItem)
+    {
+        const String fcn = "FixDifferentials";
+        StructureDefinition sDef = (StructureDefinition)processedItem.Resource;
+
+        this.ConversionInfo(this.GetType().Name,
+            fcn,
+            $"Computing differential for {processedItem.Resource.GetName()}");
+
+        ElementTreeDiffer differ = new ElementTreeDiffer(this);
+        ElementTreeNode differentialNode = processedItem.SnapNode.Clone();
+        if (differ.Process(processedItem.SnapNodeOriginal, differentialNode) == false)
+            return;
+        {
+            processedItem.DiffNode = differentialNode;
+            List<ElementDefinition> elementDefinitions = new List<ElementDefinition>();
+            differentialNode.CopyTo(elementDefinitions);
+            sDef.Differential.Element = elementDefinitions;
+        }
+    }
+}
 }
