@@ -118,7 +118,7 @@ namespace BreastRadiology.XUnitTests
                 }
             }
 
-            e.Render(rootGroup);
+            e.Render(rootGroup, true);
             e.Save(Path.Combine(OutputDir, Overview));
         }
 
@@ -203,7 +203,7 @@ namespace BreastRadiology.XUnitTests
                 SENodeGroup g = AbnormalityType("UltraSound");
             }
 
-            e.Render(rootGroup);
+            e.Render(rootGroup, true);
             e.Save(Path.Combine(OutputDir, outputName));
         }
 
@@ -257,7 +257,7 @@ namespace BreastRadiology.XUnitTests
                 group1.Children.Add(group2);
             }
 
-            e.Render(group1);
+            e.Render(group1, true);
             e.Save(Path.Combine(OutputDir, "Shapes.svg"));
         }
     }

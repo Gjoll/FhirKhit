@@ -14,16 +14,46 @@ namespace BreastRadiology.XUnitTests
     /// </summary>
     class ResourceMapMaker
     {
+        class LegendItem
+        {
+            public String ResourceType;
+            public Color Color;
+        };
+
         ResourcesMaker resourcesMaker;
+        Dictionary<String, LegendItem> legendItems = new Dictionary<string, LegendItem>();
+
 
         public ResourceMapMaker(ResourcesMaker resourcesMaker)
         {
             this.resourcesMaker = resourcesMaker;
         }
 
-        SENode CreateNode(ResourceMap.Node mapNode, Color color)
+        public void AddLegendItem(String resourceType, Color color)
         {
-            SENode node = new SENode(0, color);
+            this.legendItems.Add(resourceType,
+                new LegendItem
+                {
+                    ResourceType = resourceType,
+                    Color = color
+                });
+        }
+
+        SENode CreateNode(ResourceMap.Node mapNode)
+        {
+            LegendItem legendItem;
+            switch (mapNode.StructureName)
+            {
+                case "StructureDefinition":
+                    if (this.legendItems.TryGetValue(mapNode.BaseName, out legendItem) == false)
+                        throw new Exception($"No legend item defined for Base {mapNode.BaseName}");
+                    break;
+
+                default:
+                    throw new Exception($"No legend item defined for Structure {mapNode.StructureName}");
+            }
+
+            SENode node = new SENode(0, legendItem.Color);
 
             String url = mapNode.ResourceUrl;
             foreach (String titlePart in mapNode.MapName)
@@ -103,7 +133,7 @@ namespace BreastRadiology.XUnitTests
                     {
                         if (ResourceMap.Self.TryGetNode(link.ResourceUrl, out ResourceMap.Node linkTargetNode) == false)
                             throw new Exception("ResourceMap.Node '{link.ResourceUrl}' not found");
-                        SENode node = CreateNode(linkTargetNode, Color.LightGreen);
+                        SENode node = CreateNode(linkTargetNode);
                         groupChild.Nodes.Add(node);
                     }
                 }
@@ -112,17 +142,40 @@ namespace BreastRadiology.XUnitTests
 
         public void Create(String outputPath)
         {
+            SvgEditor svgEditor = new SvgEditor();
+            SENodeGroup legendGroup = CreateLegend(svgEditor);
+            SENodeGroup rootGroup = CreateNodes(svgEditor);
+            svgEditor.Render(legendGroup, false);
+            svgEditor.Render(rootGroup, true);
+            svgEditor.Save(outputPath);
+        }
+
+        SENodeGroup CreateLegend(SvgEditor svgEditor)
+        {
+            SENodeGroup legendGroup = new SENodeGroup("legend");
+            SENodeGroup lastGroup = legendGroup;
+            foreach (LegendItem legendItem in this.legendItems.Values)
+            {
+                SENodeGroup nextGroup = lastGroup.AppendChild("Legend");
+                SENode node = new SENode(0, legendItem.Color);
+                nextGroup.Nodes.Add(node);
+                node.AddTextLine(legendItem.ResourceType);
+                lastGroup = nextGroup;
+            }
+            return legendGroup;
+        }
+
+        SENodeGroup CreateNodes(SvgEditor svgEditor)
+        {
             ResourceMap.Node mapNode = ResourceMap.Self.GetNode(this.resourcesMaker.BreastRadiologyReport);
 
-            SvgEditor svgEditor = new SvgEditor();
             SENodeGroup rootGroup = new SENodeGroup("root");
-            SENode rootNode = CreateNode(mapNode, Color.LightGreen);
+            SENode rootNode = CreateNode(mapNode);
             rootGroup.Nodes.Add(rootNode);
             AddChildren(mapNode, "valueSet", rootGroup);
             AddChildren(mapNode, "target", rootGroup);
             AddChildren(mapNode, "extension", rootGroup);
-            svgEditor.Render(rootGroup);
-            svgEditor.Save(outputPath);
+            return rootGroup;
         }
     }
 }

@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
         {
             SDefEditor e = this.CreateEditor("BreastRadUSMass",
                     "US Mass",
-                    new string[] { "US", "Mass" },
+                    new string[] { "US Mass" },
                     ObservationUrl,
                     $"{Group_USResources}/Finding/Mass",
                     out usMass)

@@ -47,12 +47,14 @@ namespace BreastRadiology.XUnitTests
 
         const String Loinc = "http://loinc.org";
 
+        const String ClinicalImpressionUrl = "http://hl7.org/fhir/StructureDefinition/ClinicalImpression";
         const String ObservationUrl = "http://hl7.org/fhir/StructureDefinition/Observation";
         const String DiagnosticReportUrl = "http://hl7.org/fhir/StructureDefinition/DiagnosticReport";
         const String ExtensionUrl = "http://hl7.org/fhir/StructureDefinition/Extension";
         const String MedicationRequestUrl = "http://hl7.org/fhir/StructureDefinition/MedicationRequest";
         const String ServiceRequestUrl = "http://hl7.org/fhir/StructureDefinition/ServiceRequest";
         const String ResourceUrl = "http://hl7.org/fhir/StructureDefinition/Resource";
+        const String RiskAssessmentUrl = "http://hl7.org/fhir/StructureDefinition/RiskAssessment";
 
         const String contactUrl = "http://www.hl7.org/Special/committees/cic";
 
@@ -279,12 +281,33 @@ namespace BreastRadiology.XUnitTests
             resources.Add(Path.Combine(this.resourceDir, $"CodeSystem-{name}CS.json"), cs);
             resources.Add(Path.Combine(this.resourceDir, $"ValueSet-{name}VS.json"), vs);
 
-            ResourceMap.Self.CreateMapNode(vs.Url, mapName, "ValueSet");
+            ResourceMap.Self.CreateMapNode(vs.Url, mapName, "ValueSet", "");
             return vs;
         }
 
         public void CreateResources()
         {
+            ResourceMap.Self.CreateMapNode(ClinicalImpressionUrl,
+                new string[] {"Clinical", "Impression"},
+                "StructureDefinition",
+                "ClinicalImpression");
+
+            ResourceMap.Self.CreateMapNode(MedicationRequestUrl,
+                new string[] {"Medication", "Request"},
+                "StructureDefinition",
+                "MedicationRequest");
+
+            ResourceMap.Self.CreateMapNode(ServiceRequestUrl,
+                new string[] {"Service", "Request"},
+                "StructureDefinition",
+                "ServiceRequest");
+
+            ResourceMap.Self.CreateMapNode(RiskAssessmentUrl,
+                new string[] {"Risk", "Assessment"},
+                "StructureDefinition",
+                "RiskAssessment");
+
+
             this.fc.Add(this.resourceDir);
             this.fc.Add(this.pageDir);
 
@@ -308,6 +331,14 @@ namespace BreastRadiology.XUnitTests
             if (Directory.Exists(mapDir) == false)
                 Directory.CreateDirectory(mapDir);
             ResourceMapMaker resourceMapMaker = new ResourceMapMaker(this);
+            resourceMapMaker.AddLegendItem("DiagnosticReport", Color.LightGreen);
+            resourceMapMaker.AddLegendItem("Extension", Color.LightSalmon);
+            resourceMapMaker.AddLegendItem("Observation", Color.LightSkyBlue);
+            resourceMapMaker.AddLegendItem("MedicationRequest", Color.LightPink);
+            resourceMapMaker.AddLegendItem("ServiceRequest", Color.LightBlue);
+            resourceMapMaker.AddLegendItem("RiskAssessment", Color.LightGray);
+            resourceMapMaker.AddLegendItem("ClinicalImpression", Color.LightGoldenrodYellow);
+
             resourceMapMaker.Create(Path.Combine(mapDir, "ProfileOverview.svg"));
 
             //FragmentMapMaker fragmentMapMaker = new FragmentMapMaker(this, mapDir);

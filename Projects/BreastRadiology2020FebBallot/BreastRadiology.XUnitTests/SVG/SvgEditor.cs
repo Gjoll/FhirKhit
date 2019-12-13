@@ -16,6 +16,8 @@ namespace BreastRadiology.XUnitTests
         SvgDoc doc;
         SvgRoot root;
 
+        public float screenX = -1;
+        public float screenY = -1;
         public float BorderWidth { get; set; } = 0.125f;
         public float LineHeight { get; set; } = 1.25f;
         public float BorderMargin { get; set; } = 0.5f;
@@ -32,23 +34,23 @@ namespace BreastRadiology.XUnitTests
         public SvgEditor()
         {
             this.doc = new SvgDoc();
-            root = this.doc.CreateNewDocument();
-            CreateArrowStart();
-            CreateArrowEnd();
+            this.root = this.doc.CreateNewDocument();
+            this.CreateArrowStart();
+            this.CreateArrowEnd();
         }
 
         void CreateArrowEnd()
         {
             SvgMarker arrowEnd = this.doc.AddMarker();
-            arrowEnd.RefX = $"{ToPx(ArrowEndSize)}";
-            arrowEnd.RefY = $"{ToPx(ArrowEndSize / 2)}";
-            arrowEnd.MarkerWidth = $"{ToPx(ArrowEndSize)}";
-            arrowEnd.MarkerHeight = $"{ToPx(ArrowEndSize)}";
+            arrowEnd.RefX = $"{this.ToPx(ArrowEndSize)}";
+            arrowEnd.RefY = $"{this.ToPx(ArrowEndSize / 2)}";
+            arrowEnd.MarkerWidth = $"{this.ToPx(ArrowEndSize)}";
+            arrowEnd.MarkerHeight = $"{this.ToPx(ArrowEndSize)}";
             arrowEnd.MarkerUnits = "px";
             arrowEnd.Id = ArrowEnd;
 
             SvgPolygon p = this.doc.AddPolygon(arrowEnd);
-            p.Points = $"0 0 {ToPx(ArrowEndSize)} {ToPx(ArrowEndSize / 2)} 0 {ToPx(ArrowEndSize)}";
+            p.Points = $"0 0 {this.ToPx(ArrowEndSize)} {this.ToPx(ArrowEndSize / 2)} 0 {this.ToPx(ArrowEndSize)}";
             p.StrokeWidth = "0";
             p.Fill = Color.Black;
             p.StrokeWidth = "0";
@@ -59,36 +61,36 @@ namespace BreastRadiology.XUnitTests
             float radius = 0.125f;
 
             SvgMarker arrowStart = this.doc.AddMarker();
-            arrowStart.RefX = $"{ToPx(radius)}";
-            arrowStart.RefY = $"{ToPx(radius)}";
-            arrowStart.MarkerWidth = $"{ToPx(2 * radius)}";
-            arrowStart.MarkerHeight = $"{ToPx(2 * radius)}";
+            arrowStart.RefX = $"{this.ToPx(radius)}";
+            arrowStart.RefY = $"{this.ToPx(radius)}";
+            arrowStart.MarkerWidth = $"{this.ToPx(2 * radius)}";
+            arrowStart.MarkerHeight = $"{this.ToPx(2 * radius)}";
             arrowStart.MarkerUnits = "px";
             arrowStart.Id = ArrowStart;
 
             SvgCircle c = this.doc.AddCircle(arrowStart);
-            c.CX = $"{ToPx(radius)}";
-            c.CY = $"{ToPx(radius)}";
-            c.R = $"{ToPx(radius)}";
+            c.CX = $"{this.ToPx(radius)}";
+            c.CY = $"{this.ToPx(radius)}";
+            c.R = $"{this.ToPx(radius)}";
             c.Fill = Color.Black;
             c.StrokeWidth = "0";
         }
 
         public void Render(SENodeGroup group,
-            float screenX = -1,
-            float screenY = -1)
+            bool lineFlag)
         {
             this.maxWidth = 0;
             this.maxHeight = 0;
 
-            if (screenX == -1)
-                screenX = this.BorderMargin;
-            if (screenY == -1)
-                screenY = this.BorderMargin;
+            if (this.screenX == -1)
+                this.screenX = this.BorderMargin;
+            if (this.screenY == -1)
+                this.screenY = this.BorderMargin;
 
-            RenderGroup(group, screenX, screenY, out float width, out float height, out List<PointF> endConnectors);
-            this.root.Width = $"{ToPx(this.maxWidth + this.NodeGapX)}";
-            this.root.Height = $"{ToPx(this.maxHeight + this.NodeGapY)}";
+            this.RenderGroup(group, this.screenX, this.screenY, lineFlag, out float width, out float height, out List<PointF> endConnectors);
+            this.root.Width = $"{this.ToPx(this.maxWidth + this.NodeGapX)}";
+            this.root.Height = $"{this.ToPx(this.maxHeight + this.NodeGapY)}";
+            this.screenY = this.maxHeight + 4 * this.BorderMargin;
         }
 
         void CreateArrow(SvgGroup g,
@@ -101,11 +103,11 @@ namespace BreastRadiology.XUnitTests
         {
             SvgLine stub = this.doc.AddLine(g);
             stub.Stroke = Color.Black;
-            stub.X1 = ToPx(xStart);
-            stub.X2 = ToPx(xEnd);
+            stub.X1 = this.ToPx(xStart);
+            stub.X2 = this.ToPx(xEnd);
             stub.Y1 = this.ToPx(yStart);
             stub.Y2 = this.ToPx(yEnd);
-            stub.StrokeWidth = ToPx(BorderWidth);
+            stub.StrokeWidth = this.ToPx(this.BorderWidth);
             if (startMarker)
                 stub.MarkerStart = $"url(#{ArrowStart})";
             if (endMarker)
@@ -116,16 +118,17 @@ namespace BreastRadiology.XUnitTests
         {
             SvgLine stub = this.doc.AddLine(g);
             stub.Stroke = Color.Black;
-            stub.X1 = ToPx(x1);
-            stub.X2 = ToPx(x2);
+            stub.X1 = this.ToPx(x1);
+            stub.X2 = this.ToPx(x2);
             stub.Y1 = this.ToPx(y1);
             stub.Y2 = this.ToPx(y2);
-            stub.StrokeWidth = ToPx(BorderWidth);
+            stub.StrokeWidth = this.ToPx(this.BorderWidth);
         }
 
         void RenderGroup(SENodeGroup group,
             float screenX,
             float screenY,
+            bool lineFlag,
             out float colWidth,
             out float colHeight,
             out List<PointF> endConnectors)
@@ -147,7 +150,7 @@ namespace BreastRadiology.XUnitTests
 
             foreach (SENode node in group.Nodes)
             {
-                Render(g, node, screenX, col1ScreenY, out float nodeWidth, out float nodeHeight);
+                this.Render(g, node, screenX, col1ScreenY, out float nodeWidth, out float nodeHeight);
                 if (col1Width < nodeWidth)
                     col1Width = nodeWidth;
 
@@ -158,66 +161,67 @@ namespace BreastRadiology.XUnitTests
                     bottomConnectorY = connectorY;
                 startConnectors.Add(new PointF(screenX + nodeWidth, col1ScreenY + nodeHeight / 2));
                 endConnectors.Add(new PointF(screenX, col1ScreenY + nodeHeight / 2));
-                col1Height += nodeHeight + NodeGapY;
-                col1ScreenY += nodeHeight + NodeGapY;
+                col1Height += nodeHeight + this.NodeGapY;
+                col1ScreenY += nodeHeight + this.NodeGapY;
             }
 
-            if (this.maxWidth < col1ScreenX + col1Width + NodeGapX)
-                this.maxWidth = col1ScreenX + col1Width + NodeGapX;
+            if (this.maxWidth < col1ScreenX + col1Width + this.NodeGapX)
+                this.maxWidth = col1ScreenX + col1Width + this.NodeGapX;
             if (this.maxHeight < col1ScreenY)
                 this.maxHeight = col1ScreenY;
 
-            float col2ScreenX = screenX + col1Width + 2 * NodeGapX;
+            float col2ScreenX = screenX + col1Width + 2 * this.NodeGapX;
             float col2ScreenY = screenY;
 
             float col2Height = 0;
             bool endConnectorFlag = false;
             foreach (SENodeGroup child in group.Children)
             {
-                RenderGroup(child,
+                this.RenderGroup(child,
                     col2ScreenX,
                     col2ScreenY,
+                    lineFlag,
                     out float col2GroupWidth,
                     out float col2GroupHeight,
                     out List<PointF> col2EndConnectors);
                 col2ScreenY += col2GroupHeight;
                 col2Height += col2GroupHeight;
 
-                if (startConnectors.Count > 0)
+                if ((lineFlag) && (startConnectors.Count > 0))
                 {
                     foreach (PointF stubEnd in col2EndConnectors)
                     {
                         endConnectorFlag = true;
-                        CreateArrow(g, false, true, screenX + col1Width + NodeGapX, stubEnd.Y, stubEnd.X, stubEnd.Y);
+                        this.CreateArrow(g, false, true, screenX + col1Width + this.NodeGapX, stubEnd.Y, stubEnd.X, stubEnd.Y);
                         if (topConnectorY > stubEnd.Y)
                             topConnectorY = stubEnd.Y;
                         if (bottomConnectorY < stubEnd.Y)
                             bottomConnectorY = stubEnd.Y;
                     }
                 }
-                float width = col1Width + 2 * NodeGapX + col2GroupWidth;
+                float width = col1Width + 2 * this.NodeGapX + col2GroupWidth;
                 if (colWidth < width)
                     colWidth = width;
 
-                if (this.maxWidth < col2ScreenX + col2GroupWidth + NodeGapX)
-                    this.maxWidth = col2ScreenX + col2GroupWidth + NodeGapX;
+                if (this.maxWidth < col2ScreenX + col2GroupWidth + this.NodeGapX)
+                    this.maxWidth = col2ScreenX + col2GroupWidth + this.NodeGapX;
             }
 
-            if (endConnectorFlag == true)
+            if ((lineFlag) && (endConnectorFlag == true))
             {
                 foreach (PointF stubStart in startConnectors)
-                    CreateArrow(g, true, false, stubStart.X, stubStart.Y, screenX + col1Width + NodeGapX, stubStart.Y);
+                    this.CreateArrow(g, true, false, stubStart.X, stubStart.Y, screenX + col1Width + this.NodeGapX, stubStart.Y);
 
                 // Make vertical line that connects all stubs.
                 if (group.Children.Count > 0)
                 {
                     float x = screenX + col1Width + this.NodeGapX;
-                    CreateLine(g, x, topConnectorY, x, bottomConnectorY);
+                    this.CreateLine(g, x, topConnectorY, x, bottomConnectorY);
                 }
             }
 
-            if (this.maxHeight < col2ScreenY + NodeGapY)
-                this.maxHeight = col2ScreenY + NodeGapY;
+            if (this.maxHeight < col2ScreenY + this.NodeGapY)
+                this.maxHeight = col2ScreenY + this.NodeGapY;
 
             if (colHeight < col1Height)
                 colHeight = col1Height;
@@ -234,8 +238,8 @@ namespace BreastRadiology.XUnitTests
         {
             const float CharMod = 0.7f;
 
-            height = node.TextLines.Count * LineHeight + 2 * BorderMargin;
-            width = node.Width * CharMod + 2 * BorderMargin;
+            height = node.TextLines.Count * this.LineHeight + 2 * this.BorderMargin;
+            width = node.Width * CharMod + 2 * this.BorderMargin;
 
             SvgGroup g = this.doc.AddGroup(parentGroup);
 
@@ -258,17 +262,17 @@ namespace BreastRadiology.XUnitTests
                 square = this.doc.AddRect(g);
             }
             square.Stroke = Color.Black;
-            square.StrokeWidth = ToPx(BorderWidth);
-            square.RX = ToPx(this.RectRx);
-            square.RY = ToPx(this.RectRy);
-            square.X = ToPx(screenX);
-            square.Y = ToPx(screenY);
-            square.Width = ToPx(width);
-            square.Height = ToPx(height);
+            square.StrokeWidth = this.ToPx(this.BorderWidth);
+            square.RX = this.ToPx(this.RectRx);
+            square.RY = this.ToPx(this.RectRy);
+            square.X = this.ToPx(screenX);
+            square.Y = this.ToPx(screenY);
+            square.Width = this.ToPx(width);
+            square.Height = this.ToPx(height);
             square.Fill = node.FillColor;
 
-            float textX = screenX + BorderMargin;
-            float textY = screenY + BorderMargin + 1;
+            float textX = screenX + this.BorderMargin;
+            float textY = screenY + this.BorderMargin + 1;
 
             foreach (SEText line in node.TextLines)
             {
@@ -289,11 +293,11 @@ namespace BreastRadiology.XUnitTests
                 {
                     t = this.doc.AddText(g);
                 }
-                t.X = ToPx(textX);
-                t.Y = ToPx(textY);
+                t.X = this.ToPx(textX);
+                t.Y = this.ToPx(textY);
                 t.Value = line.Text;
 
-                textY += LineHeight;
+                textY += this.LineHeight;
             }
         }
 

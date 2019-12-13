@@ -57,15 +57,22 @@ namespace BreastRadiology.XUnitTests
                 .Definition("Recommendations for future care")
                 .ZeroToMany();
             e.ApplyExtension("PriorReports", this.BreastRadiologyPriorReportsExtension)
-                .Short("Recommendations for future care")
-                .Definition("Recommendations for future care")
+                .Short("Prior breast radiology reports")
+                .Definition("Prior breast radiology reports")
+                .ZeroToMany();
+            e.ApplyExtension("Impressions", this.BreastRadiologyImpressionsExtension)
+                .Short("Exam impressions")
+                .Definition("Exam impressions.")
+                .ZeroToMany();
+            e.ApplyExtension("PatientRisk", this.BreastRadiologyPatientRiskExtension)
+                .Short("Patient Risk")
+                .Definition("Patient Risk.")
                 .ZeroToMany();
 
             ProfileTargetSlice[] targets = new ProfileTargetSlice[]
             {
                     new ProfileTargetSlice(this.SectionPatientHistory, 1, "1"),
                     new ProfileTargetSlice(this.SectionFindings, 1, "1"),
-                    new ProfileTargetSlice(this.SectionPatientRisk, 1, "1")
             };
             e.Find("result").SliceByUrl(targets);
             e.Node.AddProfileTargets(targets);

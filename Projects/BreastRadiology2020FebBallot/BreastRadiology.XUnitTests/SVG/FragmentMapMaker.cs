@@ -117,7 +117,7 @@ namespace BreastRadiology.XUnitTests
                 parentsGroup.Nodes.Add(node);
             }
 
-            e.Render(parentsGroup);
+            e.Render(parentsGroup, true);
             e.Save(Path.Combine(outputDir, FragmentMapName(fragmentNode.Focus)));
         }
 

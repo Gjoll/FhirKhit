@@ -14,6 +14,7 @@ namespace BreastRadiology.XUnitTests
             public String StructureName { get; }
 
             public String[] MapName { get; }
+            public String BaseName { get; }
 
             /// <summary>
             /// Url of the resource this represents.
@@ -27,11 +28,15 @@ namespace BreastRadiology.XUnitTests
 
             Dictionary<String, Link> links = new Dictionary<String, Link>();
 
-            public Node(String resourceUrl, String[] mapName, String structureName)
+            public Node(String resourceUrl, 
+                String[] mapName, 
+                String structureName,
+                String baseName)
             {
                 this.ResourceUrl = resourceUrl;
                 this.MapName = mapName;
                 this.StructureName = structureName;
+                this.BaseName = baseName;
                 ResourceMap.Self.resources.Add(resourceUrl, this);
             }
 

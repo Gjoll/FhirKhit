@@ -30,7 +30,7 @@ namespace BreastRadiology.XUnitTests
             ValueSet binding = this.CreateValueSet(
                 "BreastRadUSMassOrientation",
                 "US Mass Orientation",
-                new string[] {"US", "Mass", "Orientation", "Values"},
+                new string[] {"US Mass", "Orientation Values"},
                 "Ultra-sound mass orientation codes",
                 Group_USCodes,
                 new ConceptDef[]
@@ -69,7 +69,7 @@ namespace BreastRadiology.XUnitTests
 
             SDefEditor e = this.CreateEditor("BreastRadUSMassOrientation",
                     "US Mass Orientation",
-                    new string[] { "US", "Mass", "Orientation" },
+                    new string[] { "US Mass", "Orientation" },
                     ObservationUrl,
                     $"{Group_USResources}/Mass/Orientation",
                     out usMassOrientation)

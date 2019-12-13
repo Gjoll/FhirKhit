@@ -62,7 +62,7 @@ namespace BreastRadiology.XUnitTests
                 BaseDefinition = baseDefinition,
                 Differential = new StructureDefinition.DifferentialComponent()
             };
-            this.Node = ResourceMap.Self.CreateMapNode(url, mapName, "StructureDefinition");
+            this.Node = ResourceMap.Self.CreateMapNode(url, mapName, "StructureDefinition", baseDefinition.LastUriPart());
             this.sDef.Differential.Element.Add(new ElementDefinition
             {
                 Path = basePath,

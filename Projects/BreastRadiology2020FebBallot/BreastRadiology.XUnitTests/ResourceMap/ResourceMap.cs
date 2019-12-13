@@ -37,11 +37,11 @@ namespace BreastRadiology.XUnitTests
             return node;
         }
 
-        public ResourceMap.Node CreateMapNode(String url, String[] mapName, String structureName)
+        public ResourceMap.Node CreateMapNode(String url, String[] mapName, String structureName, String baseName)
         {
             if (resources.TryGetValue(url, out ResourceMap.Node retVal) == true)
                 throw new Exception($"Map node {url} already exists");
-            retVal = new Node(url, mapName, structureName);
+            retVal = new Node(url, mapName, structureName, baseName);
             return retVal;
         }
     }

@@ -30,7 +30,7 @@ namespace BreastRadiology.XUnitTests
             ValueSet binding = this.CreateValueSet(
                 "BreastRadUSMassPosteriorAcousticFeatures",
                 "US Mass Posterior Acoustic Features",
-                new string[] {"US", "Mass", "Posterior", "Acoustic", "Feature", "Values"},
+                new string[] {"US Mass", "Posterior Acoustic", "Feature Values"},
                 "Ultra-sound mass Posterior acoustic features codes.",
                 Group_USCodes,
                 new ConceptDef[]
@@ -86,7 +86,7 @@ namespace BreastRadiology.XUnitTests
 
             SDefEditor e = this.CreateEditor("BreastRadUSMassPosteriorAcousticFeatures",
                     "US Mass Posterior Acoustic Features",
-                    new string[] { "US", "Mass", "Posterior", "Acoustic", "Features" },
+                    new string[] { "US Mass", "Posterior Acoustic", "Features" },
                     ObservationUrl,
                     $"{Group_USResources}/Mass/PosteriorAcousticFeatures",
                     out usMassPosteriorAcousticFeatures)
