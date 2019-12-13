@@ -9,32 +9,33 @@ using FhirKhit.Tools.R4;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 using PreFhir;
+using VTask = System.Threading.Tasks.Task;
+using StringTask = System.Threading.Tasks.Task<string>;
 
 namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker : ConverterBase
     {
-        String USMassOrientation
+        async StringTask USMassOrientation()
         {
-            get
-            {
-                if (usMassOrientation == null)
-                    CreateUSMassOrientation();
-                return usMassOrientation;
-            }
+            if (usMassOrientation == null)
+                await CreateUSMassOrientation();
+            return usMassOrientation;
         }
         String usMassOrientation = null;
 
-        void CreateUSMassOrientation()
+        async VTask CreateUSMassOrientation()
         {
-            ValueSet binding = this.CreateValueSet(
-                "BreastRadUSMassOrientation",
-                "US Mass Orientation",
-                new string[] {"US Mass", "Orientation Values"},
-                "Ultra-sound mass orientation codes",
-                Group_USCodes,
-                new ConceptDef[]
-                {
+            await VTask.Run(async () =>
+            {
+                ValueSet binding = this.CreateValueSet(
+                    "BreastRadUSMassOrientation",
+                    "US Mass Orientation",
+                    new string[] { "US Mass", "Orientation Values" },
+                    "Ultra-sound mass orientation codes",
+                    Group_USCodes,
+                    new ConceptDef[]
+                    {
                     new ConceptDef("Parallel ",
                         "Parallel",
                         new Definition()
@@ -54,50 +55,51 @@ namespace BreastRadiology.XUnitTests
                             .Line("obliquely oriented to the skin line. Round masses are NOT PARALLEL in their orientation.")
                         .CiteEnd(BiRadCitation)
                         )
-                });
+                    });
 
 
-            {
-                IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));
-                valueSetIntroDoc
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
-                    .ValueSet(binding);
+                {
+                    IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));
+                    valueSetIntroDoc
+                        .ReviewedStatus(ReviewStatus.NotReviewed)
+                        .ValueSet(binding);
                     ;
-                String outputPath = valueSetIntroDoc.Save();
-                this.fc.Mark(outputPath);
-            }
+                    String outputPath = valueSetIntroDoc.Save();
+                    this.fc.Mark(outputPath);
+                }
 
-            SDefEditor e = this.CreateEditor("BreastRadUSMassOrientation",
-                    "US Mass Orientation",
-                    new string[] { "US Mass", "Orientation" },
-                    ObservationUrl,
-                    $"{Group_USResources}/Mass/Orientation",
-                    out usMassOrientation)
-                .Description("Breast Radiology Ultra-Sound Mass Orientation Observation",
-                    new Markdown()
-                        .MissingObservation("a mass orientation")
-                        .BiradHeader()
-                        .BlockQuote("This feature of masses is unique to US imaging. Orientation is defined with reference to the skin")
-                        .BlockQuote("line. Obliquely situated masses may follow a radial pattern, and their long axes will help determine")
-                        .BlockQuote("classification as parallel or not parallel. Parallel or \"wider-than-tall\" orientation is a property of most")
-                        .BlockQuote("benign masses, notably fibroadenomas; however, many carcinomas have this orientation as well.")
-                        .BlockQuote("Orientation alone should not be used as an isolated feature in assessing a mass for its likelihood of")
-                        .BlockQuote("malignancy.")
-                        .BiradFooter()
-                        .Todo(
+                SDefEditor e = this.CreateEditor("BreastRadUSMassOrientation",
+                        "US Mass Orientation",
+                        new string[] { "US Mass", "Orientation" },
+                        ObservationUrl,
+                        $"{Group_USResources}/Mass/Orientation",
+                        out usMassOrientation)
+                    .Description("Breast Radiology Ultra-Sound Mass Orientation Observation",
+                        new Markdown()
+                            .MissingObservation("a mass orientation")
+                            .BiradHeader()
+                            .BlockQuote("This feature of masses is unique to US imaging. Orientation is defined with reference to the skin")
+                            .BlockQuote("line. Obliquely situated masses may follow a radial pattern, and their long axes will help determine")
+                            .BlockQuote("classification as parallel or not parallel. Parallel or \"wider-than-tall\" orientation is a property of most")
+                            .BlockQuote("benign masses, notably fibroadenomas; however, many carcinomas have this orientation as well.")
+                            .BlockQuote("Orientation alone should not be used as an isolated feature in assessing a mass for its likelihood of")
+                            .BlockQuote("malignancy.")
+                            .BiradFooter()
+                            .Todo(
+                            )
                         )
-                    )
-                .AddFragRef(this.ObservationNoDeviceFragment)
-                .AddFragRef(this.ObservationCodedValueFragment)
-                .AddFragRef(this.ObservationLeafFragment)
-                ;
+                    .AddFragRef(await this.ObservationNoDeviceFragment())
+                    .AddFragRef(await this.ObservationCodedValueFragment())
+                    .AddFragRef(await this.ObservationLeafFragment())
+                    ;
 
-            e.Select("value[x]")
-                .Type("CodeableConcept")
-                .Binding(binding.Url, BindingStrength.Required)
-                ;
-            e.AddValueSetLink(binding);
-            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "an ultra-sound mass orientation", binding);
+                e.Select("value[x]")
+                    .Type("CodeableConcept")
+                    .Binding(binding.Url, BindingStrength.Required)
+                    ;
+                e.AddValueSetLink(binding);
+                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "an ultra-sound mass orientation", binding);
+            });
         }
     }
 }

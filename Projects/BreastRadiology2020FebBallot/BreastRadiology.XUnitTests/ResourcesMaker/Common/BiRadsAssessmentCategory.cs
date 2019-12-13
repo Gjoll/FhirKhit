@@ -9,32 +9,33 @@ using FhirKhit.Tools.R4;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 using PreFhir;
+using VTask = System.Threading.Tasks.Task;
+using StringTask = System.Threading.Tasks.Task<string>;
 
 namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker
     {
-        String BiRadsAssessmentCategory
+        async StringTask BiRadsAssessmentCategory()
         {
-            get
-            {
-                if (biRadsAssessmentCategory == null)
-                    CreateBiRadsAssessmentCategory();
-                return biRadsAssessmentCategory;
-            }
+            if (biRadsAssessmentCategory == null)
+                await CreateBiRadsAssessmentCategory();
+            return biRadsAssessmentCategory;
         }
         String biRadsAssessmentCategory = null;
 
-        void CreateBiRadsAssessmentCategory()
+        async VTask CreateBiRadsAssessmentCategory()
         {
-            ValueSet binding = this.CreateValueSet(
-                    "BiRadsAssessmentCategories",
-                    "BiRads(r) Assessment Category Codes",
-                    new string[] {"BiRads", "Assessment", "Category", "Values"},
-                    "BiRads(r) Assessment Category codes.",
-                    Group_CommonCodes,
-                    new ConceptDef[]
-                    {
+            await VTask.Run(async () =>
+            {
+                ValueSet binding = this.CreateValueSet(
+                        "BiRadsAssessmentCategories",
+                        "BiRads(r) Assessment Category Codes",
+                        new string[] { "BiRads", "Assessment", "Category", "Values" },
+                        "BiRads(r) Assessment Category codes.",
+                        Group_CommonCodes,
+                        new ConceptDef[]
+                        {
                         new ConceptDef("Category-0",
                             "Category 0 - Incomplete ",
                             new Definition()
@@ -85,53 +86,54 @@ namespace BreastRadiology.XUnitTests
                             new Definition()
                                 .Line("Known Biopsy-Proven Malignancy")
                             )
-                    })
-                ;
-
-            {
-                IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));
-                valueSetIntroDoc
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
-                    .ValueSet(binding);
+                        })
                     ;
-                String outputPath = valueSetIntroDoc.Save();
-                this.fc.Mark(outputPath);
-            }
 
-            SDefEditor e = this.CreateEditor("BiRadsAssessmentCategory",
-                    "BiRads Assessment Category",
-                    new string[] { "BiRads", "Assessment", "Category" },
-                    ObservationUrl,
-                    $"{Group_CommonResources}/BiRads",
-                    out biRadsAssessmentCategory)
-                .Description("BiRads Assessment Category Observation",
-                    new Markdown()
-                        .BiradHeader()
-                        .BlockQuote("BI-RADS® assessments are divided into incomplete (category 0) and final assessment categories")
-                        .BlockQuote("(categories 1, 2, 3, 4, 5 and 6). An incomplete mammography assessment, usually rendered at batch-")
-                        .BlockQuote("read screening mammography, requires further evaluation with additional mammographic views,")
-                        .BlockQuote("ultrasound, and/or comparison mammography examination(s). If the additional evaluation involves")
-                        .BlockQuote("only comparison with previous mammography examination(s) that then leads to a final assessment,")
-                        .BlockQuote("the incomplete screening assessment is replaced by this final assessment. If the additional evalu-")
-                        .BlockQuote("ation includes a diagnostic imaging examination, a final assessment is rendered for the diagnostic")
-                        .BlockQuote("examination, but the screening mammography examination remains assessed as category 0.")
-                        .BiradFooter()
-                        .Todo(
-                            "Should each mass/calcification observation have its own optional/required BiRad observation or just the Left/Right/Combined sections?",
-                            "How is this different from BreastRadObservedState"
-                        )
-                )
-                .AddFragRef(this.ObservationNoDeviceFragment)
-                .AddFragRef(this.ObservationCodedValueFragment)
-                .AddFragRef(this.ObservationLeafFragment)
-                ;
+                {
+                    IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));
+                    valueSetIntroDoc
+                        .ReviewedStatus(ReviewStatus.NotReviewed)
+                        .ValueSet(binding);
+                    ;
+                    String outputPath = valueSetIntroDoc.Save();
+                    this.fc.Mark(outputPath);
+                }
 
-            e.Select("value[x]")
-                .Type("CodeableConcept")
-                .Binding(binding.Url, BindingStrength.Required)
-                ;
-            e.AddValueSetLink(binding);
-            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "a BiRad Assessment Category", binding);
+                SDefEditor e = this.CreateEditor("BiRadsAssessmentCategory",
+                        "BiRads Assessment Category",
+                        new string[] { "BiRads", "Assessment", "Category" },
+                        ObservationUrl,
+                        $"{Group_CommonResources}/BiRads",
+                        out biRadsAssessmentCategory)
+                    .Description("BiRads Assessment Category Observation",
+                        new Markdown()
+                            .BiradHeader()
+                            .BlockQuote("BI-RADS® assessments are divided into incomplete (category 0) and final assessment categories")
+                            .BlockQuote("(categories 1, 2, 3, 4, 5 and 6). An incomplete mammography assessment, usually rendered at batch-")
+                            .BlockQuote("read screening mammography, requires further evaluation with additional mammographic views,")
+                            .BlockQuote("ultrasound, and/or comparison mammography examination(s). If the additional evaluation involves")
+                            .BlockQuote("only comparison with previous mammography examination(s) that then leads to a final assessment,")
+                            .BlockQuote("the incomplete screening assessment is replaced by this final assessment. If the additional evalu-")
+                            .BlockQuote("ation includes a diagnostic imaging examination, a final assessment is rendered for the diagnostic")
+                            .BlockQuote("examination, but the screening mammography examination remains assessed as category 0.")
+                            .BiradFooter()
+                            .Todo(
+                                "Should each mass/calcification observation have its own optional/required BiRad observation or just the Left/Right/Combined sections?",
+                                "How is this different from BreastRadObservedState"
+                            )
+                    )
+                    .AddFragRef(await this.ObservationNoDeviceFragment())
+                    .AddFragRef(await this.ObservationCodedValueFragment())
+                    .AddFragRef(await this.ObservationLeafFragment())
+                    ;
+
+                e.Select("value[x]")
+                    .Type("CodeableConcept")
+                    .Binding(binding.Url, BindingStrength.Required)
+                    ;
+                e.AddValueSetLink(binding);
+                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "a BiRad Assessment Category", binding);
+            });
         }
     }
 }

@@ -9,27 +9,27 @@ using FhirKhit.Tools.R4;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 using PreFhir;
+using VTask = System.Threading.Tasks.Task;
+using StringTask = System.Threading.Tasks.Task<string>;
+
 
 namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker : ConverterBase
     {
-        String BreastRadiologyImpressionsExtension
+        async StringTask BreastRadiologyImpressionsExtension()
         {
-            get
-            {
-                if (breastRadiologyImpressionsExtension == null)
-                    CreateBreastRadiologyImpressionsExtension();
-                return breastRadiologyImpressionsExtension;
-            }
+            if (breastRadiologyImpressionsExtension == null)
+                await CreateBreastRadiologyImpressionsExtension();
+            return breastRadiologyImpressionsExtension;
         }
         String breastRadiologyImpressionsExtension = null;
 
-        String CreateBreastRadiologyImpressionsExtension()
+        async VTask CreateBreastRadiologyImpressionsExtension()
         {
-            SDefEditor e = this.CreateEditor("BreastRadImpressionsExtension", 
+            SDefEditor e = this.CreateEditor("BreastRadImpressionsExtension",
                 "Impressions Extension",
-                new string[] {"Impressions", "Extension"}, 
+                new string[] { "Impressions", "Extension" },
                 ExtensionUrl,
                 $"{Group_ExtensionResources}/Impressions",
                 out breastRadiologyImpressionsExtension)
@@ -43,7 +43,7 @@ namespace BreastRadiology.XUnitTests
                 .Kind(StructureDefinition.StructureDefinitionKind.ComplexType)
                 .Context()
                 ;
-            e.AddFragRef(this.HeaderFragment);
+            e.AddFragRef(await this.HeaderFragment());
 
             e.Select("extension").Zero();
             e.Select("url")
@@ -51,14 +51,13 @@ namespace BreastRadiology.XUnitTests
                 .Fixed(new FhirUri(e.SDef.Url));
 
             e.Select("value[x]")
-                .TypeReference(BreastRadImpression)
+                .TypeReference(await BreastRadImpression())
                 .ZeroToMany()
                 ;
 
             e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).Extension("Prior Reports", "include references to prior reports");
 
             e.Node.AddLink("target", ClinicalImpressionUrl, false);
-            return e.SDef.Url;
         }
     }
 }

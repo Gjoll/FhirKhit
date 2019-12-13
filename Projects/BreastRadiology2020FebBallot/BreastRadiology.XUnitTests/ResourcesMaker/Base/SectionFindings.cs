@@ -8,55 +8,59 @@ using FhirKhit.Tools;
 using FhirKhit.Tools.R4;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
+using VTask = System.Threading.Tasks.Task;
+using StringTask = System.Threading.Tasks.Task<string>;
 
 namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker : ConverterBase
     {
-        String SectionFindings
+        public async StringTask SectionFindings()
         {
-            get
+            if (sectionFindings == null)
             {
-                if (sectionFindings == null)
-                    CreateSectionFindings();
-                return sectionFindings;
+                await CreateSectionFindings();
             }
+            return sectionFindings;
         }
         String sectionFindings = null;
 
-        void CreateSectionFindings()
+        async VTask CreateSectionFindings()
         {
-            SDefEditor e = this.CreateEditor("BreastRadSectionFindings",
-                    "Findings",
-                    new string[] {"Findings"},
-                    ObservationUrl,
-                    $"{Group_BaseResources}/Findings",
-                    out sectionFindings)
-                .Description("Findings Section",
-                    new Markdown()
-                    .Paragraph("This resource is the head of the tree of observations made during a breast radiology exam.")
-                    .Paragraph("Child observations are referenced by the 'Observation.hasMember' field.")
-                    .Todo(
-                    )
-                )
-                .AddFragRef(this.ObservationNoDeviceFragment)
-                .AddFragRef(this.ObservationSectionFragment)
-                .AddFragRef(this.ObservationNoValueFragment)
-                ;
+            await VTask.Run( async () =>
+           {
+               SDefEditor e = this.CreateEditor("BreastRadSectionFindings",
+                       "Findings",
+                       new string[] { "Findings" },
+                       ObservationUrl,
+                       $"{Group_BaseResources}/Findings",
+                       out sectionFindings)
+                   .Description("Findings Section",
+                       new Markdown()
+                       .Paragraph("This resource is the head of the tree of observations made during a breast radiology exam.")
+                       .Paragraph("Child observations are referenced by the 'Observation.hasMember' field.")
+                       .Todo(
+                       )
+                   )
+                   .AddFragRef(await this.ObservationNoDeviceFragment())
+                   .AddFragRef(await this.ObservationSectionFragment())
+                   .AddFragRef(await this.ObservationNoValueFragment())
+                   ;
 
-            e.Select("bodySite").Zero();
-            {
-                ProfileTargetSlice[] targets = new ProfileTargetSlice[]
-                {
-                    new ProfileTargetSlice(this.BiRadsAssessmentCategory, 1, "1"),
-                    new ProfileTargetSlice(SectionFindingsLeftBreast, 1, "1"),
-                    new ProfileTargetSlice(SectionFindingsRightBreast, 1, "1")
-                };
-                e.Find("hasMember").SliceByUrl(targets);
-                e.Node.AddProfileTargets(targets);
-            }
+               e.Select("bodySite").Zero();
+               {
+                   ProfileTargetSlice[] targets = new ProfileTargetSlice[]
+                   {
+                    new ProfileTargetSlice(await this.BiRadsAssessmentCategory(), 1, "1"),
+                    new ProfileTargetSlice(await SectionFindingsLeftBreast(), 1, "1"),
+                    new ProfileTargetSlice(await SectionFindingsRightBreast(), 1, "1")
+                   };
+                   e.Find("hasMember").SliceByUrl(targets);
+                   e.Node.AddProfileTargets(targets);
+               }
 
-            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationSection($"Abnormality Finding");
+               e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationSection($"Abnormality Finding");
+           });
         }
     }
 }

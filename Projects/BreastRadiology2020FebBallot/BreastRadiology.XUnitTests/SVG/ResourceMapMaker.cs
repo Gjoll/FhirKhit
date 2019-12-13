@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using StringTask = System.Threading.Tasks.Task<string>;
 
 namespace BreastRadiology.XUnitTests
 {
@@ -167,7 +168,9 @@ namespace BreastRadiology.XUnitTests
 
         SENodeGroup CreateNodes(SvgEditor svgEditor)
         {
-            ResourceMap.Node mapNode = ResourceMap.Self.GetNode(this.resourcesMaker.BreastRadiologyReport);
+            StringTask breastRadiologyReport = this.resourcesMaker.BreastRadiologyReport();
+            breastRadiologyReport.Wait();
+            ResourceMap.Node mapNode = ResourceMap.Self.GetNode(breastRadiologyReport.Result);
 
             SENodeGroup rootGroup = new SENodeGroup("root");
             SENode rootNode = CreateNode(mapNode);

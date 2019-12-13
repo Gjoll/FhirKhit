@@ -328,7 +328,12 @@ namespace PreFhir
         bool MergeElementDefinitions()
         {
             //const String fcn = "MergeElementDefinitions";
-            return MergeElementTreeSlice(baseItem.SnapNode.DefaultSlice, this.mergeItem.DiffNode.DefaultSlice);
+            bool retVal = MergeElementTreeSlice(baseItem.SnapNode.DefaultSlice, this.mergeItem.DiffNode.DefaultSlice);
+
+            // we need to force snapshot to be recreated to add some info that
+            // the differential merge leaves out.
+            baseItem.SDef.Snapshot = null;
+            return retVal;
         }
 
         bool MergeElementTreeNode(ElementTreeNode baseNode,
@@ -472,12 +477,18 @@ namespace PreFhir
 
         /// <summary>
         /// Constrain element types. Error if constrain types are not a subset of base types.
+        /// We are constraining from a differential element to a snap shot element.
+        /// If the differential element Type array is empty, it means that there is no constraint, not
+        /// that the type is constrained to no elements.
         /// </summary>
         void ConstrainType(ElementDefinition baseElement,
                     ElementDefinition mergeElement,
                     ref bool success)
         {
             const String fcn = "MergeType";
+
+            if (mergeElement.Type.Count == 0)
+                return;
 
             //if ((this.preFhir.BreakFlag == true) && (baseElement.Path == "Observation.value[x]"))
             //    Debugger.Break();

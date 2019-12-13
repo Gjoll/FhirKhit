@@ -4,19 +4,17 @@ using PreFhir;
 using System;
 using System.Collections.Generic;
 using System.Text;
-
+using VTask = System.Threading.Tasks.Task;
+using StringTask = System.Threading.Tasks.Task<string>;
 namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker
     {
-        String ObservationCodedValueFragment
+        public async StringTask ObservationCodedValueFragment()
         {
-            get
-            {
-                if (observationCodedValueFragment == null)
-                    CreateObservationCodedValueFragment();
-                return observationCodedValueFragment;
-            }
+            if (observationCodedValueFragment == null)
+                await CreateObservationCodedValueFragment();
+            return observationCodedValueFragment;
         }
         String observationCodedValueFragment = null;
 
@@ -24,29 +22,32 @@ namespace BreastRadiology.XUnitTests
         /// Create ObservationCodedValueFragment.
         /// </summary>
         /// <returns></returns>
-        void CreateObservationCodedValueFragment()
+        async VTask CreateObservationCodedValueFragment()
         {
-            SDefEditor e = this.CreateFragment("CodedValueObservationFragment",
-                    "CodedValue Observation Fragment",
-                    new string[] {"Observation","CodedValue", "Fragment"},
-                    ObservationUrl,
-                    out observationCodedValueFragment)
-                .Description("Fragment that defines values for coded observations",
-                    new Markdown()
-                        .Paragraph("This fragment constrains an observation to only contain coded values.")
-                        .Todo(
-                        )
-                )
-                .AddFragRef(this.HeaderFragment)
-                .AddFragRef(this.BreastBodyLocationRequiredFragment)
-                .AddFragRef(this.ObservationFragment)
-                ;
+            await VTask.Run(async () =>
+            {
+                SDefEditor e = this.CreateFragment("CodedValueObservationFragment",
+                        "CodedValue Observation Fragment",
+                        new string[] { "Observation", "CodedValue", "Fragment" },
+                        ObservationUrl,
+                        out observationCodedValueFragment)
+                    .Description("Fragment that defines values for coded observations",
+                        new Markdown()
+                            .Paragraph("This fragment constrains an observation to only contain coded values.")
+                            .Todo(
+                            )
+                    )
+                    .AddFragRef(await this.HeaderFragment())
+                    .AddFragRef(await this.BreastBodyLocationRequiredFragment())
+                    .AddFragRef(await this.ObservationFragment())
+                    ;
 
-            e.Select("value[x]")
-                .Type("CodeableConcept")
-                ;
+                e.Select("value[x]")
+                    .Type("CodeableConcept")
+                    ;
 
-            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).Fragment($"Resource fragment used to by all observations whose value are a CodeableConcept.");
+                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).Fragment($"Resource fragment used to by all observations whose value are a CodeableConcept.");
+            });
         }
     }
 }

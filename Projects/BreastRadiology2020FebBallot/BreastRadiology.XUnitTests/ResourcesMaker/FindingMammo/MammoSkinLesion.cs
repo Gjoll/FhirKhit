@@ -8,63 +8,65 @@ using FhirKhit.Tools;
 using FhirKhit.Tools.R4;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
+using VTask = System.Threading.Tasks.Task;
+using StringTask = System.Threading.Tasks.Task<string>;
 
 namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker : ConverterBase
     {
-        String MammoSkinLesion
+        async StringTask MammoSkinLesion()
         {
-            get
-            {
-                if (mammoSkinLesion == null)
-                    CreateMammoSkinLesion();
-                return mammoSkinLesion;
-            }
+            if (mammoSkinLesion == null)
+                await CreateMammoSkinLesion();
+            return mammoSkinLesion;
         }
         String mammoSkinLesion = null;
 
-        void CreateMammoSkinLesion()
+        async VTask CreateMammoSkinLesion()
         {
-            SDefEditor e = this.CreateEditor("BreastRadMammoSkinLesion",
-                "Mammo Skin Lesion",
-                new string[] { "Mammo", "Skin", "Lesion" },
-                ObservationUrl,
-                $"{Group_MammoResources}/SkinLesion",
-                out mammoSkinLesion)
-                .Description("Breast Radiology Mammography Skin Lesion Observation",
-                    new Markdown()
-                        .MissingObservation("a skin lesion")
-                        .BiradHeader()
-                        .BlockQuote("This finding may be described in the mammography report or annotated on the mammographic")
-                        .BlockQuote("image when it projects over the breast (especially on 2 different projections), and may be mistaken")
-                        .BlockQuote("for an intramammary lesion. A raised skin lesion sufficiently large to be seen at mammography")
-                        .BlockQuote("should be marked by the technologist with a radiopaque device designated for use as a marker for")
-                        .BlockQuote("a skin lesion.")
-                        .BiradFooter()
-                        .Todo(
-                        )
-                )
-                .AddFragRef(this.ObservationNoDeviceFragment)
-                .AddFragRef(this.BreastBodyLocationRequiredFragment)
-                .AddFragRef(this.ObservationNoValueFragment)
-                .AddFragRef(this.ObservationSectionFragment)
-                .AddExtensionLink(this.BreastBodyLocationExtension)
-                ;
-
+            await VTask.Run(async () =>
             {
-                ProfileTargetSlice[] targets = new ProfileTargetSlice[]
-                {
-                    new ProfileTargetSlice(this.BreastRadObservedSize, 0, "1"),
-                    new ProfileTargetSlice(this.BreastRadObservedCount, 0, "1"),
-                    new ProfileTargetSlice(this.BreastRadObservedChanges, 0, "*"),
-                    new ProfileTargetSlice(this.BreastRadObservedState, 0, "1", false)
-                };
-                e.Find("hasMember").SliceByUrl(targets);
-                e.Node.AddProfileTargets(targets);
-            }
+                SDefEditor e = this.CreateEditor("BreastRadMammoSkinLesion",
+                    "Mammo Skin Lesion",
+                    new string[] { "Mammo", "Skin", "Lesion" },
+                    ObservationUrl,
+                    $"{Group_MammoResources}/SkinLesion",
+                    out mammoSkinLesion)
+                    .Description("Breast Radiology Mammography Skin Lesion Observation",
+                        new Markdown()
+                            .MissingObservation("a skin lesion")
+                            .BiradHeader()
+                            .BlockQuote("This finding may be described in the mammography report or annotated on the mammographic")
+                            .BlockQuote("image when it projects over the breast (especially on 2 different projections), and may be mistaken")
+                            .BlockQuote("for an intramammary lesion. A raised skin lesion sufficiently large to be seen at mammography")
+                            .BlockQuote("should be marked by the technologist with a radiopaque device designated for use as a marker for")
+                            .BlockQuote("a skin lesion.")
+                            .BiradFooter()
+                            .Todo(
+                            )
+                    )
+                    .AddFragRef(await this.ObservationNoDeviceFragment())
+                    .AddFragRef(await this.BreastBodyLocationRequiredFragment())
+                    .AddFragRef(await this.ObservationNoValueFragment())
+                    .AddFragRef(await this.ObservationSectionFragment())
+                    .AddExtensionLink(await this.BreastBodyLocationExtension())
+                    ;
 
-            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationLeafNode($"Skin Lesion");
+                {
+                    ProfileTargetSlice[] targets = new ProfileTargetSlice[]
+                    {
+                    new ProfileTargetSlice(await this.BreastRadObservedSize(), 0, "1"),
+                    new ProfileTargetSlice(await this.BreastRadObservedCount(), 0, "1"),
+                    new ProfileTargetSlice(await this.BreastRadObservedChanges(), 0, "*"),
+                    new ProfileTargetSlice(await this.BreastRadObservedState(), 0, "1", false)
+                    };
+                    e.Find("hasMember").SliceByUrl(targets);
+                    e.Node.AddProfileTargets(targets);
+                }
+
+                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationLeafNode($"Skin Lesion");
+            });
         }
     }
 }

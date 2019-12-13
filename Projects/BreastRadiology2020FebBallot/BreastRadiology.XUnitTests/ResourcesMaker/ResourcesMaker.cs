@@ -11,6 +11,7 @@ using FhirKhit.Tools.R4;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 using PreFhir;
+using StringTask = System.Threading.Tasks.Task<string>;
 
 namespace BreastRadiology.XUnitTests
 {
@@ -226,7 +227,11 @@ namespace BreastRadiology.XUnitTests
                 Content = CodeSystem.CodeSystemContentMode.Complete,
                 Count = codes.Count(),
             };
-            cs.AddFragRef(this.HeaderFragment);
+            StringTask headerFragTask = this.HeaderFragment();
+            headerFragTask.Wait();
+            String headerFragUrl = headerFragTask.Result;
+
+            cs.AddFragRef(headerFragUrl);
 
             // store groupPath as an extension. This is an unregistered extension that will be removed before
             // processing is complete.
@@ -244,7 +249,7 @@ namespace BreastRadiology.XUnitTests
                 Title = $"{title} ValueSet",
                 Description = new Markdown(description)
             };
-            vs.AddFragRef(this.HeaderFragment);
+            vs.AddFragRef(headerFragUrl);
 
             // store groupPath as an extension. This is an unregistered extension that will be removed before
             // processing is complete.
@@ -288,30 +293,34 @@ namespace BreastRadiology.XUnitTests
         public void CreateResources()
         {
             ResourceMap.Self.CreateMapNode(ClinicalImpressionUrl,
-                new string[] {"Clinical", "Impression"},
+                new string[] { "Clinical", "Impression" },
                 "StructureDefinition",
                 "ClinicalImpression");
 
             ResourceMap.Self.CreateMapNode(MedicationRequestUrl,
-                new string[] {"Medication", "Request"},
+                new string[] { "Medication", "Request" },
                 "StructureDefinition",
                 "MedicationRequest");
 
             ResourceMap.Self.CreateMapNode(ServiceRequestUrl,
-                new string[] {"Service", "Request"},
+                new string[] { "Service", "Request" },
                 "StructureDefinition",
                 "ServiceRequest");
 
             ResourceMap.Self.CreateMapNode(RiskAssessmentUrl,
-                new string[] {"Risk", "Assessment"},
+                new string[] { "Risk", "Assessment" },
                 "StructureDefinition",
                 "RiskAssessment");
 
+            if (Directory.Exists(this.resourceDir) == false)
+                Directory.CreateDirectory(this.resourceDir);
+            if (Directory.Exists(this.pageDir) == false)
+                Directory.CreateDirectory(this.pageDir);
 
             this.fc.Add(this.resourceDir);
             this.fc.Add(this.pageDir);
 
-            String report = this.BreastRadiologyReport;
+            this.BreastRadiologyReport().Wait();
 
             this.SaveAll();
             this.fc.Dispose();
@@ -347,23 +356,31 @@ namespace BreastRadiology.XUnitTests
 
         void SaveAll()
         {
+            List<System.Threading.Tasks.Task> tasks = new List<System.Threading.Tasks.Task>();
             foreach (KeyValuePair<string, Resource> resourceItem in this.resources)
             {
-                resourceItem.Value.SaveJson(resourceItem.Key);
+                System.Threading.Tasks.Task t = resourceItem.Value.SaveJsonAsync(resourceItem.Key);
                 this.fc.Mark(resourceItem.Key);
+                tasks.Add(t);
             }
 
             foreach (SDefEditor ce in this.editors.Values)
             {
-                if (ce.WriteFragment(out String fragmentName))
-                    this.fc.Mark(fragmentName);
+                System.Threading.Tasks.Task t = System.Threading.Tasks.Task.Run(() =>
+                   {
+                       if (ce.WriteFragment(out String fragmentName))
+                           this.fc.Mark(fragmentName);
 
-                if (ce.IntroDoc != null)
-                {
-                    String path = ce.IntroDoc.Save();
-                    this.fc.Mark(path);
-                }
+                       if (ce.IntroDoc != null)
+                       {
+                           String path = ce.IntroDoc.Save();
+                           this.fc.Mark(path);
+                       }
+                   });
+                tasks.Add(t);
             }
+
+            System.Threading.Tasks.Task.WaitAll(tasks.ToArray());
         }
     }
 }

@@ -9,32 +9,33 @@ using FhirKhit.Tools.R4;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 using PreFhir;
+using VTask = System.Threading.Tasks.Task;
+using StringTask = System.Threading.Tasks.Task<string>;
 
 namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker : ConverterBase
     {
-        String USMassEchoPattern
+        async StringTask USMassEchoPattern()
         {
-            get
-            {
-                if (usMassEchoPattern == null)
-                    CreateUSMassEchoPattern();
-                return usMassEchoPattern;
-            }
+            if (usMassEchoPattern == null)
+                await CreateUSMassEchoPattern();
+            return usMassEchoPattern;
         }
         String usMassEchoPattern = null;
 
-        void CreateUSMassEchoPattern()
+        async VTask CreateUSMassEchoPattern()
         {
-            ValueSet binding = this.CreateValueSet(
-                "BreastRadUSMassEchoPattern",
-                "US Mass Echo Pattern",
-                new string[] {"US Mass", "Echo Pattern", "Values"},
-                "Ultra-sound mass echo pattern codes.",
-                Group_USCodes,
-                new ConceptDef[]
-                {
+            await VTask.Run(async () =>
+            {
+                ValueSet binding = this.CreateValueSet(
+                    "BreastRadUSMassEchoPattern",
+                    "US Mass Echo Pattern",
+                    new string[] { "US Mass", "Echo Pattern", "Values" },
+                    "Ultra-sound mass echo pattern codes.",
+                    Group_USCodes,
+                    new ConceptDef[]
+                    {
                     new ConceptDef("Anechoic",
                         "Anechoic",
                         new Definition()
@@ -87,48 +88,49 @@ namespace BreastRadiology.XUnitTests
                             .Line("circumscribed and whose shape is irregular.")
                         .CiteEnd(BiRadCitation)
                         )
-                });
+                    });
 
 
-            {
-                IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));
-                valueSetIntroDoc
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
-                    .ValueSet(binding);
+                {
+                    IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));
+                    valueSetIntroDoc
+                        .ReviewedStatus(ReviewStatus.NotReviewed)
+                        .ValueSet(binding);
                     ;
-                String outputPath = valueSetIntroDoc.Save();
-                this.fc.Mark(outputPath);
-            }
+                    String outputPath = valueSetIntroDoc.Save();
+                    this.fc.Mark(outputPath);
+                }
 
-            SDefEditor e = this.CreateEditor("BreastRadUSMassEchoPattern",
-                    "US Mass Echo Pattern",
-                    new string[] { "US Mass", "Echo Pattern" },
-                    ObservationUrl,
-                    $"{Group_USResources}/Mass/EchoPattern",
-                    out usMassEchoPattern)
-                .Description("Breast Radiology Ultra-Sound Mass Echo Pattern Observation",
-                    new Markdown()
-                        .BiradHeader()
-                        .BlockQuote("The echogenicity of most benign and malignant masses is hypoechoic compared with ")
-                        .BlockQuote("mammary fat. While many completely echogenic masses are benign, prospective assessment as")
-                        .BlockQuote("benign has greater dependency on marginal circumscription. Although the echo pattern")
-                        .BlockQuote("contributes with other feature categories to the assessment of a breast lesion, echogenicity")
-                        .BlockQuote("alone has little specificity.")
-                        .BiradFooter()
-                        .Todo(
+                SDefEditor e = this.CreateEditor("BreastRadUSMassEchoPattern",
+                        "US Mass Echo Pattern",
+                        new string[] { "US Mass", "Echo Pattern" },
+                        ObservationUrl,
+                        $"{Group_USResources}/Mass/EchoPattern",
+                        out usMassEchoPattern)
+                    .Description("Breast Radiology Ultra-Sound Mass Echo Pattern Observation",
+                        new Markdown()
+                            .BiradHeader()
+                            .BlockQuote("The echogenicity of most benign and malignant masses is hypoechoic compared with ")
+                            .BlockQuote("mammary fat. While many completely echogenic masses are benign, prospective assessment as")
+                            .BlockQuote("benign has greater dependency on marginal circumscription. Although the echo pattern")
+                            .BlockQuote("contributes with other feature categories to the assessment of a breast lesion, echogenicity")
+                            .BlockQuote("alone has little specificity.")
+                            .BiradFooter()
+                            .Todo(
+                            )
                         )
-                    )
-                .AddFragRef(this.ObservationNoDeviceFragment)
-                .AddFragRef(this.ObservationCodedValueFragment)
-                .AddFragRef(this.ObservationLeafFragment)
-                ;
+                    .AddFragRef(await this.ObservationNoDeviceFragment())
+                    .AddFragRef(await this.ObservationCodedValueFragment())
+                    .AddFragRef(await this.ObservationLeafFragment())
+                    ;
 
-            e.Select("value[x]")
-                .Type("CodeableConcept")
-                .Binding(binding.Url, BindingStrength.Required)
-                ;
-            e.AddValueSetLink(binding);
-            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "an ultra-sound mass echo pattern", binding);
+                e.Select("value[x]")
+                    .Type("CodeableConcept")
+                    .Binding(binding.Url, BindingStrength.Required)
+                    ;
+                e.AddValueSetLink(binding);
+                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "an ultra-sound mass echo pattern", binding);
+            });
         }
     }
 }

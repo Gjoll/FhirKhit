@@ -9,28 +9,26 @@ using FhirKhit.Tools.R4;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 using PreFhir;
-
+using VTask = System.Threading.Tasks.Task;
+using StringTask = System.Threading.Tasks.Task<string>;
 namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker : ConverterBase
     {
-        String MammoAsymmetries
+        async StringTask MammoAsymmetries()
         {
-            get
-            {
-                if (mammoAsymmetries == null)
-                    CreateMammoAsymmetries();
-                return mammoAsymmetries;
-            }
+            if (mammoAsymmetries == null)
+                await CreateMammoAsymmetries();
+            return mammoAsymmetries;
         }
         String mammoAsymmetries = null;
 
-        void CreateMammoAsymmetries()
+        async VTask CreateMammoAsymmetries()
         {
             ValueSet binding = this.CreateValueSet(
                    "BreastRadMemmoAsymmetries",
                    "Mammo Asymmetries",
-                    new string[] {"Mammo", "Asymmetry" , "Values"},
+                    new string[] { "Mammo", "Asymmetry", "Values" },
                    "Codes defining types of mammography asymmetries.",
                     Group_MammoCodes,
                    new ConceptDef[]
@@ -93,14 +91,14 @@ namespace BreastRadiology.XUnitTests
                 valueSetIntroDoc
                     .ReviewedStatus(ReviewStatus.NotReviewed)
                     .ValueSet(binding);
-                    ;
+                ;
                 String outputPath = valueSetIntroDoc.Save();
                 this.fc.Mark(outputPath);
             }
 
             SDefEditor e = this.CreateEditor("BreastRadMammoAsymmetries",
                     "Mammo Asymmetries",
-                    new string[] {"Mammo", "Asymmetries"},
+                    new string[] { "Mammo", "Asymmetries" },
                     ObservationUrl,
                     $"{Group_MammoResources}/Asymmetry",
                     out mammoAsymmetries)
@@ -118,20 +116,20 @@ namespace BreastRadiology.XUnitTests
                         .Todo(
                         )
                 )
-                .AddFragRef(this.ObservationNoDeviceFragment)
-                .AddFragRef(this.BreastBodyLocationRequiredFragment)
-                .AddFragRef(this.ObservationCodedValueFragment)
-                .AddFragRef(this.ObservationSectionFragment)
-                .AddExtensionLink(this.BreastBodyLocationExtension)
+                .AddFragRef(await this.ObservationNoDeviceFragment())
+                .AddFragRef(await this.BreastBodyLocationRequiredFragment())
+                .AddFragRef(await this.ObservationCodedValueFragment())
+                .AddFragRef(await this.ObservationSectionFragment())
+                .AddExtensionLink(await this.BreastBodyLocationExtension())
             ;
 
             {
                 ProfileTargetSlice[] targets = new ProfileTargetSlice[]
                 {
-                    new ProfileTargetSlice(this.BreastRadObservedSize, 0, "1"),
-                    new ProfileTargetSlice(this.BreastRadObservedCount, 0, "1"),
-                    new ProfileTargetSlice(this.BreastRadObservedChanges, 0, "*"),
-                    new ProfileTargetSlice(this.MammoAssociatedFeatures, 0, "1", false)
+                    new ProfileTargetSlice(await this.BreastRadObservedSize(), 0, "1"),
+                    new ProfileTargetSlice(await this.BreastRadObservedCount(), 0, "1"),
+                    new ProfileTargetSlice(await this.BreastRadObservedChanges(), 0, "*"),
+                    new ProfileTargetSlice(await this.MammoAssociatedFeatures(), 0, "1", false)
                 };
                 e.Find("hasMember").SliceByUrl(targets);
                 e.Node.AddProfileTargets(targets);

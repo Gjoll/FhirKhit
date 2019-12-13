@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
+using System.Threading;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Specification.Snapshot;
 using Hl7.Fhir.Specification.Source;
@@ -19,6 +19,19 @@ namespace FhirKhit.Tools.R2
     /// </summary>
     public static class SnapshotCreator
     {
+        public static async System.Threading.Tasks.Task CreateAsync(StructureDefinition structDef)
+        {
+            using (var tokenSource = new CancellationTokenSource())
+            {
+                var token = tokenSource.Token;
+                var t = System.Threading.Tasks.Task.Run(() =>
+               {
+                   Create(structDef);
+               }, token);
+                await t.ConfigureAwait(false);
+            }
+        }
+
         public static void Create(StructureDefinition structDef)
         {
             if (structDef is null)

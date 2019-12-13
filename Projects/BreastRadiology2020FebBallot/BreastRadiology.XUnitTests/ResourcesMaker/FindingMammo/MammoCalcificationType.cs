@@ -8,32 +8,33 @@ using FhirKhit.Tools;
 using FhirKhit.Tools.R4;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
+using VTask = System.Threading.Tasks.Task;
+using StringTask = System.Threading.Tasks.Task<string>;
 
 namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker : ConverterBase
     {
-        String MammoCalcificationType
+        async StringTask MammoCalcificationType()
         {
-            get
-            {
-                if (mammoCalcificationType == null)
-                    CreateMammoCalcificationType();
-                return mammoCalcificationType;
-            }
+            if (mammoCalcificationType == null)
+                await CreateMammoCalcificationType();
+            return mammoCalcificationType;
         }
         String mammoCalcificationType = null;
 
-        void CreateMammoCalcificationType()
+        async VTask CreateMammoCalcificationType()
         {
-            ValueSet binding = this.CreateValueSet(
-                "MammoCalcificationType",
-                "Mammo Calcification Type",
-                new string[] {"Mammo", "Calcification", "Type", "Values"},
-                "Mammography calcification type codes.",
-                Group_MammoCodes,
-                new ConceptDef[]
-                {
+            await VTask.Run(async () =>
+            {
+                ValueSet binding = this.CreateValueSet(
+                    "MammoCalcificationType",
+                    "Mammo Calcification Type",
+                    new string[] { "Mammo", "Calcification", "Type", "Values" },
+                    "Mammography calcification type codes.",
+                    Group_MammoCodes,
+                    new ConceptDef[]
+                    {
                     new ConceptDef("Skin",
                         "Skin Calcification (Typically Benign)",
                         new Definition()
@@ -194,43 +195,44 @@ namespace BreastRadiology.XUnitTests
                             .Line("should be placed in BI-RADS® assessment category 4C (PPV range > 50% to < 95%).")
                         .CiteEnd(BiRadCitation)
                         )
-                }
-            );
+                    }
+                );
 
 
-            {
-                IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));
-                valueSetIntroDoc
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
-                    .ValueSet(binding);
+                {
+                    IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));
+                    valueSetIntroDoc
+                        .ReviewedStatus(ReviewStatus.NotReviewed)
+                        .ValueSet(binding);
                     ;
-                String outputPath = valueSetIntroDoc.Save();
-                this.fc.Mark(outputPath);
-            }
+                    String outputPath = valueSetIntroDoc.Save();
+                    this.fc.Mark(outputPath);
+                }
 
-            SDefEditor e = this.CreateEditor("BreastRadMammoCalcificationType",
-                "Mammo Calcification Type",
-                new string[] { "Mammo", "Calcification", "Type" },
-                ObservationUrl,
-                $"{Group_MammoResources}/Calcification/Type",
-                out mammoCalcificationType)
-                .Description("Breast Radiology Mammography Calcification Type Observation",
-                    new Markdown()
-                        .Paragraph("This resource describes the type of calcification observed.")
-                        .Todo(
-                        )
-                 )
-                .AddFragRef(this.ObservationNoDeviceFragment)
-                .AddFragRef(this.ObservationCodedValueFragment)
-                .AddFragRef(this.ObservationLeafFragment)
-                ;
+                SDefEditor e = this.CreateEditor("BreastRadMammoCalcificationType",
+                    "Mammo Calcification Type",
+                    new string[] { "Mammo", "Calcification", "Type" },
+                    ObservationUrl,
+                    $"{Group_MammoResources}/Calcification/Type",
+                    out mammoCalcificationType)
+                    .Description("Breast Radiology Mammography Calcification Type Observation",
+                        new Markdown()
+                            .Paragraph("This resource describes the type of calcification observed.")
+                            .Todo(
+                            )
+                     )
+                    .AddFragRef(await this.ObservationNoDeviceFragment())
+                    .AddFragRef(await this.ObservationCodedValueFragment())
+                    .AddFragRef(await this.ObservationLeafFragment())
+                    ;
 
-            e.Select("value[x]")
-                .Type("CodeableConcept")
-                .Binding(binding.Url, BindingStrength.Required)
-                ;
-            e.AddValueSetLink(binding);
-            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "a mammography calcification type", binding);
+                e.Select("value[x]")
+                    .Type("CodeableConcept")
+                    .Binding(binding.Url, BindingStrength.Required)
+                    ;
+                e.AddValueSetLink(binding);
+                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "a mammography calcification type", binding);
+            });
         }
     }
 }

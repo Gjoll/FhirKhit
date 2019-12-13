@@ -4,40 +4,41 @@ using PreFhir;
 using System;
 using System.Collections.Generic;
 using System.Text;
-
+using VTask = System.Threading.Tasks.Task;
+using StringTask = System.Threading.Tasks.Task<string>;
 namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker
     {
-        String ObservationNoDeviceFragment
+        public async StringTask ObservationNoDeviceFragment()
         {
-            get
-            {
-                if (observationNoDeviceFragment == null)
-                    CreateObservationNoDeviceFragment();
-                return observationNoDeviceFragment;
-            }
+            if (observationNoDeviceFragment == null)
+                await CreateObservationNoDeviceFragment();
+            return observationNoDeviceFragment;
         }
         String observationNoDeviceFragment = null;
 
-        void CreateObservationNoDeviceFragment()
+        async VTask CreateObservationNoDeviceFragment()
         {
-            SDefEditor e = this.CreateFragment("BreastRadObservationNoDeviceFragment",
-                "BreastRad Observation NoDevice Fragment",
-                    new string[] { "NoDevice", "Observation", "Fragment" },
-                ObservationUrl,
-                out observationNoDeviceFragment)
-                .Description("Fragment that constrains Observations to have not device data.",
-                    new Markdown()
-                        .Paragraph("Fragment for all observations that have no device.")
-                        .Todo(
-                        )
-                )
-                .AddFragRef(this.ObservationFragment)
-            ;
-            e.Select("device").Zero();
+            await VTask.Run(async () =>
+            {
+                SDefEditor e = this.CreateFragment("BreastRadObservationNoDeviceFragment",
+                    "BreastRad Observation NoDevice Fragment",
+                        new string[] { "NoDevice", "Observation", "Fragment" },
+                    ObservationUrl,
+                    out observationNoDeviceFragment)
+                    .Description("Fragment that constrains Observations to have not device data.",
+                        new Markdown()
+                            .Paragraph("Fragment for all observations that have no device.")
+                            .Todo(
+                            )
+                    )
+                    .AddFragRef(await this.ObservationFragment())
+                ;
+                e.Select("device").Zero();
 
-            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).Fragment($"Fragment for all observations that have no device.");
+                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).Fragment($"Fragment for all observations that have no device.");
+            });
         }
     }
 }

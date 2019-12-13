@@ -8,50 +8,51 @@ using FhirKhit.Tools;
 using FhirKhit.Tools.R4;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
-
+using VTask = System.Threading.Tasks.Task;
+using StringTask = System.Threading.Tasks.Task<string>;
 namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker : ConverterBase
     {
-        String MammoSkinThickening
+        async StringTask MammoSkinThickening()
         {
-            get
-            {
-                if (mammoSkinThickening == null)
-                    CreateMammoSkinThickening();
-                return mammoSkinThickening;
-            }
+            if (mammoSkinThickening == null)
+                await CreateMammoSkinThickening();
+            return mammoSkinThickening;
         }
         String mammoSkinThickening = null;
 
-        void CreateMammoSkinThickening()
+        async VTask CreateMammoSkinThickening()
         {
-            SDefEditor e = this.CreateEditor("BreastRadMammoSkinThickening",
-                "Mammo Skin Thickening",
-                new string[] { "Mammo", "Skin", "Thickening" },
-                ObservationUrl,
-                $"{Group_MammoResources}/AssociatedFeature/SkinThickening",
-                out mammoSkinThickening)
-                .Description("Mammography Skin Thickening Observation",
-                    new Markdown()
-                        .BiradHeader()
-                        .BlockQuote("Skin thickening may be focal or diffuse, and is defined as being greater than 2 mm in thickness. This ")
-                        .BlockQuote("finding is of particular concern if it represents a change from previous mammography examinations. ").BlockQuote("However, unilateral skin thickening is an expected finding after radiation therapy.")
-                        .BiradFooter()
-                        .Todo(
-                            "Add choice for focal or diffuse (see definition)?",
-                            "Add body location?",
-                            "Add size measurement?",
-                            "cardinality 0..1 or 0..*?"
-                        )
-                )
-                .AddFragRef(this.ObservationNoDeviceFragment)
-                .AddFragRef(this.ObservationNoValueFragment)
-                .AddFragRef(this.BreastBodyLocationRequiredFragment)
-                .AddExtensionLink(this.BreastBodyLocationExtension)
-                ;
+            await VTask.Run(async () =>
+            {
+                SDefEditor e = this.CreateEditor("BreastRadMammoSkinThickening",
+                    "Mammo Skin Thickening",
+                    new string[] { "Mammo", "Skin", "Thickening" },
+                    ObservationUrl,
+                    $"{Group_MammoResources}/AssociatedFeature/SkinThickening",
+                    out mammoSkinThickening)
+                    .Description("Mammography Skin Thickening Observation",
+                        new Markdown()
+                            .BiradHeader()
+                            .BlockQuote("Skin thickening may be focal or diffuse, and is defined as being greater than 2 mm in thickness. This ")
+                            .BlockQuote("finding is of particular concern if it represents a change from previous mammography examinations. ").BlockQuote("However, unilateral skin thickening is an expected finding after radiation therapy.")
+                            .BiradFooter()
+                            .Todo(
+                                "Add choice for focal or diffuse (see definition)?",
+                                "Add body location?",
+                                "Add size measurement?",
+                                "cardinality 0..1 or 0..*?"
+                            )
+                    )
+                    .AddFragRef(await this.ObservationNoDeviceFragment())
+                    .AddFragRef(await this.ObservationNoValueFragment())
+                    .AddFragRef(await this.BreastBodyLocationRequiredFragment())
+                    .AddExtensionLink(await this.BreastBodyLocationExtension())
+                    ;
 
-            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationLeafNode("Skin Thickening");
+                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationLeafNode("Skin Thickening");
+            });
         }
     }
 }

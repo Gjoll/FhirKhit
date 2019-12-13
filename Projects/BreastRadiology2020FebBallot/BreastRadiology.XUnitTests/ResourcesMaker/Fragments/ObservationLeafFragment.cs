@@ -4,42 +4,43 @@ using PreFhir;
 using System;
 using System.Collections.Generic;
 using System.Text;
-
+using VTask = System.Threading.Tasks.Task;
+using StringTask = System.Threading.Tasks.Task<string>;
 namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker
     {
-        String ObservationLeafFragment
+        public async StringTask ObservationLeafFragment()
         {
-            get
-            {
-                if (observationLeafFragment == null)
-                    CreateObservationLeafFragment();
-                return observationLeafFragment;
-            }
+            if (observationLeafFragment == null)
+                await CreateObservationLeafFragment();
+            return observationLeafFragment;
         }
         String observationLeafFragment = null;
 
-        void CreateObservationLeafFragment()
+        async VTask CreateObservationLeafFragment()
         {
-            SDefEditor e = this.CreateFragment("ObservationLeafFragment",
-                "Observation Leaf Fragment",
-                    new string[] {"Observation", "Leaf", "Fragment" },
-                ObservationUrl,
-                out observationLeafFragment)
-                .Description("Fragment that contstrains all observations that are leaf nodes.",
-                    new Markdown()
-                        .Paragraph("Fragment that constrains observations leaf nodes (no hasMembers references).")
-                        .Todo(
-                        )
-                )
-                .AddFragRef(this.HeaderFragment)
-                .AddFragRef(this.CategoryFragment)
-                .AddFragRef(this.ObservationFragment)
-            ;
-            e.Select("hasMember").Zero();
+            await VTask.Run(async () =>
+            {
+                SDefEditor e = this.CreateFragment("ObservationLeafFragment",
+                    "Observation Leaf Fragment",
+                        new string[] { "Observation", "Leaf", "Fragment" },
+                    ObservationUrl,
+                    out observationLeafFragment)
+                    .Description("Fragment that contstrains all observations that are leaf nodes.",
+                        new Markdown()
+                            .Paragraph("Fragment that constrains observations leaf nodes (no hasMembers references).")
+                            .Todo(
+                            )
+                    )
+                    .AddFragRef(await this.HeaderFragment())
+                    .AddFragRef(await this.CategoryFragment())
+                    .AddFragRef(await this.ObservationFragment())
+                ;
+                e.Select("hasMember").Zero();
 
-            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).Fragment($"Resource fragment used by resources that are leaf node observations.");
+                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).Fragment($"Resource fragment used by resources that are leaf node observations.");
+            });
         }
     }
 }

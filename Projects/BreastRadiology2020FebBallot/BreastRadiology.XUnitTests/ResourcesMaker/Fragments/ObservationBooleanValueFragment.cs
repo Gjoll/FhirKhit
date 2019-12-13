@@ -4,19 +4,17 @@ using PreFhir;
 using System;
 using System.Collections.Generic;
 using System.Text;
-
+using VTask = System.Threading.Tasks.Task;
+using StringTask = System.Threading.Tasks.Task<string>;
 namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker
     {
-        String ObservationBooleanValueFragment
+        public async StringTask ObservationBooleanValueFragment()
         {
-            get
-            {
-                if (observationBooleanValueFragment == null)
-                    CreateObservationBooleanValueFragment();
-                return observationBooleanValueFragment;
-            }
+            if (observationBooleanValueFragment == null)
+                await CreateObservationBooleanValueFragment();
+            return observationBooleanValueFragment;
         }
         String observationBooleanValueFragment = null;
 
@@ -24,30 +22,33 @@ namespace BreastRadiology.XUnitTests
         /// Create ObservationBooleanValueFragment.
         /// </summary>
         /// <returns></returns>
-        void CreateObservationBooleanValueFragment()
+        async VTask CreateObservationBooleanValueFragment()
         {
-            SDefEditor e = this.CreateFragment("BooleanValueObservationFragment",
-                    "BooleanValue Observation Fragment",
-                    new string[] {"Observation","BooleanValue", "Fragment"},
-                    ObservationUrl,
-                    out observationBooleanValueFragment)
-                .Description("Fragment to define a boolean observation",
-                new Markdown()
-                    .Paragraph("Fragment that constrains an observation to contains only a boolean value.")
-                    .Todo(
-                    )
-                    )
-                .AddFragRef(this.HeaderFragment)
-                .AddFragRef(this.BreastBodyLocationRequiredFragment)
-                .AddFragRef(this.ObservationFragment)
-                ;
+            await VTask.Run(async () =>
+            {
+                SDefEditor e = this.CreateFragment("BooleanValueObservationFragment",
+                        "BooleanValue Observation Fragment",
+                        new string[] { "Observation", "BooleanValue", "Fragment" },
+                        ObservationUrl,
+                        out observationBooleanValueFragment)
+                    .Description("Fragment to define a boolean observation",
+                    new Markdown()
+                        .Paragraph("Fragment that constrains an observation to contains only a boolean value.")
+                        .Todo(
+                        )
+                        )
+                    .AddFragRef(await this.HeaderFragment())
+                    .AddFragRef(await this.BreastBodyLocationRequiredFragment())
+                    .AddFragRef(await this.ObservationFragment())
+                    ;
 
-            e.Select("value[x]")
-                .Type("boolean")
-                ;
+                e.Select("value[x]")
+                    .Type("boolean")
+                    ;
 
 
-            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).Fragment($"Resource fragment used to by all observations whose value are a Boolean.");
+                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).Fragment($"Resource fragment used to by all observations whose value are a Boolean.");
+            });
         }
     }
 }

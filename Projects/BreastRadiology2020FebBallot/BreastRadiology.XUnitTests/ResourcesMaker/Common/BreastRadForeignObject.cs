@@ -9,32 +9,33 @@ using FhirKhit.Tools.R4;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 using PreFhir;
+using VTask = System.Threading.Tasks.Task;
+using StringTask = System.Threading.Tasks.Task<string>;
 
 namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker
     {
-        String BreastRadForeignObject
+        async StringTask BreastRadForeignObject()
         {
-            get
-            {
-                if (breastRadForeignObject == null)
-                    CreateBreastRadForeignObject();
-                return breastRadForeignObject;
-            }
+            if (breastRadForeignObject == null)
+                await CreateBreastRadForeignObject();
+            return breastRadForeignObject;
         }
         String breastRadForeignObject = null;
 
-        void CreateBreastRadForeignObject()
+        async VTask CreateBreastRadForeignObject()
         {
-            ValueSet binding = this.CreateValueSet(
-                    "BreastRadAbnormalities",
-                    "Foreign Object",
-                    new string[] { "Foreign", "Object", "Values" },
-                    "Foreign object codes defining types of foreign objects observed during a Breast Radiology exam",
-                    Group_CommonCodes,
-                    new ConceptDef[]
-                    {
+            await VTask.Run(async () =>
+            {
+                ValueSet binding = this.CreateValueSet(
+                        "BreastRadAbnormalities",
+                        "Foreign Object",
+                        new string[] { "Foreign", "Object", "Values" },
+                        "Foreign object codes defining types of foreign objects observed during a Breast Radiology exam",
+                        Group_CommonCodes,
+                        new ConceptDef[]
+                        {
                         new ConceptDef("BB",
                             "BB",
                             new Definition()
@@ -111,58 +112,59 @@ namespace BreastRadiology.XUnitTests
                             "WireFragment",
                             new Definition()
                             )
-                    })
-                ;
-
-            {
-                IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));
-                valueSetIntroDoc
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
-                    .ValueSet(binding);
+                        })
                     ;
-                String outputPath = valueSetIntroDoc.Save();
-                this.fc.Mark(outputPath);
-            }
 
-            SDefEditor e = this.CreateEditor("BreastRadForeignObject",
-                    "ForeignObject",
-                    new string[] { "ForeignObject" },
-                    ObservationUrl,
-                    $"{Group_CommonResources}/Foreign",
-                    out breastRadForeignObject)
-                .Description("Breast Radiology Foreign Object Observation",
-                    new Markdown()
-                        .Paragraph("These are foreign objects found during a breast radiology exam:")
-                        .Todo(
-                            "there is no way to say that the following abnormalities do not exist, only that one does exist.",
-                            "fill in code descriptions",
-                            "How are metal and metallic codes different",
-                            "body jewelery codes",
-                            "are wire and wire fragment codes the same."
-                        )
-                )
-                .AddFragRef(this.ObservationNoDeviceFragment)
-                .AddFragRef(this.ObservationCodedValueFragment)
-                .AddFragRef(this.ObservationSectionFragment)
-                ;
-
-            {
-                ProfileTargetSlice[] targets = new ProfileTargetSlice[]
                 {
-                    new ProfileTargetSlice(this.BreastRadObservedChanges, 0, "*"),
-                    new ProfileTargetSlice(this.BreastRadObservedSize, 0, "1"),
-                    new ProfileTargetSlice(this.BreastRadObservedCount, 0, "1")
-                };
-                e.Find("hasMember").SliceByUrl(targets);
-                e.Node.AddProfileTargets(targets);
-            }
+                    IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));
+                    valueSetIntroDoc
+                        .ReviewedStatus(ReviewStatus.NotReviewed)
+                        .ValueSet(binding);
+                    ;
+                    String outputPath = valueSetIntroDoc.Save();
+                    this.fc.Mark(outputPath);
+                }
 
-            e.Select("value[x]")
-                .Type("CodeableConcept")
-                .Binding(binding.Url, BindingStrength.Required)
-                ;
-            e.AddValueSetLink(binding);
-            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "an ForeignObject", binding);
+                SDefEditor e = this.CreateEditor("BreastRadForeignObject",
+                        "ForeignObject",
+                        new string[] { "ForeignObject" },
+                        ObservationUrl,
+                        $"{Group_CommonResources}/Foreign",
+                        out breastRadForeignObject)
+                    .Description("Breast Radiology Foreign Object Observation",
+                        new Markdown()
+                            .Paragraph("These are foreign objects found during a breast radiology exam:")
+                            .Todo(
+                                "there is no way to say that the following abnormalities do not exist, only that one does exist.",
+                                "fill in code descriptions",
+                                "How are metal and metallic codes different",
+                                "body jewelery codes",
+                                "are wire and wire fragment codes the same."
+                            )
+                    )
+                    .AddFragRef(await this.ObservationNoDeviceFragment())
+                    .AddFragRef(await this.ObservationCodedValueFragment())
+                    .AddFragRef(await this.ObservationSectionFragment())
+                    ;
+
+                {
+                    ProfileTargetSlice[] targets = new ProfileTargetSlice[]
+                    {
+                    new ProfileTargetSlice(await this.BreastRadObservedChanges(), 0, "*"),
+                    new ProfileTargetSlice(await this.BreastRadObservedSize(), 0, "1"),
+                    new ProfileTargetSlice(await this.BreastRadObservedCount(), 0, "1")
+                    };
+                    e.Find("hasMember").SliceByUrl(targets);
+                    e.Node.AddProfileTargets(targets);
+                }
+
+                e.Select("value[x]")
+                    .Type("CodeableConcept")
+                    .Binding(binding.Url, BindingStrength.Required)
+                    ;
+                e.AddValueSetLink(binding);
+                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "an ForeignObject", binding);
+            });
         }
     }
 }

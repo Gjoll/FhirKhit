@@ -4,19 +4,17 @@ using PreFhir;
 using System;
 using System.Collections.Generic;
 using System.Text;
-
+using VTask = System.Threading.Tasks.Task;
+using StringTask = System.Threading.Tasks.Task<string>;
 namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker
     {
-        String ObservationFragment
+        public async StringTask ObservationFragment()
         {
-            get
-            {
-                if (observationFragment == null)
-                    CreateObservationFragment();
-                return observationFragment;
-            }
+            if (observationFragment == null)
+                await CreateObservationFragment();
+            return observationFragment;
         }
         String observationFragment = null;
 
@@ -24,35 +22,38 @@ namespace BreastRadiology.XUnitTests
         /// Create FindingObservationFragment.
         /// </summary>
         /// <returns></returns>
-        void CreateObservationFragment()
+        async VTask CreateObservationFragment()
         {
-            SDefEditor e = this.CreateFragment("BreastRadObservationFragment",
-                "BreastRad Observation Fragment",
-                    new string[] { "Observation", "Fragment" },
-                ObservationUrl,
-                out observationFragment)
-                .Description("Base fragment for all BreastRad observations.",
-                    new Markdown()
-                        .Paragraph("Base fragment that performs common constrains used in all breast radiology observations.")
-                        .Todo(
-                        )
-                )
-                .AddFragRef(this.HeaderFragment)
-                .AddFragRef(this.CategoryFragment)
-            ;
-            e.Select("subject").Single();
+            await VTask.Run(async () =>
+            {
+                SDefEditor e = this.CreateFragment("BreastRadObservationFragment",
+                    "BreastRad Observation Fragment",
+                        new string[] { "Observation", "Fragment" },
+                    ObservationUrl,
+                    out observationFragment)
+                    .Description("Base fragment for all BreastRad observations.",
+                        new Markdown()
+                            .Paragraph("Base fragment that performs common constrains used in all breast radiology observations.")
+                            .Todo(
+                            )
+                    )
+                    .AddFragRef(await this.HeaderFragment())
+                    .AddFragRef(await this.CategoryFragment())
+                ;
+                e.Select("subject").Single();
 
-            e.Select("component").Zero();
-            e.Select("interpretation").Zero();
-            e.Select("referenceRange").Zero();
-            e.Select("basedOn").Zero();
-            e.Select("derivedFrom").Zero();
-            e.Select("partOf").Zero();
-            e.Select("focus").Zero();
-            e.Select("specimen").Zero();
-            e.Select("contained").Zero();
+                e.Select("component").Zero();
+                e.Select("interpretation").Zero();
+                e.Select("referenceRange").Zero();
+                e.Select("basedOn").Zero();
+                e.Select("derivedFrom").Zero();
+                e.Select("partOf").Zero();
+                e.Select("focus").Zero();
+                e.Select("specimen").Zero();
+                e.Select("contained").Zero();
 
-            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).Fragment($"Resource fragment used by all BreatRad observations.");
+                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).Fragment($"Resource fragment used by all BreatRad observations.");
+            });
         }
     }
 }

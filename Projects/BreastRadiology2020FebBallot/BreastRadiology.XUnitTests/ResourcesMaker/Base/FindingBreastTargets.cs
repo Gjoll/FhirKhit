@@ -2,33 +2,31 @@ using FhirKhit.Tools;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using VTask = System.Threading.Tasks.Task;
 
 namespace BreastRadiology.XUnitTests
 {
+    using XTask = System.Threading.Tasks.Task<ProfileTargetSlice[]>;
     partial class ResourcesMaker : ConverterBase
     {
-        ProfileTargetSlice[] FindingBreastTargets
+        async XTask FindingBreastTargets()
         {
-            get
-            {
-                if (findingBreastTargets == null)
-                    findingBreastTargets = CreateFindingBreastTargets();
-                return findingBreastTargets;
-            }
+            if (findingBreastTargets == null)
+                await CreateFindingBreastTargets();
+            return findingBreastTargets;
         }
 
         ProfileTargetSlice[] findingBreastTargets = null;
 
-        ProfileTargetSlice[] CreateFindingBreastTargets()
+        async VTask CreateFindingBreastTargets()
         {
-            ProfileTargetSlice[] retVal = new ProfileTargetSlice[]
+            findingBreastTargets = new ProfileTargetSlice[]
             {
-                new ProfileTargetSlice(this.BiRadsAssessmentCategory, 1, "1"),
-                new ProfileTargetSlice(this.FindingMammo, 0, "*"),
-                new ProfileTargetSlice(this.FindingMri, 0, "*"),
-                new ProfileTargetSlice(this.FindingUltraSound, 0, "*")
+                new ProfileTargetSlice(await this.BiRadsAssessmentCategory(), 1, "1"),
+                new ProfileTargetSlice(await this.FindingMammo(), 0, "*"),
+                new ProfileTargetSlice(await this.FindingMri(), 0, "*"),
+                new ProfileTargetSlice(await this.FindingUltraSound(), 0, "*")
             };
-            return retVal;
         }
     }
 }

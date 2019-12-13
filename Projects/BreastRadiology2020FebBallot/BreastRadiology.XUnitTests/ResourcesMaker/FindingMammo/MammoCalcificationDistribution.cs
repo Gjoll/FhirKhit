@@ -8,32 +8,33 @@ using FhirKhit.Tools;
 using FhirKhit.Tools.R4;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
+using VTask = System.Threading.Tasks.Task;
+using StringTask = System.Threading.Tasks.Task<string>;
 
 namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker : ConverterBase
     {
-        String MammoCalcificationDistribution
+        async StringTask MammoCalcificationDistribution()
         {
-            get
-            {
-                if (mammoCalcificationDistribution == null)
-                    CreateMammoCalcificationDistribution();
-                return mammoCalcificationDistribution;
-            }
+            if (mammoCalcificationDistribution == null)
+                await CreateMammoCalcificationDistribution();
+            return mammoCalcificationDistribution;
         }
         String mammoCalcificationDistribution = null;
 
-        void CreateMammoCalcificationDistribution()
+        async VTask CreateMammoCalcificationDistribution()
         {
-            ValueSet binding = this.CreateValueSet(
-                "MammoCalcificationDistribution",
-                "Mammo Calcification Distribution",
-                new string[] {"Mammo", "Calcification", "Distribution", "Values"},
-                "Mammography calcification distribution codes.",
-                Group_MammoCodes,
-                new ConceptDef[]
-                {
+            await VTask.Run(async () =>
+            {
+                ValueSet binding = this.CreateValueSet(
+                    "MammoCalcificationDistribution",
+                    "Mammo Calcification Distribution",
+                    new string[] { "Mammo", "Calcification", "Distribution", "Values" },
+                    "Mammography calcification distribution codes.",
+                    Group_MammoCodes,
+                    new ConceptDef[]
+                    {
                     new ConceptDef("Diffuse",
                         "Diffuse Calcification Distribution",
                         new Definition()
@@ -87,49 +88,50 @@ namespace BreastRadiology.XUnitTests
                             .Line("A segmental distribution may elevate the degree of suspicion for calcifications such as punctate or amorphous forms.")
                         .CiteEnd(BiRadCitation)
                     )
-                }
-            );
+                    }
+                );
 
 
-            {
-                IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));
-                valueSetIntroDoc
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
-                    .ValueSet(binding);
+                {
+                    IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));
+                    valueSetIntroDoc
+                        .ReviewedStatus(ReviewStatus.NotReviewed)
+                        .ValueSet(binding);
                     ;
-                String outputPath = valueSetIntroDoc.Save();
-                this.fc.Mark(outputPath);
-            }
+                    String outputPath = valueSetIntroDoc.Save();
+                    this.fc.Mark(outputPath);
+                }
 
-            SDefEditor e =  this.CreateEditor("BreastRadMammoCalcificationDistribution",
-                    "Mammo Calcification Distribution",
-                    new string[] {"Mammo", "Calcification", "Distribution"},
-                    ObservationUrl,
-                    $"{Group_MammoResources}/Calcification/Distribution",
-                    out mammoCalcificationDistribution)
-                .Description("Breast Radiology Mammography Calcification Distribution Observation",
-                    new Markdown()
-                        .Paragraph("This resource describes the calcification distribution observed.")
-                        .BiradHeader()
-                        .BlockQuote("These descriptors are used to indicate the arrangement of calcifications in the breast. Multiple")
-                        .BlockQuote("similar groups may be described in the report when there is more than one group of calcifications")
-                        .BlockQuote("that are similar in morphology and distribution. In evaluating the likelihood of malignancy for calcifications, ")
-                        .BlockQuote("distribution is at least as important as morphology.")
-                        .BiradFooter()
-                        .Todo(
-                        )
-                )
-                .AddFragRef(this.ObservationNoDeviceFragment)
-                .AddFragRef(this.ObservationCodedValueFragment)
-                .AddFragRef(this.ObservationLeafFragment)
-                ;
+                SDefEditor e = this.CreateEditor("BreastRadMammoCalcificationDistribution",
+                        "Mammo Calcification Distribution",
+                        new string[] { "Mammo", "Calcification", "Distribution" },
+                        ObservationUrl,
+                        $"{Group_MammoResources}/Calcification/Distribution",
+                        out mammoCalcificationDistribution)
+                    .Description("Breast Radiology Mammography Calcification Distribution Observation",
+                        new Markdown()
+                            .Paragraph("This resource describes the calcification distribution observed.")
+                            .BiradHeader()
+                            .BlockQuote("These descriptors are used to indicate the arrangement of calcifications in the breast. Multiple")
+                            .BlockQuote("similar groups may be described in the report when there is more than one group of calcifications")
+                            .BlockQuote("that are similar in morphology and distribution. In evaluating the likelihood of malignancy for calcifications, ")
+                            .BlockQuote("distribution is at least as important as morphology.")
+                            .BiradFooter()
+                            .Todo(
+                            )
+                    )
+                    .AddFragRef(await this.ObservationNoDeviceFragment())
+                    .AddFragRef(await this.ObservationCodedValueFragment())
+                    .AddFragRef(await this.ObservationLeafFragment())
+                    ;
 
-            e.Select("value[x]")
-                .Type("CodeableConcept")
-                .Binding(binding.Url, BindingStrength.Required)
-                ;
-            e.AddValueSetLink(binding);
-            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "a mammography calcification distribution", binding);
+                e.Select("value[x]")
+                    .Type("CodeableConcept")
+                    .Binding(binding.Url, BindingStrength.Required)
+                    ;
+                e.AddValueSetLink(binding);
+                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "a mammography calcification distribution", binding);
+            });
         }
     }
 }

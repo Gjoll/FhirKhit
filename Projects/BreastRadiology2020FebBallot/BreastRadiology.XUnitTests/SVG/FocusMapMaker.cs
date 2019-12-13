@@ -1,10 +1,12 @@
 using FhirKhit.Tools;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace BreastRadiology.XUnitTests
 {
@@ -20,7 +22,7 @@ namespace BreastRadiology.XUnitTests
             public List<ResourceMap.Node> Children = new List<ResourceMap.Node>();
         }
 
-        Dictionary<String, FocusNode> focusNodes = new Dictionary<string, FocusNode>();
+        ConcurrentDictionary<String, FocusNode> focusNodes = new ConcurrentDictionary<string, FocusNode>();
         String graphicsDir;
         String contentDir;
 
@@ -111,11 +113,17 @@ namespace BreastRadiology.XUnitTests
 
         void GraphNodes()
         {
+            List<Task> tasks = new List<Task>();
+
             foreach (FocusNode fragmentNode in this.focusNodes.Values)
             {
                 if (fragmentNode.Focus.Name.Contains("Fragment") == false)
-                    GraphNode(fragmentNode);
+                {
+                    Task t = Task.Run(() => GraphNode(fragmentNode));
+                    tasks.Add(t);
+                }
             }
+            Task.WaitAll(tasks.ToArray());
         }
 
         void CreateNodes()
@@ -126,7 +134,8 @@ namespace BreastRadiology.XUnitTests
                 {
                     Focus = mapNode
                 };
-                focusNodes.Add(mapNode.Name, fNode);
+                if (focusNodes.TryAdd(mapNode.Name, fNode) == false)
+                    throw new Exception("Error inserting node into focus node dictionary");
             }
         }
 

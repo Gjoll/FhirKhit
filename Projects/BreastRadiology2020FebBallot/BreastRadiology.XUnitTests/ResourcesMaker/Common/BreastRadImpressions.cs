@@ -9,23 +9,22 @@ using FhirKhit.Tools.R4;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 using PreFhir;
+using VTask = System.Threading.Tasks.Task;
+using StringTask = System.Threading.Tasks.Task<string>;
 
 namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker
     {
-        String BreastRadImpression
+        async StringTask BreastRadImpression()
         {
-            get
-            {
-                if (breastRadImpression == null)
-                    CreateBreastRadImpression();
-                return breastRadImpression;
-            }
+            if (breastRadImpression == null)
+                await CreateBreastRadImpression();
+            return breastRadImpression;
         }
         String breastRadImpression = null;
 
-        void CreateBreastRadImpression()
+        async VTask CreateBreastRadImpression()
         {
             SDefEditor e = this.CreateEditor("BreastRadImpression",
                     "Impression",
@@ -39,7 +38,7 @@ namespace BreastRadiology.XUnitTests
                         .Todo(
                         )
                 )
-                .AddFragRef(this.HeaderFragment)
+                .AddFragRef(await this.HeaderFragment())
                 ;
 
             e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed);

@@ -9,32 +9,33 @@ using FhirKhit.Tools.R4;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 using PreFhir;
+using VTask = System.Threading.Tasks.Task;
+using StringTask = System.Threading.Tasks.Task<string>;
 
 namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker
     {
-        String BreastRadObservedChanges
+        async StringTask BreastRadObservedChanges()
         {
-            get
-            {
-                if (breastRadObservedChanges == null)
-                    CreateBreastRadObservedChanges();
-                return breastRadObservedChanges;
-            }
+            if (breastRadObservedChanges == null)
+                await CreateBreastRadObservedChanges();
+            return breastRadObservedChanges;
         }
         String breastRadObservedChanges = null;
 
-        void CreateBreastRadObservedChanges()
+        async VTask CreateBreastRadObservedChanges()
         {
-            ValueSet binding = this.CreateValueSet(
-                "BreastRadObservedChanges",
-                "Observed Changes",
-                new string[] {"Observed", "Change", "Values"},
-                "Codes defining types of observed changes in an abnormality over time.",
-                Group_CommonCodes,
-                new ConceptDef[]
-                {
+            await VTask.Run(async () =>
+            {
+                ValueSet binding = this.CreateValueSet(
+                    "BreastRadObservedChanges",
+                    "Observed Changes",
+                    new string[] { "Observed", "Change", "Values" },
+                    "Codes defining types of observed changes in an abnormality over time.",
+                    Group_CommonCodes,
+                    new ConceptDef[]
+                    {
                     new ConceptDef("New",
                         "New Observation",
                         new Definition()
@@ -100,43 +101,44 @@ namespace BreastRadiology.XUnitTests
                         new Definition()
                             .Line("Item(s) have decreased in number")
                         ),
-                })
-            ;
+                    })
+                ;
 
 
-            {
-                IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));
-                valueSetIntroDoc
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
-                    .ValueSet(binding);
+                {
+                    IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));
+                    valueSetIntroDoc
+                        .ReviewedStatus(ReviewStatus.NotReviewed)
+                        .ValueSet(binding);
                     ;
-                String outputPath = valueSetIntroDoc.Save();
-                this.fc.Mark(outputPath);
-            }
+                    String outputPath = valueSetIntroDoc.Save();
+                    this.fc.Mark(outputPath);
+                }
 
-            SDefEditor e = this.CreateEditor("BreastRadObservedChanges",
-                    "Observed Changes",
-                    new string[] { "Changes" },
-                    ObservationUrl,
-                    $"{Group_CommonResources}/ObservedChanges",
-                    out breastRadObservedChanges)
-                .Description("Breast Radiology Observed Changes Observation",
-                    new Markdown()
-                        .MissingObservation("an observed change")
-                        .Todo(
-                        )
-                )
-                .AddFragRef(this.ObservationNoDeviceFragment)
-                .AddFragRef(this.ObservationCodedValueFragment)
-                .AddFragRef(this.ObservationLeafFragment)
-                ;
+                SDefEditor e = this.CreateEditor("BreastRadObservedChanges",
+                        "Observed Changes",
+                        new string[] { "Changes" },
+                        ObservationUrl,
+                        $"{Group_CommonResources}/ObservedChanges",
+                        out breastRadObservedChanges)
+                    .Description("Breast Radiology Observed Changes Observation",
+                        new Markdown()
+                            .MissingObservation("an observed change")
+                            .Todo(
+                            )
+                    )
+                    .AddFragRef(await this.ObservationNoDeviceFragment())
+                    .AddFragRef(await this.ObservationCodedValueFragment())
+                    .AddFragRef(await this.ObservationLeafFragment())
+                    ;
 
-            e.Select("value[x]")
-                .Type("CodeableConcept")
-                .Binding(binding.Url, BindingStrength.Required)
-                ;
-            e.AddValueSetLink(binding);
-            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "an abnormality observed change", binding);
+                e.Select("value[x]")
+                    .Type("CodeableConcept")
+                    .Binding(binding.Url, BindingStrength.Required)
+                    ;
+                e.AddValueSetLink(binding);
+                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "an abnormality observed change", binding);
+            });
         }
     }
 }

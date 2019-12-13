@@ -19,19 +19,31 @@ namespace FhirKhit.Tools
 
         public FileCleaner(String outputDir, String fileFilter = "*.*")
         {
-            this.Add(outputDir, fileFilter);
+            lock (this)
+            {
+                this.Add(outputDir, fileFilter);
+            }
         }
 
         public void Add(String outputDir, String fileFilter = "*.*")
         {
-            if (Directory.Exists(outputDir) == true)
+            lock (this)
             {
-                foreach (String existingFile in Directory.GetFiles(outputDir, fileFilter))
-                    this.existingFiles.Add(existingFile.ToLower());
+                if (Directory.Exists(outputDir) == true)
+                {
+                    foreach (String existingFile in Directory.GetFiles(outputDir, fileFilter))
+                        this.existingFiles.Add(existingFile.ToLower());
+                }
             }
         }
 
-        public void Mark(String filePath) => this.existingFiles.Remove(filePath.ToLower());
+        public void Mark(String filePath)
+        {
+            lock (this)
+            {
+                this.existingFiles.Remove(filePath.ToLower());
+            }
+        }
 
         public void Dispose()
         {
@@ -40,11 +52,14 @@ namespace FhirKhit.Tools
 
         public void DeleteUnMarkedFiles()
         {
-            foreach (String existingFile in this.existingFiles)
+            lock (this)
             {
-                this.TryDeleteFile(existingFile);
+                foreach (String existingFile in this.existingFiles)
+                {
+                    this.TryDeleteFile(existingFile);
+                }
+                this.existingFiles.Clear();
             }
-            this.existingFiles.Clear();
         }
 
 

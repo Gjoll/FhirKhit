@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Text;
+using System.Threading;
 
 namespace PreFhir
 {
@@ -249,8 +250,16 @@ namespace PreFhir
         {
             if (cleanFlag == true)
                 fc.Add(outputDir, "*.json");
+            List<System.Threading.Tasks.Task> tasks = new List<System.Threading.Tasks.Task>();
+
             foreach (ProcessItem processedItem in this.processed.Values)
-                SaveResource(outputDir, processedItem);
+            {
+                var tokenSource = new CancellationTokenSource();
+                var token = tokenSource.Token;
+                var t = SaveResourceAsync(outputDir, processedItem);
+                tasks.Add(t);
+            }
+            System.Threading.Tasks.Task.WaitAll(tasks.ToArray());
             fc.Dispose();
         }
 
@@ -258,7 +267,7 @@ namespace PreFhir
         /// Save resource to the indicated dir.
         /// </summary>
         /// <param name="outputDir"></param>
-        void SaveResource(String outputDir,
+        async System.Threading.Tasks.Task SaveResourceAsync(String outputDir,
             ProcessItem processedItem)
         {
             processedItem.Resource.RemoveExtension(FragmentUrl);
@@ -270,9 +279,9 @@ namespace PreFhir
                     // Dont save fragments....
                     if (sDef.IsFragment())
                         return;
-                    // force recreation of snapshot. Adds missing definitions and base elements.
-                    sDef.Snapshot = null;
-                    SnapshotCreator.Create(sDef);
+                    // recreate snapshot if missing
+                    if (sDef.Snapshot == null)
+                        SnapshotCreator.Create(sDef);
                     outputName = Path.Combine(outputDir, $"StructureDefinition-{sDef.Name}.json");
                     break;
 
@@ -287,7 +296,7 @@ namespace PreFhir
                 default:
                     throw new NotImplementedException($"Unimplemented type {processedItem.GetType().Name}");
             }
-            processedItem.Resource.SaveJson(outputName);
+            await processedItem.Resource.SaveJsonAsync(outputName);
             this.fc.Mark(outputName);
         }
 
@@ -384,7 +393,7 @@ namespace PreFhir
 
             // save intermediate merged file?
             if (String.IsNullOrEmpty(this.MergedDir) == false)
-                SaveResource(MergedDir, processItem);
+                SaveResourceAsync(MergedDir, processItem).Wait();
 
             return true;
         }
@@ -407,12 +416,6 @@ namespace PreFhir
                 List<ElementDefinition> elementDefinitions = new List<ElementDefinition>();
                 differentialNode.CopyTo(elementDefinitions);
                 sDef.Differential.Element = elementDefinitions;
-            }
-
-            {
-                List<ElementDefinition> elementDefinitions = new List<ElementDefinition>();
-                processedItem.SnapNode.CopyTo(elementDefinitions);
-                sDef.Snapshot.Element = elementDefinitions;
             }
         }
     }

@@ -9,32 +9,33 @@ using FhirKhit.Tools.R4;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 using PreFhir;
+using VTask = System.Threading.Tasks.Task;
+using StringTask = System.Threading.Tasks.Task<string>;
 
 namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker : ConverterBase
     {
-        String USMassPosteriorAcousticFeatures
+        async StringTask USMassPosteriorAcousticFeatures()
         {
-            get
-            {
-                if (usMassPosteriorAcousticFeatures == null)
-                    CreateUSMassPosteriorAcousticFeatures();
-                return usMassPosteriorAcousticFeatures;
-            }
+            if (usMassPosteriorAcousticFeatures == null)
+                await CreateUSMassPosteriorAcousticFeatures();
+            return usMassPosteriorAcousticFeatures;
         }
         String usMassPosteriorAcousticFeatures = null;
 
-        void CreateUSMassPosteriorAcousticFeatures()
+        async VTask CreateUSMassPosteriorAcousticFeatures()
         {
-            ValueSet binding = this.CreateValueSet(
-                "BreastRadUSMassPosteriorAcousticFeatures",
-                "US Mass Posterior Acoustic Features",
-                new string[] {"US Mass", "Posterior Acoustic", "Feature Values"},
-                "Ultra-sound mass Posterior acoustic features codes.",
-                Group_USCodes,
-                new ConceptDef[]
-                {
+            await VTask.Run(async () =>
+            {
+                ValueSet binding = this.CreateValueSet(
+                    "BreastRadUSMassPosteriorAcousticFeatures",
+                    "US Mass Posterior Acoustic Features",
+                    new string[] { "US Mass", "Posterior Acoustic", "Feature Values" },
+                    "Ultra-sound mass Posterior acoustic features codes.",
+                    Group_USCodes,
+                    new ConceptDef[]
+                    {
                     new ConceptDef("NoPosteriorAcousticFeatures",
                         "No Posterior Acoustic Features",
                         new Definition()
@@ -82,35 +83,36 @@ namespace BreastRadiology.XUnitTests
                             .Line("acoustic shadowing.")
                         .CiteEnd(BiRadCitation)
                         )
-                    });
+                        });
 
-            SDefEditor e = this.CreateEditor("BreastRadUSMassPosteriorAcousticFeatures",
-                    "US Mass Posterior Acoustic Features",
-                    new string[] { "US Mass", "Posterior Acoustic", "Features" },
-                    ObservationUrl,
-                    $"{Group_USResources}/Mass/PosteriorAcousticFeatures",
-                    out usMassPosteriorAcousticFeatures)
-                .Description("Breast Radiology Ultra-Sound Mass Posterior Acoustic Features Observation",
-                    new Markdown()
-                        .BiradHeader()
-                        .BlockQuote("Posterior acoustic features represent the attenuation characteristics of a mass with respect to its")
-                        .BlockQuote("acoustic transmission. Attenuation (shadowing) and enhancement are additional attributes of")
-                        .BlockQuote("masses, mostly of secondary rather than primary predictive value..")
-                        .BiradFooter()
-                        .Todo(
+                SDefEditor e = this.CreateEditor("BreastRadUSMassPosteriorAcousticFeatures",
+                        "US Mass Posterior Acoustic Features",
+                        new string[] { "US Mass", "Posterior Acoustic", "Features" },
+                        ObservationUrl,
+                        $"{Group_USResources}/Mass/PosteriorAcousticFeatures",
+                        out usMassPosteriorAcousticFeatures)
+                    .Description("Breast Radiology Ultra-Sound Mass Posterior Acoustic Features Observation",
+                        new Markdown()
+                            .BiradHeader()
+                            .BlockQuote("Posterior acoustic features represent the attenuation characteristics of a mass with respect to its")
+                            .BlockQuote("acoustic transmission. Attenuation (shadowing) and enhancement are additional attributes of")
+                            .BlockQuote("masses, mostly of secondary rather than primary predictive value..")
+                            .BiradFooter()
+                            .Todo(
+                            )
                         )
-                    )
-                .AddFragRef(this.ObservationNoDeviceFragment)
-                .AddFragRef(this.ObservationCodedValueFragment)
-                .AddFragRef(this.ObservationLeafFragment)
-                ;
+                    .AddFragRef(await this.ObservationNoDeviceFragment())
+                    .AddFragRef(await this.ObservationCodedValueFragment())
+                    .AddFragRef(await this.ObservationLeafFragment())
+                    ;
 
-            e.Select("value[x]")
-                .Type("CodeableConcept")
-                .Binding(binding.Url, BindingStrength.Required)
-                ;
-            e.AddValueSetLink(binding);
-            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "an ultra-sound mass posterior acoustic feature", binding);
+                e.Select("value[x]")
+                    .Type("CodeableConcept")
+                    .Binding(binding.Url, BindingStrength.Required)
+                    ;
+                e.AddValueSetLink(binding);
+                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "an ultra-sound mass posterior acoustic feature", binding);
+            });
         }
     }
 }

@@ -8,46 +8,50 @@ using FhirKhit.Tools;
 using FhirKhit.Tools.R4;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
+using VTask = System.Threading.Tasks.Task;
+using StringTask = System.Threading.Tasks.Task<string>;
 
 namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker : ConverterBase
     {
-        String SectionFindingsLeftBreast
+        public async StringTask SectionFindingsLeftBreast()
         {
-            get
+            if (sectionFindingsLeftBreast == null)
             {
-                if (sectionFindingsLeftBreast == null)
-                     CreateSectionFindingsLeftBreast();
-                return sectionFindingsLeftBreast;
+                await CreateSectionFindingsLeftBreast();
             }
+            return sectionFindingsLeftBreast;
         }
         String sectionFindingsLeftBreast = null;
 
-        void CreateSectionFindingsLeftBreast()
+        async VTask CreateSectionFindingsLeftBreast()
         {
-            SDefEditor e = this.CreateEditor("BreastRadSectionFindingsLeftBreast",
-                    "Findings Left Breast",
-                    new string[] {"Left Breast"},
-                    ObservationUrl,
-                    $"{Group_BaseResources}/Findings/LeftBreast",
-                    out sectionFindingsLeftBreast)
-                .Description("Findings Left Breast Section",
-                    new Markdown()
-                    .Paragraph("This resource is the head of the tree of observations made of the left breast during a breast radiology exam.")
-                    .Paragraph("Child observations are referenced by the 'Observation.hasMember' field.")
-                    .Todo(
-                    )
-                )
-                .AddFragRef(this.ObservationNoDeviceFragment)
-                .AddFragRef(this.ObservationSectionFragment)
-                .AddFragRef(this.ObservationNoValueFragment)
-                ;
-            e.Select("bodySite").Zero();
-            e.Find("hasMember").SliceByUrl(this.FindingBreastTargets);
-            e.Node.AddProfileTargets(this.FindingBreastTargets);
+            await VTask.Run(async () =>
+            {
+                SDefEditor e = this.CreateEditor("BreastRadSectionFindingsLeftBreast",
+                       "Findings Left Breast",
+                       new string[] { "Left Breast" },
+                       ObservationUrl,
+                       $"{Group_BaseResources}/Findings/LeftBreast",
+                       out sectionFindingsLeftBreast)
+                   .Description("Findings Left Breast Section",
+                       new Markdown()
+                       .Paragraph("This resource is the head of the tree of observations made of the left breast during a breast radiology exam.")
+                       .Paragraph("Child observations are referenced by the 'Observation.hasMember' field.")
+                       .Todo(
+                       )
+                   )
+                   .AddFragRef(await this.ObservationNoDeviceFragment())
+                   .AddFragRef(await this.ObservationSectionFragment())
+                   .AddFragRef(await this.ObservationNoValueFragment())
+                   ;
+                e.Select("bodySite").Zero();
+                e.Find("hasMember").SliceByUrl(await this.FindingBreastTargets());
+                e.Node.AddProfileTargets(await this.FindingBreastTargets());
 
-            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationSection($"Abnormality Left Breast Finding");
+                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationSection($"Abnormality Left Breast Finding");
+            });
         }
     }
 }

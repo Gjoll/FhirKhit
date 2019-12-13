@@ -9,41 +9,42 @@ using FhirKhit.Tools.R4;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Serialization;
 using PreFhir;
+using VTask = System.Threading.Tasks.Task;
+using StringTask = System.Threading.Tasks.Task<string>;
 
 namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker
     {
-        String BreastRadMassShape
+        async StringTask BreastRadMassShape()
         {
-            get
-            {
-                if (breastRadMassShape == null)
-                    CreateBreastRadMassShape();
-                return breastRadMassShape;
-            }
+            if (breastRadMassShape == null)
+                await CreateBreastRadMassShape();
+            return breastRadMassShape;
         }
         String breastRadMassShape = null;
 
-        void CreateBreastRadMassShape()
+        async VTask CreateBreastRadMassShape()
         {
-            ValueSet binding = this.CreateValueSet(
-                    "BreastRadMassShape",
-                    "Mass Shape",
-                    new string[] {"Mass", "Shape", "Values"},
-                    "Codes defining mass shape values.",
-                    Group_CommonCodes,
-                    new ConceptDef[]
-                    {
-                        new ConceptDef("Oval", 
-                            "Elliptical/Egg-shaped Mass", 
+            await VTask.Run(async () =>
+            {
+                ValueSet binding = this.CreateValueSet(
+                        "BreastRadMassShape",
+                        "Mass Shape",
+                        new string[] { "Mass", "Shape", "Values" },
+                        "Codes defining mass shape values.",
+                        Group_CommonCodes,
+                        new ConceptDef[]
+                        {
+                        new ConceptDef("Oval",
+                            "Elliptical/Egg-shaped Mass",
                             new Definition()
                             .CiteStart()
                                 .Line("A mass that is elliptical or egg-shaped (may include 2 or 3 undulations, , i.e., \"gently lobulated\" or \"macrolobulated\").")
                             .CiteEnd(BiRadCitation)
                             ),
-                        new ConceptDef("Round", 
-                            "Round Mass", 
+                        new ConceptDef("Round",
+                            "Round Mass",
                             new Definition()
                             .CiteStart()
                                 .Line("A mass that is spherical, ball-shaped, circular, or globular in shape.")
@@ -52,50 +53,51 @@ namespace BreastRadiology.XUnitTests
                                 .Line("Breast masses with a ROUND shape are not commonly seen with breast ultrasound.")
                             .CiteEnd(BiRadCitation)
                             ),
-                        new ConceptDef("Irregular", 
-                            "Irregular Mass", 
+                        new ConceptDef("Irregular",
+                            "Irregular Mass",
                             new Definition()
                             .CiteStart()
                                 .Line("The shape of the mass is neither round nor oval.")
                                 .Line("For mammography, use of this descriptor usually implies a suspicious finding.")
                             .CiteEnd(BiRadCitation)
                             )
-                    })
-                ;
-
-            {
-                IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));
-                valueSetIntroDoc
-                    .ReviewedStatus(ReviewStatus.NotReviewed)
-                    .ValueSet(binding);
+                        })
                     ;
-                String outputPath = valueSetIntroDoc.Save();
-                this.fc.Mark(outputPath);
-            }
 
-            SDefEditor e = this.CreateEditor("BreastRadMassShape",
-                    "Mass Shape",
-                    new string[] { "Mass", "Shape" },
-                    ObservationUrl,
-                    $"{Group_CommonResources}/MassShape",
-                    out breastRadMassShape)
-                .Description("Breast Radiology Mass Shape Observation",
-                    new Markdown()
-                        .MissingObservation("a mass shape")
-                        .Todo(
-                        )
-                )
-                .AddFragRef(this.ObservationNoDeviceFragment)
-                .AddFragRef(this.ObservationCodedValueFragment)
-                .AddFragRef(this.ObservationLeafFragment)
-                ;
+                {
+                    IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));
+                    valueSetIntroDoc
+                        .ReviewedStatus(ReviewStatus.NotReviewed)
+                        .ValueSet(binding);
+                    ;
+                    String outputPath = valueSetIntroDoc.Save();
+                    this.fc.Mark(outputPath);
+                }
 
-            e.Select("value[x]")
-                .Type("CodeableConcept")
-                .Binding(binding.Url, BindingStrength.Required)
-                ;
-            e.AddValueSetLink(binding);
-            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "a mammography mass shape", binding);
+                SDefEditor e = this.CreateEditor("BreastRadMassShape",
+                        "Mass Shape",
+                        new string[] { "Mass", "Shape" },
+                        ObservationUrl,
+                        $"{Group_CommonResources}/MassShape",
+                        out breastRadMassShape)
+                    .Description("Breast Radiology Mass Shape Observation",
+                        new Markdown()
+                            .MissingObservation("a mass shape")
+                            .Todo(
+                            )
+                    )
+                    .AddFragRef(await this.ObservationNoDeviceFragment())
+                    .AddFragRef(await this.ObservationCodedValueFragment())
+                    .AddFragRef(await this.ObservationLeafFragment())
+                    ;
+
+                e.Select("value[x]")
+                    .Type("CodeableConcept")
+                    .Binding(binding.Url, BindingStrength.Required)
+                    ;
+                e.AddValueSetLink(binding);
+                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "a mammography mass shape", binding);
+            });
         }
     }
 }
