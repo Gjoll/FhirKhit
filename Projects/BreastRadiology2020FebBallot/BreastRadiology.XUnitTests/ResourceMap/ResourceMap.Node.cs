@@ -19,7 +19,7 @@ namespace BreastRadiology.XUnitTests
             /// <summary>
             /// Url of the resource this represents.
             /// </summary>
-            public String ResourceUrl {get; }
+            public String ResourceUrl { get; }
 
             /// <summary>
             /// Links from this resource to an other resource.
@@ -28,8 +28,8 @@ namespace BreastRadiology.XUnitTests
 
             Dictionary<String, Link> links = new Dictionary<String, Link>();
 
-            public Node(String resourceUrl, 
-                String[] mapName, 
+            public Node(String resourceUrl,
+                String[] mapName,
                 String structureName,
                 String baseName)
             {
@@ -82,6 +82,8 @@ namespace BreastRadiology.XUnitTests
                 String url,
                 bool showChildren)
             {
+                if (url.StartsWith("http://hl7.org/fhir/StructureDefinition/") == true)
+                    return;
                 this.AddLink(new Link(linkType, url, showChildren));
             }
 

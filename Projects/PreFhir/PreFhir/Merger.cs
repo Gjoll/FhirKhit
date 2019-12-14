@@ -63,7 +63,6 @@ namespace PreFhir
                     case StructureDefinition mergeSDef:
                         if (this.mergeItem.SDef.Differential.Element.Count() == 0)
                             return true;
-
                         this.mergeItem.LoadMerge();
                         if (this.mergeItem.FragmentFlag == false)
                         {
@@ -489,9 +488,6 @@ namespace PreFhir
 
             if (mergeElement.Type.Count == 0)
                 return;
-
-            //if ((this.preFhir.BreakFlag == true) && (baseElement.Path == "Observation.value[x]"))
-            //    Debugger.Break();
 
             Dictionary<String, ElementDefinition.TypeRefComponent> baseTypes = new Dictionary<string, ElementDefinition.TypeRefComponent>();
             foreach (ElementDefinition.TypeRefComponent typeRef in baseElement.Type)

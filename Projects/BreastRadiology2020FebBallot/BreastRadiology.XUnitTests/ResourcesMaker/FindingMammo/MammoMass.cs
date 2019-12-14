@@ -58,6 +58,16 @@ namespace BreastRadiology.XUnitTests
                 {
                     ProfileTargetSlice[] targets = new ProfileTargetSlice[]
                     {
+                    new ProfileTargetSlice(ImagingStudyUrl, 0, "*"),
+                    new ProfileTargetSlice(await this.AimAnnotatedImagingStudy(), 0, "1"),
+                    };
+                    e.Find("derivedFrom").SliceByUrl(targets);
+                    e.Node.AddProfileTargets(targets);
+                }
+
+                {
+                    ProfileTargetSlice[] targets = new ProfileTargetSlice[]
+                    {
                     new ProfileTargetSlice(await this.BreastRadObservedSize(), 0, "1"),
                     new ProfileTargetSlice(await this.BreastRadObservedCount(), 0, "1"),
                     new ProfileTargetSlice(await this.BreastRadMassShape(), 0, "1"),

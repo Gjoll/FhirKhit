@@ -244,6 +244,10 @@ namespace BreastRadiology.XUnitTests
                 p.AddGrouping($"{ResourcesMaker.Group_USCodes}VS", "UltraSound ValueSets", "This section contains value sets used specifically in a UltraSound exam");
                 p.AddGrouping($"{ResourcesMaker.Group_USCodes}CS", "UltraSound CodeSystems", "This section contains code systems used specifically in a UltraSound exam");
 
+                p.AddGrouping($"{ResourcesMaker.Group_AimResources}", "AIM Resources", "This section contains resources used specifically by AIM");
+                p.AddGrouping($"{ResourcesMaker.Group_AimCodes}VS", "AIM ValueSets", "This section contains value sets used specifically by AIM");
+                p.AddGrouping($"{ResourcesMaker.Group_AimCodes}CS", "AIM CodeSystems", "This section contains code systems used specifically by AIM");
+
                 p.AddGrouping($"{ResourcesMaker.Group_ExtensionResources}", "Extension", "Extension Resource Definitions");
 
                 p.AddResources(this.resourcesDir);

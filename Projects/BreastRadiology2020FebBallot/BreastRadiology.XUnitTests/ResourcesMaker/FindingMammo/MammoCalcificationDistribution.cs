@@ -30,7 +30,7 @@ namespace BreastRadiology.XUnitTests
                 ValueSet binding = this.CreateValueSet(
                     "MammoCalcificationDistribution",
                     "Mammo Calcification Distribution",
-                    new string[] { "Mammo", "Calcification", "Distribution", "Values" },
+                    new string[] { "Mammo", "Calc.", "Distribution", "Values" },
                     "Mammography calcification distribution codes.",
                     Group_MammoCodes,
                     new ConceptDef[]
@@ -104,7 +104,7 @@ namespace BreastRadiology.XUnitTests
 
                 SDefEditor e = this.CreateEditor("BreastRadMammoCalcificationDistribution",
                         "Mammo Calcification Distribution",
-                        new string[] { "Mammo", "Calcification", "Distribution" },
+                        new string[] { "Mammo", "Calc.", "Distribution" },
                         ObservationUrl,
                         $"{Group_MammoResources}/Calcification/Distribution",
                         out mammoCalcificationDistribution)

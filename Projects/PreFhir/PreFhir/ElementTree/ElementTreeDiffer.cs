@@ -135,17 +135,13 @@ namespace PreFhir
                 }
             }
 
-            foreach (ElementTreeNode modifiedNode in modifiedSlice.Nodes)
+            foreach (ElementTreeNode modifiedNode in modifiedSlice.Nodes.ToArray())
             {
-                /*
-                 * See if node existed in original.
-                 * If node not found in original, then add it completely.
-                 */
                 if (originalSlice.Nodes.TryGetItem(modifiedNode.Name, out ElementTreeNode originalNode) == true)
                 {
                     if (originalNode.SameAs(modifiedNode) == true)
                     {
-                        modifiedNode.Clear();
+                        modifiedSlice.Nodes.Remove(modifiedNode);
                     }
                     else
                     {

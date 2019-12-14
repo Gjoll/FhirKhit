@@ -28,6 +28,9 @@ namespace BreastRadiology.XUnitTests
         public const String Group_CommonResources = "CommonResources";
         public const String Group_CommonCodes = "CommonCodes";
 
+        public const String Group_AimResources = "AimResources";
+        public const String Group_AimCodes = "AimCodes";
+
         public const String Group_MammoResources = "MammoResources";
         public const String Group_MammoCodes = "MammoCodes";
 
@@ -49,13 +52,14 @@ namespace BreastRadiology.XUnitTests
         const String Loinc = "http://loinc.org";
 
         const String ClinicalImpressionUrl = "http://hl7.org/fhir/StructureDefinition/ClinicalImpression";
-        const String ObservationUrl = "http://hl7.org/fhir/StructureDefinition/Observation";
         const String DiagnosticReportUrl = "http://hl7.org/fhir/StructureDefinition/DiagnosticReport";
         const String ExtensionUrl = "http://hl7.org/fhir/StructureDefinition/Extension";
+        const String ImagingStudyUrl = "http://hl7.org/fhir/StructureDefinition/ImagingStudy";
         const String MedicationRequestUrl = "http://hl7.org/fhir/StructureDefinition/MedicationRequest";
-        const String ServiceRequestUrl = "http://hl7.org/fhir/StructureDefinition/ServiceRequest";
+        const String ObservationUrl = "http://hl7.org/fhir/StructureDefinition/Observation";
         const String ResourceUrl = "http://hl7.org/fhir/StructureDefinition/Resource";
         const String RiskAssessmentUrl = "http://hl7.org/fhir/StructureDefinition/RiskAssessment";
+        const String ServiceRequestUrl = "http://hl7.org/fhir/StructureDefinition/ServiceRequest";
 
         const String contactUrl = "http://www.hl7.org/Special/committees/cic";
 
@@ -347,6 +351,7 @@ namespace BreastRadiology.XUnitTests
             resourceMapMaker.AddLegendItem("ServiceRequest", Color.LightBlue);
             resourceMapMaker.AddLegendItem("RiskAssessment", Color.LightGray);
             resourceMapMaker.AddLegendItem("ClinicalImpression", Color.LightGoldenrodYellow);
+            resourceMapMaker.AddLegendItem("ImagingStudy", Color.LightCoral);
 
             resourceMapMaker.Create(Path.Combine(mapDir, "ProfileOverview.svg"));
 

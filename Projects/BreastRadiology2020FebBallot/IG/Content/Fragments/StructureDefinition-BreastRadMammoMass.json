@@ -223,6 +223,67 @@
             ]
           }
         ]
+      },
+      {
+        "id": "Observation.derivedFrom",
+        "path": "Observation.derivedFrom",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": true,
+          "rules": "openAtEnd"
+        },
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.derivedFrom",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Observation.derivedFrom:imagingStudy",
+        "path": "Observation.derivedFrom",
+        "sliceName": "imagingStudy",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.derivedFrom",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/ImagingStudy"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.derivedFrom:aimAnnotatedImagingStudy",
+        "path": "Observation.derivedFrom",
+        "sliceName": "aimAnnotatedImagingStudy",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.derivedFrom",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AimAnnotatedImagingStudy"
+            ]
+          }
+        ]
       }
     ]
   }

@@ -154,16 +154,38 @@ namespace BreastRadiology.XUnitTests
         SENodeGroup CreateLegend(SvgEditor svgEditor)
         {
             SENodeGroup legendGroup = new SENodeGroup("legend");
-            SENodeGroup lastGroup = legendGroup;
-            foreach (LegendItem legendItem in this.legendItems.Values)
+            Int32 i = 0;
+            LegendItem[] legendItems = this.legendItems.Values.ToArray();
+            while (i < this.legendItems.Values.Count)
             {
-                SENodeGroup nextGroup = lastGroup.AppendChild("Legend");
-                SENode node = new SENode(0, legendItem.Color);
-                nextGroup.Nodes.Add(node);
-                node.AddTextLine(legendItem.ResourceType);
-                lastGroup = nextGroup;
+                SENodeGroup lastGroup = legendGroup;
+                Int32 counter = 4;
+                while ((counter > 0) && (i < this.legendItems.Values.Count))
+                {
+                    LegendItem legendItem = legendItems[i];
+                    SENodeGroup nextGroup = lastGroup.AppendChild("Legend");
+                    SENode node = new SENode(0, legendItem.Color);
+                    nextGroup.Nodes.Add(node);
+                    node.AddTextLine(legendItem.ResourceType);
+                    lastGroup = nextGroup;
+
+                    counter -= 1;
+                    i += 1;
+                }
             }
             return legendGroup;
+
+            //SENodeGroup legendGroup = new SENodeGroup("legend");
+            //SENodeGroup lastGroup = legendGroup;
+            //foreach (LegendItem legendItem in this.legendItems.Values)
+            //{
+            //    SENodeGroup nextGroup = lastGroup.AppendChild("Legend");
+            //    SENode node = new SENode(0, legendItem.Color);
+            //    nextGroup.Nodes.Add(node);
+            //    node.AddTextLine(legendItem.ResourceType);
+            //    lastGroup = nextGroup;
+            //}
+            //return legendGroup;
         }
 
         SENodeGroup CreateNodes(SvgEditor svgEditor)

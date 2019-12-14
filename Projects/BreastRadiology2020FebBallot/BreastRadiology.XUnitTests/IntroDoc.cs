@@ -128,6 +128,14 @@ namespace BreastRadiology.XUnitTests
             return this;
         }
 
+        public IntroDoc List(params String[] items)
+        {
+            sb.AppendLine("    <ul>");
+            foreach (var item in items)
+                sb.AppendLine($"        <li>{item}</li>");
+            sb.AppendLine("    </ul>");
+            return this;
+        }
 
         public IntroDoc List(ValueSet binding)
         {
