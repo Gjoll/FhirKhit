@@ -15,15 +15,15 @@ namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker : ConverterBase
     {
-        async StringTask MammoSolitaryDilatedDuct()
+        async StringTask MGSolitaryDilatedDuct()
         {
-            if (mammoSolitaryDilatedDuct == null)
-                await CreateMammoSolitaryDilatedDuct();
-            return mammoSolitaryDilatedDuct;
+            if (mgSolitaryDilatedDuct == null)
+                await CreateMGSolitaryDilatedDuct();
+            return mgSolitaryDilatedDuct;
         }
-        String mammoSolitaryDilatedDuct = null;
+        String mgSolitaryDilatedDuct = null;
 
-        async VTask CreateMammoSolitaryDilatedDuct()
+        async VTask CreateMGSolitaryDilatedDuct()
         {
             await VTask.Run(async () =>
             {
@@ -32,7 +32,7 @@ namespace BreastRadiology.XUnitTests
                         new string[] { "Mammo", "Solitary", "Dialated", "Duct" },
                         ObservationUrl,
                         $"{Group_MammoResources}/SolitaryDilatedDuct",
-                        out mammoSolitaryDilatedDuct)
+                        out mgSolitaryDilatedDuct)
                     .Description("Breat Radiology Mammography Solitary Dilated Duct Observation",
                         new Markdown()
                             .MissingObservation("a solitary dilated duct")

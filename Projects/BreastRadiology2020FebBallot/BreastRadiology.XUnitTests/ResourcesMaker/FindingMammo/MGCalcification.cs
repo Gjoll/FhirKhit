@@ -15,15 +15,15 @@ namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker : ConverterBase
     {
-        async StringTask MammoCalcification()
+        async StringTask MGCalcification()
         {
-            if (mammoCalcification == null)
-                await CreateMammoCalcification();
-            return mammoCalcification;
+            if (mgCalcification == null)
+                await CreateMGCalcification();
+            return mgCalcification;
         }
-        String mammoCalcification = null;
+        String mgCalcification = null;
 
-        async VTask CreateMammoCalcification()
+        async VTask CreateMGCalcification()
         {
             await VTask.Run(async () =>
             {
@@ -32,7 +32,7 @@ namespace BreastRadiology.XUnitTests
                         new string[] { "Mammo", "Calc." },
                         ObservationUrl,
                         $"{Group_MammoResources}/Calcification",
-                        out mammoCalcification)
+                        out mgCalcification)
                     .Description("Breast Radiology Mammography Calcification Observation",
                         new Markdown()
                             .MissingObservation("a calcification",
@@ -68,8 +68,8 @@ namespace BreastRadiology.XUnitTests
                     {
                     new ProfileTargetSlice(await this.BreastRadObservedSize(), 0, "1"),
                     new ProfileTargetSlice(await this.BreastRadObservedCount(), 0, "1"),
-                    new ProfileTargetSlice(await MammoCalcificationType(), 0, "1"),
-                    new ProfileTargetSlice(await MammoCalcificationDistribution(), 0, "1"),
+                    new ProfileTargetSlice(await MGCalcificationType(), 0, "1"),
+                    new ProfileTargetSlice(await MGCalcificationDistribution(), 0, "1"),
                     new ProfileTargetSlice(await this.BreastRadObservedChanges(), 0, "*"),
                     new ProfileTargetSlice(await this.MammoAssociatedFeatures(), 0, "1", false),
                     new ProfileTargetSlice(await this.BreastRadObservedState(), 0, "1", false)

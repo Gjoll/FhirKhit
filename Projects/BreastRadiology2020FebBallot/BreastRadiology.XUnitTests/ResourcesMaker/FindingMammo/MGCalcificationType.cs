@@ -15,15 +15,15 @@ namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker : ConverterBase
     {
-        async StringTask MammoCalcificationType()
+        async StringTask MGCalcificationType()
         {
-            if (mammoCalcificationType == null)
-                await CreateMammoCalcificationType();
-            return mammoCalcificationType;
+            if (mgCalcificationType == null)
+                await CreateMGCalcificationType();
+            return mgCalcificationType;
         }
-        String mammoCalcificationType = null;
+        String mgCalcificationType = null;
 
-        async VTask CreateMammoCalcificationType()
+        async VTask CreateMGCalcificationType()
         {
             await VTask.Run(async () =>
             {
@@ -214,7 +214,7 @@ namespace BreastRadiology.XUnitTests
                     new string[] { "Mammo", "Calc.", "Type" },
                     ObservationUrl,
                     $"{Group_MammoResources}/Calcification/Type",
-                    out mammoCalcificationType)
+                    out mgCalcificationType)
                     .Description("Breast Radiology Mammography Calcification Type Observation",
                         new Markdown()
                             .Paragraph("This resource describes the type of calcification observed.")

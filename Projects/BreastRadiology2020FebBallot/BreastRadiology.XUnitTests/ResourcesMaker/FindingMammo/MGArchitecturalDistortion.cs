@@ -14,15 +14,15 @@ namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker : ConverterBase
     {
-        async StringTask MammoArchitecturalDistortion()
+        async StringTask MGArchitecturalDistortion()
         {
-            if (mammoArchitecturalDistortion == null)
-                await CreateMammoArchitecturalDistortion();
-            return mammoArchitecturalDistortion;
+            if (mgArchitecturalDistortion == null)
+                await CreateMGArchitecturalDistortion();
+            return mgArchitecturalDistortion;
         }
-        String mammoArchitecturalDistortion = null;
+        String mgArchitecturalDistortion = null;
 
-        async VTask CreateMammoArchitecturalDistortion()
+        async VTask CreateMGArchitecturalDistortion()
         {
             await VTask.Run(async () =>
             {
@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
                         new string[] { "Mammo", "Arch.", "Distortion" },
                         ObservationUrl,
                         $"{Group_MammoResources}/ArchitecturalDistortion",
-                        out mammoArchitecturalDistortion)
+                        out mgArchitecturalDistortion)
                     .Description("Breast Radiology Mammography Architectural Distortion Observation",
                         new Markdown()
                             .MissingObservation("an architectural distortion")

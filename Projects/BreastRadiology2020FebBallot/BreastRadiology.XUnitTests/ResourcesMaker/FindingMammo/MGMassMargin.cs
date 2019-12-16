@@ -16,15 +16,15 @@ namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker : ConverterBase
     {
-        async StringTask MammoMassMargin()
+        async StringTask MGMassMargin()
         {
-            if (mammoMassMargin == null)
-                await CreateMammoMassMargin();
-            return mammoMassMargin;
+            if (mgMassMargin == null)
+                await CreateMGMassMargin();
+            return mgMassMargin;
         }
-        String mammoMassMargin = null;
+        String mgMassMargin = null;
 
-        async VTask CreateMammoMassMargin()
+        async VTask CreateMGMassMargin()
         {
             await VTask.Run(async () =>
             {
@@ -110,7 +110,7 @@ namespace BreastRadiology.XUnitTests
                     new string[] { "Mammo", "Mass", "Margin" },
                     ObservationUrl,
                     $"{Group_MammoResources}/Mass/Margin",
-                    out mammoMassMargin)
+                    out mgMassMargin)
                     .Description("Breast Radiology Mammography Mass Margin Observation",
                         new Markdown()
                             .MissingObservation("a mass margin")

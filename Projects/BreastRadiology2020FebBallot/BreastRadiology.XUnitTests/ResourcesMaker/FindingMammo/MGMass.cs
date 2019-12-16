@@ -15,15 +15,15 @@ namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker : ConverterBase
     {
-        async StringTask MammoMass()
+        async StringTask MGMass()
         {
-            if (mammoMass == null)
-                await CreateMammoMass();
-            return mammoMass;
+            if (mgMass == null)
+                await CreateMGMass();
+            return mgMass;
         }
-        String mammoMass = null;
+        String mgMass = null;
 
-        async VTask CreateMammoMass()
+        async VTask CreateMGMass()
         {
             await VTask.Run(async () =>
             {
@@ -32,7 +32,7 @@ namespace BreastRadiology.XUnitTests
                         new string[] { "Mammo", "Mass" },
                         ObservationUrl,
                         $"{Group_MammoResources}/Mass",
-                        out mammoMass)
+                        out mgMass)
                     .Description("Breast Radiology Mammography Mass Observation",
                         new Markdown()
                             .MissingObservation("a mass", "and no Shape, Margin, or Density observations should be referenced by this observation")
@@ -43,7 +43,7 @@ namespace BreastRadiology.XUnitTests
                             .BlockQuote("should be called an \"ASYMMETRY\" until its 3-dimensionality is confirmed")
                             .BiradFooter()
                             .Paragraph("This observation has the following member observations:")
-                            .List("Shape", "Margin", "Density")
+                            .List("Shape", "Margin", "Density", "Orientation")
                             .Todo(
                                 "add mass size measurements (3 dimensional) like US?",
                                 "same for asymmetry, lesion, calcification?"
@@ -63,8 +63,9 @@ namespace BreastRadiology.XUnitTests
                     new ProfileTargetSlice(await this.BreastRadObservedSize(), 0, "1"),
                     new ProfileTargetSlice(await this.BreastRadObservedCount(), 0, "1"),
                     new ProfileTargetSlice(await this.BreastRadMassShape(), 0, "1"),
-                    new ProfileTargetSlice(await this.MammoMassMargin(), 0, "*"),
-                    new ProfileTargetSlice(await this.MammoMassDensity(), 0, "1"),
+                    new ProfileTargetSlice(await this.MassOrientation(), 0, "1"),
+                    new ProfileTargetSlice(await this.MGMassMargin(), 0, "*"),
+                    new ProfileTargetSlice(await this.MGMassDensity(), 0, "1"),
                     new ProfileTargetSlice(await this.BreastRadObservedChanges(), 0, "*"),
                     new ProfileTargetSlice(await this.MammoAssociatedFeatures(), 0, "1", false),
                     new ProfileTargetSlice(await this.BreastRadObservedState(), 0, "1", false)

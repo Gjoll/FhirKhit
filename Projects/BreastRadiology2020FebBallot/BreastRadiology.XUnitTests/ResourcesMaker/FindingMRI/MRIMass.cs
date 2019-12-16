@@ -17,7 +17,7 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask MRIMass()
         {
-            if (mammoMass == null)
+            if (mgMass == null)
                 await CreateMRIMass();
             return mriMass;
         }
@@ -43,7 +43,7 @@ namespace BreastRadiology.XUnitTests
                             //$.BlockQuote("should be called an \"ASYMMETRY\" until its 3-dimensionality is confirmed")
                             //$.BiradFooter()
                             //$.Paragraph("This observation has the following member observations:")
-                            //$.List("Shape", "Margin", "Density")
+                            //$.List("Shape", "Margin", "Density", "Orientation")
                             .Todo(
                                 "Complete description"
                                 //"add mass size measurements (3 dimensional) like US?",
@@ -64,6 +64,7 @@ namespace BreastRadiology.XUnitTests
                     new ProfileTargetSlice(await this.BreastRadObservedSize(), 0, "1"),
                     new ProfileTargetSlice(await this.BreastRadObservedCount(), 0, "1"),
                     //$new ProfileTargetSlice(await this.BreastRadMassShape(), 0, "1"),
+                    new ProfileTargetSlice(await this.MassOrientation(), 0, "1"),
                     new ProfileTargetSlice(await this.MRIMassMargin(), 0, "*"),
                     //$new ProfileTargetSlice(await this.MRIMassDensity(), 0, "1"),
                     new ProfileTargetSlice(await this.BreastRadObservedChanges(), 0, "*"),

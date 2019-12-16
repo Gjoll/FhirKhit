@@ -15,15 +15,15 @@ namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker : ConverterBase
     {
-        async StringTask MammoBreastDensity()
+        async StringTask MGBreastDensity()
         {
-            if (mammoBreastDensity == null)
-                await CreateMammoBreastDensity();
-            return mammoBreastDensity;
+            if (mgBreastDensity == null)
+                await CreateMGBreastDensity();
+            return mgBreastDensity;
         }
-        String mammoBreastDensity = null;
+        String mgBreastDensity = null;
 
-        async VTask CreateMammoBreastDensity()
+        async VTask CreateMGBreastDensity()
         {
             await VTask.Run(async () =>
             {
@@ -107,7 +107,7 @@ namespace BreastRadiology.XUnitTests
                         new string[] { "Mammo", "Breast", "Density" },
                         ObservationUrl,
                         $"{Group_MammoResources}/BreastDensity",
-                        out mammoBreastDensity)
+                        out mgBreastDensity)
                     .Description("Breast Radiology Mammography Breast Density Observation",
                         new Markdown()
                             .BiradHeader()

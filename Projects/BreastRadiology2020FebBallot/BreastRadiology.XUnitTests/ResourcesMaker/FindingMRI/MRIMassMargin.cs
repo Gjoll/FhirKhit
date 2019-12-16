@@ -18,7 +18,7 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask MRIMassMargin()
         {
-            if (mammoMassMargin == null)
+            if (mgMassMargin == null)
                 await CreateMRIMassMargin();
             return mriMassMargin;
         }

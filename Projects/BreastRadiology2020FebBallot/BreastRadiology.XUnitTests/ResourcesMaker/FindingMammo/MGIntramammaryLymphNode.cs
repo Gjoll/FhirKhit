@@ -15,15 +15,15 @@ namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker : ConverterBase
     {
-        async StringTask MammoIntramammaryLymphNode()
+        async StringTask MGIntramammaryLymphNode()
         {
-            if (mammoIntramammaryLymphNode == null)
-                await CreateMammoIntramammaryLymphNode();
-            return mammoIntramammaryLymphNode;
+            if (mgIntramammaryLymphNode == null)
+                await CreateMGIntramammaryLymphNode();
+            return mgIntramammaryLymphNode;
         }
-        String mammoIntramammaryLymphNode = null;
+        String mgIntramammaryLymphNode = null;
 
-        async VTask CreateMammoIntramammaryLymphNode()
+        async VTask CreateMGIntramammaryLymphNode()
         {
             await VTask.Run(async () =>
             {
@@ -32,7 +32,7 @@ namespace BreastRadiology.XUnitTests
                     new string[] { "Mammo", "Intramammory", "Lymph Node" },
                     ObservationUrl,
                     $"{Group_MammoResources}/IntramammaryLymphNode",
-                    out mammoIntramammaryLymphNode)
+                    out mgIntramammaryLymphNode)
                     .Description("Breast Radiology Mammography Intramammary LymphNode Observation",
                         new Markdown()
                             .MissingObservation("an intramammary lymph node")

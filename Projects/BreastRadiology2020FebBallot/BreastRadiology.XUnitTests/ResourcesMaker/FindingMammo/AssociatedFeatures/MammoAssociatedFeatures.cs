@@ -51,8 +51,8 @@ namespace BreastRadiology.XUnitTests
                     new ProfileTargetSlice(await this.MammoNippleRetraction(), 0, "1"),
                     new ProfileTargetSlice(await this.MammoSkinThickening(), 0, "*"),
                     new ProfileTargetSlice(await this.MammoAxillaryAdenopathy(), 0, "1"),
-                    new ProfileTargetSlice(await this.MammoArchitecturalDistortion(), 0, "*"),
-                    new ProfileTargetSlice(await this.MammoCalcification(), 0, "*")
+                    new ProfileTargetSlice(await this.MGArchitecturalDistortion(), 0, "*"),
+                    new ProfileTargetSlice(await this.MGCalcification(), 0, "*")
                     };
                     e.Find("hasMember").SliceByUrl(targets);
                     e.Node.AddProfileTargets(targets);

@@ -15,15 +15,15 @@ namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker : ConverterBase
     {
-        async StringTask MammoAsymmetries()
+        async StringTask MGAsymmetries()
         {
-            if (mammoAsymmetries == null)
-                await CreateMammoAsymmetries();
-            return mammoAsymmetries;
+            if (mgAsymmetries == null)
+                await CreateMGAsymmetries();
+            return mgAsymmetries;
         }
-        String mammoAsymmetries = null;
+        String mgAsymmetries = null;
 
-        async VTask CreateMammoAsymmetries()
+        async VTask CreateMGAsymmetries()
         {
             ValueSet binding = this.CreateValueSet(
                    "BreastRadMemmoAsymmetries",
@@ -101,7 +101,7 @@ namespace BreastRadiology.XUnitTests
                     new string[] { "Mammo", "Asymmetries" },
                     ObservationUrl,
                     $"{Group_MammoResources}/Asymmetry",
-                    out mammoAsymmetries)
+                    out mgAsymmetries)
                 .Description("Breast Radiology Mammography Asymmetries Observation",
                     new Markdown()
                         .MissingObservation("an asymmetry")

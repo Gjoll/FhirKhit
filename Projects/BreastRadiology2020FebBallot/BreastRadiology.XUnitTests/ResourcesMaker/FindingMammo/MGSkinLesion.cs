@@ -15,15 +15,15 @@ namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker : ConverterBase
     {
-        async StringTask MammoSkinLesion()
+        async StringTask MGSkinLesion()
         {
-            if (mammoSkinLesion == null)
-                await CreateMammoSkinLesion();
-            return mammoSkinLesion;
+            if (mgSkinLesion == null)
+                await CreateMGSkinLesion();
+            return mgSkinLesion;
         }
-        String mammoSkinLesion = null;
+        String mgSkinLesion = null;
 
-        async VTask CreateMammoSkinLesion()
+        async VTask CreateMGSkinLesion()
         {
             await VTask.Run(async () =>
             {
@@ -32,7 +32,7 @@ namespace BreastRadiology.XUnitTests
                     new string[] { "Mammo", "Skin", "Lesion" },
                     ObservationUrl,
                     $"{Group_MammoResources}/SkinLesion",
-                    out mammoSkinLesion)
+                    out mgSkinLesion)
                     .Description("Breast Radiology Mammography Skin Lesion Observation",
                         new Markdown()
                             .MissingObservation("a skin lesion")
