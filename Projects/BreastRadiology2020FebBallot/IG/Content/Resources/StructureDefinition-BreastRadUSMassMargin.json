@@ -23,7 +23,7 @@
       ]
     }
   ],
-  "description": "Breast Radiology Ultra-Sound Mass Margin Observation\n\nIf this observation is present, and dataAbsentReason is empty, then a mass margin was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a mass margin was not observed and dataAbsentReason contains the reason why.\n\n\nThe margin is the edge or border of the lesion. The descriptors of margin, like the descriptors of shape, are important predictors of whether a mass is benign or malignant. \n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
+  "description": "Breast Radiology Ultra-Sound Mass Margin Observation\n\nIf this observation is present, and dataAbsentReason is empty, then a mass margin was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a mass margin was not observed and dataAbsentReason contains the reason why.\n\n\nThe margin is the edge or border of the lesion. The descriptors of margin, like the descriptors of shape, are important predictors of whether a mass is benign or malignant. \n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013 \n*** TODO Items ***** Is Irregular incorrect? Note from ACR B.3.A. 'Irregular' is not used to group these marginal attributes because irregular describes the shape of a mass.\n** Is non-circumscribed a stand along value, or implied by selection fo on or more non-circumscribed values?",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -36,7 +36,7 @@
         "id": "Observation",
         "path": "Observation",
         "short": "Breast Radiology Ultra-Sound Mass Margin Observation",
-        "definition": "If this observation is present, and dataAbsentReason is empty, then a mass margin was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a mass margin was not observed and dataAbsentReason contains the reason why.\n\n\nThe margin is the edge or border of the lesion. The descriptors of margin, like the descriptors of shape, are important predictors of whether a mass is benign or malignant. \n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
+        "definition": "If this observation is present, and dataAbsentReason is empty, then a mass margin was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a mass margin was not observed and dataAbsentReason contains the reason why.\n\n\nThe margin is the edge or border of the lesion. The descriptors of margin, like the descriptors of shape, are important predictors of whether a mass is benign or malignant. \n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013 \n*** TODO Items ***** Is Irregular incorrect? Note from ACR B.3.A. 'Irregular' is not used to group these marginal attributes because irregular describes the shape of a mass.\n** Is non-circumscribed a stand along value, or implied by selection fo on or more non-circumscribed values?",
         "comment": "Used for simple observations such as device measurements, laboratory atomic results, vital signs, height, weight, smoking status, comments, etc.  Other resources are used to provide context for observations such as laboratory reports, etc.",
         "alias": [
           "Vital Signs",
@@ -1162,16 +1162,6 @@
       {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "pattern",
-              "path": "$this"
-            }
-          ],
-          "ordered": true,
-          "rules": "openAtEnd"
-        },
         "short": "Actual result",
         "definition": "The information determined as a result of making the observation, if the information has a simple value.",
         "comment": "An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.",
@@ -1193,108 +1183,10 @@
         ],
         "isModifier": false,
         "isSummary": true,
-        "mapping": [
-          {
-            "identity": "sct-concept",
-            "map": "< 441742003 |Evaluation finding|"
-          },
-          {
-            "identity": "v2",
-            "map": "OBX.2, OBX.5, OBX.6"
-          },
-          {
-            "identity": "rim",
-            "map": "value"
-          },
-          {
-            "identity": "sct-attr",
-            "map": "363714003 |Interprets|"
-          }
-        ]
-      },
-      {
-        "id": "Observation.value[x]:Margin",
-        "path": "Observation.value[x]",
-        "sliceName": "Margin",
-        "short": "US Mass Margin Value",
-        "definition": "Specifies Circumscribed or Not-Circumscribed.",
-        "comment": "An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.",
-        "requirements": "An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Observation.value[x]",
-          "min": 0,
-          "max": "1"
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadUSMassMarginVS"
         },
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "patternCodeableConcept": {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadUSMassMarginVS"
-            }
-          ]
-        },
-        "condition": [
-          "obs-7"
-        ],
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "sct-concept",
-            "map": "< 441742003 |Evaluation finding|"
-          },
-          {
-            "identity": "v2",
-            "map": "OBX.2, OBX.5, OBX.6"
-          },
-          {
-            "identity": "rim",
-            "map": "value"
-          },
-          {
-            "identity": "sct-attr",
-            "map": "363714003 |Interprets|"
-          }
-        ]
-      },
-      {
-        "id": "Observation.value[x]:MarginNotCircumscribedOptions",
-        "path": "Observation.value[x]",
-        "sliceName": "MarginNotCircumscribedOptions",
-        "short": "US Mass Margin optional Not-Circumscribed specifier value",
-        "definition": "Optional Not-Circumscribed values.",
-        "comment": "An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.",
-        "requirements": "An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Observation.value[x]",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "patternCodeableConcept": {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadUSMassMarginNotCircumscribedVS"
-            }
-          ]
-        },
-        "condition": [
-          "obs-7"
-        ],
-        "isModifier": false,
-        "isSummary": true,
         "mapping": [
           {
             "identity": "sct-concept",
@@ -2034,7 +1926,7 @@
         "definition": "The target resource that represents a measurement from which this observation value is derived. For example, a calculated anion gap or a fetal measurement based on an ultrasound image.",
         "comment": "All the reference choices that are listed in this element can represent clinical observations and other measurements that may be the source for a derived value.  The most common reference will be another Observation.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.",
         "min": 0,
-        "max": "0",
+        "max": "*",
         "base": {
           "path": "Observation.derivedFrom",
           "min": 0,
@@ -2459,7 +2351,7 @@
         "id": "Observation",
         "path": "Observation",
         "short": "Breast Radiology Ultra-Sound Mass Margin Observation",
-        "definition": "If this observation is present, and dataAbsentReason is empty, then a mass margin was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a mass margin was not observed and dataAbsentReason contains the reason why.\n\n\nThe margin is the edge or border of the lesion. The descriptors of margin, like the descriptors of shape, are important predictors of whether a mass is benign or malignant. \n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
+        "definition": "If this observation is present, and dataAbsentReason is empty, then a mass margin was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a mass margin was not observed and dataAbsentReason contains the reason why.\n\n\nThe margin is the edge or border of the lesion. The descriptors of margin, like the descriptors of shape, are important predictors of whether a mass is benign or malignant. \n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013 \n*** TODO Items ***** Is Irregular incorrect? Note from ACR B.3.A. 'Irregular' is not used to group these marginal attributes because irregular describes the shape of a mass.\n** Is non-circumscribed a stand along value, or implied by selection fo on or more non-circumscribed values?",
         "base": {
           "path": "Observation",
           "min": 0,
@@ -2690,37 +2582,6 @@
       {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "pattern",
-              "path": "$this"
-            }
-          ],
-          "ordered": true,
-          "rules": "openAtEnd"
-        },
-        "base": {
-          "path": "Observation.value[x]",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ]
-      },
-      {
-        "id": "Observation.value[x]:Margin",
-        "path": "Observation.value[x]",
-        "sliceName": "Margin",
-        "short": "US Mass Margin Value",
-        "definition": "Specifies Circumscribed or Not-Circumscribed.",
-        "comment": "An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.",
-        "requirements": "An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations.",
-        "min": 1,
-        "max": "1",
         "base": {
           "path": "Observation.value[x]",
           "min": 0,
@@ -2731,87 +2592,10 @@
             "code": "CodeableConcept"
           }
         ],
-        "patternCodeableConcept": {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadUSMassMarginVS"
-            }
-          ]
-        },
-        "condition": [
-          "obs-7"
-        ],
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "sct-concept",
-            "map": "< 441742003 |Evaluation finding|"
-          },
-          {
-            "identity": "v2",
-            "map": "OBX.2, OBX.5, OBX.6"
-          },
-          {
-            "identity": "rim",
-            "map": "value"
-          },
-          {
-            "identity": "sct-attr",
-            "map": "363714003 |Interprets|"
-          }
-        ]
-      },
-      {
-        "id": "Observation.value[x]:MarginNotCircumscribedOptions",
-        "path": "Observation.value[x]",
-        "sliceName": "MarginNotCircumscribedOptions",
-        "short": "US Mass Margin optional Not-Circumscribed specifier value",
-        "definition": "Optional Not-Circumscribed values.",
-        "comment": "An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.",
-        "requirements": "An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Observation.value[x]",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "patternCodeableConcept": {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadUSMassMarginNotCircumscribedVS"
-            }
-          ]
-        },
-        "condition": [
-          "obs-7"
-        ],
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "sct-concept",
-            "map": "< 441742003 |Evaluation finding|"
-          },
-          {
-            "identity": "v2",
-            "map": "OBX.2, OBX.5, OBX.6"
-          },
-          {
-            "identity": "rim",
-            "map": "value"
-          },
-          {
-            "identity": "sct-attr",
-            "map": "363714003 |Interprets|"
-          }
-        ]
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadUSMassMarginVS"
+        }
       },
       {
         "id": "Observation.interpretation",
@@ -2892,17 +2676,6 @@
         "max": "0",
         "base": {
           "path": "Observation.hasMember",
-          "min": 0,
-          "max": "*"
-        }
-      },
-      {
-        "id": "Observation.derivedFrom",
-        "path": "Observation.derivedFrom",
-        "min": 0,
-        "max": "0",
-        "base": {
-          "path": "Observation.derivedFrom",
           "min": 0,
           "max": "*"
         }

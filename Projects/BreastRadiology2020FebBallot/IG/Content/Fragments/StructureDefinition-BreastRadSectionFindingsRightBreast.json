@@ -132,6 +132,26 @@
         ]
       },
       {
+        "id": "Observation.hasMember:breastRadNMFinding",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadNMFinding",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadNMFinding"
+            ]
+          }
+        ]
+      },
+      {
         "id": "Observation.hasMember:breastRadUltraSoundFinding",
         "path": "Observation.hasMember",
         "sliceName": "breastRadUltraSoundFinding",

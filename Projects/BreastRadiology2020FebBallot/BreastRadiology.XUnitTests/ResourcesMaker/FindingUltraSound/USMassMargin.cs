@@ -36,6 +36,14 @@ namespace BreastRadiology.XUnitTests
                     Group_USCodes,
                     new ConceptDef[]
                     {
+                    new ConceptDef("Angular",
+                        "Not Circumscribed - Angular",
+                        new Definition()
+                        .CiteStart()
+                            .Line("Some or all of the margin has sharp corners, often forming acute angles, but the significant")
+                            .Line("feature is that the margin of the mass is NOT CIRCUMSCRIBED.")
+                        .CiteEnd(BiRadCitation)
+                        ),
                     new ConceptDef("Circumscribed ",
                         "Circumscribed Margin",
                         new Definition()
@@ -46,40 +54,8 @@ namespace BreastRadiology.XUnitTests
                             .Line("must be sharply defined. Most circumscribed lesions have round or oval shapes.")
                         .CiteEnd(BiRadCitation)
                         ),
-                    new ConceptDef("NotCircumscribed ",
-                        "Not Circumscribed",
-                        new Definition()
-                        .CiteStart()
-                            .Line("(historically, “well-defined” or “sharply-defined”)")
-                            .Line("If any portion of the margin is NOT CIRCUMSCRIBED, the mass should be characterized as")
-                            .Line("“not circumscribed.” A mass that is NOT CIRCUMSCRIBED may further be described as having")
-                            .Line("indistinct, angular, microlobulated, spiculated, or any combination of these margin descriptors.")
-                            .Line("“Irregular” is not used to group these marginal attributes because irregular describes the shape")
-                        .CiteEnd(BiRadCitation)
-                        )
-                    });
-
-
-                {
-                    IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));
-                    valueSetIntroDoc
-                        .ReviewedStatus(ReviewStatus.NotReviewed)
-                        .ValueSet(binding);
-                    ;
-                    String outputPath = valueSetIntroDoc.Save();
-                    this.fc.Mark(outputPath);
-                }
-
-                ValueSet binding2 = this.CreateValueSet(
-                    "BreastRadUSMassMarginNotCircumscribed",
-                    "US Mass Margin Not Circumscribed values",
-                    new string[] { "US Mass Margin", "Not-Circumscribed", "Values" },
-                    "Ultra-sound mass margin 'Not Circumscribed' codes.",
-                    Group_USCodes,
-                    new ConceptDef[]
-                    {
                     new ConceptDef("Indistinct",
-                        "Not Circumscribed - Indistinct",
+                        "Indistinct Margin",
                         new Definition()
                         .CiteStart()
                             .Line("There is no clear demarcation of the entire margin or any portion of the margin from the")
@@ -89,13 +65,20 @@ namespace BreastRadiology.XUnitTests
                             .Line("one that displays an echogenic rim.")
                         .CiteEnd(BiRadCitation)
                         ),
-                    new ConceptDef("Angular",
-                        "Not Circumscribed - Angular",
+                    new ConceptDef("IntraductalExtension",
+                        "Intraductal Extension",
                         new Definition()
-                        .CiteStart()
-                            .Line("Some or all of the margin has sharp corners, often forming acute angles, but the significant")
-                            .Line("feature is that the margin of the mass is NOT CIRCUMSCRIBED.")
-                        .CiteEnd(BiRadCitation)
+                            .Line("Penrad specific.")
+                        ),
+                    new ConceptDef("Irregular",
+                        "Irregular Margin",
+                        new Definition()
+                            .Line("Penrad specific.")
+                        ),
+                    new ConceptDef("Lobulated",
+                        "Lobulated Margin",
+                        new Definition()
+                            .Line("Penrad specific.")
                         ),
                     new ConceptDef("Microlobulated",
                         "Not Circumscribed - Microlobulated",
@@ -104,6 +87,17 @@ namespace BreastRadiology.XUnitTests
                             .Line("The margin is characterized by short-cycle undulations, but the significant feature is that")
                             .Line("the margin of the mass is NOT CIRCUMSCRIBED.")
                         .CiteEnd(BiRadCitation)
+                        ),
+                    new ConceptDef("NonCircumscribed",
+                        "Non Circumscribed Margin",
+                        new Definition()
+                        .CiteStart()
+                        .CiteEnd(BiRadCitation)
+                        ),
+                    new ConceptDef("Smooth",
+                        "Smooth Margin",
+                        new Definition()
+                            .Line("Penrad specific.")
                         ),
                     new ConceptDef("Spiculated",
                         "Not Circumscribed - Spiculated",
@@ -115,11 +109,12 @@ namespace BreastRadiology.XUnitTests
                         )
                     });
 
+
                 {
-                    IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding2.Name}-intro.xml"));
+                    IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));
                     valueSetIntroDoc
                         .ReviewedStatus(ReviewStatus.NotReviewed)
-                        .ValueSet(binding2);
+                        .ValueSet(binding);
                     ;
                     String outputPath = valueSetIntroDoc.Save();
                     this.fc.Mark(outputPath);
@@ -138,41 +133,21 @@ namespace BreastRadiology.XUnitTests
                             .BlockQuote("The margin is the edge or border of the lesion. The descriptors of margin, like the descriptors of shape, are important predictors of whether a mass is benign or malignant. ")
                             .BiradFooter()
                             .Todo(
+                                "Is Irregular incorrect? Note from ACR B.3.A. 'Irregular' is not used to group these marginal attributes because irregular describes the shape of a mass.",
+                                "Is non-circumscribed a stand along value, or implied by selection fo on or more non-circumscribed values? "
                             )
                     )
                     .AddFragRef(await this.ObservationNoDeviceFragment())
                     .AddFragRef(await this.ObservationCodedValueFragment())
                     .AddFragRef(await this.ObservationLeafFragment())
                     ;
-                {
-                    CodeableConcept pattern1 = new CodeableConcept();
-                    pattern1.Coding.Add(new Coding(binding.Url, null));
 
-                    CodeableConcept pattern2 = new CodeableConcept();
-                    pattern2.Coding.Add(new Coding(binding2.Url, null));
-
-                    PatternSlice[] patternSlices = new PatternSlice[]
-                    {
-                    new PatternSlice("Margin",
-                        "US Mass Margin Value",
-                        new Markdown()
-                            .Paragraph("Specifies Circumscribed or Not-Circumscribed."),
-                        pattern1,
-                        1,
-                        "1"),
-                    new PatternSlice("MarginNotCircumscribedOptions",
-                        "US Mass Margin optional Not-Circumscribed specifier value",
-                        new Markdown()
-                            .Paragraph("Optional Not-Circumscribed values."),
-                        pattern2,
-                        0,
-                        "*")
-                    };
-                    e.Find("value[x]")
-                        .SliceByPatterns("CodeableConcept", patternSlices)
-                        ;
-                    e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "a mass margin", binding);
-                }
+                e.Select("value[x]")
+                    .Type("CodeableConcept")
+                    .Binding(binding.Url, BindingStrength.Required)
+                    ;
+                e.AddValueSetLink(binding);
+                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "a mammography mass margin", binding);
             });
         }
     }

@@ -20,6 +20,10 @@
     {
       "url": "http://www.fragment.com/fragment",
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoValueFragment"
+    },
+    {
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ImagingStudyFragment"
     }
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadUSMass",
@@ -149,7 +153,7 @@
         "path": "Observation.hasMember",
         "sliceName": "breastRadUSMassMargin",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "base": {
           "path": "Observation.hasMember",
           "min": 0,

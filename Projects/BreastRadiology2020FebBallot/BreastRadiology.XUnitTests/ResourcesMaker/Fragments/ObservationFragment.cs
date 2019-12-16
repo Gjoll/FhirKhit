@@ -46,7 +46,7 @@ namespace BreastRadiology.XUnitTests
                 e.Select("interpretation").Zero();
                 e.Select("referenceRange").Zero();
                 e.Select("basedOn").Zero();
-                e.Select("derivedFrom").Zero();
+                //e.Select("derivedFrom").Zero();
                 e.Select("partOf").Zero();
                 e.Select("focus").Zero();
                 e.Select("specimen").Zero();

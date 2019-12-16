@@ -25,6 +25,7 @@ namespace BreastRadiology.XUnitTests
                 new ProfileTargetSlice(await this.BiRadsAssessmentCategory(), 1, "1"),
                 new ProfileTargetSlice(await this.FindingMammo(), 0, "*"),
                 new ProfileTargetSlice(await this.FindingMri(), 0, "*"),
+                new ProfileTargetSlice(await this.FindingNM(), 0, "*"),
                 new ProfileTargetSlice(await this.FindingUltraSound(), 0, "*")
             };
         }

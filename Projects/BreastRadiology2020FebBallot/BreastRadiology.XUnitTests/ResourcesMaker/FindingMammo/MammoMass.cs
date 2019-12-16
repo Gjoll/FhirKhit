@@ -53,17 +53,9 @@ namespace BreastRadiology.XUnitTests
                     .AddFragRef(await this.BreastBodyLocationRequiredFragment())
                     .AddFragRef(await this.ObservationSectionFragment())
                     .AddFragRef(await this.ObservationNoValueFragment())
+                    .AddFragRef(await this.ImagingStudyFragment())
                     .AddExtensionLink(await this.BreastBodyLocationExtension())
                     ;
-                {
-                    ProfileTargetSlice[] targets = new ProfileTargetSlice[]
-                    {
-                    new ProfileTargetSlice(ImagingStudyUrl, 0, "*"),
-                    new ProfileTargetSlice(await this.AimAnnotatedImagingStudy(), 0, "1"),
-                    };
-                    e.Find("derivedFrom").SliceByUrl(targets);
-                    e.Node.AddProfileTargets(targets);
-                }
 
                 {
                     ProfileTargetSlice[] targets = new ProfileTargetSlice[]
@@ -71,7 +63,7 @@ namespace BreastRadiology.XUnitTests
                     new ProfileTargetSlice(await this.BreastRadObservedSize(), 0, "1"),
                     new ProfileTargetSlice(await this.BreastRadObservedCount(), 0, "1"),
                     new ProfileTargetSlice(await this.BreastRadMassShape(), 0, "1"),
-                    new ProfileTargetSlice(await this.MammoMassMargin(), 0, "1"),
+                    new ProfileTargetSlice(await this.MammoMassMargin(), 0, "*"),
                     new ProfileTargetSlice(await this.MammoMassDensity(), 0, "1"),
                     new ProfileTargetSlice(await this.BreastRadObservedChanges(), 0, "*"),
                     new ProfileTargetSlice(await this.MammoAssociatedFeatures(), 0, "1", false),

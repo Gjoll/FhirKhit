@@ -48,13 +48,25 @@ namespace BreastRadiology.XUnitTests
                             .Line("(the most suspicious component).")
                         .CiteEnd(BiRadCitation)
                         ),
-                    new ConceptDef("Obscured",
-                        "Obscured Margin",
+                    new ConceptDef("Indistinct",
+                        "Indistinct Margin",
                         new Definition()
                         .CiteStart()
-                            .Line("A margin that is hidden by superimposed or adjacent fibroglandular tissue. This is used")
-                            .Line("primarily when some of the margin of the mass is circumscribed, but the rest (more than 25%) is hidden.")
+                            .Line("There is no clear demarcation of the entire margin, or of any portion of the margin, from the surrounding")
+                            .Line("tissue. For mammography, this descriptor should not be used when the interpreting")
+                            .Line("physician believes it is likely due to immediately adjacent breast tissue. Use of this descriptor")
+                            .Line("usually implies a suspicious finding.")
                         .CiteEnd(BiRadCitation)
+                        ),
+                    new ConceptDef("Irregular",
+                        "Irregular Margin",
+                        new Definition()
+                            .Line("Penrad specific.")
+                        ),
+                    new ConceptDef("Macrolobulated",
+                        "Microlobulated Margin",
+                        new Definition()
+                            .Line("Penrad specific.")
                         ),
                     new ConceptDef("Microlobulated",
                         "Microlobulated Margin",
@@ -64,14 +76,12 @@ namespace BreastRadiology.XUnitTests
                             .Line("usually implies a suspicious finding.")
                         .CiteEnd(BiRadCitation)
                         ),
-                    new ConceptDef("Indistinct",
-                        "Indistinct Margin",
+                    new ConceptDef("Obscured",
+                        "Obscured Margin",
                         new Definition()
                         .CiteStart()
-                            .Line("There is no clear demarcation of the entire margin, or of any portion of the margin, from the surrounding")
-                            .Line("tissue. For mammography, this descriptor should not be used when the interpreting")
-                            .Line("physician believes it is likely due to immediately adjacent breast tissue. Use of this descriptor")
-                            .Line("usually implies a suspicious finding.")
+                            .Line("A margin that is hidden by superimposed or adjacent fibroglandular tissue. This is used")
+                            .Line("primarily when some of the margin of the mass is circumscribed, but the rest (more than 25%) is hidden.")
                         .CiteEnd(BiRadCitation)
                         ),
                     new ConceptDef("Spiculated",

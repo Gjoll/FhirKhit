@@ -54,6 +54,7 @@ namespace BreastRadiology.XUnitTests
                     .AddFragRef(await this.ObservationSectionFragment())
                     .AddFragRef(await this.ObservationNoValueFragment())
                     .AddExtensionLink(await this.BreastBodyLocationExtension())
+                    .AddFragRef(await this.ImagingStudyFragment())
                     ;
                 {
                     ProfileTargetSlice[] targets = new ProfileTargetSlice[]
@@ -62,7 +63,7 @@ namespace BreastRadiology.XUnitTests
                     new ProfileTargetSlice(await this.BreastRadObservedCount(), 0, "1"),
                     new ProfileTargetSlice(await this.BreastRadMassShape(), 0, "1"),
                     new ProfileTargetSlice(await this.USMassOrientation(), 0, "1"),
-                    new ProfileTargetSlice(await this.USMassMargin(), 0, "1"),
+                    new ProfileTargetSlice(await this.USMassMargin(), 0, "*"),
                     new ProfileTargetSlice(await this.USMassEchoPattern(), 0, "1"),
                     new ProfileTargetSlice(await this.USMassPosteriorAcousticFeatures(), 0, "1"),
                     new ProfileTargetSlice(await this.BreastRadObservedChanges(), 0, "*"),

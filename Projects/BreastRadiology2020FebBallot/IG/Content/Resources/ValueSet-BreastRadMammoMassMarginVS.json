@@ -35,16 +35,24 @@
             "display": "Circumscribed Margin"
           },
           {
-            "code": "Obscured",
-            "display": "Obscured Margin"
+            "code": "Indistinct",
+            "display": "Indistinct Margin"
+          },
+          {
+            "code": "Irregular",
+            "display": "Irregular Margin"
+          },
+          {
+            "code": "Macrolobulated",
+            "display": "Microlobulated Margin"
           },
           {
             "code": "Microlobulated",
             "display": "Microlobulated Margin"
           },
           {
-            "code": "Indistinct",
-            "display": "Indistinct Margin"
+            "code": "Obscured",
+            "display": "Obscured Margin"
           },
           {
             "code": "Spiculated",

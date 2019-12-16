@@ -37,6 +37,9 @@ namespace BreastRadiology.XUnitTests
         public const String Group_MRIResources = "MRIResources";
         public const String Group_MRICodes = "MRICodes";
 
+        public const String Group_NMResources = "NMResources";
+        public const String Group_NMCodes = "NMCodes";
+
         public const String Group_USResources = "USResources";
         public const String Group_USCodes = "USCodes";
 

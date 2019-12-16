@@ -128,17 +128,6 @@
         }
       },
       {
-        "id": "Observation.derivedFrom",
-        "path": "Observation.derivedFrom",
-        "min": 0,
-        "max": "0",
-        "base": {
-          "path": "Observation.derivedFrom",
-          "min": 0,
-          "max": "*"
-        }
-      },
-      {
         "id": "Observation.component",
         "path": "Observation.component",
         "min": 0,

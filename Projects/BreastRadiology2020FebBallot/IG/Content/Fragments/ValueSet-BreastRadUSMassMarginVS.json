@@ -21,12 +21,44 @@
         "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadUSMassMarginCS",
         "concept": [
           {
+            "code": "Angular",
+            "display": "Not Circumscribed - Angular"
+          },
+          {
             "code": "Circumscribed",
             "display": "Circumscribed Margin"
           },
           {
-            "code": "NotCircumscribed",
-            "display": "Not Circumscribed"
+            "code": "Indistinct",
+            "display": "Indistinct Margin"
+          },
+          {
+            "code": "IntraductalExtension",
+            "display": "Intraductal Extension"
+          },
+          {
+            "code": "Irregular",
+            "display": "Irregular Margin"
+          },
+          {
+            "code": "Lobulated",
+            "display": "Lobulated Margin"
+          },
+          {
+            "code": "Microlobulated",
+            "display": "Not Circumscribed - Microlobulated"
+          },
+          {
+            "code": "NonCircumscribed",
+            "display": "Non Circumscribed Margin"
+          },
+          {
+            "code": "Smooth",
+            "display": "Smooth Margin"
+          },
+          {
+            "code": "Spiculated",
+            "display": "Not Circumscribed - Spiculated"
           }
         ]
       }

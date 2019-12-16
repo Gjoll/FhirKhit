@@ -22,7 +22,7 @@
   "name": "BreastRadUSMassMargin",
   "title": "US Mass Margin",
   "status": "draft",
-  "description": "Breast Radiology Ultra-Sound Mass Margin Observation\n\nIf this observation is present, and dataAbsentReason is empty, then a mass margin was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a mass margin was not observed and dataAbsentReason contains the reason why.\n\n\nThe margin is the edge or border of the lesion. The descriptors of margin, like the descriptors of shape, are important predictors of whether a mass is benign or malignant. \n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
+  "description": "Breast Radiology Ultra-Sound Mass Margin Observation\n\nIf this observation is present, and dataAbsentReason is empty, then a mass margin was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a mass margin was not observed and dataAbsentReason contains the reason why.\n\n\nThe margin is the edge or border of the lesion. The descriptors of margin, like the descriptors of shape, are important predictors of whether a mass is benign or malignant. \n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013 \n*** TODO Items ***** Is Irregular incorrect? Note from ACR B.3.A. 'Irregular' is not used to group these marginal attributes because irregular describes the shape of a mass.\n** Is non-circumscribed a stand along value, or implied by selection fo on or more non-circumscribed values?",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -35,23 +35,13 @@
         "id": "Observation",
         "path": "Observation",
         "short": "Breast Radiology Ultra-Sound Mass Margin Observation",
-        "definition": "If this observation is present, and dataAbsentReason is empty, then a mass margin was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a mass margin was not observed and dataAbsentReason contains the reason why.\n\n\nThe margin is the edge or border of the lesion. The descriptors of margin, like the descriptors of shape, are important predictors of whether a mass is benign or malignant. \n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
+        "definition": "If this observation is present, and dataAbsentReason is empty, then a mass margin was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a mass margin was not observed and dataAbsentReason contains the reason why.\n\n\nThe margin is the edge or border of the lesion. The descriptors of margin, like the descriptors of shape, are important predictors of whether a mass is benign or malignant. \n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013 \n*** TODO Items ***** Is Irregular incorrect? Note from ACR B.3.A. 'Irregular' is not used to group these marginal attributes because irregular describes the shape of a mass.\n** Is non-circumscribed a stand along value, or implied by selection fo on or more non-circumscribed values?",
         "min": 0,
         "max": "*"
       },
       {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "pattern",
-              "path": "$this"
-            }
-          ],
-          "ordered": true,
-          "rules": "openAtEnd"
-        },
         "min": 0,
         "max": "1",
         "base": {
@@ -63,58 +53,10 @@
           {
             "code": "CodeableConcept"
           }
-        ]
-      },
-      {
-        "id": "Observation.value[x]:Margin",
-        "path": "Observation.value[x]",
-        "sliceName": "Margin",
-        "short": "US Mass Margin Value",
-        "definition": "Specifies Circumscribed or Not-Circumscribed.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Observation.value[x]",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
         ],
-        "patternCodeableConcept": {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadUSMassMarginVS"
-            }
-          ]
-        }
-      },
-      {
-        "id": "Observation.value[x]:MarginNotCircumscribedOptions",
-        "path": "Observation.value[x]",
-        "sliceName": "MarginNotCircumscribedOptions",
-        "short": "US Mass Margin optional Not-Circumscribed specifier value",
-        "definition": "Optional Not-Circumscribed values.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Observation.value[x]",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "patternCodeableConcept": {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadUSMassMarginNotCircumscribedVS"
-            }
-          ]
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadUSMassMarginVS"
         }
       }
     ]
