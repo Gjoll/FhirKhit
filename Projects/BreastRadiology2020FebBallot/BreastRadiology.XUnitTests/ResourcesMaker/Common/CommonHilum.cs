@@ -16,20 +16,20 @@ namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker
     {
-        async StringTask BreastRadHilum()
+        async StringTask CommonHilum()
         {
-            if (breastRadHilum == null)
-                await CreateBreastRadHilum();
-            return breastRadHilum;
+            if (commonHilum == null)
+                await CreateCommonHilum();
+            return commonHilum;
         }
-        String breastRadHilum = null;
+        String commonHilum = null;
 
-        async VTask CreateBreastRadHilum()
+        async VTask CreateCommonHilum()
         {
             await VTask.Run(async () =>
             {
                 ValueSet binding = this.CreateValueSet(
-                        "BreastRadHilum",
+                        "CommonHilum",
                         "Hilum Values",
                         new string[] { "Hilum", "Values" },
                         "Codes defining hilum values.",
@@ -59,12 +59,12 @@ namespace BreastRadiology.XUnitTests
                     this.fc.Mark(outputPath);
                 }
 
-                SDefEditor e = this.CreateEditor("BreastRadHilum",
+                SDefEditor e = this.CreateEditor("CommonHilum",
                         "Hilum Shape",
                         new string[] { "Hilum", "Shape" },
                         ObservationUrl,
                         $"{Group_CommonResources}/Hilum",
-                        out breastRadHilum)
+                        out commonHilum)
                     .Description("Breast Radiology Hilum Observation",
                         new Markdown()
                             .MissingObservation("a hilum")

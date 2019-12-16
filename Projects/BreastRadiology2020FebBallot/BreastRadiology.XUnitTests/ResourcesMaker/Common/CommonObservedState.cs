@@ -16,20 +16,20 @@ namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker
     {
-        async StringTask BreastRadObservedState()
+        async StringTask CommonObservedState()
         {
-            if (breastRadObservedState == null)
-                await CreateBreastRadObservedState();
-            return breastRadObservedState;
+            if (commonObservedState == null)
+                await CreateCommonObservedState();
+            return commonObservedState;
         }
-        String breastRadObservedState = null;
+        String commonObservedState = null;
 
-        async VTask CreateBreastRadObservedState()
+        async VTask CreateCommonObservedState()
         {
             await VTask.Run(async () =>
             {
                 ValueSet binding = this.CreateValueSet(
-                    "BreastRadObservedState",
+                    "CommonObservedState",
                     "Observed State",
                     new string[] { "Observed", "State", "Values" },
                     "Codes for observed state of an abnormality.",
@@ -75,12 +75,12 @@ namespace BreastRadiology.XUnitTests
                     this.fc.Mark(outputPath);
                 }
 
-                SDefEditor e = this.CreateEditor("BreastRadObservedState",
+                SDefEditor e = this.CreateEditor("CommonObservedState",
                         "Observed State",
                         new string[] { "State" },
                         ObservationUrl,
                         $"{Group_CommonResources}/ObservedState",
-                        out breastRadObservedState)
+                        out commonObservedState)
                     .Description("Breast Radiology Observed State Observation",
                         new Markdown()
                             .Paragraph("This observations describes an observed change in a previously observed item.")

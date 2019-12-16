@@ -119,7 +119,7 @@ namespace BreastRadiology.XUnitTests
                             .BiradFooter()
                             .Todo(
                                 "Should each mass/calcification observation have its own optional/required BiRad observation or just the Left/Right/Combined sections?",
-                                "How is this different from BreastRadObservedState"
+                                "How is this different from CommonObservedState"
                             )
                     )
                     .AddFragRef(await this.ObservationNoDeviceFragment())

@@ -16,24 +16,24 @@ namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker : ConverterBase
     {
-        async StringTask BreastRadObservedCount()
+        async StringTask CommonObservedCount()
         {
-            if (breastRadObservedCount == null)
-                await CreateBreastRadObservedCount();
-            return breastRadObservedCount;
+            if (commonObservedCount == null)
+                await CreateCommonObservedCount();
+            return commonObservedCount;
         }
-        String breastRadObservedCount = null;
+        String commonObservedCount = null;
 
-        async VTask CreateBreastRadObservedCount()
+        async VTask CreateCommonObservedCount()
         {
             await VTask.Run(async () =>
             {
-                SDefEditor e = this.CreateEditor("BreastRadCount",
+                SDefEditor e = this.CreateEditor("CommonCount",
                         "Count",
                         new string[] { "Count" },
                         ObservationUrl,
                         $"{Group_CommonResources}/ObservedCount",
-                        out breastRadObservedCount)
+                        out commonObservedCount)
                     .Description("Breast Radiology Count Observation",
                         new Markdown()
                             .Paragraph("This observations describes the number of discrete items in an observed item.")

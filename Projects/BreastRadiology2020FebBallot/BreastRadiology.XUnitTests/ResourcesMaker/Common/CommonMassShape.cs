@@ -16,20 +16,20 @@ namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker
     {
-        async StringTask BreastRadMassShape()
+        async StringTask CommonMassShape()
         {
-            if (breastRadMassShape == null)
-                await CreateBreastRadMassShape();
-            return breastRadMassShape;
+            if (commonMassShape == null)
+                await CreateCommonMassShape();
+            return commonMassShape;
         }
-        String breastRadMassShape = null;
+        String commonMassShape = null;
 
-        async VTask CreateBreastRadMassShape()
+        async VTask CreateCommonMassShape()
         {
             await VTask.Run(async () =>
             {
                 ValueSet binding = this.CreateValueSet(
-                        "BreastRadMassShape",
+                        "CommonMassShape",
                         "Mass Shape",
                         new string[] { "Mass", "Shape", "Values" },
                         "Codes defining mass shape values.",
@@ -74,12 +74,12 @@ namespace BreastRadiology.XUnitTests
                     this.fc.Mark(outputPath);
                 }
 
-                SDefEditor e = this.CreateEditor("BreastRadMassShape",
+                SDefEditor e = this.CreateEditor("CommonMassShape",
                         "Mass Shape",
                         new string[] { "Mass", "Shape" },
                         ObservationUrl,
                         $"{Group_CommonResources}/MassShape",
-                        out breastRadMassShape)
+                        out commonMassShape)
                     .Description("Breast Radiology Mass Shape Observation",
                         new Markdown()
                             .MissingObservation("a mass shape")

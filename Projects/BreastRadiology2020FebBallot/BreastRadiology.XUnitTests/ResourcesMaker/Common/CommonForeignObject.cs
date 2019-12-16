@@ -16,20 +16,20 @@ namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker
     {
-        async StringTask BreastRadForeignObject()
+        async StringTask CommonForeignObject()
         {
-            if (breastRadForeignObject == null)
-                await CreateBreastRadForeignObject();
-            return breastRadForeignObject;
+            if (commonForeignObject == null)
+                await CreateCommonForeignObject();
+            return commonForeignObject;
         }
-        String breastRadForeignObject = null;
+        String commonForeignObject = null;
 
-        async VTask CreateBreastRadForeignObject()
+        async VTask CreateCommonForeignObject()
         {
             await VTask.Run(async () =>
             {
                 ValueSet binding = this.CreateValueSet(
-                        "BreastRadAbnormalities",
+                        "CommonAbnormalities",
                         "Foreign Object",
                         new string[] { "Foreign", "Object", "Values" },
                         "Foreign object codes defining types of foreign objects observed during a Breast Radiology exam",
@@ -125,12 +125,12 @@ namespace BreastRadiology.XUnitTests
                     this.fc.Mark(outputPath);
                 }
 
-                SDefEditor e = this.CreateEditor("BreastRadForeignObject",
+                SDefEditor e = this.CreateEditor("CommonForeignObject",
                         "ForeignObject",
                         new string[] { "ForeignObject" },
                         ObservationUrl,
                         $"{Group_CommonResources}/Foreign",
-                        out breastRadForeignObject)
+                        out commonForeignObject)
                     .Description("Breast Radiology Foreign Object Observation",
                         new Markdown()
                             .Paragraph("These are foreign objects found during a breast radiology exam:")
@@ -150,9 +150,9 @@ namespace BreastRadiology.XUnitTests
                 {
                     ProfileTargetSlice[] targets = new ProfileTargetSlice[]
                     {
-                    new ProfileTargetSlice(await this.BreastRadObservedChanges(), 0, "*"),
-                    new ProfileTargetSlice(await this.BreastRadObservedSize(), 0, "1"),
-                    new ProfileTargetSlice(await this.BreastRadObservedCount(), 0, "1")
+                    new ProfileTargetSlice(await this.CommonObservedChanges(), 0, "*"),
+                    new ProfileTargetSlice(await this.CommonObservedSize(), 0, "1"),
+                    new ProfileTargetSlice(await this.CommonObservedCount(), 0, "1")
                     };
                     e.Find("hasMember").SliceByUrl(targets);
                     e.Node.AddProfileTargets(targets);

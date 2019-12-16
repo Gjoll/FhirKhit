@@ -16,24 +16,24 @@ namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker : ConverterBase
     {
-        async StringTask BreastRadObservedSize()
+        async StringTask CommonObservedSize()
         {
-            if (breastRadObservedSize == null)
-                await CreateBreastRadObservedSize();
-            return breastRadObservedSize;
+            if (commonObservedSize == null)
+                await CreateCommonObservedSize();
+            return commonObservedSize;
         }
-        String breastRadObservedSize = null;
+        String commonObservedSize = null;
 
-        async VTask CreateBreastRadObservedSize()
+        async VTask CreateCommonObservedSize()
         {
             await VTask.Run(async () =>
             {
-                SDefEditor e = this.CreateEditor("BreastRadSize",
+                SDefEditor e = this.CreateEditor("CommonSize",
                         "Size",
                         new string[] { "Size" },
                         ObservationUrl,
                         $"{Group_CommonResources}/ObservedSize",
-                        out breastRadObservedSize)
+                        out commonObservedSize)
                     .Description("Breast Radiology Size Observation",
                         new Markdown()
                             .Paragraph("This observations describes the size of an observed item.",

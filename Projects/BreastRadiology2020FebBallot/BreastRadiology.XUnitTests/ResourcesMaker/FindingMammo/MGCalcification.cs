@@ -66,13 +66,13 @@ namespace BreastRadiology.XUnitTests
                 {
                     ProfileTargetSlice[] targets = new ProfileTargetSlice[]
                     {
-                    new ProfileTargetSlice(await this.BreastRadObservedSize(), 0, "1"),
-                    new ProfileTargetSlice(await this.BreastRadObservedCount(), 0, "1"),
+                    new ProfileTargetSlice(await this.CommonObservedSize(), 0, "1"),
+                    new ProfileTargetSlice(await this.CommonObservedCount(), 0, "1"),
                     new ProfileTargetSlice(await MGCalcificationType(), 0, "1"),
                     new ProfileTargetSlice(await MGCalcificationDistribution(), 0, "1"),
-                    new ProfileTargetSlice(await this.BreastRadObservedChanges(), 0, "*"),
+                    new ProfileTargetSlice(await this.CommonObservedChanges(), 0, "*"),
                     new ProfileTargetSlice(await this.MammoAssociatedFeatures(), 0, "1", false),
-                    new ProfileTargetSlice(await this.BreastRadObservedState(), 0, "1", false)
+                    new ProfileTargetSlice(await this.CommonObservedState(), 0, "1", false)
                     };
                     e.Find("hasMember").SliceByUrl(targets);
                     e.Node.AddProfileTargets(targets);

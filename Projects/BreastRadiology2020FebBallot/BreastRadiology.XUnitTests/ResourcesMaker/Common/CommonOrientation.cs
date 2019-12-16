@@ -29,7 +29,7 @@ namespace BreastRadiology.XUnitTests
             await VTask.Run(async () =>
             {
                 ValueSet binding = this.CreateValueSet(
-                    "BreastRadOrientation",
+                    "CommonOrientation",
                     "Orientation",
                     new string[] { "Orientation Values" },
                     "Orientation codes",
@@ -68,7 +68,7 @@ namespace BreastRadiology.XUnitTests
                     this.fc.Mark(outputPath);
                 }
 
-                SDefEditor e = this.CreateEditor("BreastRadOrientation",
+                SDefEditor e = this.CreateEditor("CommonOrientation",
                         "Orientation",
                         new string[] { "Orientation" },
                         ObservationUrl,
