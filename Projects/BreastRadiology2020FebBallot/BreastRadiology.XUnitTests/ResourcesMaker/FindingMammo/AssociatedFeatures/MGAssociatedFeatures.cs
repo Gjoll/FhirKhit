@@ -14,15 +14,15 @@ namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker : ConverterBase
     {
-        async StringTask MammoAssociatedFeatures()
+        async StringTask MGAssociatedFeatures()
         {
-            if (mammoAssociatedFeatures == null)
-                await CreateMammoAssociatedFeatures();
-            return mammoAssociatedFeatures;
+            if (mgAssociatedFeatures == null)
+                await CreateMGAssociatedFeatures();
+            return mgAssociatedFeatures;
         }
-        String mammoAssociatedFeatures = null;
+        String mgAssociatedFeatures = null;
 
-        async VTask CreateMammoAssociatedFeatures()
+        async VTask CreateMGAssociatedFeatures()
         {
             await VTask.Run(async () =>
             {
@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
                         new string[] { "Mammo", "Associated", "Features" },
                         ObservationUrl,
                         $"{Group_MammoResources}/AssociatedFeature",
-                        out mammoAssociatedFeatures)
+                        out mgAssociatedFeatures)
                     .Description("Mammography Associated Features Observation",
                         new Markdown()
                             .Paragraph("Used with masses, asymmetries, or calcifications, or may stand alone as " +
@@ -47,10 +47,10 @@ namespace BreastRadiology.XUnitTests
                 {
                     ProfileTargetSlice[] targets = new ProfileTargetSlice[]
                     {
-                    new ProfileTargetSlice(await this.MammoSkinRetraction(), 0, "1"),
-                    new ProfileTargetSlice(await this.MammoNippleRetraction(), 0, "1"),
-                    new ProfileTargetSlice(await this.MammoSkinThickening(), 0, "*"),
-                    new ProfileTargetSlice(await this.MammoAxillaryAdenopathy(), 0, "1"),
+                    new ProfileTargetSlice(await this.MGSkinRetraction(), 0, "1"),
+                    new ProfileTargetSlice(await this.MGNippleRetraction(), 0, "1"),
+                    new ProfileTargetSlice(await this.MGSkinThickening(), 0, "*"),
+                    new ProfileTargetSlice(await this.MGAxillaryAdenopathy(), 0, "1"),
                     new ProfileTargetSlice(await this.MGArchitecturalDistortion(), 0, "*"),
                     new ProfileTargetSlice(await this.MGCalcification(), 0, "*")
                     };

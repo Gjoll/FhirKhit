@@ -14,15 +14,15 @@ namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker : ConverterBase
     {
-        async StringTask MammoSkinRetraction()
+        async StringTask MGSkinRetraction()
         {
-            if (mammoSkinRetraction == null)
-                await CreateMammoSkinRetraction();
-            return mammoSkinRetraction;
+            if (mgSkinRetraction == null)
+                await CreateMGSkinRetraction();
+            return mgSkinRetraction;
         }
-        String mammoSkinRetraction = null;
+        String mgSkinRetraction = null;
 
-        async VTask CreateMammoSkinRetraction()
+        async VTask CreateMGSkinRetraction()
         {
             await VTask.Run(async () =>
             {
@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
                     new string[] { "Mammo", "Skin", "Retraction" },
                     ObservationUrl,
                     $"{Group_MammoResources}/AssociatedFeature/SkinRetraction",
-                    out mammoSkinRetraction)
+                    out mgSkinRetraction)
                     .Description("Mammography Skin Retraction Observation",
                         new Markdown()
                             .Paragraph()

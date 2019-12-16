@@ -14,44 +14,46 @@ namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker : ConverterBase
     {
-        async StringTask MammoTrabecularThickening()
+        async StringTask MGSkinThickening()
         {
-            if (mammoTrabecularThickening == null)
-                await CreateMammoTrabecularThickening();
-            return mammoTrabecularThickening;
+            if (mgSkinThickening == null)
+                await CreateMGSkinThickening();
+            return mgSkinThickening;
         }
-        String mammoTrabecularThickening = null;
+        String mgSkinThickening = null;
 
-        async VTask CreateMammoTrabecularThickening()
+        async VTask CreateMGSkinThickening()
         {
             await VTask.Run(async () =>
             {
-                SDefEditor e = this.CreateEditor("BreastRadMammoTrabecularThickening",
-                    "Mammo Trabecular Thickening",
-                    new string[] { "Mammo", "Trabecular", "Thickening" },
+                SDefEditor e = this.CreateEditor("BreastRadMammoSkinThickening",
+                    "Mammo Skin Thickening",
+                    new string[] { "Mammo", "Skin", "Thickening" },
                     ObservationUrl,
-                    $"{Group_MammoResources}/AssociatedFeature/TrabecularThickening",
-                    out mammoTrabecularThickening)
-                    .Description("Trabecular Thickening Observation",
+                    $"{Group_MammoResources}/AssociatedFeature/SkinThickening",
+                    out mgSkinThickening)
+                    .Description("Mammography Skin Thickening Observation",
                         new Markdown()
                             .BiradHeader()
-                            .BlockQuote("This is a thickening of the fibrous septa of the breast.")
+                            .BlockQuote("Skin thickening may be focal or diffuse, and is defined as being greater than 2 mm in thickness. This ")
+                            .BlockQuote("finding is of particular concern if it represents a change from previous mammography examinations. ").BlockQuote("However, unilateral skin thickening is an expected finding after radiation therapy.")
                             .BiradFooter()
-                            .MissingObservation("a trabecular thickening")
                             .Todo(
+                                "Add choice for focal or diffuse (see definition)?",
                                 "Add body location?",
                                 "Add size measurement?",
                                 "cardinality 0..1 or 0..*?"
                             )
                     )
                     .AddFragRef(await this.ObservationNoDeviceFragment())
-                    .AddFragRef(await this.BreastBodyLocationRequiredFragment())
                     .AddFragRef(await this.ObservationNoValueFragment())
+                    .AddFragRef(await this.BreastBodyLocationRequiredFragment())
                     .AddExtensionLink(await this.BreastBodyLocationExtension())
                     ;
+
                 e.IntroDoc
                     .ReviewedStatus(ReviewStatus.NotReviewed)
-                    .ObservationLeafNode("Trabecular Thickening")
+                    .ObservationLeafNode("Skin Thickening")
                     ;
             });
         }

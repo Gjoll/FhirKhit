@@ -14,15 +14,15 @@ namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker : ConverterBase
     {
-        async StringTask MammoAxillaryAdenopathy()
+        async StringTask MGAxillaryAdenopathy()
         {
-            if (mammoAxillaryAdenopathy == null)
-                await CreateMammoAxillaryAdenopathy();
-            return mammoAxillaryAdenopathy;
+            if (mgAxillaryAdenopathy == null)
+                await CreateMGAxillaryAdenopathy();
+            return mgAxillaryAdenopathy;
         }
-        String mammoAxillaryAdenopathy = null;
+        String mgAxillaryAdenopathy = null;
 
-        async VTask CreateMammoAxillaryAdenopathy()
+        async VTask CreateMGAxillaryAdenopathy()
         {
             await VTask.Run(async () =>
             {
@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
                     new string[] { "Mammo", "Axillary", "Adenopathy" },
                     ObservationUrl,
                     $"{Group_MammoResources}/AssociatedFeature/AxillaryAdenopathy",
-                    out mammoAxillaryAdenopathy)
+                    out mgAxillaryAdenopathy)
                     .Description("Breast Radiology Mammography Axillary Adenopathy Observation",
                         new Markdown()
                             .MissingObservation("an axillary adenopathy")

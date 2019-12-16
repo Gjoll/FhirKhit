@@ -14,15 +14,15 @@ namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker : ConverterBase
     {
-        async StringTask MammoNippleRetraction()
+        async StringTask MGNippleRetraction()
         {
-            if (mammoNippleRetraction == null)
-                await CreateMammoNippleRetraction();
-            return mammoNippleRetraction;
+            if (mgNippleRetraction == null)
+                await CreateMGNippleRetraction();
+            return mgNippleRetraction;
         }
-        String mammoNippleRetraction = null;
+        String mgNippleRetraction = null;
 
-        async VTask CreateMammoNippleRetraction()
+        async VTask CreateMGNippleRetraction()
         {
             await VTask.Run(async () =>
             {
@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
                     new string[] { "Mammo", "Nipple", "Retraction" },
                     ObservationUrl,
                     $"{Group_MammoResources}/AssociatedFeature/NippleRetraction",
-                    out mammoNippleRetraction)
+                    out mgNippleRetraction)
                     .Description("Breast Radiology Mammography Nipple Retraction Observation",
                         new Markdown()
                             .MissingObservation("a nipple retraction")
