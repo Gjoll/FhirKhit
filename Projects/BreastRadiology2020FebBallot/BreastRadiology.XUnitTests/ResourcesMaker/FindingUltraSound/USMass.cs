@@ -62,7 +62,7 @@ namespace BreastRadiology.XUnitTests
                     new ProfileTargetSlice(await this.BreastRadObservedSize(), 0, "1"),
                     new ProfileTargetSlice(await this.BreastRadObservedCount(), 0, "1"),
                     new ProfileTargetSlice(await this.BreastRadMassShape(), 0, "1"),
-                    new ProfileTargetSlice(await this.MassOrientation(), 0, "1"),
+                    new ProfileTargetSlice(await this.Orientation(), 0, "1"),
                     new ProfileTargetSlice(await this.USMassMargin(), 0, "*"),
                     new ProfileTargetSlice(await this.USMassEchoPattern(), 0, "1"),
                     new ProfileTargetSlice(await this.USMassPosteriorAcousticFeatures(), 0, "1"),
@@ -74,7 +74,10 @@ namespace BreastRadiology.XUnitTests
                     e.Node.AddProfileTargets(targets);
                 }
 
-                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationSection($"Ultra-Sound Mass");
+                e.IntroDoc
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .ObservationSection($"Ultra-Sound Mass")
+                    ;
             });
         }
     }

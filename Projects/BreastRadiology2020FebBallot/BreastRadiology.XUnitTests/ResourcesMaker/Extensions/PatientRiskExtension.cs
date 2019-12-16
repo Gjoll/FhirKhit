@@ -56,7 +56,10 @@ namespace BreastRadiology.XUnitTests
                     .Single()
                     ;
 
-                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).Extension("PatientRisk", "include references to PatientRisk");
+                e.IntroDoc
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .Extension("PatientRisk", "include references to PatientRisk")
+                    ;
                 e.Node.AddLink("target", RiskAssessmentUrl, false);
                 return e.SDef.Url;
             });

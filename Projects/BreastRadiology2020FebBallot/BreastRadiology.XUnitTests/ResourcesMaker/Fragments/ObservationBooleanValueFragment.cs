@@ -46,8 +46,10 @@ namespace BreastRadiology.XUnitTests
                     .Type("boolean")
                     ;
 
-
-                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).Fragment($"Resource fragment used to by all observations whose value are a Boolean.");
+                e.IntroDoc
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .Fragment($"Resource fragment used to by all observations whose value are a Boolean.")
+                    ;
             });
         }
     }

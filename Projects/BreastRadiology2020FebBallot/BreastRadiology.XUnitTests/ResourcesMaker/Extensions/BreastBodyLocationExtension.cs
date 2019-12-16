@@ -416,7 +416,10 @@ namespace BreastRadiology.XUnitTests
                         ;
                     distanceFromNippleGroup.RelatedElements.Add(quantityCode);
 
-                    e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).Extension("Breast Body Location", "define a location in the breast");
+                    e.IntroDoc
+                        .ReviewedStatus(ReviewStatus.NotReviewed)
+                        .Extension("Breast Body Location", "define a location in the breast")
+                        ;
                 }
             });
         }

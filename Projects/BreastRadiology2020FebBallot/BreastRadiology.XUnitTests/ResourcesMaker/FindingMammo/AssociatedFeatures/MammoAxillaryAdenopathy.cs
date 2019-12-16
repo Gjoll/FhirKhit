@@ -53,7 +53,10 @@ namespace BreastRadiology.XUnitTests
                     .AddFragRef(await this.BreastBodyLocationRequiredFragment())
                     .AddExtensionLink(await this.BreastBodyLocationExtension())
                     ;
-                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationLeafNode("Mammography Axillary Adenopathy");
+                e.IntroDoc
+                .ReviewedStatus(ReviewStatus.NotReviewed)
+                .ObservationLeafNode("Mammography Axillary Adenopathy")
+                ;
             });
         }
     }

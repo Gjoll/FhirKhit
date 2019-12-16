@@ -48,7 +48,10 @@ namespace BreastRadiology.XUnitTests
                     .AddExtensionLink(await this.BreastBodyLocationExtension())
                     ;
 
-                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationLeafNode("Skin Retraction");
+                e.IntroDoc  
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .ObservationLeafNode("Skin Retraction")
+                    ;
             });
         }
     }

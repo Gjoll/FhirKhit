@@ -52,7 +52,10 @@ namespace BreastRadiology.XUnitTests
                     .AddExtensionLink(await this.BreastBodyLocationExtension())
                     ;
 
-                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationLeafNode($"Solitary Dilated Duct");
+                e.IntroDoc
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .ObservationLeafNode($"Solitary Dilated Duct")
+                    ;
             });
         }
     }

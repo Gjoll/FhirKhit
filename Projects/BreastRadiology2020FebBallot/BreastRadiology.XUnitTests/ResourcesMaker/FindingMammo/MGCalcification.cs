@@ -77,7 +77,10 @@ namespace BreastRadiology.XUnitTests
                     e.Find("hasMember").SliceByUrl(targets);
                     e.Node.AddProfileTargets(targets);
                 }
-                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationSection("Mammography Calcification");
+                e.IntroDoc
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .ObservationSection("Mammography Calcification")
+                    ;
             });
         }
     }

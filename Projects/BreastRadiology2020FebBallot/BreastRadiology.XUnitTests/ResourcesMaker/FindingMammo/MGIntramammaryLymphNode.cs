@@ -54,7 +54,10 @@ namespace BreastRadiology.XUnitTests
                     .AddExtensionLink(await this.BreastBodyLocationExtension())
                     ;
 
-                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationLeafNode($"Intramammary Lymph Node");
+                e.IntroDoc
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .ObservationLeafNode($"Intramammary Lymph Node")
+                    ;
             });
         }
     }

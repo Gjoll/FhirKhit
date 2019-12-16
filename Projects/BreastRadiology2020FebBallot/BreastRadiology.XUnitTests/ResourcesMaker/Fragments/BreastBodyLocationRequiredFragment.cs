@@ -50,7 +50,10 @@ namespace BreastRadiology.XUnitTests
                     .ApplyExtension("breastBodyLocation", await this.BreastBodyLocationExtension(), true, false)
                     .Single()
                     ;
-                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).Fragment($"Resource fragment used by various observations to include an required breast body location.");
+                e.IntroDoc
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .Fragment($"Resource fragment used by various observations to include an required breast body location.")
+                    ;
             });
         }
     }

@@ -37,7 +37,10 @@ namespace BreastRadiology.XUnitTests
                 ;
                 e.Select("device").Zero();
 
-                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).Fragment($"Fragment for all observations that have no device.");
+                e.IntroDoc
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .Fragment($"Fragment for all observations that have no device.")
+                    ;
             });
         }
     }

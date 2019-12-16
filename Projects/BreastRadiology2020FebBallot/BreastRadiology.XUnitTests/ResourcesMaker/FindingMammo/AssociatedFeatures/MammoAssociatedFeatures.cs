@@ -57,7 +57,10 @@ namespace BreastRadiology.XUnitTests
                     e.Find("hasMember").SliceByUrl(targets);
                     e.Node.AddProfileTargets(targets);
                 }
-                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationSection("Mammography Associated Features");
+                e.IntroDoc
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .ObservationSection("Mammography Associated Features")
+                    ;
             });
         }
     }

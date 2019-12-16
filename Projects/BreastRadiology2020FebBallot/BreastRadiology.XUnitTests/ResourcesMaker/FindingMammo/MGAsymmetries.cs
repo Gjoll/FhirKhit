@@ -139,7 +139,10 @@ namespace BreastRadiology.XUnitTests
                 .Binding(binding.Url, BindingStrength.Required)
                 ;
             e.AddValueSetLink(binding);
-            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "a mammography asymmetry", binding);
+            e.IntroDoc
+                .ReviewedStatus(ReviewStatus.NotReviewed)
+                .CodedObservationLeafNode(e, "a mammography asymmetry", binding)
+                ;
         }
     }
 }

@@ -44,7 +44,10 @@ namespace BreastRadiology.XUnitTests
                 e.SDef.Publisher = "Hl7-Clinical Interoperability Council";
                 e.SDef.Version = ProfileVersion;
 
-                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).Fragment($"Resource fragment used to by all resources to define common values such as Contact and Date.");
+                e.IntroDoc
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .Fragment($"Resource fragment used to by all resources to define common values such as Contact and Date.")
+                    ;
             });
         }
     }

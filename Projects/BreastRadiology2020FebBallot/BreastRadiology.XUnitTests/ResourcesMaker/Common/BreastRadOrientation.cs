@@ -16,23 +16,23 @@ namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker : ConverterBase
     {
-        async StringTask MassOrientation()
+        async StringTask Orientation()
         {
-            if (massOrientation == null)
-                await CreateMassOrientation();
-            return massOrientation;
+            if (orientation == null)
+                await CreateOrientation();
+            return orientation;
         }
-        String massOrientation = null;
+        String orientation = null;
 
-        async VTask CreateMassOrientation()
+        async VTask CreateOrientation()
         {
             await VTask.Run(async () =>
             {
                 ValueSet binding = this.CreateValueSet(
-                    "BreastRadMassOrientation",
-                    "Mass Orientation",
-                    new string[] { "Mass", "Orientation Values" },
-                    "Mass orientation codes",
+                    "BreastRadOrientation",
+                    "Orientation",
+                    new string[] { "Orientation Values" },
+                    "Orientation codes",
                     Group_CommonCodes,
                     new ConceptDef[]
                     {
@@ -68,15 +68,15 @@ namespace BreastRadiology.XUnitTests
                     this.fc.Mark(outputPath);
                 }
 
-                SDefEditor e = this.CreateEditor("BreastRadMassOrientation",
-                        "Mass Orientation",
-                        new string[] { "Mass", "Orientation" },
+                SDefEditor e = this.CreateEditor("BreastRadOrientation",
+                        "Orientation",
+                        new string[] { "Orientation" },
                         ObservationUrl,
-                        $"{Group_CommonResources}/Mass/Orientation",
-                        out massOrientation)
-                    .Description("Breast Radiology Mass Orientation Observation",
+                        $"{Group_CommonResources}/Orientation",
+                        out orientation)
+                    .Description("Breast Radiology Orientation Observation",
                         new Markdown()
-                            .MissingObservation("a mass orientation")
+                            .MissingObservation("a orientation")
                             .BiradHeader()
                             .BlockQuote("Orientation is defined with reference to the skin")
                             .BlockQuote("line. Obliquely situated masses may follow a radial pattern, and their long axes will help determine")
@@ -98,7 +98,10 @@ namespace BreastRadiology.XUnitTests
                     .Binding(binding.Url, BindingStrength.Required)
                     ;
                 e.AddValueSetLink(binding);
-                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).CodedObservationLeafNode(e, "an ultra-sound mass orientation", binding);
+                e.IntroDoc
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .CodedObservationLeafNode(e, "an orientation", binding)
+                    ;
             });
         }
     }

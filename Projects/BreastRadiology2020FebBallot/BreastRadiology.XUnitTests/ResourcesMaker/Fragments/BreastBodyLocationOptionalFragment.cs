@@ -50,7 +50,10 @@ namespace BreastRadiology.XUnitTests
                     .ZeroToOne()
                     ;
 
-                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).Fragment($"Resource fragment used by various observations to include an optional breast body location.");
+                e.IntroDoc
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .Fragment($"Resource fragment used by various observations to include an optional breast body location.")
+                    ;
             });
         }
     }

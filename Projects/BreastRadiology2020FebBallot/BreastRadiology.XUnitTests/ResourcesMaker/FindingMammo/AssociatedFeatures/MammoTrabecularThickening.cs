@@ -49,7 +49,10 @@ namespace BreastRadiology.XUnitTests
                     .AddFragRef(await this.ObservationNoValueFragment())
                     .AddExtensionLink(await this.BreastBodyLocationExtension())
                     ;
-                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationLeafNode("Trabecular Thickening");
+                e.IntroDoc
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .ObservationLeafNode("Trabecular Thickening")
+                    ;
             });
         }
     }

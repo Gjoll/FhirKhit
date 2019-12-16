@@ -59,7 +59,10 @@ namespace BreastRadiology.XUnitTests
                    e.Node.AddProfileTargets(targets);
                }
 
-               e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationSection($"Abnormality Finding");
+               e.IntroDoc
+                .ReviewedStatus(ReviewStatus.NotReviewed)
+                .ObservationSection($"Abnormality Finding")
+                ;
            });
         }
     }

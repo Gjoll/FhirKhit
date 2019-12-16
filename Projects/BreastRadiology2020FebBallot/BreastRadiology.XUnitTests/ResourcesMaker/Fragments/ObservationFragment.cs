@@ -52,7 +52,10 @@ namespace BreastRadiology.XUnitTests
                 e.Select("specimen").Zero();
                 e.Select("contained").Zero();
 
-                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).Fragment($"Resource fragment used by all BreatRad observations.");
+                e.IntroDoc
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .Fragment($"Resource fragment used by all BreatRad observations.")
+                    ;
             });
         }
     }

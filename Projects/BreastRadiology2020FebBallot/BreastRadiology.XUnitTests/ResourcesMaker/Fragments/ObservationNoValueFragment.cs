@@ -38,7 +38,10 @@ namespace BreastRadiology.XUnitTests
                 e.Select("value[x]").Zero();
                 e.Select("interpretation").Zero();
 
-                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).Fragment($"Resource fragment used by observations that constrain the value[x] element to cardinality 0..0.");
+                e.IntroDoc
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .Fragment($"Resource fragment used by observations that constrain the value[x] element to cardinality 0..0.")
+                    ;
             });
         }
     }

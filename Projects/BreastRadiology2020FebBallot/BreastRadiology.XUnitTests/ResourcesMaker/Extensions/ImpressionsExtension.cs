@@ -55,7 +55,10 @@ namespace BreastRadiology.XUnitTests
                 .ZeroToMany()
                 ;
 
-            e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).Extension("Prior Reports", "include references to prior reports");
+            e.IntroDoc
+                .ReviewedStatus(ReviewStatus.NotReviewed)
+                .Extension("Prior Reports", "include references to prior reports")
+                ;
 
             e.Node.AddLink("target", ClinicalImpressionUrl, false);
         }

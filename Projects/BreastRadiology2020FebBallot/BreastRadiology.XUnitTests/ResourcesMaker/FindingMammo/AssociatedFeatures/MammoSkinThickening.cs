@@ -51,7 +51,10 @@ namespace BreastRadiology.XUnitTests
                     .AddExtensionLink(await this.BreastBodyLocationExtension())
                     ;
 
-                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationLeafNode("Skin Thickening");
+                e.IntroDoc
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .ObservationLeafNode("Skin Thickening")
+                    ;
             });
         }
     }

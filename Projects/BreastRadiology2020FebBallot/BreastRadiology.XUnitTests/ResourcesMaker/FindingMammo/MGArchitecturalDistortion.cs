@@ -55,7 +55,10 @@ namespace BreastRadiology.XUnitTests
                     .AddExtensionLink(await this.BreastBodyLocationExtension())
                     ;
 
-                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationLeafNode($"Architectural Distortion");
+                e.IntroDoc
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .ObservationLeafNode($"Architectural Distortion")
+                    ;
             });
         }
     }

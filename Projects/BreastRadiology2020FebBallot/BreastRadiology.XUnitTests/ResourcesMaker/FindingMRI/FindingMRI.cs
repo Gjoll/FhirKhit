@@ -45,7 +45,10 @@ namespace BreastRadiology.XUnitTests
                     .AddFragRef(await this.ObservationNoValueFragment())
                 ;
 
-                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).ObservationSection("MRI Abnormality");
+                e.IntroDoc
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .ObservationSection("MRI Abnormality")
+                    ;
                 //$e.Find("method")
                 //$     .FixedCodeSlice("method", "http://snomed.info/sct", "115341008")
                 //$     .Card(1, "*")

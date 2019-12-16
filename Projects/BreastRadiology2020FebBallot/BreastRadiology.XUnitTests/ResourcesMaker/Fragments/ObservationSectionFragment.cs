@@ -42,7 +42,10 @@ namespace BreastRadiology.XUnitTests
                 e.Select("note").Zero();
                 e.Select("method").Zero();
 
-                e.IntroDoc.ReviewedStatus(ReviewStatus.NotReviewed).Fragment($"Resource fragment used by observations that are used as report sections.");
+                e.IntroDoc
+                    .ReviewedStatus(ReviewStatus.NotReviewed)
+                    .Fragment($"Resource fragment used by observations that are used as report sections.")
+                    ;
             });
         }
     }
