@@ -54,6 +54,7 @@ namespace BreastRadiology.XUnitTests
                     new ProfileTargetSlice(await this.MGAsymmetries(), 0, "*"),
                     new ProfileTargetSlice(await this.MGBreastDensity(), 1, "1"),
                     new ProfileTargetSlice(await this.MGCalcification(), 0, "*"),
+                    new ProfileTargetSlice(await this.CommonForeignObject(), 0, "*"),
                     new ProfileTargetSlice(await this.MGIntramammaryLymphNode(), 0, "1"),
                     new ProfileTargetSlice(await this.MGMass(), 0, "*"),
                     new ProfileTargetSlice(await this.MGSkinLesion(), 0, "*"),
