@@ -2,8 +2,16 @@
   "resourceType": "StructureDefinition",
   "extension": [
     {
+      "url": "http://www.resourcemap.com/mapname",
+      "valueString": "Annotation/PolyLine/Location"
+    },
+    {
       "url": "http://www.ResourceMaker.com/Group",
       "valueString": "AimResources/AimAnnotationPolyLineExtension"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AimHeaderFragment"
     }
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AimAnnotationPolyLineExtension",

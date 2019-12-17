@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
                 ValueSet binding = this.CreateValueSet(
                     "BreastRadNMMassMargin",
                     "NM Mass Margin",
-                    new string[] { "NM", "Mass", "Margin", "Values" },
+                    "NM/Mass/Margin/Values",
                     "NM mass margin codes.",
                     Group_NMCodes,
                     new ConceptDef[]
@@ -59,7 +59,7 @@ namespace BreastRadiology.XUnitTests
 
                 SDefEditor e = this.CreateEditor("BreastRadNMMassMargin",
                     "NM Mass Margin",
-                    new string[] { "NM", "Mass", "Margin" },
+                    "NM/Mass/Margin",
                     ObservationUrl,
                     $"{Group_NMResources}/Mass/Margin",
                     out nmMassMargin)

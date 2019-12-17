@@ -1,5 +1,15 @@
 {
   "resourceType": "StructureDefinition",
+  "extension": [
+    {
+      "url": "http://www.resourcemap.com/mapname",
+      "valueString": "Breast/Body/Location"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
+    }
+  ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocation",
   "version": "0.0.2",
   "name": "BreastBodyLocation",

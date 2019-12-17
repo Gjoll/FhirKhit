@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
             {
                 SDefEditor e = this.CreateEditor("BreastRadRecommendationsExtension",
                     "Recommendations Extension",
-                    new string[] { "Recommendations", "Extension" },
+                    "Recommendations/Extension",
                     ExtensionUrl,
                      $"{Group_ExtensionResources}/Recommendations",
                    out breastRadiologyRecommendationsExtension)
@@ -61,8 +61,8 @@ namespace BreastRadiology.XUnitTests
                     .ReviewedStatus(ReviewStatus.NotReviewed)
                     .Extension("Recommendations", "include references to recommendations")
                     ;
-                e.Node.AddLink("target", MedicationRequestUrl, false);
-                e.Node.AddLink("target", ServiceRequestUrl, false);
+                e.AddLink("target", MedicationRequestUrl, false);
+                e.AddLink("target", ServiceRequestUrl, false);
                 return e.SDef.Url;
             });
         }

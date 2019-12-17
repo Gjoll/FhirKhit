@@ -24,7 +24,7 @@ namespace BreastRadiology.XUnitTests
             {
                 SDefEditor e = this.CreateFragment("ObservationLeafFragment",
                     "Observation Leaf Fragment",
-                        new string[] { "Observation", "Leaf", "Fragment" },
+                        "Observation/Leaf/Fragment",
                     ObservationUrl,
                     out observationLeafFragment)
                     .Description("Fragment that contstrains all observations that are leaf nodes.",

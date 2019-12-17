@@ -2,8 +2,44 @@
   "resourceType": "StructureDefinition",
   "extension": [
     {
+      "url": "http://www.resourcemap.com/mapname",
+      "valueString": "Breast/Radiology/Report"
+    },
+    {
       "url": "http://www.ResourceMaker.com/Group",
       "valueString": "BaseResources"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CategoryFragment"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadRecommendationsExtension"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadPriorReportsExtension"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadImpressionsExtension"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadPatientRiskExtension"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadSectionPatientHistory"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadSectionFindings"
     }
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadReport",

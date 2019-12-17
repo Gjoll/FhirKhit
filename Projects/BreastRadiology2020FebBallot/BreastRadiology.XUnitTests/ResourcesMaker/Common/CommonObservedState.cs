@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
                 ValueSet binding = this.CreateValueSet(
                     "CommonObservedState",
                     "Observed State",
-                    new string[] { "Observed", "State", "Values" },
+                    "Observed/State/Values",
                     "Codes for observed state of an abnormality.",
                     Group_CommonCodes,
                     new ConceptDef[]
@@ -77,7 +77,7 @@ namespace BreastRadiology.XUnitTests
 
                 SDefEditor e = this.CreateEditor("CommonObservedState",
                         "Observed State",
-                        new string[] { "State" },
+                        "State",
                         ObservationUrl,
                         $"{Group_CommonResources}/ObservedState",
                         out commonObservedState)

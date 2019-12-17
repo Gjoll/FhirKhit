@@ -9,6 +9,10 @@
     {
       "url": "http://www.ResourceMaker.com/Group",
       "valueString": "USCodesVS"
+    },
+    {
+      "url": "http://www.resourcemap.com/mapname",
+      "valueString": "US Mass/Posterior Acoustic/Feature Values"
     }
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadUSMassPosteriorAcousticFeaturesVS",

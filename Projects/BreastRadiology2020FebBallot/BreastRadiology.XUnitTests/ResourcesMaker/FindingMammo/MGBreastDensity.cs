@@ -30,7 +30,7 @@ namespace BreastRadiology.XUnitTests
                 ValueSet binding = this.CreateValueSet(
                     "BreastRadMammoBreastDensity",
                     "Mammo Breast Density",
-                    new string[] { "Mammo", "Breast", "Density", "Values" },
+                    "Mammo/Breast/Density/Values",
                     "Codes for mammography breast density values.",
                     Group_MammoCodes,
                     new ConceptDef[]
@@ -104,7 +104,7 @@ namespace BreastRadiology.XUnitTests
 
                 SDefEditor e = this.CreateEditor("BreastRadMammoBreastDensity",
                         "Mammo Breast Density",
-                        new string[] { "Mammo", "Breast", "Density" },
+                        "Mammo/Breast/Density",
                         ObservationUrl,
                         $"{Group_MammoResources}/BreastDensity",
                         out mgBreastDensity)

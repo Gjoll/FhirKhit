@@ -9,6 +9,10 @@
     {
       "url": "http://www.ResourceMaker.com/Group",
       "valueString": "USCodesVS"
+    },
+    {
+      "url": "http://www.resourcemap.com/mapname",
+      "valueString": "US Mass/Echo Pattern/Values"
     }
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadUSMassEchoPatternVS",
@@ -25,12 +29,16 @@
             "display": "Anechoic"
           },
           {
-            "code": "Hyperechoic",
-            "display": "Hyperechoic"
-          },
-          {
             "code": "ComplexCysticAndSolid",
             "display": "Complex Cystic and Solid"
+          },
+          {
+            "code": "Heterogeneous",
+            "display": "Heterogeneous"
+          },
+          {
+            "code": "Hyperechoic",
+            "display": "Hyperechoic"
           },
           {
             "code": "Hypoechoic",
@@ -39,10 +47,6 @@
           {
             "code": "Isoechoic",
             "display": "Isoechoic"
-          },
-          {
-            "code": "Heterogeneous",
-            "display": "Heterogeneous"
           }
         ]
       }

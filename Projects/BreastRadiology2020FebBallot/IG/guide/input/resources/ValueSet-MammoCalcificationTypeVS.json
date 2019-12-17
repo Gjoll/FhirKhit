@@ -1,6 +1,12 @@
 {
   "resourceType": "ValueSet",
   "id": "MammoCalcificationTypeVS",
+  "extension": [
+    {
+      "url": "http://www.resourcemap.com/mapname",
+      "valueString": "Mammo/Calc./Type/Values"
+    }
+  ],
   "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/MammoCalcificationTypeVS",
   "version": "0.0.2",
   "name": "MammoCalcificationTypeVS",

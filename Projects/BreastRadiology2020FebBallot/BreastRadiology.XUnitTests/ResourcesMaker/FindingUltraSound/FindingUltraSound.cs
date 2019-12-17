@@ -30,7 +30,7 @@ namespace BreastRadiology.XUnitTests
                 //$ Fix me. Incorrect method!!!
                 SDefEditor e = this.CreateEditor("BreastRadUltraSoundFinding",
                         "UltraSound Finding",
-                        new string[] { "UltraSound", "Finding" },
+                        "UltraSound/Finding",
                         ObservationUrl,
                         $"{Group_USResources}",
                         out findingUltraSound)
@@ -85,7 +85,7 @@ namespace BreastRadiology.XUnitTests
                         //new ProfileTargetSlice(await this.MammoAssociatedFeatures, 0, "1")
                     };
                     e.Find("hasMember").SliceByUrl(targets);
-                    e.Node.AddProfileTargets(targets);
+                    e.AddProfileTargets(targets);
                 }
                 e.IntroDoc
                     .ReviewedStatus(ReviewStatus.NotReviewed)

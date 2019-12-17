@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
         {
             SDefEditor e = this.CreateEditor("BreastRadImpression",
                     "Impression",
-                    new string[] { "Impression" },
+                    "Impression",
                     ClinicalImpressionUrl,
                     $"{Group_CommonResources}/BreastRadImpression",
                     out breastRadImpression)

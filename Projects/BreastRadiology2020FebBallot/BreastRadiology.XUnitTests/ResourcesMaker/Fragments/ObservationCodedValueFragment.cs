@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
             {
                 SDefEditor e = this.CreateFragment("CodedValueObservationFragment",
                         "CodedValue Observation Fragment",
-                        new string[] { "Observation", "CodedValue", "Fragment" },
+                        "Observation/CodedValue/Fragment",
                         ObservationUrl,
                         out observationCodedValueFragment)
                     .Description("Fragment that defines values for coded observations",

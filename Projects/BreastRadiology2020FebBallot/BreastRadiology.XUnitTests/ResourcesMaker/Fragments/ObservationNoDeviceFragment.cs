@@ -24,7 +24,7 @@ namespace BreastRadiology.XUnitTests
             {
                 SDefEditor e = this.CreateFragment("BreastRadObservationNoDeviceFragment",
                     "BreastRad Observation NoDevice Fragment",
-                        new string[] { "NoDevice", "Observation", "Fragment" },
+                        "NoDevice/Observation/Fragment",
                     ObservationUrl,
                     out observationNoDeviceFragment)
                     .Description("Fragment that constrains Observations to have not device data.",

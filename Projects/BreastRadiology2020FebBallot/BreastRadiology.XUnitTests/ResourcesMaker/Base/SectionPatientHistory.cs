@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
             {
                SDefEditor e = this.CreateEditor("BreastRadSectionPatientHistory",
                        "Patient History",
-                       new string[] { "Patient History" },
+                       "Patient History",
                        ObservationUrl,
                        $"{Group_BaseResources}/PatientHistory",
                        out sectionPatientHistory)

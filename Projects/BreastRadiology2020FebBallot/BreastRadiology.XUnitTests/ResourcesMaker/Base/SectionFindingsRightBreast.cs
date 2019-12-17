@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
             {
                SDefEditor e = this.CreateEditor("BreastRadSectionFindingsRightBreast",
                        "Findings Right Breast",
-                       new string[] { "Right Breast" },
+                       "Right Breast",
                        ObservationUrl,
                        $"{Group_BaseResources}/Findings/RightBreast",
                        out sectionFindingsRightBreast)
@@ -48,7 +48,7 @@ namespace BreastRadiology.XUnitTests
                    ;
                e.Select("bodySite").Zero();
                e.Find("hasMember").SliceByUrl(await this.FindingBreastTargets());
-               e.Node.AddProfileTargets(await this.FindingBreastTargets());
+               e.AddProfileTargets(await this.FindingBreastTargets());
 
                e.IntroDoc
                     .ReviewedStatus(ReviewStatus.NotReviewed)

@@ -30,7 +30,7 @@ namespace BreastRadiology.XUnitTests
                 //$ Fix me. Incorrect method!!!
                 SDefEditor e = this.CreateEditor("BreastRadMRIFinding",
                         "MRI Finding",
-                        new string[] { "MRI", "Finding" },
+                        "MRI/Finding",
                         ObservationUrl,
                         $"{Group_MRIResources}",
                         out findingMri)
@@ -60,7 +60,7 @@ namespace BreastRadiology.XUnitTests
                     //new ProfileTargetSlice(await this.MGAssociatedFeatures(), 0, "1")
                     };
                     e.Find("hasMember").SliceByUrl(targets);
-                    e.Node.AddProfileTargets(targets);
+                    e.AddProfileTargets(targets);
                 }
 
                 e.IntroDoc

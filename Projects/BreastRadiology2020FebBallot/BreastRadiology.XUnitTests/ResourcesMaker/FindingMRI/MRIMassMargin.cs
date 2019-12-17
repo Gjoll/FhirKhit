@@ -18,7 +18,7 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask MRIMassMargin()
         {
-            if (mgMassMargin == null)
+            if (mriMassMargin == null)
                 await CreateMRIMassMargin();
             return mriMassMargin;
         }
@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
                 ValueSet binding = this.CreateValueSet(
                     "BreastRadMRIMassMargin",
                     "MRI Mass Margin",
-                    new string[] { "MRI", "Mass", "Margin", "Values" },
+                    "MRI/Mass/Margin/Values",
                     "MRI mass margin codes.",
                     Group_MRICodes,
                     new ConceptDef[]
@@ -80,7 +80,7 @@ namespace BreastRadiology.XUnitTests
 
                 SDefEditor e = this.CreateEditor("BreastRadMRIMassMargin",
                     "MRI Mass Margin",
-                    new string[] { "MRI", "Mass", "Margin" },
+                    "MRI/Mass/Margin",
                     ObservationUrl,
                     $"{Group_MRIResources}/Mass/Margin",
                     out mriMassMargin)

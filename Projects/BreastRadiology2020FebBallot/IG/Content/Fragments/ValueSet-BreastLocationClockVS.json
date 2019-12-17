@@ -9,6 +9,10 @@
     {
       "url": "http://www.ResourceMaker.com/Group",
       "valueString": "CommonCodesVS"
+    },
+    {
+      "url": "http://www.resourcemap.com/mapname",
+      "valueString": "Breast/Location/Clock/Values"
     }
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastLocationClockVS",

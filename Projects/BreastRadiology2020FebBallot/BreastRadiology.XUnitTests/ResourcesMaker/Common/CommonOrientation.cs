@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
                 ValueSet binding = this.CreateValueSet(
                     "CommonOrientation",
                     "Orientation",
-                    new string[] { "Orientation Values" },
+                    "Orientation Values",
                     "Orientation codes",
                     Group_CommonCodes,
                     new ConceptDef[]
@@ -70,7 +70,7 @@ namespace BreastRadiology.XUnitTests
 
                 SDefEditor e = this.CreateEditor("CommonOrientation",
                         "Orientation",
-                        new string[] { "Orientation" },
+                        "Orientation",
                         ObservationUrl,
                         $"{Group_CommonResources}/Orientation",
                         out orientation)

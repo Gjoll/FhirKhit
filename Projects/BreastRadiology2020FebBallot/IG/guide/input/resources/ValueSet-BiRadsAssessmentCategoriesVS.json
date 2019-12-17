@@ -1,6 +1,12 @@
 {
   "resourceType": "ValueSet",
   "id": "BiRadsAssessmentCategoriesVS",
+  "extension": [
+    {
+      "url": "http://www.resourcemap.com/mapname",
+      "valueString": "BiRads/Assessment/Category/Values"
+    }
+  ],
   "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BiRadsAssessmentCategoriesVS",
   "version": "0.0.2",
   "name": "BiRadsAssessmentCategoriesVS",

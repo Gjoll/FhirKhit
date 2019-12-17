@@ -2,6 +2,10 @@
   "resourceType": "StructureDefinition",
   "extension": [
     {
+      "url": "http://www.resourcemap.com/mapname",
+      "valueString": "Mammo/Finding"
+    },
+    {
       "url": "http://www.ResourceMaker.com/Group",
       "valueString": "MammoResources"
     },
@@ -10,8 +14,56 @@
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservationSectionFragment"
     },
     {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservationSectionFragment"
+    },
+    {
       "url": "http://www.fragment.com/fragment",
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoValueFragment"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoValueFragment"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoArchitecturalDistortion"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoAsymmetries"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoBreastDensity"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoCalcification"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonForeignObject"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoIntramammaryLymphNode"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoMass"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoSkinLesion"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoSolitaryDilatedDuct"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoAssociatedFeatures"
     }
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoFinding",
@@ -57,66 +109,6 @@
         }
       },
       {
-        "id": "Observation.hasMember:breastRadMammoBreastDensity",
-        "path": "Observation.hasMember",
-        "sliceName": "breastRadMammoBreastDensity",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Observation.hasMember",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoBreastDensity"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "Observation.hasMember:breastRadMammoMass",
-        "path": "Observation.hasMember",
-        "sliceName": "breastRadMammoMass",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Observation.hasMember",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoMass"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "Observation.hasMember:breastRadMammoCalcification",
-        "path": "Observation.hasMember",
-        "sliceName": "breastRadMammoCalcification",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Observation.hasMember",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoCalcification"
-            ]
-          }
-        ]
-      },
-      {
         "id": "Observation.hasMember:breastRadMammoArchitecturalDistortion",
         "path": "Observation.hasMember",
         "sliceName": "breastRadMammoArchitecturalDistortion",
@@ -157,6 +149,66 @@
         ]
       },
       {
+        "id": "Observation.hasMember:breastRadMammoBreastDensity",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadMammoBreastDensity",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoBreastDensity"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:breastRadMammoCalcification",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadMammoCalcification",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoCalcification"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:commonForeignObject",
+        "path": "Observation.hasMember",
+        "sliceName": "commonForeignObject",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonForeignObject"
+            ]
+          }
+        ]
+      },
+      {
         "id": "Observation.hasMember:breastRadMammoIntramammaryLymphNode",
         "path": "Observation.hasMember",
         "sliceName": "breastRadMammoIntramammaryLymphNode",
@@ -172,6 +224,26 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoIntramammaryLymphNode"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:breastRadMammoMass",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadMammoMass",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoMass"
             ]
           }
         ]

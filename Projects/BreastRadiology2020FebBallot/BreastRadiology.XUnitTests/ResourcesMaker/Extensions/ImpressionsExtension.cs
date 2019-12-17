@@ -29,7 +29,7 @@ namespace BreastRadiology.XUnitTests
         {
             SDefEditor e = this.CreateEditor("BreastRadImpressionsExtension",
                 "Impressions Extension",
-                new string[] { "Impressions", "Extension" },
+                "Impressions/Extension",
                 ExtensionUrl,
                 $"{Group_ExtensionResources}/Impressions",
                 out breastRadiologyImpressionsExtension)
@@ -60,7 +60,7 @@ namespace BreastRadiology.XUnitTests
                 .Extension("Prior Reports", "include references to prior reports")
                 ;
 
-            e.Node.AddLink("target", ClinicalImpressionUrl, false);
+            e.AddLink("target", ClinicalImpressionUrl, false);
         }
     }
 }

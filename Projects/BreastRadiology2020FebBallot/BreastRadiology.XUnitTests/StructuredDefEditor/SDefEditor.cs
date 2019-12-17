@@ -17,8 +17,6 @@ namespace BreastRadiology.XUnitTests
 
         public IntroDoc IntroDoc {get; }
 
-        public ResourceMap.Node Node { get; }
-
         public StructureDefinition SDef => this.sDef;
         StructureDefinition baseSDef;
         StructureDefinition sDef;
@@ -36,7 +34,7 @@ namespace BreastRadiology.XUnitTests
         public SDefEditor(String name,
             String url,
             String baseDefinition,
-            String[] mapName,
+            String mapName,
             String fragmentDir,
             String pageDir)
         {
@@ -62,7 +60,6 @@ namespace BreastRadiology.XUnitTests
                 BaseDefinition = baseDefinition,
                 Differential = new StructureDefinition.DifferentialComponent()
             };
-            this.Node = ResourceMap.Self.CreateMapNode(url, mapName, "StructureDefinition", baseDefinition.LastUriPart());
             this.sDef.Differential.Element.Add(new ElementDefinition
             {
                 Path = basePath,
@@ -70,6 +67,8 @@ namespace BreastRadiology.XUnitTests
                 Min = 0,
                 Max = "*"
             });
+
+            this.SDef.AddExtension(ResourceMap.ResourceMapNameUrl, new FhirString(mapName));
 
             this.IntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"StructureDefinition-{name}-intro.xml"));
             this.IntroDoc.AddSvgImage(this);
@@ -191,7 +190,7 @@ namespace BreastRadiology.XUnitTests
 
         public ElementDefinition ApplyExtension(String name, String extensionUrl, bool showChildren = true, bool addLink = true)
         {
-            this.Node.AddLink("target", extensionUrl, showChildren);
+            this.AddLink("target", extensionUrl, showChildren);
             this.ConfigureExtensionSlice();
             return this.Find("extension").SliceByUrl(extensionUrl, name);
         }
@@ -243,31 +242,6 @@ namespace BreastRadiology.XUnitTests
             return this;
         }
 
-        public SDefEditor AddValueSetLink(ValueSet vs, bool showChildren = true)
-        {
-            this.AddValueSetLink(vs.Url, showChildren);
-            return this;
-        }
-
-        public SDefEditor AddValueSetLink(String url, bool showChildren = true)
-        {
-            this.Node.AddValueSetLink(url, showChildren);
-            return this;
-        }
-
-        public SDefEditor AddExtensionLink(String url, bool showChildren = true)
-        {
-            this.Node.AddExtensionLink(url, showChildren);
-            return this;
-        }
-
-        public SDefEditor AddLinks(IEnumerable<ResourceMap.Link> links)
-        {
-            foreach (ResourceMap.Link link in links)
-                this.Node.AddLink(link);
-            return this;
-        }
-
         public SDefEditor AddFragRef(String fragRef)
         {
             if (String.IsNullOrWhiteSpace(fragRef))
@@ -277,7 +251,56 @@ namespace BreastRadiology.XUnitTests
                 Url = PreFhirGenerator.FragmentUrl,
                 Value = new FhirUrl(fragRef)
             });
-            this.Node.AddFragmentLink(fragRef);
+            this.AddFragmentLink(fragRef);
+            return this;
+        }
+
+
+        public SDefEditor AddFragmentLink(String url, bool showChildren = true)
+        {
+            this.AddLink("fragment", url, showChildren);
+            return this;
+        }
+
+        public SDefEditor AddTargetLink(String url, bool showChildren = true)
+        {
+            this.AddLink("target", url, showChildren);
+            return this;
+        }
+
+        public SDefEditor AddExtensionLink(String url, bool showChildren = true)
+        {
+            this.AddLink("extension", url, showChildren);
+            return this;
+        }
+
+        public SDefEditor AddValueSetLink(ValueSet vs, bool showChildren = true)
+        {
+            this.AddLink("valueSet", vs.Url, showChildren);
+            return this;
+        }
+
+        public SDefEditor AddValueSetLink(String url, bool showChildren = true)
+        {
+            this.AddLink("valueSet", url, showChildren);
+            return this;
+        }
+
+        public SDefEditor AddProfileTargets(params ProfileTargetSlice[] targets)
+        {
+            foreach (ProfileTargetSlice target in targets)
+                this.AddLink("target", target.Profile, target.ShowChildren);
+            return this;
+        }
+
+        public SDefEditor AddLink(String linkType,
+            String url,
+            bool showChildren)
+        {
+            if (url.StartsWith("http://hl7.org/fhir/StructureDefinition/") == true)
+                return this;
+            this.SDef.AddExtension(ResourceMap.ResourceMapLinkUrl,
+                new FhirString($"{linkType}|{showChildren}|{url}"));
             return this;
         }
     }

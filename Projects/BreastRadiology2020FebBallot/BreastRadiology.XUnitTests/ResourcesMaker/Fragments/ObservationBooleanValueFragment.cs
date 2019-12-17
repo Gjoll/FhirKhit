@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
             {
                 SDefEditor e = this.CreateFragment("BooleanValueObservationFragment",
                         "BooleanValue Observation Fragment",
-                        new string[] { "Observation", "BooleanValue", "Fragment" },
+                        "Observation/BooleanValue/Fragment",
                         ObservationUrl,
                         out observationBooleanValueFragment)
                     .Description("Fragment to define a boolean observation",

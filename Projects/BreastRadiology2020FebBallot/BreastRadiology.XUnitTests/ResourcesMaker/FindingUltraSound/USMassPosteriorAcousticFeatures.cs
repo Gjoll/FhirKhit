@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
                 ValueSet binding = this.CreateValueSet(
                     "BreastRadUSMassPosteriorAcousticFeatures",
                     "US Mass Posterior Acoustic Features",
-                    new string[] { "US Mass", "Posterior Acoustic", "Feature Values" },
+                    "US Mass/Posterior Acoustic/Feature Values",
                     "Ultra-sound mass Posterior acoustic features codes.",
                     Group_USCodes,
                     new ConceptDef[]
@@ -87,7 +87,7 @@ namespace BreastRadiology.XUnitTests
 
                 SDefEditor e = this.CreateEditor("BreastRadUSMassPosteriorAcousticFeatures",
                         "US Mass Posterior Acoustic Features",
-                        new string[] { "US Mass", "Posterior Acoustic", "Features" },
+                        "US Mass/Posterior Acoustic/Features",
                         ObservationUrl,
                         $"{Group_USResources}/Mass/PosteriorAcousticFeatures",
                         out usMassPosteriorAcousticFeatures)
@@ -96,7 +96,7 @@ namespace BreastRadiology.XUnitTests
                             .BiradHeader()
                             .BlockQuote("Posterior acoustic features represent the attenuation characteristics of a mass with respect to its")
                             .BlockQuote("acoustic transmission. Attenuation (shadowing) and enhancement are additional attributes of")
-                            .BlockQuote("masses, mostly of secondary rather than primary predictive value..")
+                            .BlockQuote("masses, mostly of secondary rather than primary predictive value.")
                             .BiradFooter()
                             .Todo(
                             )

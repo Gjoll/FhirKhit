@@ -29,7 +29,7 @@ namespace BreastRadiology.XUnitTests
             {
                 SDefEditor e = this.CreateEditor("BreastRadPatientRiskExtension",
                     "PatientRisk Extension",
-                    new string[] { "PatientRisk", "Extension" },
+                    "PatientRisk/Extension",
                     ExtensionUrl,
                      $"{Group_ExtensionResources}/PatientRisk",
                    out breastRadiologyPatientRiskExtension)
@@ -60,7 +60,7 @@ namespace BreastRadiology.XUnitTests
                     .ReviewedStatus(ReviewStatus.NotReviewed)
                     .Extension("PatientRisk", "include references to PatientRisk")
                     ;
-                e.Node.AddLink("target", RiskAssessmentUrl, false);
+                e.AddLink("target", RiskAssessmentUrl, false);
                 return e.SDef.Url;
             });
         }

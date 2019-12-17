@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
             ValueSet binding = this.CreateValueSet(
                    "BreastRadMemmoAsymmetries",
                    "Mammo Asymmetries",
-                    new string[] { "Mammo", "Asymmetry", "Values" },
+                    "Mammo/Asymmetry/Values",
                    "Codes defining types of mammography asymmetries.",
                     Group_MammoCodes,
                    new ConceptDef[]
@@ -98,7 +98,7 @@ namespace BreastRadiology.XUnitTests
 
             SDefEditor e = this.CreateEditor("BreastRadMammoAsymmetries",
                     "Mammo Asymmetries",
-                    new string[] { "Mammo", "Asymmetries" },
+                    "Mammo/Asymmetries",
                     ObservationUrl,
                     $"{Group_MammoResources}/Asymmetry",
                     out mgAsymmetries)
@@ -132,7 +132,7 @@ namespace BreastRadiology.XUnitTests
                     new ProfileTargetSlice(await this.MGAssociatedFeatures(), 0, "1", false)
                 };
                 e.Find("hasMember").SliceByUrl(targets);
-                e.Node.AddProfileTargets(targets);
+                e.AddProfileTargets(targets);
             }
             e.Select("value[x]")
                 .Type("CodeableConcept")

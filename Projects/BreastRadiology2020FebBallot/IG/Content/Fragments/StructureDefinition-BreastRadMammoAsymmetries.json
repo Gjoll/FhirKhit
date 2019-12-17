@@ -2,6 +2,10 @@
   "resourceType": "StructureDefinition",
   "extension": [
     {
+      "url": "http://www.resourcemap.com/mapname",
+      "valueString": "Mammo/Asymmetries"
+    },
+    {
       "url": "http://www.ResourceMaker.com/Group",
       "valueString": "MammoResources/Asymmetry"
     },
@@ -10,16 +14,56 @@
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoDeviceFragment"
     },
     {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoDeviceFragment"
+    },
+    {
       "url": "http://www.fragment.com/fragment",
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationRequiredFragment"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationRequiredFragment"
     },
     {
       "url": "http://www.fragment.com/fragment",
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CodedValueObservationFragment"
     },
     {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CodedValueObservationFragment"
+    },
+    {
       "url": "http://www.fragment.com/fragment",
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservationSectionFragment"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservationSectionFragment"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "extension|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocation"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonSize"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonCount"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonObservedChanges"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "target|False|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoAssociatedFeatures"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "valueSet|True|http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadMemmoAsymmetriesVS"
     }
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoAsymmetries",
@@ -85,9 +129,9 @@
         }
       },
       {
-        "id": "Observation.hasMember:breastRadSize",
+        "id": "Observation.hasMember:commonSize",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadSize",
+        "sliceName": "commonSize",
         "min": 0,
         "max": "1",
         "base": {
@@ -99,15 +143,15 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadSize"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonSize"
             ]
           }
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadCount",
+        "id": "Observation.hasMember:commonCount",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadCount",
+        "sliceName": "commonCount",
         "min": 0,
         "max": "1",
         "base": {
@@ -119,15 +163,15 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadCount"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonCount"
             ]
           }
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadObservedChanges",
+        "id": "Observation.hasMember:commonObservedChanges",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadObservedChanges",
+        "sliceName": "commonObservedChanges",
         "min": 0,
         "max": "*",
         "base": {
@@ -139,7 +183,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservedChanges"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonObservedChanges"
             ]
           }
         ]

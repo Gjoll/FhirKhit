@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
                 ValueSet binding = this.CreateValueSet(
                     "BreastRadUSMassEchoPattern",
                     "US Mass Echo Pattern",
-                    new string[] { "US Mass", "Echo Pattern", "Values" },
+                    "US Mass/Echo Pattern/Values",
                     "Ultra-sound mass echo pattern codes.",
                     Group_USCodes,
                     new ConceptDef[]
@@ -102,7 +102,7 @@ namespace BreastRadiology.XUnitTests
 
                 SDefEditor e = this.CreateEditor("BreastRadUSMassEchoPattern",
                         "US Mass Echo Pattern",
-                        new string[] { "US Mass", "Echo Pattern" },
+                        "US Mass/Echo Pattern",
                         ObservationUrl,
                         $"{Group_USResources}/Mass/EchoPattern",
                         out usMassEchoPattern)

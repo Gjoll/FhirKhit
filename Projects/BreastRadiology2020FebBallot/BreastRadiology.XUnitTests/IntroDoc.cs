@@ -1,4 +1,5 @@
-﻿using Hl7.Fhir.Model;
+﻿using FhirKhit.Tools;
+using Hl7.Fhir.Model;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -35,7 +36,7 @@ namespace BreastRadiology.XUnitTests
 
         public IntroDoc AddSvgImage(SDefEditor e)
         {
-            AddSvgImage(FocusMapMaker.FocusMapName(e.Node));
+            AddSvgImage(FocusMapMaker.FocusMapName(e.SDef.Url.LastUriPart()));
             return this;
         }
 

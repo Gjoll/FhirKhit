@@ -2,8 +2,24 @@
   "resourceType": "StructureDefinition",
   "extension": [
     {
+      "url": "http://www.resourcemap.com/mapname",
+      "valueString": "Aim/Annotated/Imaging/Study"
+    },
+    {
       "url": "http://www.ResourceMaker.com/Group",
       "valueString": "AimResources/Aim/AimAnnotatedImagingStudy"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AimHeaderFragment"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AimAnnotationPolyLineFragment"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "extension|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AimAnnotationPolyLineExtension"
     }
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AimAnnotatedImagingStudy",

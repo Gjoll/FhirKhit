@@ -29,7 +29,7 @@ namespace BreastRadiology.XUnitTests
             {
                 SDefEditor e = this.CreateEditor("BreastRadMammoCalcification",
                         "Mammo Calcification",
-                        new string[] { "Mammo", "Calc." },
+                        "Mammo/Calc.",
                         ObservationUrl,
                         $"{Group_MammoResources}/Calcification",
                         out mgCalcification)
@@ -75,7 +75,7 @@ namespace BreastRadiology.XUnitTests
                     new ProfileTargetSlice(await this.CommonObservedState(), 0, "1", false)
                     };
                     e.Find("hasMember").SliceByUrl(targets);
-                    e.Node.AddProfileTargets(targets);
+                    e.AddProfileTargets(targets);
                 }
                 e.IntroDoc
                     .ReviewedStatus(ReviewStatus.NotReviewed)

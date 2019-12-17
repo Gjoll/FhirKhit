@@ -2,8 +2,72 @@
   "resourceType": "StructureDefinition",
   "extension": [
     {
+      "url": "http://www.resourcemap.com/mapname",
+      "valueString": "US Mass"
+    },
+    {
       "url": "http://www.ResourceMaker.com/Group",
       "valueString": "USResources/Finding/Mass"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoDeviceFragment"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationRequiredFragment"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservationSectionFragment"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoValueFragment"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "extension|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocation"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ImagingStudyFragment"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonSize"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonCount"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonMassShape"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonOrientation"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadUSMassMargin"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadUSMassEchoPattern"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadUSMassPosteriorAcousticFeatures"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonObservedChanges"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "target|False|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonObservedState"
     }
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadUSMass",
@@ -23,7 +87,7 @@
       ]
     }
   ],
-  "description": "Breast Radiology Mammography Ultra-Sound Mass Observation\n\nIf this observation is present, and dataAbsentReason is empty, then a mass was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a mass was not observed and dataAbsentReason contains the reason whyand no Shape, Orientation, Margin, Echo Pattern, or Posterior Acoustic Feature observations should be referenced by this observation\n\n\nA mass is three dimensional and occupies space. With 2-D ultrasound, it should be seen in two\ndifferent planes, and in three planes with volumetric acquisitions. Masses can be distinguished\nfrom normal anatomic structures, such as ribs or fat lobules, using two or more projections and\nreal-time scanning.\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013 \nThis observation has the following three observations:\n\n\n** Shape\n** Orientation\n** Margin\n** Echo Pattern\n** Posterior acoustic features\n*** TODO Items ***** add mass size measurements (3 dimensional) like US?\n** same for asymmetry, lesion, calcification?",
+  "description": "Breast Radiology Mammography Ultra-Sound Mass Observation\n\nIf this observation is present, and dataAbsentReason is empty, then a mass was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a mass was not observed and dataAbsentReason contains the reason whyand no Shape, Orientation, Margin, Echo Pattern, or Posterior Acoustic Feature observations should be referenced by this observation\n\n\nA mass is three dimensional and occupies space. With 2-D ultrasound, it should be seen in two\ndifferent planes, and in three planes with volumetric acquisitions. Masses can be distinguished\nfrom normal anatomic structures, such as ribs or fat lobules, using two or more projections and\nreal-time scanning.\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013 \nThis observation has the following three observations:\n\n\n** Shape\n** Orientation\n** Margin\n** Orientation\n** Echo Pattern\n** Posterior acoustic features\n*** TODO Items ***** add mass size measurements (3 dimensional) like US?\n** same for asymmetry, lesion, calcification?",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -36,7 +100,7 @@
         "id": "Observation",
         "path": "Observation",
         "short": "Breast Radiology Mammography Ultra-Sound Mass Observation",
-        "definition": "If this observation is present, and dataAbsentReason is empty, then a mass was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a mass was not observed and dataAbsentReason contains the reason whyand no Shape, Orientation, Margin, Echo Pattern, or Posterior Acoustic Feature observations should be referenced by this observation\n\n\nA mass is three dimensional and occupies space. With 2-D ultrasound, it should be seen in two\ndifferent planes, and in three planes with volumetric acquisitions. Masses can be distinguished\nfrom normal anatomic structures, such as ribs or fat lobules, using two or more projections and\nreal-time scanning.\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013 \nThis observation has the following three observations:\n\n\n** Shape\n** Orientation\n** Margin\n** Echo Pattern\n** Posterior acoustic features\n*** TODO Items ***** add mass size measurements (3 dimensional) like US?\n** same for asymmetry, lesion, calcification?",
+        "definition": "If this observation is present, and dataAbsentReason is empty, then a mass was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a mass was not observed and dataAbsentReason contains the reason whyand no Shape, Orientation, Margin, Echo Pattern, or Posterior Acoustic Feature observations should be referenced by this observation\n\n\nA mass is three dimensional and occupies space. With 2-D ultrasound, it should be seen in two\ndifferent planes, and in three planes with volumetric acquisitions. Masses can be distinguished\nfrom normal anatomic structures, such as ribs or fat lobules, using two or more projections and\nreal-time scanning.\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013 \nThis observation has the following three observations:\n\n\n** Shape\n** Orientation\n** Margin\n** Orientation\n** Echo Pattern\n** Posterior acoustic features\n*** TODO Items ***** add mass size measurements (3 dimensional) like US?\n** same for asymmetry, lesion, calcification?",
         "comment": "Used for simple observations such as device measurements, laboratory atomic results, vital signs, height, weight, smoking status, comments, etc.  Other resources are used to provide context for observations such as laboratory reports, etc.",
         "alias": [
           "Vital Signs",
@@ -1956,9 +2020,9 @@
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadSize",
+        "id": "Observation.hasMember:commonSize",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadSize",
+        "sliceName": "commonSize",
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
@@ -1973,7 +2037,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadSize"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonSize"
             ]
           }
         ],
@@ -1991,9 +2055,9 @@
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadCount",
+        "id": "Observation.hasMember:commonCount",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadCount",
+        "sliceName": "commonCount",
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
@@ -2008,7 +2072,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadCount"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonCount"
             ]
           }
         ],
@@ -2026,9 +2090,9 @@
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadMassShape",
+        "id": "Observation.hasMember:commonMassShape",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadMassShape",
+        "sliceName": "commonMassShape",
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
@@ -2043,7 +2107,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMassShape"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonMassShape"
             ]
           }
         ],
@@ -2061,9 +2125,9 @@
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadUSMassOrientation",
+        "id": "Observation.hasMember:commonOrientation",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadUSMassOrientation",
+        "sliceName": "commonOrientation",
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
@@ -2078,7 +2142,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadUSMassOrientation"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonOrientation"
             ]
           }
         ],
@@ -2201,9 +2265,9 @@
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadObservedChanges",
+        "id": "Observation.hasMember:commonObservedChanges",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadObservedChanges",
+        "sliceName": "commonObservedChanges",
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
@@ -2218,7 +2282,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservedChanges"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonObservedChanges"
             ]
           }
         ],
@@ -2236,9 +2300,9 @@
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadObservedState",
+        "id": "Observation.hasMember:commonObservedState",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadObservedState",
+        "sliceName": "commonObservedState",
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
@@ -2253,7 +2317,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservedState"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonObservedState"
             ]
           }
         ],
@@ -2782,7 +2846,7 @@
         "id": "Observation",
         "path": "Observation",
         "short": "Breast Radiology Mammography Ultra-Sound Mass Observation",
-        "definition": "If this observation is present, and dataAbsentReason is empty, then a mass was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a mass was not observed and dataAbsentReason contains the reason whyand no Shape, Orientation, Margin, Echo Pattern, or Posterior Acoustic Feature observations should be referenced by this observation\n\n\nA mass is three dimensional and occupies space. With 2-D ultrasound, it should be seen in two\ndifferent planes, and in three planes with volumetric acquisitions. Masses can be distinguished\nfrom normal anatomic structures, such as ribs or fat lobules, using two or more projections and\nreal-time scanning.\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013 \nThis observation has the following three observations:\n\n\n** Shape\n** Orientation\n** Margin\n** Echo Pattern\n** Posterior acoustic features\n*** TODO Items ***** add mass size measurements (3 dimensional) like US?\n** same for asymmetry, lesion, calcification?",
+        "definition": "If this observation is present, and dataAbsentReason is empty, then a mass was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a mass was not observed and dataAbsentReason contains the reason whyand no Shape, Orientation, Margin, Echo Pattern, or Posterior Acoustic Feature observations should be referenced by this observation\n\n\nA mass is three dimensional and occupies space. With 2-D ultrasound, it should be seen in two\ndifferent planes, and in three planes with volumetric acquisitions. Masses can be distinguished\nfrom normal anatomic structures, such as ribs or fat lobules, using two or more projections and\nreal-time scanning.\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013 \nThis observation has the following three observations:\n\n\n** Shape\n** Orientation\n** Margin\n** Orientation\n** Echo Pattern\n** Posterior acoustic features\n*** TODO Items ***** add mass size measurements (3 dimensional) like US?\n** same for asymmetry, lesion, calcification?",
         "base": {
           "path": "Observation",
           "min": 0,
@@ -3135,9 +3199,9 @@
         }
       },
       {
-        "id": "Observation.hasMember:breastRadSize",
+        "id": "Observation.hasMember:commonSize",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadSize",
+        "sliceName": "commonSize",
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
@@ -3152,7 +3216,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadSize"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonSize"
             ]
           }
         ],
@@ -3170,9 +3234,9 @@
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadCount",
+        "id": "Observation.hasMember:commonCount",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadCount",
+        "sliceName": "commonCount",
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
@@ -3187,7 +3251,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadCount"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonCount"
             ]
           }
         ],
@@ -3205,9 +3269,9 @@
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadMassShape",
+        "id": "Observation.hasMember:commonMassShape",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadMassShape",
+        "sliceName": "commonMassShape",
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
@@ -3222,7 +3286,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMassShape"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonMassShape"
             ]
           }
         ],
@@ -3240,9 +3304,9 @@
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadUSMassOrientation",
+        "id": "Observation.hasMember:commonOrientation",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadUSMassOrientation",
+        "sliceName": "commonOrientation",
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
@@ -3257,7 +3321,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadUSMassOrientation"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonOrientation"
             ]
           }
         ],
@@ -3380,9 +3444,9 @@
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadObservedChanges",
+        "id": "Observation.hasMember:commonObservedChanges",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadObservedChanges",
+        "sliceName": "commonObservedChanges",
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
@@ -3397,7 +3461,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservedChanges"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonObservedChanges"
             ]
           }
         ],
@@ -3415,9 +3479,9 @@
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadObservedState",
+        "id": "Observation.hasMember:commonObservedState",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadObservedState",
+        "sliceName": "commonObservedState",
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
@@ -3432,7 +3496,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservedState"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonObservedState"
             ]
           }
         ],

@@ -30,7 +30,7 @@ namespace BreastRadiology.XUnitTests
             {
                 SDefEditor e = this.CreateEditor("CommonCount",
                         "Count",
-                        new string[] { "Count" },
+                        "Count",
                         ObservationUrl,
                         $"{Group_CommonResources}/ObservedCount",
                         out commonObservedCount)

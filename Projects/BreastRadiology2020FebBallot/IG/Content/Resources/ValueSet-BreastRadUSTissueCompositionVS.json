@@ -5,6 +5,10 @@
     {
       "url": "http://www.ResourceMaker.com/Group",
       "valueString": "USCodesVS"
+    },
+    {
+      "url": "http://www.resourcemap.com/mapname",
+      "valueString": "US/Tissue/Composition/Values"
     }
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadUSTissueCompositionVS",

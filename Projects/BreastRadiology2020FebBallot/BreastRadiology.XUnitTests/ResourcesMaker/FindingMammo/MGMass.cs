@@ -29,7 +29,7 @@ namespace BreastRadiology.XUnitTests
             {
                 SDefEditor e = this.CreateEditor("BreastRadMammoMass",
                         "Mammo Mass",
-                        new string[] { "Mammo", "Mass" },
+                        "Mammo/Mass",
                         ObservationUrl,
                         $"{Group_MammoResources}/Mass",
                         out mgMass)
@@ -71,7 +71,7 @@ namespace BreastRadiology.XUnitTests
                     new ProfileTargetSlice(await this.CommonObservedState(), 0, "1", false)
                     };
                     e.Find("hasMember").SliceByUrl(targets);
-                    e.Node.AddProfileTargets(targets);
+                    e.AddProfileTargets(targets);
                 }
 
                 e.IntroDoc

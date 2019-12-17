@@ -1,0 +1,43 @@
+{
+  "resourceType": "ValueSet",
+  "id": "CommonMassShapeVS",
+  "extension": [
+    {
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
+    },
+    {
+      "url": "http://www.ResourceMaker.com/Group",
+      "valueString": "CommonCodesVS"
+    },
+    {
+      "url": "http://www.resourcemap.com/mapname",
+      "valueString": "Mass/Shape/Values"
+    }
+  ],
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/CommonMassShapeVS",
+  "name": "CommonMassShapeVS",
+  "title": "Mass Shape ValueSet",
+  "description": "Codes defining mass shape values.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CommonMassShapeCS",
+        "concept": [
+          {
+            "code": "Oval",
+            "display": "Elliptical/Egg-shaped Mass"
+          },
+          {
+            "code": "Round",
+            "display": "Round Mass"
+          },
+          {
+            "code": "Irregular",
+            "display": "Irregular Mass"
+          }
+        ]
+      }
+    ]
+  }
+}

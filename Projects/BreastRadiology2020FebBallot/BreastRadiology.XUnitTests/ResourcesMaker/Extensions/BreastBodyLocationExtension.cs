@@ -70,7 +70,7 @@ namespace BreastRadiology.XUnitTests
 
                 e = this.CreateEditor("BreastBodyLocation",
                     "Breast Body Location",
-                    new string[] { "Breast", "Body", "Location" },
+                    "Breast/Body/Location",
                     ExtensionUrl,
                     $"{Group_ExtensionResources}/BreastBodyLocation",
                     out breastBodyLocationExtension)
@@ -108,7 +108,7 @@ namespace BreastRadiology.XUnitTests
                     ValueSet binding = this.CreateValueSet(
                         "BreastLocationQuadrant",
                         "Breast Location Quadrant",
-                        new string[] { "Breast", "Location", "Quadrant", "Values" },
+                        "Breast/Location/Quadrant/Values",
                         "Breast body location quadrant codes.",
                         Group_CommonCodes,
                         new ConceptDef[]
@@ -199,7 +199,7 @@ namespace BreastRadiology.XUnitTests
                     ValueSet binding = this.CreateValueSet(
                         "BreastLocationClock",
                         "Breast Location Clock",
-                        new string[] { "Breast", "Location", "Clock", "Values" },
+                        "Breast/Location/Clock/Values",
                         "Codes defining breast body location angles expressed in clock-face units.",
                         Group_CommonCodes,
                         new ConceptDef[]
@@ -345,7 +345,7 @@ namespace BreastRadiology.XUnitTests
                     ValueSet binding = this.CreateValueSet(
                         "BreastLocationDepth",
                         "Breast Location Depth",
-                        new string[] { "Breast", "Location", "Depth", "Values" },
+                        "Breast/Location/Depth/Values",
                         "Breast body location depth codes.",
                         Group_CommonCodes,
                         new ConceptDef[]

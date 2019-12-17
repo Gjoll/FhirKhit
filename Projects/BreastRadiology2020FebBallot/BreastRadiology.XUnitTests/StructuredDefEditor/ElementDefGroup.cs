@@ -22,7 +22,7 @@ namespace BreastRadiology.XUnitTests
         public Int32 Index { get; }
 
         /// <summary>
-        /// Base element definition. Null if none...
+        /// Base element definition. Null if none..
         /// </summary>
         public ElementDefinition BaseElementDefinition { get; set; }
 

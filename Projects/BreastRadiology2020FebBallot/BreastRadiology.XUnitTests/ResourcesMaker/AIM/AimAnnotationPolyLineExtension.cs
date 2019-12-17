@@ -36,7 +36,7 @@ namespace BreastRadiology.XUnitTests
 
                 e = this.CreateEditor("AimAnnotationPolyLineExtension",
                     "AIM Annotation PolyLine Extension",
-                    new string[] { "Annotation", "PolyLine", "Location" },
+                    "Annotation/PolyLine/Location",
                     ExtensionUrl,
                     $"{Group_AimResources}/AimAnnotationPolyLineExtension",
                     out aimAnnotationPolyLineExtension)

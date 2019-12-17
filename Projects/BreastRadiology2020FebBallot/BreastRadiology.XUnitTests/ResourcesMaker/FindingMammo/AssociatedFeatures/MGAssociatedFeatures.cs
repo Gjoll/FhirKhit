@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
             {
                 SDefEditor e = this.CreateEditor("BreastRadMammoAssociatedFeatures",
                         "Mammo Associated Features",
-                        new string[] { "Mammo", "Associated", "Features" },
+                        "Mammo/Associated/Features",
                         ObservationUrl,
                         $"{Group_MammoResources}/AssociatedFeature",
                         out mgAssociatedFeatures)
@@ -55,7 +55,7 @@ namespace BreastRadiology.XUnitTests
                     new ProfileTargetSlice(await this.MGCalcification(), 0, "*")
                     };
                     e.Find("hasMember").SliceByUrl(targets);
-                    e.Node.AddProfileTargets(targets);
+                    e.AddProfileTargets(targets);
                 }
                 e.IntroDoc
                     .ReviewedStatus(ReviewStatus.NotReviewed)

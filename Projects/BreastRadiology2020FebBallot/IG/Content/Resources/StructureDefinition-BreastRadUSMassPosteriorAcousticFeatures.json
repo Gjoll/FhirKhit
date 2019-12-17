@@ -2,8 +2,28 @@
   "resourceType": "StructureDefinition",
   "extension": [
     {
+      "url": "http://www.resourcemap.com/mapname",
+      "valueString": "US Mass/Posterior Acoustic/Features"
+    },
+    {
       "url": "http://www.ResourceMaker.com/Group",
       "valueString": "USResources/Mass/PosteriorAcousticFeatures"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoDeviceFragment"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CodedValueObservationFragment"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservationLeafFragment"
+    },
+    {
+      "url": "http://www.resourcemap.com/maplink",
+      "valueString": "valueSet|True|http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadUSMassPosteriorAcousticFeaturesVS"
     }
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadUSMassPosteriorAcousticFeatures",
@@ -23,7 +43,7 @@
       ]
     }
   ],
-  "description": "Breast Radiology Ultra-Sound Mass Posterior Acoustic Features Observation\n\nPosterior acoustic features represent the attenuation characteristics of a mass with respect to its\nacoustic transmission. Attenuation (shadowing) and enhancement are additional attributes of\nmasses, mostly of secondary rather than primary predictive value..\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
+  "description": "Breast Radiology Ultra-Sound Mass Posterior Acoustic Features Observation\n\nPosterior acoustic features represent the attenuation characteristics of a mass with respect to its\nacoustic transmission. Attenuation (shadowing) and enhancement are additional attributes of\nmasses, mostly of secondary rather than primary predictive value.\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -36,7 +56,7 @@
         "id": "Observation",
         "path": "Observation",
         "short": "Breast Radiology Ultra-Sound Mass Posterior Acoustic Features Observation",
-        "definition": "Posterior acoustic features represent the attenuation characteristics of a mass with respect to its\nacoustic transmission. Attenuation (shadowing) and enhancement are additional attributes of\nmasses, mostly of secondary rather than primary predictive value..\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
+        "definition": "Posterior acoustic features represent the attenuation characteristics of a mass with respect to its\nacoustic transmission. Attenuation (shadowing) and enhancement are additional attributes of\nmasses, mostly of secondary rather than primary predictive value.\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
         "comment": "Used for simple observations such as device measurements, laboratory atomic results, vital signs, height, weight, smoking status, comments, etc.  Other resources are used to provide context for observations such as laboratory reports, etc.",
         "alias": [
           "Vital Signs",
@@ -2351,7 +2371,7 @@
         "id": "Observation",
         "path": "Observation",
         "short": "Breast Radiology Ultra-Sound Mass Posterior Acoustic Features Observation",
-        "definition": "Posterior acoustic features represent the attenuation characteristics of a mass with respect to its\nacoustic transmission. Attenuation (shadowing) and enhancement are additional attributes of\nmasses, mostly of secondary rather than primary predictive value..\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
+        "definition": "Posterior acoustic features represent the attenuation characteristics of a mass with respect to its\nacoustic transmission. Attenuation (shadowing) and enhancement are additional attributes of\nmasses, mostly of secondary rather than primary predictive value.\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
         "base": {
           "path": "Observation",
           "min": 0,

@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
             {
                 SDefEditor e = this.CreateEditor("BreastRadMammoFinding",
                         "Mammo Finding",
-                        new string[] { "Mammo", "Finding" },
+                        "Mammo/Finding",
                         ObservationUrl,
                         $"{Group_MammoResources}",
                         out findingMammo)
@@ -62,7 +62,7 @@ namespace BreastRadiology.XUnitTests
                     new ProfileTargetSlice(await this.MGAssociatedFeatures(), 0, "1")
                     };
                     e.Find("hasMember").SliceByUrl(targets);
-                    e.Node.AddProfileTargets(targets);
+                    e.AddProfileTargets(targets);
                 }
 
                 e.IntroDoc

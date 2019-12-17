@@ -32,7 +32,7 @@ namespace BreastRadiology.XUnitTests
             {
                SDefEditor e = this.CreateEditor("BreastRadReport",
                     "Breast Radiology Report",
-                    new string[] { "Breast", "Radiology", "Report" },
+                    "Breast/Radiology/Report",
                     DiagnosticReportUrl,
                     Group_BaseResources,
                     out breastRadiologyReport)
@@ -77,7 +77,7 @@ namespace BreastRadiology.XUnitTests
                     new ProfileTargetSlice(await this.SectionFindings(), 1, "1"),
            };
                e.Find("result").SliceByUrl(targets);
-               e.Node.AddProfileTargets(targets);
+               e.AddProfileTargets(targets);
 
                e.IntroDoc
                     .Paragraph(

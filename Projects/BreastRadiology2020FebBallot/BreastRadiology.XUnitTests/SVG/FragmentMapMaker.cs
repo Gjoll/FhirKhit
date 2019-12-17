@@ -23,12 +23,12 @@ namespace BreastRadiology.XUnitTests
         Dictionary<String, FragmentNode> fragmentNodes = new Dictionary<string, FragmentNode>();
         String outputDir;
 
-        ResourcesMaker resourcesMaker;
+        ResourceMap map;
 
-        public FragmentMapMaker(ResourcesMaker resourcesMaker,
+        public FragmentMapMaker(ResourceMap map,
             String outputDir)
         {
-            this.resourcesMaker = resourcesMaker;
+            this.map = map;
             this.outputDir = outputDir;
         }
 
@@ -49,14 +49,14 @@ namespace BreastRadiology.XUnitTests
 
         void LinkNodes()
         {
-            foreach (ResourceMap.Node focusMapNode in ResourceMap.Self.MapNodes)
+            foreach (ResourceMap.Node focusMapNode in map.MapNodes)
             {
                 if (this.fragmentNodes.TryGetValue(focusMapNode.Name, out FragmentNode fragmentFocusNode) == false)
                     throw new Exception($"Internal error. Cant find Focus FragmentNode '{focusMapNode.Name}' ");
 
                 foreach (ResourceMap.Link link in FragmentLinks(focusMapNode))
                 {
-                    ResourceMap.Node referencedMapNode = ResourceMap.Self.GetNode(link.ResourceUrl);
+                    ResourceMap.Node referencedMapNode = map.GetNode(link.ResourceUrl);
                     fragmentFocusNode.Parents.Add(referencedMapNode);
 
                     if (this.fragmentNodes.TryGetValue(referencedMapNode.Name, out FragmentNode fragmentParentNode) == false)
@@ -129,7 +129,7 @@ namespace BreastRadiology.XUnitTests
 
         void CreateNodes()
         {
-            foreach (ResourceMap.Node mapNode in ResourceMap.Self.MapNodes)
+            foreach (ResourceMap.Node mapNode in map.MapNodes)
             {
                 FragmentNode fNode = new FragmentNode
                 {

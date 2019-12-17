@@ -30,7 +30,7 @@ namespace BreastRadiology.XUnitTests
             {
                 SDefEditor e = this.CreateEditor("BreastRadPriorReportsExtension",
                     "Prior Reports Extension",
-                    new string[] { "Prior Reports", "Extension" },
+                    "Prior Reports/Extension",
                     ExtensionUrl,
                     $"{Group_ExtensionResources}/PriorReports",
                     out breastRadiologyPriorReportsExtension)
@@ -60,7 +60,7 @@ namespace BreastRadiology.XUnitTests
                     .ReviewedStatus(ReviewStatus.NotReviewed)
                     .Extension("Prior Reports", "include references to prior reports")
                     ;
-                e.Node.AddLink("target", await BreastRadiologyReport(), false);
+                e.AddLink("target", await BreastRadiologyReport(), false);
                 return e.SDef.Url;
             });
         }

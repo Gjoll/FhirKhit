@@ -9,6 +9,10 @@
     {
       "url": "http://www.ResourceMaker.com/Group",
       "valueString": "MammoCodesVS"
+    },
+    {
+      "url": "http://www.resourcemap.com/mapname",
+      "valueString": "Mammo/Breast/Density/Values"
     }
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadMammoBreastDensityVS",

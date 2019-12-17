@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
             {
                 SDefEditor e = this.CreateEditor("BreastRadMammoSkinThickening",
                     "Mammo Skin Thickening",
-                    new string[] { "Mammo", "Skin", "Thickening" },
+                    "Mammo/Skin/Thickening",
                     ObservationUrl,
                     $"{Group_MammoResources}/AssociatedFeature/SkinThickening",
                     out mgSkinThickening)

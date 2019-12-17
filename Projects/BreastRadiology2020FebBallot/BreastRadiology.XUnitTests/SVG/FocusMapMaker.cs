@@ -22,17 +22,16 @@ namespace BreastRadiology.XUnitTests
             public List<ResourceMap.Node> Children = new List<ResourceMap.Node>();
         }
 
+        ResourceMap map;
         ConcurrentDictionary<String, FocusNode> focusNodes = new ConcurrentDictionary<string, FocusNode>();
         String graphicsDir;
         String contentDir;
 
-        ResourcesMaker resourcesMaker;
-
-        public FocusMapMaker(ResourcesMaker resourcesMaker,
+        public FocusMapMaker(ResourceMap map,
             String graphicsDir,
             String contentDir)
         {
-            this.resourcesMaker = resourcesMaker;
+            this.map = map;
             this.graphicsDir = graphicsDir;
             this.contentDir = contentDir;
         }
@@ -43,14 +42,14 @@ namespace BreastRadiology.XUnitTests
 
         void LinkNodes()
         {
-            foreach (ResourceMap.Node focusMapNode in ResourceMap.Self.MapNodes)
+            foreach (ResourceMap.Node focusMapNode in map.MapNodes)
             {
                 if (this.focusNodes.TryGetValue(focusMapNode.Name, out FocusNode fragmentFocusNode) == false)
                     throw new Exception($"Internal error. Cant find Focus FocusNode '{focusMapNode.Name}' ");
 
                 foreach (ResourceMap.Link link in focusMapNode.LinksByName("valueSet", "target", "extension"))
                 {
-                    ResourceMap.Node referencedMapNode = ResourceMap.Self.GetNode(link.ResourceUrl);
+                    ResourceMap.Node referencedMapNode = map.GetNode(link.ResourceUrl);
                     fragmentFocusNode.Parents.Add(referencedMapNode);
 
                     if (this.focusNodes.TryGetValue(referencedMapNode.Name, out FocusNode fragmentParentNode) == false)
@@ -128,7 +127,7 @@ namespace BreastRadiology.XUnitTests
 
         void CreateNodes()
         {
-            foreach (ResourceMap.Node mapNode in ResourceMap.Self.MapNodes)
+            foreach (ResourceMap.Node mapNode in map.MapNodes)
             {
                 FocusNode fNode = new FocusNode
                 {

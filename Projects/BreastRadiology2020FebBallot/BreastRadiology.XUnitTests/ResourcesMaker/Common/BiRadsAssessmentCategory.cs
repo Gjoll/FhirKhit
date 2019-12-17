@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
                 ValueSet binding = this.CreateValueSet(
                         "BiRadsAssessmentCategories",
                         "BiRads(r) Assessment Category Codes",
-                        new string[] { "BiRads", "Assessment", "Category", "Values" },
+                        "BiRads/Assessment/Category/Values",
                         "BiRads(r) Assessment Category codes.",
                         Group_CommonCodes,
                         new ConceptDef[]
@@ -101,7 +101,7 @@ namespace BreastRadiology.XUnitTests
 
                 SDefEditor e = this.CreateEditor("BiRadsAssessmentCategory",
                         "BiRads Assessment Category",
-                        new string[] { "BiRads", "Assessment", "Category" },
+                        "BiRads/Assessment/Category",
                         ObservationUrl,
                         $"{Group_CommonResources}/BiRads",
                         out biRadsAssessmentCategory)

@@ -54,17 +54,17 @@ namespace BreastRadiology.XUnitTests
 
         const String Loinc = "http://loinc.org";
 
-        const String ClinicalImpressionUrl = "http://hl7.org/fhir/StructureDefinition/ClinicalImpression";
-        const String DiagnosticReportUrl = "http://hl7.org/fhir/StructureDefinition/DiagnosticReport";
-        const String ExtensionUrl = "http://hl7.org/fhir/StructureDefinition/Extension";
-        const String ImagingStudyUrl = "http://hl7.org/fhir/StructureDefinition/ImagingStudy";
-        const String MedicationRequestUrl = "http://hl7.org/fhir/StructureDefinition/MedicationRequest";
-        const String ObservationUrl = "http://hl7.org/fhir/StructureDefinition/Observation";
-        const String ResourceUrl = "http://hl7.org/fhir/StructureDefinition/Resource";
-        const String RiskAssessmentUrl = "http://hl7.org/fhir/StructureDefinition/RiskAssessment";
-        const String ServiceRequestUrl = "http://hl7.org/fhir/StructureDefinition/ServiceRequest";
+        public const String ClinicalImpressionUrl = "http://hl7.org/fhir/StructureDefinition/ClinicalImpression";
+        public const String DiagnosticReportUrl = "http://hl7.org/fhir/StructureDefinition/DiagnosticReport";
+        public const String ExtensionUrl = "http://hl7.org/fhir/StructureDefinition/Extension";
+        public const String ImagingStudyUrl = "http://hl7.org/fhir/StructureDefinition/ImagingStudy";
+        public const String MedicationRequestUrl = "http://hl7.org/fhir/StructureDefinition/MedicationRequest";
+        public const String ObservationUrl = "http://hl7.org/fhir/StructureDefinition/Observation";
+        public const String ResourceUrl = "http://hl7.org/fhir/StructureDefinition/Resource";
+        public const String RiskAssessmentUrl = "http://hl7.org/fhir/StructureDefinition/RiskAssessment";
+        public const String ServiceRequestUrl = "http://hl7.org/fhir/StructureDefinition/ServiceRequest";
 
-        const String contactUrl = "http://www.hl7.org/Special/committees/cic";
+        public const String contactUrl = "http://www.hl7.org/Special/committees/cic";
 
         FileCleaner fc = new FileCleaner();
         Dictionary<String, Resource> resources = new Dictionary<string, Resource>();
@@ -74,7 +74,7 @@ namespace BreastRadiology.XUnitTests
         FhirDateTime date = new FhirDateTime(2019, 11, 1);
         public Dictionary<String, SDefEditor> editors = new Dictionary<String, SDefEditor>();
 
-        String CreateUrl(String name)
+        public static String CreateUrl(String name)
         {
             return $"http://hl7.org/fhir/us/breast-radiology/StructureDefinition/{name}";
         }
@@ -103,7 +103,7 @@ namespace BreastRadiology.XUnitTests
 
         SDefEditor CreateEditor(String name,
             String title,
-            String[] mapName,
+            String mapName,
             String baseDefinition,
             String groupPath,
             out String url)
@@ -111,7 +111,7 @@ namespace BreastRadiology.XUnitTests
             if (name.Contains(" "))
                 throw new Exception("Structure Def name can not contains spaces");
 
-            SDefEditor retVal = new SDefEditor(name, this.CreateUrl(name), baseDefinition, mapName, this.resourceDir, this.pageDir)
+            SDefEditor retVal = new SDefEditor(name, CreateUrl(name), baseDefinition, mapName, this.resourceDir, this.pageDir)
                 .Title(title)
                 .Derivation(StructureDefinition.TypeDerivationRule.Constraint)
                 .Abstract(false)
@@ -138,7 +138,7 @@ namespace BreastRadiology.XUnitTests
 
         SDefEditor CreateFragment(String name,
             String title,
-            String[] mapName,
+            String mapName,
             String baseDefinition,
             out String url)
         {
@@ -207,7 +207,7 @@ namespace BreastRadiology.XUnitTests
 
         ValueSet CreateValueSet(String name,
             String title,
-            String[] mapName,
+            String mapName,
             String description,
             String groupPath,
             IEnumerable<ConceptDef> codes)
@@ -217,7 +217,7 @@ namespace BreastRadiology.XUnitTests
 
         ValueSet CreateValueSet(String name,
             String title,
-            String[] mapName,
+            String mapName,
             String description,
             String groupPath,
             IEnumerable<ConceptDef> codes,
@@ -292,33 +292,12 @@ namespace BreastRadiology.XUnitTests
 
             resources.Add(Path.Combine(this.resourceDir, $"CodeSystem-{name}CS.json"), cs);
             resources.Add(Path.Combine(this.resourceDir, $"ValueSet-{name}VS.json"), vs);
-
-            ResourceMap.Self.CreateMapNode(vs.Url, mapName, "ValueSet", "");
+            vs.AddExtension(ResourceMap.ResourceMapNameUrl, new FhirString(mapName));
             return vs;
         }
 
         public void CreateResources()
         {
-            ResourceMap.Self.CreateMapNode(ClinicalImpressionUrl,
-                new string[] { "Clinical", "Impression" },
-                "StructureDefinition",
-                "ClinicalImpression");
-
-            ResourceMap.Self.CreateMapNode(MedicationRequestUrl,
-                new string[] { "Medication", "Request" },
-                "StructureDefinition",
-                "MedicationRequest");
-
-            ResourceMap.Self.CreateMapNode(ServiceRequestUrl,
-                new string[] { "Service", "Request" },
-                "StructureDefinition",
-                "ServiceRequest");
-
-            ResourceMap.Self.CreateMapNode(RiskAssessmentUrl,
-                new string[] { "Risk", "Assessment" },
-                "StructureDefinition",
-                "RiskAssessment");
-
             if (Directory.Exists(this.resourceDir) == false)
                 Directory.CreateDirectory(this.resourceDir);
             if (Directory.Exists(this.pageDir) == false)
@@ -331,35 +310,6 @@ namespace BreastRadiology.XUnitTests
 
             this.SaveAll();
             this.fc.Dispose();
-        }
-
-        public void CreateFocusMaps(String graphicsDir)
-        {
-            if (Directory.Exists(graphicsDir) == false)
-                Directory.CreateDirectory(graphicsDir);
-
-            FocusMapMaker focusMapMaker = new FocusMapMaker(this, graphicsDir, this.pageDir);
-            focusMapMaker.Create();
-        }
-
-        public void CreateResourceMap(String mapDir)
-        {
-            if (Directory.Exists(mapDir) == false)
-                Directory.CreateDirectory(mapDir);
-            ResourceMapMaker resourceMapMaker = new ResourceMapMaker(this);
-            resourceMapMaker.AddLegendItem("DiagnosticReport", Color.LightGreen);
-            resourceMapMaker.AddLegendItem("Extension", Color.LightSalmon);
-            resourceMapMaker.AddLegendItem("Observation", Color.LightSkyBlue);
-            resourceMapMaker.AddLegendItem("MedicationRequest", Color.LightPink);
-            resourceMapMaker.AddLegendItem("ServiceRequest", Color.LightBlue);
-            resourceMapMaker.AddLegendItem("RiskAssessment", Color.LightGray);
-            resourceMapMaker.AddLegendItem("ClinicalImpression", Color.LightGoldenrodYellow);
-            resourceMapMaker.AddLegendItem("ImagingStudy", Color.LightCoral);
-
-            resourceMapMaker.Create(Path.Combine(mapDir, "ProfileOverview.svg"));
-
-            //FragmentMapMaker fragmentMapMaker = new FragmentMapMaker(this, mapDir);
-            //fragmentMapMaker.Create();
         }
 
         void SaveAll()

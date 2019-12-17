@@ -1,6 +1,12 @@
 {
   "resourceType": "ValueSet",
   "id": "BreastRadMammoMassDensityVS",
+  "extension": [
+    {
+      "url": "http://www.resourcemap.com/mapname",
+      "valueString": "Mammo/Mass/Density/Values"
+    }
+  ],
   "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadMammoMassDensityVS",
   "version": "0.0.2",
   "name": "BreastRadMammoMassDensityVS",

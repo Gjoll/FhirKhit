@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
             {
                 SDefEditor e = this.CreateEditor("BreastRadMammoAxillaryAdenopathy",
                     "Mammo Axillary Adenopathy",
-                    new string[] { "Mammo", "Axillary", "Adenopathy" },
+                    "Mammo/Axillary/Adenopathy",
                     ObservationUrl,
                     $"{Group_MammoResources}/AssociatedFeature/AxillaryAdenopathy",
                     out mgAxillaryAdenopathy)

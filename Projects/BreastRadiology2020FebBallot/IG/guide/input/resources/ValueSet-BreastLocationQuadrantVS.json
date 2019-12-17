@@ -1,6 +1,12 @@
 {
   "resourceType": "ValueSet",
   "id": "BreastLocationQuadrantVS",
+  "extension": [
+    {
+      "url": "http://www.resourcemap.com/mapname",
+      "valueString": "Breast/Location/Quadrant/Values"
+    }
+  ],
   "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastLocationQuadrantVS",
   "version": "0.0.2",
   "name": "BreastLocationQuadrantVS",

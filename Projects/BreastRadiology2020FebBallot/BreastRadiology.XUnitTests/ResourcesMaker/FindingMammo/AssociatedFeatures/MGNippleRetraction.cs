@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
             {
                 SDefEditor e = this.CreateEditor("BreastRadMammoNippleRetraction",
                     "Mammo Nipple Retraction",
-                    new string[] { "Mammo", "Nipple", "Retraction" },
+                    "Mammo/Nipple/Retraction",
                     ObservationUrl,
                     $"{Group_MammoResources}/AssociatedFeature/NippleRetraction",
                     out mgNippleRetraction)

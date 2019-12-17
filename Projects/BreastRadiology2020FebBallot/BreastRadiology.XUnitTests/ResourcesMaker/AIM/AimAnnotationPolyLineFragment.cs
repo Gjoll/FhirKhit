@@ -30,7 +30,7 @@ namespace BreastRadiology.XUnitTests
             {
                 SDefEditor e = this.CreateFragment("AimAnnotationPolyLineFragment",
                         "Aim Annotation PolyLine Fragment",
-                        new string[] { "Annotation", "PolyLine", "Fragment" },
+                        "Annotation/PolyLine/Fragment",
                         ObservationUrl,
                         out aimAnnotationPolyLineFragment)
                     .Description("Fragment definition to include AIM Annotation extension",

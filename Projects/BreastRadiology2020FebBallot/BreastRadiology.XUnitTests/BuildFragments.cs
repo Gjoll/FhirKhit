@@ -72,8 +72,6 @@ namespace BreastRadiology.XUnitTests
                 pc.StatusInfo += this.StatusInfo;
                 pc.StatusWarnings += this.StatusWarnings;
                 pc.CreateResources();
-                pc.CreateFocusMaps(this.graphicsDir);
-                pc.CreateResourceMap(graphicsDir);
                 if (pc.HasErrors)
                 {
                     StringBuilder sb = new StringBuilder();
@@ -212,11 +210,72 @@ namespace BreastRadiology.XUnitTests
         {
             this.A_BuildFragments();
             this.B_BuildResources();
-            this.C_IGBuild();
+            this.C_BuildGraphics();
+            this.D_BuildIG();
         }
 
         [TestMethod]
-        public void C_IGBuild()
+        public void C_BuildGraphics()
+        {
+            try
+            {
+                if (Directory.Exists(graphicsDir) == false)
+                    Directory.CreateDirectory(graphicsDir);
+
+                ResourceMap map = new ResourceMap();
+                map.CreateMapNode(ResourcesMaker.ClinicalImpressionUrl,
+                    new string[] { "Clinical", "Impression" },
+                    "StructureDefinition",
+                    "ClinicalImpression");
+
+                map.CreateMapNode(ResourcesMaker.MedicationRequestUrl,
+                    new string[] { "Medication", "Request" },
+                    "StructureDefinition",
+                    "MedicationRequest");
+
+                map.CreateMapNode(ResourcesMaker.ServiceRequestUrl,
+                    new string[] { "Service", "Request" },
+                    "StructureDefinition",
+                    "ServiceRequest");
+
+                map.CreateMapNode(ResourcesMaker.RiskAssessmentUrl,
+                    new string[] { "Risk", "Assessment" },
+                    "StructureDefinition",
+                    "RiskAssessment");
+
+                map.AddDir(this.resourcesDir, "*.json");
+                {
+                    FocusMapMaker focusMapMaker = new FocusMapMaker(map, graphicsDir, this.pageDir);
+                    focusMapMaker.Create();
+                }
+
+                {
+                    ResourceMapMaker resourceMapMaker = new ResourceMapMaker(map);
+                    resourceMapMaker.AddLegendItem("DiagnosticReport", Color.LightGreen);
+                    resourceMapMaker.AddLegendItem("Extension", Color.LightSalmon);
+                    resourceMapMaker.AddLegendItem("Observation", Color.LightSkyBlue);
+                    resourceMapMaker.AddLegendItem("MedicationRequest", Color.LightPink);
+                    resourceMapMaker.AddLegendItem("ServiceRequest", Color.LightBlue);
+                    resourceMapMaker.AddLegendItem("RiskAssessment", Color.LightGray);
+                    resourceMapMaker.AddLegendItem("ClinicalImpression", Color.LightGoldenrodYellow);
+                    resourceMapMaker.AddLegendItem("ImagingStudy", Color.LightCoral);
+
+                    resourceMapMaker.Create(ResourcesMaker.CreateUrl("BreastRadReport"),
+                        Path.Combine(graphicsDir, "ProfileOverview.svg"));
+
+                    //FragmentMapMaker fragmentMapMaker = new FragmentMapMaker(this, mapDir);
+                    //fragmentMapMaker.Create();
+                }
+            }
+            catch (Exception err)
+            {
+                Trace.WriteLine(err.Message);
+                Assert.IsTrue(false);
+            }
+        }
+
+        [TestMethod]
+        public void D_BuildIG()
         {
             try
             {

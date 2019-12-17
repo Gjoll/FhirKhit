@@ -17,7 +17,7 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask MRIMass()
         {
-            if (mgMass == null)
+            if (mriMass == null)
                 await CreateMRIMass();
             return mriMass;
         }
@@ -29,25 +29,25 @@ namespace BreastRadiology.XUnitTests
             {
                 SDefEditor e = this.CreateEditor("BreastRadMRIMass",
                         "MRI Mass",
-                        new string[] { "MRI", "Mass" },
+                        "MRI/Mass",
                         ObservationUrl,
                         $"{Group_MRIResources}/Mass",
                         out mriMass)
                     .Description("Breast Radiology MRIgraphy Mass Observation",
                         new Markdown()
                             .MissingObservation("a mass", "and no Shape, Margin, or Density observations should be referenced by this observation")
-                            //$.BiradHeader()
-                            //$.BlockQuote("\"MASS\" is three dimensional and occupies space. It is seen on two different pro-")
-                            //$.BlockQuote("jections. It has completely or partially convex-outward borders and (when radiodense) appears")
-                            //$.BlockQuote("denser in the center than at the periphery. If a potential mass is seen only on a single projection, it")
-                            //$.BlockQuote("should be called an \"ASYMMETRY\" until its 3-dimensionality is confirmed")
-                            //$.BiradFooter()
-                            //$.Paragraph("This observation has the following member observations:")
-                            //$.List("Shape", "Margin", "Density", "Orientation")
+                            .BiradHeader()
+                            .BlockQuote("\"MASS\" is three dimensional and occupies space. It is seen on two different pro-")
+                            .BlockQuote("jections. It has completely or partially convex-outward borders and (when radiodense) appears")
+                            .BlockQuote("denser in the center than at the periphery. If a potential mass is seen only on a single projection, it")
+                            .BlockQuote("should be called an \"ASYMMETRY\" until its 3-dimensionality is confirmed")
+                            .BiradFooter()
+                            .Paragraph("This observation has the following member observations:")
+                            .List("Shape", "Margin", "Density", "Orientation")
                             .Todo(
-                                "Complete description"
-                                //"add mass size measurements (3 dimensional) like US?",
-                                //"same for asymmetry, lesion, calcification?"
+                                "Complete description",
+                                "add mass size measurements (3 dimensional) like US?",
+                                "same for asymmetry, lesion, calcification?"
                             )
                     )
                     .AddFragRef(await this.ObservationNoDeviceFragment())
@@ -72,7 +72,7 @@ namespace BreastRadiology.XUnitTests
                     new ProfileTargetSlice(await this.CommonObservedState(), 0, "1", false)
                     };
                     e.Find("hasMember").SliceByUrl(targets);
-                    e.Node.AddProfileTargets(targets);
+                    e.AddProfileTargets(targets);
                 }
 
                 e.IntroDoc

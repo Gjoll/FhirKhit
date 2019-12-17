@@ -29,7 +29,7 @@ namespace BreastRadiology.XUnitTests
             {
                 SDefEditor e = this.CreateEditor("BreastRadMammoSkinLesion",
                     "Mammo Skin Lesion",
-                    new string[] { "Mammo", "Skin", "Lesion" },
+                    "Mammo/Skin/Lesion",
                     ObservationUrl,
                     $"{Group_MammoResources}/SkinLesion",
                     out mgSkinLesion)
@@ -62,7 +62,7 @@ namespace BreastRadiology.XUnitTests
                     new ProfileTargetSlice(await this.CommonObservedState(), 0, "1", false)
                     };
                     e.Find("hasMember").SliceByUrl(targets);
-                    e.Node.AddProfileTargets(targets);
+                    e.AddProfileTargets(targets);
                 }
 
                 e.IntroDoc

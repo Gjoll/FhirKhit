@@ -1,6 +1,12 @@
 {
   "resourceType": "ValueSet",
   "id": "BreastRadNMMassMarginVS",
+  "extension": [
+    {
+      "url": "http://www.resourcemap.com/mapname",
+      "valueString": "NM/Mass/Margin/Values"
+    }
+  ],
   "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadNMMassMarginVS",
   "version": "0.0.2",
   "name": "BreastRadNMMassMarginVS",

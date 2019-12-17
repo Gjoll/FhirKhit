@@ -29,7 +29,7 @@ namespace BreastRadiology.XUnitTests
             {
                 SDefEditor e = this.CreateFragment("CategoryFragment",
                         "Category Fragment",
-                        new string[] { "Category", "Fragment" },
+                        "Category/Fragment",
                         ObservationUrl,
                         out findingCategoryFragment)
                     .Description("Fragment definition to define Observation.category",

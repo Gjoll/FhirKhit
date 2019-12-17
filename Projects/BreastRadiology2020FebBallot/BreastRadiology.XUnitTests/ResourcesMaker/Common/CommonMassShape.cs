@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
                 ValueSet binding = this.CreateValueSet(
                         "CommonMassShape",
                         "Mass Shape",
-                        new string[] { "Mass", "Shape", "Values" },
+                        "Mass/Shape/Values",
                         "Codes defining mass shape values.",
                         Group_CommonCodes,
                         new ConceptDef[]
@@ -76,7 +76,7 @@ namespace BreastRadiology.XUnitTests
 
                 SDefEditor e = this.CreateEditor("CommonMassShape",
                         "Mass Shape",
-                        new string[] { "Mass", "Shape" },
+                        "Mass/Shape",
                         ObservationUrl,
                         $"{Group_CommonResources}/MassShape",
                         out commonMassShape)

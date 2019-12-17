@@ -1,6 +1,12 @@
 {
   "resourceType": "ValueSet",
   "id": "BreastLocationClockVS",
+  "extension": [
+    {
+      "url": "http://www.resourcemap.com/mapname",
+      "valueString": "Breast/Location/Clock/Values"
+    }
+  ],
   "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastLocationClockVS",
   "version": "0.0.2",
   "name": "BreastLocationClockVS",

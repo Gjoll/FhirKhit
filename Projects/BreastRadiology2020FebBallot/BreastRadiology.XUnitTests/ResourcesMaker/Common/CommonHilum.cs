@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
                 ValueSet binding = this.CreateValueSet(
                         "CommonHilum",
                         "Hilum Values",
-                        new string[] { "Hilum", "Values" },
+                        "Hilum/Values",
                         "Codes defining hilum values.",
                         Group_CommonCodes,
                         new ConceptDef[]
@@ -61,7 +61,7 @@ namespace BreastRadiology.XUnitTests
 
                 SDefEditor e = this.CreateEditor("CommonHilum",
                         "Hilum Shape",
-                        new string[] { "Hilum", "Shape" },
+                        "Hilum/Shape",
                         ObservationUrl,
                         $"{Group_CommonResources}/Hilum",
                         out commonHilum)

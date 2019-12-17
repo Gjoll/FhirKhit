@@ -25,7 +25,7 @@ namespace BreastRadiology.XUnitTests
             {
                 SDefEditor e = this.CreateFragment("ObservationSectionFragment",
                         "Observation Section Fragment",
-                        new string[] { "Section", "Fragment" },
+                        "Section/Fragment",
                         ObservationUrl,
                         out observationSectionFragment)
                     .Description("Fragment that constrains Observations to be sections.",
