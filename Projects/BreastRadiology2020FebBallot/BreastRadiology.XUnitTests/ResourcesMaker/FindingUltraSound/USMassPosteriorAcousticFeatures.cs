@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
         {
             await VTask.Run(async () =>
             {
-                ValueSet binding = this.CreateValueSet(
+                CodeSystem cs = await this.CreateCodeSystem(
                     "BreastRadUSMassPosteriorAcousticFeatures",
                     "US Mass Posterior Acoustic Features",
                     "US Mass/Posterior Acoustic/Feature Values",
@@ -106,6 +106,13 @@ namespace BreastRadiology.XUnitTests
                     .AddFragRef(await this.ObservationLeafFragment())
                     ;
 
+                ValueSet binding = await this.CreateValueSet(
+                    "BreastRadUSMassPosteriorAcousticFeatures",
+                    "US Mass Posterior Acoustic Features",
+                    "US Mass/Posterior Acoustic/Feature Values",
+                    "Ultra-sound mass Posterior acoustic features codes.",
+                    Group_USCodes,
+                    cs);
                 e.Select("value[x]")
                     .Type("CodeableConcept")
                     .Binding(binding.Url, BindingStrength.Required)

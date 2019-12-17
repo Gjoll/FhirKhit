@@ -15,6 +15,9 @@ using StringTask = System.Threading.Tasks.Task<string>;
 
 namespace BreastRadiology.XUnitTests
 {
+    using CSTask = System.Threading.Tasks.Task<CodeSystem>;
+    using VSTask = System.Threading.Tasks.Task<ValueSet>;
+
     /*
      $ todo. Add negation items (mass, calc, etc).
      $ todo. Add condition that if item is not present, then body site is empty.
@@ -205,25 +208,14 @@ namespace BreastRadiology.XUnitTests
             }
         }
 
-        ValueSet CreateValueSet(String name,
+        async CSTask CreateCodeSystem(String name,
             String title,
             String mapName,
             String description,
             String groupPath,
             IEnumerable<ConceptDef> codes)
         {
-            return this.CreateValueSet(name, title, mapName, description, groupPath, codes, out CodeSystem cs);
-        }
-
-        ValueSet CreateValueSet(String name,
-            String title,
-            String mapName,
-            String description,
-            String groupPath,
-            IEnumerable<ConceptDef> codes,
-            out CodeSystem cs)
-        {
-            cs = new CodeSystem
+            CodeSystem cs = new CodeSystem
             {
                 Id = $"{name}CS",
                 Url = $"http://hl7.org/fhir/us/breast-radiology/CodeSystem/{name}CS",
@@ -234,11 +226,7 @@ namespace BreastRadiology.XUnitTests
                 Content = CodeSystem.CodeSystemContentMode.Complete,
                 Count = codes.Count(),
             };
-            StringTask headerFragTask = this.HeaderFragment();
-            headerFragTask.Wait();
-            String headerFragUrl = headerFragTask.Result;
-
-            cs.AddFragRef(headerFragUrl);
+            cs.AddFragRef(await this.HeaderFragment());
 
             // store groupPath as an extension. This is an unregistered extension that will be removed before
             // processing is complete.
@@ -248,6 +236,29 @@ namespace BreastRadiology.XUnitTests
                 Value = new FhirString($"{groupPath}CS")
             });
 
+            foreach (ConceptDef code in codes)
+            {
+                cs.Concept.Add(new CodeSystem.ConceptDefinitionComponent
+                {
+                    Code = code.Code,
+                    Display = code.Display,
+                    Definition = code.Definition
+                });
+            }
+
+            this.resources.Add(Path.Combine(this.resourceDir, $"CodeSystem-{name}CS.json"), cs);
+            return cs;
+        }
+        /// <summary>
+        /// Create a value set of all the codes in the passed CodeSystem.
+        /// </summary>
+        async VSTask CreateValueSet(String name,
+            String title,
+            String mapName,
+            String description,
+            String groupPath,
+            CodeSystem cs)
+        {
             ValueSet vs = new ValueSet
             {
                 Id = $"{name}VS",
@@ -256,7 +267,7 @@ namespace BreastRadiology.XUnitTests
                 Title = $"{title} ValueSet",
                 Description = new Markdown(description)
             };
-            vs.AddFragRef(headerFragUrl);
+            vs.AddFragRef(await this.HeaderFragment());
 
             // store groupPath as an extension. This is an unregistered extension that will be removed before
             // processing is complete.
@@ -274,23 +285,15 @@ namespace BreastRadiology.XUnitTests
             vs.Compose = new ValueSet.ComposeComponent();
             vs.Compose.Include.Add(vsComp);
 
-            foreach (ConceptDef code in codes)
+            foreach (var code in cs.Concept)
             {
                 vsComp.Concept.Add(new ValueSet.ConceptReferenceComponent
                 {
                     Code = code.Code,
                     Display = code.Display
                 });
-
-                cs.Concept.Add(new CodeSystem.ConceptDefinitionComponent
-                {
-                    Code = code.Code,
-                    Display = code.Display,
-                    Definition = code.Definition
-                });
             }
 
-            this.resources.Add(Path.Combine(this.resourceDir, $"CodeSystem-{name}CS.json"), cs);
             this.resources.Add(Path.Combine(this.resourceDir, $"ValueSet-{name}VS.json"), vs);
             vs.AddExtension(ResourceMap.ResourceMapNameUrl, new FhirString(mapName));
             return vs;

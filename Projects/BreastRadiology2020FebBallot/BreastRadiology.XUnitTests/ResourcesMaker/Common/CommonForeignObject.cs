@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
         {
             await VTask.Run(async () =>
             {
-                ValueSet binding = this.CreateValueSet(
+                CodeSystem cs  = await this.CreateCodeSystem(
                         "CommonAbnormalities",
                         "Foreign Object",
                         "Foreign/Object/Values",
@@ -134,6 +134,13 @@ namespace BreastRadiology.XUnitTests
                         })
                     ;
 
+                ValueSet binding  = await this.CreateValueSet(
+                        "CommonAbnormalities",
+                        "Foreign Object",
+                        "Foreign/Object/Values",
+                        "Foreign object codes defining types of foreign objects observed during a Breast Radiology exam",
+                        Group_CommonCodes,
+                        cs);
                 {
                     IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));
                     valueSetIntroDoc

@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
         {
             await VTask.Run(async () =>
             {
-                ValueSet binding = this.CreateValueSet(
+                CodeSystem cs = await this.CreateCodeSystem(
                         "BiRadsAssessmentCategories",
                         "BiRads(r) Assessment Category Codes",
                         "BiRads/Assessment/Category/Values",
@@ -88,6 +88,13 @@ namespace BreastRadiology.XUnitTests
                             )
                         })
                     ;
+                ValueSet binding = await this.CreateValueSet(
+                        "BiRadsAssessmentCategories",
+                        "BiRads(r) Assessment Category Codes",
+                        "BiRads/Assessment/Category/Values",
+                        "BiRads(r) Assessment Category codes.",
+                        Group_CommonCodes,
+                        cs);
 
                 {
                     IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));

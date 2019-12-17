@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
         {
             await VTask.Run(async () =>
             {
-                ValueSet binding = this.CreateValueSet(
+                CodeSystem cs  = await this.CreateCodeSystem(
                         "CommonHilum",
                         "Hilum Values",
                         "Hilum/Values",
@@ -48,6 +48,13 @@ namespace BreastRadiology.XUnitTests
                             )
                         })
                     ;
+                ValueSet binding = await this.CreateValueSet(
+                        "CommonHilum",
+                        "Hilum Values",
+                        "Hilum/Values",
+                        "Codes defining hilum values.",
+                        Group_CommonCodes,
+                        cs);
 
                 {
                     IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));

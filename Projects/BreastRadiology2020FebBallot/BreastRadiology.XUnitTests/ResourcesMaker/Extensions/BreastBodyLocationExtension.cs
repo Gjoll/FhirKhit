@@ -105,7 +105,7 @@ namespace BreastRadiology.XUnitTests
                 SliceAndBind("laterality", "http://hl7.org/fhir/ValueSet/bodysite-laterality");
 
                 {
-                    ValueSet binding = this.CreateValueSet(
+                    CodeSystem cs  = await this.CreateCodeSystem(
                         "BreastLocationQuadrant",
                         "Breast Location Quadrant",
                         "Breast/Location/Quadrant/Values",
@@ -180,6 +180,13 @@ namespace BreastRadiology.XUnitTests
                             )
                         });
 
+                    ValueSet binding = await this.CreateValueSet(
+                        "BreastLocationQuadrant",
+                        "Breast Location Quadrant",
+                        "Breast/Location/Quadrant/Values",
+                        "Breast body location quadrant codes.",
+                        Group_CommonCodes,
+                        cs);
 
                     {
                         IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));
@@ -196,7 +203,7 @@ namespace BreastRadiology.XUnitTests
                 }
 
                 {
-                    ValueSet binding = this.CreateValueSet(
+                    CodeSystem cs  = await this.CreateCodeSystem(
                         "BreastLocationClock",
                         "Breast Location Clock",
                         "Breast/Location/Clock/Values",
@@ -326,6 +333,13 @@ namespace BreastRadiology.XUnitTests
                             )
                         });
 
+                    ValueSet binding = await this.CreateValueSet(
+                        "BreastLocationClock",
+                        "Breast Location Clock",
+                        "Breast/Location/Clock/Values",
+                        "Codes defining breast body location angles expressed in clock-face units.",
+                        Group_CommonCodes,
+                        cs);
 
                     {
                         IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));
@@ -342,7 +356,7 @@ namespace BreastRadiology.XUnitTests
                 }
 
                 {
-                    ValueSet binding = this.CreateValueSet(
+                    CodeSystem cs  = await this.CreateCodeSystem(
                         "BreastLocationDepth",
                         "Breast Location Depth",
                         "Breast/Location/Depth/Values",
@@ -366,6 +380,13 @@ namespace BreastRadiology.XUnitTests
                                 .Line("Posterior depth")
                             )
                         });
+                    ValueSet binding = await this.CreateValueSet(
+                        "BreastLocationDepth",
+                        "Breast Location Depth",
+                        "Breast/Location/Depth/Values",
+                        "Breast body location depth codes.",
+                        Group_CommonCodes,
+                        cs);
 
 
                     {

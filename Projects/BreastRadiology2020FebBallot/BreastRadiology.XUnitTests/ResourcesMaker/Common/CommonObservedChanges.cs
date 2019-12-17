@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
         {
             await VTask.Run(async () =>
             {
-                ValueSet binding = this.CreateValueSet(
+                CodeSystem cs = await this.CreateCodeSystem(
                     "CommonObservedChanges",
                     "Observed Changes",
                     "Observed/Change/Values",
@@ -104,6 +104,13 @@ namespace BreastRadiology.XUnitTests
                     })
                 ;
 
+                ValueSet binding = await this.CreateValueSet(
+                    "CommonObservedChanges",
+                    "Observed Changes",
+                    "Observed/Change/Values",
+                    "Codes defining types of observed changes in an abnormality over time.",
+                    Group_CommonCodes,
+                    cs);
 
                 {
                     IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));

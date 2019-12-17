@@ -27,7 +27,7 @@ namespace BreastRadiology.XUnitTests
         {
             await VTask.Run(async () =>
             {
-                ValueSet binding = this.CreateValueSet(
+                CodeSystem cs  = await this.CreateCodeSystem(
                     "BreastRadMammoBreastDensity",
                     "Mammo Breast Density",
                     "Mammo/Breast/Density/Values",
@@ -91,6 +91,13 @@ namespace BreastRadiology.XUnitTests
                     }
                 );
 
+                    ValueSet binding = await this.CreateValueSet(
+                        "BreastRadMammoBreastDensity",
+                        "Mammo Breast Density",
+                        "Mammo/Breast/Density/Values",
+                        "Codes for mammography breast density values.",
+                        Group_MammoCodes,
+                        cs);
 
                 {
                     IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));

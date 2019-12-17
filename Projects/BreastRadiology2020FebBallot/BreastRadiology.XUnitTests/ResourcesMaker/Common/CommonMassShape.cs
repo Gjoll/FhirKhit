@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
         {
             await VTask.Run(async () =>
             {
-                ValueSet binding = this.CreateValueSet(
+                CodeSystem cs  = await this.CreateCodeSystem(
                         "CommonMassShape",
                         "Mass Shape",
                         "Mass/Shape/Values",
@@ -63,6 +63,14 @@ namespace BreastRadiology.XUnitTests
                             )
                         })
                     ;
+
+                    ValueSet binding = await this.CreateValueSet(
+                        "CommonMassShape",
+                        "Mass Shape",
+                        "Mass/Shape/Values",
+                        "Codes defining mass shape values.",
+                        Group_CommonCodes,
+                        cs);
 
                 {
                     IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));

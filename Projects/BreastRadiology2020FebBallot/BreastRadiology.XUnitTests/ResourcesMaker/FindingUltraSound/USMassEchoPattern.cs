@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
         {
             await VTask.Run(async () =>
             {
-                ValueSet binding = this.CreateValueSet(
+                CodeSystem cs = await this.CreateCodeSystem(
                     "BreastRadUSMassEchoPattern",
                     "US Mass Echo Pattern",
                     "US Mass/Echo Pattern/Values",
@@ -89,6 +89,13 @@ namespace BreastRadiology.XUnitTests
                         )
                     });
 
+                ValueSet binding = await this.CreateValueSet(
+                    "BreastRadUSMassEchoPattern",
+                    "US Mass Echo Pattern",
+                    "US Mass/Echo Pattern/Values",
+                    "Ultra-sound mass echo pattern codes.",
+                    Group_USCodes,
+                    cs);
 
                 {
                     IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));

@@ -25,7 +25,7 @@ namespace BreastRadiology.XUnitTests
 
         async VTask CreateMGAsymmetries()
         {
-            ValueSet binding = this.CreateValueSet(
+            CodeSystem cs = await this.CreateCodeSystem(
                    "BreastRadMemmoAsymmetries",
                    "Mammo Asymmetries",
                     "Mammo/Asymmetry/Values",
@@ -85,6 +85,13 @@ namespace BreastRadiology.XUnitTests
                     }
                 );
 
+            ValueSet binding = await this.CreateValueSet(
+               "BreastRadMemmoAsymmetries",
+               "Mammo Asymmetries",
+                "Mammo/Asymmetry/Values",
+               "Codes defining types of mammography asymmetries.",
+                Group_MammoCodes,
+                cs);
 
             {
                 IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));

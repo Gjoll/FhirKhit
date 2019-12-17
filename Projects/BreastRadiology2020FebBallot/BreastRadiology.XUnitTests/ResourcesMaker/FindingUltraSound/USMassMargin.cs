@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
         {
             await VTask.Run(async () =>
             {
-                ValueSet binding = this.CreateValueSet(
+                CodeSystem cs = await this.CreateCodeSystem(
                     "BreastRadUSMassMargin",
                     "US Mass Margin",
                     "US Mass/Margin Values",
@@ -109,6 +109,13 @@ namespace BreastRadiology.XUnitTests
                         )
                     });
 
+                ValueSet binding = await this.CreateValueSet(
+                    "BreastRadUSMassMargin",
+                    "US Mass Margin",
+                    "US Mass/Margin Values",
+                    "Ultra-sound mass margin codes.",
+                    Group_USCodes,
+                    cs);
 
                 {
                     IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));

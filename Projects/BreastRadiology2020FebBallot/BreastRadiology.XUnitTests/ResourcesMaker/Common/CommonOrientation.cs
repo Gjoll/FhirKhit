@@ -28,7 +28,7 @@ namespace BreastRadiology.XUnitTests
         {
             await VTask.Run(async () =>
             {
-                ValueSet binding = this.CreateValueSet(
+                CodeSystem cs  = await this.CreateCodeSystem(
                     "CommonOrientation",
                     "Orientation",
                     "Orientation Values",
@@ -57,6 +57,13 @@ namespace BreastRadiology.XUnitTests
                         )
                     });
 
+                    ValueSet binding = await this.CreateValueSet(
+                        "CommonOrientation",
+                        "Orientation",
+                        "Orientation Values",
+                        "Orientation codes",
+                        Group_CommonCodes,
+                        cs);
 
                 {
                     IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));
