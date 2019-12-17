@@ -42,8 +42,6 @@ namespace BreastRadiology.XUnitTests
                             .BlockQuote("from normal anatomic structures, such as ribs or fat lobules, using two or more projections and")
                             .BlockQuote("real-time scanning.")
                             .BiradFooter()
-                            .Paragraph("This observation has the following three observations:")
-                            .List("Shape", "Orientation", "Margin", "Orientation", "Echo Pattern", "Posterior acoustic features")
                             .Todo(
                                 "add mass size measurements (3 dimensional) like US?",
                                 "same for asymmetry, lesion, calcification?"
@@ -61,7 +59,7 @@ namespace BreastRadiology.XUnitTests
                     new ProfileTargetSlice(await this.CommonObservedSize(), 0, "1"),
                     new ProfileTargetSlice(await this.CommonObservedCount(), 0, "1"),
                     new ProfileTargetSlice(await this.CommonMassShape(), 0, "1"),
-                    new ProfileTargetSlice(await this.Orientation(), 0, "1"),
+                    new ProfileTargetSlice(await this.CommonOrientation(), 0, "1"),
                     new ProfileTargetSlice(await this.USMassMargin(), 0, "*"),
                     new ProfileTargetSlice(await this.USMassEchoPattern(), 0, "1"),
                     new ProfileTargetSlice(await this.USMassPosteriorAcousticFeatures(), 0, "1"),

@@ -16,7 +16,7 @@ namespace BreastRadiology.XUnitTests
 {
     partial class ResourcesMaker : ConverterBase
     {
-        async StringTask Orientation()
+        async StringTask CommonOrientation()
         {
             if (this.orientation == null)
                 await this.CreateOrientation();

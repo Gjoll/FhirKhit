@@ -42,8 +42,6 @@ namespace BreastRadiology.XUnitTests
                             .BlockQuote("denser in the center than at the periphery. If a potential mass is seen only on a single projection, it")
                             .BlockQuote("should be called an \"ASYMMETRY\" until its 3-dimensionality is confirmed")
                             .BiradFooter()
-                            .Paragraph("This observation has the following member observations:")
-                            .List("Shape", "Margin", "Density", "Orientation")
                             .Todo(
                                 "add mass size measurements (3 dimensional) like US?",
                                 "same for asymmetry, lesion, calcification?"
@@ -61,8 +59,8 @@ namespace BreastRadiology.XUnitTests
                     {
                     new ProfileTargetSlice(await this.CommonObservedSize(), 0, "1"),
                     new ProfileTargetSlice(await this.CommonObservedCount(), 0, "1"),
-                    new ProfileTargetSlice(await this.CommonMassShape(), 0, "1"),
-                    new ProfileTargetSlice(await this.Orientation(), 0, "1"),
+                    new ProfileTargetSlice(await this.MGShape(), 0, "1"),
+                    new ProfileTargetSlice(await this.CommonOrientation(), 0, "1"),
                     new ProfileTargetSlice(await this.MGMassMargin(), 0, "*"),
                     new ProfileTargetSlice(await this.MGMassDensity(), 0, "1"),
                     new ProfileTargetSlice(await this.CommonObservedChanges(), 0, "*"),

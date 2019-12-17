@@ -35,7 +35,6 @@ namespace FhirKhit.Tools.R2
             }
             return md;
         }
-
         public static Markdown List(this Markdown md, params string[] items)
         {
             foreach (String item in items)

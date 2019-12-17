@@ -72,7 +72,7 @@ namespace BreastRadiology.XUnitTests
         String resourceDir;
         String pageDir;
         FhirDateTime date = new FhirDateTime(2019, 11, 1);
-        public Dictionary<String, SDefEditor> editors = new Dictionary<String, SDefEditor>();
+        public Dictionary<String, SDefEditor> Editors = new Dictionary<String, SDefEditor>();
 
         public static String CreateUrl(String name)
         {
@@ -122,7 +122,7 @@ namespace BreastRadiology.XUnitTests
 
             retVal.SDef.FhirVersion = FHIRVersion.N4_0_0;
 
-            this.editors.Add(retVal.SDef.Url, retVal);
+            this.Editors.Add(retVal.SDef.Url, retVal);
             url = retVal.SDef.Url;
 
             // store groupPath as an extension. This is an unregistered extension that will be removed before
@@ -322,7 +322,7 @@ namespace BreastRadiology.XUnitTests
                 tasks.Add(t);
             }
 
-            foreach (SDefEditor ce in this.editors.Values)
+            foreach (SDefEditor ce in this.Editors.Values)
             {
                 System.Threading.Tasks.Task t = System.Threading.Tasks.Task.Run(() =>
                    {
