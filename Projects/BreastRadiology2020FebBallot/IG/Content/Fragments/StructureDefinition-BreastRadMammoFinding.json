@@ -51,6 +51,10 @@
     },
     {
       "url": "http://www.fragment.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoFatNecrosis"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
       "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoIntramammaryLymphNode"
     },
     {
@@ -137,7 +141,7 @@
         "path": "Observation.hasMember",
         "sliceName": "breastRadMammoArchitecturalDistortion",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "base": {
           "path": "Observation.hasMember",
           "min": 0,
@@ -233,11 +237,31 @@
         ]
       },
       {
+        "id": "Observation.hasMember:breastRadMammoFatNecrosis",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadMammoFatNecrosis",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoFatNecrosis"
+            ]
+          }
+        ]
+      },
+      {
         "id": "Observation.hasMember:breastRadMammoIntramammaryLymphNode",
         "path": "Observation.hasMember",
         "sliceName": "breastRadMammoIntramammaryLymphNode",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "base": {
           "path": "Observation.hasMember",
           "min": 0,
@@ -297,7 +321,7 @@
         "path": "Observation.hasMember",
         "sliceName": "breastRadMammoSolitaryDilatedDuct",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "base": {
           "path": "Observation.hasMember",
           "min": 0,
@@ -317,7 +341,7 @@
         "path": "Observation.hasMember",
         "sliceName": "breastRadMammoAssociatedFeatures",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "base": {
           "path": "Observation.hasMember",
           "min": 0,

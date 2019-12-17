@@ -51,6 +51,21 @@ namespace BreastRadiology.XUnitTests
                     .AddFragRef(await this.BreastBodyLocationRequiredFragment())
                     ;
 
+                {
+                    ProfileTargetSlice[] targets = new ProfileTargetSlice[]
+                    {
+                    new ProfileTargetSlice(await this.BiRadsAssessmentCategory(), 0, "1"),
+
+                    new ProfileTargetSlice(await this.CommonObservedCount(), 0, "1"),
+                    new ProfileTargetSlice(await this.CommonObservedChanges(), 0, "*"),
+                    new ProfileTargetSlice(await this.CommonObservedSize(), 0, "1"),
+                    new ProfileTargetSlice(await this.CommonOrientation(), 0, "1"),
+                    new ProfileTargetSlice(await this.CommonObservedState(), 0, "*"),
+                    };
+                    e.Find("hasMember").SliceByUrl(targets);
+                    e.AddProfileTargets(targets);
+                }
+
                 e.IntroDoc
                     .ReviewedStatus(ReviewStatus.NotReviewed)
                     .ObservationLeafNode($"Solitary Dilated Duct")

@@ -168,6 +168,7 @@ namespace BreastRadiology.XUnitTests
                                 "are wire and wire fragment codes the same."
                             )
                     )
+                    .AddFragRef(await this.BreastBodyLocationRequiredFragment())
                     .AddFragRef(await this.ObservationNoDeviceFragment())
                     .AddFragRef(await this.ObservationCodedValueFragment())
                     .AddFragRef(await this.ObservationSectionFragment())
@@ -176,9 +177,12 @@ namespace BreastRadiology.XUnitTests
                 {
                     ProfileTargetSlice[] targets = new ProfileTargetSlice[]
                     {
+                    new ProfileTargetSlice(await this.BiRadsAssessmentCategory(), 0, "1"),
+
+                    new ProfileTargetSlice(await this.CommonObservedCount(), 0, "1"),
                     new ProfileTargetSlice(await this.CommonObservedChanges(), 0, "*"),
                     new ProfileTargetSlice(await this.CommonObservedSize(), 0, "1"),
-                    new ProfileTargetSlice(await this.CommonObservedCount(), 0, "1")
+                    new ProfileTargetSlice(await this.CommonOrientation(), 0, "1"),
                     };
                     e.Find("hasMember").SliceByUrl(targets);
                     e.AddProfileTargets(targets);

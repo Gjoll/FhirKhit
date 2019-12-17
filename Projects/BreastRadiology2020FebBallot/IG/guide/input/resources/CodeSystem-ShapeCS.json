@@ -1,27 +1,19 @@
 {
   "resourceType": "CodeSystem",
-  "id": "MammoShapeCS",
+  "id": "ShapeCS",
   "extension": [
     {
       "url": "http://www.fragment.com/fragment",
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
     },
     {
-      "url": "http://www.ResourceMaker.com/Group",
-      "valueString": "CommonCodesCS"
-    },
-    {
       "url": "http://www.fragment.com/mapname",
       "valueString": "Common"
-    },
-    {
-      "url": "http://www.ResourceMaker.com/Group",
-      "valueString": "Fragment/{name}"
     }
   ],
-  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/MammoShapeCS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ShapeCS",
   "version": "0.0.2",
-  "name": "MammoShapeCS",
+  "name": "ShapeCS",
   "title": "Shape CodeSystem",
   "status": "draft",
   "date": "2019-11-01",

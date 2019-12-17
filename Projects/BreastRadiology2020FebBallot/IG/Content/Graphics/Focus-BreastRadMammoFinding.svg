@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="568.49994" height="795">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="568.49994" height="855">
 <defs>
 <marker id="arrowStart" markerWidth="3.75" markerHeight="3.75" markerUnits="px" refX="1.875" refY="1.875">
 <circle fill="Black" stroke-width="0" cx="1.875" cy="1.875" r="1.875" />
@@ -41,13 +41,14 @@
 <line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="327" y1="223.125" x2="357" y2="223.125" />
 <line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="327" y1="292.5" x2="357" y2="292.5" />
 <line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="327" y1="352.5" x2="357" y2="352.5" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="327" y1="421.875" x2="357" y2="421.875" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="327" y1="491.25" x2="357" y2="491.25" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="327" y1="560.625" x2="357" y2="560.625" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="327" y1="648.75" x2="357" y2="648.75" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="327" y1="736.875" x2="357" y2="736.875" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="327" y1="412.5" x2="357" y2="412.5" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="327" y1="481.875" x2="357" y2="481.875" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="327" y1="551.25" x2="357" y2="551.25" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="327" y1="620.625" x2="357" y2="620.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="327" y1="708.75" x2="357" y2="708.75" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="327" y1="796.875" x2="357" y2="796.875" />
 <line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="297" y1="33.75" x2="327" y2="33.75" />
-<line stroke="Black" stroke-width="1.875" x1="327" y1="24.375" x2="327" y2="736.875" />
+<line stroke="Black" stroke-width="1.875" x1="327" y1="24.375" x2="327" y2="796.875" />
 </g>
 <g>
 <g>
@@ -121,78 +122,89 @@
 </a>
 </g>
 <g>
-<rect fill="LightSalmon" stroke="Black" stroke-width="1.875" x="357" y="386.25" width="141" height="71.25" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-BreastRadMammoIntramammaryLymphNode.html" target="_blank">
-<title>'BreastRadMammoIntramammaryLymphNode'</title>
+<rect fill="LightSalmon" stroke="Black" stroke-width="1.875" x="357" y="386.25" width="130.5" height="52.5" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BreastRadMammoFatNecrosis.html" target="_blank">
+<title>'BreastRadMammoFatNecrosis'</title>
 <text x="364.5" y="408.75">Mammo</text>
 </a>
-<a href="./StructureDefinition-BreastRadMammoIntramammaryLymphNode.html" target="_blank">
-<title>'BreastRadMammoIntramammaryLymphNode'</title>
-<text x="364.5" y="427.5">Intramammory</text>
-</a>
-<a href="./StructureDefinition-BreastRadMammoIntramammaryLymphNode.html" target="_blank">
-<title>'BreastRadMammoIntramammaryLymphNode'</title>
-<text x="364.5" y="446.25">Lymph Node</text>
+<a href="./StructureDefinition-BreastRadMammoFatNecrosis.html" target="_blank">
+<title>'BreastRadMammoFatNecrosis'</title>
+<text x="364.5" y="427.5">FatNecrosis</text>
 </a>
 </g>
 <g>
-<rect fill="LightSalmon" stroke="Black" stroke-width="1.875" x="357" y="465" width="67.5" height="52.5" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-BreastRadMammoMass.html" target="_blank">
-<title>'BreastRadMammoMass'</title>
-<text x="364.5" y="487.5">Mammo</text>
+<rect fill="LightSalmon" stroke="Black" stroke-width="1.875" x="357" y="446.25" width="141" height="71.25" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BreastRadMammoIntramammaryLymphNode.html" target="_blank">
+<title>'BreastRadMammoIntramammaryLymphNode'</title>
+<text x="364.5" y="468.75">Mammo</text>
 </a>
-<a href="./StructureDefinition-BreastRadMammoMass.html" target="_blank">
-<title>'BreastRadMammoMass'</title>
-<text x="364.5" y="506.25">Mass</text>
+<a href="./StructureDefinition-BreastRadMammoIntramammaryLymphNode.html" target="_blank">
+<title>'BreastRadMammoIntramammaryLymphNode'</title>
+<text x="364.5" y="487.5">Intramammory</text>
+</a>
+<a href="./StructureDefinition-BreastRadMammoIntramammaryLymphNode.html" target="_blank">
+<title>'BreastRadMammoIntramammaryLymphNode'</title>
+<text x="364.5" y="506.25">Lymph Node</text>
 </a>
 </g>
 <g>
-<rect fill="LightSalmon" stroke="Black" stroke-width="1.875" x="357" y="525" width="78" height="71.25" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-BreastRadMammoSkinLesion.html" target="_blank">
-<title>'BreastRadMammoSkinLesion'</title>
+<rect fill="LightSalmon" stroke="Black" stroke-width="1.875" x="357" y="525" width="67.5" height="52.5" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BreastRadMammoMass.html" target="_blank">
+<title>'BreastRadMammoMass'</title>
 <text x="364.5" y="547.5">Mammo</text>
 </a>
-<a href="./StructureDefinition-BreastRadMammoSkinLesion.html" target="_blank">
-<title>'BreastRadMammoSkinLesion'</title>
-<text x="364.5" y="566.25">Skin</text>
-</a>
-<a href="./StructureDefinition-BreastRadMammoSkinLesion.html" target="_blank">
-<title>'BreastRadMammoSkinLesion'</title>
-<text x="364.5" y="585">Lesion</text>
+<a href="./StructureDefinition-BreastRadMammoMass.html" target="_blank">
+<title>'BreastRadMammoMass'</title>
+<text x="364.5" y="566.25">Mass</text>
 </a>
 </g>
 <g>
-<rect fill="LightSalmon" stroke="Black" stroke-width="1.875" x="357" y="603.75" width="99" height="90" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-BreastRadMammoSolitaryDilatedDuct.html" target="_blank">
-<title>'BreastRadMammoSolitaryDilatedDuct'</title>
-<text x="364.5" y="626.25">Mammo</text>
+<rect fill="LightSalmon" stroke="Black" stroke-width="1.875" x="357" y="585" width="78" height="71.25" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BreastRadMammoSkinLesion.html" target="_blank">
+<title>'BreastRadMammoSkinLesion'</title>
+<text x="364.5" y="607.5">Mammo</text>
 </a>
-<a href="./StructureDefinition-BreastRadMammoSolitaryDilatedDuct.html" target="_blank">
-<title>'BreastRadMammoSolitaryDilatedDuct'</title>
-<text x="364.5" y="645">Solitary</text>
+<a href="./StructureDefinition-BreastRadMammoSkinLesion.html" target="_blank">
+<title>'BreastRadMammoSkinLesion'</title>
+<text x="364.5" y="626.25">Skin</text>
 </a>
-<a href="./StructureDefinition-BreastRadMammoSolitaryDilatedDuct.html" target="_blank">
-<title>'BreastRadMammoSolitaryDilatedDuct'</title>
-<text x="364.5" y="663.75">Dialated</text>
-</a>
-<a href="./StructureDefinition-BreastRadMammoSolitaryDilatedDuct.html" target="_blank">
-<title>'BreastRadMammoSolitaryDilatedDuct'</title>
-<text x="364.5" y="682.5">Duct</text>
+<a href="./StructureDefinition-BreastRadMammoSkinLesion.html" target="_blank">
+<title>'BreastRadMammoSkinLesion'</title>
+<text x="364.5" y="645">Lesion</text>
 </a>
 </g>
 <g>
-<rect fill="LightSalmon" stroke="Black" stroke-width="1.875" x="357" y="701.25" width="120" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightSalmon" stroke="Black" stroke-width="1.875" x="357" y="663.75" width="99" height="90" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BreastRadMammoSolitaryDilatedDuct.html" target="_blank">
+<title>'BreastRadMammoSolitaryDilatedDuct'</title>
+<text x="364.5" y="686.25">Mammo</text>
+</a>
+<a href="./StructureDefinition-BreastRadMammoSolitaryDilatedDuct.html" target="_blank">
+<title>'BreastRadMammoSolitaryDilatedDuct'</title>
+<text x="364.5" y="705">Solitary</text>
+</a>
+<a href="./StructureDefinition-BreastRadMammoSolitaryDilatedDuct.html" target="_blank">
+<title>'BreastRadMammoSolitaryDilatedDuct'</title>
+<text x="364.5" y="723.75">Dialated</text>
+</a>
+<a href="./StructureDefinition-BreastRadMammoSolitaryDilatedDuct.html" target="_blank">
+<title>'BreastRadMammoSolitaryDilatedDuct'</title>
+<text x="364.5" y="742.5">Duct</text>
+</a>
+</g>
+<g>
+<rect fill="LightSalmon" stroke="Black" stroke-width="1.875" x="357" y="761.25" width="120" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
 <title>'BreastRadMammoAssociatedFeatures'</title>
-<text x="364.5" y="723.75">Mammo</text>
+<text x="364.5" y="783.75">Mammo</text>
 </a>
 <a href="./StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
 <title>'BreastRadMammoAssociatedFeatures'</title>
-<text x="364.5" y="742.5">Associated</text>
+<text x="364.5" y="802.5">Associated</text>
 </a>
 <a href="./StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
 <title>'BreastRadMammoAssociatedFeatures'</title>
-<text x="364.5" y="761.25">Features</text>
+<text x="364.5" y="821.25">Features</text>
 </a>
 </g>
 </g>

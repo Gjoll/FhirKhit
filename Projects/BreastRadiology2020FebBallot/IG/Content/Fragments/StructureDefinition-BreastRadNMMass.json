@@ -71,7 +71,7 @@
     },
     {
       "url": "http://www.fragment.com/maplink",
-      "valueString": "target|False|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonObservedState"
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonObservedState"
     }
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadNMMass",
@@ -221,7 +221,7 @@
         "path": "Observation.hasMember",
         "sliceName": "commonObservedState",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "base": {
           "path": "Observation.hasMember",
           "min": 0,

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1194" height="5437.5">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1235.9999" height="6761.25">
 <defs>
 <marker id="arrowStart" markerWidth="3.75" markerHeight="3.75" markerUnits="px" refX="1.875" refY="1.875">
 <circle fill="Black" stroke-width="0" cx="1.875" cy="1.875" r="1.875" />
@@ -208,12 +208,12 @@
 </g>
 <line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="507" y1="541.875" x2="537" y2="541.875" />
 <line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="507" y1="611.25" x2="537" y2="611.25" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="507" y1="3795" x2="537" y2="3795" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="507" y1="4301.25" x2="537" y2="4301.25" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="507" y1="4683.75" x2="537" y2="4683.75" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="507" y1="4878.75" x2="537" y2="4878.75" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="507" y1="5505" x2="537" y2="5505" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="507" y1="5887.5" x2="537" y2="5887.5" />
 <line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="466.49997" y1="523.125" x2="507" y2="523.125" />
 <line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="477" y1="564.375" x2="507" y2="564.375" />
-<line stroke="Black" stroke-width="1.875" x1="507" y1="523.125" x2="507" y2="4683.75" />
+<line stroke="Black" stroke-width="1.875" x1="507" y1="523.125" x2="507" y2="5887.5" />
 </g>
 <g>
 <g>
@@ -245,18 +245,19 @@
 </a>
 </g>
 <line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="655.5" y1="601.875" x2="685.5" y2="601.875" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="655.5" y1="744.375" x2="685.5" y2="744.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="655.5" y1="813.75" x2="685.5" y2="813.75" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="655.5" y1="1025.625" x2="685.5" y2="1025.625" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="655.5" y1="1095" x2="685.5" y2="1095" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="655.5" y1="1496.25" x2="685.5" y2="1496.25" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="655.5" y1="2086.875" x2="685.5" y2="2086.875" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="655.5" y1="2156.25" x2="685.5" y2="2156.25" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="655.5" y1="2746.875" x2="685.5" y2="2746.875" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="655.5" y1="2921.25" x2="685.5" y2="2921.25" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="655.5" y1="3009.375" x2="685.5" y2="3009.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="655.5" y1="864.375" x2="685.5" y2="864.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="655.5" y1="1098.75" x2="685.5" y2="1098.75" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="655.5" y1="1471.875" x2="685.5" y2="1471.875" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="655.5" y1="1541.25" x2="685.5" y2="1541.25" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="655.5" y1="2021.25" x2="685.5" y2="2021.25" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="655.5" y1="2081.25" x2="685.5" y2="2081.25" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="655.5" y1="2454.375" x2="685.5" y2="2454.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="655.5" y1="2730" x2="685.5" y2="2730" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="655.5" y1="3399.375" x2="685.5" y2="3399.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="655.5" y1="3573.75" x2="685.5" y2="3573.75" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="655.5" y1="3849.375" x2="685.5" y2="3849.375" />
 <line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="625.5" y1="611.25" x2="655.5" y2="611.25" />
-<line stroke="Black" stroke-width="1.875" x1="655.5" y1="601.875" x2="655.5" y2="3009.375" />
+<line stroke="Black" stroke-width="1.875" x1="655.5" y1="601.875" x2="655.5" y2="3849.375" />
 </g>
 <g>
 <g>
@@ -266,1265 +267,1597 @@
 <text x="693" y="607.5">ForeignObject</text>
 </a>
 </g>
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="867" y1="601.875" x2="897" y2="601.875" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="867" y1="643.125" x2="897" y2="643.125" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="867" y1="684.375" x2="897" y2="684.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="867" y1="620.625" x2="897" y2="620.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="867" y1="680.625" x2="897" y2="680.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="867" y1="721.875" x2="897" y2="721.875" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="867" y1="763.125" x2="897" y2="763.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="867" y1="804.375" x2="897" y2="804.375" />
 <line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="837" y1="601.875" x2="867" y2="601.875" />
-<line stroke="Black" stroke-width="1.875" x1="867" y1="601.875" x2="867" y2="684.375" />
+<line stroke="Black" stroke-width="1.875" x1="867" y1="601.875" x2="867" y2="804.375" />
 </g>
 <g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="897" y="585" width="88.5" height="33.75" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-CommonObservedChanges.html" target="_blank">
-<title>Click -> 'CommonObservedChanges'</title>
-<text x="904.5" y="607.5">Changes</text>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="897" y="585" width="120" height="71.25" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BiRadsAssessmentCategory.html" target="_blank">
+<title>Click -> 'BiRadsAssessmentCategory'</title>
+<text x="904.5" y="607.5">BiRads</text>
+</a>
+<a href="./StructureDefinition-BiRadsAssessmentCategory.html" target="_blank">
+<title>Click -> 'BiRadsAssessmentCategory'</title>
+<text x="904.5" y="626.25">Assessment</text>
+</a>
+<a href="./StructureDefinition-BiRadsAssessmentCategory.html" target="_blank">
+<title>Click -> 'BiRadsAssessmentCategory'</title>
+<text x="904.5" y="645">Category</text>
 </a>
 </g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="897" y="626.25" width="57" height="33.75" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-CommonSize.html" target="_blank">
-<title>Click -> 'CommonSize'</title>
-<text x="904.5" y="648.75">Size</text>
-</a>
-</g>
-<g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="897" y="667.5" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="897" y="663.75" width="67.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-CommonCount.html" target="_blank">
 <title>Click -> 'CommonCount'</title>
-<text x="904.5" y="690">Count</text>
-</a>
-</g>
-</g>
-<g>
-<g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="685.5" y="708.75" width="120" height="71.25" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-BreastRadMammoArchitecturalDistortion.html" target="_blank">
-<title>Click -> 'BreastRadMammoArchitecturalDistortion'</title>
-<text x="693" y="731.25">Mammo</text>
-</a>
-<a href="./StructureDefinition-BreastRadMammoArchitecturalDistortion.html" target="_blank">
-<title>Click -> 'BreastRadMammoArchitecturalDistortion'</title>
-<text x="693" y="750">Arch.</text>
-</a>
-<a href="./StructureDefinition-BreastRadMammoArchitecturalDistortion.html" target="_blank">
-<title>Click -> 'BreastRadMammoArchitecturalDistortion'</title>
-<text x="693" y="768.75">Distortion</text>
-</a>
-</g>
-</g>
-<g>
-<g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="685.5" y="787.5" width="130.5" height="52.5" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-BreastRadMammoAsymmetries.html" target="_blank">
-<title>Click -> 'BreastRadMammoAsymmetries'</title>
-<text x="693" y="810">Mammo</text>
-</a>
-<a href="./StructureDefinition-BreastRadMammoAsymmetries.html" target="_blank">
-<title>Click -> 'BreastRadMammoAsymmetries'</title>
-<text x="693" y="828.75">Asymmetries</text>
-</a>
-</g>
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="846" y1="804.375" x2="876" y2="804.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="846" y1="845.625" x2="876" y2="845.625" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="846" y1="886.875" x2="876" y2="886.875" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="846" y1="946.875" x2="876" y2="946.875" />
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="816" y1="813.75" x2="846" y2="813.75" />
-<line stroke="Black" stroke-width="1.875" x1="846" y1="804.375" x2="846" y2="946.875" />
-</g>
-<g>
-<g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="876" y="787.5" width="57" height="33.75" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-CommonSize.html" target="_blank">
-<title>Click -> 'CommonSize'</title>
-<text x="883.5" y="810">Size</text>
+<text x="904.5" y="686.25">Count</text>
 </a>
 </g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="876" y="828.75" width="67.5" height="33.75" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-CommonCount.html" target="_blank">
-<title>Click -> 'CommonCount'</title>
-<text x="883.5" y="851.25">Count</text>
-</a>
-</g>
-<g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="876" y="870" width="88.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="897" y="705" width="88.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-CommonObservedChanges.html" target="_blank">
 <title>Click -> 'CommonObservedChanges'</title>
-<text x="883.5" y="892.5">Changes</text>
+<text x="904.5" y="727.5">Changes</text>
 </a>
 </g>
-</g>
 <g>
-<g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="876" y="911.25" width="120" height="71.25" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
-<title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
-<text x="883.5" y="933.75">Mammo</text>
-</a>
-<a href="./StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
-<title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
-<text x="883.5" y="952.5">Associated</text>
-</a>
-<a href="./StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
-<title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
-<text x="883.5" y="971.25">Features</text>
-</a>
-</g>
-</g>
-<g>
-<g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="685.5" y="990" width="88.5" height="71.25" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-BreastRadMammoBreastDensity.html" target="_blank">
-<title>Click -> 'BreastRadMammoBreastDensity'</title>
-<text x="693" y="1012.5">Mammo</text>
-</a>
-<a href="./StructureDefinition-BreastRadMammoBreastDensity.html" target="_blank">
-<title>Click -> 'BreastRadMammoBreastDensity'</title>
-<text x="693" y="1031.25">Breast</text>
-</a>
-<a href="./StructureDefinition-BreastRadMammoBreastDensity.html" target="_blank">
-<title>Click -> 'BreastRadMammoBreastDensity'</title>
-<text x="693" y="1050">Density</text>
-</a>
-</g>
-</g>
-<g>
-<g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="685.5" y="1068.75" width="67.5" height="52.5" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-BreastRadMammoCalcification.html" target="_blank">
-<title>Click -> 'BreastRadMammoCalcification'</title>
-<text x="693" y="1091.25">Mammo</text>
-</a>
-<a href="./StructureDefinition-BreastRadMammoCalcification.html" target="_blank">
-<title>Click -> 'BreastRadMammoCalcification'</title>
-<text x="693" y="1110">Calc.</text>
-</a>
-</g>
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="1085.625" x2="813" y2="1085.625" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="1126.875" x2="813" y2="1126.875" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="1186.875" x2="813" y2="1186.875" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="1265.625" x2="813" y2="1265.625" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="1325.625" x2="813" y2="1325.625" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="1385.625" x2="813" y2="1385.625" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="1445.625" x2="813" y2="1445.625" />
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="753" y1="1095" x2="783" y2="1095" />
-<line stroke="Black" stroke-width="1.875" x1="783" y1="1085.625" x2="783" y2="1445.625" />
-</g>
-<g>
-<g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="1068.75" width="57" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="897" y="746.25" width="57" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-CommonSize.html" target="_blank">
 <title>Click -> 'CommonSize'</title>
-<text x="820.5" y="1091.25">Size</text>
+<text x="904.5" y="768.75">Size</text>
 </a>
 </g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="1110" width="67.5" height="33.75" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-CommonCount.html" target="_blank">
-<title>Click -> 'CommonCount'</title>
-<text x="820.5" y="1132.5">Count</text>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="897" y="787.5" width="130.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonOrientation.html" target="_blank">
+<title>Click -> 'CommonOrientation'</title>
+<text x="904.5" y="810">Orientation</text>
+</a>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="685.5" y="828.75" width="120" height="71.25" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BreastRadMammoArchitecturalDistortion.html" target="_blank">
+<title>Click -> 'BreastRadMammoArchitecturalDistortion'</title>
+<text x="693" y="851.25">Mammo</text>
+</a>
+<a href="./StructureDefinition-BreastRadMammoArchitecturalDistortion.html" target="_blank">
+<title>Click -> 'BreastRadMammoArchitecturalDistortion'</title>
+<text x="693" y="870">Arch.</text>
+</a>
+<a href="./StructureDefinition-BreastRadMammoArchitecturalDistortion.html" target="_blank">
+<title>Click -> 'BreastRadMammoArchitecturalDistortion'</title>
+<text x="693" y="888.75">Distortion</text>
+</a>
+</g>
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="835.5" y1="864.375" x2="865.5" y2="864.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="835.5" y1="924.375" x2="865.5" y2="924.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="835.5" y1="965.625" x2="865.5" y2="965.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="835.5" y1="1006.875" x2="865.5" y2="1006.875" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="835.5" y1="1048.125" x2="865.5" y2="1048.125" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="805.5" y1="864.375" x2="835.5" y2="864.375" />
+<line stroke="Black" stroke-width="1.875" x1="835.5" y1="864.375" x2="835.5" y2="1048.125" />
+</g>
+<g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="865.5" y="828.75" width="120" height="71.25" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BiRadsAssessmentCategory.html" target="_blank">
+<title>Click -> 'BiRadsAssessmentCategory'</title>
+<text x="873" y="851.25">BiRads</text>
+</a>
+<a href="./StructureDefinition-BiRadsAssessmentCategory.html" target="_blank">
+<title>Click -> 'BiRadsAssessmentCategory'</title>
+<text x="873" y="870">Assessment</text>
+</a>
+<a href="./StructureDefinition-BiRadsAssessmentCategory.html" target="_blank">
+<title>Click -> 'BiRadsAssessmentCategory'</title>
+<text x="873" y="888.75">Category</text>
 </a>
 </g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="1151.25" width="67.5" height="71.25" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-BreastRadMammoCalcificationType.html" target="_blank">
-<title>Click -> 'BreastRadMammoCalcificationType'</title>
-<text x="820.5" y="1173.75">Mammo</text>
-</a>
-<a href="./StructureDefinition-BreastRadMammoCalcificationType.html" target="_blank">
-<title>Click -> 'BreastRadMammoCalcificationType'</title>
-<text x="820.5" y="1192.5">Calc.</text>
-</a>
-<a href="./StructureDefinition-BreastRadMammoCalcificationType.html" target="_blank">
-<title>Click -> 'BreastRadMammoCalcificationType'</title>
-<text x="820.5" y="1211.25">Type</text>
-</a>
-</g>
-<g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="1230" width="141" height="71.25" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-BreastRadMammoCalcificationDistribution.html" target="_blank">
-<title>Click -> 'BreastRadMammoCalcificationDistribution'</title>
-<text x="820.5" y="1252.5">Mammo</text>
-</a>
-<a href="./StructureDefinition-BreastRadMammoCalcificationDistribution.html" target="_blank">
-<title>Click -> 'BreastRadMammoCalcificationDistribution'</title>
-<text x="820.5" y="1271.25">Calc.</text>
-</a>
-<a href="./StructureDefinition-BreastRadMammoCalcificationDistribution.html" target="_blank">
-<title>Click -> 'BreastRadMammoCalcificationDistribution'</title>
-<text x="820.5" y="1290">Distribution</text>
-</a>
-</g>
-<g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="1308.75" width="88.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="865.5" y="907.5" width="88.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-CommonObservedChanges.html" target="_blank">
 <title>Click -> 'CommonObservedChanges'</title>
-<text x="820.5" y="1331.25">Changes</text>
+<text x="873" y="930">Changes</text>
 </a>
 </g>
-</g>
 <g>
-<g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="1350" width="120" height="71.25" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
-<title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
-<text x="820.5" y="1372.5">Mammo</text>
-</a>
-<a href="./StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
-<title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
-<text x="820.5" y="1391.25">Associated</text>
-</a>
-<a href="./StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
-<title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
-<text x="820.5" y="1410">Features</text>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="865.5" y="948.75" width="57" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonSize.html" target="_blank">
+<title>Click -> 'CommonSize'</title>
+<text x="873" y="971.25">Size</text>
 </a>
 </g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="865.5" y="990" width="130.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonOrientation.html" target="_blank">
+<title>Click -> 'CommonOrientation'</title>
+<text x="873" y="1012.5">Orientation</text>
+</a>
 </g>
 <g>
-<g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="1428.75" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="865.5" y="1031.25" width="67.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-CommonObservedState.html" target="_blank">
 <title>Click -> 'CommonObservedState'</title>
-<text x="820.5" y="1451.25">State</text>
+<text x="873" y="1053.75">State</text>
 </a>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="685.5" y="1470" width="67.5" height="52.5" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-BreastRadMammoCyst.html" target="_blank">
-<title>Click -> 'BreastRadMammoCyst'</title>
-<text x="693" y="1492.5">Mammo</text>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="685.5" y="1072.5" width="130.5" height="52.5" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BreastRadMammoAsymmetries.html" target="_blank">
+<title>Click -> 'BreastRadMammoAsymmetries'</title>
+<text x="693" y="1095">Mammo</text>
 </a>
-<a href="./StructureDefinition-BreastRadMammoCyst.html" target="_blank">
-<title>Click -> 'BreastRadMammoCyst'</title>
-<text x="693" y="1511.25">Cyst</text>
+<a href="./StructureDefinition-BreastRadMammoAsymmetries.html" target="_blank">
+<title>Click -> 'BreastRadMammoAsymmetries'</title>
+<text x="693" y="1113.75">Asymmetries</text>
 </a>
 </g>
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="1486.875" x2="813" y2="1486.875" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="1528.125" x2="813" y2="1528.125" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="1569.375" x2="813" y2="1569.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="846" y1="1108.125" x2="876" y2="1108.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="846" y1="1168.125" x2="876" y2="1168.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="846" y1="1209.375" x2="876" y2="1209.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="846" y1="1250.625" x2="876" y2="1250.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="846" y1="1291.875" x2="876" y2="1291.875" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="846" y1="1333.125" x2="876" y2="1333.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="846" y1="1393.125" x2="876" y2="1393.125" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="816" y1="1098.75" x2="846" y2="1098.75" />
+<line stroke="Black" stroke-width="1.875" x1="846" y1="1098.75" x2="846" y2="1393.125" />
+</g>
+<g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="876" y="1072.5" width="120" height="71.25" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BiRadsAssessmentCategory.html" target="_blank">
+<title>Click -> 'BiRadsAssessmentCategory'</title>
+<text x="883.5" y="1095">BiRads</text>
+</a>
+<a href="./StructureDefinition-BiRadsAssessmentCategory.html" target="_blank">
+<title>Click -> 'BiRadsAssessmentCategory'</title>
+<text x="883.5" y="1113.75">Assessment</text>
+</a>
+<a href="./StructureDefinition-BiRadsAssessmentCategory.html" target="_blank">
+<title>Click -> 'BiRadsAssessmentCategory'</title>
+<text x="883.5" y="1132.5">Category</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="876" y="1151.25" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonCount.html" target="_blank">
+<title>Click -> 'CommonCount'</title>
+<text x="883.5" y="1173.75">Count</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="876" y="1192.5" width="88.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonObservedChanges.html" target="_blank">
+<title>Click -> 'CommonObservedChanges'</title>
+<text x="883.5" y="1215">Changes</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="876" y="1233.75" width="57" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonSize.html" target="_blank">
+<title>Click -> 'CommonSize'</title>
+<text x="883.5" y="1256.25">Size</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="876" y="1275" width="130.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonOrientation.html" target="_blank">
+<title>Click -> 'CommonOrientation'</title>
+<text x="883.5" y="1297.5">Orientation</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="876" y="1316.25" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonObservedState.html" target="_blank">
+<title>Click -> 'CommonObservedState'</title>
+<text x="883.5" y="1338.75">State</text>
+</a>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="876" y="1357.5" width="120" height="71.25" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
+<title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
+<text x="883.5" y="1380">Mammo</text>
+</a>
+<a href="./StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
+<title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
+<text x="883.5" y="1398.75">Associated</text>
+</a>
+<a href="./StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
+<title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
+<text x="883.5" y="1417.5">Features</text>
+</a>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="685.5" y="1436.25" width="88.5" height="71.25" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BreastRadMammoBreastDensity.html" target="_blank">
+<title>Click -> 'BreastRadMammoBreastDensity'</title>
+<text x="693" y="1458.75">Mammo</text>
+</a>
+<a href="./StructureDefinition-BreastRadMammoBreastDensity.html" target="_blank">
+<title>Click -> 'BreastRadMammoBreastDensity'</title>
+<text x="693" y="1477.5">Breast</text>
+</a>
+<a href="./StructureDefinition-BreastRadMammoBreastDensity.html" target="_blank">
+<title>Click -> 'BreastRadMammoBreastDensity'</title>
+<text x="693" y="1496.25">Density</text>
+</a>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="685.5" y="1515" width="67.5" height="52.5" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BreastRadMammoCalcification.html" target="_blank">
+<title>Click -> 'BreastRadMammoCalcification'</title>
+<text x="693" y="1537.5">Mammo</text>
+</a>
+<a href="./StructureDefinition-BreastRadMammoCalcification.html" target="_blank">
+<title>Click -> 'BreastRadMammoCalcification'</title>
+<text x="693" y="1556.25">Calc.</text>
+</a>
+</g>
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="1550.625" x2="813" y2="1550.625" />
 <line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="1610.625" x2="813" y2="1610.625" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="1670.625" x2="813" y2="1670.625" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="1749.375" x2="813" y2="1749.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="1809.375" x2="813" y2="1809.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="1869.375" x2="813" y2="1869.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="1929.375" x2="813" y2="1929.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="1998.75" x2="813" y2="1998.75" />
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="753" y1="1496.25" x2="783" y2="1496.25" />
-<line stroke="Black" stroke-width="1.875" x1="783" y1="1486.875" x2="783" y2="1998.75" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="1651.875" x2="813" y2="1651.875" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="1693.125" x2="813" y2="1693.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="1734.375" x2="813" y2="1734.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="1794.375" x2="813" y2="1794.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="1873.125" x2="813" y2="1873.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="1951.875" x2="813" y2="1951.875" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="753" y1="1541.25" x2="783" y2="1541.25" />
+<line stroke="Black" stroke-width="1.875" x1="783" y1="1541.25" x2="783" y2="1951.875" />
 </g>
 <g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="1470" width="57" height="33.75" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-CommonSize.html" target="_blank">
-<title>Click -> 'CommonSize'</title>
-<text x="820.5" y="1492.5">Size</text>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="1515" width="120" height="71.25" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BiRadsAssessmentCategory.html" target="_blank">
+<title>Click -> 'BiRadsAssessmentCategory'</title>
+<text x="820.5" y="1537.5">BiRads</text>
+</a>
+<a href="./StructureDefinition-BiRadsAssessmentCategory.html" target="_blank">
+<title>Click -> 'BiRadsAssessmentCategory'</title>
+<text x="820.5" y="1556.25">Assessment</text>
+</a>
+<a href="./StructureDefinition-BiRadsAssessmentCategory.html" target="_blank">
+<title>Click -> 'BiRadsAssessmentCategory'</title>
+<text x="820.5" y="1575">Category</text>
 </a>
 </g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="1511.25" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="1593.75" width="67.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-CommonCount.html" target="_blank">
 <title>Click -> 'CommonCount'</title>
-<text x="820.5" y="1533.75">Count</text>
+<text x="820.5" y="1616.25">Count</text>
 </a>
 </g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="1552.5" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="1635" width="88.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonObservedChanges.html" target="_blank">
+<title>Click -> 'CommonObservedChanges'</title>
+<text x="820.5" y="1657.5">Changes</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="1676.25" width="57" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonSize.html" target="_blank">
+<title>Click -> 'CommonSize'</title>
+<text x="820.5" y="1698.75">Size</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="1717.5" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonObservedState.html" target="_blank">
+<title>Click -> 'CommonObservedState'</title>
+<text x="820.5" y="1740">State</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="1758.75" width="67.5" height="71.25" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BreastRadMammoCalcificationType.html" target="_blank">
+<title>Click -> 'BreastRadMammoCalcificationType'</title>
+<text x="820.5" y="1781.25">Mammo</text>
+</a>
+<a href="./StructureDefinition-BreastRadMammoCalcificationType.html" target="_blank">
+<title>Click -> 'BreastRadMammoCalcificationType'</title>
+<text x="820.5" y="1800">Calc.</text>
+</a>
+<a href="./StructureDefinition-BreastRadMammoCalcificationType.html" target="_blank">
+<title>Click -> 'BreastRadMammoCalcificationType'</title>
+<text x="820.5" y="1818.75">Type</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="1837.5" width="141" height="71.25" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BreastRadMammoCalcificationDistribution.html" target="_blank">
+<title>Click -> 'BreastRadMammoCalcificationDistribution'</title>
+<text x="820.5" y="1860">Mammo</text>
+</a>
+<a href="./StructureDefinition-BreastRadMammoCalcificationDistribution.html" target="_blank">
+<title>Click -> 'BreastRadMammoCalcificationDistribution'</title>
+<text x="820.5" y="1878.75">Calc.</text>
+</a>
+<a href="./StructureDefinition-BreastRadMammoCalcificationDistribution.html" target="_blank">
+<title>Click -> 'BreastRadMammoCalcificationDistribution'</title>
+<text x="820.5" y="1897.5">Distribution</text>
+</a>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="1916.25" width="120" height="71.25" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
+<title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
+<text x="820.5" y="1938.75">Mammo</text>
+</a>
+<a href="./StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
+<title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
+<text x="820.5" y="1957.5">Associated</text>
+</a>
+<a href="./StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
+<title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
+<text x="820.5" y="1976.25">Features</text>
+</a>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="685.5" y="1995" width="67.5" height="52.5" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BreastRadMammoCyst.html" target="_blank">
+<title>Click -> 'BreastRadMammoCyst'</title>
+<text x="693" y="2017.5">Mammo</text>
+</a>
+<a href="./StructureDefinition-BreastRadMammoCyst.html" target="_blank">
+<title>Click -> 'BreastRadMammoCyst'</title>
+<text x="693" y="2036.25">Cyst</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="685.5" y="2055" width="130.5" height="52.5" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BreastRadMammoFatNecrosis.html" target="_blank">
+<title>Click -> 'BreastRadMammoFatNecrosis'</title>
+<text x="693" y="2077.5">Mammo</text>
+</a>
+<a href="./StructureDefinition-BreastRadMammoFatNecrosis.html" target="_blank">
+<title>Click -> 'BreastRadMammoFatNecrosis'</title>
+<text x="693" y="2096.25">FatNecrosis</text>
+</a>
+</g>
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="846" y1="2030.625" x2="876" y2="2030.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="846" y1="2090.625" x2="876" y2="2090.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="846" y1="2131.875" x2="876" y2="2131.875" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="846" y1="2173.125" x2="876" y2="2173.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="846" y1="2214.375" x2="876" y2="2214.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="846" y1="2255.625" x2="876" y2="2255.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="846" y1="2296.875" x2="876" y2="2296.875" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="846" y1="2366.25" x2="876" y2="2366.25" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="753" y1="2021.25" x2="846" y2="2021.25" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="816" y1="2081.25" x2="846" y2="2081.25" />
+<line stroke="Black" stroke-width="1.875" x1="846" y1="2021.25" x2="846" y2="2366.25" />
+</g>
+<g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="876" y="1995" width="120" height="71.25" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BiRadsAssessmentCategory.html" target="_blank">
+<title>Click -> 'BiRadsAssessmentCategory'</title>
+<text x="883.5" y="2017.5">BiRads</text>
+</a>
+<a href="./StructureDefinition-BiRadsAssessmentCategory.html" target="_blank">
+<title>Click -> 'BiRadsAssessmentCategory'</title>
+<text x="883.5" y="2036.25">Assessment</text>
+</a>
+<a href="./StructureDefinition-BiRadsAssessmentCategory.html" target="_blank">
+<title>Click -> 'BiRadsAssessmentCategory'</title>
+<text x="883.5" y="2055">Category</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="876" y="2073.75" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonCount.html" target="_blank">
+<title>Click -> 'CommonCount'</title>
+<text x="883.5" y="2096.25">Count</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="876" y="2115" width="88.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonObservedChanges.html" target="_blank">
+<title>Click -> 'CommonObservedChanges'</title>
+<text x="883.5" y="2137.5">Changes</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="876" y="2156.25" width="57" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonSize.html" target="_blank">
+<title>Click -> 'CommonSize'</title>
+<text x="883.5" y="2178.75">Size</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="876" y="2197.5" width="130.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonOrientation.html" target="_blank">
+<title>Click -> 'CommonOrientation'</title>
+<text x="883.5" y="2220">Orientation</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="876" y="2238.75" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonObservedState.html" target="_blank">
+<title>Click -> 'CommonObservedState'</title>
+<text x="883.5" y="2261.25">State</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="876" y="2280" width="67.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-MammoShape.html" target="_blank">
 <title>Click -> 'MammoShape'</title>
-<text x="820.5" y="1575">Shape</text>
+<text x="883.5" y="2302.5">Shape</text>
 </a>
 </g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="1593.75" width="130.5" height="33.75" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-CommonOrientation.html" target="_blank">
-<title>Click -> 'CommonOrientation'</title>
-<text x="820.5" y="1616.25">Orientation</text>
-</a>
-</g>
-<g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="1635" width="78" height="71.25" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-BreastRadMammoMassMargin.html" target="_blank">
-<title>Click -> 'BreastRadMammoMassMargin'</title>
-<text x="820.5" y="1657.5">Mammo</text>
-</a>
-<a href="./StructureDefinition-BreastRadMammoMassMargin.html" target="_blank">
-<title>Click -> 'BreastRadMammoMassMargin'</title>
-<text x="820.5" y="1676.25">Mass</text>
-</a>
-<a href="./StructureDefinition-BreastRadMammoMassMargin.html" target="_blank">
-<title>Click -> 'BreastRadMammoMassMargin'</title>
-<text x="820.5" y="1695">Margin</text>
-</a>
-</g>
-<g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="1713.75" width="88.5" height="71.25" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-BreastRadMammoMassDensity.html" target="_blank">
-<title>Click -> 'BreastRadMammoMassDensity'</title>
-<text x="820.5" y="1736.25">Mammo</text>
-</a>
-<a href="./StructureDefinition-BreastRadMammoMassDensity.html" target="_blank">
-<title>Click -> 'BreastRadMammoMassDensity'</title>
-<text x="820.5" y="1755">Mass</text>
-</a>
-<a href="./StructureDefinition-BreastRadMammoMassDensity.html" target="_blank">
-<title>Click -> 'BreastRadMammoMassDensity'</title>
-<text x="820.5" y="1773.75">Density</text>
-</a>
-</g>
-<g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="1792.5" width="88.5" height="33.75" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-CommonObservedChanges.html" target="_blank">
-<title>Click -> 'CommonObservedChanges'</title>
-<text x="820.5" y="1815">Changes</text>
-</a>
-</g>
-</g>
-<g>
-<g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="1833.75" width="120" height="71.25" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
-<title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
-<text x="820.5" y="1856.25">Mammo</text>
-</a>
-<a href="./StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
-<title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
-<text x="820.5" y="1875">Associated</text>
-</a>
-<a href="./StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
-<title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
-<text x="820.5" y="1893.75">Features</text>
-</a>
-</g>
-</g>
-<g>
-<g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="1912.5" width="67.5" height="33.75" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-CommonObservedState.html" target="_blank">
-<title>Click -> 'CommonObservedState'</title>
-<text x="820.5" y="1935">State</text>
-</a>
-</g>
-</g>
-<g>
-<g>
-<rect fill="LightCoral" stroke="Black" stroke-width="1.875" x="813" y="1953.75" width="109.49999" height="90" rx="3.75" ry="3.75" />
+<rect fill="LightCoral" stroke="Black" stroke-width="1.875" x="876" y="2321.25" width="109.49999" height="90" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-AimAnnotatedImagingStudy.html" target="_blank">
 <title>Click -> 'AimAnnotatedImagingStudy'</title>
-<text x="820.5" y="1976.25">Aim</text>
+<text x="883.5" y="2343.75">Aim</text>
 </a>
 <a href="./StructureDefinition-AimAnnotatedImagingStudy.html" target="_blank">
 <title>Click -> 'AimAnnotatedImagingStudy'</title>
-<text x="820.5" y="1995">Annotated</text>
+<text x="883.5" y="2362.5">Annotated</text>
 </a>
 <a href="./StructureDefinition-AimAnnotatedImagingStudy.html" target="_blank">
 <title>Click -> 'AimAnnotatedImagingStudy'</title>
-<text x="820.5" y="2013.75">Imaging</text>
+<text x="883.5" y="2381.25">Imaging</text>
 </a>
 <a href="./StructureDefinition-AimAnnotatedImagingStudy.html" target="_blank">
 <title>Click -> 'AimAnnotatedImagingStudy'</title>
-<text x="820.5" y="2032.5">Study</text>
+<text x="883.5" y="2400">Study</text>
 </a>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="685.5" y="2051.25" width="141" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="685.5" y="2418.75" width="141" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMammoIntramammaryLymphNode.html" target="_blank">
 <title>Click -> 'BreastRadMammoIntramammaryLymphNode'</title>
-<text x="693" y="2073.75">Mammo</text>
+<text x="693" y="2441.25">Mammo</text>
 </a>
 <a href="./StructureDefinition-BreastRadMammoIntramammaryLymphNode.html" target="_blank">
 <title>Click -> 'BreastRadMammoIntramammaryLymphNode'</title>
-<text x="693" y="2092.5">Intramammory</text>
+<text x="693" y="2460">Intramammory</text>
 </a>
 <a href="./StructureDefinition-BreastRadMammoIntramammaryLymphNode.html" target="_blank">
 <title>Click -> 'BreastRadMammoIntramammaryLymphNode'</title>
-<text x="693" y="2111.25">Lymph Node</text>
+<text x="693" y="2478.75">Lymph Node</text>
 </a>
 </g>
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="856.5" y1="2454.375" x2="886.5" y2="2454.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="856.5" y1="2514.375" x2="886.5" y2="2514.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="856.5" y1="2555.625" x2="886.5" y2="2555.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="856.5" y1="2596.875" x2="886.5" y2="2596.875" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="856.5" y1="2638.125" x2="886.5" y2="2638.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="856.5" y1="2679.375" x2="886.5" y2="2679.375" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="826.5" y1="2454.375" x2="856.5" y2="2454.375" />
+<line stroke="Black" stroke-width="1.875" x1="856.5" y1="2454.375" x2="856.5" y2="2679.375" />
 </g>
 <g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="685.5" y="2130" width="67.5" height="52.5" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-BreastRadMammoMass.html" target="_blank">
-<title>Click -> 'BreastRadMammoMass'</title>
-<text x="693" y="2152.5">Mammo</text>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="886.5" y="2418.75" width="120" height="71.25" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BiRadsAssessmentCategory.html" target="_blank">
+<title>Click -> 'BiRadsAssessmentCategory'</title>
+<text x="894" y="2441.25">BiRads</text>
 </a>
-<a href="./StructureDefinition-BreastRadMammoMass.html" target="_blank">
-<title>Click -> 'BreastRadMammoMass'</title>
-<text x="693" y="2171.25">Mass</text>
+<a href="./StructureDefinition-BiRadsAssessmentCategory.html" target="_blank">
+<title>Click -> 'BiRadsAssessmentCategory'</title>
+<text x="894" y="2460">Assessment</text>
 </a>
-</g>
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="2146.875" x2="813" y2="2146.875" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="2188.125" x2="813" y2="2188.125" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="2229.375" x2="813" y2="2229.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="2270.625" x2="813" y2="2270.625" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="2330.625" x2="813" y2="2330.625" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="2409.375" x2="813" y2="2409.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="2469.375" x2="813" y2="2469.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="2529.375" x2="813" y2="2529.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="2589.375" x2="813" y2="2589.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="2658.75" x2="813" y2="2658.75" />
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="753" y1="2156.25" x2="783" y2="2156.25" />
-<line stroke="Black" stroke-width="1.875" x1="783" y1="2146.875" x2="783" y2="2658.75" />
-</g>
-<g>
-<g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="2130" width="57" height="33.75" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-CommonSize.html" target="_blank">
-<title>Click -> 'CommonSize'</title>
-<text x="820.5" y="2152.5">Size</text>
+<a href="./StructureDefinition-BiRadsAssessmentCategory.html" target="_blank">
+<title>Click -> 'BiRadsAssessmentCategory'</title>
+<text x="894" y="2478.75">Category</text>
 </a>
 </g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="2171.25" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="886.5" y="2497.5" width="67.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-CommonCount.html" target="_blank">
 <title>Click -> 'CommonCount'</title>
-<text x="820.5" y="2193.75">Count</text>
+<text x="894" y="2520">Count</text>
 </a>
 </g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="2212.5" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="886.5" y="2538.75" width="88.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonObservedChanges.html" target="_blank">
+<title>Click -> 'CommonObservedChanges'</title>
+<text x="894" y="2561.25">Changes</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="886.5" y="2580" width="57" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonSize.html" target="_blank">
+<title>Click -> 'CommonSize'</title>
+<text x="894" y="2602.5">Size</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="886.5" y="2621.25" width="130.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonOrientation.html" target="_blank">
+<title>Click -> 'CommonOrientation'</title>
+<text x="894" y="2643.75">Orientation</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="886.5" y="2662.5" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonObservedState.html" target="_blank">
+<title>Click -> 'CommonObservedState'</title>
+<text x="894" y="2685">State</text>
+</a>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="685.5" y="2703.75" width="67.5" height="52.5" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BreastRadMammoMass.html" target="_blank">
+<title>Click -> 'BreastRadMammoMass'</title>
+<text x="693" y="2726.25">Mammo</text>
+</a>
+<a href="./StructureDefinition-BreastRadMammoMass.html" target="_blank">
+<title>Click -> 'BreastRadMammoMass'</title>
+<text x="693" y="2745">Mass</text>
+</a>
+</g>
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="2739.375" x2="813" y2="2739.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="2799.375" x2="813" y2="2799.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="2840.625" x2="813" y2="2840.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="2881.875" x2="813" y2="2881.875" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="2923.125" x2="813" y2="2923.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="2964.375" x2="813" y2="2964.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="3005.625" x2="813" y2="3005.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="3065.625" x2="813" y2="3065.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="3144.375" x2="813" y2="3144.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="3223.125" x2="813" y2="3223.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="783" y1="3311.25" x2="813" y2="3311.25" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="753" y1="2730" x2="783" y2="2730" />
+<line stroke="Black" stroke-width="1.875" x1="783" y1="2730" x2="783" y2="3311.25" />
+</g>
+<g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="2703.75" width="120" height="71.25" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BiRadsAssessmentCategory.html" target="_blank">
+<title>Click -> 'BiRadsAssessmentCategory'</title>
+<text x="820.5" y="2726.25">BiRads</text>
+</a>
+<a href="./StructureDefinition-BiRadsAssessmentCategory.html" target="_blank">
+<title>Click -> 'BiRadsAssessmentCategory'</title>
+<text x="820.5" y="2745">Assessment</text>
+</a>
+<a href="./StructureDefinition-BiRadsAssessmentCategory.html" target="_blank">
+<title>Click -> 'BiRadsAssessmentCategory'</title>
+<text x="820.5" y="2763.75">Category</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="2782.5" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonCount.html" target="_blank">
+<title>Click -> 'CommonCount'</title>
+<text x="820.5" y="2805">Count</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="2823.75" width="88.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonObservedChanges.html" target="_blank">
+<title>Click -> 'CommonObservedChanges'</title>
+<text x="820.5" y="2846.25">Changes</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="2865" width="57" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonSize.html" target="_blank">
+<title>Click -> 'CommonSize'</title>
+<text x="820.5" y="2887.5">Size</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="2906.25" width="130.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonOrientation.html" target="_blank">
+<title>Click -> 'CommonOrientation'</title>
+<text x="820.5" y="2928.75">Orientation</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="2947.5" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonObservedState.html" target="_blank">
+<title>Click -> 'CommonObservedState'</title>
+<text x="820.5" y="2970">State</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="2988.75" width="67.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-MammoShape.html" target="_blank">
 <title>Click -> 'MammoShape'</title>
-<text x="820.5" y="2235">Shape</text>
+<text x="820.5" y="3011.25">Shape</text>
 </a>
 </g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="2253.75" width="130.5" height="33.75" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-CommonOrientation.html" target="_blank">
-<title>Click -> 'CommonOrientation'</title>
-<text x="820.5" y="2276.25">Orientation</text>
-</a>
-</g>
-<g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="2295" width="78" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="3030" width="78" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMammoMassMargin.html" target="_blank">
 <title>Click -> 'BreastRadMammoMassMargin'</title>
-<text x="820.5" y="2317.5">Mammo</text>
+<text x="820.5" y="3052.5">Mammo</text>
 </a>
 <a href="./StructureDefinition-BreastRadMammoMassMargin.html" target="_blank">
 <title>Click -> 'BreastRadMammoMassMargin'</title>
-<text x="820.5" y="2336.25">Mass</text>
+<text x="820.5" y="3071.25">Mass</text>
 </a>
 <a href="./StructureDefinition-BreastRadMammoMassMargin.html" target="_blank">
 <title>Click -> 'BreastRadMammoMassMargin'</title>
-<text x="820.5" y="2355">Margin</text>
+<text x="820.5" y="3090">Margin</text>
 </a>
 </g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="2373.75" width="88.5" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="3108.75" width="88.5" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMammoMassDensity.html" target="_blank">
 <title>Click -> 'BreastRadMammoMassDensity'</title>
-<text x="820.5" y="2396.25">Mammo</text>
-</a>
-<a href="./StructureDefinition-BreastRadMammoMassDensity.html" target="_blank">
-<title>Click -> 'BreastRadMammoMassDensity'</title>
-<text x="820.5" y="2415">Mass</text>
+<text x="820.5" y="3131.25">Mammo</text>
 </a>
 <a href="./StructureDefinition-BreastRadMammoMassDensity.html" target="_blank">
 <title>Click -> 'BreastRadMammoMassDensity'</title>
-<text x="820.5" y="2433.75">Density</text>
+<text x="820.5" y="3150">Mass</text>
 </a>
-</g>
-<g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="2452.5" width="88.5" height="33.75" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-CommonObservedChanges.html" target="_blank">
-<title>Click -> 'CommonObservedChanges'</title>
-<text x="820.5" y="2475">Changes</text>
+<a href="./StructureDefinition-BreastRadMammoMassDensity.html" target="_blank">
+<title>Click -> 'BreastRadMammoMassDensity'</title>
+<text x="820.5" y="3168.75">Density</text>
 </a>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="2493.75" width="120" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="3187.5" width="120" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
 <title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
-<text x="820.5" y="2516.25">Mammo</text>
+<text x="820.5" y="3210">Mammo</text>
 </a>
 <a href="./StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
 <title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
-<text x="820.5" y="2535">Associated</text>
+<text x="820.5" y="3228.75">Associated</text>
 </a>
 <a href="./StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
 <title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
-<text x="820.5" y="2553.75">Features</text>
+<text x="820.5" y="3247.5">Features</text>
 </a>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="813" y="2572.5" width="67.5" height="33.75" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-CommonObservedState.html" target="_blank">
-<title>Click -> 'CommonObservedState'</title>
-<text x="820.5" y="2595">State</text>
-</a>
-</g>
-</g>
-<g>
-<g>
-<rect fill="LightCoral" stroke="Black" stroke-width="1.875" x="813" y="2613.75" width="109.49999" height="90" rx="3.75" ry="3.75" />
+<rect fill="LightCoral" stroke="Black" stroke-width="1.875" x="813" y="3266.25" width="109.49999" height="90" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-AimAnnotatedImagingStudy.html" target="_blank">
 <title>Click -> 'AimAnnotatedImagingStudy'</title>
-<text x="820.5" y="2636.25">Aim</text>
+<text x="820.5" y="3288.75">Aim</text>
 </a>
 <a href="./StructureDefinition-AimAnnotatedImagingStudy.html" target="_blank">
 <title>Click -> 'AimAnnotatedImagingStudy'</title>
-<text x="820.5" y="2655">Annotated</text>
+<text x="820.5" y="3307.5">Annotated</text>
 </a>
 <a href="./StructureDefinition-AimAnnotatedImagingStudy.html" target="_blank">
 <title>Click -> 'AimAnnotatedImagingStudy'</title>
-<text x="820.5" y="2673.75">Imaging</text>
+<text x="820.5" y="3326.25">Imaging</text>
 </a>
 <a href="./StructureDefinition-AimAnnotatedImagingStudy.html" target="_blank">
 <title>Click -> 'AimAnnotatedImagingStudy'</title>
-<text x="820.5" y="2692.5">Study</text>
+<text x="820.5" y="3345">Study</text>
 </a>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="685.5" y="2711.25" width="78" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="685.5" y="3363.75" width="78" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMammoSkinLesion.html" target="_blank">
 <title>Click -> 'BreastRadMammoSkinLesion'</title>
-<text x="693" y="2733.75">Mammo</text>
+<text x="693" y="3386.25">Mammo</text>
 </a>
 <a href="./StructureDefinition-BreastRadMammoSkinLesion.html" target="_blank">
 <title>Click -> 'BreastRadMammoSkinLesion'</title>
-<text x="693" y="2752.5">Skin</text>
+<text x="693" y="3405">Skin</text>
 </a>
 <a href="./StructureDefinition-BreastRadMammoSkinLesion.html" target="_blank">
 <title>Click -> 'BreastRadMammoSkinLesion'</title>
-<text x="693" y="2771.25">Lesion</text>
+<text x="693" y="3423.75">Lesion</text>
 </a>
 </g>
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="793.5" y1="2728.125" x2="823.5" y2="2728.125" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="793.5" y1="2769.375" x2="823.5" y2="2769.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="793.5" y1="2810.625" x2="823.5" y2="2810.625" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="793.5" y1="2851.875" x2="823.5" y2="2851.875" />
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="763.5" y1="2746.875" x2="793.5" y2="2746.875" />
-<line stroke="Black" stroke-width="1.875" x1="793.5" y1="2728.125" x2="793.5" y2="2851.875" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="793.5" y1="3380.625" x2="823.5" y2="3380.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="793.5" y1="3421.875" x2="823.5" y2="3421.875" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="793.5" y1="3463.125" x2="823.5" y2="3463.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="793.5" y1="3504.375" x2="823.5" y2="3504.375" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="763.5" y1="3399.375" x2="793.5" y2="3399.375" />
+<line stroke="Black" stroke-width="1.875" x1="793.5" y1="3380.625" x2="793.5" y2="3504.375" />
 </g>
 <g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="823.5" y="2711.25" width="57" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="823.5" y="3363.75" width="57" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-CommonSize.html" target="_blank">
 <title>Click -> 'CommonSize'</title>
-<text x="831" y="2733.75">Size</text>
+<text x="831" y="3386.25">Size</text>
 </a>
 </g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="823.5" y="2752.5" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="823.5" y="3405" width="67.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-CommonCount.html" target="_blank">
 <title>Click -> 'CommonCount'</title>
-<text x="831" y="2775">Count</text>
+<text x="831" y="3427.5">Count</text>
 </a>
 </g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="823.5" y="2793.75" width="88.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="823.5" y="3446.25" width="88.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-CommonObservedChanges.html" target="_blank">
 <title>Click -> 'CommonObservedChanges'</title>
-<text x="831" y="2816.25">Changes</text>
+<text x="831" y="3468.75">Changes</text>
 </a>
 </g>
-</g>
 <g>
-<g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="823.5" y="2835" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="823.5" y="3487.5" width="67.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-CommonObservedState.html" target="_blank">
 <title>Click -> 'CommonObservedState'</title>
-<text x="831" y="2857.5">State</text>
+<text x="831" y="3510">State</text>
 </a>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="685.5" y="2876.25" width="99" height="90" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="685.5" y="3528.75" width="99" height="90" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMammoSolitaryDilatedDuct.html" target="_blank">
 <title>Click -> 'BreastRadMammoSolitaryDilatedDuct'</title>
-<text x="693" y="2898.75">Mammo</text>
+<text x="693" y="3551.25">Mammo</text>
 </a>
 <a href="./StructureDefinition-BreastRadMammoSolitaryDilatedDuct.html" target="_blank">
 <title>Click -> 'BreastRadMammoSolitaryDilatedDuct'</title>
-<text x="693" y="2917.5">Solitary</text>
+<text x="693" y="3570">Solitary</text>
 </a>
 <a href="./StructureDefinition-BreastRadMammoSolitaryDilatedDuct.html" target="_blank">
 <title>Click -> 'BreastRadMammoSolitaryDilatedDuct'</title>
-<text x="693" y="2936.25">Dialated</text>
+<text x="693" y="3588.75">Dialated</text>
 </a>
 <a href="./StructureDefinition-BreastRadMammoSolitaryDilatedDuct.html" target="_blank">
 <title>Click -> 'BreastRadMammoSolitaryDilatedDuct'</title>
-<text x="693" y="2955">Duct</text>
+<text x="693" y="3607.5">Duct</text>
+</a>
+</g>
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="814.5" y1="3564.375" x2="844.5" y2="3564.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="814.5" y1="3624.375" x2="844.5" y2="3624.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="814.5" y1="3665.625" x2="844.5" y2="3665.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="814.5" y1="3706.875" x2="844.5" y2="3706.875" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="814.5" y1="3748.125" x2="844.5" y2="3748.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="814.5" y1="3789.375" x2="844.5" y2="3789.375" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="784.5" y1="3573.75" x2="814.5" y2="3573.75" />
+<line stroke="Black" stroke-width="1.875" x1="814.5" y1="3564.375" x2="814.5" y2="3789.375" />
+</g>
+<g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="844.5" y="3528.75" width="120" height="71.25" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BiRadsAssessmentCategory.html" target="_blank">
+<title>Click -> 'BiRadsAssessmentCategory'</title>
+<text x="852" y="3551.25">BiRads</text>
+</a>
+<a href="./StructureDefinition-BiRadsAssessmentCategory.html" target="_blank">
+<title>Click -> 'BiRadsAssessmentCategory'</title>
+<text x="852" y="3570">Assessment</text>
+</a>
+<a href="./StructureDefinition-BiRadsAssessmentCategory.html" target="_blank">
+<title>Click -> 'BiRadsAssessmentCategory'</title>
+<text x="852" y="3588.75">Category</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="844.5" y="3607.5" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonCount.html" target="_blank">
+<title>Click -> 'CommonCount'</title>
+<text x="852" y="3630">Count</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="844.5" y="3648.75" width="88.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonObservedChanges.html" target="_blank">
+<title>Click -> 'CommonObservedChanges'</title>
+<text x="852" y="3671.25">Changes</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="844.5" y="3690" width="57" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonSize.html" target="_blank">
+<title>Click -> 'CommonSize'</title>
+<text x="852" y="3712.5">Size</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="844.5" y="3731.25" width="130.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonOrientation.html" target="_blank">
+<title>Click -> 'CommonOrientation'</title>
+<text x="852" y="3753.75">Orientation</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="844.5" y="3772.5" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonObservedState.html" target="_blank">
+<title>Click -> 'CommonObservedState'</title>
+<text x="852" y="3795">State</text>
 </a>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="685.5" y="2973.75" width="120" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="685.5" y="3813.75" width="120" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
 <title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
-<text x="693" y="2996.25">Mammo</text>
+<text x="693" y="3836.25">Mammo</text>
 </a>
 <a href="./StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
 <title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
-<text x="693" y="3015">Associated</text>
+<text x="693" y="3855">Associated</text>
 </a>
 <a href="./StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
 <title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
-<text x="693" y="3033.75">Features</text>
+<text x="693" y="3873.75">Features</text>
 </a>
 </g>
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="835.5" y1="3009.375" x2="865.5" y2="3009.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="835.5" y1="3088.125" x2="865.5" y2="3088.125" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="835.5" y1="3166.875" x2="865.5" y2="3166.875" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="835.5" y1="3245.625" x2="865.5" y2="3245.625" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="835.5" y1="3324.375" x2="865.5" y2="3324.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="835.5" y1="3393.75" x2="865.5" y2="3393.75" />
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="805.5" y1="3009.375" x2="835.5" y2="3009.375" />
-<line stroke="Black" stroke-width="1.875" x1="835.5" y1="3009.375" x2="835.5" y2="3393.75" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="835.5" y1="3849.375" x2="865.5" y2="3849.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="835.5" y1="3928.125" x2="865.5" y2="3928.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="835.5" y1="4006.875" x2="865.5" y2="4006.875" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="835.5" y1="4085.625" x2="865.5" y2="4085.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="835.5" y1="4164.375" x2="865.5" y2="4164.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="835.5" y1="4398.75" x2="865.5" y2="4398.75" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="805.5" y1="3849.375" x2="835.5" y2="3849.375" />
+<line stroke="Black" stroke-width="1.875" x1="835.5" y1="3849.375" x2="835.5" y2="4398.75" />
 </g>
 <g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="865.5" y="2973.75" width="120" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="865.5" y="3813.75" width="120" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMammoSkinRetraction.html" target="_blank">
 <title>Click -> 'BreastRadMammoSkinRetraction'</title>
-<text x="873" y="2996.25">Mammo</text>
-</a>
-<a href="./StructureDefinition-BreastRadMammoSkinRetraction.html" target="_blank">
-<title>Click -> 'BreastRadMammoSkinRetraction'</title>
-<text x="873" y="3015">Skin</text>
+<text x="873" y="3836.25">Mammo</text>
 </a>
 <a href="./StructureDefinition-BreastRadMammoSkinRetraction.html" target="_blank">
 <title>Click -> 'BreastRadMammoSkinRetraction'</title>
-<text x="873" y="3033.75">Retraction</text>
+<text x="873" y="3855">Skin</text>
+</a>
+<a href="./StructureDefinition-BreastRadMammoSkinRetraction.html" target="_blank">
+<title>Click -> 'BreastRadMammoSkinRetraction'</title>
+<text x="873" y="3873.75">Retraction</text>
 </a>
 </g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="865.5" y="3052.5" width="120" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="865.5" y="3892.5" width="120" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMammoNippleRetraction.html" target="_blank">
 <title>Click -> 'BreastRadMammoNippleRetraction'</title>
-<text x="873" y="3075">Mammo</text>
+<text x="873" y="3915">Mammo</text>
 </a>
 <a href="./StructureDefinition-BreastRadMammoNippleRetraction.html" target="_blank">
 <title>Click -> 'BreastRadMammoNippleRetraction'</title>
-<text x="873" y="3093.75">Nipple</text>
+<text x="873" y="3933.75">Nipple</text>
 </a>
 <a href="./StructureDefinition-BreastRadMammoNippleRetraction.html" target="_blank">
 <title>Click -> 'BreastRadMammoNippleRetraction'</title>
-<text x="873" y="3112.5">Retraction</text>
+<text x="873" y="3952.5">Retraction</text>
 </a>
 </g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="865.5" y="3131.25" width="120" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="865.5" y="3971.25" width="120" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMammoSkinThickening.html" target="_blank">
 <title>Click -> 'BreastRadMammoSkinThickening'</title>
-<text x="873" y="3153.75">Mammo</text>
-</a>
-<a href="./StructureDefinition-BreastRadMammoSkinThickening.html" target="_blank">
-<title>Click -> 'BreastRadMammoSkinThickening'</title>
-<text x="873" y="3172.5">Skin</text>
+<text x="873" y="3993.75">Mammo</text>
 </a>
 <a href="./StructureDefinition-BreastRadMammoSkinThickening.html" target="_blank">
 <title>Click -> 'BreastRadMammoSkinThickening'</title>
-<text x="873" y="3191.25">Thickening</text>
+<text x="873" y="4012.5">Skin</text>
+</a>
+<a href="./StructureDefinition-BreastRadMammoSkinThickening.html" target="_blank">
+<title>Click -> 'BreastRadMammoSkinThickening'</title>
+<text x="873" y="4031.25">Thickening</text>
 </a>
 </g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="865.5" y="3210" width="120" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="865.5" y="4050" width="120" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMammoAxillaryAdenopathy.html" target="_blank">
 <title>Click -> 'BreastRadMammoAxillaryAdenopathy'</title>
-<text x="873" y="3232.5">Mammo</text>
+<text x="873" y="4072.5">Mammo</text>
 </a>
 <a href="./StructureDefinition-BreastRadMammoAxillaryAdenopathy.html" target="_blank">
 <title>Click -> 'BreastRadMammoAxillaryAdenopathy'</title>
-<text x="873" y="3251.25">Axillary</text>
+<text x="873" y="4091.25">Axillary</text>
 </a>
 <a href="./StructureDefinition-BreastRadMammoAxillaryAdenopathy.html" target="_blank">
 <title>Click -> 'BreastRadMammoAxillaryAdenopathy'</title>
-<text x="873" y="3270">Adenopathy</text>
-</a>
-</g>
-<g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="865.5" y="3288.75" width="120" height="71.25" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-BreastRadMammoArchitecturalDistortion.html" target="_blank">
-<title>Click -> 'BreastRadMammoArchitecturalDistortion'</title>
-<text x="873" y="3311.25">Mammo</text>
-</a>
-<a href="./StructureDefinition-BreastRadMammoArchitecturalDistortion.html" target="_blank">
-<title>Click -> 'BreastRadMammoArchitecturalDistortion'</title>
-<text x="873" y="3330">Arch.</text>
-</a>
-<a href="./StructureDefinition-BreastRadMammoArchitecturalDistortion.html" target="_blank">
-<title>Click -> 'BreastRadMammoArchitecturalDistortion'</title>
-<text x="873" y="3348.75">Distortion</text>
+<text x="873" y="4110">Adenopathy</text>
 </a>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="865.5" y="3367.5" width="67.5" height="52.5" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="865.5" y="4128.75" width="120" height="71.25" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BreastRadMammoArchitecturalDistortion.html" target="_blank">
+<title>Click -> 'BreastRadMammoArchitecturalDistortion'</title>
+<text x="873" y="4151.25">Mammo</text>
+</a>
+<a href="./StructureDefinition-BreastRadMammoArchitecturalDistortion.html" target="_blank">
+<title>Click -> 'BreastRadMammoArchitecturalDistortion'</title>
+<text x="873" y="4170">Arch.</text>
+</a>
+<a href="./StructureDefinition-BreastRadMammoArchitecturalDistortion.html" target="_blank">
+<title>Click -> 'BreastRadMammoArchitecturalDistortion'</title>
+<text x="873" y="4188.75">Distortion</text>
+</a>
+</g>
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1015.49994" y1="4164.375" x2="1045.5" y2="4164.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1015.49994" y1="4224.375" x2="1045.5" y2="4224.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1015.49994" y1="4265.625" x2="1045.5" y2="4265.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1015.49994" y1="4306.875" x2="1045.5" y2="4306.875" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="1015.49994" y1="4348.125" x2="1045.5" y2="4348.125" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="985.49994" y1="4164.375" x2="1015.49994" y2="4164.375" />
+<line stroke="Black" stroke-width="1.875" x1="1015.49994" y1="4164.375" x2="1015.49994" y2="4348.125" />
+</g>
+<g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="1045.5" y="4128.75" width="120" height="71.25" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BiRadsAssessmentCategory.html" target="_blank">
+<title>Click -> 'BiRadsAssessmentCategory'</title>
+<text x="1053" y="4151.25">BiRads</text>
+</a>
+<a href="./StructureDefinition-BiRadsAssessmentCategory.html" target="_blank">
+<title>Click -> 'BiRadsAssessmentCategory'</title>
+<text x="1053" y="4170">Assessment</text>
+</a>
+<a href="./StructureDefinition-BiRadsAssessmentCategory.html" target="_blank">
+<title>Click -> 'BiRadsAssessmentCategory'</title>
+<text x="1053" y="4188.75">Category</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="1045.5" y="4207.5" width="88.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonObservedChanges.html" target="_blank">
+<title>Click -> 'CommonObservedChanges'</title>
+<text x="1053" y="4230">Changes</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="1045.5" y="4248.75" width="57" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonSize.html" target="_blank">
+<title>Click -> 'CommonSize'</title>
+<text x="1053" y="4271.25">Size</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="1045.5" y="4290" width="130.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonOrientation.html" target="_blank">
+<title>Click -> 'CommonOrientation'</title>
+<text x="1053" y="4312.5">Orientation</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="1045.5" y="4331.25" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonObservedState.html" target="_blank">
+<title>Click -> 'CommonObservedState'</title>
+<text x="1053" y="4353.75">State</text>
+</a>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="865.5" y="4372.5" width="67.5" height="52.5" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMammoCalcification.html" target="_blank">
 <title>Click -> 'BreastRadMammoCalcification'</title>
-<text x="873" y="3390">Mammo</text>
+<text x="873" y="4395">Mammo</text>
 </a>
 <a href="./StructureDefinition-BreastRadMammoCalcification.html" target="_blank">
 <title>Click -> 'BreastRadMammoCalcification'</title>
-<text x="873" y="3408.75">Calc.</text>
+<text x="873" y="4413.75">Calc.</text>
 </a>
 </g>
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="962.99994" y1="3384.375" x2="992.99994" y2="3384.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="962.99994" y1="3425.625" x2="992.99994" y2="3425.625" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="962.99994" y1="3485.625" x2="992.99994" y2="3485.625" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="962.99994" y1="3564.375" x2="992.99994" y2="3564.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="962.99994" y1="3624.375" x2="992.99994" y2="3624.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="962.99994" y1="3684.375" x2="992.99994" y2="3684.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="962.99994" y1="3744.375" x2="992.99994" y2="3744.375" />
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="933" y1="3393.75" x2="962.99994" y2="3393.75" />
-<line stroke="Black" stroke-width="1.875" x1="962.99994" y1="3384.375" x2="962.99994" y2="3744.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="962.99994" y1="4408.125" x2="992.99994" y2="4408.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="962.99994" y1="4468.125" x2="992.99994" y2="4468.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="962.99994" y1="4509.375" x2="992.99994" y2="4509.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="962.99994" y1="4550.625" x2="992.99994" y2="4550.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="962.99994" y1="4591.875" x2="992.99994" y2="4591.875" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="962.99994" y1="4651.875" x2="992.99994" y2="4651.875" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="962.99994" y1="4730.625" x2="992.99994" y2="4730.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="962.99994" y1="4809.375" x2="992.99994" y2="4809.375" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="933" y1="4398.75" x2="962.99994" y2="4398.75" />
+<line stroke="Black" stroke-width="1.875" x1="962.99994" y1="4398.75" x2="962.99994" y2="4809.375" />
 </g>
 <g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="992.99994" y="3367.5" width="57" height="33.75" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-CommonSize.html" target="_blank">
-<title>Click -> 'CommonSize'</title>
-<text x="1000.49994" y="3390">Size</text>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="992.99994" y="4372.5" width="120" height="71.25" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BiRadsAssessmentCategory.html" target="_blank">
+<title>Click -> 'BiRadsAssessmentCategory'</title>
+<text x="1000.49994" y="4395">BiRads</text>
+</a>
+<a href="./StructureDefinition-BiRadsAssessmentCategory.html" target="_blank">
+<title>Click -> 'BiRadsAssessmentCategory'</title>
+<text x="1000.49994" y="4413.75">Assessment</text>
+</a>
+<a href="./StructureDefinition-BiRadsAssessmentCategory.html" target="_blank">
+<title>Click -> 'BiRadsAssessmentCategory'</title>
+<text x="1000.49994" y="4432.5">Category</text>
 </a>
 </g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="992.99994" y="3408.75" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="992.99994" y="4451.25" width="67.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-CommonCount.html" target="_blank">
 <title>Click -> 'CommonCount'</title>
-<text x="1000.49994" y="3431.25">Count</text>
+<text x="1000.49994" y="4473.75">Count</text>
 </a>
 </g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="992.99994" y="3450" width="67.5" height="71.25" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-BreastRadMammoCalcificationType.html" target="_blank">
-<title>Click -> 'BreastRadMammoCalcificationType'</title>
-<text x="1000.49994" y="3472.5">Mammo</text>
-</a>
-<a href="./StructureDefinition-BreastRadMammoCalcificationType.html" target="_blank">
-<title>Click -> 'BreastRadMammoCalcificationType'</title>
-<text x="1000.49994" y="3491.25">Calc.</text>
-</a>
-<a href="./StructureDefinition-BreastRadMammoCalcificationType.html" target="_blank">
-<title>Click -> 'BreastRadMammoCalcificationType'</title>
-<text x="1000.49994" y="3510">Type</text>
-</a>
-</g>
-<g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="992.99994" y="3528.75" width="141" height="71.25" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-BreastRadMammoCalcificationDistribution.html" target="_blank">
-<title>Click -> 'BreastRadMammoCalcificationDistribution'</title>
-<text x="1000.49994" y="3551.25">Mammo</text>
-</a>
-<a href="./StructureDefinition-BreastRadMammoCalcificationDistribution.html" target="_blank">
-<title>Click -> 'BreastRadMammoCalcificationDistribution'</title>
-<text x="1000.49994" y="3570">Calc.</text>
-</a>
-<a href="./StructureDefinition-BreastRadMammoCalcificationDistribution.html" target="_blank">
-<title>Click -> 'BreastRadMammoCalcificationDistribution'</title>
-<text x="1000.49994" y="3588.75">Distribution</text>
-</a>
-</g>
-<g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="992.99994" y="3607.5" width="88.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="992.99994" y="4492.5" width="88.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-CommonObservedChanges.html" target="_blank">
 <title>Click -> 'CommonObservedChanges'</title>
-<text x="1000.49994" y="3630">Changes</text>
+<text x="1000.49994" y="4515">Changes</text>
 </a>
 </g>
-</g>
 <g>
-<g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="992.99994" y="3648.75" width="120" height="71.25" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
-<title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
-<text x="1000.49994" y="3671.25">Mammo</text>
-</a>
-<a href="./StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
-<title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
-<text x="1000.49994" y="3690">Associated</text>
-</a>
-<a href="./StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
-<title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
-<text x="1000.49994" y="3708.75">Features</text>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="992.99994" y="4533.75" width="57" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonSize.html" target="_blank">
+<title>Click -> 'CommonSize'</title>
+<text x="1000.49994" y="4556.25">Size</text>
 </a>
 </g>
-</g>
 <g>
-<g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="992.99994" y="3727.5" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="992.99994" y="4575" width="67.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-CommonObservedState.html" target="_blank">
 <title>Click -> 'CommonObservedState'</title>
-<text x="1000.49994" y="3750">State</text>
+<text x="1000.49994" y="4597.5">State</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="992.99994" y="4616.25" width="67.5" height="71.25" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BreastRadMammoCalcificationType.html" target="_blank">
+<title>Click -> 'BreastRadMammoCalcificationType'</title>
+<text x="1000.49994" y="4638.75">Mammo</text>
+</a>
+<a href="./StructureDefinition-BreastRadMammoCalcificationType.html" target="_blank">
+<title>Click -> 'BreastRadMammoCalcificationType'</title>
+<text x="1000.49994" y="4657.5">Calc.</text>
+</a>
+<a href="./StructureDefinition-BreastRadMammoCalcificationType.html" target="_blank">
+<title>Click -> 'BreastRadMammoCalcificationType'</title>
+<text x="1000.49994" y="4676.25">Type</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="992.99994" y="4695" width="141" height="71.25" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BreastRadMammoCalcificationDistribution.html" target="_blank">
+<title>Click -> 'BreastRadMammoCalcificationDistribution'</title>
+<text x="1000.49994" y="4717.5">Mammo</text>
+</a>
+<a href="./StructureDefinition-BreastRadMammoCalcificationDistribution.html" target="_blank">
+<title>Click -> 'BreastRadMammoCalcificationDistribution'</title>
+<text x="1000.49994" y="4736.25">Calc.</text>
+</a>
+<a href="./StructureDefinition-BreastRadMammoCalcificationDistribution.html" target="_blank">
+<title>Click -> 'BreastRadMammoCalcificationDistribution'</title>
+<text x="1000.49994" y="4755">Distribution</text>
 </a>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="537" y="3768.75" width="88.5" height="52.5" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="992.99994" y="4773.75" width="120" height="71.25" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
+<title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
+<text x="1000.49994" y="4796.25">Mammo</text>
+</a>
+<a href="./StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
+<title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
+<text x="1000.49994" y="4815">Associated</text>
+</a>
+<a href="./StructureDefinition-BreastRadMammoAssociatedFeatures.html" target="_blank">
+<title>Click -> 'BreastRadMammoAssociatedFeatures'</title>
+<text x="1000.49994" y="4833.75">Features</text>
+</a>
+</g>
+</g>
+<g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="537" y="4852.5" width="88.5" height="52.5" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadMRIFinding.html" target="_blank">
 <title>Click -> 'BreastRadMRIFinding'</title>
-<text x="544.5" y="3791.25">MRI</text>
+<text x="544.5" y="4875">MRI</text>
 </a>
 <a href="./StructureDefinition-BreastRadMRIFinding.html" target="_blank">
 <title>Click -> 'BreastRadMRIFinding'</title>
-<text x="544.5" y="3810">Finding</text>
+<text x="544.5" y="4893.75">Finding</text>
 </a>
 </g>
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="655.5" y1="3785.625" x2="685.5" y2="3785.625" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="655.5" y1="3918.75" x2="685.5" y2="3918.75" />
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="625.5" y1="3795" x2="655.5" y2="3795" />
-<line stroke="Black" stroke-width="1.875" x1="655.5" y1="3785.625" x2="655.5" y2="3918.75" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="655.5" y1="4869.375" x2="685.5" y2="4869.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="655.5" y1="5122.5" x2="685.5" y2="5122.5" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="625.5" y1="4878.75" x2="655.5" y2="4878.75" />
+<line stroke="Black" stroke-width="1.875" x1="655.5" y1="4869.375" x2="655.5" y2="5122.5" />
 </g>
 <g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="685.5" y="3768.75" width="151.49998" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="685.5" y="4852.5" width="151.49998" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-CommonForeignObject.html" target="_blank">
 <title>Click -> 'CommonForeignObject'</title>
-<text x="693" y="3791.25">ForeignObject</text>
+<text x="693" y="4875">ForeignObject</text>
 </a>
 </g>
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="867" y1="3785.625" x2="897" y2="3785.625" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="867" y1="3826.875" x2="897" y2="3826.875" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="867" y1="3868.125" x2="897" y2="3868.125" />
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="837" y1="3785.625" x2="867" y2="3785.625" />
-<line stroke="Black" stroke-width="1.875" x1="867" y1="3785.625" x2="867" y2="3868.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="867" y1="4888.125" x2="897" y2="4888.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="867" y1="4948.125" x2="897" y2="4948.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="867" y1="4989.375" x2="897" y2="4989.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="867" y1="5030.625" x2="897" y2="5030.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="867" y1="5071.875" x2="897" y2="5071.875" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="837" y1="4869.375" x2="867" y2="4869.375" />
+<line stroke="Black" stroke-width="1.875" x1="867" y1="4869.375" x2="867" y2="5071.875" />
 </g>
 <g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="897" y="3768.75" width="88.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="897" y="4852.5" width="120" height="71.25" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BiRadsAssessmentCategory.html" target="_blank">
+<title>Click -> 'BiRadsAssessmentCategory'</title>
+<text x="904.5" y="4875">BiRads</text>
+</a>
+<a href="./StructureDefinition-BiRadsAssessmentCategory.html" target="_blank">
+<title>Click -> 'BiRadsAssessmentCategory'</title>
+<text x="904.5" y="4893.75">Assessment</text>
+</a>
+<a href="./StructureDefinition-BiRadsAssessmentCategory.html" target="_blank">
+<title>Click -> 'BiRadsAssessmentCategory'</title>
+<text x="904.5" y="4912.5">Category</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="897" y="4931.25" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonCount.html" target="_blank">
+<title>Click -> 'CommonCount'</title>
+<text x="904.5" y="4953.75">Count</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="897" y="4972.5" width="88.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-CommonObservedChanges.html" target="_blank">
 <title>Click -> 'CommonObservedChanges'</title>
-<text x="904.5" y="3791.25">Changes</text>
+<text x="904.5" y="4995">Changes</text>
 </a>
 </g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="897" y="3810" width="57" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="897" y="5013.75" width="57" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-CommonSize.html" target="_blank">
 <title>Click -> 'CommonSize'</title>
-<text x="904.5" y="3832.5">Size</text>
+<text x="904.5" y="5036.25">Size</text>
 </a>
 </g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="897" y="3851.25" width="67.5" height="33.75" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-CommonCount.html" target="_blank">
-<title>Click -> 'CommonCount'</title>
-<text x="904.5" y="3873.75">Count</text>
-</a>
-</g>
-</g>
-<g>
-<g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="685.5" y="3892.5" width="57" height="52.5" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-BreastRadMRIMass.html" target="_blank">
-<title>Click -> 'BreastRadMRIMass'</title>
-<text x="693" y="3915">MRI</text>
-</a>
-<a href="./StructureDefinition-BreastRadMRIMass.html" target="_blank">
-<title>Click -> 'BreastRadMRIMass'</title>
-<text x="693" y="3933.75">Mass</text>
-</a>
-</g>
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="772.5" y1="3909.375" x2="802.5" y2="3909.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="772.5" y1="3950.625" x2="802.5" y2="3950.625" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="772.5" y1="3991.875" x2="802.5" y2="3991.875" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="772.5" y1="4051.875" x2="802.5" y2="4051.875" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="772.5" y1="4111.875" x2="802.5" y2="4111.875" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="772.5" y1="4153.125" x2="802.5" y2="4153.125" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="772.5" y1="4222.5" x2="802.5" y2="4222.5" />
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="742.5" y1="3918.75" x2="772.5" y2="3918.75" />
-<line stroke="Black" stroke-width="1.875" x1="772.5" y1="3909.375" x2="772.5" y2="4222.5" />
-</g>
-<g>
-<g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="802.5" y="3892.5" width="57" height="33.75" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-CommonSize.html" target="_blank">
-<title>Click -> 'CommonSize'</title>
-<text x="810" y="3915">Size</text>
-</a>
-</g>
-<g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="802.5" y="3933.75" width="67.5" height="33.75" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-CommonCount.html" target="_blank">
-<title>Click -> 'CommonCount'</title>
-<text x="810" y="3956.25">Count</text>
-</a>
-</g>
-<g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="802.5" y="3975" width="130.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="897" y="5055" width="130.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-CommonOrientation.html" target="_blank">
 <title>Click -> 'CommonOrientation'</title>
-<text x="810" y="3997.5">Orientation</text>
-</a>
-</g>
-<g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="802.5" y="4016.25" width="78" height="71.25" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-BreastRadMRIMassMargin.html" target="_blank">
-<title>Click -> 'BreastRadMRIMassMargin'</title>
-<text x="810" y="4038.75">MRI</text>
-</a>
-<a href="./StructureDefinition-BreastRadMRIMassMargin.html" target="_blank">
-<title>Click -> 'BreastRadMRIMassMargin'</title>
-<text x="810" y="4057.5">Mass</text>
-</a>
-<a href="./StructureDefinition-BreastRadMRIMassMargin.html" target="_blank">
-<title>Click -> 'BreastRadMRIMassMargin'</title>
-<text x="810" y="4076.25">Margin</text>
-</a>
-</g>
-<g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="802.5" y="4095" width="88.5" height="33.75" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-CommonObservedChanges.html" target="_blank">
-<title>Click -> 'CommonObservedChanges'</title>
-<text x="810" y="4117.5">Changes</text>
+<text x="904.5" y="5077.5">Orientation</text>
 </a>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="802.5" y="4136.25" width="67.5" height="33.75" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-CommonObservedState.html" target="_blank">
-<title>Click -> 'CommonObservedState'</title>
-<text x="810" y="4158.75">State</text>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="685.5" y="5096.25" width="57" height="52.5" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BreastRadMRIMass.html" target="_blank">
+<title>Click -> 'BreastRadMRIMass'</title>
+<text x="693" y="5118.75">MRI</text>
+</a>
+<a href="./StructureDefinition-BreastRadMRIMass.html" target="_blank">
+<title>Click -> 'BreastRadMRIMass'</title>
+<text x="693" y="5137.5">Mass</text>
 </a>
 </g>
-</g>
-<g>
-<g>
-<rect fill="LightCoral" stroke="Black" stroke-width="1.875" x="802.5" y="4177.5" width="109.49999" height="90" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-AimAnnotatedImagingStudy.html" target="_blank">
-<title>Click -> 'AimAnnotatedImagingStudy'</title>
-<text x="810" y="4200">Aim</text>
-</a>
-<a href="./StructureDefinition-AimAnnotatedImagingStudy.html" target="_blank">
-<title>Click -> 'AimAnnotatedImagingStudy'</title>
-<text x="810" y="4218.75">Annotated</text>
-</a>
-<a href="./StructureDefinition-AimAnnotatedImagingStudy.html" target="_blank">
-<title>Click -> 'AimAnnotatedImagingStudy'</title>
-<text x="810" y="4237.5">Imaging</text>
-</a>
-<a href="./StructureDefinition-AimAnnotatedImagingStudy.html" target="_blank">
-<title>Click -> 'AimAnnotatedImagingStudy'</title>
-<text x="810" y="4256.25">Study</text>
-</a>
-</g>
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="772.5" y1="5113.125" x2="802.5" y2="5113.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="772.5" y1="5154.375" x2="802.5" y2="5154.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="772.5" y1="5195.625" x2="802.5" y2="5195.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="772.5" y1="5255.625" x2="802.5" y2="5255.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="772.5" y1="5315.625" x2="802.5" y2="5315.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="772.5" y1="5356.875" x2="802.5" y2="5356.875" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="772.5" y1="5426.25" x2="802.5" y2="5426.25" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="742.5" y1="5122.5" x2="772.5" y2="5122.5" />
+<line stroke="Black" stroke-width="1.875" x1="772.5" y1="5113.125" x2="772.5" y2="5426.25" />
 </g>
 <g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="537" y="4275" width="88.5" height="52.5" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-BreastRadNMFinding.html" target="_blank">
-<title>Click -> 'BreastRadNMFinding'</title>
-<text x="544.5" y="4297.5">NM</text>
-</a>
-<a href="./StructureDefinition-BreastRadNMFinding.html" target="_blank">
-<title>Click -> 'BreastRadNMFinding'</title>
-<text x="544.5" y="4316.25">Finding</text>
-</a>
-</g>
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="655.5" y1="4301.25" x2="685.5" y2="4301.25" />
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="625.5" y1="4301.25" x2="655.5" y2="4301.25" />
-<line stroke="Black" stroke-width="1.875" x1="655.5" y1="4301.25" x2="655.5" y2="4301.25" />
-</g>
-<g>
-<g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="685.5" y="4275" width="57" height="52.5" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-BreastRadNMMass.html" target="_blank">
-<title>Click -> 'BreastRadNMMass'</title>
-<text x="693" y="4297.5">NM</text>
-</a>
-<a href="./StructureDefinition-BreastRadNMMass.html" target="_blank">
-<title>Click -> 'BreastRadNMMass'</title>
-<text x="693" y="4316.25">Mass</text>
-</a>
-</g>
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="772.5" y1="4291.875" x2="802.5" y2="4291.875" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="772.5" y1="4333.125" x2="802.5" y2="4333.125" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="772.5" y1="4374.375" x2="802.5" y2="4374.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="772.5" y1="4434.375" x2="802.5" y2="4434.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="772.5" y1="4494.375" x2="802.5" y2="4494.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="772.5" y1="4535.625" x2="802.5" y2="4535.625" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="772.5" y1="4605" x2="802.5" y2="4605" />
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="742.5" y1="4301.25" x2="772.5" y2="4301.25" />
-<line stroke="Black" stroke-width="1.875" x1="772.5" y1="4291.875" x2="772.5" y2="4605" />
-</g>
-<g>
-<g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="802.5" y="4275" width="57" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="802.5" y="5096.25" width="57" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-CommonSize.html" target="_blank">
 <title>Click -> 'CommonSize'</title>
-<text x="810" y="4297.5">Size</text>
+<text x="810" y="5118.75">Size</text>
 </a>
 </g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="802.5" y="4316.25" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="802.5" y="5137.5" width="67.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-CommonCount.html" target="_blank">
 <title>Click -> 'CommonCount'</title>
-<text x="810" y="4338.75">Count</text>
+<text x="810" y="5160">Count</text>
 </a>
 </g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="802.5" y="4357.5" width="130.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="802.5" y="5178.75" width="130.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-CommonOrientation.html" target="_blank">
 <title>Click -> 'CommonOrientation'</title>
-<text x="810" y="4380">Orientation</text>
+<text x="810" y="5201.25">Orientation</text>
 </a>
 </g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="802.5" y="4398.75" width="78" height="71.25" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-BreastRadNMMassMargin.html" target="_blank">
-<title>Click -> 'BreastRadNMMassMargin'</title>
-<text x="810" y="4421.25">NM</text>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="802.5" y="5220" width="78" height="71.25" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BreastRadMRIMassMargin.html" target="_blank">
+<title>Click -> 'BreastRadMRIMassMargin'</title>
+<text x="810" y="5242.5">MRI</text>
 </a>
-<a href="./StructureDefinition-BreastRadNMMassMargin.html" target="_blank">
-<title>Click -> 'BreastRadNMMassMargin'</title>
-<text x="810" y="4440">Mass</text>
+<a href="./StructureDefinition-BreastRadMRIMassMargin.html" target="_blank">
+<title>Click -> 'BreastRadMRIMassMargin'</title>
+<text x="810" y="5261.25">Mass</text>
 </a>
-<a href="./StructureDefinition-BreastRadNMMassMargin.html" target="_blank">
-<title>Click -> 'BreastRadNMMassMargin'</title>
-<text x="810" y="4458.75">Margin</text>
+<a href="./StructureDefinition-BreastRadMRIMassMargin.html" target="_blank">
+<title>Click -> 'BreastRadMRIMassMargin'</title>
+<text x="810" y="5280">Margin</text>
 </a>
 </g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="802.5" y="4477.5" width="88.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="802.5" y="5298.75" width="88.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-CommonObservedChanges.html" target="_blank">
 <title>Click -> 'CommonObservedChanges'</title>
-<text x="810" y="4500">Changes</text>
+<text x="810" y="5321.25">Changes</text>
 </a>
 </g>
-</g>
 <g>
-<g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="802.5" y="4518.75" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="802.5" y="5340" width="67.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-CommonObservedState.html" target="_blank">
 <title>Click -> 'CommonObservedState'</title>
-<text x="810" y="4541.25">State</text>
+<text x="810" y="5362.5">State</text>
+</a>
+</g>
+<g>
+<rect fill="LightCoral" stroke="Black" stroke-width="1.875" x="802.5" y="5381.25" width="109.49999" height="90" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-AimAnnotatedImagingStudy.html" target="_blank">
+<title>Click -> 'AimAnnotatedImagingStudy'</title>
+<text x="810" y="5403.75">Aim</text>
+</a>
+<a href="./StructureDefinition-AimAnnotatedImagingStudy.html" target="_blank">
+<title>Click -> 'AimAnnotatedImagingStudy'</title>
+<text x="810" y="5422.5">Annotated</text>
+</a>
+<a href="./StructureDefinition-AimAnnotatedImagingStudy.html" target="_blank">
+<title>Click -> 'AimAnnotatedImagingStudy'</title>
+<text x="810" y="5441.25">Imaging</text>
+</a>
+<a href="./StructureDefinition-AimAnnotatedImagingStudy.html" target="_blank">
+<title>Click -> 'AimAnnotatedImagingStudy'</title>
+<text x="810" y="5460">Study</text>
 </a>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightCoral" stroke="Black" stroke-width="1.875" x="802.5" y="4560" width="109.49999" height="90" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="537" y="5478.75" width="88.5" height="52.5" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BreastRadNMFinding.html" target="_blank">
+<title>Click -> 'BreastRadNMFinding'</title>
+<text x="544.5" y="5501.25">NM</text>
+</a>
+<a href="./StructureDefinition-BreastRadNMFinding.html" target="_blank">
+<title>Click -> 'BreastRadNMFinding'</title>
+<text x="544.5" y="5520">Finding</text>
+</a>
+</g>
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="655.5" y1="5505" x2="685.5" y2="5505" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="625.5" y1="5505" x2="655.5" y2="5505" />
+<line stroke="Black" stroke-width="1.875" x1="655.5" y1="5505" x2="655.5" y2="5505" />
+</g>
+<g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="685.5" y="5478.75" width="57" height="52.5" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BreastRadNMMass.html" target="_blank">
+<title>Click -> 'BreastRadNMMass'</title>
+<text x="693" y="5501.25">NM</text>
+</a>
+<a href="./StructureDefinition-BreastRadNMMass.html" target="_blank">
+<title>Click -> 'BreastRadNMMass'</title>
+<text x="693" y="5520">Mass</text>
+</a>
+</g>
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="772.5" y1="5495.625" x2="802.5" y2="5495.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="772.5" y1="5536.875" x2="802.5" y2="5536.875" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="772.5" y1="5578.125" x2="802.5" y2="5578.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="772.5" y1="5638.125" x2="802.5" y2="5638.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="772.5" y1="5698.125" x2="802.5" y2="5698.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="772.5" y1="5739.375" x2="802.5" y2="5739.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="772.5" y1="5808.75" x2="802.5" y2="5808.75" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="742.5" y1="5505" x2="772.5" y2="5505" />
+<line stroke="Black" stroke-width="1.875" x1="772.5" y1="5495.625" x2="772.5" y2="5808.75" />
+</g>
+<g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="802.5" y="5478.75" width="57" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonSize.html" target="_blank">
+<title>Click -> 'CommonSize'</title>
+<text x="810" y="5501.25">Size</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="802.5" y="5520" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonCount.html" target="_blank">
+<title>Click -> 'CommonCount'</title>
+<text x="810" y="5542.5">Count</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="802.5" y="5561.25" width="130.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonOrientation.html" target="_blank">
+<title>Click -> 'CommonOrientation'</title>
+<text x="810" y="5583.75">Orientation</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="802.5" y="5602.5" width="78" height="71.25" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BreastRadNMMassMargin.html" target="_blank">
+<title>Click -> 'BreastRadNMMassMargin'</title>
+<text x="810" y="5625">NM</text>
+</a>
+<a href="./StructureDefinition-BreastRadNMMassMargin.html" target="_blank">
+<title>Click -> 'BreastRadNMMassMargin'</title>
+<text x="810" y="5643.75">Mass</text>
+</a>
+<a href="./StructureDefinition-BreastRadNMMassMargin.html" target="_blank">
+<title>Click -> 'BreastRadNMMassMargin'</title>
+<text x="810" y="5662.5">Margin</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="802.5" y="5681.25" width="88.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonObservedChanges.html" target="_blank">
+<title>Click -> 'CommonObservedChanges'</title>
+<text x="810" y="5703.75">Changes</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="802.5" y="5722.5" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonObservedState.html" target="_blank">
+<title>Click -> 'CommonObservedState'</title>
+<text x="810" y="5745">State</text>
+</a>
+</g>
+<g>
+<rect fill="LightCoral" stroke="Black" stroke-width="1.875" x="802.5" y="5763.75" width="109.49999" height="90" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-AimAnnotatedImagingStudy.html" target="_blank">
 <title>Click -> 'AimAnnotatedImagingStudy'</title>
-<text x="810" y="4582.5">Aim</text>
+<text x="810" y="5786.25">Aim</text>
 </a>
 <a href="./StructureDefinition-AimAnnotatedImagingStudy.html" target="_blank">
 <title>Click -> 'AimAnnotatedImagingStudy'</title>
-<text x="810" y="4601.25">Annotated</text>
+<text x="810" y="5805">Annotated</text>
 </a>
 <a href="./StructureDefinition-AimAnnotatedImagingStudy.html" target="_blank">
 <title>Click -> 'AimAnnotatedImagingStudy'</title>
-<text x="810" y="4620">Imaging</text>
+<text x="810" y="5823.75">Imaging</text>
 </a>
 <a href="./StructureDefinition-AimAnnotatedImagingStudy.html" target="_blank">
 <title>Click -> 'AimAnnotatedImagingStudy'</title>
-<text x="810" y="4638.75">Study</text>
+<text x="810" y="5842.5">Study</text>
 </a>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="537" y="4657.5" width="120" height="52.5" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="537" y="5861.25" width="120" height="52.5" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadUltraSoundFinding.html" target="_blank">
 <title>Click -> 'BreastRadUltraSoundFinding'</title>
-<text x="544.5" y="4680">UltraSound</text>
+<text x="544.5" y="5883.75">UltraSound</text>
 </a>
 <a href="./StructureDefinition-BreastRadUltraSoundFinding.html" target="_blank">
 <title>Click -> 'BreastRadUltraSoundFinding'</title>
-<text x="544.5" y="4698.75">Finding</text>
+<text x="544.5" y="5902.5">Finding</text>
 </a>
 </g>
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="687" y1="4674.375" x2="717" y2="4674.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="687" y1="4798.125" x2="717" y2="4798.125" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="687" y1="5379.375" x2="717" y2="5379.375" />
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="657" y1="4683.75" x2="687" y2="4683.75" />
-<line stroke="Black" stroke-width="1.875" x1="687" y1="4674.375" x2="687" y2="5379.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="687" y1="5878.125" x2="717" y2="5878.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="687" y1="6121.875" x2="717" y2="6121.875" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="687" y1="6703.125" x2="717" y2="6703.125" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="657" y1="5887.5" x2="687" y2="5887.5" />
+<line stroke="Black" stroke-width="1.875" x1="687" y1="5878.125" x2="687" y2="6703.125" />
 </g>
 <g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="717" y="4657.5" width="151.49998" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="717" y="5861.25" width="151.49998" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-CommonForeignObject.html" target="_blank">
 <title>Click -> 'CommonForeignObject'</title>
-<text x="724.5" y="4680">ForeignObject</text>
+<text x="724.5" y="5883.75">ForeignObject</text>
 </a>
 </g>
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="898.49994" y1="4674.375" x2="928.49994" y2="4674.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="898.49994" y1="4715.625" x2="928.49994" y2="4715.625" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="898.49994" y1="4756.875" x2="928.49994" y2="4756.875" />
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="868.49994" y1="4674.375" x2="898.49994" y2="4674.375" />
-<line stroke="Black" stroke-width="1.875" x1="898.49994" y1="4674.375" x2="898.49994" y2="4756.875" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="898.49994" y1="5896.875" x2="928.49994" y2="5896.875" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="898.49994" y1="5956.875" x2="928.49994" y2="5956.875" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="898.49994" y1="5998.125" x2="928.49994" y2="5998.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="898.49994" y1="6039.375" x2="928.49994" y2="6039.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="898.49994" y1="6080.625" x2="928.49994" y2="6080.625" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="868.49994" y1="5878.125" x2="898.49994" y2="5878.125" />
+<line stroke="Black" stroke-width="1.875" x1="898.49994" y1="5878.125" x2="898.49994" y2="6080.625" />
 </g>
 <g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="928.49994" y="4657.5" width="88.5" height="33.75" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-CommonObservedChanges.html" target="_blank">
-<title>Click -> 'CommonObservedChanges'</title>
-<text x="935.99994" y="4680">Changes</text>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="928.49994" y="5861.25" width="120" height="71.25" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BiRadsAssessmentCategory.html" target="_blank">
+<title>Click -> 'BiRadsAssessmentCategory'</title>
+<text x="935.99994" y="5883.75">BiRads</text>
+</a>
+<a href="./StructureDefinition-BiRadsAssessmentCategory.html" target="_blank">
+<title>Click -> 'BiRadsAssessmentCategory'</title>
+<text x="935.99994" y="5902.5">Assessment</text>
+</a>
+<a href="./StructureDefinition-BiRadsAssessmentCategory.html" target="_blank">
+<title>Click -> 'BiRadsAssessmentCategory'</title>
+<text x="935.99994" y="5921.25">Category</text>
 </a>
 </g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="928.49994" y="4698.75" width="57" height="33.75" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-CommonSize.html" target="_blank">
-<title>Click -> 'CommonSize'</title>
-<text x="935.99994" y="4721.25">Size</text>
-</a>
-</g>
-<g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="928.49994" y="4740" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="928.49994" y="5940" width="67.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-CommonCount.html" target="_blank">
 <title>Click -> 'CommonCount'</title>
-<text x="935.99994" y="4762.5">Count</text>
+<text x="935.99994" y="5962.5">Count</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="928.49994" y="5981.25" width="88.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonObservedChanges.html" target="_blank">
+<title>Click -> 'CommonObservedChanges'</title>
+<text x="935.99994" y="6003.75">Changes</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="928.49994" y="6022.5" width="57" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonSize.html" target="_blank">
+<title>Click -> 'CommonSize'</title>
+<text x="935.99994" y="6045">Size</text>
+</a>
+</g>
+<g>
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="928.49994" y="6063.75" width="130.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonOrientation.html" target="_blank">
+<title>Click -> 'CommonOrientation'</title>
+<text x="935.99994" y="6086.25">Orientation</text>
 </a>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="717" y="4781.25" width="88.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="717" y="6105" width="88.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadUSMass.html" target="_blank">
 <title>Click -> 'BreastRadUSMass'</title>
-<text x="724.5" y="4803.75">US Mass</text>
+<text x="724.5" y="6127.5">US Mass</text>
 </a>
 </g>
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="835.5" y1="4798.125" x2="865.5" y2="4798.125" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="835.5" y1="4839.375" x2="865.5" y2="4839.375" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="835.5" y1="4890" x2="865.5" y2="4890" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="835.5" y1="4940.625" x2="865.5" y2="4940.625" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="835.5" y1="4991.25" x2="865.5" y2="4991.25" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="835.5" y1="5051.25" x2="865.5" y2="5051.25" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="835.5" y1="5120.625" x2="865.5" y2="5120.625" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="835.5" y1="5180.625" x2="865.5" y2="5180.625" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="835.5" y1="5221.875" x2="865.5" y2="5221.875" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="835.5" y1="5291.25" x2="865.5" y2="5291.25" />
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="805.5" y1="4798.125" x2="835.5" y2="4798.125" />
-<line stroke="Black" stroke-width="1.875" x1="835.5" y1="4798.125" x2="835.5" y2="5291.25" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="835.5" y1="6121.875" x2="865.5" y2="6121.875" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="835.5" y1="6163.125" x2="865.5" y2="6163.125" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="835.5" y1="6213.75" x2="865.5" y2="6213.75" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="835.5" y1="6264.375" x2="865.5" y2="6264.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="835.5" y1="6315" x2="865.5" y2="6315" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="835.5" y1="6375" x2="865.5" y2="6375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="835.5" y1="6444.375" x2="865.5" y2="6444.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="835.5" y1="6504.375" x2="865.5" y2="6504.375" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="835.5" y1="6545.625" x2="865.5" y2="6545.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="835.5" y1="6615" x2="865.5" y2="6615" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="805.5" y1="6121.875" x2="835.5" y2="6121.875" />
+<line stroke="Black" stroke-width="1.875" x1="835.5" y1="6121.875" x2="835.5" y2="6615" />
 </g>
 <g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="865.5" y="4781.25" width="57" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="865.5" y="6105" width="57" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-CommonSize.html" target="_blank">
 <title>Click -> 'CommonSize'</title>
-<text x="873" y="4803.75">Size</text>
+<text x="873" y="6127.5">Size</text>
 </a>
 </g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="865.5" y="4822.5" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="865.5" y="6146.25" width="67.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-CommonCount.html" target="_blank">
 <title>Click -> 'CommonCount'</title>
-<text x="873" y="4845">Count</text>
+<text x="873" y="6168.75">Count</text>
 </a>
 </g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="865.5" y="4863.75" width="67.5" height="52.5" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="865.5" y="6187.5" width="67.5" height="52.5" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-CommonMassShape.html" target="_blank">
 <title>Click -> 'CommonMassShape'</title>
-<text x="873" y="4886.25">Mass</text>
+<text x="873" y="6210">Mass</text>
 </a>
 <a href="./StructureDefinition-CommonMassShape.html" target="_blank">
 <title>Click -> 'CommonMassShape'</title>
-<text x="873" y="4905">Shape</text>
+<text x="873" y="6228.75">Shape</text>
 </a>
 </g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="865.5" y="4923.75" width="130.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="865.5" y="6247.5" width="130.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-CommonOrientation.html" target="_blank">
 <title>Click -> 'CommonOrientation'</title>
-<text x="873" y="4946.25">Orientation</text>
+<text x="873" y="6270">Orientation</text>
 </a>
 </g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="865.5" y="4965" width="88.5" height="52.5" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="865.5" y="6288.75" width="88.5" height="52.5" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadUSMassMargin.html" target="_blank">
 <title>Click -> 'BreastRadUSMassMargin'</title>
-<text x="873" y="4987.5">US Mass</text>
+<text x="873" y="6311.25">US Mass</text>
 </a>
 <a href="./StructureDefinition-BreastRadUSMassMargin.html" target="_blank">
 <title>Click -> 'BreastRadUSMassMargin'</title>
-<text x="873" y="5006.25">Margin</text>
+<text x="873" y="6330">Margin</text>
 </a>
 </g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="865.5" y="5025" width="141" height="52.5" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="865.5" y="6348.75" width="141" height="52.5" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadUSMassEchoPattern.html" target="_blank">
 <title>Click -> 'BreastRadUSMassEchoPattern'</title>
-<text x="873" y="5047.5">US Mass</text>
+<text x="873" y="6371.25">US Mass</text>
 </a>
 <a href="./StructureDefinition-BreastRadUSMassEchoPattern.html" target="_blank">
 <title>Click -> 'BreastRadUSMassEchoPattern'</title>
-<text x="873" y="5066.25">Echo Pattern</text>
+<text x="873" y="6390">Echo Pattern</text>
 </a>
 </g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="865.5" y="5085" width="203.99998" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="865.5" y="6408.75" width="203.99998" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadUSMassPosteriorAcousticFeatures.html" target="_blank">
 <title>Click -> 'BreastRadUSMassPosteriorAcousticFeatures'</title>
-<text x="873" y="5107.5">US Mass</text>
+<text x="873" y="6431.25">US Mass</text>
 </a>
 <a href="./StructureDefinition-BreastRadUSMassPosteriorAcousticFeatures.html" target="_blank">
 <title>Click -> 'BreastRadUSMassPosteriorAcousticFeatures'</title>
-<text x="873" y="5126.25">Posterior Acoustic</text>
+<text x="873" y="6450">Posterior Acoustic</text>
 </a>
 <a href="./StructureDefinition-BreastRadUSMassPosteriorAcousticFeatures.html" target="_blank">
 <title>Click -> 'BreastRadUSMassPosteriorAcousticFeatures'</title>
-<text x="873" y="5145">Features</text>
+<text x="873" y="6468.75">Features</text>
 </a>
 </g>
 <g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="865.5" y="5163.75" width="88.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="865.5" y="6487.5" width="88.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-CommonObservedChanges.html" target="_blank">
 <title>Click -> 'CommonObservedChanges'</title>
-<text x="873" y="5186.25">Changes</text>
+<text x="873" y="6510">Changes</text>
 </a>
 </g>
-</g>
 <g>
-<g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="865.5" y="5205" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="865.5" y="6528.75" width="67.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-CommonObservedState.html" target="_blank">
 <title>Click -> 'CommonObservedState'</title>
-<text x="873" y="5227.5">State</text>
+<text x="873" y="6551.25">State</text>
+</a>
+</g>
+<g>
+<rect fill="LightCoral" stroke="Black" stroke-width="1.875" x="865.5" y="6570" width="109.49999" height="90" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-AimAnnotatedImagingStudy.html" target="_blank">
+<title>Click -> 'AimAnnotatedImagingStudy'</title>
+<text x="873" y="6592.5">Aim</text>
+</a>
+<a href="./StructureDefinition-AimAnnotatedImagingStudy.html" target="_blank">
+<title>Click -> 'AimAnnotatedImagingStudy'</title>
+<text x="873" y="6611.25">Annotated</text>
+</a>
+<a href="./StructureDefinition-AimAnnotatedImagingStudy.html" target="_blank">
+<title>Click -> 'AimAnnotatedImagingStudy'</title>
+<text x="873" y="6630">Imaging</text>
+</a>
+<a href="./StructureDefinition-AimAnnotatedImagingStudy.html" target="_blank">
+<title>Click -> 'AimAnnotatedImagingStudy'</title>
+<text x="873" y="6648.75">Study</text>
 </a>
 </g>
 </g>
 <g>
 <g>
-<rect fill="LightCoral" stroke="Black" stroke-width="1.875" x="865.5" y="5246.25" width="109.49999" height="90" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-AimAnnotatedImagingStudy.html" target="_blank">
-<title>Click -> 'AimAnnotatedImagingStudy'</title>
-<text x="873" y="5268.75">Aim</text>
-</a>
-<a href="./StructureDefinition-AimAnnotatedImagingStudy.html" target="_blank">
-<title>Click -> 'AimAnnotatedImagingStudy'</title>
-<text x="873" y="5287.5">Annotated</text>
-</a>
-<a href="./StructureDefinition-AimAnnotatedImagingStudy.html" target="_blank">
-<title>Click -> 'AimAnnotatedImagingStudy'</title>
-<text x="873" y="5306.25">Imaging</text>
-</a>
-<a href="./StructureDefinition-AimAnnotatedImagingStudy.html" target="_blank">
-<title>Click -> 'AimAnnotatedImagingStudy'</title>
-<text x="873" y="5325">Study</text>
-</a>
-</g>
-</g>
-<g>
-<g>
-<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="717" y="5343.75" width="130.5" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightSkyBlue" stroke="Black" stroke-width="1.875" x="717" y="6667.5" width="130.5" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadUSTissueComposition.html" target="_blank">
 <title>Click -> 'BreastRadUSTissueComposition'</title>
-<text x="724.5" y="5366.25">US</text>
-</a>
-<a href="./StructureDefinition-BreastRadUSTissueComposition.html" target="_blank">
-<title>Click -> 'BreastRadUSTissueComposition'</title>
-<text x="724.5" y="5385">Tissue</text>
+<text x="724.5" y="6690">US</text>
 </a>
 <a href="./StructureDefinition-BreastRadUSTissueComposition.html" target="_blank">
 <title>Click -> 'BreastRadUSTissueComposition'</title>
-<text x="724.5" y="5403.75">Composition</text>
+<text x="724.5" y="6708.75">Tissue</text>
+</a>
+<a href="./StructureDefinition-BreastRadUSTissueComposition.html" target="_blank">
+<title>Click -> 'BreastRadUSTissueComposition'</title>
+<text x="724.5" y="6727.5">Composition</text>
 </a>
 </g>
 </g>

@@ -51,16 +51,17 @@ namespace BreastRadiology.XUnitTests
                     ProfileTargetSlice[] targets = new ProfileTargetSlice[]
                     {
                     new ProfileTargetSlice(await this.CommonForeignObject(), 0, "*"),
-                    new ProfileTargetSlice(await this.MGArchitecturalDistortion(), 0, "1"),
+                    new ProfileTargetSlice(await this.MGArchitecturalDistortion(), 0, "*"),
                     new ProfileTargetSlice(await this.MGAsymmetries(), 0, "*"),
                     new ProfileTargetSlice(await this.MGBreastDensity(), 1, "1"),
                     new ProfileTargetSlice(await this.MGCalcification(), 0, "*"),
                     new ProfileTargetSlice(await this.MGCyst(), 0, "*"),
-                    new ProfileTargetSlice(await this.MGIntramammaryLymphNode(), 0, "1"),
+                    new ProfileTargetSlice(await this.MGFatNecrosis(), 0, "*"),
+                    new ProfileTargetSlice(await this.MGIntramammaryLymphNode(), 0, "*"),
                     new ProfileTargetSlice(await this.MGMass(), 0, "*"),
                     new ProfileTargetSlice(await this.MGSkinLesion(), 0, "*"),
-                    new ProfileTargetSlice(await this.MGSolitaryDilatedDuct(), 0, "1"),
-                    new ProfileTargetSlice(await this.MGAssociatedFeatures(), 0, "1")
+                    new ProfileTargetSlice(await this.MGSolitaryDilatedDuct(), 0, "*"),
+                    new ProfileTargetSlice(await this.MGAssociatedFeatures(), 0, "*")
                     };
                     e.Find("hasMember").SliceByUrl(targets);
                     e.AddProfileTargets(targets);
