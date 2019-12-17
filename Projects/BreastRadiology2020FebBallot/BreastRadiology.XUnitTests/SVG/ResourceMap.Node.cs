@@ -24,7 +24,7 @@ namespace BreastRadiology.XUnitTests
             /// <summary>
             /// Links from this resource to an other resource.
             /// </summary>
-            public IEnumerable<Link> Links => links.Values;
+            public IEnumerable<Link> Links => this.links.Values;
 
             Dictionary<String, Link> links = new Dictionary<String, Link>();
 

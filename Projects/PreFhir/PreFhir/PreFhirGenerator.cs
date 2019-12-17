@@ -289,7 +289,6 @@ namespace PreFhir
         {
             await VTask.Run(async () =>
           {
-              processedItem.Resource.RemoveExtension(FragmentUrl);
               String outputName;
 
               switch (processedItem.Resource)

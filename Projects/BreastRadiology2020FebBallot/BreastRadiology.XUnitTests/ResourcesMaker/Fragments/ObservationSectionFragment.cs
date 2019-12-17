@@ -12,9 +12,9 @@ namespace BreastRadiology.XUnitTests
     {
         public async StringTask ObservationSectionFragment()
         {
-            if (observationSectionFragment == null)
-                await CreateObservationSectionFragment();
-            return observationSectionFragment;
+            if (this.observationSectionFragment == null)
+                await this.CreateObservationSectionFragment();
+            return this.observationSectionFragment;
         }
         String observationSectionFragment = null;
 
@@ -27,7 +27,7 @@ namespace BreastRadiology.XUnitTests
                         "Observation Section Fragment",
                         "Section/Fragment",
                         ObservationUrl,
-                        out observationSectionFragment)
+                        out this.observationSectionFragment)
                     .Description("Fragment that constrains Observations to be sections.",
                         new Markdown()
                             .Paragraph("this fragment constrains a generic observation to be a observation section.")

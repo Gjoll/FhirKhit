@@ -24,12 +24,12 @@ namespace BreastRadiology.XUnitTests
         String contentDir = Path.Combine(DirHelper.FindParentDir(baseDir), "IG", "Content");
         String guideDir => Path.Combine(DirHelper.FindParentDir(baseDir), "IG", "Guide");
 
-        String graphicsDir => Path.Combine(contentDir, "Graphics");
-        String fragmentDir => Path.Combine(contentDir, "Fragments");
-        String resourcesDir => Path.Combine(contentDir, "Resources");
-        String pageDir => Path.Combine(contentDir, "Page");
-        String pageTemplateDir => Path.Combine(contentDir, "PageTemplate");
-        String mergedDir => Path.Combine(contentDir, "Merged");
+        String graphicsDir => Path.Combine(this.contentDir, "Graphics");
+        String fragmentDir => Path.Combine(this.contentDir, "Fragments");
+        String resourcesDir => Path.Combine(this.contentDir, "Resources");
+        String pageDir => Path.Combine(this.contentDir, "Page");
+        String pageTemplateDir => Path.Combine(this.contentDir, "PageTemplate");
+        String mergedDir => Path.Combine(this.contentDir, "Merged");
 
 
         private void Message(String import, string className, string method, string msg)
@@ -219,8 +219,8 @@ namespace BreastRadiology.XUnitTests
         {
             try
             {
-                if (Directory.Exists(graphicsDir) == false)
-                    Directory.CreateDirectory(graphicsDir);
+                if (Directory.Exists(this.graphicsDir) == false)
+                    Directory.CreateDirectory(this.graphicsDir);
 
                 ResourceMap map = new ResourceMap();
                 map.CreateMapNode(ResourcesMaker.ClinicalImpressionUrl,
@@ -245,7 +245,7 @@ namespace BreastRadiology.XUnitTests
 
                 map.AddDir(this.resourcesDir, "*.json");
                 {
-                    FocusMapMaker focusMapMaker = new FocusMapMaker(map, graphicsDir, this.pageDir);
+                    FocusMapMaker focusMapMaker = new FocusMapMaker(map, this.graphicsDir, this.pageDir);
                     focusMapMaker.Create();
                 }
 
@@ -261,7 +261,7 @@ namespace BreastRadiology.XUnitTests
                     resourceMapMaker.AddLegendItem("ImagingStudy", Color.LightCoral);
 
                     resourceMapMaker.Create(ResourcesMaker.CreateUrl("BreastRadReport"),
-                        Path.Combine(graphicsDir, "ProfileOverview.svg"));
+                        Path.Combine(this.graphicsDir, "ProfileOverview.svg"));
 
                     //FragmentMapMaker fragmentMapMaker = new FragmentMapMaker(this, mapDir);
                     //fragmentMapMaker.Create();

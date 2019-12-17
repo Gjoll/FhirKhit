@@ -165,19 +165,19 @@ namespace BreastRadiology.XUnitTests
 
             public Definition CiteEnd(String citationSource)
             {
-                sb.AppendLine($"    -- {citationSource}");
+                this.sb.AppendLine($"    -- {citationSource}");
                 return this;
             }
 
             public Definition Line(String line)
             {
-                sb.AppendLine(line);
+                this.sb.AppendLine(line);
                 return this;
             }
 
             public String ToText()
             {
-                return sb.ToString();
+                return this.sb.ToString();
             }
         }
 
@@ -195,9 +195,9 @@ namespace BreastRadiology.XUnitTests
                     throw new Exception("Empty Display");
                 if (String.IsNullOrWhiteSpace(definition) == true)
                     throw new Exception("Empty definition");
-                Code = code;
-                Display = display;
-                Definition = definition;
+                this.Code = code;
+                this.Display = display;
+                this.Definition = definition;
             }
 
             public ConceptDef(String code, String display, Definition definition) : this(code, display, definition.ToText())
@@ -212,7 +212,7 @@ namespace BreastRadiology.XUnitTests
             String groupPath,
             IEnumerable<ConceptDef> codes)
         {
-            return CreateValueSet(name, title, mapName, description, groupPath, codes, out CodeSystem cs);
+            return this.CreateValueSet(name, title, mapName, description, groupPath, codes, out CodeSystem cs);
         }
 
         ValueSet CreateValueSet(String name,
@@ -290,8 +290,8 @@ namespace BreastRadiology.XUnitTests
                 });
             }
 
-            resources.Add(Path.Combine(this.resourceDir, $"CodeSystem-{name}CS.json"), cs);
-            resources.Add(Path.Combine(this.resourceDir, $"ValueSet-{name}VS.json"), vs);
+            this.resources.Add(Path.Combine(this.resourceDir, $"CodeSystem-{name}CS.json"), cs);
+            this.resources.Add(Path.Combine(this.resourceDir, $"ValueSet-{name}VS.json"), vs);
             vs.AddExtension(ResourceMap.ResourceMapNameUrl, new FhirString(mapName));
             return vs;
         }

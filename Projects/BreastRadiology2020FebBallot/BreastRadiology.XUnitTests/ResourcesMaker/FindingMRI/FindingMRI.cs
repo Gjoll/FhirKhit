@@ -17,9 +17,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask FindingMri()
         {
-            if (findingMri == null)
-                await CreateFindingMri();
-            return findingMri;
+            if (this.findingMri == null)
+                await this.CreateFindingMri();
+            return this.findingMri;
         }
         String findingMri = null;
 
@@ -33,7 +33,7 @@ namespace BreastRadiology.XUnitTests
                         "MRI/Finding",
                         ObservationUrl,
                         $"{Group_MRIResources}",
-                        out findingMri)
+                        out this.findingMri)
                     .Description("Breast Radiology MRI Finding",
                         new Markdown()
                             .Todo(

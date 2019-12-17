@@ -18,9 +18,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask USMassPosteriorAcousticFeatures()
         {
-            if (usMassPosteriorAcousticFeatures == null)
-                await CreateUSMassPosteriorAcousticFeatures();
-            return usMassPosteriorAcousticFeatures;
+            if (this.usMassPosteriorAcousticFeatures == null)
+                await this.CreateUSMassPosteriorAcousticFeatures();
+            return this.usMassPosteriorAcousticFeatures;
         }
         String usMassPosteriorAcousticFeatures = null;
 
@@ -90,7 +90,7 @@ namespace BreastRadiology.XUnitTests
                         "US Mass/Posterior Acoustic/Features",
                         ObservationUrl,
                         $"{Group_USResources}/Mass/PosteriorAcousticFeatures",
-                        out usMassPosteriorAcousticFeatures)
+                        out this.usMassPosteriorAcousticFeatures)
                     .Description("Breast Radiology Ultra-Sound Mass Posterior Acoustic Features Observation",
                         new Markdown()
                             .BiradHeader()

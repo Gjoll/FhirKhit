@@ -262,12 +262,6 @@ namespace BreastRadiology.XUnitTests
             return this;
         }
 
-        public SDefEditor AddTargetLink(String url, bool showChildren = true)
-        {
-            this.AddLink("target", url, showChildren);
-            return this;
-        }
-
         public SDefEditor AddExtensionLink(String url, bool showChildren = true)
         {
             this.AddLink("extension", url, showChildren);
@@ -280,11 +274,6 @@ namespace BreastRadiology.XUnitTests
             return this;
         }
 
-        public SDefEditor AddValueSetLink(String url, bool showChildren = true)
-        {
-            this.AddLink("valueSet", url, showChildren);
-            return this;
-        }
 
         public SDefEditor AddProfileTargets(params ProfileTargetSlice[] targets)
         {

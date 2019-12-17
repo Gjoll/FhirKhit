@@ -17,9 +17,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask MGCalcificationDistribution()
         {
-            if (mgCalcificationDistribution == null)
-                await CreateMGCalcificationDistribution();
-            return mgCalcificationDistribution;
+            if (this.mgCalcificationDistribution == null)
+                await this.CreateMGCalcificationDistribution();
+            return this.mgCalcificationDistribution;
         }
         String mgCalcificationDistribution = null;
 
@@ -107,7 +107,7 @@ namespace BreastRadiology.XUnitTests
                         "Mammo/Calc./Distribution",
                         ObservationUrl,
                         $"{Group_MammoResources}/Calcification/Distribution",
-                        out mgCalcificationDistribution)
+                        out this.mgCalcificationDistribution)
                     .Description("Breast Radiology Mammography Calcification Distribution Observation",
                         new Markdown()
                             .Paragraph("This resource describes the calcification distribution observed.")

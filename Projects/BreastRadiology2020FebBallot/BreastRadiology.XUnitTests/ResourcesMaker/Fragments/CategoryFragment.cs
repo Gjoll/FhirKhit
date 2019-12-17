@@ -12,9 +12,9 @@ namespace BreastRadiology.XUnitTests
     {
         public async StringTask CategoryFragment()
         {
-            if (findingCategoryFragment == null)
-                await CreateCategoryFragment();
-            return findingCategoryFragment;
+            if (this.findingCategoryFragment == null)
+                await this.CreateCategoryFragment();
+            return this.findingCategoryFragment;
         }
         String findingCategoryFragment = null;
 
@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
                         "Category Fragment",
                         "Category/Fragment",
                         ObservationUrl,
-                        out findingCategoryFragment)
+                        out this.findingCategoryFragment)
                     .Description("Fragment definition to define Observation.category",
                         new Markdown()
                             .Paragraph("This fragment slices Observation.category and adds the required observation code value.")

@@ -17,9 +17,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask MGBreastDensity()
         {
-            if (mgBreastDensity == null)
-                await CreateMGBreastDensity();
-            return mgBreastDensity;
+            if (this.mgBreastDensity == null)
+                await this.CreateMGBreastDensity();
+            return this.mgBreastDensity;
         }
         String mgBreastDensity = null;
 
@@ -107,7 +107,7 @@ namespace BreastRadiology.XUnitTests
                         "Mammo/Breast/Density",
                         ObservationUrl,
                         $"{Group_MammoResources}/BreastDensity",
-                        out mgBreastDensity)
+                        out this.mgBreastDensity)
                     .Description("Breast Radiology Mammography Breast Density Observation",
                         new Markdown()
                             .BiradHeader()

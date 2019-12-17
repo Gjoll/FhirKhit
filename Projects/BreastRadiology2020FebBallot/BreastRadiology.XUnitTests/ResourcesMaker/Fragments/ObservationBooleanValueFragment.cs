@@ -12,9 +12,9 @@ namespace BreastRadiology.XUnitTests
     {
         public async StringTask ObservationBooleanValueFragment()
         {
-            if (observationBooleanValueFragment == null)
-                await CreateObservationBooleanValueFragment();
-            return observationBooleanValueFragment;
+            if (this.observationBooleanValueFragment == null)
+                await this.CreateObservationBooleanValueFragment();
+            return this.observationBooleanValueFragment;
         }
         String observationBooleanValueFragment = null;
 
@@ -30,7 +30,7 @@ namespace BreastRadiology.XUnitTests
                         "BooleanValue Observation Fragment",
                         "Observation/BooleanValue/Fragment",
                         ObservationUrl,
-                        out observationBooleanValueFragment)
+                        out this.observationBooleanValueFragment)
                     .Description("Fragment to define a boolean observation",
                     new Markdown()
                         .Paragraph("Fragment that constrains an observation to contains only a boolean value.")

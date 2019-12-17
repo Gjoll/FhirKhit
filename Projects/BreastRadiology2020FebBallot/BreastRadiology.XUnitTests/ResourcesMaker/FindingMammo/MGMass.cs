@@ -17,9 +17,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask MGMass()
         {
-            if (mgMass == null)
-                await CreateMGMass();
-            return mgMass;
+            if (this.mgMass == null)
+                await this.CreateMGMass();
+            return this.mgMass;
         }
         String mgMass = null;
 
@@ -32,7 +32,7 @@ namespace BreastRadiology.XUnitTests
                         "Mammo/Mass",
                         ObservationUrl,
                         $"{Group_MammoResources}/Mass",
-                        out mgMass)
+                        out this.mgMass)
                     .Description("Breast Radiology Mammography Mass Observation",
                         new Markdown()
                             .MissingObservation("a mass", "and no Shape, Margin, or Density observations should be referenced by this observation")
@@ -54,7 +54,6 @@ namespace BreastRadiology.XUnitTests
                     .AddFragRef(await this.ObservationSectionFragment())
                     .AddFragRef(await this.ObservationNoValueFragment())
                     .AddFragRef(await this.ImagingStudyFragment())
-                    .AddExtensionLink(await this.BreastBodyLocationExtension())
                     ;
 
                 {

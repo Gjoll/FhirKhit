@@ -18,9 +18,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask USMassMargin()
         {
-            if (usMassMargin == null)
-                await CreateUSMassMargin();
-            return usMassMargin;
+            if (this.usMassMargin == null)
+                await this.CreateUSMassMargin();
+            return this.usMassMargin;
         }
         String usMassMargin = null;
 
@@ -125,7 +125,7 @@ namespace BreastRadiology.XUnitTests
                         "US Mass/Margin",
                         ObservationUrl,
                         $"{Group_USResources}/Mass/Margin",
-                        out usMassMargin)
+                        out this.usMassMargin)
                     .Description("Breast Radiology Ultra-Sound Mass Margin Observation",
                         new Markdown()
                             .MissingObservation("a mass margin")

@@ -321,7 +321,41 @@ namespace PreFhir
                     return false;
             }
 
+            MergeExtensions(baseResource.Extension, mergeResource.Extension);
             return retVal;
+        }
+
+        /// <summary>
+        /// Add all merge extensions to base extensions, unless an identical extension
+        /// already exists.
+        /// </summary>
+        void MergeExtensions(List<Extension> baseExtensions, List<Extension> mergeExtensions)
+        {
+            bool AlreadyHasExtension(Extension mergeExtension)
+            {
+                foreach (Extension baseExtension in baseExtensions)
+                {
+                    if (baseExtension.IsExactly(mergeExtension))
+                        return true;
+                }
+                return false;
+            }
+
+            foreach (Extension mergeExtension in mergeExtensions)
+            {
+                switch (mergeExtension.Url)
+                {
+                    // dont copy these fragment extensions.
+                    case PreFhirGenerator.IsFragmentUrl:
+                    case PreFhirGenerator.FragmentUrl:
+                        break;
+
+                    default:
+                        if (AlreadyHasExtension(mergeExtension) == false)
+                            baseExtensions.Add(mergeExtension);
+                        break;
+                }
+            }
         }
 
         bool MergeElementDefinitions()
@@ -364,6 +398,8 @@ namespace PreFhir
                         this.preFhir.ConversionInfo(this.GetType().Name,
                             fcn,
                             $"Slice '{mergeSlice.Name}' found in base. Merging slice");
+                    MergeExtensions(baseNode.ElementDefinition.Extension,
+                        mergeNode.ElementDefinition.Extension);
                     if (!Constrain(baseNode.ElementDefinition, mergeNode.ElementDefinition))
                         retVal = false;
                     if (!MergeElementTreeSlice(baseSlice, mergeSlice))
@@ -385,7 +421,7 @@ namespace PreFhir
                 if (!baseSlice.Nodes.TryGetItem(mergeNode.Name, out baseNode))
                 {
                     // see if element definition is something like {CodeableConcept}.coding.
-                    if(
+                    if (
                         (baseItem.SnapNodeOriginal.TryGetNode(baseSlice.ElementDefinition.Path, out ElementTreeNode originalNode) == false) ||
                         (this.IsElementPart(originalNode.ElementDefinition, mergeNode.Name) == false)
                         )

@@ -16,9 +16,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask MGTrabecularThickening()
         {
-            if (mgTrabecularThickening == null)
-                await CreateMGTrabecularThickening();
-            return mgTrabecularThickening;
+            if (this.mgTrabecularThickening == null)
+                await this.CreateMGTrabecularThickening();
+            return this.mgTrabecularThickening;
         }
         String mgTrabecularThickening = null;
 
@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
                     "Mammo/Trabecular/Thickening",
                     ObservationUrl,
                     $"{Group_MammoResources}/AssociatedFeature/TrabecularThickening",
-                    out mgTrabecularThickening)
+                    out this.mgTrabecularThickening)
                     .Description("Trabecular Thickening Observation",
                         new Markdown()
                             .BiradHeader()
@@ -47,7 +47,6 @@ namespace BreastRadiology.XUnitTests
                     .AddFragRef(await this.ObservationNoDeviceFragment())
                     .AddFragRef(await this.BreastBodyLocationRequiredFragment())
                     .AddFragRef(await this.ObservationNoValueFragment())
-                    .AddExtensionLink(await this.BreastBodyLocationExtension())
                     ;
                 e.IntroDoc
                     .ReviewedStatus(ReviewStatus.NotReviewed)

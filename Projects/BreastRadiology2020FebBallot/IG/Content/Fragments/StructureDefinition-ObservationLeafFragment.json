@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "extension": [
     {
-      "url": "http://www.resourcemap.com/mapname",
+      "url": "http://www.fragment.com/mapname",
       "valueString": "Observation/Leaf/Fragment"
     },
     {
@@ -18,7 +18,7 @@
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
     },
     {
-      "url": "http://www.resourcemap.com/maplink",
+      "url": "http://www.fragment.com/maplink",
       "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
     },
     {
@@ -26,7 +26,7 @@
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CategoryFragment"
     },
     {
-      "url": "http://www.resourcemap.com/maplink",
+      "url": "http://www.fragment.com/maplink",
       "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CategoryFragment"
     },
     {
@@ -34,7 +34,7 @@
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationFragment"
     },
     {
-      "url": "http://www.resourcemap.com/maplink",
+      "url": "http://www.fragment.com/maplink",
       "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationFragment"
     }
   ],

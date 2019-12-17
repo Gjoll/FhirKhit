@@ -13,9 +13,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask BreastBodyLocationRequiredFragment()
         {
-            if (breastBodyLocationRequiredFragment == null)
-                await CreateBreastBodyLocationRequiredFragment();
-            return breastBodyLocationRequiredFragment;
+            if (this.breastBodyLocationRequiredFragment == null)
+                await this.CreateBreastBodyLocationRequiredFragment();
+            return this.breastBodyLocationRequiredFragment;
         }
         String breastBodyLocationRequiredFragment = null;
 
@@ -32,7 +32,7 @@ namespace BreastRadiology.XUnitTests
                         "Breast Body Location (Required) Fragment",
                         "Breast/Body/Location/Fragment/(Required)",
                         ObservationUrl,
-                        out breastBodyLocationRequiredFragment)
+                        out this.breastBodyLocationRequiredFragment)
                     .Description("Fragment definition for a Required Breast Body Location",
                         new Markdown()
                         .Paragraph("This fragment adds the references for the breast body location extension.")
@@ -40,7 +40,8 @@ namespace BreastRadiology.XUnitTests
                         .Todo(
                         )
                      )
-                    .AddFragRef(await this.HeaderFragment());
+                    .AddFragRef(await this.HeaderFragment())
+                    .AddExtensionLink(await this.BreastBodyLocationExtension())
                 ;
                 e
                     .Select("bodySite")

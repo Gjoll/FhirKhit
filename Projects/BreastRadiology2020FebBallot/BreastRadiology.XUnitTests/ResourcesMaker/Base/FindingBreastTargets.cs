@@ -11,16 +11,16 @@ namespace BreastRadiology.XUnitTests
     {
         async XTask FindingBreastTargets()
         {
-            if (findingBreastTargets == null)
-                await CreateFindingBreastTargets();
-            return findingBreastTargets;
+            if (this.findingBreastTargets == null)
+                await this.CreateFindingBreastTargets();
+            return this.findingBreastTargets;
         }
 
         ProfileTargetSlice[] findingBreastTargets = null;
 
         async VTask CreateFindingBreastTargets()
         {
-            findingBreastTargets = new ProfileTargetSlice[]
+            this.findingBreastTargets = new ProfileTargetSlice[]
             {
                 new ProfileTargetSlice(await this.BiRadsAssessmentCategory(), 1, "1"),
                 new ProfileTargetSlice(await this.FindingMammo(), 0, "*"),

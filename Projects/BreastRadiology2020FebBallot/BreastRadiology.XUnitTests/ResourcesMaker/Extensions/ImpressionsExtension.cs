@@ -19,9 +19,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask BreastRadiologyImpressionsExtension()
         {
-            if (breastRadiologyImpressionsExtension == null)
-                await CreateBreastRadiologyImpressionsExtension();
-            return breastRadiologyImpressionsExtension;
+            if (this.breastRadiologyImpressionsExtension == null)
+                await this.CreateBreastRadiologyImpressionsExtension();
+            return this.breastRadiologyImpressionsExtension;
         }
         String breastRadiologyImpressionsExtension = null;
 
@@ -32,7 +32,7 @@ namespace BreastRadiology.XUnitTests
                 "Impressions/Extension",
                 ExtensionUrl,
                 $"{Group_ExtensionResources}/Impressions",
-                out breastRadiologyImpressionsExtension)
+                out this.breastRadiologyImpressionsExtension)
                 .Description("Impressions extension",
                     new Markdown()
                         .Paragraph("This extension defines the impressions section of a breast radiology report, " +
@@ -51,7 +51,7 @@ namespace BreastRadiology.XUnitTests
                 .Fixed(new FhirUri(e.SDef.Url));
 
             e.Select("value[x]")
-                .TypeReference(await BreastRadImpression())
+                .TypeReference(await this.BreastRadImpression())
                 .ZeroToMany()
                 ;
 

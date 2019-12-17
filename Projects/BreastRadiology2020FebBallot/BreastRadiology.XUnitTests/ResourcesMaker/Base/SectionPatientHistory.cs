@@ -17,11 +17,11 @@ namespace BreastRadiology.XUnitTests
     {
         public async StringTask SectionPatientHistory()
         {
-            if (sectionPatientHistory == null)
+            if (this.sectionPatientHistory == null)
             {
-                await CreateSectionPatientHistory();
+                await this.CreateSectionPatientHistory();
             }
-            return sectionPatientHistory;
+            return this.sectionPatientHistory;
         }
         String sectionPatientHistory = null;
 
@@ -34,7 +34,7 @@ namespace BreastRadiology.XUnitTests
                        "Patient History",
                        ObservationUrl,
                        $"{Group_BaseResources}/PatientHistory",
-                       out sectionPatientHistory)
+                       out this.sectionPatientHistory)
                    .Description("Patient History Section",
                        new Markdown()
                        .Paragraph("This resource is the head of the tree of previous observations.")

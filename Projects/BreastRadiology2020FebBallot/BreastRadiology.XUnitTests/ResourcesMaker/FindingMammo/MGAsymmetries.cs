@@ -17,9 +17,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask MGAsymmetries()
         {
-            if (mgAsymmetries == null)
-                await CreateMGAsymmetries();
-            return mgAsymmetries;
+            if (this.mgAsymmetries == null)
+                await this.CreateMGAsymmetries();
+            return this.mgAsymmetries;
         }
         String mgAsymmetries = null;
 
@@ -101,7 +101,7 @@ namespace BreastRadiology.XUnitTests
                     "Mammo/Asymmetries",
                     ObservationUrl,
                     $"{Group_MammoResources}/Asymmetry",
-                    out mgAsymmetries)
+                    out this.mgAsymmetries)
                 .Description("Breast Radiology Mammography Asymmetries Observation",
                     new Markdown()
                         .MissingObservation("an asymmetry")
@@ -120,7 +120,6 @@ namespace BreastRadiology.XUnitTests
                 .AddFragRef(await this.BreastBodyLocationRequiredFragment())
                 .AddFragRef(await this.ObservationCodedValueFragment())
                 .AddFragRef(await this.ObservationSectionFragment())
-                .AddExtensionLink(await this.BreastBodyLocationExtension())
             ;
 
             {

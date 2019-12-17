@@ -13,9 +13,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask AimAnnotationPolyLineFragment()
         {
-            if (aimAnnotationPolyLineFragment == null)
-                await CreateAimAnnotationPolyLineFragment();
-            return aimAnnotationPolyLineFragment;
+            if (this.aimAnnotationPolyLineFragment == null)
+                await this.CreateAimAnnotationPolyLineFragment();
+            return this.aimAnnotationPolyLineFragment;
         }
         String aimAnnotationPolyLineFragment = null;
 
@@ -32,14 +32,15 @@ namespace BreastRadiology.XUnitTests
                         "Aim Annotation PolyLine Fragment",
                         "Annotation/PolyLine/Fragment",
                         ObservationUrl,
-                        out aimAnnotationPolyLineFragment)
+                        out this.aimAnnotationPolyLineFragment)
                     .Description("Fragment definition to include AIM Annotation extension",
                         new Markdown()
                         .Paragraph("This fragment adds the references for the AIM Annotation PolyLine extension.")
                         .Todo(
                         )
                      )
-                    .AddFragRef(await this.HeaderFragment());
+                    .AddFragRef(await this.HeaderFragment())
+                    .AddExtensionLink(await this.AimAnnotationPolyLineExtension())
                 ;
                 e
                     .ApplyExtension("polyLineAnnotation", await this.AimAnnotationPolyLineExtension(), true, false)

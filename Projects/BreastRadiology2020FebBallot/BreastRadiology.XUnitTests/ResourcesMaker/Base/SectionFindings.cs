@@ -17,11 +17,11 @@ namespace BreastRadiology.XUnitTests
     {
         public async StringTask SectionFindings()
         {
-            if (sectionFindings == null)
+            if (this.sectionFindings == null)
             {
-                await CreateSectionFindings();
+                await this.CreateSectionFindings();
             }
-            return sectionFindings;
+            return this.sectionFindings;
         }
         String sectionFindings = null;
 
@@ -34,7 +34,7 @@ namespace BreastRadiology.XUnitTests
                        "Findings",
                        ObservationUrl,
                        $"{Group_BaseResources}/Findings",
-                       out sectionFindings)
+                       out this.sectionFindings)
                    .Description("Findings Section",
                        new Markdown()
                        .Paragraph("This resource is the head of the tree of observations made during a breast radiology exam.")
@@ -52,8 +52,8 @@ namespace BreastRadiology.XUnitTests
                    ProfileTargetSlice[] targets = new ProfileTargetSlice[]
                    {
                     new ProfileTargetSlice(await this.BiRadsAssessmentCategory(), 1, "1"),
-                    new ProfileTargetSlice(await SectionFindingsLeftBreast(), 1, "1"),
-                    new ProfileTargetSlice(await SectionFindingsRightBreast(), 1, "1")
+                    new ProfileTargetSlice(await this.SectionFindingsLeftBreast(), 1, "1"),
+                    new ProfileTargetSlice(await this.SectionFindingsRightBreast(), 1, "1")
                    };
                    e.Find("hasMember").SliceByUrl(targets);
                    e.AddProfileTargets(targets);

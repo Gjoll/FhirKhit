@@ -17,9 +17,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask MGCalcification()
         {
-            if (mgCalcification == null)
-                await CreateMGCalcification();
-            return mgCalcification;
+            if (this.mgCalcification == null)
+                await this.CreateMGCalcification();
+            return this.mgCalcification;
         }
         String mgCalcification = null;
 
@@ -32,7 +32,7 @@ namespace BreastRadiology.XUnitTests
                         "Mammo/Calc.",
                         ObservationUrl,
                         $"{Group_MammoResources}/Calcification",
-                        out mgCalcification)
+                        out this.mgCalcification)
                     .Description("Breast Radiology Mammography Calcification Observation",
                         new Markdown()
                             .MissingObservation("a calcification",
@@ -60,7 +60,6 @@ namespace BreastRadiology.XUnitTests
                     .AddFragRef(await this.BreastBodyLocationRequiredFragment())
                     .AddFragRef(await this.ObservationSectionFragment())
                     .AddFragRef(await this.ObservationNoValueFragment())
-                    .AddExtensionLink(await this.BreastBodyLocationExtension())
                     ;
 
                 {
@@ -68,8 +67,8 @@ namespace BreastRadiology.XUnitTests
                     {
                     new ProfileTargetSlice(await this.CommonObservedSize(), 0, "1"),
                     new ProfileTargetSlice(await this.CommonObservedCount(), 0, "1"),
-                    new ProfileTargetSlice(await MGCalcificationType(), 0, "1"),
-                    new ProfileTargetSlice(await MGCalcificationDistribution(), 0, "1"),
+                    new ProfileTargetSlice(await this.MGCalcificationType(), 0, "1"),
+                    new ProfileTargetSlice(await this.MGCalcificationDistribution(), 0, "1"),
                     new ProfileTargetSlice(await this.CommonObservedChanges(), 0, "*"),
                     new ProfileTargetSlice(await this.MGAssociatedFeatures(), 0, "1", false),
                     new ProfileTargetSlice(await this.CommonObservedState(), 0, "1", false)

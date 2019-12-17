@@ -18,9 +18,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask BiRadsAssessmentCategory()
         {
-            if (biRadsAssessmentCategory == null)
-                await CreateBiRadsAssessmentCategory();
-            return biRadsAssessmentCategory;
+            if (this.biRadsAssessmentCategory == null)
+                await this.CreateBiRadsAssessmentCategory();
+            return this.biRadsAssessmentCategory;
         }
         String biRadsAssessmentCategory = null;
 
@@ -104,7 +104,7 @@ namespace BreastRadiology.XUnitTests
                         "BiRads/Assessment/Category",
                         ObservationUrl,
                         $"{Group_CommonResources}/BiRads",
-                        out biRadsAssessmentCategory)
+                        out this.biRadsAssessmentCategory)
                     .Description("BiRads Assessment Category Observation",
                         new Markdown()
                             .BiradHeader()

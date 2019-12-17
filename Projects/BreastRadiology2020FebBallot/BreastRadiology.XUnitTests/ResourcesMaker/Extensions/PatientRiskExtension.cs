@@ -17,9 +17,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask BreastRadiologyPatientRiskExtension()
         {
-            if (breastRadiologyPatientRiskExtension == null)
-                await CreateBreastRadiologyPatientRiskExtension();
-            return breastRadiologyPatientRiskExtension;
+            if (this.breastRadiologyPatientRiskExtension == null)
+                await this.CreateBreastRadiologyPatientRiskExtension();
+            return this.breastRadiologyPatientRiskExtension;
         }
         String breastRadiologyPatientRiskExtension = null;
 
@@ -32,7 +32,7 @@ namespace BreastRadiology.XUnitTests
                     "PatientRisk/Extension",
                     ExtensionUrl,
                      $"{Group_ExtensionResources}/PatientRisk",
-                   out breastRadiologyPatientRiskExtension)
+                   out this.breastRadiologyPatientRiskExtension)
                     .Description("Patient Risk section extension",
                     new Markdown()
                         .Paragraph("This extension defines the PatientRisk section of a breast radiology report, " +

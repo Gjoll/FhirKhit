@@ -16,9 +16,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask MGAxillaryAdenopathy()
         {
-            if (mgAxillaryAdenopathy == null)
-                await CreateMGAxillaryAdenopathy();
-            return mgAxillaryAdenopathy;
+            if (this.mgAxillaryAdenopathy == null)
+                await this.CreateMGAxillaryAdenopathy();
+            return this.mgAxillaryAdenopathy;
         }
         String mgAxillaryAdenopathy = null;
 
@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
                     "Mammo/Axillary/Adenopathy",
                     ObservationUrl,
                     $"{Group_MammoResources}/AssociatedFeature/AxillaryAdenopathy",
-                    out mgAxillaryAdenopathy)
+                    out this.mgAxillaryAdenopathy)
                     .Description("Breast Radiology Mammography Axillary Adenopathy Observation",
                         new Markdown()
                             .MissingObservation("an axillary adenopathy")
@@ -51,7 +51,6 @@ namespace BreastRadiology.XUnitTests
                     .AddFragRef(await this.ObservationNoDeviceFragment())
                     .AddFragRef(await this.ObservationNoValueFragment())
                     .AddFragRef(await this.BreastBodyLocationRequiredFragment())
-                    .AddExtensionLink(await this.BreastBodyLocationExtension())
                     ;
                 e.IntroDoc
                 .ReviewedStatus(ReviewStatus.NotReviewed)

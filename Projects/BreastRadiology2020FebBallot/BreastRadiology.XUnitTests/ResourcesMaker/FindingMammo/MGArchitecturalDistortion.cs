@@ -16,9 +16,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask MGArchitecturalDistortion()
         {
-            if (mgArchitecturalDistortion == null)
-                await CreateMGArchitecturalDistortion();
-            return mgArchitecturalDistortion;
+            if (this.mgArchitecturalDistortion == null)
+                await this.CreateMGArchitecturalDistortion();
+            return this.mgArchitecturalDistortion;
         }
         String mgArchitecturalDistortion = null;
 
@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
                         "Mammo/Arch./Distortion",
                         ObservationUrl,
                         $"{Group_MammoResources}/ArchitecturalDistortion",
-                        out mgArchitecturalDistortion)
+                        out this.mgArchitecturalDistortion)
                     .Description("Breast Radiology Mammography Architectural Distortion Observation",
                         new Markdown()
                             .MissingObservation("an architectural distortion")
@@ -52,7 +52,6 @@ namespace BreastRadiology.XUnitTests
                     .AddFragRef(await this.ObservationNoValueFragment())
                     .AddFragRef(await this.ObservationLeafFragment())
                     .AddFragRef(await this.BreastBodyLocationRequiredFragment())
-                    .AddExtensionLink(await this.BreastBodyLocationExtension())
                     ;
 
                 e.IntroDoc

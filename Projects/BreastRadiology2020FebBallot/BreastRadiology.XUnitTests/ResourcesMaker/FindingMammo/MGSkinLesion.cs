@@ -17,9 +17,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask MGSkinLesion()
         {
-            if (mgSkinLesion == null)
-                await CreateMGSkinLesion();
-            return mgSkinLesion;
+            if (this.mgSkinLesion == null)
+                await this.CreateMGSkinLesion();
+            return this.mgSkinLesion;
         }
         String mgSkinLesion = null;
 
@@ -32,7 +32,7 @@ namespace BreastRadiology.XUnitTests
                     "Mammo/Skin/Lesion",
                     ObservationUrl,
                     $"{Group_MammoResources}/SkinLesion",
-                    out mgSkinLesion)
+                    out this.mgSkinLesion)
                     .Description("Breast Radiology Mammography Skin Lesion Observation",
                         new Markdown()
                             .MissingObservation("a skin lesion")
@@ -50,7 +50,6 @@ namespace BreastRadiology.XUnitTests
                     .AddFragRef(await this.BreastBodyLocationRequiredFragment())
                     .AddFragRef(await this.ObservationNoValueFragment())
                     .AddFragRef(await this.ObservationSectionFragment())
-                    .AddExtensionLink(await this.BreastBodyLocationExtension())
                     ;
 
                 {

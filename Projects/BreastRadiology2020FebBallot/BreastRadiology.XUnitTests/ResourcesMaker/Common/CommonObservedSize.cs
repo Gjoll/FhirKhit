@@ -18,9 +18,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask CommonObservedSize()
         {
-            if (commonObservedSize == null)
-                await CreateCommonObservedSize();
-            return commonObservedSize;
+            if (this.commonObservedSize == null)
+                await this.CreateCommonObservedSize();
+            return this.commonObservedSize;
         }
         String commonObservedSize = null;
 
@@ -33,7 +33,7 @@ namespace BreastRadiology.XUnitTests
                         "Size",
                         ObservationUrl,
                         $"{Group_CommonResources}/ObservedSize",
-                        out commonObservedSize)
+                        out this.commonObservedSize)
                     .Description("Breast Radiology Size Observation",
                         new Markdown()
                             .Paragraph("This observations describes the size of an observed item.",

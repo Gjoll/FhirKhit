@@ -18,9 +18,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask CommonObservedCount()
         {
-            if (commonObservedCount == null)
-                await CreateCommonObservedCount();
-            return commonObservedCount;
+            if (this.commonObservedCount == null)
+                await this.CreateCommonObservedCount();
+            return this.commonObservedCount;
         }
         String commonObservedCount = null;
 
@@ -33,7 +33,7 @@ namespace BreastRadiology.XUnitTests
                         "Count",
                         ObservationUrl,
                         $"{Group_CommonResources}/ObservedCount",
-                        out commonObservedCount)
+                        out this.commonObservedCount)
                     .Description("Breast Radiology Count Observation",
                         new Markdown()
                             .Paragraph("This observations describes the number of discrete items in an observed item.")

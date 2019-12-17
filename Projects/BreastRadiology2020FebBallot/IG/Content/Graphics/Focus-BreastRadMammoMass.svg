@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="473.99997" height="603.75">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="473.99997" height="701.25">
 <defs>
 <marker id="arrowStart" markerWidth="3.75" markerHeight="3.75" markerUnits="px" refX="1.875" refY="1.875">
 <circle fill="Black" stroke-width="0" cx="1.875" cy="1.875" r="1.875" />
@@ -40,9 +40,10 @@
 <line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="253.5" y1="365.625" x2="283.5" y2="365.625" />
 <line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="253.5" y1="425.625" x2="283.5" y2="425.625" />
 <line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="253.5" y1="485.625" x2="283.5" y2="485.625" />
-<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="253.5" y1="545.625" x2="283.5" y2="545.625" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="253.5" y1="555" x2="283.5" y2="555" />
+<line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="253.5" y1="643.125" x2="283.5" y2="643.125" />
 <line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="223.5" y1="33.75" x2="253.5" y2="33.75" />
-<line stroke="Black" stroke-width="1.875" x1="253.5" y1="24.375" x2="253.5" y2="545.625" />
+<line stroke="Black" stroke-width="1.875" x1="253.5" y1="24.375" x2="253.5" y2="643.125" />
 </g>
 <g>
 <g>
@@ -137,18 +138,37 @@
 </a>
 </g>
 <g>
-<rect fill="LightSalmon" stroke="Black" stroke-width="1.875" x="283.5" y="510" width="99" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightSalmon" stroke="Black" stroke-width="1.875" x="283.5" y="510" width="109.49999" height="90" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-AimAnnotatedImagingStudy.html" target="_blank">
+<title>'AimAnnotatedImagingStudy'</title>
+<text x="291" y="532.5">Aim</text>
+</a>
+<a href="./StructureDefinition-AimAnnotatedImagingStudy.html" target="_blank">
+<title>'AimAnnotatedImagingStudy'</title>
+<text x="291" y="551.25">Annotated</text>
+</a>
+<a href="./StructureDefinition-AimAnnotatedImagingStudy.html" target="_blank">
+<title>'AimAnnotatedImagingStudy'</title>
+<text x="291" y="570">Imaging</text>
+</a>
+<a href="./StructureDefinition-AimAnnotatedImagingStudy.html" target="_blank">
+<title>'AimAnnotatedImagingStudy'</title>
+<text x="291" y="588.75">Study</text>
+</a>
+</g>
+<g>
+<rect fill="LightSalmon" stroke="Black" stroke-width="1.875" x="283.5" y="607.5" width="99" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastBodyLocation.html" target="_blank">
 <title>'BreastBodyLocation'</title>
-<text x="291" y="532.5">Breast</text>
+<text x="291" y="630">Breast</text>
 </a>
 <a href="./StructureDefinition-BreastBodyLocation.html" target="_blank">
 <title>'BreastBodyLocation'</title>
-<text x="291" y="551.25">Body</text>
+<text x="291" y="648.75">Body</text>
 </a>
 <a href="./StructureDefinition-BreastBodyLocation.html" target="_blank">
 <title>'BreastBodyLocation'</title>
-<text x="291" y="570">Location</text>
+<text x="291" y="667.5">Location</text>
 </a>
 </g>
 </g>

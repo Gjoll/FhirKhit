@@ -18,9 +18,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask USMassEchoPattern()
         {
-            if (usMassEchoPattern == null)
-                await CreateUSMassEchoPattern();
-            return usMassEchoPattern;
+            if (this.usMassEchoPattern == null)
+                await this.CreateUSMassEchoPattern();
+            return this.usMassEchoPattern;
         }
         String usMassEchoPattern = null;
 
@@ -105,7 +105,7 @@ namespace BreastRadiology.XUnitTests
                         "US Mass/Echo Pattern",
                         ObservationUrl,
                         $"{Group_USResources}/Mass/EchoPattern",
-                        out usMassEchoPattern)
+                        out this.usMassEchoPattern)
                     .Description("Breast Radiology Ultra-Sound Mass Echo Pattern Observation",
                         new Markdown()
                             .BiradHeader()

@@ -18,9 +18,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask BreastRadImpression()
         {
-            if (breastRadImpression == null)
-                await CreateBreastRadImpression();
-            return breastRadImpression;
+            if (this.breastRadImpression == null)
+                await this.CreateBreastRadImpression();
+            return this.breastRadImpression;
         }
         String breastRadImpression = null;
 
@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
                     "Impression",
                     ClinicalImpressionUrl,
                     $"{Group_CommonResources}/BreastRadImpression",
-                    out breastRadImpression)
+                    out this.breastRadImpression)
                 .Description("Breast Radiology Impression (ClinicalImpression)",
                     new Markdown()
                         .Paragraph("Breast radiology exam clinical impression")

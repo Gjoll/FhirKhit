@@ -18,9 +18,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask CommonForeignObject()
         {
-            if (commonForeignObject == null)
-                await CreateCommonForeignObject();
-            return commonForeignObject;
+            if (this.commonForeignObject == null)
+                await this.CreateCommonForeignObject();
+            return this.commonForeignObject;
         }
         String commonForeignObject = null;
 
@@ -149,7 +149,7 @@ namespace BreastRadiology.XUnitTests
                         "ForeignObject",
                         ObservationUrl,
                         $"{Group_CommonResources}/Foreign",
-                        out commonForeignObject)
+                        out this.commonForeignObject)
                     .Description("Breast Radiology Foreign Object Observation",
                         new Markdown()
                             .Paragraph("These are foreign objects found during a breast radiology exam:")

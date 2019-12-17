@@ -19,9 +19,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask AimAnnotationPolyLineExtension()
         {
-            if (aimAnnotationPolyLineExtension == null)
-                await CreateAimAnnotationPolyLineExtension();
-            return aimAnnotationPolyLineExtension;
+            if (this.aimAnnotationPolyLineExtension == null)
+                await this.CreateAimAnnotationPolyLineExtension();
+            return this.aimAnnotationPolyLineExtension;
         }
         String aimAnnotationPolyLineExtension = null;
 
@@ -39,7 +39,7 @@ namespace BreastRadiology.XUnitTests
                     "Annotation/PolyLine/Location",
                     ExtensionUrl,
                     $"{Group_AimResources}/AimAnnotationPolyLineExtension",
-                    out aimAnnotationPolyLineExtension)
+                    out this.aimAnnotationPolyLineExtension)
                     .Description("AIM Annotation PolyLine Extension",
                         new Markdown()
                             .Paragraph("this extension defines the fields that are used to describe a" +

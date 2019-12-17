@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "extension": [
     {
-      "url": "http://www.resourcemap.com/mapname",
+      "url": "http://www.fragment.com/mapname",
       "valueString": "Mammo/Associated/Features"
     },
     {
@@ -14,7 +14,7 @@
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoDeviceFragment"
     },
     {
-      "url": "http://www.resourcemap.com/maplink",
+      "url": "http://www.fragment.com/maplink",
       "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoDeviceFragment"
     },
     {
@@ -22,7 +22,7 @@
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservationSectionFragment"
     },
     {
-      "url": "http://www.resourcemap.com/maplink",
+      "url": "http://www.fragment.com/maplink",
       "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservationSectionFragment"
     },
     {
@@ -30,31 +30,31 @@
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoValueFragment"
     },
     {
-      "url": "http://www.resourcemap.com/maplink",
+      "url": "http://www.fragment.com/maplink",
       "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoValueFragment"
     },
     {
-      "url": "http://www.resourcemap.com/maplink",
+      "url": "http://www.fragment.com/maplink",
       "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoSkinRetraction"
     },
     {
-      "url": "http://www.resourcemap.com/maplink",
+      "url": "http://www.fragment.com/maplink",
       "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoNippleRetraction"
     },
     {
-      "url": "http://www.resourcemap.com/maplink",
+      "url": "http://www.fragment.com/maplink",
       "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoSkinThickening"
     },
     {
-      "url": "http://www.resourcemap.com/maplink",
+      "url": "http://www.fragment.com/maplink",
       "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoAxillaryAdenopathy"
     },
     {
-      "url": "http://www.resourcemap.com/maplink",
+      "url": "http://www.fragment.com/maplink",
       "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoArchitecturalDistortion"
     },
     {
-      "url": "http://www.resourcemap.com/maplink",
+      "url": "http://www.fragment.com/maplink",
       "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoCalcification"
     }
   ],

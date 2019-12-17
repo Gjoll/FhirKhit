@@ -18,9 +18,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask CommonMassShape()
         {
-            if (commonMassShape == null)
-                await CreateCommonMassShape();
-            return commonMassShape;
+            if (this.commonMassShape == null)
+                await this.CreateCommonMassShape();
+            return this.commonMassShape;
         }
         String commonMassShape = null;
 
@@ -79,7 +79,7 @@ namespace BreastRadiology.XUnitTests
                         "Mass/Shape",
                         ObservationUrl,
                         $"{Group_CommonResources}/MassShape",
-                        out commonMassShape)
+                        out this.commonMassShape)
                     .Description("Breast Radiology Mass Shape Observation",
                         new Markdown()
                             .MissingObservation("a mass shape")

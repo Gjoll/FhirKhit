@@ -19,9 +19,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask BreastBodyLocationExtension()
         {
-            if (breastBodyLocationExtension == null)
-                await CreateBreastBodyLocationExtension();
-            return breastBodyLocationExtension;
+            if (this.breastBodyLocationExtension == null)
+                await this.CreateBreastBodyLocationExtension();
+            return this.breastBodyLocationExtension;
         }
         String breastBodyLocationExtension = null;
 
@@ -73,7 +73,7 @@ namespace BreastRadiology.XUnitTests
                     "Breast/Body/Location",
                     ExtensionUrl,
                     $"{Group_ExtensionResources}/BreastBodyLocation",
-                    out breastBodyLocationExtension)
+                    out this.breastBodyLocationExtension)
                     .Description("Breast Body Location extension",
                         new Markdown()
                             .Paragraph("this extension defines the fields that are used to describe the" +

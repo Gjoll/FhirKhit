@@ -16,9 +16,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask MGSkinThickening()
         {
-            if (mgSkinThickening == null)
-                await CreateMGSkinThickening();
-            return mgSkinThickening;
+            if (this.mgSkinThickening == null)
+                await this.CreateMGSkinThickening();
+            return this.mgSkinThickening;
         }
         String mgSkinThickening = null;
 
@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
                     "Mammo/Skin/Thickening",
                     ObservationUrl,
                     $"{Group_MammoResources}/AssociatedFeature/SkinThickening",
-                    out mgSkinThickening)
+                    out this.mgSkinThickening)
                     .Description("Mammography Skin Thickening Observation",
                         new Markdown()
                             .BiradHeader()
@@ -48,7 +48,6 @@ namespace BreastRadiology.XUnitTests
                     .AddFragRef(await this.ObservationNoDeviceFragment())
                     .AddFragRef(await this.ObservationNoValueFragment())
                     .AddFragRef(await this.BreastBodyLocationRequiredFragment())
-                    .AddExtensionLink(await this.BreastBodyLocationExtension())
                     ;
 
                 e.IntroDoc

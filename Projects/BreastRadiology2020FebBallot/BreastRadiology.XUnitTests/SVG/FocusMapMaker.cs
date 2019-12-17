@@ -42,14 +42,14 @@ namespace BreastRadiology.XUnitTests
 
         void LinkNodes()
         {
-            foreach (ResourceMap.Node focusMapNode in map.MapNodes)
+            foreach (ResourceMap.Node focusMapNode in this.map.MapNodes)
             {
                 if (this.focusNodes.TryGetValue(focusMapNode.Name, out FocusNode fragmentFocusNode) == false)
                     throw new Exception($"Internal error. Cant find Focus FocusNode '{focusMapNode.Name}' ");
 
                 foreach (ResourceMap.Link link in focusMapNode.LinksByName("valueSet", "target", "extension"))
                 {
-                    ResourceMap.Node referencedMapNode = map.GetNode(link.ResourceUrl);
+                    ResourceMap.Node referencedMapNode = this.map.GetNode(link.ResourceUrl);
                     fragmentFocusNode.Parents.Add(referencedMapNode);
 
                     if (this.focusNodes.TryGetValue(referencedMapNode.Name, out FocusNode fragmentParentNode) == false)
@@ -89,24 +89,24 @@ namespace BreastRadiology.XUnitTests
             focusGroup.Children.Add(childrenGroup);
 
             {
-                SENode node = CreateNode(fragmentNode.Focus, Color.LightGreen, false);
+                SENode node = this.CreateNode(fragmentNode.Focus, Color.LightGreen, false);
                 focusGroup.Nodes.Add(node);
             }
 
             foreach (ResourceMap.Node childNode in fragmentNode.Children)
             {
-                SENode node = CreateNode(childNode, Color.LightBlue, true);
+                SENode node = this.CreateNode(childNode, Color.LightBlue, true);
                 parentsGroup.Nodes.Add(node);
             }
 
             foreach (ResourceMap.Node parentNode in fragmentNode.Parents)
             {
-                SENode node = CreateNode(parentNode, Color.LightSalmon, true);
+                SENode node = this.CreateNode(parentNode, Color.LightSalmon, true);
                 childrenGroup.Nodes.Add(node);
             }
 
             e.Render(parentsGroup, true);
-            e.Save(Path.Combine(graphicsDir, FocusMapName(fragmentNode.Focus)));
+            e.Save(Path.Combine(this.graphicsDir, FocusMapName(fragmentNode.Focus)));
         }
 
 
@@ -118,7 +118,7 @@ namespace BreastRadiology.XUnitTests
             {
                 if (fragmentNode.Focus.Name.Contains("Fragment") == false)
                 {
-                    Task t = Task.Run(() => GraphNode(fragmentNode));
+                    Task t = Task.Run(() => this.GraphNode(fragmentNode));
                     tasks.Add(t);
                 }
             }
@@ -127,22 +127,22 @@ namespace BreastRadiology.XUnitTests
 
         void CreateNodes()
         {
-            foreach (ResourceMap.Node mapNode in map.MapNodes)
+            foreach (ResourceMap.Node mapNode in this.map.MapNodes)
             {
                 FocusNode fNode = new FocusNode
                 {
                     Focus = mapNode
                 };
-                if (focusNodes.TryAdd(mapNode.Name, fNode) == false)
+                if (this.focusNodes.TryAdd(mapNode.Name, fNode) == false)
                     throw new Exception("Error inserting node into focus node dictionary");
             }
         }
 
         public void Create()
         {
-            CreateNodes();
-            LinkNodes();
-            GraphNodes();
+            this.CreateNodes();
+            this.LinkNodes();
+            this.GraphNodes();
         }
     }
 }

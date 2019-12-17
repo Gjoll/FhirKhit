@@ -12,9 +12,9 @@ namespace BreastRadiology.XUnitTests
     {
         public async StringTask ObservationNoValueFragment()
         {
-            if (observationNoValueFragment == null)
-                await CreateObservationNoValueFragment();
-            return observationNoValueFragment;
+            if (this.observationNoValueFragment == null)
+                await this.CreateObservationNoValueFragment();
+            return this.observationNoValueFragment;
         }
         String observationNoValueFragment = null;
 
@@ -26,7 +26,7 @@ namespace BreastRadiology.XUnitTests
                     "BreastRad Observation NoValue Fragment",
                         "NoValue/Observation/Fragment",
                     ObservationUrl,
-                    out observationNoValueFragment)
+                    out this.observationNoValueFragment)
                     .Description("Fragment that constrains Observations to have no explicit value.",
                         new Markdown()
                             .Paragraph("Base fragment for all BreastRad observations that have no explicit value.")

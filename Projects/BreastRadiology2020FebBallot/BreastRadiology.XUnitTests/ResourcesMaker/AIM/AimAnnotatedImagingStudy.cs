@@ -16,9 +16,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask AimAnnotatedImagingStudy()
         {
-            if (aimAnnotatedImagingStudy == null)
-                await CreateAimAnnotatedImagingStudy();
-            return aimAnnotatedImagingStudy;
+            if (this.aimAnnotatedImagingStudy == null)
+                await this.CreateAimAnnotatedImagingStudy();
+            return this.aimAnnotatedImagingStudy;
         }
         String aimAnnotatedImagingStudy = null;
 
@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
                     "Aim/Annotated/Imaging/Study",
                     ImagingStudyUrl,
                     $"{Group_AimResources}/Aim/AimAnnotatedImagingStudy",
-                    out aimAnnotatedImagingStudy)
+                    out this.aimAnnotatedImagingStudy)
                     .Description("AIM Annotated Imaging Study",
                         new Markdown()
                             .Todo(
@@ -39,7 +39,6 @@ namespace BreastRadiology.XUnitTests
                     )
                     .AddFragRef(await this.AimHeaderFragment())
                     .AddFragRef(await this.AimAnnotationPolyLineFragment())
-                    .AddExtensionLink(await this.AimAnnotationPolyLineExtension())
                     ;
                 e.IntroDoc
                     .ReviewedStatus(ReviewStatus.NotReviewed)

@@ -18,9 +18,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask CommonObservedChanges()
         {
-            if (commonObservedChanges == null)
-                await CreateCommonObservedChanges();
-            return commonObservedChanges;
+            if (this.commonObservedChanges == null)
+                await this.CreateCommonObservedChanges();
+            return this.commonObservedChanges;
         }
         String commonObservedChanges = null;
 
@@ -120,7 +120,7 @@ namespace BreastRadiology.XUnitTests
                         "Changes",
                         ObservationUrl,
                         $"{Group_CommonResources}/ObservedChanges",
-                        out commonObservedChanges)
+                        out this.commonObservedChanges)
                     .Description("Breast Radiology Observed Changes Observation",
                         new Markdown()
                             .MissingObservation("an observed change")

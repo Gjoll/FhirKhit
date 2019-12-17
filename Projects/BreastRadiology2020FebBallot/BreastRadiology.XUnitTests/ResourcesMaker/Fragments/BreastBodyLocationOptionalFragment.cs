@@ -13,9 +13,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask BreastBodyLocationOptionalFragment()
         {
-            if (breastBodyLocationOptionalFragment == null)
-                await CreateBreastBodyLocationOptionalFragment();
-            return breastBodyLocationOptionalFragment;
+            if (this.breastBodyLocationOptionalFragment == null)
+                await this.CreateBreastBodyLocationOptionalFragment();
+            return this.breastBodyLocationOptionalFragment;
         }
         String breastBodyLocationOptionalFragment = null;
 
@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
                                     "Breast Body Location (Optional) Fragment",
                                     "Breast/Body/Location/Fragment/(Optional)",
                                     ObservationUrl,
-                                    out breastBodyLocationOptionalFragment)
+                                    out this.breastBodyLocationOptionalFragment)
                     .Description("Fragment definition for a Optional Breast Body Location",
                         new Markdown()
                         .Paragraph("This fragment adds the references for the breast body location extension.")
@@ -40,6 +40,7 @@ namespace BreastRadiology.XUnitTests
                         )
                      )
                     .AddFragRef(await this.HeaderFragment())
+                    .AddExtensionLink(await this.BreastBodyLocationExtension())
                     ;
                 e
                     .Select("bodySite")

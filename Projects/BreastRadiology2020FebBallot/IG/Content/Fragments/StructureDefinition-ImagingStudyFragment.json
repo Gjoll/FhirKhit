@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "extension": [
     {
-      "url": "http://www.resourcemap.com/mapname",
+      "url": "http://www.fragment.com/mapname",
       "valueString": "ImagingStudy"
     },
     {
@@ -14,7 +14,7 @@
       "valueBoolean": true
     },
     {
-      "url": "http://www.resourcemap.com/maplink",
+      "url": "http://www.fragment.com/maplink",
       "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AimAnnotatedImagingStudy"
     }
   ],

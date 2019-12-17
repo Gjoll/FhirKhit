@@ -18,9 +18,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask Orientation()
         {
-            if (orientation == null)
-                await CreateOrientation();
-            return orientation;
+            if (this.orientation == null)
+                await this.CreateOrientation();
+            return this.orientation;
         }
         String orientation = null;
 
@@ -73,7 +73,7 @@ namespace BreastRadiology.XUnitTests
                         "Orientation",
                         ObservationUrl,
                         $"{Group_CommonResources}/Orientation",
-                        out orientation)
+                        out this.orientation)
                     .Description("Breast Radiology Orientation Observation",
                         new Markdown()
                             .MissingObservation("a orientation")

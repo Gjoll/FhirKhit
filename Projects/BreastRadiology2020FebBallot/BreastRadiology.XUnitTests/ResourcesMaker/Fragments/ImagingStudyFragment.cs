@@ -12,9 +12,9 @@ namespace BreastRadiology.XUnitTests
     {
         public async StringTask ImagingStudyFragment()
         {
-            if (aimImagingStudyFragment == null)
-                await CreateImagingStudyFragment();
-            return aimImagingStudyFragment;
+            if (this.aimImagingStudyFragment == null)
+                await this.CreateImagingStudyFragment();
+            return this.aimImagingStudyFragment;
         }
         String aimImagingStudyFragment = null;
 
@@ -27,7 +27,7 @@ namespace BreastRadiology.XUnitTests
                         "Imaging Study Fragment",
                         "ImagingStudy",
                         ObservationUrl,
-                        out aimImagingStudyFragment)
+                        out this.aimImagingStudyFragment)
                     .Description("Adds references to imaging studies.",
                         new Markdown()
                             .Paragraph("Fragment that adds derivedFrom references to imaging studies, including AIM annotated imaaging study.")

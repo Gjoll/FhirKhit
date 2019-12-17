@@ -12,9 +12,9 @@ namespace BreastRadiology.XUnitTests
     {
         public async StringTask ObservationCodedValueFragment()
         {
-            if (observationCodedValueFragment == null)
-                await CreateObservationCodedValueFragment();
-            return observationCodedValueFragment;
+            if (this.observationCodedValueFragment == null)
+                await this.CreateObservationCodedValueFragment();
+            return this.observationCodedValueFragment;
         }
         String observationCodedValueFragment = null;
 
@@ -30,7 +30,7 @@ namespace BreastRadiology.XUnitTests
                         "CodedValue Observation Fragment",
                         "Observation/CodedValue/Fragment",
                         ObservationUrl,
-                        out observationCodedValueFragment)
+                        out this.observationCodedValueFragment)
                     .Description("Fragment that defines values for coded observations",
                         new Markdown()
                             .Paragraph("This fragment constrains an observation to only contain coded values.")

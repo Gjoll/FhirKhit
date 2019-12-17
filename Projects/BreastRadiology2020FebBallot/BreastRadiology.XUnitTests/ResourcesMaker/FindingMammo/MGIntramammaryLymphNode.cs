@@ -17,9 +17,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask MGIntramammaryLymphNode()
         {
-            if (mgIntramammaryLymphNode == null)
-                await CreateMGIntramammaryLymphNode();
-            return mgIntramammaryLymphNode;
+            if (this.mgIntramammaryLymphNode == null)
+                await this.CreateMGIntramammaryLymphNode();
+            return this.mgIntramammaryLymphNode;
         }
         String mgIntramammaryLymphNode = null;
 
@@ -32,7 +32,7 @@ namespace BreastRadiology.XUnitTests
                     "Mammo/Intramammory/Lymph Node",
                     ObservationUrl,
                     $"{Group_MammoResources}/IntramammaryLymphNode",
-                    out mgIntramammaryLymphNode)
+                    out this.mgIntramammaryLymphNode)
                     .Description("Breast Radiology Mammography Intramammary LymphNode Observation",
                         new Markdown()
                             .MissingObservation("an intramammary lymph node")
@@ -51,7 +51,6 @@ namespace BreastRadiology.XUnitTests
                     .AddFragRef(await this.BreastBodyLocationRequiredFragment())
                     .AddFragRef(await this.ObservationCodedValueFragment())
                     .AddFragRef(await this.ObservationLeafFragment())
-                    .AddExtensionLink(await this.BreastBodyLocationExtension())
                     ;
 
                 e.IntroDoc

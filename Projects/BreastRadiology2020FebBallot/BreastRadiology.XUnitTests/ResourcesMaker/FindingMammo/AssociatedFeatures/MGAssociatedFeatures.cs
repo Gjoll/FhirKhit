@@ -16,9 +16,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask MGAssociatedFeatures()
         {
-            if (mgAssociatedFeatures == null)
-                await CreateMGAssociatedFeatures();
-            return mgAssociatedFeatures;
+            if (this.mgAssociatedFeatures == null)
+                await this.CreateMGAssociatedFeatures();
+            return this.mgAssociatedFeatures;
         }
         String mgAssociatedFeatures = null;
 
@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
                         "Mammo/Associated/Features",
                         ObservationUrl,
                         $"{Group_MammoResources}/AssociatedFeature",
-                        out mgAssociatedFeatures)
+                        out this.mgAssociatedFeatures)
                     .Description("Mammography Associated Features Observation",
                         new Markdown()
                             .Paragraph("Used with masses, asymmetries, or calcifications, or may stand alone as " +

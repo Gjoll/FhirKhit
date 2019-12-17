@@ -12,9 +12,9 @@ namespace BreastRadiology.XUnitTests
     {
         public async StringTask ObservationNoDeviceFragment()
         {
-            if (observationNoDeviceFragment == null)
-                await CreateObservationNoDeviceFragment();
-            return observationNoDeviceFragment;
+            if (this.observationNoDeviceFragment == null)
+                await this.CreateObservationNoDeviceFragment();
+            return this.observationNoDeviceFragment;
         }
         String observationNoDeviceFragment = null;
 
@@ -26,7 +26,7 @@ namespace BreastRadiology.XUnitTests
                     "BreastRad Observation NoDevice Fragment",
                         "NoDevice/Observation/Fragment",
                     ObservationUrl,
-                    out observationNoDeviceFragment)
+                    out this.observationNoDeviceFragment)
                     .Description("Fragment that constrains Observations to have not device data.",
                         new Markdown()
                             .Paragraph("Fragment for all observations that have no device.")

@@ -17,9 +17,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask USMass()
         {
-            if (usMass == null)
-                await CreateUSMass();
-            return usMass;
+            if (this.usMass == null)
+                await this.CreateUSMass();
+            return this.usMass;
         }
         String usMass = null;
 
@@ -32,7 +32,7 @@ namespace BreastRadiology.XUnitTests
                         "US Mass",
                         ObservationUrl,
                         $"{Group_USResources}/Finding/Mass",
-                        out usMass)
+                        out this.usMass)
                     .Description("Breast Radiology Mammography Ultra-Sound Mass Observation",
                         new Markdown()
                             .MissingObservation("a mass", "and no Shape, Orientation, Margin, Echo Pattern, or Posterior Acoustic Feature observations should be referenced by this observation")
@@ -53,7 +53,6 @@ namespace BreastRadiology.XUnitTests
                     .AddFragRef(await this.BreastBodyLocationRequiredFragment())
                     .AddFragRef(await this.ObservationSectionFragment())
                     .AddFragRef(await this.ObservationNoValueFragment())
-                    .AddExtensionLink(await this.BreastBodyLocationExtension())
                     .AddFragRef(await this.ImagingStudyFragment())
                     ;
                 {

@@ -17,9 +17,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask MGCalcificationType()
         {
-            if (mgCalcificationType == null)
-                await CreateMGCalcificationType();
-            return mgCalcificationType;
+            if (this.mgCalcificationType == null)
+                await this.CreateMGCalcificationType();
+            return this.mgCalcificationType;
         }
         String mgCalcificationType = null;
 
@@ -214,7 +214,7 @@ namespace BreastRadiology.XUnitTests
                     "Mammo/Calc./Type",
                     ObservationUrl,
                     $"{Group_MammoResources}/Calcification/Type",
-                    out mgCalcificationType)
+                    out this.mgCalcificationType)
                     .Description("Breast Radiology Mammography Calcification Type Observation",
                         new Markdown()
                             .Paragraph("This resource describes the type of calcification observed.")

@@ -17,11 +17,11 @@ namespace BreastRadiology.XUnitTests
     {
         public async StringTask BreastRadiologyReport()
         {
-            if (breastRadiologyReport == null)
+            if (this.breastRadiologyReport == null)
             {
-                await CreateBreastRadiologyReport();
+                await this.CreateBreastRadiologyReport();
             }
-            return breastRadiologyReport;
+            return this.breastRadiologyReport;
         }
         String breastRadiologyReport = null;
 
@@ -35,7 +35,7 @@ namespace BreastRadiology.XUnitTests
                     "Breast/Radiology/Report",
                     DiagnosticReportUrl,
                     Group_BaseResources,
-                    out breastRadiologyReport)
+                    out this.breastRadiologyReport)
                     .Description("Breast Radiology Diagnostic Report",
                         new Markdown()
                             .Paragraph("This diagnostic report has links to the data that comprise a Breast Radiology Report, including:")

@@ -128,14 +128,17 @@ namespace PreFhir
 
         public static IEnumerable<String> ReferencedFragments(this DomainResource domainResource)
         {
+            List<String> retVal = new List<string>();
             foreach (var extension in domainResource.Extension)
             {
                 if (extension.Url == PreFhirGenerator.FragmentUrl)
                 {
                     FhirUrl fragmentUrl = (FhirUrl)extension.Value;
-                    yield return fragmentUrl.Value;
+                    retVal.Add(fragmentUrl.Value);
                 }
             }
+
+            return retVal;
         }
 
         public static T AddFragRef<T>(this T domainResource, StructureDefinition fragRef)

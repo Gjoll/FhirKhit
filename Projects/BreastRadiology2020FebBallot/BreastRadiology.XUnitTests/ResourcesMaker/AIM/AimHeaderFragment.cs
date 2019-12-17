@@ -16,9 +16,9 @@ namespace BreastRadiology.XUnitTests
     {
         public async StringTask AimHeaderFragment()
         {
-            if (aimHeaderFragment == null)
-                await CreateAimHeaderFragment();
-            return aimHeaderFragment;
+            if (this.aimHeaderFragment == null)
+                await this.CreateAimHeaderFragment();
+            return this.aimHeaderFragment;
         }
         String aimHeaderFragment = null;
 
@@ -30,7 +30,7 @@ namespace BreastRadiology.XUnitTests
                     "Resource",
                     "Common/Header",
                     ResourceUrl,
-                    out aimHeaderFragment);
+                    out this.aimHeaderFragment);
                 ContactDetail cd = new ContactDetail();
                 cd.Telecom.Add(new ContactPoint
                 {

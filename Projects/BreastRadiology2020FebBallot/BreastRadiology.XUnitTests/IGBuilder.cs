@@ -18,7 +18,7 @@ namespace BreastRadiology.XUnitTests
         String pagecontentDir => Path.Combine(this.outputDir, "pagecontent");
         String imagesDir => Path.Combine(this.outputDir, "images");
         //String IgPath => Path.Combine(this.outputDir, "IGBreastRad.json");
-        String ImpGuidePath => Path.Combine(this.outputDir, impGuideName);
+        String ImpGuidePath => Path.Combine(this.outputDir, this.impGuideName);
         String impGuideName;
 
 
@@ -70,19 +70,59 @@ namespace BreastRadiology.XUnitTests
             foreach (String inputPath in Directory.GetFiles(inputDir, inputMask))
             {
                 String outputPath = Path.Combine(outputDir, Path.GetFileName(inputPath));
+
                 File.Copy(inputPath, outputPath, true);
-                fc.Mark(outputPath);
+                this.fc.Mark(outputPath);
+            }
+        }
+
+        void CopyResources(String inputDir, String inputMask, String outputDir)
+        {
+            const String FragmentUrl = "http://www.fragment.com";
+
+            foreach (String inputPath in Directory.GetFiles(inputDir, inputMask))
+            {
+                DomainResource r;
+                switch (Path.GetExtension(inputPath).ToUpper())
+                {
+                    case ".XML":
+                        {
+                            FhirXmlParser parser = new FhirXmlParser();
+                            r = parser.Parse<DomainResource>(File.ReadAllText(inputPath));
+                            break;
+                        }
+
+                    case ".JSON":
+                        {
+                            FhirJsonParser parser = new FhirJsonParser();
+                            r = parser.Parse<DomainResource>(File.ReadAllText(inputPath));
+                            break;
+                        }
+
+                    default:
+                        throw new Exception($"Unknown extension for serialized fhir resource '{inputPath}'");
+                }
+
+                foreach (Extension e in r.Extension.ToArray())
+                {
+                    if (e.Url.StartsWith(FragmentUrl))
+                        r.Extension.Remove(e);
+                }
+
+                String outputPath = Path.Combine(outputDir, Path.GetFileName(inputPath));
+                r.SaveJson(outputPath);
+                this.fc.Mark(outputPath);
             }
         }
 
         public void AddPageContent(String inputDir)
         {
-            CopyFiles(inputDir, "*.xml", this.pagecontentDir);
+            this.CopyFiles(inputDir, "*.xml", this.pagecontentDir);
         }
 
         public void AddImages(String inputDir)
         {
-            CopyFiles(inputDir, "*.svg", this.imagesDir);
+            this.CopyFiles(inputDir, "*.svg", this.imagesDir);
         }
 
         HashSet<String> groupIds = new HashSet<string>();

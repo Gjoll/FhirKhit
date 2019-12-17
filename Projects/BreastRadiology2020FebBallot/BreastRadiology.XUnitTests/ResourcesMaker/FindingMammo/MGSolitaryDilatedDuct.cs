@@ -17,9 +17,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask MGSolitaryDilatedDuct()
         {
-            if (mgSolitaryDilatedDuct == null)
-                await CreateMGSolitaryDilatedDuct();
-            return mgSolitaryDilatedDuct;
+            if (this.mgSolitaryDilatedDuct == null)
+                await this.CreateMGSolitaryDilatedDuct();
+            return this.mgSolitaryDilatedDuct;
         }
         String mgSolitaryDilatedDuct = null;
 
@@ -32,7 +32,7 @@ namespace BreastRadiology.XUnitTests
                         "Mammo/Solitary/Dialated/Duct",
                         ObservationUrl,
                         $"{Group_MammoResources}/SolitaryDilatedDuct",
-                        out mgSolitaryDilatedDuct)
+                        out this.mgSolitaryDilatedDuct)
                     .Description("Breat Radiology Mammography Solitary Dilated Duct Observation",
                         new Markdown()
                             .MissingObservation("a solitary dilated duct")
@@ -49,7 +49,6 @@ namespace BreastRadiology.XUnitTests
                     .AddFragRef(await this.ObservationNoValueFragment())
                     .AddFragRef(await this.ObservationLeafFragment())
                     .AddFragRef(await this.BreastBodyLocationRequiredFragment())
-                    .AddExtensionLink(await this.BreastBodyLocationExtension())
                     ;
 
                 e.IntroDoc

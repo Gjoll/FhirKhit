@@ -18,9 +18,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask CommonObservedState()
         {
-            if (commonObservedState == null)
-                await CreateCommonObservedState();
-            return commonObservedState;
+            if (this.commonObservedState == null)
+                await this.CreateCommonObservedState();
+            return this.commonObservedState;
         }
         String commonObservedState = null;
 
@@ -80,7 +80,7 @@ namespace BreastRadiology.XUnitTests
                         "State",
                         ObservationUrl,
                         $"{Group_CommonResources}/ObservedState",
-                        out commonObservedState)
+                        out this.commonObservedState)
                     .Description("Breast Radiology Observed State Observation",
                         new Markdown()
                             .Paragraph("This observations describes an observed change in a previously observed item.")

@@ -17,9 +17,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask FindingUltraSound()
         {
-            if (findingUltraSound == null)
-                await CreateFindingUltraSound();
-            return findingUltraSound;
+            if (this.findingUltraSound == null)
+                await this.CreateFindingUltraSound();
+            return this.findingUltraSound;
         }
         String findingUltraSound = null;
 
@@ -33,7 +33,7 @@ namespace BreastRadiology.XUnitTests
                         "UltraSound/Finding",
                         ObservationUrl,
                         $"{Group_USResources}",
-                        out findingUltraSound)
+                        out this.findingUltraSound)
                     .Description("Breast Radiology Ultra Sound Finding",
                         new Markdown()
                             .Todo(

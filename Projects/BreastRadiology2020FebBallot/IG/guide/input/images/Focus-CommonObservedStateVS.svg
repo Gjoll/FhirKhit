@@ -12,8 +12,8 @@
 <g>
 <g>
 <rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="7.5" y="7.5" width="67.5" height="33.75" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-BreastRadObservedState.html" target="_blank">
-<title>'BreastRadObservedState'</title>
+<a href="./StructureDefinition-CommonObservedState.html" target="_blank">
+<title>'CommonObservedState'</title>
 <text x="15" y="30">State</text>
 </a>
 </g>

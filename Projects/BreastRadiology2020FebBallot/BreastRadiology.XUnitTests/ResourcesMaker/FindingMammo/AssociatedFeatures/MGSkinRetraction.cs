@@ -16,9 +16,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask MGSkinRetraction()
         {
-            if (mgSkinRetraction == null)
-                await CreateMGSkinRetraction();
-            return mgSkinRetraction;
+            if (this.mgSkinRetraction == null)
+                await this.CreateMGSkinRetraction();
+            return this.mgSkinRetraction;
         }
         String mgSkinRetraction = null;
 
@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
                     "Mammo/Skin/Retraction",
                     ObservationUrl,
                     $"{Group_MammoResources}/AssociatedFeature/SkinRetraction",
-                    out mgSkinRetraction)
+                    out this.mgSkinRetraction)
                     .Description("Mammography Skin Retraction Observation",
                         new Markdown()
                             .Paragraph()
@@ -45,7 +45,6 @@ namespace BreastRadiology.XUnitTests
                     .AddFragRef(await this.ObservationNoDeviceFragment())
                     .AddFragRef(await this.ObservationNoValueFragment())
                     .AddFragRef(await this.BreastBodyLocationRequiredFragment())
-                    .AddExtensionLink(await this.BreastBodyLocationExtension())
                     ;
 
                 e.IntroDoc  

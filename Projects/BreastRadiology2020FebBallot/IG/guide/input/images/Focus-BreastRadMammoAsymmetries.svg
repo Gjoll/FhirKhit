@@ -58,22 +58,22 @@
 </g>
 <g>
 <rect fill="LightSalmon" stroke="Black" stroke-width="1.875" x="346.49997" y="86.25" width="57" height="33.75" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-BreastRadSize.html" target="_blank">
-<title>'BreastRadSize'</title>
+<a href="./StructureDefinition-CommonSize.html" target="_blank">
+<title>'CommonSize'</title>
 <text x="353.99997" y="108.75">Size</text>
 </a>
 </g>
 <g>
 <rect fill="LightSalmon" stroke="Black" stroke-width="1.875" x="346.49997" y="127.5" width="67.5" height="33.75" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-BreastRadCount.html" target="_blank">
-<title>'BreastRadCount'</title>
+<a href="./StructureDefinition-CommonCount.html" target="_blank">
+<title>'CommonCount'</title>
 <text x="353.99997" y="150">Count</text>
 </a>
 </g>
 <g>
 <rect fill="LightSalmon" stroke="Black" stroke-width="1.875" x="346.49997" y="168.75" width="88.5" height="33.75" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-BreastRadObservedChanges.html" target="_blank">
-<title>'BreastRadObservedChanges'</title>
+<a href="./StructureDefinition-CommonObservedChanges.html" target="_blank">
+<title>'CommonObservedChanges'</title>
 <text x="353.99997" y="191.25">Changes</text>
 </a>
 </g>

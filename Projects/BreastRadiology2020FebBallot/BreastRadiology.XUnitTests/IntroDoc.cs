@@ -27,7 +27,7 @@ namespace BreastRadiology.XUnitTests
         public IntroDoc(String outputPath)
         {
             this.outputPath = outputPath;
-            sb
+            this.sb
                 .AppendLine("<div xmlns=\"http://www.w3.org/1999/xhtml\"")
                 .AppendLine("    xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"")
                 .AppendLine("    xsi:schemaLocation=\"http://hl7.org/fhir ../../src-generated/schemas/fhir-single.xsd\">")
@@ -36,13 +36,13 @@ namespace BreastRadiology.XUnitTests
 
         public IntroDoc AddSvgImage(SDefEditor e)
         {
-            AddSvgImage(FocusMapMaker.FocusMapName(e.SDef.Url.LastUriPart()));
+            this.AddSvgImage(FocusMapMaker.FocusMapName(e.SDef.Url.LastUriPart()));
             return this;
         }
 
         IntroDoc AddSvgImage(String svgFileName)
         {
-            sb
+            this.sb
                 .AppendLine($"    <object data=\"{svgFileName}\" type=\"image/svg+xml\">")
                 .AppendLine($"        <img src=\"{svgFileName}\" alt=\"image/svg+xml\" />")
                 .AppendLine($"    </object>")
@@ -92,7 +92,7 @@ namespace BreastRadiology.XUnitTests
 
         public IntroDoc ValueSet(ValueSet binding)
         {
-            AddSvgImage(FocusMapMaker.FocusMapName(binding.Name));
+            this.AddSvgImage(FocusMapMaker.FocusMapName(binding.Name));
             //this
             //    .Paragraph(
             //        $"This resource is a ValueSet."
@@ -120,53 +120,53 @@ namespace BreastRadiology.XUnitTests
 
         public IntroDoc Paragraph(params String[] lines)
         {
-            sb.AppendLine("    <p>");
+            this.sb.AppendLine("    <p>");
             foreach (String line in lines)
             {
-                sb.AppendLine($"{line}");
+                this.sb.AppendLine($"{line}");
             }
-            sb.AppendLine("    </p>");
+            this.sb.AppendLine("    </p>");
             return this;
         }
 
         public IntroDoc List(params String[] items)
         {
-            sb.AppendLine("    <ul>");
+            this.sb.AppendLine("    <ul>");
             foreach (var item in items)
-                sb.AppendLine($"        <li>{item}</li>");
-            sb.AppendLine("    </ul>");
+                this.sb.AppendLine($"        <li>{item}</li>");
+            this.sb.AppendLine("    </ul>");
             return this;
         }
 
         public IntroDoc List(ValueSet binding)
         {
-            sb.AppendLine("    <ul>");
+            this.sb.AppendLine("    <ul>");
             foreach (var include in binding.Compose.Include)
             {
                 switch (include)
                 {
                     case ValueSet.ConceptSetComponent compose:
                         foreach (ValueSet.ConceptReferenceComponent concept in include.Concept)
-                            sb.AppendLine($"        <li>{concept.Code} - {concept.Display}</li>");
+                            this.sb.AppendLine($"        <li>{concept.Code} - {concept.Display}</li>");
                         break;
                     default:
                         throw new NotImplementedException();
                 }
             }
-            sb.AppendLine("    </ul>");
+            this.sb.AppendLine("    </ul>");
             return this;
         }
 
         public String Render()
         {
-            sb.AppendLine("</div>");
-            return sb.ToString();
+            this.sb.AppendLine("</div>");
+            return this.sb.ToString();
         }
 
         public String Save()
         {
             String introHtml = this.Render();
-            File.WriteAllText(outputPath, introHtml);
+            File.WriteAllText(this.outputPath, introHtml);
             return this.outputPath;
         }
     }

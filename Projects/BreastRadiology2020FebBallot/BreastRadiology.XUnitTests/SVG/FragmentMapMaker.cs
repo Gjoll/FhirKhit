@@ -49,14 +49,14 @@ namespace BreastRadiology.XUnitTests
 
         void LinkNodes()
         {
-            foreach (ResourceMap.Node focusMapNode in map.MapNodes)
+            foreach (ResourceMap.Node focusMapNode in this.map.MapNodes)
             {
                 if (this.fragmentNodes.TryGetValue(focusMapNode.Name, out FragmentNode fragmentFocusNode) == false)
                     throw new Exception($"Internal error. Cant find Focus FragmentNode '{focusMapNode.Name}' ");
 
-                foreach (ResourceMap.Link link in FragmentLinks(focusMapNode))
+                foreach (ResourceMap.Link link in this.FragmentLinks(focusMapNode))
                 {
-                    ResourceMap.Node referencedMapNode = map.GetNode(link.ResourceUrl);
+                    ResourceMap.Node referencedMapNode = this.map.GetNode(link.ResourceUrl);
                     fragmentFocusNode.Parents.Add(referencedMapNode);
 
                     if (this.fragmentNodes.TryGetValue(referencedMapNode.Name, out FragmentNode fragmentParentNode) == false)
@@ -75,7 +75,7 @@ namespace BreastRadiology.XUnitTests
                 String title = null;
                 if (linkFlag)
                 {
-                    String fragMapName = FragmentMapName(mapNode);
+                    String fragMapName = this.FragmentMapName(mapNode);
                     hRef = $"./{fragMapName}";
                     title = $"'{fragMapName}'";
                 }
@@ -101,49 +101,49 @@ namespace BreastRadiology.XUnitTests
             focusGroup.Children.Add(childrenGroup);
 
             {
-                SENode node = CreateNode(fragmentNode.Focus, Color.Green, false);
+                SENode node = this.CreateNode(fragmentNode.Focus, Color.Green, false);
                 focusGroup.Nodes.Add(node);
             }
 
             foreach (ResourceMap.Node childNode in fragmentNode.Children)
             {
-                SENode node = CreateNode(childNode, Color.LightBlue, true);
+                SENode node = this.CreateNode(childNode, Color.LightBlue, true);
                 childrenGroup.Nodes.Add(node);
             }
 
             foreach (ResourceMap.Node parentNode in fragmentNode.Parents)
             {
-                SENode node = CreateNode(parentNode, Color.LightCyan, true);
+                SENode node = this.CreateNode(parentNode, Color.LightCyan, true);
                 parentsGroup.Nodes.Add(node);
             }
 
             e.Render(parentsGroup, true);
-            e.Save(Path.Combine(outputDir, FragmentMapName(fragmentNode.Focus)));
+            e.Save(Path.Combine(this.outputDir, this.FragmentMapName(fragmentNode.Focus)));
         }
 
         void GraphNodes()
         {
             foreach (FragmentNode fragmentNode in this.fragmentNodes.Values)
-                GraphNode(fragmentNode);
+                this.GraphNode(fragmentNode);
         }
 
         void CreateNodes()
         {
-            foreach (ResourceMap.Node mapNode in map.MapNodes)
+            foreach (ResourceMap.Node mapNode in this.map.MapNodes)
             {
                 FragmentNode fNode = new FragmentNode
                 {
                     Focus = mapNode
                 };
-                fragmentNodes.Add(mapNode.Name, fNode);
+                this.fragmentNodes.Add(mapNode.Name, fNode);
             }
         }
 
         public void Create()
         {
-            CreateNodes();
-            LinkNodes();
-            GraphNodes();
+            this.CreateNodes();
+            this.LinkNodes();
+            this.GraphNodes();
         }
     }
 }

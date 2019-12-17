@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "extension": [
     {
-      "url": "http://www.resourcemap.com/mapname",
+      "url": "http://www.fragment.com/mapname",
       "valueString": "Breast/Radiology/Report"
     },
     {
@@ -14,7 +14,7 @@
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
     },
     {
-      "url": "http://www.resourcemap.com/maplink",
+      "url": "http://www.fragment.com/maplink",
       "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
     },
     {
@@ -22,31 +22,31 @@
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CategoryFragment"
     },
     {
-      "url": "http://www.resourcemap.com/maplink",
+      "url": "http://www.fragment.com/maplink",
       "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CategoryFragment"
     },
     {
-      "url": "http://www.resourcemap.com/maplink",
+      "url": "http://www.fragment.com/maplink",
       "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadRecommendationsExtension"
     },
     {
-      "url": "http://www.resourcemap.com/maplink",
+      "url": "http://www.fragment.com/maplink",
       "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadPriorReportsExtension"
     },
     {
-      "url": "http://www.resourcemap.com/maplink",
+      "url": "http://www.fragment.com/maplink",
       "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadImpressionsExtension"
     },
     {
-      "url": "http://www.resourcemap.com/maplink",
+      "url": "http://www.fragment.com/maplink",
       "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadPatientRiskExtension"
     },
     {
-      "url": "http://www.resourcemap.com/maplink",
+      "url": "http://www.fragment.com/maplink",
       "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadSectionPatientHistory"
     },
     {
-      "url": "http://www.resourcemap.com/maplink",
+      "url": "http://www.fragment.com/maplink",
       "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadSectionFindings"
     }
   ],

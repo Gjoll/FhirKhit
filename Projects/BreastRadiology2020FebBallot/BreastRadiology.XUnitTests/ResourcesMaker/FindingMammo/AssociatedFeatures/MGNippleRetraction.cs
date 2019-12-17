@@ -16,9 +16,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask MGNippleRetraction()
         {
-            if (mgNippleRetraction == null)
-                await CreateMGNippleRetraction();
-            return mgNippleRetraction;
+            if (this.mgNippleRetraction == null)
+                await this.CreateMGNippleRetraction();
+            return this.mgNippleRetraction;
         }
         String mgNippleRetraction = null;
 
@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
                     "Mammo/Nipple/Retraction",
                     ObservationUrl,
                     $"{Group_MammoResources}/AssociatedFeature/NippleRetraction",
-                    out mgNippleRetraction)
+                    out this.mgNippleRetraction)
                     .Description("Breast Radiology Mammography Nipple Retraction Observation",
                         new Markdown()
                             .MissingObservation("a nipple retraction")
@@ -46,7 +46,6 @@ namespace BreastRadiology.XUnitTests
                     .AddFragRef(await this.ObservationNoDeviceFragment())
                     .AddFragRef(await this.ObservationNoValueFragment())
                     .AddFragRef(await this.BreastBodyLocationRequiredFragment())
-                    .AddExtensionLink(await this.BreastBodyLocationExtension())
                     ;
 
                 e.IntroDoc

@@ -16,9 +16,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask FindingNM()
         {
-            if (findingNM == null)
-                await CreateFindingNM();
-            return findingNM;
+            if (this.findingNM == null)
+                await this.CreateFindingNM();
+            return this.findingNM;
         }
         String findingNM = null;
 
@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
                         "NM/Finding",
                         ObservationUrl,
                         $"{Group_NMResources}",
-                        out findingNM)
+                        out this.findingNM)
                     .Description("Breast Radiology NMgraphy Finding",
                         new Markdown()
                             .Todo(

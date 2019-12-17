@@ -119,14 +119,14 @@ namespace BreastRadiology.XUnitTests
             }
 
             e.Render(rootGroup, true);
-            e.Save(Path.Combine(OutputDir, Overview));
+            e.Save(Path.Combine(this.OutputDir, Overview));
         }
 
         [TestMethod]
         public void BuildFindings()
         {
-            BuildFindings("Left", FindingsLeftBreast);
-            BuildFindings("Right", FindingsRightBreast);
+            this.BuildFindings("Left", FindingsLeftBreast);
+            this.BuildFindings("Right", FindingsRightBreast);
         }
 
 
@@ -204,7 +204,7 @@ namespace BreastRadiology.XUnitTests
             }
 
             e.Render(rootGroup, true);
-            e.Save(Path.Combine(OutputDir, outputName));
+            e.Save(Path.Combine(this.OutputDir, outputName));
         }
 
         [TestMethod]
@@ -258,7 +258,7 @@ namespace BreastRadiology.XUnitTests
             }
 
             e.Render(group1, true);
-            e.Save(Path.Combine(OutputDir, "Shapes.svg"));
+            e.Save(Path.Combine(this.OutputDir, "Shapes.svg"));
         }
     }
 }

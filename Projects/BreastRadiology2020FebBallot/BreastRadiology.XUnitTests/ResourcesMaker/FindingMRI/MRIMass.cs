@@ -17,9 +17,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask MRIMass()
         {
-            if (mriMass == null)
-                await CreateMRIMass();
-            return mriMass;
+            if (this.mriMass == null)
+                await this.CreateMRIMass();
+            return this.mriMass;
         }
         String mriMass = null;
 
@@ -32,7 +32,7 @@ namespace BreastRadiology.XUnitTests
                         "MRI/Mass",
                         ObservationUrl,
                         $"{Group_MRIResources}/Mass",
-                        out mriMass)
+                        out this.mriMass)
                     .Description("Breast Radiology MRIgraphy Mass Observation",
                         new Markdown()
                             .MissingObservation("a mass", "and no Shape, Margin, or Density observations should be referenced by this observation")
@@ -55,8 +55,7 @@ namespace BreastRadiology.XUnitTests
                     .AddFragRef(await this.ObservationSectionFragment())
                     .AddFragRef(await this.ObservationNoValueFragment())
                     .AddFragRef(await this.ImagingStudyFragment())
-                    .AddExtensionLink(await this.BreastBodyLocationExtension())
-                    ;
+;
 
                 {
                     ProfileTargetSlice[] targets = new ProfileTargetSlice[]

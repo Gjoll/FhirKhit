@@ -17,11 +17,11 @@ namespace BreastRadiology.XUnitTests
     {
         public async StringTask SectionFindingsRightBreast()
         {
-            if (sectionFindingsRightBreast == null)
+            if (this.sectionFindingsRightBreast == null)
             {
-                await CreateSectionFindingsRightBreast();
+                await this.CreateSectionFindingsRightBreast();
             }
-            return sectionFindingsRightBreast;
+            return this.sectionFindingsRightBreast;
         }
         String sectionFindingsRightBreast = null;
 
@@ -34,7 +34,7 @@ namespace BreastRadiology.XUnitTests
                        "Right Breast",
                        ObservationUrl,
                        $"{Group_BaseResources}/Findings/RightBreast",
-                       out sectionFindingsRightBreast)
+                       out this.sectionFindingsRightBreast)
                    .Description("Findings Right Breast Section",
                        new Markdown()
                        .Paragraph("This resource is the head of the tree of observations made of the right breast during a breast radiology exam.")

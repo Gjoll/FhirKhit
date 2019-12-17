@@ -18,9 +18,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask BreastRadiologyPriorReportsExtension()
         {
-            if (breastRadiologyPriorReportsExtension == null)
-                await CreateBreastRadiologyPriorReportsExtension();
-            return breastRadiologyPriorReportsExtension;
+            if (this.breastRadiologyPriorReportsExtension == null)
+                await this.CreateBreastRadiologyPriorReportsExtension();
+            return this.breastRadiologyPriorReportsExtension;
         }
         String breastRadiologyPriorReportsExtension = null;
 
@@ -33,7 +33,7 @@ namespace BreastRadiology.XUnitTests
                     "Prior Reports/Extension",
                     ExtensionUrl,
                     $"{Group_ExtensionResources}/PriorReports",
-                    out breastRadiologyPriorReportsExtension)
+                    out this.breastRadiologyPriorReportsExtension)
                     .Description("Prior Diagnostic Report extension",
                         new Markdown()
                             .Paragraph("This extension defines the prior reports section of a breast radiology report, " +
@@ -60,7 +60,7 @@ namespace BreastRadiology.XUnitTests
                     .ReviewedStatus(ReviewStatus.NotReviewed)
                     .Extension("Prior Reports", "include references to prior reports")
                     ;
-                e.AddLink("target", await BreastRadiologyReport(), false);
+                e.AddLink("target", await this.BreastRadiologyReport(), false);
                 return e.SDef.Url;
             });
         }

@@ -18,9 +18,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask CommonHilum()
         {
-            if (commonHilum == null)
-                await CreateCommonHilum();
-            return commonHilum;
+            if (this.commonHilum == null)
+                await this.CreateCommonHilum();
+            return this.commonHilum;
         }
         String commonHilum = null;
 
@@ -64,7 +64,7 @@ namespace BreastRadiology.XUnitTests
                         "Hilum/Shape",
                         ObservationUrl,
                         $"{Group_CommonResources}/Hilum",
-                        out commonHilum)
+                        out this.commonHilum)
                     .Description("Breast Radiology Hilum Observation",
                         new Markdown()
                             .MissingObservation("a hilum")

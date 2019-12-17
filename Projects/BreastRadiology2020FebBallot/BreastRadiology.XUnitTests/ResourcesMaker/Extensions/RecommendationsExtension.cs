@@ -19,9 +19,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask BreastRadiologyRecommendationsExtension()
         {
-            if (breastRadiologyRecommendationsExtension == null)
-                await CreateBreastRadiologyRecommendationsExtension();
-            return breastRadiologyRecommendationsExtension;
+            if (this.breastRadiologyRecommendationsExtension == null)
+                await this.CreateBreastRadiologyRecommendationsExtension();
+            return this.breastRadiologyRecommendationsExtension;
         }
         String breastRadiologyRecommendationsExtension = null;
 
@@ -34,7 +34,7 @@ namespace BreastRadiology.XUnitTests
                     "Recommendations/Extension",
                     ExtensionUrl,
                      $"{Group_ExtensionResources}/Recommendations",
-                   out breastRadiologyRecommendationsExtension)
+                   out this.breastRadiologyRecommendationsExtension)
                     .Description("Diagnostic Report recommendations section extension",
                     new Markdown()
                         .Paragraph("This extension defines the recommendations section of a breast radiology report, " +

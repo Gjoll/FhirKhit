@@ -12,9 +12,9 @@ namespace BreastRadiology.XUnitTests
     {
         public async StringTask ObservationLeafFragment()
         {
-            if (observationLeafFragment == null)
-                await CreateObservationLeafFragment();
-            return observationLeafFragment;
+            if (this.observationLeafFragment == null)
+                await this.CreateObservationLeafFragment();
+            return this.observationLeafFragment;
         }
         String observationLeafFragment = null;
 
@@ -26,7 +26,7 @@ namespace BreastRadiology.XUnitTests
                     "Observation Leaf Fragment",
                         "Observation/Leaf/Fragment",
                     ObservationUrl,
-                    out observationLeafFragment)
+                    out this.observationLeafFragment)
                     .Description("Fragment that contstrains all observations that are leaf nodes.",
                         new Markdown()
                             .Paragraph("Fragment that constrains observations leaf nodes (no hasMembers references).")

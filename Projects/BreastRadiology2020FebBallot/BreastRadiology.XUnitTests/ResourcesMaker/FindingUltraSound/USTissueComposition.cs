@@ -17,9 +17,9 @@ namespace BreastRadiology.XUnitTests
     {
         async StringTask USTissueComposition()
         {
-            if (usTissueComposition == null)
-                await CreateUSTissueComposition();
-            return usTissueComposition;
+            if (this.usTissueComposition == null)
+                await this.CreateUSTissueComposition();
+            return this.usTissueComposition;
         }
         String usTissueComposition = null;
 
@@ -83,7 +83,7 @@ namespace BreastRadiology.XUnitTests
                         "US/Tissue/Composition",
                         ObservationUrl,
                         $"{Group_USResources}/Mass/TissueComposition",
-                        out usTissueComposition)
+                        out this.usTissueComposition)
                     .Description("Breast Radiology Ultra-Sound Tissue Composition Observation",
                         new Markdown()
                             .BiradHeader()

@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "extension": [
     {
-      "url": "http://www.resourcemap.com/mapname",
+      "url": "http://www.fragment.com/mapname",
       "valueString": "Annotation/PolyLine/Location"
     },
     {
@@ -10,8 +10,20 @@
       "valueString": "AimResources/AimAnnotationPolyLineExtension"
     },
     {
-      "url": "http://www.resourcemap.com/maplink",
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AimHeaderFragment"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
       "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AimHeaderFragment"
+    },
+    {
+      "url": "http://www.fragment.com/mapname",
+      "valueString": "Common/Header"
+    },
+    {
+      "url": "http://www.ResourceMaker.com/Group",
+      "valueString": "Fragment/{name}"
     }
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AimAnnotationPolyLineExtension",

@@ -10,8 +10,8 @@ namespace BreastRadiology.XUnitTests
 {
     partial class ResourceMap
     {
-        public const String ResourceMapNameUrl = "http://www.resourcemap.com/mapname";
-        public const String ResourceMapLinkUrl = "http://www.resourcemap.com/maplink";
+        public const String ResourceMapNameUrl = "http://www.fragment.com/mapname";
+        public const String ResourceMapLinkUrl = "http://www.fragment.com/maplink";
 
         Dictionary<String, ResourceMap.Node> resources = new Dictionary<string, ResourceMap.Node>();
 
@@ -60,12 +60,12 @@ namespace BreastRadiology.XUnitTests
 
         public bool TryGetNode(String url, out ResourceMap.Node node)
         {
-            return resources.TryGetValue(url, out node);
+            return this.resources.TryGetValue(url, out node);
         }
 
         public ResourceMap.Node GetNode(String url)
         {
-            if (resources.TryGetValue(url, out ResourceMap.Node node) == false)
+            if (this.resources.TryGetValue(url, out ResourceMap.Node node) == false)
                 throw new Exception($"Map node {url} not found");
             return node;
         }
@@ -108,7 +108,7 @@ namespace BreastRadiology.XUnitTests
 
         public ResourceMap.Node CreateMapNode(String url, String[] mapName, String structureName, String baseName)
         {
-            if (resources.TryGetValue(url, out ResourceMap.Node retVal) == true)
+            if (this.resources.TryGetValue(url, out ResourceMap.Node retVal) == true)
                 throw new Exception($"Map node {url} already exists");
             retVal = new Node(url, mapName, structureName, baseName);
             return retVal;

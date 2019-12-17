@@ -12,9 +12,9 @@ namespace BreastRadiology.XUnitTests
     {
         public async StringTask ObservationFragment()
         {
-            if (observationFragment == null)
-                await CreateObservationFragment();
-            return observationFragment;
+            if (this.observationFragment == null)
+                await this.CreateObservationFragment();
+            return this.observationFragment;
         }
         String observationFragment = null;
 
@@ -30,7 +30,7 @@ namespace BreastRadiology.XUnitTests
                     "BreastRad Observation Fragment",
                         "Observation/Fragment",
                     ObservationUrl,
-                    out observationFragment)
+                    out this.observationFragment)
                     .Description("Base fragment for all BreastRad observations.",
                         new Markdown()
                             .Paragraph("Base fragment that performs common constrains used in all breast radiology observations.")
