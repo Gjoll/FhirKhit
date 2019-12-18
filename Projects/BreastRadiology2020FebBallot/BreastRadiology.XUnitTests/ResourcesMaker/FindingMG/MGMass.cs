@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
                         "Mammo Mass",
                         "Mammo/Mass",
                         ObservationUrl,
-                        $"{Group_MammoResources}/Mass",
+                        $"{Group_MGResources}/Mass",
                         out this.mgMass)
                     .Description("Breast Radiology Mammography Mass Observation",
                         new Markdown()

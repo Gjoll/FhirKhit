@@ -33,7 +33,7 @@ namespace BreastRadiology.XUnitTests
                     "Mammo Mass Density",
                     "Mammo/Mass/Density/Values",
                     "Mammography mass density codes.",
-                    Group_MammoCodes,
+                    Group_MGCodes,
                     new ConceptDef[]
                     {
                     new ConceptDef("HighDensity ",
@@ -79,7 +79,7 @@ namespace BreastRadiology.XUnitTests
                     "Mammo Mass Density",
                     "Mammo/Mass/Density/Values",
                     "Mammography mass density codes.",
-                    Group_MammoCodes,
+                    Group_MGCodes,
                     cs);
 
                 {
@@ -96,7 +96,7 @@ namespace BreastRadiology.XUnitTests
                         "Mammo Mass Density",
                         "Mammo/Mass/Density",
                         ObservationUrl,
-                        $"{Group_MammoResources}/Mass/Density",
+                        $"{Group_MGResources}/Mass/Density",
                         out this.mgMassDensity)
                     .Description("Breast Radiology Mammography Mass Density Observation",
                         new Markdown()

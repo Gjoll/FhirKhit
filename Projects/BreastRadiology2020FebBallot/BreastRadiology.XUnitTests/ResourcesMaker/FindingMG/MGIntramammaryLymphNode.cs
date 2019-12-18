@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
                     "Mammo Intramammary LymphNode",
                     "Mammo/Intramammory/Lymph Node",
                     ObservationUrl,
-                    $"{Group_MammoResources}/IntramammaryLymphNode",
+                    $"{Group_MGResources}/IntramammaryLymphNode",
                     out this.mgIntramammaryLymphNode)
                     .Description("Breast Radiology Mammography Intramammary LymphNode Observation",
                         new Markdown()

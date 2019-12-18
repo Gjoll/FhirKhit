@@ -30,7 +30,7 @@ namespace BreastRadiology.XUnitTests
                     "Mammo Trabecular Thickening",
                     "Mammo/Trabecular/Thickening",
                     ObservationUrl,
-                    $"{Group_MammoResources}/AssociatedFeature/TrabecularThickening",
+                    $"{Group_MGResources}/AssociatedFeature/TrabecularThickening",
                     out this.mgTrabecularThickening)
                     .Description("Trabecular Thickening Observation",
                         new Markdown()

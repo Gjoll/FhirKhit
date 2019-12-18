@@ -30,7 +30,7 @@ namespace BreastRadiology.XUnitTests
                     "Mammo Axillary Adenopathy",
                     "Mammo/Axillary/Adenopathy",
                     ObservationUrl,
-                    $"{Group_MammoResources}/AssociatedFeature/AxillaryAdenopathy",
+                    $"{Group_MGResources}/AssociatedFeature/AxillaryAdenopathy",
                     out this.mgAxillaryAdenopathy)
                     .Description("Breast Radiology Mammography Axillary Adenopathy Observation",
                         new Markdown()

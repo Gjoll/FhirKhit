@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="490.49994" height="2298.75">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="490.49994" height="2520">
 <defs>
 <marker id="arrowStart" markerWidth="3.75" markerHeight="3.75" markerUnits="px" refX="1.875" refY="1.875">
 <circle fill="Black" stroke-width="0" cx="1.875" cy="1.875" r="1.875" />
@@ -332,108 +332,148 @@
 </a>
 </g>
 <g>
-<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="7.5" y="1706.25" width="88.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="7.5" y="1706.25" width="99" height="52.5" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BreastRadUSBoundary.html" target="_blank">
+<title>'BreastRadUSBoundary'</title>
+<text x="15" y="1728.75">US</text>
+</a>
+<a href="./StructureDefinition-BreastRadUSBoundary.html" target="_blank">
+<title>'BreastRadUSBoundary'</title>
+<text x="15" y="1747.5">Boundary</text>
+</a>
+</g>
+<g>
+<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="7.5" y="1766.25" width="141" height="52.5" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BreastRadUSEchoPattern.html" target="_blank">
+<title>'BreastRadUSEchoPattern'</title>
+<text x="15" y="1788.75">US</text>
+</a>
+<a href="./StructureDefinition-BreastRadUSEchoPattern.html" target="_blank">
+<title>'BreastRadUSEchoPattern'</title>
+<text x="15" y="1807.5">Echo Pattern</text>
+</a>
+</g>
+<g>
+<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="7.5" y="1826.25" width="120" height="52.5" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BreastRadUSElasticity.html" target="_blank">
+<title>'BreastRadUSElasticity'</title>
+<text x="15" y="1848.75">US</text>
+</a>
+<a href="./StructureDefinition-BreastRadUSElasticity.html" target="_blank">
+<title>'BreastRadUSElasticity'</title>
+<text x="15" y="1867.5">Elasticity</text>
+</a>
+</g>
+<g>
+<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="7.5" y="1886.25" width="78" height="52.5" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BreastRadUSMargin.html" target="_blank">
+<title>'BreastRadUSMargin'</title>
+<text x="15" y="1908.75">US</text>
+</a>
+<a href="./StructureDefinition-BreastRadUSMargin.html" target="_blank">
+<title>'BreastRadUSMargin'</title>
+<text x="15" y="1927.5">Margin</text>
+</a>
+</g>
+<g>
+<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="7.5" y="1946.25" width="88.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadUSMass.html" target="_blank">
 <title>'BreastRadUSMass'</title>
-<text x="15" y="1728.75">US Mass</text>
+<text x="15" y="1968.75">US Mass</text>
 </a>
 </g>
 <g>
-<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="7.5" y="1747.5" width="141" height="52.5" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-BreastRadUSMassEchoPattern.html" target="_blank">
-<title>'BreastRadUSMassEchoPattern'</title>
-<text x="15" y="1770">US Mass</text>
+<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="7.5" y="1987.5" width="203.99998" height="71.25" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BreastRadUSPosteriorAcousticFeatures.html" target="_blank">
+<title>'BreastRadUSPosteriorAcousticFeatures'</title>
+<text x="15" y="2010">US</text>
 </a>
-<a href="./StructureDefinition-BreastRadUSMassEchoPattern.html" target="_blank">
-<title>'BreastRadUSMassEchoPattern'</title>
-<text x="15" y="1788.75">Echo Pattern</text>
+<a href="./StructureDefinition-BreastRadUSPosteriorAcousticFeatures.html" target="_blank">
+<title>'BreastRadUSPosteriorAcousticFeatures'</title>
+<text x="15" y="2028.75">Posterior Acoustic</text>
 </a>
-</g>
-<g>
-<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="7.5" y="1807.5" width="88.5" height="52.5" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-BreastRadUSMassMargin.html" target="_blank">
-<title>'BreastRadUSMassMargin'</title>
-<text x="15" y="1830">US Mass</text>
-</a>
-<a href="./StructureDefinition-BreastRadUSMassMargin.html" target="_blank">
-<title>'BreastRadUSMassMargin'</title>
-<text x="15" y="1848.75">Margin</text>
+<a href="./StructureDefinition-BreastRadUSPosteriorAcousticFeatures.html" target="_blank">
+<title>'BreastRadUSPosteriorAcousticFeatures'</title>
+<text x="15" y="2047.5">Features</text>
 </a>
 </g>
 <g>
-<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="7.5" y="1867.5" width="203.99998" height="71.25" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-BreastRadUSMassPosteriorAcousticFeatures.html" target="_blank">
-<title>'BreastRadUSMassPosteriorAcousticFeatures'</title>
-<text x="15" y="1890">US Mass</text>
-</a>
-<a href="./StructureDefinition-BreastRadUSMassPosteriorAcousticFeatures.html" target="_blank">
-<title>'BreastRadUSMassPosteriorAcousticFeatures'</title>
-<text x="15" y="1908.75">Posterior Acoustic</text>
-</a>
-<a href="./StructureDefinition-BreastRadUSMassPosteriorAcousticFeatures.html" target="_blank">
-<title>'BreastRadUSMassPosteriorAcousticFeatures'</title>
-<text x="15" y="1927.5">Features</text>
-</a>
-</g>
-<g>
-<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="7.5" y="1946.25" width="130.5" height="71.25" rx="3.75" ry="3.75" />
+<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="7.5" y="2066.25" width="130.5" height="71.25" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-BreastRadUSTissueComposition.html" target="_blank">
 <title>'BreastRadUSTissueComposition'</title>
-<text x="15" y="1968.75">US</text>
+<text x="15" y="2088.75">US</text>
 </a>
 <a href="./StructureDefinition-BreastRadUSTissueComposition.html" target="_blank">
 <title>'BreastRadUSTissueComposition'</title>
-<text x="15" y="1987.5">Tissue</text>
+<text x="15" y="2107.5">Tissue</text>
 </a>
 <a href="./StructureDefinition-BreastRadUSTissueComposition.html" target="_blank">
 <title>'BreastRadUSTissueComposition'</title>
-<text x="15" y="2006.25">Composition</text>
+<text x="15" y="2126.25">Composition</text>
 </a>
 </g>
 <g>
-<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="7.5" y="2025" width="151.49998" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="7.5" y="2145" width="130.5" height="52.5" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-BreastRadUSVascularity.html" target="_blank">
+<title>'BreastRadUSVascularity'</title>
+<text x="15" y="2167.5">US</text>
+</a>
+<a href="./StructureDefinition-BreastRadUSVascularity.html" target="_blank">
+<title>'BreastRadUSVascularity'</title>
+<text x="15" y="2186.25">Vascularity</text>
+</a>
+</g>
+<g>
+<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="7.5" y="2205" width="151.49998" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-CommonForeignObject.html" target="_blank">
 <title>'CommonForeignObject'</title>
-<text x="15" y="2047.5">ForeignObject</text>
+<text x="15" y="2227.5">ForeignObject</text>
 </a>
 </g>
 <g>
-<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="7.5" y="2066.25" width="67.5" height="52.5" rx="3.75" ry="3.75" />
-<a href="./StructureDefinition-CommonMassShape.html" target="_blank">
-<title>'CommonMassShape'</title>
-<text x="15" y="2088.75">Mass</text>
+<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="7.5" y="2246.25" width="67.5" height="52.5" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-CommonHilum.html" target="_blank">
+<title>'CommonHilum'</title>
+<text x="15" y="2268.75">Hilum</text>
 </a>
-<a href="./StructureDefinition-CommonMassShape.html" target="_blank">
-<title>'CommonMassShape'</title>
-<text x="15" y="2107.5">Shape</text>
+<a href="./StructureDefinition-CommonHilum.html" target="_blank">
+<title>'CommonHilum'</title>
+<text x="15" y="2287.5">Shape</text>
 </a>
 </g>
 <g>
-<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="7.5" y="2126.25" width="88.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="7.5" y="2306.25" width="88.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-CommonObservedChanges.html" target="_blank">
 <title>'CommonObservedChanges'</title>
-<text x="15" y="2148.75">Changes</text>
+<text x="15" y="2328.75">Changes</text>
 </a>
 </g>
 <g>
-<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="7.5" y="2167.5" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="7.5" y="2347.5" width="67.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-CommonObservedState.html" target="_blank">
 <title>'CommonObservedState'</title>
-<text x="15" y="2190">State</text>
+<text x="15" y="2370">State</text>
 </a>
 </g>
 <g>
-<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="7.5" y="2208.75" width="130.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="7.5" y="2388.75" width="130.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-CommonOrientation.html" target="_blank">
 <title>'CommonOrientation'</title>
-<text x="15" y="2231.25">Orientation</text>
+<text x="15" y="2411.25">Orientation</text>
 </a>
 </g>
 <g>
-<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="7.5" y="2250" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="7.5" y="2430" width="67.5" height="33.75" rx="3.75" ry="3.75" />
 <a href="./StructureDefinition-MammoShape.html" target="_blank">
 <title>'MammoShape'</title>
-<text x="15" y="2272.5">Shape</text>
+<text x="15" y="2452.5">Shape</text>
+</a>
+</g>
+<g>
+<rect fill="LightBlue" stroke="Black" stroke-width="1.875" x="7.5" y="2471.25" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<a href="./StructureDefinition-UltraSoundShape.html" target="_blank">
+<title>'UltraSoundShape'</title>
+<text x="15" y="2493.75">Shape</text>
 </a>
 </g>
 <line stroke="Black" stroke-width="1.875" marker-end="url(#arrowEnd)" x1="241.49997" y1="43.125" x2="271.49997" y2="43.125" />
@@ -460,18 +500,22 @@
 <line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="85.5" y1="1524.375" x2="241.49997" y2="1524.375" />
 <line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="64.5" y1="1593.75" x2="241.49997" y2="1593.75" />
 <line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="85.5" y1="1663.125" x2="241.49997" y2="1663.125" />
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="96" y1="1723.125" x2="241.49997" y2="1723.125" />
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="148.5" y1="1773.75" x2="241.49997" y2="1773.75" />
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="96" y1="1833.75" x2="241.49997" y2="1833.75" />
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="211.49998" y1="1903.125" x2="241.49997" y2="1903.125" />
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="138" y1="1981.875" x2="241.49997" y2="1981.875" />
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="158.99998" y1="2041.875" x2="241.49997" y2="2041.875" />
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="75" y1="2092.5" x2="241.49997" y2="2092.5" />
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="96" y1="2143.125" x2="241.49997" y2="2143.125" />
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="75" y1="2184.375" x2="241.49997" y2="2184.375" />
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="138" y1="2225.625" x2="241.49997" y2="2225.625" />
-<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="75" y1="2266.875" x2="241.49997" y2="2266.875" />
-<line stroke="Black" stroke-width="1.875" x1="241.49997" y1="43.125" x2="241.49997" y2="2266.875" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="106.5" y1="1732.5" x2="241.49997" y2="1732.5" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="148.5" y1="1792.5" x2="241.49997" y2="1792.5" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="127.5" y1="1852.5" x2="241.49997" y2="1852.5" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="85.5" y1="1912.5" x2="241.49997" y2="1912.5" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="96" y1="1963.125" x2="241.49997" y2="1963.125" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="211.49998" y1="2023.125" x2="241.49997" y2="2023.125" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="138" y1="2101.875" x2="241.49997" y2="2101.875" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="138" y1="2171.25" x2="241.49997" y2="2171.25" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="158.99998" y1="2221.875" x2="241.49997" y2="2221.875" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="75" y1="2272.5" x2="241.49997" y2="2272.5" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="96" y1="2323.125" x2="241.49997" y2="2323.125" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="75" y1="2364.375" x2="241.49997" y2="2364.375" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="138" y1="2405.625" x2="241.49997" y2="2405.625" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="75" y1="2446.875" x2="241.49997" y2="2446.875" />
+<line stroke="Black" stroke-width="1.875" marker-start="url(#arrowStart)" x1="75" y1="2488.125" x2="241.49997" y2="2488.125" />
+<line stroke="Black" stroke-width="1.875" x1="241.49997" y1="43.125" x2="241.49997" y2="2488.125" />
 </g>
 <g>
 <g>

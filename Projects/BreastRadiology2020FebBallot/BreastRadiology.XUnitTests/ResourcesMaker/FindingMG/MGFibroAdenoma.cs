@@ -39,7 +39,7 @@ namespace BreastRadiology.XUnitTests
                         "Mammo Fibroadenoma",
                         "Mammo/Fibroadenoma",
                         ObservationUrl,
-                        $"{Group_MammoResources}/Fibroadenoma",
+                        $"{Group_MGResources}/Fibroadenoma",
                         out this.mgFibroadenoma)
                     .Description("Breast Radiology Mammography Fibroadenoma Observation",
                         new Markdown()

@@ -33,7 +33,7 @@ namespace BreastRadiology.XUnitTests
                         "Shape",
                         "Shape/Values",
                         "Codes defining shape values.",
-                        Group_CommonCodes,
+                        Group_MGCodes,
                         await this.CommonCSShape());
                 {
                     IntroDoc valueSetIntroDoc = new IntroDoc(Path.Combine(this.pageDir, $"ValueSet-{binding.Name}-intro.xml"));
@@ -55,7 +55,6 @@ namespace BreastRadiology.XUnitTests
                         new Markdown()
                             .MissingObservation("a shape")
                             .Todo(
-                            "Make one common codesystem for Mammo and Common shape"
                             )
                     )
                     .AddFragRef(await this.ObservationNoDeviceFragment())

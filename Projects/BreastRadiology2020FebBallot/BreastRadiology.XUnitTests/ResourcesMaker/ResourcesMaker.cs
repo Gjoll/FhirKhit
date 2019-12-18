@@ -34,8 +34,8 @@ namespace BreastRadiology.XUnitTests
         public const String Group_AimResources = "AimResources";
         public const String Group_AimCodes = "AimCodes";
 
-        public const String Group_MammoResources = "MammoResources";
-        public const String Group_MammoCodes = "MammoCodes";
+        public const String Group_MGResources = "MGResources";
+        public const String Group_MGCodes = "MGCodes";
 
         public const String Group_MRIResources = "MRIResources";
         public const String Group_MRICodes = "MRICodes";

@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
                         "Mammo Fat Necrosis",
                         "Mammo/FatNecrosis",
                         ObservationUrl,
-                        $"{Group_MammoResources}/FatNecrosis",
+                        $"{Group_MGResources}/FatNecrosis",
                         out this.mgFatNecrosis)
                     .Description("Breast Radiology Mammography Fat Necrosis Observation",
                         new Markdown()

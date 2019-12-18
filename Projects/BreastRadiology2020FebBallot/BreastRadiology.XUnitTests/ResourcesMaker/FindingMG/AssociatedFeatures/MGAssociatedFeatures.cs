@@ -30,7 +30,7 @@ namespace BreastRadiology.XUnitTests
                         "Mammo Associated Features",
                         "Mammo/Associated/Features",
                         ObservationUrl,
-                        $"{Group_MammoResources}/AssociatedFeature",
+                        $"{Group_MGResources}/AssociatedFeature",
                         out this.mgAssociatedFeatures)
                     .Description("Mammography Associated Features Observation",
                         new Markdown()

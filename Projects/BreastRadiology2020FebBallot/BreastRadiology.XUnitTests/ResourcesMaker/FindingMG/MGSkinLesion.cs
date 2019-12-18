@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
                     "Mammo Skin Lesion",
                     "Mammo/Skin/Lesion",
                     ObservationUrl,
-                    $"{Group_MammoResources}/SkinLesion",
+                    $"{Group_MGResources}/SkinLesion",
                     out this.mgSkinLesion)
                     .Description("Breast Radiology Mammography Skin Lesion Observation",
                         new Markdown()

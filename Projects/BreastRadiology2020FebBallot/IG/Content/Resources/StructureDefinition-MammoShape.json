@@ -111,7 +111,7 @@
       ]
     }
   ],
-  "description": "Breast Radiology Shape Observation\n\nIf this observation is present, and dataAbsentReason is empty, then a shape was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a shape was not observed and dataAbsentReason contains the reason why.\n\n\n*** TODO Items ***** Make one common codesystem for Mammo and Common shape",
+  "description": "Breast Radiology Shape Observation\n\nIf this observation is present, and dataAbsentReason is empty, then a shape was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a shape was not observed and dataAbsentReason contains the reason why.",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -124,7 +124,7 @@
         "id": "Observation",
         "path": "Observation",
         "short": "Breast Radiology Shape Observation",
-        "definition": "If this observation is present, and dataAbsentReason is empty, then a shape was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a shape was not observed and dataAbsentReason contains the reason why.\n\n\n*** TODO Items ***** Make one common codesystem for Mammo and Common shape",
+        "definition": "If this observation is present, and dataAbsentReason is empty, then a shape was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a shape was not observed and dataAbsentReason contains the reason why.",
         "comment": "Used for simple observations such as device measurements, laboratory atomic results, vital signs, height, weight, smoking status, comments, etc.  Other resources are used to provide context for observations such as laboratory reports, etc.",
         "alias": [
           "Vital Signs",
@@ -2439,7 +2439,7 @@
         "id": "Observation",
         "path": "Observation",
         "short": "Breast Radiology Shape Observation",
-        "definition": "If this observation is present, and dataAbsentReason is empty, then a shape was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a shape was not observed and dataAbsentReason contains the reason why.\n\n\n*** TODO Items ***** Make one common codesystem for Mammo and Common shape",
+        "definition": "If this observation is present, and dataAbsentReason is empty, then a shape was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a shape was not observed and dataAbsentReason contains the reason why.",
         "base": {
           "path": "Observation",
           "min": 0,

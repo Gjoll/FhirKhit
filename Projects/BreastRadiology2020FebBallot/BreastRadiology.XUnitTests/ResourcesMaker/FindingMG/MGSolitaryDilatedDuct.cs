@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
                         "Mammo Solitary Dilated Duct",
                         "Mammo/Solitary/Dialated/Duct",
                         ObservationUrl,
-                        $"{Group_MammoResources}/SolitaryDilatedDuct",
+                        $"{Group_MGResources}/SolitaryDilatedDuct",
                         out this.mgSolitaryDilatedDuct)
                     .Description("Breat Radiology Mammography Solitary Dilated Duct Observation",
                         new Markdown()

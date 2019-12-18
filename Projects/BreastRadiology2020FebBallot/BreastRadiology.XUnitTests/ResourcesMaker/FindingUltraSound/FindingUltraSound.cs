@@ -45,7 +45,7 @@ namespace BreastRadiology.XUnitTests
                                 "Can we use the Mammo calcification structure instead?",
                                 "US Special cases (page 155 E.). How to handle?",
                                 "Associated features: " +
-                                $"{Group_MammoResources}/Ultra-Sound/MRI associated fetures are similar. Can we merge?" +
+                                $"{Group_MGResources}/Ultra-Sound/MRI associated fetures are similar. Can we merge?" +
                                 "us has" +
                                 "- Edema" +
                                 "- Vascularity" +
@@ -56,10 +56,10 @@ namespace BreastRadiology.XUnitTests
                                 "mri has" +
                                 "- Skin INvasion" +
                                 "- Nipple Invasion",
-                                $"{Group_MammoResources}/Ultra-Sound/MRI Mass Margin are different." +
+                                $"{Group_MGResources}/Ultra-Sound/MRI Mass Margin are different." +
                                 "Not Circumscribed differently." +
                                 "Can they be aligned?",
-                                $"{Group_MammoResources}/Ultra-Sound/MRI Breast Density similar but not same." +
+                                $"{Group_MGResources}/Ultra-Sound/MRI Breast Density similar but not same." +
                                 "Can they be aligned?"
                             )
                     )

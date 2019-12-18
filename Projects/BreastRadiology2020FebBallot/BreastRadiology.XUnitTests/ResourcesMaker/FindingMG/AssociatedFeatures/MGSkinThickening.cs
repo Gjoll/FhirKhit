@@ -30,7 +30,7 @@ namespace BreastRadiology.XUnitTests
                     "Mammo Skin Thickening",
                     "Mammo/Skin/Thickening",
                     ObservationUrl,
-                    $"{Group_MammoResources}/AssociatedFeature/SkinThickening",
+                    $"{Group_MGResources}/AssociatedFeature/SkinThickening",
                     out this.mgSkinThickening)
                     .Description("Mammography Skin Thickening Observation",
                         new Markdown()

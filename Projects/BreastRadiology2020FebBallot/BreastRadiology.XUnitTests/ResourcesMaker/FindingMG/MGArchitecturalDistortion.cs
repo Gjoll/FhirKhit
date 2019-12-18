@@ -30,7 +30,7 @@ namespace BreastRadiology.XUnitTests
                             "Mammo Architectural Distortion",
                         "Mammo/Arch./Distortion",
                         ObservationUrl,
-                        $"{Group_MammoResources}/ArchitecturalDistortion",
+                        $"{Group_MGResources}/ArchitecturalDistortion",
                         out this.mgArchitecturalDistortion)
                     .Description("Breast Radiology Mammography Architectural Distortion Observation",
                         new Markdown()

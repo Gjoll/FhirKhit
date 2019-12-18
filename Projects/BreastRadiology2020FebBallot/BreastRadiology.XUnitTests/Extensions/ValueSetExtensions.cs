@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BreastRadiology.XUnitTests.Extensions
+namespace BreastRadiology.XUnitTests
 {
     public static class ValueSetExtensions
     {
@@ -20,7 +20,7 @@ namespace BreastRadiology.XUnitTests.Extensions
                     }
                 }
             }
-            return vs;
+            throw new Exception($"Code {code} not found in valueset. Remove failed!");
         }
     }
 }

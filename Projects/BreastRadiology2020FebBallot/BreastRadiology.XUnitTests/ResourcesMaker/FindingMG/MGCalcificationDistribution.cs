@@ -32,7 +32,7 @@ namespace BreastRadiology.XUnitTests
                     "Mammo Calcification Distribution",
                     "Mammo/Calc./Distribution/Values",
                     "Mammography calcification distribution codes.",
-                    Group_MammoCodes,
+                    Group_MGCodes,
                     new ConceptDef[]
                     {
                     new ConceptDef("Diffuse",
@@ -96,7 +96,7 @@ namespace BreastRadiology.XUnitTests
                         "Mammo Calcification Distribution",
                         "Mammo/Calc./Distribution/Values",
                         "Mammography calcification distribution codes.",
-                        Group_MammoCodes,
+                        Group_MGCodes,
                         cs);
 
                 {
@@ -113,7 +113,7 @@ namespace BreastRadiology.XUnitTests
                         "Mammo Calcification Distribution",
                         "Mammo/Calc./Distribution",
                         ObservationUrl,
-                        $"{Group_MammoResources}/Calcification/Distribution",
+                        $"{Group_MGResources}/Calcification/Distribution",
                         out this.mgCalcificationDistribution)
                     .Description("Breast Radiology Mammography Calcification Distribution Observation",
                         new Markdown()

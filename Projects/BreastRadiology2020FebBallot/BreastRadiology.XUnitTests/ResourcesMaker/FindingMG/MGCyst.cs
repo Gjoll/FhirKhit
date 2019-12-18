@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
                         "Mammo Cyst",
                         "Mammo/Cyst",
                         ObservationUrl,
-                        $"{Group_MammoResources}/Cyst",
+                        $"{Group_MGResources}/Cyst",
                         out this.mgCyst)
                     .Description("Breast Radiology Mammography Cyst Observation",
                         new Markdown()

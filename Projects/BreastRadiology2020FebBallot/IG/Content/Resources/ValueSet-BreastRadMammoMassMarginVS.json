@@ -8,7 +8,7 @@
     },
     {
       "url": "http://www.ResourceMaker.com/Group",
-      "valueString": "MammoCodesVS"
+      "valueString": "MGCodesVS"
     },
     {
       "url": "http://www.fragment.com/mapname",
@@ -44,8 +44,12 @@
   "compose": {
     "include": [
       {
-        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadMammoMassMarginCS",
+        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadMarginCS",
         "concept": [
+          {
+            "code": "Angular",
+            "display": "Not Circumscribed - Angular"
+          },
           {
             "code": "Circumscribed",
             "display": "Circumscribed Margin"
@@ -64,7 +68,7 @@
           },
           {
             "code": "Microlobulated",
-            "display": "Microlobulated Margin"
+            "display": "Not Circumscribed - Microlobulated"
           },
           {
             "code": "Obscured",
@@ -72,7 +76,7 @@
           },
           {
             "code": "Spiculated",
-            "display": "Spiculated Margin"
+            "display": "Not Circumscribed - Spiculated"
           }
         ]
       }

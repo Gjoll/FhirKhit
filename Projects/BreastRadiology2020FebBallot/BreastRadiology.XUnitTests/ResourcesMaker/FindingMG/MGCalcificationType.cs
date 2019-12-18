@@ -32,7 +32,7 @@ namespace BreastRadiology.XUnitTests
                     "Mammo Calcification Type",
                     "Mammo/Calc./Type/Values",
                     "Mammography calcification type codes.",
-                    Group_MammoCodes,
+                    Group_MGCodes,
                     new ConceptDef[]
                     {
                     new ConceptDef("Skin",
@@ -203,7 +203,7 @@ namespace BreastRadiology.XUnitTests
                     "Mammo Calcification Type",
                     "Mammo/Calc./Type/Values",
                     "Mammography calcification type codes.",
-                    Group_MammoCodes,
+                    Group_MGCodes,
                     cs);
 
                 {
@@ -220,7 +220,7 @@ namespace BreastRadiology.XUnitTests
                     "Mammo Calcification Type",
                     "Mammo/Calc./Type",
                     ObservationUrl,
-                    $"{Group_MammoResources}/Calcification/Type",
+                    $"{Group_MGResources}/Calcification/Type",
                     out this.mgCalcificationType)
                     .Description("Breast Radiology Mammography Calcification Type Observation",
                         new Markdown()

@@ -31,7 +31,7 @@ namespace BreastRadiology.XUnitTests
                         "Mammo Calcification",
                         "Mammo/Calc.",
                         ObservationUrl,
-                        $"{Group_MammoResources}/Calcification",
+                        $"{Group_MGResources}/Calcification",
                         out this.mgCalcification)
                     .Description("Breast Radiology Mammography Calcification Observation",
                         new Markdown()

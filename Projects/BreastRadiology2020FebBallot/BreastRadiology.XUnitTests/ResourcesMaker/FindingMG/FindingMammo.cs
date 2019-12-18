@@ -30,7 +30,7 @@ namespace BreastRadiology.XUnitTests
                         "Mammo Finding",
                         "Mammo/Finding",
                         ObservationUrl,
-                        $"{Group_MammoResources}",
+                        $"{Group_MGResources}",
                         out this.findingMammo)
                     .Description("Breast Radiology Mammography Finding",
                         new Markdown()

@@ -56,16 +56,22 @@ namespace BreastRadiology.XUnitTests
                 {
                     ProfileTargetSlice[] targets = new ProfileTargetSlice[]
                     {
-                    new ProfileTargetSlice(await this.CommonObservedSize(), 0, "1"),
+                    new ProfileTargetSlice(await this.BiRadsAssessmentCategory(), 0, "1"),
+
                     new ProfileTargetSlice(await this.CommonObservedCount(), 0, "1"),
-                    new ProfileTargetSlice(await this.CommonMassShape(), 0, "1"),
-                    new ProfileTargetSlice(await this.CommonOrientation(), 0, "1"),
-                    new ProfileTargetSlice(await this.USMassMargin(), 0, "*"),
-                    new ProfileTargetSlice(await this.USMassEchoPattern(), 0, "1"),
-                    new ProfileTargetSlice(await this.USMassPosteriorAcousticFeatures(), 0, "1"),
                     new ProfileTargetSlice(await this.CommonObservedChanges(), 0, "*"),
-                    new ProfileTargetSlice(await this.CommonObservedState(), 0, "*")
-                        //new ProfileTargetSlice(await this.MammoAssociatedFeatures, 0, "1", false)
+                    new ProfileTargetSlice(await this.CommonObservedSize(), 0, "1"),
+                    new ProfileTargetSlice(await this.CommonOrientation(), 0, "1"),
+                    new ProfileTargetSlice(await this.CommonObservedState(), 0, "*"),
+                    new ProfileTargetSlice(await this.CommonHilum(), 0, "1"),
+
+                    new ProfileTargetSlice(await this.USBoundary(), 0, "1"),
+                    new ProfileTargetSlice(await this.USEchoPattern(), 0, "1"),
+                    new ProfileTargetSlice(await this.USElasticity(), 0, "1"),
+                    new ProfileTargetSlice(await this.USMargin(), 0, "*"),
+                    new ProfileTargetSlice(await this.USPosteriorAcousticFeatures(), 0, "1"),
+                    new ProfileTargetSlice(await this.USShape(), 0, "1"),
+                    new ProfileTargetSlice(await this.USVascularity(), 0, "1"),
                     };
                     e.Find("hasMember").SliceByUrl(targets);
                     e.AddProfileTargets(targets);

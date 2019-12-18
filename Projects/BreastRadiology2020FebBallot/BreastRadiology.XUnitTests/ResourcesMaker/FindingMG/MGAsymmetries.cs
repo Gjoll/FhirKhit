@@ -30,7 +30,7 @@ namespace BreastRadiology.XUnitTests
                    "Mammo Asymmetries",
                     "Mammo/Asymmetry/Values",
                    "Codes defining types of mammography asymmetries.",
-                    Group_MammoCodes,
+                    Group_MGCodes,
                    new ConceptDef[]
                     {
                         new ConceptDef("Asymmetry",
@@ -90,7 +90,7 @@ namespace BreastRadiology.XUnitTests
                "Mammo Asymmetries",
                 "Mammo/Asymmetry/Values",
                "Codes defining types of mammography asymmetries.",
-                Group_MammoCodes,
+                Group_MGCodes,
                 cs);
 
             {
@@ -107,7 +107,7 @@ namespace BreastRadiology.XUnitTests
                     "Mammo Asymmetries",
                     "Mammo/Asymmetries",
                     ObservationUrl,
-                    $"{Group_MammoResources}/Asymmetry",
+                    $"{Group_MGResources}/Asymmetry",
                     out this.mgAsymmetries)
                 .Description("Breast Radiology Mammography Asymmetries Observation",
                     new Markdown()

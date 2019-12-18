@@ -291,9 +291,9 @@ namespace BreastRadiology.XUnitTests
                 p.AddGrouping($"{ResourcesMaker.Group_CommonCodes}VS", "Common ValueSets ", "This section contains value sets that are commonly used throughout a Breast Radiology Report");
                 p.AddGrouping($"{ResourcesMaker.Group_CommonCodes}CS", "Common CodeSystems", "This section contains code systems that are commonly used throughout a Breast Radiology Report");
 
-                p.AddGrouping($"{ResourcesMaker.Group_MammoResources}", "Mammography Resources", "This section contains resources used specifically in a Mammography exam");
-                p.AddGrouping($"{ResourcesMaker.Group_MammoCodes}VS", "Mammography ValueSets", "This section contains value sets used specifically in a Mammography exam");
-                p.AddGrouping($"{ResourcesMaker.Group_MammoCodes}CS", "Mammography CodeSystems", "This section contains code systems used specifically in a Mammography exam");
+                p.AddGrouping($"{ResourcesMaker.Group_MGResources}", "Mammography Resources", "This section contains resources used specifically in a Mammography exam");
+                p.AddGrouping($"{ResourcesMaker.Group_MGCodes}VS", "Mammography ValueSets", "This section contains value sets used specifically in a Mammography exam");
+                p.AddGrouping($"{ResourcesMaker.Group_MGCodes}CS", "Mammography CodeSystems", "This section contains code systems used specifically in a Mammography exam");
 
                 p.AddGrouping($"{ResourcesMaker.Group_MRIResources}", "MRI Resources", "This section contains resources used specifically in a MRI exam");
                 p.AddGrouping($"{ResourcesMaker.Group_MRICodes}VS", "MRI ValueSets", "This section contains value sets used specifically in a MRI exam");
