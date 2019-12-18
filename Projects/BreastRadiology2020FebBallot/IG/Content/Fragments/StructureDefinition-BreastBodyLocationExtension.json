@@ -69,11 +69,13 @@
       {
         "id": "Extension.extension:laterality",
         "path": "Extension.extension",
-        "sliceName": "laterality"
+        "sliceName": "laterality",
+        "min": 0,
+        "max": "1"
       },
       {
         "id": "Extension.extension:laterality.extension",
-        "path": "Extension.extension",
+        "path": "Extension.extension.extension",
         "min": 0,
         "max": "0"
       },
@@ -97,11 +99,13 @@
       {
         "id": "Extension.extension:quadrant",
         "path": "Extension.extension",
-        "sliceName": "quadrant"
+        "sliceName": "quadrant",
+        "min": 0,
+        "max": "1"
       },
       {
         "id": "Extension.extension:quadrant.extension",
-        "path": "Extension.extension",
+        "path": "Extension.extension.extension",
         "min": 0,
         "max": "0"
       },
@@ -125,11 +129,13 @@
       {
         "id": "Extension.extension:clockDirection",
         "path": "Extension.extension",
-        "sliceName": "clockDirection"
+        "sliceName": "clockDirection",
+        "min": 0,
+        "max": "1"
       },
       {
         "id": "Extension.extension:clockDirection.extension",
-        "path": "Extension.extension",
+        "path": "Extension.extension.extension",
         "min": 0,
         "max": "0"
       },
@@ -153,11 +159,13 @@
       {
         "id": "Extension.extension:depth",
         "path": "Extension.extension",
-        "sliceName": "depth"
+        "sliceName": "depth",
+        "min": 0,
+        "max": "1"
       },
       {
         "id": "Extension.extension:depth.extension",
-        "path": "Extension.extension",
+        "path": "Extension.extension.extension",
         "min": 0,
         "max": "0"
       },

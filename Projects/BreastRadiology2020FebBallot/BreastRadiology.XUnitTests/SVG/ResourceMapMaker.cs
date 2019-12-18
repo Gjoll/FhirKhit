@@ -60,7 +60,7 @@ namespace BreastRadiology.XUnitTests
             foreach (String titlePart in mapNode.MapName)
             {
                 String hRef = $"./{mapNode.StructureName}-{url.LastUriPart()}.html";
-                String title = $"Click -> '{url.LastUriPart()}'";
+                String title = $"{url.LastUriPart()}";
                 String s = titlePart.Trim();
                 node.AddTextLine(s, hRef, title);
             }
@@ -86,20 +86,18 @@ namespace BreastRadiology.XUnitTests
             return false;
         }
 
+        String[] linkNames = new string[] {"extension", "target" };
         /*
          * Add children. If two adjacent children have same children, then dont create each in a seperate
          * group. Have the two nodes point to the same group of children.
          */
         void AddChildren(ResourceMap.Node mapNode,
-            String linkType,
             SENodeGroup group)
         {
-            ResourceMap.Link[] links = mapNode.LinksByName(linkType).ToArray();
-            this.AddChildren(mapNode, linkType, links, group);
+            this.AddChildren(mapNode, mapNode.LinksByName(linkNames).ToArray(), group);
         }
 
         void AddChildren(ResourceMap.Node mapNode,
-            String linkType,
             ResourceMap.Link[] links,
             SENodeGroup group)
         {
@@ -114,7 +112,7 @@ namespace BreastRadiology.XUnitTests
                     ResourceMap.Node childMapNode = this.map.GetNode(link.ResourceUrl);
                     if (link.ShowChildren)
                     {
-                        childMapLinks = childMapNode.LinksByName(linkType).ToArray();
+                        childMapLinks = childMapNode.LinksByName(linkNames).ToArray();
                         if (this.DifferentChildren(previousChildLinks, childMapLinks))
                             previousChildLinks = null;
                     }
@@ -126,7 +124,7 @@ namespace BreastRadiology.XUnitTests
                         groupChild = group.AppendChild("");
                         if (link.ShowChildren)
                         {
-                            this.AddChildren(childMapNode, linkType, childMapLinks, groupChild);
+                            this.AddChildren(childMapNode, childMapLinks, groupChild);
                             previousChildLinks = childMapLinks;
                         }
                     }
@@ -191,13 +189,10 @@ namespace BreastRadiology.XUnitTests
         SENodeGroup CreateNodes(String reportUrl, SvgEditor svgEditor)
         {
             ResourceMap.Node mapNode = this.map.GetNode(reportUrl);
-
             SENodeGroup rootGroup = new SENodeGroup("root");
             SENode rootNode = this.CreateNode(mapNode);
             rootGroup.Nodes.Add(rootNode);
-            this.AddChildren(mapNode, "valueSet", rootGroup);
-            this.AddChildren(mapNode, "target", rootGroup);
-            this.AddChildren(mapNode, "extension", rootGroup);
+            this.AddChildren(mapNode, rootGroup);
             return rootGroup;
         }
     }

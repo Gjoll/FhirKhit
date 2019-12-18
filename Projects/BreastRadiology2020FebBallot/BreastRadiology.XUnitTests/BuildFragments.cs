@@ -245,11 +245,6 @@ namespace BreastRadiology.XUnitTests
 
                 map.AddDir(this.resourcesDir, "*.json");
                 {
-                    FocusMapMaker focusMapMaker = new FocusMapMaker(map, this.graphicsDir, this.pageDir);
-                    focusMapMaker.Create();
-                }
-
-                {
                     ResourceMapMaker resourceMapMaker = new ResourceMapMaker(map);
                     resourceMapMaker.AddLegendItem("DiagnosticReport", Color.LightGreen);
                     resourceMapMaker.AddLegendItem("Extension", Color.LightSalmon);
@@ -265,6 +260,11 @@ namespace BreastRadiology.XUnitTests
 
                     //FragmentMapMaker fragmentMapMaker = new FragmentMapMaker(this, mapDir);
                     //fragmentMapMaker.Create();
+                }
+
+                {
+                    FocusMapMaker focusMapMaker = new FocusMapMaker(map, this.graphicsDir, this.pageDir);
+                    focusMapMaker.Create();
                 }
             }
             catch (Exception err)

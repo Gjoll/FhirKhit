@@ -48,12 +48,14 @@ namespace BreastRadiology.XUnitTests
                     extensionElement
                         .ElementId($"{topExtension.Path}:{sliceName}")
                         .SliceName(sliceName)
+                        .ZeroToOne()
                         ;
                     ElementDefGroup extensionGroup = e.InsertAfter(eGroup, extensionElement);
 
                     ElementDefinition sealExtension = e.Clone("extension");
                     sealExtension
                         .ElementId($"{topExtension.Path}:{sliceName}.extension")
+                        .Path($"{topExtension.Path}.extension")
                         .Zero()
                         ;
                     extensionGroup.RelatedElements.Add(sealExtension);

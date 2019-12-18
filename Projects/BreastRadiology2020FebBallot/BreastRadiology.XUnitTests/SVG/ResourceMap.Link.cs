@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 
 namespace BreastRadiology.XUnitTests
 {
     partial class ResourceMap
     {
+        [DebuggerDisplay("{LinkType}:{ResourceUrl}")]
         public class Link
         {
             /// <summary>
