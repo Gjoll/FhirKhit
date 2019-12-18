@@ -40,7 +40,9 @@ namespace BreastRadiology.XUnitTests
                 }
 
                 void SliceAndBind(String sliceName,
-                    String bindName)
+                    String bindName,
+                    String shortText,
+                    Markdown definition)
                 {
                     ElementDefinition extensionElement = e.Clone("extension");
                     extensionElement
@@ -56,20 +58,22 @@ namespace BreastRadiology.XUnitTests
                         ;
                     extensionGroup.RelatedElements.Add(sealExtension);
 
-                    ElementDefinition lateralityValue = e.Clone("value[x]")
+                    ElementDefinition elementValue = e.Clone("value[x]")
                         .Path($"{topExtension.Path}.value[x]")
                         .ElementId($"{topExtension.Path}:{sliceName}.value[x]")
                         .Type("CodeableConcept")
                         .Binding(bindName, BindingStrength.Required)
                         .Single()
+                        .Short(shortText)
+                        .Definition(definition)
                         ;
-                    extensionGroup.RelatedElements.Add(lateralityValue);
+                    extensionGroup.RelatedElements.Add(elementValue);
                 }
 
                 //breastBodyLocationMapLinks = new List<ResourceMap.Link>();
 
-                e = this.CreateEditor("BreastBodyLocation",
-                    "Breast Body Location",
+                e = this.CreateEditor("BreastBodyLocationExtension",
+                    "Breast Body Location Extension",
                     "Breast/Body/Location",
                     ExtensionUrl,
                     $"{Group_ExtensionResources}/BreastBodyLocation",
@@ -102,7 +106,10 @@ namespace BreastRadiology.XUnitTests
                 topExtension = eGroup.ElementDefinition;
                 topExtension.ConfigureSliceByUrlDiscriminator();
 
-                SliceAndBind("laterality", "http://hl7.org/fhir/ValueSet/bodysite-laterality");
+                SliceAndBind("laterality",
+                    "http://hl7.org/fhir/ValueSet/bodysite-laterality",
+                    "Laterality of the body location",
+                    new Markdown().Paragraph("The laterality of the body location"));
 
                 {
                     CodeSystem cs  = await this.CreateCodeSystem(
@@ -198,7 +205,10 @@ namespace BreastRadiology.XUnitTests
                         this.fc.Mark(outputPath);
                     }
 
-                    SliceAndBind("quadrant", binding.Url);
+                    SliceAndBind("quadrant", 
+                        binding.Url,
+                        "Quadrant of the body location",
+                        new Markdown().Paragraph("The quadrant  of the body location"));
                     AddMapLink(binding);
                 }
 
@@ -351,7 +361,10 @@ namespace BreastRadiology.XUnitTests
                         this.fc.Mark(outputPath);
                     }
 
-                    SliceAndBind("clockDirection", binding.Url);
+                    SliceAndBind("clockDirection",
+                        binding.Url,
+                        "Clock direction of the body location",
+                        new Markdown().Paragraph("The clock direction of the body location."));
                     AddMapLink(binding);
                 }
 
@@ -399,7 +412,10 @@ namespace BreastRadiology.XUnitTests
                         this.fc.Mark(outputPath);
                     }
 
-                    SliceAndBind("depth", binding.Url);
+                    SliceAndBind("depth", 
+                        binding.Url,
+                        "Depth of the body location",
+                        new Markdown().Paragraph("The depth of the body location."));
                     AddMapLink(binding);
                 }
 

@@ -389,6 +389,8 @@ namespace PreFhir
 
             return BoolTask.Run(() =>
            {
+               Debug.Assert(processItem.SDef?.Url != "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationExtension");
+
                Trace.WriteLine($"++++++++ Starting {processItem.Title}");
                this.ConversionInfo(this.GetType().Name,
                     fcn,

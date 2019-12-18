@@ -38,7 +38,6 @@ namespace BreastRadiology.XUnitTests
                             )
                     )
                     .AddFragRef(await this.HeaderFragment())
-                    .AddFragRef(await this.BreastBodyLocationRequiredFragment())
                     .AddFragRef(await this.ObservationFragment())
                     ;
 
