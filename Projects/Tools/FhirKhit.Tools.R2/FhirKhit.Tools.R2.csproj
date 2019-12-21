@@ -5,7 +5,7 @@
     <LangVersion>7.1</LangVersion>
     <Platforms>AnyCPU;x64</Platforms>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>2.10.0</Version>
+    <Version>2.18.0</Version>
     <Authors>Kurt W. Allen</Authors>
     <Company>Eir Solutions, LLC.</Company>
     <PackageProjectUrl>https://github.com/Gjoll/FhirKhit</PackageProjectUrl>
@@ -40,9 +40,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Validation\org.hl7.fhir.validation.cli.jar">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
   <Import Project="..\FhirKhit.Tools.Shar\FhirKhit.Tools.Shar.projitems" Label="PGShared" />

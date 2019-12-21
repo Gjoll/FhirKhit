@@ -5,7 +5,7 @@
     <LangVersion>7.1</LangVersion>
     <Platforms>AnyCPU;x64</Platforms>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>2.10.0</Version>
+    <Version>2.18.0</Version>
     <Authors>Kurt W. Allen</Authors>
     <Company>Eir Solutions, LLC.</Company>
     <PackageProjectUrl>https://github.com/Gjoll/FhirKhit</PackageProjectUrl>
@@ -28,13 +28,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="org.hl7.fhir.validator.jar" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="org.hl7.fhir.validator.jar">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
 
   <ItemGroup>

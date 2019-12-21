@@ -33,9 +33,4 @@
     <Compile Include="$(MSBuildThisFileDirectory)Validation\FhirValidator.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ZipFhirSource.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="$(MSBuildThisFileDirectory)Validation\org.hl7.fhir.validator.jar">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
 </Project>

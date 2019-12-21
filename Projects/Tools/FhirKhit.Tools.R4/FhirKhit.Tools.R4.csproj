@@ -5,7 +5,7 @@
     <LangVersion>7.1</LangVersion>
     <Platforms>AnyCPU;x64</Platforms>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>2.10.0</Version>
+    <Version>2.18.0</Version>
     <Authors>Kurt W. Allen</Authors>
     <Company>Eir Solutions, LLC.</Company>
     <PackageProjectUrl>https://github.com/Gjoll/FhirKhit</PackageProjectUrl>
@@ -29,8 +29,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="$(OutputPath)\Validation\org.hl7.fhir.validator.jar" Pack="true" PackagePath="lib\$(TargetFramework)">
-    </None>
+    <None Include="$(OutputPath)\Hl7.Fhir.R4.Specification.dll" Pack="true" PackagePath="lib\$(TargetFramework)" />
+    <None Include="$(OutputPath)\Hl7.FhirPath.dll" Pack="true" PackagePath="lib\$(TargetFramework)" />
+    <None Include="$(OutputPath)\Hl7.Fhir.Serialization.dll" Pack="true" PackagePath="lib\$(TargetFramework)" />
+    <None Include="$(OutputPath)\Hl7.Fhir.ElementModel.dll" Pack="true" PackagePath="lib\$(TargetFramework)" />
+    <None Include="$(OutputPath)\Hl7.Fhir.Support.Poco.dll" Pack="true" PackagePath="lib\$(TargetFramework)" />
   </ItemGroup>
   
   <ItemGroup>
@@ -44,20 +47,39 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\HL7\fhir-net-api\common\src\Hl7.Fhir.ElementModel\Hl7.Fhir.ElementModel.csproj" />
-    <ProjectReference Include="..\..\..\..\..\HL7\fhir-net-api\common\src\Hl7.Fhir.Serialization\Hl7.Fhir.Serialization.csproj" />
-    <ProjectReference Include="..\..\..\..\..\HL7\fhir-net-api\common\src\Hl7.Fhir.Support.Poco\Hl7.Fhir.Support.Poco.csproj" />
-    <ProjectReference Include="..\..\..\..\..\HL7\fhir-net-api\common\src\Hl7.Fhir.Support\Hl7.Fhir.Support.csproj" />
-    <ProjectReference Include="..\..\..\..\..\HL7\fhir-net-api\common\src\Hl7.FhirPath\Hl7.FhirPath.csproj" />
-    <ProjectReference Include="..\..\..\..\..\HL7\fhir-net-api\src\Hl7.Fhir.Core\Hl7.Fhir.Core.csproj" />
-    <ProjectReference Include="..\..\..\..\..\HL7\fhir-net-api\src\Hl7.Fhir.Specification\Hl7.Fhir.Specification.csproj" />
-    <ProjectReference Include="..\FhirKhit.Tools\FhirKhit.Tools.csproj" />
+    <ProjectReference Include="..\..\..\..\..\HL7\fhir-net-api\common\src\Hl7.Fhir.ElementModel\Hl7.Fhir.ElementModel.csproj">
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <IncludeAssets>all</IncludeAssets>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\HL7\fhir-net-api\common\src\Hl7.Fhir.Serialization\Hl7.Fhir.Serialization.csproj">
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <IncludeAssets>all</IncludeAssets>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\HL7\fhir-net-api\common\src\Hl7.Fhir.Support.Poco\Hl7.Fhir.Support.Poco.csproj">
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <IncludeAssets>all</IncludeAssets>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\HL7\fhir-net-api\common\src\Hl7.Fhir.Support\Hl7.Fhir.Support.csproj">
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <IncludeAssets>all</IncludeAssets>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\HL7\fhir-net-api\common\src\Hl7.FhirPath\Hl7.FhirPath.csproj">
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <IncludeAssets>all</IncludeAssets>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\HL7\fhir-net-api\src\Hl7.Fhir.Core\Hl7.Fhir.Core.csproj">
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <IncludeAssets>all</IncludeAssets>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\HL7\fhir-net-api\src\Hl7.Fhir.Specification\Hl7.Fhir.Specification.csproj">
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <IncludeAssets>all</IncludeAssets>
+    </ProjectReference>
+    <ProjectReference Include="..\FhirKhit.Tools\FhirKhit.Tools.csproj">
+    </ProjectReference>
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Validation\org.hl7.fhir.validation.cli.jar">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
   <Import Project="..\FhirKhit.Tools.Shar\FhirKhit.Tools.Shar.projitems" Label="PGShared" />
@@ -73,6 +95,12 @@
 
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
     <Exec Command="del $(OutDir)..\*.nupkg" />
+  </Target>
+
+  <Target DependsOnTargets="ResolveReferences" Name="CopyProjectReferencesToPackage">
+    <ItemGroup>
+      <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))" />
+    </ItemGroup>
   </Target>
 
 </Project>
