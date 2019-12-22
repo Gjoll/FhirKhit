@@ -46,11 +46,12 @@ namespace PreFhir
         /// </summary>
         public String MergedDir { get; set; } = null;
 
-        FileCleaner fc = new FileCleaner();
+        FileCleaner fc;
 
-        public PreFhirGenerator(String cacheDir)
+        public PreFhirGenerator(FileCleaner fc, String cacheDir)
         {
             const String fcn = "PreFhirGenerator";
+            this.fc = fc;
             if (FhirStructureDefinitions.Self == null)
             {
                 this.ConversionInfo(this.GetType().Name, fcn, $"Init'g 'FhirStructureDefinitions'");
@@ -263,10 +264,8 @@ namespace PreFhir
         /// Save all processed resources to the indicated dir.
         /// </summary>
         /// <param name="outputDir"></param>
-        public void SaveResources(String outputDir, bool cleanFlag)
+        public void SaveResources(String outputDir)
         {
-            if (cleanFlag == true)
-                fc.Add(outputDir, "*.json");
             List<System.Threading.Tasks.Task> tasks = new List<System.Threading.Tasks.Task>();
 
             foreach (ProcessItem processedItem in this.processed.Values)
@@ -277,7 +276,6 @@ namespace PreFhir
                 tasks.Add(t);
             }
             System.Threading.Tasks.Task.WaitAll(tasks.ToArray());
-            fc.Dispose();
         }
 
         /// <summary>
@@ -315,7 +313,7 @@ namespace PreFhir
                       throw new NotImplementedException($"Unimplemented type {processedItem.GetType().Name}");
               }
               await processedItem.Resource.SaveJsonAsync(outputName);
-              this.fc.Mark(outputName);
+              this.fc?.Mark(outputName);
           });
         }
 

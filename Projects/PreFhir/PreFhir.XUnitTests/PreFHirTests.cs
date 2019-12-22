@@ -27,7 +27,7 @@ namespace PreFhir.XUnitTests
 
         PreFhirGenerator CreatePreFhir()
         {
-            PreFhirGenerator preFhir = new PreFhirGenerator(Path.Combine(DirHelper.FindParentDir("PreFhir"), "Cache"));
+            PreFhirGenerator preFhir = new PreFhirGenerator(null, Path.Combine(DirHelper.FindParentDir("PreFhir"), "Cache"));
             preFhir.StatusInfo += this.PreFhir_StatusInfo;
             preFhir.StatusWarnings += this.PreFhir_StatusWarnings;
             preFhir.StatusErrors += this.PreFhir_StatusErrors;

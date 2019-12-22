@@ -15,10 +15,15 @@ namespace FhirKhit.Tools
     {
         public static bool DebugFlag { get; set; } = true;
 
+        public String BlockStart { get; set; } = "//+";
+        public String BlockStartTerm { get; set; } = "";
+        public String BlockEnd { get; set; } = "//-";
+        public String BlockEndTerm { get; set; } = "";
+
         /// <summary>
         /// Strings that make up code file.
         /// </summary>
-        public CodeBlockNested Blocks { get; } = new CodeBlockNested("");
+        public CodeBlockNested Blocks { get; }
 
         public String SavePath { get; set; }
 
@@ -27,6 +32,7 @@ namespace FhirKhit.Tools
         /// </summary>
         public CodeEditor()
         {
+             this.Blocks = new CodeBlockNested(this, "");
         }
 
         /// <summary>

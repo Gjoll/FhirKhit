@@ -70,7 +70,7 @@ namespace PreFhir
                 if (String.IsNullOrEmpty(this.output) == true)
                     throw new Exception($"Output not set");
 
-                this.preFhir = new PreFhirGenerator(".");
+                this.preFhir = new PreFhirGenerator(null, ".");
                 this.ParseArgs(args);
                 String optionsFile = Path.Combine(DirHelper.FindParentDir("PreFhir"), "Options.txt");
                 if (File.Exists(optionsFile))

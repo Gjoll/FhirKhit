@@ -57,7 +57,7 @@ namespace FhirKhit.Tools
                 switch (this.Children.Count)
                 {
                     case 0:
-                        CodeBlockText temp = new CodeBlockText();
+                        CodeBlockText temp = new CodeBlockText(this.owner);
                         this.Children.Add(temp);
                         return temp.Code;
 
@@ -83,7 +83,7 @@ namespace FhirKhit.Tools
                     throw new ArgumentNullException(nameof(value));
 
                 this.startLine = value;
-                this.baseMargin = value.Substring(0, value.IndexOf("//+"));
+                this.baseMargin = value.Substring(0, value.IndexOf(this.owner.BlockStart));
             }
         }
         String startLine;
@@ -103,7 +103,7 @@ namespace FhirKhit.Tools
         /// </summary>
         public List<CodeBlock> Children { get; } = new List<CodeBlock>();
 
-        public CodeBlockNested(String name) : base(name)
+        public CodeBlockNested(CodeEditor owner, String name) : base(owner, name)
         {
         }
 
@@ -164,10 +164,10 @@ namespace FhirKhit.Tools
                 createFlag
             )
             {
-                block = new CodeBlockNested(blockName)
+                block = new CodeBlockNested(this.owner, blockName)
                 {
-                    StartLine = $"{this.MarginString}//+ {blockName}",
-                    EndLine = $"{this.MarginString}//- {blockName}"
+                    StartLine = $"{this.MarginString}{this.owner.BlockStart} {blockName}{this.owner.BlockStartTerm}",
+                    EndLine = $"{this.MarginString}{this.owner.BlockEnd} {blockName}{this.owner.BlockEndTerm}"
                 };
                 this.NamedBlocks.Add(blockName, block);
                 this.Children.Add(block);
@@ -251,13 +251,20 @@ namespace FhirKhit.Tools
                 String line = lines[index++];
                 String s = line.Trim();
 
-                if (s.StartsWith("//+"))
+                if (s.StartsWith(this.owner.BlockStart))
                 {
                     // All blocks start with //+
-                    s = s.Substring(3).Trim();
-                    String blockName = s.Trim();
+                    String blockName = s.Substring(this.owner.BlockStart.Length).Trim();
+                    if (String.IsNullOrEmpty(this.owner.BlockStartTerm) == false)
+                    {
+                        if (blockName.EndsWith(this.owner.BlockStartTerm) == false)
+                            throw new Exception($"Invalid termination for block start '{s}'");
+                        blockName = blockName.Substring(0, blockName.Length - this.owner.BlockStartTerm.Length);
+                    }
 
-                    CodeBlockNested block = new CodeBlockNested(blockName);
+                    blockName = blockName.Trim();
+
+                    CodeBlockNested block = new CodeBlockNested(this.owner, blockName);
                     block.StartLine = line;
                     this.Children.Add(block);
                     if (block.Name.Length > 0)
@@ -265,7 +272,7 @@ namespace FhirKhit.Tools
                     block.DoLoad(lines, ref index);
                     currentBlock = null;
                 }
-                else if (s.StartsWith("//-"))
+                else if (s.StartsWith(this.owner.BlockEnd))
                 {
                     // All blocks end  with //-
                     this.EndLine = line;
@@ -275,7 +282,7 @@ namespace FhirKhit.Tools
                 {
                     if (currentBlock == null)
                     {
-                        currentBlock = new CodeBlockText();
+                        currentBlock = new CodeBlockText(this.owner);
                         this.Children.Add(currentBlock);
                     }
 
@@ -290,10 +297,10 @@ namespace FhirKhit.Tools
         /// <param name="path"></param>
         public CodeBlockNested AppendBlock(String blockName = "")
         {
-            CodeBlockNested block = new CodeBlockNested(blockName)
+            CodeBlockNested block = new CodeBlockNested(this.owner, blockName)
             {
-                StartLine = $"{this.MarginString}//+ {blockName}",
-                EndLine = $"{this.MarginString}//- {blockName}"
+                StartLine = $"{this.MarginString}{this.owner.BlockStart} {blockName}{this.owner.BlockStartTerm}",
+                EndLine = $"{this.MarginString}{this.owner.BlockEnd} {blockName}{this.owner.BlockEndTerm}"
             };
             return AppendBlock(block);
         }
@@ -318,7 +325,7 @@ namespace FhirKhit.Tools
 
             if (currentBlock == null)
             {
-                currentBlock = new CodeBlockText();
+                currentBlock = new CodeBlockText(this.owner);
                 this.Children.Add(currentBlock);
             }
 
@@ -479,8 +486,8 @@ namespace FhirKhit.Tools
             }
             else
             {
-                block.StartLine = $"{this.MarginString}//+ {blockName}";
-                block.EndLine = $"{this.MarginString}//- {blockName}";
+                block.StartLine = $"{this.MarginString}{this.owner.BlockStart} {blockName}{this.owner.BlockStartTerm}";
+                block.EndLine = $"{this.MarginString}{this.owner.BlockEnd} {blockName}{this.owner.BlockEndTerm}";
             }
             this.AppendBlock(block);
             return this;

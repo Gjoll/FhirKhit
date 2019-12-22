@@ -11,7 +11,7 @@ namespace FhirKhit.Tools
         /// </summary>
         public List<String> Code {get; }  = new List<String>();
 
-        public CodeBlockText() : base("")
+        public CodeBlockText(CodeEditor owner) : base(owner, "")
         {
         }
 
