@@ -135,7 +135,7 @@ namespace FhirKhit.Tools
         /// <param name="blockName"></param>
         /// <param name="code"></param>
         /// <returns></returns>
-        public Boolean Replace(String blockName, String code) => this.Replace(blockName, code.ToLines());
+        public Boolean Replace(String blockName, String code, bool addMargin) => this.Replace(blockName, code.ToLines(), addMargin);
 
         /// <summary>
         /// Replace existing block with passed code.
@@ -143,12 +143,12 @@ namespace FhirKhit.Tools
         /// <param name="blockName"></param>
         /// <param name="code"></param>
         /// <returns></returns>
-        public Boolean Replace(String blockName, String[] code)
+        public Boolean Replace(String blockName, String[] code, bool addMargin)
         {
             if (this.NamedBlocks.TryGetValue(blockName, out CodeBlockNested block) == false)
                 return false;
             block.Children.Clear();
-            block.Load(code);
+            block.Load(code, addMargin);
             return true;
         }
 
@@ -228,21 +228,21 @@ namespace FhirKhit.Tools
         /// Load code from 
         /// </summary>
         /// <param name="path"></param>
-        public void Load(String[] lines)
+        public void Load(String[] lines, bool addMargin)
         {
             if (lines is null)
                 throw new ArgumentNullException(nameof(lines));
 
             this.Children.Clear();
             Int32 index = 0;
-            this.DoLoad(lines, ref index);
+            this.DoLoad(lines, addMargin, ref index);
         }
 
         /// <summary>
         /// Load code from 
         /// </summary>
         /// <param name="path"></param>
-        void DoLoad(String[] lines, ref Int32 index)
+        void DoLoad(String[] lines, bool addMargin, ref Int32 index)
         {
             CodeBlockText currentBlock = null;
 
@@ -269,7 +269,7 @@ namespace FhirKhit.Tools
                     this.Children.Add(block);
                     if (block.Name.Length > 0)
                         this.NamedBlocks.Add(block.Name, block);
-                    block.DoLoad(lines, ref index);
+                    block.DoLoad(lines, addMargin, ref index);
                     currentBlock = null;
                 }
                 else if (s.StartsWith(this.owner.BlockEnd))
@@ -286,7 +286,10 @@ namespace FhirKhit.Tools
                         this.Children.Add(currentBlock);
                     }
 
-                    currentBlock.Code.Add($"{this.MarginString}{line}");
+                    if (addMargin)
+                        currentBlock.Code.Add($"{this.MarginString}{line}");
+                    else
+                        currentBlock.Code.Add(line);
                 }
             }
         }

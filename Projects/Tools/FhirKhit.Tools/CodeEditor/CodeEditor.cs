@@ -44,7 +44,7 @@ namespace FhirKhit.Tools
             if (File.Exists(path) == false)
                 throw new Exception($"File '{path}' not found");
             String[] lines = File.ReadAllLines(path);
-            this.Load(lines);
+            this.Load(lines, false);
             this.SavePath = path;
         }
 
@@ -81,6 +81,6 @@ namespace FhirKhit.Tools
         /// Load code from 
         /// </summary>
         /// <param name="path"></param>
-        public void Load(String[] lines) => this.Blocks.Load(lines);
+        public void Load(String[] lines, bool addMargin = true) => this.Blocks.Load(lines, addMargin);
     }
 }
