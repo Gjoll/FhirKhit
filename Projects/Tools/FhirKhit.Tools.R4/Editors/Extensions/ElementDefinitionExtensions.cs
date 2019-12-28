@@ -94,8 +94,15 @@ namespace FhirKhit.Tools.R4
             return e;
         }
 
+        public static ElementDefinition Pattern(this ElementDefinition e,
+            ElementDefinition p)
+        {
+            e.Pattern = p;
+            return e;
+        }
+
         public static ElementDefinition Type(this ElementDefinition e,
-            ElementDefinition.TypeRefComponent[] types)
+        ElementDefinition.TypeRefComponent[] types)
         {
             // Rename Value[x] to ValueCodeableConcept if type is set to one type of codeable concept.
             // Currently commentes out cause it does not appear to be necessary and it screws up the firely code.
