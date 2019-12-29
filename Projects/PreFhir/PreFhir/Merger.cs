@@ -34,6 +34,10 @@ namespace PreFhir
             const String fcn = "Merge";
 
             elementsMerged = false;
+
+            if (this.baseItem.CheckCompatible(mergeItem, this.preFhir) == false)
+                return false;
+
             try
             {
                 if (this.preFhir.DebugFlag)

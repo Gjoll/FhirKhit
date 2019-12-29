@@ -4,6 +4,7 @@ using Hl7.Fhir.Model;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Text;
 
 namespace PreFhir
@@ -14,6 +15,23 @@ namespace PreFhir
     [DebuggerDisplay("{Title}")]
     class ProcessItem
     {
+        /// <summary>
+        /// Cache TreeNode's of base fhir resoruces.
+        /// This is faster than recreating them each time.
+        /// </summary>
+        static Dictionary<String, ElementTreeNode> originalNodes = new Dictionary<string, ElementTreeNode>();
+
+        /// <summary>
+        /// Hashset of all fragments included in this fragment,
+        /// </summary>
+        HashSet<ProcessItem> includedFragments = new HashSet<ProcessItem>();
+
+        /// <summary>
+        /// HashSet of all fragments that are incompatible with this one. Any attempt to 
+        /// merge with one of these fragments will cause an error.
+        /// </summary>
+        HashSet<String> incompatibleFragments = new HashSet<string>();
+
         public String Title => Resource.GetUrl().LastUriPart();
 
         public bool FragmentFlag { get; private set; }
@@ -50,6 +68,13 @@ namespace PreFhir
         {
             this.info = info;
             this.Resource = resource;
+
+            // Load incompatible extensions.
+            foreach (Extension extension in resource.GetExtensions(PreFhirGenerator.IncompatibleFragmentUrl))
+            {
+                FhirUrl imcompatibleUrl = (FhirUrl)extension.Value;
+                this.incompatibleFragments.Add(imcompatibleUrl.Value);
+            }
         }
 
         public bool LoadMerge()
@@ -64,13 +89,66 @@ namespace PreFhir
         }
 
         /// <summary>
-        /// Cache TreeNode's of base fhir resoruces.
-        /// This is faster than recreating them each time.
+        /// Check if fragment is compatible.
         /// </summary>
-        static Dictionary<String, ElementTreeNode> originalNodes = new Dictionary<string, ElementTreeNode>();
+        bool CheckCompatible(String url)
+        {
+            return this.incompatibleFragments.Contains(url) == false;
+        }
+
+        public bool AddIncludedFragment(ProcessItem fragment)
+        {
+            if (this.includedFragments.Contains(fragment) == true)
+                return true;
+
+            this.includedFragments.Add(fragment);
+            return false;
+        }
+
+        bool DoCheckCompatible(ProcessItem mergeItem,
+            IConversionInfo conversionInfo)
+        {
+            const String fcn = "CheckCompatible";
+
+            if (this.incompatibleFragments.Contains(mergeItem.Resource.GetUrl()))
+            {
+                conversionInfo.ConversionError(this.GetType().Name,
+                    fcn,
+                    $"Fragment {mergeItem.Resource.GetUrl()} is not compatible with {this.Resource.GetUrl()}.");
+                return false;
+            }
+
+            foreach (ProcessItem includedFragment in this.includedFragments)
+            {
+                if (includedFragment.CheckCompatible(mergeItem, conversionInfo) == false)
+                    return false;
+            }
+            return true;
+        }
+
+        /// <summary>
+        /// Check if item is compatible.
+        /// </summary>
+        public bool CheckCompatible(ProcessItem mergeItem,
+        IConversionInfo conversionInfo)
+        {
+            const String fcn = "CheckCompatible";
+
+            bool retVal = true;
+            if (DoCheckCompatible(mergeItem, conversionInfo) == false)
+            {
+                conversionInfo.ConversionError(this.GetType().Name,
+                    fcn,
+                    $"    {this.Resource.GetUrl()}.");
+                return false;
+            }
+
+            return retVal;
+        }
+
 
         ElementTreeNode GetSnapNodeOriginal(StructureDefinition sDef,
-            ElementTreeLoader l)
+        ElementTreeLoader l)
         {
             const String fcn = "LoadBase";
 
@@ -92,7 +170,7 @@ namespace PreFhir
                     SnapshotCreator.Create(SBaseDef);
                 retVal = l.Create(SBaseDef.Snapshot.Element); ;
                 originalNodes.Add(sDef.BaseDefinition, retVal);
-            return retVal;
+                return retVal;
             }
         }
 

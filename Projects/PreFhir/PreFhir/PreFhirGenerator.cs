@@ -40,6 +40,7 @@ namespace PreFhir
 
         public const String FragmentUrl = "http://www.fragment.com/fragment";
         public const String IsFragmentUrl = "http://www.fragment.com/isFragment";
+        public const String IncompatibleFragmentUrl = "http://www.fragment.com/incompatibleFragment";
 
         /// <summary>
         /// Is not null, save merged files here (done before differential from base computed).
@@ -386,41 +387,51 @@ namespace PreFhir
                 throw new Exception($"Error removing item from unprocessed list"); ;
 
             return BoolTask.Run(() =>
-           {
-               Trace.WriteLine($"++++++++ Starting {processItem.Title}");
-               this.ConversionInfo(this.GetType().Name,
-                    fcn,
-                    $"Processing {processItem.Resource.GetName()}");
-               bool mergedFlag = false;
-               foreach (String fragmentUrl in processItem.Resource.ReferencedFragments())
-               {
-                   if (this.processed.TryGetValue(fragmentUrl, out ProcessItem fragment) == false)
-                       throw new Exception("Processed fragment {fragmentUrl} not found in processed dictionary");
-                   this.ConversionInfo(this.GetType().Name,
-                        fcn,
-                        $"Merging fragment {fragment.Resource.GetName()} into {processItem.Resource.GetName()}");
-                   Merger m = new Merger(this, processItem, fragment);
-                   if (m.Merge(out bool mergedElements) == false)
-                   {
-                       this.ConversionError(this.GetType().Name, fcn, $"Merge of fragment {fragment.Resource.GetName()} into {processItem.Resource.GetName()} failed ");
-                       return false;
-                   }
-                   if (mergedElements == true)
-                       mergedFlag = true;
-               }
-               if (mergedFlag == true)
-                   this.FixDifferential(processItem);
+            {
+                Trace.WriteLine($"++++++++ Starting {processItem.Title}");
+                this.ConversionInfo(this.GetType().Name,
+                     fcn,
+                     $"Processing {processItem.Resource.GetName()}");
+                bool mergedFlag = false;
+                foreach (String fragmentUrl in processItem.Resource.ReferencedFragments())
+                {
+                    if (this.processed.TryGetValue(fragmentUrl, out ProcessItem fragment) == false)
+                        throw new Exception("Processed fragment {fragmentUrl} not found in processed dictionary");
 
-           // save intermediate merged file?
-           if (String.IsNullOrEmpty(this.MergedDir) == false)
-                   SaveResourceAsync(MergedDir, processItem).Wait();
+                    if (processItem.AddIncludedFragment(fragment) == true)
+                    {
+                        this.ConversionWarn(this.GetType().Name,
+                             fcn,
+                             $"Fragment {fragment.Resource.GetName()} has already been included");
+                    }
+                    else
+                    {
+                        this.ConversionInfo(this.GetType().Name,
+                             fcn,
+                             $"Merging fragment {fragment.Resource.GetName()} into {processItem.Resource.GetName()}");
+                        Merger m = new Merger(this, processItem, fragment);
+                        if (m.Merge(out bool mergedElements) == false)
+                        {
+                            this.ConversionError(this.GetType().Name, fcn, $"Merge of fragment {fragment.Resource.GetName()} into {processItem.Resource.GetName()} failed ");
+                            return false;
+                        }
+                        if (mergedElements == true)
+                            mergedFlag = true;
+                    }
+                }
+                if (mergedFlag == true)
+                    this.FixDifferential(processItem);
 
-               if (this.processed.TryAdd(processItem.Resource.GetUrl(), processItem) == false)
-                   throw new Exception($"Error adding item to Processed list"); ;
+                // save intermediate merged file?
+                if (String.IsNullOrEmpty(this.MergedDir) == false)
+                    SaveResourceAsync(MergedDir, processItem).Wait();
 
-               Trace.WriteLine($"-------- Completed{processItem.Title}");
-               return true;
-           });
+                if (this.processed.TryAdd(processItem.Resource.GetUrl(), processItem) == false)
+                    throw new Exception($"Error adding item to Processed list"); ;
+
+                Trace.WriteLine($"-------- Completed{processItem.Title}");
+                return true;
+            });
         }
 
         void FixDifferential(ProcessItem processedItem)
