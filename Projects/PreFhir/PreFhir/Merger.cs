@@ -65,6 +65,8 @@ namespace PreFhir
                         }
 
                     case StructureDefinition mergeSDef:
+                        if (this.mergeItem.SDef.Differential == null)
+                            return true;
                         if (this.mergeItem.SDef.Differential.Element.Count() == 0)
                             return true;
                         this.mergeItem.LoadMerge();

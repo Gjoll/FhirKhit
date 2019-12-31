@@ -66,6 +66,15 @@ namespace PreFhir
             return node;
         }
 
+        public ElementTreeNode CreateNode(ElementDefinition elementDefinition)
+        {
+            ElementTreeNode node = new ElementTreeNode(elementDefinition.Path, 
+                elementDefinition.Path.LastPathPart(), 
+                elementDefinition);
+            this.Nodes.Add(node);
+            return node;
+        }
+
         /// <summary>
         /// value[x] can also be references as valueCode or valueString. 
         /// register alias' for these names as well.

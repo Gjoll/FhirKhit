@@ -119,10 +119,11 @@ namespace PreFhir
             {
                 ElementDefinition loadItem = loadItems[itemIndex];
 
-                if (
-                    (loadItem.Path.Length <= path.Length) ||
-                    (loadItem.Path.StartsWith(path) == false)
-                    )
+                if (loadItem.Path.Length <= path.Length)
+                    return;
+                if (loadItem.Path.StartsWith(path) == false)
+                    return;
+                if ((path.Length > 0) && (loadItem.Path[path.Length] != '.'))
                     return;
 
                 String newPath = path;

@@ -443,10 +443,18 @@ namespace PreFhir
                 fcn,
                 $"Computing differential for {processedItem.Resource.GetName()}");
 
-            ElementTreeDiffer differ = new ElementTreeDiffer(this);
             ElementTreeNode differentialNode = processedItem.SnapNode.Clone();
-            if (differ.Process(processedItem.SnapNodeOriginal, differentialNode) == false)
-                return;
+            {
+                ElementTreeDiffer differ = new ElementTreeDiffer(this);
+                if (differ.Process(processedItem.SnapNodeOriginal, differentialNode) == false)
+                    return;
+            }
+            {
+                ElementTreeSetBase setBase= new ElementTreeSetBase(this);
+                if (setBase.Process(processedItem.SnapNodeOriginal, differentialNode) == false)
+                    return;
+            }
+
             {
                 processedItem.DiffNode = differentialNode;
                 List<ElementDefinition> elementDefinitions = new List<ElementDefinition>();

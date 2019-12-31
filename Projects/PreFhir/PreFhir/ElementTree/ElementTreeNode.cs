@@ -21,7 +21,7 @@ namespace PreFhir
     ///    X.A.B
     ///    X.A.B.Z
     ///    X.A.C
-    ///    the ElementTree sould liik like this
+    ///    the ElementTree would like like this
     ///    ElementTreeNode
     ///     ElementSlice (contains ElementDefinition 'X')
     ///       ElementTreeNode
@@ -86,6 +86,58 @@ namespace PreFhir
             this.Path = this.Path.ReplacePathBase(newBase);
             foreach (ElementTreeSlice slice in this)
                 slice.ReplaceBasePath(newBase);
+        }
+
+        /// <summary>
+        /// Create new slice.
+        /// </summary>
+        public ElementTreeSlice CreateSlice(String sliceName)
+        {
+            ElementDefinition baseElement = this.ElementDefinition;
+            ElementDefinition elementDefinition = new ElementDefinition
+            {
+                Path = $"{baseElement.Path}",
+                ElementId = $"{baseElement.ElementId}:{sliceName}",
+                SliceName = sliceName
+            };
+            ElementTreeSlice nodeSlice = new ElementTreeSlice(this, sliceName, elementDefinition);
+            this.Slices.Add(nodeSlice);
+            return nodeSlice;
+        }
+
+        public void ApplySlicing(ElementDefinition.SlicingComponent slicingComponent,
+            bool overrideExistingSliceDiscriminator)
+        {
+            bool NonCompatible()
+            {
+                if (this.ElementDefinition.Slicing == null)
+                    return false;
+                if (this.ElementDefinition.Slicing.Ordered != slicingComponent.Ordered)
+                    return true;
+                if (this.ElementDefinition.Slicing.Rules != slicingComponent.Rules)
+                    return true;
+                if (this.ElementDefinition.Slicing.Discriminator.Count != slicingComponent.Discriminator.Count)
+                    return true;
+                for (Int32 i = 0; i < slicingComponent.Discriminator.Count; i++)
+                {
+                    if (slicingComponent.Discriminator[i].Type != this.ElementDefinition.Slicing.Discriminator[i].Type)
+                        return true;
+                    if (slicingComponent.Discriminator[i].Path != this.ElementDefinition.Slicing.Discriminator[i].Path)
+                        return true;
+                }
+
+                return false;
+            }
+
+            if (overrideExistingSliceDiscriminator)
+                this.ElementDefinition.Slicing = null;
+            if (this.ElementDefinition.Slicing != null)
+            {
+                if (NonCompatible() == true)
+                    throw new Exception($"Slicing already defined in a noncompatible manner");
+                return;
+            }
+            this.ElementDefinition.Slicing = slicingComponent;
         }
 
         /// <summary>

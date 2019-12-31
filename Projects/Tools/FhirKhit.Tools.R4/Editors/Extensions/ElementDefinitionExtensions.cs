@@ -57,6 +57,17 @@ namespace FhirKhit.Tools.R4
             return e;
         }
 
+        public static ElementDefinition SetBase(this ElementDefinition e, ElementDefinition eBase)
+        {
+            e.Base = new ElementDefinition.BaseComponent
+            {
+                Path = eBase.Path,
+                Min = eBase.Min,
+                Max = eBase.Max
+            };
+            return e;
+        }
+
         public static ElementDefinition Card(this ElementDefinition e, Int32 min, String max)
         {
             e.Min = min;

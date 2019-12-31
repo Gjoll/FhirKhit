@@ -107,6 +107,7 @@ namespace PreFhir
                     modifiedElement.SliceIsConstraining = Compare.ClearIfSame(originalElement.SliceIsConstraining, modifiedElement.SliceIsConstraining);
                     modifiedElement.Label = Compare.ClearIfSame(originalElement.Label, modifiedElement.Label);
                     modifiedElement.Code = Compare.ClearIfSame(originalElement.Code, modifiedElement.Code);
+                    modifiedElement.Constraint = Compare.ClearIfSame(originalElement.Constraint, modifiedElement.Constraint);
                     modifiedElement.Slicing = Compare.ClearIfSame(originalElement.Slicing, modifiedElement.Slicing);
                     modifiedElement.Short = Compare.ClearIfSame(originalElement.Short, modifiedElement.Short);
                     modifiedElement.Definition = Compare.ClearIfSame(originalElement.Definition, modifiedElement.Definition);
