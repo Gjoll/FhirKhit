@@ -388,7 +388,7 @@ namespace PreFhir
 
             return BoolTask.Run(() =>
             {
-                Trace.WriteLine($"++++++++ Starting {processItem.Title}");
+                //Trace.WriteLine($"++++++++ Starting {processItem.Title}");
                 this.ConversionInfo(this.GetType().Name,
                      fcn,
                      $"Processing {processItem.Resource.GetName()}");
@@ -429,7 +429,7 @@ namespace PreFhir
                 if (this.processed.TryAdd(processItem.Resource.GetUrl(), processItem) == false)
                     throw new Exception($"Error adding item to Processed list"); ;
 
-                Trace.WriteLine($"-------- Completed{processItem.Title}");
+                //Trace.WriteLine($"-------- Completed{processItem.Title}");
                 return true;
             });
         }
