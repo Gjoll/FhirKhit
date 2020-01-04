@@ -20,10 +20,20 @@ namespace FhirKhit.Tools
         public String BlockEnd { get; set; } = "//-";
         public String BlockEndTerm { get; set; } = "";
 
+        public bool IgnoreMacrosInQuotedStrings {get; set; }  = true;
+
         /// <summary>
         /// Strings that make up code file.
         /// </summary>
         public CodeBlockNested Blocks { get; }
+
+        /// <summary>
+        /// Value can be a
+        /// - a string
+        /// - a list of strings
+        /// - a list of string lists.
+        /// </summary>
+        Dictionary<String, Object> userMacros = new Dictionary<string, Object>();
 
         public String SavePath { get; set; }
 
@@ -82,5 +92,19 @@ namespace FhirKhit.Tools
         /// </summary>
         /// <param name="path"></param>
         public void Load(String[] lines, bool addMargin = true) => this.Blocks.Load(lines, addMargin);
+
+        public bool TryGetUserMacro(String name, out Object value)
+        {
+            return this.userMacros.TryGetValue(name, out value);
+        }
+
+        public bool TryAddUserMacro(String name, Object value)
+        {
+            if (String.IsNullOrEmpty(name))
+                throw new Exception($"Invalid null or empty user macro name");
+            if (Char.IsUpper(name[0]) == false)
+                throw new Exception($"Invalid user macro name {name}. All user macros must start with upper case letter");
+            return this.userMacros.TryAdd(name, value);
+        }
     }
 }

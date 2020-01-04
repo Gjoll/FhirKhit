@@ -286,6 +286,7 @@ namespace FhirKhit.Tools
                         this.Children.Add(currentBlock);
                     }
 
+                    line = this.ProcessLine(line);
                     if (addMargin)
                         currentBlock.Code.Add($"{this.MarginString}{line}");
                     else
@@ -584,14 +585,137 @@ namespace FhirKhit.Tools
             return this;
         }
 
+        void ProcessUserMacro(StringBuilder sb,
+            String name,
+            List<String> values)
+        {
+            if (this.owner.TryGetUserMacro(name, out Object macroValue) == false)
+            {
+                OutputRawMacro(sb, name, values);
+                return;
+            }
+
+            String prefix = "";
+            String suffix = "";
+            bool lbFlag = false;
+
+            bool expandFlag = true;
+            foreach (String value in values)
+            {
+                String[] valueArr = value.Split('=');
+                switch (valueArr[0])
+                {
+                    case null:
+                    case "":
+                        break;
+
+                    case "lb":
+                        lbFlag = true;
+                        break;
+
+                    case "prefix":
+                        prefix = valueArr[1];
+                        break;
+
+                    case "suffix":
+                        suffix = valueArr[1];
+                        break;
+
+                    case "noexpand":
+                        expandFlag = false;
+                        break;
+
+                    case "expand":
+                        expandFlag = true;
+                        break;
+
+                    default:
+                        throw new Exception($"Invalid user macro value {value}");
+                }
+            }
+
+            void Append(String s)
+            {
+                String fullValue = $"{prefix}{s}{suffix}";
+
+                if (lbFlag)
+                    sb.AppendLine("");
+                if (expandFlag)
+                    fullValue = this.ProcessLine(fullValue);
+                sb.Append(fullValue);
+            }
+
+            switch (macroValue)
+            {
+                case String macroStringValue:
+                    Append(macroStringValue);
+                    break;
+
+                case List<String> macroStringValues:
+                    foreach (String macroStringValue in macroStringValues)
+                        Append(macroStringValue);
+                    break;
+
+                default:
+                    throw new Exception($"Invalid macro type {macroValue.GetType().Name}");
+            }
+        }
+
+        void OutputRawMacro(StringBuilder sb,
+            String name,
+            List<String> values)
+        {
+            sb.Append($"%{name}");
+            foreach (String value in values)
+                sb.Append($":{value}");
+            sb.Append($"%");
+        }
+
+        void ProcessSystemMacro(StringBuilder sb,
+        String name,
+        List<String> values)
+        {
+            switch (name.ToUpper().Trim())
+            {
+                case "col":
+                    if (values.Count != 1)
+                        throw new Exception($"Invalid col value count (expected one, got {values.Count})");
+                    if (int.TryParse(values[0], out Int32 col) == false)
+                        throw new Exception($"Invalid col macro value {values[0]}");
+                    while (sb.Length < col)
+                        sb.Append(" ");
+                    return;
+
+                default:
+                    OutputRawMacro(sb, name, values);
+                    return;
+            }
+        }
+
         void ProcessMacro(StringBuilder sb,
             String line,
             ref Int32 index)
         {
-            String name = "";
-            String value = "";
+            StringBuilder current = new StringBuilder();
+            String name = null;
+            List<String> values = new List<string>();
+
             Boolean valueFlag = false;
-            while (true)
+            bool done = false;
+
+            void AddToken()
+            {
+                if (valueFlag == false)
+                {
+                    name = current.ToString();
+                    valueFlag = true;
+                }
+                else
+                    values.Add(current.ToString());
+                current.Clear();
+            }
+
+            while (done == false)
             {
                 Char c = CodeBlockNested.GetChar(line, ref index);
                 switch (c)
@@ -604,30 +728,20 @@ namespace FhirKhit.Tools
                         break;
 
                     case '%':
-                        switch (name.ToUpper().Trim())
-                        {
-                            case "COL":
-                                if (int.TryParse(value, out Int32 col) == false)
-                                    throw new Exception($"Invalid col macro value {value}");
-                                while (sb.Length < col)
-                                    sb.Append(" ");
-                                return;
-
-                            default:
-                                throw new Exception($"Unknown $ macro name '{name}'");
-                        }
+                        AddToken();
+                        if (Char.IsLower(name[0]))
+                            ProcessSystemMacro(sb, name, values);
+                        else
+                            ProcessUserMacro(sb, name, values);
+                        done = true;
+                        break;
 
                     case ':':
-                        if (valueFlag == true)
-                            throw new Exception("Invalid ':' flag in '%' string");
-                        valueFlag = true;
+                        AddToken();
                         break;
 
                     default:
-                        if (valueFlag == false)
-                            name += c;
-                        else
-                            value += c;
+                        current.Append(c);
                         break;
                 }
             }
@@ -655,7 +769,8 @@ namespace FhirKhit.Tools
                 switch (c)
                 {
                     case '\"':
-                        quoteFlag = !quoteFlag;
+                        if (this.owner.IgnoreMacrosInQuotedStrings == true)
+                            quoteFlag = !quoteFlag;
                         sb.Append(c);
                         break;
 
