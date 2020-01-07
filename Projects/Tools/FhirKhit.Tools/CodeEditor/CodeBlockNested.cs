@@ -138,6 +138,18 @@ namespace FhirKhit.Tools
         public Boolean Replace(String blockName, String code, bool addMargin) => this.Replace(blockName, code.ToLines(), addMargin);
 
         /// <summary>
+        /// Reload block.
+        /// This will expand macros that may have been previously unexpanded.
+        /// </summary>
+        public Boolean Reload()
+        {
+            String[] code = this.Lines();
+            this.Clear();
+            this.Load(code, false);
+            return true;
+        }
+
+        /// <summary>
         /// Replace existing block with passed code.
         /// </summary>
         /// <param name="blockName"></param>
@@ -651,7 +663,7 @@ namespace FhirKhit.Tools
                     Append(macroStringValue);
                     break;
 
-                case List<String> macroStringValues:
+                case IEnumerable<String> macroStringValues:
                     foreach (String macroStringValue in macroStringValues)
                         Append(macroStringValue);
                     break;
