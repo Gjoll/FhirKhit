@@ -124,10 +124,24 @@ namespace PreFhir
 
         public bool MergeBase()
         {
+            // Fragments have version set to "Fragment" so the fhir publisher doesnt get upset that
+            // the version is not set. Strip that out...
+            String GetVersion(DomainResource r)
+            {
+                String version = r.GetVersion();
+                    if (
+                        (version != null) && 
+                        (version.ToUpper().StartsWith("FRAG") == true)
+                    )
+                    version = String.Empty;
+                return version;
+            }
+
             const String fcn = "MergeBase";
             bool retVal = true;
             FHIRVersion? fhirVersion = this.mergeResource.GetFhirVersion();
-            String version = this.mergeResource.GetVersion();
+            String version = GetVersion(this.mergeResource);
+
             String date = this.mergeResource.GetDate();
             PublicationStatus? status = this.mergeResource.GetStatus();
             String publisher = this.mergeResource.GetPublisher();
@@ -149,7 +163,8 @@ namespace PreFhir
                     }
                     if (version.IsEmpty() == false)
                     {
-                        if ((sDef.Version.IsEmpty() == false) && (sDef.Version != version))
+                        String sDefVersion = GetVersion(sDef);
+                        if ((sDefVersion.IsEmpty() == false) && (sDefVersion != version))
                         {
                             this.preFhir.ConversionError(this.GetType().Name,
                                 fcn,
@@ -207,7 +222,8 @@ namespace PreFhir
                 case CodeSystem codeSys:
                     if (version.IsEmpty() == false)
                     {
-                        if ((codeSys.Version.IsEmpty() == false) && (codeSys.Version != version))
+                        String codeSysVersion = GetVersion(codeSys);
+                        if ((codeSysVersion.IsEmpty() == false) && (codeSysVersion != version))
                         {
                             this.preFhir.ConversionError(this.GetType().Name,
                                 fcn,
@@ -265,7 +281,8 @@ namespace PreFhir
                 case ValueSet valueSet:
                     if (version.IsEmpty() == false)
                     {
-                        if ((valueSet.Version.IsEmpty() == false) && (valueSet.Version != version))
+                        String valueSetVersion = GetVersion(valueSet);
+                        if ((valueSetVersion.IsEmpty() == false) && (valueSetVersion != version))
                         {
                             this.preFhir.ConversionError(this.GetType().Name,
                                 fcn,
