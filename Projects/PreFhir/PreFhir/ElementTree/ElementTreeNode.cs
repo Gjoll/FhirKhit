@@ -108,36 +108,7 @@ namespace PreFhir
         public void ApplySlicing(ElementDefinition.SlicingComponent slicingComponent,
             bool overrideExistingSliceDiscriminator)
         {
-            bool NonCompatible()
-            {
-                if (this.ElementDefinition.Slicing == null)
-                    return false;
-                if (this.ElementDefinition.Slicing.Ordered != slicingComponent.Ordered)
-                    return true;
-                if (this.ElementDefinition.Slicing.Rules != slicingComponent.Rules)
-                    return true;
-                if (this.ElementDefinition.Slicing.Discriminator.Count != slicingComponent.Discriminator.Count)
-                    return true;
-                for (Int32 i = 0; i < slicingComponent.Discriminator.Count; i++)
-                {
-                    if (slicingComponent.Discriminator[i].Type != this.ElementDefinition.Slicing.Discriminator[i].Type)
-                        return true;
-                    if (slicingComponent.Discriminator[i].Path != this.ElementDefinition.Slicing.Discriminator[i].Path)
-                        return true;
-                }
-
-                return false;
-            }
-
-            if (overrideExistingSliceDiscriminator)
-                this.ElementDefinition.Slicing = null;
-            if (this.ElementDefinition.Slicing != null)
-            {
-                if (NonCompatible() == true)
-                    throw new Exception($"Slicing already defined in a noncompatible manner");
-                return;
-            }
-            this.ElementDefinition.Slicing = slicingComponent;
+            this.ElementDefinition.ApplySlicing(slicingComponent, overrideExistingSliceDiscriminator);
         }
 
         /// <summary>

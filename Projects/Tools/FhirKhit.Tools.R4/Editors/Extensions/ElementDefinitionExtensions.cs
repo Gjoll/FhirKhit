@@ -140,6 +140,13 @@ namespace FhirKhit.Tools.R4
         }
 
         public static ElementDefinition Binding(this ElementDefinition e,
+            ValueSet vs,
+            BindingStrength? strength)
+        {
+            return e.Binding(vs.Url, strength);
+        }
+
+        public static ElementDefinition Binding(this ElementDefinition e,
             String binding,
             BindingStrength? strength)
         {
