@@ -843,7 +843,7 @@ namespace PreFhir
                 {
                     this.preFhir.ConversionError(this.GetType().Name,
                          fcn,
-                         $"Error constraining [{mergeElement.Path}].Max. Fragment max {mergeElement.Max} < base max {baseElement.Max}");
+                         $"Error constraining [{mergeElement.Path}].Max. Fragment max {mergeElement.Max} > base max {baseElement.Max}");
                     success = false;
                     return;
                 }

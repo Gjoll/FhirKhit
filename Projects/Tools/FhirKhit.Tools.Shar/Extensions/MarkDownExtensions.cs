@@ -20,10 +20,9 @@ namespace FhirKhit.Tools.R2
     {
         public static Markdown Paragraph(this Markdown md, params string[] lines)
         {
-            md.Value += "<p>";
             foreach (String line in lines)
-                md.Value += $"{line}\n";
-            md.Value += "</p>";
+                md.Value += $"{line}";
+            md.Value += "<br/>";
             return md;
         }
 
