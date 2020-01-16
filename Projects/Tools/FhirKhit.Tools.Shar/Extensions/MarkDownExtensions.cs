@@ -20,9 +20,10 @@ namespace FhirKhit.Tools.R2
     {
         public static Markdown Paragraph(this Markdown md, params string[] lines)
         {
+            md.Value += "<p>";
             foreach (String line in lines)
                 md.Value += $"{line}\n";
-            md.Value += $"\n\n";
+            md.Value += "</p>";
             return md;
         }
 
@@ -37,8 +38,10 @@ namespace FhirKhit.Tools.R2
         }
         public static Markdown List(this Markdown md, params string[] items)
         {
+            md.Value += "<ul>";
             foreach (String item in items)
-                md.Value += $"** {item}\n";
+                md.Value += $"<li>{item}</li>\n";
+            md.Value += "</ul>";
             return md;
         }
     }

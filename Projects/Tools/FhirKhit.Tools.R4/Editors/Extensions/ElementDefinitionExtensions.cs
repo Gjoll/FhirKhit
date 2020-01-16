@@ -25,6 +25,12 @@ namespace FhirKhit.Tools.R4
             return e;
         }
 
+        public static ElementDefinition MustSupport(this ElementDefinition e, bool value = true)
+        {
+            e.MustSupport = value;
+            return e;
+        }
+
         public static ElementDefinition ZeroToOne(this ElementDefinition e)
         {
             return e.Card(0, "1");
