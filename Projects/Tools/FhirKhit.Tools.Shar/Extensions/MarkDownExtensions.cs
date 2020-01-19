@@ -21,8 +21,8 @@ namespace FhirKhit.Tools.R2
         public static Markdown Paragraph(this Markdown md, params string[] lines)
         {
             foreach (String line in lines)
-                md.Value += $"{line}";
-            md.Value += "<br/>";
+                md.Value += $"{line}\n";
+            md.Value += "\n";
             return md;
         }
 
