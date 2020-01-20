@@ -29,6 +29,24 @@ namespace PreFhir
             this.mergeItem = mergeItem;
         }
 
+        void ConversionError(String className,
+            String fcn,
+            String message,
+            Base baseElement,
+            Base mergeElement)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb
+                .AppendLine(message)
+                .AppendLine("----  Base Element  ----")
+                .AppendLine(baseElement.ToFormatedJson())
+                .AppendLine("----  Merge Element  ----")
+                .AppendLine(mergeElement.ToFormatedJson())
+                ;
+
+            this.preFhir.ConversionError(className, fcn, sb.ToString());
+        }
+
         public bool Merge(out bool elementsMerged)
         {
             const String fcn = "Merge";
@@ -397,10 +415,6 @@ namespace PreFhir
         {
             const String fcn = "MergeElementTreeNode";
 
-            //this.preFhir.ConversionError(this.GetType().Name,
-            //    fcn,
-            //    $"Error constraining {mergeNode.Path}. Matching element not found in base profile's snapshot");
-
             bool retVal = true;
             foreach (ElementTreeSlice mergeSlice in mergeNode.Slices)
             {
@@ -670,10 +684,12 @@ namespace PreFhir
             if (TryConstrainSingleElement(baseElement, mergeElement, out T value) == true)
                 return value;
 
-            // otherwise, the values are different and we hav a problem.
-            this.preFhir.ConversionError(this.GetType().Name,
+            // otherwise, the values are different and we hava problem.
+            this.ConversionError(this.GetType().Name,
                 fcn,
-                $"Error constaining {path}:{valueName}. Merge Element and Base Element both contain distinct values that can not be reconciled. ");
+                $"Error constaining {path}:{valueName}. Merge Element and Base Element both contain distinct values that can not be reconciled.",
+                baseElement,
+                mergeElement);
             success = false;
             return baseElement;
         }
@@ -786,9 +802,11 @@ namespace PreFhir
             if (baseElement.Slicing.IsExactly(mergeElement.Slicing))
                 return;
 
-            this.preFhir.ConversionError(this.GetType().Name,
+            this.ConversionError(this.GetType().Name,
                 fcn,
-                $"Error constaining {mergeElement.Path}. Not Supported (yet). Merge Element and Base Element both define a slicing component. ");
+                $"Error constaining {mergeElement.Path}. Not Supported (yet). Merge Element and Base Element both define a slicing component.",
+                baseElement,
+                mergeElement);
             success = false;
             return;
         }
@@ -825,9 +843,11 @@ namespace PreFhir
                     (mergeElement.Min.Value < baseElement.Min.Value)
                     )
                 {
-                    this.preFhir.ConversionError(this.GetType().Name,
+                    this.ConversionError(this.GetType().Name,
                         fcn,
-                        $"Error constraining [{mergeElement.Path}].Min. Fragment min {mergeElement.Min} < base min {baseElement.Min}");
+                        $"Error constraining [{mergeElement.Path}].Min. Fragment min {mergeElement.Min} < base min {baseElement.Min}",
+                        baseElement,
+                        mergeElement);
                     success = false;
                     return;
                 }
@@ -841,9 +861,11 @@ namespace PreFhir
                     (MaxCmp(baseElement.Max, mergeElement.Max) < 0)
                     )
                 {
-                    this.preFhir.ConversionError(this.GetType().Name,
+                    this.ConversionError(this.GetType().Name,
                          fcn,
-                         $"Error constraining [{mergeElement.Path}].Max. Fragment max {mergeElement.Max} > base max {baseElement.Max}");
+                         $"Error constraining [{mergeElement.Path}].Max. Fragment max {mergeElement.Max} > base max {baseElement.Max}",
+                        baseElement,
+                        mergeElement);
                     success = false;
                     return;
                 }
