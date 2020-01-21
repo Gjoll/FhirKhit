@@ -1,16 +1,13 @@
 ﻿using Hl7.Fhir.Model;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
+using System.Linq;
 using System.Text;
 
 #if FHIR_R4
 namespace FhirKhit.Tools.R4
 #elif FHIR_R3
 namespace FhirKhit.Tools.R3
-#elif FHIR_R2
-namespace FhirKhit.Tools.R2
 #endif
 {
     public static class StructureDefinitionExtensions
@@ -26,7 +23,7 @@ namespace FhirKhit.Tools.R2
         public static IEnumerable<Uri> GetBoundValueSets(this StructureDefinition sDef)
         {
             if (sDef is null)
-                throw new ArgumentNullException(nameof(sDef ));
+                throw new ArgumentNullException(nameof(sDef));
 
 
             foreach (ElementDefinition elementDefinition in sDef.Differential.Element)
@@ -36,7 +33,7 @@ namespace FhirKhit.Tools.R2
 #if FHIR_R4
                     case String canonicalUrl:
                         yield return new Uri(canonicalUrl);
-#elif FHIR_R2 || FHIR_R3
+#elif FHIR_R3
                     case FhirString canonicalUrl:
                         yield return new Uri(canonicalUrl.Value);
 #else           // default
@@ -58,7 +55,7 @@ namespace FhirKhit.Tools.R2
             String propertyPath)
         {
             if (sDef is null)
-                throw new ArgumentNullException(nameof(sDef ));
+                throw new ArgumentNullException(nameof(sDef));
 
             ElementDefinition retVal = new ElementDefinition
             {
@@ -75,7 +72,7 @@ namespace FhirKhit.Tools.R2
         public static void AddSnapElement(this StructureDefinition sDef, ElementDefinition elementDefinition)
         {
             if (sDef is null)
-                throw new ArgumentNullException(nameof(sDef ));
+                throw new ArgumentNullException(nameof(sDef));
 
             if (sDef.Snapshot == null)
                 sDef.Snapshot = new StructureDefinition.SnapshotComponent();
@@ -87,7 +84,7 @@ namespace FhirKhit.Tools.R2
             String propertyPath)
         {
             if (sDef is null)
-                throw new ArgumentNullException(nameof(sDef ));
+                throw new ArgumentNullException(nameof(sDef));
 
             ElementDefinition retVal = new ElementDefinition
             {
@@ -104,7 +101,7 @@ namespace FhirKhit.Tools.R2
         public static void AddDiffElement(this StructureDefinition sDef, ElementDefinition elementDefinition)
         {
             if (sDef is null)
-                throw new ArgumentNullException(nameof(sDef ));
+                throw new ArgumentNullException(nameof(sDef));
 
             if (sDef.Differential == null)
                 sDef.Differential = new StructureDefinition.DifferentialComponent();
@@ -123,7 +120,7 @@ namespace FhirKhit.Tools.R2
         public static Int32 ElementCount(this StructureDefinition sDef)
         {
             if (sDef is null)
-                throw new ArgumentNullException(nameof(sDef ));
+                throw new ArgumentNullException(nameof(sDef));
 
             if (sDef.Differential?.Element == null)
                 return 0;
@@ -133,7 +130,7 @@ namespace FhirKhit.Tools.R2
         public static StructureDefinition Init(this StructureDefinition sDef, String id, String name)
         {
             if (sDef is null)
-                throw new ArgumentNullException(nameof(sDef ));
+                throw new ArgumentNullException(nameof(sDef));
 
             sDef.Kind = StructureDefinition.StructureDefinitionKind.Resource;
             sDef.Id = id.ToMachineName();
@@ -145,7 +142,7 @@ namespace FhirKhit.Tools.R2
         public static StructureDefinition InitDifferential(this StructureDefinition sDef)
         {
             if (sDef is null)
-                throw new ArgumentNullException(nameof(sDef ));
+                throw new ArgumentNullException(nameof(sDef));
 
             if (sDef.Differential == null)
                 sDef.Differential = new StructureDefinition.DifferentialComponent();
@@ -191,15 +188,11 @@ namespace FhirKhit.Tools.R2
                     Rules = ElementDefinition.SlicingRules.Open,
                     Ordered = false
                 };
-#if FHIR_R2
-                slicingComponent.Discriminator = new String[] { "url" };
-#elif FHIR_R3 || FHIR_R4
                 slicingComponent.Discriminator.Add(new ElementDefinition.DiscriminatorComponent
                 {
                     Type = ElementDefinition.DiscriminatorType.Value,
                     Path = "url"
                 });
-#endif
                 e.Slicing = slicingComponent;
             }
         }
@@ -246,16 +239,10 @@ namespace FhirKhit.Tools.R2
             Markdown value)
         {
             if (sDef is null)
-                throw new ArgumentNullException(nameof(sDef ));
+                throw new ArgumentNullException(nameof(sDef));
             if (value is null)
-                throw new ArgumentNullException(nameof(value ));
-#if FHIR_R3 || FHIR_R4
+                throw new ArgumentNullException(nameof(value));
             sDef.Description = value;
-#elif FHIR_R2
-            sDef.Description = value.Value;
-#else // default
-                Invalid fhir type
-#endif
             return sDef;
         }
 
@@ -272,13 +259,7 @@ namespace FhirKhit.Tools.R2
 
             if (baseDefinition.ToLower().StartsWith("http:") == false)
                 baseDefinition = "http://hl7.org/fhir/StructureDefinition/" + baseDefinition;
-#if FHIR_R4 || FHIR_R3
             sDef.BaseDefinition = baseDefinition;
-#elif FHIR_R2
-            sDef.Base = baseDefinition;
-#else           // default
-                Invalid fhir type
-#endif
             return sDef;
         }
 
@@ -290,7 +271,7 @@ namespace FhirKhit.Tools.R2
             String mapping)
         {
             if (sDef is null)
-                throw new ArgumentNullException(nameof(sDef ));
+                throw new ArgumentNullException(nameof(sDef));
             if (mapping is null)
                 throw new ArgumentNullException(nameof(mapping));
 
@@ -300,13 +281,7 @@ namespace FhirKhit.Tools.R2
                 Name = name
             };
 
-#if FHIR_R4 || FHIR_R3
             map.Comment = mapping;
-#elif FHIR_R2
-            //$$$$map.UserData.Add("map", mapping);
-#else           // default
-                Invalid fhir type
-#endif
 
             sDef.Mapping.Add(map);
             return sDef;
@@ -319,23 +294,45 @@ namespace FhirKhit.Tools.R2
             String name)
         {
             if (sDef is null)
-                throw new ArgumentNullException(nameof(sDef ));
+                throw new ArgumentNullException(nameof(sDef));
 
             foreach (StructureDefinition.MappingComponent map in sDef.Mapping)
             {
                 if (map.Identity == name)
                 {
-#if FHIR_R4 || FHIR_R3
                     return map.Comment;
-#elif FHIR_R2
-                    //$$$$if (map.UserData.TryGetValue("map", out object data) == true)
-                    //$$$$    return data as string;
-#else           // default
-                Invalid fhir type
-#endif
                 }
             }
             return null;
+        }
+        public static ElementDefinition FindElement(this IEnumerable<ElementDefinition> elements, String path)
+        {
+            foreach (ElementDefinition e in elements)
+            {
+                if (e.Path == path)
+                    return e;
+            }
+
+            return null;
+        }
+
+        public static bool IsExactly<T>(this IEnumerable<T> thisList, IEnumerable<T> otherList)
+            where T : IDeepComparable
+        {
+            if (thisList.Count() != otherList.Count())
+                return false;
+
+            IEnumerator<T> thisEnum = thisList.GetEnumerator();
+            IEnumerator<T> otherEnum = otherList.GetEnumerator();
+            for (Int32 i = 0; i < thisList.Count(); i++)
+            {
+                thisEnum.MoveNext();
+                otherEnum.MoveNext();
+                if (thisEnum.Current.IsExactly(otherEnum.Current) == false)
+                    return false;
+            }
+
+            return true;
         }
     }
 }

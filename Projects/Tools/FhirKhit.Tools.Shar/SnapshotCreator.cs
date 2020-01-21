@@ -10,8 +10,6 @@ using Hl7.Fhir.Specification.Source;
 namespace FhirKhit.Tools.R4
 #elif FHIR_R3
 namespace FhirKhit.Tools.R3
-#elif FHIR_R2
-namespace FhirKhit.Tools.R2
 #endif
 {
     /// <summary>

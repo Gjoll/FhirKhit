@@ -15,8 +15,6 @@ using System.Text;
 namespace FhirKhit.Tools.R4
 #elif FHIR_R3
 namespace FhirKhit.Tools.R3
-#elif FHIR_R2
-namespace FhirKhit.Tools.R2
 #endif
 
 {
@@ -413,13 +411,9 @@ namespace FhirKhit.Tools.R2
             {
                 if (node.childNodeDictionary.TryGetValue(name, out ElementDefinitionNode newNode) == false)
                 {
-#if FHIR_R2
-                    throw new NotImplementedException();
-#else
                     newNode = node.FindCommonChild(partialPath, name);
                     if (newNode == null)
                         return false;
-#endif
                 }
                 node = newNode;
                 path = $"{partialPath}.{name}";
@@ -444,12 +438,8 @@ namespace FhirKhit.Tools.R2
 
         public bool TryGetCommonChild(String name, out ElementDefinitionNode node)
         {
-#if FHIR_R2
-                    throw new NotImplementedException();
-#else
             node = this.FindCommonChild(this.Path, name);
             return (node != null);
-#endif
         }
 
         public bool TryGetSlice(String name, out ElementDefinitionNode node)

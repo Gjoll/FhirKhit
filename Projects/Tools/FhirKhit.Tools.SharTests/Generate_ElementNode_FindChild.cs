@@ -8,17 +8,13 @@ using Xunit;
 using System.IO;
 using System.Diagnostics;
 
-#if FHIR_R2
-using FhirKhit.Tools.R2;
-#elif FHIR_R3
+#if FHIR_R3
 using FhirKhit.Tools.R3;
 #elif FHIR_R4
 using FhirKhit.Tools.R4;
 #endif
 
-#if FHIR_R2
-namespace FhirKhit.Tools.R2.XUnitTests
-#elif FHIR_R3
+#if FHIR_R3
 namespace FhirKhit.Tools.R3.XUnitTests
 #elif FHIR_R4
 namespace FhirKhit.Tools.R4.XUnitTests
@@ -138,9 +134,7 @@ namespace FhirKhit.Tools.R4.XUnitTests
                 .AppendLine($"using System.Diagnostics;")
                 .AppendLine($"using Hl7.FhirPath;")
                 .BlankLine()
-#if FHIR_R2
-                .AppendLine($"namespace FhirKhit.Tools.R2")
-#elif FHIR_R3
+#if FHIR_R3
                 .AppendLine($"namespace FhirKhit.Tools.R3")
 #elif FHIR_R4
                 .AppendLine($"namespace FhirKhit.Tools.R4")
@@ -200,11 +194,7 @@ namespace FhirKhit.Tools.R4.XUnitTests
                 .CloseBrace()
                 ;
 
-#if FHIR_R2
-            String outputPath = Path.Combine(DirHelper.FindParentDir("Tools"),
-                "FhirKhit.Tools.R2",
-                "ElementDefinitionNode.FindChild.cs");
-#elif FHIR_R3
+#if FHIR_R3
             String outputPath = Path.Combine(DirHelper.FindParentDir("Tools"),
                 "FhirKhit.Tools.R3",
                 "ElementDefinitionNode.FindChild.cs");

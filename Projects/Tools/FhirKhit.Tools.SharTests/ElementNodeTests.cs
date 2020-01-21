@@ -9,9 +9,7 @@ using System.Text;
 using Hl7.Fhir.Serialization;
 using System.IO.Compression;
 
-#if FHIR_R2
-using FhirKhit.Tools.R2;
-#elif FHIR_R3
+#if FHIR_R3
 using FhirKhit.Tools.R3;
 #elif FHIR_R4
 using FhirKhit.Tools.R4;

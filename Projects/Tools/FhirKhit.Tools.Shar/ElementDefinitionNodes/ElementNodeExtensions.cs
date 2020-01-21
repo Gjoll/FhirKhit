@@ -7,8 +7,6 @@ using System.Text;
 namespace FhirKhit.Tools.R4
 #elif FHIR_R3
 namespace FhirKhit.Tools.R3
-#elif FHIR_R2
-namespace FhirKhit.Tools.R2
 #endif
 {
     public static class ElementNodeExtensions

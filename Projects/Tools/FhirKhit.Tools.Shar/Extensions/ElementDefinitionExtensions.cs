@@ -8,8 +8,6 @@ using System.Text;
 namespace FhirKhit.Tools.R4
 #elif FHIR_R3
 namespace FhirKhit.Tools.R3
-#elif FHIR_R2
-namespace FhirKhit.Tools.R2
 #endif
 {
     public static class ElementDefinitionExtensions
@@ -177,21 +175,10 @@ namespace FhirKhit.Tools.R2
             if (elementDefinition is null)
                 throw new ArgumentNullException(nameof(elementDefinition));
 
-#if FHIR_R2
-            FHIRDefinedType fType = type.ToFhirType();
-#endif
-
             foreach (ElementDefinition.TypeRefComponent typeRef in elementDefinition.Type)
             {
-#if FHIR_R4 || FHIR_R3
                 if (typeRef.Code == type)
                     return typeRef;
-#elif FHIR_R2
-                if (typeRef.Code == fType)
-                    return typeRef;
-#else           // default
-                Invalid fhir type
-#endif
 
             }
             if (createFlag == false)
@@ -199,13 +186,7 @@ namespace FhirKhit.Tools.R2
             {
                 ElementDefinition.TypeRefComponent typeRef = new ElementDefinition.TypeRefComponent
                 {
-#if FHIR_R4 || FHIR_R3
                     Code = type
-#elif FHIR_R2
-                    Code = fType
-#else           // default
-                Invalid fhir type
-#endif
                 };
                 elementDefinition.AddType(typeRef);
                 return typeRef;
@@ -323,7 +304,7 @@ namespace FhirKhit.Tools.R2
 
 #if FHIR_R4
             elementDefinition.Requirements = value;
-#elif FHIR_R3 || FHIR_R2
+#elif FHIR_R3
             elementDefinition.Requirements = value.ToString();
 #else           // default
                 Invalid fhir type
@@ -360,7 +341,6 @@ namespace FhirKhit.Tools.R2
             elementDefinition.Comment = value;
 #elif FHIR_R3
             elementDefinition.Comment = value.Value;
-#elif  FHIR_R2
 #else           // default
                 Invalid fhir type
 #endif
@@ -376,7 +356,7 @@ namespace FhirKhit.Tools.R2
                 throw new ArgumentNullException(nameof(value));
 #if FHIR_R4
             elementDefinition.Definition = value;
-#elif FHIR_R3 || FHIR_R2
+#elif FHIR_R3
             elementDefinition.Definition = value.ToString();
 #else           // default
                 Invalid fhir type
@@ -490,8 +470,6 @@ namespace FhirKhit.Tools.R2
             {
 #if FHIR_R4 || FHIR_R3
                 Code = elementType,
-#elif FHIR_R2
-                Code = elementType.ToFhirType()
 #else           // default
                 Invalid fhir type
 #endif
@@ -526,8 +504,6 @@ namespace FhirKhit.Tools.R2
 #elif FHIR_R3
                 Code = elementType,
                 TargetProfile = profile
-#elif FHIR_R2
-                Code = elementType.ToFhirType(),
 #endif
             };
             if (elementDefinition.Type == null)
@@ -599,12 +575,7 @@ namespace FhirKhit.Tools.R2
             {
                 foreach (ElementDefinition.TypeRefComponent type in elementDef.Type)
                 {
-#if FHIR_R4 || FHIR_R3
                     retVal.Add(type.Code);
-#elif FHIR_R2
-                    if (type.Code.HasValue)
-                        retVal.Add(ModelInfo.FhirTypeToFhirTypeName(type.Code.Value));
-#endif
                 }
             }
             return retVal.ToArray();
@@ -681,14 +652,7 @@ namespace FhirKhit.Tools.R2
                 Identity = name
             };
 
-#if FHIR_R4 || FHIR_R3
             map.Comment = mapping;
-#elif FHIR_R2
-            //$$$map.UserData.Add("map", mapping);
-#else           // default
-                Invalid fhir type
-#endif
-
             elementDefinition.Mapping.Add(map);
             return elementDefinition;
         }
@@ -706,31 +670,13 @@ namespace FhirKhit.Tools.R2
             {
                 if (map.Identity == name)
                 {
-#if FHIR_R4 || FHIR_R3
                     return map.Comment;
-#elif FHIR_R2
-                    //$$$$if (map.UserData.TryGetValue("map", out object data) == true)
-                    //$$$$    return data as string;
-#else           // default
-                Invalid fhir type
-#endif
                 }
             }
             return null;
         }
 
-#if FHIR_R2
-        public static ElementDefinition.BindingComponent SetBinding(this ElementDefinition elementDefinition,
-            BindingStrength strength,
-            String name,
-            String description,
-            String valueSet)
-        {
-            if (elementDefinition is null)
-                throw new ArgumentNullException(nameof(elementDefinition));
-
-            elementDefinition.Binding = new ElementDefinition.BindingComponent
-#elif FHIR_R3
+#if FHIR_R3
         public static ElementDefinition.ElementDefinitionBindingComponent SetBinding(this ElementDefinition elementDefinition,
             BindingStrength strength,
             String name,
@@ -758,7 +704,7 @@ namespace FhirKhit.Tools.R2
             {
                 Strength = strength,
                 Description = description,
-#if FHIR_R2 || FHIR_R3
+#if FHIR_R3
                 ValueSet = new FhirUri(valueSet),
 #elif FHIR_R4
                 ValueSet = valueSet,
@@ -768,6 +714,43 @@ namespace FhirKhit.Tools.R2
             };
             elementDefinition.Binding.AddExtension(@"http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName", new FhirString(name));
             return elementDefinition.Binding;
+        }
+
+
+        public static void ApplySlicing(this ElementDefinition e,
+            ElementDefinition.SlicingComponent slicingComponent,
+            bool overrideExistingSliceDiscriminator)
+        {
+            bool NonCompatible()
+            {
+                if (e.Slicing == null)
+                    return false;
+                if (e.Slicing.Ordered != slicingComponent.Ordered)
+                    return true;
+                if (e.Slicing.Rules != slicingComponent.Rules)
+                    return true;
+                if (e.Slicing.Discriminator.Count != slicingComponent.Discriminator.Count)
+                    return true;
+                for (Int32 i = 0; i < slicingComponent.Discriminator.Count; i++)
+                {
+                    if (slicingComponent.Discriminator[i].Type != e.Slicing.Discriminator[i].Type)
+                        return true;
+                    if (slicingComponent.Discriminator[i].Path != e.Slicing.Discriminator[i].Path)
+                        return true;
+                }
+
+                return false;
+            }
+
+            if (overrideExistingSliceDiscriminator)
+                e.Slicing = null;
+            if (e.Slicing != null)
+            {
+                if (NonCompatible() == true)
+                    throw new Exception($"Slicing already defined in a noncompatible manner");
+                return;
+            }
+            e.Slicing = slicingComponent;
         }
     }
 }

@@ -7,8 +7,6 @@ using System.Text;
 namespace FhirKhit.Tools.R4
 #elif FHIR_R3
 namespace FhirKhit.Tools.R3
-#elif FHIR_R2
-namespace FhirKhit.Tools.R2
 #endif
 {
     public static class StringExtensions
@@ -40,29 +38,6 @@ namespace FhirKhit.Tools.R2
                 default:
                     Log.Error("StringExtensions.ToPublicationStatus", $"Unknown publication status {value}");
                     return PublicationStatus.Unknown;
-            }
-        }
-#elif FHIR_R2
-        public static FHIRDefinedType ToFhirType(this String s)
-        {
-            FHIRDefinedType? fhirType = ModelInfo.FhirTypeNameToFhirType(s);
-            if (fhirType.HasValue == false)
-                throw new Exception($"Can not determine fhir type of '{s}'");
-            return fhirType.Value;
-        }
-
-        public static ConformanceResourceStatus ToPublicationStatus(this String value)
-        {
-            if (value is null)
-                throw new ArgumentNullException(nameof(value));
-
-            switch (value.ToUpper().Trim())
-            {
-                case "ACTIVE": return ConformanceResourceStatus.Active;
-                case "DRAFT": return ConformanceResourceStatus.Draft;
-                case "RETIRED": return ConformanceResourceStatus.Retired;
-                default:
-                    throw new Exception($"StringExtensions.ToPublicationStatus: Unknown publication status {value}");
             }
         }
 #endif

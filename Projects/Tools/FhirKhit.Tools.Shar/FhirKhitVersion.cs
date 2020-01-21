@@ -7,8 +7,6 @@ using System.Text;
 namespace FhirKhit.Tools.R4
 #elif FHIR_R3
 namespace FhirKhit.Tools.R3
-#elif FHIR_R2
-namespace FhirKhit.Tools.R2
 #endif
 {
 #if FHIR_R4
@@ -21,11 +19,6 @@ namespace FhirKhit.Tools.R2
     public static class FhirKhitVersion
     {
         public const String FhirVersion = "3.0.1";
-    }
-#elif FHIR_R2
-    public static class FhirKhitVersion
-    {
-        public const String FhirVersion = "1.0.2";
     }
 #endif
 }

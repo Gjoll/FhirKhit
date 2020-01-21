@@ -33,6 +33,8 @@ namespace FhirKhit.Tools
                 {
                     foreach (String existingFile in Directory.GetFiles(outputDir, fileFilter))
                         this.existingFiles.Add(existingFile.ToLower());
+                    foreach (String subDir in Directory.GetDirectories(outputDir))
+                        this.Add(subDir, fileFilter);
                 }
             }
         }

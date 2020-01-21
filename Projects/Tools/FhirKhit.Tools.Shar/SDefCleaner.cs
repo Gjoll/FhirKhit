@@ -7,8 +7,6 @@ using System.Text;
 namespace FhirKhit.Tools.R4
 #elif FHIR_R3
 namespace FhirKhit.Tools.R3
-#elif FHIR_R2
-namespace FhirKhit.Tools.R2
 #endif
 {
     public class SDefCleaner
@@ -70,11 +68,7 @@ namespace FhirKhit.Tools.R2
 
             const String fcn = "CleanElements";
 
-#if FHIR_R4 || FHIR_R3
             String parentUri = sDef.BaseDefinition;
-#elif FHIR_R2
-           String parentUri = sDef.Base;
-#endif
             if (String.IsNullOrEmpty(parentUri))
             {
                 this.conversionInfo.ConversionInfo(this.GetType().Name, fcn, $"");
