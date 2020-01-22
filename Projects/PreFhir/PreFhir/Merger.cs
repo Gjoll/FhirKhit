@@ -14,6 +14,7 @@ namespace PreFhir
     {
         ProcessItem baseItem;
         ProcessItem mergeItem;
+        public String BreakOnElementId = null;
 
         DomainResource mergeResource => mergeItem.Resource;
         DomainResource baseResource => baseItem.Resource;
@@ -147,10 +148,10 @@ namespace PreFhir
             String GetVersion(DomainResource r)
             {
                 String version = r.GetVersion();
-                    if (
-                        (version != null) && 
-                        (version.ToUpper().StartsWith("FRAG") == true)
-                    )
+                if (
+                    (version != null) &&
+                    (version.ToUpper().StartsWith("FRAG") == true)
+                )
                     version = String.Empty;
                 return version;
             }
@@ -416,6 +417,13 @@ namespace PreFhir
             const String fcn = "MergeElementTreeNode";
 
             bool retVal = true;
+
+            if (this.BreakOnElementId != null)
+            {
+                if (baseNode.ElementDefinition.ElementId == this.BreakOnElementId)
+                    Debugger.Break();
+            }
+
             foreach (ElementTreeSlice mergeSlice in mergeNode.Slices)
             {
                 if (!baseNode.Slices.TryGetItem(mergeSlice.Name, out ElementTreeSlice baseSlice))

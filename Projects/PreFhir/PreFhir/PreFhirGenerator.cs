@@ -34,13 +34,15 @@ namespace PreFhir
     public class PreFhirGenerator : ConverterBase
     {
         public bool DebugFlag { get; set; } = true;
-        public bool BreakFlag = false;
         ConcurrentDictionary<String, ProcessItem> processed = new ConcurrentDictionary<string, ProcessItem>();
         ConcurrentDictionary<String, ProcessItem> unProcessed = new ConcurrentDictionary<string, ProcessItem>();
 
         public const String FragmentUrl = "http://www.fragment.com/fragment";
         public const String IsFragmentUrl = "http://www.fragment.com/isFragment";
         public const String IncompatibleFragmentUrl = "http://www.fragment.com/incompatibleFragment";
+
+        public String BreakOnTitle = null;
+        public String BreakOnElementId = null;
 
         /// <summary>
         /// Is not null, save merged files here (done before differential from base computed).
@@ -125,12 +127,15 @@ namespace PreFhir
 
         public void AddFragment(String url, DomainResource frag)
         {
-            if (frag != null)
-            {
-                ProcessItem pi = new ProcessItem(this, frag);
-                if (this.unProcessed.TryAdd(url, pi) == false)
-                    throw new Exception($"Error adding item to unProcessed list"); ;
-            }
+            if (frag == null)
+                return;
+
+            if (this.unProcessed.ContainsKey(url) == true)
+                return;
+
+            ProcessItem pi = new ProcessItem(this, frag);
+            if (this.unProcessed.TryAdd(url, pi) == false)
+                throw new Exception($"Error adding item to unProcessed list"); ;
         }
 
         String FragPath(String fragmentDir, String name)
@@ -149,7 +154,7 @@ namespace PreFhir
         /// </summary>
         /// <param name="path"></param>
         /// <returns></returns>
-        public bool ProcessOne(String fragmentDir, String name, bool breakFlag)
+        public bool ProcessOne(String fragmentDir, String name)
         {
             const String fcn = "ProcessOne";
 
@@ -179,11 +184,6 @@ namespace PreFhir
             // all referenced fragments have been executed.
             // process test resource.
             ProcessItem pi = new ProcessItem(this, sd);
-            if (breakFlag)
-            {
-                this.BreakFlag = true;
-                Debugger.Break();
-            }
             this.Process(pi);
 
             return this.HasErrors;
@@ -409,7 +409,14 @@ namespace PreFhir
                         this.ConversionInfo(this.GetType().Name,
                              fcn,
                              $"Merging fragment {fragment.Resource.GetName()} into {processItem.Resource.GetName()}");
+
                         Merger m = new Merger(this, processItem, fragment);
+                        if (
+                            (this.BreakOnTitle == null) ||
+                            (processItem.Title == this.BreakOnTitle)
+                            )
+                            m.BreakOnElementId = this.BreakOnElementId;
+
                         if (m.Merge(out bool mergedElements) == false)
                         {
                             this.ConversionError(this.GetType().Name, fcn, $"Merge of fragment {fragment.Resource.GetName()} into {processItem.Resource.GetName()} failed ");
@@ -450,7 +457,7 @@ namespace PreFhir
                     return;
             }
             {
-                ElementTreeSetBase setBase= new ElementTreeSetBase(this);
+                ElementTreeSetBase setBase = new ElementTreeSetBase(this);
                 if (setBase.Process(processedItem.SnapNodeOriginal, differentialNode) == false)
                     return;
             }

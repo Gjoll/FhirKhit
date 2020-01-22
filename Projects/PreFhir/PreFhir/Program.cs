@@ -11,6 +11,7 @@ namespace PreFhir
     {
         PreFhirGenerator preFhir;
         String output;
+
         void Usage()
         {
             Console.WriteLine("usage: -o 'outputdir' [-i inputfile]*");
@@ -47,8 +48,18 @@ namespace PreFhir
                         this.preFhir.DebugFlag = true;
                         break;
 
+                    case "-break":
+                        this.preFhir.BreakOnTitle = this.GetArg(arg, args, ref i);
+                        this.preFhir.BreakOnElementId = this.GetArg(arg, args, ref i);
+                        break;
+
                     case "-o":
                         this.output = this.GetArg(arg, args, ref i);
+                        break;
+
+                    case "-m":
+                    case "-mergeDir":
+                        this.preFhir.MergedDir = this.GetArg(arg, args, ref i);
                         break;
 
                     case "-i":
