@@ -9,8 +9,6 @@ using System.Diagnostics;
 using System.IO;
 using System.Text;
 using System.Threading;
-using BoolTask = System.Threading.Tasks.Task<System.Boolean>;
-using VTask = System.Threading.Tasks.Task;
 
 
 namespace PreFhir
@@ -225,36 +223,24 @@ namespace PreFhir
             while (this.unProcessed.Values.Count > 0)
             {
                 bool processed = false;
-                List<BoolTask> tasks = new List<BoolTask>();
                 foreach (ProcessItem processable in this.FindProcessable())
                 {
-                    BoolTask b = Process(processable);
-                    tasks.Add(b);
+                    if (Process(processable) == false) ;
+                    retVal = false;
+                    processed = true;
                 }
 
-                if (tasks.Count > 0)
+                if (processed == false)
                 {
-                    BoolTask.WaitAll(tasks.ToArray());
-                    foreach (BoolTask b in tasks)
-                    {
-                        if (b.Result == false)
-                            retVal = false;
-                    }
-                }
-                else
-                {
-                    if (processed == false)
+                    this.ConversionError(this.GetType().Name,
+                        fcn,
+                        $"Unprocessable fragments. Possible circular reference in fragments");
+                    foreach (var fragment in this.unProcessed.Values)
                     {
                         this.ConversionError(this.GetType().Name,
                             fcn,
-                            $"Unprocessable fragments. Possible circular reference in fragments");
-                        foreach (var fragment in this.unProcessed.Values)
-                        {
-                            this.ConversionError(this.GetType().Name,
-                                fcn,
-                                $"Unprocessed fragment: {fragment.Resource.GetName()}");
-                            return false;
-                        }
+                            $"Unprocessed fragment: {fragment.Resource.GetName()}");
+                        return false;
                     }
                 }
             }
@@ -267,55 +253,44 @@ namespace PreFhir
         /// <param name="outputDir"></param>
         public void SaveResources(String outputDir)
         {
-            List<System.Threading.Tasks.Task> tasks = new List<System.Threading.Tasks.Task>();
-
             foreach (ProcessItem processedItem in this.processed.Values)
-            {
-                var tokenSource = new CancellationTokenSource();
-                var token = tokenSource.Token;
-                var t = SaveResourceAsync(outputDir, processedItem);
-                tasks.Add(t);
-            }
-            System.Threading.Tasks.Task.WaitAll(tasks.ToArray());
+                SaveResource(outputDir, processedItem);
         }
 
         /// <summary>
         /// Save resource to the indicated dir.
         /// </summary>
         /// <param name="outputDir"></param>
-        async VTask SaveResourceAsync(String outputDir,
+        void SaveResource(String outputDir,
             ProcessItem processedItem)
         {
-            await VTask.Run(async () =>
-          {
-              String outputName;
+            String outputName;
 
-              switch (processedItem.Resource)
-              {
-                  case StructureDefinition sDef:
-                      // Dont save fragments....
-                      if (sDef.IsFragment())
-                          return;
-                      // recreate snapshot if missing
-                      if (sDef.Snapshot == null)
-                          SnapshotCreator.Create(sDef);
-                      outputName = Path.Combine(outputDir, $"StructureDefinition-{sDef.Name}.json");
-                      break;
+            switch (processedItem.Resource)
+            {
+                case StructureDefinition sDef:
+                    // Dont save fragments....
+                    if (sDef.IsFragment())
+                        return;
+                    // recreate snapshot if missing
+                    if (sDef.Snapshot == null)
+                        SnapshotCreator.Create(sDef);
+                    outputName = Path.Combine(outputDir, $"StructureDefinition-{sDef.Name}.json");
+                    break;
 
-                  case CodeSystem codeSys:
-                      outputName = Path.Combine(outputDir, $"CodeSystem-{codeSys.Name}.json");
-                      break;
+                case CodeSystem codeSys:
+                    outputName = Path.Combine(outputDir, $"CodeSystem-{codeSys.Name}.json");
+                    break;
 
-                  case ValueSet valueSet:
-                      outputName = Path.Combine(outputDir, $"ValueSet-{valueSet.Name}.json");
-                      break;
+                case ValueSet valueSet:
+                    outputName = Path.Combine(outputDir, $"ValueSet-{valueSet.Name}.json");
+                    break;
 
-                  default:
-                      throw new NotImplementedException($"Unimplemented type {processedItem.GetType().Name}");
-              }
-              await processedItem.Resource.SaveJsonAsync(outputName);
-              this.fc?.Mark(outputName);
-          });
+                default:
+                    throw new NotImplementedException($"Unimplemented type {processedItem.GetType().Name}");
+            }
+            processedItem.Resource.SaveJson(outputName);
+            this.fc?.Mark(outputName);
         }
 
         IEnumerable<ProcessItem> FindProcessable()
@@ -379,66 +354,63 @@ namespace PreFhir
             }
         }
 
-        BoolTask Process(ProcessItem processItem)
+        bool Process(ProcessItem processItem)
         {
             const String fcn = "Process";
 
             if (this.unProcessed.TryRemove(processItem.Resource.GetUrl(), out var value) == false)
                 throw new Exception($"Error removing item from unprocessed list"); ;
 
-            return BoolTask.Run(() =>
+            //Trace.WriteLine($"++++++++ Starting {processItem.Title}");
+            this.ConversionInfo(this.GetType().Name,
+                 fcn,
+                 $"Processing {processItem.Resource.GetName()}");
+            bool mergedFlag = false;
+            foreach (String fragmentUrl in processItem.Resource.ReferencedFragments())
             {
-                //Trace.WriteLine($"++++++++ Starting {processItem.Title}");
-                this.ConversionInfo(this.GetType().Name,
-                     fcn,
-                     $"Processing {processItem.Resource.GetName()}");
-                bool mergedFlag = false;
-                foreach (String fragmentUrl in processItem.Resource.ReferencedFragments())
+                if (this.processed.TryGetValue(fragmentUrl, out ProcessItem fragment) == false)
+                    throw new Exception("Processed fragment {fragmentUrl} not found in processed dictionary");
+
+                if (processItem.AddIncludedFragment(fragment) == true)
                 {
-                    if (this.processed.TryGetValue(fragmentUrl, out ProcessItem fragment) == false)
-                        throw new Exception("Processed fragment {fragmentUrl} not found in processed dictionary");
-
-                    if (processItem.AddIncludedFragment(fragment) == true)
-                    {
-                        this.ConversionWarn(this.GetType().Name,
-                             fcn,
-                             $"Fragment {fragment.Resource.GetName()} has already been included");
-                    }
-                    else
-                    {
-                        this.ConversionInfo(this.GetType().Name,
-                             fcn,
-                             $"Merging fragment {fragment.Resource.GetName()} into {processItem.Resource.GetName()}");
-
-                        Merger m = new Merger(this, processItem, fragment);
-                        if (
-                            (this.BreakOnTitle == null) ||
-                            (processItem.Title == this.BreakOnTitle)
-                            )
-                            m.BreakOnElementId = this.BreakOnElementId;
-
-                        if (m.Merge(out bool mergedElements) == false)
-                        {
-                            this.ConversionError(this.GetType().Name, fcn, $"Merge of fragment {fragment.Resource.GetName()} into {processItem.Resource.GetName()} failed ");
-                            return false;
-                        }
-                        if (mergedElements == true)
-                            mergedFlag = true;
-                    }
+                    this.ConversionWarn(this.GetType().Name,
+                         fcn,
+                         $"Fragment {fragment.Resource.GetName()} has already been included");
                 }
-                if (mergedFlag == true)
-                    this.FixDifferential(processItem);
+                else
+                {
+                    this.ConversionInfo(this.GetType().Name,
+                         fcn,
+                         $"Merging fragment {fragment.Resource.GetName()} into {processItem.Resource.GetName()}");
 
-                // save intermediate merged file?
-                if (String.IsNullOrEmpty(this.MergedDir) == false)
-                    SaveResourceAsync(MergedDir, processItem).Wait();
+                    Merger m = new Merger(this, processItem, fragment);
+                    if (
+                        (this.BreakOnTitle == null) ||
+                        (processItem.Title == this.BreakOnTitle)
+                        )
+                        m.BreakOnElementId = this.BreakOnElementId;
 
-                if (this.processed.TryAdd(processItem.Resource.GetUrl(), processItem) == false)
-                    throw new Exception($"Error adding item to Processed list"); ;
+                    if (m.Merge(out bool mergedElements) == false)
+                    {
+                        this.ConversionError(this.GetType().Name, fcn, $"Merge of fragment {fragment.Resource.GetName()} into {processItem.Resource.GetName()} failed ");
+                        return false;
+                    }
+                    if (mergedElements == true)
+                        mergedFlag = true;
+                }
+            }
+            if (mergedFlag == true)
+                this.FixDifferential(processItem);
 
-                //Trace.WriteLine($"-------- Completed{processItem.Title}");
-                return true;
-            });
+            // save intermediate merged file?
+            if (String.IsNullOrEmpty(this.MergedDir) == false)
+                SaveResource(MergedDir, processItem);
+
+            if (this.processed.TryAdd(processItem.Resource.GetUrl(), processItem) == false)
+                throw new Exception($"Error adding item to Processed list"); ;
+
+            //Trace.WriteLine($"-------- Completed{processItem.Title}");
+            return true;
         }
 
         void FixDifferential(ProcessItem processedItem)
