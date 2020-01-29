@@ -14,6 +14,7 @@ namespace FhirKhit.Tools
         public const Int32 CommentCol = 140;
         public delegate void CodeCallback(CodeBlockNested code);
 
+        public String Name { get; }
         public IEnumerable<CodeBlockNested> AllNamedBlocks => this.NamedBlocks.Values;
 
         readonly Dictionary<String, CodeBlockNested> NamedBlocks = new Dictionary<String, CodeBlockNested>();
@@ -40,8 +41,11 @@ namespace FhirKhit.Tools
             Int32 index = 0;
             while (index < this.Children.Count)
             {
-                CodeBlock child = this.Children[index];
-                if (usedBlocks.Contains(child.Name) == false)
+                CodeBlockNested child = this.Children[index] as CodeBlockNested;
+                if (
+                    (child != null) &&
+                    (usedBlocks.Contains(child.Name) == false)
+                    )
                     this.Children.RemoveAt(index);
                 else
                     index += 1;
@@ -103,8 +107,11 @@ namespace FhirKhit.Tools
         /// </summary>
         public List<CodeBlock> Children { get; } = new List<CodeBlock>();
 
-        public CodeBlockNested(CodeEditor owner, String name) : base(owner, name)
+        public CodeBlockNested(CodeEditor owner, String name) : base(owner)
         {
+            if (name is null)
+                throw new ArgumentNullException(nameof(name));
+            this.Name = name.Trim();
         }
 
         public CodeBlockNested IndentMarkerLines(Int32 indent)
@@ -136,18 +143,6 @@ namespace FhirKhit.Tools
         /// <param name="code"></param>
         /// <returns></returns>
         public Boolean Replace(String blockName, String code, bool addMargin) => this.Replace(blockName, code.ToLines(), addMargin);
-
-        /// <summary>
-        /// Reload block.
-        /// This will expand macros that may have been previously unexpanded.
-        /// </summary>
-        public Boolean Reload()
-        {
-            String[] code = this.Lines();
-            this.Clear();
-            this.Load(code, false);
-            return true;
-        }
 
         /// <summary>
         /// Replace existing block with passed code.
@@ -251,6 +246,33 @@ namespace FhirKhit.Tools
         }
 
         /// <summary>
+        /// Reload block.
+        /// This will expand macros that may have been previously unexpanded.
+        /// </summary>
+        public void Reload()
+        {
+            foreach (CodeBlock child in this.Children)
+            {
+                switch (child)
+                {
+                    case CodeBlockText text:
+                        String[] lines = text.AllLines();
+                        text.Clear();
+                        foreach (String line in lines)
+                            text.Code.Add(this.ProcessLine(line));
+                        break;
+
+                    case CodeBlockNested nested:
+                        nested.Reload();
+                        break;
+
+                    default:
+                        throw new NotImplementedException("Unknown code block type");
+                }
+            }
+        }
+
+        /// <summary>
         /// Load code from 
         /// </summary>
         /// <param name="path"></param>
@@ -321,6 +343,21 @@ namespace FhirKhit.Tools
             return AppendBlock(block);
         }
 
+        public CodeBlock AppendBlock(CodeBlock block)
+        {
+            this.Children.Add(block);
+            CodeBlockNested blockNested = block as CodeBlockNested;
+            if (blockNested != null)
+                this.NamedBlocks.Add(blockNested.Name, blockNested);
+            return block;
+        }
+
+        public CodeBlockText AppendBlock(CodeBlockText block)
+        {
+            this.Children.Add(block);
+            return block;
+        }
+
         public CodeBlockNested AppendBlock(CodeBlockNested block)
         {
             this.Children.Add(block);
@@ -355,9 +392,11 @@ namespace FhirKhit.Tools
         /// Load code from 
         /// </summary>
         /// <param name="path"></param>
-        public CodeBlockNested AppendLine(String line)
+        public CodeBlockNested AppendLine(String line, String margin = null)
         {
-            this.AppendRaw(this.ProcessLine($"{this.MarginString}{line}"));
+            if (margin == null)
+                margin = this.MarginString;
+            this.AppendRaw(this.ProcessLine($"{margin}{line}"));
             return this;
         }
 
@@ -687,7 +726,7 @@ namespace FhirKhit.Tools
         String name,
         List<String> values)
         {
-            switch (name.ToUpper().Trim())
+            switch (name.ToLower().Trim())
             {
                 case "col":
                     if (values.Count != 1)

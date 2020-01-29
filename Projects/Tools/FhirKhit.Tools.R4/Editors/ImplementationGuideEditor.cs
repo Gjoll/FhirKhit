@@ -14,24 +14,26 @@ namespace FhirKhit.Tools.R4
     /// </summary>
     public class ImplementationGuideEditor
     {
-        ImplementationGuide implementationGuide;
+        CodeEditorXml implementationGuide;
+        CodeBlockNested groups;
+        CodeBlockNested resources;
 
         public ImplementationGuideEditor(String templatePath)
         {
-            String xmlText = File.ReadAllText(templatePath);
-            FhirXmlParser parser = new FhirXmlParser();
-            this.implementationGuide = (ImplementationGuide)parser.Parse(xmlText, typeof(Resource));
+            this.implementationGuide = new CodeEditorXml();
+            this.implementationGuide.Load(templatePath);
+            this.groups = this.implementationGuide.Blocks.Find("*Groups");
+            this.resources = this.implementationGuide.Blocks.Find("*Resources");
         }
 
         public void AddGrouping(String groupId, String name, String description)
         {
-            ImplementationGuide.GroupingComponent item = new ImplementationGuide.GroupingComponent
-            {
-                ElementId = groupId,
-                Name = name,
-                Description = description,
-            };
-            this.implementationGuide.Definition.Grouping.Add(item);
+            this.groups
+                .AppendLine($"<grouping id=\"{groupId}\">")
+                .AppendLine($"  <name value=\"{name}\" />")
+                .AppendLine($"  <description value=\"{description}\" />")
+                .AppendLine($"</grouping>")
+                ;
         }
 
         public void AddIGResource(String path,
@@ -40,20 +42,22 @@ namespace FhirKhit.Tools.R4
             String groupId,
             bool example)
         {
-            ImplementationGuide.ResourceComponent item = new ImplementationGuide.ResourceComponent
-            {
-                Name = name,
-                Reference = new ResourceReference(path),
-                Description = description,
-                Example = new FhirBoolean(example),
-                GroupingId = groupId
-            };
-            this.implementationGuide.Definition.Resource.Add(item);
+            this.resources
+                .AppendLine($"<resource>")
+                .AppendLine($"  <reference>")
+                .AppendLine($"    <reference value=\"{path}\" />")
+                .AppendLine($"  </reference>")
+                .AppendLine($"  <name value=\"{name}\" />")
+                .AppendLine($"  <description value=\"{description}\" />")
+                .AppendLine($"  <exampleBoolean value=\"{example}\" />")
+                .AppendLine($"  <groupingId value=\"{groupId}\" />")
+                .AppendLine($"</resource>")
+                ;
         }
 
         public void Save(String path)
         {
-            implementationGuide.SaveXml(path);
+            implementationGuide.Save(path);
         }
     }
 }

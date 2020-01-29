@@ -98,6 +98,12 @@ namespace FhirKhit.Tools
             return this.userMacros.TryGetValue(name, out value);
         }
 
+        /// <summary>
+        ///  Try and dd user macro. Throw exception if existing macro of same name.
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public bool TryAddUserMacro(String name, Object value)
         {
             if (String.IsNullOrEmpty(name))
@@ -105,6 +111,15 @@ namespace FhirKhit.Tools
             if (Char.IsUpper(name[0]) == false)
                 throw new Exception($"Invalid user macro name {name}. All user macros must start with upper case letter");
             return this.userMacros.TryAdd(name, value);
+        }
+
+        /// <summary>
+        ///  Add user macro. Obverwire any existing macro of same name.
+        /// </summary>
+        public void AddUserMacro(String name, Object value)
+        {
+            this.userMacros.Remove(name);
+            this.TryAddUserMacro(name, value);
         }
     }
 }
