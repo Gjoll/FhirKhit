@@ -42,6 +42,8 @@ namespace FhirKhit.Tools.R4
             String groupId,
             bool example)
         {
+            string exampleStr = example == true ? "true" : "false";
+
             this.resources
                 .AppendLine($"<resource>")
                 .AppendLine($"  <reference>")
@@ -49,7 +51,7 @@ namespace FhirKhit.Tools.R4
                 .AppendLine($"  </reference>")
                 .AppendLine($"  <name value=\"{name}\" />")
                 .AppendLine($"  <description value=\"{description}\" />")
-                .AppendLine($"  <exampleBoolean value=\"{example}\" />")
+                .AppendLine($"  <exampleBoolean value=\"{exampleStr}\" />")
                 .AppendLine($"  <groupingId value=\"{groupId}\" />")
                 .AppendLine($"</resource>")
                 ;
