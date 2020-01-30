@@ -18,9 +18,19 @@ namespace FhirKhit.Tools.R3
     {
         public static Markdown Paragraph(this Markdown md, params string[] lines)
         {
+            bool spaceFlag = false;
+            StringBuilder sb = new StringBuilder();
             foreach (String line in lines)
-                md.Value += $"{line}\n";
-            md.Value += "\n";
+            {
+                if (line.First() == ' ')
+                    spaceFlag = false;
+                if (spaceFlag)
+                    sb.Append(" ");
+                sb.Append($"{line}\n");
+                spaceFlag = (line.Last() != ' ');
+            }
+            sb.Append($"\n");
+            md.Value += sb.ToString();
             return md;
         }
 
