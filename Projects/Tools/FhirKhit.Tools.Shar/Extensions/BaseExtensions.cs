@@ -60,15 +60,19 @@ namespace FhirKhit.Tools.R3
     public static void SaveJson(this Base fhirBase, String path)
     {
         Int32 retries = 3;
-        try
+        while (true)
         {
-            File.WriteAllText(path, fhirBase.ToFormatedJson());
-        }
-        catch(Exception e)
-        {
-            if (--retries == 0)
-                throw e;
-            Thread.Sleep(500);
+            try
+            {
+                File.WriteAllText(path, fhirBase.ToFormatedJson());
+                return;
+            }
+            catch (Exception e)
+            {
+                if (--retries == 0)
+                    throw e;
+                Thread.Sleep(500);
+            }
         }
     }
 

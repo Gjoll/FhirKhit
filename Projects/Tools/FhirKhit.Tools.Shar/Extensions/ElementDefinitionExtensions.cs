@@ -717,7 +717,7 @@ namespace FhirKhit.Tools.R3
         }
 
 
-        public static void ApplySlicing(this ElementDefinition e,
+        public static ElementDefinition ApplySlicing(this ElementDefinition e,
             ElementDefinition.SlicingComponent slicingComponent,
             bool overrideExistingSliceDiscriminator)
         {
@@ -748,9 +748,10 @@ namespace FhirKhit.Tools.R3
             {
                 if (NonCompatible() == true)
                     throw new Exception($"Slicing already defined in a noncompatible manner");
-                return;
             }
-            e.Slicing = slicingComponent;
+            else
+                e.Slicing = slicingComponent;
+            return e;
         }
     }
 }
