@@ -403,7 +403,7 @@ namespace FhirKhit.Tools
         /// <summary>
         /// Append comment lines. Split long lines. 
         /// </summary>
-        public CodeBlockNested AppendComment(String[] lines)
+        public CodeBlockNested AppendComment(params String[] lines)
         {
             if (lines == null)
                 return this;
