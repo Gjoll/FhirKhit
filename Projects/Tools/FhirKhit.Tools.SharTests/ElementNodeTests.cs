@@ -10,11 +10,13 @@ using System.IO.Compression;
 
 #if FHIR_R3
 using FhirKhit.Tools.R3;
+
+namespace FhirKhit.Tools.R3.XUnitTests
 #elif FHIR_R4
 using FhirKhit.Tools.R4;
-#endif
 
-namespace FhirKhit.SliceGen.XUnitTestsA
+namespace FhirKhit.Tools.R4.XUnitTests
+#endif
 {
     /// <summary>
     /// Test the output test files generated in FhirKhit.SliceGen.XUnitTests.

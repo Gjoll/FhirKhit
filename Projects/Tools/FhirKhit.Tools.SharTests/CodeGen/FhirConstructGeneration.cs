@@ -569,6 +569,7 @@ namespace FhirKhit.Tools.FhirConstructTests
                 .AppendLine($"using Hl7.Fhir.Model;")
                 .AppendLine($"using System.Diagnostics;")
                 .AppendLine($"using Hl7.FhirPath;")
+                .AppendLine($"using Range = Hl7.Fhir.Model.Range;")
                 .BlankLine()
 #if FHIR_R3
                 .AppendLine($"namespace FhirKhit.Tools.R3")
