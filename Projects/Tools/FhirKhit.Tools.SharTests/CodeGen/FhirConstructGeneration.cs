@@ -53,7 +53,7 @@ namespace FhirKhit.Tools.FhirConstructTests
 
 
             String name = pi.PropertyType.FriendlyName();
-            code.AppendCode($"block.AppendCode(\"// Set {pi.Name} of type {name})\");");
+            //code.AppendCode($"block.AppendCode(\"// Set {pi.Name} of type {name})\");");
             switch (name)
             {
                 case "Element":
@@ -66,20 +66,19 @@ namespace FhirKhit.Tools.FhirConstructTests
 
                 case "bool?":
                     code
-                        .AppendCode($"if ({varName}.{pi.Name}.HasValue == false)")
-                        .AppendCode($"    block.AppendCode($\"{retValName}.{pi.Name} = null;\");")
-                        .AppendCode($"else if ({varName}.{pi.Name}.Value == true)")
+                        .AppendCode($"if ({varName}.{pi.Name}.HasValue == true)")
+                        .OpenBrace()
+                        .AppendCode($"if ({varName}.{pi.Name}.Value == true)")
                         .AppendCode($"    block.AppendCode($\"{retValName}.{pi.Name} = true;\");")
                         .AppendCode($"else")
                         .AppendCode($"    block.AppendCode($\"{retValName}.{pi.Name} = false;\");")
+                        .CloseBrace()
                         ;
                     break;
 
                 case "byte[]":
                     code
-                        .AppendCode($"if ({varName}.{pi.Name} == null)")
-                        .AppendCode($"    block.AppendCode($\"{retValName}.{pi.Name} = null;\");")
-                        .AppendCode($"else")
+                        .AppendCode($"if ({varName}.{pi.Name} != null)")
                         .OpenBrace()
                         .AppendCode($"block.OpenBrace();")
                         .AppendCode($"block.AppendCode($\"byte[] data = new byte[]\");")
@@ -107,9 +106,7 @@ namespace FhirKhit.Tools.FhirConstructTests
 
                 case "DateTimeOffset?":
                     code
-                        .AppendCode($"if ({varName}.{pi.Name}.HasValue == false)")
-                        .AppendCode($"    block.AppendCode($\"{retValName}.{pi.Name} = null;\");")
-                        .AppendCode($"else")
+                        .AppendCode($"if ({varName}.{pi.Name}.HasValue == true)")
                         .OpenBrace()
                         .AppendCode($"DateTimeOffset x = {varName}.{pi.Name}.Value;")
                         .AppendCode($"block")
@@ -123,27 +120,21 @@ namespace FhirKhit.Tools.FhirConstructTests
 
                 case "decimal?":
                     code
-                        .AppendCode($"if ({varName}.{pi.Name}.HasValue == false)")
-                        .AppendCode($"    block.AppendCode($\"{retValName}.{pi.Name} = null;\");")
-                        .AppendCode($"else")
+                        .AppendCode($"if ({varName}.{pi.Name}.HasValue == true)")
                         .AppendCode($"    block.AppendCode($\"{retValName}.{pi.Name} = new Nullable<decimal>((decimal) {{{varName}.{pi.Name}.Value}});\");")
                         ;
                     break;
 
                 case "int?":
                     code
-                        .AppendCode($"if ({varName}.{pi.Name}.HasValue == false)")
-                        .AppendCode($"    block.AppendCode($\"{retValName}.{pi.Name} = null;\");")
-                        .AppendCode($"else")
+                        .AppendCode($"if ({varName}.{pi.Name}.HasValue == true)")
                         .AppendCode($"    block.AppendCode($\"{retValName}.{pi.Name} = new Nullable<int>((int) {{{varName}.{pi.Name}.Value}});\");")
                         ;
                     break;
 
                 case "string":
                     code
-                        .AppendCode($"if ({varName}.{pi.Name} == null)")
-                        .AppendCode($"    block.AppendCode($\"{retValName}.{pi.Name} = null;\");")
-                        .AppendCode($"else")
+                        .AppendCode($"if ({varName}.{pi.Name} != null)")
                         .AppendCode($"    block.AppendCode($\"{retValName}.{pi.Name} = \\\"{{{varName}.{pi.Name}}}\\\";\");")
                         ;
                     break;
@@ -153,9 +144,7 @@ namespace FhirKhit.Tools.FhirConstructTests
                     {
                         String enumName = pi.PropertyType.GenericTypeArguments[0].FriendlyName();
                         code
-                            .AppendCode($"if ({varName}.{pi.Name} == null)")
-                            .AppendCode($"    block.AppendCode($\"{retValName}.{pi.Name} = null;\");")
-                            .AppendCode($"else")
+                            .AppendCode($"if ({varName}.{pi.Name} != null)")
                             .AppendCode($"    block.AppendCode($\"{retValName}.{pi.Name} = new {name}({enumName}.{{{varName}.{pi.Name}.Value}});\");")
                             ;
                     }
@@ -167,9 +156,7 @@ namespace FhirKhit.Tools.FhirConstructTests
                         String listTypeName = listType.FriendlyName();
 
                         code
-                            .AppendCode($"if ({varName}.{pi.Name} == null)")
-                            .AppendCode($"    block.AppendCode($\"{retValName}.{pi.Name} = null;\");")
-                            .AppendCode($"else")
+                            .AppendCode($"if ({varName}.{pi.Name} != null)")
                             .OpenBrace()
                             .AppendCode($"block.AppendCode($\"{retValName}.{pi.Name} = new {name}();\");")
                             .AppendCode($"foreach (var {source} in {varName}.{pi.Name})")
@@ -194,18 +181,14 @@ namespace FhirKhit.Tools.FhirConstructTests
                         if (nullableType.IsEnum)
                         {
                             code
-                                .AppendCode($"if ({varName}.{pi.Name}.HasValue == false)")
-                                .AppendCode($"    block.AppendCode($\"{retValName}.{pi.Name} = null;\");")
-                                .AppendCode($"else")
+                                .AppendCode($"if ({varName}.{pi.Name}.HasValue == true)")
                                 .AppendCode($"    block.AppendCode($\"{retValName}.{pi.Name} = {nullableTypeName}.{{{varName}.{pi.Name}.Value}};\");")
                                 ;
                         }
                         else if (nullableType.IsClass)
                         {
                             code
-                                .AppendCode($"if ({varName}.{pi.Name}.HasValue == false)")
-                                .AppendCode($"    block.AppendCode($\"{retValName}.{pi.Name} = null;\");")
-                                .AppendCode($"else")
+                                .AppendCode($"if ({varName}.{pi.Name}.HasValue == true)")
                                 .OpenBrace()
                                 .AppendCode($"    block.AppendCode($\"{retValName}.{pi.Name} = new {nullableTypeName}();\");")
                                 ;
@@ -221,9 +204,7 @@ namespace FhirKhit.Tools.FhirConstructTests
                     {
                         String typeName = pi.PropertyType.FriendlyName();
                         code
-                            .AppendCode($"if ({varName}.{pi.Name} == null)")
-                            .AppendCode($"    block.AppendCode($\"{retValName}.{pi.Name} = null;\");")
-                            .AppendCode($"else")
+                            .AppendCode($"if ({varName}.{pi.Name} != null)")
                             .OpenBrace()
                             .AppendCode($"    block.AppendCode($\"{retValName}.{pi.Name} = new {typeName}();\");")
                             ;
