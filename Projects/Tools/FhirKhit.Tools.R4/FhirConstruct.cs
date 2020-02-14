@@ -504,7 +504,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Address();")                                                                               // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -563,7 +563,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Age();")                                                                                   // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -604,7 +604,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Annotation();")                                                                            // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -735,7 +735,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Attachment();")                                                                            // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -826,7 +826,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new CodeableConcept();")                                                                       // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -896,7 +896,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Coding();")                                                                                // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -984,7 +984,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new ContactDetail();")                                                                         // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -1051,7 +1051,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new ContactPoint();")                                                                          // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -1162,7 +1162,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Contributor();")                                                                           // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -1221,7 +1221,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Count();")                                                                                 // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -1433,7 +1433,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new DataRequirement();")                                                                       // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -1492,7 +1492,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Distance();")                                                                              // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -2307,7 +2307,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Dosage();")                                                                                // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -2366,7 +2366,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Duration();")                                                                              // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -2961,7 +2961,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new ElementDefinition();")                                                                     // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -3026,7 +3026,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Expression();")                                                                            // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -3053,7 +3053,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Extension();")                                                                             // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -3163,7 +3163,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new HumanName();")                                                                             // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -3300,7 +3300,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Identifier();")                                                                            // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -3571,7 +3571,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new MarketingStatus();")                                                                       // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -3758,7 +3758,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Meta();")                                                                                  // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -3793,7 +3793,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Money();")                                                                                 // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -3852,7 +3852,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new MoneyQuantity();")                                                                         // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -3881,7 +3881,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Narrative();")                                                                             // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -3950,7 +3950,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new ParameterDefinition();")                                                                   // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -3991,7 +3991,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Period();")                                                                                // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -4232,7 +4232,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Population();")                                                                            // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -4726,7 +4726,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new ProdCharacteristic();")                                                                    // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -5060,7 +5060,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new ProductShelfLife();")                                                                      // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -5119,7 +5119,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Quantity();")                                                                              // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -5224,7 +5224,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Range();")                                                                                 // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -5329,7 +5329,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Ratio();")                                                                                 // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -5496,7 +5496,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new ResourceReference();")                                                                     // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -5675,7 +5675,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new RelatedArtifact();")                                                                       // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -5788,7 +5788,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new SampledData();")                                                                           // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -5931,7 +5931,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Signature();")                                                                             // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -5990,7 +5990,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new SimpleQuantity();")                                                                        // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -6181,7 +6181,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new SubstanceAmount();")                                                                       // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -6420,7 +6420,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Timing();")                                                                                // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -6701,7 +6701,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new TriggerDefinition();")                                                                     // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341
@@ -6777,7 +6777,7 @@ namespace FhirKhit.Tools.R4
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
             }                                                                                                                               // FhirConstructGeneration.cs:336
             block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new UsageContext();")                                                                          // FhirConstructGeneration.cs:338
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:338
                 .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
                 ;                                                                                                                           // FhirConstructGeneration.cs:340
             return  true;                                                                                                                   // FhirConstructGeneration.cs:341

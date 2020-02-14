@@ -145,7 +145,7 @@ namespace FhirKhit.Tools.R4
             retVal.Period.EndElement.ElementId = "String";                                                                                  // FhirConstruct.cs:498
             retVal.Period.ElementId = "String";                                                                                             // FhirConstruct.cs:501
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:504
-            return retVal = new Address();                                                                                                  // FhirConstruct.cs:507
+            return retVal;                                                                                                                  // FhirConstruct.cs:507
         }                                                                                                                                   // FhirConstruct.cs:508
         public Age Method4()                                                                                                                // FhirConstruct.cs:522
         {                                                                                                                                   // FhirConstruct.cs:523
@@ -164,7 +164,7 @@ namespace FhirKhit.Tools.R4
             retVal.CodeElement.Value = "String";                                                                                            // FhirConstruct.cs:558
             retVal.CodeElement.ElementId = "String";                                                                                        // FhirConstruct.cs:560
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:563
-            return retVal = new Age();                                                                                                      // FhirConstruct.cs:566
+            return retVal;                                                                                                                  // FhirConstruct.cs:566
         }                                                                                                                                   // FhirConstruct.cs:567
         public Annotation Method6()                                                                                                         // FhirConstruct.cs:581
         {                                                                                                                                   // FhirConstruct.cs:582
@@ -176,7 +176,7 @@ namespace FhirKhit.Tools.R4
             retVal.Text.Value = "String";                                                                                                   // FhirConstruct.cs:599
             retVal.Text.ElementId = "String";                                                                                               // FhirConstruct.cs:601
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:604
-            return retVal = new Annotation();                                                                                               // FhirConstruct.cs:607
+            return retVal;                                                                                                                  // FhirConstruct.cs:607
         }                                                                                                                                   // FhirConstruct.cs:608
         public Attachment Method8()                                                                                                         // FhirConstruct.cs:622
         {                                                                                                                                   // FhirConstruct.cs:623
@@ -218,7 +218,7 @@ namespace FhirKhit.Tools.R4
             retVal.CreationElement.Value = "String";                                                                                        // FhirConstruct.cs:730
             retVal.CreationElement.ElementId = "String";                                                                                    // FhirConstruct.cs:732
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:735
-            return retVal = new Attachment();                                                                                               // FhirConstruct.cs:738
+            return retVal;                                                                                                                  // FhirConstruct.cs:738
         }                                                                                                                                   // FhirConstruct.cs:739
         public CodeableConcept Method10()                                                                                                   // FhirConstruct.cs:753
         {                                                                                                                                   // FhirConstruct.cs:754
@@ -328,7 +328,7 @@ namespace FhirKhit.Tools.R4
             retVal.TextElement.Value = "String";                                                                                            // FhirConstruct.cs:821
             retVal.TextElement.ElementId = "String";                                                                                        // FhirConstruct.cs:823
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:826
-            return retVal = new CodeableConcept();                                                                                          // FhirConstruct.cs:829
+            return retVal;                                                                                                                  // FhirConstruct.cs:829
         }                                                                                                                                   // FhirConstruct.cs:830
         public Coding Method12()                                                                                                            // FhirConstruct.cs:844
         {                                                                                                                                   // FhirConstruct.cs:845
@@ -349,7 +349,7 @@ namespace FhirKhit.Tools.R4
             retVal.UserSelectedElement.Value = true;                                                                                        // FhirConstruct.cs:888
             retVal.UserSelectedElement.ElementId = "String";                                                                                // FhirConstruct.cs:893
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:896
-            return retVal = new Coding();                                                                                                   // FhirConstruct.cs:899
+            return retVal;                                                                                                                  // FhirConstruct.cs:899
         }                                                                                                                                   // FhirConstruct.cs:900
         public ContactDetail Method14()                                                                                                     // FhirConstruct.cs:914
         {                                                                                                                                   // FhirConstruct.cs:915
@@ -464,7 +464,7 @@ namespace FhirKhit.Tools.R4
                 retVal.Telecom.Add(temp6);                                                                                                  // FhirConstruct.cs:979
             }                                                                                                                               // FhirConstruct.cs:980
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:984
-            return retVal = new ContactDetail();                                                                                            // FhirConstruct.cs:987
+            return retVal;                                                                                                                  // FhirConstruct.cs:987
         }                                                                                                                                   // FhirConstruct.cs:988
         public ContactPoint Method16()                                                                                                      // FhirConstruct.cs:1002
         {                                                                                                                                   // FhirConstruct.cs:1003
@@ -486,7 +486,7 @@ namespace FhirKhit.Tools.R4
             retVal.Period.EndElement.ElementId = "String";                                                                                  // FhirConstruct.cs:1045
             retVal.Period.ElementId = "String";                                                                                             // FhirConstruct.cs:1048
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:1051
-            return retVal = new ContactPoint();                                                                                             // FhirConstruct.cs:1054
+            return retVal;                                                                                                                  // FhirConstruct.cs:1054
         }                                                                                                                                   // FhirConstruct.cs:1055
         public Contributor Method18()                                                                                                       // FhirConstruct.cs:1069
         {                                                                                                                                   // FhirConstruct.cs:1070
@@ -1067,7 +1067,7 @@ namespace FhirKhit.Tools.R4
                 retVal.Contact.Add(temp8);                                                                                                  // FhirConstruct.cs:1157
             }                                                                                                                               // FhirConstruct.cs:1158
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:1162
-            return retVal = new Contributor();                                                                                              // FhirConstruct.cs:1165
+            return retVal;                                                                                                                  // FhirConstruct.cs:1165
         }                                                                                                                                   // FhirConstruct.cs:1166
         public Count Method20()                                                                                                             // FhirConstruct.cs:1180
         {                                                                                                                                   // FhirConstruct.cs:1181
@@ -1086,7 +1086,7 @@ namespace FhirKhit.Tools.R4
             retVal.CodeElement.Value = "String";                                                                                            // FhirConstruct.cs:1216
             retVal.CodeElement.ElementId = "String";                                                                                        // FhirConstruct.cs:1218
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:1221
-            return retVal = new Count();                                                                                                    // FhirConstruct.cs:1224
+            return retVal;                                                                                                                  // FhirConstruct.cs:1224
         }                                                                                                                                   // FhirConstruct.cs:1225
         public DataRequirement Method22()                                                                                                   // FhirConstruct.cs:1239
         {                                                                                                                                   // FhirConstruct.cs:1240
@@ -1836,7 +1836,7 @@ namespace FhirKhit.Tools.R4
                 retVal.Sort.Add(temp22);                                                                                                    // FhirConstruct.cs:1428
             }                                                                                                                               // FhirConstruct.cs:1429
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:1433
-            return retVal = new DataRequirement();                                                                                          // FhirConstruct.cs:1436
+            return retVal;                                                                                                                  // FhirConstruct.cs:1436
         }                                                                                                                                   // FhirConstruct.cs:1437
         public Distance Method24()                                                                                                          // FhirConstruct.cs:1451
         {                                                                                                                                   // FhirConstruct.cs:1452
@@ -1855,7 +1855,7 @@ namespace FhirKhit.Tools.R4
             retVal.CodeElement.Value = "String";                                                                                            // FhirConstruct.cs:1487
             retVal.CodeElement.ElementId = "String";                                                                                        // FhirConstruct.cs:1489
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:1492
-            return retVal = new Distance();                                                                                                 // FhirConstruct.cs:1495
+            return retVal;                                                                                                                  // FhirConstruct.cs:1495
         }                                                                                                                                   // FhirConstruct.cs:1496
         public Dosage Method26()                                                                                                            // FhirConstruct.cs:1510
         {                                                                                                                                   // FhirConstruct.cs:1511
@@ -3615,7 +3615,7 @@ namespace FhirKhit.Tools.R4
             retVal.MaxDosePerLifetime.CodeElement.ElementId = "String";                                                                     // FhirConstruct.cs:2301
             retVal.MaxDosePerLifetime.ElementId = "String";                                                                                 // FhirConstruct.cs:2304
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:2307
-            return retVal = new Dosage();                                                                                                   // FhirConstruct.cs:2310
+            return retVal;                                                                                                                  // FhirConstruct.cs:2310
         }                                                                                                                                   // FhirConstruct.cs:2311
         public Duration Method28()                                                                                                          // FhirConstruct.cs:2325
         {                                                                                                                                   // FhirConstruct.cs:2326
@@ -3634,7 +3634,7 @@ namespace FhirKhit.Tools.R4
             retVal.CodeElement.Value = "String";                                                                                            // FhirConstruct.cs:2361
             retVal.CodeElement.ElementId = "String";                                                                                        // FhirConstruct.cs:2363
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:2366
-            return retVal = new Duration();                                                                                                 // FhirConstruct.cs:2369
+            return retVal;                                                                                                                  // FhirConstruct.cs:2369
         }                                                                                                                                   // FhirConstruct.cs:2370
         public ElementDefinition Method30()                                                                                                 // FhirConstruct.cs:2384
         {                                                                                                                                   // FhirConstruct.cs:2385
@@ -4722,7 +4722,7 @@ namespace FhirKhit.Tools.R4
                 retVal.Mapping.Add(temp70);                                                                                                 // FhirConstruct.cs:2956
             }                                                                                                                               // FhirConstruct.cs:2957
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:2961
-            return retVal = new ElementDefinition();                                                                                        // FhirConstruct.cs:2964
+            return retVal;                                                                                                                  // FhirConstruct.cs:2964
         }                                                                                                                                   // FhirConstruct.cs:2965
         public Expression Method32()                                                                                                        // FhirConstruct.cs:2979
         {                                                                                                                                   // FhirConstruct.cs:2980
@@ -4743,14 +4743,14 @@ namespace FhirKhit.Tools.R4
             retVal.ReferenceElement.Value = "String";                                                                                       // FhirConstruct.cs:3021
             retVal.ReferenceElement.ElementId = "String";                                                                                   // FhirConstruct.cs:3023
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:3026
-            return retVal = new Expression();                                                                                               // FhirConstruct.cs:3029
+            return retVal;                                                                                                                  // FhirConstruct.cs:3029
         }                                                                                                                                   // FhirConstruct.cs:3030
         public Extension Method34()                                                                                                         // FhirConstruct.cs:3044
         {                                                                                                                                   // FhirConstruct.cs:3045
             Extension retVal = new Extension();                                                                                             // FhirConstruct.cs:3046
             retVal.Url = "String";                                                                                                          // FhirConstruct.cs:3051
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:3053
-            return retVal = new Extension();                                                                                                // FhirConstruct.cs:3056
+            return retVal;                                                                                                                  // FhirConstruct.cs:3056
         }                                                                                                                                   // FhirConstruct.cs:3057
         public HumanName Method36()                                                                                                         // FhirConstruct.cs:3071
         {                                                                                                                                   // FhirConstruct.cs:3072
@@ -4864,7 +4864,7 @@ namespace FhirKhit.Tools.R4
             retVal.Period.EndElement.ElementId = "String";                                                                                  // FhirConstruct.cs:3157
             retVal.Period.ElementId = "String";                                                                                             // FhirConstruct.cs:3160
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:3163
-            return retVal = new HumanName();                                                                                                // FhirConstruct.cs:3166
+            return retVal;                                                                                                                  // FhirConstruct.cs:3166
         }                                                                                                                                   // FhirConstruct.cs:3167
         public Identifier Method38()                                                                                                        // FhirConstruct.cs:3181
         {                                                                                                                                   // FhirConstruct.cs:3182
@@ -4991,7 +4991,7 @@ namespace FhirKhit.Tools.R4
             retVal.Period.EndElement.ElementId = "String";                                                                                  // FhirConstruct.cs:3294
             retVal.Period.ElementId = "String";                                                                                             // FhirConstruct.cs:3297
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:3300
-            return retVal = new Identifier();                                                                                               // FhirConstruct.cs:3303
+            return retVal;                                                                                                                  // FhirConstruct.cs:3303
         }                                                                                                                                   // FhirConstruct.cs:3304
         public MarketingStatus Method40()                                                                                                   // FhirConstruct.cs:3318
         {                                                                                                                                   // FhirConstruct.cs:3319
@@ -5326,7 +5326,7 @@ namespace FhirKhit.Tools.R4
             retVal.RestoreDateElement.Value = "String";                                                                                     // FhirConstruct.cs:3566
             retVal.RestoreDateElement.ElementId = "String";                                                                                 // FhirConstruct.cs:3568
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:3571
-            return retVal = new MarketingStatus();                                                                                          // FhirConstruct.cs:3574
+            return retVal;                                                                                                                  // FhirConstruct.cs:3574
         }                                                                                                                                   // FhirConstruct.cs:3575
         public Meta Method42()                                                                                                              // FhirConstruct.cs:3589
         {                                                                                                                                   // FhirConstruct.cs:3590
@@ -5336,7 +5336,7 @@ namespace FhirKhit.Tools.R4
             retVal.VersionIdElement.ElementId = "String";                                                                                   // FhirConstruct.cs:3601
             retVal.LastUpdatedElement = new Instant();                                                                                      // FhirConstruct.cs:3605
             retVal.LastUpdatedElement.Value = new DateTimeOffset(2020, 2, 14,                                                               // FhirConstruct.cs:3610
-                12, 21, 38, 178,                                                                                                            // FhirConstruct.cs:3611
+                13, 3, 12, 364,                                                                                                             // FhirConstruct.cs:3611
                 new TimeSpan(-6, 0, 0));                                                                                                    // FhirConstruct.cs:3612
             retVal.LastUpdatedElement.ElementId = "String";                                                                                 // FhirConstruct.cs:3616
             retVal.SourceElement = new FhirUri();                                                                                           // FhirConstruct.cs:3620
@@ -5576,7 +5576,7 @@ namespace FhirKhit.Tools.R4
                 retVal.Tag.Add(temp90);                                                                                                     // FhirConstruct.cs:3753
             }                                                                                                                               // FhirConstruct.cs:3754
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:3758
-            return retVal = new Meta();                                                                                                     // FhirConstruct.cs:3761
+            return retVal;                                                                                                                  // FhirConstruct.cs:3761
         }                                                                                                                                   // FhirConstruct.cs:3762
         public Money Method44()                                                                                                             // FhirConstruct.cs:3776
         {                                                                                                                                   // FhirConstruct.cs:3777
@@ -5586,7 +5586,7 @@ namespace FhirKhit.Tools.R4
             retVal.ValueElement.ElementId = "String";                                                                                       // FhirConstruct.cs:3788
             retVal.CurrencyElement = new Code<Money.Currencies>(Money.Currencies.AED);                                                      // FhirConstruct.cs:3791
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:3793
-            return retVal = new Money();                                                                                                    // FhirConstruct.cs:3796
+            return retVal;                                                                                                                  // FhirConstruct.cs:3796
         }                                                                                                                                   // FhirConstruct.cs:3797
         public MoneyQuantity Method46()                                                                                                     // FhirConstruct.cs:3811
         {                                                                                                                                   // FhirConstruct.cs:3812
@@ -5605,7 +5605,7 @@ namespace FhirKhit.Tools.R4
             retVal.CodeElement.Value = "String";                                                                                            // FhirConstruct.cs:3847
             retVal.CodeElement.ElementId = "String";                                                                                        // FhirConstruct.cs:3849
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:3852
-            return retVal = new MoneyQuantity();                                                                                            // FhirConstruct.cs:3855
+            return retVal;                                                                                                                  // FhirConstruct.cs:3855
         }                                                                                                                                   // FhirConstruct.cs:3856
         public Narrative Method48()                                                                                                         // FhirConstruct.cs:3870
         {                                                                                                                                   // FhirConstruct.cs:3871
@@ -5613,7 +5613,7 @@ namespace FhirKhit.Tools.R4
             retVal.StatusElement = new Code<Narrative.NarrativeStatus>(Narrative.NarrativeStatus.Generated);                                // FhirConstruct.cs:3877
             retVal.Div = "String";                                                                                                          // FhirConstruct.cs:3879
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:3881
-            return retVal = new Narrative();                                                                                                // FhirConstruct.cs:3884
+            return retVal;                                                                                                                  // FhirConstruct.cs:3884
         }                                                                                                                                   // FhirConstruct.cs:3885
         public ParameterDefinition Method50()                                                                                               // FhirConstruct.cs:3899
         {                                                                                                                                   // FhirConstruct.cs:3900
@@ -5636,7 +5636,7 @@ namespace FhirKhit.Tools.R4
             retVal.ProfileElement.Value = "String";                                                                                         // FhirConstruct.cs:3945
             retVal.ProfileElement.ElementId = "String";                                                                                     // FhirConstruct.cs:3947
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:3950
-            return retVal = new ParameterDefinition();                                                                                      // FhirConstruct.cs:3953
+            return retVal;                                                                                                                  // FhirConstruct.cs:3953
         }                                                                                                                                   // FhirConstruct.cs:3954
         public Period Method52()                                                                                                            // FhirConstruct.cs:3968
         {                                                                                                                                   // FhirConstruct.cs:3969
@@ -5648,7 +5648,7 @@ namespace FhirKhit.Tools.R4
             retVal.EndElement.Value = "String";                                                                                             // FhirConstruct.cs:3986
             retVal.EndElement.ElementId = "String";                                                                                         // FhirConstruct.cs:3988
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:3991
-            return retVal = new Period();                                                                                                   // FhirConstruct.cs:3994
+            return retVal;                                                                                                                  // FhirConstruct.cs:3994
         }                                                                                                                                   // FhirConstruct.cs:3995
         public Population Method54()                                                                                                        // FhirConstruct.cs:4009
         {                                                                                                                                   // FhirConstruct.cs:4010
@@ -5972,7 +5972,7 @@ namespace FhirKhit.Tools.R4
             retVal.PhysiologicalCondition.TextElement.ElementId = "String";                                                                 // FhirConstruct.cs:4226
             retVal.PhysiologicalCondition.ElementId = "String";                                                                             // FhirConstruct.cs:4229
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:4232
-            return retVal = new Population();                                                                                               // FhirConstruct.cs:4235
+            return retVal;                                                                                                                  // FhirConstruct.cs:4235
         }                                                                                                                                   // FhirConstruct.cs:4236
         public ProdCharacteristic Method56()                                                                                                // FhirConstruct.cs:4250
         {                                                                                                                                   // FhirConstruct.cs:4251
@@ -6445,7 +6445,7 @@ namespace FhirKhit.Tools.R4
             retVal.Scoring.TextElement.ElementId = "String";                                                                                // FhirConstruct.cs:4720
             retVal.Scoring.ElementId = "String";                                                                                            // FhirConstruct.cs:4723
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:4726
-            return retVal = new ProdCharacteristic();                                                                                       // FhirConstruct.cs:4729
+            return retVal;                                                                                                                  // FhirConstruct.cs:4729
         }                                                                                                                                   // FhirConstruct.cs:4730
         public ProductShelfLife Method58()                                                                                                  // FhirConstruct.cs:4744
         {                                                                                                                                   // FhirConstruct.cs:4745
@@ -7241,7 +7241,7 @@ namespace FhirKhit.Tools.R4
                 retVal.SpecialPrecautionsForStorage.Add(temp110);                                                                           // FhirConstruct.cs:5055
             }                                                                                                                               // FhirConstruct.cs:5056
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:5060
-            return retVal = new ProductShelfLife();                                                                                         // FhirConstruct.cs:5063
+            return retVal;                                                                                                                  // FhirConstruct.cs:5063
         }                                                                                                                                   // FhirConstruct.cs:5064
         public Quantity Method60()                                                                                                          // FhirConstruct.cs:5078
         {                                                                                                                                   // FhirConstruct.cs:5079
@@ -7260,7 +7260,7 @@ namespace FhirKhit.Tools.R4
             retVal.CodeElement.Value = "String";                                                                                            // FhirConstruct.cs:5114
             retVal.CodeElement.ElementId = "String";                                                                                        // FhirConstruct.cs:5116
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:5119
-            return retVal = new Quantity();                                                                                                 // FhirConstruct.cs:5122
+            return retVal;                                                                                                                  // FhirConstruct.cs:5122
         }                                                                                                                                   // FhirConstruct.cs:5123
         public Range Method62()                                                                                                             // FhirConstruct.cs:5137
         {                                                                                                                                   // FhirConstruct.cs:5138
@@ -7296,7 +7296,7 @@ namespace FhirKhit.Tools.R4
             retVal.High.CodeElement.ElementId = "String";                                                                                   // FhirConstruct.cs:5218
             retVal.High.ElementId = "String";                                                                                               // FhirConstruct.cs:5221
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:5224
-            return retVal = new Range();                                                                                                    // FhirConstruct.cs:5227
+            return retVal;                                                                                                                  // FhirConstruct.cs:5227
         }                                                                                                                                   // FhirConstruct.cs:5228
         public Ratio Method64()                                                                                                             // FhirConstruct.cs:5242
         {                                                                                                                                   // FhirConstruct.cs:5243
@@ -7332,7 +7332,7 @@ namespace FhirKhit.Tools.R4
             retVal.Denominator.CodeElement.ElementId = "String";                                                                            // FhirConstruct.cs:5323
             retVal.Denominator.ElementId = "String";                                                                                        // FhirConstruct.cs:5326
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:5329
-            return retVal = new Ratio();                                                                                                    // FhirConstruct.cs:5332
+            return retVal;                                                                                                                  // FhirConstruct.cs:5332
         }                                                                                                                                   // FhirConstruct.cs:5333
         public ResourceReference Method66()                                                                                                 // FhirConstruct.cs:5347
         {                                                                                                                                   // FhirConstruct.cs:5348
@@ -7470,7 +7470,7 @@ namespace FhirKhit.Tools.R4
             retVal.DisplayElement.Value = "String";                                                                                         // FhirConstruct.cs:5491
             retVal.DisplayElement.ElementId = "String";                                                                                     // FhirConstruct.cs:5493
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:5496
-            return retVal = new ResourceReference();                                                                                        // FhirConstruct.cs:5499
+            return retVal;                                                                                                                  // FhirConstruct.cs:5499
         }                                                                                                                                   // FhirConstruct.cs:5500
         public RelatedArtifact Method68()                                                                                                   // FhirConstruct.cs:5514
         {                                                                                                                                   // FhirConstruct.cs:5515
@@ -7530,7 +7530,7 @@ namespace FhirKhit.Tools.R4
             retVal.ResourceElement.Value = "String";                                                                                        // FhirConstruct.cs:5670
             retVal.ResourceElement.ElementId = "String";                                                                                    // FhirConstruct.cs:5672
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:5675
-            return retVal = new RelatedArtifact();                                                                                          // FhirConstruct.cs:5678
+            return retVal;                                                                                                                  // FhirConstruct.cs:5678
         }                                                                                                                                   // FhirConstruct.cs:5679
         public SampledData Method70()                                                                                                       // FhirConstruct.cs:5693
         {                                                                                                                                   // FhirConstruct.cs:5694
@@ -7569,7 +7569,7 @@ namespace FhirKhit.Tools.R4
             retVal.DataElement.Value = "String";                                                                                            // FhirConstruct.cs:5783
             retVal.DataElement.ElementId = "String";                                                                                        // FhirConstruct.cs:5785
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:5788
-            return retVal = new SampledData();                                                                                              // FhirConstruct.cs:5791
+            return retVal;                                                                                                                  // FhirConstruct.cs:5791
         }                                                                                                                                   // FhirConstruct.cs:5792
         public Signature Method72()                                                                                                         // FhirConstruct.cs:5806
         {                                                                                                                                   // FhirConstruct.cs:5807
@@ -7677,7 +7677,7 @@ namespace FhirKhit.Tools.R4
             }                                                                                                                               // FhirConstruct.cs:5867
             retVal.WhenElement = new Instant();                                                                                             // FhirConstruct.cs:5872
             retVal.WhenElement.Value = new DateTimeOffset(2020, 2, 14,                                                                      // FhirConstruct.cs:5877
-                12, 21, 38, 381,                                                                                                            // FhirConstruct.cs:5878
+                13, 3, 12, 584,                                                                                                             // FhirConstruct.cs:5878
                 new TimeSpan(-6, 0, 0));                                                                                                    // FhirConstruct.cs:5879
             retVal.WhenElement.ElementId = "String";                                                                                        // FhirConstruct.cs:5883
             retVal.TargetFormatElement = new Code();                                                                                        // FhirConstruct.cs:5887
@@ -7696,7 +7696,7 @@ namespace FhirKhit.Tools.R4
             };                                                                                                                              // FhirConstruct.cs:5925
             retVal.DataElement.ElementId = "String";                                                                                        // FhirConstruct.cs:5928
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:5931
-            return retVal = new Signature();                                                                                                // FhirConstruct.cs:5934
+            return retVal;                                                                                                                  // FhirConstruct.cs:5934
         }                                                                                                                                   // FhirConstruct.cs:5935
         public SimpleQuantity Method74()                                                                                                    // FhirConstruct.cs:5949
         {                                                                                                                                   // FhirConstruct.cs:5950
@@ -7715,7 +7715,7 @@ namespace FhirKhit.Tools.R4
             retVal.CodeElement.Value = "String";                                                                                            // FhirConstruct.cs:5985
             retVal.CodeElement.ElementId = "String";                                                                                        // FhirConstruct.cs:5987
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:5990
-            return retVal = new SimpleQuantity();                                                                                           // FhirConstruct.cs:5993
+            return retVal;                                                                                                                  // FhirConstruct.cs:5993
         }                                                                                                                                   // FhirConstruct.cs:5994
         public SubstanceAmount Method76()                                                                                                   // FhirConstruct.cs:6008
         {                                                                                                                                   // FhirConstruct.cs:6009
@@ -7862,7 +7862,7 @@ namespace FhirKhit.Tools.R4
             retVal.ReferenceRange.HighLimit.ElementId = "String";                                                                           // FhirConstruct.cs:6175
             retVal.ReferenceRange.ElementId = "String";                                                                                     // FhirConstruct.cs:6178
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:6181
-            return retVal = new SubstanceAmount();                                                                                          // FhirConstruct.cs:6184
+            return retVal;                                                                                                                  // FhirConstruct.cs:6184
         }                                                                                                                                   // FhirConstruct.cs:6185
         public Timing Method78()                                                                                                            // FhirConstruct.cs:6199
         {                                                                                                                                   // FhirConstruct.cs:6200
@@ -8129,7 +8129,7 @@ namespace FhirKhit.Tools.R4
             retVal.Code.TextElement.ElementId = "String";                                                                                   // FhirConstruct.cs:6414
             retVal.Code.ElementId = "String";                                                                                               // FhirConstruct.cs:6417
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:6420
-            return retVal = new Timing();                                                                                                   // FhirConstruct.cs:6423
+            return retVal;                                                                                                                  // FhirConstruct.cs:6423
         }                                                                                                                                   // FhirConstruct.cs:6424
         public TriggerDefinition Method80()                                                                                                 // FhirConstruct.cs:6438
         {                                                                                                                                   // FhirConstruct.cs:6439
@@ -11902,7 +11902,7 @@ namespace FhirKhit.Tools.R4
             retVal.Condition.ReferenceElement.ElementId = "String";                                                                         // FhirConstruct.cs:6695
             retVal.Condition.ElementId = "String";                                                                                          // FhirConstruct.cs:6698
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:6701
-            return retVal = new TriggerDefinition();                                                                                        // FhirConstruct.cs:6704
+            return retVal;                                                                                                                  // FhirConstruct.cs:6704
         }                                                                                                                                   // FhirConstruct.cs:6705
         public UsageContext Method82()                                                                                                      // FhirConstruct.cs:6719
         {                                                                                                                                   // FhirConstruct.cs:6720
@@ -11925,7 +11925,7 @@ namespace FhirKhit.Tools.R4
             retVal.Code.UserSelectedElement.ElementId = "String";                                                                           // FhirConstruct.cs:6771
             retVal.Code.ElementId = "String";                                                                                               // FhirConstruct.cs:6774
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:6777
-            return retVal = new UsageContext();                                                                                             // FhirConstruct.cs:6780
+            return retVal;                                                                                                                  // FhirConstruct.cs:6780
         }                                                                                                                                   // FhirConstruct.cs:6781
         public Base64Binary Method84()                                                                                                      // FhirConstruct.cs:6795
         {                                                                                                                                   // FhirConstruct.cs:6796
@@ -11993,7 +11993,7 @@ namespace FhirKhit.Tools.R4
         {                                                                                                                                   // FhirConstruct.cs:7038
             Instant retVal = new Instant();                                                                                                 // FhirConstruct.cs:7039
             retVal.Value = new DateTimeOffset(2020, 2, 14,                                                                                  // FhirConstruct.cs:7047
-                12, 21, 38, 598,                                                                                                            // FhirConstruct.cs:7048
+                13, 3, 12, 852,                                                                                                             // FhirConstruct.cs:7048
                 new TimeSpan(-6, 0, 0));                                                                                                    // FhirConstruct.cs:7049
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:7053
             return retVal;                                                                                                                  // FhirConstruct.cs:7056
