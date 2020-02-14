@@ -76,11 +76,6 @@ namespace FhirKhit.Tools.R3
         }
     }
 
-    public static async System.Threading.Tasks.Task SaveJsonAsync(this Base fhirBase, String path)
-    {
-        await File.WriteAllTextAsync(path, fhirBase.ToFormatedJson()).ConfigureAwait(false);
-    }
-
     /// <summary>
     /// Save Fhir item as JSON file
     /// </summary>

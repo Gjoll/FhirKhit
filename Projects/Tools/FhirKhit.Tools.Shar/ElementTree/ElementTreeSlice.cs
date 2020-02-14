@@ -20,7 +20,11 @@ namespace FhirKhit.Tools.R3
     /// a) A ElementDefinition instance
     /// b) zero or more child ElementTreeNode instances, containing
     ///    children ElementDefinition.
-    /// All elements in an instance are derived fromt he same base fhir element slice.
+    /// All elements in an instance are derived from the same base fhir element slice.
+    /// i.e.
+    /// Observation.thingy
+    ///     Observation.thingy.a
+    ///     Observation.thingy.b
     /// Elements of a different slice would be contained in a different instance.
     /// </summary>
     [DebuggerDisplay("{this.parent.Path}[{this.Name}]")]

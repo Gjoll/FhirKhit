@@ -52,8 +52,7 @@ namespace FhirKhit.Tools.R3
             if (path == null)
                 throw new Exception($"Invalid path for elemend {e.ElementId}");
 
-            if (elementDictionary.TryAdd(path, e) == false)
-                throw new Exception($"Error adding element {e.Path} to dictionary. Path already exists...");
+            elementDictionary.Add(path, e);
         }
 
         /// <summary>

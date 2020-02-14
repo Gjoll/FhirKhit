@@ -9,6 +9,8 @@
     <Import_RootNamespace>FhirKhit.Tools.Shar</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)CodeGen\GenerateCommon.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeGen\GenerateFixCode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ElementDefinitionNodes\ElementDefinitionNode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ElementDefinitionNodes\ElementNodeExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ElementDictionary.cs" />

@@ -9,6 +9,7 @@
     <Import_RootNamespace>FhirKhit.Tools.SharTests</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)CodeGen\FhirConstructGeneration.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ElementNodeTests.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Generate_ElementNode_FindChild.cs" />
   </ItemGroup>

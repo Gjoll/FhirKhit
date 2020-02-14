@@ -110,7 +110,10 @@ namespace FhirKhit.Tools
                 throw new Exception($"Invalid null or empty user macro name");
             if (Char.IsUpper(name[0]) == false)
                 throw new Exception($"Invalid user macro name {name}. All user macros must start with upper case letter");
-            return this.userMacros.TryAdd(name, value);
+            if (this.userMacros.ContainsKey(name))
+                return false;
+            this.userMacros.Add(name, value);
+            return true;
         }
 
         /// <summary>
