@@ -25,7 +25,6 @@ namespace FhirKhit.Tools.R4.XUnitTests
     /// </summary>
     public class ElementNodeTests
     {
-#if FHIR_R4 || FHIR_R3
         StructureDefinition CreateBaseObservation()
         {
             StructureDefinition s = new StructureDefinition
@@ -52,16 +51,9 @@ namespace FhirKhit.Tools.R4.XUnitTests
 
             SnapshotCreator.Create(s);
             ElementDefinitionNode head = ElementDefinitionNode.Create(s);
-            {
-                ElementDefinitionNode[] nodes = head.ChildNodes.First().Select("code.coding").ToArray();
-                Assert.True(nodes.Length == 1);
-                Assert.True(nodes[0].Name == "coding");
-            }
-            {
-                ElementDefinitionNode[] nodes = head.ChildNodes.First().Select("code.coding.code").ToArray();
-                Assert.True(nodes.Length == 1);
-                Assert.True(nodes[0].Name == "code");
-            }
+            ElementDefinitionNode[] nodes = head.ChildNodes.First().Select("Observation.code").ToArray();
+            Assert.True(nodes.Length == 1);
+            Assert.True(nodes[0].Name == "code");
         }
 
 
@@ -216,28 +208,27 @@ namespace FhirKhit.Tools.R4.XUnitTests
             }
         }
 
-        [Fact(DisplayName = "ElementNode.LoadElementsInBreastAbnormality")]
-        [Trait("Test", "test")]
-        public void LoadElementsInBreastAbnormality()
-        {
-            String zipPath = Path.Combine("TestFiles", "BreastRadiology.zip");
-            using (ZipArchive archive = ZipFile.OpenRead(zipPath))
-            {
-                FhirJsonParser fjp = new FhirJsonParser();
-                foreach (ZipArchiveEntry entry in archive.Entries)
-                {
-                    if (entry.FullName.EndsWith(".json", StringComparison.OrdinalIgnoreCase))
-                    {
-                        using (StreamReader streamReader = new StreamReader(entry.Open()))
-                        {
-                            String jsonText = streamReader.ReadToEndAsync().WaitResult();
-                            StructureDefinition s = fjp.Parse<StructureDefinition>(jsonText);
-                            ElementDefinitionNode head = ElementDefinitionNode.Create(s);
-                        }
-                    }
-                }
-            }
-        }
-#endif
+        //[Fact(DisplayName = "ElementNode.LoadElementsInBreastAbnormality")]
+        //[Trait("Test", "test")]
+        //public void LoadElementsInBreastAbnormality()
+        //{
+        //    String zipPath = Path.Combine("TestFiles", "BreastRadiology.zip");
+        //    using (ZipArchive archive = ZipFile.OpenRead(zipPath))
+        //    {
+        //        FhirJsonParser fjp = new FhirJsonParser();
+        //        foreach (ZipArchiveEntry entry in archive.Entries)
+        //        {
+        //            if (entry.FullName.EndsWith(".json", StringComparison.OrdinalIgnoreCase))
+        //            {
+        //                using (StreamReader streamReader = new StreamReader(entry.Open()))
+        //                {
+        //                    String jsonText = streamReader.ReadToEndAsync().WaitResult();
+        //                    StructureDefinition s = fjp.Parse<StructureDefinition>(jsonText);
+        //                    ElementDefinitionNode head = ElementDefinitionNode.Create(s);
+        //                }
+        //            }
+        //        }
+        //    }
+        //}
     }
 }

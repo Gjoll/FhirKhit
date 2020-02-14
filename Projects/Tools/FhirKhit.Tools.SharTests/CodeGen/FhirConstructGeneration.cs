@@ -549,7 +549,8 @@ namespace FhirKhit.Tools.FhirConstructTests
 
         /// <summary>
         /// Use FhirConstruct method to generate code to test each element.
-        /// Run FhirConstructC() to execute this code.
+        /// There is no test to run the code, but compiling it shows that the
+        /// code generated is correct syntactically, if not semantically.
         /// </summary>
         [Fact(DisplayName = "CodeGeneration.FhirConstructB")]
         [Trait("CodeGen", "CodeGen")]
