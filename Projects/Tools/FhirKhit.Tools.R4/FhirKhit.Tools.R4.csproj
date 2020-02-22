@@ -27,17 +27,14 @@
     <None Include="specification.zip" Pack="true" PackagePath="lib\$(TargetFramework)">
     </None>
   </ItemGroup>
-
-  <ItemGroup>
-    <None Include="$(OutputPath)\Hl7.Fhir.R4.Specification.dll" Pack="true" PackagePath="lib\$(TargetFramework)" />
-    <None Include="$(OutputPath)\Hl7.FhirPath.dll" Pack="true" PackagePath="lib\$(TargetFramework)" />
-    <None Include="$(OutputPath)\Hl7.Fhir.Serialization.dll" Pack="true" PackagePath="lib\$(TargetFramework)" />
-    <None Include="$(OutputPath)\Hl7.Fhir.ElementModel.dll" Pack="true" PackagePath="lib\$(TargetFramework)" />
-    <None Include="$(OutputPath)\Hl7.Fhir.Support.Poco.dll" Pack="true" PackagePath="lib\$(TargetFramework)" />
-  </ItemGroup>
   
   <ItemGroup>
     <PackageReference Include="CommonMark.NET" Version="0.15.1" />
+    <PackageReference Include="Hl7.Fhir.ElementModel" Version="1.5.0" />
+    <PackageReference Include="Hl7.Fhir.R4" Version="1.5.0" />
+    <PackageReference Include="Hl7.Fhir.Serialization" Version="1.5.0" />
+    <PackageReference Include="Hl7.Fhir.Specification.R4" Version="1.5.0" />
+    <PackageReference Include="Hl7.FhirPath" Version="1.5.0" />
     <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.8">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -47,34 +44,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\HL7\fhir-net-api\common\src\Hl7.Fhir.ElementModel\Hl7.Fhir.ElementModel.csproj">
-      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
-      <IncludeAssets>all</IncludeAssets>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\..\HL7\fhir-net-api\common\src\Hl7.Fhir.Serialization\Hl7.Fhir.Serialization.csproj">
-      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
-      <IncludeAssets>all</IncludeAssets>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\..\HL7\fhir-net-api\common\src\Hl7.Fhir.Support.Poco\Hl7.Fhir.Support.Poco.csproj">
-      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
-      <IncludeAssets>all</IncludeAssets>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\..\HL7\fhir-net-api\common\src\Hl7.Fhir.Support\Hl7.Fhir.Support.csproj">
-      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
-      <IncludeAssets>all</IncludeAssets>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\..\HL7\fhir-net-api\common\src\Hl7.FhirPath\Hl7.FhirPath.csproj">
-      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
-      <IncludeAssets>all</IncludeAssets>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\..\HL7\fhir-net-api\src\Hl7.Fhir.Core\Hl7.Fhir.Core.csproj">
-      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
-      <IncludeAssets>all</IncludeAssets>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\..\HL7\fhir-net-api\src\Hl7.Fhir.Specification\Hl7.Fhir.Specification.csproj">
-      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
-      <IncludeAssets>all</IncludeAssets>
-    </ProjectReference>
     <ProjectReference Include="..\FhirKhit.Tools\FhirKhit.Tools.csproj">
     </ProjectReference>
   </ItemGroup>
