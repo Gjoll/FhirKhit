@@ -87,35 +87,15 @@ namespace FhirKhit.Tools.R4
             return e;
         }
 
-        public static ElementDefinition FixedAndDefault(this ElementDefinition e, Element value)
-        {
-            e.Fixed = value;
-            e.DefaultValue = value;
-            return e;
-        }
-
         public static ElementDefinition Fixed(this ElementDefinition e, Element value)
         {
             e.Fixed = value;
             return e;
         }
 
-        public static ElementDefinition PatternAndDefault(this ElementDefinition e, Element value)
-        {
-            e.Pattern = value;
-            e.DefaultValue = value;
-            return e;
-        }
-
         public static ElementDefinition Pattern(this ElementDefinition e, Element value)
         {
             e.Pattern = value;
-            return e;
-        }
-
-        public static ElementDefinition DefaultValue(this ElementDefinition e, Element value)
-        {
-            e.DefaultValue = value;
             return e;
         }
 
