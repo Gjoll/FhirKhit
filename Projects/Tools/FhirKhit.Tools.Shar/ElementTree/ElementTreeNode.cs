@@ -124,26 +124,6 @@ namespace FhirKhit.Tools.R3
             return nodeSlice;
         }
 
-        public bool TryGetNode(String path, out ElementTreeNode item)
-        {
-            String[] pathItems = path.Split('.');
-            Int32 pathIndex = 0;
-
-            item = null;
-            ElementTreeNode node = this;
-            if (node.Name != pathItems[pathIndex++])
-                return false;
-            while (pathIndex < pathItems.Length)
-            {
-                if (node.Slices.TryGetItem(DefaultSliceName, out ElementTreeSlice nodeSlice) == false)
-                    return false;
-                if (nodeSlice.Nodes.TryGetItem(pathItems[pathIndex++], out node) == false)
-                    return false;
-            }
-            item = node;
-            return true;
-        }
-
         /// <summary>
         /// Add an element.
         /// </summary>

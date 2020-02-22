@@ -467,7 +467,7 @@ namespace PreFhir
                 {
                     // see if element definition is something like {CodeableConcept}.coding.
                     if (
-                        (baseItem.SnapNodeOriginal.TryGetNode(baseSlice.ElementDefinition.Path, out ElementTreeNode originalNode) == false) ||
+                        (baseItem.SnapNodeOriginal.TryGetElementNode(baseSlice.ElementDefinition.Path, out ElementTreeNode originalNode) == false) ||
                         (this.IsElementPart(originalNode.ElementDefinition, mergeNode.Name) == false)
                         )
                     {
