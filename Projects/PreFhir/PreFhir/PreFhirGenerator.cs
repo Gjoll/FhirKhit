@@ -7,6 +7,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Text;
 using System.Threading;
 
@@ -225,8 +226,8 @@ namespace PreFhir
                 bool processed = false;
                 foreach (ProcessItem processable in this.FindProcessable())
                 {
-                    if (Process(processable) == false) ;
-                    retVal = false;
+                    if (Process(processable) == false)
+                        retVal = false;
                     processed = true;
                 }
 
@@ -254,7 +255,40 @@ namespace PreFhir
         public void SaveResources(String outputDir)
         {
             foreach (ProcessItem processedItem in this.processed.Values)
-                SaveResource(outputDir, processedItem);
+                SaveResource(outputDir, processedItem, true);
+        }
+
+        /// <summary>
+        /// Fix errors in differentia.
+        /// The tools will celan out the min and max values if they are unchanged from the base, so here
+        /// we put them back in because they are required.
+        /// </summary>
+        /// <param name="processedItem"></param>
+        /// <param name="sDef"></param>
+        void CleanupDifferential(ProcessItem item,
+            StructureDefinition sDef)
+        {
+            foreach (ElementDefinition ed in sDef.Differential.Element.Skip(1))
+            {
+                if ((ed.Min.HasValue == false) ||
+                    (String.IsNullOrEmpty(ed.Max)))
+                {
+                    if (item.SnapNode == null)
+                    {
+                        ElementTreeLoader l = new ElementTreeLoader(this);
+                        item.SnapNode = l.Create(item.SDef.Snapshot.Element);
+                    }
+
+                    ElementTreeNode snapNode;
+                    if (item.SnapNode.TryGetElementNode(ed.ElementId, out snapNode) == false)
+                    {
+                        if (item.SnapNode.TryGetElementNode(ed.Path, out snapNode) == false)
+                            throw new Exception($"Internal error. Element {ed.ElementId} not found in snapshot");
+                    }
+                    ed.Min = snapNode.ElementDefinition.Min;
+                    ed.Max = snapNode.ElementDefinition.Max;
+                }
+            }
         }
 
         /// <summary>
@@ -262,7 +296,8 @@ namespace PreFhir
         /// </summary>
         /// <param name="outputDir"></param>
         void SaveResource(String outputDir,
-            ProcessItem processedItem)
+            ProcessItem processedItem,
+            bool finalFlag)
         {
             String outputName;
 
@@ -273,8 +308,12 @@ namespace PreFhir
                     if (sDef.IsFragment())
                         return;
                     // recreate snapshot if missing
-                    if (sDef.Snapshot == null)
-                        SnapshotCreator.Create(sDef);
+                    if (finalFlag)
+                    {
+                        if (sDef.Snapshot == null)
+                            SnapshotCreator.Create(sDef);
+                        this.CleanupDifferential(processedItem, sDef);
+                    }
                     outputName = Path.Combine(outputDir, $"StructureDefinition-{sDef.Name}.json");
                     break;
 
@@ -404,7 +443,7 @@ namespace PreFhir
 
             // save intermediate merged file?
             if (String.IsNullOrEmpty(this.MergedDir) == false)
-                SaveResource(MergedDir, processItem);
+                SaveResource(MergedDir, processItem, false);
 
             if (this.processed.TryAdd(processItem.Resource.GetUrl(), processItem) == false)
                 throw new Exception($"Error adding item to Processed list"); ;
