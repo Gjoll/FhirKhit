@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>FhirKhit.Tools.R4</id>
-    <version>2.18.0</version>
+    <version>2.19.0</version>
     <authors>Kurt W. Allen</authors>
     <owners>Kurt W. Allen</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -13,7 +13,7 @@
     <repository url="https://github.com/Gjoll/FhirKhit" />
     <dependencies>
       <group targetFramework=".NETCoreApp2.2">
-        <dependency id="FhirKhit.Tools" version="2.18.0" exclude="Build,Analyzers" />
+        <dependency id="FhirKhit.Tools" version="2.19.0" exclude="Build,Analyzers" />
         <dependency id="Hl7.Fhir.ElementModel" version="1.5.0-alpha" exclude="Build,Analyzers" />
         <dependency id="Hl7.Fhir.Serialization" version="1.5.0-alpha" exclude="Build,Analyzers" />
         <dependency id="Hl7.Fhir.Support.Poco" version="1.5.0-alpha" exclude="Build,Analyzers" />
