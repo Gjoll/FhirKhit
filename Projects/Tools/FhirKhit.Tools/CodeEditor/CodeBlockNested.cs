@@ -389,7 +389,25 @@ namespace FhirKhit.Tools
         }
 
         /// <summary>
-        /// Load code from 
+        /// </summary>
+        /// <param name="path"></param>
+        public CodeBlockNested AppendUniqueLine(String line, String margin = null)
+        {
+            if (margin == null)
+                margin = this.MarginString;
+            String formattedLine = this.ProcessLine($"{margin}{line}");
+            String trimmedLine = formattedLine.Trim();
+            foreach (String existingLine in this.Lines())
+            {
+                String existingLineTrimmed = existingLine.Trim();
+                if (String.Compare(existingLineTrimmed, trimmedLine) == 0)
+                    return this;
+            }
+            this.AppendRaw(formattedLine);
+            return this;
+        }
+
+        /// <summary>
         /// </summary>
         /// <param name="path"></param>
         public CodeBlockNested AppendLine(String line, String margin = null)
@@ -569,8 +587,8 @@ namespace FhirKhit.Tools
         {
             if (value)
             {
-                if (CodeEditor.DebugFlag)
-                    this.AppendCode($"//If: {filePath} {lineNumber}");
+                //if (CodeEditor.DebugFlag)
+                //    this.AppendCode($"//If: {filePath} {lineNumber}");
                 ifCode(this);
             }
             return this;
@@ -584,14 +602,14 @@ namespace FhirKhit.Tools
         {
             if (value)
             {
-                if (CodeEditor.DebugFlag)
-                    this.AppendCode($"//If: {filePath} {lineNumber}");
+                //if (CodeEditor.DebugFlag)
+                //    this.AppendCode($"//If: {filePath} {lineNumber}");
                 ifCode(this);
             }
             else
             {
-                if (CodeEditor.DebugFlag)
-                    this.AppendCode($"//Else: {filePath} {lineNumber}");
+                //if (CodeEditor.DebugFlag)
+                //    this.AppendCode($"//Else: {filePath} {lineNumber}");
                 elseCode(this);
             }
             return this;
