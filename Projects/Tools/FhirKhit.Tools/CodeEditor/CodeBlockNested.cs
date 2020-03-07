@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -7,6 +8,7 @@ using System.Xml;
 
 namespace FhirKhit.Tools
 {
+    [DebuggerDisplay("{Name}")]
     public class CodeBlockNested : CodeBlock
     {
         const String IndentOneLevel = "    ";
@@ -564,6 +566,24 @@ namespace FhirKhit.Tools
             }
             this.AppendBlock(block);
             return this;
+        }
+
+        /// <summary>
+        /// Create a new nested code block and return it.
+        /// Calling EndBlock will return the current block.
+        /// </summary>
+        public CodeBlockNested StartBlock(String blockName = "")
+        {
+            this.owner.BlockStack.Push(this);
+            return this.AppendBlock(blockName);
+        }
+
+        /// <summary>
+        /// Returns the codeblock pushed in CodeBlockStart
+        /// </summary>
+        public CodeBlockNested EndBlock()
+        {
+            return this.owner.BlockStack.Pop();
         }
 
         public CodeBlockNested DefineBlock(out CodeBlockNested block,

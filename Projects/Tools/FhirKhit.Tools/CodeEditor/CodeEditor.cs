@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -11,8 +12,10 @@ namespace FhirKhit.Tools
     /// <summary>
     /// Class to edit code.
     /// </summary>
+    [DebuggerDisplay("{SavePath}")]
     public class CodeEditor
     {
+        public Stack<CodeBlockNested> BlockStack { get; }  = new Stack<CodeBlockNested>();
         public static bool DebugFlag { get; set; } = true;
 
         public String BlockStart { get; set; } = "//+";
