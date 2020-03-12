@@ -23,8 +23,6 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.Tools.SharTests", 
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FhirKhit.GlobalSuppressions", "Projects\FhirKhit.GlobalSuppressions\FhirKhit.GlobalSuppressions.shproj", "{721F484A-1C1A-4A95-AA2C-FF38E18C9D77}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FhirApi", "FhirApi", "{F82D386E-705C-44AC-B460-324E1F4B8995}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PreFhir", "PreFhir", "{8D7C4669-7299-4CF5-8C3F-A579B27DE1B4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PreFhir", "Projects\PreFhir\PreFhir\PreFhir.csproj", "{93230D45-AE8D-4945-8E37-A774527A31F8}"

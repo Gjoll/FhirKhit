@@ -50,6 +50,19 @@ namespace FhirKhit.Tools.R3
             this.ElementDefinition = elementDefinition;
         }
 
+        public override String ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            this.Dump("", sb);
+            return sb.ToString();
+        }
+        public void Dump(String margin, StringBuilder sb)
+        {
+            sb.AppendLine($"{margin}Slice: {this.Name}");
+            foreach (ElementTreeNode node in this.Nodes)
+                node.Dump(margin + "  ", sb);
+        }
+
         public void ReplaceBasePath(String newBase)
         {
             if (this.ElementDefinition != null)

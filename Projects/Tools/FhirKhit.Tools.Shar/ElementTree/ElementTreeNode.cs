@@ -74,13 +74,25 @@ namespace FhirKhit.Tools.R3
         {
         }
 
+        public override String ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            this.Dump("", sb);
+            return sb.ToString();
+        }
+        public void Dump(String margin, StringBuilder sb)
+        {
+            sb.AppendLine($"{margin}Node: {this.ElementDefinition.ElementId}");
+            foreach (ElementTreeSlice slice in this.Slices)
+                slice.Dump(margin + "  ", sb);
+        }
+
         public ElementTreeNode(String path,
             String pathName,
             ElementDefinition elementDefinition = null)
         {
             this.Path = path;
             this.Name = pathName;
-
             this.Slices.Add(new ElementTreeSlice(this, DefaultSliceName, elementDefinition));
         }
 
@@ -174,19 +186,17 @@ namespace FhirKhit.Tools.R3
             }
         }
 
+
         /// <summary>
         /// Find an element by its path, which can include slice names.
         /// </summary>
-        /// <param name=""></param>
-        /// <returns></returns>
-        public bool TryGetElementNode(String id, out ElementTreeNode currentItem)
+        public bool TryGetChild(String id, out ElementTreeNode childItem)
         {
-            currentItem = this;
-            ElementTreeSlice slice = currentItem.DefaultSlice;
-
+            childItem = this;
+            ElementTreeSlice slice = childItem.DefaultSlice;
             String[] pathItems = id.Split('.');
             // Ignore first element (base path name).
-            foreach (String pathItem in pathItems.Skip(1))
+            foreach (String pathItem in pathItems)
             {
                 String[] pathItemParts = pathItem.Split(':');
                 String pathPart;
@@ -205,15 +215,34 @@ namespace FhirKhit.Tools.R3
                     default:
                         throw new Exception($"Error parsing path item {pathItem}");
                 }
-
-                if (slice.Nodes.TryGetItem(pathPart, out currentItem) == false)
+                if (slice.Nodes.TryGetItem(pathPart, out childItem) == false)
                     return false;
-
-                if (currentItem.Slices.TryGetItem(sliceName, out slice) == false)
+                if (childItem.Slices.TryGetItem(sliceName, out slice) == false)
                     return false;
             }
-
             return true;
+        }
+
+        /// <summary>
+        /// Find an element by its path, which can include slice names.
+        /// The first path item must match this items last path item.
+        /// </summary>
+        /// <param name=""></param>
+        /// <returns></returns>
+        public bool TryGetElementNode(String id, out ElementTreeNode item)
+        {
+            if (String.Compare(id, this.ElementDefinition.ElementId) == 0)
+            {
+                item = this;
+                return true;
+            }
+
+            String thisId = $"{this.ElementDefinition.ElementId}.";
+            if (id.StartsWith(thisId) == false)
+                throw new Exception($"Id must start with this items current id '{thisId}'");
+
+            return TryGetChild(id.Substring(this.ElementDefinition.ElementId.Length + 1),
+                out item);
         }
 
         /// <summary>
