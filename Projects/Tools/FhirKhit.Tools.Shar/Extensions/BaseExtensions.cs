@@ -15,8 +15,7 @@ namespace FhirKhit.Tools.R4
 #elif FHIR_R3
 namespace FhirKhit.Tools.R3
 #endif
-{
-    public static class BaseExtensions
+public static class BaseExtensions
 {
     /// <summary>
     /// Save Fhir item
@@ -64,6 +63,9 @@ namespace FhirKhit.Tools.R3
         {
             try
             {
+                String outputDir = Path.GetDirectoryName(path);
+                if (Directory.Exists(outputDir) == false)
+                    Directory.CreateDirectory(outputDir);
                 File.WriteAllText(path, fhirBase.ToFormatedJson());
                 return;
             }
@@ -93,5 +95,4 @@ namespace FhirKhit.Tools.R3
         }
         return sb.ToString();
     }
-}
 }
