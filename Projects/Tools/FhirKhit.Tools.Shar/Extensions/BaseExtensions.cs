@@ -15,84 +15,87 @@ namespace FhirKhit.Tools.R4
 #elif FHIR_R3
 namespace FhirKhit.Tools.R3
 #endif
-public static class BaseExtensions
 {
-    /// <summary>
-    /// Save Fhir item
-    /// </summary>
-    public static void Save(this Base fhirBase, String path, SaveType saveType)
+    public static class BaseExtensions
     {
-        switch (saveType)
+        /// <summary>
+        /// Save Fhir item
+        /// </summary>
+        public static void Save(this Base fhirBase, String path, SaveType saveType)
         {
-            case SaveType.Json: fhirBase.SaveJson(path + ".json"); break;
-            case SaveType.Xml: fhirBase.SaveXml(path + ".xml"); break;
-            default: throw new NotImplementedException();
-        }
-    }
-
-    /// <summary>
-    /// SaveXml file
-    /// </summary>
-    /// <param name="outputDir"></param>
-    public static void SaveXml(this Base fhirBase, String path)
-    {
-        FhirXmlSerializer fxs = new FhirXmlSerializer();
-        XmlWriterSettings settings = new XmlWriterSettings
-        {
-            Indent = true,
-            IndentChars = "  ",
-            NewLineOnAttributes = false
-        };
-
-        using (StreamWriter sw = File.CreateText(path))
-        using (XmlWriter xmlWriter = XmlWriter.Create(sw, settings))
-        {
-            fxs.Serialize(fhirBase, xmlWriter);
-            xmlWriter.Flush();
-            xmlWriter.Close();
-        }
-    }
-
-    /// <summary>
-    /// Save Fhir item as JSON file
-    /// </summary>
-    public static void SaveJson(this Base fhirBase, String path)
-    {
-        Int32 retries = 3;
-        while (true)
-        {
-            try
+            switch (saveType)
             {
-                String outputDir = Path.GetDirectoryName(path);
-                if (Directory.Exists(outputDir) == false)
-                    Directory.CreateDirectory(outputDir);
-                File.WriteAllText(path, fhirBase.ToFormatedJson());
-                return;
-            }
-            catch (Exception e)
-            {
-                if (--retries == 0)
-                    throw e;
-                Thread.Sleep(500);
+                case SaveType.Json: fhirBase.SaveJson(path + ".json"); break;
+                case SaveType.Xml: fhirBase.SaveXml(path + ".xml"); break;
+                default: throw new NotImplementedException();
             }
         }
-    }
 
-    /// <summary>
-    /// Save Fhir item as JSON file
-    /// </summary>
-    public static String ToFormatedJson(this Base fhirBase)
-    {
-        FhirJsonSerializer fjs = new FhirJsonSerializer();
-        StringBuilder sb = new StringBuilder();
-        StringWriter sw = new StringWriter(sb);
-        using (JsonWriter jsonWriter = new JsonTextWriter(sw))
+        /// <summary>
+        /// SaveXml file
+        /// </summary>
+        /// <param name="outputDir"></param>
+        public static void SaveXml(this Base fhirBase, String path)
         {
-            jsonWriter.Formatting = Newtonsoft.Json.Formatting.Indented;
-            fjs.Serialize(fhirBase, jsonWriter);
-            jsonWriter.Flush();
-            jsonWriter.Close();
+            FhirXmlSerializer fxs = new FhirXmlSerializer();
+            XmlWriterSettings settings = new XmlWriterSettings
+            {
+                Indent = true,
+                IndentChars = "  ",
+                NewLineOnAttributes = false
+            };
+
+            using (StreamWriter sw = File.CreateText(path))
+            using (XmlWriter xmlWriter = XmlWriter.Create(sw, settings))
+            {
+                fxs.Serialize(fhirBase, xmlWriter);
+                xmlWriter.Flush();
+                xmlWriter.Close();
+            }
         }
-        return sb.ToString();
+
+        /// <summary>
+        /// Save Fhir item as JSON file
+        /// </summary>
+        public static void SaveJson(this Base fhirBase, String path)
+        {
+            Int32 retries = 3;
+            while (true)
+            {
+                try
+                {
+                    String outputDir = Path.GetDirectoryName(path);
+                    if (Directory.Exists(outputDir) == false)
+                        Directory.CreateDirectory(outputDir);
+                    File.WriteAllText(path, fhirBase.ToFormatedJson());
+                    return;
+                }
+                catch (Exception e)
+                {
+                    if (--retries == 0)
+                        throw e;
+                    Thread.Sleep(500);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Save Fhir item as JSON file
+        /// </summary>
+        public static String ToFormatedJson(this Base fhirBase)
+        {
+            FhirJsonSerializer fjs = new FhirJsonSerializer();
+            StringBuilder sb = new StringBuilder();
+            StringWriter sw = new StringWriter(sb);
+            using (JsonWriter jsonWriter = new JsonTextWriter(sw))
+            {
+                jsonWriter.Formatting = Newtonsoft.Json.Formatting.Indented;
+                fjs.Serialize(fhirBase, jsonWriter);
+                jsonWriter.Flush();
+                jsonWriter.Close();
+            }
+            return sb.ToString();
+        }
     }
 }
+

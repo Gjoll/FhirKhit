@@ -600,6 +600,16 @@ namespace FhirKhit.Tools
             return this;
         }
 
+        public CodeBlockNested Call(CodeCallback code,
+            [CallerFilePath] String filePath = "",
+            [CallerLineNumber] Int32 lineNumber = 0)
+        {
+            //if (CodeEditor.DebugFlag)
+            //    this.AppendCode($"//If: {filePath} {lineNumber}");
+            code(this);
+            return this;
+        }
+
         public CodeBlockNested If(bool value,
             CodeCallback ifCode,
             [CallerFilePath] String filePath = "",
