@@ -483,8 +483,10 @@ namespace FhirKhit.Tools
         }
 
 
-        public CodeBlockNested SummaryOpen()
+        public CodeBlockNested SummaryOpen([CallerFilePath] String filePath = "",
+            [CallerLineNumber] Int32 lineNumber = 0)
         {
+            this.AppendLine($"// {Path.GetFileName(filePath)}:{lineNumber}");
             this.AppendLine("/// <summary>");
             return this;
         }

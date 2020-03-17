@@ -83,6 +83,17 @@ namespace FhirKhit.Tools.R3
         /// <summary>
         /// Try to get item.
         /// </summary>
+        public T GetItem(String name)
+        {
+            if (TryGetItem(name, out T item) == false)
+                throw new Exception($"Child item {name} not found");
+            return item;
+        }
+
+
+        /// <summary>
+        /// Try to get item.
+        /// </summary>
         public bool TryGetItem(String name, out T item)
         {
             return this.dict.TryGetValue(name, out item);
