@@ -9,79 +9,79 @@ using Hl7.Fhir.Model;
 using System.Diagnostics;
 using Hl7.FhirPath;
 using Range = Hl7.Fhir.Model.Range;
-                                                                                                                                            // FhirConstructGeneration.cs:555
+                                                                                                                                            // FhirConstructGeneration.cs:556
 namespace FhirKhit.Tools.R4
-{                                                                                                                                           // FhirConstructGeneration.cs:561
-    public class FhirConstructUse                                                                                                           // FhirConstructGeneration.cs:562
-    {                                                                                                                                       // FhirConstructGeneration.cs:563
+{                                                                                                                                           // FhirConstructGeneration.cs:562
+    public class FhirConstructUse                                                                                                           // FhirConstructGeneration.cs:563
+    {                                                                                                                                       // FhirConstructGeneration.cs:564
         /// <summary>
         /// generate code for eqch fhri element. Makes sure it compiles.
         /// </summary>
-        public void Use()                                                                                                                   // FhirConstructGeneration.cs:577
-        {                                                                                                                                   // FhirConstructGeneration.cs:578
-                                                                                                                                            // FhirConstructGeneration.cs:579
-            Hl7.Fhir.Model.Address x1 = Method2();                                                                                          // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.Age x3 = Method4();                                                                                              // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.Annotation x5 = Method6();                                                                                       // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.Attachment x7 = Method8();                                                                                       // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.CodeableConcept x9 = Method10();                                                                                 // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.Coding x11 = Method12();                                                                                         // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.ContactDetail x13 = Method14();                                                                                  // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.ContactPoint x15 = Method16();                                                                                   // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.Contributor x17 = Method18();                                                                                    // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.Count x19 = Method20();                                                                                          // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.DataRequirement x21 = Method22();                                                                                // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.Distance x23 = Method24();                                                                                       // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.Dosage x25 = Method26();                                                                                         // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.Duration x27 = Method28();                                                                                       // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.ElementDefinition x29 = Method30();                                                                              // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.Expression x31 = Method32();                                                                                     // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.Extension x33 = Method34();                                                                                      // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.HumanName x35 = Method36();                                                                                      // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.Identifier x37 = Method38();                                                                                     // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.MarketingStatus x39 = Method40();                                                                                // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.Meta x41 = Method42();                                                                                           // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.Money x43 = Method44();                                                                                          // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.MoneyQuantity x45 = Method46();                                                                                  // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.Narrative x47 = Method48();                                                                                      // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.ParameterDefinition x49 = Method50();                                                                            // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.Period x51 = Method52();                                                                                         // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.Population x53 = Method54();                                                                                     // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.ProdCharacteristic x55 = Method56();                                                                             // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.ProductShelfLife x57 = Method58();                                                                               // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.Quantity x59 = Method60();                                                                                       // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.Range x61 = Method62();                                                                                          // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.Ratio x63 = Method64();                                                                                          // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.ResourceReference x65 = Method66();                                                                              // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.RelatedArtifact x67 = Method68();                                                                                // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.SampledData x69 = Method70();                                                                                    // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.Signature x71 = Method72();                                                                                      // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.SimpleQuantity x73 = Method74();                                                                                 // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.SubstanceAmount x75 = Method76();                                                                                // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.Timing x77 = Method78();                                                                                         // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.TriggerDefinition x79 = Method80();                                                                              // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.UsageContext x81 = Method82();                                                                                   // FhirConstructGeneration.cs:609
-            Hl7.Fhir.Model.Base64Binary x83 = Method84();                                                                                   // FhirConstructGeneration.cs:595
-            Hl7.Fhir.Model.FhirBoolean x85 = Method86();                                                                                    // FhirConstructGeneration.cs:595
-            Hl7.Fhir.Model.Canonical x87 = Method88();                                                                                      // FhirConstructGeneration.cs:595
-            Hl7.Fhir.Model.Code x89 = Method90();                                                                                           // FhirConstructGeneration.cs:595
-            Hl7.Fhir.Model.Date x91 = Method92();                                                                                           // FhirConstructGeneration.cs:595
-            Hl7.Fhir.Model.FhirDateTime x93 = Method94();                                                                                   // FhirConstructGeneration.cs:595
-            Hl7.Fhir.Model.FhirDecimal x95 = Method96();                                                                                    // FhirConstructGeneration.cs:595
-            Hl7.Fhir.Model.Id x97 = Method98();                                                                                             // FhirConstructGeneration.cs:595
-            Hl7.Fhir.Model.Instant x99 = Method100();                                                                                       // FhirConstructGeneration.cs:595
-            Hl7.Fhir.Model.Integer x101 = Method102();                                                                                      // FhirConstructGeneration.cs:595
-            Hl7.Fhir.Model.Markdown x103 = Method104();                                                                                     // FhirConstructGeneration.cs:595
-            Hl7.Fhir.Model.Oid x105 = Method106();                                                                                          // FhirConstructGeneration.cs:595
-            Hl7.Fhir.Model.PositiveInt x107 = Method108();                                                                                  // FhirConstructGeneration.cs:595
-            Hl7.Fhir.Model.FhirString x109 = Method110();                                                                                   // FhirConstructGeneration.cs:595
-            Hl7.Fhir.Model.Time x111 = Method112();                                                                                         // FhirConstructGeneration.cs:595
-            Hl7.Fhir.Model.UnsignedInt x113 = Method114();                                                                                  // FhirConstructGeneration.cs:595
-            Hl7.Fhir.Model.FhirUri x115 = Method116();                                                                                      // FhirConstructGeneration.cs:595
-            Hl7.Fhir.Model.FhirUrl x117 = Method118();                                                                                      // FhirConstructGeneration.cs:595
-            Hl7.Fhir.Model.Uuid x119 = Method120();                                                                                         // FhirConstructGeneration.cs:595
-            Hl7.Fhir.Model.XHtml x121 = Method122();                                                                                        // FhirConstructGeneration.cs:595
-        }                                                                                                                                   // FhirConstructGeneration.cs:619
+        public void Use()                                                                                                                   // FhirConstructGeneration.cs:578
+        {                                                                                                                                   // FhirConstructGeneration.cs:579
+                                                                                                                                            // FhirConstructGeneration.cs:580
+            Hl7.Fhir.Model.Address x1 = Method2();                                                                                          // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.Age x3 = Method4();                                                                                              // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.Annotation x5 = Method6();                                                                                       // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.Attachment x7 = Method8();                                                                                       // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.CodeableConcept x9 = Method10();                                                                                 // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.Coding x11 = Method12();                                                                                         // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.ContactDetail x13 = Method14();                                                                                  // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.ContactPoint x15 = Method16();                                                                                   // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.Contributor x17 = Method18();                                                                                    // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.Count x19 = Method20();                                                                                          // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.DataRequirement x21 = Method22();                                                                                // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.Distance x23 = Method24();                                                                                       // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.Dosage x25 = Method26();                                                                                         // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.Duration x27 = Method28();                                                                                       // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.ElementDefinition x29 = Method30();                                                                              // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.Expression x31 = Method32();                                                                                     // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.Extension x33 = Method34();                                                                                      // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.HumanName x35 = Method36();                                                                                      // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.Identifier x37 = Method38();                                                                                     // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.MarketingStatus x39 = Method40();                                                                                // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.Meta x41 = Method42();                                                                                           // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.Money x43 = Method44();                                                                                          // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.MoneyQuantity x45 = Method46();                                                                                  // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.Narrative x47 = Method48();                                                                                      // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.ParameterDefinition x49 = Method50();                                                                            // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.Period x51 = Method52();                                                                                         // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.Population x53 = Method54();                                                                                     // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.ProdCharacteristic x55 = Method56();                                                                             // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.ProductShelfLife x57 = Method58();                                                                               // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.Quantity x59 = Method60();                                                                                       // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.Range x61 = Method62();                                                                                          // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.Ratio x63 = Method64();                                                                                          // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.ResourceReference x65 = Method66();                                                                              // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.RelatedArtifact x67 = Method68();                                                                                // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.SampledData x69 = Method70();                                                                                    // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.Signature x71 = Method72();                                                                                      // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.SimpleQuantity x73 = Method74();                                                                                 // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.SubstanceAmount x75 = Method76();                                                                                // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.Timing x77 = Method78();                                                                                         // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.TriggerDefinition x79 = Method80();                                                                              // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.UsageContext x81 = Method82();                                                                                   // FhirConstructGeneration.cs:610
+            Hl7.Fhir.Model.Base64Binary x83 = Method84();                                                                                   // FhirConstructGeneration.cs:596
+            Hl7.Fhir.Model.FhirBoolean x85 = Method86();                                                                                    // FhirConstructGeneration.cs:596
+            Hl7.Fhir.Model.Canonical x87 = Method88();                                                                                      // FhirConstructGeneration.cs:596
+            Hl7.Fhir.Model.Code x89 = Method90();                                                                                           // FhirConstructGeneration.cs:596
+            Hl7.Fhir.Model.Date x91 = Method92();                                                                                           // FhirConstructGeneration.cs:596
+            Hl7.Fhir.Model.FhirDateTime x93 = Method94();                                                                                   // FhirConstructGeneration.cs:596
+            Hl7.Fhir.Model.FhirDecimal x95 = Method96();                                                                                    // FhirConstructGeneration.cs:596
+            Hl7.Fhir.Model.Id x97 = Method98();                                                                                             // FhirConstructGeneration.cs:596
+            Hl7.Fhir.Model.Instant x99 = Method100();                                                                                       // FhirConstructGeneration.cs:596
+            Hl7.Fhir.Model.Integer x101 = Method102();                                                                                      // FhirConstructGeneration.cs:596
+            Hl7.Fhir.Model.Markdown x103 = Method104();                                                                                     // FhirConstructGeneration.cs:596
+            Hl7.Fhir.Model.Oid x105 = Method106();                                                                                          // FhirConstructGeneration.cs:596
+            Hl7.Fhir.Model.PositiveInt x107 = Method108();                                                                                  // FhirConstructGeneration.cs:596
+            Hl7.Fhir.Model.FhirString x109 = Method110();                                                                                   // FhirConstructGeneration.cs:596
+            Hl7.Fhir.Model.Time x111 = Method112();                                                                                         // FhirConstructGeneration.cs:596
+            Hl7.Fhir.Model.UnsignedInt x113 = Method114();                                                                                  // FhirConstructGeneration.cs:596
+            Hl7.Fhir.Model.FhirUri x115 = Method116();                                                                                      // FhirConstructGeneration.cs:596
+            Hl7.Fhir.Model.FhirUrl x117 = Method118();                                                                                      // FhirConstructGeneration.cs:596
+            Hl7.Fhir.Model.Uuid x119 = Method120();                                                                                         // FhirConstructGeneration.cs:596
+            Hl7.Fhir.Model.XHtml x121 = Method122();                                                                                        // FhirConstructGeneration.cs:596
+        }                                                                                                                                   // FhirConstructGeneration.cs:620
         public Address Method2()                                                                                                            // FhirConstruct.cs:408
         {                                                                                                                                   // FhirConstruct.cs:409
             Address retVal = new Address();                                                                                                 // FhirConstruct.cs:410
@@ -5335,9 +5335,9 @@ namespace FhirKhit.Tools.R4
             retVal.VersionIdElement.Value = "String";                                                                                       // FhirConstruct.cs:3599
             retVal.VersionIdElement.ElementId = "String";                                                                                   // FhirConstruct.cs:3601
             retVal.LastUpdatedElement = new Instant();                                                                                      // FhirConstruct.cs:3605
-            retVal.LastUpdatedElement.Value = new DateTimeOffset(2020, 2, 14,                                                               // FhirConstruct.cs:3610
-                13, 3, 12, 364,                                                                                                             // FhirConstruct.cs:3611
-                new TimeSpan(-6, 0, 0));                                                                                                    // FhirConstruct.cs:3612
+            retVal.LastUpdatedElement.Value = new DateTimeOffset(2020, 3, 16,                                                               // FhirConstruct.cs:3610
+                21, 42, 4, 867,                                                                                                             // FhirConstruct.cs:3611
+                new TimeSpan(-5, 0, 0));                                                                                                    // FhirConstruct.cs:3612
             retVal.LastUpdatedElement.ElementId = "String";                                                                                 // FhirConstruct.cs:3616
             retVal.SourceElement = new FhirUri();                                                                                           // FhirConstruct.cs:3620
             retVal.SourceElement.Value = "String";                                                                                          // FhirConstruct.cs:3622
@@ -7676,9 +7676,9 @@ namespace FhirKhit.Tools.R4
                 retVal.Type.Add(temp116);                                                                                                   // FhirConstruct.cs:5866
             }                                                                                                                               // FhirConstruct.cs:5867
             retVal.WhenElement = new Instant();                                                                                             // FhirConstruct.cs:5872
-            retVal.WhenElement.Value = new DateTimeOffset(2020, 2, 14,                                                                      // FhirConstruct.cs:5877
-                13, 3, 12, 584,                                                                                                             // FhirConstruct.cs:5878
-                new TimeSpan(-6, 0, 0));                                                                                                    // FhirConstruct.cs:5879
+            retVal.WhenElement.Value = new DateTimeOffset(2020, 3, 16,                                                                      // FhirConstruct.cs:5877
+                21, 42, 5, 98,                                                                                                              // FhirConstruct.cs:5878
+                new TimeSpan(-5, 0, 0));                                                                                                    // FhirConstruct.cs:5879
             retVal.WhenElement.ElementId = "String";                                                                                        // FhirConstruct.cs:5883
             retVal.TargetFormatElement = new Code();                                                                                        // FhirConstruct.cs:5887
             retVal.TargetFormatElement.Value = "String";                                                                                    // FhirConstruct.cs:5889
@@ -11992,9 +11992,9 @@ namespace FhirKhit.Tools.R4
         public Instant Method100()                                                                                                          // FhirConstruct.cs:7037
         {                                                                                                                                   // FhirConstruct.cs:7038
             Instant retVal = new Instant();                                                                                                 // FhirConstruct.cs:7039
-            retVal.Value = new DateTimeOffset(2020, 2, 14,                                                                                  // FhirConstruct.cs:7047
-                13, 3, 12, 852,                                                                                                             // FhirConstruct.cs:7048
-                new TimeSpan(-6, 0, 0));                                                                                                    // FhirConstruct.cs:7049
+            retVal.Value = new DateTimeOffset(2020, 3, 16,                                                                                  // FhirConstruct.cs:7047
+                21, 42, 5, 331,                                                                                                             // FhirConstruct.cs:7048
+                new TimeSpan(-5, 0, 0));                                                                                                    // FhirConstruct.cs:7049
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:7053
             return retVal;                                                                                                                  // FhirConstruct.cs:7056
         }                                                                                                                                   // FhirConstruct.cs:7057
@@ -12075,5 +12075,5 @@ namespace FhirKhit.Tools.R4
             retVal.ElementId = "String";                                                                                                    // FhirConstruct.cs:7350
             return retVal;                                                                                                                  // FhirConstruct.cs:7353
         }                                                                                                                                   // FhirConstruct.cs:7354
-    }                                                                                                                                       // FhirConstructGeneration.cs:569
-}                                                                                                                                           // FhirConstructGeneration.cs:570
+    }                                                                                                                                       // FhirConstructGeneration.cs:570
+}                                                                                                                                           // FhirConstructGeneration.cs:571

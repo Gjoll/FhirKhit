@@ -9,354 +9,356 @@ using Hl7.Fhir.Model;
 using System.Diagnostics;
 using Hl7.FhirPath;
 using Range = Hl7.Fhir.Model.Range;
-                                                                                                                                            // FhirConstructGeneration.cs:368
+                                                                                                                                            // FhirConstructGeneration.cs:370
 namespace FhirKhit.Tools.R3
-{                                                                                                                                           // FhirConstructGeneration.cs:374
-    public static class FhirConstruct
-    {                                                                                                                                       // FhirConstructGeneration.cs:376
+{                                                                                                                                           // FhirConstructGeneration.cs:376
+    public static class FhirConstruct                                                                                                       // FhirConstructGeneration.cs:377
+    {                                                                                                                                       // FhirConstructGeneration.cs:378
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,
-            Element fix,                                                                                                                    // FhirConstructGeneration.cs:391
-            String methodName,                                                                                                              // FhirConstructGeneration.cs:392
-            out String propertyType)                                                                                                        // FhirConstructGeneration.cs:393
-        {                                                                                                                                   // FhirConstructGeneration.cs:394
-                                                                                                                                            // FhirConstructGeneration.cs:396
-            propertyType = null;                                                                                                            // FhirConstructGeneration.cs:397
-            switch (fix.TypeName)                                                                                                           // FhirConstructGeneration.cs:398
-            {                                                                                                                               // FhirConstructGeneration.cs:399
-                case "Address": // Address  - DataType                                                                                      // FhirConstructGeneration.cs:304
-                {                                                                                                                           // FhirConstructGeneration.cs:305
-                    propertyType = "Address";                                                                                               // FhirConstructGeneration.cs:306
-                    return Construct(block, (Address)fix, methodName);                                                                      // FhirConstructGeneration.cs:307
-                }                                                                                                                           // FhirConstructGeneration.cs:308
-                                                                                                                                            // FhirConstructGeneration.cs:309
-                case "Age": // Age  - DataType                                                                                              // FhirConstructGeneration.cs:304
-                {                                                                                                                           // FhirConstructGeneration.cs:305
-                    propertyType = "Age";                                                                                                   // FhirConstructGeneration.cs:306
-                    return Construct(block, (Age)fix, methodName);                                                                          // FhirConstructGeneration.cs:307
-                }                                                                                                                           // FhirConstructGeneration.cs:308
-                                                                                                                                            // FhirConstructGeneration.cs:309
-                case "Annotation": // Annotation  - DataType                                                                                // FhirConstructGeneration.cs:304
-                {                                                                                                                           // FhirConstructGeneration.cs:305
-                    propertyType = "Annotation";                                                                                            // FhirConstructGeneration.cs:306
-                    return Construct(block, (Annotation)fix, methodName);                                                                   // FhirConstructGeneration.cs:307
-                }                                                                                                                           // FhirConstructGeneration.cs:308
-                                                                                                                                            // FhirConstructGeneration.cs:309
-                case "Attachment": // Attachment  - DataType                                                                                // FhirConstructGeneration.cs:304
-                {                                                                                                                           // FhirConstructGeneration.cs:305
-                    propertyType = "Attachment";                                                                                            // FhirConstructGeneration.cs:306
-                    return Construct(block, (Attachment)fix, methodName);                                                                   // FhirConstructGeneration.cs:307
-                }                                                                                                                           // FhirConstructGeneration.cs:308
-                                                                                                                                            // FhirConstructGeneration.cs:309
-                case "CodeableConcept": // CodeableConcept  - DataType                                                                      // FhirConstructGeneration.cs:304
-                {                                                                                                                           // FhirConstructGeneration.cs:305
-                    propertyType = "CodeableConcept";                                                                                       // FhirConstructGeneration.cs:306
-                    return Construct(block, (CodeableConcept)fix, methodName);                                                              // FhirConstructGeneration.cs:307
-                }                                                                                                                           // FhirConstructGeneration.cs:308
-                                                                                                                                            // FhirConstructGeneration.cs:309
-                case "Coding": // Coding  - DataType                                                                                        // FhirConstructGeneration.cs:304
-                {                                                                                                                           // FhirConstructGeneration.cs:305
-                    propertyType = "Coding";                                                                                                // FhirConstructGeneration.cs:306
-                    return Construct(block, (Coding)fix, methodName);                                                                       // FhirConstructGeneration.cs:307
-                }                                                                                                                           // FhirConstructGeneration.cs:308
-                                                                                                                                            // FhirConstructGeneration.cs:309
-                case "ContactDetail": // ContactDetail  - DataType                                                                          // FhirConstructGeneration.cs:304
-                {                                                                                                                           // FhirConstructGeneration.cs:305
-                    propertyType = "ContactDetail";                                                                                         // FhirConstructGeneration.cs:306
-                    return Construct(block, (ContactDetail)fix, methodName);                                                                // FhirConstructGeneration.cs:307
-                }                                                                                                                           // FhirConstructGeneration.cs:308
-                                                                                                                                            // FhirConstructGeneration.cs:309
-                case "ContactPoint": // ContactPoint  - DataType                                                                            // FhirConstructGeneration.cs:304
-                {                                                                                                                           // FhirConstructGeneration.cs:305
-                    propertyType = "ContactPoint";                                                                                          // FhirConstructGeneration.cs:306
-                    return Construct(block, (ContactPoint)fix, methodName);                                                                 // FhirConstructGeneration.cs:307
-                }                                                                                                                           // FhirConstructGeneration.cs:308
-                                                                                                                                            // FhirConstructGeneration.cs:309
-                case "Contributor": // Contributor  - DataType                                                                              // FhirConstructGeneration.cs:304
-                {                                                                                                                           // FhirConstructGeneration.cs:305
-                    propertyType = "Contributor";                                                                                           // FhirConstructGeneration.cs:306
-                    return Construct(block, (Contributor)fix, methodName);                                                                  // FhirConstructGeneration.cs:307
-                }                                                                                                                           // FhirConstructGeneration.cs:308
-                                                                                                                                            // FhirConstructGeneration.cs:309
-                case "Count": // Count  - DataType                                                                                          // FhirConstructGeneration.cs:304
-                {                                                                                                                           // FhirConstructGeneration.cs:305
-                    propertyType = "Count";                                                                                                 // FhirConstructGeneration.cs:306
-                    return Construct(block, (Count)fix, methodName);                                                                        // FhirConstructGeneration.cs:307
-                }                                                                                                                           // FhirConstructGeneration.cs:308
-                                                                                                                                            // FhirConstructGeneration.cs:309
-                case "DataRequirement": // DataRequirement  - DataType                                                                      // FhirConstructGeneration.cs:304
-                {                                                                                                                           // FhirConstructGeneration.cs:305
-                    propertyType = "DataRequirement";                                                                                       // FhirConstructGeneration.cs:306
-                    return Construct(block, (DataRequirement)fix, methodName);                                                              // FhirConstructGeneration.cs:307
-                }                                                                                                                           // FhirConstructGeneration.cs:308
-                                                                                                                                            // FhirConstructGeneration.cs:309
-                case "Distance": // Distance  - DataType                                                                                    // FhirConstructGeneration.cs:304
-                {                                                                                                                           // FhirConstructGeneration.cs:305
-                    propertyType = "Distance";                                                                                              // FhirConstructGeneration.cs:306
-                    return Construct(block, (Distance)fix, methodName);                                                                     // FhirConstructGeneration.cs:307
-                }                                                                                                                           // FhirConstructGeneration.cs:308
-                                                                                                                                            // FhirConstructGeneration.cs:309
-                case "Dosage": // Dosage  - DataType                                                                                        // FhirConstructGeneration.cs:304
-                {                                                                                                                           // FhirConstructGeneration.cs:305
-                    propertyType = "Dosage";                                                                                                // FhirConstructGeneration.cs:306
-                    return Construct(block, (Dosage)fix, methodName);                                                                       // FhirConstructGeneration.cs:307
-                }                                                                                                                           // FhirConstructGeneration.cs:308
-                                                                                                                                            // FhirConstructGeneration.cs:309
-                case "Duration": // Duration  - DataType                                                                                    // FhirConstructGeneration.cs:304
-                {                                                                                                                           // FhirConstructGeneration.cs:305
-                    propertyType = "Duration";                                                                                              // FhirConstructGeneration.cs:306
-                    return Construct(block, (Duration)fix, methodName);                                                                     // FhirConstructGeneration.cs:307
-                }                                                                                                                           // FhirConstructGeneration.cs:308
-                                                                                                                                            // FhirConstructGeneration.cs:309
-                case "ElementDefinition": // ElementDefinition  - DataType                                                                  // FhirConstructGeneration.cs:304
-                {                                                                                                                           // FhirConstructGeneration.cs:305
-                    propertyType = "ElementDefinition";                                                                                     // FhirConstructGeneration.cs:306
-                    return Construct(block, (ElementDefinition)fix, methodName);                                                            // FhirConstructGeneration.cs:307
-                }                                                                                                                           // FhirConstructGeneration.cs:308
-                                                                                                                                            // FhirConstructGeneration.cs:309
-                case "Extension": // Extension  - DataType                                                                                  // FhirConstructGeneration.cs:304
-                {                                                                                                                           // FhirConstructGeneration.cs:305
-                    propertyType = "Extension";                                                                                             // FhirConstructGeneration.cs:306
-                    return Construct(block, (Extension)fix, methodName);                                                                    // FhirConstructGeneration.cs:307
-                }                                                                                                                           // FhirConstructGeneration.cs:308
-                                                                                                                                            // FhirConstructGeneration.cs:309
-                case "HumanName": // HumanName  - DataType                                                                                  // FhirConstructGeneration.cs:304
-                {                                                                                                                           // FhirConstructGeneration.cs:305
-                    propertyType = "HumanName";                                                                                             // FhirConstructGeneration.cs:306
-                    return Construct(block, (HumanName)fix, methodName);                                                                    // FhirConstructGeneration.cs:307
-                }                                                                                                                           // FhirConstructGeneration.cs:308
-                                                                                                                                            // FhirConstructGeneration.cs:309
-                case "Identifier": // Identifier  - DataType                                                                                // FhirConstructGeneration.cs:304
-                {                                                                                                                           // FhirConstructGeneration.cs:305
-                    propertyType = "Identifier";                                                                                            // FhirConstructGeneration.cs:306
-                    return Construct(block, (Identifier)fix, methodName);                                                                   // FhirConstructGeneration.cs:307
-                }                                                                                                                           // FhirConstructGeneration.cs:308
-                                                                                                                                            // FhirConstructGeneration.cs:309
-                case "Meta": // Meta  - DataType                                                                                            // FhirConstructGeneration.cs:304
-                {                                                                                                                           // FhirConstructGeneration.cs:305
-                    propertyType = "Meta";                                                                                                  // FhirConstructGeneration.cs:306
-                    return Construct(block, (Meta)fix, methodName);                                                                         // FhirConstructGeneration.cs:307
-                }                                                                                                                           // FhirConstructGeneration.cs:308
-                                                                                                                                            // FhirConstructGeneration.cs:309
-                case "Money": // Money  - DataType                                                                                          // FhirConstructGeneration.cs:304
-                {                                                                                                                           // FhirConstructGeneration.cs:305
-                    propertyType = "Money";                                                                                                 // FhirConstructGeneration.cs:306
-                    return Construct(block, (Money)fix, methodName);                                                                        // FhirConstructGeneration.cs:307
-                }                                                                                                                           // FhirConstructGeneration.cs:308
-                                                                                                                                            // FhirConstructGeneration.cs:309
-                case "Narrative": // Narrative  - DataType                                                                                  // FhirConstructGeneration.cs:304
-                {                                                                                                                           // FhirConstructGeneration.cs:305
-                    propertyType = "Narrative";                                                                                             // FhirConstructGeneration.cs:306
-                    return Construct(block, (Narrative)fix, methodName);                                                                    // FhirConstructGeneration.cs:307
-                }                                                                                                                           // FhirConstructGeneration.cs:308
-                                                                                                                                            // FhirConstructGeneration.cs:309
-                case "ParameterDefinition": // ParameterDefinition  - DataType                                                              // FhirConstructGeneration.cs:304
-                {                                                                                                                           // FhirConstructGeneration.cs:305
-                    propertyType = "ParameterDefinition";                                                                                   // FhirConstructGeneration.cs:306
-                    return Construct(block, (ParameterDefinition)fix, methodName);                                                          // FhirConstructGeneration.cs:307
-                }                                                                                                                           // FhirConstructGeneration.cs:308
-                                                                                                                                            // FhirConstructGeneration.cs:309
-                case "Period": // Period  - DataType                                                                                        // FhirConstructGeneration.cs:304
-                {                                                                                                                           // FhirConstructGeneration.cs:305
-                    propertyType = "Period";                                                                                                // FhirConstructGeneration.cs:306
-                    return Construct(block, (Period)fix, methodName);                                                                       // FhirConstructGeneration.cs:307
-                }                                                                                                                           // FhirConstructGeneration.cs:308
-                                                                                                                                            // FhirConstructGeneration.cs:309
-                case "Quantity": // Quantity  - DataType                                                                                    // FhirConstructGeneration.cs:304
-                {                                                                                                                           // FhirConstructGeneration.cs:305
-                    propertyType = "Quantity";                                                                                              // FhirConstructGeneration.cs:306
-                    return Construct(block, (Quantity)fix, methodName);                                                                     // FhirConstructGeneration.cs:307
-                }                                                                                                                           // FhirConstructGeneration.cs:308
-                                                                                                                                            // FhirConstructGeneration.cs:309
-                case "Range": // Range  - DataType                                                                                          // FhirConstructGeneration.cs:304
-                {                                                                                                                           // FhirConstructGeneration.cs:305
-                    propertyType = "Range";                                                                                                 // FhirConstructGeneration.cs:306
-                    return Construct(block, (Range)fix, methodName);                                                                        // FhirConstructGeneration.cs:307
-                }                                                                                                                           // FhirConstructGeneration.cs:308
-                                                                                                                                            // FhirConstructGeneration.cs:309
-                case "Ratio": // Ratio  - DataType                                                                                          // FhirConstructGeneration.cs:304
-                {                                                                                                                           // FhirConstructGeneration.cs:305
-                    propertyType = "Ratio";                                                                                                 // FhirConstructGeneration.cs:306
-                    return Construct(block, (Ratio)fix, methodName);                                                                        // FhirConstructGeneration.cs:307
-                }                                                                                                                           // FhirConstructGeneration.cs:308
-                                                                                                                                            // FhirConstructGeneration.cs:309
-                case "Reference": // Reference  - DataType                                                                                  // FhirConstructGeneration.cs:304
-                {                                                                                                                           // FhirConstructGeneration.cs:305
-                    propertyType = "Reference";                                                                                             // FhirConstructGeneration.cs:306
-                    return Construct(block, (ResourceReference)fix, methodName);                                                            // FhirConstructGeneration.cs:307
-                }                                                                                                                           // FhirConstructGeneration.cs:308
-                                                                                                                                            // FhirConstructGeneration.cs:309
-                case "RelatedArtifact": // RelatedArtifact  - DataType                                                                      // FhirConstructGeneration.cs:304
-                {                                                                                                                           // FhirConstructGeneration.cs:305
-                    propertyType = "RelatedArtifact";                                                                                       // FhirConstructGeneration.cs:306
-                    return Construct(block, (RelatedArtifact)fix, methodName);                                                              // FhirConstructGeneration.cs:307
-                }                                                                                                                           // FhirConstructGeneration.cs:308
-                                                                                                                                            // FhirConstructGeneration.cs:309
-                case "SampledData": // SampledData  - DataType                                                                              // FhirConstructGeneration.cs:304
-                {                                                                                                                           // FhirConstructGeneration.cs:305
-                    propertyType = "SampledData";                                                                                           // FhirConstructGeneration.cs:306
-                    return Construct(block, (SampledData)fix, methodName);                                                                  // FhirConstructGeneration.cs:307
-                }                                                                                                                           // FhirConstructGeneration.cs:308
-                                                                                                                                            // FhirConstructGeneration.cs:309
-                case "Signature": // Signature  - DataType                                                                                  // FhirConstructGeneration.cs:304
-                {                                                                                                                           // FhirConstructGeneration.cs:305
-                    propertyType = "Signature";                                                                                             // FhirConstructGeneration.cs:306
-                    return Construct(block, (Signature)fix, methodName);                                                                    // FhirConstructGeneration.cs:307
-                }                                                                                                                           // FhirConstructGeneration.cs:308
-                                                                                                                                            // FhirConstructGeneration.cs:309
-                case "SimpleQuantity": // SimpleQuantity  - DataType                                                                        // FhirConstructGeneration.cs:304
-                {                                                                                                                           // FhirConstructGeneration.cs:305
-                    propertyType = "SimpleQuantity";                                                                                        // FhirConstructGeneration.cs:306
-                    return Construct(block, (SimpleQuantity)fix, methodName);                                                               // FhirConstructGeneration.cs:307
-                }                                                                                                                           // FhirConstructGeneration.cs:308
-                                                                                                                                            // FhirConstructGeneration.cs:309
-                case "Timing": // Timing  - DataType                                                                                        // FhirConstructGeneration.cs:304
-                {                                                                                                                           // FhirConstructGeneration.cs:305
-                    propertyType = "Timing";                                                                                                // FhirConstructGeneration.cs:306
-                    return Construct(block, (Timing)fix, methodName);                                                                       // FhirConstructGeneration.cs:307
-                }                                                                                                                           // FhirConstructGeneration.cs:308
-                                                                                                                                            // FhirConstructGeneration.cs:309
-                case "TriggerDefinition": // TriggerDefinition  - DataType                                                                  // FhirConstructGeneration.cs:304
-                {                                                                                                                           // FhirConstructGeneration.cs:305
-                    propertyType = "TriggerDefinition";                                                                                     // FhirConstructGeneration.cs:306
-                    return Construct(block, (TriggerDefinition)fix, methodName);                                                            // FhirConstructGeneration.cs:307
-                }                                                                                                                           // FhirConstructGeneration.cs:308
-                                                                                                                                            // FhirConstructGeneration.cs:309
-                case "UsageContext": // UsageContext  - DataType                                                                            // FhirConstructGeneration.cs:304
-                {                                                                                                                           // FhirConstructGeneration.cs:305
-                    propertyType = "UsageContext";                                                                                          // FhirConstructGeneration.cs:306
-                    return Construct(block, (UsageContext)fix, methodName);                                                                 // FhirConstructGeneration.cs:307
-                }                                                                                                                           // FhirConstructGeneration.cs:308
-                                                                                                                                            // FhirConstructGeneration.cs:309
+            Element fix,                                                                                                                    // FhirConstructGeneration.cs:393
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:394
+            out String propertyType,                                                                                                        // FhirConstructGeneration.cs:395
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:396
+        {                                                                                                                                   // FhirConstructGeneration.cs:397
+                                                                                                                                            // FhirConstructGeneration.cs:399
+            propertyType = null;                                                                                                            // FhirConstructGeneration.cs:400
+            switch (fix.TypeName)                                                                                                           // FhirConstructGeneration.cs:401
+            {                                                                                                                               // FhirConstructGeneration.cs:402
+                case "Address": // Address  - DataType                                                                                      // FhirConstructGeneration.cs:305
+                {                                                                                                                           // FhirConstructGeneration.cs:306
+                    propertyType = "Address";                                                                                               // FhirConstructGeneration.cs:307
+                    return Construct(block, (Address)fix, methodName);                                                                      // FhirConstructGeneration.cs:308
+                }                                                                                                                           // FhirConstructGeneration.cs:309
+                                                                                                                                            // FhirConstructGeneration.cs:310
+                case "Age": // Age  - DataType                                                                                              // FhirConstructGeneration.cs:305
+                {                                                                                                                           // FhirConstructGeneration.cs:306
+                    propertyType = "Age";                                                                                                   // FhirConstructGeneration.cs:307
+                    return Construct(block, (Age)fix, methodName);                                                                          // FhirConstructGeneration.cs:308
+                }                                                                                                                           // FhirConstructGeneration.cs:309
+                                                                                                                                            // FhirConstructGeneration.cs:310
+                case "Annotation": // Annotation  - DataType                                                                                // FhirConstructGeneration.cs:305
+                {                                                                                                                           // FhirConstructGeneration.cs:306
+                    propertyType = "Annotation";                                                                                            // FhirConstructGeneration.cs:307
+                    return Construct(block, (Annotation)fix, methodName);                                                                   // FhirConstructGeneration.cs:308
+                }                                                                                                                           // FhirConstructGeneration.cs:309
+                                                                                                                                            // FhirConstructGeneration.cs:310
+                case "Attachment": // Attachment  - DataType                                                                                // FhirConstructGeneration.cs:305
+                {                                                                                                                           // FhirConstructGeneration.cs:306
+                    propertyType = "Attachment";                                                                                            // FhirConstructGeneration.cs:307
+                    return Construct(block, (Attachment)fix, methodName);                                                                   // FhirConstructGeneration.cs:308
+                }                                                                                                                           // FhirConstructGeneration.cs:309
+                                                                                                                                            // FhirConstructGeneration.cs:310
+                case "CodeableConcept": // CodeableConcept  - DataType                                                                      // FhirConstructGeneration.cs:305
+                {                                                                                                                           // FhirConstructGeneration.cs:306
+                    propertyType = "CodeableConcept";                                                                                       // FhirConstructGeneration.cs:307
+                    return Construct(block, (CodeableConcept)fix, methodName);                                                              // FhirConstructGeneration.cs:308
+                }                                                                                                                           // FhirConstructGeneration.cs:309
+                                                                                                                                            // FhirConstructGeneration.cs:310
+                case "Coding": // Coding  - DataType                                                                                        // FhirConstructGeneration.cs:305
+                {                                                                                                                           // FhirConstructGeneration.cs:306
+                    propertyType = "Coding";                                                                                                // FhirConstructGeneration.cs:307
+                    return Construct(block, (Coding)fix, methodName);                                                                       // FhirConstructGeneration.cs:308
+                }                                                                                                                           // FhirConstructGeneration.cs:309
+                                                                                                                                            // FhirConstructGeneration.cs:310
+                case "ContactDetail": // ContactDetail  - DataType                                                                          // FhirConstructGeneration.cs:305
+                {                                                                                                                           // FhirConstructGeneration.cs:306
+                    propertyType = "ContactDetail";                                                                                         // FhirConstructGeneration.cs:307
+                    return Construct(block, (ContactDetail)fix, methodName);                                                                // FhirConstructGeneration.cs:308
+                }                                                                                                                           // FhirConstructGeneration.cs:309
+                                                                                                                                            // FhirConstructGeneration.cs:310
+                case "ContactPoint": // ContactPoint  - DataType                                                                            // FhirConstructGeneration.cs:305
+                {                                                                                                                           // FhirConstructGeneration.cs:306
+                    propertyType = "ContactPoint";                                                                                          // FhirConstructGeneration.cs:307
+                    return Construct(block, (ContactPoint)fix, methodName);                                                                 // FhirConstructGeneration.cs:308
+                }                                                                                                                           // FhirConstructGeneration.cs:309
+                                                                                                                                            // FhirConstructGeneration.cs:310
+                case "Contributor": // Contributor  - DataType                                                                              // FhirConstructGeneration.cs:305
+                {                                                                                                                           // FhirConstructGeneration.cs:306
+                    propertyType = "Contributor";                                                                                           // FhirConstructGeneration.cs:307
+                    return Construct(block, (Contributor)fix, methodName);                                                                  // FhirConstructGeneration.cs:308
+                }                                                                                                                           // FhirConstructGeneration.cs:309
+                                                                                                                                            // FhirConstructGeneration.cs:310
+                case "Count": // Count  - DataType                                                                                          // FhirConstructGeneration.cs:305
+                {                                                                                                                           // FhirConstructGeneration.cs:306
+                    propertyType = "Count";                                                                                                 // FhirConstructGeneration.cs:307
+                    return Construct(block, (Count)fix, methodName);                                                                        // FhirConstructGeneration.cs:308
+                }                                                                                                                           // FhirConstructGeneration.cs:309
+                                                                                                                                            // FhirConstructGeneration.cs:310
+                case "DataRequirement": // DataRequirement  - DataType                                                                      // FhirConstructGeneration.cs:305
+                {                                                                                                                           // FhirConstructGeneration.cs:306
+                    propertyType = "DataRequirement";                                                                                       // FhirConstructGeneration.cs:307
+                    return Construct(block, (DataRequirement)fix, methodName);                                                              // FhirConstructGeneration.cs:308
+                }                                                                                                                           // FhirConstructGeneration.cs:309
+                                                                                                                                            // FhirConstructGeneration.cs:310
+                case "Distance": // Distance  - DataType                                                                                    // FhirConstructGeneration.cs:305
+                {                                                                                                                           // FhirConstructGeneration.cs:306
+                    propertyType = "Distance";                                                                                              // FhirConstructGeneration.cs:307
+                    return Construct(block, (Distance)fix, methodName);                                                                     // FhirConstructGeneration.cs:308
+                }                                                                                                                           // FhirConstructGeneration.cs:309
+                                                                                                                                            // FhirConstructGeneration.cs:310
+                case "Dosage": // Dosage  - DataType                                                                                        // FhirConstructGeneration.cs:305
+                {                                                                                                                           // FhirConstructGeneration.cs:306
+                    propertyType = "Dosage";                                                                                                // FhirConstructGeneration.cs:307
+                    return Construct(block, (Dosage)fix, methodName);                                                                       // FhirConstructGeneration.cs:308
+                }                                                                                                                           // FhirConstructGeneration.cs:309
+                                                                                                                                            // FhirConstructGeneration.cs:310
+                case "Duration": // Duration  - DataType                                                                                    // FhirConstructGeneration.cs:305
+                {                                                                                                                           // FhirConstructGeneration.cs:306
+                    propertyType = "Duration";                                                                                              // FhirConstructGeneration.cs:307
+                    return Construct(block, (Duration)fix, methodName);                                                                     // FhirConstructGeneration.cs:308
+                }                                                                                                                           // FhirConstructGeneration.cs:309
+                                                                                                                                            // FhirConstructGeneration.cs:310
+                case "ElementDefinition": // ElementDefinition  - DataType                                                                  // FhirConstructGeneration.cs:305
+                {                                                                                                                           // FhirConstructGeneration.cs:306
+                    propertyType = "ElementDefinition";                                                                                     // FhirConstructGeneration.cs:307
+                    return Construct(block, (ElementDefinition)fix, methodName);                                                            // FhirConstructGeneration.cs:308
+                }                                                                                                                           // FhirConstructGeneration.cs:309
+                                                                                                                                            // FhirConstructGeneration.cs:310
+                case "Extension": // Extension  - DataType                                                                                  // FhirConstructGeneration.cs:305
+                {                                                                                                                           // FhirConstructGeneration.cs:306
+                    propertyType = "Extension";                                                                                             // FhirConstructGeneration.cs:307
+                    return Construct(block, (Extension)fix, methodName);                                                                    // FhirConstructGeneration.cs:308
+                }                                                                                                                           // FhirConstructGeneration.cs:309
+                                                                                                                                            // FhirConstructGeneration.cs:310
+                case "HumanName": // HumanName  - DataType                                                                                  // FhirConstructGeneration.cs:305
+                {                                                                                                                           // FhirConstructGeneration.cs:306
+                    propertyType = "HumanName";                                                                                             // FhirConstructGeneration.cs:307
+                    return Construct(block, (HumanName)fix, methodName);                                                                    // FhirConstructGeneration.cs:308
+                }                                                                                                                           // FhirConstructGeneration.cs:309
+                                                                                                                                            // FhirConstructGeneration.cs:310
+                case "Identifier": // Identifier  - DataType                                                                                // FhirConstructGeneration.cs:305
+                {                                                                                                                           // FhirConstructGeneration.cs:306
+                    propertyType = "Identifier";                                                                                            // FhirConstructGeneration.cs:307
+                    return Construct(block, (Identifier)fix, methodName);                                                                   // FhirConstructGeneration.cs:308
+                }                                                                                                                           // FhirConstructGeneration.cs:309
+                                                                                                                                            // FhirConstructGeneration.cs:310
+                case "Meta": // Meta  - DataType                                                                                            // FhirConstructGeneration.cs:305
+                {                                                                                                                           // FhirConstructGeneration.cs:306
+                    propertyType = "Meta";                                                                                                  // FhirConstructGeneration.cs:307
+                    return Construct(block, (Meta)fix, methodName);                                                                         // FhirConstructGeneration.cs:308
+                }                                                                                                                           // FhirConstructGeneration.cs:309
+                                                                                                                                            // FhirConstructGeneration.cs:310
+                case "Money": // Money  - DataType                                                                                          // FhirConstructGeneration.cs:305
+                {                                                                                                                           // FhirConstructGeneration.cs:306
+                    propertyType = "Money";                                                                                                 // FhirConstructGeneration.cs:307
+                    return Construct(block, (Money)fix, methodName);                                                                        // FhirConstructGeneration.cs:308
+                }                                                                                                                           // FhirConstructGeneration.cs:309
+                                                                                                                                            // FhirConstructGeneration.cs:310
+                case "Narrative": // Narrative  - DataType                                                                                  // FhirConstructGeneration.cs:305
+                {                                                                                                                           // FhirConstructGeneration.cs:306
+                    propertyType = "Narrative";                                                                                             // FhirConstructGeneration.cs:307
+                    return Construct(block, (Narrative)fix, methodName);                                                                    // FhirConstructGeneration.cs:308
+                }                                                                                                                           // FhirConstructGeneration.cs:309
+                                                                                                                                            // FhirConstructGeneration.cs:310
+                case "ParameterDefinition": // ParameterDefinition  - DataType                                                              // FhirConstructGeneration.cs:305
+                {                                                                                                                           // FhirConstructGeneration.cs:306
+                    propertyType = "ParameterDefinition";                                                                                   // FhirConstructGeneration.cs:307
+                    return Construct(block, (ParameterDefinition)fix, methodName);                                                          // FhirConstructGeneration.cs:308
+                }                                                                                                                           // FhirConstructGeneration.cs:309
+                                                                                                                                            // FhirConstructGeneration.cs:310
+                case "Period": // Period  - DataType                                                                                        // FhirConstructGeneration.cs:305
+                {                                                                                                                           // FhirConstructGeneration.cs:306
+                    propertyType = "Period";                                                                                                // FhirConstructGeneration.cs:307
+                    return Construct(block, (Period)fix, methodName);                                                                       // FhirConstructGeneration.cs:308
+                }                                                                                                                           // FhirConstructGeneration.cs:309
+                                                                                                                                            // FhirConstructGeneration.cs:310
+                case "Quantity": // Quantity  - DataType                                                                                    // FhirConstructGeneration.cs:305
+                {                                                                                                                           // FhirConstructGeneration.cs:306
+                    propertyType = "Quantity";                                                                                              // FhirConstructGeneration.cs:307
+                    return Construct(block, (Quantity)fix, methodName);                                                                     // FhirConstructGeneration.cs:308
+                }                                                                                                                           // FhirConstructGeneration.cs:309
+                                                                                                                                            // FhirConstructGeneration.cs:310
+                case "Range": // Range  - DataType                                                                                          // FhirConstructGeneration.cs:305
+                {                                                                                                                           // FhirConstructGeneration.cs:306
+                    propertyType = "Range";                                                                                                 // FhirConstructGeneration.cs:307
+                    return Construct(block, (Range)fix, methodName);                                                                        // FhirConstructGeneration.cs:308
+                }                                                                                                                           // FhirConstructGeneration.cs:309
+                                                                                                                                            // FhirConstructGeneration.cs:310
+                case "Ratio": // Ratio  - DataType                                                                                          // FhirConstructGeneration.cs:305
+                {                                                                                                                           // FhirConstructGeneration.cs:306
+                    propertyType = "Ratio";                                                                                                 // FhirConstructGeneration.cs:307
+                    return Construct(block, (Ratio)fix, methodName);                                                                        // FhirConstructGeneration.cs:308
+                }                                                                                                                           // FhirConstructGeneration.cs:309
+                                                                                                                                            // FhirConstructGeneration.cs:310
+                case "Reference": // Reference  - DataType                                                                                  // FhirConstructGeneration.cs:305
+                {                                                                                                                           // FhirConstructGeneration.cs:306
+                    propertyType = "Reference";                                                                                             // FhirConstructGeneration.cs:307
+                    return Construct(block, (ResourceReference)fix, methodName);                                                            // FhirConstructGeneration.cs:308
+                }                                                                                                                           // FhirConstructGeneration.cs:309
+                                                                                                                                            // FhirConstructGeneration.cs:310
+                case "RelatedArtifact": // RelatedArtifact  - DataType                                                                      // FhirConstructGeneration.cs:305
+                {                                                                                                                           // FhirConstructGeneration.cs:306
+                    propertyType = "RelatedArtifact";                                                                                       // FhirConstructGeneration.cs:307
+                    return Construct(block, (RelatedArtifact)fix, methodName);                                                              // FhirConstructGeneration.cs:308
+                }                                                                                                                           // FhirConstructGeneration.cs:309
+                                                                                                                                            // FhirConstructGeneration.cs:310
+                case "SampledData": // SampledData  - DataType                                                                              // FhirConstructGeneration.cs:305
+                {                                                                                                                           // FhirConstructGeneration.cs:306
+                    propertyType = "SampledData";                                                                                           // FhirConstructGeneration.cs:307
+                    return Construct(block, (SampledData)fix, methodName);                                                                  // FhirConstructGeneration.cs:308
+                }                                                                                                                           // FhirConstructGeneration.cs:309
+                                                                                                                                            // FhirConstructGeneration.cs:310
+                case "Signature": // Signature  - DataType                                                                                  // FhirConstructGeneration.cs:305
+                {                                                                                                                           // FhirConstructGeneration.cs:306
+                    propertyType = "Signature";                                                                                             // FhirConstructGeneration.cs:307
+                    return Construct(block, (Signature)fix, methodName);                                                                    // FhirConstructGeneration.cs:308
+                }                                                                                                                           // FhirConstructGeneration.cs:309
+                                                                                                                                            // FhirConstructGeneration.cs:310
+                case "SimpleQuantity": // SimpleQuantity  - DataType                                                                        // FhirConstructGeneration.cs:305
+                {                                                                                                                           // FhirConstructGeneration.cs:306
+                    propertyType = "SimpleQuantity";                                                                                        // FhirConstructGeneration.cs:307
+                    return Construct(block, (SimpleQuantity)fix, methodName);                                                               // FhirConstructGeneration.cs:308
+                }                                                                                                                           // FhirConstructGeneration.cs:309
+                                                                                                                                            // FhirConstructGeneration.cs:310
+                case "Timing": // Timing  - DataType                                                                                        // FhirConstructGeneration.cs:305
+                {                                                                                                                           // FhirConstructGeneration.cs:306
+                    propertyType = "Timing";                                                                                                // FhirConstructGeneration.cs:307
+                    return Construct(block, (Timing)fix, methodName);                                                                       // FhirConstructGeneration.cs:308
+                }                                                                                                                           // FhirConstructGeneration.cs:309
+                                                                                                                                            // FhirConstructGeneration.cs:310
+                case "TriggerDefinition": // TriggerDefinition  - DataType                                                                  // FhirConstructGeneration.cs:305
+                {                                                                                                                           // FhirConstructGeneration.cs:306
+                    propertyType = "TriggerDefinition";                                                                                     // FhirConstructGeneration.cs:307
+                    return Construct(block, (TriggerDefinition)fix, methodName);                                                            // FhirConstructGeneration.cs:308
+                }                                                                                                                           // FhirConstructGeneration.cs:309
+                                                                                                                                            // FhirConstructGeneration.cs:310
+                case "UsageContext": // UsageContext  - DataType                                                                            // FhirConstructGeneration.cs:305
+                {                                                                                                                           // FhirConstructGeneration.cs:306
+                    propertyType = "UsageContext";                                                                                          // FhirConstructGeneration.cs:307
+                    return Construct(block, (UsageContext)fix, methodName);                                                                 // FhirConstructGeneration.cs:308
+                }                                                                                                                           // FhirConstructGeneration.cs:309
+                                                                                                                                            // FhirConstructGeneration.cs:310
                 case "base64Binary": // Base64Binary  - primitive                                                                           // FhirConstructGeneration.cs:237
                 {                                                                                                                           // FhirConstructGeneration.cs:238
                     propertyType = "base64Binary";                                                                                          // FhirConstructGeneration.cs:239
-                    return Construct(block, (Base64Binary)fix, methodName);                                                                 // FhirConstructGeneration.cs:240
+                    return Construct(block, (Base64Binary)fix, methodName, methodAccess);                                                   // FhirConstructGeneration.cs:240
                 }                                                                                                                           // FhirConstructGeneration.cs:241
                                                                                                                                             // FhirConstructGeneration.cs:242
                 case "boolean": // Boolean  - primitive                                                                                     // FhirConstructGeneration.cs:237
                 {                                                                                                                           // FhirConstructGeneration.cs:238
                     propertyType = "boolean";                                                                                               // FhirConstructGeneration.cs:239
-                    return Construct(block, (FhirBoolean)fix, methodName);                                                                  // FhirConstructGeneration.cs:240
+                    return Construct(block, (FhirBoolean)fix, methodName, methodAccess);                                                    // FhirConstructGeneration.cs:240
                 }                                                                                                                           // FhirConstructGeneration.cs:241
                                                                                                                                             // FhirConstructGeneration.cs:242
                 case "code": // Code  - primitive                                                                                           // FhirConstructGeneration.cs:237
                 {                                                                                                                           // FhirConstructGeneration.cs:238
                     propertyType = "code";                                                                                                  // FhirConstructGeneration.cs:239
-                    return Construct(block, (Code)fix, methodName);                                                                         // FhirConstructGeneration.cs:240
+                    return Construct(block, (Code)fix, methodName, methodAccess);                                                           // FhirConstructGeneration.cs:240
                 }                                                                                                                           // FhirConstructGeneration.cs:241
                                                                                                                                             // FhirConstructGeneration.cs:242
                 case "date": // Date  - primitive                                                                                           // FhirConstructGeneration.cs:237
                 {                                                                                                                           // FhirConstructGeneration.cs:238
                     propertyType = "date";                                                                                                  // FhirConstructGeneration.cs:239
-                    return Construct(block, (Date)fix, methodName);                                                                         // FhirConstructGeneration.cs:240
+                    return Construct(block, (Date)fix, methodName, methodAccess);                                                           // FhirConstructGeneration.cs:240
                 }                                                                                                                           // FhirConstructGeneration.cs:241
                                                                                                                                             // FhirConstructGeneration.cs:242
                 case "dateTime": // DateTime  - primitive                                                                                   // FhirConstructGeneration.cs:237
                 {                                                                                                                           // FhirConstructGeneration.cs:238
                     propertyType = "dateTime";                                                                                              // FhirConstructGeneration.cs:239
-                    return Construct(block, (FhirDateTime)fix, methodName);                                                                 // FhirConstructGeneration.cs:240
+                    return Construct(block, (FhirDateTime)fix, methodName, methodAccess);                                                   // FhirConstructGeneration.cs:240
                 }                                                                                                                           // FhirConstructGeneration.cs:241
                                                                                                                                             // FhirConstructGeneration.cs:242
                 case "decimal": // Decimal  - primitive                                                                                     // FhirConstructGeneration.cs:237
                 {                                                                                                                           // FhirConstructGeneration.cs:238
                     propertyType = "decimal";                                                                                               // FhirConstructGeneration.cs:239
-                    return Construct(block, (FhirDecimal)fix, methodName);                                                                  // FhirConstructGeneration.cs:240
+                    return Construct(block, (FhirDecimal)fix, methodName, methodAccess);                                                    // FhirConstructGeneration.cs:240
                 }                                                                                                                           // FhirConstructGeneration.cs:241
                                                                                                                                             // FhirConstructGeneration.cs:242
                 case "id": // Id  - primitive                                                                                               // FhirConstructGeneration.cs:237
                 {                                                                                                                           // FhirConstructGeneration.cs:238
                     propertyType = "id";                                                                                                    // FhirConstructGeneration.cs:239
-                    return Construct(block, (Id)fix, methodName);                                                                           // FhirConstructGeneration.cs:240
+                    return Construct(block, (Id)fix, methodName, methodAccess);                                                             // FhirConstructGeneration.cs:240
                 }                                                                                                                           // FhirConstructGeneration.cs:241
                                                                                                                                             // FhirConstructGeneration.cs:242
                 case "instant": // Instant  - primitive                                                                                     // FhirConstructGeneration.cs:237
                 {                                                                                                                           // FhirConstructGeneration.cs:238
                     propertyType = "instant";                                                                                               // FhirConstructGeneration.cs:239
-                    return Construct(block, (Instant)fix, methodName);                                                                      // FhirConstructGeneration.cs:240
+                    return Construct(block, (Instant)fix, methodName, methodAccess);                                                        // FhirConstructGeneration.cs:240
                 }                                                                                                                           // FhirConstructGeneration.cs:241
                                                                                                                                             // FhirConstructGeneration.cs:242
                 case "integer": // Integer  - primitive                                                                                     // FhirConstructGeneration.cs:237
                 {                                                                                                                           // FhirConstructGeneration.cs:238
                     propertyType = "integer";                                                                                               // FhirConstructGeneration.cs:239
-                    return Construct(block, (Integer)fix, methodName);                                                                      // FhirConstructGeneration.cs:240
+                    return Construct(block, (Integer)fix, methodName, methodAccess);                                                        // FhirConstructGeneration.cs:240
                 }                                                                                                                           // FhirConstructGeneration.cs:241
                                                                                                                                             // FhirConstructGeneration.cs:242
                 case "markdown": // Markdown  - primitive                                                                                   // FhirConstructGeneration.cs:237
                 {                                                                                                                           // FhirConstructGeneration.cs:238
                     propertyType = "markdown";                                                                                              // FhirConstructGeneration.cs:239
-                    return Construct(block, (Markdown)fix, methodName);                                                                     // FhirConstructGeneration.cs:240
+                    return Construct(block, (Markdown)fix, methodName, methodAccess);                                                       // FhirConstructGeneration.cs:240
                 }                                                                                                                           // FhirConstructGeneration.cs:241
                                                                                                                                             // FhirConstructGeneration.cs:242
                 case "oid": // Oid  - primitive                                                                                             // FhirConstructGeneration.cs:237
                 {                                                                                                                           // FhirConstructGeneration.cs:238
                     propertyType = "oid";                                                                                                   // FhirConstructGeneration.cs:239
-                    return Construct(block, (Oid)fix, methodName);                                                                          // FhirConstructGeneration.cs:240
+                    return Construct(block, (Oid)fix, methodName, methodAccess);                                                            // FhirConstructGeneration.cs:240
                 }                                                                                                                           // FhirConstructGeneration.cs:241
                                                                                                                                             // FhirConstructGeneration.cs:242
                 case "positiveInt": // PositiveInt  - primitive                                                                             // FhirConstructGeneration.cs:237
                 {                                                                                                                           // FhirConstructGeneration.cs:238
                     propertyType = "positiveInt";                                                                                           // FhirConstructGeneration.cs:239
-                    return Construct(block, (PositiveInt)fix, methodName);                                                                  // FhirConstructGeneration.cs:240
+                    return Construct(block, (PositiveInt)fix, methodName, methodAccess);                                                    // FhirConstructGeneration.cs:240
                 }                                                                                                                           // FhirConstructGeneration.cs:241
                                                                                                                                             // FhirConstructGeneration.cs:242
                 case "string": // String  - primitive                                                                                       // FhirConstructGeneration.cs:237
                 {                                                                                                                           // FhirConstructGeneration.cs:238
                     propertyType = "string";                                                                                                // FhirConstructGeneration.cs:239
-                    return Construct(block, (FhirString)fix, methodName);                                                                   // FhirConstructGeneration.cs:240
+                    return Construct(block, (FhirString)fix, methodName, methodAccess);                                                     // FhirConstructGeneration.cs:240
                 }                                                                                                                           // FhirConstructGeneration.cs:241
                                                                                                                                             // FhirConstructGeneration.cs:242
                 case "time": // Time  - primitive                                                                                           // FhirConstructGeneration.cs:237
                 {                                                                                                                           // FhirConstructGeneration.cs:238
                     propertyType = "time";                                                                                                  // FhirConstructGeneration.cs:239
-                    return Construct(block, (Time)fix, methodName);                                                                         // FhirConstructGeneration.cs:240
+                    return Construct(block, (Time)fix, methodName, methodAccess);                                                           // FhirConstructGeneration.cs:240
                 }                                                                                                                           // FhirConstructGeneration.cs:241
                                                                                                                                             // FhirConstructGeneration.cs:242
                 case "unsignedInt": // UnsignedInt  - primitive                                                                             // FhirConstructGeneration.cs:237
                 {                                                                                                                           // FhirConstructGeneration.cs:238
                     propertyType = "unsignedInt";                                                                                           // FhirConstructGeneration.cs:239
-                    return Construct(block, (UnsignedInt)fix, methodName);                                                                  // FhirConstructGeneration.cs:240
+                    return Construct(block, (UnsignedInt)fix, methodName, methodAccess);                                                    // FhirConstructGeneration.cs:240
                 }                                                                                                                           // FhirConstructGeneration.cs:241
                                                                                                                                             // FhirConstructGeneration.cs:242
                 case "uri": // Uri  - primitive                                                                                             // FhirConstructGeneration.cs:237
                 {                                                                                                                           // FhirConstructGeneration.cs:238
                     propertyType = "uri";                                                                                                   // FhirConstructGeneration.cs:239
-                    return Construct(block, (FhirUri)fix, methodName);                                                                      // FhirConstructGeneration.cs:240
+                    return Construct(block, (FhirUri)fix, methodName, methodAccess);                                                        // FhirConstructGeneration.cs:240
                 }                                                                                                                           // FhirConstructGeneration.cs:241
                                                                                                                                             // FhirConstructGeneration.cs:242
                 case "uuid": // Uuid  - primitive                                                                                           // FhirConstructGeneration.cs:237
                 {                                                                                                                           // FhirConstructGeneration.cs:238
                     propertyType = "uuid";                                                                                                  // FhirConstructGeneration.cs:239
-                    return Construct(block, (Uuid)fix, methodName);                                                                         // FhirConstructGeneration.cs:240
+                    return Construct(block, (Uuid)fix, methodName, methodAccess);                                                           // FhirConstructGeneration.cs:240
                 }                                                                                                                           // FhirConstructGeneration.cs:241
                                                                                                                                             // FhirConstructGeneration.cs:242
                 case "xhtml": // Xhtml  - primitive                                                                                         // FhirConstructGeneration.cs:237
                 {                                                                                                                           // FhirConstructGeneration.cs:238
                     propertyType = "xhtml";                                                                                                 // FhirConstructGeneration.cs:239
-                    return Construct(block, (XHtml)fix, methodName);                                                                        // FhirConstructGeneration.cs:240
+                    return Construct(block, (XHtml)fix, methodName, methodAccess);                                                          // FhirConstructGeneration.cs:240
                 }                                                                                                                           // FhirConstructGeneration.cs:241
                                                                                                                                             // FhirConstructGeneration.cs:242
-            }                                                                                                                               // FhirConstructGeneration.cs:413
-            return false;                                                                                                                   // FhirConstructGeneration.cs:414
-        }                                                                                                                                   // FhirConstructGeneration.cs:415
-                                                                                                                                            // FhirConstructGeneration.cs:314
+            }                                                                                                                               // FhirConstructGeneration.cs:416
+            return false;                                                                                                                   // FhirConstructGeneration.cs:417
+        }                                                                                                                                   // FhirConstructGeneration.cs:418
+                                                                                                                                            // FhirConstructGeneration.cs:315
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:318
-            Address fix,                                                                                                                    // FhirConstructGeneration.cs:319
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:320
-        {                                                                                                                                   // FhirConstructGeneration.cs:321
-                                                                                                                                            // FhirConstructGeneration.cs:323
-            block                                                                                                                           // FhirConstructGeneration.cs:324
-                .AppendCode($"public Address {methodName}()")                                                                               // FhirConstructGeneration.cs:325
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:326
-                .AppendCode("Address retVal = new Address();")                                                                              // FhirConstructGeneration.cs:327
-                ;                                                                                                                           // FhirConstructGeneration.cs:328
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:329
-            {                                                                                                                               // FhirConstructGeneration.cs:330
+        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:319
+            Address fix,                                                                                                                    // FhirConstructGeneration.cs:320
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:321
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:322
+        {                                                                                                                                   // FhirConstructGeneration.cs:323
+                                                                                                                                            // FhirConstructGeneration.cs:325
+            block                                                                                                                           // FhirConstructGeneration.cs:326
+                .AppendCode($"{methodAccess} Address {methodName}()")                                                                       // FhirConstructGeneration.cs:327
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:328
+                .AppendCode("Address retVal = new Address();")                                                                              // FhirConstructGeneration.cs:329
+                ;                                                                                                                           // FhirConstructGeneration.cs:330
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:331
+            {                                                                                                                               // FhirConstructGeneration.cs:332
                 if (fix.UseElement != null)                                                                                                 // FhirConstructGeneration.cs:147
                     block.AppendCode($"retVal.UseElement = new Code<Address.AddressUse>(Address.AddressUse.{fix.UseElement.Value});");      // FhirConstructGeneration.cs:148
                 if (fix.TypeElement != null)                                                                                                // FhirConstructGeneration.cs:147
@@ -448,29 +450,30 @@ namespace FhirKhit.Tools.R3
                 }                                                                                                                           // FhirConstructGeneration.cs:213
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:336
-            block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Address();")                                                                               // FhirConstructGeneration.cs:338
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
-                ;                                                                                                                           // FhirConstructGeneration.cs:340
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:341
-        }                                                                                                                                   // FhirConstructGeneration.cs:342
-                                                                                                                                            // FhirConstructGeneration.cs:314
+            }                                                                                                                               // FhirConstructGeneration.cs:338
+            block                                                                                                                           // FhirConstructGeneration.cs:339
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:340
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:341
+                ;                                                                                                                           // FhirConstructGeneration.cs:342
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:343
+        }                                                                                                                                   // FhirConstructGeneration.cs:344
+                                                                                                                                            // FhirConstructGeneration.cs:315
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:318
-            Age fix,                                                                                                                        // FhirConstructGeneration.cs:319
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:320
-        {                                                                                                                                   // FhirConstructGeneration.cs:321
-                                                                                                                                            // FhirConstructGeneration.cs:323
-            block                                                                                                                           // FhirConstructGeneration.cs:324
-                .AppendCode($"public Age {methodName}()")                                                                                   // FhirConstructGeneration.cs:325
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:326
-                .AppendCode("Age retVal = new Age();")                                                                                      // FhirConstructGeneration.cs:327
-                ;                                                                                                                           // FhirConstructGeneration.cs:328
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:329
-            {                                                                                                                               // FhirConstructGeneration.cs:330
+        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:319
+            Age fix,                                                                                                                        // FhirConstructGeneration.cs:320
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:321
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:322
+        {                                                                                                                                   // FhirConstructGeneration.cs:323
+                                                                                                                                            // FhirConstructGeneration.cs:325
+            block                                                                                                                           // FhirConstructGeneration.cs:326
+                .AppendCode($"{methodAccess} Age {methodName}()")                                                                           // FhirConstructGeneration.cs:327
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:328
+                .AppendCode("Age retVal = new Age();")                                                                                      // FhirConstructGeneration.cs:329
+                ;                                                                                                                           // FhirConstructGeneration.cs:330
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:331
+            {                                                                                                                               // FhirConstructGeneration.cs:332
                 if (fix.ValueElement != null)                                                                                               // FhirConstructGeneration.cs:207
                 {                                                                                                                           // FhirConstructGeneration.cs:208
                         block.AppendCode($"retVal.ValueElement = new FhirDecimal();");                                                      // FhirConstructGeneration.cs:209
@@ -507,29 +510,30 @@ namespace FhirKhit.Tools.R3
                 }                                                                                                                           // FhirConstructGeneration.cs:213
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:336
-            block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Age();")                                                                                   // FhirConstructGeneration.cs:338
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
-                ;                                                                                                                           // FhirConstructGeneration.cs:340
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:341
-        }                                                                                                                                   // FhirConstructGeneration.cs:342
-                                                                                                                                            // FhirConstructGeneration.cs:314
+            }                                                                                                                               // FhirConstructGeneration.cs:338
+            block                                                                                                                           // FhirConstructGeneration.cs:339
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:340
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:341
+                ;                                                                                                                           // FhirConstructGeneration.cs:342
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:343
+        }                                                                                                                                   // FhirConstructGeneration.cs:344
+                                                                                                                                            // FhirConstructGeneration.cs:315
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:318
-            Annotation fix,                                                                                                                 // FhirConstructGeneration.cs:319
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:320
-        {                                                                                                                                   // FhirConstructGeneration.cs:321
-                                                                                                                                            // FhirConstructGeneration.cs:323
-            block                                                                                                                           // FhirConstructGeneration.cs:324
-                .AppendCode($"public Annotation {methodName}()")                                                                            // FhirConstructGeneration.cs:325
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:326
-                .AppendCode("Annotation retVal = new Annotation();")                                                                        // FhirConstructGeneration.cs:327
-                ;                                                                                                                           // FhirConstructGeneration.cs:328
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:329
-            {                                                                                                                               // FhirConstructGeneration.cs:330
+        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:319
+            Annotation fix,                                                                                                                 // FhirConstructGeneration.cs:320
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:321
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:322
+        {                                                                                                                                   // FhirConstructGeneration.cs:323
+                                                                                                                                            // FhirConstructGeneration.cs:325
+            block                                                                                                                           // FhirConstructGeneration.cs:326
+                .AppendCode($"{methodAccess} Annotation {methodName}()")                                                                    // FhirConstructGeneration.cs:327
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:328
+                .AppendCode("Annotation retVal = new Annotation();")                                                                        // FhirConstructGeneration.cs:329
+                ;                                                                                                                           // FhirConstructGeneration.cs:330
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:331
+            {                                                                                                                               // FhirConstructGeneration.cs:332
                 if (fix.TimeElement != null)                                                                                                // FhirConstructGeneration.cs:207
                 {                                                                                                                           // FhirConstructGeneration.cs:208
                         block.AppendCode($"retVal.TimeElement = new FhirDateTime();");                                                      // FhirConstructGeneration.cs:209
@@ -548,29 +552,30 @@ namespace FhirKhit.Tools.R3
                 }                                                                                                                           // FhirConstructGeneration.cs:213
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:336
-            block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Annotation();")                                                                            // FhirConstructGeneration.cs:338
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
-                ;                                                                                                                           // FhirConstructGeneration.cs:340
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:341
-        }                                                                                                                                   // FhirConstructGeneration.cs:342
-                                                                                                                                            // FhirConstructGeneration.cs:314
+            }                                                                                                                               // FhirConstructGeneration.cs:338
+            block                                                                                                                           // FhirConstructGeneration.cs:339
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:340
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:341
+                ;                                                                                                                           // FhirConstructGeneration.cs:342
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:343
+        }                                                                                                                                   // FhirConstructGeneration.cs:344
+                                                                                                                                            // FhirConstructGeneration.cs:315
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:318
-            Attachment fix,                                                                                                                 // FhirConstructGeneration.cs:319
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:320
-        {                                                                                                                                   // FhirConstructGeneration.cs:321
-                                                                                                                                            // FhirConstructGeneration.cs:323
-            block                                                                                                                           // FhirConstructGeneration.cs:324
-                .AppendCode($"public Attachment {methodName}()")                                                                            // FhirConstructGeneration.cs:325
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:326
-                .AppendCode("Attachment retVal = new Attachment();")                                                                        // FhirConstructGeneration.cs:327
-                ;                                                                                                                           // FhirConstructGeneration.cs:328
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:329
-            {                                                                                                                               // FhirConstructGeneration.cs:330
+        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:319
+            Attachment fix,                                                                                                                 // FhirConstructGeneration.cs:320
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:321
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:322
+        {                                                                                                                                   // FhirConstructGeneration.cs:323
+                                                                                                                                            // FhirConstructGeneration.cs:325
+            block                                                                                                                           // FhirConstructGeneration.cs:326
+                .AppendCode($"{methodAccess} Attachment {methodName}()")                                                                    // FhirConstructGeneration.cs:327
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:328
+                .AppendCode("Attachment retVal = new Attachment();")                                                                        // FhirConstructGeneration.cs:329
+                ;                                                                                                                           // FhirConstructGeneration.cs:330
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:331
+            {                                                                                                                               // FhirConstructGeneration.cs:332
                 if (fix.ContentTypeElement != null)                                                                                         // FhirConstructGeneration.cs:207
                 {                                                                                                                           // FhirConstructGeneration.cs:208
                         block.AppendCode($"retVal.ContentTypeElement = new Code();");                                                       // FhirConstructGeneration.cs:209
@@ -679,29 +684,30 @@ namespace FhirKhit.Tools.R3
                 }                                                                                                                           // FhirConstructGeneration.cs:213
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:336
-            block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Attachment();")                                                                            // FhirConstructGeneration.cs:338
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
-                ;                                                                                                                           // FhirConstructGeneration.cs:340
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:341
-        }                                                                                                                                   // FhirConstructGeneration.cs:342
-                                                                                                                                            // FhirConstructGeneration.cs:314
+            }                                                                                                                               // FhirConstructGeneration.cs:338
+            block                                                                                                                           // FhirConstructGeneration.cs:339
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:340
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:341
+                ;                                                                                                                           // FhirConstructGeneration.cs:342
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:343
+        }                                                                                                                                   // FhirConstructGeneration.cs:344
+                                                                                                                                            // FhirConstructGeneration.cs:315
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:318
-            CodeableConcept fix,                                                                                                            // FhirConstructGeneration.cs:319
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:320
-        {                                                                                                                                   // FhirConstructGeneration.cs:321
-                                                                                                                                            // FhirConstructGeneration.cs:323
-            block                                                                                                                           // FhirConstructGeneration.cs:324
-                .AppendCode($"public CodeableConcept {methodName}()")                                                                       // FhirConstructGeneration.cs:325
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:326
-                .AppendCode("CodeableConcept retVal = new CodeableConcept();")                                                              // FhirConstructGeneration.cs:327
-                ;                                                                                                                           // FhirConstructGeneration.cs:328
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:329
-            {                                                                                                                               // FhirConstructGeneration.cs:330
+        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:319
+            CodeableConcept fix,                                                                                                            // FhirConstructGeneration.cs:320
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:321
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:322
+        {                                                                                                                                   // FhirConstructGeneration.cs:323
+                                                                                                                                            // FhirConstructGeneration.cs:325
+            block                                                                                                                           // FhirConstructGeneration.cs:326
+                .AppendCode($"{methodAccess} CodeableConcept {methodName}()")                                                               // FhirConstructGeneration.cs:327
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:328
+                .AppendCode("CodeableConcept retVal = new CodeableConcept();")                                                              // FhirConstructGeneration.cs:329
+                ;                                                                                                                           // FhirConstructGeneration.cs:330
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:331
+            {                                                                                                                               // FhirConstructGeneration.cs:332
                 if (fix.Coding != null)                                                                                                     // FhirConstructGeneration.cs:159
                 {                                                                                                                           // FhirConstructGeneration.cs:160
                     block.AppendCode($"retVal.Coding = new List<Coding>();");                                                               // FhirConstructGeneration.cs:161
@@ -770,29 +776,30 @@ namespace FhirKhit.Tools.R3
                 }                                                                                                                           // FhirConstructGeneration.cs:213
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:336
-            block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new CodeableConcept();")                                                                       // FhirConstructGeneration.cs:338
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
-                ;                                                                                                                           // FhirConstructGeneration.cs:340
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:341
-        }                                                                                                                                   // FhirConstructGeneration.cs:342
-                                                                                                                                            // FhirConstructGeneration.cs:314
+            }                                                                                                                               // FhirConstructGeneration.cs:338
+            block                                                                                                                           // FhirConstructGeneration.cs:339
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:340
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:341
+                ;                                                                                                                           // FhirConstructGeneration.cs:342
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:343
+        }                                                                                                                                   // FhirConstructGeneration.cs:344
+                                                                                                                                            // FhirConstructGeneration.cs:315
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:318
-            Coding fix,                                                                                                                     // FhirConstructGeneration.cs:319
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:320
-        {                                                                                                                                   // FhirConstructGeneration.cs:321
-                                                                                                                                            // FhirConstructGeneration.cs:323
-            block                                                                                                                           // FhirConstructGeneration.cs:324
-                .AppendCode($"public Coding {methodName}()")                                                                                // FhirConstructGeneration.cs:325
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:326
-                .AppendCode("Coding retVal = new Coding();")                                                                                // FhirConstructGeneration.cs:327
-                ;                                                                                                                           // FhirConstructGeneration.cs:328
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:329
-            {                                                                                                                               // FhirConstructGeneration.cs:330
+        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:319
+            Coding fix,                                                                                                                     // FhirConstructGeneration.cs:320
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:321
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:322
+        {                                                                                                                                   // FhirConstructGeneration.cs:323
+                                                                                                                                            // FhirConstructGeneration.cs:325
+            block                                                                                                                           // FhirConstructGeneration.cs:326
+                .AppendCode($"{methodAccess} Coding {methodName}()")                                                                        // FhirConstructGeneration.cs:327
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:328
+                .AppendCode("Coding retVal = new Coding();")                                                                                // FhirConstructGeneration.cs:329
+                ;                                                                                                                           // FhirConstructGeneration.cs:330
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:331
+            {                                                                                                                               // FhirConstructGeneration.cs:332
                 if (fix.SystemElement != null)                                                                                              // FhirConstructGeneration.cs:207
                 {                                                                                                                           // FhirConstructGeneration.cs:208
                         block.AppendCode($"retVal.SystemElement = new FhirUri();");                                                         // FhirConstructGeneration.cs:209
@@ -840,29 +847,30 @@ namespace FhirKhit.Tools.R3
                 }                                                                                                                           // FhirConstructGeneration.cs:213
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:336
-            block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Coding();")                                                                                // FhirConstructGeneration.cs:338
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
-                ;                                                                                                                           // FhirConstructGeneration.cs:340
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:341
-        }                                                                                                                                   // FhirConstructGeneration.cs:342
-                                                                                                                                            // FhirConstructGeneration.cs:314
+            }                                                                                                                               // FhirConstructGeneration.cs:338
+            block                                                                                                                           // FhirConstructGeneration.cs:339
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:340
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:341
+                ;                                                                                                                           // FhirConstructGeneration.cs:342
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:343
+        }                                                                                                                                   // FhirConstructGeneration.cs:344
+                                                                                                                                            // FhirConstructGeneration.cs:315
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:318
-            ContactDetail fix,                                                                                                              // FhirConstructGeneration.cs:319
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:320
-        {                                                                                                                                   // FhirConstructGeneration.cs:321
-                                                                                                                                            // FhirConstructGeneration.cs:323
-            block                                                                                                                           // FhirConstructGeneration.cs:324
-                .AppendCode($"public ContactDetail {methodName}()")                                                                         // FhirConstructGeneration.cs:325
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:326
-                .AppendCode("ContactDetail retVal = new ContactDetail();")                                                                  // FhirConstructGeneration.cs:327
-                ;                                                                                                                           // FhirConstructGeneration.cs:328
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:329
-            {                                                                                                                               // FhirConstructGeneration.cs:330
+        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:319
+            ContactDetail fix,                                                                                                              // FhirConstructGeneration.cs:320
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:321
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:322
+        {                                                                                                                                   // FhirConstructGeneration.cs:323
+                                                                                                                                            // FhirConstructGeneration.cs:325
+            block                                                                                                                           // FhirConstructGeneration.cs:326
+                .AppendCode($"{methodAccess} ContactDetail {methodName}()")                                                                 // FhirConstructGeneration.cs:327
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:328
+                .AppendCode("ContactDetail retVal = new ContactDetail();")                                                                  // FhirConstructGeneration.cs:329
+                ;                                                                                                                           // FhirConstructGeneration.cs:330
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:331
+            {                                                                                                                               // FhirConstructGeneration.cs:332
                 if (fix.NameElement != null)                                                                                                // FhirConstructGeneration.cs:207
                 {                                                                                                                           // FhirConstructGeneration.cs:208
                         block.AppendCode($"retVal.NameElement = new FhirString();");                                                        // FhirConstructGeneration.cs:209
@@ -928,29 +936,30 @@ namespace FhirKhit.Tools.R3
                 }                                                                                                                           // FhirConstructGeneration.cs:174
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:336
-            block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new ContactDetail();")                                                                         // FhirConstructGeneration.cs:338
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
-                ;                                                                                                                           // FhirConstructGeneration.cs:340
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:341
-        }                                                                                                                                   // FhirConstructGeneration.cs:342
-                                                                                                                                            // FhirConstructGeneration.cs:314
+            }                                                                                                                               // FhirConstructGeneration.cs:338
+            block                                                                                                                           // FhirConstructGeneration.cs:339
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:340
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:341
+                ;                                                                                                                           // FhirConstructGeneration.cs:342
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:343
+        }                                                                                                                                   // FhirConstructGeneration.cs:344
+                                                                                                                                            // FhirConstructGeneration.cs:315
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:318
-            ContactPoint fix,                                                                                                               // FhirConstructGeneration.cs:319
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:320
-        {                                                                                                                                   // FhirConstructGeneration.cs:321
-                                                                                                                                            // FhirConstructGeneration.cs:323
-            block                                                                                                                           // FhirConstructGeneration.cs:324
-                .AppendCode($"public ContactPoint {methodName}()")                                                                          // FhirConstructGeneration.cs:325
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:326
-                .AppendCode("ContactPoint retVal = new ContactPoint();")                                                                    // FhirConstructGeneration.cs:327
-                ;                                                                                                                           // FhirConstructGeneration.cs:328
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:329
-            {                                                                                                                               // FhirConstructGeneration.cs:330
+        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:319
+            ContactPoint fix,                                                                                                               // FhirConstructGeneration.cs:320
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:321
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:322
+        {                                                                                                                                   // FhirConstructGeneration.cs:323
+                                                                                                                                            // FhirConstructGeneration.cs:325
+            block                                                                                                                           // FhirConstructGeneration.cs:326
+                .AppendCode($"{methodAccess} ContactPoint {methodName}()")                                                                  // FhirConstructGeneration.cs:327
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:328
+                .AppendCode("ContactPoint retVal = new ContactPoint();")                                                                    // FhirConstructGeneration.cs:329
+                ;                                                                                                                           // FhirConstructGeneration.cs:330
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:331
+            {                                                                                                                               // FhirConstructGeneration.cs:332
                 if (fix.SystemElement != null)                                                                                              // FhirConstructGeneration.cs:147
                     block.AppendCode($"retVal.SystemElement = new Code<ContactPoint.ContactPointSystem>(ContactPoint.ContactPointSystem.{fix.SystemElement.Value});");// FhirConstructGeneration.cs:148
                 if (fix.ValueElement != null)                                                                                               // FhirConstructGeneration.cs:207
@@ -995,29 +1004,30 @@ namespace FhirKhit.Tools.R3
                 }                                                                                                                           // FhirConstructGeneration.cs:213
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:336
-            block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new ContactPoint();")                                                                          // FhirConstructGeneration.cs:338
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
-                ;                                                                                                                           // FhirConstructGeneration.cs:340
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:341
-        }                                                                                                                                   // FhirConstructGeneration.cs:342
-                                                                                                                                            // FhirConstructGeneration.cs:314
+            }                                                                                                                               // FhirConstructGeneration.cs:338
+            block                                                                                                                           // FhirConstructGeneration.cs:339
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:340
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:341
+                ;                                                                                                                           // FhirConstructGeneration.cs:342
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:343
+        }                                                                                                                                   // FhirConstructGeneration.cs:344
+                                                                                                                                            // FhirConstructGeneration.cs:315
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:318
-            Contributor fix,                                                                                                                // FhirConstructGeneration.cs:319
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:320
-        {                                                                                                                                   // FhirConstructGeneration.cs:321
-                                                                                                                                            // FhirConstructGeneration.cs:323
-            block                                                                                                                           // FhirConstructGeneration.cs:324
-                .AppendCode($"public Contributor {methodName}()")                                                                           // FhirConstructGeneration.cs:325
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:326
-                .AppendCode("Contributor retVal = new Contributor();")                                                                      // FhirConstructGeneration.cs:327
-                ;                                                                                                                           // FhirConstructGeneration.cs:328
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:329
-            {                                                                                                                               // FhirConstructGeneration.cs:330
+        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:319
+            Contributor fix,                                                                                                                // FhirConstructGeneration.cs:320
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:321
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:322
+        {                                                                                                                                   // FhirConstructGeneration.cs:323
+                                                                                                                                            // FhirConstructGeneration.cs:325
+            block                                                                                                                           // FhirConstructGeneration.cs:326
+                .AppendCode($"{methodAccess} Contributor {methodName}()")                                                                   // FhirConstructGeneration.cs:327
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:328
+                .AppendCode("Contributor retVal = new Contributor();")                                                                      // FhirConstructGeneration.cs:329
+                ;                                                                                                                           // FhirConstructGeneration.cs:330
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:331
+            {                                                                                                                               // FhirConstructGeneration.cs:332
                 if (fix.TypeElement != null)                                                                                                // FhirConstructGeneration.cs:147
                     block.AppendCode($"retVal.TypeElement = new Code<Contributor.ContributorType>(Contributor.ContributorType.{fix.TypeElement.Value});");// FhirConstructGeneration.cs:148
                 if (fix.NameElement != null)                                                                                                // FhirConstructGeneration.cs:207
@@ -1106,29 +1116,30 @@ namespace FhirKhit.Tools.R3
                 }                                                                                                                           // FhirConstructGeneration.cs:174
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:336
-            block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Contributor();")                                                                           // FhirConstructGeneration.cs:338
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
-                ;                                                                                                                           // FhirConstructGeneration.cs:340
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:341
-        }                                                                                                                                   // FhirConstructGeneration.cs:342
-                                                                                                                                            // FhirConstructGeneration.cs:314
+            }                                                                                                                               // FhirConstructGeneration.cs:338
+            block                                                                                                                           // FhirConstructGeneration.cs:339
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:340
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:341
+                ;                                                                                                                           // FhirConstructGeneration.cs:342
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:343
+        }                                                                                                                                   // FhirConstructGeneration.cs:344
+                                                                                                                                            // FhirConstructGeneration.cs:315
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:318
-            Count fix,                                                                                                                      // FhirConstructGeneration.cs:319
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:320
-        {                                                                                                                                   // FhirConstructGeneration.cs:321
-                                                                                                                                            // FhirConstructGeneration.cs:323
-            block                                                                                                                           // FhirConstructGeneration.cs:324
-                .AppendCode($"public Count {methodName}()")                                                                                 // FhirConstructGeneration.cs:325
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:326
-                .AppendCode("Count retVal = new Count();")                                                                                  // FhirConstructGeneration.cs:327
-                ;                                                                                                                           // FhirConstructGeneration.cs:328
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:329
-            {                                                                                                                               // FhirConstructGeneration.cs:330
+        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:319
+            Count fix,                                                                                                                      // FhirConstructGeneration.cs:320
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:321
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:322
+        {                                                                                                                                   // FhirConstructGeneration.cs:323
+                                                                                                                                            // FhirConstructGeneration.cs:325
+            block                                                                                                                           // FhirConstructGeneration.cs:326
+                .AppendCode($"{methodAccess} Count {methodName}()")                                                                         // FhirConstructGeneration.cs:327
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:328
+                .AppendCode("Count retVal = new Count();")                                                                                  // FhirConstructGeneration.cs:329
+                ;                                                                                                                           // FhirConstructGeneration.cs:330
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:331
+            {                                                                                                                               // FhirConstructGeneration.cs:332
                 if (fix.ValueElement != null)                                                                                               // FhirConstructGeneration.cs:207
                 {                                                                                                                           // FhirConstructGeneration.cs:208
                         block.AppendCode($"retVal.ValueElement = new FhirDecimal();");                                                      // FhirConstructGeneration.cs:209
@@ -1165,29 +1176,30 @@ namespace FhirKhit.Tools.R3
                 }                                                                                                                           // FhirConstructGeneration.cs:213
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:336
-            block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Count();")                                                                                 // FhirConstructGeneration.cs:338
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
-                ;                                                                                                                           // FhirConstructGeneration.cs:340
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:341
-        }                                                                                                                                   // FhirConstructGeneration.cs:342
-                                                                                                                                            // FhirConstructGeneration.cs:314
+            }                                                                                                                               // FhirConstructGeneration.cs:338
+            block                                                                                                                           // FhirConstructGeneration.cs:339
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:340
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:341
+                ;                                                                                                                           // FhirConstructGeneration.cs:342
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:343
+        }                                                                                                                                   // FhirConstructGeneration.cs:344
+                                                                                                                                            // FhirConstructGeneration.cs:315
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:318
-            DataRequirement fix,                                                                                                            // FhirConstructGeneration.cs:319
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:320
-        {                                                                                                                                   // FhirConstructGeneration.cs:321
-                                                                                                                                            // FhirConstructGeneration.cs:323
-            block                                                                                                                           // FhirConstructGeneration.cs:324
-                .AppendCode($"public DataRequirement {methodName}()")                                                                       // FhirConstructGeneration.cs:325
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:326
-                .AppendCode("DataRequirement retVal = new DataRequirement();")                                                              // FhirConstructGeneration.cs:327
-                ;                                                                                                                           // FhirConstructGeneration.cs:328
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:329
-            {                                                                                                                               // FhirConstructGeneration.cs:330
+        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:319
+            DataRequirement fix,                                                                                                            // FhirConstructGeneration.cs:320
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:321
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:322
+        {                                                                                                                                   // FhirConstructGeneration.cs:323
+                                                                                                                                            // FhirConstructGeneration.cs:325
+            block                                                                                                                           // FhirConstructGeneration.cs:326
+                .AppendCode($"{methodAccess} DataRequirement {methodName}()")                                                               // FhirConstructGeneration.cs:327
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:328
+                .AppendCode("DataRequirement retVal = new DataRequirement();")                                                              // FhirConstructGeneration.cs:329
+                ;                                                                                                                           // FhirConstructGeneration.cs:330
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:331
+            {                                                                                                                               // FhirConstructGeneration.cs:332
                 if (fix.TypeElement != null)                                                                                                // FhirConstructGeneration.cs:147
                     block.AppendCode($"retVal.TypeElement = new Code<FHIRAllTypes>(FHIRAllTypes.{fix.TypeElement.Value});");                // FhirConstructGeneration.cs:148
                 if (fix.ProfileElement != null)                                                                                             // FhirConstructGeneration.cs:159
@@ -1416,29 +1428,30 @@ namespace FhirKhit.Tools.R3
                 }                                                                                                                           // FhirConstructGeneration.cs:174
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:336
-            block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new DataRequirement();")                                                                       // FhirConstructGeneration.cs:338
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
-                ;                                                                                                                           // FhirConstructGeneration.cs:340
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:341
-        }                                                                                                                                   // FhirConstructGeneration.cs:342
-                                                                                                                                            // FhirConstructGeneration.cs:314
+            }                                                                                                                               // FhirConstructGeneration.cs:338
+            block                                                                                                                           // FhirConstructGeneration.cs:339
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:340
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:341
+                ;                                                                                                                           // FhirConstructGeneration.cs:342
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:343
+        }                                                                                                                                   // FhirConstructGeneration.cs:344
+                                                                                                                                            // FhirConstructGeneration.cs:315
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:318
-            Distance fix,                                                                                                                   // FhirConstructGeneration.cs:319
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:320
-        {                                                                                                                                   // FhirConstructGeneration.cs:321
-                                                                                                                                            // FhirConstructGeneration.cs:323
-            block                                                                                                                           // FhirConstructGeneration.cs:324
-                .AppendCode($"public Distance {methodName}()")                                                                              // FhirConstructGeneration.cs:325
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:326
-                .AppendCode("Distance retVal = new Distance();")                                                                            // FhirConstructGeneration.cs:327
-                ;                                                                                                                           // FhirConstructGeneration.cs:328
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:329
-            {                                                                                                                               // FhirConstructGeneration.cs:330
+        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:319
+            Distance fix,                                                                                                                   // FhirConstructGeneration.cs:320
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:321
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:322
+        {                                                                                                                                   // FhirConstructGeneration.cs:323
+                                                                                                                                            // FhirConstructGeneration.cs:325
+            block                                                                                                                           // FhirConstructGeneration.cs:326
+                .AppendCode($"{methodAccess} Distance {methodName}()")                                                                      // FhirConstructGeneration.cs:327
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:328
+                .AppendCode("Distance retVal = new Distance();")                                                                            // FhirConstructGeneration.cs:329
+                ;                                                                                                                           // FhirConstructGeneration.cs:330
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:331
+            {                                                                                                                               // FhirConstructGeneration.cs:332
                 if (fix.ValueElement != null)                                                                                               // FhirConstructGeneration.cs:207
                 {                                                                                                                           // FhirConstructGeneration.cs:208
                         block.AppendCode($"retVal.ValueElement = new FhirDecimal();");                                                      // FhirConstructGeneration.cs:209
@@ -1475,29 +1488,30 @@ namespace FhirKhit.Tools.R3
                 }                                                                                                                           // FhirConstructGeneration.cs:213
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:336
-            block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Distance();")                                                                              // FhirConstructGeneration.cs:338
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
-                ;                                                                                                                           // FhirConstructGeneration.cs:340
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:341
-        }                                                                                                                                   // FhirConstructGeneration.cs:342
-                                                                                                                                            // FhirConstructGeneration.cs:314
+            }                                                                                                                               // FhirConstructGeneration.cs:338
+            block                                                                                                                           // FhirConstructGeneration.cs:339
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:340
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:341
+                ;                                                                                                                           // FhirConstructGeneration.cs:342
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:343
+        }                                                                                                                                   // FhirConstructGeneration.cs:344
+                                                                                                                                            // FhirConstructGeneration.cs:315
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:318
-            Dosage fix,                                                                                                                     // FhirConstructGeneration.cs:319
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:320
-        {                                                                                                                                   // FhirConstructGeneration.cs:321
-                                                                                                                                            // FhirConstructGeneration.cs:323
-            block                                                                                                                           // FhirConstructGeneration.cs:324
-                .AppendCode($"public Dosage {methodName}()")                                                                                // FhirConstructGeneration.cs:325
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:326
-                .AppendCode("Dosage retVal = new Dosage();")                                                                                // FhirConstructGeneration.cs:327
-                ;                                                                                                                           // FhirConstructGeneration.cs:328
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:329
-            {                                                                                                                               // FhirConstructGeneration.cs:330
+        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:319
+            Dosage fix,                                                                                                                     // FhirConstructGeneration.cs:320
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:321
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:322
+        {                                                                                                                                   // FhirConstructGeneration.cs:323
+                                                                                                                                            // FhirConstructGeneration.cs:325
+            block                                                                                                                           // FhirConstructGeneration.cs:326
+                .AppendCode($"{methodAccess} Dosage {methodName}()")                                                                        // FhirConstructGeneration.cs:327
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:328
+                .AppendCode("Dosage retVal = new Dosage();")                                                                                // FhirConstructGeneration.cs:329
+                ;                                                                                                                           // FhirConstructGeneration.cs:330
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:331
+            {                                                                                                                               // FhirConstructGeneration.cs:332
                 if (fix.SequenceElement != null)                                                                                            // FhirConstructGeneration.cs:207
                 {                                                                                                                           // FhirConstructGeneration.cs:208
                         block.AppendCode($"retVal.SequenceElement = new Integer();");                                                       // FhirConstructGeneration.cs:209
@@ -2205,29 +2219,30 @@ namespace FhirKhit.Tools.R3
                 }                                                                                                                           // FhirConstructGeneration.cs:213
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:336
-            block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Dosage();")                                                                                // FhirConstructGeneration.cs:338
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
-                ;                                                                                                                           // FhirConstructGeneration.cs:340
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:341
-        }                                                                                                                                   // FhirConstructGeneration.cs:342
-                                                                                                                                            // FhirConstructGeneration.cs:314
+            }                                                                                                                               // FhirConstructGeneration.cs:338
+            block                                                                                                                           // FhirConstructGeneration.cs:339
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:340
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:341
+                ;                                                                                                                           // FhirConstructGeneration.cs:342
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:343
+        }                                                                                                                                   // FhirConstructGeneration.cs:344
+                                                                                                                                            // FhirConstructGeneration.cs:315
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:318
-            Duration fix,                                                                                                                   // FhirConstructGeneration.cs:319
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:320
-        {                                                                                                                                   // FhirConstructGeneration.cs:321
-                                                                                                                                            // FhirConstructGeneration.cs:323
-            block                                                                                                                           // FhirConstructGeneration.cs:324
-                .AppendCode($"public Duration {methodName}()")                                                                              // FhirConstructGeneration.cs:325
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:326
-                .AppendCode("Duration retVal = new Duration();")                                                                            // FhirConstructGeneration.cs:327
-                ;                                                                                                                           // FhirConstructGeneration.cs:328
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:329
-            {                                                                                                                               // FhirConstructGeneration.cs:330
+        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:319
+            Duration fix,                                                                                                                   // FhirConstructGeneration.cs:320
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:321
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:322
+        {                                                                                                                                   // FhirConstructGeneration.cs:323
+                                                                                                                                            // FhirConstructGeneration.cs:325
+            block                                                                                                                           // FhirConstructGeneration.cs:326
+                .AppendCode($"{methodAccess} Duration {methodName}()")                                                                      // FhirConstructGeneration.cs:327
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:328
+                .AppendCode("Duration retVal = new Duration();")                                                                            // FhirConstructGeneration.cs:329
+                ;                                                                                                                           // FhirConstructGeneration.cs:330
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:331
+            {                                                                                                                               // FhirConstructGeneration.cs:332
                 if (fix.ValueElement != null)                                                                                               // FhirConstructGeneration.cs:207
                 {                                                                                                                           // FhirConstructGeneration.cs:208
                         block.AppendCode($"retVal.ValueElement = new FhirDecimal();");                                                      // FhirConstructGeneration.cs:209
@@ -2264,29 +2279,30 @@ namespace FhirKhit.Tools.R3
                 }                                                                                                                           // FhirConstructGeneration.cs:213
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:336
-            block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Duration();")                                                                              // FhirConstructGeneration.cs:338
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
-                ;                                                                                                                           // FhirConstructGeneration.cs:340
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:341
-        }                                                                                                                                   // FhirConstructGeneration.cs:342
-                                                                                                                                            // FhirConstructGeneration.cs:314
+            }                                                                                                                               // FhirConstructGeneration.cs:338
+            block                                                                                                                           // FhirConstructGeneration.cs:339
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:340
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:341
+                ;                                                                                                                           // FhirConstructGeneration.cs:342
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:343
+        }                                                                                                                                   // FhirConstructGeneration.cs:344
+                                                                                                                                            // FhirConstructGeneration.cs:315
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:318
-            ElementDefinition fix,                                                                                                          // FhirConstructGeneration.cs:319
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:320
-        {                                                                                                                                   // FhirConstructGeneration.cs:321
-                                                                                                                                            // FhirConstructGeneration.cs:323
-            block                                                                                                                           // FhirConstructGeneration.cs:324
-                .AppendCode($"public ElementDefinition {methodName}()")                                                                     // FhirConstructGeneration.cs:325
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:326
-                .AppendCode("ElementDefinition retVal = new ElementDefinition();")                                                          // FhirConstructGeneration.cs:327
-                ;                                                                                                                           // FhirConstructGeneration.cs:328
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:329
-            {                                                                                                                               // FhirConstructGeneration.cs:330
+        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:319
+            ElementDefinition fix,                                                                                                          // FhirConstructGeneration.cs:320
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:321
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:322
+        {                                                                                                                                   // FhirConstructGeneration.cs:323
+                                                                                                                                            // FhirConstructGeneration.cs:325
+            block                                                                                                                           // FhirConstructGeneration.cs:326
+                .AppendCode($"{methodAccess} ElementDefinition {methodName}()")                                                             // FhirConstructGeneration.cs:327
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:328
+                .AppendCode("ElementDefinition retVal = new ElementDefinition();")                                                          // FhirConstructGeneration.cs:329
+                ;                                                                                                                           // FhirConstructGeneration.cs:330
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:331
+            {                                                                                                                               // FhirConstructGeneration.cs:332
                 if (fix.PathElement != null)                                                                                                // FhirConstructGeneration.cs:207
                 {                                                                                                                           // FhirConstructGeneration.cs:208
                         block.AppendCode($"retVal.PathElement = new FhirString();");                                                        // FhirConstructGeneration.cs:209
@@ -2816,56 +2832,58 @@ namespace FhirKhit.Tools.R3
                 }                                                                                                                           // FhirConstructGeneration.cs:174
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:336
-            block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new ElementDefinition();")                                                                     // FhirConstructGeneration.cs:338
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
-                ;                                                                                                                           // FhirConstructGeneration.cs:340
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:341
-        }                                                                                                                                   // FhirConstructGeneration.cs:342
-                                                                                                                                            // FhirConstructGeneration.cs:314
+            }                                                                                                                               // FhirConstructGeneration.cs:338
+            block                                                                                                                           // FhirConstructGeneration.cs:339
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:340
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:341
+                ;                                                                                                                           // FhirConstructGeneration.cs:342
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:343
+        }                                                                                                                                   // FhirConstructGeneration.cs:344
+                                                                                                                                            // FhirConstructGeneration.cs:315
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:318
-            Extension fix,                                                                                                                  // FhirConstructGeneration.cs:319
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:320
-        {                                                                                                                                   // FhirConstructGeneration.cs:321
-                                                                                                                                            // FhirConstructGeneration.cs:323
-            block                                                                                                                           // FhirConstructGeneration.cs:324
-                .AppendCode($"public Extension {methodName}()")                                                                             // FhirConstructGeneration.cs:325
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:326
-                .AppendCode("Extension retVal = new Extension();")                                                                          // FhirConstructGeneration.cs:327
-                ;                                                                                                                           // FhirConstructGeneration.cs:328
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:329
-            {                                                                                                                               // FhirConstructGeneration.cs:330
+        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:319
+            Extension fix,                                                                                                                  // FhirConstructGeneration.cs:320
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:321
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:322
+        {                                                                                                                                   // FhirConstructGeneration.cs:323
+                                                                                                                                            // FhirConstructGeneration.cs:325
+            block                                                                                                                           // FhirConstructGeneration.cs:326
+                .AppendCode($"{methodAccess} Extension {methodName}()")                                                                     // FhirConstructGeneration.cs:327
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:328
+                .AppendCode("Extension retVal = new Extension();")                                                                          // FhirConstructGeneration.cs:329
+                ;                                                                                                                           // FhirConstructGeneration.cs:330
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:331
+            {                                                                                                                               // FhirConstructGeneration.cs:332
                 if (fix.Url != null)                                                                                                        // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.Url = \"{fix.Url}\";");                                                                       // FhirConstructGeneration.cs:138
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:336
-            block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Extension();")                                                                             // FhirConstructGeneration.cs:338
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
-                ;                                                                                                                           // FhirConstructGeneration.cs:340
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:341
-        }                                                                                                                                   // FhirConstructGeneration.cs:342
-                                                                                                                                            // FhirConstructGeneration.cs:314
+            }                                                                                                                               // FhirConstructGeneration.cs:338
+            block                                                                                                                           // FhirConstructGeneration.cs:339
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:340
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:341
+                ;                                                                                                                           // FhirConstructGeneration.cs:342
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:343
+        }                                                                                                                                   // FhirConstructGeneration.cs:344
+                                                                                                                                            // FhirConstructGeneration.cs:315
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:318
-            HumanName fix,                                                                                                                  // FhirConstructGeneration.cs:319
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:320
-        {                                                                                                                                   // FhirConstructGeneration.cs:321
-                                                                                                                                            // FhirConstructGeneration.cs:323
-            block                                                                                                                           // FhirConstructGeneration.cs:324
-                .AppendCode($"public HumanName {methodName}()")                                                                             // FhirConstructGeneration.cs:325
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:326
-                .AppendCode("HumanName retVal = new HumanName();")                                                                          // FhirConstructGeneration.cs:327
-                ;                                                                                                                           // FhirConstructGeneration.cs:328
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:329
-            {                                                                                                                               // FhirConstructGeneration.cs:330
+        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:319
+            HumanName fix,                                                                                                                  // FhirConstructGeneration.cs:320
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:321
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:322
+        {                                                                                                                                   // FhirConstructGeneration.cs:323
+                                                                                                                                            // FhirConstructGeneration.cs:325
+            block                                                                                                                           // FhirConstructGeneration.cs:326
+                .AppendCode($"{methodAccess} HumanName {methodName}()")                                                                     // FhirConstructGeneration.cs:327
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:328
+                .AppendCode("HumanName retVal = new HumanName();")                                                                          // FhirConstructGeneration.cs:329
+                ;                                                                                                                           // FhirConstructGeneration.cs:330
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:331
+            {                                                                                                                               // FhirConstructGeneration.cs:332
                 if (fix.UseElement != null)                                                                                                 // FhirConstructGeneration.cs:147
                     block.AppendCode($"retVal.UseElement = new Code<HumanName.NameUse>(HumanName.NameUse.{fix.UseElement.Value});");        // FhirConstructGeneration.cs:148
                 if (fix.TextElement != null)                                                                                                // FhirConstructGeneration.cs:207
@@ -2953,29 +2971,30 @@ namespace FhirKhit.Tools.R3
                 }                                                                                                                           // FhirConstructGeneration.cs:213
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:336
-            block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new HumanName();")                                                                             // FhirConstructGeneration.cs:338
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
-                ;                                                                                                                           // FhirConstructGeneration.cs:340
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:341
-        }                                                                                                                                   // FhirConstructGeneration.cs:342
-                                                                                                                                            // FhirConstructGeneration.cs:314
+            }                                                                                                                               // FhirConstructGeneration.cs:338
+            block                                                                                                                           // FhirConstructGeneration.cs:339
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:340
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:341
+                ;                                                                                                                           // FhirConstructGeneration.cs:342
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:343
+        }                                                                                                                                   // FhirConstructGeneration.cs:344
+                                                                                                                                            // FhirConstructGeneration.cs:315
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:318
-            Identifier fix,                                                                                                                 // FhirConstructGeneration.cs:319
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:320
-        {                                                                                                                                   // FhirConstructGeneration.cs:321
-                                                                                                                                            // FhirConstructGeneration.cs:323
-            block                                                                                                                           // FhirConstructGeneration.cs:324
-                .AppendCode($"public Identifier {methodName}()")                                                                            // FhirConstructGeneration.cs:325
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:326
-                .AppendCode("Identifier retVal = new Identifier();")                                                                        // FhirConstructGeneration.cs:327
-                ;                                                                                                                           // FhirConstructGeneration.cs:328
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:329
-            {                                                                                                                               // FhirConstructGeneration.cs:330
+        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:319
+            Identifier fix,                                                                                                                 // FhirConstructGeneration.cs:320
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:321
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:322
+        {                                                                                                                                   // FhirConstructGeneration.cs:323
+                                                                                                                                            // FhirConstructGeneration.cs:325
+            block                                                                                                                           // FhirConstructGeneration.cs:326
+                .AppendCode($"{methodAccess} Identifier {methodName}()")                                                                    // FhirConstructGeneration.cs:327
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:328
+                .AppendCode("Identifier retVal = new Identifier();")                                                                        // FhirConstructGeneration.cs:329
+                ;                                                                                                                           // FhirConstructGeneration.cs:330
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:331
+            {                                                                                                                               // FhirConstructGeneration.cs:332
                 if (fix.UseElement != null)                                                                                                 // FhirConstructGeneration.cs:147
                     block.AppendCode($"retVal.UseElement = new Code<Identifier.IdentifierUse>(Identifier.IdentifierUse.{fix.UseElement.Value});");// FhirConstructGeneration.cs:148
                 if (fix.Type != null)                                                                                                       // FhirConstructGeneration.cs:207
@@ -3090,29 +3109,30 @@ namespace FhirKhit.Tools.R3
                 }                                                                                                                           // FhirConstructGeneration.cs:213
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:336
-            block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Identifier();")                                                                            // FhirConstructGeneration.cs:338
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
-                ;                                                                                                                           // FhirConstructGeneration.cs:340
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:341
-        }                                                                                                                                   // FhirConstructGeneration.cs:342
-                                                                                                                                            // FhirConstructGeneration.cs:314
+            }                                                                                                                               // FhirConstructGeneration.cs:338
+            block                                                                                                                           // FhirConstructGeneration.cs:339
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:340
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:341
+                ;                                                                                                                           // FhirConstructGeneration.cs:342
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:343
+        }                                                                                                                                   // FhirConstructGeneration.cs:344
+                                                                                                                                            // FhirConstructGeneration.cs:315
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:318
-            Meta fix,                                                                                                                       // FhirConstructGeneration.cs:319
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:320
-        {                                                                                                                                   // FhirConstructGeneration.cs:321
-                                                                                                                                            // FhirConstructGeneration.cs:323
-            block                                                                                                                           // FhirConstructGeneration.cs:324
-                .AppendCode($"public Meta {methodName}()")                                                                                  // FhirConstructGeneration.cs:325
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:326
-                .AppendCode("Meta retVal = new Meta();")                                                                                    // FhirConstructGeneration.cs:327
-                ;                                                                                                                           // FhirConstructGeneration.cs:328
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:329
-            {                                                                                                                               // FhirConstructGeneration.cs:330
+        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:319
+            Meta fix,                                                                                                                       // FhirConstructGeneration.cs:320
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:321
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:322
+        {                                                                                                                                   // FhirConstructGeneration.cs:323
+                                                                                                                                            // FhirConstructGeneration.cs:325
+            block                                                                                                                           // FhirConstructGeneration.cs:326
+                .AppendCode($"{methodAccess} Meta {methodName}()")                                                                          // FhirConstructGeneration.cs:327
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:328
+                .AppendCode("Meta retVal = new Meta();")                                                                                    // FhirConstructGeneration.cs:329
+                ;                                                                                                                           // FhirConstructGeneration.cs:330
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:331
+            {                                                                                                                               // FhirConstructGeneration.cs:332
                 if (fix.VersionIdElement != null)                                                                                           // FhirConstructGeneration.cs:207
                 {                                                                                                                           // FhirConstructGeneration.cs:208
                         block.AppendCode($"retVal.VersionIdElement = new Id();");                                                           // FhirConstructGeneration.cs:209
@@ -3269,29 +3289,30 @@ namespace FhirKhit.Tools.R3
                 }                                                                                                                           // FhirConstructGeneration.cs:174
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:336
-            block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Meta();")                                                                                  // FhirConstructGeneration.cs:338
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
-                ;                                                                                                                           // FhirConstructGeneration.cs:340
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:341
-        }                                                                                                                                   // FhirConstructGeneration.cs:342
-                                                                                                                                            // FhirConstructGeneration.cs:314
+            }                                                                                                                               // FhirConstructGeneration.cs:338
+            block                                                                                                                           // FhirConstructGeneration.cs:339
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:340
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:341
+                ;                                                                                                                           // FhirConstructGeneration.cs:342
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:343
+        }                                                                                                                                   // FhirConstructGeneration.cs:344
+                                                                                                                                            // FhirConstructGeneration.cs:315
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:318
-            Money fix,                                                                                                                      // FhirConstructGeneration.cs:319
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:320
-        {                                                                                                                                   // FhirConstructGeneration.cs:321
-                                                                                                                                            // FhirConstructGeneration.cs:323
-            block                                                                                                                           // FhirConstructGeneration.cs:324
-                .AppendCode($"public Money {methodName}()")                                                                                 // FhirConstructGeneration.cs:325
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:326
-                .AppendCode("Money retVal = new Money();")                                                                                  // FhirConstructGeneration.cs:327
-                ;                                                                                                                           // FhirConstructGeneration.cs:328
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:329
-            {                                                                                                                               // FhirConstructGeneration.cs:330
+        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:319
+            Money fix,                                                                                                                      // FhirConstructGeneration.cs:320
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:321
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:322
+        {                                                                                                                                   // FhirConstructGeneration.cs:323
+                                                                                                                                            // FhirConstructGeneration.cs:325
+            block                                                                                                                           // FhirConstructGeneration.cs:326
+                .AppendCode($"{methodAccess} Money {methodName}()")                                                                         // FhirConstructGeneration.cs:327
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:328
+                .AppendCode("Money retVal = new Money();")                                                                                  // FhirConstructGeneration.cs:329
+                ;                                                                                                                           // FhirConstructGeneration.cs:330
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:331
+            {                                                                                                                               // FhirConstructGeneration.cs:332
                 if (fix.ValueElement != null)                                                                                               // FhirConstructGeneration.cs:207
                 {                                                                                                                           // FhirConstructGeneration.cs:208
                         block.AppendCode($"retVal.ValueElement = new FhirDecimal();");                                                      // FhirConstructGeneration.cs:209
@@ -3328,58 +3349,60 @@ namespace FhirKhit.Tools.R3
                 }                                                                                                                           // FhirConstructGeneration.cs:213
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:336
-            block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Money();")                                                                                 // FhirConstructGeneration.cs:338
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
-                ;                                                                                                                           // FhirConstructGeneration.cs:340
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:341
-        }                                                                                                                                   // FhirConstructGeneration.cs:342
-                                                                                                                                            // FhirConstructGeneration.cs:314
+            }                                                                                                                               // FhirConstructGeneration.cs:338
+            block                                                                                                                           // FhirConstructGeneration.cs:339
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:340
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:341
+                ;                                                                                                                           // FhirConstructGeneration.cs:342
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:343
+        }                                                                                                                                   // FhirConstructGeneration.cs:344
+                                                                                                                                            // FhirConstructGeneration.cs:315
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:318
-            Narrative fix,                                                                                                                  // FhirConstructGeneration.cs:319
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:320
-        {                                                                                                                                   // FhirConstructGeneration.cs:321
-                                                                                                                                            // FhirConstructGeneration.cs:323
-            block                                                                                                                           // FhirConstructGeneration.cs:324
-                .AppendCode($"public Narrative {methodName}()")                                                                             // FhirConstructGeneration.cs:325
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:326
-                .AppendCode("Narrative retVal = new Narrative();")                                                                          // FhirConstructGeneration.cs:327
-                ;                                                                                                                           // FhirConstructGeneration.cs:328
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:329
-            {                                                                                                                               // FhirConstructGeneration.cs:330
+        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:319
+            Narrative fix,                                                                                                                  // FhirConstructGeneration.cs:320
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:321
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:322
+        {                                                                                                                                   // FhirConstructGeneration.cs:323
+                                                                                                                                            // FhirConstructGeneration.cs:325
+            block                                                                                                                           // FhirConstructGeneration.cs:326
+                .AppendCode($"{methodAccess} Narrative {methodName}()")                                                                     // FhirConstructGeneration.cs:327
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:328
+                .AppendCode("Narrative retVal = new Narrative();")                                                                          // FhirConstructGeneration.cs:329
+                ;                                                                                                                           // FhirConstructGeneration.cs:330
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:331
+            {                                                                                                                               // FhirConstructGeneration.cs:332
                 if (fix.StatusElement != null)                                                                                              // FhirConstructGeneration.cs:147
                     block.AppendCode($"retVal.StatusElement = new Code<Narrative.NarrativeStatus>(Narrative.NarrativeStatus.{fix.StatusElement.Value});");// FhirConstructGeneration.cs:148
                 if (fix.Div != null)                                                                                                        // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.Div = \"{fix.Div}\";");                                                                       // FhirConstructGeneration.cs:138
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:336
-            block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Narrative();")                                                                             // FhirConstructGeneration.cs:338
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
-                ;                                                                                                                           // FhirConstructGeneration.cs:340
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:341
-        }                                                                                                                                   // FhirConstructGeneration.cs:342
-                                                                                                                                            // FhirConstructGeneration.cs:314
+            }                                                                                                                               // FhirConstructGeneration.cs:338
+            block                                                                                                                           // FhirConstructGeneration.cs:339
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:340
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:341
+                ;                                                                                                                           // FhirConstructGeneration.cs:342
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:343
+        }                                                                                                                                   // FhirConstructGeneration.cs:344
+                                                                                                                                            // FhirConstructGeneration.cs:315
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:318
-            ParameterDefinition fix,                                                                                                        // FhirConstructGeneration.cs:319
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:320
-        {                                                                                                                                   // FhirConstructGeneration.cs:321
-                                                                                                                                            // FhirConstructGeneration.cs:323
-            block                                                                                                                           // FhirConstructGeneration.cs:324
-                .AppendCode($"public ParameterDefinition {methodName}()")                                                                   // FhirConstructGeneration.cs:325
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:326
-                .AppendCode("ParameterDefinition retVal = new ParameterDefinition();")                                                      // FhirConstructGeneration.cs:327
-                ;                                                                                                                           // FhirConstructGeneration.cs:328
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:329
-            {                                                                                                                               // FhirConstructGeneration.cs:330
+        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:319
+            ParameterDefinition fix,                                                                                                        // FhirConstructGeneration.cs:320
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:321
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:322
+        {                                                                                                                                   // FhirConstructGeneration.cs:323
+                                                                                                                                            // FhirConstructGeneration.cs:325
+            block                                                                                                                           // FhirConstructGeneration.cs:326
+                .AppendCode($"{methodAccess} ParameterDefinition {methodName}()")                                                           // FhirConstructGeneration.cs:327
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:328
+                .AppendCode("ParameterDefinition retVal = new ParameterDefinition();")                                                      // FhirConstructGeneration.cs:329
+                ;                                                                                                                           // FhirConstructGeneration.cs:330
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:331
+            {                                                                                                                               // FhirConstructGeneration.cs:332
                 if (fix.NameElement != null)                                                                                                // FhirConstructGeneration.cs:207
                 {                                                                                                                           // FhirConstructGeneration.cs:208
                         block.AppendCode($"retVal.NameElement = new Code();");                                                              // FhirConstructGeneration.cs:209
@@ -3418,29 +3441,30 @@ namespace FhirKhit.Tools.R3
                     block.AppendCode($"retVal.TypeElement = new Code<FHIRAllTypes>(FHIRAllTypes.{fix.TypeElement.Value});");                // FhirConstructGeneration.cs:148
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:336
-            block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new ParameterDefinition();")                                                                   // FhirConstructGeneration.cs:338
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
-                ;                                                                                                                           // FhirConstructGeneration.cs:340
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:341
-        }                                                                                                                                   // FhirConstructGeneration.cs:342
-                                                                                                                                            // FhirConstructGeneration.cs:314
+            }                                                                                                                               // FhirConstructGeneration.cs:338
+            block                                                                                                                           // FhirConstructGeneration.cs:339
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:340
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:341
+                ;                                                                                                                           // FhirConstructGeneration.cs:342
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:343
+        }                                                                                                                                   // FhirConstructGeneration.cs:344
+                                                                                                                                            // FhirConstructGeneration.cs:315
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:318
-            Period fix,                                                                                                                     // FhirConstructGeneration.cs:319
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:320
-        {                                                                                                                                   // FhirConstructGeneration.cs:321
-                                                                                                                                            // FhirConstructGeneration.cs:323
-            block                                                                                                                           // FhirConstructGeneration.cs:324
-                .AppendCode($"public Period {methodName}()")                                                                                // FhirConstructGeneration.cs:325
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:326
-                .AppendCode("Period retVal = new Period();")                                                                                // FhirConstructGeneration.cs:327
-                ;                                                                                                                           // FhirConstructGeneration.cs:328
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:329
-            {                                                                                                                               // FhirConstructGeneration.cs:330
+        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:319
+            Period fix,                                                                                                                     // FhirConstructGeneration.cs:320
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:321
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:322
+        {                                                                                                                                   // FhirConstructGeneration.cs:323
+                                                                                                                                            // FhirConstructGeneration.cs:325
+            block                                                                                                                           // FhirConstructGeneration.cs:326
+                .AppendCode($"{methodAccess} Period {methodName}()")                                                                        // FhirConstructGeneration.cs:327
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:328
+                .AppendCode("Period retVal = new Period();")                                                                                // FhirConstructGeneration.cs:329
+                ;                                                                                                                           // FhirConstructGeneration.cs:330
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:331
+            {                                                                                                                               // FhirConstructGeneration.cs:332
                 if (fix.StartElement != null)                                                                                               // FhirConstructGeneration.cs:207
                 {                                                                                                                           // FhirConstructGeneration.cs:208
                         block.AppendCode($"retVal.StartElement = new FhirDateTime();");                                                     // FhirConstructGeneration.cs:209
@@ -3459,29 +3483,30 @@ namespace FhirKhit.Tools.R3
                 }                                                                                                                           // FhirConstructGeneration.cs:213
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:336
-            block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Period();")                                                                                // FhirConstructGeneration.cs:338
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
-                ;                                                                                                                           // FhirConstructGeneration.cs:340
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:341
-        }                                                                                                                                   // FhirConstructGeneration.cs:342
-                                                                                                                                            // FhirConstructGeneration.cs:314
+            }                                                                                                                               // FhirConstructGeneration.cs:338
+            block                                                                                                                           // FhirConstructGeneration.cs:339
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:340
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:341
+                ;                                                                                                                           // FhirConstructGeneration.cs:342
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:343
+        }                                                                                                                                   // FhirConstructGeneration.cs:344
+                                                                                                                                            // FhirConstructGeneration.cs:315
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:318
-            Quantity fix,                                                                                                                   // FhirConstructGeneration.cs:319
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:320
-        {                                                                                                                                   // FhirConstructGeneration.cs:321
-                                                                                                                                            // FhirConstructGeneration.cs:323
-            block                                                                                                                           // FhirConstructGeneration.cs:324
-                .AppendCode($"public Quantity {methodName}()")                                                                              // FhirConstructGeneration.cs:325
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:326
-                .AppendCode("Quantity retVal = new Quantity();")                                                                            // FhirConstructGeneration.cs:327
-                ;                                                                                                                           // FhirConstructGeneration.cs:328
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:329
-            {                                                                                                                               // FhirConstructGeneration.cs:330
+        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:319
+            Quantity fix,                                                                                                                   // FhirConstructGeneration.cs:320
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:321
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:322
+        {                                                                                                                                   // FhirConstructGeneration.cs:323
+                                                                                                                                            // FhirConstructGeneration.cs:325
+            block                                                                                                                           // FhirConstructGeneration.cs:326
+                .AppendCode($"{methodAccess} Quantity {methodName}()")                                                                      // FhirConstructGeneration.cs:327
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:328
+                .AppendCode("Quantity retVal = new Quantity();")                                                                            // FhirConstructGeneration.cs:329
+                ;                                                                                                                           // FhirConstructGeneration.cs:330
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:331
+            {                                                                                                                               // FhirConstructGeneration.cs:332
                 if (fix.ValueElement != null)                                                                                               // FhirConstructGeneration.cs:207
                 {                                                                                                                           // FhirConstructGeneration.cs:208
                         block.AppendCode($"retVal.ValueElement = new FhirDecimal();");                                                      // FhirConstructGeneration.cs:209
@@ -3518,29 +3543,30 @@ namespace FhirKhit.Tools.R3
                 }                                                                                                                           // FhirConstructGeneration.cs:213
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:336
-            block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Quantity();")                                                                              // FhirConstructGeneration.cs:338
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
-                ;                                                                                                                           // FhirConstructGeneration.cs:340
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:341
-        }                                                                                                                                   // FhirConstructGeneration.cs:342
-                                                                                                                                            // FhirConstructGeneration.cs:314
+            }                                                                                                                               // FhirConstructGeneration.cs:338
+            block                                                                                                                           // FhirConstructGeneration.cs:339
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:340
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:341
+                ;                                                                                                                           // FhirConstructGeneration.cs:342
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:343
+        }                                                                                                                                   // FhirConstructGeneration.cs:344
+                                                                                                                                            // FhirConstructGeneration.cs:315
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:318
-            Range fix,                                                                                                                      // FhirConstructGeneration.cs:319
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:320
-        {                                                                                                                                   // FhirConstructGeneration.cs:321
-                                                                                                                                            // FhirConstructGeneration.cs:323
-            block                                                                                                                           // FhirConstructGeneration.cs:324
-                .AppendCode($"public Range {methodName}()")                                                                                 // FhirConstructGeneration.cs:325
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:326
-                .AppendCode("Range retVal = new Range();")                                                                                  // FhirConstructGeneration.cs:327
-                ;                                                                                                                           // FhirConstructGeneration.cs:328
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:329
-            {                                                                                                                               // FhirConstructGeneration.cs:330
+        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:319
+            Range fix,                                                                                                                      // FhirConstructGeneration.cs:320
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:321
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:322
+        {                                                                                                                                   // FhirConstructGeneration.cs:323
+                                                                                                                                            // FhirConstructGeneration.cs:325
+            block                                                                                                                           // FhirConstructGeneration.cs:326
+                .AppendCode($"{methodAccess} Range {methodName}()")                                                                         // FhirConstructGeneration.cs:327
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:328
+                .AppendCode("Range retVal = new Range();")                                                                                  // FhirConstructGeneration.cs:329
+                ;                                                                                                                           // FhirConstructGeneration.cs:330
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:331
+            {                                                                                                                               // FhirConstructGeneration.cs:332
                 if (fix.Low != null)                                                                                                        // FhirConstructGeneration.cs:207
                 {                                                                                                                           // FhirConstructGeneration.cs:208
                         block.AppendCode($"retVal.Low = new Quantity();");                                                                  // FhirConstructGeneration.cs:209
@@ -3623,29 +3649,30 @@ namespace FhirKhit.Tools.R3
                 }                                                                                                                           // FhirConstructGeneration.cs:213
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:336
-            block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Range();")                                                                                 // FhirConstructGeneration.cs:338
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
-                ;                                                                                                                           // FhirConstructGeneration.cs:340
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:341
-        }                                                                                                                                   // FhirConstructGeneration.cs:342
-                                                                                                                                            // FhirConstructGeneration.cs:314
+            }                                                                                                                               // FhirConstructGeneration.cs:338
+            block                                                                                                                           // FhirConstructGeneration.cs:339
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:340
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:341
+                ;                                                                                                                           // FhirConstructGeneration.cs:342
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:343
+        }                                                                                                                                   // FhirConstructGeneration.cs:344
+                                                                                                                                            // FhirConstructGeneration.cs:315
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:318
-            Ratio fix,                                                                                                                      // FhirConstructGeneration.cs:319
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:320
-        {                                                                                                                                   // FhirConstructGeneration.cs:321
-                                                                                                                                            // FhirConstructGeneration.cs:323
-            block                                                                                                                           // FhirConstructGeneration.cs:324
-                .AppendCode($"public Ratio {methodName}()")                                                                                 // FhirConstructGeneration.cs:325
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:326
-                .AppendCode("Ratio retVal = new Ratio();")                                                                                  // FhirConstructGeneration.cs:327
-                ;                                                                                                                           // FhirConstructGeneration.cs:328
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:329
-            {                                                                                                                               // FhirConstructGeneration.cs:330
+        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:319
+            Ratio fix,                                                                                                                      // FhirConstructGeneration.cs:320
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:321
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:322
+        {                                                                                                                                   // FhirConstructGeneration.cs:323
+                                                                                                                                            // FhirConstructGeneration.cs:325
+            block                                                                                                                           // FhirConstructGeneration.cs:326
+                .AppendCode($"{methodAccess} Ratio {methodName}()")                                                                         // FhirConstructGeneration.cs:327
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:328
+                .AppendCode("Ratio retVal = new Ratio();")                                                                                  // FhirConstructGeneration.cs:329
+                ;                                                                                                                           // FhirConstructGeneration.cs:330
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:331
+            {                                                                                                                               // FhirConstructGeneration.cs:332
                 if (fix.Numerator != null)                                                                                                  // FhirConstructGeneration.cs:207
                 {                                                                                                                           // FhirConstructGeneration.cs:208
                         block.AppendCode($"retVal.Numerator = new Quantity();");                                                            // FhirConstructGeneration.cs:209
@@ -3728,29 +3755,30 @@ namespace FhirKhit.Tools.R3
                 }                                                                                                                           // FhirConstructGeneration.cs:213
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:336
-            block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Ratio();")                                                                                 // FhirConstructGeneration.cs:338
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
-                ;                                                                                                                           // FhirConstructGeneration.cs:340
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:341
-        }                                                                                                                                   // FhirConstructGeneration.cs:342
-                                                                                                                                            // FhirConstructGeneration.cs:314
+            }                                                                                                                               // FhirConstructGeneration.cs:338
+            block                                                                                                                           // FhirConstructGeneration.cs:339
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:340
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:341
+                ;                                                                                                                           // FhirConstructGeneration.cs:342
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:343
+        }                                                                                                                                   // FhirConstructGeneration.cs:344
+                                                                                                                                            // FhirConstructGeneration.cs:315
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:318
-            ResourceReference fix,                                                                                                          // FhirConstructGeneration.cs:319
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:320
-        {                                                                                                                                   // FhirConstructGeneration.cs:321
-                                                                                                                                            // FhirConstructGeneration.cs:323
-            block                                                                                                                           // FhirConstructGeneration.cs:324
-                .AppendCode($"public ResourceReference {methodName}()")                                                                     // FhirConstructGeneration.cs:325
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:326
-                .AppendCode("ResourceReference retVal = new ResourceReference();")                                                          // FhirConstructGeneration.cs:327
-                ;                                                                                                                           // FhirConstructGeneration.cs:328
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:329
-            {                                                                                                                               // FhirConstructGeneration.cs:330
+        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:319
+            ResourceReference fix,                                                                                                          // FhirConstructGeneration.cs:320
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:321
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:322
+        {                                                                                                                                   // FhirConstructGeneration.cs:323
+                                                                                                                                            // FhirConstructGeneration.cs:325
+            block                                                                                                                           // FhirConstructGeneration.cs:326
+                .AppendCode($"{methodAccess} ResourceReference {methodName}()")                                                             // FhirConstructGeneration.cs:327
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:328
+                .AppendCode("ResourceReference retVal = new ResourceReference();")                                                          // FhirConstructGeneration.cs:329
+                ;                                                                                                                           // FhirConstructGeneration.cs:330
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:331
+            {                                                                                                                               // FhirConstructGeneration.cs:332
                 if (fix.ReferenceElement != null)                                                                                           // FhirConstructGeneration.cs:207
                 {                                                                                                                           // FhirConstructGeneration.cs:208
                         block.AppendCode($"retVal.ReferenceElement = new FhirString();");                                                   // FhirConstructGeneration.cs:209
@@ -3887,29 +3915,30 @@ namespace FhirKhit.Tools.R3
                 }                                                                                                                           // FhirConstructGeneration.cs:213
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:336
-            block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new ResourceReference();")                                                                     // FhirConstructGeneration.cs:338
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
-                ;                                                                                                                           // FhirConstructGeneration.cs:340
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:341
-        }                                                                                                                                   // FhirConstructGeneration.cs:342
-                                                                                                                                            // FhirConstructGeneration.cs:314
+            }                                                                                                                               // FhirConstructGeneration.cs:338
+            block                                                                                                                           // FhirConstructGeneration.cs:339
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:340
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:341
+                ;                                                                                                                           // FhirConstructGeneration.cs:342
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:343
+        }                                                                                                                                   // FhirConstructGeneration.cs:344
+                                                                                                                                            // FhirConstructGeneration.cs:315
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:318
-            RelatedArtifact fix,                                                                                                            // FhirConstructGeneration.cs:319
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:320
-        {                                                                                                                                   // FhirConstructGeneration.cs:321
-                                                                                                                                            // FhirConstructGeneration.cs:323
-            block                                                                                                                           // FhirConstructGeneration.cs:324
-                .AppendCode($"public RelatedArtifact {methodName}()")                                                                       // FhirConstructGeneration.cs:325
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:326
-                .AppendCode("RelatedArtifact retVal = new RelatedArtifact();")                                                              // FhirConstructGeneration.cs:327
-                ;                                                                                                                           // FhirConstructGeneration.cs:328
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:329
-            {                                                                                                                               // FhirConstructGeneration.cs:330
+        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:319
+            RelatedArtifact fix,                                                                                                            // FhirConstructGeneration.cs:320
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:321
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:322
+        {                                                                                                                                   // FhirConstructGeneration.cs:323
+                                                                                                                                            // FhirConstructGeneration.cs:325
+            block                                                                                                                           // FhirConstructGeneration.cs:326
+                .AppendCode($"{methodAccess} RelatedArtifact {methodName}()")                                                               // FhirConstructGeneration.cs:327
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:328
+                .AppendCode("RelatedArtifact retVal = new RelatedArtifact();")                                                              // FhirConstructGeneration.cs:329
+                ;                                                                                                                           // FhirConstructGeneration.cs:330
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:331
+            {                                                                                                                               // FhirConstructGeneration.cs:332
                 if (fix.TypeElement != null)                                                                                                // FhirConstructGeneration.cs:147
                     block.AppendCode($"retVal.TypeElement = new Code<RelatedArtifact.RelatedArtifactType>(RelatedArtifact.RelatedArtifactType.{fix.TypeElement.Value});");// FhirConstructGeneration.cs:148
                 if (fix.DisplayElement != null)                                                                                             // FhirConstructGeneration.cs:207
@@ -4050,29 +4079,30 @@ namespace FhirKhit.Tools.R3
                 }                                                                                                                           // FhirConstructGeneration.cs:213
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:336
-            block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new RelatedArtifact();")                                                                       // FhirConstructGeneration.cs:338
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
-                ;                                                                                                                           // FhirConstructGeneration.cs:340
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:341
-        }                                                                                                                                   // FhirConstructGeneration.cs:342
-                                                                                                                                            // FhirConstructGeneration.cs:314
+            }                                                                                                                               // FhirConstructGeneration.cs:338
+            block                                                                                                                           // FhirConstructGeneration.cs:339
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:340
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:341
+                ;                                                                                                                           // FhirConstructGeneration.cs:342
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:343
+        }                                                                                                                                   // FhirConstructGeneration.cs:344
+                                                                                                                                            // FhirConstructGeneration.cs:315
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:318
-            SampledData fix,                                                                                                                // FhirConstructGeneration.cs:319
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:320
-        {                                                                                                                                   // FhirConstructGeneration.cs:321
-                                                                                                                                            // FhirConstructGeneration.cs:323
-            block                                                                                                                           // FhirConstructGeneration.cs:324
-                .AppendCode($"public SampledData {methodName}()")                                                                           // FhirConstructGeneration.cs:325
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:326
-                .AppendCode("SampledData retVal = new SampledData();")                                                                      // FhirConstructGeneration.cs:327
-                ;                                                                                                                           // FhirConstructGeneration.cs:328
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:329
-            {                                                                                                                               // FhirConstructGeneration.cs:330
+        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:319
+            SampledData fix,                                                                                                                // FhirConstructGeneration.cs:320
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:321
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:322
+        {                                                                                                                                   // FhirConstructGeneration.cs:323
+                                                                                                                                            // FhirConstructGeneration.cs:325
+            block                                                                                                                           // FhirConstructGeneration.cs:326
+                .AppendCode($"{methodAccess} SampledData {methodName}()")                                                                   // FhirConstructGeneration.cs:327
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:328
+                .AppendCode("SampledData retVal = new SampledData();")                                                                      // FhirConstructGeneration.cs:329
+                ;                                                                                                                           // FhirConstructGeneration.cs:330
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:331
+            {                                                                                                                               // FhirConstructGeneration.cs:332
                 if (fix.Origin != null)                                                                                                     // FhirConstructGeneration.cs:207
                 {                                                                                                                           // FhirConstructGeneration.cs:208
                         block.AppendCode($"retVal.Origin = new Quantity();");                                                               // FhirConstructGeneration.cs:209
@@ -4163,29 +4193,30 @@ namespace FhirKhit.Tools.R3
                 }                                                                                                                           // FhirConstructGeneration.cs:213
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:336
-            block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new SampledData();")                                                                           // FhirConstructGeneration.cs:338
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
-                ;                                                                                                                           // FhirConstructGeneration.cs:340
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:341
-        }                                                                                                                                   // FhirConstructGeneration.cs:342
-                                                                                                                                            // FhirConstructGeneration.cs:314
+            }                                                                                                                               // FhirConstructGeneration.cs:338
+            block                                                                                                                           // FhirConstructGeneration.cs:339
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:340
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:341
+                ;                                                                                                                           // FhirConstructGeneration.cs:342
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:343
+        }                                                                                                                                   // FhirConstructGeneration.cs:344
+                                                                                                                                            // FhirConstructGeneration.cs:315
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:318
-            Signature fix,                                                                                                                  // FhirConstructGeneration.cs:319
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:320
-        {                                                                                                                                   // FhirConstructGeneration.cs:321
-                                                                                                                                            // FhirConstructGeneration.cs:323
-            block                                                                                                                           // FhirConstructGeneration.cs:324
-                .AppendCode($"public Signature {methodName}()")                                                                             // FhirConstructGeneration.cs:325
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:326
-                .AppendCode("Signature retVal = new Signature();")                                                                          // FhirConstructGeneration.cs:327
-                ;                                                                                                                           // FhirConstructGeneration.cs:328
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:329
-            {                                                                                                                               // FhirConstructGeneration.cs:330
+        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:319
+            Signature fix,                                                                                                                  // FhirConstructGeneration.cs:320
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:321
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:322
+        {                                                                                                                                   // FhirConstructGeneration.cs:323
+                                                                                                                                            // FhirConstructGeneration.cs:325
+            block                                                                                                                           // FhirConstructGeneration.cs:326
+                .AppendCode($"{methodAccess} Signature {methodName}()")                                                                     // FhirConstructGeneration.cs:327
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:328
+                .AppendCode("Signature retVal = new Signature();")                                                                          // FhirConstructGeneration.cs:329
+                ;                                                                                                                           // FhirConstructGeneration.cs:330
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:331
+            {                                                                                                                               // FhirConstructGeneration.cs:332
                 if (fix.Type != null)                                                                                                       // FhirConstructGeneration.cs:159
                 {                                                                                                                           // FhirConstructGeneration.cs:160
                     block.AppendCode($"retVal.Type = new List<Coding>();");                                                                 // FhirConstructGeneration.cs:161
@@ -4298,29 +4329,30 @@ namespace FhirKhit.Tools.R3
                 }                                                                                                                           // FhirConstructGeneration.cs:213
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:336
-            block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Signature();")                                                                             // FhirConstructGeneration.cs:338
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
-                ;                                                                                                                           // FhirConstructGeneration.cs:340
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:341
-        }                                                                                                                                   // FhirConstructGeneration.cs:342
-                                                                                                                                            // FhirConstructGeneration.cs:314
+            }                                                                                                                               // FhirConstructGeneration.cs:338
+            block                                                                                                                           // FhirConstructGeneration.cs:339
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:340
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:341
+                ;                                                                                                                           // FhirConstructGeneration.cs:342
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:343
+        }                                                                                                                                   // FhirConstructGeneration.cs:344
+                                                                                                                                            // FhirConstructGeneration.cs:315
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:318
-            SimpleQuantity fix,                                                                                                             // FhirConstructGeneration.cs:319
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:320
-        {                                                                                                                                   // FhirConstructGeneration.cs:321
-                                                                                                                                            // FhirConstructGeneration.cs:323
-            block                                                                                                                           // FhirConstructGeneration.cs:324
-                .AppendCode($"public SimpleQuantity {methodName}()")                                                                        // FhirConstructGeneration.cs:325
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:326
-                .AppendCode("SimpleQuantity retVal = new SimpleQuantity();")                                                                // FhirConstructGeneration.cs:327
-                ;                                                                                                                           // FhirConstructGeneration.cs:328
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:329
-            {                                                                                                                               // FhirConstructGeneration.cs:330
+        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:319
+            SimpleQuantity fix,                                                                                                             // FhirConstructGeneration.cs:320
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:321
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:322
+        {                                                                                                                                   // FhirConstructGeneration.cs:323
+                                                                                                                                            // FhirConstructGeneration.cs:325
+            block                                                                                                                           // FhirConstructGeneration.cs:326
+                .AppendCode($"{methodAccess} SimpleQuantity {methodName}()")                                                                // FhirConstructGeneration.cs:327
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:328
+                .AppendCode("SimpleQuantity retVal = new SimpleQuantity();")                                                                // FhirConstructGeneration.cs:329
+                ;                                                                                                                           // FhirConstructGeneration.cs:330
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:331
+            {                                                                                                                               // FhirConstructGeneration.cs:332
                 if (fix.ValueElement != null)                                                                                               // FhirConstructGeneration.cs:207
                 {                                                                                                                           // FhirConstructGeneration.cs:208
                         block.AppendCode($"retVal.ValueElement = new FhirDecimal();");                                                      // FhirConstructGeneration.cs:209
@@ -4357,29 +4389,30 @@ namespace FhirKhit.Tools.R3
                 }                                                                                                                           // FhirConstructGeneration.cs:213
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:336
-            block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new SimpleQuantity();")                                                                        // FhirConstructGeneration.cs:338
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
-                ;                                                                                                                           // FhirConstructGeneration.cs:340
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:341
-        }                                                                                                                                   // FhirConstructGeneration.cs:342
-                                                                                                                                            // FhirConstructGeneration.cs:314
+            }                                                                                                                               // FhirConstructGeneration.cs:338
+            block                                                                                                                           // FhirConstructGeneration.cs:339
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:340
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:341
+                ;                                                                                                                           // FhirConstructGeneration.cs:342
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:343
+        }                                                                                                                                   // FhirConstructGeneration.cs:344
+                                                                                                                                            // FhirConstructGeneration.cs:315
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:318
-            Timing fix,                                                                                                                     // FhirConstructGeneration.cs:319
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:320
-        {                                                                                                                                   // FhirConstructGeneration.cs:321
-                                                                                                                                            // FhirConstructGeneration.cs:323
-            block                                                                                                                           // FhirConstructGeneration.cs:324
-                .AppendCode($"public Timing {methodName}()")                                                                                // FhirConstructGeneration.cs:325
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:326
-                .AppendCode("Timing retVal = new Timing();")                                                                                // FhirConstructGeneration.cs:327
-                ;                                                                                                                           // FhirConstructGeneration.cs:328
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:329
-            {                                                                                                                               // FhirConstructGeneration.cs:330
+        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:319
+            Timing fix,                                                                                                                     // FhirConstructGeneration.cs:320
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:321
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:322
+        {                                                                                                                                   // FhirConstructGeneration.cs:323
+                                                                                                                                            // FhirConstructGeneration.cs:325
+            block                                                                                                                           // FhirConstructGeneration.cs:326
+                .AppendCode($"{methodAccess} Timing {methodName}()")                                                                        // FhirConstructGeneration.cs:327
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:328
+                .AppendCode("Timing retVal = new Timing();")                                                                                // FhirConstructGeneration.cs:329
+                ;                                                                                                                           // FhirConstructGeneration.cs:330
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:331
+            {                                                                                                                               // FhirConstructGeneration.cs:332
                 if (fix.EventElement != null)                                                                                               // FhirConstructGeneration.cs:159
                 {                                                                                                                           // FhirConstructGeneration.cs:160
                     block.AppendCode($"retVal.EventElement = new List<FhirDateTime>();");                                                   // FhirConstructGeneration.cs:161
@@ -4596,29 +4629,30 @@ namespace FhirKhit.Tools.R3
                 }                                                                                                                           // FhirConstructGeneration.cs:213
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:336
-            block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new Timing();")                                                                                // FhirConstructGeneration.cs:338
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
-                ;                                                                                                                           // FhirConstructGeneration.cs:340
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:341
-        }                                                                                                                                   // FhirConstructGeneration.cs:342
-                                                                                                                                            // FhirConstructGeneration.cs:314
+            }                                                                                                                               // FhirConstructGeneration.cs:338
+            block                                                                                                                           // FhirConstructGeneration.cs:339
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:340
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:341
+                ;                                                                                                                           // FhirConstructGeneration.cs:342
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:343
+        }                                                                                                                                   // FhirConstructGeneration.cs:344
+                                                                                                                                            // FhirConstructGeneration.cs:315
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:318
-            TriggerDefinition fix,                                                                                                          // FhirConstructGeneration.cs:319
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:320
-        {                                                                                                                                   // FhirConstructGeneration.cs:321
-                                                                                                                                            // FhirConstructGeneration.cs:323
-            block                                                                                                                           // FhirConstructGeneration.cs:324
-                .AppendCode($"public TriggerDefinition {methodName}()")                                                                     // FhirConstructGeneration.cs:325
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:326
-                .AppendCode("TriggerDefinition retVal = new TriggerDefinition();")                                                          // FhirConstructGeneration.cs:327
-                ;                                                                                                                           // FhirConstructGeneration.cs:328
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:329
-            {                                                                                                                               // FhirConstructGeneration.cs:330
+        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:319
+            TriggerDefinition fix,                                                                                                          // FhirConstructGeneration.cs:320
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:321
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:322
+        {                                                                                                                                   // FhirConstructGeneration.cs:323
+                                                                                                                                            // FhirConstructGeneration.cs:325
+            block                                                                                                                           // FhirConstructGeneration.cs:326
+                .AppendCode($"{methodAccess} TriggerDefinition {methodName}()")                                                             // FhirConstructGeneration.cs:327
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:328
+                .AppendCode("TriggerDefinition retVal = new TriggerDefinition();")                                                          // FhirConstructGeneration.cs:329
+                ;                                                                                                                           // FhirConstructGeneration.cs:330
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:331
+            {                                                                                                                               // FhirConstructGeneration.cs:332
                 if (fix.TypeElement != null)                                                                                                // FhirConstructGeneration.cs:147
                     block.AppendCode($"retVal.TypeElement = new Code<TriggerDefinition.TriggerType>(TriggerDefinition.TriggerType.{fix.TypeElement.Value});");// FhirConstructGeneration.cs:148
                 if (fix.EventNameElement != null)                                                                                           // FhirConstructGeneration.cs:207
@@ -4863,29 +4897,30 @@ namespace FhirKhit.Tools.R3
                 }                                                                                                                           // FhirConstructGeneration.cs:213
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:336
-            block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new TriggerDefinition();")                                                                     // FhirConstructGeneration.cs:338
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
-                ;                                                                                                                           // FhirConstructGeneration.cs:340
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:341
-        }                                                                                                                                   // FhirConstructGeneration.cs:342
-                                                                                                                                            // FhirConstructGeneration.cs:314
+            }                                                                                                                               // FhirConstructGeneration.cs:338
+            block                                                                                                                           // FhirConstructGeneration.cs:339
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:340
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:341
+                ;                                                                                                                           // FhirConstructGeneration.cs:342
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:343
+        }                                                                                                                                   // FhirConstructGeneration.cs:344
+                                                                                                                                            // FhirConstructGeneration.cs:315
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
-        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:318
-            UsageContext fix,                                                                                                               // FhirConstructGeneration.cs:319
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:320
-        {                                                                                                                                   // FhirConstructGeneration.cs:321
-                                                                                                                                            // FhirConstructGeneration.cs:323
-            block                                                                                                                           // FhirConstructGeneration.cs:324
-                .AppendCode($"public UsageContext {methodName}()")                                                                          // FhirConstructGeneration.cs:325
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:326
-                .AppendCode("UsageContext retVal = new UsageContext();")                                                                    // FhirConstructGeneration.cs:327
-                ;                                                                                                                           // FhirConstructGeneration.cs:328
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:329
-            {                                                                                                                               // FhirConstructGeneration.cs:330
+        static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:319
+            UsageContext fix,                                                                                                               // FhirConstructGeneration.cs:320
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:321
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:322
+        {                                                                                                                                   // FhirConstructGeneration.cs:323
+                                                                                                                                            // FhirConstructGeneration.cs:325
+            block                                                                                                                           // FhirConstructGeneration.cs:326
+                .AppendCode($"{methodAccess} UsageContext {methodName}()")                                                                  // FhirConstructGeneration.cs:327
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:328
+                .AppendCode("UsageContext retVal = new UsageContext();")                                                                    // FhirConstructGeneration.cs:329
+                ;                                                                                                                           // FhirConstructGeneration.cs:330
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:331
+            {                                                                                                                               // FhirConstructGeneration.cs:332
                 if (fix.Code != null)                                                                                                       // FhirConstructGeneration.cs:207
                 {                                                                                                                           // FhirConstructGeneration.cs:208
                         block.AppendCode($"retVal.Code = new Coding();");                                                                   // FhirConstructGeneration.cs:209
@@ -4939,29 +4974,30 @@ namespace FhirKhit.Tools.R3
                 }                                                                                                                           // FhirConstructGeneration.cs:213
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:336
-            block                                                                                                                           // FhirConstructGeneration.cs:337
-                .AppendCode("return retVal = new UsageContext();")                                                                          // FhirConstructGeneration.cs:338
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:339
-                ;                                                                                                                           // FhirConstructGeneration.cs:340
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:341
-        }                                                                                                                                   // FhirConstructGeneration.cs:342
+            }                                                                                                                               // FhirConstructGeneration.cs:338
+            block                                                                                                                           // FhirConstructGeneration.cs:339
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:340
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:341
+                ;                                                                                                                           // FhirConstructGeneration.cs:342
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:343
+        }                                                                                                                                   // FhirConstructGeneration.cs:344
                                                                                                                                             // FhirConstructGeneration.cs:246
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:250
             Base64Binary fix,                                                                                                               // FhirConstructGeneration.cs:251
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:252
-        {                                                                                                                                   // FhirConstructGeneration.cs:253
-                                                                                                                                            // FhirConstructGeneration.cs:255
-            block                                                                                                                           // FhirConstructGeneration.cs:256
-                .AppendCode($"public Base64Binary {methodName}()")                                                                          // FhirConstructGeneration.cs:257
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:258
-                .AppendCode("Base64Binary retVal = new Base64Binary();")                                                                    // FhirConstructGeneration.cs:259
-                ;                                                                                                                           // FhirConstructGeneration.cs:260
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:261
-            {                                                                                                                               // FhirConstructGeneration.cs:262
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:252
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:253
+        {                                                                                                                                   // FhirConstructGeneration.cs:254
+                                                                                                                                            // FhirConstructGeneration.cs:256
+            block                                                                                                                           // FhirConstructGeneration.cs:257
+                .AppendCode($"{methodAccess} Base64Binary {methodName}()")                                                                  // FhirConstructGeneration.cs:258
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:259
+                .AppendCode("Base64Binary retVal = new Base64Binary();")                                                                    // FhirConstructGeneration.cs:260
+                ;                                                                                                                           // FhirConstructGeneration.cs:261
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:262
+            {                                                                                                                               // FhirConstructGeneration.cs:263
                 if (fix.Value != null)                                                                                                      // FhirConstructGeneration.cs:81
                 {                                                                                                                           // FhirConstructGeneration.cs:82
                     block.OpenBrace();                                                                                                      // FhirConstructGeneration.cs:83
@@ -4987,29 +5023,30 @@ namespace FhirKhit.Tools.R3
                 }                                                                                                                           // FhirConstructGeneration.cs:103
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:268
-            block                                                                                                                           // FhirConstructGeneration.cs:269
-                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:270
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:271
-                ;                                                                                                                           // FhirConstructGeneration.cs:272
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:273
-        }                                                                                                                                   // FhirConstructGeneration.cs:274
+            }                                                                                                                               // FhirConstructGeneration.cs:269
+            block                                                                                                                           // FhirConstructGeneration.cs:270
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:271
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:272
+                ;                                                                                                                           // FhirConstructGeneration.cs:273
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:274
+        }                                                                                                                                   // FhirConstructGeneration.cs:275
                                                                                                                                             // FhirConstructGeneration.cs:246
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:250
             FhirBoolean fix,                                                                                                                // FhirConstructGeneration.cs:251
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:252
-        {                                                                                                                                   // FhirConstructGeneration.cs:253
-                                                                                                                                            // FhirConstructGeneration.cs:255
-            block                                                                                                                           // FhirConstructGeneration.cs:256
-                .AppendCode($"public FhirBoolean {methodName}()")                                                                           // FhirConstructGeneration.cs:257
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:258
-                .AppendCode("FhirBoolean retVal = new FhirBoolean();")                                                                      // FhirConstructGeneration.cs:259
-                ;                                                                                                                           // FhirConstructGeneration.cs:260
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:261
-            {                                                                                                                               // FhirConstructGeneration.cs:262
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:252
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:253
+        {                                                                                                                                   // FhirConstructGeneration.cs:254
+                                                                                                                                            // FhirConstructGeneration.cs:256
+            block                                                                                                                           // FhirConstructGeneration.cs:257
+                .AppendCode($"{methodAccess} FhirBoolean {methodName}()")                                                                   // FhirConstructGeneration.cs:258
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:259
+                .AppendCode("FhirBoolean retVal = new FhirBoolean();")                                                                      // FhirConstructGeneration.cs:260
+                ;                                                                                                                           // FhirConstructGeneration.cs:261
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:262
+            {                                                                                                                               // FhirConstructGeneration.cs:263
                 if (fix.Value.HasValue == true)                                                                                             // FhirConstructGeneration.cs:69
                 {                                                                                                                           // FhirConstructGeneration.cs:70
                     if (fix.Value.Value == true)                                                                                            // FhirConstructGeneration.cs:71
@@ -5019,164 +5056,170 @@ namespace FhirKhit.Tools.R3
                 }                                                                                                                           // FhirConstructGeneration.cs:75
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:268
-            block                                                                                                                           // FhirConstructGeneration.cs:269
-                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:270
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:271
-                ;                                                                                                                           // FhirConstructGeneration.cs:272
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:273
-        }                                                                                                                                   // FhirConstructGeneration.cs:274
+            }                                                                                                                               // FhirConstructGeneration.cs:269
+            block                                                                                                                           // FhirConstructGeneration.cs:270
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:271
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:272
+                ;                                                                                                                           // FhirConstructGeneration.cs:273
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:274
+        }                                                                                                                                   // FhirConstructGeneration.cs:275
                                                                                                                                             // FhirConstructGeneration.cs:246
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:250
             Code fix,                                                                                                                       // FhirConstructGeneration.cs:251
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:252
-        {                                                                                                                                   // FhirConstructGeneration.cs:253
-                                                                                                                                            // FhirConstructGeneration.cs:255
-            block                                                                                                                           // FhirConstructGeneration.cs:256
-                .AppendCode($"public Code {methodName}()")                                                                                  // FhirConstructGeneration.cs:257
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:258
-                .AppendCode("Code retVal = new Code();")                                                                                    // FhirConstructGeneration.cs:259
-                ;                                                                                                                           // FhirConstructGeneration.cs:260
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:261
-            {                                                                                                                               // FhirConstructGeneration.cs:262
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:252
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:253
+        {                                                                                                                                   // FhirConstructGeneration.cs:254
+                                                                                                                                            // FhirConstructGeneration.cs:256
+            block                                                                                                                           // FhirConstructGeneration.cs:257
+                .AppendCode($"{methodAccess} Code {methodName}()")                                                                          // FhirConstructGeneration.cs:258
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:259
+                .AppendCode("Code retVal = new Code();")                                                                                    // FhirConstructGeneration.cs:260
+                ;                                                                                                                           // FhirConstructGeneration.cs:261
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:262
+            {                                                                                                                               // FhirConstructGeneration.cs:263
                 if (fix.Value != null)                                                                                                      // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.Value = \"{fix.Value}\";");                                                                   // FhirConstructGeneration.cs:138
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:268
-            block                                                                                                                           // FhirConstructGeneration.cs:269
-                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:270
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:271
-                ;                                                                                                                           // FhirConstructGeneration.cs:272
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:273
-        }                                                                                                                                   // FhirConstructGeneration.cs:274
+            }                                                                                                                               // FhirConstructGeneration.cs:269
+            block                                                                                                                           // FhirConstructGeneration.cs:270
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:271
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:272
+                ;                                                                                                                           // FhirConstructGeneration.cs:273
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:274
+        }                                                                                                                                   // FhirConstructGeneration.cs:275
                                                                                                                                             // FhirConstructGeneration.cs:246
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:250
             Date fix,                                                                                                                       // FhirConstructGeneration.cs:251
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:252
-        {                                                                                                                                   // FhirConstructGeneration.cs:253
-                                                                                                                                            // FhirConstructGeneration.cs:255
-            block                                                                                                                           // FhirConstructGeneration.cs:256
-                .AppendCode($"public Date {methodName}()")                                                                                  // FhirConstructGeneration.cs:257
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:258
-                .AppendCode("Date retVal = new Date();")                                                                                    // FhirConstructGeneration.cs:259
-                ;                                                                                                                           // FhirConstructGeneration.cs:260
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:261
-            {                                                                                                                               // FhirConstructGeneration.cs:262
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:252
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:253
+        {                                                                                                                                   // FhirConstructGeneration.cs:254
+                                                                                                                                            // FhirConstructGeneration.cs:256
+            block                                                                                                                           // FhirConstructGeneration.cs:257
+                .AppendCode($"{methodAccess} Date {methodName}()")                                                                          // FhirConstructGeneration.cs:258
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:259
+                .AppendCode("Date retVal = new Date();")                                                                                    // FhirConstructGeneration.cs:260
+                ;                                                                                                                           // FhirConstructGeneration.cs:261
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:262
+            {                                                                                                                               // FhirConstructGeneration.cs:263
                 if (fix.Value != null)                                                                                                      // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.Value = \"{fix.Value}\";");                                                                   // FhirConstructGeneration.cs:138
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:268
-            block                                                                                                                           // FhirConstructGeneration.cs:269
-                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:270
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:271
-                ;                                                                                                                           // FhirConstructGeneration.cs:272
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:273
-        }                                                                                                                                   // FhirConstructGeneration.cs:274
+            }                                                                                                                               // FhirConstructGeneration.cs:269
+            block                                                                                                                           // FhirConstructGeneration.cs:270
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:271
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:272
+                ;                                                                                                                           // FhirConstructGeneration.cs:273
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:274
+        }                                                                                                                                   // FhirConstructGeneration.cs:275
                                                                                                                                             // FhirConstructGeneration.cs:246
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:250
             FhirDateTime fix,                                                                                                               // FhirConstructGeneration.cs:251
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:252
-        {                                                                                                                                   // FhirConstructGeneration.cs:253
-                                                                                                                                            // FhirConstructGeneration.cs:255
-            block                                                                                                                           // FhirConstructGeneration.cs:256
-                .AppendCode($"public FhirDateTime {methodName}()")                                                                          // FhirConstructGeneration.cs:257
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:258
-                .AppendCode("FhirDateTime retVal = new FhirDateTime();")                                                                    // FhirConstructGeneration.cs:259
-                ;                                                                                                                           // FhirConstructGeneration.cs:260
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:261
-            {                                                                                                                               // FhirConstructGeneration.cs:262
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:252
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:253
+        {                                                                                                                                   // FhirConstructGeneration.cs:254
+                                                                                                                                            // FhirConstructGeneration.cs:256
+            block                                                                                                                           // FhirConstructGeneration.cs:257
+                .AppendCode($"{methodAccess} FhirDateTime {methodName}()")                                                                  // FhirConstructGeneration.cs:258
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:259
+                .AppendCode("FhirDateTime retVal = new FhirDateTime();")                                                                    // FhirConstructGeneration.cs:260
+                ;                                                                                                                           // FhirConstructGeneration.cs:261
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:262
+            {                                                                                                                               // FhirConstructGeneration.cs:263
                 if (fix.Value != null)                                                                                                      // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.Value = \"{fix.Value}\";");                                                                   // FhirConstructGeneration.cs:138
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:268
-            block                                                                                                                           // FhirConstructGeneration.cs:269
-                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:270
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:271
-                ;                                                                                                                           // FhirConstructGeneration.cs:272
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:273
-        }                                                                                                                                   // FhirConstructGeneration.cs:274
+            }                                                                                                                               // FhirConstructGeneration.cs:269
+            block                                                                                                                           // FhirConstructGeneration.cs:270
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:271
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:272
+                ;                                                                                                                           // FhirConstructGeneration.cs:273
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:274
+        }                                                                                                                                   // FhirConstructGeneration.cs:275
                                                                                                                                             // FhirConstructGeneration.cs:246
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:250
             FhirDecimal fix,                                                                                                                // FhirConstructGeneration.cs:251
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:252
-        {                                                                                                                                   // FhirConstructGeneration.cs:253
-                                                                                                                                            // FhirConstructGeneration.cs:255
-            block                                                                                                                           // FhirConstructGeneration.cs:256
-                .AppendCode($"public FhirDecimal {methodName}()")                                                                           // FhirConstructGeneration.cs:257
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:258
-                .AppendCode("FhirDecimal retVal = new FhirDecimal();")                                                                      // FhirConstructGeneration.cs:259
-                ;                                                                                                                           // FhirConstructGeneration.cs:260
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:261
-            {                                                                                                                               // FhirConstructGeneration.cs:262
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:252
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:253
+        {                                                                                                                                   // FhirConstructGeneration.cs:254
+                                                                                                                                            // FhirConstructGeneration.cs:256
+            block                                                                                                                           // FhirConstructGeneration.cs:257
+                .AppendCode($"{methodAccess} FhirDecimal {methodName}()")                                                                   // FhirConstructGeneration.cs:258
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:259
+                .AppendCode("FhirDecimal retVal = new FhirDecimal();")                                                                      // FhirConstructGeneration.cs:260
+                ;                                                                                                                           // FhirConstructGeneration.cs:261
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:262
+            {                                                                                                                               // FhirConstructGeneration.cs:263
                 if (fix.Value.HasValue == true)                                                                                             // FhirConstructGeneration.cs:123
                     block.AppendCode($"retVal.Value = new Nullable<decimal>((decimal) {fix.Value.Value});");                                // FhirConstructGeneration.cs:124
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:268
-            block                                                                                                                           // FhirConstructGeneration.cs:269
-                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:270
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:271
-                ;                                                                                                                           // FhirConstructGeneration.cs:272
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:273
-        }                                                                                                                                   // FhirConstructGeneration.cs:274
+            }                                                                                                                               // FhirConstructGeneration.cs:269
+            block                                                                                                                           // FhirConstructGeneration.cs:270
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:271
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:272
+                ;                                                                                                                           // FhirConstructGeneration.cs:273
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:274
+        }                                                                                                                                   // FhirConstructGeneration.cs:275
                                                                                                                                             // FhirConstructGeneration.cs:246
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:250
             Id fix,                                                                                                                         // FhirConstructGeneration.cs:251
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:252
-        {                                                                                                                                   // FhirConstructGeneration.cs:253
-                                                                                                                                            // FhirConstructGeneration.cs:255
-            block                                                                                                                           // FhirConstructGeneration.cs:256
-                .AppendCode($"public Id {methodName}()")                                                                                    // FhirConstructGeneration.cs:257
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:258
-                .AppendCode("Id retVal = new Id();")                                                                                        // FhirConstructGeneration.cs:259
-                ;                                                                                                                           // FhirConstructGeneration.cs:260
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:261
-            {                                                                                                                               // FhirConstructGeneration.cs:262
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:252
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:253
+        {                                                                                                                                   // FhirConstructGeneration.cs:254
+                                                                                                                                            // FhirConstructGeneration.cs:256
+            block                                                                                                                           // FhirConstructGeneration.cs:257
+                .AppendCode($"{methodAccess} Id {methodName}()")                                                                            // FhirConstructGeneration.cs:258
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:259
+                .AppendCode("Id retVal = new Id();")                                                                                        // FhirConstructGeneration.cs:260
+                ;                                                                                                                           // FhirConstructGeneration.cs:261
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:262
+            {                                                                                                                               // FhirConstructGeneration.cs:263
                 if (fix.Value != null)                                                                                                      // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.Value = \"{fix.Value}\";");                                                                   // FhirConstructGeneration.cs:138
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:268
-            block                                                                                                                           // FhirConstructGeneration.cs:269
-                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:270
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:271
-                ;                                                                                                                           // FhirConstructGeneration.cs:272
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:273
-        }                                                                                                                                   // FhirConstructGeneration.cs:274
+            }                                                                                                                               // FhirConstructGeneration.cs:269
+            block                                                                                                                           // FhirConstructGeneration.cs:270
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:271
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:272
+                ;                                                                                                                           // FhirConstructGeneration.cs:273
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:274
+        }                                                                                                                                   // FhirConstructGeneration.cs:275
                                                                                                                                             // FhirConstructGeneration.cs:246
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:250
             Instant fix,                                                                                                                    // FhirConstructGeneration.cs:251
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:252
-        {                                                                                                                                   // FhirConstructGeneration.cs:253
-                                                                                                                                            // FhirConstructGeneration.cs:255
-            block                                                                                                                           // FhirConstructGeneration.cs:256
-                .AppendCode($"public Instant {methodName}()")                                                                               // FhirConstructGeneration.cs:257
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:258
-                .AppendCode("Instant retVal = new Instant();")                                                                              // FhirConstructGeneration.cs:259
-                ;                                                                                                                           // FhirConstructGeneration.cs:260
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:261
-            {                                                                                                                               // FhirConstructGeneration.cs:262
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:252
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:253
+        {                                                                                                                                   // FhirConstructGeneration.cs:254
+                                                                                                                                            // FhirConstructGeneration.cs:256
+            block                                                                                                                           // FhirConstructGeneration.cs:257
+                .AppendCode($"{methodAccess} Instant {methodName}()")                                                                       // FhirConstructGeneration.cs:258
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:259
+                .AppendCode("Instant retVal = new Instant();")                                                                              // FhirConstructGeneration.cs:260
+                ;                                                                                                                           // FhirConstructGeneration.cs:261
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:262
+            {                                                                                                                               // FhirConstructGeneration.cs:263
                 if (fix.Value.HasValue == true)                                                                                             // FhirConstructGeneration.cs:109
                 {                                                                                                                           // FhirConstructGeneration.cs:110
                     DateTimeOffset x = fix.Value.Value;                                                                                     // FhirConstructGeneration.cs:111
@@ -5188,282 +5231,292 @@ namespace FhirKhit.Tools.R3
                 }                                                                                                                           // FhirConstructGeneration.cs:117
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:268
-            block                                                                                                                           // FhirConstructGeneration.cs:269
-                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:270
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:271
-                ;                                                                                                                           // FhirConstructGeneration.cs:272
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:273
-        }                                                                                                                                   // FhirConstructGeneration.cs:274
+            }                                                                                                                               // FhirConstructGeneration.cs:269
+            block                                                                                                                           // FhirConstructGeneration.cs:270
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:271
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:272
+                ;                                                                                                                           // FhirConstructGeneration.cs:273
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:274
+        }                                                                                                                                   // FhirConstructGeneration.cs:275
                                                                                                                                             // FhirConstructGeneration.cs:246
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:250
             Integer fix,                                                                                                                    // FhirConstructGeneration.cs:251
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:252
-        {                                                                                                                                   // FhirConstructGeneration.cs:253
-                                                                                                                                            // FhirConstructGeneration.cs:255
-            block                                                                                                                           // FhirConstructGeneration.cs:256
-                .AppendCode($"public Integer {methodName}()")                                                                               // FhirConstructGeneration.cs:257
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:258
-                .AppendCode("Integer retVal = new Integer();")                                                                              // FhirConstructGeneration.cs:259
-                ;                                                                                                                           // FhirConstructGeneration.cs:260
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:261
-            {                                                                                                                               // FhirConstructGeneration.cs:262
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:252
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:253
+        {                                                                                                                                   // FhirConstructGeneration.cs:254
+                                                                                                                                            // FhirConstructGeneration.cs:256
+            block                                                                                                                           // FhirConstructGeneration.cs:257
+                .AppendCode($"{methodAccess} Integer {methodName}()")                                                                       // FhirConstructGeneration.cs:258
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:259
+                .AppendCode("Integer retVal = new Integer();")                                                                              // FhirConstructGeneration.cs:260
+                ;                                                                                                                           // FhirConstructGeneration.cs:261
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:262
+            {                                                                                                                               // FhirConstructGeneration.cs:263
                 if (fix.Value.HasValue == true)                                                                                             // FhirConstructGeneration.cs:130
                     block.AppendCode($"retVal.Value = new Nullable<int>((int) {fix.Value.Value});");                                        // FhirConstructGeneration.cs:131
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:268
-            block                                                                                                                           // FhirConstructGeneration.cs:269
-                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:270
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:271
-                ;                                                                                                                           // FhirConstructGeneration.cs:272
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:273
-        }                                                                                                                                   // FhirConstructGeneration.cs:274
+            }                                                                                                                               // FhirConstructGeneration.cs:269
+            block                                                                                                                           // FhirConstructGeneration.cs:270
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:271
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:272
+                ;                                                                                                                           // FhirConstructGeneration.cs:273
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:274
+        }                                                                                                                                   // FhirConstructGeneration.cs:275
                                                                                                                                             // FhirConstructGeneration.cs:246
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:250
             Markdown fix,                                                                                                                   // FhirConstructGeneration.cs:251
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:252
-        {                                                                                                                                   // FhirConstructGeneration.cs:253
-                                                                                                                                            // FhirConstructGeneration.cs:255
-            block                                                                                                                           // FhirConstructGeneration.cs:256
-                .AppendCode($"public Markdown {methodName}()")                                                                              // FhirConstructGeneration.cs:257
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:258
-                .AppendCode("Markdown retVal = new Markdown();")                                                                            // FhirConstructGeneration.cs:259
-                ;                                                                                                                           // FhirConstructGeneration.cs:260
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:261
-            {                                                                                                                               // FhirConstructGeneration.cs:262
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:252
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:253
+        {                                                                                                                                   // FhirConstructGeneration.cs:254
+                                                                                                                                            // FhirConstructGeneration.cs:256
+            block                                                                                                                           // FhirConstructGeneration.cs:257
+                .AppendCode($"{methodAccess} Markdown {methodName}()")                                                                      // FhirConstructGeneration.cs:258
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:259
+                .AppendCode("Markdown retVal = new Markdown();")                                                                            // FhirConstructGeneration.cs:260
+                ;                                                                                                                           // FhirConstructGeneration.cs:261
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:262
+            {                                                                                                                               // FhirConstructGeneration.cs:263
                 if (fix.Value != null)                                                                                                      // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.Value = \"{fix.Value}\";");                                                                   // FhirConstructGeneration.cs:138
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:268
-            block                                                                                                                           // FhirConstructGeneration.cs:269
-                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:270
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:271
-                ;                                                                                                                           // FhirConstructGeneration.cs:272
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:273
-        }                                                                                                                                   // FhirConstructGeneration.cs:274
+            }                                                                                                                               // FhirConstructGeneration.cs:269
+            block                                                                                                                           // FhirConstructGeneration.cs:270
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:271
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:272
+                ;                                                                                                                           // FhirConstructGeneration.cs:273
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:274
+        }                                                                                                                                   // FhirConstructGeneration.cs:275
                                                                                                                                             // FhirConstructGeneration.cs:246
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:250
             Oid fix,                                                                                                                        // FhirConstructGeneration.cs:251
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:252
-        {                                                                                                                                   // FhirConstructGeneration.cs:253
-                                                                                                                                            // FhirConstructGeneration.cs:255
-            block                                                                                                                           // FhirConstructGeneration.cs:256
-                .AppendCode($"public Oid {methodName}()")                                                                                   // FhirConstructGeneration.cs:257
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:258
-                .AppendCode("Oid retVal = new Oid();")                                                                                      // FhirConstructGeneration.cs:259
-                ;                                                                                                                           // FhirConstructGeneration.cs:260
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:261
-            {                                                                                                                               // FhirConstructGeneration.cs:262
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:252
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:253
+        {                                                                                                                                   // FhirConstructGeneration.cs:254
+                                                                                                                                            // FhirConstructGeneration.cs:256
+            block                                                                                                                           // FhirConstructGeneration.cs:257
+                .AppendCode($"{methodAccess} Oid {methodName}()")                                                                           // FhirConstructGeneration.cs:258
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:259
+                .AppendCode("Oid retVal = new Oid();")                                                                                      // FhirConstructGeneration.cs:260
+                ;                                                                                                                           // FhirConstructGeneration.cs:261
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:262
+            {                                                                                                                               // FhirConstructGeneration.cs:263
                 if (fix.Value != null)                                                                                                      // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.Value = \"{fix.Value}\";");                                                                   // FhirConstructGeneration.cs:138
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:268
-            block                                                                                                                           // FhirConstructGeneration.cs:269
-                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:270
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:271
-                ;                                                                                                                           // FhirConstructGeneration.cs:272
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:273
-        }                                                                                                                                   // FhirConstructGeneration.cs:274
+            }                                                                                                                               // FhirConstructGeneration.cs:269
+            block                                                                                                                           // FhirConstructGeneration.cs:270
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:271
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:272
+                ;                                                                                                                           // FhirConstructGeneration.cs:273
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:274
+        }                                                                                                                                   // FhirConstructGeneration.cs:275
                                                                                                                                             // FhirConstructGeneration.cs:246
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:250
             PositiveInt fix,                                                                                                                // FhirConstructGeneration.cs:251
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:252
-        {                                                                                                                                   // FhirConstructGeneration.cs:253
-                                                                                                                                            // FhirConstructGeneration.cs:255
-            block                                                                                                                           // FhirConstructGeneration.cs:256
-                .AppendCode($"public PositiveInt {methodName}()")                                                                           // FhirConstructGeneration.cs:257
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:258
-                .AppendCode("PositiveInt retVal = new PositiveInt();")                                                                      // FhirConstructGeneration.cs:259
-                ;                                                                                                                           // FhirConstructGeneration.cs:260
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:261
-            {                                                                                                                               // FhirConstructGeneration.cs:262
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:252
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:253
+        {                                                                                                                                   // FhirConstructGeneration.cs:254
+                                                                                                                                            // FhirConstructGeneration.cs:256
+            block                                                                                                                           // FhirConstructGeneration.cs:257
+                .AppendCode($"{methodAccess} PositiveInt {methodName}()")                                                                   // FhirConstructGeneration.cs:258
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:259
+                .AppendCode("PositiveInt retVal = new PositiveInt();")                                                                      // FhirConstructGeneration.cs:260
+                ;                                                                                                                           // FhirConstructGeneration.cs:261
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:262
+            {                                                                                                                               // FhirConstructGeneration.cs:263
                 if (fix.Value.HasValue == true)                                                                                             // FhirConstructGeneration.cs:130
                     block.AppendCode($"retVal.Value = new Nullable<int>((int) {fix.Value.Value});");                                        // FhirConstructGeneration.cs:131
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:268
-            block                                                                                                                           // FhirConstructGeneration.cs:269
-                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:270
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:271
-                ;                                                                                                                           // FhirConstructGeneration.cs:272
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:273
-        }                                                                                                                                   // FhirConstructGeneration.cs:274
+            }                                                                                                                               // FhirConstructGeneration.cs:269
+            block                                                                                                                           // FhirConstructGeneration.cs:270
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:271
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:272
+                ;                                                                                                                           // FhirConstructGeneration.cs:273
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:274
+        }                                                                                                                                   // FhirConstructGeneration.cs:275
                                                                                                                                             // FhirConstructGeneration.cs:246
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:250
             FhirString fix,                                                                                                                 // FhirConstructGeneration.cs:251
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:252
-        {                                                                                                                                   // FhirConstructGeneration.cs:253
-                                                                                                                                            // FhirConstructGeneration.cs:255
-            block                                                                                                                           // FhirConstructGeneration.cs:256
-                .AppendCode($"public FhirString {methodName}()")                                                                            // FhirConstructGeneration.cs:257
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:258
-                .AppendCode("FhirString retVal = new FhirString();")                                                                        // FhirConstructGeneration.cs:259
-                ;                                                                                                                           // FhirConstructGeneration.cs:260
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:261
-            {                                                                                                                               // FhirConstructGeneration.cs:262
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:252
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:253
+        {                                                                                                                                   // FhirConstructGeneration.cs:254
+                                                                                                                                            // FhirConstructGeneration.cs:256
+            block                                                                                                                           // FhirConstructGeneration.cs:257
+                .AppendCode($"{methodAccess} FhirString {methodName}()")                                                                    // FhirConstructGeneration.cs:258
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:259
+                .AppendCode("FhirString retVal = new FhirString();")                                                                        // FhirConstructGeneration.cs:260
+                ;                                                                                                                           // FhirConstructGeneration.cs:261
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:262
+            {                                                                                                                               // FhirConstructGeneration.cs:263
                 if (fix.Value != null)                                                                                                      // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.Value = \"{fix.Value}\";");                                                                   // FhirConstructGeneration.cs:138
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:268
-            block                                                                                                                           // FhirConstructGeneration.cs:269
-                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:270
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:271
-                ;                                                                                                                           // FhirConstructGeneration.cs:272
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:273
-        }                                                                                                                                   // FhirConstructGeneration.cs:274
+            }                                                                                                                               // FhirConstructGeneration.cs:269
+            block                                                                                                                           // FhirConstructGeneration.cs:270
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:271
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:272
+                ;                                                                                                                           // FhirConstructGeneration.cs:273
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:274
+        }                                                                                                                                   // FhirConstructGeneration.cs:275
                                                                                                                                             // FhirConstructGeneration.cs:246
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:250
             Time fix,                                                                                                                       // FhirConstructGeneration.cs:251
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:252
-        {                                                                                                                                   // FhirConstructGeneration.cs:253
-                                                                                                                                            // FhirConstructGeneration.cs:255
-            block                                                                                                                           // FhirConstructGeneration.cs:256
-                .AppendCode($"public Time {methodName}()")                                                                                  // FhirConstructGeneration.cs:257
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:258
-                .AppendCode("Time retVal = new Time();")                                                                                    // FhirConstructGeneration.cs:259
-                ;                                                                                                                           // FhirConstructGeneration.cs:260
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:261
-            {                                                                                                                               // FhirConstructGeneration.cs:262
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:252
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:253
+        {                                                                                                                                   // FhirConstructGeneration.cs:254
+                                                                                                                                            // FhirConstructGeneration.cs:256
+            block                                                                                                                           // FhirConstructGeneration.cs:257
+                .AppendCode($"{methodAccess} Time {methodName}()")                                                                          // FhirConstructGeneration.cs:258
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:259
+                .AppendCode("Time retVal = new Time();")                                                                                    // FhirConstructGeneration.cs:260
+                ;                                                                                                                           // FhirConstructGeneration.cs:261
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:262
+            {                                                                                                                               // FhirConstructGeneration.cs:263
                 if (fix.Value != null)                                                                                                      // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.Value = \"{fix.Value}\";");                                                                   // FhirConstructGeneration.cs:138
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:268
-            block                                                                                                                           // FhirConstructGeneration.cs:269
-                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:270
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:271
-                ;                                                                                                                           // FhirConstructGeneration.cs:272
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:273
-        }                                                                                                                                   // FhirConstructGeneration.cs:274
+            }                                                                                                                               // FhirConstructGeneration.cs:269
+            block                                                                                                                           // FhirConstructGeneration.cs:270
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:271
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:272
+                ;                                                                                                                           // FhirConstructGeneration.cs:273
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:274
+        }                                                                                                                                   // FhirConstructGeneration.cs:275
                                                                                                                                             // FhirConstructGeneration.cs:246
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:250
             UnsignedInt fix,                                                                                                                // FhirConstructGeneration.cs:251
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:252
-        {                                                                                                                                   // FhirConstructGeneration.cs:253
-                                                                                                                                            // FhirConstructGeneration.cs:255
-            block                                                                                                                           // FhirConstructGeneration.cs:256
-                .AppendCode($"public UnsignedInt {methodName}()")                                                                           // FhirConstructGeneration.cs:257
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:258
-                .AppendCode("UnsignedInt retVal = new UnsignedInt();")                                                                      // FhirConstructGeneration.cs:259
-                ;                                                                                                                           // FhirConstructGeneration.cs:260
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:261
-            {                                                                                                                               // FhirConstructGeneration.cs:262
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:252
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:253
+        {                                                                                                                                   // FhirConstructGeneration.cs:254
+                                                                                                                                            // FhirConstructGeneration.cs:256
+            block                                                                                                                           // FhirConstructGeneration.cs:257
+                .AppendCode($"{methodAccess} UnsignedInt {methodName}()")                                                                   // FhirConstructGeneration.cs:258
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:259
+                .AppendCode("UnsignedInt retVal = new UnsignedInt();")                                                                      // FhirConstructGeneration.cs:260
+                ;                                                                                                                           // FhirConstructGeneration.cs:261
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:262
+            {                                                                                                                               // FhirConstructGeneration.cs:263
                 if (fix.Value.HasValue == true)                                                                                             // FhirConstructGeneration.cs:130
                     block.AppendCode($"retVal.Value = new Nullable<int>((int) {fix.Value.Value});");                                        // FhirConstructGeneration.cs:131
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:268
-            block                                                                                                                           // FhirConstructGeneration.cs:269
-                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:270
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:271
-                ;                                                                                                                           // FhirConstructGeneration.cs:272
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:273
-        }                                                                                                                                   // FhirConstructGeneration.cs:274
+            }                                                                                                                               // FhirConstructGeneration.cs:269
+            block                                                                                                                           // FhirConstructGeneration.cs:270
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:271
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:272
+                ;                                                                                                                           // FhirConstructGeneration.cs:273
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:274
+        }                                                                                                                                   // FhirConstructGeneration.cs:275
                                                                                                                                             // FhirConstructGeneration.cs:246
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:250
             FhirUri fix,                                                                                                                    // FhirConstructGeneration.cs:251
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:252
-        {                                                                                                                                   // FhirConstructGeneration.cs:253
-                                                                                                                                            // FhirConstructGeneration.cs:255
-            block                                                                                                                           // FhirConstructGeneration.cs:256
-                .AppendCode($"public FhirUri {methodName}()")                                                                               // FhirConstructGeneration.cs:257
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:258
-                .AppendCode("FhirUri retVal = new FhirUri();")                                                                              // FhirConstructGeneration.cs:259
-                ;                                                                                                                           // FhirConstructGeneration.cs:260
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:261
-            {                                                                                                                               // FhirConstructGeneration.cs:262
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:252
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:253
+        {                                                                                                                                   // FhirConstructGeneration.cs:254
+                                                                                                                                            // FhirConstructGeneration.cs:256
+            block                                                                                                                           // FhirConstructGeneration.cs:257
+                .AppendCode($"{methodAccess} FhirUri {methodName}()")                                                                       // FhirConstructGeneration.cs:258
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:259
+                .AppendCode("FhirUri retVal = new FhirUri();")                                                                              // FhirConstructGeneration.cs:260
+                ;                                                                                                                           // FhirConstructGeneration.cs:261
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:262
+            {                                                                                                                               // FhirConstructGeneration.cs:263
                 if (fix.Value != null)                                                                                                      // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.Value = \"{fix.Value}\";");                                                                   // FhirConstructGeneration.cs:138
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:268
-            block                                                                                                                           // FhirConstructGeneration.cs:269
-                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:270
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:271
-                ;                                                                                                                           // FhirConstructGeneration.cs:272
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:273
-        }                                                                                                                                   // FhirConstructGeneration.cs:274
+            }                                                                                                                               // FhirConstructGeneration.cs:269
+            block                                                                                                                           // FhirConstructGeneration.cs:270
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:271
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:272
+                ;                                                                                                                           // FhirConstructGeneration.cs:273
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:274
+        }                                                                                                                                   // FhirConstructGeneration.cs:275
                                                                                                                                             // FhirConstructGeneration.cs:246
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:250
             Uuid fix,                                                                                                                       // FhirConstructGeneration.cs:251
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:252
-        {                                                                                                                                   // FhirConstructGeneration.cs:253
-                                                                                                                                            // FhirConstructGeneration.cs:255
-            block                                                                                                                           // FhirConstructGeneration.cs:256
-                .AppendCode($"public Uuid {methodName}()")                                                                                  // FhirConstructGeneration.cs:257
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:258
-                .AppendCode("Uuid retVal = new Uuid();")                                                                                    // FhirConstructGeneration.cs:259
-                ;                                                                                                                           // FhirConstructGeneration.cs:260
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:261
-            {                                                                                                                               // FhirConstructGeneration.cs:262
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:252
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:253
+        {                                                                                                                                   // FhirConstructGeneration.cs:254
+                                                                                                                                            // FhirConstructGeneration.cs:256
+            block                                                                                                                           // FhirConstructGeneration.cs:257
+                .AppendCode($"{methodAccess} Uuid {methodName}()")                                                                          // FhirConstructGeneration.cs:258
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:259
+                .AppendCode("Uuid retVal = new Uuid();")                                                                                    // FhirConstructGeneration.cs:260
+                ;                                                                                                                           // FhirConstructGeneration.cs:261
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:262
+            {                                                                                                                               // FhirConstructGeneration.cs:263
                 if (fix.Value != null)                                                                                                      // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.Value = \"{fix.Value}\";");                                                                   // FhirConstructGeneration.cs:138
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:268
-            block                                                                                                                           // FhirConstructGeneration.cs:269
-                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:270
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:271
-                ;                                                                                                                           // FhirConstructGeneration.cs:272
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:273
-        }                                                                                                                                   // FhirConstructGeneration.cs:274
+            }                                                                                                                               // FhirConstructGeneration.cs:269
+            block                                                                                                                           // FhirConstructGeneration.cs:270
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:271
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:272
+                ;                                                                                                                           // FhirConstructGeneration.cs:273
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:274
+        }                                                                                                                                   // FhirConstructGeneration.cs:275
                                                                                                                                             // FhirConstructGeneration.cs:246
         /// <summary>
         /// Return c# text to create indicated element.
         /// </summary>
         static public bool Construct(CodeBlockNested block,                                                                                 // FhirConstructGeneration.cs:250
             XHtml fix,                                                                                                                      // FhirConstructGeneration.cs:251
-            String methodName)                                                                                                              // FhirConstructGeneration.cs:252
-        {                                                                                                                                   // FhirConstructGeneration.cs:253
-                                                                                                                                            // FhirConstructGeneration.cs:255
-            block                                                                                                                           // FhirConstructGeneration.cs:256
-                .AppendCode($"public XHtml {methodName}()")                                                                                 // FhirConstructGeneration.cs:257
-                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:258
-                .AppendCode("XHtml retVal = new XHtml();")                                                                                  // FhirConstructGeneration.cs:259
-                ;                                                                                                                           // FhirConstructGeneration.cs:260
-            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:261
-            {                                                                                                                               // FhirConstructGeneration.cs:262
+            String methodName,                                                                                                              // FhirConstructGeneration.cs:252
+            String methodAccess = "public")                                                                                                 // FhirConstructGeneration.cs:253
+        {                                                                                                                                   // FhirConstructGeneration.cs:254
+                                                                                                                                            // FhirConstructGeneration.cs:256
+            block                                                                                                                           // FhirConstructGeneration.cs:257
+                .AppendCode($"{methodAccess} XHtml {methodName}()")                                                                         // FhirConstructGeneration.cs:258
+                .OpenBrace()                                                                                                                // FhirConstructGeneration.cs:259
+                .AppendCode("XHtml retVal = new XHtml();")                                                                                  // FhirConstructGeneration.cs:260
+                ;                                                                                                                           // FhirConstructGeneration.cs:261
+            if (fix != null)                                                                                                                // FhirConstructGeneration.cs:262
+            {                                                                                                                               // FhirConstructGeneration.cs:263
                 if (fix.Value != null)                                                                                                      // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.Value = \"{fix.Value}\";");                                                                   // FhirConstructGeneration.cs:138
                 if (fix.ElementId != null)                                                                                                  // FhirConstructGeneration.cs:137
                     block.AppendCode($"retVal.ElementId = \"{fix.ElementId}\";");                                                           // FhirConstructGeneration.cs:138
-            }                                                                                                                               // FhirConstructGeneration.cs:268
-            block                                                                                                                           // FhirConstructGeneration.cs:269
-                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:270
-                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:271
-                ;                                                                                                                           // FhirConstructGeneration.cs:272
-            return  true;                                                                                                                   // FhirConstructGeneration.cs:273
-        }                                                                                                                                   // FhirConstructGeneration.cs:274
-    }                                                                                                                                       // FhirConstructGeneration.cs:382
-}                                                                                                                                           // FhirConstructGeneration.cs:383
+            }                                                                                                                               // FhirConstructGeneration.cs:269
+            block                                                                                                                           // FhirConstructGeneration.cs:270
+                .AppendCode("return retVal;")                                                                                               // FhirConstructGeneration.cs:271
+                .CloseBrace()                                                                                                               // FhirConstructGeneration.cs:272
+                ;                                                                                                                           // FhirConstructGeneration.cs:273
+            return  true;                                                                                                                   // FhirConstructGeneration.cs:274
+        }                                                                                                                                   // FhirConstructGeneration.cs:275
+    }                                                                                                                                       // FhirConstructGeneration.cs:384
+}                                                                                                                                           // FhirConstructGeneration.cs:385
