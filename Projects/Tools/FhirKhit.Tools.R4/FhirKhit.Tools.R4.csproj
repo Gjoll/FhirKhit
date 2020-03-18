@@ -30,11 +30,11 @@
   
   <ItemGroup>
     <PackageReference Include="CommonMark.NET" Version="0.15.1" />
-    <PackageReference Include="Hl7.Fhir.ElementModel" Version="1.5.0" />
-    <PackageReference Include="Hl7.Fhir.R4" Version="1.5.0" />
-    <PackageReference Include="Hl7.Fhir.Serialization" Version="1.5.0" />
-    <PackageReference Include="Hl7.Fhir.Specification.R4" Version="1.5.0" />
-    <PackageReference Include="Hl7.FhirPath" Version="1.5.0" />
+    <PackageReference Include="Hl7.Fhir.ElementModel" Version="1.6.0" />
+    <PackageReference Include="Hl7.Fhir.R4" Version="1.6.0" />
+    <PackageReference Include="Hl7.Fhir.Serialization" Version="1.6.0" />
+    <PackageReference Include="Hl7.Fhir.Specification.R4" Version="1.6.0" />
+    <PackageReference Include="Hl7.FhirPath" Version="1.6.0" />
     <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.8">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
