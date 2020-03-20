@@ -59,24 +59,10 @@ namespace FhirKhit.Tools.R3
         /// </summary>
         public static void SaveJson(this Base fhirBase, String path)
         {
-            Int32 retries = 3;
-            while (true)
-            {
-                try
-                {
-                    String outputDir = Path.GetDirectoryName(path);
-                    if (Directory.Exists(outputDir) == false)
-                        Directory.CreateDirectory(outputDir);
-                    File.WriteAllText(path, fhirBase.ToFormatedJson());
-                    return;
-                }
-                catch (Exception e)
-                {
-                    if (--retries == 0)
-                        throw e;
-                    Thread.Sleep(500);
-                }
-            }
+            String outputDir = Path.GetDirectoryName(path);
+            if (Directory.Exists(outputDir) == false)
+                Directory.CreateDirectory(outputDir);
+            FileTools.WriteAllText(path, fhirBase.ToFormatedJson());
         }
 
         /// <summary>

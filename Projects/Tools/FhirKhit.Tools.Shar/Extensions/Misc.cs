@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
+using System.Threading;
 
 #if FHIR_R4
 namespace FhirKhit.Tools.R4

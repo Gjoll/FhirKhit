@@ -81,7 +81,7 @@ namespace FhirKhit.Tools
                 if (string.Compare(newCode, oldCode, StringComparison.InvariantCulture) == 0)
                     return this.SavePath;
             }
-            File.WriteAllText(path, newCode);
+            FileTools.WriteAllText(path, newCode);
             return this.SavePath;
         }
 
