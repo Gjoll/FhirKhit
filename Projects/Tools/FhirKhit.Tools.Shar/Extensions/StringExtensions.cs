@@ -1,6 +1,7 @@
 ﻿using Hl7.Fhir.Model;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 #if FHIR_R4
@@ -10,18 +11,38 @@ namespace FhirKhit.Tools.R3
 #endif
 {
     public static class StringExtensions
-{
-    /// <summary>
-    /// Create Markdown instance from a string.
-    /// </summary>
-    /// <param name="description"></param>
-    /// <returns></returns>
-    public static Markdown ConvertToMarkdown(this String description)
     {
-        Markdown retVal = new Markdown();
-        retVal.Value = description;
-        return retVal;
-    }
+        /// <summary>
+        /// Create Markdown instance from a string.
+        /// </summary>
+        public static String Collate(this String[] lines)
+        {
+            bool spaceFlag = false;
+            StringBuilder sb = new StringBuilder();
+            foreach (String line in lines)
+            {
+                if (line.First() == ' ')
+                    spaceFlag = false;
+                if (spaceFlag)
+                    sb.Append(" ");
+                sb.Append($"{line}\n");
+                spaceFlag = (line.Last() != ' ');
+            }
+            sb.Append($"\n");
+            return sb.ToString();
+        }
+
+        /// <summary>
+        /// Create Markdown instance from a string.
+        /// </summary>
+        /// <param name="description"></param>
+        /// <returns></returns>
+        public static Markdown ConvertToMarkdown(this String description)
+        {
+            Markdown retVal = new Markdown();
+            retVal.Value = description;
+            return retVal;
+        }
 
 #if FHIR_R4 || FHIR_R3
         public static PublicationStatus ToPublicationStatus(this String value)
@@ -42,47 +63,47 @@ namespace FhirKhit.Tools.R3
         }
 #endif
 
-    public static void ProcessSystem(this String modelLabSystem,
-        String modelLabCode,
-        String modelLabDisplay,
-        out String fhirSystem,
-        out String fhirCode,
-        out String fhirDisplay)
-    {
-        const String fcn = nameof(ProcessSystem);
-
-        fhirCode = modelLabCode;
-        fhirDisplay = modelLabDisplay;
-        if (String.IsNullOrWhiteSpace(fhirDisplay))
-            fhirDisplay = modelLabCode;
-
-        switch (modelLabSystem?.ToUpper())
+        public static void ProcessSystem(this String modelLabSystem,
+            String modelLabCode,
+            String modelLabDisplay,
+            out String fhirSystem,
+            out String fhirCode,
+            out String fhirDisplay)
         {
-            case null:
-                fhirSystem = "http://test.com";
-                break;
+            const String fcn = nameof(ProcessSystem);
 
-            case "LOINC":
-                fhirSystem = "http://loinc.org";
-                break;
+            fhirCode = modelLabCode;
+            fhirDisplay = modelLabDisplay;
+            if (String.IsNullOrWhiteSpace(fhirDisplay))
+                fhirDisplay = modelLabCode;
 
-            case "SNOMED-CT":
-                fhirSystem = "http://snomed.info/sct";
-                break;
+            switch (modelLabSystem?.ToUpper())
+            {
+                case null:
+                    fhirSystem = "http://test.com";
+                    break;
 
-            case "RADLEX":
-                fhirSystem = "http://www.radlex.org";
-                break;
+                case "LOINC":
+                    fhirSystem = "http://loinc.org";
+                    break;
 
-            case "RXNORM":
-                fhirSystem = "http://www.nlm.nih.gov/research/umls/rxnorm";
-                break;
+                case "SNOMED-CT":
+                    fhirSystem = "http://snomed.info/sct";
+                    break;
 
-            default:
-                Log.Warn(fcn, $"Unimplemented model lab system {modelLabSystem}");
-                fhirSystem = modelLabSystem;
-                break;
+                case "RADLEX":
+                    fhirSystem = "http://www.radlex.org";
+                    break;
+
+                case "RXNORM":
+                    fhirSystem = "http://www.nlm.nih.gov/research/umls/rxnorm";
+                    break;
+
+                default:
+                    Log.Warn(fcn, $"Unimplemented model lab system {modelLabSystem}");
+                    fhirSystem = modelLabSystem;
+                    break;
+            }
         }
     }
-}
 }
