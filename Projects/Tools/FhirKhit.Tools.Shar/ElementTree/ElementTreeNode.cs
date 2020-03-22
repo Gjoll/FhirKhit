@@ -189,7 +189,7 @@ namespace FhirKhit.Tools.R3
 
         /// <summary>
         /// Find an element by its path, which can include slice names.
-        /// Throiw exception if not found.
+        /// Throw exception if not found.
         /// </summary>
         public ElementTreeNode GetChild(String id)
         {
